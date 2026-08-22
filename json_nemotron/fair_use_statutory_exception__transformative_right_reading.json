@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "fair_use_statutory_exception__transformative_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fair_use_trr",
+    "story_uid": "e6ee5db8-0d96-4c2d-9bf4-3b95f3e84f2e"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.15,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Fair Use Statutory Exception — Transformative Right Reading",
+    "topic_domain": "intellectual_property/legal_interpretation/information_economics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "transformative_creators",
+      "cultural_institutions",
+      "educational_users",
+      "researchers",
+      "journalists",
+      "general_public"
+    ],
+    "victims": [
+      "rights_holders_claiming_substitutive_uses"
+    ],
+    "vindicated_propositions": [
+      "transformative_use_doctrine",
+      "cultural_progress_clause",
+      "first_amendment_protection_of_expression",
+      "burden_sharing_in_fair_use_analysis"
+    ]
+  },
+  "interval": {
+    "start": 1994,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.15
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transformative_vs_substitutive_boundary",
+      "question": "Where is the structural boundary between transformative and substitutive use — and does the reading's own framework locate it in the work's new expression or in the economic effect on the original?",
+      "resolution_mechanism": "Case-by-case judicial application tracked against the reading's stated axiom (transformative_creation_as_distinct_economic_activity); if courts consistently require economic substitution analysis as a proxy for transformation, the boundary has drifted toward the market_licensing_reading's framework.",
+      "impact": "If the boundary collapses to economic substitution, this reading's low ε for transformative uses becomes unstable — extractiveness rises for edge cases and the reading converges toward narrow_defense_reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether transformative/substitutive is a formal distinction in the work or an economic proxy"
+    },
+    {
+      "id": "licensing_market_endogeneity",
+      "question": "Does the existence of a licensing market for a use type structurally preclude fair use (market_licensing_reading) or is the market endogenous to the fair use doctrine's scope (transformative_right_reading)?",
+      "resolution_mechanism": "Observe whether courts treat licensing availability as dispositive (market_licensing_reading) or as one factor that does not foreclose fair use (this reading). Track Campbell v. Acuff-Rose and subsequent circuit splits.",
+      "impact": "If licensing markets become dispositive, ε rises for all uses with potential markets — the reading's low-extraction core shrinks. This is the primary structural delta from the market_licensing_reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether licensing market existence forecloses fair use or is treated as non-dispositive"
+    },
+    {
+      "id": "kernel_reading_fair_use_transformative_right",
+      "question": "This constraint is the transformative_right_reading of the fair_use_statutory_exception kernel. What structural elements would change under the narrow_defense_reading and market_licensing_reading siblings?",
+      "resolution_mechanism": "Compare beneficiary/victim sets, extractiveness profiles, and burden allocations across the three readings. The narrow_defense_reading shifts beneficiaries toward rights_holders and raises ε; the market_licensing_reading makes licensing market existence dispositive, raising ε for any use with a potential market.",
+      "impact": "Sibling readings instantiate different constraints with different ε, different beneficiary/victim structures, and different claimed_types. The kernel_id is fair_use_statutory_exception; this reading_id is transformative_right_reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system framing: this reading of the fair use kernel and its structural differences from sibling readings"
+    },
+    {
+      "id": "burden_of_proof_allocation",
+      "question": "Does the reading's 'shared burden' axiom mean the defendant bears initial production burden but the plaintiff bears ultimate persuasion burden, or is the burden genuinely symmetric across factors?",
+      "resolution_mechanism": "Track judicial opinions for explicit burden allocation language: 'defendant must prove transformative purpose' vs. 'plaintiff must prove market harm' vs. 'holistic balancing'. The reading's axiom names 'shared_burden_in_fair_use_analysis' but the operational allocation determines effective extraction for defendants with fewer resources.",
+      "impact": "If burden falls disproportionately on defendants, ε effectively rises for resource-constrained creators — the reading's low-extraction promise holds only for well-resourced parties.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational burden allocation within the 'shared burden' axiom"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the transformative_right_reading of the fair_use_statutory_exception kernel. The reading holds that fair use is an affirmative right enabling transformative reuse and cultural production, not merely a narrow defense against infringement claims. Courts are structurally positioned as facilitators of innovation: the four statutory factors are balanced with a thumb on the scale for transformative purpose, licensing markets are not dispositive, and the burden of proof is shared rather than placed entirely on the defendant. The reading's ε is low (0.18) for transformative uses because the constraint extracts little from those it governs — it enables rather than restricts. For substitutive uses (mere copying), ε would be higher, but those uses fall outside this reading's protected core. The beneficiary set is broad: transformative creators, cultural institutions, educators, researchers, journalists, and the public. The victim set is narrow: rights holders who claim substitutive uses as fair use. The reading coexists with sibling readings (narrow_defense_reading, market_licensing_reading) as live positions in judicial and scholarly discourse — no single framework forecloses the others, though they create mutual structural pressure.",
+    "key_agents": [
+      "transformative_creators: Primary beneficiary (organized/constrained) — enabled to build on existing culture",
+      "cultural_institutions: Primary beneficiary (institutional/constrained) — libraries, archives, museums rely on fair use for preservation and access",
+      "educational_users: Primary beneficiary (organized/constrained) — teaching and scholarship depend on flexible reuse",
+      "researchers: Primary beneficiary (organized/constrained) — text/data mining, computational analysis require fair use",
+      "journalists: Primary beneficiary (organized/constrained) — reporting and commentary require quotation and critique",
+      "general_public: Primary beneficiary (organized/mobile) — cultural participation and expression",
+      "rights_holders_claiming_substitutive_uses: Victim of this reading (powerful/constrained) — their claim to control transformative uses is denied",
+      "courts: Agenda setter (institutional/analytical) — adjudicate the boundary, set precedent",
+      "copyright_industries: Secondary payer (powerful/mobile) — licensing revenue constrained by fair use scope",
+      "legal_scholars: Observer (analytical/analytical) — analyze and critique the doctrine"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint primarily enables activity rather than extracting from it. The reading's core axiom — transformative creation is a distinct economic activity that does not merely substitute for the original — means the constraint imposes minimal cost on its beneficiaries. Suppression is low (0.15) because the constraint does not require active enforcement against alternatives; it operates as a permissive rule. Theater is low (0.12) because the doctrine's operation tracks its stated purpose: courts do not perform transformative analysis while actually applying market substitution. Accessibility collapse is modest (0.25) because alternative frameworks (licensing, public domain, permission) remain available — the constraint does not foreclose other paths. Resistance is moderate (0.55) because rights holders and their industries actively litigate to narrow the doctrine, and courts sometimes drift toward market_licensing_reading frameworks. The measurement series shows declining extraction and suppression from 1994 (pre-Campbell) to 2024, reflecting the reading's consolidation after Campbell v. Acuff-Rose (1994) and its subsequent institutionalization.",
+    "perspectival_gap": "From the transformative creator's seat (beneficiary, organized, constrained exit), the constraint is a genuine rope: it solves the coordination problem of building on culture without permission, with minimal coercive overhead. From the rights holder's seat (powerful, constrained exit when their substitutive claims are denied), the same constraint operates as extraction — they lose control over derivative markets. From the court's seat (agenda setter, institutional, analytical), the constraint is a coordination mechanism with genuine interpretive difficulty at the boundaries. The engine computes these divergences from the structural data; the claimed_type (rope) reflects the reading's self-understanding as a coordination mechanism, while the metrics reflect its actual operation across seats.",
+    "directionality_logic": "Beneficiaries (transformative_creators, cultural_institutions, educational_users, researchers, journalists, general_public) receive low directionality values (d ~ 0.1-0.2): the constraint subsidizes their activity. The victim group (rights_holders_claiming_substitutive_uses) receives high directionality (d ~ 0.8): the constraint denies them control they would otherwise exercise. Courts as agenda_setters sit near symmetric (d ~ 0.5): they bear adjudication costs but gain institutional legitimacy from facilitating cultural progress. Copyright industries as secondary payers sit at d ~ 0.4: they lose some licensing revenue but gain a stable, predictable doctrine. The general_public has the lowest d (arbitrage-grade exit via public domain, licensing, original creation).",
+    "mandatrophy_analysis": "The founding problem — enabling cultural progress by permitting transformative reuse without permission — remains live (founding_problem_status: contested). The reading's mandate has not atrophied; if anything, digital culture has expanded the domain of transformative use. However, the contestation is real: rights holders argue the founding problem is solved by licensing markets (market_licensing_reading) or that the property right should predominate (narrow_defense_reading). The corroboration from outside the beneficiary set (legislative history, First Amendment jurisprudence, economic studies of cumulative innovation) supports the reading's continued relevance. No mandatrophy resolution is declared — the constraint's function remains active.",
+    "kernel_context": "This constraint is the transformative_right_reading of the fair_use_statutory_exception kernel. Sibling readings: narrow_defense_reading (copyright as property, fair use as narrow affirmative defense), market_licensing_reading (fair use exists only where no licensing market exists). This reading's structural delta: low ε for transformative uses, high ε for substitutive uses, licensing markets not dispositive, burden of proof shared. The kernel's statutory text (17 USC 107) is the fixed_text; the authority_grounding is lineage (judicial precedent chain from Folsom v. Marsh through Campbell). An interpretation_layer_present (true) — courts absorb drift through factor balancing without revising the statutory kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "fair_use_statutory_exception__narrow_defense_reading",
+      "fair_use_statutory_exception__market_licensing_reading",
+      "copyright_term_extension",
+      "digital_millennium_copyright_act_anticircumvention",
+      "orphan_works_mass_digitization"
+    ],
+    "dual_formulation_note": "This reading decomposes the fair use kernel with narrow_defense_reading and market_licensing_reading. All three share the fixed_text kernel (17 USC 107) but instantiate different constraints: this reading (rope, low ε, broad beneficiaries), narrow_defense_reading (tangled_rope, moderate ε, rights_holder beneficiaries), market_licensing_reading (snare, high ε for uses with potential markets, rights_holder beneficiaries). The ε-invariance principle requires separate stories because ε differs structurally across readings — the transformative/substitutive boundary and licensing market disposition are not measurement choices but different constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "transformative_creators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Artists, writers, musicians, filmmakers, and digital creators who build new works by transforming existing copyrighted material — parody, criticism, commentary, remix, collage, appropriation art, sampling. They rely on fair use to create without licensing negotiation or fee payment. Their exit is constrained: they cannot easily create equivalent work without referencing the cultural corpus, and licensing is often impractical (orphan works, refusal, cost). They benefit directly from the low-extraction regime this reading establishes."
+    },
+    {
+      "name": "cultural_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Libraries, archives, museums, and universities that preserve, provide access to, and enable research on copyrighted collections. They depend on fair use for digitization, preservation copying, text and data mining, exhibition, and educational use. Their exit is constrained by mission and public mandate — they cannot simply avoid copyrighted material. They are institutional beneficiaries who also serve the general public."
+    },
+    {
+      "name": "educational_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Teachers, students, and educational institutions using copyrighted material for teaching, scholarship, and research. Classroom copying, course reserves, distance learning, and student projects all rely on fair use. Exit is constrained by curriculum requirements and the necessity of engaging with the cultural canon. They benefit from the reading's expansive view of educational purpose."
+    },
+    {
+      "name": "researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Academic and independent researchers conducting text and data mining, computational analysis, systematic reviews, and other research requiring large-scale use of copyrighted works. Fair use enables research that would be impossible under a permission regime. Their exit is constrained by the nature of research questions — they must study what exists. They are beneficiaries of the reading's recognition of research as transformative purpose."
+    },
+    {
+      "name": "journalists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Reporters, editors, and news organizations using copyrighted material for reporting, criticism, commentary, and news gathering. Quotation, screenshot, clip, and document reproduction are essential to journalism. Exit is constrained by the news cycle and public interest — they cannot wait for permission. They benefit from the reading's protection of reporting and commentary as core transformative purposes."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Ordinary citizens engaging in cultural participation: memes, fan fiction, home videos, social media sharing, personal study. They benefit from a cultural commons enriched by transformative reuse. Their exit is relatively mobile — they can consume rather than create, use public domain works, or seek licensed alternatives — but the cultural environment they inhabit is shaped by the constraint's operation."
+    },
+    {
+      "name": "rights_holders_claiming_substitutive_uses",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Copyright owners (individual authors, publishers, studios, record labels) who assert control over uses they characterize as substitutive — verbatim copying, format shifting, or derivatives that serve the same market function as the original. Under this reading, their claims to control transformative uses are denied; they bear the cost of lost licensing revenue for uses deemed fair. They are also secondary beneficiaries when the reading protects their own transformative uses of others' works. Their exit is constrained: they cannot opt out of the fair use exception, but they retain full control over non-transformative licensing."
+    },
+    {
+      "name": "courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Federal courts (especially Courts of Appeals and the Supreme Court) that adjudicate fair use disputes and set binding precedent. They administer the constraint by applying the four-factor test with the reading's interpretive gloss: transformative purpose favored, licensing markets not dispositive, burden shared. They bear adjudication costs but gain legitimacy from facilitating cultural progress. Their exit is analytical — they interpret the constraint but do not bear its extraction or benefit from its coordination in the same way parties do."
+    },
+    {
+      "name": "copyright_industries",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Major content industries (film, music, publishing, software) that license derivative works and view fair use as a constraint on their licensing revenue. They lobby for narrower interpretations, fund litigation, and develop technological controls (DRM, content ID). They are payers under this reading because the expansive transformative right reduces their licensing base. Their exit is relatively mobile — they can adapt business models, focus on non-transformative licensing, or advocate for legislative change — but they bear significant transition costs."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academics, practitioners, and policy analysts who study, critique, and propose reforms to fair use doctrine. They neither collect rents nor pay them directly; they observe the constraint's operation across seats and contribute to the interpretive discourse that shapes judicial application. Their exit is analytical — they engage by choice and can shift focus to other doctrines."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the cumulative innovation problem: cultural production builds on prior culture; requiring permission for every transformative reuse would create prohibitive transaction costs, holdout problems, and chilling effects. Fair use as a transformative right provides a default permission structure that enables follow-on creativity without central coordination.",
+    "transfer_function": "Moves control over transformative reuse from rights holders to follow-on creators. Rights holders lose the ability to license or veto transformative uses; creators gain the freedom to transform without payment. The transfer is not monetary but allocative — decision rights over cultural building blocks shift from originators to transformers.",
+    "absent_voices": "Future creators whose transformative uses have not yet been litigated — they would benefit from the reading's expansive scope but are not present in current cases. Also absent: rights holders in jurisdictions without fair use (most of the world) who would object to the U.S. model's breadth but have no standing in U.S. courts. The excluded role is partially filled by rights_holders_claiming_substitutive_uses, but the global perspective is missing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the transformative right reading vanished overnight, the default would shift to permission-based culture: transformative creators would need licenses for every reference, quotation, sample, or critique. Cultural production would slow, concentrate in well-resourced entities, and avoid critical or parodic engagement with dominant works. Libraries and archives would curtail digitization. Research would face prohibitive licensing. The cultural ecosystem would reorganize around permission and payment.",
+    "founding_problem": "The constitutional mandate to 'promote the Progress of Science and useful Arts' (Art. I, Sec. 8, Cl. 8) requires a copyright system that enables, not merely rewards, cultural production. The founding problem of fair use is that exclusive rights, if absolute, would block the very progress they are meant to incentivize — follow-on creators cannot build on a culture they cannot touch. Fair use was built (judicially, then codified in 1976) to ensure the copyright system does not eat its own seed corn.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The constitutional progress clause and First Amendment are cited by courts (Campbell, Google v. Oracle) and scholars (Litman, Lessig, Samuelson, Tushnet) outside the immediate beneficiary set. Economic studies of cumulative innovation (Scotchmer, Green & Scotchmer) corroborate that follow-on innovation requires access. The CONTU report (1978) and legislative history of the 1976 Act show Congress understood fair use as a safety valve for progress. However, rights holder groups (RIAA, MPAA, AAP) contest that the founding problem is solved by voluntary licensing and that fair use has expanded beyond its original justification."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "fair_use_statutory_exception"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_defense_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "market_licensing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transformative_creation_as_distinct_economic_activity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "shared_burden_in_fair_use_analysis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "licensing_market_non_dispositive",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "campbell_transformative_use_framework",
+    "drift_state": {
+      "moment": "post_google_v_oracle_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

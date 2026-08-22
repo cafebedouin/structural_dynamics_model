@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "5cae49b7-55ba-4b49-962c-eabacb069a7b"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "HOA Covenant Scope — Coordination Reading",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "all_homeowners"
+    ],
+    "victims": [
+      "free_riders"
+    ],
+    "vindicated_propositions": [
+      "shared_infrastructure_requires_collective_funding",
+      "objective_nuisance_standards_prevent_externalities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "all_homeowners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Every homeowner in the HOA community benefits from maintained shared infrastructure (roads, drainage, lighting, common areas) and from objective nuisance standards that prevent genuine externalities. They contribute through assessments proportional to infrastructure costs. Exit means selling the home, which is possible but costly and disruptive."
+    },
+    {
+      "name": "free_riders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Homeowners who would avoid paying their share of infrastructure costs or would create objective nuisances (uncontrolled runoff, hazardous conditions, noise exceeding established decibel limits) if not constrained. The covenant's enforcement mechanism targets this behavior — they pay through compliance or fines."
+    },
+    {
+      "name": "hoa_board",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Elected volunteer board administers the covenant: sets assessment levels tied to documented infrastructure costs, enforces objective nuisance standards, maintains common elements. Board members are homeowners themselves and benefit symmetrically. Their authority is narrow — limited to cost recovery and objectively measurable standards."
+    },
+    {
+      "name": "municipal_government",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Local government retains underlying regulatory authority (zoning, building codes, environmental regulations). The HOA covenant operates as a supplementary layer for hyper-local infrastructure and nuance standards the municipality does not provide. Municipality can intervene if covenant enforcement violates higher law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of funding and maintaining shared infrastructure (roads, stormwater, lighting, common areas) that no single homeowner can efficiently provide alone, and resolves genuine externalities (runoff, noise, hazardous conditions) through objective, measurable standards rather than aesthetic preferences.",
+    "transfer_function": "Moves infrastructure maintenance costs from the collective pool (funded by proportional assessments) to service providers and materials. Transfers the cost of externality remediation from affected neighbors to the party creating the externality, via fines tied to objective standards.",
+    "absent_voices": "Future homeowners who will inherit the covenant without having voted on it; renters in the community who bear assessment pass-through but have no vote; adjacent non-HOA property owners affected by the community's infrastructure decisions (e.g., stormwater flow).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the covenant vanished overnight, shared infrastructure would degrade rapidly (no funding mechanism), objective nuisance standards would disappear (reverting to municipal minimums which are weaker on hyper-local issues), and the community would face immediate collective action failures — free-riding on maintenance, uncontrolled externalities. The world rearranges because arrangements depend on this constraint.",
+    "founding_problem": "New planned communities in the 1960s-1980s needed a mechanism to maintain shared infrastructure that municipalities would not adopt (private roads, private stormwater, common areas) and to prevent the tragedy of the commons where individual owners underinvest in maintenance that benefits all.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated by municipal planning departments (which confirm they do not maintain private infrastructure), civil engineering literature on infrastructure funding gaps in private communities, and homeowner surveys across multiple HOA communities showing majority support for assessment-funded maintenance. The founding problem is attested from outside the HOA board itself."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.25
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the coordination reading of the HOA covenant kernel: the covenant as a genuine collective-action solution for shared infrastructure maintenance and objective externality resolution. The constraint is claimed as rope — a pure coordination mechanism with symmetric benefits, narrow enforcement scope limited to cost recovery and objectively measurable standards (decibel limits, runoff volumes, structural safety), and no aesthetic or behavioral conformity demands. Extraction is low (0.15) because assessments track documented infrastructure costs; suppression is low (0.25) because enforcement targets only free-riding and measurable nuisance, not taste. Theater is minimal (0.1) because the board's activity is functional maintenance, not performative control.",
+    "logic_rationale": "The low extractiveness reflects assessments tied to actual infrastructure costs with transparent accounting. Low suppression reflects enforcement limited to objective standards (measurable noise, runoff, safety) — no architectural review committees, no paint-color rules, no behavioral mandates. The beneficiary set is symmetric (all homeowners) because infrastructure and externality protection benefit everyone equally. The victim set is narrow (free_riders) — only those who would defect from the collective action problem or create measurable externalities bear enforcement costs. This is the coordination function isolated from the behavioral control and extraction readings.",
+    "directionality_logic": "All homeowners are structural beneficiaries (d near 0.0) — they pay assessments but receive equivalent value in maintained infrastructure and externality protection. The hoa_board sits near symmetric (d ~ 0.5) — they administer the constraint and benefit as homeowners, but their administrative role is unpaid volunteer work. Free_riders are the structural targets (d near 1.0) — they would extract the benefits without paying the costs, so the constraint's enforcement falls on them. Municipal government is analytical observer (d = 0.5).",
+    "perspectival_gap": "From the homeowner seat, the constraint is experienced as a fair cost-sharing mechanism for necessary infrastructure. From the free_rider seat, it is experienced as coercive extraction (but the extraction is the cost of the externality they would impose). From the board seat, it is administrative burden with no personal gain beyond shared homeowner benefit. The engine computes these divergences from the structural data — the coordination reading claims rope and the metrics support it.",
+    "mandatrophy_analysis": "The founding problem (private infrastructure maintenance + hyper-local externality resolution) remains live — municipalities still do not adopt private roads/stormwater, and collective action failures still occur without a binding mechanism. The constraint has not atrophied into piton because the coordination function is actively used and the enforcement scope has not drifted toward aesthetic/behavioral control. Mandatrophy is not resolved — the constraint continues to serve its founding purpose.",
+    "kernel_context": "This is the coordination_reading of kernel hoa_covenant_scope. Sibling readings: behavioral_control_reading (covenant as aesthetic/behavioral conformity enforcement for property value maximization), extraction_reading (covenant as revenue generation and board power consolidation via fine proliferation and selective enforcement). This reading isolates the pure coordination function: shared infrastructure cost recovery + objective nuisance standards. The other readings represent drift of the same covenant text into different structural operations."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_behavioral_boundary",
+      "question": "Where is the structural boundary between objective nuisance standards (coordination) and aesthetic/behavioral rules (behavioral control)?",
+      "resolution_mechanism": "Codification test: can the standard be reduced to a measurable physical quantity (decibels, runoff volume, structural load) without reference to taste, preference, or 'community character'? If yes, it belongs to the coordination reading; if no, it belongs to behavioral_control_reading.",
+      "impact": "If the boundary is porous, the coordination reading's low ε claim is contaminated by behavioral control provisions that inevitably exist in the same covenant document. The ε-invariance principle would require decomposing the covenant into separate constraints per measurable standard.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether objective nuisance standards can be cleanly separated from aesthetic rules in the same covenant."
+    },
+    {
+      "id": "enforcement_drift_trajectory",
+      "question": "Does the coordination reading's enforcement mechanism inevitably drift toward behavioral control or extraction over time, or can it remain stable?",
+      "resolution_mechanism": "Longitudinal study of HOA covenants that started with coordination-only scope: track whether enforcement provisions expand to aesthetic/behavioral rules or fine structures proliferate beyond cost recovery.",
+      "impact": "If drift is structurally inevitable, the coordination reading describes a transient state, not a stable constraint type. The constraint would be a scaffold (transitional) rather than a rope, or would inevitably mutate into the behavioral_control_reading or extraction_reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether pure coordination covenants are stable or inevitably drift toward extraction/control."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine reading of the hoa_covenant_scope kernel, or does it artificially isolate one function from an inseparable whole?",
+      "resolution_mechanism": "Counterfactual test: if a community adopted ONLY the coordination provisions (infrastructure funding + objective nuisance standards) and explicitly prohibited aesthetic/behavioral rules and fine proliferation, would the resulting constraint be recognizable as the same kernel? If yes, the reading is ε-invariant; if no, the kernel is inseparable.",
+      "impact": "If the kernel is inseparable, the three readings are not distinct constraints but observer perspectives on one constraint — violating the ε-invariance principle. The decomposition would be authorial, not structural.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the coordination reading is a structurally distinct constraint or an authorial decomposition of an inseparable kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__behavioral_control_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "This constraint is the coordination_reading of the hoa_covenant_scope kernel. The behavioral_control_reading and extraction_reading are sibling constraints from the same kernel text. This reading claims rope with ε=0.15; the behavioral_control_reading claims tangled_rope with higher ε (aesthetic enforcement adds extraction); the extraction_reading claims snare with highest ε (fine proliferation as revenue). The ε values differ because the readings instantiate different constraints from the same kernel — the coordination reading restricts enforcement to cost recovery and objective standards, while the other readings expand enforcement scope."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "hoa_covenant_scope__behavioral_control_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "behavioral_control_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "covenant_scope_limited_to_infrastructure_and_objective_nuisance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "assessments_tied_to_documented_costs_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "planned_community_infrastructure_coordination",
+    "drift_state": {
+      "moment": "contemporary_hoa_landscape",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

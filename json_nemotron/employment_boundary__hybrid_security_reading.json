@@ -1,0 +1,291 @@
+{
+  "header": {
+    "constraint_id": "employment_boundary__hybrid_security_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hybrid_sec",
+    "story_uid": "bc4f65ed-6f71-429b-a24b-49b9cef2e720"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Security Reading: Platform Worker Third-Category Protections",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_companies",
+      "platform_workers_basic_protections"
+    ],
+    "victims": [
+      "platform_workers_long_term_precariat"
+    ],
+    "vindicated_propositions": [
+      "tailored_third_category_necessity",
+      "flexibility_security_tradeoff_justified"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine alternative to the employment boundary or a mechanism that stabilizes the boundary by offering partial concessions?",
+      "resolution_mechanism": "Track whether hybrid protections expand toward full employment equivalence over time or remain a stable ceiling. Longitudinal policy adoption data across jurisdictions.",
+      "impact": "If the hybrid category is a stable ceiling, it functions as a pressure valve preventing substantive employment classification — extraction is structural. If it ratchets upward, it is a transitional scaffold toward substantive employment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether hybrid_security_reading forecloses or coexists with substantive_employment_reading in practice"
+    },
+    {
+      "id": "extraction_distribution_ambiguity",
+      "question": "Does the 0.42 extractiveness primarily reflect platform cost savings from avoided employment obligations, or worker losses from absent career/retirement infrastructure?",
+      "resolution_mechanism": "Decompose the extraction into platform-side avoided costs (employer payroll taxes, benefits administration, unemployment insurance) vs worker-side forgone accumulations (pension vesting, seniority, skill certification portability).",
+      "impact": "If extraction is predominantly platform cost avoidance, the beneficiary is the platform. If predominantly worker foregone accumulation, the victim bears a structural loss not captured by current benefit rates.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution of hybrid category extraction between platform savings and worker precarity"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.38) structural (algorithmic deactivation, contractual prohibition on collective bargaining) or internalized (workers accept precarity as 'flexibility' trade-off)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: survey workers who leave platform work — if precarity acceptance persists, reclassify as partially internalized. Compare deactivation appeal success rates vs traditional unfair dismissal.",
+      "impact": "If internalized, effective suppression is higher than structural measure — the constraint travels with the worker. If structural, suppression drops sharply at exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression in algorithmic management"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The hybrid_security_reading instantiates a third-category constraint for platform workers: neither employee nor independent contractor, but a tailored protection regime (medical 91.5%, injury 86.2% coverage) with platform obligations limited to injury insurance. This reading claims to solve the coordination problem of extending basic protections without imposing full employment costs. The metrics describe a constraint that has grown more extractive and theatrical over 12 years — extraction rising from 0.28 to 0.42 as platforms institutionalize the hybrid category while resisting expansion of obligations; theater rising from 0.15 to 0.31 as 'flexibility' framing increasingly covers precarity; suppression hardening from 0.22 to 0.38 as algorithmic management replaces contractual control.",
+    "logic_rationale": "Extraction (0.42) reflects the gap between full employment cost and hybrid obligation cost — platforms avoid payroll taxes, unemployment insurance, pension contributions, and career infrastructure while capturing labor. Suppression (0.38) is algorithmic: deactivation without appeal, rating systems that penalize advocacy, contractual waivers of collective action. Theater (0.31) is the 'innovation' narrative that presents precarity as worker choice. The constraint is tangled_rope because it delivers real coordination (basic medical/injury coverage where none existed) AND asymmetric extraction (platforms shed long-term obligations). Active enforcement is required: platforms lobby to maintain the third category, litigate against reclassification, and design algorithmic controls that prevent worker organizing.",
+    "directionality_logic": "Platform companies are structural beneficiaries (d ~0.15): they collect the labor value while externalizing long-term reproduction costs. Platform workers are split: those receiving basic protections are partial beneficiaries (d ~0.45) but those lacking career/retirement infrastructure are victims (d ~0.75) — the same workers occupy both positions over their lifecycle. Regulators are observers (d ~0.5). The split within platform_workers is the key seat divergence: the constraint coordinates immediate injury/medical needs while extracting long-term security.",
+    "perspectival_gap": "From the platform seat, the hybrid category is a rope: genuine coordination solving the 'no protections at all' problem with minimal coercion. From the long-term platform worker seat, it is a snare: the coordination story covers extraction of career development, retirement security, and collective voice. The engine computes this divergence from the structural data — the same constraint, different effective extraction per seat.",
+    "mandatrophy_analysis": "The founding problem (no protections for gig workers) is partially solved — medical/injury coverage exists. But the arrangement now prevents the substantive_employment_reading from gaining traction by offering a 'good enough' alternative that stabilizes platform business models. Mandatrophy is NOT resolved: the hybrid category has become a ceiling, not a floor.",
+    "kernel_context": "This constraint is the hybrid_security_reading of the employment_boundary kernel. Sibling readings: formalist_employment_reading (employment = formal contract + direct supervision; platform workers = contractors) and substantive_employment_reading (employment = economic dependence + algorithmic control; platform workers = employees). This reading claims a third category with tailored protections. The disagreement is located at the beneficiary/victim boundary: formalist excludes platform workers from victim set; substantive includes them fully; hybrid partially includes them (basic protections yes, career/retirement no)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "employment_boundary__formalist_employment_reading",
+      "employment_boundary__substantive_employment_reading",
+      "platform_algorithmic_control",
+      "portable_benefits_infrastructure"
+    ],
+    "dual_formulation_note": "The employment_boundary kernel decomposes into three constraint stories with distinct ε values: formalist (low ε, mountain-like), hybrid_security (moderate ε = 0.42, tangled_rope), substantive (high ε if platforms resist, snare/tangled_rope). The hybrid reading sits between them structurally — it concedes basic protections (moving toward substantive) but blocks full employment classification (preserving formalist boundary). Network edges reflect this: hybrid influences both siblings by occupying the contested middle ground."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "platform_companies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design the hybrid category through lobbying, litigation, and platform architecture. Collect the value of labor without long-term reproduction costs (pensions, career development, unemployment insurance). Obligated only for injury insurance (86.2% coverage) and basic medical (91.5%). Can shift jurisdiction, reclassify work, or alter algorithmic parameters to maintain the hybrid ceiling."
+    },
+    {
+      "name": "platform_workers_basic_protections",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive immediate medical and injury protections that did not exist before the hybrid category. Coverage rates are high (91.5% medical, 86.2% injury) but benefits are event-driven, not accumulative. Exit options are constrained: leaving platform work means losing even these basic protections; staying means accepting no career progression, no retirement vesting, no seniority. The 'flexibility' narrative frames this as choice."
+    },
+    {
+      "name": "platform_workers_long_term_precariat",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Same workers as above, but viewed over the biographical horizon. They bear the extraction: no pension contributions, no skill certification portability, no unemployment insurance, no career ladder. Algorithmic management internalizes precarity — deactivation risk suppresses wage demands and organizing. Identity-locked because platform work becomes primary identity and income source; exit means not just job loss but identity rupture. The hybrid category institutionalizes this as 'independent entrepreneurship.'"
+    },
+    {
+      "name": "traditional_employers",
+      "role": "excluded",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Compete with platforms that externalize labor reproduction costs. Would face pressure to adopt hybrid categories if the model spreads. Not in the conversation because the hybrid category is framed as 'new economy' specific. Their objection — competitive distortion — is structurally excluded from the policy framing."
+    },
+    {
+      "name": "labor_regulators",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer the hybrid category, monitor coverage rates, adjudicate boundary disputes. They see the full structure: the coordination function (basic protections delivered) and the extraction function (long-term obligations avoided). Their enforcement capacity is limited by the 'innovation' framing that treats algorithmic management as outside labor law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Extends basic medical and injury protections to workers who would otherwise have none, without imposing full employment costs that platforms claim would destroy the business model. Solves the 'zero protections' coordination failure for a workforce that falls through the employee/contractor binary.",
+    "transfer_function": "Moves long-term labor reproduction costs (pensions, unemployment insurance, career infrastructure, skill certification) from platforms to individual workers and the public purse, while platforms retain the value of algorithmically coordinated labor. Basic medical/injury costs stay with platforms (91.5%/86.2% coverage) — the transfer is selective.",
+    "absent_voices": "Traditional employers facing competitive distortion from platforms that externalize reproduction costs. Workers who would be employees under substantive_employment_reading but are locked into hybrid category. Public pension/unemployment systems that absorb the long-term costs. These voices are excluded by the 'new economy exceptionalism' framing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid category vanished overnight, platforms would face binary choice: classify workers as employees (full obligations) or contractors (zero protections). Most jurisdictions would likely push toward substantive employment classification given algorithmic control evidence. The platform labor market would reorganize around either full employment costs or genuinely independent contracting with portable benefits.",
+    "founding_problem": "Platform workers had zero protections — no medical coverage, no injury insurance, no safety net — because they fell outside both employment and contractor categories. The hybrid category was built to deliver basic protections without destroying platform viability.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Platform companies and some labor ministries attest the problem remains live (new platform sectors emerging, coverage gaps persist). Worker organizations and independent researchers attest the founding problem is substantially solved for acute risks (medical/injury) but the arrangement now prevents solving the chronic risks (retirement, career, collective voice) — the hybrid category has become a ceiling. No neutral arbiter has declared the problem dead."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "employment_boundary__formalist_employment_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "formalist_employment_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "substantive_employment_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "third_category_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "protection_without_employment_costs",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pre_platform_zero_protections_baseline",
+    "drift_state": {
+      "moment": "post_algorithmic_control_evidence",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

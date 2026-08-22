@@ -1,0 +1,313 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_obligations__selective_solidarity",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_federation_membership_obligations__selective_solidarity",
+    "measurement_id_prefix": "fmo_ss",
+    "story_uid": "bd1ee213-92a1-4eac-8704-47a7b20a59ba"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.51,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement Tiered by Contribution History and Economic Activity",
+    "topic_domain": "political_economy/federalism/migration_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "net_contributor_member_states",
+      "economically_active_mobile_workers",
+      "eu_institutions_budgetary_authority"
+    ],
+    "victims": [
+      "economically_inactive_mobile_citizens",
+      "low_contribution_history_migrants",
+      "net_recipient_member_states"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this constraint instantiate a distinct reading of the federation_membership_obligations kernel, or is it a policy implementation of the integration_primary reading?",
+      "resolution_mechanism": "Analyze whether the contributory principle as the exclusive gateway to welfare access structurally displaces the citizenship principle, or merely operationalizes it under fiscal pressure. Court jurisprudence trajectory (Dano, Alimanovic, Commission v UK) and legislative proposals for a European Unemployment Benefit Scheme are the empirical field.",
+      "impact": "If distinct reading, the kernel has three stable poles (integration_primary, member_sovereignty_primary, selective_solidarity) with different beneficiary/victim structures and different ε. If implementation, selective_solidarity is a contingent restriction within integration_primary and shares its ε referent — the engine would classify them together.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether selective_solidarity is a kernel reading or a policy variant"
+    },
+    {
+      "id": "contributory_threshold_calibration",
+      "question": "Where is the contributory threshold set — at a level that captures genuine free-riders, or at a level that excludes structurally vulnerable mobile workers (precarious, intermittent, care-giving)?",
+      "resolution_mechanism": "Micro-simulation of contribution-history requirements across actual mobile worker trajectories (EU-LFS microdata, longitudinal administrative data). Compare exclusion rates for economically inactive vs. precariously active populations.",
+      "impact": "If the threshold excludes structurally vulnerable workers at scale, the constraint's extraction is systematically targeted at the precariat rather than the voluntarily inactive — reclassification toward snare from the payer seat. If narrowly targeted, the coordination function (fiscal sustainability) is more credible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the contributory threshold operates as precision instrument or blunt exclusion"
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Is the authority structure grounding this reading the EU legislative process (formalized kernel, expertise authority) or the Member State coalition that writes the Treaties (lineage authority, extraction grounding)?",
+      "resolution_mechanism": "Trace the citation chain: does the Court cite Treaty provisions on free movement (Article 21 TFEU) as the kernel with secondary law as interpretation, or does it cite the coordination regulations (883/2004) as the kernel with Treaty as background? The authority_grounding assignment changes the CS pattern classification.",
+      "impact": "If expertise/formalized: the reading is a technical coordination standard with drift absorption through the interpretation layer. If extraction/lineage: the reading is a Member State coalition extracting fiscal protection from the kernel, with the interpretation layer as the extraction mechanism. Different CS patterns produce different contamination propagation signatures.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which CS framing captures the authority structure of the selective_solidarity reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 2004,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The selective_solidarity reading of federation_membership_obligations establishes that free movement rights within the EU federation are not uniform citizenship entitlements but are tiered by contribution history and current economic activity status. Welfare access follows a contributory principle — only those who have paid into a system (or are actively paying) may draw from it — rather than a citizenship principle where membership alone confers equal access. This reading emerged through ECJ jurisprudence (Dano, Alimanovic, Commission v UK) and the 2014/54/EU Directive, which operationalized 'genuine link' and 'habitual residence' tests that function as contributory filters. The constraint bifurcates mobile workers into employed/self-employed (full rights, coordination beneficiaries) and economically inactive (restricted rights, cost-bearers). Net contributor Member States benefit from reduced welfare tourism risk; net recipient Member States bear the cost of their citizens' restricted mobility. EU institutions gain budgetary authority through the coordination framework. The reading coexists with integration_primary (free movement as constitutive citizenship right) and member_sovereignty_primary (national welfare closure) — neither forecloses the others, but selective_solidarity creates structural pressure toward contributory conditionality as the federation's fiscal settlement.",
+    "key_agents": [
+      "net_contributor_member_states: Primary beneficiary (institutional/powerful) — reduced fiscal exposure from mobile economically inactive citizens",
+      "economically_active_mobile_workers: Beneficiary (organized/moderate) — secure coordination of social security, portable rights, full market access",
+      "eu_institutions_budgetary_authority: Agenda setter (institutional/generational) — expands coordination competences, manages the contributory framework",
+      "economically_inactive_mobile_citizens: Primary victim (powerless/trapped) — denied welfare access despite citizenship, mobility restricted by resource tests",
+      "low_contribution_history_migrants: Victim (moderate/constrained) — precarious, intermittent, or care-giving workers excluded by contribution thresholds",
+      "net_recipient_member_states: Victim (institutional/constrained) — their citizens face mobility barriers; fiscal transfers don't offset mobility losses",
+      "national_courts_and_administrations: Observer (institutional/biographical) — implement the contributory tests, produce the jurisprudence that calibrates the threshold"
+    ],
+    "logic_rationale": "Extractiveness (0.62) reflects the systematic redistribution from economically inactive and low-contribution-history mobile citizens toward the coordination budget and net contributor states. The constraint extracts welfare access from those who cannot meet contributory thresholds and transfers fiscal risk to net recipient states. Suppression (0.48) is moderate: the constraint operates through legal-administrative filters (habitual residence tests, genuine link requirements, resource sufficiency directives) rather than overt coercion, but the filters are actively enforced and exit (moving to another Member State) does not escape the contributory logic — it replicates across the federation. Theater ratio (0.28) captures the gap between the citizenship rhetoric (EU as a space of equal rights) and the contributory operation. Accessibility collapse (0.55) is intermediate: alternatives (national welfare, private insurance, return migration) exist but are costly or unavailable for the most vulnerable. Resistance (0.51) is moderate: litigation by affected individuals, political pushback from net recipient states, and academic critique of the citizenship erosion, but no coordinated federation-level reversal. The rising trajectory across all three metrics (2004-2024) shows the contributory principle hardening — extraction accumulating, enforcement intensifying, theater growing as the citizenship vocabulary persists while the operation diverges.",
+    "perspectival_gap": "The agenda_setter seat (EU institutions) experiences this as a coordination mechanism (rope-like) that solves the fiscal sustainability problem of a mobile population. The payer seats (economically inactive mobile citizens, net recipient states) experience it as extraction with constrained exit — the federation's rules replicate the barrier everywhere. The beneficiary seat (economically active mobile workers) sits near symmetric: they gain portable rights and lose nothing. Net contributor states are beneficiaries with arbitrage-grade exit (they could threaten withdrawal, but the federation's value exceeds the extraction). This seat divergence — coordination for some, extraction for others, enforced by the same structure — is the tangled_rope signature.",
+    "directionality_logic": "Beneficiaries declared: net_contributor_member_states (fiscal protection), economically_active_mobile_workers (portable rights, full access), eu_institutions_budgetary_authority (competence expansion). Victims declared: economically_inactive_mobile_citizens (denied welfare despite citizenship), low_contribution_history_migrants (excluded by thresholds), net_recipient_member_states (citizens' mobility restricted without fiscal compensation). Directionality derives from this structure: payers have high d (target), beneficiaries have low d (subsidized), agenda_setter has d near 0.5 (runs the system, bears some political cost, gains competence). The engine computes χ from these declarations.",
+    "mandatrophy_analysis": "The founding problem (fiscal sustainability of welfare systems under free movement) is contested — net contributor states and EU institutions attest it is live; net recipient states and affected citizens attest it is substantially solved or exaggerated. The constraint persists because the contributory principle serves as a fiscal federalism settlement: it allows free movement to continue without a federal welfare budget. Mandatrophy is not resolved — the arrangement's function has shifted from solving a genuine coordination problem (portability for workers) to managing a fiscal distribution conflict (cost allocation for non-workers). The theater ratio rise documents this shift.",
+    "kernel_context": "This constraint instantiates the selective_solidarity reading of the federation_membership_obligations kernel. Sibling readings: integration_primary (free movement as constitutive citizenship right, welfare boundaries yield to mobility) and member_sovereignty_primary (national welfare closure, free movement conditional on labor market protection). The selective_solidarity reading occupies the middle: free movement exists but is tiered by contribution; welfare access is contributory not citizenship-based. All three readings are live positions in EU political-legal discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_social_security_coordination_regulation",
+      "free_movement_of_workers_directive",
+      "european_unemployment_benefit_scheme_proposal",
+      "federation_membership_obligations__integration_primary",
+      "federation_membership_obligations__member_sovereignty_primary"
+    ],
+    "dual_formulation_note": "federation_membership_obligations kernel decomposes into three constraint stories: integration_primary (ε≈0.15, claimed mountain/rope), member_sovereignty_primary (ε≈0.35, claimed tangled_rope), selective_solidarity (ε=0.62, claimed tangled_rope). The ε values differ because each reading instantiates a different constraint with different beneficiary/victim structures. Selective_solidarity extracts from economically inactive mobile citizens; integration_primary extracts from net contributor states (fiscal externalities); member_sovereignty_primary extracts from mobile workers (restricted access). They are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "net_contributor_member_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Net contributors to the EU budget (Germany, Netherlands, Austria, Finland, etc.) face political pressure from domestic electorates to limit 'welfare tourism.' The selective_solidarity reading reduces their fiscal exposure by conditioning mobile EU citizens' welfare access on contribution history. They benefit from a federation that permits labor mobility but blocks fiscal mobility for the economically inactive. Their exit option is arbitrage-grade: they could veto treaty changes or threaten withdrawal, but the single market's value exceeds the extraction cost."
+    },
+    {
+      "name": "economically_active_mobile_workers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Workers and self-employed persons who move for employment gain full coordination of social security (aggregation of periods, export of benefits, equal treatment). They are the coordination function's intended beneficiaries — the system solves their portability problem. They also bear the contributory cost (paying in) but receive the benefit. Exit is mobile: they can move to another Member State and the coordination rules follow them, preserving rights."
+    },
+    {
+      "name": "eu_institutions_budgetary_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The Commission, Council, and Parliament (in codecision) expand the EU's social coordination competences through the contributory framework. The selective_solidarity reading justifies deeper integration of social security coordination without a federal welfare budget. They administer the constraint (regulations, directives, jurisprudence steering) and gain authority from its operation. Their exit is analytical: they observe the system they govern."
+    },
+    {
+      "name": "economically_inactive_mobile_citizens",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "EU citizens who move without economic activity (jobseekers, students, retirees, family members, care-givers) face welfare access conditioned on 'sufficient resources' and 'comprehensive sickness insurance' — effectively a contributory test they cannot meet. They are denied access to non-contributory benefits (social assistance, minimum income) in the host state. Their home state's welfare system may not cover them abroad. Exit is trapped: moving to another Member State replicates the same test; returning home may mean loss of established life. The constraint extracts their citizenship right to equal treatment and transfers the fiscal burden to them or their home state."
+    },
+    {
+      "name": "low_contribution_history_migrants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Mobile workers with precarious, intermittent, part-time, or care-giving employment histories who fall below the contributory thresholds for benefit access (e.g., minimum insurance periods for unemployment, sickness, or pension). They pay contributions but do not qualify for benefits when needed. The constraint extracts their contributions without delivering the coordinated protection. Exit is constrained: they can seek more stable employment, but structural labor market segmentation makes this difficult; moving states resets contribution clocks."
+    },
+    {
+      "name": "net_recipient_member_states",
+      "role": "payer",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Member States that are net recipients of EU funds (Eastern and Southern Europe) see their citizens' mobility rights restricted by the contributory principle. Their citizens are disproportionately represented among economically inactive movers and low-contribution-history migrants. The fiscal transfers they receive from the EU budget do not compensate for the mobility losses. They are institutionally constrained: they cannot unilaterally change the coordination regulations, and blocking treaty changes would forfeit structural funds. They bear the cost of a settlement they did not design."
+    },
+    {
+      "name": "national_courts_and_administrations",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National courts (referring preliminary rulings to ECJ) and social security administrations (applying the habitual residence and genuine link tests) implement the constraint on the ground. They produce the case law that calibrates the contributory threshold. They are analytical observers of the constraint's operation but also its enforcement agents — their application decisions shape the effective extraction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the portability problem for economically active mobile workers: aggregates insurance periods across Member States, exports benefits, ensures equal treatment with host-state nationals. Prevents a race to the bottom where Member States would restrict access to protect their welfare budgets, which would destroy labor mobility.",
+    "transfer_function": "Moves welfare access from economically inactive mobile citizens and low-contribution-history migrants to the coordination budget (financed by contributions from active workers and employer contributions) and to net contributor Member States (reduced fiscal exposure). Net recipient states bear the cost of their citizens' restricted mobility without full compensation.",
+    "absent_voices": "Economically inactive mobile citizens (jobseekers, students, retirees, care-givers) and precarious mobile workers are structurally excluded from the legislative process that writes the coordination regulations. Their interests are represented only indirectly through the European Parliament (which has limited competence in social security) and national parliaments (which are constrained by EU law). Civil society organizations (EAPN, PICUM, AGE Platform) advocate but lack institutional power.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the contributory tiering vanished overnight, economically inactive EU citizens would gain immediate equal access to host-state welfare systems. Net contributor states would face sharp fiscal exposure increases, likely triggering political crisis (welfare chauvinism, free movement restrictions). The EU would need a federal welfare budget or re-nationalization of welfare. Mobile workers' portability rights would persist (they predate the contributory turn) but the fiscal settlement would collapse.",
+    "founding_problem": "The 2004/2007 enlargements brought large wage-differential mobility flows. Net contributor states feared 'welfare tourism' — economically inactive citizens moving to access higher benefits. The founding problem was fiscal sustainability of national welfare systems under free movement without a federal fiscal union. The contributory principle was the compromise: keep free movement for workers, condition it for non-workers.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Net contributor states and EU institutions attest the problem is live (ongoing mobility, demographic aging, fiscal pressure). Net recipient states, affected citizens, and independent researchers (e.g., EU-funded REMINDER project, OECD migration studies) attest the problem was exaggerated — 'welfare tourism' flows were small, fiscally negligible, and the contributory turn solves a political problem not a fiscal one. The corroboration split is the contestation."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "federation_membership_obligations__integration_primary",
+      "federation_membership_obligations__member_sovereignty_primary"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "integration_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "member_sovereignty_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "welfare_access_requires_contribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "free_movement_tiered_by_economic_activity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_maastricht_citizenship_settlement",
+    "drift_state": {
+      "moment": "post_2014_judisprudence_turn",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "jewish_territorial_claim__political_zionism_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_jewish_territorial_claim__political_zionism_reading",
+    "measurement_id_prefix": "jewish_territorial_claim_pzr",
+    "story_uid": "59e51e39-fc7e-40a5-96d4-c574a4e74b1f",
+    "created_at": "2026-08-15T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.73,
+    "resistance": 0.67,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Political Zionism: Jewish Statehood as Solution to Antisemitism Requiring Territorial Sovereignty with Jewish Majority",
+    "topic_domain": "political_history/settl_colonialism/nationalism_studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "jewish_immigrants_settlers",
+      "zionist_institutions",
+      "jewish_diaspora_leadership"
+    ],
+    "victims": [
+      "palestinian_arab_population",
+      "palestinian_peasantry_fellahin",
+      "palestinian_urban_notables"
+    ],
+    "vindicated_propositions": [
+      "jewish_national_self_determination",
+      "antisemitism_requires_territorial_solution"
+    ]
+  },
+  "interval": {
+    "start": 1897,
+    "end": 1948
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1897,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1917,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1897,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1917,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1897,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1917,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1936,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.82
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "zionist_leadership",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sets the political program for Jewish statehood, builds institutions (Jewish Agency, Haganah, Histadrut), negotiates with imperial powers, and directs settlement. Benefits from institutional control and international recognition. Exit means abandoning the statehood project; constrained by ideological commitment and sunk organizational investment."
+    },
+    {
+      "name": "jewish_immigrants_settlers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Arrive as refugees and ideologues; receive land, employment, and political membership in the emerging polity. Their identity fuses with the project — exit means not just leaving a place but unmaking a self-concept. The constraint subsidizes them with territory and rights extracted from the Arab population."
+    },
+    {
+      "name": "jewish_diaspora_leadership",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Mobilizes philanthropic and political resources for the project; gains a sovereign fallback and symbolic center. Not personally subject to the constraint's extraction on the ground; can redirect support if the project fails. Mobile exit — institutional, not existential."
+    },
+    {
+      "name": "palestinian_arab_population",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Subject to land expropriation, demographic displacement, political exclusion, and military conquest. Organized national movement emerges in response but is structurally outgunned. Exit options constrained by attachment to land, lack of alternative sovereignty, and British mandatory suppression of rebellion."
+    },
+    {
+      "name": "palestinian_peasantry_fellahin",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Lose land tenure to Jewish National Fund purchases and colonial land law; become wage laborers or refugees. No political voice, no exit — trapped in place by poverty, colonial administration, and the logic of 'conquest of labor' that displaces them."
+    },
+    {
+      "name": "palestinian_urban_notables",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempt political negotiation and petition to British; excluded from the constraint's decision structure (the Mandate's 'Jewish National Home' clause privileges the Zionist claim). Their authority erodes as the constraint's enforcement hardens; constrained exit via exile or accommodation."
+    },
+    {
+      "name": "british_mandate_authority",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Administers the constraint via the Mandate; both enables and restrains Zionist state-building. Extracts imperial strategic value (Suez, oil, air routes) but loses control as the constraint's internal logic outpaces British management. Mobile exit — withdraws in 1948 when the constraint becomes unmanageable."
+    },
+    {
+      "name": "international_legal_community",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces the partition resolution (UNGA 181) and later human rights frameworks. Observes the constraint's operation from outside; its verdicts legitimize or delegitimize but do not control enforcement. Analytical exit — can revise interpretation without material cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of Jewish collective survival under antisemitism by concentrating a dispersed people into a sovereign territorial polity with a Jewish demographic majority, enabling self-defense, immigration control, and international legal personality.",
+    "transfer_function": "Transfers land, labor, political sovereignty, and demographic weight from the indigenous Arab population to the Jewish immigrant-settler collective, mediated by British imperial administration and Zionist institutions.",
+    "absent_voices": "Palestinian Arab peasants and urban poor had no representation in the League of Nations Mandate system, the Zionist Congress, or British cabinets; their opposition was treated as rioting rather than politics. Arab women, Bedouin communities, and non-elite religious minorities were entirely excluded from the diplomatic frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the political Zionist constraint vanished in 1897, no Jewish state emerges in Palestine; the Jewish Question remains unresolved in Europe (leading to different outcomes: assimilation, emigration to Americas, or genocide); Arab Palestine evolves under Ottoman then British rule without settler-colonial displacement; the Middle East map is unrecognizable.",
+    "founding_problem": "The 'Jewish Question' in Europe: persistent antisemitism, legal discrimination, pogroms, and the failure of emancipation to secure Jewish safety and equality; the need for a territorial solution where Jews exercise sovereign self-determination.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Zionist leadership (Herzl, Weizmann, Ben-Gurion) attests the problem is live and requires statehood. Palestinian leadership (Husseini, Nashashibi) and Arab states attest the problem is European, not Palestinian, and the solution extracts from the wrong population. British Royal Commission (Peel 1937) attests the conflict is irreconcilable — two national claims on one land. Holocaust survivors' testimony corroborates the European danger but not the Palestinian extraction."
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the political Zionist reading of the Jewish territorial claim kernel: the insistence that Jewish safety and national normalization require a sovereign state with a Jewish demographic majority in Palestine. The reading treats the Arab population as a demographic obstacle to be managed — through transfer, partition, or military conquest — rather than as a partner in a shared polity. The constraint's extraction is the transfer of land, sovereignty, and demographic destiny from Palestinians to the Jewish national project; its coordination function is the concentration of a stateless people into a defensible polity. The engine computes per-seat types from the structural data: the Zionist leadership and immigrants experience coordination with subsidy; Palestinians experience enforced extraction with constrained exit; British authority experiences a declining coordination function that becomes pure administrative burden.",
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint's operation transfers the core material and political assets of an indigenous population to an immigrant collective. Suppression (0.82) is very high because the constraint's persistence depends on British military power, then Jewish military power, actively suppressing Palestinian political agency and physical presence. Theater ratio (0.28) is moderate: the 'civilizing mission' and 'making the desert bloom' narratives perform coordination while the mechanism is conquest. Accessibility collapse (0.73) is high because the binary of Jewish state vs. Arab Palestine leaves little room for bi-national or federal alternatives once the constraint is understood. Resistance (0.67) is substantial: Palestinian revolts (1936-39), diplomatic rejection, and military opposition persisted throughout.",
+    "directionality_logic": "Zionist leadership and immigrants are structural beneficiaries (d near 0.0–0.2): the constraint subsidizes them with land, rights, and sovereignty. Palestinian peasantry is fully trapped (d ≈ 1.0): no exit, total extraction. Palestinian notables are constrained payers (d ≈ 0.7–0.8): some agency but structurally excluded. British authority shifts from agenda-setter with mobile exit (d ≈ 0.3 early) to trapped administrator (d ≈ 0.6 late) as the constraint outpaces imperial control. Jewish diaspora leadership is mobile beneficiary (d ≈ 0.1): gains symbolic capital without material cost.",
+    "perspectival_gap": "The Zionist seat experiences a rope-like coordination structure (solving Jewish statelessness); the Palestinian seats experience a snare-like extraction structure (land and sovereignty taken by force); the British seat experiences a scaffold that collapses (transitional mandate that cannot manage the forces it unleashed). The engine computes this divergence from the declared roles, power, and exit options — the claimed_type 'tangled_rope' reflects the author's judgment that the constraint as a whole has BOTH genuine coordination (for Jews) AND asymmetric extraction (from Palestinians) requiring active enforcement.",
+    "mandatrophy_analysis": "The founding problem (European antisemitism) was real and catastrophic; the Holocaust confirmed it. But the constraint's mechanism — solving a European problem by extracting from a non-European population — means the solution carries its own structural extraction that persists after the founding crisis. The mandate has not atrophied; it intensified into statehood. The 'mandatrophy' question is whether the constraint's current form (an expansionist Jewish state) still serves the original coordination function or has become self-perpetuating extraction. The status 'contested' reflects that Zionists say yes (security still requires maximum land and demographic control); Palestinians and critics say no (the founding problem is solved for Jews, the extraction continues for its own sake).",
+    "kernel_context": "This constraint is the political_zionism_reading of the jewish_territorial_claim kernel. Sibling readings: cultural_zionism_reading (spiritual center without sovereignty), labor_zionism_reading (socialist regeneration through settlement), revisionist_zionism_reading (maximalist territory via Iron Wall). This reading prioritizes state-building and demographic majority over cultural content; treats Arab population as obstacle; considers transfer necessary. It coexists_with cultural and labor readings (different factions in the same movement) but forecloses revisionist reading in practice (Ben-Gurion's mainstream rejected Revisionism's maximalism, though 1948 outcomes approximated it). Foundational axiom: jewish_majority_sovereignty_necessary_for_safety (holdable, empirically_contingent — contested by binationalists and post-Zionists)."
+  },
+  "omegas": [
+    {
+      "id": "transfer_necessity_ambiguity",
+      "question": "Was population transfer (displacement of Arabs) structurally necessary for a Jewish demographic majority, or was it a contingent choice by Zionist leadership?",
+      "resolution_mechanism": "Counterfactual analysis of 1947-49: could a Jewish state with a stable majority have emerged without mass expulsion, given the demographic ratios and the UN partition borders? Compare with binationalist proposals (Magnes, Buber) and the actual military dynamics.",
+      "impact": "If necessary, the extraction is baked into the coordination function (tangled_rope is the only honest type). If contingent, the extraction is a political choice layered on top of coordination (could be rope with a snare overlay).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's extraction is intrinsic to its coordination or a separable political choice."
+    },
+    {
+      "id": "british_complicity_vs_constraint",
+      "question": "Was British mandatory policy an independent enforcement of the constraint, or was it captured by Zionist pressure?",
+      "resolution_mechanism": "Archive analysis of British cabinet debates, Colonial Office correspondence, and military reports 1917-1948: track when British policy leads vs. follows Zionist demands.",
+      "impact": "If British enforcement is independent imperial logic, the constraint has institutional depth beyond Zionist agency. If captured, the constraint's enforcement is a Zionist-British fusion that collapses when British interest ends (1948).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's active enforcement is autonomously British or Zionist-captured."
+    },
+    {
+      "id": "founding_problem_persistence",
+      "question": "Does the Holocaust's confirmation of European antisemitism validate the constraint's founding problem permanently, or does the founding problem's resolution (Jewish state exists) change the constraint's legitimacy?",
+      "resolution_mechanism": "Track Zionist discourse 1948-1967: does the rhetoric shift from 'refuge from antisemitism' to 'historical right to the whole land'? Measure the gap between declared security needs and actual territorial expansion.",
+      "impact": "If founding problem remains live, the constraint retains coordination legitimacy. If founding problem is dead but constraint expands, mandatrophy resolves toward snare/piton.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether the constraint's original justification remains its operating logic."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "jewish_territorial_claim__labor_zionism_reading",
+      "jewish_territorial_claim__cultural_zionism_reading",
+      "jewish_territorial_claim__revisionist_zionism_reading",
+      "palestinian_national_movement_constraint",
+      "british_mandate_constraint"
+    ],
+    "dual_formulation_note": "This reading (political_zionism) shares the kernel jewish_territorial_claim with three sibling readings. The epsilon values diverge: cultural_zionism (ε≈0.2, rope), labor_zionism (ε≈0.55, tangled_rope), revisionist_zionism (ε≈0.85, snare). This reading sits at ε≈0.78 (tangled_rope) — state-building prioritized, transfer necessary. The network edges represent the constraint family: each reading inherits the kernel's territorial claim but differs in extraction mechanism and coordination scope."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "cultural_zionism_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "labor_zionism_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "revisionist_zionism_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "jewish_majority_sovereignty_necessary_for_safety",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "arab_population_as_demographic_obstacle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "herzlian_statist_solution",
+    "drift_state": {
+      "moment": "post_1948_statehood",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "jewish_territorial_claim"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

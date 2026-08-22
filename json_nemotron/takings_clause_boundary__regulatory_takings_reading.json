@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "takings_clause_boundary__regulatory_takings_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_takings_clause_boundary__regulatory_takings_reading",
+    "measurement_id_prefix": "takings_clause_boundary__regulatory_takings_reading",
+    "story_uid": "e0c575f5-b560-4b0c-b851-967087720233",
+    "created_at": "2026-08-03T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Takings Doctrine (Pennsylvania Coal v. Mahon / Penn Central)",
+    "topic_domain": "constitutional_law/property_rights/regulatory_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "property_owners_severe_diminution",
+      "land_use_regulators",
+      "judicial_branch"
+    ],
+    "victims": [
+      "property_owners_severe_diminution",
+      "taxpayers_general",
+      "regulatory_state_legitimacy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the regulatory_takings_reading a distinct constraint from the categorical_takings_reading and physical_appropriation_reading, or a single constraint evaluated through different observables?",
+      "resolution_mechanism": "The ε-invariance principle: if the three readings yield different ε values for the same kernel, they are distinct constraints. This reading's ε=0.42 reflects substantial extraction through the ad hoc balancing test's uncertainty and compensation transfers. The categorical reading's ε is lower (per se rules constrain extraction). The physical reading's ε is near-zero (only direct seizure triggers compensation). Three ε values → three constraints linked by network.affects_constraints.",
+      "impact": "Confirms this story must be authored independently with its own metrics, stakeholders, and classification. The kernel context is recorded in commentary.kernel_context and cs_structure.reading_relations/axioms; it does not merge the readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this reading instantiates one ε-invariant constraint, not a measurement variant of a single constraint."
+    },
+    {
+      "id": "diminution_threshold_ambiguity",
+      "question": "What quantum of value diminution constitutes 'too far' — and is the threshold a structural property of the constraint or a judicial construction that varies by decision-maker?",
+      "resolution_mechanism": "Longitudinal analysis of Penn Central factor application across circuits and decades: if outcomes cluster around a stable threshold, the constraint has structural coherence; if outcomes are predictably divergent based on judicial philosophy, the threshold is a construction masking extraction.",
+      "impact": "If the threshold is a judicial construction, the constraint's extractiveness is higher than measured (the balancing test is a mechanism for discretionary extraction). If structural, the coordination function is genuine and the ad hoc test is the price of that coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 'too far' is a discoverable line or a cover for discretionary extraction."
+    },
+    {
+      "id": "regulatory_uncertainty_as_extraction",
+      "question": "Does the uncertainty created by the ad hoc balancing test function as an extraction mechanism (chilling regulation, enabling strategic litigation) or as a genuine coordination cost of calibrating property protection?",
+      "resolution_mechanism": "Measure regulatory chill: track regulation abandonment or modification rates attributable to takings litigation risk. Compare to jurisdictions with per se rules. If chill exceeds what calibration requires, uncertainty is extractive.",
+      "impact": "If uncertainty is extractive, the constraint's suppression is under-measured (it suppresses regulatory alternatives, not just property uses). If coordination cost, the current metrics are descriptively accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether doctrinal uncertainty is a feature or a bug."
+    },
+    {
+      "id": "taxpayer_victim_structure",
+      "question": "Are taxpayers a genuine victim class bearing the cost of compensation awards, or is this a diffuse political grievance that does not map to the directionality engine's victim concept?",
+      "resolution_mechanism": "Trace compensation payments from specific regulatory programs to general revenue or program budgets. If payments come from general funds, taxpayers bear diffuse costs; if from program fees, regulated parties bear them. Compare fiscal incidence to the directionality derivation for 'taxpayers_general'.",
+      "impact": "If taxpayers are genuine victims, the victim set expands and the constraint's extraction is more widely distributed. If not, the victim set narrows to property owners and the regulatory state itself.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether taxpayer burden is a structural victim relationship or political rhetoric."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1922,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1978,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1922,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1978,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1922,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1978,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 1922,
+    "end": 2019
+  },
+  "commentary": {
+    "narrative_context": "The regulatory takings reading of the Takings Clause holds that regulations diminishing property value 'too far' require just compensation, per Pennsylvania Coal v. Mahon (1922) and the Penn Central ad hoc balancing test (1978). This reading expands the victim set beyond physical appropriation to include severe economic diminution, introduces a multi-factor balancing test that creates doctrinal uncertainty, and provides property protection against non-physical extraction. The constraint is claimed as tangled_rope because it performs a genuine coordination function (calibrating the boundary between regulation and taking) while also extracting: property owners facing severe diminution are coordinated with the regulatory state, but the uncertainty of the test and the compensation transfers extract from both property owners (litigation costs, unpredictability) and the regulatory state (compensation liability, chilled regulation). Taxpayers bear diffuse compensation costs. Active enforcement is required — courts must adjudicate each balancing test, and the doctrine's persistence depends on judicial willingness to find takings in novel contexts.",
+    "key_agents": [
+      "property_owners_severe_diminution: Primary target AND beneficiary (powerless/identity_locked) — bears extraction from uncertainty, benefits from compensation when takings found",
+      "land_use_regulators: Agenda setter (institutional/constrained) — administers regulations subject to takings review; constrained by doctrine but sets regulatory agenda",
+      "judicial_branch: Agenda setter (institutional/analytical) — adjudicates balancing test, defines 'too far'; analytical exit but institutional power",
+      "taxpayers_general: Victim (powerless/trapped) — bears compensation costs diffusely; no exit from tax liability",
+      "regulatory_state_legitimacy: Victim (institutional/identity_locked) — chilled regulation, doctrinal uncertainty undermines governance capacity; identity-locked to regulatory mission"
+    ],
+    "logic_rationale": "Base extractiveness (0.42) reflects the compensation transfer plus the cost of doctrinal uncertainty — the ad hoc test creates litigation markets, strategic behavior, and regulatory chill that exceed the coordination value. Suppression (0.35) is moderate: the constraint does not forbid regulation outright but raises its cost and risk, suppressing some regulatory alternatives. Theater ratio (0.25) captures the performative invocation of 'balancing' where outcomes often track judicial philosophy rather than factor application. Accessibility collapse (0.45) is partial: property owners can sometimes avoid diminution (mobile exit for some asset classes), but identity-locked owners (family land, unique resources) face near-total collapse. Resistance (0.55) is substantial: regulated entities litigate aggressively, legislatures craft workarounds, and scholars contest the doctrine's coherence.",
+    "directionality_logic": "Property owners with severe diminution are structurally dual-positioned: they are targets of the uncertainty and litigation costs (d → 0.7), but beneficiaries when compensation is awarded (d → 0.2). The engine derives this from the dual beneficiary/victim declaration. Land use regulators are agenda setters with constrained exit (they cannot abandon regulation; d ~0.4). The judicial branch is an agenda setter with analytical exit (d ~0.15). Taxpayers are trapped victims (d → 0.9). Regulatory state legitimacy is identity-locked (d → 0.8) — the state cannot exit its regulatory function, and the doctrine's uncertainty is internalized as institutional drag.",
+    "perspectival_gap": "The property owner seat diverges most: from the owner's perspective, the doctrine is a snare when uncertainty chills use of their property, but a rope when compensation protects them. The regulator seat experiences it as a tangled rope — genuine coordination need (knowing the boundary) but extractive overhead (unpredictable liability). The judicial seat sees coordination (providing a decision procedure) with modest extraction (adjudication costs). The taxpayer seat sees pure extraction (snare-like) — diffuse cost, no benefit. The engine computes these per-seat types from the structural data.",
+    "mandatrophy_analysis": "The founding problem (calibrating regulation vs. taking) remains live, but the ad hoc test has accumulated extraction layers: litigation industry, strategic behavior, compensation as regulatory tax. The doctrinal form persists (mandatrophy unresolved) because no constituency benefits enough to reform it — property owners want stronger protection, regulators want clearer rules, courts want manageable standards, but the coalition for a per se replacement fractures on where the line falls. This is the tangled rope dynamic: coordination function alive, extraction layered on top.",
+    "kernel_context": "This constraint is the regulatory_takings_reading of the takings_clause_boundary kernel. Sibling readings: categorical_takings_reading (per se rules for physical occupation/total wipeout; Penn Central for rest) and physical_appropriation_reading (only direct seizure triggers compensation). This reading expands the victim set to severe diminution without possession, introduces the ad hoc balancing test, and creates regulatory uncertainty as the price of broader property protection. The three readings have different ε values (this: 0.42, categorical: ~0.25, physical: ~0.05) and are linked as a constraint family via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "takings_clause_boundary__categorical_takings_reading",
+      "takings_clause_boundary__physical_appropriation_reading",
+      "inverse_condemnation_doctrine",
+      "penn_central_factors_application"
+    ],
+    "dual_formulation_note": "Takings Clause Boundary constraint family: three readings of the same constitutional text with divergent ε. Regulatory takings reading (this story) has highest ε due to ad hoc balancing test uncertainty and expanded victim set. Categorical reading uses per se rules to constrain extraction. Physical appropriation reading has near-zero ε by limiting takings to physical seizure. The upstream physical/categorical readings are often cited as limiting principles for the downstream regulatory reading, creating institutional coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "property_owners_severe_diminution",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Owners whose property suffers severe economic diminution from regulation (e.g., 90%+ value loss from wetlands designation, historic preservation, zoning downzoning). They bear the uncertainty of the Penn Central test — cannot predict if their loss crosses 'too far.' When takings are found, they receive compensation (beneficiary). When not, they absorb the loss with no recourse (payer). Exit is identity-locked: family land, unique location, generational attachment make sale or abandonment existentially costly. Spatial scope is local (the regulation hits their specific parcel), but the doctrine's reach is national."
+    },
+    {
+      "name": "land_use_regulators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State and local agencies (planning departments, environmental regulators, zoning boards) that promulgate regulations affecting property value. They set the regulatory agenda but operate under the shadow of takings liability. Cannot exit the regulatory function (constrained exit) — the political mandate to regulate is institutional. Their power is institutional (coercive authority), but they are constrained by the doctrine's uncertainty: regulations are drafted defensively, ambitious programs abandoned or scaled back to avoid takings claims."
+    },
+    {
+      "name": "judicial_branch",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts (especially SCOTUS) that articulate and apply the Penn Central factors. They adjudicate 'too far' case by case, creating the doctrine's content. Analytical exit: judges can reason to different outcomes without personal cost. Institutional power: their decisions bind all regulators and property owners. They benefit from the doctrine's flexibility (judicial discretion) but bear legitimacy costs when outcomes appear result-oriented."
+    },
+    {
+      "name": "taxpayers_general",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "General taxpayers who fund compensation awards when takings are found. Payments come from general revenues or agency budgets, diffused across the tax base. No exit from tax liability (trapped). No direct benefit from the regulation or the taking — purely extractive from this seat. The cost per taxpayer is small but aggregate compensation liability is substantial (billions annually across jurisdictions)."
+    },
+    {
+      "name": "regulatory_state_legitimacy",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The regulatory state's capacity to govern effectively. Takings uncertainty chills regulation: agencies avoid innovative or ambitious rules, settle claims to avoid precedent, and lose policy flexibility. This is not a human agent but an institutional capacity — identity-locked because the state cannot 'exit' its governance function. The extraction is the foregone regulatory value: public goods not provided, externalities not internalized, because the takings risk made the regulation too costly to pursue."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decision procedure for distinguishing regulation from taking when government action diminishes property value without physical seizure. Solves the coordination problem of allocating loss between property owners and the public when regulation destroys value: the balancing test (economic impact, investment-backed expectations, character of government action) is the mechanism.",
+    "transfer_function": "Moves compensation liability from the public fisc to property owners when regulation is deemed 'too far' (government pays owner), and moves the cost of uncertainty and foregone regulation from the regulatory state to the public when regulation is chilled (public loses regulatory benefits). The ad hoc test creates a litigation market that transfers wealth to attorneys and experts.",
+    "absent_voices": "Future generations who bear the cost of chilled environmental/land-use regulation (climate adaptation, habitat preservation, floodplain management not undertaken due to takings risk). Non-property-owning residents of regulated areas who benefit from regulation but have no standing in takings claims. Indigenous nations whose land-use sovereignty is constrained by the same doctrine but were not consulted in its creation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regulatory takings doctrine vanished overnight, regulations that severely diminish value could be enacted without compensation liability. Property owners would lose the compensation backstop but gain regulatory predictability (no 'too far' line to litigate). Regulators would gain freedom to pursue ambitious policies but lose the constraint that forces internalization of regulatory costs. The litigation industry around Penn Central would collapse. The allocation of regulatory loss would shift to the political process.",
+    "founding_problem": "How to distinguish legitimate regulation (which may diminish value) from a taking (which requires compensation) when government acts through law rather than physical seizure. Pennsylvania Coal v. Mahon (1922) recognized that regulation could go 'too far' and become a taking, but provided no clear line.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested as live by all three institutional seats (regulators, courts, property owners) — each claims the line-drawing problem persists. However, the regulatory state's corroboration is self-interested (it wants clearer rules to reduce liability). Independent corroboration comes from legislative history: Congress has repeatedly considered but never enacted a statutory takings standard, suggesting the problem resists legislative solution. Scholars across the ideological spectrum (Epstein, Sax, Michelman, Krier) agree the line-drawing problem is genuine, though they disagree on the solution."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "takings_clause_boundary__categorical_takings_reading",
+      "takings_clause_boundary__physical_appropriation_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "categorical_takings_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "physical_appropriation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "regulation_can_be_taking_without_physical_seizure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "ad_hoc_balancing_calibrates_just_compensation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "mahon_too_far_principle",
+    "drift_state": {
+      "moment": "penn_central_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

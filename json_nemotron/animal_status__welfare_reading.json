@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "animal_status__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "fd89259c-2d95-43db-aff0-b44459588fac"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.31,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Welfare Regulation of Animal Use",
+    "topic_domain": "applied_ethics/legal_philosophy/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "animal_agriculture_industry",
+      "biomedical_research_establishment",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "farmed_animals",
+      "laboratory_animals"
+    ],
+    "vindicated_propositions": [
+      "sentience_criterion_for_moral_consideration",
+      "proportionality_principle_in_animal_use"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint one reading of the contested animal_status kernel, and does the welfare reading instantiate a distinct constraint from the abolitionist and property readings?",
+      "resolution_mechanism": "Structural analysis: the three readings produce different victim sets, different extractiveness profiles, and different exemption structures — each reading instantiates its own ε-invariant constraint per DP-001.",
+      "impact": "If readings are structurally distinct constraints, each must be authored as a separate story with its own ε, beneficiaries, victims, and classification. Conflating them produces ε-invariance violation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the welfare reading is a structurally distinct constraint from sibling readings of the animal_status kernel."
+    },
+    {
+      "id": "welfare_exemption_extraction_boundary",
+      "question": "Where does the welfare constraint's coordination function end and its extraction function begin — specifically, are the exemption structures (agricultural exceptions, research exceptions, customary practice carve-outs) necessary for the coordination of humane treatment, or are they extraction mechanisms that capture the regulatory apparatus?",
+      "resolution_mechanism": "Comparative regulatory analysis: jurisdictions with narrower exemptions vs. broader exemptions — if animal welfare outcomes do not degrade when exemptions are narrowed, the exemptions are extractive rather than coordinative.",
+      "impact": "If exemptions are extractive, the constraint's effective extraction is higher than its welfare provisions alone suggest, and the Tangled Rope classification is reinforced. If exemptions are coordinative, the constraint approaches a purer Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exemption structures in welfare regulation serve coordination or extraction."
+    },
+    {
+      "id": "sentience_interests_victim_set_boundary",
+      "question": "Does the welfare reading's victim set properly include animals subjected to gratuitous harm but exclude animals in instrumental use with welfare protections, or does the sentience/interests premise structurally require a broader victim set?",
+      "resolution_mechanism": "Logical analysis of the welfare premise: if sentience grounds interests that constrain use, does the distinction between 'gratuitous' and 'instrumental' harm hold, or does it collapse under the premise's own logic?",
+      "impact": "If the premise collapses, the welfare reading either forecloses into abolitionist_reading or reveals itself as a false summit masking property_reading extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the welfare reading's victim set boundary is structurally stable given its own premises."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1822,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1876,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1911,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1966,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1822,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1876,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1911,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1966,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1822,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1876,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1911,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1966,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1822,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The welfare reading of animal status holds that animals are sentient beings with interests that constrain but do not prohibit human use. This reading grounds the modern animal welfare regulatory regime: anti-cruelty statutes, husbandry standards, laboratory animal care requirements, and the 3Rs framework (Replacement, Reduction, Refinement). The constraint coordinates a baseline of humane treatment while preserving the institutional legitimacy of animal agriculture, biomedical research, and other instrumental uses. However, the regulatory architecture contains extensive exemption structures — agricultural exceptions for 'customary farming practices,' research exceptions for 'scientific necessity,' and enforcement gaps that concentrate protection on companion animals while farmed and laboratory animals receive minimal substantive protection. The constraint extracts via these exemptions: the welfare framework legitimates the continued expansion of industrial animal use by providing a moral and legal cover that the system is 'humane,' while the exemptions ensure the economic logic of intensive use remains undisturbed. Extraction has risen from ~0.12 (early anti-cruelty laws targeting sadistic acts) to ~0.45 (comprehensive regulatory regime with industrial-scale exemptions), and theater has risen from ~0.08 to ~0.38 as welfare performance (inspections, protocols, certifications) increasingly substitutes for substantive protection.",
+    "key_agents": [
+      "animal_agriculture_industry: Primary beneficiary (institutional/arbitrage) — gains legitimacy and regulatory capture from welfare framework while exemptions preserve extraction",
+      "biomedical_research_establishment: Primary beneficiary (institutional/arbitrage) — gains social license and funding stability from 3Rs framework while 'scientific necessity' exemptions preserve experimental freedom",
+      "regulatory_agencies: Agenda setter (institutional/arbitrage) — administers welfare standards, captures enforcement discretion, rotates with industry",
+      "farmed_animals: Primary victim (powerless/trapped) — bears 99%+ of animal use by biomass; welfare protections minimal, exemptions near-total",
+      "laboratory_animals: Primary victim (powerless/trapped) — bears concentrated harm in research; 3Rs framework aspirational, 'necessity' exemption broad",
+      "animal_advocacy_organizations: Payer/beneficiary dual (organized/constrained) — extracts concessions through litigation and campaigns; co-opted into welfare framework",
+      "consumers: Beneficiary/payer dual (organized/constrained) — gains 'humane' labeling assurance; pays price premiums that flow to industry not animals",
+      "philosophical_observers: Observer (analytical/analytical) — evaluates structural coherence of welfare premise against abolitionist and property alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.45) reflects the scale of animal use legitimated by the welfare framework relative to the marginal welfare gains delivered. The constraint coordinates genuine harm reduction (anti-cruelty baseline, some husbandry improvements) but extracts massively through exemptions that preserve the economic core of industrial use. Suppression (0.52) operates through legal categorization (animals as property), regulatory capture (industry-dominated standard-setting), and epistemic closure (welfare science framed as 'sufficient' without addressing use itself). Theater (0.38) is rising: inspection regimes, certification programs, and transparency initiatives create appearance of oversight while exemption structures remain intact. Accessibility collapse (0.42) is moderate: alternatives exist (plant-based systems, non-animal methods) but are structurally disadvantaged by the welfare framework's legitimation of the status quo. Resistance (0.31) is growing but fragmented: advocacy campaigns, litigation, and market shifts meet institutional inertia and regulatory capture.",
+    "perspectival_gap": "From the agenda_setter seat (regulatory agencies), the constraint appears as genuine coordination: it solves the problem of public demand for humane treatment while preserving food security and medical progress. From the victim seats (farmed animals, laboratory animals), the same structure operates as extraction with coordination theater: their interests are acknowledged in principle but overridden by exemption structures in practice. From the beneficiary seats (industry, research), the constraint is a favorable settlement: it absorbs advocacy pressure, provides marketing assets ('humane'), and stabilizes the regulatory environment. The engine computes these divergent per-seat classifications from the structural data — the claimed_type (tangled_rope) represents the generating model's structural assessment, not a reconciliation of perspectives.",
+    "directionality_logic": "Beneficiaries (industry, research, agencies) collect rents: legitimacy, regulatory capture, social license, revolving-door careers. Their directionality d is low (beneficiary end). Victims (farmed animals, laboratory animals) bear concentrated harm with near-zero exit: biological confinement, legal property status, no political voice. Their d is near 1.0 (full target). Dual-positioned agents (advocacy orgs, consumers) sit near symmetric (d ~0.5): they gain some coordination benefit (reduced gratuitous cruelty) but pay costs (advocacy resources, price premiums) and are constrained by the framework's legitimation function. Observers sit at analytical (d = 0.5 by definition).",
+    "mandatrophy_analysis": "The founding problem — preventing sadistic cruelty to animals — was substantially addressed by early anti-cruelty laws (1822-1900). The modern welfare regulatory regime (post-1966) addresses a different problem: managing public opposition to industrial animal use while preserving that use. The mandate has atrophied from 'prevent cruelty' to 'legitimate industrial use through welfare performance.' This is not a pure snare (coordination function is real but narrow) nor a pure rope (extraction is structural and large). Tangled Rope captures the hybrid: genuine coordination of baseline humane treatment AND asymmetric extraction via exemption structures that preserve the economic logic of intensive use. The classification prevents mislabeling the coordination as pure extraction (which would miss the real harm reduction) or the extraction as pure coordination (which would miss the industrial-scale victimization).",
+    "kernel_context": "This constraint is the welfare_reading of the animal_status kernel. The kernel_id is 'animal_status' — the contested commitment about the moral and legal status of animals. This reading instantiates a constraint where animals have interests that constrain but do not prohibit instrumental use. Sibling readings: abolitionist_reading (animals as rights-holders precluding all instrumental use — victim set includes ALL animals in instrumental use; extractiveness near 0 for the advocated arrangement but high for the status quo it opposes) and property_reading (animals as legal objects without independent standing — no victims in the welfare sense; extraction flows entirely to owners/users). The three readings produce structurally distinct constraints with different ε, different victim/beneficiary sets, and different classifications. Per DP-001 (ε-invariance), they must be authored as separate stories linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status__abolitionist_reading",
+      "animal_status__property_reading"
+    ],
+    "dual_formulation_note": "The animal_status kernel decomposes into three constraint stories: welfare_reading (this file), abolitionist_reading, and property_reading. The welfare reading cites the sentience criterion (shared with abolitionist) to constrain use, but the property reading's legal categorization (animals as property) provides the structural platform for the exemption architecture that enables extraction. The welfare reading is downstream of the property reading's legal categorization and upstream of the abolitionist reading's challenge to the instrumental-use premise. network.affects_constraints links this reading to both siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "animal_agriculture_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Receives regulatory legitimacy, social license, and marketing assets ('humane certified') from the welfare framework. Agricultural exemptions for 'customary farming practices' preserve intensive confinement, mutilations without analgesia, and early weaning. Industry dominates standard-setting bodies and rotates personnel with regulatory agencies. Exit is arbitrage-grade: can relocate production, lobby for weaker standards, or capture certification schemes."
+    },
+    {
+      "name": "biomedical_research_establishment",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gains public trust, funding stability, and ethical cover from the 3Rs framework and Institutional Animal Care and Use Committees (IACUCs). 'Scientific necessity' exemptions are broadly interpreted; protocol review is internal. Non-animal methods receive marginal funding. Exit is arbitrage-grade: can outsource to jurisdictions with weaker standards, define 'necessity' expansively, and control validation pathways for alternatives."
+    },
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers welfare standards (USDA APHIS, NIH OLAW, EU DG SANTE), controls enforcement discretion, and staffs from industry. Mandates are dual: promote animal welfare AND promote animal agriculture/research. Revolving-door employment creates structural alignment with regulated industries. Exit is arbitrage-grade: career paths flow between agencies, industry, and consulting."
+    },
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears 99%+ of animal use by biomass (70+ billion land animals/year). Welfare protections minimal: US '28 Hour Law' and Humane Slaughter Act exclude poultry; EU directives permit intensive confinement; 'customary farming practice' exemptions override standards. No legal standing, no political voice, biological confinement. Exit is trapped: bred into the system, no alternative exists within the constraint."
+    },
+    {
+      "name": "laboratory_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears concentrated harm in research (100+ million/year globally). 3Rs framework is aspirational: Replacement receives <1% of research funding; Reduction is offset by increasing study numbers; Refinement applies only when 'scientifically compatible.' IACUC review is internal, approval rates >98%. 'Scientific necessity' exemption is self-certified by researchers. Exit is trapped: bred for purpose, no legal personhood, no release pathway."
+    },
+    {
+      "name": "animal_advocacy_organizations",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Extracts incremental concessions (cage-free pledges, funding for alternatives) through litigation, campaigns, and corporate pressure. Simultaneously co-opted: welfare reforms become the ceiling of achievable change; 'pragmatic' organizations gain access and funding while abolitionist demands are marginalized. Exit is constrained: can push for stronger welfare or shift to abolitionist framing, but the welfare framework structures the discourse and funding landscape."
+    },
+    {
+      "name": "consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Gains psychological assurance from 'humane' labeling and welfare certifications. Pays price premiums for welfare-labeled products that flow to industry margins, not animal welfare. Choice architecture is structured by the welfare framework: 'humane' options exist within the system; opting out requires rejecting animal products entirely. Exit is constrained: plant-based alternatives exist but are disadvantaged by subsidies, labeling rules, and cultural normalization of animal use."
+    },
+    {
+      "name": "philosophical_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Evaluates the structural coherence of the welfare premise against abolitionist and property alternatives. Analyzes whether the sentience/interests criterion logically entails the victim-set boundary the welfare reading draws, or whether the distinction between 'gratuitous' and 'instrumental' harm collapses under the premise's own logic. Neither collects nor pays; provides the analytical seat for classification."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a socially accepted baseline of humane treatment for animals, resolving the coordination problem of public opposition to cruelty while preserving the institutional legitimacy of animal agriculture and biomedical research. Solves: 'How can society use animals at scale without appearing barbaric?'",
+    "transfer_function": "Moves legitimacy, social license, and regulatory stability from the public (concerned about cruelty) to animal-use industries (agriculture, research). Moves welfare costs (compliance, certification, marginal housing improvements) from industries to consumers via price premiums. Moves harm (confinement, suffering, death) from industries to animals via exemption structures that preserve intensive use.",
+    "absent_voices": "Animals themselves are structurally excluded — they cannot testify, litigate, or vote. Future generations of animals (who will be born into the system) are excluded. Abolitionist advocates are excluded from regulatory standard-setting bodies. Non-animal method developers are excluded from validation pathways controlled by animal-use establishments. These voices would challenge the victim-set boundary and the exemption architecture.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the welfare constraint vanished overnight, animal agriculture and research would lose their primary legitimacy mechanism. Public opposition would surge without the 'humane' cover. Industries would face direct pressure to abolish or radically transform. Legal property status of animals would be exposed without the welfare mediation. The world would rearrange toward either abolitionist pressure or property-reading regression — the welfare framework is the structural dam holding both at bay.",
+    "founding_problem": "Early 19th century: preventing sadistic cruelty to animals (bear-baiting, horse-beating, gratuitous violence) which was seen as degrading to human character and public morals. The founding problem was cruelty as a vice, not animal use as such.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical scholarship (Ritvo, Thomas, Francione) attests that the founding problem — sadistic cruelty as a public vice — was substantially addressed by early anti-cruelty laws (Martin's Act 1822, subsequent statutes). The modern welfare regime addresses a different problem: managing opposition to industrial-scale instrumental use. The animal-use industries (beneficiaries) claim the problem is still live (ongoing cruelty); abolitionist and independent scholars (outside beneficiaries) attest the problem has shifted. No corroboration from outside the beneficiary set supports 'live' status."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "animal_status__property_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentience_grounds_interests_that_constrain_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "instrumental_use_permissible_with_welfare_provisions",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "anti_cruelty_legitimacy_framework",
+    "drift_state": {
+      "moment": "industrial_animal_use_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

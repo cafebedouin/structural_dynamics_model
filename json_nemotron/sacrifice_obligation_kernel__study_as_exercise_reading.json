@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_kernel__study_as_exercise_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sacrifice_obligation_kernel__study_as_exercise_reading",
+    "measurement_id_prefix": "sacrifice_study_exercise",
+    "story_uid": "cbfdf7be-4300-4f59-9f2e-6b1568ed6ee8"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Study as Genuine Exercise of Sacrifice Obligation (Halakhic Reading)",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "rabbinic_authority"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "torah_study_as_avodah",
+      "authorized_transformation_of_mitzvot",
+      "intellectual_engagement_fulfills_obligation"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this constraint instantiate one reading of the sacrifice_obligation_kernel rather than the kernel itself?",
+      "resolution_mechanism": "Committee frame: this story IS the study_as_exercise_reading of the sacrifice_obligation_kernel. The sibling readings (messianic_suspension_reading, performance_only_reading, symbolic_archive_reading) are separate constraints with their own ε values, beneficiaries, and classifications.",
+      "impact": "Confirms ε-invariance discipline: each reading gets its own constraint_id, its own extractiveness, its own type. The kernel is the shared referent; the readings are distinct instantiated constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the sacrifice_obligation_kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "interpretive_monopoly_as_extraction",
+      "question": "Does the rabbinic authority's interpretive monopoly on what counts as fulfillment constitute a subtle extraction mechanism despite low measured extractiveness?",
+      "resolution_mechanism": "Trace whether the authority's gatekeeping power over valid study methods, canonical texts, and认定 of 'genuine engagement' creates dependency that benefits the authority structurally — even if no material transfer occurs. Compare with performance_only_reading where the authority's gatekeeping is over physical performance.",
+      "impact": "If the interpretive monopoly functions as structural extraction (controlling access to legitimacy), the constraint's effective classification shifts toward tangled_rope despite near-zero base extractiveness. This would reveal a coordination-extraction hybrid masked by the 'study is fulfillment' framing.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether interpretive gatekeeping constitutes extraction even without material transfer."
+    },
+    {
+      "id": "suspension_vs_transformation_boundary",
+      "question": "Is the boundary between 'authorized transformation' (this reading) and 'divine suspension' (messianic_suspension_reading) a genuine structural difference or a terminological distinction without operational consequence?",
+      "resolution_mechanism": "Examine whether the two readings produce different halakhic consequences for: (a) liability for non-study, (b) conditions for resumption of physical sacrifice, (c) status of one who studies without proper intent. If consequences are identical, the boundary is terminological.",
+      "impact": "If structurally identical, the two readings collapse into one constraint (ε-invariance violation — same ε, same stakeholders, same type). If distinct, they remain separate stories linked by network.affects_constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether authorized transformation and divine suspension are structurally distinct or terminologically distinct only."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 250
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the study_as_exercise_reading of the sacrifice_obligation_kernel: the halakhic position that intellectual engagement with sacrifice law (learning the tractates, analyzing the procedures, understanding the requirements) constitutes genuine fulfillment of the mitzvah under current conditions where the Temple stands destroyed. The obligation is not suspended or reduced — it is occupied through study. This reading claims zero extractiveness because no material transfer occurs and the arrangement is framed as authorized transformation rather than loss. The beneficiary is rabbinic authority, which holds the interpretive monopoly on what counts as valid study, which texts are canonical, and what constitutes 'genuine engagement.' The vindicated propositions are Torah study as avodah (service), authorized transformation of mitzvot when performance is impossible, and intellectual engagement as obligation-fulfillment.",
+    "key_agents": [
+      "rabbinic_authority: Primary beneficiary (institutional/arbitrage) — holds interpretive monopoly on fulfillment criteria",
+      "observant_jews: Primary participants (organized/constrained) — engage in study as mitzvah performance",
+      "messianic_expectants: Secondary participants (organized/identity_locked) — hold sibling reading of divine suspension",
+      "temple_restoration_advocates: Excluded (powerful/trapped) — hold performance_only_reading",
+      "secular_scholars: Observer (analytical/analytical) — study as cultural-historical archive (symbolic_archive_reading)"
+    ],
+    "logic_rationale": "Extractiveness is near-zero (0.02) because the constraint involves no material transfer, no mandatory payment, and no coercive extraction — study is voluntary intellectual engagement framed as fulfillment. Suppression is low (0.15) but non-zero because the interpretive monopoly creates soft boundaries: unauthorized study methods or texts may be dismissed as 'not genuine engagement,' creating subtle pressure toward authorized channels. Theater ratio is minimal (0.05) because the study function is the genuine article, not a performance masking extraction. Accessibility collapse is low (0.2) because alternatives (other readings, secular study, non-participation) remain fully accessible — no one is prevented from holding a different reading. Resistance is moderate (0.35) because the performance_only_reading and messianic_suspension_reading actively contest this reading's legitimacy, and the symbolic_archive_reading denies its halakhic force entirely.",
+    "perspectival_gap": "From the rabbinic authority seat, this constraint is pure coordination (rope): it solves the problem of how to maintain the sacrifice obligation's vitality when physical performance is impossible, and the authority's interpretive role is the coordination mechanism. From the observant Jew seat, the constraint is experienced as genuine obligation-fulfillment — study IS the mitzvah. From the performance_only_reading seat, this reading appears as a substitution that avoids the real obligation. From the messianic_suspension_reading seat, this reading appears as presumptuous — only divine authority can transform the obligation. The engine computes these per-seat classifications from the structural data.",
+    "directionality_logic": "Rabbinic authority is the structural beneficiary (d near 0.0): it controls the interpretive framework that defines valid fulfillment, collects no material rents but holds status/legitimacy capital. Observant Jews are near-symmetric (d ~ 0.5): they voluntarily engage in study as fulfillment, gain spiritual/religious benefit, bear time/attention cost. No victim set exists — the reading explicitly frames suspension as authorized transformation, not extraction from a victim class. The messianic_suspension_reading and performance_only_reading are sibling constraints with their own beneficiary/victim structures, not victims of this constraint.",
+    "mandatrophy_analysis": "The founding problem (how to maintain sacrifice obligation vitality without Temple) remains live — the Temple is still destroyed, the obligation still cannot be physically performed. The arrangement has not outlived its function; it actively occupies the obligation. No mandatrophy resolution is declared because the founding problem persists. The constraint is not a degraded remnant (piton) nor a transitional measure (scaffold) — it is the current authorized form of the mitzvah.",
+    "kernel_context": "This constraint is the study_as_exercise_reading of the sacrifice_obligation_kernel. The kernel is the persisting commitment: 'the sacrifice obligation endures despite Temple destruction.' Sibling readings: messianic_suspension_reading (divine suspension until messianic restoration), performance_only_reading (physical performance required, study is preparatory only), symbolic_archive_reading (cultural-historical archive, no halakhic claim). Each reading instantiates a distinct constraint with its own ε, stakeholders, and classification. This reading claims the obligation is occupied through intellectual engagement — study IS the mitzvah."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_kernel__messianic_suspension_reading",
+      "sacrifice_obligation_kernel__performance_only_reading",
+      "sacrifice_obligation_kernel__symbolic_archive_reading"
+    ],
+    "dual_formulation_note": "Constraint family: sacrifice_obligation_kernel with four readings. This reading (study_as_exercise) claims zero extractiveness, beneficiary = rabbinic authority (interpretive monopoly). The performance_only_reading claims higher extractiveness (physical performance demanded but impossible, creating guilt/obligation debt), victim = observant Jews. The messianic_suspension_reading claims near-zero extractiveness but different coordination function (readiness maintenance). The symbolic_archive_reading claims zero extractiveness, no halakhic beneficiaries, treats study as cultural preservation. All four linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "rabbinic_authority",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds the interpretive monopoly on what constitutes valid study, canonical texts, and genuine engagement. Defines the boundaries of the mitzvah's current form. Collects no material rents but maintains status as the authorized adjudicators of halakhic fulfillment. Can shape the constraint's evolution through responsa and institutional authority."
+    },
+    {
+      "name": "observant_jews",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Engage in study of sacrifice law as their primary mode of fulfilling the mitzvah. Invest significant time, cognitive effort, and educational resources. Experience the study as genuine religious fulfillment (beneficiary) while bearing the cost of sustained intellectual engagement (payer). Exit options are constrained: leaving the framework means abandoning the halakhic system's coherence, but alternative readings exist within the tradition."
+    },
+    {
+      "name": "messianic_expectants",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold the sibling messianic_suspension_reading: they study sacrifice law to maintain operational readiness for restoration, not as current fulfillment. Their identity is fused with the expectation of imminent messianic transformation. They benefit from the study framework this reading provides but contest its claim that study IS the fulfillment rather than preparation."
+    },
+    {
+      "name": "temple_restoration_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold the performance_only_reading: they advocate for actual physical sacrifice on the Temple Mount now. They are structurally excluded from the halakhic conversation because mainstream authority rejects their position as dangerous/premature. They would object to the claim that study fulfills the obligation — they see it as evasion. Their exit is trapped: they cannot perform the mitzvah as they understand it, and their reading is marginalized."
+    },
+    {
+      "name": "secular_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study sacrifice law as cultural-historical archive (symbolic_archive_reading). They make no halakhic claim and are neither beneficiaries nor payers within the halakhic system. Their engagement is analytical and preservative. They observe the internal contest among readings from outside the commitment structure."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Maintains the vitality and operational continuity of the sacrifice obligation when physical performance is impossible, by authorizing intellectual engagement as legitimate fulfillment. Solves the coordination problem of how a community sustains a Temple-centered mitzvah without a Temple, without fragmenting into competing claims about suspension or abrogation.",
+    "transfer_function": "Moves interpretive authority and legitimacy capital to rabbinic authority (gatekeeping what counts as valid study/engagement). Moves time, attention, and cognitive investment from observant Jews into the study framework. No material transfer occurs. The 'gain' is the maintenance of halakhic continuity and the authority's interpretive monopoly.",
+    "absent_voices": "Those who would perform physical sacrifice if permitted (temple_restoration_advocates) are structurally excluded from mainstream halakhic discourse. Those who reject halakhic authority entirely (secular Jews, non-Jews) are not in the conversation. The messianic_expectants are present but hold a sibling reading — they are not absent, they are in contention.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished overnight, the sacrifice obligation would revert to contested status: performance_only advocates would push for physical restoration, messianic_expectants would claim divine suspension, secular scholars would treat it as archive only. The halakhic system would lose its authorized mechanism for occupying the obligation. Observant Jews would lose their primary mode of fulfillment. The rabbinic authority would lose its interpretive monopoly over this mitzvah's current form.",
+    "founding_problem": "After the Temple's destruction (70 CE), the sacrifice obligation — central to Torah law — became physically impossible to perform. The community faced: (a) treat the obligation as abrogated (loss of Torah integrity), (b) demand impossible performance (crisis of feasibility), (c) await divine restoration (passive suspension), or (d) authorize an alternative mode of fulfillment that preserves the obligation's vitality. This reading instantiates option (d).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the historical record (Temple destruction, cessation of sacrifices) and by all four readings' own existence — each reading is a response to the same founding problem. The performance_only_reading and messianic_suspension_reading corroborate the problem's reality by offering different solutions. The symbolic_archive_reading corroborates by denying the problem has a halakhic solution. No single party owns the founding problem; it is the kernel's historical condition."
+  },
+  "uke_scope": {
+    "epsilon_bin": "negligible",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "sacrifice_obligation_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "messianic_suspension_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "performance_only_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "symbolic_archive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_is_genuine_avodah",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "authorized_transformation_preserves_mitzvah_integrity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "torah_obligation_intact_despite_temple_destruction",
+    "drift_state": {
+      "moment": "contemporary_halakhic_consensus",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

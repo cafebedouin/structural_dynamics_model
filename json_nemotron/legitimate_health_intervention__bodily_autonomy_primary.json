@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_legitimate_health_intervention__bodily_autonomy_primary",
+    "measurement_id_prefix": "legitimate_health_intervention__bodily_autonomy_primary",
+    "story_uid": "0d531d15-b276-45ba-80e0-a2c597781ff2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Bodily Autonomy Primary Reading of Legitimate Health Intervention",
+    "topic_domain": "medical_ethics/constitutional_law/public_health_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_health_establishment",
+      "state_capacity_expansion_interests"
+    ],
+    "victims": [
+      "mandate_coerced_individuals",
+      "conscientious_objectors_to_medical_interventions"
+    ],
+    "vindicated_propositions": [
+      "bodily_integrity_as_inalienable_right",
+      "informed_consent_as_legitimacy_precondition"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct structural claim or merely a different weighting of the same legitimacy kernel?",
+      "resolution_mechanism": "Compare the victim set and extraction pathways across the three readings: bodily_autonomy_primary produces mandate_coerced_individuals as a structural victim class with state extraction via employment/access leverage; public_health_primary produces no victim class (refusal is framed as externality); proportionality_reading produces a conditional victim class dependent on disease severity thresholds. If victim sets are structurally disjoint across readings, they are distinct constraints per ε-invariance.",
+      "impact": "If readings share a victim set, ε differences are merely measurement variance on one constraint; if victim sets are disjoint, each reading instantiates a different constraint with its own ε, requiring separate stories linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's three readings are structurally distinct constraints or one constraint with observable-dependent classification"
+    },
+    {
+      "id": "extraction_vs_externality_framing",
+      "question": "Does the state's use of employment and access leverage to enforce mandates constitute extraction from coerced individuals, or is it a legitimate cost-internalization mechanism for externality imposition?",
+      "resolution_mechanism": "Trace the resource flow: if the state collects no direct revenue but the constraint redirects labor market access, service access, and civic participation toward state-defined compliance, the extraction is positional (access captured by the compliant class) rather than fiscal. Compare with tax-funded public goods where the state collects and redistributes.",
+      "impact": "If extraction is positional, the constraint is a snare with state as extractor via leverage; if cost-internalization, it is a tangled_rope with coordination function (public health) and asymmetric burden (non-compliant bear costs). The ε=0.68 reflects the positional extraction reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether mandate enforcement via employment/access leverage is extraction or externality internalization"
+    },
+    {
+      "id": "informed_consent_operationalization",
+      "question": "At what threshold does 'informed consent' become structurally impossible under mandate pressure — when alternatives are formally available but practically foreclosed by employment/access consequences?",
+      "resolution_mechanism": "Empirical study of mandate regimes: measure the proportion of non-compliers who experience job loss, service denial, or civic exclusion versus those who access genuine alternatives. If >80% face material consequences that eliminate meaningful choice, informed consent is structurally voided.",
+      "impact": "If informed consent is structurally voided at high mandate enforcement, the constraint's claimed legitimacy precondition is performative — theater_ratio should be higher. If meaningful alternatives persist, the bodily_autonomy reading overstates extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether informed consent retains operational meaning under high-leverage mandates"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the bodily_autonomy_primary reading of the legitimate_health_intervention kernel. The reading holds that legitimate medical intervention requires informed consent as a non-negotiable precondition; state coercion via mandates backed by employment and access leverage violates bodily integrity regardless of asserted public benefit. The constraint operates by making non-compliance materially costly (job loss, service denial, civic exclusion) such that consent is structurally coerced. The state functions as extractor through positional leverage rather than fiscal revenue — it captures the compliance of the coerced population, redirecting their labor and civic participation toward state-defined health objectives. The sibling readings (public_health_primary, proportionality_reading) are separate constraint stories with distinct victim sets and extraction pathways.",
+    "key_agents": [
+      "mandate_coerced_individuals: Primary target (powerless/constrained) — bears extraction via employment/access leverage, consent structurally voided",
+      "conscientious_objectors_to_medical_interventions: Primary target (powerless/trapped) — bears concentrated extraction, identity-locked refusal",
+      "public_health_establishment: Primary beneficiary (institutional/arbitrage) — gains compliance capture, legitimacy for expanded authority",
+      "state_capacity_expansion_interests: Secondary beneficiary (institutional/mobile) — mandate infrastructure generalizes to other domains",
+      "medical_professionals_enforcing_mandates: Dual-positioned (organized/constrained) — institutional role requires enforcement, professional ethics may conflict",
+      "judicial_review_bodies: Observer (institutional/analytical) — adjudicate mandate challenges, define constitutional boundaries"
+    ],
+    "logic_rationale": "Extractiveness (0.68) is moderate-high because the constraint redirects the life trajectories of coerced individuals (employment, education, civic participation) without their consent, and the state captures the compliance value. Suppression (0.72) is high because alternatives are formally present but practically foreclosed by material consequences — the suppression is structural (leverage architecture) not merely persuasive. Theater ratio (0.28) is moderate: the informed consent framework is maintained rhetorically while its operational content is hollowed out by leverage. Accessibility collapse (0.62) reflects that once the leverage architecture is understood, meaningful exit from the constraint's reach is severely limited. Resistance (0.55) is moderate: conscientious objection exists but is individually costly and collectively fragmented.",
+    "perspectival_gap": "From the public_health_establishment seat, the constraint appears as coordination (rope-ish): a collective action problem solved by universal participation. From the mandate_coerced_individuals seat, it is pure extraction (snare): their bodily integrity and life access are leveraged for a collective goal they did not choose. The judicial_review_bodies seat sees a contested constitutional boundary. The engine computes these divergences from the structural data — the bodily_autonomy_primary reading claims snare; the public_health_primary reading would claim rope.",
+    "directionality_logic": "The state (public_health_establishment + state_capacity_expansion_interests) is the structural beneficiary: it captures population compliance, expands institutional authority, and builds mandate infrastructure reusable across domains. Directionality d is near 0.0 for these seats. Mandate_coerced_individuals and conscientious_objectors are structural victims: they bear the full cost of compliance (bodily intrusion, loss of access, identity violation) with no offsetting benefit they have consented to. Directionality d is near 1.0. Medical_professionals are near symmetric (d≈0.5): they gain professional authority from the mandate system but bear ethical conflict and liability risk. Judicial_review_bodies are analytical (d=0.5 by definition).",
+    "mandatrophy_analysis": "The founding problem (infectious disease control) is live but the arrangement (mandate leverage architecture) has drifted from its justification. The constraint was built for acute epidemic response with clear threat thresholds; it now operates as a standing capacity for leveraging bodily compliance across expanding health definitions. The mandate infrastructure persists because it serves state capacity expansion interests, not because the founding epidemiological problem requires it. This is mandatrophy: the mandate form has outlived its epidemiological function and persists via institutional inertia and authority capture.",
+    "kernel_context": "This constraint is the bodily_autonomy_primary reading of the legitimate_health_intervention kernel (kernel_id: legitimate_health_intervention). Sibling readings: public_health_primary (legitimacy derives from population-level morbidity/mortality reduction; individual refusal is externality imposition) and proportionality_reading (legitimacy requires proportionality between intervention severity and threat level; both population harm and individual autonomy matter but are weighted by disease characteristics). This reading structurally diverges by producing a victim class (mandate_coerced_individuals) and an extractor (state via employment/access leverage) that the other readings do not produce or produce conditionally. The ε-invariance principle requires separate stories because the victim sets and extraction pathways are structurally disjoint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__public_health_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the legitimate_health_intervention kernel into three structurally distinct claims with disjoint victim sets: bodily_autonomy_primary produces mandate_coerced_individuals as victims with state extraction (snare, ε=0.68); public_health_primary produces no victim class, framing refusal as externality (rope/tangled_rope, ε≈0.15); proportionality_reading produces conditional victims dependent on severity thresholds (tangled_rope, ε≈0.40). The ε values differ by wide margins because the referent arrangements are different. They are linked via affects_constraints; the upstream epidemiological claims (public_health_primary) are often cited as evidence for the downstream mandate architecture (bodily_autonomy_primary's referent)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "mandate_coerced_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face mandate compliance as condition for employment, education access, healthcare access, and civic participation. Formally retain right to refuse but material consequences (job loss, service denial, exclusion) make refusal practically foreclosed for most. Bear the bodily intrusion and life-trajectory disruption without consent or compensation. Exit requires accepting severe material deprivation or migrating to jurisdictions without mandates."
+    },
+    {
+      "name": "conscientious_objectors_to_medical_interventions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Refuse mandates based on religious, philosophical, or medical conviction. Identity is fused with refusal — compliance would violate core self-concept. Face concentrated extraction: targeted enforcement, social stigmatization, complete exclusion from mainstream institutions. Exit is not practically available because the identity commitment makes compliance structurally impossible; the constraint attacks the self, not just behavior."
+    },
+    {
+      "name": "public_health_establishment",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs, advocates for, and administers mandate regimes. Gains universal compliance capture for public health objectives, expanded institutional authority, and mandate infrastructure reusable across health domains. Justifies mandates as necessary coordination for population health. Controls the epidemiological narrative that defines threat levels and intervention necessity. Can pivot to new mandate targets as disease definitions expand."
+    },
+    {
+      "name": "state_capacity_expansion_interests",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Political and administrative actors who benefit from the precedent and infrastructure of bodily mandate authority. The leverage architecture (employment/access conditioning) generalizes to climate policy, behavioral compliance, digital identity systems, and other domains. They do not directly administer health mandates but capture the expanded state capacity. Exit is mobile: they can shift to other domains if mandate authority is rolled back."
+    },
+    {
+      "name": "medical_professionals_enforcing_mandates",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Institutional role requires enforcing mandates (vaccination, testing, reporting) as condition of licensure and employment. Gain professional authority, liability protection, and institutional integration from mandate compliance. Bear ethical conflict (informed consent violation), professional autonomy loss, and liability risk for mandate injuries. Exit requires leaving licensed practice or migrating — constrained by credential portability and career investment."
+    },
+    {
+      "name": "judicial_review_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate constitutional challenges to mandates, defining the boundaries of state power versus bodily integrity. Apply frameworks (strict scrutiny, rational basis, proportionality) that determine whether mandates stand or fall. Their rulings shape the operational suppression level and the viability of the bodily_autonomy reading as a legal constraint on state power. Neither collect nor pay; they interpret the kernel."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of achieving population-level immunity or disease control when individual incentives diverge from collective benefit. The mandate architecture ensures universal participation without requiring individual consent, treating refusal as a free-rider problem.",
+    "transfer_function": "Moves bodily autonomy, labor market access, educational access, and civic participation from mandate_coerced_individuals and conscientious_objectors to the state (via public_health_establishment and state_capacity_expansion_interests) as captured compliance. The state does not collect fiscal revenue but captures the positional value of a compliant population.",
+    "absent_voices": "Future generations who will inherit the mandate infrastructure precedent; immunocompromised individuals who cannot be vaccinated but are not separately represented in the mandate calculus; global populations subject to mandate regimes exported via international health regulations. These voices are excluded because the mandate architecture operates at national/state level with no structural mechanism for their representation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If mandate leverage architecture vanished overnight, the state would lose its primary mechanism for compelling medical compliance. Public health would revert to persuasion, incentive, and voluntary participation models. The state capacity expansion precedent would collapse. Mandate_coerced_individuals would regain bodily autonomy and access rights. Conscientious_objectors would no longer face identity-targeted exclusion. The epidemiological trajectory would depend on voluntary uptake — a genuine rearrangement of the state-individual relationship.",
+    "founding_problem": "Historical infectious disease epidemics (smallpox, polio, measles) where voluntary uptake failed to achieve herd immunity thresholds, creating persistent population-level morbidity/mortality that voluntary measures could not resolve. The founding mandate architecture was built for acute, high-mortality pathogens with sterilizing vaccines and clear transmission dynamics.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Epidemiologists outside the public health establishment (e.g., Bhattacharya, Kulldorff, Gupta via Great Barrington Declaration) attest that the founding problem (acute high-mortality epidemics with sterilizing vaccines) is not the current mandate target — mandates now apply to non-sterilizing interventions for lower-mortality pathogens. Legal historians (e.g., Gostin, Jacobson scholars) attest that Jacobson v. Massachusetts (1905) was a narrow smallpox precedent, not a general mandate authority. The public health establishment attests the problem is live, citing ongoing pandemic threats and emergence risks."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_smallpox_precedent",
+    "drift_state": {
+      "moment": "contemporary_mandate_expansion",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_integrity_inalienable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "informed_consent_legitimacy_precondition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_mandate_cannot_override_consent",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

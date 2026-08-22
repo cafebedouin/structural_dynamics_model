@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-23",
+    "status": "ACTIVE",
+    "story_uid": "8243b262-d1d0-45d1-ba2f-6de8f8391b1a"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.82,
+    "resistance": 0.22,
+    "claimed_type": "mountain",
+    "human_readable": "Beta Designation Unavailable for Critical Systems",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "critical_systems_users",
+      "regulatory_authorities"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "harm_severity_overrides_contractual_allocation",
+      "safety_requirements_are_non_waivable_by_designation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "critical_systems_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Users of medical devices, financial infrastructure, aviation systems, and other life-safety domains who cannot opt out of reliance on these systems. They benefit from the categorical unavailability of beta designation because it prevents vendors from using beta labels to escape liability for failures in systems where failure causes death, injury, or catastrophic financial loss."
+    },
+    {
+      "name": "software_vendors_critical_domains",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Vendors developing software for life-safety, financial, or critical infrastructure domains. They bear the cost of full liability exposure regardless of development stage or disclosure. They cannot use beta designation to limit liability, must carry full insurance and compliance burden from first deployment, and face higher development costs due to the inability to iterate in production under reduced liability."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Regulators (FDA, FAA, SEC, banking regulators) who set safety and soundness standards for critical domains. They administer the constraint by refusing to recognize beta designation as a mitigating factor in enforcement actions. Their authority derives from statutory mandates to protect public safety and financial stability."
+    },
+    {
+      "name": "insurers_critical_systems",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Insurers who underwrite liability for critical-systems software vendors. They bear the risk of full liability exposure (payer role) but benefit from the predictability and non-waivability of the liability regime (beneficiary role), which makes risk modeling and pricing more stable than a regime where beta designation could arbitrarily reduce exposure."
+    },
+    {
+      "name": "legal_academics_liability",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars of products liability, software law, and regulatory theory who analyze the doctrinal boundary between contractual liability allocation and non-waivable safety requirements. They see the full structure but neither collect from nor pay into the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the non-negotiable baseline of accountability for systems where failure causes irreversible harm. It solves the collective action problem of vendors racing to deploy under beta labels in high-stakes domains by making the liability floor structural rather than contractual.",
+    "transfer_function": "Moves the full cost of failure (injury, death, financial catastrophe) from victims to vendors and their insurers, without allowing contractual designation to shift it back. The transfer is from the party creating the risk to the party suffering the harm, with no beta-label escape valve.",
+    "absent_voices": "Early-stage startups attempting to enter critical domains with limited capital — they would argue the categorical bar raises barriers to entry and prevents iterative safety improvement in production. They are structurally excluded because the constraint treats capital adequacy as a prerequisite for participation, not a problem to be solved by liability reduction.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical bar vanished overnight, vendors would immediately deploy beta-labeled software in medical devices, payment systems, and aviation controls to accelerate time-to-market. Liability would shift to victims via click-wrap beta agreements. Regulatory enforcement would fragment as beta designation became a litigated defense. The critical-systems liability landscape would reorganize around contractual waiver rather than statutory floor.",
+    "founding_problem": "The historical problem was vendors using 'beta' or 'experimental' labels on safety-critical software (early medical device firmware, trading algorithms, flight control systems) to avoid liability for foreseeable catastrophic failures, while regulators lacked a clear doctrinal tool to reject the label categorically.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "FDA enforcement history (e.g., 2011 infusion pump guidance rejecting 'beta' as mitigation), FAA DO-178C certification requirements that make no provision for beta designation, SEC/FINRA regulatory framework for algorithmic trading systems. These regulatory bodies — outside the vendor beneficiary set — attest the problem persists: vendors still attempt beta-label defenses in critical domains, and regulators still reject them categorically."
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies the doctrinal principle that beta designation — a software development label indicating incomplete testing — cannot function as a liability shield in domains where failure causes death, serious injury, or systemic financial collapse. The constraint is not a statute but a convergent regulatory and judicial doctrine: FDA, FAA, banking regulators, and courts consistently hold that safety requirements and harm severity override any contractual liability allocation attempted through beta labeling. The reading's ε is low (0.12) because the constraint extracts little from those it governs; it primarily prevents extraction (vendors extracting risk-transfer via beta labels). Suppression is low (0.18) because the constraint operates through legal validity (courts/regulators simply refuse to enforce beta waivers) rather than active coercion. Theater is minimal (0.08) — the constraint's function is genuine and its enforcement is the ordinary operation of liability law. Accessibility collapse is high (0.82) because once the principle is understood, alternatives (beta waivers in critical domains) are legally foreclosed. Resistance is low (0.22) because vendors in critical domains accept this as the cost of participation; the constraint is not controversial among regulated parties.",
+    "key_agents": [
+      "critical_systems_users: Primary beneficiary (moderate/constrained) — protected from beta waivers in life-safety domains",
+      "software_vendors_critical_domains: Primary payer (powerful/constrained) — bears full liability regardless of development stage",
+      "regulatory_authorities: Agenda setter (institutional/analytical) — administers the categorical bar through enforcement",
+      "insurers_critical_systems: Dual payer/beneficiary (organized/mobile) — bears risk but gains pricing stability",
+      "legal_academics_liability: Observer (analytical/analytical) — analyzes doctrinal boundary"
+    ],
+    "logic_rationale": "The mountain classification rests on three pillars: (1) The constraint emerges from the physical reality of irreversible harm — no contractual label can undo death or systemic collapse. (2) It requires no active enforcement machinery beyond ordinary liability adjudication; courts and regulators simply decline to recognize the beta defense. (3) Beneficiaries (users, regulators) are identifiable but the constraint does not transfer value TO them — it prevents value extraction FROM them. The FSM omega documents the tension: the constraint appears natural (harm severity is physical) but its legal instantiation is constructed (courts could recognize beta waivers). The metrics are authored independently of the claim: ε=0.12 reflects minimal extraction; the mountain claim reflects structural invariance.",
+    "perspectival_gap": "From the vendor seat, the constraint appears as a cost-imposing requirement (full liability from day one). From the user/regulator seat, it appears as a protective floor (no beta escape hatch). The engine computes this divergence from the structural data: vendors are payers with constrained exit; users are beneficiaries with constrained exit; regulators are agenda-setters with analytical exit. The claimed type (mountain) is the analytical observer's classification; vendor seats may compute differently.",
+    "directionality_logic": "Critical systems users are beneficiaries (d → 0.0) because the constraint prevents vendors from shifting catastrophic risk to them via beta labels. Software vendors in critical domains are payers (d → 1.0) because they bear full liability that could otherwise be contractually reduced. Regulatory authorities are agenda-setters (d → 0.5) — they administer but do not collect. Insurers are dual: payers for the risk they underwrite, beneficiaries of the regime's predictability. The directionality derivation from beneficiary/victim + exit produces the correct structural relationships; no overrides needed.",
+    "mandatrophy_analysis": "The constraint shows no mandatrophy: the founding problem (vendors using beta labels to escape liability in critical domains) remains live, as evidenced by ongoing regulatory guidance rejecting beta defenses. The arrangement has not outlived its function; if anything, the proliferation of software in critical domains (AI medical devices, algorithmic trading, autonomous vehicles) has expanded its scope. The low theater ratio and stable extractiveness over 35 years confirm functional persistence, not inertial maintenance.",
+    "kernel_context": "This constraint is the severity_carve_out_reading of the beta_designation_doctrine kernel. Sibling readings: expansive_shield_reading (beta as comprehensive liability waiver, all domains), narrow_warning_reading (beta as time-bounded testing disclosure, base liability preserved). This reading asserts that harm severity creates a domain-specific physical constraint that categorically overrides contractual designation — beta is structurally unavailable in critical domains regardless of testing status or disclosure. The disagreement is located on whether liability allocation can be contracted around in high-stakes domains: this reading says no (physical constraint), expansive_shield says yes (contractual freedom), narrow_warning says partially (time-bounded only)."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_doctrine",
+      "question": "Is the categorical unavailability of beta designation in critical domains a genuine natural law (physical irreversibility of harm) or a constructed legal doctrine that could be reversed by legislative or judicial action?",
+      "resolution_mechanism": "Legislative history review: did Congress/Parliament explicitly bar beta waivers in critical domains, or did courts/regulators derive the bar from general liability principles? Counterfactual: if a jurisdiction enacted a statute permitting beta waivers in medical devices with enhanced disclosure, would courts uphold it or strike it as contrary to public policy?",
+      "impact": "If natural law, the constraint is a true mountain (ε ≈ 0, emerges_naturally = true). If constructed doctrine, it is a false summit mountain (FSM candidate) — appears natural but serves identifiable beneficiaries (users, regulators) and could be legislatively overridden. The FSM signature would trigger reclassification to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's mountain status reflects physical necessity or legal construction serving identifiable beneficiaries."
+    },
+    {
+      "id": "critical_domain_boundary",
+      "question": "What counts as a 'critical system' for purposes of the beta bar? The boundary determines the constraint's scope and thus its effective extraction via the engine's scope modifier.",
+      "resolution_mechanism": "Survey of regulatory guidance (FDA, FAA, SEC, NERC) and case law to map the declared critical domains. Test edge cases: IoT medical devices, fintech payment apps, industrial control systems, autonomous vehicle software. Determine if the boundary is principle-based (severity of harm) or list-based (enumerated domains).",
+      "impact": "A principle-based boundary (harm severity threshold) makes the constraint universal in scope (engine scope modifier = universal, higher χ). A list-based boundary makes it national/continental in scope (lower χ). The boundary also determines which vendors are payers and which users are beneficiaries.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the critical-system boundary is principle-based (universal scope) or list-based (narrower scope)."
+    },
+    {
+      "id": "committer_frame_disagreement_location",
+      "question": "Where exactly do the three beta_designation_doctrine readings disagree structurally? Is it on the waivability of liability (expansive_shield vs. severity_carve_out), the temporal bound (narrow_warning vs. both), or the domain scope (severity_carve_out vs. expansive_shield)?",
+      "resolution_mechanism": "Map each reading's structural commitments: (1) Can liability be waived by designation? (2) Must the designation be time-bounded? (3) Does harm severity create a categorical exception? The disagreement location determines the reading_relations (forecloses vs. coexists_with vs. influences).",
+      "impact": "If severity_carve_out forecloses expansive_shield (physical constraint vs. contractual freedom), the kernel has a genuine forecloses pair. If they merely coexist as competing policy positions, the relation is coexists_with. This affects the CS structure's reading_relations and the engine's cross-reading contamination analysis.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural disagreement location among the three kernel readings for CS commitment-system analysis."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__narrow_warning_reading",
+      "software_liability_regime",
+      "critical_infrastructure_regulation"
+    ],
+    "dual_formulation_note": "This reading and its two siblings form the beta_designation_doctrine constraint family. All three share the kernel (beta designation as liability allocation mechanism) but differ on waivability, temporal bounds, and domain scope. The severity_carve_out_reading is the most restrictive (categorical bar in critical domains), expansive_shield_reading the most permissive (comprehensive waiver), narrow_warning_reading intermediate (time-bounded disclosure). ε differs across readings: this reading ε≈0.12 (prevents extraction), expansive_shield ε≈0.7 (enables vendor extraction), narrow_warning ε≈0.3 (partial extraction with temporal limit)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_creates_non_waivable_liability_floor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "beta_designation_cannot_override_physical_consequences",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "liability_allocation_by_contractual_designation",
+    "drift_state": {
+      "moment": "contemporary_ai_critical_systems",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

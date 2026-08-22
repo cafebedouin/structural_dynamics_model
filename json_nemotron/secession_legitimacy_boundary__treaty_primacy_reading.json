@@ -1,0 +1,339 @@
+{
+  "header": {
+    "constraint_id": "secession_legitimacy_boundary__treaty_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "secession_treaty_primacy",
+    "story_uid": "f69d3e76-a261-465f-9cf9-f055405fb4e4"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.62,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Indigenous Treaty Primacy Over Secession Legitimacy",
+    "topic_domain": "political_economy/federalism/resource_politics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "indigenous_treaty_holders",
+      "federal_government"
+    ],
+    "victims": [
+      "provincial_separatist_movements",
+      "provincial_governments"
+    ],
+    "vindicated_propositions": [
+      "treaty_primacy_doctrine",
+      "crown_indigenous_fiduciary_duty",
+      "section_35_constitutional_protection"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "Is this constraint one reading of a contested kernel (secession_legitimacy_boundary) rather than an independent claim?",
+      "resolution_mechanism": "The four declared readings (constitutional_impossibility, grievance_threshold, popular_sovereignty, treaty_primacy) each instantiate different constraints with different beneficiary/victim structures. This reading's distinct victim set (indigenous_treaty_holders if secession proceeds without consent) and beneficiary structure (treaty_holders + federal_government) confirm kernel membership.",
+      "impact": "If this is a kernel reading, its classification must be generated independently per Rule 1 — ε is reading-indexed over the standing arrangement (unilateral secession attempts), not averaged across readings. Sibling readings are other constraint stories linked via network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to kernel structure with sibling readings"
+    },
+    {
+      "id": "treaty_vs_constitutional_supremacy",
+      "question": "Does treaty primacy structurally foreclose constitutional_impossibility_reading within a single framework, or do they coexist as competing legitimate positions?",
+      "resolution_mechanism": "Analyze whether a single legal framework could simultaneously hold: (a) secession requires constitutional amendment, and (b) no amendment valid without Indigenous consent. If both can be true (amendment process exists but is constrained by treaty consent), they coexist. If treaty primacy makes constitutional amendment itself illegitimate for secession, it forecloses.",
+      "impact": "forecloses reading_relation means the two cannot be held together by any single actor; coexists_with means different actors hold them simultaneously without logical contradiction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between treaty_primacy and constitutional_impossibility readings"
+    },
+    {
+      "id": "extraction_distribution_uncertainty",
+      "question": "Is the constraint's extraction primarily borne by separatist movements (blocked from unilateral action) or by provincial governments (constrained in territorial claims)?",
+      "resolution_mechanism": "Track which actors bear enforcement costs and opportunity costs when secession attempts are constrained by treaty consent requirements. Separatist movements face blocked mobilization; provinces face restricted territorial sovereignty claims.",
+      "impact": "Affects victim set precision and directionality derivation for provincial vs. separatist actors. Different victims imply different χ distributions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether victims are primarily separatist movements or provincial governments"
+    },
+    {
+      "id": "federal_beneficiary_ambiguity",
+      "question": "Is the federal government a genuine beneficiary (treaty enforcement protects federal territorial integrity) or a captured enforcer (administers treaty obligations it would prefer to minimize)?",
+      "resolution_mechanism": "Compare federal litigation positions: does the Crown actively assert treaty primacy against provinces, or does it resist treaty enforcement while using it instrumentally against secession?",
+      "impact": "If federal is captured, its beneficiary status is partial; directionality override may be needed. If genuine beneficiary, federal and Indigenous interests align structurally on this constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Federal government's true structural position relative to treaty enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 1982,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the treaty_primacy_reading of the secession_legitimacy_boundary kernel. The reading asserts that Indigenous treaty rights — which predate Confederation and are constitutionally protected under Section 35 — structurally constrain any legitimate secession process. Neither the federal Parliament nor a provincial legislature can unilaterally alter treaty relationships or extinguish treaty rights; any secession claim that proceeds without the free, prior, and informed consent of affected treaty holders is illegitimate. The constraint coordinates Indigenous-federal alignment against provincial secessionism while extracting from separatist movements and provincial governments that would otherwise claim unilateral exit authority. The claimed type (tangled_rope) reflects genuine coordination (treaty rights as constitutional floor) combined with asymmetric extraction (provincial sovereignty claims blocked, separatist projects constrained).",
+    "key_agents": [
+      "indigenous_treaty_holders: Primary beneficiaries and rights-holders (organized/identity_locked) — hold constitutional treaty rights that gate secession legitimacy",
+      "federal_government: Secondary beneficiary and agenda_setter (institutional/arbitrage) — treaty enforcement preserves federal territorial integrity against provincial exit",
+      "provincial_separatist_movements: Primary victims/payers (organized/constrained) — blocked from unilateral secession by treaty consent requirement",
+      "provincial_governments: Secondary victims (institutional/constrained) — territorial sovereignty claims constrained by treaty obligations they did not create",
+      "supreme_court_canada: Observer/agenda_setter (institutional/analytical) — adjudicates treaty scope and secession legality (Reference re Secession 1998, Tsilhqot'in 2014)",
+      "international_law_community: Observer (analytical/analytical) — UNDRIP, FPIC standards inform but do not determine domestic enforceability"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint blocks a major territorial claim (provincial secession) and redistributes veto power to Indigenous nations — a substantial transfer of political authority. Suppression (0.62) is significant: the constraint requires active judicial enforcement and federal legislative backing to maintain treaty primacy against provincial challenges. Theater ratio (0.18) is low: the coordination function (treaty rights as constitutional constraint) is genuinely operative, not performative. Accessibility collapse (0.45) is moderate: alternatives exist (negotiated secession with consent, constitutional amendment) but are structurally narrowed by the consent requirement. Resistance (0.71) is high: provincial governments and separatist movements actively contest treaty primacy through litigation, political mobilization, and narrative framing. The measurement series shows rising extractiveness and suppression from 1982 (Constitution Act patriation, Section 35) to 2020, reflecting jurisprudential strengthening of treaty rights (Sparrow 1990, Delgamuukw 1997, Haida 2004, Tsilhqot'in 2014) and the 1995 Quebec referendum near-miss that sharpened the secession-treaty intersection.",
+    "directionality_logic": "Indigenous treaty holders are structural beneficiaries (d ≈ 0.15): the constraint subsidizes their veto power, subsidized by federal enforcement. Federal government is a beneficiary (d ≈ 0.25): territorial integrity preserved against provincial exit, though it bears enforcement costs — partial capture risk documented in omega. Provincial separatist movements are full targets (d ≈ 0.85): their core project is blocked, exit from the constraint is identity_locked (secessionism defined by unilateral action). Provincial governments are constrained targets (d ≈ 0.65): their sovereignty claims are limited but they retain substantial authority within treaty boundaries. Supreme Court is analytical (d ≈ 0.5): symmetric costs/benefits of adjudication.",
+    "perspectival_gap": "The payer seats (separatists, provinces) experience the constraint as extraction from their sovereign claims — a snare-like structure from their view. The beneficiary seats (Indigenous nations, federal) experience it as coordination — a rope-like structure protecting constitutional order. The engine computes this divergence from the declared beneficiary/victim structure and exit options. The gap is not a measurement error; it is the structural reality of a tangled_rope.",
+    "mandatrophy_analysis": "The founding problem (1867-1982): Confederation excluded Indigenous nations; treaty rights were ignored or violated. The 1982 constitutional recognition was built to solve that exclusion. The problem is CONTESTED: Indigenous nations argue the founding problem persists (unfulfilled treaties, unextinguished rights); federal and provincial governments argue the constitutional framework solves it. Corroboration: Royal Commission on Aboriginal Peoples (1996), Truth and Reconciliation Commission (2015), UNDRIP (2016) — all outside the beneficiary set — attest the problem remains live. The constraint has not resolved its mandatrophy; it remains a live coordination-extraction hybrid.",
+    "kernel_context": "This constraint is the treaty_primacy_reading of the secession_legitimacy_boundary kernel. Sibling readings: constitutional_impossibility_reading (unilateral secession constitutionally impermissible; only negotiated amendment legitimate), popular_sovereignty_reading (provincial democratic majority holds sovereignty; referendum self-legitimating), grievance_threshold_reading (federal structural injustice triggers secession legitimacy regardless of constitutional text). This reading's distinctive structural delta: Indigenous treaty holders enter the victim set if secession proceeds without consent; neither federal nor provincial authority can unilaterally alter treaty relationships."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "secession_legitimacy_boundary__constitutional_impossibility_reading",
+      "secession_legitimacy_boundary__popular_sovereignty_reading",
+      "secession_legitimacy_boundary__grievance_threshold_reading",
+      "indigenous_resource_revenue_sharing",
+      "federal_provincial_jurisdiction_disputes"
+    ],
+    "dual_formulation_note": "Constraint family: secession_legitimacy_boundary kernel with four readings. This reading (treaty_primacy) adds Indigenous veto to the secession legitimacy question, structurally distinct from the other three which operate within federal-provincial constitutional framework. The ε values differ: constitutional_impossibility has lower extraction (procedural constraint), popular_sovereignty has near-zero extraction (self-legitimating), grievance_threshold has variable extraction (threshold-dependent). This reading's ε=0.78 reflects the substantial transfer of veto authority to Indigenous nations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "indigenous_treaty_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold constitutionally protected treaty rights (Section 35) that predate Confederation. Their consent is structurally required for any legitimate secession affecting treaty territories. They cannot exit the treaty relationship — it constitutes their nationhood and land relationship. The constraint subsidizes their veto power through federal enforcement. Gains: constitutional recognition, consultation rights, resource revenue sharing. Costs: ongoing litigation to enforce rights, Crown's fiduciary duty often unfulfilled."
+    },
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers treaty obligations and enforces Section 35. Treaty primacy preserves federal territorial integrity against provincial secession — the federal state cannot be dismembered without Indigenous consent. Collects political capital from upholding constitutional order. But also bears enforcement costs (litigation, negotiation, implementation) and faces capture risk: may prefer to minimize treaty obligations while using them instrumentally against secession. Exit: could amend Constitution (extremely difficult) or negotiate treaty modifications (requires Indigenous consent)."
+    },
+    {
+      "name": "provincial_separatist_movements",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Seek unilateral provincial secession (e.g., Quebec sovereignty movement). The treaty primacy constraint blocks their core strategy: Indigenous nations in claimed territory (Cree, Innu, Inuit in Quebec) hold veto via treaty rights and self-determination. Their project is structurally constrained — they cannot achieve legitimate secession without negotiating consent they have historically resisted. Exit from constraint: abandon unilateralism for negotiated consent (identity-threatening for core separatist identity) or challenge treaty validity (legally foreclosed by Section 35 jurisprudence)."
+    },
+    {
+      "name": "provincial_governments",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Claim provincial sovereignty over territory and resources. Treaty primacy constrains their authority: duty to consult, accommodation requirements, revenue sharing, and now secession veto. They did not create treaties (federal Crown did) but bear implementation costs. Their territorial integrity claims are structurally limited by superior treaty rights. Exit: intergovernmental negotiation, litigation (usually losing), or political resistance (e.g., Alberta Sovereignty Act) — all constrained by Supreme Court jurisprudence."
+    },
+    {
+      "name": "supreme_court_canada",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates the treaty-secession intersection. Reference re Secession (1998) established secession requires constitutional negotiation; Tsilhqot'in (2014) confirmed Aboriginal title and consent requirements. The Court's rulings structurally enforce the constraint but it does not set the agenda — it interprets the kernel. Gains: institutional legitimacy as constitutional arbiter. Costs: political backlash from all sides, legitimacy challenges when rulings constrain popular sovereignty claims."
+    },
+    {
+      "name": "international_law_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Provides normative framework (UNDRIP Article 3, 4, 19, 32; FPIC standards) that informs but does not determine domestic enforceability. Canada's UNDRIP implementation (2021) creates interpretive pressure but no direct enforcement. Observes whether domestic constraint meets international standards. No direct stake in Canadian federalism outcome."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a constitutional floor for Indigenous-Crown relationships that cannot be unilaterally overridden by federal or provincial secessionist projects. Solves the coordination problem of how pre-existing Indigenous sovereignty interfaces with Canadian federalism: treaty rights operate as a structural constraint that all parties must navigate, preventing a race to the bottom where provinces or federal government extinguish rights for territorial control.",
+    "transfer_function": "Moves veto authority over secession legitimacy from provincial/federal unilateral claim to Indigenous treaty holders. Transfers political authority: provinces lose unilateral exit option; federal government gains Indigenous alignment against secession but assumes enforcement burden; Indigenous nations gain constitutional veto over territorial reorganization affecting their rights.",
+    "absent_voices": "Indigenous nations without modern treaties or settled claims (e.g., many BC nations, unceded territories) — their consent requirements are less legally crystallized but politically potent. Urban Indigenous populations off-reserve — excluded from territory-based treaty frameworks. Future generations of all parties — bound by present constitutional settlements without voice. International Indigenous peoples — Canadian precedent influences global standards but they have no seat.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If treaty primacy over secession vanished overnight, Quebec or other provinces could pursue unilateral secession without Indigenous consent. Indigenous territories would be incorporated into new states without negotiation. Federal territorial integrity would lose its strongest constitutional barrier against dismemberment. The entire architecture of Section 35 jurisprudence (consultation, accommodation, consent, title) would lose its structural anchor. The Canadian federation would reorganize around provincial sovereignty unconstrained by pre-existing Indigenous rights.",
+    "founding_problem": "Confederation (1867) created a federal union that excluded Indigenous nations and ignored pre-existing treaty relationships. The Constitution Act 1982 (Section 35) was built to constitutionally recognize and affirm existing Aboriginal and treaty rights — solving the founding exclusion by making treaty rights a structural constraint on all Crown sovereignty claims, including secession.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Royal Commission on Aboriginal Peoples (1996) — independent federal commission — documented ongoing exclusion and unfulfilled treaties. Truth and Reconciliation Commission (2015) — independent, survivor-led — confirmed founding problem persists in child welfare, justice, resource rights. UNDRIP implementation (2021) — international standard adopted domestically — affirms the problem is live. Federal and provincial governments contest this, citing Section 35 jurisprudence as resolution. The mismatch (status=contested, verdict=world_rearranges) flags unresolved mandatrophy: the arrangement persists and reshapes the world while its founding problem remains disputed."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "secession_legitimacy_boundary__constitutional_impossibility_reading",
+      "section_35_constitutional_recognition"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_impossibility_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "popular_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "grievance_threshold_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "treaty_rights_predate_constitutional_order",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "indigenous_consent_required_for_territorial_reorganization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "crown_fiduciary_duty_survives_constitutional_amendment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "section_35_constitutional_recognition_1982",
+    "drift_state": {
+      "moment": "post_tsilhqotin_undrip_implementation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

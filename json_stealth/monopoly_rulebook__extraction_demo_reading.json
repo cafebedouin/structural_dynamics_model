@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__extraction_demo_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a331c913-06c3-40d3-9a1d-6a6a587fa7d6"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.65,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.82,
+    "resistance": 0.28,
+    "claimed_type": "mountain",
+    "human_readable": "Unamended Monopoly Rulebook as Rent-Extraction Demonstration",
+    "topic_domain": "game theory / social coordination / institutional design",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "eventual_winner"
+    ],
+    "victims": [
+      "eliminated_players"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "eventual_winner",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Started with the same capital as everyone else and survived the mid-game rent drain by assembling monopolies early. Through most of the session they were among the largest rent-payers at the table; the late-game position converts that accumulated exposure into the only collecting seat. Their gain lasts until the board is boxed up and resets."
+    },
+    {
+      "name": "eliminated_players",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Entered with equal capital; the rent schedule drained their liquidity faster than acquisition could offset it. Bankruptcy removes them from the table entirely — no assets, no further turns, and the text provides no re-entry, subsidy, or consolation mechanism. Their remaining role in the session is watching it conclude without them."
+    },
+    {
+      "name": "struggling_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Still solvent but paying more rent each circuit than they collect. The rules leave them a choice set that determines only who wins, not whether someone wins: acquire aggressively and hope, trade from weakness, or ride toward bankruptcy. Committed to the session once it began."
+    },
+    {
+      "name": "house_rule_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Propose injecting cash on Free Parking, raising starting capital, or capping rents — amendments that would slow or prevent elimination. At a strict-text table their proposals are ruled out of order before the first turn; they are physically present but absent from the governing framework. Their alternative lives in other households' rule sheets."
+    },
+    {
+      "name": "publisher_trademark_holder",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds the trademark and publishes the canonical rulebook across editions. Profits from the game's continued sale in whatever form tables will buy, and tolerates widespread informal amendment at home tables so long as the standard text remains the reference product. Its revenue tracks the activity's popularity, not the outcome of any session."
+    },
+    {
+      "name": "critical_game_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the rulebook as a materialized model of rent dynamics and trace its lineage to Elizabeth Magie's 1904 Landlord's Game and the Georgist movement. They assess what the game's dynamics do and do not show about actual markets. They neither collect nor pay within any session."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a common procedural framework — turn order, transaction and auction rules, bankruptcy adjudication — that lets four to six players run a determinate property-acquisition contest to a definite conclusion without negotiating process. It solves the problem of conducting a multi-player economic simulation with settled rules for dispute and termination.",
+    "transfer_function": "Moves paper capital from every player toward whichever player first assembles irreplaceable property monopolies, via scheduled rent payments that scale with development; terminal bankruptcy consolidates all remaining assets to the last solvent player. Net flow is many-to-one, terminating in winner-takes-all.",
+    "absent_voices": "House-rule advocates are ruled out of order at strict tables before play begins; eliminated players lose their seat — literally — at bankruptcy and cannot speak to the endgame their losses funded; the Georgist counter-tradition (Magie's second, Prosperity ruleset) that would insist the demonstration argues for the single-tax remedy rather than fatalism is absent from the commercial text.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Game nights organized around this text would reorganize around something else: tables already running amended versions show the activity continues comfortably under liquidity-injecting rules, while strict tables would either adopt another winner-takes-all game or schism into house-rule factions. The characteristic arc — 60 to 90 minutes, serial elimination, sole survivor — is constituted by the text and vanishes with it.",
+    "founding_problem": "Elizabeth Magie's 1904 Landlord's Game was built to make the Georgist critique of land rent playable: to let ordinary people feel how rent enrichment of landlords impoverishes tenants, and — in its second, Prosperity ruleset — how the single-tax remedy reverses it. The commercialized descendant retained the exploitation ruleset and dropped the remedy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the beneficiary set: Magie's patents and Georgist writings establish the design intent; game historians documenting the Magie-to-Darrow lineage and economists who assign the game to teach rent-seeking both attest that the pedagogical function persists. Hasbro's marketing, which frames the product as family entertainment, corroborates nothing about the founding problem."
+  },
+  "gain_flow": "eventual_winner",
+  "fixing_cost": "cheap",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "monopoly_rulebook__social_scaffold_reading",
+      "monopoly_rulebook__tournament_orthodoxy_reading"
+    ],
+    "dual_formulation_note": "Constraint family: one rulebook text, three structurally distinct constraints. This file instantiates the extraction-demonstration reading (epsilon ~0.78, victim set = eliminated players, winner-takes-all terminus). The social-scaffold sibling authors the same text as a coordination frame kept playable by community correction (low epsilon, no fixed victim set); the tournament-orthodoxy sibling authors it as a legitimate competitive ranking instrument (losses recoded as meritocratic prices, near-zero epsilon at the ranking seat). The epsilon differences are reading-indexed over the same referent text. Edges run from this reading to both siblings because the extraction dynamic is what each sibling responds to — by correcting it or by defending the text against correction."
+  },
+  "directionality_overrides": [],
+  "omegas": [
+    {
+      "id": "designed_vs_emergent_necessity",
+      "question": "Is the concentration-and-elimination dynamic a natural consequence of any property-trading structure with positional rents, or an authored artifact tuned by designers to produce it?",
+      "resolution_mechanism": "Parameter-space simulation over rent schedules, starting capital, and board topology; historical analysis of the Magie-to-Darrow-to-Hasbro design record; comparative study of variant property games.",
+      "impact": "If the dynamic is robust across parameter space, the structural-necessity claim strengthens. If it depends on tuned parameters (rent levels calibrated to drain slower players on schedule), the inevitability is a design choice and the constraint is constructed — supporting reclassification away from the mountain claim despite the declared beneficiary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the rulebook's extraction arc is emergent law or tuned design."
+    },
+    {
+      "id": "magic_circle_transfer_question",
+      "question": "Does the extraction experienced at the table transfer beyond the magic circle — shaping players' beliefs about how markets work — or is it confined to play-money stakes?",
+      "resolution_mechanism": "Controlled studies of gameplay effects on economic attitudes; longitudinal comparison of heavily exposed cohorts; discourse analysis of how the game is invoked in political argument.",
+      "impact": "If transfer is real, the constraint's effective reach exceeds the table and the pedagogical claim gains force in both directions. If nil, the measured extraction is bounded by the session and the reading reduces to metaphor — the structural-necessity claim would describe a toy world only.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether in-game rent dynamics map to extra-game economic cognition."
+    },
+    {
+      "id": "consent_vs_compulsion_boundary",
+      "question": "Is the suppression that binds players once the session begins structural (the text permits no rescue, re-entry, or secession) or consensual (players freely accepted the arc at shuffle)?",
+      "resolution_mechanism": "Compare mid-game quitters' post-exit assessments with rule-bound completers; test whether felt compulsion persists after leaving the table (post-exit suppression trajectory).",
+      "impact": "If suppression is mostly consensual, effective suppression falls and the arrangement resembles an agreed harsh procedure at the individual seat. If structural within-session, the eliminated seat computes close to a fully targeted position.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus consensual suppression mechanism in bounded play."
+    },
+    {
+      "id": "kernel_reading_allocation",
+      "question": "Which reading of the monopoly_rulebook kernel correctly identifies the operative constraint — this extraction-demonstration reading, the social-scaffold reading (community correction is the real rule), or the tournament-orthodoxy reading (the text as legitimate ranking instrument)?",
+      "resolution_mechanism": "Cross-table observational study correlating rule-fidelity with elimination rates, session welfare, and what regulars say the game is for; treat revealed house-rule adoption as revealed preference over readings.",
+      "impact": "Scaffold adoption dissolves the victim set (elimination becomes optional) and drops epsilon; orthodoxy adoption recodes the transfer as earned outcome and shifts the constraint toward coordination-at-the-ranking-seat; this reading's structure survives only where tables actually play the unamended text.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this story is one reading of the monopoly_rulebook kernel; sibling readings restructure the victim set and epsilon."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reference_frame": "unamended_rent_extraction_text",
+    "drift_state": {
+      "moment": "contemporary_home_play",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "social_scaffold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tournament_orthodoxy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "concentration_structurally_inevitable_under_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "text_fidelity_required_for_pedagogical_validity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is play conducted by the unamended Monopoly rule text: scheduled rents scaling with development, no redistribution mechanisms, bankruptcy as permanent removal, and consolidation of all assets in one survivor within 60 to 90 minutes. This file instantiates the extraction_demo_reading of the monopoly_rulebook kernel, for which that arc is not a defect but the payload: the text is a faithful, deliberately harsh working model of rent-extraction dynamics, and elimination is the structurally necessary outcome that carries the lesson. The epsilon referent is the unamended arrangement itself, assessed by this reading's own lights — never the house-ruled alternative the scaffold sibling endorses. Claim and metrics are authored independently: the claim is mountain because the reading presents the outcome as structurally necessary rather than chosen; the metrics describe the session arc as it actually runs. The eventual_winner is declared as beneficiary intentionally — a collector seat demonstrably exists — which routes this story through false-summit evaluation; the designed_vs_emergent_necessity omega documents the required natural-law-versus-constructed ambiguity, sharpened by the historical fact that the text descends from a game explicitly designed to produce this demonstration.",
+    "key_agents": [
+      "eventual_winner: primary beneficiary (moderate/constrained) — converts mid-game rent exposure into the sole collecting position; gain expires at box-up",
+      "eliminated_players: primary victims (powerless/trapped) — drained by the rent schedule, removed at bankruptcy, no re-entry or rescue",
+      "struggling_holders: secondary payers (moderate/constrained) — solvent but net-negative; their choices select the winner, not whether one exists",
+      "house_rule_advocates: excluded (moderate/mobile) — liquidity-injection amendments ruled out of order at strict tables",
+      "publisher_trademark_holder: agenda_setter (institutional/arbitrage) — publishes and maintains the canonical text; its gain is orthogonal to the session transfer",
+      "critical_game_scholars: analytical observers — assess the demonstration's fidelity to actual market dynamics"
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because the rent schedule drains net-losers monotonically and the terminal consolidation leaves one holder of everything; the temporal series shows the accumulation ramp the reading treats as the point rather than a malfunction. Suppression (0.65) reflects the text's closure once play begins — no rescue, re-entry, or secession — tightening as liquidity drains; the suppression_requirement series tracks this within-session ratchet, which is why that series is authored despite a stable rulebook. Theater ratio is low (0.18): the mechanics do real work every session, with only mild ceremonial continuation in foregone endgames. Accessibility collapse is 0.82 — under the unamended text every playthrough converges to concentration, and alternatives collapse once the rules are understood; the residual is the meta-level exit of switching to house rules, which belongs to the sibling reading's world. Resistance (0.28) covers collusion attempts, trade refusals, and rage-quits, all futile under strict play. All three metric series share one seven-point grid (0/15/30/45/60/75/90 minutes) so no row substitutes an end-state value into earlier times.",
+    "perspectival_gap": "Four seats inhabit the same text and should compute differently. From the winner's seat the rules are a meritocratic ascent they financed fairly through the same rent schedule that ruins others; from the eliminated seat the identical schedule is unrecoverable loss with zero recourse; from the scholar's seat the whole arc is evidence about markets; from the publisher's seat it is product maintenance indifferent to who wins. The engine derives these per-seat classifications from the structural data (role, power, exit); the divergence between the winner's and the eliminated player's computed experience of the same rules is the measurement this story exists to take.",
+    "directionality_logic": "Declarations map directly onto the transfer structure. eventual_winner is declared beneficiary (with payer as secondary role — they reached the collecting seat by passing through the paying one), placing them near the beneficiary end of directionality but not at 0.0. eliminated_players are declared victims with trapped exit, placing them near the full-target end; struggling_holders are victims-in-progress with slightly more agency. house_rule_advocates sit outside the transfer loop entirely — excluded rather than coordinated. publisher_trademark_holder administers the text but is deliberately NOT listed as a beneficiary: its revenue tracks the activity's existence, not the extraction transfer, so no override is needed to keep it out of the beneficiary derivation. critical_game_scholars carry the analytical atom. No directionality_overrides are authored: the beneficiary/victim declarations plus exit options already yield the correct directionalities, and the override surface keys on power atoms, which would smear corrections across unrelated seats.",
+    "mandatrophy_analysis": "Mandatrophy is not resolved here because the founding function is live: the arrangement still performs the demonstration every session, so nothing has outlived its mandate — for this reading the mandate IS the extraction arc. The classification guards against two symmetric mislabels. Calling the arrangement a pure coordination device (an evening's entertainment that happens to have winners) erases the asymmetric transfer and the eliminated victim set; calling it pure predation erases consent at entry, bounded play-money stakes, and the full reset after each session. The piton failure mode is likewise distant: theater is low and the function is executed, not merely performed at. The live risk runs the opposite direction from atrophy — the constraint works exactly as designed, which is precisely this reading's claim and why the designed_vs_emergent_necessity omega matters more than any decay question.",
+    "kernel_context": "Kernel: monopoly_rulebook — the canonical Monopoly rule text as a persisting commitment that different parties read differently. This file instantiates the extraction_demo_reading: the text as a faithful, deliberately harsh model of rent-extraction capitalism whose mandated endgame (serial elimination, winner-takes-all) is the pedagogical payload. Sibling readings, authored as separate constraints: social_scaffold_reading (the text kept socially playable by house-rule liquidity injection — community correction as the real rule) and tournament_orthodoxy_reading (the text as immutable legitimate competitive framework for ranking and comparison). This reading shares the orthodoxy's text-fidelity while inverting its valence: fidelity matters because the harshness is the evidence. Under the scaffold reading the victim set dissolves; under the orthodoxy the transfer is recoded as earned outcome; only this reading holds both the high epsilon and the fixed victim set."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

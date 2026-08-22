@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "tordesillas_demarcation_kernel__portuguese_exploration_legitimation",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "45637709-1d32-42a1-9c0a-43ddfdc8b196"
+  },
+  "base_properties": {
+    "extractiveness": 0.56,
+    "suppression": 0.68,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Tordesillas Demarcation — Portuguese Exploration-Legitimation Reading",
+    "topic_domain": "international law/colonial history/sovereignty theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "portuguese_crown",
+      "estado_da_india",
+      "castilian_crown",
+      "papal_see"
+    ],
+    "victims": [
+      "rival_european_maritime_powers"
+    ],
+    "vindicated_propositions": [
+      "papal_donation_doctrine",
+      "prior_discovery_title",
+      "exclusive_sphere_allocation_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.68,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "committer_reading_delta_vs_spanish_sibling",
+      "question": "This constraint is the portuguese_exploration_legitimation reading of the tordesillas_demarcation_kernel: what structural differences would instantiate the sibling spanish_conquest_legitimation reading?",
+      "resolution_mechanism": "Author the sibling story against the same referent (the demarcation arrangement as operated) and compare victim sets, epsilon, and enforcement mode.",
+      "impact": "The sibling reading shifts the victim set to indigenous populations, raises epsilon well above this reading's moderate value, and pushes classification toward snare; this file's metrics are valid only for the Portuguese reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel membership and cross-reading structural delta."
+    },
+    {
+      "id": "cartaz_extraction_boundary",
+      "question": "Does this reading's epsilon include the cartaz licensing levies on Asian Ocean shipping, or is that a structurally distinct arrangement warranting its own story?",
+      "resolution_mechanism": "Decomposition test: if counting Asian-side levies moves epsilon materially, author a separate cartaz-licensing constraint story and link it via network edges.",
+      "impact": "Including Asian-side levies raises epsilon toward 0.7 and adds victim seats; excluding them keeps the declared victim set purely European and epsilon moderate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between European-rival exclusion and Asian-shipping licensing levies."
+    },
+    {
+      "id": "papal_warrant_operative_force",
+      "question": "How much of the arrangement's binding force on non-party European powers came from the papal warrant itself rather than from Portuguese naval deterrence?",
+      "resolution_mechanism": "Counterfactual comparison of enforcement episodes: French, English, and Dutch conduct toward the line as such versus toward Portuguese squadrons.",
+      "impact": "If warrant force was negligible among third parties, the legitimation layer functions closer to cover, theater_ratio trends higher, and classification drifts toward the snare flank of tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative causal weight of papal title versus naval deterrence."
+    },
+    {
+      "id": "post_union_inertial_tail",
+      "question": "After the 1580 dynastic union merged the Iberian crowns, did the demarcation regime persist as inertial ceremony until the 1750 Treaty of Madrid replaced it?",
+      "resolution_mechanism": "Extend temporal measurement beyond this interval's end: track theater_ratio and enforcement activity from 1580 to 1750.",
+      "impact": "An inertial tail would date the mandate-obsolescence transition precisely and support reading the regime's final phase as performance maintained by bureaucratic habit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Lifecycle tail: inertia versus function after the founding problem died."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "After Columbus's landfalls created overlapping Iberian claims, Portuguese diplomacy secured first the 1493 papal bulls and then the 1494 bilateral treaty moving the demarcation line to 370 leagues west of Cape Verde. This story authors the arrangement as the Portuguese reading holds it: the papal-treaty complex CONFIRMS rights Portugal had already earned through decades of African-coast exploration and protects its eastern route, while licensing exclusion of European rivals from the zone east of the line. Operationally the arrangement ran through the Estado da India: a fortress chain (Goa, Malacca, Hormuz), naval patrols, and the cartaz safe-conduct system. The declared victim set is the rival European maritime powers — France, England, the Netherlands — bound by an instrument they never signed; Castile sits on the beneficiary side as co-signatory. This file belongs to a decomposed constraint family: the demarcation commitment splits into this reading and a Spanish conquest-legitimation sibling with a different victim set and different epsilon (see kernel_context and network.dual_formulation_note). Claim and metrics are independent authored facts: claimed_type tangled_rope states the structure I believe true (genuine bilateral coordination plus asymmetric third-party extraction plus active enforcement); the metrics state what I believe descriptively occurred.",
+    "key_agents": [
+      "portuguese_crown: agenda-setter and principal beneficiary (institutional/arbitrage) — negotiated the line, directs enforcement, receives the monopoly revenues",
+      "estado_da_india: administering beneficiary (institutional/identity_locked) — runs the fortress chain, patrols, and cartaz licensing; its officers' careers fuse with the monopoly mission",
+      "castilian_crown: co-beneficiary of the bilateral settlement (institutional/mobile) — accepted eastern exclusion in exchange for western recognition",
+      "papal_see: warrant-granting beneficiary (institutional/constrained) — collects jurisdictional precedent from the donation framework",
+      "rival_european_maritime_powers: primary payers (powerful/constrained) — France, England, Netherlands, excluded without consent",
+      "asian_ocean_trading_networks: secondary payers under the licensing machinery (organized/constrained)",
+      "venetian_mamluk_intermediaries: excluded voices (powerful/trapped) — Levant spice intermediation displaced by the Cape route",
+      "international_law_historians: analytical observer (analytical/analytical)"
+    ],
+    "logic_rationale": "Epsilon is moderate (0.56 at interval end) because two things are simultaneously true: the settlement genuinely solved a war-avoidance and investment-protection problem between the signatories, and it transferred enormous spice-route rents from unconsenting third parties to Lisbon. Suppression (0.68) reflects that persistence depended on active naval exclusion — patrols, seizures, the fortress chain — not on voluntary compliance by those excluded; suppression is authored as a raw structural property and is not scaled by power or scope anywhere in this story. Theater ratio (0.30 and rising) tracks the growing gap between the papal-ceremonial layer, which performed less work as Protestant and Gallican challengers dismissed it, and the treaty-enforcement layer, which remained functional throughout. Accessibility collapse is partial (0.45): overland Levant trade, westward expansion, and eventual passage-searches kept alternatives alive for the excluded. Resistance (0.60) is substantial — corsair warfare, state-sponsored interlopers, and the beginnings of the Dutch challenge. The measurement series run on one shared six-point grid (t=0..100, i.e., 1494-1594) with all three metrics authored at every point; extractiveness peaks mid-interval as the Albuquerque-era monopoly consolidates, then leaks as smuggling and rival probes grow.",
+    "perspectival_gap": "The payer and beneficiary seats compute differently from the same structure. From the Portuguese and papal seats the arrangement is legitimate confirmation of earned rights and a cheap substitute for Iberian war; from the rival-power seats the same instrument is pure external imposition — a line drawn over them by others' authority. Same-level divergence is sharpest between Castile and France: both were great powers facing the same line, but Castile's signature purchased western security and mutual recognition while France's non-consent left it bearing the full cost of exclusion with none of the settlement's protections. Exit asymmetry follows the same fault lines: Portugal holds arbitrage-grade exit (it authored the terms), Castile is mobile (its sphere lay west), the rivals are constrained (alternative routes were costly and unproven within this interval), and the Asian carrying trade is constrained between paying cartaz dues and risking seizure.",
+    "directionality_logic": "Declared beneficiaries (Portuguese crown, Estado da India, Castilian crown, papal see) derive low directionality — the arrangement subsidizes them; the declared victim set (rival European maritime powers) derives high directionality amplified by their constrained exit. One override is authored: the organized-power atom is set to d=0.78 because the only organized-power seat in this story is asian_ocean_trading_networks, which bears real levies under threat of seizure but is deliberately NOT placed in the declared victim set — the kernel's structural delta for this reading fixes the victim set as the European rivals, and the Asian-side licensing extraction is flagged (omega cartaz_extraction_boundary) as a candidate separate constraint. The override corrects what the derivation would otherwise miss: an undeclared payer would fall to canonical fallback despite sitting near the full-target end structurally.",
+    "mandatrophy_analysis": "The founding problem — war-avoidance between the Iberian crowns and protection of sunk exploration investment — was genuinely solved, and died as a live problem with the 1580 dynastic union; the arrangement nonetheless persisted formally until the 1750 Treaty of Madrid. The tangled_rope classification is what prevents mislabeling here: calling the arrangement pure coordination ignores that its rents were extracted from parties who never consented; calling it pure extraction ignores the real bilateral settlement it delivered. Keeping both halves visible lets the lifecycle detector date the transition — the coordination half finished mid-interval while the extraction half continued — instead of flattening the genealogy into a single verdict. The founding_problem_status=dead combined with disappearance_verdict=world_rearranges is the mismatch signature of a regime whose extraction architecture outlived its reason.",
+    "kernel_context": "This story instantiates the portuguese_exploration_legitimation reading of the tordesillas_demarcation_kernel: the papal-treaty complex as confirmation of prior exploration rights and as warrant for excluding European rivals east of the line. The sibling reading, spanish_conquest_legitimation, reads the same donation framework as license for territorial conquest and indigenous subjugation west of the line — a different victim set, a much higher epsilon, and land-conquest rather than trade-monopoly enforcement. The two readings coexisted within a single donation framework held simultaneously by both crowns, but this reading structurally configured the sibling: Portuguese diplomatic pressure produced the 370-league line that defines where the Spanish reading's scope runs, hence the influences edge. Epsilon here is reading-indexed over the fixed referent of the standing demarcation arrangement — assessed by the legitimating reading's own lights, which is why it is moderate rather than the high value a free-navigation or conquered-population reading would author over the same referent."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tordesillas_demarcation_kernel__spanish_conquest_legitimation"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Tordesillas/Papal demarcation' conflates two structurally distinct claims and is decomposed per the epsilon-invariance principle. This story (portuguese_exploration_legitimation) authors the eastern-route reading: moderate epsilon, victim set = rival European maritime powers, extraction via trade-monopoly exclusion. The sibling (spanish_conquest_legitimation) authors the western reading: substantially higher epsilon, victim set = indigenous populations, extraction via territorial conquest. The papal bulls are the upstream common source feeding both; this reading is upstream-configurational for the sibling because the negotiated line location defines the sibling's territorial scope. A third candidate decomposition — the cartaz licensing system as its own constraint — is flagged in omega cartaz_extraction_boundary rather than forced into this file."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.78
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "portuguese_crown",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds the treaty title and directs the regime: negotiated the line's placement, commissions the fleet and fortress network, licenses the India-run convoys, and receives the customs duties, monopoly margins, and licensing fees the arrangement yields. Its exit is rewriting or renegotiating the terms, since it authored them."
+    },
+    {
+      "name": "estado_da_india",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "The viceregal administration headquartered at Goa: runs the fortresses at Goa, Malacca, and Hormuz, patrols the sea lanes, issues cartaz safe-conducts, seizes unlicensed shipping, and staffs the monopoly factories. Officers' careers, pensions, and honor are bound to the monopoly mission; repeated proposals to abandon the fortress chain for open factory trade read internally as betrayal of the enterprise rather than as strategy."
+    },
+    {
+      "name": "castilian_crown",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Co-signed the settlement: accepts exclusion from the eastern route in exchange for recognition of its western claims and relief from Iberian naval rivalry. It expands westward and, over time, treats the eastern line as binding mainly where enforcement actually reaches."
+    },
+    {
+      "name": "papal_see",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Grants and ratifies the warrants (Inter caetera, Dudum siquidem, Julius II's 1506 ratification), collecting jurisdictional precedent: the donation doctrine asserts papal authority to allocate newly encountered non-Christian lands and routes. Its authority depends on Catholic monarchs continuing to seek its warrants, which the Reformation progressively undermines."
+    },
+    {
+      "name": "rival_european_maritime_powers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "France, England, and the Netherlands: never party to the treaty, yet subject to its enforcement when their ships enter the eastern zone. Their alternatives — overland Levant trade, searching for other passages, privateering — are costly and slow to mature; within this interval their eastern commerce runs through smuggling, corsairing, and captured carriage."
+    },
+    {
+      "name": "asian_ocean_trading_networks",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Gujarati, Arab, Persian, Malay, and Chinese merchants operating the Indian Ocean carrying trade: they may purchase cartaz passes, pay port and passage dues at Portuguese forts, or risk seizure of ship and cargo. Some shift routes and seasons to evade patrols; most treat the fees as one more toll among many."
+    },
+    {
+      "name": "venetian_mamluk_intermediaries",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Venice and the Mamluk sultanate profit from the Levant-Alexandria spice intermediation that the Cape route bypasses. Neither was consulted in the negotiation; both protest, mount or contemplate naval responses, and watch their margins erode as the route matures."
+    },
+    {
+      "name": "international_law_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of sovereignty and the law of nations: reconstruct the negotiations, weigh the warrant's legal force against balance-of-power reality, and trace the demarcation's afterlife through mare clausum debates to the 1750 Treaty of Madrid."
+    }
+  ],
+  "gain_flow": "portuguese_crown",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Settles, without war between the signatories, which crown may exploit which oceanic zone: converts overlapping claims left by Columbus's landfalls into mutually recognized spheres, shields Portugal's decades of African-route investment from free-riding Castilian expeditions, and gives both crowns a cheap, legible title to police against each other.",
+    "transfer_function": "Moves exclusive commercial access to the eastern sea route from all European comers to the two signatory crowns; moves spice-trade margins, convoy customs, cartaz licensing fees, and seized cargoes from rival European entrants and levied Asian shippers to the Portuguese crown and its Indian Ocean administration.",
+    "absent_voices": "Non-party European powers — France, England, the Netherlands — are bound by an instrument they never signed; Francis I's demand to be shown Adam's will voices their objection from outside the room. The Asian polities whose waters the arrangement purports to license are absent entirely; Venice and the Mamluk sultanate, whose intermediation the route displaces, learned of the settlement as accomplished fact.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight disappearance reopens the Castile-Portugal dispute a generation early, exposes the India-run convoys to immediate rival expedition, collapses cartaz revenue and the fortress-chain financing, and pulls Dutch, English, and French competition into the Indian Ocean decades ahead of schedule — the Estado da India's entire revenue architecture rearranges around open access.",
+    "founding_problem": "Two Catholic crowns faced war over overlapping claims after 1492: Portugal needed its ten-year African-Indian exploration program shielded from free-riding; Castile needed its western discoveries secured; both preferred a divinely warranted, arbitration-style division to a naval war neither could afford while also fighting infidel powers and financing fleets.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Venetian envoy dispatches of 1493 (Trevisan's report on the panic and subsequent negotiation) corroborate the founding crisis from outside both courts. Francisco de Vitoria's Salamanca lectures (1539), delivered from outside the beneficiary set, attest that the papal-warrant solution was already contested on its own terms. The 1580 dynastic union of the crowns and the 1750 Treaty of Madrid's explicit replacement of the line attest the founding problem's death; no party outside the arrangement's administrators defends the original problem as still live."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "prior_rights_confirmation_framework",
+    "drift_state": {
+      "moment": "post_reformation_challenge",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "spanish_conquest_legitimation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prior_exploration_confers_exclusive_title",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "papal_warrant_binds_all_christian_powers",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "enforced_exclusion_of_unconsenting_rivals_is_lawful",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

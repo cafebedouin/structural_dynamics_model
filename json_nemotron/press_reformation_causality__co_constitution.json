@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "press_reformation_causality__co_constitution",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_press_reformation_causality__co_constitution",
+    "story_uid": "47318def-bf24-4e2a-9dc9-31430c70de03"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "Print Economy–Religious Controversy Co-Constitution (Reformation)",
+    "topic_domain": "history_of_technology/religious_history/media_studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "vernacular_printers",
+      "reform_movements",
+      "literate_lay_publics"
+    ],
+    "victims": [
+      "catholic_institutional_authority",
+      "latin_literary_monopoly_holders"
+    ],
+    "vindicated_propositions": [
+      "vernacular_access_to_scripture",
+      "public_sphere_formation_through_print",
+      "institutional_adaptation_pressure"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the co_constitution reading of the press_reformation_causality kernel structurally distinct from its sibling readings (technological_determinism, strategic_deployment), or do they describe the same constraint from different angles?",
+      "resolution_mechanism": "Test epsilon-invariance: measure extractiveness, suppression, and beneficiary structure under each reading. If epsilon differs materially (e.g., technological_determinism yields near-zero extraction as Mountain; strategic_deployment yields concentrated extraction as Snare/Tangled Rope), the readings instantiate different constraints.",
+      "impact": "If readings map to different epsilon values, they are distinct constraints linked by network.affects_constraints, not one constraint with observer-dependent classification. Confirms the kernel decomposition protocol.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's declared readings decompose into separate constraint stories per epsilon-invariance."
+    },
+    {
+      "id": "scaffold_sunset_location",
+      "question": "Where is the sunset clause for the scaffold function of print technology? Does the enabling infrastructure role terminate at a specific historical moment (e.g., confessionalization, state-church settlement), or does it persist as a permanent coordination layer?",
+      "resolution_mechanism": "Trace the trajectory of print's coordination function: from enabling vernacular dissemination (1520s) to stabilizing confessional identities (1550s-1648) to becoming the default public sphere substrate (post-1648). If the coordination problem (access to authoritative text) is solved and the infrastructure becomes self-sustaining without active enforcement, the scaffold has sunset.",
+      "impact": "If sunset occurred at confessionalization (Peace of Augsburg 1555, Westphalia 1648), the constraint reclassifies from Scaffold to Rope or Mountain for later periods. If no sunset, the scaffold claim is a false summit masking persistent extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical location of the scaffold's sunset — when the enabling infrastructure became self-sustaining or was captured."
+    },
+    {
+      "id": "distributed_extraction_measurement",
+      "question": "Can distributed extraction patterns among printers, reformers, and Church be measured without collapsing into a single beneficiary category?",
+      "resolution_mechanism": "Reconstruct revenue flows: printer profits from polemical pamphlets vs. liturgical texts; reformer resource capture (tithes, patronage, state support) enabled by print; Church counter-printing costs and indulgence revenue protection. If no single agent captures >50% of the constraint's gains, gain_flow = 'diffuse' is warranted.",
+      "impact": "Validates the claimed 'no single beneficiary' structure. If a dominant capturer emerges (e.g., territorial princes capturing both print regulation and church lands), reclassifies toward Snare/Tangled Rope with named beneficiary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction is genuinely distributed or covertly concentrated."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1517,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1525,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1535,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1555,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1618,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1517,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1525,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1535,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1555,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1618,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1517,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1525,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1535,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1555,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1618,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1517,
+    "end": 1648
+  },
+  "commentary": {
+    "narrative_context": "The Reformation emerges from feedback loops between the print economy and religious controversy (1517-1648). Print technology functions as a scaffold: enabling infrastructure for vernacular dissemination that was meant to be transitional — once publics could access scripture directly, the coordination problem (authoritative text access) would be solved and the scaffold could sunset. Instead, the infrastructure was captured by confessional state-building: territorial princes used print regulation to stabilize religious identity, printers became dependent on confessional patronage, and the Church developed counter-printing apparatus. The constraint is claimed as Scaffold because the print infrastructure's enabling function (solving the access problem) is structurally distinct from the extraction patterns that layered onto it. Multiple tangled_rope dynamics exist: printers coordinate distribution but extract via confessional monopoly; reformers coordinate publics but extract via mandatory tithes and state enforcement; the Church coordinates orthodoxy but extracts via suppression and counter-printing costs. No single beneficiary captures the constraint — gain_flow is diffuse across printers, reformers, princes, and Church counter-apparatus.",
+    "logic_rationale": "Extractiveness (0.42) reflects layered rents: printer monopolies, confessional tithe systems, state censorship apparatus — but distributed, not concentrated. Suppression (0.38) is moderate: censorship, index librorum prohibitorum, territorial print licensing exist but alternatives (smuggling, manuscript circulation, oral preaching) persist. Theater ratio (0.28) captures performative orthodoxy enforcement vs. genuine coordination of textual access. Accessibility collapse (0.45) is partial: Latin monopoly breaks but confessional canon replacements create new barriers. Resistance (0.55) is high: underground printing, radical reformation, Catholic resistance, peasant revolts all contest the arrangement. The scaffold claim rests on the enabling function (vernacular access) having a declared sunset — the confessional settlements (Augsburg 1555, Westphalia 1648) as structural sunset points where the infrastructure becomes self-sustaining.",
+    "directionality_logic": "Vernacular printers are beneficiaries (coordination function: they enable distribution and profit) but also payers (confessional licensing, censorship risk) — dual position yields d ~0.45. Reform movements are beneficiaries (print enables public formation) and agenda_setters (they direct the controversy) — d ~0.25. Literate lay publics are beneficiaries (access) with constrained exit (confessional boundaries) — d ~0.4. Catholic institutional authority is payer (loses monopoly, bears counter-printing costs) with identity_locked exit (institutional identity fused to Latin unity) — d ~0.85. Latin literary monopoly holders are payers (displaced) with trapped exit — d ~0.9. Territorial princes (implicit in stakeholders) are agenda_setters capturing regulatory rent — d ~0.2.",
+    "perspectival_gap": "The engine will compute different seat types: from the printer's seat, the constraint is Tangled Rope (genuine coordination + confessional extraction). From the lay public's seat, it is Rope (coordination benefit > cost). From the Catholic authority's seat, it is Snare (extraction without coordination benefit). From the reformer's seat, it is Scaffold (transitional enabling function). The divergence is the measurement — the co_constitution reading insists no single seat owns the truth.",
+    "mandatrophy_analysis": "The founding problem (vernacular scripture access) was live in 1517. By 1555/1648, the problem is substantially solved (vernacular bibles exist, literacy spreads, public sphere forms) but the print regulation apparatus persists and intensifies — confessional censorship, state licensing, monopoly grants. This is mandatrophy: the arrangement outlives its founding function. The scaffold's sunset clause (confessional settlement) was either not honored or was reinterpreted as permanent regulatory authority. The constraint avoids pure Snare classification because the coordination function (textual access) remains real and the extraction is distributed, not captured by one party.",
+    "kernel_context": "This constraint instantiates the 'co_constitution' reading of the 'press_reformation_causality' kernel. Sibling readings: 'technological_determinism' (print as autonomous Mountain-like enabler, epsilon ~0.05, Mountain classification) and 'strategic_deployment' (print as weaponized Snare/Tangled Rope with concentrated reformer/printer beneficiary capture, epsilon ~0.65). This reading positions print as Scaffold with distributed tangled_rope dynamics and diffuse extraction (epsilon 0.42). The structural delta: technology is enabling infrastructure (scaffold), not autonomous cause (mountain) or pure weapon (snare); beneficiaries are multiple and distributed, not singular."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "press_reformation_causality__technological_determinism",
+      "press_reformation_causality__strategic_deployment",
+      "confessional_print_regulation",
+      "vernacular_public_sphere_formation"
+    ],
+    "dual_formulation_note": "This constraint is one member of the press_reformation_causality kernel family. technological_determinism treats print as Mountain (natural law enabler, epsilon ~0). strategic_deployment treats print as Snare/Tangled Rope with concentrated beneficiary capture (epsilon ~0.65). co_constitution treats print as Scaffold with distributed tangled_rope dynamics (epsilon 0.42). The three readings have different epsilon values because they describe structurally distinct constraints: the Mountain reading describes the physical press; the Snare reading describes the strategic capture; the Scaffold reading describes the co-constituted feedback loop. They are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "vernacular_printers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Print and distribute vernacular religious texts (pamphlets, bibles, polemics) for profit. Gain coordination benefit: print solves the distribution problem for religious controversy. Bear extraction: confessional licensing fees, censorship risk, dependence on territorial patronage. Exit is constrained — moving cities risks losing guild privileges and confessional market access."
+    },
+    {
+      "name": "reform_movements",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Use print to coordinate publics, standardize doctrine, and challenge Latin unity. Gain massive coordination benefit: print enables movement formation at scale. Bear extraction: resources diverted to printing, dependence on printer networks, vulnerability to censorship. Exit is identity_locked — the movement's identity is constituted through print controversy; abandoning print means abandoning the Reformation itself."
+    },
+    {
+      "name": "literate_lay_publics",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Gain access to vernacular scripture, devotional texts, and religious debate. Bear indirect extraction: higher prices for confessional monopoly texts, conformity pressure from confessional state. Exit is constrained — confessional boundaries (cuius regio, eius religio) make religious mobility costly; literacy itself ties them to the print ecosystem."
+    },
+    {
+      "name": "catholic_institutional_authority",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Loses Latin liturgical monopoly and doctrinal control. Bears extraction: counter-printing costs, Index maintenance, Council of Trent enforcement apparatus, territory losses to Protestant princes. Exit is identity_locked — the Church's self-conception is fused to Latin unity and magisterial authority; adapting to vernacular plurality is experienced as institutional death."
+    },
+    {
+      "name": "latin_literary_monopoly_holders",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Scholastic publishers, Latin humanist networks, university text suppliers displaced by vernacular market. Bear full extraction with no coordination benefit — their product (Latin texts) loses the coordination function print once gave it. Exit is trapped — retraining for vernacular markets is blocked by confessional polarization and guild structures."
+    },
+    {
+      "name": "territorial_princes",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Capture print regulation (licensing, censorship, monopoly grants) to stabilize confessional identity and extract revenue. Gain both coordination (religious uniformity aids governance) and extraction (print fees, church land secularization). Exit is arbitrage — they can shift confessional allegiance (as some did) to maximize advantage; the constraint serves their interests."
+    },
+    {
+      "name": "radical_reformation_groups",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Anabaptists, spiritualists, anti-trinitarians use print but are suppressed by both Catholic and magisterial Protestant authorities. They would object to the confessional capture of print; their exclusion is enforced by the same print licensing that stabilizes the major confessions. Exit is trapped — no territorial protector, printing is illegal for them."
+    },
+    {
+      "name": "historian_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyzes the feedback loop from outside the constraint. Sees the scaffold function (vernacular access enabled), the tangled_rope dynamics (confessional capture), and the distributed extraction (no single capturer). No material stake; exit is analytical."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Print technology solved the coordination problem of authoritative textual access: vernacular scripture and religious debate could reach publics beyond manuscript networks, enabling mass religious movements and public opinion formation.",
+    "transfer_function": "Moves textual authority from Latin clerical monopoly to vernacular public sphere. Printers capture revenue from polemical and devotional printing. Reformers capture tithes, patronage, and state support enabled by print publics. Princes capture church lands and regulatory rents. Church bears counter-printing and enforcement costs. No single capturer — flows are distributed across confessional, commercial, and state channels.",
+    "absent_voices": "Radical reformation groups (Anabaptists, spiritualists) and non-confessional humanist networks were structurally excluded from the print licensing regime. They would argue for open printing and religious liberty but were suppressed by both major confessions. Peasant and urban poor publics (largely illiterate) were excluded from the vernacular public sphere itself — their voices enter only through rebellion (1525 Peasants' War) which the constraint's beneficiaries crushed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the print-religion feedback loop vanished in 1517: no mass pamphlet circulation, no vernacular bible standardization, no coordinated Reformation publics, no confessional state-building via print regulation. The Reformation as a mass movement fails; the Catholic Church retains Latin unity longer; the public sphere develops differently (perhaps through manuscript academies or oral networks). The world rearranges profoundly.",
+    "founding_problem": "The Latin liturgical monopoly blocked lay access to scripture and religious debate; manuscript production could not scale to meet demand for vernacular texts; religious controversy was confined to clerical circles. Print infrastructure was built to solve the access problem — enabling vernacular dissemination at scale.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (access to scripture) is attested as solved by 1555: vernacular bibles existed in German, French, English, Dutch; literacy rates rose; public religious debate was normalized. Corroboration from outside beneficiaries: Catholic historians (Jedin, Hubert) acknowledge the access problem was real and substantially solved; secular historians (Eisenstein, Febvre) document the print infrastructure's self-sustaining status post-1648. The arrangement persists (print regulation, confessional censorship) despite the founding problem's resolution — mandatrophy confirmed."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "technological_determinism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "strategic_deployment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technology_and_agency_co_constitute_historical_outcomes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "print_infrastructure_has_transitional_enabling_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "vernacular_access_problem_unsolved",
+    "drift_state": {
+      "moment": "post_westphalia_1648",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

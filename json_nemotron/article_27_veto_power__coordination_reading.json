@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "article_27_veto_power__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_article_27_veto_power__coordination_reading",
+    "measurement_id_prefix": "art27_coord",
+    "story_uid": "af36804f-91e6-43a8-954b-737539c51708",
+    "created_at": "2026-08-03T14:22:11Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.03,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.02,
+    "claimed_type": "rope",
+    "human_readable": "UN Security Council P5 Veto — Coordination Reading",
+    "topic_domain": "international_relations/institutional_design/constitutional_law",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "international_system",
+      "p5_states",
+      "non_p5_states"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "great_power_war_prevention_via_unanimity_gate",
+      "collective_action_failure_averted_by_veto"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Is the P5 veto a genuine coordination mechanism (this reading) or an oligopolistic extraction device (oligopoly_reading)?",
+      "resolution_mechanism": "Compare counterfactual great-power conflict rates in institutional designs with and without a unanimity gate; measure whether veto use correlates with preventing nuclear confrontation or with protecting narrow P5 interests.",
+      "impact": "If oligopoly_reading is structurally dominant, this constraint reclassifies from rope to tangled_rope or snare with P5 as beneficiaries and non-P5 states as victims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Commitment to this reading vs. the oligopoly_reading of the same kernel (article_27_veto_power)."
+    },
+    {
+      "id": "coordination_necessity",
+      "question": "Is a P5 unanimity gate actually necessary to prevent great-power war, or would alternative mechanisms (e.g., qualified majority with nuclear-use thresholds) achieve the same coordination with less suppression?",
+      "resolution_mechanism": "Historical analysis of near-miss crises (Cuban Missile Crisis, 1983 Soviet nuclear false alarm) and institutional design experiments; formal modeling of veto vs. alternative gates.",
+      "impact": "If alternatives exist, the veto's suppression component is structural overkill — the constraint extracts unnecessary compliance cost, shifting toward tangled_rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the veto's coordination function is uniquely satisfied by the current unanimity rule."
+    },
+    {
+      "id": "nuclear_state_coverage",
+      "question": "Does the veto's war-prevention logic depend on the P5 being the only nuclear states, or does it degrade as nuclear proliferation expands?",
+      "resolution_mechanism": "Track veto use patterns and great-power confrontation dynamics as nuclear club expands (India, Pakistan, North Korea, potential Iran); assess whether the coordination function holds without veto power for new nuclear states.",
+      "impact": "If the coordination logic requires veto for all nuclear-armed states, the current P5-only structure becomes a partial coordination mechanism with extractive exclusion — tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the veto's war-prevention coordination scales with the actual nuclear landscape."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.025
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.028
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.075
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.04
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.045
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.048
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 1945,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the coordination_reading of the Article 27 veto power kernel. It interprets the P5 veto as a necessary unanimity gate that solves a collective-action problem: without it, any Security Council resolution could compel a nuclear-armed great power into military confrontation it rejects, creating unacceptable escalation risk. The veto's extraction (ε ≈ 0.03) derives from the small but real cost of maintaining the veto mechanism (diplomatic friction, blocked resolutions on non-existential issues) — not from rents captured by the P5. The beneficiary is the international system as a whole, including non-P5 states, because great-power war avoidance is a global public good. This reading coexists with the oligopoly_reading (which sees the veto as extracting authority rents) and the sovereignty_reading (which sees it as instantiating Westphalian non-consent). The coordination_reading does not foreclose either sibling; it occupies a distinct normative claim about the veto's structural function.",
+    "key_agents": [
+      "international_system: Primary beneficiary (analytical/universal) — receives the global public good of great-power war avoidance",
+      "p5_states: Institutional agenda_setters (institutional/global) — hold the veto power, administer the constraint, benefit from stability",
+      "non_p5_states: Beneficiaries (organized/regional_to_global) — receive war-prevention benefit without holding veto; exit constrained by UN membership",
+      "nuclear_non_p5_states: Excluded (powerful/regional) — nuclear-armed but without veto; their confrontation risk is not directly gated",
+      "security_council_institution: Agenda_setter (institutional/global) — administers the veto mechanism, sets procedural rules",
+      "analytical_observer: Observer (analytical/universal) — assesses the constraint's structural function across readings"
+    ],
+    "logic_rationale": "Base extractiveness is extremely low (0.03) because the veto's operational cost is the diplomatic friction of blocked resolutions — not a transfer from victims to beneficiaries. Suppression is minimal (0.05) because the veto is a procedural gate, not an active coercive apparatus; states comply because the alternative (great-power war) is worse, not because they are forced. Theater ratio is low (0.08) because the veto's war-prevention function is genuine and actively used (e.g., Cold War crisis management), not performative. Accessibility collapse is very high (0.92) because the unanimity gate is structurally hard to bypass — any reform requires P5 consent, creating a self-entrenching coordination equilibrium. Resistance is near-zero (0.02) because no state seriously contests the veto's existence as a war-prevention mechanism; contestation targets specific veto uses, not the mechanism itself. The claimed type is rope: a pure coordination mechanism with minimal extraction, genuine collective-action function, and no victim class.",
+    "perspectival_gap": "The coordination_reading sees the veto as a rope from every seat: even non-P5 states benefit from the global public good of great-power war avoidance, and their constrained exit (UN membership) is voluntary participation in the coordination mechanism. The oligopoly_reading would compute tangled_rope or snare for non-P5 seats (extraction of authority rents by P5). The sovereignty_reading computes rope from the P5 seat (sovereignty protection) but may compute differently for non-P5 states. The engine will compute per-seat classifications from the structural data authored here; the divergence between readings is the measurement the corpus exists to take.",
+    "directionality_logic": "All declared beneficiaries (international_system, p5_states, non_p5_states) receive the coordination benefit: avoided great-power war. No victim class is declared because this reading asserts no asymmetric extraction — the veto's cost (blocked resolutions) is symmetrically distributed across all members and is the price of the coordination function. P5 states are both agenda_setters (they hold and exercise the veto) and beneficiaries (they avoid being compelled into unwanted confrontation). Non-P5 states are beneficiaries with constrained exit (UN membership is the coordination commitment). The analytical observer seat sees the full structure. Directionality d is near 0.5 (symmetric) for all beneficiary seats because costs ≈ benefits; the international_system seat is analytical (d not applicable).",
+    "mandatrophy_analysis": "The veto's founding problem (preventing great-power war via unanimity gate) remains live — nuclear confrontation risk persists. The mandate has not atrophied because the coordination function is continuously exercised (vetoes cast on Syria, Ukraine, Israel-Palestine resolutions demonstrate active use). However, the oligopoly_reading argues mandatrophy has occurred: the veto now primarily protects P5 geopolitical interests rather than preventing nuclear war. This reading rejects that characterization; the mandate is live and the mechanism remains functionally necessary. The theater_ratio at 0.08 reflects minimal performative maintenance — the veto is not a degraded institution.",
+    "kernel_context": "This constraint is the coordination_reading of the contested kernel 'article_27_veto_power'. Sibling readings: oligopoly_reading (veto as oligopolistic authority-rent extraction), sovereignty_reading (veto as Westphalian sovereignty instantiation for great powers). This reading asserts the veto is a genuine coordination rope with ε deriving from collective-action failure risk without the unanimity gate; beneficiary is international system stability; no victim class."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "article_27_veto_power__oligopoly_reading",
+      "article_27_veto_power__sovereignty_reading",
+      "un_charter_amendment_procedure",
+      "great_power_conflict_management",
+      "nuclear_nonproliferation_regime"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the article_27_veto_power kernel. The coordination_reading asserts rope classification with ε≈0.03 from coordination overhead; oligopoly_reading asserts tangled_rope/snare with P5 as beneficiaries extracting authority rents; sovereignty_reading asserts rope/mountain from P5 seat (sovereignty protection) but ambiguous for non-P5. All three stories share the kernel_id and are linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "international_system",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The global system of states receives the public good of great-power war avoidance. The veto prevents any SC resolution from compelling a nuclear great power into rejected confrontation, which would risk nuclear escalation. This benefit is non-excludable and non-rivalrous. The international system has no exit from this constraint — it is the constituency the constraint serves."
+    },
+    {
+      "name": "p5_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The five permanent Security Council members (US, UK, France, Russia, China) hold the veto power. They administer the constraint by casting or threatening vetoes. They benefit directly from the war-prevention function (avoiding unwanted confrontation) and from the institutional authority the veto confers. Their exit option is arbitrage-grade: they could withdraw from the UN or block Charter amendment, but the veto itself is their primary leverage."
+    },
+    {
+      "name": "non_p5_states",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The 188+ non-permanent UN member states receive the global public good of great-power war avoidance without holding veto power. They participate in the coordination mechanism through UN membership, which constrains exit (withdrawal is legally possible but politically and practically costly). They benefit from the stability the veto provides but have no direct control over its exercise."
+    },
+    {
+      "name": "nuclear_non_p5_states",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Nuclear-armed states outside the P5 (India, Pakistan, North Korea, potentially Israel, Iran) face great-power confrontation risk without a veto gate. They are excluded from the veto mechanism but affected by its systemic effects. Their exit from the UN system is constrained; they would object to the P5 monopoly on veto power if present in the coordination calculus."
+    },
+    {
+      "name": "security_council_institution",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The Security Council as an institution administers the veto mechanism through its procedural rules (Article 27). It sets the agenda, manages veto use, and is the forum where the coordination function is exercised. It has no independent exit — it is the institutional embodiment of the constraint."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The analytical seat assessing the constraint's structural function across all readings. Sees the full coordination-extraction landscape, the kernel contest, and the seat divergences. Neither collects nor pays; exit is analytical (always available)."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Prevents great-power war by requiring unanimity among nuclear-armed P5 states before the Security Council can authorize military action that could compel a nuclear state into confrontation it rejects — solving the collective-action problem where any single great power's rejection of a military mandate would otherwise create escalation risk.",
+    "transfer_function": "Moves diplomatic friction and blocked resolutions (the cost of maintaining the unanimity gate) from all UN member states collectively, in exchange for the global public good of avoided great-power nuclear confrontation. No net transfer from victims to beneficiaries — the cost is the coordination overhead itself.",
+    "absent_voices": "Nuclear-armed non-P5 states (India, Pakistan, North Korea, Israel, Iran) are structurally excluded from the veto mechanism but bear confrontation risk without a corresponding gate. They would argue for either veto expansion or alternative coordination mechanisms. Future generations (who inherit the institutional design) are also absent — they would bear any long-term degradation of the veto's war-prevention function.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the P5 veto disappeared overnight, the Security Council could pass binding resolutions compelling nuclear-armed great powers into military confrontations they reject. This would create immediate escalation risk in multiple active flashpoints (Ukraine, Taiwan, Korea, Middle East). The international system would reorganize around ad hoc great-power management (summits, bilateral hotlines, spheres of influence) — the UN-centered collective security architecture would collapse.",
+    "founding_problem": "The UN Charter's founders (1945) designed the P5 veto to prevent the League of Nations' failure: without a great-power unanimity gate, collective security mechanisms would either be ignored by great powers or compel them into unwanted wars, causing system collapse. The veto was the price of great-power participation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the UN Charter drafting history (San Francisco Conference records), by Cold War crisis management literature (e.g., Cuban Missile Crisis veto use preventing escalation), and by contemporary nuclear deterrence scholars outside the P5 beneficiary set (e.g., Scott Sagan, Nina Tannenwald). The oligopoly_reading contests this status, arguing the founding problem is dead and the veto persists as rent extraction; this reading holds the problem is live because nuclear confrontation risk persists."
+  },
+  "uke_scope": {
+    "epsilon_bin": "negligible",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "article_27_veto_power"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "oligopoly_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "great_power_war_prevention_requires_unanimity_gate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "veto_cost_is_coordination_overhead_not_rent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "charter_unanimity_gate_1945",
+    "drift_state": {
+      "moment": "contemporary_multipolar_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

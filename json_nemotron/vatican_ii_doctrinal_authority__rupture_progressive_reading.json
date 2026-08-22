@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "vatican_ii_doctrinal_authority__rupture_progressive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "story_uid": "c646e3b7-a1bc-4f41-acef-f93494a07733"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.52,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vatican II Doctrinal Authority — Rupture Progressive Reading",
+    "topic_domain": "ecclesiology/institutional_history/hermeneutics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "progressive_theologians",
+      "post_conciliar_reformers",
+      "ecumenical_dialogue_practitioners",
+      "collegial_bishops"
+    ],
+    "victims": [
+      "traditionalist_faithful",
+      "pre_conciliar_doctrinal_framework",
+      "clergy_formed_pre_1962"
+    ],
+    "vindicated_propositions": [
+      "spirit_of_the_council_hermeneutic",
+      "development_of_doctrine_as_rupture",
+      "religious_liberty_as_doctrinal_reversal"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this constraint represent one reading of the contested kernel 'vatican_ii_doctrinal_authority', or an independent constraint?",
+      "resolution_mechanism": "Compare structural metrics and beneficiary/victim sets across the declared sibling readings (continuity_reading, rupture_traditionalist_reading, composite_overdetermination_reading). If each yields distinct ε and distinct stakeholder structures, they are separate constraints linked by the kernel.",
+      "impact": "If this is a kernel reading, the committer structure (which reading, which kernel, sibling relations) must be routed to omegas and cs_structure, not embedded in standard fields.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this constraint instantiates the rupture_progressive_reading of the vatican_ii_doctrinal_authority kernel."
+    },
+    {
+      "id": "spirit_vs_letter_extraction_boundary",
+      "question": "Where does the 'spirit of the Council' hermeneutic transition from genuine development of doctrine into extraction — authorizing changes that have no textual anchor and serve institutional interests rather than the faithful?",
+      "resolution_mechanism": "Trace specific post-conciliar changes (liturgical, ecumenical, disciplinary) to their conciliar textual basis. Where the chain of derivation breaks — where a change is justified only by 'spirit' with no textual foothold — measure the extraction that change generates.",
+      "impact": "If the spirit/letter gap is systematically extractive, the constraint's claimed_type may be snare rather than tangled_rope. If the gap is genuinely developmental, tangled_rope holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between authentic doctrinal development and extraction via hermeneutic license."
+    },
+    {
+      "id": "religious_freedom_reversal_measurement",
+      "question": "How much of the measured extractiveness (ε=0.78) derives specifically from the religious liberty reversal (Dignitatis Humanae vs. Syllabus of Errors), versus other conciliar shifts?",
+      "resolution_mechanism": "Decompose ε by doctrinal domain: religious liberty, ecumenism, collegiality, liturgy, world engagement. Compare pre/post conciliar teaching in each domain and measure the coercive/reform pressure each shift generated.",
+      "impact": "If religious liberty reversal alone accounts for most extraction, the constraint may be more snare-like (targeted reversal with high coercion). If distributed across domains, tangled_rope is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of extractiveness to specific doctrinal reversals within the Council."
+    },
+    {
+      "id": "suppression_mechanism_internalized",
+      "question": "Is the suppression experienced by traditionalist_faithful and pre-1962 clergy primarily structural (canonical penalties, institutional marginalization) or internalized (identity-fusion with the pre-conciliar framework making the new framework unlivable)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: where traditionalist communities obtained structural exit (Ecclesia Dei, Summorum Pontificum, Traditionis Custodes phases), did suppression persist? Persistence after structural exit indicates internalized component.",
+      "impact": "If substantially internalized, effective suppression is higher than structural measure suggests — the constraint travels with the agent after formal exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression for traditionalist stakeholders."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the 'rupture progressive' reading of Vatican II's doctrinal authority: the Council constituted a necessary break with pre-conciliar rigidity, and its 'spirit' authorizes ongoing reform beyond the textual limits of the sixteen documents. This reading treats Dignitatis Humanae (religious liberty) as a genuine reversal of the Syllabus of Errors, reads textual ambiguities (e.g., 'subsists in' in Lumen Gentium 8, 'seeds of the Word' in Ad Gentes) as intentional openings for further development, and treats post-conciliar implementation (the liturgical reform, ecumenical dialogue, collegial episcopal conferences) as the authentic realization of conciliar intent rather than distortion. The constraint operates through the hermeneutic license: 'spirit of the Council' becomes a principle that authorizes development unmoored from textual anchors, generating extraction from those bound to the pre-conciliar framework while benefiting reformers who claim the Council's mandate.",
+    "key_agents": [
+      "progressive_theologians: Primary beneficiary (institutional/biographical) — claim interpretive authority over the Council's meaning, receive institutional positions and intellectual prestige",
+      "post_conciliar_reformers: Primary beneficiary (organized/biographical) — implement changes authorized by 'spirit' reading, control pastoral and liturgical apparatus",
+      "traditionalist_faithful: Primary victim (organized/identity_locked) — bear doctrinal/liturgical displacement, experience suppression through marginalization and canonical restriction",
+      "pre_conciliar_doctrinal_framework: Victim (abstract, non-agent) — the doctrinal structure itself is overwritten; its coherence is the extraction referent",
+      "clergy_formed_pre_1962: Victim (organized/identity_locked) — formation rendered obsolete, ministerial identity disrupted, obedience demanded to changes they were not formed to understand",
+      "collegial_bishops: Beneficiary (institutional/generational) — gain governance authority via collegiality doctrine, exercise power previously reserved to Rome",
+      "ecumenical_dialogue_practitioners: Beneficiary (organized/biographical) — gain institutional mandate and resources for dialogue previously forbidden",
+      "magisterium_post_conciliar: Agenda setter (institutional/generational) — administers the hermeneutic, determines which 'spirit' developments are authentic"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the hermeneutic license authorizes unbounded development: the 'spirit' principle has no internal stopping condition, so each generation of reformers can claim new reforms as conciliarly mandated. The religious liberty reversal alone is a massive extraction — it overturns a settled doctrinal framework (Syllabus of Errors, Quanta Cura) that structured Catholic political theology for a century, imposing costs on the faithful who held that framework as binding. Suppression (0.52) is moderate: structural suppression exists (canonical restrictions on traditionalist groups, liturgical uniformity enforcement via Traditionis Custodes), but much suppression is internalized — the pre-conciliar framework's collapse makes the old way unlivable from within. Theater ratio (0.28) is moderate: genuine coordination occurs (ecumenism, religious liberty engagement with modernity, collegial governance), but a growing share of 'spirit'-authorized changes serve institutional interests (bureaucratic expansion, relevance-seeking) rather than the coordination function. Accessibility collapse (0.35) is low for a tangled_rope: alternatives persist (traditionalist communities, continuity hermeneutics, sedevacantism) because the textual documents themselves are ambiguous enough to support rival readings. Resistance (0.62) is high: the continuity reading and traditionalist reading maintain institutional presence and intellectual coherence, contesting the progressive reading's claim to authenticity.",
+    "perspectival_gap": "From the progressive_theologian and post_conciliar_reformer seats, the constraint is genuine coordination (rope-like): the Council solved the Church's isolation from modernity, and 'spirit' is the principle that keeps the solution living. From the traditionalist_faithful and clergy_formed_pre_1962 seats, the same constraint is extractive (snare-like): the 'spirit' license extracts their doctrinal and liturgical inheritance without consent, and suppression enforces the extraction. The magisterium_post_conciliar seat experiences it as agenda-setting authority with extraction as a byproduct of governance. The engine computes this divergence from the structural data — the declared beneficiaries, victims, power levels, and exit options.",
+    "directionality_logic": "Beneficiaries (progressive_theologians, post_conciliar_reformers, collegial_bishops, ecumenical_dialogue_practitioners) collect interpretive authority, institutional positions, governance power, and intellectual prestige — they are near the beneficiary end (d ~ 0.15-0.25). Victims (traditionalist_faithful, clergy_formed_pre_1962) bear doctrinal displacement, liturgical loss, identity disruption, and canonical marginalization — they are near the target end (d ~ 0.85-0.95, identity_locked exit). The pre_conciliar_doctrinal_framework is a non-agent victim (the doctrinal structure overwritten). The magisterium_post_conciliar is agenda_setter with institutional power and analytical exit — it administers the hermeneutic and could change it but extracts legitimacy from maintaining it.",
+    "mandatrophy_analysis": "The founding problem (Church's isolation from modernity, need for aggiornamento) was live in 1962. By 2025, the problem is contested: the Church is not isolated but the 'spirit' hermeneutic continues authorizing reforms. The constraint exhibits mandatrophy — the coordination function (engaging modernity) has been substantially achieved, but the extraction function (unbounded hermeneutic license) persists and expands. The founding_problem_status 'contested' reflects this: beneficiaries claim the problem is live (new modernities require new reforms); victims claim it is dead (the Council solved it, further 'development' is extraction). No external corroborator outside the beneficiary set confirms the problem remains live — the corroboration field notes this absence.",
+    "kernel_context": "This constraint is the rupture_progressive_reading of the contested kernel 'vatican_ii_doctrinal_authority'. Sibling readings: continuity_reading (Vatican II as organic development within unchanging tradition), rupture_traditionalist_reading (Vatican II as rupture with tradition containing errors enabling heterodoxy), composite_overdetermination_reading (Vatican II as convergence of multiple distinct structural changes packaged as unified reform). This reading differs structurally: high ε on doctrinal change (religious freedom as Syllabus reversal), textual ambiguities read as intentional openings, post-conciliar implementation treated as authentic realization. The kernel_context records this committer-frame information per Rules 2-3."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "vatican_ii_doctrinal_authority__continuity_reading",
+      "vatican_ii_doctrinal_authority__rupture_traditionalist_reading",
+      "vatican_ii_doctrinal_authority__composite_overdetermination_reading",
+      "post_conciliar_liturgical_reform",
+      "ecumenical_dialogue_framework",
+      "collegial_episcopal_governance"
+    ],
+    "dual_formulation_note": "This constraint is one of four readings of the vatican_ii_doctrinal_authority kernel. The continuity_reading claims low ε (organic development); rupture_traditionalist_reading claims high ε but frames it as error rather than authentic development; composite_overdetermination_reading decomposes the Council into multiple constraints with distinct ε values. This reading (rupture_progressive) claims high ε as authentic development authorized by 'spirit'. The ε-invariance principle requires separate stories because each reading produces a different ε on the same referent — they are different constraints, not different measurements of one constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "progressive_theologians",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Claim interpretive authority over the Council's meaning through the 'spirit' hermeneutic. Receive academic positions, publication venues, advisory roles in Roman curia and episcopal conferences. Their career advancement depends on the hermeneutic remaining authoritative. Exit is mobile — they could work in secular academia or other traditions, but their specific capital is tied to this reading's dominance."
+    },
+    {
+      "name": "post_conciliar_reformers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement liturgical, catechetical, and pastoral changes justified by 'spirit of the Council'. Control diocesan offices, liturgical commissions, seminary formation. Their institutional position depends on the reform trajectory continuing. Exit is constrained — they have professional skills but their specific authority derives from the progressive reading's institutional capture."
+    },
+    {
+      "name": "traditionalist_faithful",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Experience the Council's changes as loss of doctrinal certainty, liturgical form, and spiritual inheritance. Their identity is fused with the pre-conciliar framework — the Mass, the catechism, the moral theology of their formation. Structural exit exists (Ecclesia Dei communities, SSPX, sedevacantism) but is costly and incomplete; internal exit is nearly impossible because the framework constitutes their Catholic identity. They bear the extraction: their inheritance is overwritten, their obedience demanded to changes they experience as rupture."
+    },
+    {
+      "name": "pre_conciliar_doctrinal_framework",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The doctrinal structure itself — the Syllabus of Errors, Quanta Cura, the Thomistic manual tradition, the pre-conciliar magisterial corpus — is the referent of extraction. It is overwritten by Dignitatis Humanae, the collegiality doctrine, the religious liberty reversal. As a non-agent, it cannot resist or exit; its coherence is simply displaced. Listed as victim to mark the structural extraction referent."
+    },
+    {
+      "name": "clergy_formed_pre_1962",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Priests and bishops formed in the pre-conciliar seminary system (Thomistic philosophy, Trent catechism, Tridentine liturgy, anti-modernist oath). Their ministerial identity, intellectual formation, and spiritual vocabulary were constituted by the framework the Council displaced. They are required to implement and teach reforms they were not formed to understand, often experiencing this as betrayal of their ordination promises. Exit is identity_locked — leaving ministry means leaving their vocation; staying means administering a framework they experience as alien."
+    },
+    {
+      "name": "collegial_bishops",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gain governance authority through Lumen Gentium's collegiality doctrine — episcopal conferences, synods, shared responsibility with Rome. Their power is structurally enhanced by the Council. Exit is arbitrage-grade: they could operate within the continuity reading or traditionalist frameworks and retain episcopal authority, but the collegial structure gives them maximum leverage."
+    },
+    {
+      "name": "ecumenical_dialogue_practitioners",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receive institutional mandate, funding, and status for ecumenical and interreligious dialogue previously forbidden (Unitatis Redintegratio, Nostra Aetate). Their professional existence depends on the post-conciliar framework. Exit is constrained — dialogue skills transfer, but the Catholic institutional mandate is specific to this reading."
+    },
+    {
+      "name": "magisterium_post_conciliar",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Administers the hermeneutic: determines which 'spirit' developments are authentic (e.g., approving the liturgical reform, restricting the traditional Mass via Traditionis Custodes, advancing synodality). Could change the hermeneutic (as Benedict XVI attempted with 'hermeneutic of continuity') but extracts legitimacy and governance capacity from maintaining the progressive reading's authority. Exit is analytical — as an institution it can reevaluate its own interpretive framework, but doing so risks its governing legitimacy."
+    }
+  ],
+  "gain_flow": "magisterium_post_conciliar",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the Church's isolation from modernity: religious liberty enables engagement with pluralistic states; ecumenism ends confessional warfare; collegiality decentralizes governance; liturgical reform makes worship intelligible. The 'spirit' hermeneutic coordinates ongoing adaptation so the solution doesn't fossilize.",
+    "transfer_function": "Moves interpretive authority, governance power, liturgical control, and intellectual prestige from the pre-conciliar framework (papal monarchy, curial centralization, Tridentine liturgy, Thomistic manualism) to progressive reformers (theologians, bishops' conferences, liturgical experts, ecumenical offices). The extraction is the displacement of the old framework's coherence and the faithful's inheritance.",
+    "absent_voices": "The pre-conciliar magisterium itself (Pius IX, Leo XIII, Pius X, Pius XII) — their teaching is the referent being overwritten, but they cannot speak. The faithful of 1960 who entered the Council with one framework and exited with another — they were not consulted. Future generations who inherit the 'spirit' license with no textual anchor — they are not yet present to object.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 'spirit of the Council' hermeneutic vanished overnight, the Church would revert to textual conciliar documents only. The unbounded development license would cease. Liturgical, ecumenical, and governance reforms justified only by 'spirit' (not textual conciliar mandate) would lose authorization. Traditionalist communities would claim vindication. Progressive reformers would lose their primary legitimating principle. The magisterium would face a legitimacy crisis — its post-conciliar governance has been justified by this hermeneutic for 60 years.",
+    "founding_problem": "The Church's isolation from the modern world: condemnation of religious liberty (Syllabus of Errors), rejection of ecumenism (Mortalium Animos), centralized papal monarchy unable to govern a global Church, liturgy unintelligible to the faithful, anti-modernist oath suppressing theological engagement with contemporary thought.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Progressive theologians and post-conciliar reformers attest the problem is live: new modernities (digital, bioethical, gender, ecological) require ongoing 'spirit'-authorized development. Traditionalist faithful and clergy formed pre-1962 attest the problem is dead: the Council solved the isolation, further development is extraction. No corroborating source outside the beneficiary set (progressive theologians, reformers, collegial bishops) confirms the problem remains live — independent historians of the modern Church (e.g., non-Catholic scholars like Brad Gregory, Carlos Eire) document the Church's successful engagement with modernity post-Vatican II but do not confirm the 'spirit' hermeneutic remains necessary for that engagement."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rupture_traditionalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "vatican_ii_doctrinal_authority__composite_overdetermination_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "spirit_authorizes_unbounded_development",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "religious_liberty_reverses_syllabus_authentically",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "conciliar_texts_as_springboard",
+    "drift_state": {
+      "moment": "post_synodality_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

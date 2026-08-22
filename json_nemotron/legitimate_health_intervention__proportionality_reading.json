@@ -1,0 +1,363 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_legitimate_health_intervention__proportionality_reading",
+    "measurement_id_prefix": "lhi_proportionality",
+    "story_uid": "1d228e47-3595-4164-a72f-398c508fc98c",
+    "created_at": "2026-08-20T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.38,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality-Based Legitimacy for Health Interventions",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_health_agencies",
+      "vulnerable_populations",
+      "healthcare_systems"
+    ],
+    "victims": [
+      "objectors_to_specific_interventions",
+      "minority_religious_communities",
+      "autonomy_prioritizing_individuals"
+    ],
+    "vindicated_propositions": [
+      "proportionality_principle",
+      "least_restrictive_means_doctrine",
+      "disease_characteristics_weighting"
+    ]
+  },
+  "interval": {
+    "start": 1905,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1905,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1905,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1905,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint encodes the proportionality reading of legitimate health intervention: state coercion is legitimate only when intervention severity is proportional to the threat level, with both population harm and individual autonomy weighted by disease characteristics (transmissibility, case-fatality rate, morbidity profile). It is a conditional constraint — the victim set and extraction intensity vary with disease severity (e.g., measles mandates vs. flu recommendations). The constraint sits between public_health_primary (which minimizes individual autonomy) and bodily_autonomy_primary (which minimizes state power), claiming to balance both. Historically rooted in Jacobson v. Massachusetts (1905) and refined through subsequent jurisprudence and public health practice. The claimed type is tangled_rope: it coordinates collective protection against disease while extracting compliance from objectors, with enforcement actively maintained through legal mandates, school-entry requirements, and employment conditions.",
+    "key_agents": [
+      "public_health_agencies: Primary agenda_setter (institutional/generational/arbitrage/global) — sets intervention thresholds, mandates, and enforcement mechanisms",
+      "vulnerable_populations: Primary beneficiary (organized/biographical/constrained/national) — gains protection from disease spread they cannot individually prevent",
+      "healthcare_systems: Beneficiary (institutional/generational/arbitrage/national) — avoids surge overload, preserves capacity",
+      "objectors_to_specific_interventions: Primary victim (moderate/biographical/constrained/national) — bears mandate compliance costs, faces penalties for refusal",
+      "minority_religious_communities: Victim (organized/biographical/identity_locked/national) — disproportionately burdened when mandates conflict with sincere beliefs",
+      "autonomy_prioritizing_individuals: Victim (moderate/biographical/constrained/national) — bears liberty restriction weighted against population benefit",
+      "courts: Observer (institutional/generational/analytical/national) — adjudicates proportionality challenges, sets precedent",
+      "legislatures: Agenda_setter (institutional/generational/arbitrage/national) — enacts statutory frameworks, defines exemption scopes"
+    ],
+    "logic_rationale": "Extractiveness (0.45) reflects that the constraint imposes compliance costs on objectors — fines, exclusion from school/work, loss of livelihood — while the coordination benefit (disease control) accrues to the population. Suppression (0.38) is moderate: alternatives (home schooling, religious exemptions in some jurisdictions, alternative employment) exist but are constrained. Theater ratio (0.22) is low-moderate: the proportionality analysis is genuinely operationalized in courts and agencies, but some mandates persist after threat diminishes (performance of caution). Accessibility collapse (0.48) reflects that once a mandate is understood, alternatives narrow but do not fully collapse (exemptions, relocation, non-compliance). Resistance (0.52) is substantial: legal challenges, political movements, and non-compliance are persistent. The conditional structure (victim set varies by disease) means ε is not constant — measles mandates extract more than flu recommendations — but the base_properties extractiveness is the reading's weighted assessment across the disease spectrum.",
+    "perspectival_gap": "From the public_health_agencies seat (agenda_setter, institutional, arbitrage exit), the constraint is coordination: it solves the collective action problem of disease control with calibrated tools. From the objectors seat (payer, moderate, constrained exit), it is extraction: they bear disproportionate costs for a benefit they may not value or accept. From vulnerable_populations (beneficiary, organized, constrained exit), it is essential protection they cannot secure individually. Courts (observer) see the proportionality balancing test as the legitimate structure. The engine computes per-seat classification from these structural positions.",
+    "directionality_logic": "Public health agencies and legislatures are beneficiaries/agenda_setters (d near 0.0) — they gain authority, legitimacy, and operational capacity. Vulnerable populations and healthcare systems are beneficiaries (d ~ 0.2-0.3) — they gain protection but do not control the constraint. Objectors, minority religious communities, and autonomy-prioritizing individuals are victims/payers (d ~ 0.7-0.9) — they bear compliance costs, liberty restrictions, and penalty risks with constrained exit. Minority religious communities are identity_locked (exit requires abandoning community/identity), pushing their d higher than moderate objectors with merely constrained exit. Courts are analytical (d = 0.5).",
+    "mandatrophy_analysis": "The founding problem (controlling communicable disease in dense populations) remains live but transformed: vaccines/therapeutics changed the threat landscape, yet the mandate structure persists. The constraint avoids pure mandatrophy because proportionality requires continual re-calibration — mandates for eradicated diseases (smallpox) were lifted. However, some mandates persist at low threat levels (theater), and exemption structures have narrowed in some jurisdictions (extraction accumulation). The conditional structure (disease-dependent victim set) is the anti-mandatrophy mechanism: it forces periodic reassessment rather than automatic persistence.",
+    "kernel_context": "This constraint is the proportionality_reading of the legitimate_health_intervention kernel. Sibling readings: public_health_primary (legitimacy derives from population-level morbidity/mortality reduction; individual refusal is externality) and bodily_autonomy_primary (legitimacy requires informed consent; state coercion violates bodily integrity regardless of public benefit). This reading claims the middle ground: both values matter, weighted by disease characteristics. The structural delta: victim set varies by disease severity (measles vs flu), ε scales with transmissibility and CFR, conditional constraint structure."
+  },
+  "omegas": [
+    {
+      "id": "proportionality_threshold_ambiguity",
+      "question": "Where exactly is the proportionality threshold — what threat level justifies what intervention severity?",
+      "resolution_mechanism": "Judicial precedent analysis across jurisdictions; systematic review of how courts weigh transmissibility, CFR, and intervention burden in proportionality tests.",
+      "impact": "If threshold is vague, the constraint operates as a delegation of unguided discretion (higher effective extraction); if precise, it functions as a genuine coordination limit on state power.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The operational boundary of the proportionality principle"
+    },
+    {
+      "id": "disease_characteristics_weighting_method",
+      "question": "How are disease characteristics (transmissibility, CFR, morbidity) formally weighted in the proportionality calculus?",
+      "resolution_mechanism": "Analysis of public health agency frameworks (CDC ACIP, WHO SAGE), legislative statutes, and judicial opinions for explicit weighting methodologies.",
+      "impact": "If weighting is ad hoc, extraction varies unpredictably (coordination function degrades); if systematic, the conditional structure is genuine coordination.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the conditional ε-scaling follows a transparent methodology"
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this proportionality reading a stable structural position or a transitional compromise between the sibling readings?",
+      "resolution_mechanism": "Longitudinal analysis of judicial doctrine and public health practice: does proportionality analysis produce distinct outcomes from either sibling, or does it track one sibling's outcomes with rhetorical cover?",
+      "impact": "If transitional, the constraint may be a scaffold (temporary) or piton (degraded); if stable, tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether proportionality is a distinct reading or a rhetorical bridge"
+    },
+    {
+      "id": "exemption_structure_as_extraction_modulator",
+      "question": "Do exemption structures (medical, religious, philosophical) genuinely modulate extraction, or do they function as theater masking a fixed mandate?",
+      "resolution_mechanism": "Comparative analysis of exemption grant rates, judicial scrutiny of exemption claims, and mandate persistence after exemption narrowing.",
+      "impact": "If exemptions are narrowly granted and highly scrutinized, effective extraction approaches the no-exemption baseline; if broadly available, extraction is genuinely modulated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exemptions are functional escape valves or performative"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__public_health_primary",
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "school_entry_vaccine_mandates",
+      "healthcare_worker_vaccine_requirements",
+      "emergency_health_powers_act"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the 'legitimate health intervention' kernel into three readings with distinct ε values, victim sets, and coordination/extraction balances. Proportionality_reading is the conditional middle; public_health_primary minimizes individual autonomy weight; bodily_autonomy_primary minimizes state power weight."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set intervention thresholds, define mandate scopes, design enforcement mechanisms, and justify measures through epidemiological modeling. They hold regulatory authority, control public messaging, and can shift between voluntary and mandatory frameworks. Exit is arbitrage-grade: they can redefine the threat level, change the intervention, or delegate enforcement."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised individuals, infants too young for vaccination, elderly with comorbidities — they gain indirect protection from reduced community transmission. They cannot individually prevent exposure and depend on population-level compliance. Exit is constrained: they can limit contacts but cannot secure safety without collective action."
+    },
+    {
+      "name": "healthcare_systems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Hospitals and health systems avoid surge overload, preserve ICU capacity, and maintain elective care continuity when mandates reduce severe disease burden. They influence policy through professional associations and emergency declarations. Exit is arbitrage-grade: they can triage, transfer patients, or declare crisis standards."
+    },
+    {
+      "name": "objectors_to_specific_interventions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who refuse specific interventions (e.g., COVID-19 vaccines, MMR) based on risk-benefit assessment, distrust, or preference. They face school exclusion, employment termination, travel restrictions, or fines. Exit is constrained: home schooling, job change, or relocation are costly and not universally available."
+    },
+    {
+      "name": "minority_religious_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Communities whose sincere religious beliefs conflict with mandated interventions (e.g., certain Christian Scientist, Amish, Orthodox Jewish groups). They face concentrated burden: exclusion from communal institutions (schools, workplaces) that are central to community life. Exit is identity_locked: leaving the community means abandoning religious identity and social world."
+    },
+    {
+      "name": "autonomy_prioritizing_individuals",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who prioritize bodily autonomy as a non-negotiable principle, regardless of disease characteristics. They experience mandates as fundamental liberty violations. Exit is constrained: same practical options as other objectors, but the principled stance makes compliance psychologically costly."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate constitutional challenges to mandates, apply proportionality balancing tests, set precedent for what interventions survive scrutiny. They do not bear compliance costs or gain protection directly; their role is structural interpretation."
+    },
+    {
+      "name": "legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact statutory mandate frameworks, define exemption categories, set penalty structures, and oversee agency rulemaking. They respond to political pressure from all seats. Exit is arbitrage-grade: they can amend statutes, create new exemptions, or defund enforcement."
+    }
+  ],
+  "gain_flow": "public_health_agencies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of communicable disease control: individuals face strong incentives to free-ride on others' compliance, but universal compliance achieves herd protection that no individual can secure alone. Proportionality calibrates the mandate to the threat, avoiding over-reach that erodes legitimacy.",
+    "transfer_function": "Moves compliance burden (liberty restriction, medical risk, financial penalty) from the population at large onto objectors, in exchange for population-level disease reduction that benefits vulnerable groups and preserves healthcare capacity. The transfer is conditional: higher threat → more burden transferred to objectors.",
+    "absent_voices": "Future generations (who inherit precedent and infrastructure), undocumented migrants (excluded from exemption processes and healthcare access), global south populations (affected by vaccine nationalism driven by domestic mandate priorities), and those with medical contraindications who cannot be vaccinated but are not always centered in proportionality analysis.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proportionality-based mandates vanished overnight, jurisdictions would revert to either unrestricted state power (public_health_primary) or absolute individual refusal rights (bodily_autonomy_primary). Disease control would become either more coercive or more voluntary, fundamentally reorganizing the legal and practical landscape of public health authority.",
+    "founding_problem": "Early 20th century urbanization created dense populations vulnerable to explosive epidemics (smallpox, diphtheria). The state needed authority to mandate vaccination but faced constitutional limits on police power. Jacobson v. Massachusetts (1905) established that liberty is not absolute and may be restricted for the common good — but only to the extent necessary.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Epidemiologists and public health historians attest that communicable disease threats persist and evolve (antimicrobial resistance, zoonotic spillover, climate-driven range shifts). Legal scholars outside the public health establishment (e.g., Gostin, Jacobson critics) corroborate that the proportionality framework remains the dominant constitutional standard, though its application is contested. No major jurisdiction has abandoned the proportionality principle for health mandates."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "legitimate_health_intervention"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intervention_severity_must_track_threat_level",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "individual_autonomy_and_population_harm_are_commensurable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "disease_characteristics_determine_weighting",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "jacobson_proportionality_framework",
+    "drift_state": {
+      "moment": "contemporary_precision_public_health_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

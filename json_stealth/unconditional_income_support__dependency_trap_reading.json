@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "d5cb8505-ed49-4633-a850-617c8c2b9d3a"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.62,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support — Dependency Trap Reading",
+    "topic_domain": "political economy/social policy/welfare state theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "middle_upper_income_recipients",
+      "ubi_advocacy_networks"
+    ],
+    "victims": [
+      "working_poor",
+      "net_taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "legislative_fiscal_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Drafts the annual payment level and the offset schedule that retires means-tested programs; enforces replacement through appropriations riders and eligibility statute amendments. Collects campaign support and coalition goodwill from the universality bloc while answering to taxpayer constituencies. Exit is procedural — repeal or redesign is available with a governing majority but electorally expensive once households budget around the payment."
+    },
+    {
+      "name": "middle_upper_income_recipients",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive the same flat payment as the poorest households while progressive taxation claws back part of it; on net, much of the cohort retains a positive transfer despite having no income need. Their votes and donations anchor the cross-ideological coalition behind universality. Exit is trivial: they lose little if the program ends, and income planning shields part of the clawback."
+    },
+    {
+      "name": "ubi_advocacy_networks",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Think tanks, movement organizations, and philanthropic funders whose staffing, budgets, and public identities are built around advancing the universal payment. Universality itself delivers their legitimacy, media attention, and fundraising base. Stepping back would mean dismantling the organization's reason for being, so internal dissent from the universality framing is rare."
+    },
+    {
+      "name": "working_poor",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Currently stack targeted supports — housing assistance, nutrition benefits, earned-income top-ups, utility relief — whose combined value exceeds the flat payment. Under replacement they lose depth they cannot rebuild by working more, because rent, childcare, and health costs scale with need rather than with hours. Adding hours or moving helps at the margin, but every jurisdiction inside the program runs the same flat-payment arithmetic."
+    },
+    {
+      "name": "net_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Finance roughly $1.4 trillion in annual net cost after offsets through federal taxation. Organized taxpayer and deficit-reduction groups contest the outlay publicly, but individual households cannot leave the tax base without giving up residence or income sources; high earners shift part of the burden through mobility and planning, leaving the residual on less-mobile filers."
+    },
+    {
+      "name": "caseworkers_and_local_aid_providers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Run the means-tested programs slated for retirement — eligibility processing, housing placement, benefits counseling. They see daily which households need more than any flat payment and would testify that replacement strips calibrated support, but they hold no seat in the coalitions drafting the offset schedules."
+    },
+    {
+      "name": "fiscal_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Score proposals and run pilot evaluations — congressional scorekeepers, academic panels, think-tank meta-analyses. They see the full structure: gross cost, incidence by income decile, employment effects. Their findings feed both this reading's critique and its rivals', and their methods are contested by every camp."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the delivery problem of getting cash to residents: one uniform payment channel replaces the eligibility machinery of multiple means-tested programs, eliminating take-up gaps, application stigma, and per-program administrative cost. Stated without evaluation: whatever else it does, it coordinates income-floor delivery through a single universal pipe.",
+    "transfer_function": "Moves roughly $1.4 trillion annually (net of tax offsets) from the federal tax base to every resident household in equal flat payments; relative to the targeted system it displaces, it shifts marginal dollars away from the deepest-need households toward the broad middle, and delivers legitimacy, media attention, and fundraising capacity to the advocacy organizations that champion it.",
+    "absent_voices": "Caseworkers and local aid providers who see daily which households need more than a flat payment would object to replacement design but hold no seat in the universality coalitions; deep-poverty households whose combined targeted supports exceed the flat payment are represented only statistically, not as negotiating parties; future cohorts who inherit the crowded-out safety-net capacity are absent entirely.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Recipient households budget around the monthly payment; agencies and advocacy organizations are staffed and funded around it; the universality coalition's cross-ideological structure depends on continued receipt. Overnight removal would force re-budgeting by tens of millions of households, collapse the advocacy infrastructure built on the program, and reopen the fight over which targeted programs return.",
+    "founding_problem": "Means-tested welfare's failures: stigma that suppresses take-up, eligibility cliffs that punish work, bureaucratic complexity, and gaps that leave households below any floor — the arrangement was built to guarantee income unconditionally and administratively simply.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent poverty measurement corroborates that the founding problem remains live: Census Supplemental Poverty Measure series, academic panel studies of income volatility, and take-up research from outside the benefiting parties all document persistent income insecurity and means-testing failures. No party outside the beneficiary set attests that the universal flat payment specifically solves it — pilot evaluations report mixed results, and the employment-effect meta-analysis this reading cites is itself disputed by the sibling readings' proponents."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the consolidating architecture of unconditional income support: a flat, universal cash payment delivered through a single channel, advanced through pilot programs, advocacy infrastructure, and legislative designs whose fiscal-offset schedules retire means-tested programs. This story instantiates the dependency_trap_reading of that kernel and authors epsilon FOR THAT ARRANGEMENT AS THIS READING ASSESSES IT — high, because the reading holds that the payment rewards labor-market exit at the margin (pooled large-pilot estimates near -3.2% employment), displaces targeted aid whose calibrated depth exceeds the flat amount for the poorest households, and routes a large net share of gross transfer to households with no income need, at roughly $1.4 trillion annual net cost after offsets. The referent is the universal-transfer arrangement itself, never the freedom-floor alternative this reading rejects; sibling readings are separate constraints linked in network.affects_constraints. Claim and metrics are independent authored facts: the type is claimed as snare from this reading's structural assessment, and the metrics describe the arrangement's operation as the reading's evidentiary tradition measures it; the engine computes per-seat classifications from the structural data and owns any divergence.\n\nKEY AGENTS (by structural relationship):\n- legislative_fiscal_authority: Agenda setter (institutional/mobile) — drafts transfer level and offset schedule, enforces program replacement\n- middle_upper_income_recipients: Primary beneficiary (powerful/arbitrage) — retains net transfers without income need\n- ubi_advocacy_networks: Secondary beneficiary (organized/identity_locked) — collects political capital from universality\n- working_poor: Primary target (moderate/constrained) — loses targeted-support depth exceeding the flat payment\n- net_taxpayers: Primary target (moderate/constrained) — bears the $1.4T annual net cost\n- caseworkers_and_local_aid_providers: Excluded voice (moderate/constrained) — sees unmet need daily, holds no design seat\n- fiscal_policy_analysts: Analytical observer (analytical/analytical) — sees full incidence and employment structure",
+    "logic_rationale": "Extractiveness is authored high (0.78 at interval end) because the reading's referent arrangement combines three channels: behavioral (pooled large-pilot employment losses withdraw output from the tax base that funds the payment), distributive (flat payments to non-needy households survive clawback in material net amounts), and displacement (offset schedules retire targeted programs whose combined value for deep-need households exceeds the flat payment). Suppression (0.62) is authored as a raw structural property — unscaled by power or scope — reflecting the enforcement work the arrangement requires: retiring entrenched entitlements over recipient and provider opposition, and holding the universality coalition together against reform pressure from both fiscal conservatives and targeted-aid defenders. Theater_ratio (0.35) tracks pilot theater: small demonstrations (hundreds to thousands of recipients, fixed durations) rhetorically scaled to justify national permanence, a share of advocacy activity that has grown as pilots returned mixed results. Accessibility_collapse (0.50): the targeted-aid alternative persists wherever programs survive, but each offset schedule collapses it further, so alternatives are half-closed and closing. Resistance (0.60): organized taxpayer and deficit opposition, anti-poverty organizations defending program depth, and provider associations. The measurement series share one time grid (points 0, 4, 8, 12, 16, 20, 24) so every tracked metric is authored at every examined point; trajectories are monotone accumulation, not oscillation. Coalition note: the two victim seats could in principle combine — taxpayer cost and poverty-depth loss point at the same fix — but their preferred remedies diverge (smaller government vs. deeper targeting), and the universality framing exploits exactly that divergence, which is why the coalition never forms.",
+    "perspectival_gap": "The seats compute differently from identical metrics. Middle- and upper-income recipients sit near the beneficiary pole: the payment subsidizes them and their exit is arbitrage-grade, so effective extraction inverts toward subsidy. UBI advocacy networks are beneficiaries with identity-locked exit — ideologically fused with the arrangement, they experience no extraction and cannot imagine exit, which raises persistence independent of performance. The working poor and net taxpayers sit near the target pole: both bear costs (depth lost, taxes paid) with constrained exit, so effective extraction amplifies toward the full-target end, and national scope further amplifies it by making verification of who truly needs the floor harder. The agenda setter sits mid-range with electoral feedback running in both directions. Same-level divergence: working poor and net taxpayers hold the same nominal power atom yet occupy different structural relationships — the differentiation is exit-relevant specificity (the poor lose a determinate bundle; taxpayers bear a diffuse bill), which the engine reads from the declared roles and exits rather than from power.",
+    "directionality_logic": "Beneficiary declarations: middle_upper_income_recipients derive d near 0.0 (the payment is a net subsidy after clawback for much of the cohort) and ubi_advocacy_networks derive d near 0.1 (they collect legitimacy and funding rather than cash, but collect reliably). Victim declarations: working_poor derive d near 0.9 (they finance nothing directly but absorb the largest per-household loss when targeted depth is retired) and net_taxpayers derive d near 0.85 (they bear the $1.4T residual). The agenda setter derives a mid-range d: it administers the arrangement and collects coalition support from it while remaining answerable to taxed constituencies. No directionality overrides are authored: the derivation chain from roles, power, and exit options reproduces these positions without correction.",
+    "mandatrophy_analysis": "No mandatrophy is declared: the founding problem (income insecurity amid means-testing failures) is corroborated as live by measurement from outside the beneficiary set, so the arrangement has not outlived its mandate — it is contested at scale-up, not decayed. The snare claim functions as the guard against mislabeling: it refuses the rope reading (pure coordination of an income floor) by insisting the same structure that delivers the floor also displaces deeper aid and subsidizes the non-needy, and it refuses the piton reading by identifying concentrated receipts (non-needy recipients) and an active enforcement schedule (offset legislation) rather than inertial drift. The omegas keep the classification falsifiable: a stacking adoption path would thin the victim set toward tangled_rope; null pooled employment effects would cut the behavioral leg; a broken advocacy identity-lock would lower fixing_cost from prohibitive.",
+    "kernel_context": "This story is the dependency_trap_reading of kernel unconditional_income_support. Sibling readings: freedom_floor_reading (the payment as autonomy-enabling floor — coercion removal, stigma elimination, shock protection; would author low epsilon with no victim set) and universality_paradox_reading (cross-ideological appeal masking incompatible implementation paths converging on similar fiscal outcomes; would relocate the harm from class incidence to design incoherence). The disagreement is located in victim-set construction and epsilon attribution: this reading counts the working poor (depth loss) and taxpayers (net cost) as victims and authors high epsilon; the floor reading counts no victims; the paradox reading counts future fiscal outcomes. No reading's core premise logically contradicts another's — mixed effects are coherent — so all reading_relations are coexists_with and the contest resolves empirically and politically, not logically."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint instantiates the dependency_trap_reading of kernel unconditional_income_support; what structural facts would the sibling readings (freedom_floor_reading, universality_paradox_reading) change?",
+      "resolution_mechanism": "Cross-reading comparison of authored victim/beneficiary sets, epsilon, and disappearance verdicts across the three stories linked in network.affects_constraints.",
+      "impact": "freedom_floor_reading would vacate the victim set (no household loses; all gain a floor) and drive epsilon toward coordination-cost levels; universality_paradox_reading relocates the harm from class incidence to fiscal convergence, changing which seats count as targets.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: one reading of a contested kernel; sibling readings instantiate different constraints."
+    },
+    {
+      "id": "employment_effect_magnitude",
+      "question": "Does unconditional income support materially reduce labor supply at national scale, as the -3.2% pooled estimate from large-pilot meta-analysis asserts?",
+      "resolution_mechanism": "Long-run follow-ups on completed pilots (Finland 2017-2018, Stockton SEED, Alaska Permanent Fund dividend series) and any national-scale natural experiment; heterogeneity analysis separating liquidity effects from substitution effects.",
+      "impact": "If pooled employment effects are near zero, the rewards-idleness premise weakens, epsilon falls, and the snare claim loses its behavioral leg; if effects are strongly negative at scale, the reading's account firms up.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Contested magnitude of labor-supply response to unconditional cash."
+    },
+    {
+      "id": "replacement_vs_stacking_design",
+      "question": "Do actual adoption paths replace targeted programs with the flat payment, or stack the payment atop them?",
+      "resolution_mechanism": "Legislative text and fiscal-offset schedules of enacted and serious proposals; official scoring of which programs are sunset in each offset path.",
+      "impact": "Under stacking, the working poor are net gainers, the victim set thins toward taxpayers alone, and the arrangement trends toward tangled_rope; under replacement, the declared victim structure stands and the snare reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the flat payment displaces or supplements means-tested aid — the crux of the working-poor victim claim."
+    },
+    {
+      "id": "net_incidence_after_clawback",
+      "question": "After tax clawback, what share of gross transfer is retained by middle- and upper-income households, and is the upward-redistribution claim robust to incidence-modeling choice?",
+      "resolution_mechanism": "Distributional incidence analysis across static and behavioral scoring models (decile tables under competing offset designs).",
+      "impact": "If clawback recovers most gross payments to non-needy households, the middle_upper_income_recipient seat's directionality rises toward symmetric and the upward-redistribution axiom weakens; if retention is large, the seat sits near full beneficiary and the snare reading firms up.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net incidence of the universal payment across income deciles."
+    },
+    {
+      "id": "advocacy_identity_lock_duration",
+      "question": "How durable is the advocacy networks' identity lock — does it survive a sequence of disappointing or null pilot results?",
+      "resolution_mechanism": "Observe funding trajectories, staffing, and public statements of major advocacy organizations following null-result publications; track whether reframing (rather than exit) dominates.",
+      "impact": "If the lock breaks, the universality coalition fragments, reversal becomes legislatively cheaper, and fixing_cost drops from prohibitive; if it holds, persistence is insulated from evidence and the prohibitive cost class stands.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Durability of ideological fusion binding advocacy organizations to the universality framing."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "universality_paradox_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'universal basic income' decomposes into three structurally distinct constraints sharing one kernel: this dependency-trap reading (high epsilon, victims = working poor + net taxpayers, type snare), freedom_floor_reading (epsilon near coordination cost, no victim set), and universality_paradox_reading (harm located in implementation-path convergence). Each file authors its own epsilon, beneficiaries, and victims per the epsilon-invariance principle; the family is linked through affects_constraints. The freedom-floor reading is upstream in public argument — its normative case is cited as evidence for adoption — while this reading contests the same adoption path downstream of the pilot-evidence era."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "need_calibrated_targeted_baseline",
+    "drift_state": {
+      "moment": "post_pilot_evidence_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_transfers_distort_labor_supply",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universality_redistributes_upward_to_non_needy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "targeted_aid_dominates_for_poverty_depth",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "middle_upper_income_recipients",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

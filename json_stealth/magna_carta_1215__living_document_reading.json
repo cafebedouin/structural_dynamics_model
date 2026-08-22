@@ -1,0 +1,384 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__living_document_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mc_living_doc",
+    "story_uid": "66748976-553b-4ebb-abba-ab7508fbe827"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.35,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magna Carta Living-Document Interpretive Regime",
+    "topic_domain": "constitutional law/legal history/political theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "appellate_judiciary",
+      "constitutional_bar_and_legal_academy",
+      "rights_claimants_invoking_evolved_meaning"
+    ],
+    "victims": [
+      "original_meaning_adherents",
+      "democratic_legislative_majorities",
+      "general_citizens_subject_to_unenacted_limits"
+    ],
+    "vindicated_propositions": [
+      "stare_decisis_doctrine",
+      "common_law_continuity_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 810
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 82,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 561,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 650,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 750,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 810,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 82,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 561,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 650,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 750,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 810,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 82,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 561,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 650,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 750,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 810,
+      "value": 0.35,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of kernel magna_carta_1215 (the living_document_reading): how would instantiating a sibling reading instead change the structural picture?",
+      "resolution_mechanism": "Generate the sibling stories (baronial_privilege_reading, universal_rights_reading) and compare beneficiary/victim sets, epsilon, and authority structure across the family.",
+      "impact": "The baronial reading shrinks the beneficiary set to landed contracting parties and dates the arrangement's death centuries ago; the universal reading enlarges the protected class to all persons and raises measured extraction by counting everyone the developed meaning still fails to protect.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position: one of three readings of the Magna Carta kernel."
+    },
+    {
+      "id": "authority_locus_disagreement",
+      "question": "Where do the three readings locate the authority that fixes the Charter's meaning: the 1215 contracting parties' intent, a transhistorical principle, or the accumulating interpretive tradition?",
+      "resolution_mechanism": "Conceptual analysis of what each reading treats as defeasible: a reading that lets the tradition err against original intent places authority in the intent; one that lets the text err against principle places authority in the principle; this reading treats neither as defeasible against the tradition and locates authority there.",
+      "impact": "Relocating authority to original intent collapses this constraint toward the baronial reading's victim structure; relocating it to transhistorical principle merges it toward the universal reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The specific structural element on which the sibling readings diverge: the locus of interpretive authority."
+    },
+    {
+      "id": "democratic_deficit_alignment",
+      "question": "Does doctrinal development track the values of the publics bound by it, or the values of the professional class that produces it?",
+      "resolution_mechanism": "Longitudinal comparison of landmark doctrinal shifts against contemporaneous legislative preference and survey data.",
+      "impact": "Systematic misalignment would push effective extraction above the authored 0.40 and shift the computed type toward capture; alignment would support the coordination-dominant reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the accumulative regime serves governed publics or the producing profession."
+    },
+    {
+      "id": "amendment_counterfactual",
+      "question": "Could the constitution have adapted through formal amendment alone, making the accumulative regime's costs unnecessary?",
+      "resolution_mechanism": "Historical throughput analysis: amendment rates in comparable rigid constitutions versus the pace of adaptation the accumulated reading actually delivered.",
+      "impact": "If amendment could not have kept pace, much of the measured transfer is the price of adaptability rather than discretionary capture; if it could, the regime's persistence reflects professional advantage.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual necessity of the accumulative mechanism."
+    },
+    {
+      "id": "stare_decisis_internalization",
+      "question": "Is adherence to accumulated precedent structural (enforceable rules) or internalized (professional identity renders deviation unthinkable)?",
+      "resolution_mechanism": "Observe benches whose composition is hostile to the tradition: if they still extend precedent, the bind is internalized; if they distinguish it away case by case, the bind is structural.",
+      "impact": "Internalized adherence survives formal reform, so measured suppression would persist after any enforcement change; structural adherence tracks the enforcement machinery directly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized mechanism behind precedent-deference."
+    },
+    {
+      "id": "divergence_ceiling",
+      "question": "Is there a limit to how far accumulated meaning may drift from the text before the legitimacy claim breaks?",
+      "resolution_mechanism": "Comparative analysis: identify constitutional traditions where the gap between honored text and operative meaning exceeded tolerance and the framework was discarded or formally rewritten.",
+      "impact": "A ceiling bounds the rising trajectories in the measurement series; no ceiling implies continued growth in extraction past the interval end.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the accumulation dynamic has a legitimacy bound."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "appellate_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Sits atop the interpretive hierarchy: decides what the Charter's clauses require under present conditions, and each decision joins the body of accumulated meaning that future benches inherit and extend. Tenure insulates members from removal, but their authority rests entirely on the tradition they maintain; stepping outside the accumulative method would dissolve the basis of their own office. Exit from the role is practically unavailable, and the judicial identity is formed inside the practice it administers."
+    },
+    {
+      "name": "constitutional_bar_and_legal_academy",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Argues, teaches, and writes the doctrine: counsel bill constitutional litigation, professors build careers explicating the accumulated gloss, and the profession staffs the clerkships and commissions that feed the tradition. Members move fluidly between practice, academy, and bench, and their livelihoods scale with the volume and complexity of interpretive work the tradition generates."
+    },
+    {
+      "name": "rights_claimants_invoking_evolved_meaning",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Come to court seeking protections the 1215 text nowhere names, such as procedural fairness beyond its medieval forms, and receive them only because the accumulated reading has grown past the original words. Without the developed tradition their claims have no textual home, and no other institution will supply the equivalent protection."
+    },
+    {
+      "name": "original_meaning_adherents",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Judges, scholars, and advocates who hold that the Charter's clauses mean what the contracting parties understood in 1215 and that later accretions lack binding force. They litigate inside courts whose method presumes the opposite, publish in venues the tradition credentials, and see their positions lose not for want of talent but because the forum's premises exclude them. Formal amendment is their stated alternative and is rarely reachable."
+    },
+    {
+      "name": "democratic_legislative_majorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact statutes that courts sometimes set aside by appeal to developed constitutional meaning the legislature never voted on. The formal amendment path exists but demands supermajorities and multi-year process no ordinary majority can muster, so the practical responses are appointment politics and jurisdiction-limiting bills: slow counters to fast-moving doctrine."
+    },
+    {
+      "name": "general_citizens_subject_to_unenacted_limits",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Live under limits on what their legislatures may do that originate in judicial readings of an eight-century-old text. Many receive real protections this way; none consented to the specific contents of the accumulated gloss, and emigration or exit is not a realistic response to a doctrine one dislikes."
+    },
+    {
+      "name": "lay_public_outside_interpretive_conversation",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Ratified nothing and argues nothing: doctrinal development happens in judgments, law reviews, and closed conferences. Public ceremonies reaffirm the Charter at anniversaries while the operative meaning is set elsewhere; the public's participation amounts to celebrating a document whose working content it did not shape."
+    },
+    {
+      "name": "constitutional_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the documentary record of 1215 and its reception from outside the profession's argumentative stakes. They attest what the original settlement said, trace how each era's reading served that era's needs, and supply the evidence that both defenders and critics of the accumulative method cite."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Supplies one authoritative, continuously updated answer to what the Charter requires under present conditions, letting an unamendable ancient text keep doing constitutional work across radically changed circumstances without recurring legitimacy crises.",
+    "transfer_function": "Moves interpretive authority from the text's original enactors and from sitting legislative majorities to successive benches and the legal profession; moves concrete limits on public power from enacted statute to adjudicated precedent.",
+    "absent_voices": "The lay public bound by unratified doctrinal content, and originalist legislators whose methodological position receives no hearing inside the courtroom. Both stand outside the conversation where operative meaning is made; their objections surface only in political channels that cannot reach the doctrine directly.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would strand eight centuries of developed meaning: every protection the courts now enforce beyond the 1215 text would lose its warrant simultaneously, the profession's argumentative practice would lose its object, and the polity would face a frozen text governing changed conditions, forcing either an amendment crisis or abandonment of the text. Arrangements across the common-law world depend on the regime continuing.",
+    "founding_problem": "An ancient charter, granted to constrain a medieval king, had to keep governing polities and problems its drafters could not imagine; some mechanism was needed to let the text's authority persist while its content changed.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional historians outside the beneficiary set attest the adaptation problem is real: the documentary record shows literal-application efforts failing within a generation of the grant. Originalist jurists corroborate the problem's existence while disputing the accumulative solution, and legislative debate records repeatedly acknowledge that formal amendment alone cannot carry the load. Corroboration of the problem crosses the beneficiary boundary; the adequacy of this regime as the answer remains disputed by those same outside voices."
+  },
+  "gain_flow": "appellate_judiciary",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "baronial_privilege_reading",
+      "universal_rights_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Magna Carta' covers three structurally distinct constraints instantiated by three readings of one kernel: the baronial_privilege_reading (a contract among landed parties), this living_document_reading (an interpretive-authority regime whose epsilon referent is the accumulative tradition itself), and the universal_rights_reading (Clause 39 as a universal due-process constraint). Each carries its own epsilon, beneficiary/victim structure, and classification. This file authors only the living-document reading and links the family via affects_constraints; the upstream accumulative machinery legitimized here is the vehicle through which the universal reading's expansion traveled."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "adaptive_interpretive_continuity",
+    "drift_state": {
+      "moment": "contemporary_originalist_revival",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "baronial_privilege_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universal_rights_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "interpretive_tradition_supersedes_original_meaning",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "precedential_accumulation_constitutes_development",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story authors the living-document reading of Magna Carta as a clean, epsilon-invariant constraint: the standing arrangement under contest is the interpretive-authority regime itself, by which accumulated tradition legitimately supersedes the 1215 original meaning and precedential accumulation counts as constitutional development. The regime genuinely coordinates (one authoritative, continuously updated answer to what an unamendable ancient text requires) and simultaneously transfers interpretive authority from enactors and legislatures to benches and the profession, under active enforcement (courts bind by their readings; the profession polices method). The claim/metric gap is deliberate: the reading CLAIMS tangled_rope from its own endorsing seat while the metrics are authored independently as descriptively true; the engine computes per-seat classifications from the structural data. Family membership: this is one of three readings of kernel magna_carta_1215; the sibling stories carry the other two constraints, linked via network.affects_constraints.",
+    "key_agents": [
+      "appellate_judiciary: agenda-setter (institutional/identity_locked) — administers the interpretive regime; its authority is constituted by the tradition it maintains",
+      "constitutional_bar_and_legal_academy: primary beneficiary (powerful/arbitrage) — collects fees, careers, and prestige scaled to interpretive volume",
+      "rights_claimants_invoking_evolved_meaning: secondary beneficiary (powerless/trapped) — receives protections only the developed reading supplies",
+      "original_meaning_adherents: primary payer (organized/constrained) — bears methodological displacement inside forums premised against them",
+      "democratic_legislative_majorities: payer (institutional/constrained) — loses statutory outcomes to meaning they never enacted",
+      "general_citizens_subject_to_unenacted_limits: diffuse payer (powerless/trapped) — governed by doctrinal content they never consented to",
+      "lay_public_outside_interpretive_conversation: excluded (powerless/trapped) — bound by, but absent from, doctrinal development",
+      "constitutional_historians: analytical observer — attests the record from outside the profession's stakes"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.40 from this reading's own seat: the regime's costs are real (authority concentration, democratic displacement, unratified doctrinal content) but bounded by a load-bearing coordination function, so the endorsing reading assesses moderate rather than severe extraction. Suppression 0.35 is a raw structural property, unscaled by power or scope: the courtroom's method monopoly is enforced, with an internalized component (professional socialization into precedent-deference) flagged in the stare_decisis_internalization omega. Theater 0.30 reflects anniversary ceremonialism and symbolic reaffirmation that increasingly diverges from operative content. Accessibility_collapse 0.35: originalism and formal amendment remain live alternatives, so alternatives only partly collapse. Resistance 0.55: a sustained originalist and political counter-movement actively contests the regime. The measurement series run on one shared seven-point grid (every tracked metric authored at every time point); trajectories rise monotonically with the accumulation dynamic rather than cycling. Enforcement history is traced via suppression_requirement because the story's dynamic is the maturation of the interpretive enforcement machinery alongside growing divergence from original meaning.",
+    "perspectival_gap": "Seats compute differently from identical structural inputs. From the bench, the regime is stewardship: continuity maintained, adaptation delivered, legitimacy renewed each generation. From the bar and academy, it is opportunity: careers and fees scaling with doctrinal volume. From the claimant seat, it is rescue: protections unavailable anywhere else. From the originalist seat, it is methodological exclusion: losing inside forums whose premises preclude the argument. From the legislative seat, it is displacement of enacted law by unenacted meaning. Same-power differentiation: the bar and originalist scholars occupy the same nominal professional class with opposite exits, because one sells the tradition and the other disputes it; arbitrage versus constrained exit follows from that relationship to the doctrine, not from global standing.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for the judiciary, bar, and claimants; victim declarations drive high directionality for original-meaning adherents, legislative majorities, and citizens. The judiciary's dual position (agenda-setter and beneficiary) is captured by role plus secondary positioning in the structural data rather than an override, because the derivation from beneficiary-plus-administration already yields the correct near-beneficiary d. General citizens are the one genuinely mixed seat: the reading itself holds that diffuse evolved protections offset much of the unenacted-limits cost, so their true d sits nearer symmetric than the victim declaration alone suggests; this is documented here rather than overridden, since the aggregate derivation remains serviceable and the mixture is a matter of degree the engine's scope handling can absorb.",
+    "mandatrophy_analysis": "The founding problem (an ancient text must govern changed conditions) is live, so no mandatrophy is declared and no sunset applies. Classification prevents two symmetrical mislabels: reading the regime as pure extraction ignores that the coordination function is genuine and load-bearing (remove it and the constitution stops working overnight, per the disappearance verdict); reading it as pure coordination ignores the enforced, asymmetric transfer of interpretive authority to a self-perpetuating professional class. Tangled_rope holds both truths: coordinated and paying through the same structure, held together by active enforcement. The identity-lock on the bench matters here: because judicial identity fuses with the interpretive office, the regime's administrators cannot neutrally evaluate it, which is precisely the mechanism by which a coordination structure accumulates extraction without anyone deciding to extract."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

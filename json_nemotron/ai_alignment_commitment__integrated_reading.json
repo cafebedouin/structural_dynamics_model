@@ -1,0 +1,333 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_commitment__integrated_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "3d8ad9d0-3eb5-462f-8d01-a6bc4409088a"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Integrated Alignment Commitment: Control and Justice as Non-Exclusive",
+    "topic_domain": "AI Governance / Technology Ethics / Risk Assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "present_marginalized_populations",
+      "future_humanity"
+    ],
+    "victims": [
+      "siloed_safety_researchers",
+      "siloed_justice_researchers",
+      "fragmented_policy_communities"
+    ]
+  },
+  "interval": {
+    "start": 2018,
+    "end": 2026
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Does the integrated reading's core premise (simultaneous attention to control and justice as non-exclusive) logically foreclose the safety_control_reading's premise (alignment = preventing catastrophic loss of control) within a single governance framework?",
+      "resolution_mechanism": "Analyze whether any single institutional framework can coherently maintain both premises without internal contradiction — specifically whether a framework that treats control and justice as co-constitutive can also treat control as the sole or primary alignment target.",
+      "impact": "If forecloses, the safety_control_reading cannot be held within the same commitment framework as the integrated reading; if coexists_with or influences, both can persist as live positions in the field with structural pressure between them.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between integrated and safety_control readings of the alignment kernel"
+    },
+    {
+      "id": "kernel_reading_boundary_justice",
+      "question": "Does the integrated reading's core premise logically foreclose the ethics_justice_reading's premise (alignment = preventing reproduction of social bias and present-day harm) within a single governance framework?",
+      "resolution_mechanism": "Analyze whether any single institutional framework can coherently maintain both premises — specifically whether a framework that treats control and justice as co-constitutive can also treat present-day justice as the sole or primary alignment target.",
+      "impact": "If forecloses, the ethics_justice_reading cannot be held within the same commitment framework as the integrated reading; if coexists_with or influences, both can persist as live positions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between integrated and ethics_justice readings of the alignment kernel"
+    },
+    {
+      "id": "extraction_from_siloed_fragmentation",
+      "question": "How much of the measured extractiveness (ε=0.42) derives from active exclusion of the integrated approach by siloed communities, versus inherent cost of the integration itself?",
+      "resolution_mechanism": "Natural experiment: track resource allocation, publication venues, and hiring patterns as integrated safety-justice programs emerge; measure whether siloed communities' resistance decreases when integration is institutionally rewarded rather than marginal.",
+      "impact": "If extraction is primarily from active exclusion, the constraint is more snare-like (suppression of alternative); if primarily from integration cost, it is more rope-like (coordination overhead).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether extractiveness comes from suppression of integrated approach or inherent coordination cost"
+    },
+    {
+      "id": "victim_set_coherence",
+      "question": "Is the combined victim set (present marginalized populations + future humanity) structurally coherent — do the same mechanisms extract from both — or does the integrated reading conflate two distinct extraction mechanisms?",
+      "resolution_mechanism": "Map the causal pathways: for present marginalized populations, extraction operates through bias replication, exclusion from design, and labor displacement; for future humanity, extraction operates through control loss, misalignment, and existential risk pathways. Test whether interventions addressing one pathway reliably affect the other.",
+      "impact": "If mechanisms are distinct, the integrated reading may be two constraints linked by network.affects_constraints rather than one constraint with a unified victim set.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Coherence of the combined victim set across temporal scales"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The AI alignment field has crystallized around two dominant but partial readings: safety_control (preventing catastrophic loss of control over advanced AI) and ethics_justice (preventing reproduction of social bias and present-day harm). The integrated reading asserts these are non-exclusive — that alignment requires simultaneous attention to both control problems and justice problems, because the mechanisms that produce catastrophic misalignment and those that produce present-day injustice share structural roots (concentration of power, absence of accountable governance, optimization without legitimate constraint). This reading names a constraint: the field's institutional arrangement that fragments effort, funding, and legitimacy into silos, extracting from researchers and communities who would work across the boundary. The extractiveness (ε=0.42) reflects the cost of maintaining this fragmentation — duplicated infrastructure, missed interventions, and the active marginalization of integrated approaches. The constraint persists because each silo has institutional beneficiaries (dedicated funding streams, distinct publication venues, separate career ladders) and because the integrated approach lacks a natural institutional home.",
+    "key_agents": [
+      "present_marginalized_populations: Primary beneficiary (powerless/identity_locked) — bears present-day harm from AI bias, exclusion, and labor displacement; would benefit from integrated governance that centers justice",
+      "future_humanity: Primary beneficiary (powerless/identity_locked) — bears existential risk from loss of control; would benefit from integrated governance that treats control as a justice problem",
+      "siloed_safety_researchers: Victim (organized/constrained) — researchers focused on control problems who lose legitimacy, funding, and intellectual scope when integration is marginalized",
+      "siloed_justice_researchers: Victim (organized/constrained) — researchers focused on justice problems who face identical marginalization from the control silo",
+      "fragmented_policy_communities: Victim (institutional/constrained) — governance bodies forced to choose between safety frameworks and justice frameworks, unable to enact integrated regulation",
+      "integrated_alignment_researchers: Payer/beneficiary (moderate/constrained) — researchers working across the boundary who bear career costs but capture the intellectual and practical gains of integration",
+      "major_ai_labs: Agenda_setter (institutional/arbitrage) — set research priorities, control compute access, benefit from fragmentation that lets them claim alignment via either silo without integrated accountability",
+      "funding_agencies: Agenda_setter (institutional/arbitrage) — allocate resources through siloed programs, reinforcing the constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.42) is substantial but not dominant: the constraint extracts by forcing researchers and communities to choose silos, duplicating effort, and blocking interventions that require integrated analysis. Suppression (0.35) is moderate: the constraint persists through institutional inertia, funding structures, and social identity more than active coercion — researchers who integrate face career friction, not prohibition. Theater (0.28) reflects performative gestures toward integration (joint workshops, bridging grants) that don't restructure the underlying incentive landscape. Accessibility collapse (0.38) is partial: alternative integrated frameworks exist and are advocated, but lack institutional footholds. Resistance (0.52) is significant: a growing coalition explicitly rejects the dichotomy and builds integrated approaches, creating measurable pushback against the siloed arrangement.",
+    "directionality_logic": "Present marginalized populations and future humanity are structural beneficiaries (d near 0.0): the integrated reading's operation would subsidize them by redirecting alignment effort toward their interests. Siloed researchers and fragmented policy communities are structural victims (d near 1.0): they bear the cost of fragmentation through duplicated work, missed leverage, and institutional exclusion. Integrated researchers sit near symmetric (d ~ 0.5): they pay career costs but capture intellectual gains. Major AI labs and funding agencies are agenda_setters with arbitrage-grade exit (d ~ 0.15): they benefit from the fragmentation they administer and can exit the constraint by restructuring their own institutions.",
+    "perspectival_gap": "From the agenda-setter seats (major labs, funders), the siloed arrangement appears as rational specialization — distinct problems, distinct methods, distinct communities. From the victim seats (siloed researchers, policy communities), the same arrangement appears as enforced fragmentation that blocks necessary integration. From the beneficiary seats (present marginalized, future humanity), the constraint is a structural barrier to the governance they need. The engine computes these divergences from the declared power/exit/role structure; the authored claim (tangled_rope) asserts the constraint has both genuine coordination function (field-building, resource allocation) and asymmetric extraction (siloed communities pay, integrated communities are excluded).",
+    "mandatrophy_analysis": "The alignment commitment's founding problem (preventing AI catastrophe) remains live, but the siloed institutional form has outlived its function — the field's growth and the convergence of control/justice mechanisms mean the arrangement now extracts more than it coordinates. The mandate has not been formally resolved; it has drifted into a state where the institutional form actively impedes the mandate. This is mandatrophy: the constraint persists because no single actor bears enough cost to fix it and no single actor benefits enough from the status quo to defend it explicitly — it is maintained by the aggregate inertia of siloed institutions.",
+    "kernel_context": "This constraint instantiates the 'integrated_reading' of the contested kernel 'ai_alignment_commitment'. The kernel is the stabilized commitment that 'AI alignment is a coherent governance target requiring dedicated institutional effort'. Three readings instantiate distinct constraints: safety_control_reading (alignment = preventing catastrophic loss of control), ethics_justice_reading (alignment = preventing reproduction of social bias and present-day harm), and this integrated_reading (alignment requires simultaneous attention to control and justice as non-exclusive). The sibling readings are separate constraint files linked via network.affects_constraints. This reading's ε (0.42) assesses the standing arrangement of siloed alignment governance from the integrated reading's lights — not the integrated arrangement it advocates."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_commitment__safety_control_reading",
+      "ai_alignment_commitment__ethics_justice_reading"
+    ],
+    "dual_formulation_note": "This constraint is one member of the ai_alignment_commitment kernel family. The safety_control_reading (ε ≈ 0.15, mountain-claimed) treats control as a technical coordination problem with negligible extraction. The ethics_justice_reading (ε ≈ 0.35, tangled_rope-claimed) treats justice as a sociotechnical coordination problem with moderate extraction from bias replication. This integrated_reading (ε = 0.42, tangled_rope) treats the siloed institutional arrangement itself as the constraint — its extraction derives from actively maintaining the boundary between control and justice communities. The ε values differ because the referents differ: safety_control reads the kernel as a technical fact; ethics_justice reads it as a sociotechnical practice; integrated reads it as an institutional arrangement that fragments effort."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "present_marginalized_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities historically excluded from AI development and disproportionately harmed by deployed systems (bias in hiring, lending, policing, healthcare). They bear present-day extraction from AI systems but have no structural power over alignment governance. Their 'exit' from AI harm is identity-locked — they cannot opt out of systems that govern their life chances. The integrated reading's operation would benefit them by making justice a co-constitutive alignment target rather than an afterthought."
+    },
+    {
+      "name": "future_humanity",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "The collective subject of existential risk from loss of control over advanced AI. No individual can exit this risk; it is identity-locked at the species level. The integrated reading's operation would benefit them by treating control problems as inseparable from justice problems — preventing the concentration of power that enables both catastrophic misalignment and present-day injustice."
+    },
+    {
+      "name": "siloed_safety_researchers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers and institutions dedicated to control/alignment technical work (interpretability, scalable oversight, reward modeling). They lose when the integrated approach is marginalized: their work is framed as 'only technical,' missing justice dimensions that affect robustness; they compete for siloed funding; they face intellectual narrowing. Exit is constrained — moving toward integration risks career capital in the safety silo, but staying siloed limits impact."
+    },
+    {
+      "name": "siloed_justice_researchers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers and institutions dedicated to AI ethics, fairness, accountability, and present-day harm reduction. They face symmetric marginalization from the control silo: their work is framed as 'only near-term,' missing control dimensions that affect long-term justice; they compete for siloed funding; they face intellectual narrowing. Exit is constrained for identical structural reasons."
+    },
+    {
+      "name": "fragmented_policy_communities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Governance bodies (legislatures, regulatory agencies, international forums) forced to choose between 'AI safety' frameworks and 'AI ethics' frameworks. They bear the cost of fragmented expertise, contradictory testimony, and inability to write integrated regulation. Exit is constrained — institutional mandates and political coalitions are built around the silos."
+    },
+    {
+      "name": "integrated_alignment_researchers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers and practitioners working across the control/justice boundary (e.g., on participatory alignment, democratic governance of AI, justice-aware interpretability). They pay career costs (fewer dedicated venues, ambiguous funding fit, identity friction from both silos) but capture the intellectual and practical gains of integration — more robust interventions, broader coalitions, truer problem representation."
+    },
+    {
+      "name": "major_ai_labs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Frontier AI developers (e.g., OpenAI, Anthropic, DeepMind, Meta AI) who set de facto research priorities, control compute access, and define what counts as 'alignment work.' They benefit from fragmentation: they can claim alignment via safety investments OR ethics investments without being held to an integrated standard. Their exit is arbitrage-grade — they could restructure their own alignment portfolios overnight and have the resources to weather any transition."
+    },
+    {
+      "name": "funding_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Government agencies (NSF, DARPA, EU Horizon, UK ARIA) and philanthropies (Open Philanthropy, Longview, etc.) that allocate alignment funding through siloed programs (AI Safety, AI Ethics, Responsible AI). They reinforce the constraint by designing RFPs, review panels, and metrics around the dichotomy. Exit is arbitrage-grade — they control the purse strings and could create integrated programs by fiat."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The siloed arrangement coordinates specialized research communities, dedicated funding streams, and distinct policy interfaces — it solves the problem of 'how to build a field' by partitioning the alignment target into tractable sub-problems with legible metrics and communities.",
+    "transfer_function": "Moves research talent, funding, and institutional legitimacy from integrated approaches to siloed ones. Resources flow to researchers who stay in lane; career capital accrues to silo-legible work; policy attention splits into parallel tracks. The transfer is not zero-sum — the field grows overall — but the integrated margin is systematically under-resourced relative to its leverage.",
+    "absent_voices": "Communities most affected by both present-day AI harm and future AI risk (Global South populations, indigenous communities, precarious workers, future generations) are structurally excluded from the alignment governance conversation. They would object to the dichotomy that treats their present harm and their existential risk as separate problems. Their absence is not accidental — the siloed arrangement has no mechanism for their representation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the siloed constraint vanished overnight, funding agencies would restructure programs toward integrated priorities within grant cycles; major labs would consolidate safety and ethics teams; researchers would reorganize around unified problem statements; policy bodies would draft integrated frameworks. The field's intellectual and institutional architecture would reorganize — not collapse, but rearrange around the integrated target.",
+    "founding_problem": "The alignment field's founding problem was preventing catastrophic outcomes from advanced AI systems — initially framed narrowly as 'loss of control' (the safety_control reading). As the field grew, the justice dimension (bias, fairness, accountability) emerged as a co-constitutive problem, but the institutional form had already crystallized around the control frame.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Safety_control proponents (e.g., MIRI, early FHI) attest the founding problem is purely control and remains live. Ethics_justice proponents (e.g., DAIR, algorithmic justice organizations) attest the founding problem was always broader and the control framing was ahistorical exclusion. Integrated proponents (e.g., Center for AI Safety's later work, Partnership on AI, interdisciplinary institutes) attest the founding problem was underspecified and the dichotomy is the constraint. No single party's attestation is definitive — the contest is structural."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "safety_control_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "ethics_justice_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "control_and_justice_co_constitutive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "siloed_arrangement_extracts_from_integration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "ai_alignment_as_siloed_governance_target",
+    "drift_state": {
+      "moment": "post_chatgpt_integration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "paris_article_4_ndc__sovereigntist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-06",
+    "status": "ACTIVE",
+    "story_uid": "44c30efb-b93b-47fd-bc38-3cfaed546880"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.12,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "NDC Voluntary Pledge Architecture (Sovereigntist Reading)",
+    "topic_domain": "international_climate_governance/treaty_law/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "fossil_dependent_exporters",
+      "rapidly_industrializing_economies",
+      "developed_economy_parties"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.12
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Which reading correctly characterizes Article 4's legal force — voluntary self-determination (this file), binding ratcheting accountability (supranational_reading), or CBDR-structured differentiation (equity_reading)?",
+      "resolution_mechanism": "Authoritative interpretation: ICJ and ITLOS jurisprudence on the obligatory character of the Paris provisions, CMA decisions on implementation, and accumulated state practice and opinio juris.",
+      "impact": "If the supranational reading prevails, epsilon rises sharply, victims appear (states subject to international accountability), and the computed type shifts toward tangled_rope; if the equity reading prevails, the beneficiary and victim sets restructure along development-status lines. This file's rope classification holds only within the sovereigntist reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the paris_article_4_ndc kernel; sibling readings instantiate different constraints with different epsilon and victim structures."
+    },
+    {
+      "id": "informal_enforcement_question",
+      "question": "Does the absence of formal penalty mean absence of effective compulsion, or do reputational cycles, stocktake naming, and finance-linkage function as informal enforcement that the suppression scalar undercounts?",
+      "resolution_mechanism": "Behavioral studies of NDC revision following stocktake rounds and peer review; analysis of whether finance access and diplomatic standing vary measurably with pledge performance.",
+      "impact": "Demonstrable informal enforcement would raise effective suppression and extraction and push the computed type toward tangled_rope; confirmed non-enforcement supports the rope claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pledge-and-review exerts real compulsion beneath its formally voluntary surface."
+    },
+    {
+      "id": "vulnerable_seat_cost_attribution",
+      "question": "Do climate-vulnerable states bear costs imposed by the voluntary architecture itself (a venue that consumes their diplomatic capacity and returns wholly discretionary outcomes), or are their losses attributable to aggregate emissions regardless of pledge design?",
+      "resolution_mechanism": "Counterfactual treaty-design analysis: would a binding-compliance counterfactual plausibly have produced emission paths sufficient to alter vulnerable states' exposure, and at what participation cost?",
+      "impact": "If the architecture itself imposes the cost, victims must be declared, the vulnerable seat's directionality moves toward the target pole, and the type shifts toward tangled_rope; if not, the current no-victim structure stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the equity reading's critique would enter this story if credited — the boundary between coordination-failure cost and imposed cost."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "fossil_dependent_exporters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "States and blocs whose fiscal stability and export revenue depend on continued global fossil fuel demand — oil and gas exporters, coal-reliant economies. The arrangement asks nothing of their energy mix: no body can set a phase-out date for them, and the consensus rule lets them shape or block text that would. Membership costs them little — reports, delegations, occasional finance pledges — and staying inside preserves a seat where demand-side pressure can be managed. Leaving would forfeit that seat and gain nothing, since nothing binds them here anyway."
+    },
+    {
+      "name": "rapidly_industrializing_economies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Large emerging economies whose development strategies still run through expanding energy consumption. Under this architecture they choose their own peaking timelines and target shapes; no external schedule is imposed, and the differentiation language they negotiated remains in the treaty preamble. They submit pledges sized to domestic plans, report on them, and face no consequence if delivery lags. Exit is available and occasionally threatened, but the venue's legitimacy and its technology-cooperation channels are worth the modest dues."
+    },
+    {
+      "name": "developed_economy_parties",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Industrialized parties that accept the framework as the price of universal membership. They gain a common accounting standard, a venue where their own ambition can be showcased, and insulation from the binding-target politics that sank the previous treaty. They pay in voluntary finance contributions, reporting labor, and reputational exposure when delivery trails pledges. Withdrawal is legally straightforward — one large party has exercised it twice — but carries a diplomatic cost they have been willing to pay only intermittently."
+    },
+    {
+      "name": "climate_vulnerable_alliance",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Coalitions of small island and least-developed states facing existential exposure to warming they did little to cause. They send delegations, negotiate text, and supply much of the process's moral energy; what comes back depends entirely on other parties' discretionary choices, since nothing in the architecture compels anyone's ambition. Their alternative to participation is isolation from the only universal venue that records their plight — so they stay, spend scarce capacity, and hold a veto over rules but no lever over outcomes."
+    },
+    {
+      "name": "unfccc_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The treaty body that keeps the machinery running: maintains the NDC registry, organizes transparency reviews and the global stocktake synthesis, services the annual conferences. It administers everything and decides nothing of substance — rules require party consensus, and it serves at the parties' pleasure, funded by their contributions. Its institutional survival depends on the process continuing, whatever the process produces."
+    },
+    {
+      "name": "independent_climate_assessment_bodies",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Research consortia and UN assessment programs outside the negotiation rooms that compare announced pledges against measured trajectories and published implementation gaps. They consume the transparency outputs, translate them into public scorecards, and are the seat that sees the full spread between what parties say and what emissions do. They collect nothing from the process and answer to no party."
+    },
+    {
+      "name": "youth_climate_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Mass mobilizations and advocacy networks acting on the stakes the negotiations manage. They have no formal seat: no vote, no pledge, no delegation rights in the sessions that determine the architecture. Their influence runs through protest, litigation, and pressure on national politics — channels that exist entirely outside the treaty structure they are trying to move."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides the shared machinery without which national climate efforts cannot be compared or aggregated: a common reporting and accounting framework, a public NDC registry, five-yearly global stocktakes that synthesize collective progress, and a standing negotiation forum. It solves the information and measurement coordination problem — who is doing what, stated comparably — while deliberately leaving the level of effort to each party.",
+    "transfer_function": "Moves little of material value. What circulates is attention, reputational standing, and administrative effort: parties transfer reporting and diplomatic labor into the process; the stocktake and peer review return normative pressure and public visibility; voluntary finance pledges move funds outside the compliance core. No compulsory transfer runs through the pledge architecture itself.",
+    "absent_voices": "Future generations and populations already experiencing climate losses hold no seat; youth movements mobilize outside the process with no formal access to pledge-setting. Within the process, climate-vulnerable delegations are present but structurally voiceless over others' pledges — consensus gives every party a veto over rules yet no lever over anyone's ambition. Advocates of binding accountability operate outside the consensus and would object to the voluntariness itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "The reporting infrastructure, registry, stocktake cycle, and diplomatic focal point would vanish; climate diplomacy would reorganize within years around minilateral substitutes — G20 statements, bilateral deals, sectoral clubs — with worse comparability and no universal membership. The physical emissions trajectory would shift little at first, since the architecture compels nothing, but the loss of a common measurement standard and a universal venue would degrade every subsequent coordination attempt.",
+    "founding_problem": "After the previous treaty's compliance architecture failed — one major emitter never ratified it, another withdrew to escape penalties — the founding problem was designing a framework that could achieve near-universal participation, including major emitters and developing economies, by making commitment content a matter of national choice while still generating upward ambition pressure through transparency and periodic review.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The participation diagnosis is corroborated outside the benefiting parties by treaty-design scholarship documenting the prior treaty's ratification failure, and by the near-universal ratification that followed. The status is disputed: UNEP Emissions Gap assessments and independent pledge-tracking consortia attest that the ambition problem the architecture was meant to progressively solve remains unsolved, while party communiqués attest the process functions as designed. No neutral source attests that the founding problem is simply dead."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "paris_article_4_ndc_supranational_reading",
+      "paris_article_4_ndc_equity_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the Paris NDC regime' decomposes into three structurally distinct constraints, one per reading of the Article 4 kernel. This file is the sovereigntist reading (epsilon 0.20, no declared victims, rope claim). The supranational reading authors the same standing arrangement as binding ratcheting accountability with higher epsilon and state-subject victims; the equity reading restructures beneficiaries and victims along development-status lines. Epsilon differs across the family because each reading assesses the same arrangement by its own lights, not because the arrangement differs; each file links the others here."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "self_enforcing",
+    "reference_frame": "sovereign_consent_pledge_review",
+    "drift_state": {
+      "moment": "post_first_global_stocktake",
+      "direction": "repudiation_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "paris_article_4_ndc_supranational_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "paris_article_4_ndc_equity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "pledge_content_domestically_determined",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "compliance_through_facilitation_not_penalties",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates the sovereigntist reading of the Paris Agreement's Article 4 NDC architecture: nationally determined contributions are voluntary, self-determined pledges, and the arrangement's defining feature is what it does not compel — no target is internationally binding, no penalty attaches to non-achievement, and any party may withdraw on twelve months' notice after three years of membership. Assessed by this reading's own lights, the standing arrangement is a low-extraction coordination system: it builds shared measurement, reporting, and review infrastructure while preserving exclusive national jurisdiction over energy policy. The claim/metric independence rule applies throughout: rope is my structural claim, and the metrics are my separate descriptive assessment of how the arrangement actually operates. The sibling readings (supranational, equity) are separate constraints in separate files; their critiques are routed to omega variables rather than folded into this classification.\n\nKEY AGENTS (by structural relationship):\n- fossil_dependent_exporters: primary beneficiary (organized/mobile) — preserve export demand and development pathways at minimal membership cost\n- rapidly_industrializing_economies: primary beneficiary (institutional/mobile) — no externally imposed peaking schedule\n- developed_economy_parties: beneficiary with payer secondary role (institutional/mobile) — buy legitimacy and coordination goods with voluntary finance and reporting\n- climate_vulnerable_alliance: payer (organized/trapped) — supply diplomatic labor, bear aggregate-shortfall exposure, hold no lever over others' pledges\n- unfccc_secretariat: agenda_setter (institutional/constrained) — administers registry, reviews, and stocktake logistics; decides nothing of substance\n- independent_climate_assessment_bodies: analytical observer (organized/analytical) — measures the pledge-implementation gap from outside\n- youth_climate_movements: excluded voice (organized/trapped) — acts on the stakes, holds no seat",
+    "logic_rationale": "Extraction is low (0.20 at interval end) because the architecture compels nothing material: its costs are reporting labor, diplomatic attendance, and reputational exposure, and its headline discipline — the five-year ratchet — operates through facilitation rather than sanction. Suppression is very low (0.12): exit is codified, non-ratification remains available, and free-riding inside the regime carries no formal consequence; the series declines across the interval as enforcement expectations atrophied from an already-facilitative baseline. Theater is moderate and rising (0.42): pledge announcements, conference ceremonies, and stocktake spectacle increasingly outrun implementation linkage, though the transparency machinery still produces real, comparable data. Accessibility collapse is low (0.25): alternatives — exit, minilateralism, open free-riding — survive contact with the arrangement. Resistance is low-moderate (0.30): the arrangement is resisted mainly by those who want it to bind harder, a resistance to its weakness rather than to its operation. The three measurement series share one six-point grid (2015–2025 at two-year steps, t=0 to t=10). Dynamics are monotone drift with episodic pulses around stocktake years; the pulses register as steps in theater rather than sustained oscillation, so no cyclical series is asserted and no intermittent-reinforcement mechanism is claimed.",
+    "perspectival_gap": "Seats diverge sharply. From the fossil-exporter and industrializer seats the arrangement computes as near-pure coordination: it costs little, compels nothing, and protects jurisdiction. From the vulnerable-alliance seat the same structure is a venue that consumes scarce diplomatic capacity and returns outcomes wholly contingent on others' discretion — the experience of paying into a system whose benefits are priced beyond one's reach. The secretariat experiences administration without authority; the assessment bodies see the pledge-implementation gap that participant seats do not price into their own ledgers. The engine computes these per-seat classifications from the structural data; this story authors the data, not the verdicts.",
+    "directionality_logic": "Declared beneficiaries (fossil exporters, industrializers, developed parties) derive directionality near the beneficiary pole: the arrangement subsidizes their preferred outcome — sovereignty retained, compulsion avoided — and their mobile exit options anchor them at low d. The vulnerable alliance is the hardest seat: it is deliberately not declared a victim under this reading, which attributes their exposure to aggregate emissions rather than to anything the architecture takes from them; but trapped exit and one-way cost-bearing push its derived d toward the middle-upper range rather than the beneficiary pole. The secretariat is administratively central yet collects no rents. No directionality overrides are authored: the beneficiary declarations plus exit options capture the structure, and the residual ambiguity about the vulnerable seat is carried as an omega (vulnerable_seat_cost_attribution) instead of a forced override.",
+    "mandatrophy_analysis": "The rope claim guards against two mislabels. Against snare: nothing is compelled, no seat captures the gains, and exit is codified — the coercive signature is absent. Against piton: the coordination function (common accounting, transparency, universal venue) is still performed and consumed, so the theater ratio, while rising, has not swallowed the function. The live risk this reading registers is drift: if implementation linkage continues to decouple from pledge performance, theater crosses the functional threshold and the arrangement degrades toward theatrical maintenance — the trajectory the rising theater series tracks. Mandatrophy is not resolved: the founding participation problem was solved by design, but the framework's ongoing warrant — progressive ambition — is exactly what the independent assessments dispute, leaving the mandate's status contested rather than dead.",
+    "kernel_context": "Kernel: paris_article_4_ndc — the legal character of nationally determined contributions under the Paris Agreement. This file instantiates the sovereigntist_reading: NDCs are voluntary, self-determined pledges preserving national energy sovereignty, with authority resting on state consent and self-enforcement rather than any adjudicating body. Sibling readings: the supranational_reading (NDCs as binding commitments on a ratcheting trajectory with international accountability) and the equity_reading (NDCs interpreted through Common But Differentiated Responsibilities requiring structural differentiation between developed and developing states). The disagreement is located in the legal force of pledge content and the locus of authority over energy policy. This reading's low epsilon and absent victim set follow from its own premises; the sibling critiques enter only through omega variables, and the foreclosure relation to the supranational reading reflects that one framework cannot hold pledge content as both domestically sovereign and internationally accountable."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

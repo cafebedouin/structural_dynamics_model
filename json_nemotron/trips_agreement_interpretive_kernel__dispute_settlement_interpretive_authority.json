@@ -1,0 +1,360 @@
+{
+  "header": {
+    "constraint_id": "trips_agreement_interpretive_kernel__dispute_settlement_interpretive_authority",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_trips_agreement_interpretive_kernel__dispute_settlement_interpretive_authority",
+    "measurement_id_prefix": "trips_dsp",
+    "story_uid": "06b5c26a-2c7b-49df-9166-5300cb1ae253",
+    "created_at": "2026-08-05T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "WTO Dispute Settlement Interpretive Authority over TRIPS",
+    "topic_domain": "international_law/trade/health",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "pharmaceutical_innovator_firms",
+      "wto_dispute_settlement_body",
+      "high_income_member_states"
+    ],
+    "victims": [
+      "low_middle_income_country_governments",
+      "generic_pharmaceutical_producers",
+      "public_health_access_populations"
+    ],
+    "vindicated_propositions": [
+      "dispute_settlement_interpretive_supremacy",
+      "trips_minimum_standards_enforcement",
+      "patent_protection_uniformity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is the dispute settlement interpretive authority reading a distinct constraint from the TRIPS agreement itself, or merely an enforcement mechanism of the same constraint?",
+      "resolution_mechanism": "Compare extraction profiles: if dispute panels extract beyond the TRIPS text's own requirements (e.g., through precedent that narrows flexibilities), the interpretive authority is a separate constraint layer with its own ε.",
+      "impact": "If separate, this constraint's claimed_type applies only to the interpretive layer; the TRIPS substantive text would need its own story. If unified, the high extraction reflects the entire regime.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the interpretive authority constitutes a separable constraint from the substantive TRIPS obligations."
+    },
+    {
+      "id": "post_appellate_body_drift",
+      "question": "How has the Appellate Body's paralysis since 2019 changed the constraint's effective extraction and suppression?",
+      "resolution_mechanism": "Track panel compliance rates, appeal-into-void outcomes, and bilateral settlement patterns post-2019. Compare effective extraction for identical disputes pre- and post-Appellate Body collapse.",
+      "impact": "If bilateral power substitution amplifies extraction against weaker members, the constraint shifts toward snare. If panel authority degrades uniformly, theater_ratio rises and constraint drifts toward piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural drift from multilateral adjudication to bilateral power dynamics."
+    },
+    {
+      "id": "public_health_flexibility_capture",
+      "question": "Have dispute panel rulings systematically narrowed TRIPS flexibilities (Art. 31, Doha Declaration) beyond what the text requires?",
+      "resolution_mechanism": "Code panel reports 1995–present for interpretation of compulsory licensing, parallel imports, and public health exceptions. Measure narrowing trend against textual baseline.",
+      "impact": "Systematic narrowing establishes the interpretive layer as extractive overlay (tangled_rope → snare drift). Textual fidelity would support coordination framing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether interpretive precedent has contracted flexibilities beyond textual mandate."
+    },
+    {
+      "id": "committer_frame_location",
+      "question": "This constraint instantiates the dispute_settlement_interpretive_authority reading of the trips_agreement_interpretive_kernel. What structural elements do the sibling readings (strong_exclusivity_reading, public_health_flexibility_reading) change?",
+      "resolution_mechanism": "Map each sibling's beneficiary/victim structure, claimed_type, and ε against this reading. The disagreement is located in: (1) who holds interpretive authority (panels vs. members vs. text), (2) whether flexibilities are self-judging or panel-adjudicated, (3) whether enforcement is multilateral or bilateral.",
+      "impact": "Sibling readings produce different constraint classifications: strong_exclusivity_reading likely snare (high extraction, narrow beneficiaries); public_health_flexibility_reading likely rope or scaffold (coordination with sunset via Doha). This reading (dispute_settlement_interpretive_authority) is tangled_rope — genuine coordination (dispute resolution) with asymmetric extraction (precedent locks in narrow readings).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commiter frame: kernel_id=trips_agreement_interpretive_kernel, reading_id=dispute_settlement_interpretive_authority, sibling readings differ on interpretive authority locus, flexibility scope, and enforcement modality."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The WTO Dispute Settlement Understanding (DSU) grants panels binding interpretive authority over the TRIPS Agreement text, with enforcement through authorized trade retaliation. This interpretive layer operates as a meta-constraint on the TRIPS kernel: panel rulings lock in one reading (strong exclusivity, public health flexibility, or dispute settlement authority) through precedent. Since the Appellate Body's paralysis in 2019, bilateral power dynamics increasingly substitute for multilateral adjudication — powerful members settle disputes on favorable terms while weaker members face panel rulings without appeal. The constraint coordinates genuine dispute resolution (rope function) but extracts asymmetrically through precedent that narrows flexibilities, benefits pharmaceutical innovators and high-income members, and suppresses generic competition and public health access.",
+    "key_agents": [
+      "wto_dispute_settlement_body: Agenda setter (institutional/analytical) — administers interpretive authority, writes precedent",
+      "pharmaceutical_innovator_firms: Primary beneficiary (powerful/organized) — gain extended exclusivity through narrow panel readings",
+      "high_income_member_states: Secondary beneficiary (institutional/powerful) — shape panel composition, use retaliation threats",
+      "low_middle_income_country_governments: Primary payer/victim (moderate/organized) — face retaliation for using flexibilities, lack appeal recourse",
+      "generic_pharmaceutical_producers: Victim (moderate/organized) — blocked by panel precedent narrowing compulsory licensing",
+      "public_health_access_populations: Victim (powerless/trapped) — bear health costs of delayed/denied generic access",
+      "wto_member_states_general: Observer/analytical (various) — systemic interest in rule of law vs. power dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the interpretive layer's net transfer: panels narrow flexibilities beyond textual minima, extending patent rents to innovators and high-income states. Suppression (0.75) is high because the enforcement mechanism (retaliation) is actively used and the Appellate Body collapse removes the correction channel. Theater ratio (0.22) is low-moderate: dispute resolution is real coordination, but a growing share of panel activity serves precedent-building for narrow readings. Accessibility collapse (0.62) reflects that once a panel ruling establishes precedent, alternative readings are foreclosed for all members. Resistance (0.58) is substantial: developing country coalitions, public health advocates, and some members contest narrow readings, but the institutional machinery continues.",
+    "directionality_logic": "The WTO DSB (agenda_setter) sits at d ≈ 0.15 (beneficiary of institutional authority). Pharmaceutical innovators and high-income states (beneficiaries) sit at d ≈ 0.2–0.3 (subsidized by the constraint). Low/middle-income governments, generic producers, and access populations (victims) sit at d ≈ 0.7–0.9 (targets of extraction, trapped by retaliation threat and no appeal). The Appellate Body collapse increased d for weaker members by removing the only check on panel overreach — bilateral settlements now substitute, where power asymmetry dictates terms.",
+    "perspectival_gap": "From the DSB/institutional seat: this is a rope — genuine coordination solving the 'who interprets TRIPS' problem with rule of law. From the pharmaceutical innovator/high-income seat: this is a beneficial coordination mechanism protecting innovation incentives. From the developing country/generic producer/access population seats: this is a snare — the coordination story (dispute resolution) covers extraction (precedent narrowing flexibilities) enforced by retaliation. The engine computes this seat divergence from the declared structural positions.",
+    "mandatrophy_analysis": "The founding problem (1995): 'How to ensure consistent interpretation of TRIPS across 164 members without endless renegotiation?' That problem remains live (disputes still arise). But the arrangement has accumulated extractive precedent that serves narrow interests beyond the coordination function. The mandate hasn't atrophied — it's been captured. The constraint is tangled_rope, not piton, because the coordination function is still actively used and the extraction is actively maintained, not merely inertial.",
+    "kernel_context": "This constraint instantiates the 'dispute_settlement_interpretive_authority' reading of the 'trips_agreement_interpretive_kernel'. Sibling readings: 'strong_exclusivity_reading' (TRIPS mandates high uniform patent protection with narrow flexibilities) and 'public_health_flexibility_reading' (TRIPS embeds broad compulsory licensing/parallel import flexibilities for public health). This reading holds that the DSU's grant of binding interpretive authority to panels is the operative constraint — panels lock in one reading through precedent. The structural delta from siblings: this reading adds a meta-constraint layer (interpretive authority + enforcement) that the other readings treat as background. Post-Appellate Body collapse, bilateral power increasingly substitutes for multilateral adjudication, amplifying this layer's extractive asymmetry."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "trips_agreement_interpretive_kernel__strong_exclusivity_reading",
+      "trips_agreement_interpretive_kernel__public_health_flexibility_reading",
+      "trips_substantive_patent_standards",
+      "wto_dispute_settlement_understanding"
+    ],
+    "dual_formulation_note": "Part of the TRIPS Agreement Interpretive Kernel family. This story models the meta-constraint: DSU grant of binding interpretive authority to panels with retaliation enforcement. The sibling stories model the substantive readings that panels choose between. The kernel itself (trips_agreement_interpretive_kernel) is the stabilized commitment — the TRIPS text + Doha Declaration — that all three readings claim to interpret. This reading's ε (0.68) is higher than the public_health_flexibility_reading's expected ε (~0.25, rope/scaffold) but lower than strong_exclusivity_reading's expected ε (~0.75, snare), because this reading includes genuine dispute resolution coordination alongside extractive precedent-building."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "wto_dispute_settlement_body",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Panels and (formerly) Appellate Body issue binding rulings on TRIPS interpretation. Their precedent narrows flexibilities (compulsory licensing conditions, parallel import rules, patentability standards). They collect institutional authority and legitimacy; their enforcement arm is the DSB's retaliation authorization. Post-2019, they operate without appellate review, increasing their de facto interpretive power."
+    },
+    {
+      "name": "pharmaceutical_innovator_firms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Originator pharmaceutical companies (primarily US/EU/JP-based) gain extended market exclusivity when panels interpret TRIPS flexibilities narrowly. They lobby home governments to bring disputes, fund legal support, and use panel precedent to pressure governments against using compulsory licenses. Their exit is arbitrage-grade: they operate globally and can shift R&D, pricing, and enforcement strategies across jurisdictions."
+    },
+    {
+      "name": "high_income_member_states",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Countries with strong pharmaceutical sectors (US, EU, Japan, Switzerland, UK) initiate most TRIPS disputes, shape panel composition through DSU procedures, and wield credible retaliation threats. They benefit from the constraint's interpretive drift toward stronger protection. Their exit is arbitrage: they can bypass the system via bilateral/regional agreements (TRIPS-plus FTAs) while using the multilateral system to pressure others."
+    },
+    {
+      "name": "low_middle_income_country_governments",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Governments seeking to use TRIPS flexibilities (compulsory licenses, parallel imports, patent opposition) face dispute risk. Panel rulings against them authorize trade retaliation that can devastate export sectors. Post-Appellate Body collapse, they cannot appeal adverse panels; they must comply or face retaliation. Exit is constrained: leaving WTO is economically catastrophic; regional blocs offer limited shelter."
+    },
+    {
+      "name": "generic_pharmaceutical_producers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Generic manufacturers (India, China, Brazil, regional producers) face panel precedent that narrows Art. 31 compulsory licensing (e.g., Canada – Patent Protection, EC – Trademarks/Geographical Indications). They bear compliance costs, lost markets, and legal uncertainty. Exit is constrained: they depend on global supply chains and regulatory harmonization that the WTO system governs."
+    },
+    {
+      "name": "public_health_access_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Patients and health systems in low/middle-income countries bear the health costs when panel precedent delays or blocks generic entry (e.g., HIV/AIDS, COVID-19, cancer drugs). They have no voice in disputes, no exit from the patent system, and no retaliation capacity. Their situation is structural: the constraint operates through their governments' compelled compliance, but they bear the ultimate cost in morbidity/mortality."
+    },
+    {
+      "name": "wto_member_states_general",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The broader membership has systemic interest in a functioning dispute settlement system (rule of law, predictability) but divergent interests on TRIPS interpretation. They observe panel precedent, participate in DSB meetings, and may join disputes as third parties. Their analytical seat sees the full structure: coordination function (dispute resolution) + extraction function (precedent drift) + enforcement shift (bilateral substitution post-2019)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single authoritative interpretation of TRIPS obligations across 164 members, resolving disputes that would otherwise require constant renegotiation or unilateral action. The DSU's binding panel rulings (with former Appellate Body review) create legal certainty for trade in intellectual property.",
+    "transfer_function": "Moves interpretive authority from member states (who negotiated TRIPS flexibilities as self-judging) to dispute panels (who narrow those flexibilities through precedent). The economic transfer: extended patent rents flow from generic producers and public health systems in developing countries to originator firms and high-income states. The political transfer: policy space for public health shifts from national governments to Geneva panels.",
+    "absent_voices": "Patients and civil society in affected countries are structurally excluded from dispute proceedings — only governments can be parties. Indigenous knowledge holders and traditional medicine practitioners are excluded from patentability interpretations. Future generations (who bear innovation incentive costs/benefits) are excluded. These voices would likely support the public_health_flexibility_reading but have no standing in the DSU.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If panel interpretive authority vanished overnight, TRIPS interpretation would revert to member-state practice (each government interpreting flexibilities for itself). Generic competition would expand rapidly in countries currently constrained by panel precedent. High-income states would accelerate bilateral TRIPS-plus agreements. The WTO's dispute settlement function would collapse or transform. The global pharmaceutical market would reorganize around national/regional patent regimes rather than a single interpretive hierarchy.",
+    "founding_problem": "After TRIPS negotiation (1994), members needed a mechanism to ensure consistent interpretation of the Agreement's minimum standards without constant renegotiation. The DSU provided binding panel rulings with appellate review, creating a rule-of-law framework for IP trade disputes.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The WTO Secretariat and DSB annual reports attest the dispute settlement system remains active and necessary (200+ disputes since 1995). However, developing country members (India, Brazil, South Africa, African Group) and public health NGOs (MSF, Oxfam, Knowledge Ecology International) corroborate that the founding problem (consistent interpretation) has been overtaken by a new problem: interpretive capture narrowing flexibilities beyond the negotiated text. The 2001 Doha Declaration on TRIPS and Public Health — negotiated by all members — explicitly reaffirmed flexibilities that panels have subsequently narrowed, corroborating the drift from coordination to extraction."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "trips_agreement_interpretive_kernel",
+      "wto_dispute_settlement_understanding"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strong_exclusivity_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "public_health_flexibility_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "panel_precedent_binds_flexibility_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "retaliation_enforces_interpretive_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "appellate_body_paralysis_shifts_authority_to_panels",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "dsu_multilateral_adjudication_framework",
+    "drift_state": {
+      "moment": "post_appellate_body_collapse",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "statutory_debt_ceiling__extraction_snare_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "573971c0-d338-4a93-add8-93fe964d3fb6"
+  },
+  "base_properties": {
+    "extractiveness": 0.76,
+    "suppression": 0.72,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Statutory Debt Ceiling as Minority Extraction Weapon (Extraction-Snare Reading)",
+    "topic_domain": "constitutional/political economy/fiscal governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "legislative_minority_factions",
+      "primary_election_challengers"
+    ],
+    "victims": [
+      "federal_bondholders",
+      "benefit_recipients_and_contractors",
+      "general_taxpaying_public"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "legislative_minority_factions",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "A caucus of legislators, typically in the chamber minority, that withholds the votes needed to raise or suspend the statutory limit on Treasury borrowing. By refusing consent they push the government toward missed payments, then release their votes in exchange for policy concessions — spending caps, program cuts, procedural commitments — that they could not obtain through ordinary bill-passing. They can end each standoff at will by voting yes, and they return to the same lever in the next cycle; their own constituents rarely bear the first-order costs of a default scare."
+    },
+    {
+      "name": "primary_election_challengers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Outsider candidates and insurgent challengers who campaign on refusing to raise the borrowing limit. Each standoff supplies them with fundraising appeals, media attention, and proof-of-defiance credentials against incumbents; they collect reputational returns from every episode without bearing responsibility for the settlement terms."
+    },
+    {
+      "name": "federal_bondholders",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Holders of Treasury securities — domestic pension funds, foreign central banks, money-market funds — whose assets are the direct object of the default threat. Every standoff forces repricing of the world's benchmark safe asset; the 2011 episode produced the first-ever US credit downgrade and measurable yield penalties. They cannot exit the position meaningfully: Treasuries are the collateral and liquidity backbone of the global financial system, so selling during a scare realizes exactly the losses the threat implies."
+    },
+    {
+      "name": "benefit_recipients_and_contractors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Social Security recipients, veterans, federal employees, Medicare providers, and government contractors who depend on scheduled federal payments. In each standoff they face the possibility that Treasury must choose which obligations to pay after the deadline; their income arrives on fixed dates and they have no way to hedge or relocate away from the payment calendar."
+    },
+    {
+      "name": "general_taxpaying_public",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Households and firms outside the payment calendar who bear the diffuse costs: higher borrowing costs passed through mortgages and credit, austerity concessions written into settlement bills, growth drag from each uncertainty episode, and the accumulated fiscal commitments traded away in closed-door deals. Their recourse is electoral, delayed, and diluted across millions of households."
+    },
+    {
+      "name": "us_treasury",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the borrowing limit day to day: issues debt up to the cap, forecasts the exhaustion date, and deploys 'extraordinary measures' — accounting maneuvers around G Fund and exchange-stabilization rules — to postpone it. During standoffs it drafts contingency plans for prioritizing payments, briefs markets, and absorbs the operational and legal risk of whatever happens after the deadline. It cannot refuse the statute and cannot resolve the standoff; it can only manage the countdown."
+    },
+    {
+      "name": "presidents_and_governing_majorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The president and congressional majority in office when the limit binds. They must assemble the votes to raise or suspend it, absorbing blame for any market turmoil and paying the policy price demanded by the withholding faction. Their alternatives — invoking the Fourteenth Amendment, minting a large-denomination coin, ignoring the limit — carry constitutional and legal jeopardy, so their practical option set collapses to negotiation."
+    },
+    {
+      "name": "alternative_authority_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legal scholars, former officials, and advocates who argue the executive can honor debt obligations regardless of the limit — through Section 4 of the Fourteenth Amendment, a platinum coin, or premium bonds — and that the limit itself is unnecessary or invalid. They are kept outside the negotiated settlements: deals are struck between the withholding faction and the leadership facing the deadline, and the alternative-authority routes are dismissed as too risky to attempt."
+    },
+    {
+      "name": "credit_rating_agencies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Rate sovereign credit and publish outlooks tied to the standoffs. S&P's 2011 downgrade and Fitch's 2023 action translated each episode into measurable repricing across global portfolios. They score the arrangement from outside; their ratings shape the perceived cost of every standoff without their holding any seat in the negotiation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Consolidates what would otherwise be a separate authorization vote for every Treasury debt auction into a single periodic decision on the aggregate stock of federal debt, giving Congress a recurring checkpoint on cumulative indebtedness without micromanaging each issuance.",
+    "transfer_function": "Moves policy concessions — discretionary spending caps, program cuts, procedural commitments — from the governing majority to the withholding minority faction, with the price of each transfer paid in default risk absorbed by bondholders, payment-schedule risk absorbed by benefit recipients and contractors, and economic drag absorbed by the broader public.",
+    "absent_voices": "Bondholders, benefit recipients, and future taxpayers have no seat at the settlement table; advocates of alternative authorities (Fourteenth Amendment invocation, the platinum coin, premium bonds) are structurally outside the room; rank-and-file members of both parties learn deal terms after they are struck. Unanimity around each settlement reflects who was in the room — the faction holding the limit and the leadership facing the deadline — not consent among those who bear the costs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the limit vanished overnight, Treasury would resume issuing debt against already-appropriated obligations as a matter of course; the withholding faction would lose its recurring lever and migrate to appropriations and reconciliation fights where it holds weaker cards; the periodic market scares, downgrade risk premia, and last-minute austerity settlements would disappear; and fiscal argument would return to the ordinary budget process, where majorities can actually pass what they negotiate.",
+    "founding_problem": "In 1917, Congress faced rapidly expanding World War I borrowing and delegated to Treasury the ability to issue bonds without a separate statute for each offering, retaining instead a single aggregate ceiling on the outstanding stock — trading issuance-by-issuance control for speed while keeping a cumulative check.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Fiscal hawks in Congress attest that an aggregate check on debt remains necessary. Outside the benefiting parties: the Congressional Research Service traces the ceiling's divergence from its 1917 delegation purpose; GAO reports document that it does not constrain spending decisions already made; former Treasury secretaries and Federal Reserve chairs (Geithner, Lew, Bernanke, Powell) have testified it serves no useful fiscal-discipline function; and the comparative record — most advanced economies (Denmark, Sweden, New Zealand, the United Kingdom) operate without binding debt ceilings while maintaining fiscal control — corroborates that the founding problem no longer requires this instrument."
+  },
+  "gain_flow": "legislative_minority_factions",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the extraction-snare reading of the statutory debt ceiling: a statutory aggregate limit on Treasury borrowing that, once the federal government runs persistent deficits, no longer authorizes anything new (spending is already obligated by prior appropriations) and instead operates as a recurring hostage boundary. A legislative minority withholds the increase, threatens default on obligations Congress already incurred, and releases its votes only in exchange for policy concessions unavailable through ordinary majoritarian channels — the Budget Control Act caps and sequestration extracted in 2011, the Fiscal Responsibility Act caps extracted in 2023, with the 2011 S&P downgrade and the 2023 Fitch downgrade marking the market cost of each firing. The wielders can end any standoff at will and reload the lever next cycle; the costs land on bondholders, payment-dependent households, and the diffuse public. Sibling stories (statutory_debt_ceiling__coordination_scaffold_reading, statutory_debt_ceiling__constitutional_nullity_reading) instantiate the other readings of the same kernel with their own epsilon values and stakeholder sets; this file authors only the snare reading and links the family via network edges.\n\nKEY AGENTS (by structural relationship):\n- legislative_minority_factions: Primary wielder/agenda-setter (organized/mobile) — withholds ceiling increases to obtain concessions; can reload the lever each cycle\n- presidents_and_governing_majorities: Primary negotiating target (institutional/constrained) — must settle to avoid default\n- us_treasury: Administrative executor (institutional/constrained) — manages the exhaustion date, deploys extraordinary measures, bears operational and legal risk\n- federal_bondholders: Financial target (powerful/constrained) — bear repricing, downgrade losses, safe-asset disruption\n- benefit_recipients_and_contractors: Human-cost payers (powerless/trapped) — face payment-priority risk on fixed dates\n- general_taxpaying_public: Diffuse payer (moderate/trapped) — bears austerity concessions, risk premia, growth drag\n- primary_election_challengers: Secondary beneficiary (moderate/mobile) — converts crisis hardball into fundraising and positioning\n- alternative_authority_advocates: Excluded seat (moderate/mobile) — Fourteenth Amendment, coin, and premium-bond routes kept out of settlements\n- credit_rating_agencies: Analytical observer (institutional/arbitrage) — price the credibility damage of each episode",
+    "logic_rationale": "Extractiveness is high (0.76 at interval end) because the arrangement transfers real policy concessions to a faction that obtains them by threatening an outcome nobody wants, and imposes economy-wide risk costs on top; the transfer is decoupled from any service rendered. Suppression (0.72) is structural: the weapon works by making missed payments the default outcome unless the target concedes, and neither Treasury nor the governing majority has a lawful exit — the alternative authorities all carry constitutional jeopardy. Theater (0.44) is moderate: the symbolic voting is heavy (poison-pill bills, defiance messaging, blame choreography), but the exhaustion date is mechanically real, so performance rides on a live trigger rather than replacing one. Accessibility collapse is moderate (0.45): the alternatives are well understood — coin, Fourteenth Amendment, premium bonds, simple abolition, as practiced by most peer nations — but each collapses institutionally rather than conceptually. Resistance (0.62) is substantial: presidential refusal-to-negotiate stands, market discipline, rating actions, and recurring abolition proposals. The measurement series run on one shared grid (T=0..30 mapping 1995..2025, sampled at five-year points) with every tracked metric authored at every point. The series oscillate rather than drift monotonically: buildup, brinkmanship, settlement, calm, accumulation — with dips in the surplus era (~T=5) and the 2019-2021 suspension window (~T=25) when the lever was legally unavailable. The oscillation is itself part of the mechanism: each resolved crisis rewards the wielders (intermittent reinforcement), teaching that brinkmanship pays and ratcheting the envelope upward from 0.34 to 0.76 across the interval. Suppression_requirement is tracked because enforcement intensity is the traced dynamic: the brinkmanship machinery matured over the period — exhaustion-date forecasting, extraordinary-measures depletion schedules, payment-prioritization playbooks, calibrated market messaging — so the active force needed to keep the lever loaded rose from 0.38 to 0.72. Claimed type (snare) is authored from the structural reading; the metrics are authored independently from the descriptive record; the engine computes per-seat classifications from the structural data.",
+    "perspectival_gap": "The seats compute differently from the same statute. From the wielder seat, the arrangement is legitimate accountability — a check on debt the majority refuses to impose on itself — and each standoff is successful strategy. From the negotiating-target seat (president, governing majority), the same structure is extortion: pay concessions or preside over default. From the Treasury seat it is an administrative siege — managing a countdown under legal jeopardy for a decision it does not control. From the bondholder seat it is recurring tail risk on the world's safe asset. The engine derives these divergent per-seat classifications from the structural data (role, power, exit options); the authored claim does not adjudicate among them.",
+    "directionality_logic": "The declared beneficiaries sit near the subsidy end: legislative_minority_factions collect the concessions and hold mobile exit (they can end any crisis by voting yes, and they choose not to), and primary_election_challengers collect reputational rents incidentally. The declared victims sit near the full-target end: federal_bondholders are powerful but portfolio-constrained (selling realizes the threatened loss), benefit_recipients_and_contractors are powerless and trapped on a fixed payment calendar, and the general_taxpaying_public bears diffuse costs with only delayed electoral recourse. Us_treasury is dual-positioned — it administers the mechanics (agenda-setting secondary role) while absorbing the operational and legal costs — placing it mid-to-high. Presidents_and_governing_majorities are full targets at the table. National scope modestly amplifies effective extraction for the target seats by making coordinated verification and response harder; the wielders' organizational power and mobile exit keep their effective burden near zero.",
+    "mandatrophy_analysis": "The founding problem — delegating rapid wartime bond issuance while retaining a cumulative check — died with the institutional arrangements it served; the modern budget process handles aggregate fiscal control through appropriations and reconciliation. The arrangement persists not from inertia alone but because the lever retains concentrated value to a repeat player, which is what separates this from a piton: a piton has no seat that meaningfully profits, whereas here gain_flow names the withholding faction, and fixing is prohibitive precisely because disarmament requires the benefiting actors (and a blame-averse majority) to surrender the weapon voluntarily. Reading the ceiling as a coordination scaffold would mask the transfer entirely; reading it as mere vestigial dysfunction would miss the concentrated capturer; the snare classification keeps both the victims and the capturing seat visible. The R5 interview records the founding problem as contested — wielders attest the aggregate check is live, while CRS, GAO, former Treasury secretaries, Fed chairs, and the comparative international record corroborate obsolescence — paired with a world_rearranges disappearance verdict, since the negotiating calendar, the market-risk cycle, and the concession stream all depend on the arrangement continuing.",
+    "kernel_context": "This story is the extraction_snare_reading of the statutory_debt_ceiling kernel: the ceiling as a weaponized boundary enabling legislative-minority extraction under default threat. Sibling readings are separate constraints in separate files: coordination_scaffold_reading (the ceiling as procedural facilitation of Treasury operations, low extraction, no victim set) and constitutional_nullity_reading (the ceiling as void under Fourteenth Amendment Section 4, relocating the operative dispute to executive-legislative constitutional conflict). The disagreement between readings is located in two structural elements: the ceiling's operative function (facilitation versus leverage) and its legal validity. This file authors only the snare reading's epsilon and structure; nothing here averages across readings."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates one reading of the statutory_debt_ceiling kernel — the extraction-snare reading. How would the coordination-scaffold or constitutional-nullity readings change the constraint's structure?",
+      "resolution_mechanism": "Author the sibling stories: the scaffold reading would produce low extraction, no victim set, and a sunset-compatible profile; the nullity reading would relocate the arrangement from statute-boundary to executive-legislative constitutional conflict with the ceiling's validity itself as the contested object.",
+      "impact": "Under the scaffold reading the same statute computes as low-extraction coordination; under the nullity reading the operative constraint becomes the constitutional dispute rather than the borrowing limit. The classification in this file applies only to the snare reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this is one of three readings of the debt-ceiling kernel; siblings are separate constraints linked by network edges."
+    },
+    {
+      "id": "counterfactual_fiscal_discipline",
+      "question": "Would federal debt trajectories differ materially if the ceiling were abolished, or does the appropriations process alone determine borrowing?",
+      "resolution_mechanism": "Comparative panel studies of advanced economies with and without binding ceilings; natural experiment from the 2019-2021 suspension window.",
+      "impact": "If a real discipline effect exists, part of the measured transfer prices a genuine check (shading the arrangement toward hybrid coordination); if none, the arrangement is pure transfer with no coordination residue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the ceiling produces any fiscal-discipline effect that would offset its transfer function."
+    },
+    {
+      "id": "concession_attribution_ambiguity",
+      "question": "Are the policy concessions obtained at limit standoffs attributable to the default threat, or would equivalent concessions have emerged through ordinary appropriations bargaining?",
+      "resolution_mechanism": "Compare concession outcomes across suspended-limit periods, clean-raise periods, and brinkmanship periods matched on divided government.",
+      "impact": "Sets the magnitude of the transfer component of extractiveness; misattribution would inflate or deflate the measured extraction attributable to the threat mechanism specifically.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of extracted concessions to the default-threat mechanism versus background bargaining."
+    },
+    {
+      "id": "diffuse_victim_coalition_potential",
+      "question": "Can the diffuse victims — bondholders, payment-dependent households, the broad public — coordinate to impose costs on the withholding faction sufficient to disarm the lever (market discipline, electoral punishment), or does their dispersion leave the arrangement stable?",
+      "resolution_mechanism": "Track yield penalties and electoral outcomes following successive standoffs; measure whether incumbents who led brinkmanship suffer measurable punishment in subsequent elections.",
+      "impact": "If coalition costs bind, the arrangement destabilizes toward reform or abolition; if not, it stabilizes as a repeat-play equilibrium with the current victim set.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dispersed victims can form an effective counter-coalition against the wielding faction."
+    },
+    {
+      "id": "x_date_priority_legality",
+      "question": "Can Treasury legally prioritize principal payments over other obligations after the exhaustion date, and would doing so avert technical default?",
+      "resolution_mechanism": "Litigation or OLC/GAO determination on payment-prioritization authority; market reaction to actual prioritization in a live standoff.",
+      "impact": "Determines the credibility of the threat that powers the transfer: a credible prioritization path weakens the lever; legal impossibility of prioritization sharpens it and raises the effective stakes of every standoff.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Legality and feasibility of post-deadline payment prioritization, which calibrates the threat's potency."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "statutory_debt_ceiling__coordination_scaffold_reading",
+      "statutory_debt_ceiling__constitutional_nullity_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the debt ceiling' decomposes into three structurally distinct claims per the epsilon-invariance principle. The coordination-scaffold reading (upstream, design-era claim) carries near-zero extraction and no victim set; the extraction-snare reading (this file) carries high extraction with a named capturing seat; the constitutional-nullity reading relocates the constraint entirely, making validity rather than borrowing the contested object. The scaffold claim is cited as cover by wielders during standoffs, and each snare episode feeds momentum to the nullity argument — hence the family edges run scaffold -> snare -> nullity in influence terms. Each member has its own epsilon, beneficiaries, victims, and classification; no member averages across the others."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_nullity_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "coordination_scaffold_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "authorized_debt_payment_not_leverage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "minority_default_threat_is_coercion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "standing_default_leverage_regime",
+    "drift_state": {
+      "moment": "contemporary_post_2011_downgrade_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

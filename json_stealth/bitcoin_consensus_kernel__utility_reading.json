@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__utility_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "84746523-fbee-4a88-bfa3-7b5abadefca6"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.4,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Consensus Baseline as Minimum Viable Specification (Utility Reading)",
+    "topic_domain": "cryptoeconomics/monetary systems/distributed consensus",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_adopters",
+      "layer2_builders",
+      "mining_operators"
+    ],
+    "victims": [
+      "immutability_reliant_holders",
+      "full_node_operators"
+    ],
+    "vindicated_propositions": [
+      "nakamoto_consensus_sufficiency"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Contribute to reference implementations and draft improvement proposals, shepherding them through review and activation. They collect no direct revenue from the rules they propose; their returns are professional standing, sponsorship income, and the value of the ecosystem their software runs. Exit is real: the same skills are in demand across many ledgers, though reputation accumulated here does not transfer at par."
+    },
+    {
+      "name": "mining_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run the hardware that extends the chain and decide which rule set gets built upon by pointing hash power at it. They receive newly issued coins and transaction fees — the system's direct monetary flow — while carrying capital-intensive, energy-exposed operations and the risk that a rule change or fee-market shift strands equipment or compresses revenue. Redirecting to another ledger means writing off specialized hardware."
+    },
+    {
+      "name": "full_node_operators",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Independently verify every block and refuse invalid ones, which is what keeps rule enforcement distributed rather than delegated. Each accepted upgrade asks them to update and re-verify software, and staying current costs ongoing attention; falling behind means silently dropping off the network everyone else transacts on. In exchange they keep the ability to verify their own holdings without trusting anyone."
+    },
+    {
+      "name": "layer2_builders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build payment channels and other upper-layer protocols on top of the base ledger. The base rules' stability plus their openness to change is their business premise: guarantees strong enough to build on, flexibility enough to iterate. Their capital and customers are portable to other platforms, at the cost of rebuilding network presence and liquidity from zero."
+    },
+    {
+      "name": "protocol_adopters",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold balances, run businesses, and move value across the ledger. They get a settlement layer no single party controls, and they pay fees that rise with congestion while bearing the disruption risk of each upgrade. Moving to a different ledger means rebuilding custody arrangements, counterparty relationships, and liquidity."
+    },
+    {
+      "name": "immutability_reliant_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold for long horizons on the premise that the monetary rules — the fixed supply cap and issuance schedule — will not change. Under the revisable-baseline frame their guarantee is a policy choice rather than a law of nature: every improvement cycle re-opens the rules they depend on. Their identity as savers in a hard-capped asset is fused with the immutability story, which makes selling psychologically costly even when they object to a proposed change."
+    },
+    {
+      "name": "maximalist_faction",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Read the founding document as a covenant fixing monetary policy permanently and oppose every proposed change on principle. They hold no formal seat in upgrade governance: proposals proceed when miners and the economic majority activate them, and the maximalist objection registers only as public argument and refusal to upgrade. Their holdings and public identity are bound up in the no-change reading."
+    },
+    {
+      "name": "financial_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Supervise the exchanges, custodians, and on-ramps through which the ledger touches the formal financial system. They do not participate in consensus, but their rulings on what may be traded or custodied shape which improvements are usable in practice. Their seat is observational, with enforcement leverage at the edges of the network rather than in it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves Byzantine agreement among mutually distrusting parties over a single transaction history without a trusted third party: double-spending prevention, transaction ordering, and rule enforcement are solved once at the protocol layer, as a deliberately minimal baseline that soft forks and upper layers can extend.",
+    "transfer_function": "Moves newly issued coins and transaction fees from the issuance schedule and users to mining operators as the security budget; moves rule-change option value from long-horizon holders who prefer fixed rules to builders and adopters who capture the gains from improvements.",
+    "absent_voices": "Maximalist holders would object to every change but hold no seat in upgrade governance — activation proceeds on miner and economic-majority signal, so their objection arrives only as post-proposal resistance. Future users not yet in the network bear the consequences of baseline choices made before they arrive. Communities absorbing mining's energy and siting load are represented only indirectly, through regulators.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "The mining industry, exchange and custody businesses, upper-layer protocols, and the entire store-of-value position built on the ledger presuppose the consensus baseline. If it vanished overnight, every balance becomes unverifiable, every channel and custody arrangement dissolves, and the ecosystem reorganizes around whatever successor mechanism captures the displaced demand.",
+    "founding_problem": "Peer-to-peer electronic cash needed a way for strangers to agree on a single transaction history without a trusted intermediary — a minimum viable mechanism that solves double-spending once, at the protocol layer, so everything else can be built on top.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding document attests it from outside the current benefiting parties: its title and abstract frame the mechanism as a solution to peer-to-peer electronic cash, and the author's early communications treat the design as a starting point with versioning and extensibility built in. Continued payment usage and upper-layer deployment corroborate that the problem remains live. The maximalist faction attests a different founding problem — immutable scarcity — and that disagreement is the live contest this reading sits inside; no beneficiary seat is the source of the attestation offered here."
+  },
+  "interval": {
+    "start": 2009,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Bitcoin consensus mechanism — proof-of-work chain selection, the issuance schedule, and the rule set every full node enforces — is read here through the utility_reading of the bitcoin_consensus_kernel: the whitepaper established a minimum viable consensus baseline whose legitimacy tracks its usefulness, and which soft forks and upper-layer protocols may legitimately improve. The standing arrangement under contest, and the referent of every metric in this story, is that baseline as it actually operates: a globally enforced rule set that coordinates mutually distrusting parties, collects a security budget through issuance and fees, and re-opens its own rules on each improvement cycle. Under this reading the arrangement coordinates genuinely — adopters and builders capture an improvement dividend — while extracting moderately and asymmetrically: long-horizon holders bear rule-change risk against an immutability guarantee the operating frame does not actually fix in place, node operators bear a recurring upgrade-and-verify burden, and miners collect rents where revenue decouples from marginal cost. This story authors ONE reading as a clean, epsilon-invariant constraint; the maximalist and pragmatic-synthesis readings are separate constraints with their own epsilon values, linked through the network and reading-relation surfaces. The claimed type and the metrics are independent authored facts.",
+    "key_agents": [
+      "protocol_developers: agenda-setting co-author (organized/mobile) — draft improvement proposals, maintain reference implementations, shepherd activation; collect no direct revenue from the rules",
+      "mining_operators: enforcement arm and primary monetary receipt (organized/constrained) — point hash power at a rule set; receive issuance and fees; carry capital-stranding risk",
+      "full_node_operators: enforcement backbone and recurring payer (moderate/constrained) — verify every block, absorb the upgrade-and-verify burden of each improvement cycle",
+      "layer2_builders: beneficiary-builders (moderate/mobile) — need guarantees strong enough to build on and flexibility enough to iterate",
+      "protocol_adopters: adopter-beneficiaries paying the fee and upgrade-risk bill (moderate/constrained)",
+      "immutability_reliant_holders: primary target seat (moderate/identity_locked) — hold on a fixed-rules premise the revisable baseline does not guarantee",
+      "maximalist_faction: excluded objectors (moderate/identity_locked) — no formal seat in upgrade governance; objection registers only as post-proposal resistance",
+      "financial_regulators: analytical observer with edge leverage (institutional/analytical) — shape the usability of improvements through exchange and custody rulings"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.5 (moderate): the security budget is largely payment for a real service, but miner revenue decouples from marginal cost at scale, node operators absorb an unreimbursed upgrade burden, and long-horizon holders bear rule-change risk against a guarantee the operating frame does not hold fixed. Suppression is authored at 0.4 as a raw structural property — it is NOT scaled by power or scope; only extractiveness is scaled in the engine's arithmetic. The baseline is enforced by economic-majority partition: dissenters are not coerced into the upgraded network, they are left behind on a branch nobody accepts, and exit to other ledgers exists but is discounted by network effects. Theater is low (0.15): the mechanism does what it claims; the performative share is mostly decentralization rhetoric and node-count display, spiking during the 2017 block-size war when positioning substituted for engineering. Accessibility collapse is low (0.3): rival ledgers and fork variants persist as live alternatives, discounted rather than eliminated. Resistance is moderate (0.4): the block-size war, maximalist objection, and upgrade hesitancy are real, recurring friction the activation process must overcome. The suppression_requirement series is authored because this story specifically tracks enforcement-capacity change: enforcement machinery built toward the 2017 activation crisis, then partially relaxed as soft-fork activation norms matured. All three series share one time grid — every tracked metric is authored at every examined point — and the end-state values match the base_properties scalars. Claim and metrics are independent: the tangled_rope claim is what the utility reading's seat holds structurally true; the metrics describe the arrangement as this reading assesses it.",
+    "perspectival_gap": "The seats should compute differently. From the developer and builder seats the baseline is enabling: a floor strong enough to build on and flexible enough to iterate — a coordination structure they would describe as mostly benign. From the immutability-reliant holder's seat the same structure is a standing rule-change risk attached to their savings; from the node operator's seat it is a recurring assessment of attention and verification labor. Miners experience the arrangement as payment for service plus competitive rent; regulators experience only its edges through exchange and custody supervision. The engine computes these per-seat divergences from the structural data; this story's claim does not adjudicate them.",
+    "directionality_logic": "Declared beneficiaries (protocol_adopters, layer2_builders, mining_operators) derive low directionality; declared victims (immutability_reliant_holders, full_node_operators) derive high directionality, with the holders' identity-locked exit seating them near the full-target end because identity fusion blocks the repricing exit that would damp their effective extraction. One override is authored at the organized-power atom (d=0.25): a pure-beneficiary derivation would seat both organized agents near 0.1, but both mix beneficiary position with enforcement duty and cost-bearing that the derivation misses — developers carry unreimbursed coordination labor and legal exposure, and miners' revenue is the extraction vector itself, so neither sits at the beneficiary end. Node operators keep their derived high d despite their verification benefit because their payer role is recurring and structural rather than incidental.",
+    "mandatrophy_analysis": "The founding problem — trustless agreement on a single transaction history — is live under this reading, so no mandatrophy is declared: the arrangement has not outlived its function. The classification work this reading performs is boundary-keeping. It refuses the maximalist move of reading every upgrader as a covenant-violator, which would misread a live coordination dividend as pure extraction; it equally refuses the pure-rope move of erasing the holder's rule-change risk and the node operator's upgrade burden, which would misread asymmetric extraction as pure coordination. The omega on the improvement mandate tracks the reading's own degradation path: if base-layer improvement becomes practically unreachable and all evolution migrates to upper layers, the utility frame collapses in practice into the pragmatic synthesis and this story's coordination claim narrows to the baseline as it stands.",
+    "kernel_context": "This constraint instantiates the utility_reading of kernel bitcoin_consensus_kernel: the whitepaper as a minimum viable consensus baseline enabling iterative improvement, with soft forks and upper-layer protocols as legitimate evolution. Sibling readings are separate constraints: maximalist_reading (the whitepaper as immutable monetary covenant; any change violates it) and pragmatic_synthesis (base-layer rules immutable, upper layers free to innovate). The disagreement is located in a single structural element — whether the whitepaper text fixes the base-layer rules permanently or establishes them as a revisable floor — and each reading yields its own epsilon, victim set, and classification over the same standing arrangement."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the bitcoin_consensus_kernel — the utility_reading, which takes the whitepaper as a minimum viable baseline enabling iterative improvement. How would the sibling readings restructure the same standing arrangement?",
+      "resolution_mechanism": "Author and compile the sibling stories — maximalist_reading and pragmatic_synthesis — then compare beneficiary/victim sets and epsilon across the family. Under the maximalist reading the sets invert: immutability-reliant holders become beneficiaries and upgrade advocates become targets, with measured extraction rising sharply. Under the pragmatic synthesis the arrangement splits into two constraints (immutable base layer, free upper layers) with separate epsilon values.",
+      "impact": "Classification is reading-relative: this story's tangled_rope verdict does not transfer across the kernel. The kernel-level dispute is located in what the whitepaper text establishes about base-layer revisability, and only cross-reading comparison takes that measurement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is the utility_reading of a contested kernel; sibling readings restructure beneficiary/victim sets and split or raise epsilon."
+    },
+    {
+      "id": "ossification_victim_status",
+      "question": "Do immutability_reliant_holders genuinely bear asymmetric costs under this reading, or is rule-change risk a disclosed, priced-in property of a voluntarily held asset?",
+      "resolution_mechanism": "Examine adoption-era disclosures and holder onboarding: if the asset was marketed on absolute immutability (the maximalist frame) while the operating frame is revisable, the gap between promise and delivery is the extraction; if revisability was disclosed at adoption and holders could reprice, the payer seat weakens and the arrangement trends toward pure coordination.",
+      "impact": "Determines whether the victim declaration is honest or over-claimed. A priced-in-risk resolution would lower effective extraction toward the beneficiary seats and pull the computed type toward rope; a promise-gap resolution confirms the tangled_rope asymmetry.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the holder victim seat reflects real extraction or voluntary exposure to a disclosed property of the asset."
+    },
+    {
+      "id": "improvement_mandate_reality",
+      "question": "Is iterative improvement structurally enabled by the baseline as this reading claims, or is the improvement mandate aspirational while base-layer practice ossifies?",
+      "resolution_mechanism": "Track soft-fork cadence, activation thresholds, and time-to-activation across the interval. If base-layer change becomes practically unreachable and all improvement migrates to upper layers, this reading collapses in practice into the pragmatic synthesis.",
+      "impact": "If improvement is no longer structurally enabled, the coordination claim narrows to the baseline as-is, the reading's distinguishing axiom loses operative content, and the story's classification should be re-derived under the synthesis framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the utility reading's improvement mandate matches observable upgrade practice or is drifting into aspiration."
+    },
+    {
+      "id": "holder_exit_suppression_mechanism",
+      "question": "Is the immutability_reliant_holders' inability to exit structural (capital lock-in, custody arrangements, tax exposure) or internalized (identity fusion with the hard-money narrative making sale psychologically unthinkable)?",
+      "resolution_mechanism": "Post-exit trajectory of holders who do sell: if they re-fuse with a successor hard-capped asset and reproduce the same holding behavior, the suppression is substantially internalized; if they reallocate freely, it was structural.",
+      "impact": "If internalized, the payer seat carries the suppression with them after exit and the measured suppression overstates structural coercion; the split between structural and internalized shares feeds the suppression-mechanism ambiguity for this reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism for the identity-locked holder seat."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_consensus_kernel__maximalist_reading",
+      "bitcoin_consensus_kernel__pragmatic_synthesis"
+    ],
+    "dual_formulation_note": "The colloquial label 'Bitcoin's consensus rules' covers three structurally distinct constraints corresponding to three readings of one kernel (bitcoin_consensus_kernel). The maximalist reading instantiates an immutability covenant (high suppression, holders as beneficiaries, upgraders as violators); the pragmatic synthesis instantiates a two-layer arrangement (immutable base, free upper layers); this story instantiates the utility reading (revisable minimum viable baseline). Per the epsilon-invariance principle, each reading is a separate file with its own epsilon, beneficiary/victim structure, and claimed type; this story's epsilon is assessed on the standing arrangement — the consensus baseline as it operates — by the utility reading's own lights. The upstream/downstream pressure runs from this reading's activated soft forks toward the synthesis's kernel-boundary drawings, and the maximalist reading exerts repudiation pressure on both."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "minimum_viable_baseline_specification",
+    "drift_state": {
+      "moment": "contemporary_layer2_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "maximalist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_synthesis",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "whitepaper_establishes_minimum_viable_baseline",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "iterative_improvement_is_kernel_faithful",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "mining_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

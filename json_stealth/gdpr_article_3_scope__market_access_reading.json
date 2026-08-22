@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__market_access_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "f27b6a91-3879-4e06-a14c-92e0ac9a46c9"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.3,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "GDPR as Conditional Market Access Requirement (Market-Access Reading)",
+    "topic_domain": "technology governance/international law/privacy regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_residents_data_subjects",
+      "eu_domiciled_firms",
+      "eu_supervisory_authorities",
+      "compliance_industry"
+    ],
+    "victims": [
+      "small_non_eu_online_services"
+    ],
+    "vindicated_propositions": [
+      "brussels_effect_standard_diffusion"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eu_supervisory_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "National data-protection authorities and the European Data Protection Board issue binding guidance, investigate complaints, and levy administrative fines up to four percent of worldwide turnover. They wrote the delegated guidance that fills the regulation's open texture and decide which violations to pursue. Their budgets and staffing grew substantially after 2018, and the regulation's international reputation raises their standing; fine receipts accrue to member-state budgets."
+    },
+    {
+      "name": "eu_residents_data_subjects",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Roughly 450 million people hold enforceable rights to access, correct, delete, and port their personal data, and to complain to a supervisor at no cost. Most never invoke the machinery individually; NGOs and representative actions carry the workload. Their practical leverage runs through complaint volume and electoral salience rather than direct bargaining with any firm."
+    },
+    {
+      "name": "multinational_platforms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Global advertising, cloud, and social firms process EU residents' data at scale and maintain permanent compliance organizations spanning legal, engineering, and product review. They absorbed the largest absolute compliance outlays and the largest fines to date. EU revenue is material to their business models, so excluding EU users is periodically evaluated and rejected; they lobby over implementation details rather than the regulation's existence."
+    },
+    {
+      "name": "small_non_eu_online_services",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Foreign websites and apps with modest EU traffic faced the same fixed compliance costs as the giants — counsel, data-protection-officer appointment, records of processing — against thin EU revenue. Many responded by blocking EU IP addresses entirely, forgoing the market rather than building a compliance function; others bought standardized tooling and carried the overhead."
+    },
+    {
+      "name": "eu_domiciled_firms",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "European companies operated under national data-protection law before 2016 and had already built the relevant functions; harmonization replaced twenty-seven divergent regimes with one and raised the entry costs their foreign competitors face in the home market. They staffed the trade associations that shaped implementing guidance."
+    },
+    {
+      "name": "compliance_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Law firms, consultancies, privacy-software vendors, and consent-management platforms sell interpretation, audits, and tooling to every firm touching EU data. Demand spiked at the 2018 application deadline and settled into a permanent maintenance market; consent-banner vendors became a distinct product category."
+    },
+    {
+      "name": "non_eu_regulators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Trade ministries and data-protection agencies in the United States, Asia, and elsewhere negotiate adequacy or mutual-recognition arrangements from outside the room where the terms were written. Their exporters must satisfy provisions they had no vote on. Several responded by drafting their own statutes modeled on the EU text."
+    },
+    {
+      "name": "brussels_effect_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Comparative-law and international-regulation researchers track how the EU text propagates through corporate policy and foreign legislation. They publish the adoption counts and causal analyses that the other seats cite when characterizing what the regulation does abroad."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single uniform rulebook for processing personal data across the 27-member EU market, replacing fragmented national regimes: any firm can reach roughly 450 million users under one compliance architecture, and individuals hold identical rights everywhere in the union.",
+    "transfer_function": "Moves compliance expenditure from firms seeking EU market access to legal, audit, and privacy-engineering providers and to internal data-protection functions; occasionally moves administrative fines from violators to member-state budgets; moves data-control entitlements to EU residents.",
+    "absent_voices": "Non-EU governments and trade ministries had no seat in the trilogue that set terms conditioning their exporters' market access. Small foreign online businesses — the class least able to amortize fixed compliance costs — were represented neither by large-firm lobbies nor by EU civil-society groups. Third-country data subjects whose local standards shift by diffusion had no voice either.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, the EU's adequacy framework would lapse, national data-protection law would fragment back toward pre-2016 divergence, firms would unwind unified compliance architectures into per-jurisdiction patchworks, and the worldwide adoption of GDPR-grade rules would reverse as rival standards or no standard governed third-market practice.",
+    "founding_problem": "Pre-2016 fragmentation: twenty-seven divergent national data-protection regimes under the 1995 Directive produced uneven individual protection, legal uncertainty, and duplicated compliance for cross-border digital services, under rules written before cloud computing and social media.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "European Commission fitness-check evaluations and EDPB coherence reports — bodies whose remit is evaluation rather than rent collection — document continued enforcement divergence among authorities, and independent comparative-privacy scholarship outside the beneficiary set attests both the original fragmentation problem and its persistence in transformed form around cross-border transfers and AI training data. Platform trade associations dispute continuing necessity; the corroborating sources for the transformed-live reading are non-beneficiary."
+  },
+  "interval": {
+    "start": 2016,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.38,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.32,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.3,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The General Data Protection Regulation conditions access to the EU market for any organization processing EU residents' personal data, wherever that organization sits. Firms worldwide weigh the cost of GDPR-grade practice against the value of roughly 450 million customers, and the overwhelming majority conclude that access is worth the price: they build compliance functions, appoint data-protection officers, and extend GDPR-standard handling to their global operations. On this reading the regulation's worldwide footprint is the shadow of that market calculation — a standard diffusing through commercial incentive, with EU supervisory authorities maintaining the standard's credibility through guidance and selective enforcement rather than projecting day-to-day authority over foreign conduct. Compliance functions as market strategy: the largest payers treat the cost as a price of admission and lobby over implementation, while marginal payers exercise the option the arrangement leaves open and simply decline the market. KEY AGENTS (by structural relationship): - eu_supervisory_authorities: Agenda setter (institutional/constrained) — administers, issues guidance, collects fines and reputational capital - eu_residents_data_subjects: Primary beneficiary (moderate/constrained) — hold the enforceable rights the arrangement delivers - multinational_platforms: Primary payer (powerful/constrained) — bears the largest compliance outlays and fines - small_non_eu_online_services: Marginal payer (moderate/mobile) — bears fixed costs disproportionate to EU revenue; exits by geoblocking - eu_domiciled_firms: Secondary beneficiary (organized/constrained) — harmonization raised rivals' costs in their home market - compliance_industry: Fee-collecting beneficiary (organized/mobile) — sells the compliance the arrangement requires - non_eu_regulators: Excluded voice (institutional/trapped) — terms were set without them; several answered with copycat statutes - brussels_effect_scholars: Analytical observer (analytical/analytical) — tracks diffusion and attributes effects",
+    "logic_rationale": "Extractiveness is moderate (0.38): compliance outlays are real and recurring, but they are purchased against market access that most incumbents judge worth more than their cost, and the bulk of the spend converts into professional fees and internal capability rather than accruing to the rule-setter. Suppression is low-moderate (0.30): nothing prohibits serving the EU without compliance to a firm that declines the market — geoblocking is exercised routinely — so the residual suppressive force is the practical difficulty of exit at platform scale plus adequacy leverage over third countries; the mechanism is structural (market dependence), not internalized. Theater is moderate (0.32): consent interfaces and boilerplate notices generate well-documented performative compliance, while records-of-processing, security, and DPO functions remain substantive. Accessibility collapse is partial (0.52): once a firm commits to EU revenue, alternatives to compliance collapse almost entirely, but the exit of declining the market stays open and is visibly used. Resistance is moderate-low (0.35): sustained lobbying over implementation and periodic third-country objections, but no serious repeal movement — widespread paid compliance is the revealed verdict of most payers. The claim and the metrics are independent authored facts: the rope claim reflects this reading's structure (conditional access, voluntary uptake, no capturing seat), and the engine computes per-seat classifications from the structural data, where divergence at particular seats is the expected signal. The measurement series run on one shared time grid (2016–2026, six points) so every tracked metric is authored at every examined time point; the rising suppression_requirement series traces the deliberate maturation of enforcement capacity (EDPB consolidation, landmark fines, growing DPA staffing), not a shift in the arrangement's coercive character.",
+    "perspectival_gap": "The agenda-setter seat experiences the arrangement as successful standard-setting it built and maintains; the payer seats experience it as a cost of doing business whose size varies sharply with scale. The two payer seats share a nominal role but diverge structurally: platforms amortize fixed costs over enormous EU revenue and stay, while small foreign services face the same fixed costs against thin revenue and exit — same role, opposite revealed choices, driven entirely by exit optionality. Among beneficiaries the gap is equally real: residents receive rights most rarely exercise personally, while the compliance industry receives a fee stream contingent on the very complexity it helps elaborate. The engine computes these per-seat differences from power, exit, and directional position; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary declarations place four seats near the subsidized end: residents (rights delivered at no charge), EU-domiciled firms (a moat they did not pay extra for), the compliance industry (a demand stream), and the supervisory authorities (mandate, staffing, fine receipts, reputational capital). Victim declaration places small non-EU services near the target end, but their mobile exit dampens effective extraction — they can and do decline the market, which is precisely why their loss lands as forgone access rather than captured rent. Multinational platforms derive high directionality from their large transfers and constrained exit: EU revenue is material, so the access condition binds them at close to full weight despite their power. Scope amplification applies modestly: the arrangement's continental-to-global reach makes verification harder, which the engine scales into effective extraction for the targeted seats.",
+    "mandatrophy_analysis": "The founding problem — twenty-seven divergent national regimes — was substantially solved inside the EU by 2018, yet the arrangement persists and has expanded. The mandatrophy question is whether persistence rides the solved problem or a transformed live one; the evidence (cross-border transfer litigation, AI training-data disputes, continued enforcement divergence) supports the latter, so no dead-mandate zombie flag is warranted. Classification discipline cuts both ways here: reading the arrangement as pure extraction would erase the voluntary-uptake evidence — firms pay without being chased, and the marginal ones leave; reading it as frictionless coordination would erase the unilateral terms-setting and the small-firm casualties. The rope claim with an authored victim seat keeps both signals live for the engine's per-seat computation, and the R5 interview records the founding problem as live-in-transformed-form rather than resolved or dead."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Is Article 3(2)'s operative structure better captured as conditional market access (this reading) or as effects-based extension of protection through the targeting-and-monitoring tests?",
+      "resolution_mechanism": "Comparative analysis of enforcement practice against organizations with no EU establishment: if sanctions attach only to conduct undertaken for EU market participation, the access-condition account holds; if they reach conduct with a mere monitoring nexus, the effects account gains ground.",
+      "impact": "Resolution reallocates the phenomenon between this story and the effects-jurisdiction sibling story; extraction and suppression estimates move with whichever account is adopted, and this reading's rope claim would weaken under the effects account.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which sibling reading of the gdpr_article_3_scope kernel captures Article 3(2)'s operative structure."
+    },
+    {
+      "id": "exit_realism_for_global_platforms",
+      "question": "Is declining EU market access a real option for dominant global platforms, or is the nominally voluntary compliance choice compelled for any firm whose business model requires EU users?",
+      "resolution_mechanism": "Revealed-preference study of firms that geoblocked or exited versus absorbed compliance costs, controlling for EU revenue share and substitutability of other markets.",
+      "impact": "If exit is unreal at platform scale, effective extraction for the platform seat rises toward the effects-reading profile and the rope claim weakens toward a hybrid at that seat; if exit is real, the conditional-access framing stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platform compliance is strategic purchase or compelled concession."
+    },
+    {
+      "id": "standard_diffusion_beneficiary_attribution",
+      "question": "Who actually captures the standard-diffusion payoff — identifiable EU institutional seats (negotiating leverage, reputational capital), or diffuse third-country populations whose local protections upgrade as firms extend GDPR-grade practice worldwide?",
+      "resolution_mechanism": "Trace the diffusion channels separately — adequacy negotiations, contractual cascades through supply chains, copycat legislation — and attribute welfare gains per recipient class.",
+      "impact": "Determines whether the beneficiary map should widen beyond the EU-centered seats authored here, or whether an EU-institutional capture seat should be added; changes directionality for the authority seats.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Attribution of the diffusion dividend across EU institutional and third-country recipients."
+    },
+    {
+      "id": "fixed_cost_exclusion_magnitude",
+      "question": "How many small non-EU online services actually lost EU market access because fixed compliance costs exceeded reachable EU revenue?",
+      "resolution_mechanism": "Survey geoblocking incidence among small non-EU services before and after 2018, and measure traffic restoration as compliance tooling commoditized.",
+      "impact": "Quantifies the victim class: a negligible count thins the victim structure toward a pure coordination reading, while a large count strengthens the distributional objection and the target-seat classification for small firms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of the small-firm exclusion effect from fixed compliance costs."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gdpr_article_3_scope__effects_jurisdiction_reading",
+      "gdpr_article_3_scope__territorial_sovereignty_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'GDPR extraterritoriality' covers three structurally distinct claims about Article 3 and decomposes into a three-story constraint family per the epsilon-invariance principle: this story (market-access conditionality — compliance as purchased admission, lowest enforcement tension), the effects-jurisdiction story (protection following effects on EU residents via targeting/monitoring tests — higher extraction, contested enforcement reach), and the territorial-sovereignty story (application bounded by territorial authority — framed as overreach). Each story carries its own epsilon, beneficiary/victim structure, and enforcement profile. This reading sits upstream of the sovereignty story in argumentative structure: the access-condition framing is the standard rejoinder to sovereignty objections and materially changed that debate's terrain, while coexisting with the effects account in official discourse, where the Commission and supervisory authorities mix both languages."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "market_access_conditionality",
+    "drift_state": {
+      "moment": "contemporary_enforcement_maturation",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "effects_jurisdiction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "territorial_sovereignty_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "extraterritorial_compliance_is_voluntary_adoption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_access_conditioning_is_legitimate_prerogative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "compliance_industry",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

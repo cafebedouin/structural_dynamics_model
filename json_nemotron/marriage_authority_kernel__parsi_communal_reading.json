@@ -1,0 +1,396 @@
+{
+  "header": {
+    "constraint_id": "marriage_authority_kernel__parsi_communal_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_marriage_authority_kernel__parsi_communal_reading",
+    "measurement_id_prefix": "parsi_marriage",
+    "story_uid": "8eda0e78-181d-4991-9733-48748abfc2e9"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.31,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Parsi Community Marriage Authority (Parsi Marriage and Divorce Act 1936)",
+    "topic_domain": "comparative_law/constitutional_pluralism/religious_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "parsi_anjanas",
+      "parsi_punchayet",
+      "parsi_women_within_community"
+    ],
+    "victims": [
+      "parsi_intermarried_individuals",
+      "parsi_dissidents",
+      "parsi_youth_outside_endogamy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "parsi_anjanas",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The Parsi Anjumas (community associations) and the Bombay Parsi Punchayet administer the Act's tribunals, appoint delegates, and control the interpretation of community custom. They benefit from the institutional authority and gatekeeping power over marriage, divorce, and inheritance within the community. Their identity is fused with the community's survival — exit means dissolution of the communal structure they steward."
+    },
+    {
+      "name": "parsi_punchayet",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The apex body that administers the Parsi Marriage and Divorce Act's tribunal system, manages community trusts, and defines who counts as Parsi for legal purposes. Collects administrative fees and exercises disciplinary authority. Its legitimacy derives entirely from the Act's recognition; without the statutory framework, its authority collapses to moral suasion only."
+    },
+    {
+      "name": "parsi_women_within_community",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the Act's unusually gender-equitable provisions (equal divorce grounds, mutual consent divorce since 1988 amendment, maintenance rights, property protections). But pay through mandatory community tribunal jurisdiction, endogamy requirements, and limited exit to secular law. The Special Marriage Act 1954 exists as formal exit but carries severe social ostracism and loss of community property rights."
+    },
+    {
+      "name": "parsi_intermarried_individuals",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Parsis who marry outside the community lose access to community tribunals, inheritance under Parsi law, fire temple entry, and community trust benefits. Their children are often denied Parsi status (patrilineal descent rule enforced by Punchayet). The constraint extracts their community membership and material benefits as the price of exogamy. No effective exit — the secular Special Marriage Act grants civil marriage but not community re-entry."
+    },
+    {
+      "name": "parsi_dissidents",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parsis who challenge Punchayet authority (e.g., on descent rules, women's priesthood, trust governance) face excommunication, loss of community housing, and denial of religious rites. The Act's tribunal system offers no internal dissent channel — the delegates are Punchayet-appointed. Exit to secular courts is theoretically possible but practically blocked by community ostracism and the Act's ouster of civil court jurisdiction over 'matters of community custom.'"
+    },
+    {
+      "name": "parsi_youth_outside_endogamy",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Young Parsis who reject endogamy norms face demographic erasure: marrying out means their children are not Parsi; marrying in shrinks the pool (community ~50,000 and declining). They bear the cost of a constraint designed for demographic survival that now accelerates demographic collapse. Some exit entirely to secular identity; others negotiate within. Their mobility is real but the identity cost is total."
+    },
+    {
+      "name": "secular_courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "High Courts and Supreme Court hear appeals from Parsi matrimonial tribunals and constitutional challenges to the Act's provisions. They interpret the boundary between community autonomy and fundamental rights. Their jurisprudence (e.g., on whether Punchayet's descent rules violate Article 14/21) shapes the constraint's enforcement but they do not administer it."
+    },
+    {
+      "name": "parsi_priesthood",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The mobeds (priests) perform marriage ceremonies and certify religious compliance. Their authority is bound to the community's endogamous continuity. They benefit from the Act's recognition of religious rites as legally necessary. Women's entry into priesthood is contested — the constraint's gender equity stops at the altar."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of maintaining a distinct ethnoreligious community's legal continuity, property transmission, and dispute resolution without assimilating into the majority legal order. Provides a unified tribunal system, recognized marriage rites, and inheritance rules that preserve community trust assets and demographic boundaries.",
+    "transfer_function": "Moves authority over marriage, divorce, maintenance, and inheritance from the secular state to community tribunals; moves community membership and material benefits (trust housing, fire temple access, inheritance) from intermarried/dissident individuals to the collective; moves demographic survival costs onto youth who must choose between endogamy and community extinction.",
+    "absent_voices": "Parsis who have fully exited to secular identity (estimated 30-40% of demographic cohort) — they would object to the Act's continuing jurisdiction over their descendants but are not in the conversation. Children of intermarried couples denied Parsi status — they have no standing in community tribunals. Women seeking priesthood — excluded by the same religious authority the Act empowers.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Act vanished overnight, Parsi matrimonial disputes would flood secular courts under the Special Marriage Act and Indian Succession Act; community trusts would lose their legal framework; the Punchayet's authority would revert to voluntary association; fire temple access disputes would become civil property cases. The community's legal distinctiveness — its primary survival mechanism — would dissolve. The demographic decline would accelerate as the cost of exit drops to zero.",
+    "founding_problem": "After British colonial courts began applying English law to Parsis (1830s-1860s), the community faced legal fragmentation: no unified marriage law, inconsistent inheritance rulings, and erosion of trust property. The 1936 Act was built to reclaim communal legal autonomy, codify custom into statute, and protect community assets from colonial legal incursion.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Parsi Anjumas and Punchayet attest the founding problem is live — colonial legal incursion has been replaced by constitutional majoritarianism threatening community autonomy. Secular courts and women's rights advocates (e.g., Goolrukh Gupta litigation, 2017) attest the founding problem is substantially solved — the community has legal recognition, gender-equitable provisions, and property protection; the constraint now primarily serves demographic gatekeeping. Independent legal historians (e.g., Mitra Sharafi, 'Law and Identity in Colonial South Asia') corroborate the shifted-function reading."
+  },
+  "interval": {
+    "start": 1936,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1961,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1974,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1988,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1961,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1974,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1988,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1936,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1961,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1974,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1988,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Parsi Marriage and Divorce Act 1936 codifies Parsi community custom into statutory law, creating a hybrid constraint: community tribunals (delegates appointed by the Punchayet) exercise original jurisdiction over marriage, divorce, and maintenance, with appeals to High Courts. The Act is celebrated for gender-equitable provisions (mutual consent divorce 1988, equal grounds, maintenance rights) that exceed most personal laws. But it simultaneously enforces strict endogamy (patrilineal descent, loss of community status for intermarried women and their children) and concentrates interpretive authority in the Punchayet — an unelected body of trustees. Demographic collapse (from ~114,000 in 1941 to ~50,000 in 2024) makes the constraint's survival function self-defeating: the endogamy enforcement that once preserved the community now accelerates its disappearance. The constraint is a tangled rope — genuine coordination (gender-equitable dispute resolution, trust preservation) fused with asymmetric extraction (demographic gatekeeping, dissent suppression, intermarried exclusion).",
+    "logic_rationale": "Extractiveness (0.38) reflects the constraint's dual character: low extraction for compliant endogamous members (genuine coordination benefit), high extraction for intermarried/dissident individuals (total community exclusion). Suppression (0.42) is moderate — the constraint relies more on identity-locked exit barriers (social ostracism, loss of inheritance, religious exclusion) than active coercion. Theater ratio (0.25) rising over time: the gender-equity provisions are real but the constraint increasingly performs 'community survival' while its enforcement mechanics (descent rules, trust governance) hasten demographic collapse. Accessibility collapse (0.52) — alternatives exist (Special Marriage Act) but carry prohibitive identity costs. Resistance (0.31) — internal dissent exists (women's priesthood, descent rule challenges) but is fragmented and lacks institutional leverage.",
+    "directionality_logic": "Anjanas/Punchayet are structural beneficiaries (institutional authority, gatekeeping revenue, identity fusion — d near 0.1). Parsi women within community are dual-positioned: beneficiaries of gender-equitable provisions but payers of endogamy compliance (d ~0.45). Intermarried individuals, dissidents, and youth outside endogamy are structural targets (trapped/constrained exit, bear demographic gatekeeping costs — d ~0.75-0.85). Secular courts are analytical observers (d ~0.5). Priesthood is identity-locked beneficiary (d ~0.15). The derivation chain captures this through beneficiary/victim declarations + exit modulation + power atoms.",
+    "perspectival_gap": "From the Anjuna/Punchayet seat, the constraint is a rope — genuine coordination preserving community autonomy and gender equity. From the intermarried/dissident seats, it is a snare — extraction of community membership and material benefits enforced through identity-locked exit barriers. From the youth seat, it is a piton — the constraint's survival function (endogamy) now produces the opposite of its intent (demographic collapse), maintained theatrically because no actor has both the incentive and capacity to reform it. The engine computes this divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (colonial legal incursion) is substantially resolved — the community has statutory recognition, gender-equitable tribunals, and trust protection. But the constraint persists because its enforcement mechanism (endogamy, Punchayet authority) has become the community's primary survival strategy in a demographic crisis. The mandatrophy is not resolved: the constraint has acquired a new function (demographic gatekeeping) that contradicts its founding purpose. The classification as tangled rope prevents mislabeling this as pure coordination (ignoring the extraction) or pure extraction (ignoring the genuine gender-equitable coordination). The demographic trap makes reform structurally difficult — any relaxation of endogamy accelerates collapse; any tightening accelerates collapse faster.",
+    "kernel_context": "This constraint is the parsi_communal_reading of the marriage_authority_kernel. The kernel is the contested claim that marriage/family law authority derives from religious/communal tradition rather than secular legislation. Sibling readings: hindu_codified_reading (Hindu Marriage Act 1955, civil court interpretation), muslim_shariat_reading (Shariat via personal law boards/qazis), christian_canonical_reading (Indian Christian Marriage Act 1872, canonical law), secular_civil_reading (Special Marriage Act 1954, constitutional individual rights). This reading's structural delta: community tribunals with delegate system; strict endogamy enforcement via patrilineal descent; unusually high gender equity within community; demographic decline threatening the constraint's own viability."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_custom",
+      "question": "Is the Parsi community's endogamy rule a genuine religious/customary requirement (mountain-like natural law within the community's ontology) or a constructed demographic gatekeeping mechanism that serves institutional interests?",
+      "resolution_mechanism": "Historical analysis of pre-1936 Parsi custom: was patrilineal descent universally enforced or was it codified/strengthened by the Act? Comparative analysis with Zoroastrian communities in Iran (where conversion and intermarriage rules differ).",
+      "impact": "If the endogamy rule is a constructed institutional choice (not an irreducible religious requirement), the constraint's claimed naturalness is a false summit — the Mountain immunity claim for 'community custom' collapses, revealing a tangled_rope where the coordination function (gender equity) is real but the extraction function (demographic gatekeeping) is mutable policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether endogamy enforcement is structurally necessary to the community's religious identity or a contingent institutional choice."
+    },
+    {
+      "id": "gender_equity_vs_priesthood_exclusion",
+      "question": "Does the constraint's celebrated gender equity (divorce, maintenance, property) structurally require the priesthood's male-only restriction, or is the priesthood exclusion an independent extraction that the coordination function does not depend on?",
+      "resolution_mechanism": "Theological analysis: is male-only priesthood doctrinally necessary in Zoroastrianism? Sociological analysis: do Parsi communities with women priests (North America) maintain the same marriage/divorce coordination function?",
+      "impact": "If priesthood exclusion is independent, the constraint's gender-equity coordination is separable from its gendered authority structure — the extraction is not the price of coordination. If inseparable, the constraint's coordination function is structurally gendered, complicating the tangled_rope classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination and gendered authority are structurally coupled."
+    },
+    {
+      "id": "demographic_trap_reversibility",
+      "question": "Can the Parsi community survive as a distinct legal-religious entity without endogamy enforcement, or is the constraint's demographic trap irreversible — meaning the tangled_rope will necessarily degrade into a piton (theatrical maintenance of a collapsing structure)?",
+      "resolution_mechanism": "Demographic modeling of Parsi population under alternative endogamy rules. Comparative study of other small ethnoreligious communities (e.g., Bene Israel, Syrian Christians) that relaxed endogamy.",
+      "impact": "If survival without endogamy is possible, the constraint is a mutable tangled_rope with reform pathways. If survival requires endogamy, the constraint is a doomed piton — its coordination function (community survival) is structurally bound to an extraction mechanism (endogamy) that now produces the opposite outcome.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's demographic trajectory is reversible or locked into piton degradation."
+    },
+    {
+      "id": "committer_structure_omega",
+      "question": "How does this reading's structural relationship to the marriage_authority_kernel differ from its sibling readings, and where is the disagreement located?",
+      "resolution_mechanism": "Comparative structural analysis of all five readings' beneficiary/victim architectures, enforcement mechanisms, and exit geographies.",
+      "impact": "Maps the kernel's contestation surface: identifies which structural elements are shared across readings (coordination of marriage regulation) and which are reading-specific (endogamy enforcement, gender equity profile, demographic trajectory).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint instantiates the parsi_communal_reading of the marriage_authority_kernel. Sibling readings: hindu_codified_reading, muslim_shariat_reading, christian_canonical_reading, secular_civil_reading. The structural disagreement is located in: (1) enforcement locus — community tribunals vs. civil courts vs. religious authorities vs. secular registry; (2) exit architecture — identity-locked endogamy vs. codified opt-out vs. canonical process vs. civil marriage; (3) gender equity profile — unusually high within community but priesthood exclusion; (4) demographic viability — only this reading faces existential demographic collapse."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_authority_kernel__hindu_codified_reading",
+      "marriage_authority_kernel__muslim_shariat_reading",
+      "marriage_authority_kernel__christian_canonical_reading",
+      "marriage_authority_kernel__secular_civil_reading",
+      "parsi_trust_governance",
+      "parsi_fire_temple_access",
+      "special_marriage_act_1954"
+    ],
+    "dual_formulation_note": "The marriage_authority_kernel decomposes into five constraint stories, one per reading. This story (parsi_communal_reading) is structurally distinct because it combines community tribunal administration with strict endogamy enforcement and high internal gender equity, all under conditions of demographic collapse. The hindu_codified_reading uses civil courts; muslim_shariat_reading uses qazi boards; christian_canonical_reading uses ecclesiastical courts; secular_civil_reading uses civil registry. Only this reading has the demographic trap dynamic. All five are linked via affects_constraints because they compete for legitimacy in the same constitutional pluralism framework and the Supreme Court's personal law jurisprudence treats them as a family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hindu_codified_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "muslim_shariat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secular_civil_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "community_autonomy_preserves_gender_equity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "endogamy_is_necessary_for_community_survival",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "punchayet_authority_derives_from_community_consent",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "parsi_communal_legal_autonomy_1936",
+    "drift_state": {
+      "moment": "contemporary_demographic_crisis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

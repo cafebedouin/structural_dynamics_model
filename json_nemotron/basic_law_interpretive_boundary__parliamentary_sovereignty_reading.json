@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "39c04b58-a20a-4f85-a5f7-ed0115084824"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Knesset Parliamentary Sovereignty Over Basic Law Interpretation",
+    "topic_domain": "constitutional_law/comparative_constitutionalism/judicial_review",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "knesset_majority_coalition",
+      "elected_representatives"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "parliamentary_sovereignty_doctrine",
+      "democratic_legitimacy_of_elected_bodies",
+      "majoritarian_constitutional_amendment"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this reading of the basic_law_interpretive_boundary kernel instantiate a distinct constraint from its siblings, or is it a facet of the same constraint evaluated differently?",
+      "resolution_mechanism": "Trace whether the structural elements (ε, beneficiaries/victims, enforcement, exit options) diverge sufficiently across readings to satisfy ε-invariance; if changing the reading changes ε or the beneficiary/victim structure, they are distinct constraints.",
+      "impact": "If distinct, each reading gets its own story and classification; if not, the kernel is one constraint with observer-relative type — which violates DP-001.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether parliamentary_sovereignty_reading is a separate constraint from judicial_supremacy_reading and balanced_contestation_reading per ε-invariance"
+    },
+    {
+      "id": "extraction_boundary_treaty_obligations",
+      "question": "Do international treaty obligations constitute genuine extraction under this reading, or are they voluntarily accepted coordination costs?",
+      "resolution_mechanism": "Compare the Knesset's practical ability to denounce or reinterpret treaties versus domestic Basic Laws; if treaty exit is structurally harder, the obligation functions as extraction.",
+      "impact": "If treaties are extraction, ε rises above near-zero and the constraint may shift toward tangled_rope (coordination + asymmetric extraction from treaty-bound minorities).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international obligations under this reading operate as coordination or extraction"
+    },
+    {
+      "id": "advisory_judiciary_enforcement",
+      "question": "Is the judiciary genuinely advisory under this reading, or does its interpretive output create de facto constraints through legitimacy pressure?",
+      "resolution_mechanism": "Measure compliance rates when the Court issues non-binding opinions contrary to Knesset majorities; if compliance is near-universal, the advisory label masks structural constraint.",
+      "impact": "If advisory opinions bind in practice, suppression and extraction are higher than declared; the constraint may be tangled_rope rather than rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the Court's advisory role under this reading generates de facto suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.03
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.06
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 1992,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the parliamentary_sovereignty_reading of the basic_law_interpretive_boundary kernel. Under this reading, the Knesset as the elected sovereign holds ultimate authority to interpret and amend Basic Laws via simple majority, including the power to override judicial review. The judiciary serves an advisory function only; no external veto exists on legislative will. The constraint's extraction is near-zero for majoritarian policy except where international treaty obligations create binding external constraints. This reading positions the arrangement as a coordination mechanism (rope) — solving the problem of who ultimately decides constitutional meaning in a democratic polity by vesting that authority in the elected legislature. The claimed type is rope; metrics describe low extraction, minimal suppression, and low theater. Sibling readings (judicial_supremacy_reading, balanced_contestation_reading) are separate constraints with different structural profiles.",
+    "key_agents": [
+      "knesset_majority_coalition: Primary beneficiary (institutional/arbitrage) — holds interpretive authority and amendment power",
+      "elected_representatives: Beneficiary (organized/mobile) — derive democratic legitimacy from unconstrained legislative sovereignty",
+      "supreme_court_justices: Advisory role (institutional/analytical) — interpretive output carries moral authority but no binding veto",
+      "minority_communities: Excluded (powerless/trapped) — lack institutional protection against majoritarian constitutional amendment",
+      "international_treaty_bodies: External constraint (organized/constrained) — impose obligations the Knesset cannot unilaterally override"
+    ],
+    "logic_rationale": "Extraction is low (0.12) because the constraint primarily coordinates democratic decision-making by allocating final interpretive authority to the elected body; the primary cost is borne by minorities who lack exit from majoritarian constitutional amendment, but this cost is structural to majoritarian democracy rather than extractive rent. Suppression is minimal (0.08) because the constraint does not actively prevent alternatives — minority protections exist through political process, not judicial veto. Theater ratio is low (0.15) and rising slowly as performative judicial review debates increase while the structural reality remains parliamentary sovereignty. The measurement grid shows gradual increases across all three metrics from 1992 (pre-constitutional revolution) to 2024, reflecting the judicialization of politics and growing legitimacy contests, but the structural ε remains near-zero for domestic majoritarian policy.",
+    "directionality_logic": "The Knesset majority coalition and elected representatives are beneficiaries (d near 0.0) — the constraint subsidizes their authority. Minority communities are de facto targets (d nearer 1.0) — they bear the cost of having no constitutional veto against majoritarian amendment, but their exit options are 'trapped' (identity/territory-bound) rather than constrained by this specific constraint. The Supreme Court sits near analytical (d ~ 0.5) — it neither collects nor pays but provides interpretive labor. International treaty bodies are external constraint sources, not targets of this constraint's extraction. The directionality derivation from beneficiary/victim declarations + exit options produces this gradient without overrides.",
+    "perspectival_gap": "From the Knesset majority seat, this is pure coordination (rope) — the elected sovereign decides. From minority community seats, the same structure operates as a snare-like vulnerability — no institutional barrier prevents majoritarian rights restriction. The engine computes this seat divergence from the structural data; the claimed type (rope) reflects the authoring seat's assessment of the constraint's primary function. The divergence IS the measurement.",
+    "mandatrophy_analysis": "The founding problem (resolving constitutional interpretive authority in favor of democratic legitimacy) remains live per the Knesset and its supporters; critics argue it is dead (judicial review has de facto displaced parliamentary sovereignty) or contested. The mandate has not atrophied — the constraint actively coordinates constitutional decision-making. No mandatrophy resolution is declared.",
+    "kernel_context": "This story instantiates the parliamentary_sovereignty_reading of the basic_law_interpretive_boundary kernel. Sibling readings: judicial_supremacy_reading (Basic Laws as higher-order framework with binding judicial invalidation), balanced_contestation_reading (both institutions hold legitimate but bounded authority). This reading asserts Knesset as unconstrained sovereign; judiciary advisory only; no external veto on legislative will. The three readings instantiate three distinct constraints with different ε, beneficiary/victim structures, and types — they are linked via network.affects_constraints, not merged."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "basic_law_interpretive_boundary__judicial_supremacy_reading",
+      "basic_law_interpretive_boundary__balanced_contestation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the basic_law_interpretive_boundary kernel. The ε-invariance principle requires separate stories because ε differs: this reading has near-zero ε for domestic majoritarian policy; judicial_supremacy_reading has substantial ε (judicial veto extracts from legislative majorities); balanced_contestation_reading has intermediate ε. The beneficiary/victim structures also differ: this reading benefits the Knesset majority; judicial_supremacy_reading benefits minority-rights holders via judicial protection; balanced_contestation_reading has a more diffuse beneficiary structure. All three stories link via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "knesset_majority_coalition",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Holds ultimate authority to interpret and amend Basic Laws via simple majority. Can override judicial review. Collects the democratic legitimacy dividend of unconstrained constitutional sovereignty. Faces no institutional veto on domestic policy. Exit is arbitrage-grade: can shift coalition composition, call elections, or amend the constitutional framework itself."
+    },
+    {
+      "name": "elected_representatives",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Derive democratic legitimacy and effective power from the Knesset's unconstrained sovereign authority. Their legislative acts cannot be invalidated by courts on constitutional grounds. Exit is mobile: can join/leave coalitions, run on different platforms, or seek judicial appointments — but their power derives from the parliamentary sovereignty this constraint establishes."
+    },
+    {
+      "name": "supreme_court_justices",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Issue advisory opinions on Basic Law interpretation. Their interpretations carry moral and professional authority but no binding veto. They neither collect extraction nor bear its costs. Exit is analytical: they observe the constraint's operation from within the institution but cannot change its structural terms."
+    },
+    {
+      "name": "minority_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lack institutional protection against majoritarian constitutional amendment. Their rights depend on political coalition-building rather than judicial enforcement. Exit is trapped: identity and territory bind them to the polity; emigration is costly and incomplete. They would object to the absence of judicial veto but are structurally excluded from the constitutional interpretive authority."
+    },
+    {
+      "name": "international_treaty_bodies",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Impose treaty obligations that the Knesset cannot unilaterally override under this reading. These obligations function as the primary external constraint on Knesset sovereignty. They do not collect extraction from this constraint but their decisions create the near-zero ε floor for domestic policy. Exit is constrained: they operate within international legal frameworks but can apply diplomatic and reputational pressure."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Allocates final constitutional interpretive authority to the elected legislature, resolving the coordination problem of who ultimately decides constitutional meaning in a democratic polity. Prevents judicial veto from blocking democratic majorities.",
+    "transfer_function": "Moves constitutional interpretive authority from the judiciary to the Knesset. The arrangement transfers the power of final constitutional say from unelected judges to elected representatives. No monetary transfer; the transfer is of authority and veto power.",
+    "absent_voices": "Minority communities (Arab citizens, Haredi subgroups, migrant populations) would object to the absence of judicial veto protection but are structurally excluded from the constitutional interpretive authority. International human rights bodies would object to the lack of domestic enforcement mechanism for treaty obligations but operate at global scope.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished overnight and judicial supremacy were instantiated instead, the Knesset would lose its override power, minority rights would gain judicial enforcement, and the constitutional order would reorganize around court-centered review. The world rearranges because arrangements depend on this constraint — the Knesset's legislative strategy, coalition agreements, and minority political mobilization all presuppose parliamentary sovereignty.",
+    "founding_problem": "Resolving the constitutional interpretive authority vacuum after 1992 Basic Laws: whether the Knesset (elected, majoritarian) or the Supreme Court (professional, rights-protective) holds ultimate say over Basic Law meaning. The parliamentary sovereignty reading was built to solve the democratic legitimacy deficit of judicial review over constitutional norms.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Knesset majorities and coalition partners attest the problem is live — democratic legitimacy requires parliamentary sovereignty. Supreme Court justices and civil society organizations attest the problem is dead — judicial review has de facto displaced parliamentary sovereignty. Legal scholars are divided. No external corroboration resolves the contest; the founding problem's status is itself the axis of the kernel dispute."
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "balanced_contestation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "knesset_sovereign_constitutional_interpreter",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "judicial_review_advisory_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "parliamentary_sovereignty_framework",
+    "drift_state": {
+      "moment": "contemporary_judicial_activism_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

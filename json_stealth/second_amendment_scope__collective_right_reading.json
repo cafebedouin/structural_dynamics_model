@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__collective_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "92066df0-1cb3-435e-993e-e5bcdcb8689c"
+  },
+  "base_properties": {
+    "extractiveness": 0.26,
+    "suppression": 0.62,
+    "theater_ratio": 0.6,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.72,
+    "claimed_type": "rope",
+    "human_readable": "Second Amendment — Collective Right Reading (State Militia Shield)",
+    "topic_domain": "constitutional_law/political_theory/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_governments",
+      "organized_state_militias"
+    ]
+  },
+  "interval": {
+    "start": 1791,
+    "end": 2008
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1791,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1876,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1939,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1791,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1876,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1939,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1791,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1876,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1939,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of kernel second_amendment_scope (reading: collective_right_reading). What would the sibling readings change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Comparative authoring of the sibling stories: individual_right_reading moves individual_firearm_owners into the beneficiary set, raises epsilon sharply, and narrows regulatory authority; civic_right_reading conditions a personal right on militia participation, yielding an intermediate beneficiary set. The disagreement is located in the normative force of the prefatory clause ('A well regulated Militia, being necessary to the security of a free State') — scope-limiting versus purpose-stating.",
+      "impact": "Cross-reading epsilon divergence over the identical arrangement is the designed signal: this story authors low epsilon; the individual-right sibling authors high epsilon for the same text. This story's classification must not hedge across readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position of this story within the second_amendment_scope kernel."
+    },
+    {
+      "id": "founding_problem_death_date",
+      "question": "When did independent state military capacity effectively die — the Militia Act of 1903, the 1916 National Defense Act, or post-1945 total integration?",
+      "resolution_mechanism": "Military-historical record of the Guard federalization stages: command structure, funding dependence, and deployment authority at each stage.",
+      "impact": "An earlier death date strengthens the mandatrophy account (longer period of functionless persistence); demonstrable residual state capacity would keep the shield partially functional and support the rope claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dating the obsolescence of the arrangement's founding problem."
+    },
+    {
+      "id": "shield_vs_claim_blocker_share",
+      "question": "What share of the reading's 1939–2008 operation was protective (shielding militia arrangements from federal action) versus claim-blocking (defeating individual rights claims)?",
+      "resolution_mechanism": "Docket analysis of Second Amendment invocations in federal courts 1939–2008, coding each invocation by whether a militia arrangement was defended or an individual claim was rejected.",
+      "impact": "A high protective share supports the rope classification; a high claim-blocking share supports drift toward theatrical maintenance with real costs imposed on litigant seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Composition of the reading's twentieth-century operational work."
+    },
+    {
+      "id": "post_heller_persistence_mode",
+      "question": "After Heller (2008) formally repudiated the reading, does the constraint persist as a live scholarly position, an inertial academic habit, or is it extinct as an operating constraint?",
+      "resolution_mechanism": "Track rates of scholarly defense of the collective reading and any state or lower-court adoption after 2008.",
+      "impact": "Determines whether the story's terminal state is a repudiated rope or a surviving piton maintained by professional inertia.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Post-repudiation survival mode of the reading."
+    },
+    {
+      "id": "freedmen_protection_attribution",
+      "question": "Does the postbellum failure to protect freedmen arms-bearing count as an operation OF this constraint (the reading denying any federal individual right), or as state-action failure orthogonal to the reading?",
+      "resolution_mechanism": "Historical analysis of Cruikshank-era litigation and counterfactual assessment of whether an individual-right reading would have altered outcomes given Reconstruction enforcement capacity.",
+      "impact": "Attributing these costs to the constraint raises effective extraction and pushes toward tangled_rope; orthogonal attribution keeps epsilon low and preserves the rope reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Cost-attribution question for the reading's darkest historical episode."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sovereign polities that organized, armed, and officered citizen militias from 1791 onward, relying on the amendment as a guarantee that Congress cannot disarm or abolish their military institutions. Each also holds plenary police power over private firearms within its borders — under this reading that power is untouched by the amendment. After 1903 their militias were folded into the federal National Guard, leaving the guarantee wrapped around an institution they no longer independently control."
+    },
+    {
+      "name": "organized_state_militias",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Guard units and their predecessor bodies: they receive arms, funding, and officers through cooperative state-federal administration at the intersection of Title 10 and Title 32. The amendment's guarantee is addressed to their continued existence; they cannot exit the arrangement because they are its creatures, constituted by the very statutes the guarantee overlays."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets and enforces the amendment's scope. Across Cruikshank (1876), Miller (1939), and Quilici (1982) it administered this reading: declining individual-rights claims, sustaining convictions and municipal bans, and treating the prefatory clause as controlling. Its docket is where the reading lived; Heller (2008) ended its administration of this reading."
+    },
+    {
+      "name": "federal_legislature",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Wrote the amendment in 1791 and retains Article V power to rewrite it, though that path requires two-thirds of both houses plus thirty-eight states. In the narrow domain of disarming state militias it is legally checked; everywhere else in firearms policy — commerce, taxation, manufacture — this reading leaves it unobstructed."
+    },
+    {
+      "name": "individual_firearm_owners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tens of millions of households keeping firearms for defense, sport, and work. Under this reading they hold no constitutional card: regulation, licensing, prohibition, and prosecution proceed without a Second Amendment defense, and their recourse runs through legislatures and elections rather than courts. Exit means changing jurisdictions or surrendering the goods; neither is realistically available to most."
+    },
+    {
+      "name": "compulsory_militia_members",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Historical seat: the able-bodied men enrolled by state militia statutes from 1791 into the early twentieth century, obligated to muster, arm themselves at personal expense, and serve under state officers, with fines for absence. They supplied the labor the guaranteed institution ran on; the obligation lapsed as enrollment systems decayed and the Guard went volunteer."
+    },
+    {
+      "name": "gun_policy_advocacy_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Public-health and gun-control organizations pressing for registration, licensing, and bans. Under this reading the amendment poses no obstacle to any of it — their model legislation faces only ordinary political channels — so the reading's narrow scope is a standing benefit to their agenda."
+    },
+    {
+      "name": "freedmen_communities_postbellum",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Historical seat: newly emancipated Black communities in the Reconstruction South who sought arms for self-defense against paramilitary terror and were systematically disarmed by state governments and white militias. The reading gave them nothing to invoke — no personal right, and hostile state authorities — and Cruikshank (1876) confirmed the amendment imposed no duty on states to secure their arms-bearing. They had no seat in the doctrine's construction."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic lawyers and historians producing the interpretive scholarship courts cite. This reading dominated the mid-twentieth-century literature; a revisionist wave from the 1980s, textualist and historiographic, eroded it, and by 2008 the profession had largely shifted. They observe and argue; they neither collect nor pay."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves an eighteenth-century problem of military federalism: guaranteeing that states could organize, arm, and sustain citizen militias so that organized force would not concentrate exclusively in a federal standing army. It coordinates by allocating a shield — Congress may not disarm the state military institution — while leaving everything else about arms to ordinary legislation.",
+    "transfer_function": "Moves constitutional protection away from private persons and toward state institutions: security in arms is located in the militia, not the household. Correspondingly it moves regulatory authority over private firearms wholly to legislatures, and — across its operational centuries — moved mandatory musters, personal arms expenses, and service risk onto enrolled militiamen.",
+    "absent_voices": "Individual claimants had no seat: the reading assigned them no protected interest, so gun owners challenging bans — and, catastrophically, Reconstruction-era freedmen facing disarmament and paramilitary violence — entered the doctrine only as losing arguments. Their objections survive in dissents, failed petitions, and the later revisionist scholarship, nowhere in the doctrine's operative consensus.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "State and militia seats attest dependency: the guarantee is the textual anchor of federalism in military affairs, and removing it overnight would expose state military institutions to outright federal abolition. Individual-rights seats and, after 1903, most military historians attest that nothing practical depends on it — the Guard's integration into federal command already removed the independent capacity the guarantee protected, and the reading's residual daily work (defeating individual claims) is exactly what its opponents want ended. Whether the world rearranges depends on which seat's dependencies count, and the seats disagree.",
+    "founding_problem": "The ratification-era fear that a federal standing army would extinguish state autonomy: Anti-Federalists demanded a written guarantee that the states could maintain armed citizen militias as a counterweight to congressional control of the army.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Military-history scholarship on the Militia Act of 1903 and successor acts attests, from outside the beneficiary set, that state militias ceased to be independent forces — dual federal command, federal equipment, federal deployment. Federal courts' own characterizations of the Guard as an integral federal reserve component corroborate the finding, as does revealed behavior: no state has acted to rebuild an independent military capability, and state governments invoke the guarantee rhetorically while accepting federal integration."
+  },
+  "gain_flow": "state_governments",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_scope__individual_right_reading",
+      "second_amendment_scope__civic_right_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the Second Amendment' decomposes into three structurally distinct readings of one kernel (second_amendment_scope). This member authors low epsilon for the standing arrangement as seen from the collective-right seat; the individual-right sibling authors high epsilon for the same arrangement; the civic-right sibling sits between. Historically this reading influenced its siblings — a century of precedent from Cruikshank through Miller shaped the terms each sibling had to answer — while being logically incompatible with both."
+  },
+  "commentary": {
+    "narrative_context": "The collective right reading holds that the Second Amendment's prefatory militia clause limits the operative clause: the amendment secures state authority to maintain militias and confers no personal entitlement to own firearms. This was the dominant judicial reading from Cruikshank (1876) through Miller (1939) to Quilici (1982), until Heller (2008) repudiated it. The story treats the reading-as-operated as the constraint: a federalism shield around state military institutions, with regulatory authority over private arms left wholly to legislatures. The claim/metric posture is deliberate and unreconciled: claimed_type is rope (the structure is a coordination mechanism allocating military capacity between center and states), while the metrics document late-interval drift — theater rising toward 0.60 as the shielded function atrophied after the 1903 federalization of the Guard, and suppression rising toward 0.62 as holding the reading against mounting resistance required ever more doctrinal force. Epsilon is authored low (0.26) because the referent is the standing arrangement assessed by this reading's own lights: from this seat the arrangement shields states and obstructs no regulation. The individual-right sibling story will author high epsilon for the same arrangement; that divergence is the kernel's designed signal, not an inconsistency.",
+    "key_agents": [
+      "state_governments: primary beneficiary (institutional/constrained) — holds the militia shield and unrestricted regulatory power",
+      "organized_state_militias: secondary beneficiary (organized/trapped) — the shielded institution itself, unable to exit",
+      "federal_judiciary: agenda_setter (institutional/analytical) — administered the reading for a century, ended it in 2008",
+      "federal_legislature: agenda_setter + payer (institutional/constrained) — wrote the text, checked only in the militia domain",
+      "individual_firearm_owners: payer (moderate/constrained) — bears regulation and prosecution with no constitutional defense",
+      "compulsory_militia_members: historical payer (powerless/trapped) — supplied the mandated labor and personal expense the guaranteed institution ran on",
+      "gun_policy_advocacy_organizations: beneficiary (organized/mobile) — the narrow scope removes their chief legal obstacle",
+      "freedmen_communities_postbellum: excluded (powerless/trapped) — denied any seat or protection in the doctrine's construction",
+      "constitutional_scholars: observer (analytical/analytical) — produced and then dismantled the reading's intellectual warrant"
+    ],
+    "logic_rationale": "Extractiveness is authored low and rising gently (0.10 to 0.26): under this reading's own lights the arrangement extracts little — it shields state institutions and leaves regulation unobstructed — but the series accumulates as the reading's operational work shifts from protecting militias to defeating individual claims. Suppression (0.62 at end) is a raw structural property, unscaled by power or scope: it measures the enforcement machinery — the doctrine of claim-dismissal built from Miller through Quilici — needed to hold the reading in place as resistance mounted; it is deliberately distinct from extractiveness, and the divergence between a low epsilon and a high suppression requirement is itself diagnostic. Theater rises 0.05 to 0.60: after 1903 the shielded function (independent state military capacity) was gone, and invocation of the reading became increasingly ritual — performed to dismiss claims rather than to protect anything that existed. Accessibility_collapse is moderate (0.40): alternative sources of militia protection (Article I militia powers, state constitutional provisions, statutory frameworks) persisted alongside the amendment, so understanding the constraint did not foreclose all alternatives. Resistance is high (0.72): sustained scholarly revisionism from the 1980s, five federal circuits abandoning the reading in the 1990s–2000s, and final judicial repudiation. All three tracked metrics run on one shared time grid (1791, 1876, 1939, 1982, 1999, 2008) so every metric is authored at every examined point; trajectories are monotonic, not cyclical, so no cycle-lengthening was applied.",
+    "perspectival_gap": "The seats compute differently from the same structural data. State and militia seats experience a shield: low effective extraction, a genuine coordination benefit. Individual firearm owner seats experience a locked door: they bear the full weight of the regulatory environment with no constitutional recourse, so their per-seat extraction runs high despite the story-level low epsilon — their constrained exit and payer position place them near the target end of directionality. The judiciary seat experiences settled law to administer, neither collecting nor bearing. The sharpest divergence is cross-story rather than cross-seat: the individual-right sibling reading of the same text authors high epsilon for the identical arrangement. Both stories are correct from their seats; the engine computes each, and the gap between them is the measurement the kernel exists to take.",
+    "directionality_logic": "Beneficiaries drive the derivation: state_governments and organized_state_militias sit near the beneficiary end (low d, damped or inverted effective extraction) — the arrangement subsidizes them. Payers sit near the target end: individual_firearm_owners (constrained exit amplifies d toward full target) and compulsory_militia_members (trapped, historically the arrangement's direct labor source). Agenda-setters (federal_judiciary, federal_legislature) derive mid-range positions — the legislature's dual role (sets the text via Article V, bears the militia-domain check) is captured by its secondary_role. The victims array is intentionally EMPTY under this reading's own lights: the reading concedes no personal right, so it recognizes no one whose right it takes — individual cost-bearing is registered through payer roles and exits rather than a victims declaration, and the engine derives directionality from those roles. The excluded seat (freedmen_communities_postbellum) is commentary-grade per R3: it documents who was never in the room and drives no classification override. Gain_flow names state_governments because the shield's value demonstrably accrues there; fixing_cost is prohibitive because the only removal path is Article V amendment.",
+    "mandatrophy_analysis": "The founding problem — state military capacity as counterweight to a federal standing army — died with the 1903 federalization of the militia, yet the arrangement persisted 105 more years, its theater ratio climbing from 0.05 to 0.60 while its protective function emptied out. The classification apparatus prevents two opposite mislabelings. Calling the constraint pure rope across the whole interval hides the late-period reality: a functionless shield maintained ritually, whose daily work was defeating individual claims — real costs borne by real litigant seats. Calling it a snare overstates: there is no concentrated capturer running the extraction — gains accrue to states as a class for a federalism function, extraction itself stayed low, and the reading's own lights sincerely register the arrangement as benign. The rope claim plus the drift series locates the transition honestly: a genuine coordination mechanism that atrophied into theatrical maintenance, resolved as mandatrophy (founding_problem_status dead, corroborated by military-history scholarship and the courts' own Guard characterizations from outside the beneficiary set). The status-dead x verdict-contested combination routes correctly: the parties genuinely dispute whether anything depends on the arrangement, so no zombie flag is asserted, but the theater trajectory flags the drift for review."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "prefatory_clause_scope_limitation",
+    "drift_state": {
+      "moment": "post_heller_doctrinal_repudiation",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "individual_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "civic_right_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_personal_arms_entitlement",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "militia_shield_against_federal_disarmament",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

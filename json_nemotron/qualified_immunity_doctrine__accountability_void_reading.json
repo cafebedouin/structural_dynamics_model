@@ -1,0 +1,414 @@
+{
+  "header": {
+    "constraint_id": "qualified_immunity_doctrine__accountability_void_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_qualified_immunity_doctrine__accountability_void_reading",
+    "measurement_id_prefix": "qi_avr",
+    "story_uid": "bc2a0197-c980-42ae-a69d-71727b174b23",
+    "created_at": "2026-08-14T14:22:17Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.92,
+    "suppression": 0.89,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Qualified Immunity Doctrine — Accountability Void Reading",
+    "topic_domain": "constitutional_law/civil_rights/law_enforcement_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "law_enforcement_officers",
+      "police_unions",
+      "municipal_insurers"
+    ],
+    "victims": [
+      "constitutional_violation_victims",
+      "civil_rights_plaintiffs",
+      "marginalized_communities_subject_to_policing"
+    ],
+    "vindicated_propositions": [
+      "judicial_supremacy_doctrine",
+      "official_immunity_tradition"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "supreme_court_justices",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Author and maintain the qualified immunity doctrine through precedent. Control the 'clearly established law' standard that determines when immunity applies. Their rulings are binding on all lower courts and effectively final for the vast majority of civil rights cases. They face no electoral accountability and serve for life."
+    },
+    {
+      "name": "lower_court_judges",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Apply the Supreme Court's qualified immunity framework to individual cases. Must grant immunity unless plaintiffs can identify a prior case with nearly identical facts. Their discretion is narrow — the doctrine structurally compels dismissal in most novel-fact scenarios. Career advancement depends on collegial approval within the judicial hierarchy."
+    },
+    {
+      "name": "law_enforcement_officers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Receive near-absolute protection from personal liability for constitutional violations committed on duty. The doctrine shields them from financial consequences, disciplinary consequences tied to civil liability, and the deterrent effect of potential lawsuits. Their institutional culture treats qualified immunity as an entitlement enabling aggressive policing without legal risk."
+    },
+    {
+      "name": "police_unions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Treat qualified immunity as a core contractual and political achievement. Lobby aggressively against legislative reform at state and federal levels. Use the doctrine's existence to negotiate indemnification provisions that shift all financial risk to municipalities. Their members' qualified immunity protection is a primary recruitment and retention selling point."
+    },
+    {
+      "name": "municipal_insurers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Benefit from the doctrine's filtration effect: qualified immunity dismisses the vast majority of §1983 claims before discovery, drastically reducing defense costs and settlement exposure. Their actuarial models price qualified immunity as a massive loss-reduction mechanism. They lobby to preserve the doctrine and oppose municipal self-insurance reforms that would internalize costs."
+    },
+    {
+      "name": "constitutional_violation_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the full cost of constitutional violations — physical injury, psychological trauma, loss of liberty, financial ruin — with no remedy path. The 'clearly established' standard requires them to find a prior case with functionally identical facts, which is structurally impossible for novel or context-specific violations. Most cannot afford counsel; those who do face dismissal rates exceeding 80% at the motion-to-dismiss stage."
+    },
+    {
+      "name": "civil_rights_plaintiffs",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempt to vindicate constitutional rights through §1983 litigation. Face a doctrinal gauntlet: qualified immunity at the motion-to-dismiss stage, Monell barriers to municipal liability, and appellate courts that treat qualified immunity as a threshold immunity rather than a defense. Their lawyers operate on contingency with negative expected value for all but the clearest cases. The doctrine selects against novel rights claims."
+    },
+    {
+      "name": "marginalized_communities_subject_to_policing",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience the systemic downstream effects: policing practices calibrated to the immunity floor rather than the constitutional ceiling. Over-policing, excessive force, and discriminatory stops persist because officers internalize that constitutional violations carry no personal cost. Community trust erodes; legitimacy of law enforcement collapses; the social contract frays. No exit from the jurisdiction that polices them."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Possess theoretical authority to abrogate qualified immunity through state-law causes of action (as Colorado and New Mexico have done). Face intense police union opposition, municipal cost-shifting fears, and federal preemption uncertainty. Most have not acted; those that have face immediate repeal campaigns. Their structural position is potential agenda-setters currently locked out by organized opposition."
+    },
+    {
+      "name": "congress",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Possesses constitutional authority to abrogate or modify qualified immunity through legislation amending §1983. Has considered but never passed reform (e.g., Ending Qualified Immunity Act). Structural barriers: filibuster, police union lobbying, municipal liability fears, judicial supremacy norms. Could change the constraint overnight but has not."
+    },
+    {
+      "name": "legal_academy",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Produces the doctrinal critique establishing that qualified immunity has no basis in the text or history of §1983, was fabricated by the Court in 1967/1982, and operates as a policy choice disguised as legal interpretation. Their scholarship is cited in dissents but does not move the Court. They observe the constraint from outside the power structure that maintains it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Nominally: balances the need for vigorous law enforcement against the need to vindicate constitutional rights by protecting officers from liability for reasonable mistakes. Actually: coordinates a system where constitutional violations are filtered out before adjudication, insulating the policing institution from the cost of its own misconduct.",
+    "transfer_function": "Transfers the cost of constitutional violations from the officers who commit them and the municipalities that employ them to the victims who suffer them. Moves financial risk, deterrent pressure, and accountability from the powerful (officers, departments, insurers) to the powerless (victims, marginalized communities). The transfer is near-total: over 80% of §1983 claims against individual officers are dismissed on qualified immunity grounds at the motion-to-dismiss stage.",
+    "absent_voices": "The victims whose cases are dismissed before discovery — they never get to testify, never get a jury, never appear in the judicial record as anything but a dismissed complaint. Future victims whose rights will be violated because the deterrent signal was extinguished. State legislatures and Congress, structurally capable of acting but politically locked out. The 'clearly established' standard itself silences novel rights claims: if no prior case exists, the right cannot be 'clearly established,' so the violation cannot be remedied, so no precedent is created — a structural silence machine.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If qualified immunity vanished overnight, §1983 litigation would proceed to discovery and trial on the merits in the vast majority of cases. Officers would face personal financial exposure; municipalities would face true cost internalization; insurers would price constitutional misconduct accurately; policing practices would shift toward constitutional compliance to avoid liability. The entire incentive structure of American policing would reorganize around actual constitutional requirements rather than the immunity floor. Victims would gain a functional remedy path. The doctrine is the linchpin of the current accountability architecture — remove it and the architecture collapses.",
+    "founding_problem": "The Supreme Court in Pierson v. Ray (1967) and Harlow v. Fitzgerald (1982) constructed qualified immunity as a judicial policy response to: (1) fear that §1983 litigation would deter vigorous law enforcement, (2) concern that officers would face ruinous personal liability for good-faith mistakes, (3) the Court's self-assigned role in 'balancing' competing policy interests absent congressional guidance. The founding problem was judicial — the Court perceived a policy vacuum and filled it with a judge-made immunity doctrine.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem is dead per the Court's own subsequent jurisprudence and historical scholarship. Harlow eliminated the subjective good-faith inquiry, converting a qualified 'good faith' defense into an objective 'clearly established' standard — admitting the original problem (officer subjective state of mind) was not the real target. Historical scholarship (Baude, 'Is Qualified Immunity Unlawful?'; Schwartz, 'How Qualified Immunity Fails') demonstrates the doctrine has no basis in the text, history, or common-law background of §1983. The Court itself has acknowledged the doctrine is a 'balance' it struck, not a command of Congress. No corroborating source outside the benefiting parties (the Court, police unions, municipal insurers) attests that the founding problem persists — the deterrence fear is empirically unsupported (Schwartz, 'The Case Against Qualified Immunity'), and the good-faith mistake concern was solved by Harlow's objective test. The doctrine persists despite its founding problem being dead, not because of it."
+  },
+  "interval": {
+    "start": 1967,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.92
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.89
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the accountability_void_reading of the qualified_immunity_doctrine kernel. The doctrine, judge-made in 1967 and radicalized in 1982, operates as a near-absolute bar to §1983 liability for law enforcement officers who violate constitutional rights. The 'clearly established law' standard requires victims to identify a prior case with nearly identical facts — a structural impossibility for novel or context-specific violations. The result is a systematic extraction mechanism: the costs of constitutional violations are transferred from officers and municipalities to victims, the deterrent function of §1983 is nullified, and policing practices calibrate to the immunity floor rather than the constitutional ceiling. The Court maintains the doctrine despite acknowledging it has no statutory basis, because it serves the institutional interests of the judiciary (docket control, finality), law enforcement (operational autonomy), and municipal insurers (loss limitation). This reading treats the doctrine as a snare: pure extraction with a coordination cover story.",
+    "key_agents": [
+      "supreme_court_justices: Primary agenda_setter (institutional/analytical) — authors and maintains the doctrine",
+      "law_enforcement_officers: Primary beneficiary (organized/constrained) — receives near-absolute liability shield",
+      "police_unions: Secondary beneficiary (organized/mobile) — treats immunity as core political achievement",
+      "municipal_insurers: Tertiary beneficiary (powerful/arbitrage) — profits from claim filtration",
+      "constitutional_violation_victims: Primary payer (powerless/trapped) — bears full cost with no remedy",
+      "civil_rights_plaintiffs: Secondary payer/excluded (moderate/constrained) — faces structural dismissal",
+      "marginalized_communities: Tertiary payer/excluded (powerless/trapped) — experiences systemic downstream effects",
+      "state_legislatures: Excluded agenda_setter (institutional/constrained) — theoretically capable but politically locked out",
+      "congress: Excluded agenda_setter (institutional/analytical) — constitutionally authorized but inert",
+      "legal_academy: Observer (analytical/analytical) — produces critique that does not move power"
+    ],
+    "logic_rationale": "Extractiveness is 0.92 because the doctrine operates as a near-total filtration mechanism: the vast majority of constitutional violation claims are dismissed before discovery, transferring 100% of the cost to victims. The small residual of cases that survive (factually identical precedent exists) does not meaningfully reduce the extraction rate. Suppression is 0.89 because the constraint's persistence depends on active judicial enforcement — the Court must continuously police the 'clearly established' boundary, summarily reverse denials of immunity, and resist legislative abrogation. Theater ratio is only 0.12 because the doctrine's coordination function (protecting reasonable mistakes) was eviscerated by Harlow's conversion to an objective standard; what remains is almost purely extractive. Accessibility collapse is 0.78 (not higher) because state legislative abrogation (Colorado, New Mexico) and occasional circuit splits create narrow exit paths — but these are structurally fragile and cover a tiny fraction of the victim population. Resistance is 0.68 because the doctrine faces sustained scholarly critique, circuit judge dissent, state legislative action, and public opposition — but this resistance has not translated into doctrinal change at the Supreme Court level.",
+    "perspectival_gap": "The agenda-setter seats (Supreme Court justices, lower court judges) experience the constraint as a legitimate judicial balancing of policy interests — they see docket management, protection of government function, and institutional stability. The payer seats (victims, plaintiffs, marginalized communities) experience it as a structural denial of the constitutional remedy Congress enacted. The beneficiary seats (officers, unions, insurers) experience it as an earned protection enabling their work. The engine computes per-seat effective extraction from these structural positions: the payer seats see χ near ε (trapped, powerless, local scope); the beneficiary seats see χ near zero or negative (organized, mobile, national scope); the agenda-setter seats see χ modulated by institutional role (institutional power, analytical exit). The claimed type (snare) reflects the payer-seat reality; the Court's self-characterization would be rope or scaffold.",
+    "directionality_logic": "Beneficiaries declared: law_enforcement_officers (direct liability shield), police_unions (political/organizational asset), municipal_insurers (actuarial windfall). Victims declared: constitutional_violation_victims (trapped, no remedy), civil_rights_plaintiffs (constrained, structural dismissal), marginalized_communities_subject_to_policing (trapped, systemic downstream harm). The directionality derivation flows from these declarations: officers have constrained exit (cannot leave policing without career loss) but collect massive benefit → d ≈ 0.15 (beneficiary). Victims are trapped, powerless, local scope → d ≈ 0.95 (full target). Municipal insurers have arbitrage exit (can exit markets, reprice) but collect benefit → d ≈ 0.10. Police unions have mobile exit (political influence across jurisdictions) → d ≈ 0.15. Supreme Court justices have analytical exit (lifetime tenure, no accountability) but are agenda-setters, not beneficiaries per se — their directionality derives from institutional role, not personal gain. The engine computes χ from these structural positions.",
+    "mandatrophy_analysis": "The founding problem (judicial concern about deterring vigorous policing) is dead — eliminated by the Court's own doctrinal evolution (Harlow's objective test) and empirical falsification (no evidence §1983 deters legitimate policing). The doctrine persists because it now serves the extraction interests of its beneficiaries (officers, unions, insurers) and the institutional interests of its agenda-setters (judicial finality, docket control). This is classic mandatrophy: a constraint whose original justification has evaporated but whose enforcement machinery has been captured by the parties who benefit from its extraction function. The Court's refusal to reconsider, despite explicit invitations from across the ideological spectrum, confirms the capture. The classification as snare (not tangled_rope) is warranted because the coordination function is vestigial — the 'clearly established' standard does not protect reasonable mistakes; it protects all mistakes for which no prior case exists. The coordination cover story is a Potemkin facade.",
+    "kernel_context": "This constraint is the accountability_void_reading of the qualified_immunity_doctrine kernel. Sibling readings: protective_scaffold_reading (immunity as necessary protection for vigorous law enforcement), constitutional_fidelity_reading (immunity as judicially fabricated doctrine lacking constitutional/statutory authorization). This reading emphasizes the systematic extraction mechanism: victims enter the victim set with no remedy path; officers are shielded from consequences; ε_base is high (near-absolute bar to liability); beneficiaries are officers who would otherwise face liability. The three readings differ on the constraint's structural character (snare vs. scaffold vs. mountain-of-illegitimacy) and its normative status, but share the same doctrinal referent."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_framing",
+      "question": "Is the qualified immunity doctrine a single constraint with multiple readings, or are these structurally distinct constraints sharing a label?",
+      "resolution_mechanism": "Apply the ε-invariance test: if the accountability_void_reading (ε≈0.92, snare) and protective_scaffold_reading (ε≈0.3, scaffold) produce different ε values for the same doctrinal machinery, they are different constraints. The test is whether the 'coordination function' claimed by the scaffold reading is real (would persist without extraction) or a cover story. If the Court would maintain the doctrine even if it provided zero coordination benefit, the scaffold reading is false and the accountability_void_reading captures the true structure.",
+      "impact": "If the readings are distinct constraints, each gets its own classification and the kernel is a linguistic confusion, not a structural ambiguity. If they are readings of one constraint, the ε-invariance principle is violated and the framework must account for observer-relative classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel decomposes into multiple constraints per the ε-invariance principle."
+    },
+    {
+      "id": "coordination_function_reality",
+      "question": "Does the qualified immunity doctrine genuinely coordinate a necessary function (protecting reasonable officers), or is the coordination function a cover story for extraction?",
+      "resolution_mechanism": "Counterfactual: if the Court adopted a 'reasonable officer' standard without the 'clearly established' ratchet (as Harlow's dissent urged), would officers be deterred from legitimate policing? Empirical evidence from pre-Harlow era and state systems without qualified immunity (Colorado post-2020) suggests no. If the coordination function is empirically false, the doctrine is pure snare.",
+      "impact": "If coordination is a cover story, the claimed_type snare is structurally correct and the protective_scaffold_reading is a false framing. If coordination is real but extractive, the type is tangled_rope. The current metrics (extraction 0.92, theater 0.12) assume the former.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the doctrine's nominal coordination function is genuine or fabricated."
+    },
+    {
+      "id": "state_abrogation_viability",
+      "question": "Can state-level abrogation of qualified immunity (Colorado, New Mexico, Connecticut) meaningfully reduce extraction for victims in those states, or does federal qualified immunity reassert itself through removal jurisdiction and §1983 preemption?",
+      "resolution_mechanism": "Track §1983 filing outcomes in states that have enacted state-law causes of action with qualified immunity abrogation. Measure: (1) removal rate to federal court, (2) federal court application of federal qualified immunity to state claims, (3) verdict/settlement differential. If federal courts apply federal immunity to state claims via supplemental jurisdiction or preemption, state abrogation is structurally circumvented.",
+      "impact": "If state abrogation is effective, accessibility_collapse is lower than 0.78 for victims in those states (creating a spatial scope split). If circumvented, the national constraint holds and state action is theatrical. This affects whether the constraint is a single national snare or a fragmented system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state legislative action creates genuine exit paths or is structurally nullified."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "municipal_liability_monell_barrier",
+      "police_union_collective_bargaining_shield",
+      "civil_rights_remedy_exhaustion_requirements",
+      "federal_court_abstention_doctrines"
+    ],
+    "dual_formulation_note": "This reading (accountability_void) and its siblings (protective_scaffold, constitutional_fidelity) form a constraint family decomposing the qualified_immunity_doctrine kernel. The accountability_void_reading has ε≈0.92 (snare); the protective_scaffold_reading would have ε≈0.30 (scaffold, coordination function genuine but transitional); the constitutional_fidelity_reading would have ε≈0.0 (mountain, the doctrine is illegitimate and should not exist — but as a constraint on judicial behavior, it extracts from the Court's legitimacy). The ε values differ by a wide margin because they measure different structural realities: the extraction machine as it operates, the coordination function as it is claimed, and the legitimacy deficit as it corrodes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "critical",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "municipal_liability_monell_barrier",
+      "police_union_collective_bargaining_shield"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "harlow_objective_immunity_framework",
+    "drift_state": {
+      "moment": "contemporary_qualified_immunity_regime",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "protective_scaffold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_fidelity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "clearly_established_standard_is_extraction_mechanism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "judicial_fabrication_of_immunity_lacks_statutory_authorization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "deterrence_justification_empirically_falsified",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "reading_acquisition_mechanism__phonics_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-11",
+    "status": "ACTIVE",
+    "story_uid": "3854b3a7-dd90-4084-b676-d57d062d3092"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.52,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Systematic Phonics Foundational Instruction Requirement",
+    "topic_domain": "educational/cognitive-science/pedagogy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "struggling_readers",
+      "typical_developing_readers",
+      "curriculum_publishers"
+    ],
+    "victims": [
+      "classroom_teachers",
+      "school_district_administrators"
+    ],
+    "vindicated_propositions": [
+      "simple_view_of_reading",
+      "national_reading_panel_findings"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading (phonics_reading) of the kernel reading_acquisition_mechanism; how would instantiating a sibling reading (whole_language_reading, balanced_literacy_reading) change the structural picture?",
+      "resolution_mechanism": "Corpus-level comparison across the constraint family: each sibling file carries its own epsilon, beneficiary/victim structure, and enforcement profile; disagreement is located in the necessity claim (whether explicit systematic grapheme-phoneme instruction is foundational or emergent/incidental).",
+      "impact": "Under whole_language_reading the mandate itself becomes the extractive object (imposed method suppressing the endorsed one) and the beneficiary set inverts; under balanced_literacy_reading the enforcement burden softens and the victim set narrows. This file's classification holds only under this reading's premises.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "necessity_universality",
+      "question": "Is explicit systematic grapheme-phoneme instruction necessary for every child, or necessary for reliable acquisition at population scale while some children acquire decoding through exposure alone?",
+      "resolution_mechanism": "Longitudinal item-level studies crossing instructional dosage with learner profile (home literacy environment, phonological awareness at entry): if a identifiable subpopulation reaches functional decoding with negligible explicit code instruction, the necessity claim is scale-relative rather than universal.",
+      "impact": "If necessity is scale-relative, the universal mandate imposes deadweight instructional time on the acquiring subpopulation and effective extraction at the typical-reader seat is higher than modeled; if necessity is universal, the modeled benefit understates the arrangement's value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the foundational-instruction requirement binds all learners or only the population reliably."
+    },
+    {
+      "id": "veteran_teacher_identity_lock",
+      "question": "Is the measured teacher-side resistance structural (compliance burden, monitoring load, lost planning autonomy) or internalized (professional identity fused with meaning-first methods acquired during training)?",
+      "resolution_mechanism": "Post-transition attitude and practice trajectories of teacher cohorts trained before versus after the mandates: if resistance persists undiminished in classrooms with full resource support and visible student gains, the internalized component dominates.",
+      "impact": "An internalized component predicts informal persistence of meaning-first practice after formal repeal and a longer decay tail for the suppression series; a purely structural component predicts rapid decay once compliance burdens are eased.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized mechanism behind teacher-side resistance."
+    },
+    {
+      "id": "vendor_rent_share",
+      "question": "What share of mandated program spending is coordination value (materials, training, screening tools that would be bought anyway) versus premium captured because approval lists narrow the eligible vendor set?",
+      "resolution_mechanism": "Procurement audits comparing pricing for approved-list products against comparable unlisted products, and lobbying-expenditure records correlated with list composition changes.",
+      "impact": "A high rent share would raise effective extraction at the district and taxpayer seats, strengthen the case that the receipt surface concentrates in the publisher seat, and push per-seat computation at payer seats further toward the extractive end.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Rent-versus-value split inside mandated program procurement."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_education_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Write and administer the instructional standards: statutes requiring systematic phonics, approved instructional-materials lists, screening and progress-monitoring schedules, and teacher-preparation accreditation rules. They respond to legislative sessions, advocacy campaigns, and assessment results; they can revise the approved list or the required sequence, but cannot abandon standards-setting altogether without statutory change."
+    },
+    {
+      "name": "curriculum_publishers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develop and sell structured literacy programs, decodable text series, assessment platforms, and training packages that districts purchase to demonstrate compliance. Product lines pivot quickly toward whatever the approved lists require; the same firms previously sold meaning-first and integrated materials and will sell whatever the next consensus demands."
+    },
+    {
+      "name": "classroom_teachers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Deliver daily lessons from a prescribed scope-and-sequence, complete required training modules, and document progress-monitoring data. Novice teachers report gaining a concrete method their preparation programs never supplied; veterans trained in meaning-first approaches report losing instructional judgment accumulated over careers. Compliance is monitored through walkthroughs and data dashboards; opting out risks evaluation consequences, and leaving the profession is the main exit."
+    },
+    {
+      "name": "school_district_administrators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Purchase the mandated materials and training within fixed budgets, schedule screening windows, and answer to school boards and local taxpayers for the spending. They choose among approved vendors but not whether to buy, and they absorb the recurring license and retraining costs whenever the approved list changes."
+    },
+    {
+      "name": "struggling_readers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children who do not pick up decoding incidentally — disproportionately from homes with fewer books or less adult reading time, and including most children with dyslexia. They receive daily small-step code instruction, decodable practice, and frequent screening; before such instruction reached their classrooms, their typical trajectory was falling further behind each year with no route around the teacher they were assigned."
+    },
+    {
+      "name": "typical_developing_readers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children who would likely crack the code under almost any method. They move through the same sequence, often consolidating faster and spelling more accurately, while some instructional minutes go to code work they may not have needed; they cannot choose their curriculum and mostly experience the sequence as ordinary school."
+    },
+    {
+      "name": "dyslexia_advocacy_families",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parent networks organized after watching children fail under meaning-first instruction despite intact intelligence and effort. They lobby legislators, testify at hearings, and supply much of the political pressure behind screening mandates and approved-list laws; their children are the population the screening catches earliest."
+    },
+    {
+      "name": "whole_language_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Teacher-education faculty, authors, and consultants whose careers and scholarly identities are built on meaning-first theory. Legislation and approved lists have removed their methods from most public classrooms; they publish critiques, retain influence in preparation programs and professional networks, and experience the new mandates as the erasure of a life's work rather than a correction."
+    },
+    {
+      "name": "literacy_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Cognitive psychologists, education scientists, and synthesis authors who run the trials and meta-analyses that every camp cites. They hold no instructional duties and sell no product lines; their leverage is evidentiary — effect sizes, replication, and the credibility of the next synthesis."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Standardizes how a large, unevenly trained teaching workforce delivers beginning decoding instruction: a shared scope-and-sequence, common screening checkpoints, and vetted materials mean a child's literacy no longer depends on which classroom they are assigned to, and novice teachers inherit a working method instead of improvising one.",
+    "transfer_function": "Moves pedagogical decision authority and daily instructional time from individual teachers to standardized sequences defined by agencies and program vendors; moves public funds from district budgets to commercial publishers through mandated material adoptions and training contracts; moves decoding skill to children, disproportionately to those who would not otherwise acquire it.",
+    "absent_voices": "Meaning-first theorists and veteran teachers trained in whole-language methods were largely absent from the legislative hearings that produced the mandates; their objections enter mainly through published critiques after the fact. Children, the people the instruction lands on, are present only through proxy testimony from parents and advocacy organizations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the requirement vanished overnight, approved lists would lapse, districts would drift back toward eclectic and meaning-first materials within a few adoption cycles, screening would thin out, and struggling readers would again depend on which teacher they drew; the structured-literacy product market would contract sharply and teacher-preparation syllabi would diverge again.",
+    "founding_problem": "Mass reading failure: for decades a large minority of children — concentrated among the poor — left elementary school unable to read reliably, while national panels and syntheses documented a widening gap between how reading was taught (immersion in authentic text, guessing from context and pictures) and what laboratory and classroom evidence indicated about how the skill is actually acquired.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: national and international assessments continue to document persistent reading failure; developmental and neuroimaging research on dyslexia attests the decoding deficit the arrangement targets; independent syntheses (the National Reading Panel, the What Works Clearinghouse, the Education Endowment Foundation toolkit) attest the efficacy claim. No serious party outside the arrangement disputes that reading failure exists; the live dispute is over cause and remedy."
+  },
+  "gain_flow": "curriculum_publishers",
+  "fixing_cost": "cheap",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "whole_language_reading",
+      "balanced_literacy_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the reading wars' covers three structurally distinct arrangements, decomposed per the epsilon-invariance principle into one kernel with three readings: phonics_reading (this file), whole_language_reading, and balanced_literacy_reading. Each carries its own epsilon, beneficiary/victim structure, and enforcement profile; they are linked here as a constraint family. The upstream/downstream structure runs through the shared evidence base: the syntheses this reading cites are the same syntheses the siblings must answer to, so movement in the evidentiary layer propagates to all three files."
+  },
+  "commentary": {
+    "narrative_context": "Across many jurisdictions, statute and curriculum policy now require that beginning reading instruction include explicit, systematic instruction in grapheme-phoneme correspondence as a foundational skill — implemented through defined scope-and-sequence documents, universal screening, progress-monitoring schedules, approved instructional-materials lists, and teacher-preparation requirements. The arrangement solves a real coordination problem (workforce-wide instructional reliability for a skill most adults assume is automatic) while simultaneously channeling procurement toward a narrowed vendor set and transferring pedagogical discretion from experienced teachers to standardized programs. KEY AGENTS (by structural relationship): - state_education_agencies: agenda setter (institutional/constrained) — writes and enforces the requirement - curriculum_publishers: primary commercial beneficiary (powerful/arbitrage) — receives mandated program spending - classroom_teachers: primary payer (organized/constrained) — bears discretion and labor costs, with offsetting gains for novices - school_district_administrators: payer (organized/constrained) — absorbs procurement and retraining costs - struggling_readers: principal intended beneficiary (powerless/trapped) - typical_developing_readers: near-symmetric seat (powerless/trapped) - dyslexia_advocacy_families: beneficiary-agenda-setter hybrid (organized/constrained) - whole_language_advocates: excluded seat (institutional/identity_locked) - literacy_researchers: analytical observer (institutional/analytical)",
+    "logic_rationale": "Extraction is moderate (0.42 at interval end): the dominant flow is genuine coordination value delivered to children, but two real extractions ride the same structure — budget premiums captured because approval lists narrow eligible vendors, and pedagogical discretion transferred from experienced teachers to standardized programs. Suppression (0.52) is authored as a raw structural property, unscaled by power or scope (only extractiveness is scaled downstream by directionality and scope): the enforcement machinery — statutes, approved lists, funding conditionality, monitored compliance — is real and it does displace the rival pedagogy, but exits persist (private, tutoring, homeschool routes; balanced literacy survives in modified form), so suppression sits mid-range rather than high. Theater ratio is low (0.18): the instruction does what it claims where implemented — decoding outcomes improve — though performative compliance (materials purchased, dashboards populated, pacing guides followed nominally) grows with enforcement intensity. Accessibility collapse (0.55): once the evidence base is understood, meaning-first-only positions become hard to sustain publicly, yet hybrid forms persist, so alternatives are partly but not completely collapsed. Resistance (0.48): organized pushback from teacher-education faculties, portions of the teaching force, and professional networks defending meaning-first practice. The temporal series run on one shared grid (t=0,6,12,18,24,30) with all three metrics authored at every point; the trajectories are monotonic ratchets, not cycles — enforcement capacity built up steadily as legislation spread, with extraction and theater following. Claim and metrics are independent authored facts: tangled_rope is my structural claim from this seat; the engine computes per-seat types from the data.",
+    "perspectival_gap": "The seats should compute differently. From the agency seat the arrangement is standards administration responding to documented failure; from the publisher seat it is a market; from the struggling-reader seat it is the difference between acquiring literacy and not; from the typical-reader seat it is near-symmetric (modest benefit, modest deadweight time); from the district-administrator seat it is unfunded-mandate procurement; and the teacher seat splits internally — novices experience inherited method as scaffolding while veterans trained in meaning-first approaches experience the same lesson plans as deskilling, with an identity-locked subset for whom compliance violates professional self-concept. The powerless child seats cannot mount direct resistance; their coalition power runs through the organized parent advocacy seat, which is why the political pressure behind the mandates came from parents rather than from the children affected. The engine computes these per-seat classifications from the structural data; nothing here adjudicates them.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation. Struggling_readers sit nearest the beneficiary pole (d near 0.05): full recipients of the arrangement's subsidy, with trapped exit meaning they receive everything the classroom delivers. Typical_developing_readers sit near symmetric (d ~0.45): real decoding consolidation gained, real instructional minutes paid. Curriculum_publishers sit near the beneficiary pole (d ~0.12) with arbitrage-grade exit — they collect the procurement flow and can pivot product lines at will. Classroom_teachers sit target-leaning (d ~0.65): discretion and labor flow away from them through the same structure that hands them a usable method, and their constrained exit keeps them in the paying position. School_district_administrators are similar (d ~0.6) with less offsetting gain. Dyslexia_advocacy_families sit low (d ~0.12) as beneficiaries who also helped build the arrangement. Whole_language_advocates sit near the target pole (d ~0.8): the arrangement's operation displaces their practice and market, and their identity_locked exit means displacement lands as identity injury rather than a relocatable cost. State_education_agencies carry no beneficiary declaration; as agenda setters their position is administrative — they neither consume the subsidy nor bear the transfer, and the engine's fallback governs their seat. Literacy_researchers are analytical and feed no directional arithmetic. No directionality overrides are authored: the role-plus-exit derivation captures the asymmetries, and the available override keys by power atom would misapply across the three distinct institutional seats.",
+    "mandatrophy_analysis": "The founding problem — mass reading failure — is live and independently corroborated, so the mismatch consumer reads status=live against verdict=world_rearranges and finds no zombie signature: the arrangement still performs the function it was built for. The classification guards both directions of mislabeling. Against pure-coordination labeling: the victim declarations (teachers, district administrators) and the concentrated receipt surface (publishers) prevent the rent premium and discretion transfer from being absorbed into 'coordination cost.' Against pure-extraction labeling: the dominant flow remains literacy delivered to children who would otherwise not acquire it, so the arrangement cannot be read as a snare wearing a pedagogical costume. The forward risk is Goodhart drift: as enforcement matures, box-ticking compliance can substitute for instructional function — the theater_ratio series is the tripwire, and a sustained rise past 0.5 would signal drift toward a piton profile (mandate maintained performatively while the function atrophies). Fixing is cheap for the agenda setter — the legal lever is a statutory amendment, already exercised by several states — which distinguishes this arrangement from entrenched structures whose removal cost is prohibitive.",
+    "kernel_context": "This story instantiates the phonics_reading of the kernel reading_acquisition_mechanism — the question of how children come to read and what instruction therefore owes them. Sibling readings: whole_language_reading (decoding skill emerges implicitly from meaningful engagement with authentic texts) and balanced_literacy_reading (integrated practice combining explicit phonics with authentic literature). Under this reading the kernel resolves to a necessity claim: explicit, systematic grapheme-phoneme instruction is the foundation on which reliable reading acquisition rests. The expected structural delta versus siblings: high initial instructional cost (systematic scope-and-sequence, training, materials), low long-term remediation cost, narrowed teacher discretion, and disproportionate benefit to struggling readers. Per the one-reading discipline, sibling content is excluded from this file's epsilon, metrics, and stakeholder structure; the sibling files carry their own classifications, and the committer structure lives in the kernel_reading_instantiation omega."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "systematic_explicit_code_instruction_baseline",
+    "drift_state": {
+      "moment": "contemporary_science_of_reading_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "whole_language_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "balanced_literacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "explicit_systematic_gpc_instruction_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "fidelity_to_scope_and_sequence_over_eclectic_adaptation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

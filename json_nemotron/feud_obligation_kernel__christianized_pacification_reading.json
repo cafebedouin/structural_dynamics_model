@@ -1,0 +1,541 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__christianized_pacification_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-07",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "feud_christianized",
+    "story_uid": "3c597ba6-bdc3-4fd0-9e34-279c1a1ee5e1"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blood-feud obligation under Christianized pacification",
+    "topic_domain": "legal_anthropology/medieval_history/comparative_political_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "church_hierarchy",
+      "royal_courts"
+    ],
+    "victims": [
+      "blood_feud_participants",
+      "kinship_group_members"
+    ],
+    "vindicated_propositions": [
+      "divine_monopoly_on_vengeance",
+      "ecclesiastical_jurisdiction_over_violence",
+      "royal_peace_as_divine_mandate"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the feud_obligation_kernel (christianized_pacification_reading), and how do the sibling readings stateless_coordination_reading and extraction_cycle_reading differ structurally?",
+      "resolution_mechanism": "Comparative structural analysis: stateless_coordination_reading treats feud as self-enforcing coordination (rope-like, low extraction); extraction_cycle_reading treats feud as destructive depletion (snare-like, high extraction). This reading treats feud as violation of divine order requiring active suppression (tangled_rope, coordination+extraction).",
+      "impact": "If the kernel decomposes cleanly into three distinct constraints with stable ε, each gets its own story. If the readings are merely perspectival slices of one constraint, the ε-invariance principle is violated and the framework must treat them as one story with observer-dependent classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural independence of the three declared readings of feud_obligation_kernel"
+    },
+    {
+      "id": "spiritual_peril_as_extraction",
+      "question": "Does the spiritual peril faced by feud participants (eternal damnation, sacramental exclusion) function as extractive leverage for the Church, or is it an independent theological reality that the Church merely declares?",
+      "resolution_mechanism": "Historical analysis of penitential practice: did the Church use feud-related penances as revenue source (commutation fees, pilgrimage levies, land grants)? Did jurisdictions with stronger ecclesiastical courts show higher feud suppression correlated with ecclesiastical enrichment?",
+      "impact": "If spiritual peril is extractive leverage, the Church's beneficiary status is strengthened and χ rises for feud participants. If purely declarative, the Church is a vindicated_proposition beneficiary only, not a material extractor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether spiritual sanctions against feuding function as extraction mechanism for ecclesiastical institutions"
+    },
+    {
+      "id": "royal_church_competition",
+      "question": "Did royal courts and ecclesiastical courts compete or cooperate in suppressing feud violence, and how did this affect the extraction profile?",
+      "resolution_mechanism": "Comparative institutional history: jurisdictions with strong royal courts (England, France) vs. fragmented imperial territories (HRE) vs. ecclesiastical principalities. Did royal courts adopt ecclesiastical anti-feud rhetoric to legitimize their own monopolization of violence?",
+      "impact": "If cooperative, the beneficiary set is unified (church+royal). If competitive, each institution's extraction from feud participants is moderated by the other's competing jurisdiction, potentially lowering effective χ for both.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional relationship between Church and Crown in feud suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1300,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1100,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1200,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1300,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1100,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1300,
+      "value": 0.82
+    }
+  ],
+  "interval": {
+    "start": 500,
+    "end": 1300
+  },
+  "coercion_grid": {
+    "t0": 500,
+    "tn": 1300,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 500,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1300,
+        "value": 0.75
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 500,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1300,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 500,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1300,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 500,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1300,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 500,
+        "value": 0.4
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1300,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 500,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1300,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 500,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1300,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 500,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1300,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 500,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1300,
+        "value": 0.8
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 500,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1300,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 500,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1300,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 500,
+        "value": 0.4
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1300,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 500,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1300,
+        "value": 0.4
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 500,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1300,
+        "value": 0.45
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 500,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1300,
+        "value": 0.5
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 500,
+        "value": 0.5
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1300,
+        "value": 0.42
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the christianized_pacification_reading of the feud_obligation_kernel. The reading holds that blood-feud obligations — kinship-based duties to avenge wrongs through lethal violence — violate divine law's prohibition on private vengeance. Legitimate violence authority resides exclusively with God and is delegated to ecclesiastical institutions (penitential discipline, sacramental gatekeeping) and royal institutions (king's peace, judicial courts). The constraint operates by declaring feud participation a spiritual peril (mortal sin, excommunication risk) while simultaneously offering the only authorized path to legitimate violence resolution through Church and Crown courts. This creates a tangled_rope structure: a genuine coordination function (replacing chaotic private violence with ordered judicial process) fused with asymmetric extraction (ecclesiastical jurisdiction expands via penitential fees, commutations, and jurisdictional claims; royal courts extract fines, forfeitures, and political loyalty from pacified populations).",
+    "key_agents": [
+      "church_hierarchy: Primary beneficiary (institutional/identity_locked) — claims interpretive monopoly on legitimate violence, expands jurisdictional reach through anti-feud canons, collects penitential revenue",
+      "royal_courts: Secondary beneficiary (institutional/arbitrage) — monopolizes violence authority, extracts judicial profits and political submission from pacified populations",
+      "blood_feud_participants: Primary victims (powerless/identity_locked) — face spiritual peril (excommunication, damnation) and legal penalties; exit requires surrendering kin-honor identity",
+      "kinship_group_members: Secondary victims (moderate/identity_locked) — collective liability for feud acts; spiritual and legal sanctions extend to entire kin-group",
+      "local_lords: Ambiguous position (organized/constrained) — lose private justice revenue but gain royal delegation; some resist, some collaborate",
+      "analytical_observer: Observer (analytical/analytical) — sees full structural transformation from stateless coordination to institutionalized extraction"
+    ],
+    "logic_rationale": "The claimed_type is tangled_rope because the constraint genuinely solves a coordination problem (private violence is unpredictable, escalatory, and destroys productive capacity) while simultaneously extracting asymmetric benefits for Church and Crown. Extraction (0.68) is substantial: penitential commutations, judicial fees, forfeited lands, and political loyalty flows to the institutions. Suppression (0.82) is high: the constraint seeks complete elimination of feud violence through spiritual sanctions (excommunication, interdict) and legal penalties (outlawry, execution). Theater_ratio (0.28) is moderate-low: the spiritual justification is sincerely held by the enforcing institutions, but the jurisdictional and revenue benefits are real and pursued. Accessibility_collapse (0.71) is high: once the divine prohibition is accepted, private vengeance becomes conceptually illegitimate, not just illegal. Resistance (0.55) is significant: kinship groups resist surrendering honor-justice for generations; local lords resist centralization.",
+    "perspectival_gap": "From the Church/Crown seat (agenda_setter/beneficiary), the constraint appears as rope: a divinely mandated pacification that brings order. From the feud participant seat (victim/identity_locked), it appears as snare: spiritual terror and legal coercion stripping away the only effective justice they knew. From the local lord seat (ambiguous), it appears as scaffold: a transitional arrangement that centralizes authority they once held. The engine computes these per-seat divergences from the structural data.",
+    "directionality_logic": "Church hierarchy and royal courts are beneficiaries: they gain jurisdictional authority, revenue streams (penitential fees, court profits), and political control. Their exit_options are arbitrage (they can shift between spiritual/secular justification). Blood feud participants and kinship groups are victims: they bear spiritual peril, legal penalties, and loss of autonomous justice. Their exit_options are identity_locked — surrendering feud obligation means surrendering kin-honor identity, which is existentially costly. Local lords are constrained: they lose private justice revenue but may gain royal delegation; exit is constrained by competing institutional pressures.",
+    "mandatrophy_analysis": "The founding problem (stateless violence coordination) was live in the early medieval period but substantially resolved by the high medieval period as royal courts developed functional judicial systems. The constraint persists (mandatrophy) because the institutional beneficiaries (Church, Crown) extract value from maintaining the anti-feud framework even after its coordination function could be served by less extractive means. The spiritual justification becomes a cover for jurisdictional and revenue extraction.",
+    "kernel_context": "This story instantiates the christianized_pacification_reading of feud_obligation_kernel. Sibling readings: stateless_coordination_reading (feud as self-enforcing coordination mechanism in absence of central enforcement — rope-like) and extraction_cycle_reading (feud as destructive depletion cycle preventing territorial consolidation — snare-like). This reading's structural delta: all feud participants enter victim set (spiritual peril); Church enters beneficiary set (interpretive monopoly on legitimate violence, expanded jurisdictional reach); complete suppression sought via penitential discipline."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "feud_obligation_kernel__stateless_coordination_reading",
+      "feud_obligation_kernel__extraction_cycle_reading",
+      "royal_peace_expansion",
+      "ecclesiastical_court_jurisdiction",
+      "penitential_system"
+    ],
+    "dual_formulation_note": "feud_obligation_kernel decomposes into three structurally distinct constraints with different ε values: stateless_coordination_reading (rope, ε≈0.25), extraction_cycle_reading (snare, ε≈0.75), christianized_pacification_reading (tangled_rope, ε≈0.68). The readings share the referent (blood-feud obligations) but disagree on the constraint's coordination/extraction structure. This reading's ε is higher than the coordination reading because it includes institutional extraction; lower than the extraction reading because it retains a genuine coordination function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "church_hierarchy",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Claims divine authority to define legitimate violence; promulgates anti-feud canons (e.g., Lateran councils); operates penitential system that commutes feud-related sins for fees, pilgrimages, or land grants; expands ecclesiastical court jurisdiction over violence cases. Can shift between spiritual and temporal justification. Collects material and jurisdictional benefits from the constraint."
+    },
+    {
+      "name": "royal_courts",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Asserts king's peace as divine mandate; establishes royal courts as sole legitimate venue for violence adjudication; extracts judicial profits (fines, forfeitures, wardships) and political loyalty from pacified populations. Adopts ecclesiastical anti-feud rhetoric to legitimize monopolization of violence. Can shift between divine-right and pragmatic-order justification."
+    },
+    {
+      "name": "blood_feud_participants",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bound by kinship honor to avenge wrongs through lethal violence; now face excommunication, denial of sacraments, eternal damnation rhetoric, and royal outlawry/execution. Exit requires publicly surrendering the feud obligation — which means surrendering kin-honor identity and admitting ancestral duties were sinful. No viable alternative justice system exists locally; royal courts are distant, expensive, and culturally alien."
+    },
+    {
+      "name": "kinship_group_members",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Collective liability for feud acts of any member; entire kin-group faces spiritual sanctions (interdict) and legal penalties (collective fines, land seizure). Group identity is fused with feud obligation — 'we are the people who avenge our own.' Exit requires collective surrender of identity, which is structurally nearly impossible without external coercion or generational collapse."
+    },
+    {
+      "name": "local_lords",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Traditionally held private justice rights (court profits, vengeance mediation fees). Lose these to royal/ecclesiastical courts but may gain delegated royal authority (sheriff, bailiff) or ecclesiastical protection. Caught between kinship obligations to their own kin-groups and institutional pressures from Church/Crown. Some resist centralization violently; others collaborate for office."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structural transformation: a stateless coordination mechanism (feud) being replaced by an institutionalized extraction-coordination hybrid (Church/Crown courts). Observes that the coordination function (predictable violence resolution) is genuine but the extraction layer (jurisdictional monopolies, revenue streams, identity destruction) is asymmetric and persistent beyond the coordination necessity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Replaces unpredictable, escalatory private vengeance with ordered judicial process under divine authority. Provides a single legitimate venue for violence adjudication, standardized penalties, and spiritual assurance that justice aligns with divine will. Solves the coordination problem of 'who may legitimately kill whom' by answering: only God's delegates.",
+    "transfer_function": "Moves three things from feud participants/kinship groups to Church and Crown: (1) jurisdictional authority over violence cases — from kin-groups to courts; (2) material revenue — penitential commutation fees, judicial fines, forfeited lands; (3) political loyalty — submission to royal/ecclesiastical authority as condition of legal personhood.",
+    "absent_voices": "The dead ancestors whose honor the feud obligates the living to avenge — they cannot consent to the surrender of their vengeance. The unborn kin-group members whose identity is being restructured without their input. Rival pagan/customary legal practitioners (brehons, lagmen, thingmen) who are excluded from the new court system. Women in kin-groups who often bore the social cost of feud violence but had no voice in either the feud or its suppression.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Christianized pacification constraint vanished overnight, kinship groups would revert to private vengeance within months — the coordination problem it solved (stateless violence) remains real in structural memory. Royal courts would lose their divine mandate for violence monopoly; ecclesiastical courts would lose jurisdictional basis. The medieval order of 'king's peace under God' would collapse into competing lordships.",
+    "founding_problem": "Early medieval Europe lacked centralized enforcement capacity. Kinship groups filled the vacuum with self-enforcing vengeance obligations that provided deterrence and dispute resolution but at terrible cost: escalatory violence, destruction of productive capacity, impossibility of territorial consolidation, and spiritual danger (from the Church's perspective). The constraint was built to replace kin-justice with divine-justice-administered-by-institutions.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Church attests the problem is still live (human sinfulness requires constant pacification). Royal courts attest the problem is substantially solved (king's peace functions). Historians outside the benefiting parties (e.g., Marxist historians of state formation, anthropologists of stateless societies) attest the coordination problem was real but the institutional solution extracted far beyond coordination necessity. No single corroboration settles it — the founding problem's status is the kernel's contested ground."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "feud_obligation_kernel__stateless_coordination_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "stateless_coordination_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "extraction_cycle_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "vengeance_is_divine_prerogative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "church_holds_keys_to_legitimate_violence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "christian_pacification_mandate",
+    "drift_state": {
+      "moment": "high_medieval_institutionalization",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uif_floor",
+    "story_uid": "d94dc194-0dc0-4c91-9d8e-f6a0c2ed0304"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.15,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Autonomy-Enabling Floor (freedom-floor reading)",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "unpaid_caregivers",
+      "independent_artists",
+      "domestic_abuse_survivors"
+    ],
+    "vindicated_propositions": [
+      "autonomy_precondition_thesis",
+      "voluntary_participation_thesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "This constraint is one reading of the unconditional_income_support kernel (freedom_floor_reading). The sibling dependency_trap_reading reads the same transfers as incentive-distorting subsidy. Where exactly is the structural disagreement located, such that the two readings instantiate different constraints?",
+      "resolution_mechanism": "Long-run panel evidence on the contested parameters: labor-supply and sector-participation elasticities from the Alaska dividend cohorts, the Finnish experiment follow-ups, and multi-year Kenyan cash trials, plus net-incidence tables showing whether any seat is a net loser. The sibling file authors the dependency-trap constraint with its own epsilon and victim set; this file does not hedge across the two.",
+      "impact": "If behavioral distortion dominates and a net-loser seat is established, this reading's rope classification fails toward the sibling's structure; if the behavioral evidence stays minimal, the freedom-floor classification holds. The two files remain separate constraints either way — the disagreement is a parameter dispute between stories, not an observable-selection dial inside one.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Location of the structural disagreement between the freedom-floor and dependency-trap readings of the kernel."
+    },
+    {
+      "id": "pareto_claim_net_contributor_position",
+      "question": "This reading claims no victim seat (Pareto improvement via autonomy). Is the net contributor's compensation claim real — insurance value in shocks, reduced desperate competition for labor, care and health externalities — or is it cover for an uncompensated net outflow?",
+      "resolution_mechanism": "Distributional incidence studies measuring each seat's net position across the full funding-and-payment cycle, combined with willingness-to-accept estimates for the insurance and externality benefits; the Alaska funding fights provide a revealed-preference test of whether net contributors behave as compensated parties.",
+      "impact": "If net contributors are uncompensated, a victim seat exists and the arrangement is coordination plus asymmetric extraction through the same tax-transfer structure — a hybrid, not a pure coordination mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the no-victims Pareto claim survives incidence analysis."
+    },
+    {
+      "id": "funding_source_ambiguity",
+      "question": "How much of the standing arrangement's funding wedge falls on taxable activity versus resource rents? Rent-funded dividends (Alaska's oil-funded payment) extract from a pool no one labored for; broad-tax-funded designs place a visible compulsory wedge on earned income.",
+      "resolution_mechanism": "Decompose the standing arrangements by jurisdiction and funding instrument, and track pending legislation's funding bases separately from its payment levels.",
+      "impact": "Rent-funded variants sit near the low end of the extractiveness range; broad-tax variants carry a heavier wedge and sharpen the net-contributor seat's position, changing the per-seat classifications the engine computes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Funding-base composition of the standing arrangements and its effect on the funding wedge."
+    },
+    {
+      "id": "adequacy_erosion_piton_risk",
+      "question": "If the payment's real value erodes against subsistence costs while the payment itself persists, does the arrangement's autonomy function atrophy into ritual maintenance of a check that no longer floors anything?",
+      "resolution_mechanism": "Real-value series of the transfer against subsistence and median-cost benchmarks; the Alaska formula fights of the mid-2010s are the observed case of adequacy erosion resisted and partially accepted.",
+      "impact": "Sustained erosion would push the standing arrangement toward an inertial, theatrically maintained remnant even under this reading's own lights — the theater_ratio series is the early-warning indicator.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adequacy erosion converts the live floor into a maintained ritual."
+    },
+    {
+      "id": "implementation_path_ambiguity",
+      "question": "This reading instantiates the flat, unconditional design: one payment per adult, no phase-out. Phase-out designs (negative-income-tax forms) embed implicit marginal tax rates in the withdrawal zone that reintroduce conditionality by stealth. Which implementation path does the standing arrangement actually take?",
+      "resolution_mechanism": "Legislative design analysis of enacted and pending schemes: payment uniformity, withdrawal structure, and household versus individual payment units.",
+      "impact": "Adoption of phase-out designs would create an effective-loser seat among withdrawal-zone earners, raise the extractiveness profile, and move the standing arrangement away from this reading's reference frame without any change in headline generosity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Flat-versus-phase-out design ambiguity within this reading's own reference frame."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A periodic cash payment is made to every adult resident, individually, with no means test, no work requirement, and no behavioral condition — funded through progressive taxation and, in the longest-standing case, resource rents. The payment arrives without an application interview, a caseworker, or a eligibility hearing: the administrative gatekeeping that conditional relief requires is absent by design. The standing arrangements this story is about are the ones that actually exist: the Alaska dividend operating since 1982, the Finnish national experiment of 2017-2018 and its follow-ups, and multi-year unconditional cash trials in Kenya — together with their funding bases. The interval 0-40 maps approximately to 1985-2025. The epsilon referent is this standing arrangement assessed by the reading's own lights — the reading's endorsed full-scale design is NOT the referent, and no metric here describes that alternative.\n\nKEY AGENTS (by structural relationship):\n- precarious_workers: primary beneficiary seat (powerless/constrained) — the payment converts desperation-taking into refusable offers\n- unpaid_caregivers: primary beneficiary seat (powerless/trapped) — care work compensated by default instead of penalized\n- independent_artists: beneficiary seat (moderate/identity_locked) — vocation decoupled from survival income\n- domestic_abuse_survivors: primary beneficiary seat (powerless/trapped) — individual payment as exit resource from economic dependence\n- high_income_net_contributors: funding seat (powerful/arbitrage) — largest net wedge, partially returned via the universal payment\n- small_business_employers: dual seat (organized/mobile) — upward wage pressure against stabilized demand\n- national_treasury: agenda setter (institutional/mobile) — sets level, indexation, and funding base; administers disbursement\n- conditional_aid_apparatus: excluded seat (organized/constrained) — the gatekeeping profession the design eliminates by construction\n- welfare_policy_analysts: analytical observer — supplies the external evaluation base",
+    "key_agents": [
+      "precarious_workers: primary beneficiary (powerless/constrained) — bears labor-market desperation the payment removes; cannot exit the tax-and-transfer system but gains refusal power within it",
+      "unpaid_caregivers: primary beneficiary (powerless/trapped) — bound by care obligations; the payment reaches them without requiring them to misrepresent availability for work",
+      "independent_artists: beneficiary (moderate/identity_locked) — vocation-fused; the payment changes the viability of staying, not the decision to stay",
+      "domestic_abuse_survivors: primary beneficiary (powerless/trapped) — the individual, unmonitored payment is the exit resource; the window for exit is crisis-bound",
+      "high_income_net_contributors: funding seat (powerful/arbitrage) — largest net outflow; holds insurance and externality arguments as compensation claim; holds tax-arbitrage exit",
+      "small_business_employers: dual payer/beneficiary (organized/mobile) — pays into the funding base, faces wage pressure, sells into stabilized demand",
+      "national_treasury: agenda setter (institutional/mobile) — legislates and administers; absorbs counter-cyclical fiscal exposure; can restructure at political cost",
+      "conditional_aid_apparatus: excluded (organized/constrained) — the means-testing profession whose discretion the design removes; would argue targeting reaches the desperate better",
+      "welfare_policy_analysts: analytical observer (analytical/analytical) — runs the Alaska, Finland, and Kenya evaluation base from outside the administration"
+    ],
+    "logic_rationale": "Extractiveness 0.28: the funding wedge is compulsory and concentrated on the upper tail, but the universal payment returns purchasing power to the same population, and the behavioral evidence this reading rests on (minimal labor-supply response in the Alaska and Kenya records) keeps the distortion cost low. Suppression 0.15: the arrangement's defining structural feature is the removal of conditional gates — no means test, no sanctions, no caseworker surveillance — so the residual compulsion is the tax itself, priced here as the cost of the insurance. Theater_ratio 0.15: the payment is the function; the ritual share is the annual check ceremony, pilot press cycles, and anniversary politics, which grow slowly as the payment becomes a political symbol. Accessibility_collapse 0.30: rival designs — means-tested aid, negative-income-tax forms, workfare — remain live, partly implemented policy options; the arrangement does not collapse them. Resistance 0.40: real funding fights exist (the Alaska formula battles of the mid-2010s), but universality diffuses opposition since nearly every seat also receives. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is engine-scaled. No suppression_requirement series is authored: enforcement capacity (tax collection plus disbursement) is stable across the interval, and a static enforcement picture belongs to the scalar, not to a manufactured trajectory. Both tracked series run on one shared six-point grid so every metric is authored at every examined time point.",
+    "perspectival_gap": "The seats compute differently by construction. From the beneficiary seats the arrangement is experienced as autonomy: the caregiver reads the payment as compensation finally arriving by default; the abuse survivor reads it as an exit resource no abuser can jointly claim; the precarious worker reads it as the difference between refusing and accepting a dangerous shift. From the funding seat the same structure is experienced as a compulsory wedge partially returned — the net contributor's position is genuinely dual, which is why the override pins that seat above symmetric rather than at the beneficiary end the no-victims declaration would otherwise imply. The treasury seat is pass-through: it raises and disburses, retaining only overhead, and bears the counter-cyclical exposure. The artist seat is identity-locked to the vocation, not to the arrangement — exit from the field is not a live option under any design, so that seat reads the payment purely as viability. The engine computes these per-seat classifications from the structural data; the authored rope claim does not adjudicate them.",
+    "directionality_logic": "The four declared beneficiary seats derive low directionality from the beneficiary declarations — the payment subsidizes them, and for the trapped seats (caregivers, abuse survivors) the subsidy is deepest because their exit options are worst. No victim seat is declared: the reading's Pareto claim is that the funding wedge is compensated by insurance value and externality benefits even for its largest payers. Three overrides are needed precisely because the derivation cannot see funding burden in the absence of victim declarations: high_income_net_contributors (powerful) would derive near the beneficiary end, but they bear the largest net outflow — pinned at 0.60, above symmetric; small_business_employers (organized) pay into the base but sell into stabilized demand — pinned at 0.55; national_treasury (institutional) is pass-through administration — pinned at 0.50. Spatial scope is national for the standing arrangements, giving moderate scope amplification of the funding wedge.",
+    "mandatrophy_analysis": "The founding problem is live: labor-market desperation, uncompensated care, vocation-destroying income volatility, and economically enforced relationship dependence all persist, and market shocks recur on schedule. The status is corroborated from outside the benefiting parties — the academic evaluation base (Alaska ISER dividend studies, the Finnish evaluation consortium, the Kenyan long-run trials) attests both the problem and the payment's measured effects, and even critics of the design concede the desperation and stigma it targets exist while disputing the cure. The rope classification prevents the two mislabelings this arrangement attracts: reading the transfers as pure subsidy-for-idleness ignores the live coordination function (risk pooled once, universally, instead of per-case means-tested assessment); reading them as self-sustaining ignores the compulsory funding machinery that requires active enforcement. The live mandatrophy risk runs toward decay rather than capture: if adequacy erodes while the payment persists, the arrangement drifts toward a theatrically maintained check whose floor function has atrophied — the theater_ratio series and the adequacy omega are the tracking instruments for exactly that drift.",
+    "kernel_context": "This constraint instantiates the freedom_floor_reading of the unconditional_income_support kernel: the arrangement read as an autonomy-enabling floor that removes coercion from labor-market participation, dissolves the stigma machinery of conditional relief, and insures against market shocks. The sibling readings — dependency_trap_reading (the same transfers read as incentive-distorting subsidy with upward redistribution) and universality_paradox_reading (cross-ideological appeal masking incompatible implementation paths) — are separate constraint files with their own epsilon values, beneficiary/victim structures, and classifications; this file carries one stable epsilon over one referent and does not hedge across readings. The disagreement with the dependency-trap sibling is located in the behavioral-response parameter and the net-incidence table (see omega kernel_reading_disagreement_location); the relation to the universality-paradox sibling is structural pressure rather than rivalry — the cross-ideological appeal this reading generates is the material that sibling analyzes. Reading relations and axioms are declared in cs_structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__dependency_trap_reading",
+      "unconditional_income_support__universality_paradox_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'unconditional income support' covers three structurally distinct claims about the same transfers, decomposed per the epsilon-invariance principle into a three-story kernel family. This file is the freedom-floor reading: no victim seat claimed, moderate extractiveness, rope. The dependency_trap_reading file instantiates the incentive-distortion claim (victim seat: net contributors and crowded-out targeted-aid recipients; higher extractiveness). The universality_paradox_reading file instantiates the implementation-path claim (the dispute located in design convergence rather than behavioral response). Each story links to the other two; the upstream freedom-floor reading supplies the cross-ideological appeal that the paradox reading analyzes, and the dependency-trap reading is the standing rival characterization whose empirical parameters this file's omegas track."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.6
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work unstable low-wage jobs with irregular hours and thin savings. The periodic unconditional payment arrives regardless of employment status, so declining a dangerous or demeaning shift no longer means missing rent. They continue to pay sales and payroll taxes into the funding base, so their net position is modestly positive. Leaving the national tax-and-transfer system is not realistic; what changes for them is the power to say no to individual employers."
+    },
+    {
+      "name": "unpaid_caregivers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Provide full-time care for children or aging relatives outside paid employment. Means-tested programs have historically treated them as work-ready and penalized the care they perform; an unconditional payment compensates care by default and arrives without an application interview. Their days are bound by care obligations they will not abandon, so their practical options run through the payment rather than around it."
+    },
+    {
+      "name": "independent_artists",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Earn volatile project income in fields with long unpaid apprenticeships. The payment covers the gap years that would otherwise force a choice between the vocation and survival work; they also pay taxes in their good years. Their attachment to the vocation is constitutive — they would not leave the field under any payment design — so what the payment changes is the viability of staying, not the decision to stay."
+    },
+    {
+      "name": "domestic_abuse_survivors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face economic dependence on a partner or family member as the practical barrier to leaving. An individual payment, paid to each adult rather than to households, provides money an abuser cannot jointly claim or monitor through a caseworker. The window in which escape is possible is short and crisis-bound, which makes the timing and individuality of the payment matter more than its long-run size."
+    },
+    {
+      "name": "high_income_net_contributors",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Pay the largest net share of the funding through progressive income and capital taxation while receiving the same flat payment as everyone else — a substantial net outflow. They hold the insurance argument as their compensation claim: the payment protects their own downside in shocks, and a population that cannot be starved into any job competes less desperately for their labor and their neighborhoods. Income restructuring and relocation to lower-tax jurisdictions are live options, which limits how much of the funding burden is actually collectable."
+    },
+    {
+      "name": "small_business_employers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Contribute payroll and business taxes to the funding base while facing upward wage pressure as employees' ability to refuse bad offers rises. They also sell into a population with stabilized purchasing power and hire from a workforce that can afford training and health. Relocation, automation, and restructuring are available to them, so the wage pressure operates as a price signal rather than a bind."
+    },
+    {
+      "name": "national_treasury",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legislates the payment's level, indexation, and funding base, and administers disbursement through the tax authority rather than a caseworker apparatus. It absorbs the counter-cyclical exposure: in recessions the payment's cost rises exactly as revenue falls. It can restructure or repeal the design at any budget cycle, at the political cost of taking a payment away from the entire electorate."
+    },
+    {
+      "name": "conditional_aid_apparatus",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The professional strata — caseworkers, means-testing administrators, targeted-aid organizations — whose gatekeeping role an unconditional design eliminates by construction. They are not seated in the design conversations, where unconditionality is framed as the removal of their discretion rather than as a decision affecting them. They would argue that dollars delivered to the non-needy are dollars not delivered to the desperate, and that professional discretion is how aid reaches the hardest cases."
+    },
+    {
+      "name": "welfare_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and institutional researchers who run the evaluation base: long-run dividend studies in Alaska, the Finnish experiment's follow-up analyses, multi-year cash-transfer trials in Kenya. They attest labor-supply, health, and relationship-exit effects from outside the program's administration, and their findings are the main external check on what the payment actually does."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Pools survival risk once, universally, instead of assessing need case by case: every resident's downside is insured by the same mechanism, and relief arrives without verification of deservingness. Removes the need to prove desperation before receiving subsistence.",
+    "transfer_function": "Moves purchasing power from net contributors — concentrated in higher-income households, funded through progressive taxation and in one standing case resource rents — to every adult resident equally as a periodic unconditional payment; the net flow runs downward, with the largest relative gains to those with the least market income.",
+    "absent_voices": "The conditional-aid apparatus — caseworkers, means-testing administrators, targeted-aid organizations — would object that universality spends fiscal capacity on the non-needy and that professional discretion is how aid reaches the desperate; they are absent from the design conversation because the design's premise is the removal of their discretion. Residency-excluded groups (migrants without permanent status) would object to being outside the floor's coverage entirely.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the payment vanished overnight, refusal power would collapse back to desperation: caregivers would be forced into whatever work fits around care or into deeper dependence, abuse exits would close for anyone without independent savings, artists would abandon vocations for survival employment, and precarious workers would lose the ability to wait out a bad labor market. The conditional apparatus would re-expand to fill the gap, reinstating the surveillance and stigma the design removed. The labor market would re-coerce at the bottom within a payment cycle.",
+    "founding_problem": "Decoupling survival from two coupled machines: the labor market's desperation pricing (take any offer or go without) and the conditional-relief apparatus's surveillance-and-stigma gatekeeping (prove deservingness, submit to monitoring, accept the marked status). The design problem was a floor that reached care, vocation, and crisis without passing through either machine.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the academic evaluation base — University of Alaska Anchorage ISER dividend studies, the Finnish government's evaluation consortium for the 2017-18 experiment, and the multi-year Kenyan cash-transfer trials — attests both the persistence of desperation-driven labor acceptance and the measured effects of removing it. Poor-law and welfare-state historiography independently attests the stigma-and-surveillance machinery of conditional relief. Critics of the design, who dispute the cure, nonetheless concede the founding problem exists — the strongest available external corroboration of its liveness."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "universal_adequate_autonomy_floor",
+    "drift_state": {
+      "moment": "post_pilot_evaluation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditionality_removes_market_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "conditional_relief_machinery_generates_stigma",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

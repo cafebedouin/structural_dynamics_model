@@ -1,0 +1,318 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_preparedness_retention__hybrid_reading",
+    "measurement_id_prefix": "prep_ret_hybrid",
+    "story_uid": "8d9bc539-8c59-4ff6-9a41-4886b43927ec",
+    "created_at": "2026-08-20T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.32,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Stratified Preparedness Retention (Hybrid Reading)",
+    "topic_domain": "governance/disaster_preparedness/institutional_memory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "core_technical_institutions",
+      "institutional_continuity_bureaucracy"
+    ],
+    "victims": [
+      "distributed_local_resilience",
+      "peripheral_operational_staff",
+      "citizen_community_response_capacity"
+    ],
+    "vindicated_propositions": [
+      "specialized_expertise_preservation_doctrine",
+      "centralized_command_continuity_axiom"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Is this constraint one reading (hybrid) of the contested kernel 'preparedness_retention', distinct from competence_reading and husk_reading?",
+      "resolution_mechanism": "Cross-reading structural comparison: if the three readings produce different ε, different beneficiary/victim structures, and different computed seat types from the same referent, they are structurally distinct constraints linked by network.affects_constraints.",
+      "impact": "Confirms the ε-invariance decomposition: each reading gets its own constraint story with its own classification; the kernel is the committer frame, not a single constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Validates that hybrid_reading is a separate constraint story from its siblings."
+    },
+    {
+      "id": "stratification_boundary",
+      "question": "Where exactly does the boundary lie between 'core technical institutions' that retain live competence and 'peripheral actors' that perform ceremony?",
+      "resolution_mechanism": "Institutional audit mapping drill outcomes, decision authority during incidents, and resource allocation across the Dutch water governance system (Rijkswaterstaat, water boards, municipalities, safety regions).",
+      "impact": "If the boundary is porous (competence diffuses outward), the constraint trends toward competence_reading (rope). If the boundary is impermeable (ceremony fully substitutes for competence at periphery), it trends toward husk_reading (piton/snare). The hybrid classification depends on a real, sustained stratification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary porosity between core competence retention and peripheral ceremonial substitution."
+    },
+    {
+      "id": "single_point_of_failure_risk",
+      "question": "Does centralized expertise in Rijkswaterstaat/water boards create an actual single point of failure for distributed resilience, or is there sufficient redundancy?",
+      "resolution_mechanism": "Scenario testing and historical incident analysis: examine near-miss events where core institution capacity was degraded (staff loss, system failure, communication breakdown) and measure peripheral response degradation.",
+      "impact": "If single point of failure is real, the victim class 'distributed_local_resilience' bears structural extraction — the constraint is tangled_rope with genuine asymmetric cost. If redundancy exists, extraction is lower and the constraint may be a degraded rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether centralized technical competence creates structural fragility for the broader system."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of distributed resilience structural (institutional monopoly on authority/resources) or internalized (communities believe only experts can manage water threats)?",
+      "resolution_mechanism": "Post-event community response analysis: if communities self-mobilize effectively when formal systems are overwhelmed, suppression is partly internalized. If they wait for expert instruction even when-delayed, internalization is high.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — communities carry the suppression with them. This would increase the constraint's extractiveness from the victim seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for peripheral resilience."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Dutch water governance system exhibits a dual-track preparedness structure: specialized institutions (Rijkswaterstaat, regional water boards) maintain live technical competence through continuous operational engagement, while broader societal actors (municipalities, safety regions, citizen communities) increasingly perform preparedness through scripted drills, tabletop exercises, and compliance rituals that do not translate into operational capacity. This stratification is not accidental — it is sustained by resource allocation, legal authority structures, and professionalization pathways that concentrate expertise and decision-making in the core institutions. The constraint coordinates genuine flood-risk management (a real coordination problem) while extracting resilience from the periphery: local actors lose the capacity to act independently, becoming dependent on centralized instruction during events. The beneficiary is institutional continuity — the core institutions secure their mandate, funding, and authority. The victim is distributed resilience — the system's overall adaptive capacity degrades as peripheral competence atrophies.",
+    "key_agents": [
+      "core_technical_institutions: Primary beneficiary (institutional/arbitrage) — retains live competence, controls authority and resources",
+      "institutional_continuity_bureaucracy: Primary beneficiary (institutional/generational) — administers the stratified system, secures mandate",
+      "distributed_local_resilience: Primary victim (organized/constrained) — loses operational capacity, becomes dependent on central command",
+      "peripheral_operational_staff: Primary victim (moderate/identity_locked) — performs ceremony, career path depends on compliance not competence",
+      "citizen_community_response_capacity: Primary victim (powerless/trapped) — excluded from meaningful participation, expects rescue",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure"
+    ],
+    "logic_rationale": "Extractiveness (0.42) reflects the asymmetry: core institutions capture authority and resources while peripheral resilience atrophies. The coordination function is real — flood defense requires specialized hydraulic engineering — but the same structure suppresses distributed response capacity. Suppression (0.38) is moderate: the constraint operates through resource allocation, legal monopoly on emergency decision-making, and professional gatekeeping rather than overt coercion. Theater ratio (0.55) is elevated and rising: peripheral drills increasingly simulate competence without preserving it. Accessibility collapse (0.48) is partial — alternatives (community-based response, municipal operational capacity) exist but are starved of resources and authority. Resistance (0.32) is low but measurable: some water boards experiment with citizen participation, and safety regions push for devolved authority. The measurements show a 15-year trajectory of rising extraction and theater, with suppression hardening gradually — consistent with a coordination function being progressively captured by institutional self-preservation.",
+    "perspectival_gap": "From the core institution seat (agenda_setter, institutional power, arbitrage exit), the constraint appears as necessary specialization: expertise is preserved where it matters, ceremony elsewhere is harmless compliance. From the peripheral victim seats (payer, organized/moderate power, constrained/identity_locked exit), the same structure operates as enforced dependency — they bear the cost of atrophied capacity without the authority to rebuild it. The citizen seat (payer, powerless, trapped) experiences pure extraction: they fund the system through taxes and water board levies but have no operational role. The engine computes this divergence from the structural data; the authored claim (tangled_rope) reflects the analytical seat's reading.",
+    "directionality_logic": "Beneficiaries: core_technical_institutions and institutional_continuity_bureaucracy collect authority, funding, and mandate protection — they are structural beneficiaries (d near 0.1-0.2). Victims: distributed_local_resilience, peripheral_operational_staff, and citizen_community_response_capacity bear the cost of atrophied capacity and dependency — they are structural targets (d near 0.7-0.9). The peripheral staff are identity_locked: their professional identity is fused with the ceremonial role, making exit from the frame nearly impossible even though they could technically change jobs. Citizens are trapped: no meaningful exit from the water governance system exists. The analytical observer sits at d=0.5 by definition.",
+    "mandatrophy_analysis": "The founding problem (1953 flood response: centralized hydraulic expertise was necessary and sufficient) is DEAD — modern flood risk is distributed, compound, and requires layered response. The arrangement persists because the core institutions successfully redefined 'preparedness' to mean 'what we do' rather than 'what the system can do.' The mandate has outlived its function: centralization was the solution to a coordination problem that no longer exists in the same form, but the institutional structure that solved it now suppresses the distributed capacity needed for current risks. This is mandatrophy resolved as tangled_rope: coordination function real but captured, extraction asymmetric, enforcement active.",
+    "kernel_context": "This constraint is the hybrid_reading of the contested kernel 'preparedness_retention'. The kernel has three declared readings: competence_reading (preparedness as live exercised knowledge — drills preserve operational capacity), husk_reading (preparedness as memorial performance — drills are rituals lacking live competence), and this hybrid_reading (preparedness is stratified — core institutions retain competence, periphery performs ceremony). The three readings produce different ε values, different beneficiary/victim structures, and different computed classifications from the same empirical referent (the Dutch water governance system). They are linked via network.affects_constraints as a constraint family."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__competence_reading",
+      "preparedness_retention__husk_reading"
+    ],
+    "dual_formulation_note": "This hybrid_reading decomposes the natural-language concept 'preparedness retention' into a structurally distinct claim from its siblings. competence_reading claims the system preserves live competence throughout (ε ≈ 0.15, rope). husk_reading claims the system is entirely ceremonial (ε ≈ 0.65, piton/snare). This reading claims a stratified dual-track structure (ε = 0.42, tangled_rope). The ε values differ because the structural referents differ: competence_reading measures the core only, husk_reading measures the periphery only, hybrid_reading measures the system-level asymmetry. All three stories share kernel_id 'preparedness_retention' and are linked here."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "core_technical_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Rijkswaterstaat and the 21 regional water boards hold the legal mandate, technical expertise, and operational authority for primary flood defense. They conduct live operations (pumping, barrier management, hydraulic modeling) daily. They set preparedness standards, control funding flows, and define what counts as competence. Their exit options are arbitrage-grade: they could restructure but have no incentive to — the system rewards their monopoly."
+    },
+    {
+      "name": "institutional_continuity_bureaucracy",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The policy layers above the operational core (Ministry of Infrastructure and Water Management, provincial executives, national safety region coordination) that translate operational competence into legislative mandate, budget allocations, and international reputation. They benefit from the perception of a world-class system without bearing operational risk. Their careers advance by defending the institutional structure."
+    },
+    {
+      "name": "distributed_local_resilience",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Municipalities, safety regions (veiligheidsregio's), and organized community response teams (brandweer, GHOR, Red Cross) that would be the first operational layer during a flood event. They conduct drills but lack decision authority, real-time data access, and resource control. Their exit is constrained: they can advocate for devolution but cannot act independently during events without legal exposure. They pay in atrophied capacity and dependency."
+    },
+    {
+      "name": "peripheral_operational_staff",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Mid-level staff at water boards, municipalities, and safety regions who execute the drills, write the plans, and attend the exercises. They gain professional status and job security (beneficiary) but their actual operational competence decays because the system rewards compliance with procedure over adaptive capacity (payer). Their identity is fused with the ceremonial role — 'I am a preparedness professional' means 'I run the drills correctly' — making exit from the frame psychologically and professionally costly."
+    },
+    {
+      "name": "citizen_community_response_capacity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Residents in flood-prone areas who have no meaningful role in preparedness beyond 'follow instructions.' They fund the system through taxes and water board levies (waterschapsbelasting) but are structurally excluded from operational participation. During events, they wait for evacuation orders. Their exit is trapped: they cannot leave the floodplain, cannot build independent response capacity, and have no voice in the governance structure."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The analytical seat that sees the full stratified structure: the coordination function at the core, the extraction at the periphery, the rising theater ratio, the hardening suppression. This seat does not collect or pay — it classifies."
+    }
+  ],
+  "gain_flow": "core_technical_institutions",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates flood-risk management across a low-lying delta: hydraulic modeling, barrier operations, pumping station management, dike maintenance, and emergency decision-making are centralized in institutions with the specialized expertise to execute them reliably.",
+    "transfer_function": "Moves operational authority, resource control, and decision-making capacity from distributed local actors (municipalities, safety regions, communities) to core technical institutions (Rijkswaterstaat, water boards), justified as necessary for technical competence but resulting in peripheral atrophy.",
+    "absent_voices": "Citizen communities in floodplains who would demand meaningful participation in preparedness if they understood the dependency trap; municipal leaders who would push for devolved authority if not constrained by liability frameworks; water board staff who would advocate for competence-preserving practices if not identity-locked into ceremonial compliance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stratified structure vanished overnight, core institutions would lose their monopoly on authority and resources; peripheral actors would have to rebuild operational capacity from atrophied foundations (chaotic transition); citizens would face immediate exposure without evacuation systems. The water governance system would reorganize — likely toward a more devolved but initially less competent model. The world rearranges.",
+    "founding_problem": "After the 1953 North Sea flood (1,836 deaths), the Delta Works program centralized hydraulic expertise in Rijkswaterstaat and water boards because fragmented local response had failed catastrophically. The founding problem was: how to guarantee flood defense through centralized, expert-operated infrastructure.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The 1953 flood is historical fact. The Delta Works are completed. Modern flood risk is qualitatively different: compound events (storm surge + river discharge + pluvial flooding), climate non-stationarity, and cascading infrastructure failure require distributed adaptive capacity, not just centralized barrier operations. The Dutch National Water Authority (2023) and multiple independent safety region evaluations (OVV reports 2018, 2021) attest that the current institutional structure is misaligned with current risk — corroboration from outside the core beneficiary institutions."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_is_stratified_by_institutional_tier",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "centralized_expertise_creates_peripheral_fragility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "delta_works_centralized_expertise_model",
+    "drift_state": {
+      "moment": "contemporary_compound_flood_risk_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

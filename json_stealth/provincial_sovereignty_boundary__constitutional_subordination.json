@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__constitutional_subordination",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a32e0f3e-7822-414e-8cfb-7aecb874dd99"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Constitutional Subordination of Provinces — Federal Veto over Exit (constitutional_subordination reading)",
+    "topic_domain": "political economy/federalism/resource governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "federal_government",
+      "have_not_provinces"
+    ],
+    "victims": [
+      "resource_rich_provinces",
+      "quebec_sovereignty_movement",
+      "indigenous_nations"
+    ],
+    "vindicated_propositions": [
+      "federal_spending_power_doctrine",
+      "pogg_national_concern_doctrine",
+      "unilateral_secession_unconstitutionality"
+    ]
+  },
+  "interval": {
+    "start": 1982,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates the constitutional_subordination reading of the contested kernel provincial_sovereignty_boundary. Would the sibling readings reclassify the same standing arrangement — compact_federalism (Confederation as compact among sovereign provinces; residual sovereignty; exit negotiable under duress) computes the equalization flows and the exit veto as extraction from sovereign parties, and resource_sovereignty_primacy (s.92A resource ownership grounds absolute sovereignty; resource control = territorial sovereignty) computes federal climate policy over provincial resources as expropriation? The disagreement is located in a single structural element: the source of provincial authority — constitutional grant versus founding compact versus resource ownership.",
+      "resolution_mechanism": "Author sibling stories from each reading's seat over the identical referent (the standing subordination arrangement), each with its own epsilon, victim set, and claimed type; compare the three computed classifications. The divergence across readings is the measurement; no observable flow can adjudicate it because the readings dispute what the flows ARE.",
+      "impact": "This story's epsilon (0.50) is reading-indexed: the constitutional_subordination seat assesses the flows as legitimate constitutional operation and authors moderate extraction. The same referent assessed from the compact_federalism seat would author epsilon near the snare range; from the resource_sovereignty_primacy seat, high with a different victim set. Classification of the arrangement is therefore kernel-contested by construction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three readings of the provincial sovereignty kernel; epsilon is a property of this reading, not of the topic."
+    },
+    {
+      "id": "union_necessity_contingency",
+      "question": "Is the federal veto over provincial exit a structural necessity of governing a continental, regionally asymmetric economy, or a contingent constitutional choice that alternative federal designs (confederal, treaty-based, secession-permissive) could replace?",
+      "resolution_mechanism": "Comparative federal analysis: stability and redistribution records of exit-locked federations versus exit-permissive unions (devolutionary arrangements, treaty systems with withdrawal clauses), controlling for regional asymmetry.",
+      "impact": "If necessity, part of the measured suppression is the price of the coordination itself and the rope-side reading strengthens; if contingent, the veto is a constructed closure and the extraction-side reading strengthens.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the exit veto is coordination cost or constructed foreclosure."
+    },
+    {
+      "id": "indigenous_sovereignty_exclusion",
+      "question": "Does the arrangement's cost-bearing structure extend to Indigenous nations — whose prior sovereignty the constitution-sourcing logic locates nowhere, on territory much of which was never ceded — and how much of the measured extraction is borne by seats absent from the constitutional table where the boundary is contested?",
+      "resolution_mechanism": "Section 35 jurisprudence trajectory and treaty-federalism litigation: if courts come to recognize prior Indigenous sovereignty as limiting both federal and provincial authority, the victim set widens and epsilon rises; the current story measures only seats present in the contest.",
+      "impact": "Recognition would reclassify the arrangement's victim structure and raise effective extraction beyond what this reading's own lights can see; non-recognition leaves the current victim set as measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extraction borne by a structurally excluded seat, invisible to the contest's participants."
+    },
+    {
+      "id": "exit_foreclosure_depth",
+      "question": "How deep is the exit foreclosure in fact: absolute (the federal veto means no exit under any circumstances) or procedural (a clear majority on a clear question obliges negotiation, so exit remains possible through federal consent)?",
+      "resolution_mechanism": "An actual post-clear-vote secession negotiation — the trigger the Clarity Act defines. The 1995 referendum (50.6% No) approached it; only a negotiation attempt would reveal whether consent is withholdable at will or genuinely obliged.",
+      "impact": "Procedural foreclosure lowers the effective suppression and supports the coordination reading; absolute foreclosure raises suppression and supports the extraction reading. The Secession Reference's text supports the procedural reading; federal behavior under duress is untested.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the veto is absolute or a negotiation gate."
+    },
+    {
+      "id": "provincial_compliance_mechanism",
+      "question": "Is provincial acquiescence in the subordination arrangement maintained by structural enforcement (the amending formula, fiscal dependency, judicial enforcement) or by internalized identity (provincial political cultures — Quebec sovereignty identity, western grievance identity — that reproduce the contest as constitutive of the province's self-conception)?",
+      "resolution_mechanism": "Post-accommodation trajectory: after each concession episode (open federalism circa 2007, fiscal-balance adjustments), does contest intensity resume at prior levels within a political cycle (identity-reproduced) or decay durably (structurally maintained)?",
+      "impact": "If internalized, suppression persists through accommodation cycles and the oscillating measurement series is itself part of the arrangement's hold — intermittent concession reproduces consent while the underlying foreclosure never moves; if structural, suppression tracks enforcement capacity and accommodation should durably lower it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized maintenance of provincial compliance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "provincial_sovereignty_boundary__compact_federalism",
+      "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+      "equalization_fiscal_transfer_regime",
+      "federal_carbon_pricing_backstop",
+      "clarity_act_secession_gatekeeping"
+    ],
+    "dual_formulation_note": "The colloquial label 'provincial sovereignty' decomposes into three structurally distinct constraints — one per reading of the provincial_sovereignty_boundary kernel — each with its own epsilon, victim set, and classification, per the epsilon-invariance principle. This story is the constitutional_subordination member. The constitutional text is upstream in empirical confidence and is cited as evidence by all three readings for incompatible conclusions; the sibling stories should link back via affects_constraints so the family is closed."
+  },
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Holds the amendment gate over any change to the provincial-federal boundary, appoints the judges who adjudicate it, and wrote the Clarity Act's terms for any secession negotiation. Collects the arrangement's structural gains: territorial integrity without provincial consent rights, fiscal leverage through conditional transfers, and policy authority in climate and environmental assessment. Exit from the arrangement is meaningless from its seat — it is the arrangement's author and residual sovereign, able to restructure its own instruments at will."
+    },
+    {
+      "name": "have_not_provinces",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Receive equalization transfers that close the gap between their fiscal capacity and the national average; several operate on annual budgets that depend on the flows. The subordination reading legitimizes the federal spending power that sustains them. Leaving the federation would mean forfeiting the transfers their fiscal models rest on, so exit is not a live option from where they stand regardless of its legal status."
+    },
+    {
+      "name": "resource_rich_provinces",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Net fiscal contributors whose resource revenues are drawn into the federal tax base that funds equalization, and whose resource development is now bounded by federal climate policy upheld as a matter of national concern. They also draw real benefit from the common market, pooled debt, and defense the union provides. Their only exit path runs through the negotiation procedure the arrangement itself defines — unilateral departure is foreclosed, so leverage must be exercised politically from inside, through provincial statutes, referenda, and litigation."
+    },
+    {
+      "name": "quebec_sovereignty_movement",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "A mass movement spanning parties and generations whose project — provincial exit — is the precise act the arrangement forecloses. It has twice taken the question to a referendum (1980, 1995, the latter losing by half a point) and forced the reference case that now defines the terms of any exit. The movement cannot abandon the exit project without ceasing to be itself; it contests from inside a framework that holds its goal constitutionally null without federal consent."
+    },
+    {
+      "name": "supreme_court_of_canada",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates the boundary through reference jurisdiction: it authored the Secession Reference's terms (unilateral exit unconstitutional; negotiation obligatory on a clear vote and clear question) and struck down the federal Impact Assessment Act's designated-projects scheme as beyond federal competence. It neither collects the arrangement's gains nor bears its costs; its own authority is constituted by the framework it polices, and its interpretive moves absorb drift without formal amendment."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Hold prior occupancy and treaty relationships across the territory both levels of government claim to govern. Section 35 recognizes Aboriginal and treaty rights, but the sovereignty contest proceeds between federal and provincial governments with no Indigenous seat at the constitutional table, and the constitution-sourcing logic locates all governing authority in 1867/1982 rather than in prior Indigenous sovereignty. They cannot exit the framework that overrides their governance authority, and much of the landmass was never ceded by treaty."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Holds together a continental federation of regionally asymmetric provinces: a single currency and common market, pooled defense and debt, interprovincial redistribution that stabilizes the union, and a supreme adjudicator for cross-boundary disputes. Prevents destructive unilateral fragmentation and preserves a common economic space across regions of very unequal fiscal capacity.",
+    "transfer_function": "Moves fiscal capacity from high-capacity provinces through the federal tax base to lower-capacity provinces (equalization); moves policy authority over climate and environmental assessment from provinces to the federation; and moves the exit decision itself from provinces to the federal gate — territory cannot leave without federal consent.",
+    "absent_voices": "Indigenous nations would object that the arrangement sources all governing authority in the 1867/1982 constitution while much of the territory was never ceded — the sovereignty conversation excludes the peoples with the longest-standing claim to it. Municipal governments, creatures of provinces under the same logic, have no seat either. Both are absent from the table where the boundary is set, and the arrangement's cost structure falls partly on them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would leave provinces free to exit unilaterally: the Quebec sovereignty question reopens immediately, resource provinces would contest federal climate authority with no adjudicated boundary, and the equalization architecture loses its constitutional footing — the union would face fragmentation pressure within a single political cycle.",
+    "founding_problem": "The 1860s problem of uniting fragmented British North American colonies into a polity able to finance a continental railway, defend itself, and avoid absorption into the United States — solved by designing a strong central government with residual powers and provinces as subordinate jurisdictions rather than sovereign compact parties.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The specific founding problems (colonial defense, railway finance) are dead — any post-1945 political history attests that from outside the benefiting parties. Constitutional historians working from the London Resolutions and Macdonald's correspondence attest the centralist founding design this reading claims. But Quebec's dissenting tradition, documented from the 1865 Confederation debates onward, attests that the founding terms were contested as a compact from the start, and Indigenous legal scholarship attests the founding excluded prior sovereignty entirely. No outside source attests this reading's framing of the problem as settled; the status is contested, not dead and not cleanly live."
+  },
+  "gain_flow": "federal_government",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "compact_federalism",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "resource_sovereignty_primacy",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "provinces_are_constitutional_creatures",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "unilateral_secession_constitutionally_null",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "one_and_indivisible_federal_framework",
+    "drift_state": {
+      "moment": "post_secession_reference_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "commentary": {
+    "narrative_context": "The constitutional subordination reading of Canadian federalism: provinces hold no sovereignty prior to or independent of the Constitution Acts — they are creatures of the federal framework — and territorial exit requires federal consent; unilaterally, secession is constitutional nullity (Secession Reference 1998; Clarity Act 2000). This story instantiates ONE reading of the contested kernel provincial_sovereignty_boundary. The compact_federalism reading (provinces as sovereign compact parties retaining residual sovereignty) and the resource_sovereignty_primacy reading (s.92A resource ownership grounds absolute sovereignty) are separate constraints authored from other seats; they are not folded into this file, per the epsilon-invariance discipline. The epsilon referent is the standing subordination arrangement itself, assessed by this reading's own lights: the reading sees the arrangement as legitimate constitutional operation, so its authored epsilon is moderate — the flows and foreclosures are real, but this seat deems them constitutionally justified. The claim/metric independence rule holds: claimed_type tangled_rope is my structural judgment of the arrangement; the metrics are my descriptive judgment; the engine computes per-seat classifications from the structural data, and divergence between claim and computed type is signal, not error.",
+    "key_agents": [
+      "federal_government: agenda-setter and chief beneficiary (institutional/arbitrage) — holds the amendment gate, enforces the exit veto, collects the arrangement's structural gains",
+      "have_not_provinces: beneficiary (organized/trapped) — equalization recipients whose fiscal models depend on the federal spending power this reading legitimizes",
+      "resource_rich_provinces: primary payer (powerful/constrained) — net contributors whose resource authority is bounded by federal climate policy; exit only through the arrangement's own negotiation procedure",
+      "quebec_sovereignty_movement: payer (organized/identity_locked) — the foreclosed exit project itself; two referendums, one lost by half a point",
+      "supreme_court_of_canada: enforcing interpreter (institutional/analytical) — polices the boundary; neither collects nor pays",
+      "indigenous_nations: excluded cost-bearer (organized/trapped) — prior sovereignty claims overridden by the constitution-sourcing logic; no seat at the constitutional table"
+    ],
+    "logic_rationale": "Extraction is moderate (0.50 at interval end, reading-indexed): equalization moves tens of billions annually through the federal tax base, federal climate policy bounds resource development worth billions, and the exit option is foreclosed — but this reading assesses those flows as legitimate constitutional operation, and the Secession Reference's negotiation obligation keeps exit procedurally open. Suppression (0.55) is structural rather than violent: the veto operates through the amending formula, judicial enforcement, and the Clarity Act, while referendums and provincial sovereignty statutes remain legal. Theater is low-moderate (0.25): the machinery genuinely adjudicates and transfers; the performative share is symbolic union maintenance and the Clarity Act's question-certification ritual. Accessibility collapse is 0.5: the unilateral-exit alternative collapses almost completely, but renegotiation, asymmetric federalism, and judicial contest remain live. Resistance is 0.65: sustained, institutionalized, and cyclical. The measurement series documents an accommodation-assertion cycle rather than monotonic drift: crisis (1995 referendum) -> formalization (1998 Secession Reference, 2000 Clarity Act) -> accommodation (open federalism circa 2007) -> renewed assertion (carbon pricing upheld 2021; provincial sovereignty statutes) -> judicial recalibration (Impact Assessment Act struck down in part, 2023). The oscillation is partly the arrangement's hold mechanism itself: intermittent concession resets resistance while the underlying foreclosure never moves. All three tracked metrics share one time grid. Suppression_requirement is tracked because enforcement capacity genuinely changed over the interval (Clarity Act hardening, climate backstop enforcement, then partial judicial constraint) — not merely extraction.",
+    "perspectival_gap": "The agenda-setter seats and the payer seats compute different types from the same structure. From the federal government's seat the arrangement is the coordination it administers: union maintenance, solidarity transfers, national policy capacity. From the resource provinces' seat the same structure is a fiscal drain and a policy ceiling with the exit door welded shut. From the sovereignty movement's seat it is the nullification of a democratic project that twice came to a vote. The have-not provinces' seat sees the subsidy side of the very flows the resource provinces see as extraction. The engine computes this divergence from power, exit options, and declared position; the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: federal_government and have_not_provinces sit near the beneficiary end (low d — the veto and the transfers subsidize them); resource_rich_provinces and quebec_sovereignty_movement sit near the target end (high d — they pay the transfers and bear the foreclosure, the movement compounded by identity lock); indigenous_nations derive high d as victims whose governance authority the constitution-sourcing logic overrides, compounded by trapped exit and continental scope. The Supreme Court is deliberately left to the canonical fallback: it is declared neither beneficiary nor victim because it collects no rents and bears no costs — its authority is constituted by the framework it polices, a near-symmetric enforcement seat. No directionality overrides are used: the derivation from declared structure captures every seat, and an override keyed to the institutional power atom would misplace the federal government alongside the Court.",
+    "mandatrophy_analysis": "The classification guards both failure modes. Reading the arrangement as pure extraction would erase the genuine coordination function — a continental common market, pooled defense and debt, redistribution no province could replicate alone — and would misread the Secession Reference's negotiation obligation as mere cover. Reading it as pure coordination would erase the asymmetry: the same structure that stabilizes the union forecloses the sovereignty movement's project, draws resource revenues into a federal base their earners do not control, and overrides Indigenous governance authority without a seat at the table. Tangled rope holds both halves. On mandate: the 1867 founding mandate (colonial defense, railway finance) is dead, but the arrangement's operative mandate — holding a regionally asymmetric federation together — is live; the constraint transformed its function rather than outliving it, so no mandatrophy resolution is declared. The R5 fields record the founding problem as contested rather than dead: the mismatch consumer should find no dead-mandate-plus-world_rearranges flag here, and that absence is itself the honest measurement.",
+    "kernel_context": "Kernel: provincial_sovereignty_boundary — what grounds provincial authority and whether exit is available. This file instantiates the constitutional_subordination reading: the constitution is the sole source of provincial authority, provinces are creatures of it, and exit requires federal consent. Sibling readings, authored as separate constraints: compact_federalism (Confederation as compact among sovereign provinces; residual sovereignty retained; exit negotiable under duress) and resource_sovereignty_primacy (s.92A resource ownership grounds absolute sovereignty; resource control equals territorial sovereignty). This reading's foundational axiom logically excludes both siblings' core premises within any single framework — hence forecloses relations — while the siblings survive as live positions held by other parties, which is precisely the kernel contest. The reference frame is the one-and-indivisible federal framework of the founding design; the drift state records that practice has substantially departed from its pure form (the Secession Reference's negotiated-consent overlay, expanded provincial autonomy in practice, partial judicial curbs on federal reach), and that the authority structure itself acknowledges the gap by having written the qualification into doctrine."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

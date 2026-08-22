@@ -1,0 +1,349 @@
+{
+  "header": {
+    "constraint_id": "derivative_work_statutory_boundary__hybrid_carveout_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "712c2cce-f7ab-47fc-aa7a-319b05dc76cf"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.7,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Derivative Work Boundary — Commercial Carveout Reading",
+    "topic_domain": "legal/economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "copyright_holders",
+      "licensing_intermediaries",
+      "noncommercial_creators"
+    ],
+    "victims": [
+      "commercial_developers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.7
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This constraint is one reading of the derivative_work_statutory_boundary kernel (reading: hybrid_carveout_reading). How would classification change under the sibling readings enclosure_reading and coordination_reading?",
+      "resolution_mechanism": "Track doctrinal migration: if courts collapse the commerciality condition and restrict the right to fixed, substantially incorporating recastings, the corpus is drifting toward coordination_reading; if courts extend the right to any incorporative use regardless of commerciality, toward enclosure_reading.",
+      "impact": "Under enclosure_reading epsilon rises sharply (every transformative use becomes licensable, victims expand to noncommercial creators) and the type trends toward snare; under coordination_reading epsilon falls (only fixed substantial recastings restricted) and the type trends toward rope. The present moderate-epsilon tangled_rope verdict holds only for this reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame contingency: classification is indexed to the hybrid carveout reading, not the kernel."
+    },
+    {
+      "id": "commerciality_harm_decoupling",
+      "question": "Does commercial status actually predict harm to the exploitation interests the authorization requirement protects?",
+      "resolution_mechanism": "Market-substitution studies across the gray zone: monetized fan works, mod distributions, reaction and commentary formats, sampled music — measuring substitution rates against licensing outcomes.",
+      "impact": "If commerciality and harm are decoupled, the authorization requirement collects fees without serving its incentive rationale and the commercial seat drifts toward pure extraction; if coupled, the coordination half of the structure is confirmed and the tangled_rope reading stabilizes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the commercial/non-commercial trigger tracks the harm the arrangement nominally manages."
+    },
+    {
+      "id": "commercial_line_indeterminacy",
+      "question": "Where exactly does the commercial/non-commercial line sit — ads, tips, patronage, exposure, portfolio-building — and does the indeterminacy itself function as enforcement leverage?",
+      "resolution_mechanism": "Doctrinal survey of decided cases plus platform-policy analysis of takedown patterns against marginally monetized creators.",
+      "impact": "A wide unadministered gray zone means effective suppression exceeds the authored scalar: creators self-censor short of the visible line, so measured suppression understates realized chilling. Narrower line-drawing would lower effective suppression.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary indeterminacy as a suppression amplifier distinct from the scalar metric."
+    },
+    {
+      "id": "selective_enforcement_cycle",
+      "question": "Does enforcement run in waves — crackdowns on marginally commercial fan creators followed by toleration once platforms normalize — and is the oscillation itself part of how compliance is maintained?",
+      "resolution_mechanism": "Time-series of takedown volumes and settlement patterns against fan-commercialization waves (comics, fan fiction anthologies, ROM-hack monetization, reaction-video monetization).",
+      "impact": "If intermittent reinforcement is operating, the flat-to-rising suppression series understates the mechanism: periodic visible enforcement disciplines a much larger population than the enforcement volume alone suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cyclical selective enforcement as a compliance-maintenance mechanism."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the derivative_work_statutory_boundary kernel: the hybrid carveout reading, under which the lawful/unlawful line for transformative reuse of copyrighted expression runs along commercial status — non-commercial transformation is permitted, commercial exploitation requires authorization. Under the epsilon-invariance principle this is a separate constraint from its siblings, not a variant view of one thing: the enclosure_reading (any incorporative use is a derivative preparation) authors a high-epsilon constraint whose victim set includes non-commercial creators; the coordination_reading (only fixed, substantially incorporating recastings are restricted) authors a low-epsilon constraint with almost no extraction from transformative practice. This reading sits between them with a categorical beneficiary split: rights holders and licensing intermediaries collect from the commercial side, non-commercial creators are subsidized by the carveout, and commercial developers bear licensing costs that scale with commerciality rather than with demonstrated harm. The claim/metric gap is deliberate: the reading is CLAIMED as tangled_rope because it plausibly carries both a genuine coordination function (pricing expressive reuse while preserving an open non-commercial commons) and asymmetric extraction (fees keyed to a proxy — commerciality — rather than to substitution), and the authored metrics describe that mixed operation independently; the engine measures the divergence per seat.",
+    "key_agents": [
+      "copyright_holders: Primary beneficiary and enforcement agenda-setter (institutional/arbitrage) — own the catalogs, choose whom to license and whom to sue, collect the authorization revenues",
+      "commercial_developers: Primary target (powerful/constrained) — bear the licensing burden whenever transformative reuse touches commerce",
+      "noncommercial_creators: Carveout beneficiaries (moderate/constrained) — operate inside the permitted zone, bounded by the commercial line they must not cross",
+      "open_source_communities: Split-position actors (moderate/constrained) — mostly subsidized by the carveout, exposed when projects commercialize",
+      "licensing_intermediaries: Secondary beneficiary (organized/mobile) — run the clearance and royalty machinery the authorization requirement feeds",
+      "federal_courts: Administering authority (institutional/analytical) — draw the operative line case by case",
+      "ai_training_developers: Excluded challengers (powerful/arbitrage) — contest the boundary's reach from outside the framework",
+      "downstream_audiences: Diffuse cost-bearers (powerless/mobile) — absorb pass-through costs and lost transformative works"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62 at interval end) because the authorization requirement is keyed to a categorical proxy — commerciality — rather than to demonstrated substitution, so some payers harm no exploitable market while paying anyway, and the fee level is set by bargaining position rather than cost. Suppression (0.70) is a raw structural property, unscaled by power or scope: persistence depends on active machinery — statutory damages, DMCA takedowns, platform Content ID — that keeps marginally commercial creators short of the line; the series rises over the interval as automated enforcement matured. Theater ratio (0.28) is low-moderate: licensing and clearance are real functions performed constantly, but a growing share of enforcement activity defends scope expansion (new formats, longer tails, adjacent media) rather than the adaptation markets the arrangement was built for. Accessibility collapse (0.45) is well below mountain range: exits persist — original creation, public-domain and openly licensed sources, staying non-commercial — but none reaches the same expressive material, so alternatives are partial. Resistance (0.50) is sustained: fair-use litigation, doctrinal scholarship, and platform-policy fights contest the line continuously without displacing it. The measurement series run on one shared time grid (interval 0-30, roughly 1994-2024, anchored at the modern commerciality-conscious era of the doctrine); trajectories are monotonic drift, not cyclical, though omega selective_enforcement_cycle flags possible oscillation beneath the trend.",
+    "perspectival_gap": "The seats compute differently from identical statutory text. From the copyright_holder seat the arrangement is an orderly licensing market it built and polices — coordination with a price attached. From the commercial_developer seat the same structure operates as a toll gate whose charge varies with commercial status rather than with harm, and whose gray zone is administered by threat. From the noncommercial_creator seat it is a protected commons whose value depends entirely on staying on the permitted side of a line that platform monetization keeps moving toward them. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Copyright_holders sit nearest the beneficiary end: they collect the authorization revenues and control the enforcement agenda (d near 0.0). Licensing_intermediaries likewise benefit, with mobile exit into adjacent rights-administration work. Noncommercial_creators are subsidized by the carveout — the constraint grants them a permission they would otherwise lack — placing them near the beneficiary end despite modest power. Commercial_developers are the declared victims with constrained exit (license, redesign, or litigate), which the derivation places near the full-target end; a directionality override pulls the powerful atom down to 0.6 because the largest commercial actors hold cross-licensing portfolios — major studios and publishers both pay authorization fees and collect them, so their net position is payer-but-partial-collector, not pure target. Open_source_communities straddle: predominantly carveout beneficiaries with episodic exposure when projects monetize. Downstream_audiences bear diffuse indirect costs with mobile exit. Ai_training_developers, excluded from the framework, contest the boundary's reach from outside; their exclusion is enforced by the same doctrine the reading administers.",
+    "mandatrophy_analysis": "Claiming tangled_rope is what keeps both halves of the structure visible. Reading the arrangement as pure rope would hide the categorical extraction: fees keyed to commerciality rather than harm, collected under threat, with the gray zone doing disciplinary work no license ever prices. Reading it as pure snare would erase the real permitted zone: non-commercial transformation is genuinely free in ways that would not survive an enclosure_reading regime, and clearance machinery performs a real matching function for adaptations that do get made. The R5 genealogy supports the hybrid verdict rather than a mandatrophy resolution: the founding problem — unauthorized commercial recasting of protected expression threatening adaptation markets — is still partially live (translation, film, and sequel markets remain real), but the arrangement now governs territories (monetized fan works, mods, reaction formats, machine-learning corpora) far outside it. Status is contested, not dead, so no mandatrophy resolution is declared; the mismatch consumer reads founding_problem_status=contested against disappearance_verdict=world_rearranges and finds no zombie flag.",
+    "kernel_context": "Kernel: derivative_work_statutory_boundary — the persisting statutory commitment defining when reuse of copyrighted expression creates a regulated derivative work. This file instantiates the hybrid_carveout_reading: the boundary varies with commercial exploitation, permitting non-commercial transformative use and requiring authorization for commercial use. Sibling readings, authored as separate constraints: enclosure_reading (any use of copyrighted expression in creating a new work constitutes preparation of a derivative work — high epsilon, non-commercial creators included in the victim set) and coordination_reading (only fixed recastings substantially incorporating original expression are restricted — low epsilon, transformative and intermediate uses free). The disagreement is located in the partitioning criterion itself: enclosure partitions by degree of incorporation, coordination by fixity-plus-substantial-taking, this reading by commercial status. This reading forecloses enclosure within any single framework (one cannot both permit and prohibit non-commercial transformative use) and coexists with coordination_reading, whose criterion blends with commerciality in live doctrine."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "enclosure_reading",
+      "coordination_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the derivative work boundary' decomposes into three structurally distinct constraints under the epsilon-invariance principle. enclosure_reading (high epsilon: all incorporative use licensable), coordination_reading (low epsilon: only fixed substantial recastings restricted), and this hybrid_carveout_reading (moderate epsilon: commerciality-keyed restriction with categorical beneficiary split). Each has its own epsilon, victim set, and classification; they are linked here because the upstream readings are cited as authority in disputes over this one — enclosure rhetoric pressures enforcement scope outward, coordination doctrine pressures it inward, and this reading's gray zone is the terrain both contest."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.6
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "copyright_holders",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Own catalogs of protected expression spanning text, music, film, and software. Decide which commercial reuses receive licenses, at what rates, and which proceed to litigation instead. Collect authorization revenues directly and through intermediaries, and selectively tolerate some unlicensed uses while prosecuting others. Because they hold the assets, their exit takes the form of choosing enforcement venues and targets rather than leaving the arrangement."
+    },
+    {
+      "name": "commercial_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build products that incorporate, adapt, sample, or extend existing protected expression and intend to sell the result. Face a clearance step whose cost scales with their commerciality rather than with any measured effect on the rights holder's markets. Options are negotiating licenses, redesigning around the borrowed expression, or litigating; abandoning commerce converts them into the permitted class but forfeits the revenue that justified the project. Large incumbents often hold licensing portfolios on both sides of the table."
+    },
+    {
+      "name": "noncommercial_creators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Make transformative works — fan fiction, remixes, mods, commentary, covers — without charging for them, and operate inside the zone the carveout leaves open. Their freedom is bounded by the commercial line: accepting tips, running ads, or selling prints can flip their status and expose them to takedown or suit. Many police themselves short of monetization they could technically pursue."
+    },
+    {
+      "name": "open_source_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Distributed developer communities whose non-commercial building on existing expression is sheltered by the carveout, and whose norms assume that openness. When a community project accepts sponsorship, sells support, or is acquired, its past reuse can retroactively acquire a price tag, and the community faces a choice between relicensing, reverting contributions, or disputing the characterization. Most members experience the permission; the minority who commercialize experience the bill."
+    },
+    {
+      "name": "licensing_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Collective rights organizations, clearance houses, and royalty administrators that operate the machinery connecting commercial reusers with rights holders. Their revenue is a function of authorization volume and rate; they maintain databases, audit usage, and distribute proceeds minus administrative cuts. If the authorization requirement narrowed, their business would shrink to the remaining licensed categories, and several have diversified into adjacent rights administration."
+    },
+    {
+      "name": "federal_courts",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate where the commercial line falls case by case, weighing transformativeness, market effect, and the character of the use. Their opinions are the operative text of the boundary between statutory revisions, and each ruling reallocates freedom between the permitted and licensed zones. They take the positions of the other seats as adversarial input rather than experiencing the arrangement's costs or gains directly."
+    },
+    {
+      "name": "ai_training_developers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build systems trained on large corpora that include protected expression, arguing that training is transformative intermediate use rather than preparation of a derivative work. They hold no seat in the statutory framework the boundary administers and are shaping the doctrine through litigation fought from outside it. Their alternatives include jurisdictional relocation, licensed-data deals, and synthetic corpora, each carrying cost or capability tradeoffs."
+    },
+    {
+      "name": "downstream_audiences",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Consume adaptations, remixes, sequels, and commentary built on existing expression. They receive authorized works whose licensing costs are passed through in prices, and they lose unauthorized transformative works that never clear the line and are withdrawn or never published. They are represented in the arrangement only indirectly, through market behavior and amicus positions, and can shift attention to unaffected content."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Channels commercial reuse of protected expression through a negotiable authorization step — solving the pricing problem for expressive adaptation that bilateral bargaining could not solve at scale — while leaving a free non-commercial zone that preserves follow-on creativity without requiring every transformer to clear rights first.",
+    "transfer_function": "Moves licensing revenue from commercial reusers of protected expression to rights holders (with administrative cuts to intermediaries), and moves legal security to non-commercial transformers in the form of a permission they did not previously hold.",
+    "absent_voices": "Downstream audiences have no seat in clearance negotiations and feel the outcome only as prices and vanished works. Machine-learning developers contest the boundary's reach from outside the framework. The public-domain interest — the claim that broader freedom to build on expression serves future creation — is argued by scholars and amici but holds no standing seat; dissent enters the process mainly after suits are filed, not before terms are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commerciality-keyed boundary vanished overnight, clearance markets and intermediary businesses would contract immediately, incumbent adaptation pipelines would lose their moat, platform takedown policies would lose their doctrinal anchor, and a wave of previously suppressed commercial fan works, mods, and remixes would surface — while rights holders would scramble to rebuild protection through contract and technical measures. The expressive-reuse economy reorganizes around whichever norm replaces it.",
+    "founding_problem": "Unauthorized commercial recasting of protected expression — translations, dramatizations, adaptations into new media — competing directly with the markets through which rights holders exploited their works, addressed by codifying a derivative-work right in the 1976 Copyright Act.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legislative history (House Report No. 94-1476), leading treatises, and decades of court opinions outside the beneficiary set attest the original adaptation-market rationale and confirm those markets still exist, supporting partial liveness. Rights holders attest the problem is fully live and expanding into new media. Doctrinal scholars and fair-use advocates — also outside the beneficiary set — attest the arrangement now governs conduct (monetized fan works, mods, machine-learning corpora) far beyond the founding problem, supporting the shifted-function reading. Corroboration exists on both sides; neither attests from inside the benefiting parties alone."
+  },
+  "gain_flow": "copyright_holders",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "adaptation_market_protection_frame",
+    "drift_state": {
+      "moment": "contemporary_platform_economy",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "enclosure_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coordination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "commercial_status_conditions_infringement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "noncommercial_transformation_presumptively_free",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

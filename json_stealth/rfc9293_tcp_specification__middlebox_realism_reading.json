@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "24ddc691-2c67-47de-9f51-e67adc394b2f"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.68,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Middlebox-Mediated TCP Operation (Middlebox Realism Reading of RFC 9293)",
+    "topic_domain": "technological/infrastructural/governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "isp_network_operators",
+      "enterprise_security_teams",
+      "state_surveillance_agencies"
+    ],
+    "victims": [
+      "endpoint_application_developers",
+      "protocol_innovators",
+      "end_users"
+    ],
+    "vindicated_propositions": [
+      "operator_path_authority_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "isp_network_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the on-path equipment — NAT gateways, stateful firewalls, DPI boxes — through which subscriber traffic passes. They decide what packet shapes their networks tolerate, rewrite addresses, terminate idle connections, and refresh inspection rulesets on vendor timelines. Address translation lets them serve many customers with scarce IPv4 space instead of completing IPv6 rollout. Their exit is wide: they choose which equipment to deploy and can replace entire fleets; nothing binds them to any particular protocol posture."
+    },
+    {
+      "name": "enterprise_security_teams",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Run perimeter policy for their organizations: egress filtering, application awareness, data-loss prevention at the edge. They receive enforcement capability they could not practically obtain endpoint-by-endpoint, and they purchase and configure the boxes that provide it. Their commitment runs deep — security architecture, compliance certifications, and staff skills are built around the perimeter model — so moving to endpoint-centric trust models would mean re-architecting decades of accumulated practice."
+    },
+    {
+      "name": "state_surveillance_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Obtain visibility into traffic that endpoints never knowingly granted: metadata, handshake fingerprints, and — where encryption permits or is bypassed — content. On-path collection scales cheaply compared to per-device compromise. Their position is indifferent to any single network's choices; they adapt collection techniques to whatever the deployed population allows."
+    },
+    {
+      "name": "endpoint_application_developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build software that must traverse networks they do not control. Connections fail or degrade depending on which boxes sit on the path; they engineer retries, fallbacks, and disguise strategies such as wrapping traffic in TLS on port 443 to survive arbitrary interference. They cannot select their users' paths, and shipping a new transport means years of accommodating hostile intermediaries."
+    },
+    {
+      "name": "protocol_innovators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design successor transports and extensions. Deployed middleboxes strip unknown options, block unfamiliar port and protocol combinations, and freeze header layouts, so new protocols must either masquerade as tolerated traffic or encrypt everything to be opaque. The path to deployment runs through the very population whose behavior they are trying to change; leaving public-standards work for closed platforms is the main alternative exit."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Send traffic across infrastructure they cannot see or choose. They receive incidental protection from edge filtering and working connectivity from address translation, and they bear surveillance exposure, latency added by inspection, and breakage when boxes mishandle novel traffic. Switching providers rarely changes the class of equipment sitting on the path."
+    },
+    {
+      "name": "ietf_specification_community",
+      "role": "agenda_setter",
+      "secondary_role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Authors and maintains RFC 9293 and the surrounding standards process; publishes normative requirements for endpoint behavior and documents known middlebox interactions. Its determinations bind no one on the wire: operators deploy what vendors ship, and vendors ship what buyers request. The community responds by designing for a hostile path — encrypting transports, padding, disguising — rather than by commanding it. Members' professional identities are fused with the open-standards project, so abandoning the effort is unthinkable even as its writ fails to run."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Mediates scarce IPv4 addresses across many hosts per address (NAT), lets each network owner enforce local policy at its edge without global agreement, filters unsolicited inbound traffic, and translates between protocol generations so heterogeneous networks interoperate. These functions are performed by the same boxes that inspect and modify traffic.",
+    "transfer_function": "Moves control over connection behavior and visibility into traffic from endpoints and their users to whichever actor operates the on-path equipment; moves protocol-evolution costs onto innovators, who must accommodate or evade the deployed population; moves intelligence value to operators and states.",
+    "absent_voices": "End users are absent from every procurement and ruleset decision that shapes their traffic; application developers typically learn of new interference from failure reports after deployment; the IETF's recorded objection that pervasive monitoring is an attack (RFC 7258 / BCP 188) carries no vote in operator purchasing. Each sits outside the vendor-operator conversation where wire behavior is actually settled.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would break IPv4-only addressing for hundreds of millions of hosts behind NAT, strip enterprise perimeters bare, eliminate bulk on-path collection, and immediately un-tax protocol evolution — new transports would deploy directly to endpoints. The internet's current shape depends on the arrangement.",
+    "founding_problem": "IPv4 address exhaustion in the early 1990s, plus network owners' demand to enforce local policy on traffic crossing their links without waiting for global consensus. NAT and the firewall industry were built to solve these two problems together.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Address-exhaustion records from the regional registries (IANA/RIPE/ARIN depletion reports) corroborate the original scarcity problem from outside the operator set; two decades of independent measurement research (IMC/SIGCOMM middlebox studies) corroborates the population's prevalence and interference with the specified protocol; the IETF's BCP 188 and privacy advocates attest the control-transfer side. Operator trade literature attests only the policy-enforcement half — no beneficiary-party source seriously disputes that the address-scarcity justification has weakened as IPv6 deployment has grown, which is why the status is contested rather than live."
+  },
+  "interval": {
+    "start": 0,
+    "end": 31
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 26,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 31,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 26,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 31,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 26,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 31,
+      "value": 0.68,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 (2022) is the canonical specification of TCP. This story instantiates the middlebox_realism_reading of the rfc9293_tcp_specification kernel: the text describes ideal endpoint behavior, but the operative constraint on real TCP is the deployed middlebox population — NATs, stateful firewalls, DPI devices — and specification authority is therefore subordinate to what the network actually does. The standing arrangement under contest is middlebox-mediated TCP operation, and epsilon is authored for THAT arrangement as this reading sees it: a structure with a genuine coordination face (address mediation during IPv4 scarcity, local policy enforcement without global consensus, legacy translation) and an asymmetric transfer face (control over connection behavior and traffic visibility moves from endpoints to on-path actors; protocol evolution is taxed; surveillance capability accrues without endpoint consent). Claim and metrics are independent authored facts: claimed_type tangled_rope is asserted from the two-faced structure; the metric values are authored from the descriptive record of the arrangement's actual operation. The strict_invariance_reading and optimization_latitude_reading are separate constraints over the same kernel text, linked via network.affects_constraints; their epsilon values differ because they are different constraints, not different views of one.",
+    "key_agents": [
+      "isp_network_operators: de facto agenda-setter and primary beneficiary (institutional/arbitrage) — operates the NAT/DPI fleets that determine wire behavior and collects control, address-economics savings, and policy capability",
+      "state_surveillance_agencies: secondary beneficiary (institutional/arbitrage) — derives scalable intelligence from on-path visibility that endpoints never granted",
+      "enterprise_security_teams: beneficiary within their own edges (powerful/constrained) — purchases and configures the enforcement apparatus, invested in the perimeter model",
+      "endpoint_application_developers: primary target (organized/constrained) — bears lost connection autonomy and the engineering tax of surviving arbitrary interference",
+      "protocol_innovators: target (moderate/constrained) — new transports are broken or forced to disguise themselves by the ossified deployed population",
+      "end_users: diffuse target with incidental benefit (powerless/trapped) — bears surveillance exposure and breakage, receives edge filtering and working NAT connectivity",
+      "ietf_specification_community: formal agenda-setter, effectively excluded (institutional/identity_locked) — authors the kernel text whose governing force this reading denies; responds by designing for a hostile path"
+    ],
+    "logic_rationale": "Extractiveness 0.70: control over connection behavior, traffic visibility, and protocol-evolution latitude transfers to on-path actors without endpoint delegation, discounted by residual endpoint sovereignty (stacks still run, TLS limits payload access). Suppression 0.68: persistence now depends on actively maintained enforcement — refreshed DPI rulesets, throttling and blocking of encrypted evasions (early QUIC throttling, ECH filtering) — not on participant preference; the suppression_requirement series is authored because this story specifically tracks enforcement-capacity buildup from passive translation (0.20) to counter-evasion hardening (0.68). Theater 0.32: NAT and basic filtering do real work, but a growing share of DPI activity is marketed 'value-add' whose security contribution is difficult to distinguish from checkbox compliance. Accessibility_collapse 0.50: partial exits exist (encrypted transports, overlays, VPNs) but every practical path crosses someone's middleboxes, so alternatives narrow without vanishing. Resistance 0.60: QUIC, TLS 1.3, Encrypted Client Hello, BCP 188's 'pervasive monitoring is an attack' ruling, and coordinated browser-vendor deployment (an example of coalition power among otherwise constrained developers) constitute sustained, partly successful pushback. Boltzmann coordination_type resource_allocation: NAT's mediation of scarce IPv4 addresses is the load-bearing coordination function — if it failed, the IPv4 internet breaks — so the type default floor applies without override. All three metric series share one time grid (t=0,5,10,16,21,26,31 on a 1994–2025 mapping) so no metric row is backfilled.",
+    "perspectival_gap": "The operator seat experiences the arrangement as legitimate network management and property rights over owned infrastructure: they bought the boxes, they answer for their network's behavior, local policy is their prerogative. The endpoint-developer and innovator seats experience the same structure as expropriated autonomy and a tax on evolution levied by unaccountable intermediaries. The IETF seat experiences its own authority as circumvented — it publishes requirements that bind no one on the wire. The user seat mostly experiences nothing at all: the structure is invisible until it breaks something. The engine computes these per-seat divergences from the structural data; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiary declarations place isp_network_operators, enterprise_security_teams, and state_surveillance_agencies near the subsidized end (low d), amplified for the agencies by arbitrage-grade exit and for operators by their agenda-setting position. Victim declarations place endpoint_application_developers, protocol_innovators, and end_users near the full-target end (high d), with end_users slightly moderated by their secondary beneficiary position (incidental filtering and connectivity gains) and pushed toward full-target by trapped exit. The ietf_specification_community sits outside the beneficiary/victim declaration set — its position (formal authority, no wire jurisdiction) is carried by its role and situation rather than by a directionality input; no override is authored because the per-power-atom override mechanism would misstate the named groups sharing its power level.",
+    "mandatrophy_analysis": "The founding problem (IPv4 address scarcity) is substantially resolved by IPv6, yet the arrangement has persisted and intensified — classic mandate-outlived-function pressure, visible in the rising suppression_requirement series tracking enforcement buildup rather than coordination need. Classification as tangled_rope rather than snare or piton keeps both faces honest: genuine residual coordination functions (local policy enforcement demand, legacy translation, incomplete IPv6 deployment) prevent a pure-extraction reading, while concentrated beneficiaries (operators collecting control and savings, agencies collecting intelligence) prevent an inertial-piton reading. The contested founding_problem_status paired with world_rearranges disappearance verdict feeds the mismatch check without gaming it: if IPv6 completion ever renders address mediation vestigial while enforcement persists, expect drift toward harder forms — the measurements' divergence between flatlining extractiveness growth and steeply rising suppression requirement traces exactly that handoff from coordination justification to enforcement self-justification.",
+    "kernel_context": "Kernel: rfc9293_tcp_specification — the canonical TCP specification text as a stabilized commitment. This story instantiates the middlebox_realism_reading: the text describes ideal endpoint behavior while the operative standard is set by the deployed middlebox population, making specification authority subordinate to wire reality. Sibling readings: strict_invariance_reading (the text specifies an invariant state machine implementations must replicate exactly to preserve global interoperability) and optimization_latitude_reading (the text specifies behavioral outcomes and permits implementation latitude within semantic bounds). No foreclosure relations are declared: each reading can be held alongside the others within a single framework as a normative or descriptive stance — they are rival characterizations of one text, not logically exclusive commitments. The disagreement is located in what carries governing force: the text's normative MUSTs, the specified semantic outcomes, or the deployed network's demonstrated tolerances."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which reading of the rfc9293_tcp_specification kernel is structurally correct: an invariant state machine implementations must replicate exactly (strict_invariance_reading), specified outcomes with implementation latitude (optimization_latitude_reading), or an aspirational endpoint model subordinate to deployed middlebox behavior (this reading)?",
+      "resolution_mechanism": "Cross-reading corpus comparison plus wire-measurement evidence: if observed interoperability failures trace to implementation deviation from the text, the invariance reading gains; if they trace to middlebox interference with compliant implementations, this reading gains.",
+      "impact": "Sibling readings yield different victim sets (deviant implementers vs. none vs. endpoint autonomy) and different extraction profiles; the classification of the whole constraint family shifts with the resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This story is one reading of the rfc9293_tcp_specification kernel; sibling readings instantiate structurally different constraints over the same text."
+    },
+    {
+      "id": "middlebox_necessity_vs_rent",
+      "question": "Is the deployed middlebox population a live coordination necessity (address scarcity where IPv6 lags, genuine edge security) or rent-seeking infrastructure whose founding justifications have decayed?",
+      "resolution_mechanism": "Compare security outcomes and addressing economics between networks operating heavy middlebox fleets and comparable networks operating transparently; evaluate IPv6-completion counterfactuals for the address-mediation function.",
+      "impact": "If rent dominates, the arrangement trends toward pure extraction with a cover-story coordination function; if necessity dominates, part of the measured extraction is irreducible coordination cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination face of the arrangement is live or vestigial."
+    },
+    {
+      "id": "surveillance_anchor_question",
+      "question": "Does state-surveillance demand anchor the arrangement's persistence more strongly than operator economics, such that removing the commercial justifications would leave the control-transfer core intact?",
+      "resolution_mechanism": "Natural experiments where commercial middleboxes were retired (regulatory mandates, corporate decommissioning) contrasted with jurisdictions where state demand sustains fleets regardless of commercial value.",
+      "impact": "If surveillance anchors persistence, the beneficiary structure concentrates and the arrangement hardens; if operator economics anchor it, remediation through market and regulatory incentives is feasible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Which beneficiary class anchors the arrangement's persistence."
+    },
+    {
+      "id": "encryption_arms_race_trajectory",
+      "question": "Will ubiquitous encryption (QUIC, TLS 1.3, Encrypted Client Hello) shrink the middlebox population's control over traffic, or will counter-evasion enforcement keep pace and entrench it?",
+      "resolution_mechanism": "Extend the measurement series beyond the interval: a falling suppression_requirement with stable extractiveness indicates successful endpoint exit; a continued rise indicates entrenchment.",
+      "impact": "Endpoint success would push the arrangement toward vestigial maintenance of a shrinking control surface; entrenchment pushes it toward harder forms with the specification's authority reduced further.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the endpoint-exit strategy succeeds or the enforcement response entrenches the arrangement."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__optimization_latitude_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'what RFC 9293 requires of TCP' covers three structurally distinct claims with different epsilon values and different victim sets, so the kernel is authored as three linked stories. The strict_invariance_reading is the traditional upstream account (implementations replicate an invariant machine) and is the version cited in vendor interoperability claims; this middlebox_realism_reading cites two decades of measurement research on deployed middlebox behavior as evidence against the upstream account's descriptive adequacy; the optimization_latitude_reading mediates (outcomes specified, latitude permitted). Each story links to the others via affects_constraints; epsilon here (0.70, referent: the standing middlebox-mediated arrangement as this reading assesses it) is stable within this story and deliberately not averaged across readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "aspirational_endpoint_behavior_model",
+    "drift_state": {
+      "moment": "contemporary_middlebox_deployments",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "wire_behavior_constitutes_the_standard",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "on_path_control_prerogative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "isp_network_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

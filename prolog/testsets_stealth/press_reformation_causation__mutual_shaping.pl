@@ -1,0 +1,417 @@
+% ============================================================================
+% CONSTRAINT STORY: press_reformation_causation__mutual_shaping
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_press_reformation_causation__mutual_shaping, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: press_reformation_causation__mutual_shaping
+ *   human_readable: Print-Reformation Mutual Shaping (Enabling-Structure Reading)
+ *   domain: history_of_technology/religious_history/media_studies
+ *
+ * SUMMARY:
+ *   Between Gutenberg's Bible (c. 1455) and the close of the confessional
+ *   century (c. 1600), print technology and religious reform co-evolved: the
+ *   press created possibilities — cheap pamphlets, vernacular scripture,
+ *   anonymous polemic, speed exceeding any prohibition — that reformers
+ *   exploited, and their exploitation in turn shaped how printing developed
+ *   (the Flugschrift format, title-page conventions, illustration practices,
+ *   the concentration of shops in tolerant imperial cities, colportage
+ *   networks). This story instantiates the mutual_shaping reading of the
+ *   press_reformation_causation kernel: the arrangement under assessment is
+ *   the 1450-1600 print-reform complex itself, assessed by this reading's own
+ *   lights as an enabling structure that was constitutively transitional — it
+ *   carried the Reformation through its fragile founding phase and was then
+ *   deliberately closed by the very settlement its success produced. KEY
+ *   AGENTS (by structural relationship): - evangelical_printers: Primary
+ *   agenda-setter and collector of the commercial surplus
+ *   (organized/constrained) — ran the circulation infrastructure; -
+ *   protestant_reform_movements: Principal beneficiary supplying content and
+ *   demand (organized/identity_locked); - vernacular_reading_public: Mass
+ *   beneficiary bearing indirect costs (powerless/mobile); -
+ *   scribal_workshops: Displaced payer (moderate/constrained); -
+ *   ecclesiastical_authorities: Cost-bearing payer, structurally bypassed
+ *   (institutional/identity_locked); -
+ *   magistrates_of_imperial_printing_cities: Institutional enabler deciding
+ *   where the trade could live (institutional/constrained); -
+ *   anabaptist_radicals: Excluded party — earliest users of the channel, then
+ *   proscribed by all sides (powerless/trapped); - historians_of_the_book:
+ *   Analytical observer (analytical/analytical). CONSTRAINT FAMILY NOTE
+ *   (epsilon-invariance decomposition): the colloquial label 'the printing
+ *   press caused the Reformation' covers three structurally distinct claims,
+ *   authored as separate stories linked by network.affects_constraints. The
+ *   technological_determinism reading authors a fixed enabling structure with
+ *   an inevitability claim (low contested extraction, mountain-adjacent); the
+ *   strategic_deployment reading centers agent choice over a neutral capacity
+ *   (rope-adjacent, agent-side); THIS reading authors moderate epsilon (0.45)
+ *   over the same referent because bidirectional coupling distributes both
+ *   benefit and cost across seats — the press was neither inert capacity nor
+ *   irresistible force but a transitional enabling structure whose shape the
+ *   movements' use of it altered.
+ *
+ * KEY AGENTS:
+ *   - - evangelical_printers: Primary agenda-setter/beneficiary (organized/constrained) — ran the infrastructure, collected the commercial surplus, bore capital and prohibition risk
+ *   - - protestant_reform_movements: Principal beneficiary (organized/identity_locked) — supplied content, gained unmatched reach, could not exit their commitment
+ *   - - vernacular_reading_public: Mass beneficiary with indirect costs (powerless/mobile) — gained direct access, paid in coin and later in confessional conflict
+ *   - - scribal_workshops: Displaced payer (moderate/constrained) — lost the copywork market, partial adaptation into the print trades
+ *   - - ecclesiastical_authorities: Payer and structurally excluded voice (institutional/identity_locked) — spent on failed enforcement, lost the information monopoly
+ *   - - magistrates_of_imperial_printing_cities: Institutional agenda-setter (institutional/constrained) — privileges and shielding decided the trade's geography
+ *   - - anabaptist_radicals: Excluded (powerless/trapped) — used the channel first, silenced by the settlement
+ *   - - historians_of_the_book: Analytical observer (analytical/analytical) — adjudicates the causal account from outside every seat
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(press_reformation_causation__mutual_shaping, 0.45).
+domain_priors:suppression_score(press_reformation_causation__mutual_shaping, 0.65).
+domain_priors:theater_ratio(press_reformation_causation__mutual_shaping, 0.3).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(press_reformation_causation__mutual_shaping, extractiveness, 0.45).
+narrative_ontology:constraint_metric(press_reformation_causation__mutual_shaping, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(press_reformation_causation__mutual_shaping, theater_ratio, 0.3).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(press_reformation_causation__mutual_shaping, accessibility_collapse, 0.35).
+narrative_ontology:constraint_metric(press_reformation_causation__mutual_shaping, resistance, 0.7).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(press_reformation_causation__mutual_shaping, scaffold).
+narrative_ontology:human_readable(press_reformation_causation__mutual_shaping, "Print-Reformation Mutual Shaping (Enabling-Structure Reading)").
+narrative_ontology:topic_domain(press_reformation_causation__mutual_shaping, "history_of_technology/religious_history/media_studies").
+
+domain_priors:requires_active_enforcement(press_reformation_causation__mutual_shaping).
+narrative_ontology:has_sunset_clause(press_reformation_causation__mutual_shaping).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(press_reformation_causation__mutual_shaping, '89184b2f-dd8d-430d-b9fb-45c3a2e22178').
+narrative_ontology:cs_kernel_codification('89184b2f-dd8d-430d-b9fb-45c3a2e22178', distributed).
+narrative_ontology:cs_authority_grounding('89184b2f-dd8d-430d-b9fb-45c3a2e22178', expertise).
+narrative_ontology:cs_interpretation_layer_present('89184b2f-dd8d-430d-b9fb-45c3a2e22178').
+narrative_ontology:cs_reading_relation('89184b2f-dd8d-430d-b9fb-45c3a2e22178', press_reformation_causation__technological_determinism, forecloses).
+narrative_ontology:cs_reading_relation('89184b2f-dd8d-430d-b9fb-45c3a2e22178', press_reformation_causation__strategic_deployment, coexists_with).
+narrative_ontology:cs_axiom('89184b2f-dd8d-430d-b9fb-45c3a2e22178', foundational, media_change_is_bidirectional).
+narrative_ontology:cs_axiom_status(media_change_is_bidirectional, holdable).
+narrative_ontology:cs_axiom_grounding('89184b2f-dd8d-430d-b9fb-45c3a2e22178', media_change_is_bidirectional, empirically_contingent).
+narrative_ontology:cs_axiom('89184b2f-dd8d-430d-b9fb-45c3a2e22178', foundational, reformation_outcomes_were_contingent).
+narrative_ontology:cs_axiom_status(reformation_outcomes_were_contingent, holdable).
+narrative_ontology:cs_axiom_grounding('89184b2f-dd8d-430d-b9fb-45c3a2e22178', reformation_outcomes_were_contingent, empirically_contingent).
+narrative_ontology:cs_reference_frame('89184b2f-dd8d-430d-b9fb-45c3a2e22178', bidirectional_co_evolution_framework).
+narrative_ontology:cs_drift_state('89184b2f-dd8d-430d-b9fb-45c3a2e22178', contemporary_book_history_synthesis, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('89184b2f-dd8d-430d-b9fb-45c3a2e22178', '').
+narrative_ontology:cs_kernel_id(press_reformation_causation__mutual_shaping, press_reformation_causation).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(press_reformation_causation__mutual_shaping, evangelical_printers).
+narrative_ontology:constraint_beneficiary(press_reformation_causation__mutual_shaping, protestant_reform_movements).
+narrative_ontology:constraint_beneficiary(press_reformation_causation__mutual_shaping, vernacular_reading_public).
+narrative_ontology:constraint_victim(press_reformation_causation__mutual_shaping, scribal_workshops).
+narrative_ontology:constraint_victim(press_reformation_causation__mutual_shaping, ecclesiastical_authorities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(press_reformation_causation__mutual_shaping, vernacular_reading_public).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Operated the workshops and distribution networks that decided what circulated: chose manuscripts, financed editions, cultivated colporteur routes, and timed releases to outrun prohibition. Collected the commercial surplus of the boom in cheap religious pamphlets and vernacular Bibles. Capital sunk in presses and type made relocation costly, but many houses printed for several confessions at once, hedging their position.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, evangelical_printers, agenda_setter,
+    organized, biographical, constrained, continental).
+narrative_ontology:stakeholder_secondary_role(press_reformation_causation__mutual_shaping, evangelical_printers, beneficiary).
+
+% Supplied the texts and the demand that kept the presses running: short vernacular pamphlets, sermons, translations of scripture. Gained reach no pulpit network could match and a public that read arguments directly rather than receiving them through clergy. Leaders could not abandon the movement without dissolving the commitments that defined them; several were formally outlawed and continued publishing anyway.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, protestant_reform_movements, beneficiary,
+    organized, generational, identity_locked, continental).
+
+% Bought or borrowed cheap editions, read aloud in households and taverns, and gained direct access to arguments previously mediated by clergy. Paid for books out of household budgets and later absorbed the costs of the confessional conflicts the circulation fed. Any individual could stop buying, but the information environment around them was remade without their consent or participation in setting its terms.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, vernacular_reading_public, beneficiary,
+    powerless, biographical, mobile, continental).
+narrative_ontology:stakeholder_secondary_role(press_reformation_causation__mutual_shaping, vernacular_reading_public, payer).
+
+% Lost the copywork market that had sustained scriptoria and independent scribes as printed prices fell below hand-copying cost. Some adapted as correctors, compositors, or publishers' clerks; older practitioners with no path into the trade saw their livelihood collapse. Guild protections slowed but did not stop the displacement, and the displaced had no seat in the commercial settlements that followed.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, scribal_workshops, payer,
+    moderate, biographical, constrained, regional).
+
+% Held licensing and doctrinal gatekeeping before the boom and spent heavily afterward on bans, indices, and visitations that failed to restore control. Lost the information monopoly that had underwritten their authority. Their objections were structurally bypassed because the channel moved faster than any prohibition could, and abandoning the gatekeeping role outright was unthinkable for institutions constituted by it.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, ecclesiastical_authorities, payer,
+    institutional, generational, identity_locked, continental).
+narrative_ontology:stakeholder_secondary_role(press_reformation_causation__mutual_shaping, ecclesiastical_authorities, excluded).
+
+% Granted printing privileges, tolerated or shielded workshops whose output violated imperial bans, and balanced confessional allegiance against the tax value and prestige of a thriving trade. Their protection determined where the trade concentrated; exposure to imperial reprisal bound their discretion and made their tolerance a deliberate, costly choice.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, magistrates_of_imperial_printing_cities, agenda_setter,
+    institutional, generational, constrained, regional).
+
+% Used the same cheap-pamphlet channels in the 1520s and were then proscribed by every confession alike; their presses and peddlers were seized and their literature driven back into manuscript. They had the strongest interest in open circulation and the least voice in the settlement that closed it.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, anabaptist_radicals, excluded,
+    powerless, biographical, trapped, continental).
+
+% Reconstruct the trade from print-run fragments, price series, privilege registers, and surviving editions; weigh competing accounts of how the medium and the movements shaped each other. Stand outside every historical seat and bear none of its costs or gains.
+narrative_ontology:constraint_stakeholder(press_reformation_causation__mutual_shaping, historians_of_the_book, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(press_reformation_causation__mutual_shaping, evangelical_printers).
+narrative_ontology:fixing_cost_class(press_reformation_causation__mutual_shaping, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solved the dissemination problem: cheap, fast, standardized reproduction of texts across linguistic regions connected dispersed sympathizers faster than any authority could respond, and built a market infrastructure linking authors, printers, peddlers, and readers who had previously been coordinated only through clerical networks.
+% TRANSFER_FUNCTION: Moves texts and arguments from author-printer nodes to dispersed readers; moves money from readers to printers and authors through the book trade; moves doctrinal interpretive authority from clerical gatekeepers to lay readers; moves displacement costs onto scribal labor and enforcement costs onto the authorities that resisted.
+% ABSENT_VOICES: Anabaptist radicals used the channel earliest and were crushed by every confession, leaving the settlement with no radical-press voice; illiterate rural majorities had their oral world reshaped by literate intermediaries without representation; displaced scribes appear in the record chiefly as petitioners, not negotiators.
+% DISAPPEARANCE_RATIONALE: Remove the print-reform coupling around 1520 and reform arguments still travel by sermon, song, and manuscript — the Hussite precedent proves movements could spread without print — but at a fraction of the speed and scale. Luther's survival past Worms depended on the pamphlet flood making enforcement impossible; the religious map of Europe, the vernacular literary cultures, and the confessional boundaries that followed would all be redrawn.
+% FOUNDING_PROBLEM: How to circulate texts reliably and cheaply before mass literacy infrastructure existed — specifically for reformers, how to reach dispersed believers with vernacular teaching faster than authorities could suppress it, given that hand-copying was slow, expensive, and easily intercepted.
+% FOUNDING_PROBLEM_CORROBORATION: No participant survives to attest; corroboration is historiographical and sits outside every benefiting party: economic historians of the book trade (price and print-run series documenting the pre-1450 manuscript bottleneck and its post-1450 collapse), archive-based studies of privilege registers, and confessional licensing records showing the bottleneck's solution being formalized into successor institutions. None of these sources originates with the arrangement's beneficiaries.
+narrative_ontology:disappearance_verdict(press_reformation_causation__mutual_shaping, world_rearranges).
+narrative_ontology:founding_problem_status(press_reformation_causation__mutual_shaping, dead).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(press_reformation_causation__mutual_shaping, '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(press_reformation_causation__mutual_shaping, 'none', 1).
+narrative_ontology:epsilon_provenance(press_reformation_causation__mutual_shaping, 0.45, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(press_reformation_causation__mutual_shaping_tests).
+:- end_tests(press_reformation_causation__mutual_shaping_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is moderate (0.45 at interval end): the arrangement solved a real dissemination problem and its gains were broad, but the costs were asymmetric — scribal livelihoods collapsed, authorities bore ruinous enforcement spending, and readers later absorbed confessional-war costs attributable to the circulation the arrangement enabled. Suppression (0.65) is authored as a raw structural property, unscaled by power or scope: the arrangement operated for decades under active prohibition (Worms onward) and its successor order required a full licensing-and-index machinery; the scalar describes the coercive force surrounding the channel, not a scaled effective quantity. Theater ratio (0.30) captures the performative share that grew with enforcement: orthodox prefaces on heterodox texts, fake imprints, licensing rituals that legitimated rather than controlled, index entries for books already everywhere. Accessibility collapse is LOW (0.35) — manuscript and oral channels did not collapse when print arrived; they persisted and specialized, and clandestine manuscript circulation expanded precisely because print was surveilled. Resistance is HIGH (0.70): bans, burnings, indices, and stationers' regulation constitute sustained official resistance across the whole interval. CLAIM/METRIC INDEPENDENCE: claimed_type=scaffold is asserted from this reading's authoring seat (the mutual-shaping account sees a transitional enabling structure); the metrics above are authored independently as descriptive facts about the arrangement's operation. Where the engine's computed type diverges from the scaffold claim, that divergence is the datum. MEASUREMENT GRID: all three tracked series run on one shared eight-point grid (1450/1475/1500/1517/1534/1555/1571/1600); trajectories are monotone arcs, not cycles — the extractiveness hump peaks at the pamphlet boom (1534) and declines as confessional licensing formalizes the trade; suppression_requirement is tracked because enforcement-capacity change IS the story's dynamic (buildup 1517-1555, routinization thereafter).
+ *
+ * PERSPECTIVAL GAP:
+ *   The seats should compute differently. From the evangelical_printers seat the arrangement is an opportunity structure they administered — risk-bearing entrepreneurship, not imposition. From the protestant_reform_movements seat it is constitutive: the medium made the movement possible, and identity-lock means the arrangement is experienced as self rather than circumstance. From the scribal_workshops and ecclesiastical_authorities seats the same structure operates as imposed cost — livelihood destruction in one case, enforced loss of a constitutive monopoly in the other. The vernacular_reading_public sits nearest symmetric: easy individual exit (stop buying) with zero collective exit from the transformed information environment. Magistrates hold a genuinely dual position — they administered the arrangement's conditions while absorbing imperial reprisal risk for doing so. The engine computes these divergences from the structural data; nothing in the authored claim adjudicates them.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiary declarations drive low directionality for evangelical_printers (partially offset toward symmetric by capital risk and prohibition exposure), protestant_reform_movements (identity_lock pushes their experienced stake deeper than their extraction exposure), and vernacular_reading_public (damped further toward symmetric by the secondary payer role). Victim declarations drive high directionality for scribal_workshops (constrained exit keeps them near the target end) and ecclesiastical_authorities (identity_locked exit plus institutional power places them at the full-target end despite their power atom — they could not leave, only spend). Magistrates derive near-symmetric from their dual administration/cost position. Anabaptist_radicals sit outside the derivation as an excluded seat: their exclusion is recorded as absent voice, not as a directionality input. No directionality overrides are authored — the beneficiary/victim plus exit-option data yields the correct relationships without correction.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The scaffold claim does specific protective work against two mislabelings. Read as a permanent pure-coordination arrangement, the pamphlet economy's victims (scribes, authorities, later the radical press) vanish from the ledger and the confessional wars' costs go unattributed. Read as pure predation, the genuine coordination achievement disappears and the arrangement's dissolution looks like failure rather than completion. The sunset clause encodes the actual lifecycle: the arrangement's success dissolved it — by 1600 confessional churches had internalized print discipline through licensure, catechisms, and school systems, and the open pamphlet frontier was closed by the settlement the scaffold had made possible. The R5 mismatch (founding_problem_status=dead combined with disappearance_verdict=world_rearranges) is here the signature of COMPLETION, not capture: no seat captures residual gains from the arrangement today, theatrical residue is modest (0.30), and the world that rearranged around its work kept the rearrangement. A zombie flag fired on this pair should be cross-checked against the computed theater path and the absence of any living capturer seat before being treated as indicating capture.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_contestation,
+    'This constraint is one reading (mutual_shaping) of the press_reformation_causation kernel — how would instantiating a sibling reading change the structural data?',
+    'Comparative compilation of the sibling stories: the technological_determinism reading would delete the feedback arrow (agency shaping the technology), lowering epsilon and shifting the claim toward fixed-natural-structure territory; the strategic_deployment reading would delete the enabling-structure character (affordances shaping agency), shifting the claim toward agent-side coordination. The disagreement is located in the direction and shape of the causal arrows, not in the underlying evidence base.',
+    'Adopting determinism would recast the arrangement as inevitable and uncontested (suppressing the victim ledger); adopting deployment would recast it as chosen instrument (suppressing the structural cost side). This story''s moderate epsilon and scaffold claim are indexed to the mutual-shaping arrow structure specifically.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_contestation, conceptual, 'Committer structure: one of three readings of the press-Reformation causation kernel; siblings alter the causal graph and hence epsilon.').
+
+omega_variable(
+    counterfactual_manuscript_path,
+    'Would reform movements have spread substantially without print — via manuscript and oral channels alone — or was the press a necessary enabling condition?',
+    'Systematic comparison with manuscript-circulated movements (Hussitism before print, Waldensian networks): growth rates, geographic spread, survival under persecution relative to the print-era movements.',
+    'If reform-scale diffusion was achievable without print, the press is an accelerant rather than an enabling structure, and this reading''s scaffold claim weakens toward the strategic_deployment position; if not, the enabling-structure claim is confirmed.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(counterfactual_manuscript_path, empirical, 'Counterfactual necessity of print for reform-scale diffusion.').
+
+omega_variable(
+    sunset_boundary_location,
+    'When exactly did the open pamphlet configuration close — the Augsburg settlement (1555), the Roman Index (1559), or a gradual confessional licensing consolidation through the 1570s?',
+    'Print-run and privilege-register series by territory and confession across 1550-1590, tracking when unauthorized religious output became commercially nonviable in each jurisdiction.',
+    'Fixes whether the arrangement is genuinely transitional (supporting the scaffold claim and its sunset clause) or hardened into a licensed rent regime administered by confessional authorities (which would make the successor order a separate, more extractive constraint deserving its own story).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sunset_boundary_location, empirical, 'Location of the transitional arrangement''s endpoint in time.').
+
+omega_variable(
+    scribal_displacement_scale,
+    'How large was the net displacement of scribal labor, versus absorption into the print trades as correctors, compositors, and clerks?',
+    'Guild rolls, estate inventories, and employment records for scriptoria and independent scribes across the 1470-1530 price-collapse window, by region.',
+    'If absorption was substantial, the scribal victim entry is overweighted and epsilon drops; if displacement dominated, the victim entry stands and the arrangement''s cost asymmetry is starker than the current 0.45 encodes.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(scribal_displacement_scale, empirical, 'Magnitude of scribal victimhood versus occupational adaptation.').
+
+omega_variable(
+    reader_net_position,
+    'Were lay readers net beneficiaries (direct access to arguments and scripture) or net payers once the costs of the confessional conflicts the circulation fed are charged to them?',
+    'Not resolvable by data alone: it depends on whether one counts access and literacy gains against a century of confessional warfare — a weighting choice among incommensurable goods. Survey how the historiography itself distributes the charge.',
+    'Charging the wars flips the reading public from beneficiary toward symmetric or target position, materially changing the seat-divergence profile and the arrangement''s measured coordination purity; exempting them preserves the current near-beneficiary derivation.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reader_net_position, preference, 'Value-dependent net position of the mass reading public.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(press_reformation_causation__mutual_shaping, 1450, 1600).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(pres_tr_t1450, press_reformation_causation__mutual_shaping, theater_ratio, 1450, 0.1).
+narrative_ontology:measurement_basis(pres_tr_t1450, observed).
+narrative_ontology:measurement(pres_tr_t1475, press_reformation_causation__mutual_shaping, theater_ratio, 1475, 0.12).
+narrative_ontology:measurement_basis(pres_tr_t1475, observed).
+narrative_ontology:measurement(pres_tr_t1500, press_reformation_causation__mutual_shaping, theater_ratio, 1500, 0.15).
+narrative_ontology:measurement_basis(pres_tr_t1500, observed).
+narrative_ontology:measurement(pres_tr_t1517, press_reformation_causation__mutual_shaping, theater_ratio, 1517, 0.22).
+narrative_ontology:measurement_basis(pres_tr_t1517, observed).
+narrative_ontology:measurement(pres_tr_t1534, press_reformation_causation__mutual_shaping, theater_ratio, 1534, 0.3).
+narrative_ontology:measurement_basis(pres_tr_t1534, observed).
+narrative_ontology:measurement(pres_tr_t1555, press_reformation_causation__mutual_shaping, theater_ratio, 1555, 0.33).
+narrative_ontology:measurement_basis(pres_tr_t1555, observed).
+narrative_ontology:measurement(pres_tr_t1571, press_reformation_causation__mutual_shaping, theater_ratio, 1571, 0.31).
+narrative_ontology:measurement_basis(pres_tr_t1571, observed).
+narrative_ontology:measurement(pres_tr_t1600, press_reformation_causation__mutual_shaping, theater_ratio, 1600, 0.3).
+narrative_ontology:measurement_basis(pres_tr_t1600, observed).
+
+% Extraction over time
+narrative_ontology:measurement(pres_be_t1450, press_reformation_causation__mutual_shaping, base_extractiveness, 1450, 0.25).
+narrative_ontology:measurement_basis(pres_be_t1450, observed).
+narrative_ontology:measurement(pres_be_t1475, press_reformation_causation__mutual_shaping, base_extractiveness, 1475, 0.28).
+narrative_ontology:measurement_basis(pres_be_t1475, observed).
+narrative_ontology:measurement(pres_be_t1500, press_reformation_causation__mutual_shaping, base_extractiveness, 1500, 0.32).
+narrative_ontology:measurement_basis(pres_be_t1500, observed).
+narrative_ontology:measurement(pres_be_t1517, press_reformation_causation__mutual_shaping, base_extractiveness, 1517, 0.45).
+narrative_ontology:measurement_basis(pres_be_t1517, observed).
+narrative_ontology:measurement(pres_be_t1534, press_reformation_causation__mutual_shaping, base_extractiveness, 1534, 0.52).
+narrative_ontology:measurement_basis(pres_be_t1534, observed).
+narrative_ontology:measurement(pres_be_t1555, press_reformation_causation__mutual_shaping, base_extractiveness, 1555, 0.5).
+narrative_ontology:measurement_basis(pres_be_t1555, observed).
+narrative_ontology:measurement(pres_be_t1571, press_reformation_causation__mutual_shaping, base_extractiveness, 1571, 0.47).
+narrative_ontology:measurement_basis(pres_be_t1571, observed).
+narrative_ontology:measurement(pres_be_t1600, press_reformation_causation__mutual_shaping, base_extractiveness, 1600, 0.45).
+narrative_ontology:measurement_basis(pres_be_t1600, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(pres_su_t1450, press_reformation_causation__mutual_shaping, suppression_requirement, 1450, 0.15).
+narrative_ontology:measurement_basis(pres_su_t1450, observed).
+narrative_ontology:measurement(pres_su_t1475, press_reformation_causation__mutual_shaping, suppression_requirement, 1475, 0.2).
+narrative_ontology:measurement_basis(pres_su_t1475, observed).
+narrative_ontology:measurement(pres_su_t1500, press_reformation_causation__mutual_shaping, suppression_requirement, 1500, 0.3).
+narrative_ontology:measurement_basis(pres_su_t1500, observed).
+narrative_ontology:measurement(pres_su_t1517, press_reformation_causation__mutual_shaping, suppression_requirement, 1517, 0.52).
+narrative_ontology:measurement_basis(pres_su_t1517, observed).
+narrative_ontology:measurement(pres_su_t1534, press_reformation_causation__mutual_shaping, suppression_requirement, 1534, 0.66).
+narrative_ontology:measurement_basis(pres_su_t1534, observed).
+narrative_ontology:measurement(pres_su_t1555, press_reformation_causation__mutual_shaping, suppression_requirement, 1555, 0.7).
+narrative_ontology:measurement_basis(pres_su_t1555, observed).
+narrative_ontology:measurement(pres_su_t1571, press_reformation_causation__mutual_shaping, suppression_requirement, 1571, 0.68).
+narrative_ontology:measurement_basis(pres_su_t1571, observed).
+narrative_ontology:measurement(pres_su_t1600, press_reformation_causation__mutual_shaping, suppression_requirement, 1600, 0.65).
+narrative_ontology:measurement_basis(pres_su_t1600, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(press_reformation_causation__mutual_shaping, resource_allocation).
+narrative_ontology:affects_constraint(press_reformation_causation__mutual_shaping, press_reformation_causation__technological_determinism).
+narrative_ontology:affects_constraint(press_reformation_causation__mutual_shaping, press_reformation_causation__strategic_deployment).
+
+% DUAL FORMULATION NOTE:
+% Constraint family decomposition of the colloquial label 'the printing press caused the Reformation' (epsilon-invariance principle): the label conflates three structurally distinct causal claims, each with its own epsilon, beneficiary/victim structure, and classification. press_reformation_causation__technological_determinism (upstream: the popular and textbook-level claim, whose inevitability premise this reading forecloses) exerts framing pressure on both siblings because it dominates general-audience transmission; press_reformation_causation__strategic_deployment (agent-centered) coexists with this reading in hybrid scholarly positions. This story is the downstream synthetic member: it retains the technology-to-agency arrow from determinism and the agency-to-technology arrow from deployment, and authors moderate epsilon (0.45) over the shared referent — the 1450-1600 print-reform complex — because bidirectional coupling distributes benefit and cost across seats rather than concentrating either.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

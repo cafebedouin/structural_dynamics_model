@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "jewish_self_determination__indigenous_return_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_jewish_self_determination__indigenous_return_reading",
+    "measurement_id_prefix": "jsd_ir",
+    "story_uid": "b67d67e4-1c36-4a28-a4c6-fa4355bd9a58",
+    "created_at": "2026-08-03T14:22:17Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Jewish Indigenous Return Reading of Self-Determination",
+    "topic_domain": "political_philosophy/nationalism_studies/postcolonial_theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "jewish_people_as_indigenous_collective"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "jewish_indigeneity_to_eretz_yisrael",
+      "zionism_as_decolonization_not_colonization",
+      "unbroken_jewish_connection_to_land"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'jewish_self_determination', instantiating the 'indigenous_return_reading'?",
+      "resolution_mechanism": "Committee frame confirmation: the kernel_id and reading_id are assigned by the UKE_SCOPE decomposition manifest; this omega records that this file is that reading and nothing else.",
+      "impact": "If this is not a kernel reading, the cs_structure.reading_relations and cs_structure.axioms blocks are misplaced and must be removed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms this story is the indigenous_return_reading of the jewish_self_determination kernel."
+    },
+    {
+      "id": "indigeneity_contestation_as_extraction_driver",
+      "question": "Does the contested status of Jewish indigeneity (rather than the claim itself) drive the constraint's effective extraction upward?",
+      "resolution_mechanism": "Compare epsilon in contexts where the reading is accepted (e.g. Israeli constitutional discourse, certain international legal arguments) vs. contexts where it is actively contested (e.g. UNHRC resolutions, BDS discourse, settler-colonial-reading-dominated frameworks). If epsilon differs systematically by discursive context, the extraction is context-dependent, not reading-intrinsic.",
+      "impact": "If extraction is driven by contestation, the rope classification reflects the *political cost of maintaining the reading against rivals* rather than the reading's internal structure. This would make the constraint a 'rope under fire' — coordination maintained by active defense against foreclosure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's measured extractiveness stems from the claim itself or from the structural pressure of rival readings."
+    },
+    {
+      "id": "palestinian_indigeneity_foreclosure_boundary",
+      "question": "Does this reading's core premise (Jewish indigeneity with unbroken connection) logically foreclose the settler_colonial_reading's core premise (Zionism as European settler-colonial project dispossessing indigenous Palestinians), or do they coexist as competing frameworks?",
+      "resolution_mechanism": "Test whether a single legal/political framework could simultaneously recognize Jewish indigeneity *and* Palestinian indigeneity with full self-determination for both. If mutual recognition is logically possible (e.g. binational or confederal models), the relation is coexists_with. If the readings' core premises are mutually exclusive in any single framework, the relation is forecloses.",
+      "impact": "If forecloses: the indigenous_return_reading structurally eliminates the settler_colonial_reading as a live option within its framework — the kernel cannot hold both. If coexists_with: both remain live positions held by different parties, and the constraint family contains genuine structural contention.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Jewish indigeneity claim logically forecloses Palestinian indigeneity/settler-colonial framing or coexists with it as a rival framework."
+    },
+    {
+      "id": "suppression_mechanism_discursive_vs_structural",
+      "question": "Is the measured suppression (0.35) primarily discursive (marginalization of the reading in international forums, academic discourse) or structural (legal/political barriers to acting on the reading)?",
+      "resolution_mechanism": "Trace the reading's operational capacity: does it translate into effective sovereignty claims (Law of Return, settlement policy, international recognition of Jerusalem) or does it remain a discourse-level claim with limited structural effectuation? High structural effectuation with discursive marginalization = low structural suppression. Low structural effectuation = higher structural suppression.",
+      "impact": "If suppression is primarily discursive, the reading operates as a rope with high coordination function but contested legitimacy. If suppression is structural (the reading cannot be effectuated), the coordination function is degraded and the constraint may drift toward scaffold or piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Discursive vs. structural suppression of the indigenous return reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.2,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.25,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.22,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.38,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.35,
+      "basis": "projected"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the indigenous_return_reading of the jewish_self_determination kernel: the claim that Jewish people are indigenous to the land (Eretz Yisrael) with an unbroken connection spanning millennia, making Zionism a decolonization movement — the return of an indigenous people to their ancestral homeland — rather than a colonial enterprise. The reading draws on archaeological continuity, genetic studies, liturgical and textual orientation toward the land, and the persistence of Jewish communities in the land through successive empires. It frames competing claims (particularly the settler_colonial_reading) as either denying Jewish history or subordinating it to a European colonial paradigm that misidentifies the actors. The constraint operates as a rope: it coordinates Jewish collective action (aliyah, state-building, defense) around a shared historical narrative that legitimizes sovereignty, while the coordination function is contested by rival readings that challenge its factual and moral premises. The extractiveness is low when the reading is internally accepted (indigenous status is binary — you are or you aren't) but rises in contexts where the claim must be actively defended against foreclosure by rival frameworks.",
+    "key_agents": [
+      "jewish_people_as_indigenous_collective: Primary beneficiary (institutional/biographical/identity_locked) — receives legitimization of sovereignty claim, coordination for return and statehood",
+      "palestinian_arab_population: Excluded/co-indigenous with subordinate claim (organized/biographical/constrained) — presence acknowledged but framed as later arrival or co-indigenous with subordinate claim; not a victim in this reading's internal logic",
+      "zionist_movement_institutions: Agenda setter (institutional/generational/arbitrage) — administers the return, builds sovereignty structures, derives authority from the reading",
+      "international_legal_diplomatic_community: Observer (institutional/generational/analytical) — adjudicates competing indigeneity claims, recognizes or contests the reading",
+      "settler_colonial_reading_adherents: Excluded (organized/biographical/constrained) — would object to the reading's core premise but are not in the conversation from this reading's perspective"
+    ],
+    "logic_rationale": "The reading claims mountain-like status (indigeneity as historical fact, binary and unchanging) but operates as a rope because its coordination function depends on active maintenance against rival readings that challenge its factual basis (genetic continuity, unbrokenness of connection) and moral conclusion (decolonization not colonization). Extractiveness is low (0.18) because the reading itself does not extract from others — it coordinates Jewish collective action around a return narrative. Suppression (0.35) reflects the discursive and institutional pressure to conform to the settler_colonial_reading in international forums, not structural barriers to the reading's own operation (Israel effectuates the reading via Law of Return, settlement, sovereignty). Theater ratio (0.22) captures the gap between the reading's binary historical claim and the complex demographic reality it must navigate — performative invocation of 'unbroken connection' against documented population shifts. Accessibility collapse (0.72) is high: once the indigenous return frame is accepted, alternative framings (liberal nationalist, diasporist) lose coherence as primary legitimizers. Resistance (0.58) is significant: the reading faces active contestation from settler_colonial_reading, diasporist_reading, and liberal_nationalist_reading adherents who reject its historical premises or moral conclusions.",
+    "perspectival_gap": "From the Jewish indigenous collective seat: the constraint is a mountain (historical fact) that enables rope-like coordination (return, sovereignty). From the Palestinian seat (excluded in this reading): the constraint operates as a snare — their indigeneity is denied or subordinated, their displacement justified. From the international observer seat: the constraint is a tangled rope — genuine coordination function for one people, asymmetric extraction from another, requiring active enforcement (Israeli state apparatus) to maintain. The engine computes per-seat classifications from the structural data; this reading's internal logic declares no victims, but the structural reality includes excluded parties who experience extraction.",
+    "directionality_logic": "The beneficiary is the Jewish people as an indigenous collective — they receive the legitimization of their sovereignty claim and the coordination mechanism for return. The reading declares no victims (Palestinian presence reframed as later arrival or co-indigenous with subordinate claim). However, the structural reality includes the Palestinian population as an excluded party whose indigeneity claim is contested by this reading's premises. The directionality derivation would assign low d to Jewish collective (beneficiary), high d to Palestinian population (excluded/target), and moderate d to international observers. The reading's self-declaration of zero victims is itself a structural feature — the foreclosure of the rival indigeneity claim.",
+    "mandatrophy_analysis": "The reading's founding problem (Jewish statelessness and vulnerability in diaspora) remains live (antisemitism persists, diaspora insecurity recurs), so mandatrophy is not resolved. However, the reading's application has expanded beyond the founding problem: the coordination function now includes settlement beyond 1967 lines, demographic engineering, and legal regimes that exceed the 'return' justification. This expansion without sunset clause creates a mandatrophy risk — the constraint persists and grows beyond its original coordination mandate.",
+    "kernel_context": "This constraint is the indigenous_return_reading of the jewish_self_determination kernel. Sibling readings: liberal_nationalist_reading (Jewish nation with equal self-determination claim), religious_covenant_reading (divine covenant grounds land claim), diasporist_reading (Jewish flourishing via diaspora pluralism, not sovereignty), settler_colonial_reading (Zionism as European settler-colonial project dispossessing indigenous Palestinians). This reading's distinct structural move: transmutes the kernel from a political claim (self-determination) into an ontological-historical claim (indigeneity), making the constraint binary (indigenous or not) rather than scalar (degree of self-determination)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "jewish_self_determination__liberal_nationalist_reading",
+      "jewish_self_determination__settler_colonial_reading",
+      "jewish_self_determination__religious_covenant_reading",
+      "jewish_self_determination__diasporist_reading",
+      "israeli_law_of_return",
+      "palestinian_right_of_return",
+      "jerusalem_status_constraint"
+    ],
+    "dual_formulation_note": "This constraint is one member of the jewish_self_determination constraint family. The kernel 'jewish_self_determination' decomposes into five readings with distinct ε values, beneficiary/victim structures, and constraint types. This reading (indigenous_return) claims mountain-like historical fact but operates as rope due to contestation. The settler_colonial_reading claims snare/tangled_rope structure with Palestinian victims. The liberal_nationalist_reading claims rope with symmetric coordination. The religious_covenant_reading claims mountain (divine decree). The diasporist_reading claims snare (Zionism extracts from diaspora Jews). All five are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "jewish_people_as_indigenous_collective",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The collective subject of the reading: Jewish people worldwide who identify with the indigenous return narrative. They receive legitimization of their connection to the land, coordination for aliyah and state-building, and a moral framework that frames sovereignty as decolonization. Exit from this identity frame is identity_locked — the reading constitutes Jewish peoplehood itself; leaving it means leaving the collective self-understanding. The constraint provides the structural basis for Law of Return citizenship, settlement enterprise, and international advocacy."
+    },
+    {
+      "name": "palestinian_arab_population",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "The Palestinian Arab population in the land (Israel, West Bank, Gaza) and in diaspora. In this reading's internal logic, they are not victims — their presence is framed as later arrival (post-7th century) or as co-indigenous with a subordinate claim (their connection is real but secondary to the prior Jewish claim). Structurally, they are excluded from the coordination function: the reading's legitimization of Jewish sovereignty does not coordinate their self-determination. Their exit options are constrained by Israeli military control, legal restrictions, and the reading's own denial of their equal indigeneity."
+    },
+    {
+      "name": "zionist_movement_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The institutional apparatus (World Zionist Organization, Jewish Agency, Israeli state ministries, settlement enterprises) that administers the return, builds sovereignty structures, and derives authority from the indigenous return narrative. They set the agenda for how the reading is operationalized: where settlement occurs, who qualifies for return, how the narrative is deployed internationally. They have arbitrage-grade exit — they could pivot to liberal_nationalist_reading or religious_covenant_reading as legitimizing frameworks without losing their institutional position."
+    },
+    {
+      "name": "international_legal_diplomatic_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "UN bodies, ICJ, ICC, EU, US State Department, and other international actors who adjudicate competing indigeneity claims. They do not collect from the constraint but their recognition or contestation shapes its structural effectuation. They observe the reading's deployment in Law of Return, settlement policy, Jerusalem recognition, and counter it with competing frameworks (settler_colonial_reading in UNHRC, liberal_nationalist_reading in Oslo framework). Their analytical seat has no exit — they must engage the contestation."
+    },
+    {
+      "name": "settler_colonial_reading_adherents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Activists, scholars, international NGOs, and state actors who hold the settler_colonial_reading (Zionism as European settler-colonial project). They would object to this reading's core premise (Jewish indigeneity) but are excluded from this reading's conversation — the indigenous_return_reading does not engage their framework as legitimate, it forecloses it. Their exit options are constrained: they operate in international forums where this reading has limited traction, or in academic discourse where they contest it."
+    },
+    {
+      "name": "diasporist_jewish_communities",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Jewish communities and organizations (e.g., Jewish Voice for Peace, Satmar Hasidim, Bundist descendants) who hold the diasporist_reading: Jewish survival via diaspora pluralism, not territorial sovereignty. They are excluded from this reading's coordination — the indigenous return reading treats diaspora as exile to be ended, not a valid form of Jewish life. They have mobile exit: they can maintain their framework independently, but they lose access to Israeli state resources and mainstream Jewish institutional recognition."
+    }
+  ],
+  "gain_flow": "jewish_people_as_indigenous_collective",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates Jewish collective action around return to ancestral land: aliyah, state-building, defense, Hebrew revival, and international advocacy are unified by the narrative that this is an indigenous people's decolonization, not a colonial project. The reading solves the coordination problem of 'why this land, why now, by what right' with a binary historical claim.",
+    "transfer_function": "Moves moral and legal authorization for sovereignty from the indigenous return narrative to Jewish collective institutions (Israeli state, Zionist organizations). The transfer is not material extraction from others in this reading's logic — it is the conversion of historical claim into political authority. The reading declares no transfer from Palestinians (their claim is subordinated, not extracted).",
+    "absent_voices": "Palestinian voices asserting equal indigeneity and self-determination are structurally absent — the reading's premise (Jewish indigeneity with unbroken connection) does not accommodate equal Palestinian indigeneity. Diasporist Jewish voices rejecting sovereignty as the Jewish future are absent. Both would object if present; their absence is maintained by the reading's binary frame (indigenous return vs. exile/colonization).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the indigenous return reading vanished overnight, the primary legitimizing framework for Israeli sovereignty (Law of Return, settlement enterprise, Jerusalem claim) would lose its historical-moral foundation. The Israeli state would need to rely solely on liberal_nationalist_reading (self-determination as a nation among nations) or religious_covenant_reading (divine promise) — both of which carry different structural implications for borders, demographics, and international law. The Palestinian claim would lose its primary rival framework. The conflict's discursive structure would rearrange.",
+    "founding_problem": "Jewish statelessness, vulnerability to persecution in diaspora, and the inability to secure collective survival without territorial sovereignty — the 'Jewish Question' as posed in 19th-20th century Europe, compounded by the Holocaust and the expulsion of Jews from Arab lands.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is corroborated by antisemites (who continue to target Jews), by diaspora Jewish insecurity (rising antisemitism in Europe and US post-2023), by the historical record of Jewish expulsion from Arab lands (1948-1970s), and by the continued existence of stateless populations globally. It is NOT corroborated solely by Zionist institutions — the problem's persistence is attested by adversaries of the reading as well. However, the reading's *expansion* beyond the founding problem (settlement beyond 1967, demographic engineering) is contested as mandatrophy by liberal_nationalist_reading and diasporist_reading adherents."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "jewish_self_determination"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "liberal_nationalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "religious_covenant_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diasporist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "settler_colonial_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "jewish_people_are_indigenous_to_eretz_yisrael",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "zionism_is_decolonization_not_colonization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ancestral_indigenous_sovereignty",
+    "drift_state": {
+      "moment": "post_1967_settlement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "substance_control_legitimacy__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "c9a783a1-8f39-4cdc-98a0-db44bfec14ae"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Harm Reduction Drug Policy Framework",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_agencies",
+      "treatment_providers",
+      "harm_reduction_ngos",
+      "people_who_use_drugs_medicalized"
+    ],
+    "victims": [
+      "low_income_people_who_use_drugs",
+      "marginalized_communities_targeted_by_enforcement",
+      "black_market_participants"
+    ],
+    "vindicated_propositions": [
+      "public_health_supremacy_over_criminal_law",
+      "harm_reduction_as_state_duty"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the substance_control_legitimacy kernel, or does it collapse into the prohibition_reading in practice?",
+      "resolution_mechanism": "Trace enforcement outcomes: if treatment mandates functionally criminalize non-compliance, the reading converges with prohibition. Measure arrest rates for treatment non-adherence vs. possession.",
+      "impact": "If convergence is structural, the harm_reduction_reading is not a stable separate constraint — its ε and extraction profile would be reattributed to the prohibition_reading. The kernel would have only two live readings.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the harm_reduction_reading maintains structural distinctness from prohibition_reading under actual enforcement."
+    },
+    {
+      "id": "black_market_extraction_boundary",
+      "question": "How much of the constraint's measured extraction derives from the persistent black market (prohibition residue) vs. the harm reduction apparatus itself (treatment mandates, reporting requirements)?",
+      "resolution_mechanism": "Decompose extraction: compare jurisdictions with identical harm reduction frameworks but different black market penetration (e.g., Portugal vs. Canada vs. Switzerland). Attribute extraction variance to enforcement of treatment mandates vs. black market violence.",
+      "impact": "If black market extraction dominates, the constraint's tangled_rope character is largely inherited from prohibition_reading; if treatment mandate extraction dominates, the harm reduction apparatus itself is extractive. Changes the structural diagnosis of who benefits and who pays.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Attribution of extraction between prohibition residue and harm reduction apparatus."
+    },
+    {
+      "id": "treatment_mandate_coercion_mechanism",
+      "question": "Is the suppression from treatment mandates structural (legal sanctions, benefit conditionality) or internalized (therapeutic compliance as identity)?",
+      "resolution_mechanism": "Post-exit trajectory study: track suppression levels for people who complete mandated treatment vs. those who exit the system. If suppression persists after legal mandate ends, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than structural measures suggest — the medicalized subject carries the constraint forward voluntarily.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in mandated treatment."
+    },
+    {
+      "id": "cs_framing_alternative",
+      "question": "Does the harm_reduction_reading's kernel framing center on 'state duty to minimize harm' (public health authority) or 'bodily autonomy constrained by harm to others' (liberal autonomy)?",
+      "resolution_mechanism": "Analyze legislative preambles, judicial opinions, and policy documents for the stated authority ground. If authority derives from 'protecting vulnerable populations from themselves', it is public_health_paternalism framing; if from 'preventing third-party harms', it is liberal_autonomy framing.",
+      "impact": "Public_health_paternalism framing influences toward prohibition_reading (expands state duty); liberal_autonomy framing influences toward legalization_reading (limits state duty). The reading's structural neighbors shift.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the kernel's authority grounding for this reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The harm_reduction_reading instantiates a constraint where substance use is framed as a public health issue and state authority derives from a duty to minimize harm without criminalization. Users are medicalized rather than criminalized — but treatment mandates, reporting requirements, and conditionality of social benefits create moderate extractiveness. A persistent black market (prohibition residue) continues to generate violence and extraction, particularly in marginalized communities. The constraint claims to be a rope (coordination of health services) but operates as a tangled_rope: genuine coordination of harm reduction services coexists with asymmetric extraction from low-income users who face treatment mandates while the black market persists.",
+    "logic_rationale": "Extractiveness (0.42) reflects treatment mandate compliance costs, reporting burdens, and black market price premiums borne disproportionately by low-income users. Suppression (0.58) is moderate — the constraint does not criminalize possession but enforces treatment adherence through legal sanctions and benefit conditionality. Theater ratio (0.28) is rising: the 'public health' framing increasingly covers enforcement of treatment compliance rather than voluntary services. Accessibility collapse (0.45) is partial — alternatives exist (voluntary treatment, decriminalization models) but are structurally marginalized. Resistance (0.35) comes from user-led movements and some jurisdictions refusing mandates.",
+    "directionality_logic": "Public health agencies and treatment providers are beneficiaries (d ~0.15): they receive funding, authority, and patient flows. Harm reduction NGOs are beneficiaries (d ~0.25): they gain legitimacy and resources but face co-optation. Medicalized users are in a dual position — they benefit from services (d ~0.3) but bear mandates (d ~0.7). Low-income users and marginalized communities are primary targets (d ~0.85): they face the most intrusive mandates and black market violence. Black market participants are excluded (d ~0.95): the constraint's persistence depends on their exclusion from legitimate markets.",
+    "perspectival_gap": "From the public health agency seat, this is genuine coordination: services are delivered, overdose deaths decline, the constraint works. From the low-income user seat, the same structure is extraction: mandates remove autonomy, black market violence persists, the 'health' frame obscures coercion. The engine computes this divergence from the structural data — the claimed_type (tangled_rope) captures the structural truth that both seats are simultaneously valid.",
+    "mandatrophy_analysis": "The founding problem (overdose crisis, HIV transmission, mass incarceration for possession) is contested — some jurisdictions show it is substantially solved, others show it persists. The constraint has not developed a sunset clause despite harm reduction advocates' original intent. Mandatrophy is unresolved: the treatment mandate apparatus continues to expand (rising theater_ratio, rising extractiveness) even where the founding problem has shifted.",
+    "kernel_context": "This constraint is the harm_reduction_reading of the substance_control_legitimacy kernel. Sibling readings: prohibition_reading (substance use inherently harmful, state authority from moral duty to criminalize), legalization_reading (competent adult autonomy, state limited to preventing third-party harm). This reading medicalizes users rather than criminalizing them, but retains moderate extractiveness through treatment mandates and does not eliminate the black market. The three readings are live positions in contemporary drug policy discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_legitimacy__prohibition_reading",
+      "substance_control_legitimacy__legalization_reading"
+    ],
+    "dual_formulation_note": "The substance_control_legitimacy kernel decomposes into three readings with distinct ε values: prohibition_reading (high extractiveness, high suppression, claimed snare), harm_reduction_reading (moderate extractiveness, moderate suppression, claimed tangled_rope), legalization_reading (low extractiveness, low suppression, claimed rope). They share the referent (state authority over substance use) but instantiate different constraints with different beneficiary/victim structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and fund harm reduction frameworks; set treatment protocols and mandate compliance conditions. Control licensing of treatment providers and allocation of public health funding. Justify the framework as minimizing population-level harm. Can pivot to other public health priorities if political winds shift."
+    },
+    {
+      "name": "treatment_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Receive state funding and mandated patient flows from treatment mandates. Operate opioid agonist therapy programs, counseling services, and monitoring regimes. Their revenue depends on the constraint's enforcement — if mandates weaken, patient volumes drop. Can exit to private practice or other specialties."
+    },
+    {
+      "name": "harm_reduction_ngos",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gain legitimacy, funding, and policy access from the harm reduction framing. Run syringe services, overdose prevention sites, and advocacy. Dependent on state grants that require compliance with reporting and service delivery metrics. Some are co-opted into administering mandates they originally opposed. Exit means losing institutional access."
+    },
+    {
+      "name": "people_who_use_drugs_medicalized",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Access medication-assisted treatment, sterile equipment, and overdose prevention without criminal penalties for possession. But face mandatory counseling, observed dosing, urine testing, and risk of benefit sanctions for non-compliance. Their 'choice' is structured by the mandate — voluntary treatment exists but is capacity-constrained. Exit means returning to unregulated use or the black market."
+    },
+    {
+      "name": "low_income_people_who_use_drugs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the most intrusive treatment mandates (daily observed dosing, frequent testing, housing/benefit conditionality) and highest black market price premiums. Lack resources for private treatment alternatives. Face compounding extraction: time costs of compliance, loss of autonomy, exposure to violence in black markets. Cannot exit — no money for private care, no political voice to change mandates."
+    },
+    {
+      "name": "marginalized_communities_targeted_by_enforcement",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Experience disproportionate enforcement of treatment mandates and residual prohibition enforcement (paraphernalia laws, public use citations). Black market violence concentrates in these communities. Public health services are under-resourced relative to need. The 'harm reduction' frame does not reach them equally. Exit means geographic displacement or continued exposure."
+    },
+    {
+      "name": "black_market_participants",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate outside the legal framework — supply unregulated substances at inflated prices. Their exclusion is structural: the constraint's persistence (both harm reduction and prohibition residues) depends on maintaining a prohibited supply chain. Would lose market position if legalization_reading prevailed. Some diversify into legitimate cannabis markets where available."
+    },
+    {
+      "name": "law_enforcement_residual",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Retain authority over trafficking, manufacturing, and public order offenses. Resist full decriminalization; advocate for treatment mandates with criminal backup. Their budget and mission depend on the prohibition residue. Can pivot to other enforcement priorities but lose drug-war institutional rationale."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study outcomes across jurisdictions: Portugal's decriminalization, Switzerland's heroin-assisted treatment, Canada's safe supply, US state-level variation. See the full constraint family — harm_reduction_reading as implemented, not as theorized. No stake in any reading's victory."
+    }
+  ],
+  "gain_flow": "treatment_providers",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates population-level harm reduction: overdose prevention, disease transmission reduction, connection to services for a stigmatized population. Solves the collective action problem of providing health services to people who use drugs when no single provider has incentive or reach.",
+    "transfer_function": "Moves public funding and mandated compliance from state to treatment providers and public health agencies; moves autonomy and time from low-income users to the mandate apparatus; moves black market revenue to prohibited suppliers. The 'public health' transfer is bidirectional — services flow to users, compliance flows from them.",
+    "absent_voices": "People who use drugs who reject medicalization entirely (autonomy advocates, legalization_reading adherents) are excluded from policy design. Their objection — that any state mandate over substance use is illegitimate — is structurally excluded because the harm_reduction_reading's authority derives from 'duty to minimize harm,' not autonomy. They are present in advocacy but absent from mandate-setting rooms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the harm reduction framework vanished overnight: treatment mandates would dissolve (some users would lose access to medication-assisted treatment), public health funding would be reallocated, black market would expand into the service vacuum, overdose deaths would likely spike in the short term. The world rearranges — but the rearrangement is contested: prohibition_reading advocates say it proves the constraint was necessary; legalization_reading advocates say it proves the constraint blocked autonomy-based solutions.",
+    "founding_problem": "Overdose crisis, HIV/HCV transmission among people who inject drugs, mass incarceration for simple possession, and the failure of prohibition to reduce supply or demand. The arrangement was built to replace criminalization with health-centered response while maintaining state authority over substance use.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health agencies attest the problem is live (rising overdose deaths, novel psychoactive substances). User-led organizations and some jurisdictions attest the founding problem is substantially solved where harm reduction is fully implemented (Portugal, Switzerland) — the constraint persists as mandate expansion. Independent epidemiological analyses support both readings: overdose mortality rises where mandates are punitive, falls where services are voluntary and comprehensive."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "substance_control_legitimacy__prohibition_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_duty_to_minimize_harm_justifies_mandates",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "medicalization_preferable_to_criminalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "public_health_supremacy_framework",
+    "drift_state": {
+      "moment": "contemporary_overdose_crisis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

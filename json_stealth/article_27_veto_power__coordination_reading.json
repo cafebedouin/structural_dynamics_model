@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "article_27_veto_power__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "8a2a7f03-cd64-4d57-a5c6-f5fafe899d1e"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.55,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Security Council Permanent-Five Veto (War-Prevention Reading)",
+    "topic_domain": "international_relations/institutional_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "p5_great_powers",
+      "non_p5_member_states"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of kernel article_27_veto_power — the coordination_reading, which holds the veto is justified by war-prevention necessity. Sibling readings (separate constraint files) are the oligopoly_reading (veto as entrenched authority rent extracted through Charter immutability) and the sovereignty_reading (veto as Westphalian consent principle applied to great powers). What would adopting a sibling change structurally?",
+      "resolution_mechanism": "Comparative classification across the three reading files over the identical referent (the standing veto arrangement). The disagreement is located in what explains the veto's persistence: functional necessity (this reading), rent entrenchment (oligopoly), or consent-based legitimacy (sovereignty).",
+      "impact": "If the oligopoly reading is structurally correct, epsilon for the same arrangement is far higher and victim classes exist (blocked-reform membership, vetoed-theater populations), pushing classification toward extraction-dominated types. If the sovereignty reading is correct, the veto is a principled limit whose costs are constitutive rather than incidental. This file's low-moderate epsilon is valid only under this reading's own lights.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this story instantiates one of three live readings of the Article 27 veto kernel."
+    },
+    {
+      "id": "war_prevention_counterfactual",
+      "question": "Would great-power war actually be more probable without the unanimity gate — that is, is the coordination function real, independently of nuclear deterrence as a rival explanation for the post-1945 great-power peace?",
+      "resolution_mechanism": "Historical and archival comparison: League of Nations exclusion/walkout dynamics versus post-1945 crisis episodes where the gate plausibly lowered escalation pressure (confrontations resolved by Council paralysis rather than ultimata), controlling for the nuclear deterrent variable across dyads and periods.",
+      "impact": "If nuclear deterrence rather than the veto explains great-power restraint, the coordination justification collapses, the measured extraction becomes uncompensated cost, and the classification shifts sharply upward in extractiveness. If the gate has independent causal weight, the current profile stands.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the veto's war-prevention function is causally real or confounded by nuclear deterrence."
+    },
+    {
+      "id": "client_shielding_boundary",
+      "question": "What share of veto exercises protect the vetoing power itself from compelled confrontation (the coordination function) versus shield third-party clients or proxy interests (a use the coordination rationale does not cover)?",
+      "resolution_mechanism": "Code the full veto record by whether the casting power faced any realistic prospect of binding action against itself in the matter, versus shielding an allied government or annexation/proxy asset; publish the distribution by era.",
+      "impact": "A rising client-shielding share means a growing fraction of the arrangement's operation extracts from the broader membership and vetoed-theater populations without purchasing war prevention — the signal that function and persistence are decoupling and that a hybrid classification would become the honest terminal state.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between self-protection vetoes (function) and client-shielding vetoes (cost without function)."
+    },
+    {
+      "id": "amendment_lock_persistence",
+      "question": "Does the veto persist because it remains necessary (functional persistence) or because Article 108's ratification requirement makes removal impossible regardless of function (lock-in persistence)?",
+      "resolution_mechanism": "Behavioral test: observe P5 responses to binding-form restraint proposals (code-of-conduct pledges with reporting obligations, automatic Assembly referral). Willingness to accept enforceable self-limitation indicates the privilege is held for its function; refusal across all forms indicates the privilege is held for itself.",
+      "impact": "If lock-in rather than necessity explains persistence, the arrangement is held aloft by constitutional impossibility of exit rather than ongoing coordination value, and its honest steady-state classification is inertial rather than coordinative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Functional persistence versus constitutional lock-in as the explanation for the veto's survival."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "article_27_veto_power__oligopoly_reading",
+      "article_27_veto_power__sovereignty_reading"
+    ],
+    "dual_formulation_note": "Constraint family: one kernel (Article 27 veto power), three readings emitted as separate stories. All three share the same epsilon referent — the standing veto arrangement itself — but author reading-indexed epsilon over it: this coordination_reading authors low-moderate epsilon (mostly the operating cost of keeping great powers inside collective security, with a rising client-shielding component); the oligopoly_reading authors high epsilon with explicit victim classes; the sovereignty_reading authors the arrangement as a consent-based limit whose costs are principled. Family links run through network.affects_constraints in all three files; this reading is the upstream founding-era justification from which the other two dissent."
+  },
+  "stakeholders": [
+    {
+      "name": "p5_great_powers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Five states hold permanent seats and a negative vote over every substantive Security Council decision. Each uses that vote to guarantee that no Council resolution can order or authorize military action against it or march its forces into a confrontation it rejects. They wrote the rule in 1945, defend it in every reform negotiation, and are the only governments whose ratification any Charter amendment requires. Walking out of the framework would cost them the legitimating cover of collective security, so they operate inside rules they themselves control."
+    },
+    {
+      "name": "non_p5_member_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The remaining member states vote in the Council but can be overridden on any substantive matter by a single permanent-member negative vote. They receive the continued presence of the great powers inside a legal framework — the alternative having been demonstrated by the League's collapse — and the assurance that no war will be authorized over a great power's objection. They bear Council paralysis whenever the five disagree, and they organize through caucuses and initiatives to condemn or route around individual vetoes, but no voting arithmetic they control can amend the rule."
+    },
+    {
+      "name": "populations_in_vetoed_theaters",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "People in conflict zones where protective or coercive resolutions were blocked by a permanent-member negative vote — sieges, annexations, and bombardments that continued under the shelter of a cast veto. They hold no vote, occupy no seat, and often have no state willing to spend negotiating capital on their behalf inside the chamber; their recourse is humanitarian channels that operate outside Council procedure entirely."
+    },
+    {
+      "name": "veto_reform_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A cross-regional grouping of governments and initiatives — the ACT group's restraint code, the French-Mexican voluntary limitation pledge, the Liechtenstein initiative mandating Assembly debate after every veto. They can convene, publish, and lobby, but every amendment path runs through ratification by the five themselves, so their leverage terminates at the chamber door however wide their support."
+    },
+    {
+      "name": "international_law_community",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars, legal advisers, and practitioners who track the veto's usage record, analyze its doctrinal treatment of procedural versus substantive questions, and advise delegations on precedent. They see the full structure across cases and decades; their stake is the coherence of the legal order and the accuracy of the precedent record rather than any flow controlled by the rule."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the great-power participation problem in collective security: by making every substantive Council decision subject to each permanent member's concurrence, the rule guarantees that no great power can be outvoted into an enforced confrontation, which is the condition under which all five stayed inside the institution after 1945 instead of repeating the League pattern of walkout and irrelevance.",
+    "transfer_function": "Moves blocking control over binding collective action from the Council majority to five permanent holders, and moves the corresponding assurance — immunity from compelled confrontation — to those five. The forgone timely action in divided-interest crises is borne by the wider membership and, acutely, by populations in the theaters concerned.",
+    "absent_voices": "Populations in theaters where action was vetoed have no seat and no vote; the broad membership is locked out of amendment by the ratification rule even where it speaks with near-unanimity through the Assembly; reform coalitions are heard in debate but hold no decision rights anywhere in the chain that could change the text.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal of the unanimity gate forces an immediate choice on the five: defy binding resolutions they reject (compliance crisis, and the credible threat of enforcement against nuclear states collapses the Council's authority) or accept compulsion (direct confrontation risk). Either branch dismantles the Chapter VII architecture; the realistic reconstruction is some renewed great-power concert outside the Charter or a reversion to sphere-of-influence politics — the arrangements the 1945 design was built to displace.",
+    "founding_problem": "In 1945 the founders confronted the League's demonstrated failure mode: an institution that could bind or exclude the great powers lost them — aggressors walked out, sanctions failed, and the organization watched the war it existed to prevent. The founding problem was designing a collective-security body the great powers would join and remain inside, under conditions where the atomic age made their direct confrontation catastrophic.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroboration outside the beneficiary set is partial and should be stated plainly. Independent support comes from the League failure record itself, from diplomatic practice of non-permanent members — governments that harshly criticize individual vetoes nonetheless build policy around great-power participation and pursue restraint codes rather than abolition — and from international-relations scholarship across rival theoretical traditions, which disputes the veto's justice but broadly concedes the participation dynamic. The strongest attestations of the founding problem, however, still come from the five themselves, and that asymmetry is itself signal: the genealogy is corroborated at the level of the participation problem, contested at the level of what the privilege is currently used for."
+  },
+  "gain_flow": "p5_great_powers",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "Article 27(3) of the UN Charter requires the concurring votes of the permanent members for substantive Security Council resolutions; the operative effect is that no binding Council action can pass over any one of the five. This story instantiates the coordination reading of that arrangement: the veto is the price that keeps the great powers inside collective security, guaranteeing each of them against being outvoted into a military confrontation it rejects. Epsilon is authored for the standing veto arrangement itself, assessed by this reading's own lights — never for an alternative decision rule this reading might prefer — and lands at low-moderate (0.28): mostly the operating cost of the war-prevention function, with a rising component from vetoes that shield third-party clients rather than the caster. Under this reading there is no victim class: the costs of Council paralysis fall diffusely on the membership as a whole, and the acute cost-bearers in vetoed theaters are seated as excluded voices rather than declared victims — that is this reading's own structural claim, fixed here so the file stays epsilon-invariant. The claim and the metrics are independent authored facts: the type is claimed as rope from this reading's seat, while the metrics describe creeping extraction over the interval; where the engine's per-seat computations diverge from the claim, that divergence is the datum the corpus exists to take.",
+    "key_agents": [
+      "p5_great_powers: agenda-setters and principal beneficiaries (institutional/constrained) — hold and administer the veto; each collects immunity from compelled confrontation and jointly controls all amendment paths",
+      "non_p5_member_states: beneficiaries (organized/constrained) — receive great-power participation in collective security and freedom from wars authorized over a great power's objection; bear diffuse paralysis costs",
+      "populations_in_vetoed_theaters: excluded (powerless/trapped) — bear the acute costs of blocked action; no seat, no vote, no champion in the chamber",
+      "veto_reform_coalition: excluded (organized/constrained) — restraint-code and transparency initiatives with majority support but no amendment leverage",
+      "international_law_community: analytical observer (moderate/analytical) — tracks usage patterns and doctrinal consequences across the full record"
+    ],
+    "logic_rationale": "Extractiveness 0.28: under this reading most veto exercises purchase the core function (no great power is compelled), but the client-shielding share has grown since the 1970s and dominates recent usage, so the extraction component trends upward across the series. Suppression 0.55: the veto actively nullifies binding Council action whenever the five diverge — a real suppression of the collective-security channel — while leaving extra-Council alternatives (Assembly session, ad hoc coalitions, unilateral action) open, which caps it well below coercive-system levels. Theater_ratio 0.12: the mechanism is operative, not performed; the slight rise reflects growing rhetorical framing of each veto as responsibility-exercise rather than its blocking work. Accessibility_collapse 0.45: once the arrangement is understood, formal alternatives collapse (any amendment requires the five's own ratification), but workable partial substitutes persist — Assembly mechanisms, voluntary restraint codes, routing around the Council — each with known failure modes inherited from the League record. Resistance 0.55: sustained and institutionalized (Uniting for Peace 1950, the ACT code of conduct, the Franco-Mexican pledge, the Liechtenstein veto initiative) yet ineffective at the textual level for eight decades. The suppression series is deliberately cyclical rather than monotonic — Cold War peak, detente decline, post-Cold-War trough in the 1990s when the five cooperated, renewed climb through the Ukraine and Middle East crises — tracking the great-power discord cycle; nine points capture one full cycle. Whether the oscillation itself is an extraction mechanism (intermittent blocking training the membership into dependence on P5 goodwill) or a side effect of external geopolitics is flagged in the client_shielding_boundary omega. All three tracked metrics are authored on one shared nine-point grid so no end-state value is silently substituted into earlier periods.",
+    "perspectival_gap": "The seats compute differently by construction. From the permanent-member seat the arrangement is self-defense insurance plus the service of presence: we stay at the table, and the table can never be turned into a weapon against us. From the non-permanent-member seat it is a diffuse tax — paralysis paid by everyone — funding a public good (great-power restraint) whose incidence is invisible until a crisis exposes it. From the excluded seats — vetoed-theater populations and the reform coalition — the same structure presents as rule by five, with costs concentrated on those with the least voice. The engine derives these per-seat classifications from the declared positions and exits; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Both declared beneficiary groups derive low directionality: the permanent members sit nearest the beneficiary pole (designers, administrators, and collectors of the immunity guarantee, with constrained exit that binds them to the system they run), and the broader membership sits near-symmetric-but-net-positive under this reading — real paralysis costs, outweighed by the participation dividend the reading asserts. No victims are declared because this reading holds there is no victim class; the acute cost-bearers are seated as excluded, and per the R3 ruling their authored absence feeds commentary, never a directionality correction. Suppression enters the engine's computation as a raw structural property, unscaled; only extractiveness is scaled, modestly amplified here by the global spatial scope that makes verification of every member's position harder.",
+    "mandatrophy_analysis": "The founding problem — keeping the great powers inside a common institution in the nuclear age — remains live, so there is no mandate atrophy to resolve: function and persistence coincide under this reading, and the R5 mismatch consumer reads status=live against verdict=world_rearranges with no zombie flag available. The live risk to this reading is temporal, not logical: the extraction series rises monotonically while the suppression series cycles. If the client-shielding share continues to grow until blocking-for-others dominates blocking-for-self, the arrangement's persistence decouples from its founding function while the founding problem technically remains live — the precise condition the amendment_lock_persistence omega is designed to detect, and the point at which this file's rope claim would need revisiting on the evidence rather than on rhetoric.",
+    "kernel_context": "Kernel: article_27_veto_power — the standing Article 27(3) permanent-member concurrence requirement. This file instantiates the coordination_reading: the veto as the war-prevention price of great-power participation. Sibling readings, each a separate constraint file over the same referent: the oligopoly_reading (persistence explained by entrenched authority rents defended through Charter immutability) and the sovereignty_reading (persistence explained by the Westphalian consent principle applied to states with global enforcement reach). Relations are authored coexists_with in both directions because no single party's framework logically excludes the others — a government or analyst can coherently hold that the veto prevents war and entrenches privilege simultaneously — so the readings compete in discourse without foreclosure. The disagreement is located in the explanation of persistence: necessity, rent, or principle; each reading's epsilon, beneficiary structure, and classification follow from that choice."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "great_power_concert_bargain",
+    "drift_state": {
+      "moment": "contemporary_p5_discord_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "oligopoly_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "compelled_confrontation_risk_dominates",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "unanimity_gate_secures_participation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

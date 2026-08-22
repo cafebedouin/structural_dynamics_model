@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "reformation_event_boundary__political_swap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "7158b70c-9c97-4e81-b11a-c831bd15b1b0"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reformation as Political Asset Seizure (Political Swap Reading)",
+    "topic_domain": "historical/religious/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "secular_princes",
+      "imperial_estates",
+      "city_councils_reformed"
+    ],
+    "victims": [
+      "papal_states",
+      "monastic_institutions",
+      "catholic_clergy_dispossessed",
+      "imperial_free_cities_catholic"
+    ],
+    "vindicated_propositions": [
+      "cuius_regio_eius_religio_doctrine",
+      "secular_sovereignty_over_ecclesiastical_goods"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is the political_swap_reading of the contested kernel reformation_event_boundary. What structural elements distinguish it from the theological_climb_reading and composite_overdetermination_reading?",
+      "resolution_mechanism": "Comparative periodization: political_swap extends to 1648 (Westphalia) as settlement stabilization; theological_climb centers 1517-1555 (Augsburg); composite rejects single periodization. Cross-reading ε-invariance test: each reading must produce stable ε on its own referent.",
+      "impact": "If readings share referent but author different ε, the kernel decomposition is validated. If ε drifts with observable choice within one reading, the reading itself conflates constraints and must split further.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel identity and reading distinction for reformation_event_boundary"
+    },
+    {
+      "id": "theology_as_scaffold_or_independent",
+      "question": "Is the theological dimension of the Reformation a genuine coordination function (scaffold with sunset) or pure post-hoc rationalization (theater on a snare)?",
+      "resolution_mechanism": "Trace doctrinal commitments that persisted after political settlement stabilized (post-1648). If core theological innovations survived political utility, they carried independent coordination weight. If they dissolved or were purely instrumental, the scaffold characterization holds.",
+      "impact": "If theology was genuine scaffold, the constraint has a coordination function that partially sunset; if pure rationalization, extraction is higher and suppression is the primary persistence mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether theological commitments were independent coordination or instrumental cover"
+    },
+    {
+      "id": "asset_seizure_vs_secularization_legitimacy",
+      "question": "Did secular rulers seize church assets primarily through force/expropriation, or through negotiated secularization with legal frameworks that conferred legitimacy?",
+      "resolution_mechanism": "Comparative analysis of Reichstag decrees, Peace of Augsburg (1555) provisions, and Westphalia (1648) treaties on ecclesiastical property. Examine whether transfers followed legal forms or were imposed by conquest.",
+      "impact": "If primarily legalized secularization, the constraint has stronger coordination character (rope/tangled_rope); if primarily forcible seizure, it trends toward snare with higher suppression and extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of ecclesiastical asset transfer: legal vs. coercive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1517,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1525,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1535,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1555,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1618,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1517,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1525,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1535,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1555,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1618,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1517,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1525,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1535,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1555,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1618,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 1517,
+    "end": 1648
+  },
+  "commentary": {
+    "narrative_context": "This reading frames the Reformation as a political swap: secular rulers (German princes, imperial estates, city councils) exploited theological disputes to break papal authority and seize church lands, revenues, and jurisdictional rights. Theology served as post-hoc rationalization and mobilization tool — a scaffold for power consolidation that partially sunset once political settlement stabilized at Westphalia (1648). The Catholic Church (papal states, monastic institutions, dispossessed clergy) is the primary victim of asset seizure and authority transfer. The constraint is the standing arrangement of transferred ecclesiastical sovereignty and property, assessed by this reading's lights: high extraction (0.78) from the Church to secular rulers, active suppression of Catholic restoration attempts, and moderate theater as theological justification persisted beyond its instrumental utility.",
+    "key_agents": [
+      "secular_princes: Primary beneficiaries (institutional/powerful) — seized ecclesiastical territories, revenues, and episcopal appointments",
+      "imperial_estates: Beneficiaries (organized/powerful) — gained Reichsstand status and church property through secularization",
+      "city_councils_reformed: Beneficiaries (organized/moderate) — seized monastic property and assumed ecclesiastical jurisdiction",
+      "papal_states: Primary victims (institutional/powerless) — lost territorial sovereignty and revenue streams in Germany",
+      "monastic_institutions: Victims (organized/powerless) — dissolved, assets confiscated across Protestant territories",
+      "catholic_clergy_dispossessed: Victims (moderate/powerless) — lost benefices, livelihoods, legal protections",
+      "imperial_free_cities_catholic: Victims (organized/moderate) — pressured to conform or lose status",
+      "theologians_reformers: Excluded from this reading's beneficiary structure — treated as instrumental agents, not independent drivers",
+      "historians_composite: Observers (analytical) — see overdetermined causality this reading reduces"
+    ],
+    "logic_rationale": "Base extractiveness (0.78 at 1648) reflects the massive, permanent transfer of ecclesiastical wealth and sovereignty to secular rulers — roughly 40% of German ecclesiastical territory secularized by 1648. Suppression (0.72) reflects active enforcement: military suppression of Catholic restoration (Schmalkaldic War, Thirty Years' War), legal exclusion of Catholic clergy from secularized territories, and the cuius regio principle denying exit to Catholic subjects. Theater ratio (0.45) captures the dual character: genuine theological coordination existed (Lutheran/Calvinist confessionalization) but was instrumentalized for political consolidation — the Peace of Augsburg (1555) and Westphalia (1648) formalized the political settlement while freezing confessional boundaries as political borders. Accessibility collapse (0.35) is moderate: alternative arrangements (imperial reform councils, conciliarism, Erasmian reform) were suppressed but not unthinkable. Resistance (0.68) is high: Catholic Counter-Reformation, Jesuit missions, Habsburg restoration attempts, and the Thirty Years' War itself constitute sustained resistance.",
+    "perspectival_gap": "From secular princes' seat (beneficiaries, powerful, arbitrage exit): the constraint is a successful coordination mechanism that solved the problem of fragmented imperial authority and unlocked resources for state-building — a rope/tangled_rope from their view. From the papal states and monastic institutions (victims, institutional/powerless, trapped exit): the constraint is a violent expropriation enforced by military power and legal fiction — a snare. From city councils (beneficiaries, organized, constrained exit): mixed — gained autonomy and assets but locked into confessional politics. The engine computes this divergence from power/exit/role structural data.",
+    "directionality_logic": "Secular princes and imperial estates are structural beneficiaries (d near 0.0-0.15): they collected the extraction (lands, revenues, appointments) and controlled enforcement. The papal states and monastic institutions are structural victims (d near 0.85-1.0): they bore the full extraction with no exit (territorial sovereignty cannot be moved). Catholic clergy and Catholic imperial cities are secondary victims (d near 0.7-0.85): some mobility for individuals but collective dispossession. Theologians are excluded from the beneficiary structure in this reading — their role was instrumental, not that of independent drivers capturing gains.",
+    "mandatrophy_analysis": "The founding problem (fragmented imperial authority, papal fiscal extraction from Germany) was substantially resolved by 1555 (Augsburg) and definitively by 1648 (Westphalia). The arrangement persisted as a settled political order, not as an active extraction machine — but the asset transfer was irreversible. The mandate (breaking papal authority) was resolved; the extraction (seized assets) was consolidated. This is not classic mandatrophy (function atrophied but constraint persists) — it is a completed swap that became the new baseline. The constraint's type reflects the active enforcement phase (1517-1648); post-1648 it becomes the structural background of the Westphalian system.",
+    "kernel_context": "This constraint is the political_swap_reading of kernel reformation_event_boundary. Sibling readings: theological_climb_reading (theology as genuine doctrinal breakthrough requiring institutional separation) and composite_overdetermination_reading (irreducible multi-causal composite). This reading asserts: periodization 1517-1648 (Westphalia as stabilization); primary driver = political asset seizure; theology = scaffold/rationalization; Catholic Church = victim; secular rulers = beneficiaries. The ε-invariance principle applies: this reading's ε (0.78) is assessed on the standing arrangement of transferred ecclesiastical sovereignty, not on the theological innovations the sibling reading centers."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "reformation_event_boundary__theological_climb_reading",
+      "reformation_event_boundary__composite_overdetermination_reading",
+      "westphalian_sovereignty_settlement",
+      "confessionalization_state_formation"
+    ],
+    "dual_formulation_note": "This reading (political_swap) and theological_climb_reading are dual formulations of the same kernel. Political_swap centers authority transfer and asset seizure (high ε, victims = Church); theological_climb centers doctrinal innovation (lower ε, beneficiaries = reformers/communities). They differ in referent periodization, beneficiary/victim structure, and what counts as the constraint's coordination function. The composite reading rejects the duality as false."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "secular_princes",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "German territorial princes (electors, dukes, margraves) who seized episcopal territories, monastic lands, and church revenues. They enforced cuius regio eius religio to consolidate sovereignty. Exit options were high — they could shift confessions for political advantage (e.g., Brandenburg 1613, Palatinate shifts). Gains were direct and massive: ~40% of ecclesiastical territory secularized."
+    },
+    {
+      "name": "imperial_estates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Imperial knights, counts, and prelates who gained Reichsstand status and church property through secularization. They operated within the Imperial legal framework (Reichstag, Kreis structures) but used Reformation to expand autonomy. Exit was constrained by Imperial law but mobile within the estate system."
+    },
+    {
+      "name": "city_councils_reformed",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Urban magistrates (Nuremberg, Strasbourg, Ulm, etc.) who seized monastic property, assumed ecclesiastical jurisdiction, and redirected church revenues to civic uses. Gains were substantial but exit was constrained by Imperial politics and confessional alliances (Schmalkaldic League)."
+    },
+    {
+      "name": "papal_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "The Papacy's temporal sovereignty in Germany (episcopal territories, monastic networks, revenue streams from annates/pallia/Peter's Pence). Lost permanently — no exit, no recovery. The constraint extracted territorial sovereignty and fiscal rights through military and legal means."
+    },
+    {
+      "name": "monastic_institutions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Monasteries, convents, and cathedral chapters across German lands. Dissolved en masse; assets confiscated; members expelled or pensioned. No collective exit — the institution itself was the target. Individual monks/nuns had limited personal exit (secularization, migration) but the corporate entity was destroyed."
+    },
+    {
+      "name": "catholic_clergy_dispossessed",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Parish priests, canons, and bishops in territories that adopted Reformation. Lost benefices, legal protections, and livelihoods. Some migrated to Catholic territories; others conformed outwardly. Exit was individually possible but collectively catastrophic — the Catholic clerical structure in Protestant lands was dismantled."
+    },
+    {
+      "name": "imperial_free_cities_catholic",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Free Imperial Cities that remained Catholic (e.g., Cologne, Aachen, Regensburg) but faced pressure to conform, lost influence in Imperial diets, and saw surrounding territories secularize. Exit was constrained by geography and Imperial politics — they could not relocate."
+    },
+    {
+      "name": "theologians_reformers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Luther, Melanchthon, Bucer, Calvin, Zwingli and their networks. In this reading they are instrumental agents — their theological innovations were real but were mobilized by political actors. They did not capture the gains of asset seizure. Some gained patronage positions but exit was mobile (they moved between cities/territories)."
+    },
+    {
+      "name": "historians_composite",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars who reject single-driver narratives (Moeller, Oberman, Brady, Dixon). They see the Reformation as overdetermined: theological, political, social, and economic causes operating simultaneously. Their analysis is not captured by this reading's constraint but provides the comparative frame."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The arrangement solved the coordination problem of fragmented Imperial authority by transferring ecclesiastical sovereignty to secular rulers, creating a new legal framework (cuius regio) for confessional coexistence that stabilized at Westphalia. It coordinated the dissolution of a transnational ecclesiastical property system into territorial state assets.",
+    "transfer_function": "Transferred ecclesiastical lands, revenues (tithes, annates, monastic rents), jurisdictional rights (episcopal appointments, ecclesiastical courts), and legislative authority over religion from the Papacy and Catholic Church to secular princes, imperial estates, and city councils — roughly 40% of German ecclesiastical territory by 1648.",
+    "absent_voices": "The Catholic clergy and laity in Protestant territories who had no representation in the secularization decisions; the monastic communities dissolved without consent; the papal curia excluded from Imperial legal processes after 1555. They would have objected to the legitimacy of the transfers but were structurally excluded from the negotiation (Reichstag, religious colloquies, Westphalia).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the political swap constraint vanished overnight (i.e., if the secularization of church property and transfer of ecclesiastical sovereignty were reversed), the territorial map of Central Europe would reorganize: ~40% of land would revert to ecclesiastical rule, the cuius regio principle would collapse, confessional boundaries would decouple from political borders, and the Westphalian sovereignty framework would lose its foundational settlement. The modern state system in Germany is built on this transfer.",
+    "founding_problem": "The Holy Roman Empire's fragmented authority structure allowed the Papacy to extract fiscal resources (annates, pallia, Peter's Pence, reservation of benefices) and appoint foreign clerics to German benefices, while Imperial estates lacked full sovereignty over their territories. Secular rulers sought to seize these resources and jurisdictions for state-building.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Imperial diet records (Reichsabschiede 1521-1555) document princely grievances against papal fiscal extraction. The Gravamina Nationis Germanicae (1522-1523) — a petition from German estates to the Diet — attests the founding problem from the beneficiaries' side. Catholic historians (Jedin, Hubbard) corroborate the fiscal grievances but contest the legitimacy of the seizure. The problem is dead: papal fiscal extraction from Germany ended permanently; the territorial sovereignty transfer was consolidated at Westphalia."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "reformation_event_boundary__theological_climb_reading",
+      "reformation_event_boundary__composite_overdetermination_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "theological_climb_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_overdetermination_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reformation_primarily_political_asset_transfer",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "theology_as_instrumental_scaffold_for_power_consolidation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "westphalia_as_definitive_settlement_stabilization",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "imperial_ecclesiastical_order_pre_1517",
+    "drift_state": {
+      "moment": "westphalian_settlement_1648",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

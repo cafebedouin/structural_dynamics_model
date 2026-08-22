@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "total_war_reachability_boundary__contraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "6968312d-384f-47de-802f-22c12ee990ce"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.12,
+    "claimed_type": "mountain",
+    "human_readable": "Contraction Reading: Winnable Total War Outside the Feasible Set",
+    "topic_domain": "international_relations/strategic_studies",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint instantiates the contraction_reading of the total_war_reachability_boundary kernel; how would classification shift under the sibling readings?",
+      "resolution_mechanism": "Generate and compare the sibling stories: dropping_reading (total war improbable but reachable; deterrence as coordination equilibrium) and contingent_reachability_reading (current contraction as a reversible technological artifact). Cross-read epsilon and computed type across the family.",
+      "impact": "Under dropping_reading the same observables classify as a rope with moderate epsilon (forbearance maintained by coordinated expectation); under contingent_reachability_reading as a piton awaiting technological reversal. Only the contraction reading yields a mountain with no beneficiary structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: one reading of a three-reading kernel; siblings are separate constraints, not folded into this one."
+    },
+    {
+      "id": "constructed_vs_physical_boundary",
+      "question": "Is the closure of the total-war outcome set a genuine structural limit of thermonuclear physics, or a contingent artifact of current arsenal configurations that better technology could reopen?",
+      "resolution_mechanism": "Adversarial technical assessment: can any deployable defense architecture (wide-area missile defense, orbital interception, layered airburst) plausibly reduce assured retaliation below punishment thresholds against a peer's full arsenal? Four decades of program history (Sentinel, SDI, GMD intercept testing) supplies the base rate.",
+      "impact": "If some architecture could restore damage limitation against assured retaliation, the boundary is contingent rather than structural, the mountain claim fails, and the story migrates toward the contingent_reachability_reading's classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Natural-law versus constructed-condition ambiguity at the heart of the mountain claim."
+    },
+    {
+      "id": "deliberate_vs_accidental_pathways",
+      "question": "Does the feasible-set closure bind only deliberate policy, or also the accidental and unauthorized-use pathways that the historical record shows repeatedly approached activation?",
+      "resolution_mechanism": "Systematic coding of near-miss incidents (1962 ExComm record, 1979 NORAD false alarm, 1983 Petrov episode, Able Archer 83) for how close the system came to total exchange absent any decision to fight one.",
+      "impact": "If inadvertent pathways are live, the boundary is porous at the margins: the closure holds for chosen wars but not for the full route-space to total exchange, lowering effective closure and weakening the mountain profile.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the closure covers the whole route-space to total war or only the deliberate branch."
+    },
+    {
+      "id": "universal_tail_risk_accounting",
+      "question": "This reading declares no current victims, yet boundary failure carries a species-level victim set; should the existential tail risk carried by the arsenals count as extraction imposed on everyone by the arrangement's mere existence?",
+      "resolution_mechanism": "An explicit accounting decision: standard expected-value extraction (near-zero, since failure probability is very small) versus tail-weighted accounting (catastrophic loss multiplied by small probability).",
+      "impact": "Tail-weighted accounting would make every living person simultaneously beneficiary and payer, dissolving the clean no-beneficiary structure; expected-value accounting preserves the mountain profile with negligible extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "How to book the species-level tail risk the arsenal substrate carries."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1962,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1972,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1962,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1972,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1962,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1972,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.8
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the total_war_reachability_boundary kernel: the contraction_reading, under which thermonuclear arsenals with assured second-strike capability contracted the strategic space until winnable total war between great powers left the feasible set entirely. The constraint is the closure itself — the standing arrangement under contest is the present-day unavailability of total war, and epsilon is authored for that arrangement as this reading sees it: a structural limit that extracts from no one, employs no one, and requires no enforcement machinery, because retaliation physics does the enforcing. The sibling readings (dropping_reading, contingent_reachability_reading) are separate constraints in separate files; per the single-reading discipline, no hedge across readings appears in the metrics. The expected structural delta is honored: no beneficiary structure is declared because no actor collects from the boundary's operation, and the universal victim set attaches to the boundary's FAILURE mode, not to its standing operation — that distinction is carried in the universal_tail_risk_accounting omega rather than in a victims declaration, because the standing arrangement imposes no costs on anyone.\n\nKEY AGENTS (by structural relationship):\n- nuclear_powers_command_authorities: Administrator of the boundary's physical substrate (institutional/identity_locked) — maintains the second-strike forces whose survivability closes the outcome set; did not choose the boundary, inherited it\n- civilian_populations_nuclear_states: Sheltered background party (moderate/trapped) — receives the absence of total war as an unchosen condition; their cities are the hostages that make retaliation credible\n- extended_deterrence_allies: Umbrella beneficiary bearing sovereignty costs (powerful/constrained) — plans defense around the ceiling and forgoes independent arsenals\n- nonaligned_non_nuclear_states: Voiceless beneficiary-at-risk (moderate/trapped) — enjoys damped great-power war with no seat and no arsenal; bears full exposure to failure\n- counterforce_restoration_community: Recurring challenger paying futile program costs (institutional/mobile) — invests in restoring damage limitation that the closure prices out\n- disarmament_movements: Excluded objector (organized/constrained) — contests the permanence framing from outside the planning rooms\n- strategic_studies_community: Analytical observer (analytical/analytical) — formalized the reading and audits it against new technology",
+    "logic_rationale": "Extractiveness is authored near zero (0.05) because nothing flows through the boundary: no seat collects, no seat is bled. Suppression is high (0.80) but must be read correctly: it is the boundary's self-enforcing force — assured retaliation suppressing the total-war option — and suppression is a raw structural property, unscaled by power or scope; here the high value describes the mechanism working, not coercion applied by any agent to maintain the arrangement. Theater ratio (0.30) reflects the growing share of boundary-adjacent activity that is performative (parades, doctrine statements, modernization announcements) relative to the functional core (survivability engineering); it rises over the interval as the boundary became taken for granted. Accessibility collapse is high (0.90): once the arithmetic of thermonuclear exchange is understood, winnable-total-war alternatives collapse almost completely — forty years of counterforce and missile-defense programs have not reopened them. Resistance is low (0.12): the counterforce restoration community probes the boundary persistently but unsuccessfully. Claim and metrics are independently authored: the claimed type is mountain because this reading holds the closure to be structural, and the metric profile happens to be consistent with that claim — no value was tuned to secure certification. All three tracked series run on one shared seven-point grid (1950–2025) so every metric is authored at every examined time point; the suppression_requirement series is included because the story specifically traces the boundary's enforcement consolidation (thin bomber-era deterrence through SLBM-matured assured destruction, then plateau), not merely extraction drift.",
+    "perspectival_gap": "With extraction near zero, the seats diverge less in what they pay or collect than in what the boundary IS to them. From the command authorities' seat the closure is the constitution of their institutions — their missions, careers, and budgets are fused with stewardship of the substrate, and unilateral exit (disarmament) would expose them to the very war the boundary forecloses, hence identity_locked exit. From the civilian populations' seat it is an invisible background condition they never negotiated and cannot leave. From the counterforce community's seat it is a wall — a standing refutation their programs keep failing to overturn, borne by people mobile enough to pivot to other work. From the excluded abolitionist seat it is a life sentence: a permanence framing that entrenches the arsenals indefinitely. The engine computes per-seat classifications from power and exit atoms; with epsilon this low every seat should compute mountain-adjacent, but the exit-option spread differentiates the texture of each seat's experience.",
+    "directionality_logic": "No beneficiaries and no victims are declared, deliberately. The directionality derivation chain finds no structural relationship data pointing any seat toward the target end: nobody is extracted from, and nobody sits at the beneficiary end collecting rents either — the populations and allies who benefit do so incidentally, receiving a public good rather than a transfer taken from anyone. Because the derivation would fall back to canonical defaults that could misread incidental beneficiaries as rent-collectors, the honest authoring choice was to leave the structural arrays empty and let epsilon's near-zero value dominate: effective extraction stays negligible for every seat regardless of derived directionality. No directionality_overrides are authored for the same reason — there is no seat whose derived d would be wrong in a way that matters at this epsilon.",
+    "mandatrophy_analysis": "The classification discipline here guards against two opposite mislabels. Reading the closure as a rope (the dropping_reading's move) would render the ceiling a negotiated equilibrium that diplomacy, signaling, or erosion of resolve could unwind — an invitation to test it. Reading it as a piton (the contingent_reachability_reading's move) would license restoration spending on the theory that the boundary is inertial residue awaiting reversal. Conversely, the temporal series watches for the genuine degradation path: if the arsenal substrate rots while rhetoric continues, theater_ratio climbs past functional maintenance and the piton characterization would become correct — the 0.05-to-0.30 theater drift is the early-warning channel. Mandatrophy is not resolved: the founding problem (preventing recurrence of great-power total war) remains live precisely because the arrangement is load-bearing, so no sunset or obsolescence flag is authored.",
+    "kernel_context": "Kernel: total_war_reachability_boundary. This file instantiates the contraction_reading: nuclear weapons contracted the strategic space until winnable total war left the feasible set entirely — a mountain with no beneficiary structure. Siblings: dropping_reading (total war dropped in probability but remains reachable; deterrence as a rope) and contingent_reachability_reading (reachability is technology-dependent; current contraction is a reversible piton). Both reading_relations are authored as forecloses after assessment, not by default: categorical exclusion of total war from the feasible set cannot coexist within one framework with either nonzero reachability (dropping) or technological reversibility of the closure (contingent) — the modal premises directly contradict. The sibling files should mirror the foreclosure edges back toward this reading."
+  },
+  "network": {
+    "affects_constraints": [
+      "total_war_reachability_boundary__dropping_reading",
+      "total_war_reachability_boundary__contingent_reachability_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the nuclear revolution' decomposes into three structurally distinct claims about the same observables — categorical exclusion (this story: mountain, epsilon ~0.05, no beneficiary structure), probabilistic reduction (dropping_reading: rope, moderate epsilon, coordination equilibrium), and contingent reversal (contingent_reachability_reading: piton, reversible artifact). Each member carries its own epsilon, its own stakeholder surface, and its own claimed type; they share the kernel and are linked here per the family rule. The upstream record is common: the 1950–1972 consolidation series (survivable second-strike forces maturing through the crisis decade) is cited by this reading as evidence of physical closure, by the dropping_reading as evidence of successful coordination, and by the contingent reading as evidence of a merely technological balance."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "assured_second_strike_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_counterforce_modernization",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dropping_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "contingent_reachability_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "offense_dominance_is_permanent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "deterrence_without_agreement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

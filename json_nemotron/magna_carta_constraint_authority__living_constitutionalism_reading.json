@@ -1,0 +1,353 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_constraint_authority__living_constitutionalism_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "b3bb8486-5e46-4435-bd4f-6243f96997b8"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Magna Carta — Living Constitutionalism Reading (Inherited Due Process Constraint)",
+    "topic_domain": "constitutional_history/legal_philosophy/political_theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "subjects_citizens",
+      "judiciary",
+      "parliament_legacy"
+    ],
+    "victims": [
+      "royal_prerogative",
+      "executive_discretion"
+    ],
+    "vindicated_propositions": [
+      "due_process_continuity",
+      "rule_of_law_above_sovereign",
+      "evolutionary_interpretation_legitimacy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the living constitutionalism reading a distinct constraint from its sibling readings (feudal obsolescence, parliamentary sovereignty), or a different evaluation of the same constraint?",
+      "resolution_mechanism": "Compare ε values, beneficiary/victim structures, and claimed types across the three readings. If each reading has a stable ε and distinct structural profile, they are distinct constraints per ε-invariance (DP-001).",
+      "impact": "If distinct, each reading gets its own constraint_id and classification. If same constraint, they are perspectival variants and the engine's per-seat computation handles the divergence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's declared readings instantiate separate ε-invariant constraints."
+    },
+    {
+      "id": "extraction_referent_ambiguity",
+      "question": "Does the extraction referent for this reading capture the historical accumulation of executive power that the constraint restrains, or only the current marginal cost of compliance?",
+      "resolution_mechanism": "Longitudinal comparison of executive prerogative claims before and after Magna Carta's invocation in key constitutional moments (1628 Petition of Right, 1689 Bill of Rights, 1765 Entick v Carrington, 1976 Bennett v Horseferry Road).",
+      "impact": "If extraction is measured against historical executive aggrandizement, ε rises (tangled_rope territory). If measured against current compliance cost, ε stays low (rope). This is the ε-referent discipline for kernel-reading stories (OQ-258).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's ε measures restraint of historical accumulation or current marginal cost."
+    },
+    {
+      "id": "parliamentary_absorption_displacement",
+      "question": "Does parliamentary absorption of Magna Carta's restraints constitute displacement (the constraint survives only as statute) or continuation (Parliament inherits the constraint's authority)?",
+      "resolution_mechanism": "Track whether Parliament treats charter provisions as repealable statute or as entrenched constitutional principle in judicial review and legislative practice.",
+      "impact": "If displacement, the living constitutionalism reading's victim set shrinks (royal prerogative already displaced) and the constraint becomes primarily coordination. If continuation, executive discretion remains a live victim and the constraint retains restraining force.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether parliamentary sovereignty absorbs or inherits the constraint's authority."
+    },
+    {
+      "id": "executive_discretion_boundary",
+      "question": "Where does legitimate executive discretion end and unlawful prerogative begin under this reading's evolutionary interpretation?",
+      "resolution_mechanism": "Case law analysis of prerogative power boundaries from Case of Proclamations (1610) through modern judicial review (GCHQ, Miller I/II).",
+      "impact": "A narrow boundary increases extraction on executive discretion (higher ε, more snare-like). A wide boundary preserves executive flexibility (lower ε, more rope-like). The boundary is the reading's core interpretive move.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The structural location of the extraction/coordination boundary within executive power."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1215,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1297,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1628,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1689,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1765,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1215,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1297,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1628,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1689,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1765,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1215,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1297,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1628,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1689,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1765,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 1215,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the living constitutionalism reading of Magna Carta: the 1215 charter and its reissues establish an inherited due process and lawful restraint that binds all subsequent rulers through juridical precedent and evolutionary interpretation. The constraint is not the parchment but the living doctrinal structure that treats Magna Carta as a continuing constitutional authority — a coordination mechanism that channels sovereign power through lawful procedure. Royal prerogative and unbounded executive discretion are the victims (their arbitrary exercise is constrained); subjects/citizens, the judiciary, and the parliamentary tradition are beneficiaries (they gain a due process shield and a stable framework for legitimate authority). The constraint claims rope type: genuine coordination around inherited restraint with low-to-moderate extractiveness. The low extraction reflects that the constraint primarily coordinates — it provides a stable interpretive framework for lawful authority — while the moderate theater reflects ceremonial invocations that exceed operational necessity.",
+    "key_agents": [
+      "royal_prerogative: Primary victim (institutional/historical) — the unbounded executive claim constrained by due process",
+      "executive_discretion: Secondary victim (institutional/historical) — administrative latitude that must now proceed through lawful procedure",
+      "subjects_citizens: Primary beneficiary (powerless/moderate/organized) — gain due process shield against arbitrary power",
+      "judiciary: Beneficiary and agenda_setter (institutional) — interprets and applies the constraint, gains institutional authority",
+      "parliament_legacy: Beneficiary (institutional) — inherits constraint authority as legislative supremacy grounded in charter tradition"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18 at interval end) because the constraint primarily coordinates — it establishes a stable framework for legitimate authority rather than extracting resources. The extraction that exists is the compliance cost on executive power: the requirement to proceed through lawful procedure rather than arbitrary will. This cost is structural, not predatory. Suppression is low (0.12) because alternatives (arbitrary rule) are not actively suppressed by force; they are delegitimized by the constraint's normative and institutional weight. Theater ratio (0.22) reflects ceremonial invocations (Magna Carta as symbolic totem) that exceed the constraint's operational necessity — the charter is cited in contexts where its doctrinal relevance is marginal. Accessibility collapse (0.25) is low because alternative constitutional frameworks (parliamentary sovereignty, feudal obsolescence) remain live and contest the reading. Resistance (0.35) is moderate: executive power has historically resisted the constraint (Stuart prerogative claims, modern executive privilege assertions) but the constraint persists through institutionalization.",
+    "perspectival_gap": "The living constitutionalism reading experiences the constraint as rope (coordination around inherited restraint) from the beneficiary seats (subjects, judiciary, parliamentary tradition). The feudal obsolescence reading would experience it as piton (degraded, theatrical) — a historical artifact with no binding force. The parliamentary sovereignty reading would experience it as scaffold (transitional) — its restraints absorbed into statute, the charter itself superseded. The engine computes these per-seat divergences from the structural data: the same constraint, different structural positions, different types. This story authors only the living constitutionalism reading's structural position.",
+    "directionality_logic": "Beneficiaries (subjects_citizens, judiciary, parliament_legacy) derive d near 0.0 — the constraint subsidizes their position by providing a due process shield and stable authority framework. Victims (royal_prerogative, executive_discretion) derive d near 1.0 — the constraint extracts from their arbitrary exercise by requiring lawful procedure. The directionality is asymmetric: the constraint coordinates for beneficiaries while restraining victims. This is the structural signature of a rope with a victim set — coordination function genuine, extraction present but low and structurally necessary.",
+    "mandatrophy_analysis": "The constraint's founding problem (arbitrary royal power) remains live in mutated form (modern executive discretion, emergency powers, administrative state). The mandate has not atrophied; it has evolved. The living constitutionalism reading treats the constraint as continuously adaptive — its justification is the ongoing need to restrain arbitrary power, not a historical settlement. Mandatrophy is not resolved; the constraint remains functionally justified. The theater ratio reflects ceremonial accretion, not functional decay.",
+    "kernel_context": "This constraint is the living_constitutionalism_reading of the magna_carta_constraint_authority kernel. Sibling readings: feudal_obsolescence_reading (Magna Carta as 13th-century baronial compact with no modern binding authority), parliamentary_sovereignty_reading (Magna Carta's restraints survive only as absorbed into parliamentary statute; Parliament can revise or repeal any provision). This reading treats the charter as establishing a living due process constraint that binds all subsequent rulers through evolutionary interpretation. The kernel contest is structural: each reading instantiates a different constraint with different ε, different beneficiary/victim sets, and different claimed types."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_constraint_authority__feudal_obsolescence_reading",
+      "magna_carta_constraint_authority__parliamentary_sovereignty_reading",
+      "petition_of_right_1628",
+      "bill_of_rights_1689",
+      "habeas_corpus_tradition",
+      "judicial_review_doctrine"
+    ],
+    "dual_formulation_note": "The magna_carta_constraint_authority kernel decomposes into three ε-invariant constraint stories: (1) feudal_obsolescence_reading — low extraction, mountain-claimed, treats charter as historical artifact; (2) living_constitutionalism_reading — this story, moderate extraction, rope-claimed, treats charter as living due process constraint; (3) parliamentary_sovereignty_reading — variable extraction, scaffold-claimed, treats charter as transitional statute. The living constitutionalism reading influences the parliamentary sovereignty reading (shared doctrinal lineage, different absorption claims) and coexists with the feudal obsolescence reading (different parties hold each; neither logically forecloses the other in a single framework)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.05
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "royal_prerogative",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The historical claim of unbounded royal/executive authority. The constraint extracts from this claim by requiring all exercises of sovereign power to proceed through lawful procedure. It cannot exit the constraint without ceasing to be 'royal prerogative' — the constraint defines the boundary between lawful authority and arbitrary power. Its structural position is the primary target of the constraint's restraining function."
+    },
+    {
+      "name": "executive_discretion",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The practical latitude of executive administration. The constraint does not eliminate discretion but channels it through legal procedure (judicial review, statutory authority, procedural fairness). Executive discretion can exit by accepting legal bounds — becoming 'lawful executive action' rather than 'prerogative' — but this exit transforms its nature. The constraint extracts the cost of procedural compliance from administrative efficiency."
+    },
+    {
+      "name": "subjects_citizens",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "The people subject to sovereign power. They gain a due process shield: protection against arbitrary detention, seizure, and judgment. Their exit from the constraint's protection is identity-locked — to reject due process is to reject the status of legal subject/citizen itself. They are the primary beneficiaries of the constraint's coordination function: a stable framework of lawful authority."
+    },
+    {
+      "name": "judiciary",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The courts that interpret and apply Magna Carta's due process guarantees. They gain institutional authority and a stable interpretive framework from the constraint. As agenda_setter, they define the boundary between lawful restraint and unlawful prerogative through case law. They can exit by adopting a different interpretive methodology (e.g., originalism, positivism), but this would transform the constraint's operation — their interpretive role is constitutive of the living constitutionalism reading."
+    },
+    {
+      "name": "parliament_legacy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The parliamentary tradition that inherits Magna Carta's authority as legislative supremacy grounded in charter continuity. It benefits from the constraint's legitimating force: Parliament's law-making power is the modern form of the charter's restraint on arbitrary rule. It can exit by asserting parliamentary sovereignty over the charter (the parliamentary_sovereignty_reading's position) — a mobile exit that redefines rather than abandons the constitutional structure."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic observers who analyze the constraint's doctrinal evolution, historical legitimacy, and contemporary operation. They neither collect from nor pay into the constraint. Their structural position is analytical: they map the reading's coherence, its relationship to sibling readings, and its empirical fidelity to legal practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, inherited framework that channels sovereign power through lawful procedure rather than arbitrary will — solving the coordination problem of legitimate authority by establishing a continuous doctrinal lineage from 1215 to present that all parties can reference and rely upon.",
+    "transfer_function": "Transfers the capacity for arbitrary executive action from the sovereign/executive to a lawful procedural framework. The 'transfer' is not material resource but authority: the sovereign loses the right to act without legal process; the subject gains the right to demand legal process; the judiciary gains the authority to adjudicate the boundary.",
+    "absent_voices": "The feudal barons who extracted the original charter — their specific grievances (feudal incidents, wardships, marriage rights) are not the constraint's current coordination function. Colonial subjects and imperial populations — Magna Carta's due process was historically denied to them while being invoked as imperial ideology. Modern administrative state architects — who see the constraint as obsolete formalism impeding efficient governance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the living constitutionalism reading vanished overnight, the doctrinal lineage connecting contemporary due process to 1215 would be severed. Judicial review would lose its deepest historical anchor; executive power would lack its most venerable procedural constraint; the 'ancient constitution' argument in constitutional politics would collapse. The world would rearrange toward either parliamentary sovereignty (statutory rights only) or executive dominance (discretion unchecked by evolutionary interpretation).",
+    "founding_problem": "Arbitrary royal power in 1215: the king's capacity to detain, seize, and judge without lawful process, treating the realm as private domain rather than public trust.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested as live by: (1) judicial review case law continuously applying due process to new executive powers (Entick v Carrington, GCHQ, Miller I/II); (2) constitutional scholars outside the beneficiary set (e.g., positivist critics like Dicey, modern administrative law theorists) who acknowledge the constraint's ongoing operational role while disputing its normative grounding; (3) executive branch itself, which litigates the boundary of prerogative rather than denying the constraint's applicability — confirming the problem (arbitrary power) remains live and the constraint (due process) remains the operative response."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "magna_carta_constraint_authority"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "charter_liberties_1215",
+    "drift_state": {
+      "moment": "contemporary_judicial_review",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "feudal_obsolescence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "parliamentary_sovereignty_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "charter_binds_successors_through_evolutionary_interpretation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "due_process_is_living_doctrine_not_historical_artifact",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judicial_interpretation_authoritatively_extends_charter_principles",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

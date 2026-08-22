@@ -1,0 +1,364 @@
+{
+  "header": {
+    "constraint_id": "sovereign_legitimacy__monarchical_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sovleg_mon",
+    "story_uid": "f3caa1c4-2334-468f-908e-c5c9949b0cdc"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.88,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Monarchical Legitimacy: Divine Right & Bloodline Succession",
+    "topic_domain": "political/philosophical/constitutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "hereditary_sovereign",
+      "aristocratic_hierarchy",
+      "court_establishment",
+      "state_church_hierarchy"
+    ],
+    "victims": [
+      "disenfranchised_subjects",
+      "excluded_merchant_class",
+      "reformist_intellectuals",
+      "succession_rivals"
+    ],
+    "vindicated_propositions": [
+      "divine_appointment_of_rulers",
+      "bloodline_continuity_as_legitimacy",
+      "organic_society_hierarchy",
+      "coronation_ritual_validates_authority"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the monarchical reading of sovereign legitimacy a structurally distinct constraint from the republican and constitutional hybrid readings, or are they observable-dependent framings of one arrangement?",
+      "resolution_mechanism": "Apply ε-invariance test: do the three readings author different beneficiary/victim structures, different suppression mechanisms, different extractiveness profiles? If yes, they are distinct constraints linked by network.affects_constraints; if no, they are one constraint with a measurement parameter.",
+      "impact": "If distinct, each reading gets its own constraint story with its own ε and classification; the kernel_id documents the family. If not distinct, the framework must model observable-dependent classification within one story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three declared readings of sovereign_legitimacy are separate constraints or one constraint viewed from three angles"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.88) structural (legal penalties for dissent, hereditary exclusion from office, state church enforcement) or internalized (subjects believe the sovereign's right is divinely ordained, identity fused with the dynastic order)?",
+      "resolution_mechanism": "Post-dynastic suppression trajectory: if suppression persists after the extractive mechanism (the dynasty) is removed — e.g., subjects continue to defer to hereditary claimants — reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the subject carries the suppression with them after regime change. Affects T17 drift detection and cross-generational classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in monarchical legitimacy"
+    },
+    {
+      "id": "ceremonial_residue_as_scaffold",
+      "question": "Does the monarchical reading leave a residual coordination function (ceremonial unity, symbolic continuity) that persists as a scaffold after political extraction is removed, or does the entire structure dissolve when the divine-right premise is rejected?",
+      "resolution_mechanism": "Historical comparison: track post-monarchical regimes that retained ceremonial monarchs (UK, Japan, Scandinavia) vs. those that abolished the institution entirely (France, Russia, Iran). Measure whether ceremonial retention reduces transition costs or legitimacy vacuums.",
+      "impact": "If scaffold residue exists, the monarchical constraint is a constraint family: political_snare + ceremonial_scaffold. If not, it is a pure snare with no transitional function.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether ceremonial monarchy functions as a scaffold after the snare is removed"
+    },
+    {
+      "id": "succession_contest_extraction_spike",
+      "question": "Do succession contests (war of succession, disputed heir, regency crises) function as periodic extraction spikes that reset the constraint's theater_ratio and suppress resistance, or are they exogenous shocks?",
+      "resolution_mechanism": "Compare extractiveness and suppression metrics in the 5-year windows before/after major succession crises across 20+ historical monarchies. Test for systematic spikes.",
+      "impact": "If endogenous, the constraint's temporal profile is cyclical with extraction peaks at succession boundaries — measurement grids must sample at succession frequency. If exogenous, the constraint is stable between external shocks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether succession crises are endogenous extraction cycles or exogenous shocks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the monarchical_reading of the sovereign_legitimacy kernel: legitimate authority flows downward from the sovereign through inherited right, grounded in divine sanction, tradition, and bloodline continuity. The constraint operates as a snare — high extraction (0.82) from subjects who are excluded from authority participation, enforced through suppression of alternative legitimacy claims (0.88). Beneficiaries are the hereditary sovereign, aristocratic hierarchy, court establishment, and state church hierarchy; victims are disenfranchised subjects, excluded merchant class, reformist intellectuals, and succession rivals. The legitimating mechanism is continuity of bloodline and traditional ritual (coronation, anointing, hereditary succession). The reading relates to two sibling readings: republican_reading (popular sovereignty, authority flows upward) and constitutional_hybrid_reading (dual-sourced authority with constitutional mediation). Per the ε-invariance principle, this is a distinct constraint with its own ε, not a measurement variant.",
+    "kernel_context": "This constraint is the monarchical_reading of kernel sovereign_legitimacy. Sibling readings: republican_reading (authority flows upward from the people through delegated consent), constitutional_hybrid_reading (ceremonial authority inherited, political authority delegated, constitutional law mediates the boundary). The three readings author different beneficiary/victim structures, different suppression mechanisms, and different ε profiles — they are distinct constraints linked by network.affects_constraints.",
+    "logic_rationale": "Extractiveness is high (0.82) because the arrangement transfers nearly all political authority and a substantial share of economic surplus to the hereditary sovereign and aristocratic hierarchy without reciprocal accountability. Suppression is very high (0.88) because the constraint's persistence depends on actively suppressing alternative legitimacy claims — republican movements, constitutional reformers, rival claimants — through legal penalties, hereditary exclusion from office, state church enforcement, and control of succession mechanisms. Theater ratio is low (0.15) because the constraint's coordination function (order, succession stability, symbolic unity) is genuine but small relative to the extraction; the ritual and tradition apparatus is not primarily performative but functional for the extraction. Accessibility collapse is moderate (0.35) because alternative legitimacy concepts (popular sovereignty, constitutionalism) remain cognitively available and historically attested, but they collapse practically under the constraint's enforcement. Resistance is high (0.72) because the excluded classes (merchant class, intellectuals, succession rivals) actively contest the arrangement throughout the interval.",
+    "directionality_logic": "The hereditary_sovereign and aristocratic_hierarchy are structural beneficiaries (d ≈ 0.1): they collect authority and surplus, control the rules, and have arbitrage-grade exit (can abdicate, negotiate, or flee). The court_establishment and state_church_hierarchy are secondary beneficiaries (d ≈ 0.25): they collect status and resources but depend on the sovereign's favor. Disenfranchised_subjects and excluded_merchant_class are structural targets (d ≈ 0.9): they bear the extraction (taxes, labor, political exclusion) with constrained exit (emigration is costly, rebellion is suppressed). Reformist_intellectuals and succession_rivals are high-target agents (d ≈ 0.95): they actively oppose the constraint and face severe suppression (execution, exile, attainder). The engine derives these d values from the beneficiary/victim declarations plus exit options; the override array is not needed because the structural derivation captures the relationships.",
+    "perspectival_gap": "From the sovereign's seat (agenda_setter, institutional power, arbitrage exit), the constraint appears as a rope: genuine coordination of succession, order, and symbolic unity with minimal coercive overhead. From the disenfranchised_subjects' seat (payer, powerless, constrained exit), the same constraint computes as a snare: pure extraction enforced by suppressing alternatives. From the reformist_intellectuals' seat (excluded, moderate power, trapped exit), it computes as a snare with existential stakes. The engine computes this per-seat divergence from the structural data; the authored metrics describe the constraint's aggregate operation.",
+    "mandatrophy_analysis": "The founding problem (dynastic succession stability in fragmented feudal orders) is dead — the problem the arrangement was built for no longer exists in the contemporary world. Yet the arrangement persists in residual ceremonial forms and in authoritarian regimes that adopt monarchical legitimation. The founding_problem_status = dead with disappearance_verdict = world_rearranges creates the mandatrophy signature: a constraint whose founding problem is gone but whose removal would rearrange the world (because the extraction apparatus has become load-bearing). This is the classic zombie constraint pattern — not a piton because the administrator (the sovereign) still benefits substantially from maintaining it, but a snare whose coordination cover story has atrophied."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "sovereign_legitimacy__republican_reading",
+      "sovereign_legitimacy__constitutional_hybrid_reading",
+      "dynastic_succession_law",
+      "state_church_establishment",
+      "aristocratic_privilege_system"
+    ],
+    "dual_formulation_note": "This constraint is the monarchical_reading of the sovereign_legitimacy kernel. The republican_reading and constitutional_hybrid_reading are sibling constraints with different ε, different beneficiary/victim structures, and different suppression mechanisms. All three are linked via network.affects_constraints. The monarchical reading forecloses the republican reading's core premise (popular sovereignty) within any single framework — they cannot coexist as the ground of legitimacy. The monarchical reading influences the constitutional_hybrid reading by providing the inherited/ceremonial pole that the hybrid mediates."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "hereditary_sovereign",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Holds supreme executive, legislative, and judicial authority by right of bloodline. Appoints ministers, commands armies, controls succession, and receives the surplus extracted from the realm. Justifies authority through divine sanction and coronation ritual. Can abdicate or negotiate away powers but rarely does; exit is arbitrage-grade (exile with retained claim, abdication with pension)."
+    },
+    {
+      "name": "aristocratic_hierarchy",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds hereditary titles, land, judicial privileges, military commissions, and court offices by right of bloodline. Collects rents from peasant labor and urban commerce. Depends on the sovereign for confirmation of privileges and protection from merchant-class challenges. Exit is constrained: can defect to rival claimants or flee abroad, but loses hereditary position."
+    },
+    {
+      "name": "court_establishment",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Comprises royal household officers, ministers, diplomats, and favorites who administer the realm and distribute patronage. Collects salaries, perquisites, and influence. Pays the cost of constant court intrigue, dependence on sovereign's favor, and vulnerability to purges. Exit is constrained: skills are court-specific; exile means loss of position."
+    },
+    {
+      "name": "state_church_hierarchy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Performs coronation and anointing rituals that validate the sovereign's divine right. Controls education, marriage, morality policing, and poor relief. Receives tithes, land grants, and legal immunities. Depends on the sovereign for protection against dissent and heresy. Exit is constrained: schism risks loss of establishment privileges; alignment with rival claimants is dangerous."
+    },
+    {
+      "name": "disenfranchised_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Peasants, artisans, laborers who bear taxes, labor dues, military conscription, and legal disabilities without political voice. Subject to arbitrary justice, feudal obligations, and religious conformity enforcement. Exit is constrained: emigration is legally restricted and economically prohibitive; rebellion is suppressed by state violence."
+    },
+    {
+      "name": "excluded_merchant_class",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Urban merchants, bankers, professionals who generate economic surplus but are excluded from political authority and burdened with arbitrary taxation, monopolies granted to aristocrats, and guild restrictions. Their wealth gives them mobile exit (capital flight, relocation to freer cities) but their political exclusion makes them structural payers. They fund reformist intellectuals and rival claimants."
+    },
+    {
+      "name": "reformist_intellectuals",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "situation": "Writers, jurists, clerics who articulate alternative legitimacy (natural law, popular sovereignty, constitutionalism). Face censorship, imprisonment, exile, or execution. Their ideas cannot be fully suppressed (print, correspondence networks) but their persons are trapped — they cannot exit the intellectual battle without abandoning their vocation.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "succession_rivals",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Princes, dukes, foreign claimants with bloodline claims to the throne. Excluded by primogeniture or sovereign's designation. Bear costs of maintaining rival courts, funding rebellions, and risking attainder. Exit is constrained: renunciation is politically costly; rebellion risks death. Their exclusion is the constraint's primary vulnerability — succession contests are the moments when extraction spikes and suppression intensifies."
+    },
+    {
+      "name": "comparative_political_theorist",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyzes the constraint across historical cases and theoretical frameworks. Sees the full structure: how the divine-right premise coordinates succession but extracts from subjects, how the ritual apparatus legitimates extraction, how the constraint relates to its sibling readings. Neither collects nor pays; observes the constraint's operation across the kernel family."
+    }
+  ],
+  "gain_flow": "hereditary_sovereign",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the succession problem in fragmented feudal orders: bloodline continuity provides a clear, non-contested (in principle) transfer of authority that prevents civil war at each transition. Also coordinates symbolic unity of the realm through the sovereign's person and ritual center.",
+    "transfer_function": "Moves political authority, legislative power, judicial supremacy, military command, and a substantial share of economic surplus (taxes, feudal dues, domain revenues) from the subject population to the hereditary sovereign and aristocratic hierarchy. The sovereign is the ultimate residual claimant.",
+    "absent_voices": "The disenfranchised_subjects (peasants, laborers) are structurally excluded from the legitimacy conversation — they have no forum, no representation, and their objection is treated as rebellion. Reformist_intellectuals are excluded by censorship and persecution. The merchant class is excluded from authority despite generating the surplus. Women are excluded from succession in most monarchical systems (Salic law, male-preference primogeniture) — a structural exclusion within the beneficiary class itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the monarchical legitimacy constraint vanished overnight, the sovereign would lose legitimate authority, the aristocracy would lose hereditary privilege, the state church would lose establishment, and the subject population would face a legitimacy vacuum. The realm would reorganize around a new legitimacy ground (republican, constitutional, or warlord) — civil war, constitutional convention, or foreign intervention would follow. The world rearranges because the constraint is load-bearing for the entire political order.",
+    "founding_problem": "Feudal fragmentation and succession wars: in the absence of a clear succession rule, the death of a ruler triggered contested claims, civil war, and external invasion. Bloodline continuity grounded in divine sanction provided a single, sacralized transfer mechanism that stabilized the realm across generations.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (feudal succession wars) is attested as dead by historians of state formation (Tilly, Weber, Elias) who document the transition from feudal fragmentation to centralized bureaucratic states where succession is managed by law, not bloodline. The hereditary_sovereign and aristocratic_hierarchy attest the problem is still live, citing the need for symbolic continuity and the danger of republican chaos — but they are the beneficiaries. No corroborating source outside the beneficiary set attests the founding problem as live; the consensus of non-beneficiary scholarship is that the problem is dead."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "republican_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "divine_sanction_of_bloodline_succession",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "organic_society_requires_hereditary_hierarchy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "dynastic_legitimacy_framework",
+    "drift_state": {
+      "moment": "post_westphalian_sovereignty",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

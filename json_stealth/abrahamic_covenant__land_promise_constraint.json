@@ -1,0 +1,401 @@
+{
+  "header": {
+    "constraint_id": "abrahamic_covenant__land_promise_constraint",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "531bddd8-2581-452c-8be5-dacd39b083e3"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Abrahamic Covenant — Land-Promise Reading (Territorial Grant)",
+    "topic_domain": "religious/political/territorial",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_state_apparatus",
+      "religious_zionist_settlement_movement"
+    ],
+    "victims": [
+      "displaced_palestinian_refugees",
+      "west_bank_palestinian_residents"
+    ]
+  },
+  "interval": {
+    "start": 1948,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1987,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.9
+    }
+  ],
+  "omegas": [
+    {
+      "id": "abrahamic_kernel_reading_position",
+      "question": "This story instantiates one reading of the abrahamic_covenant kernel — the land_promise_constraint reading (the territorial-grant claim). What would the sibling readings — isaac_covenant_reading (election/lineage boundary) and ishmael_covenant_reading (continuation through Ishmael) — change structurally if operative, and where exactly does the disagreement sit?",
+      "resolution_mechanism": "Generate the sibling stories as separate constraints and compare their beneficiary/victim sets and epsilon values: the isaac reading without the territorial axis relocates the extraction to identity-boundary exclusion; the ishmael reading relocates the title claim to the Arab/Muslim population and inverts the victim set. The disagreement is located on two distinct axes — who carries the covenant (lineage) and what it grants (territory) — and this story fixes only the territorial axis.",
+      "impact": "The snare structure computed here is a property of THIS reading's operation in the standing arrangement, not of the kernel as such; a corpus that averaged across readings would misattribute the displacement arrangement's costs to the covenant complex as a whole.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the abrahamic_covenant kernel; siblings are separate constraints with their own epsilon and victim sets."
+    },
+    {
+      "id": "promise_conditionality",
+      "question": "Is the territorial promise conditional on covenant fidelity or unconditional? Conditional readings make current title forfeitable by conduct; unconditional readings foreclose forfeiture arguments entirely.",
+      "resolution_mechanism": "Track rabbinic and religious-authority rulings on territorial compromise over time, alongside textual analysis of the covenant's condition clauses (Genesis 17 against the Deuteronomy 28-30 blessing-and-curse frame); observe how religious parties vote on land transfers.",
+      "impact": "Conditional readings license religiously-grounded territorial compromise and make the title claim internally revisable; unconditional readings harden the arrangement, foreclose forfeiture arguments, and raise the suppression requirement — the classification would shift from a contested title claim toward an absolute one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the grant is conditional on covenant fidelity — the internal contest this reading carries."
+    },
+    {
+      "id": "fulfillment_status",
+      "question": "Is the promise read as fulfilled (1948/1967 completed it, so claims are bounded at current lines) or ongoing (fulfillment is incomplete, so expansion remains mandated)?",
+      "resolution_mechanism": "Track doctrinal statements and settlement-movement literature: does possession complete the promise or does incompleteness mandate continued settling? Observable in movement texts, ministerial rhetoric, and the doctrinal justification offered for each new settlement wave.",
+      "impact": "Determines whether the arrangement's extraction is bounded or structurally unbounded — a fulfilled reading caps claims and opens a settlement path; an ongoing reading makes the extraction expandable without limit, which is the difference between a settling claim and an expanding one.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the promise is read as fulfilled or ongoing — the expansion engine of the arrangement."
+    },
+    {
+      "id": "coordination_function_or_cover",
+      "question": "Is the reading's coordination of the beneficiary coalition (identity, meaning, mobilization durability) a genuine independent function of the territorial-grant claim, or the cover story that makes title-legitimation for dispossession politically durable?",
+      "resolution_mechanism": "Historical counterfactual comparison: secular territorial nationalism produced overlapping arrangements before the religious turn (Mandate-era Zionism pre-dated religious-nationalist settlement doctrine); test whether covenant-framed constituencies show mobilization durability or sacrifice tolerance exceeding security-and-nation-framed constituencies under identical conditions.",
+      "impact": "If the in-group coordination is genuine and independent, the constraint computes as a tangled rope carrying catastrophic extraction; if the coordination is cover, the snare claim stands and the identity framing is doing legitimacy work for extraction — the exact pattern the identity_coordination gaming alert watches for.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the covenant reading's in-group coordination is genuine function or cover for extraction."
+    },
+    {
+      "id": "covenant_reading_causal_weight",
+      "question": "How load-bearing is the covenant reading in the arrangement's persistence, relative to security and demographic drivers — would the arrangement persist on security logic alone if the reading lost its holders?",
+      "resolution_mechanism": "Natural experiments at moments where covenant-reading actors vetoed security-establishment compromises (Oslo ratification, 2000 Camp David, 2008 Olmert-Abbas talks, annexation pauses): measure whether the arrangement's trajectory diverges when the reading's holders gain or lose veto power.",
+      "impact": "If the reading is epiphenomenal, the arrangement would persist without it and its independent epsilon contribution is small; if it is load-bearing — blocking exits and compromises that security logic would permit — the reading is the binding element and the measured extraction attaches to it directly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much of the arrangement's persistence the covenant reading independently causes."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "israeli_state_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs the state whose founding and ongoing territorial claims draw on the covenant narrative: it administers the West Bank through a military government, registers land, approves settlements, funds their infrastructure, and teaches the narrative in its school curricula. It collects the sovereignty dividends of the arrangement — territory, strategic depth, a legitimacy story — while bearing its costs: military expenditure, international censure, and coalition dependence on parties who treat the narrative as non-negotiable. Reframing its claims on purely secular and legal grounds is available in principle and politically ruinous in practice."
+    },
+    {
+      "name": "religious_zionist_settlement_movement",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Builds and lives in communities beyond the 1967 lines on the conviction that the land was promised to the people and that settling it advances redemption. Receives land, housing, roads, and legal defense through state channels. Members' religious practice, family decisions, and life projects are organized around the settlement enterprise; giving up the claim would not be a policy change for them but the collapse of a way of life."
+    },
+    {
+      "name": "diaspora_jewish_supporters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sustains the arrangement from abroad through philanthropy, political lobbying, and immigration. The promise narrative supplies part of the attachment story that organizes this support; the community is divided, with liberal denominations reading the promise as conditional or non-territorial. Individual supporters can reduce their involvement at will; the institutions they fund are more durably invested."
+    },
+    {
+      "name": "moderate_israeli_citizenry",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lives inside the state the narrative underwrites and pays the conflict's bills: conscription, reserve duty, security spending, international isolation, and moral controversy. Survey majorities have repeatedly supported trading territory for a settlement; their preferences are overridden by coalition partners who hold the promise reading as a red line."
+    },
+    {
+      "name": "palestinian_authority",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Governs limited self-rule enclaves under the Oslo framework while the sovereignty it was built to achieve is the claim the title narrative denies. It coordinates security with the state it negotiates against, pays salaries in territory it does not control, depends on donor funding and withheld clearance revenues, and pursues statehood through recognition votes rather than territory."
+    },
+    {
+      "name": "displaced_palestinian_refugees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lost homes, land, and livelihoods in the 1948 war and again in 1967; several million registered descendants live across the region with a recognized right of return that the regime's enforcement prevents them from exercising. Citizenship in host states ranges from full to none. Their title to the same land is the mirror of the covenant title, and the framework that administers the arrangement gives their claim no adjudicating seat."
+    },
+    {
+      "name": "west_bank_palestinian_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live under military administration that controls land, water, movement, and building permits while settlements expand around and sometimes through their communities. Families have lost groves and hilltops to outposts; the law applied to them differs from the law applied to settlers a few hundred meters away. Leaving means emigration; staying means navigating the permit regime."
+    },
+    {
+      "name": "gaza_palestinian_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Have lived under blockade since 2007 and through successive military campaigns; the 2023-2025 war displaced the large majority of the strip's population and destroyed most of its housing. Officials overseeing aid and reconstruction proposals have framed the territory in biblical terms. Exit is sealed by the blockade; return to destroyed neighborhoods is contingent on military discretion."
+    },
+    {
+      "name": "palestinian_citizens_of_israel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold citizenship and vote, inside a state whose self-definition — supplied by the title narrative — privileges one community's historical claim. Equal-citizenship arguments run against the grain of that narrative; planning regimes have historically restricted their towns' growth, and their loyalty is politically contested in ways the majority's is not."
+    },
+    {
+      "name": "ishmael_line_covenant_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Read the same Genesis text as continuing the covenant through Ishmael and understand the promise's beneficiaries to include the region's Arab population. Inside the framework the title narrative administers, this reading has no standing: it is not taught, not adjudicated, and its political expression is classified as hostility rather than interpretation. Their co-religionists are among the population paying the arrangement's costs."
+    },
+    {
+      "name": "international_legal_institutions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Assess the arrangement against treaty and humanitarian law; the International Court of Justice found the occupation unlawful and settlement policy in violation in its 2024 advisory opinion. They issue findings and resolutions but hold no enforcement arm; the state absorbs their pronouncements as costs and the narrative's coalition dismisses them as hostility."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The reading coordinates the beneficiary coalition's attachment to a contested territory across generations: it supplies a shared answer to why this land is theirs, motivates settlement, military service, and diaspora support, and sustains commitment through defeat and exile. It solves a real collective-action problem — maintaining a dispersed people's connection to a specific territory — for the population it addresses.",
+    "transfer_function": "Moves territorial control, land value, and legitimacy from the populations resident on the land to the covenant-leveraging state and its settlement constituency; moves the costs of dispossession — statelessness, displacement, restricted movement — onto the displaced and occupied populations; and moves identity goods (meaning, continuity, warrant) to the beneficiary coalition and its diaspora supporters.",
+    "absent_voices": "The displaced were absent when the reading's modern territorial form was fixed: the Balfour Declaration, the Mandate, and the 1947 partition were decided without a Palestinian seat, and the reading's operative form was consolidated after 1967 in forums — government, rabbinate, settlement institutions — where no Palestinian counter-reading was ever adjudicated. Holders of the ishmael reading of the same text are structurally outside the framework; their interpretation is treated as rejectionism rather than exegesis. Palestinian Christian and Muslim attachments to the same land carry no standing in the title narrative.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the territorial-grant reading vanished overnight, the settlement movement's warrant would collapse — its communities are constituted by the claim — annexation and sovereignty politics would lose their theological floor, and the conflict would re-sort onto security, demographic, and international-law axes with a different distribution of veto players: compromise coalitions currently blocked by covenant red lines would become possible, and the diaspora support channel would restructure. The coercive machinery would not vanish with the reading, but its legitimacy architecture and veto distribution would rearrange.",
+    "founding_problem": "A defeated and exiled people needed a warrant that its connection to a specific territory outlived the loss of sovereignty: a promise that made continued attachment meaningful across two millennia of landlessness and marked the land as held-in-trust rather than merely remembered.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Academic historiography of religious Zionism — produced outside the settlement coalition's institutional apparatus — documents the mutation of the reading's function from exile-warrant to activist mandate for possession; Palestinian and international legal scholarship attests that the reading's current operative function is title-legitimation rather than exile-hope. No source inside the beneficiary coalition attests the dead status — religious authorities hold redemption incomplete and the problem live — and that dispute is itself the contested terrain the promise_conditionality and fulfillment_status omegas track."
+  },
+  "gain_flow": "israeli_state_apparatus",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the abrahamic_covenant kernel — the land_promise_constraint reading: the claim that the Genesis covenant includes a territorial grant of the Land of Canaan. The standing arrangement under contest is the modern territorial regime this reading legitimates: a state and settlement project whose title narrative runs through divine grant, maintained by military occupation and administrative machinery, with displaced and occupied Palestinian populations bearing the costs and no adjudicating seat for rival readings of the same text. Per the kernel-reading rules, the sibling readings (isaac_covenant_reading, ishmael_covenant_reading) are separate constraints — their victim and beneficiary structures are neither adjudicated nor hedged here; the contest they carry is routed to omega variables and the cs_structure reading relations. Epsilon's referent is the standing arrangement — the territorial regime the reading legitimates — assessed as it operates, never the arrangement the reading's holders imagine completion would bring. The claim and the metrics are independent authored facts: claimed_type is authored from the structural analysis (the reading's operative function in the standing arrangement is title-legitimation for dispossession; persistence depends on coercion; victims are identifiable; alternatives are suppressed), while the metrics describe observed operation. Where a beneficiary seat computes rope-like and a payer seat computes snare-like, that divergence is the measurement.",
+    "key_agents": [
+      "israeli_state_apparatus: agenda-setter and primary beneficiary (institutional power, constrained exit) — administers the arrangement the reading legitimates and collects its sovereignty dividends",
+      "religious_zionist_settlement_movement: direct beneficiary (organized, identity_locked) — the reading's most committed constituency, whose way of life is constituted by the claim",
+      "diaspora_jewish_supporters: beneficiary (organized, mobile) — external support channel, internally divided on the reading",
+      "moderate_israeli_citizenry: dual-positioned beneficiary/payer (organized, constrained) — inside the narrative, against the maximalism, outvoted",
+      "palestinian_authority: payer (organized, trapped) — institution built for a sovereignty the title narrative forecloses",
+      "displaced_palestinian_refugees: primary target (powerless, trapped, generational horizon) — bears the arrangement's founding extraction and its transmission across generations",
+      "west_bank_palestinian_residents and gaza_palestinian_residents: primary targets (powerless, trapped) — bear the ongoing occupation's extraction directly",
+      "palestinian_citizens_of_israel: payer (moderate power, constrained) — equality claims subordinated to the title narrative",
+      "ishmael_line_covenant_communities: excluded (organized, trapped) — hold the rival reading of the same text with no standing in the framework",
+      "international_legal_institutions: analytical observer (institutional, no enforcement arm) — assesses the arrangement against law it cannot enforce"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.85 (interval end): the arrangement's founding act displaced roughly 750,000 people in 1948 and the 1967 occupation displaced hundreds of thousands more; extraction accumulated since through settlement expansion, land expropriation, and — in 2023-2025 — the displacement of the large majority of Gaza's population. Suppression is authored at 0.90 and is structural: military government, the permit regime, the blockade, denial of return by force, and legal architecture that applies different law by identity. The internalized component of suppression operates on the BENEFICIARY side, not the victim side: the reading fuses religious identity with the land claim so that compromise is experienced as betrayal rather than choice — this is the identity-lock mechanism, and if the frame broke (a major rabbinic authority reverting to the classical position that redemption is not human-achievable), beneficiary-side exit would open and the suppression requirement would spike and then decay. Theater rises monotonically (0.18 to 0.62): as the arrangement's operative work shifted to administrative and military machinery, a growing share of the reading's activity became legitimation performance — biblical nomenclature, heritage budgets, sovereignty ceremonies — maintaining the claim while coercion does the functional work; this is Goodhart drift in the legitimation function itself. The measurement series run on one shared time grid (all three metrics at all eight points); the Oslo dip is visible in all three series simultaneously — the one interval where extraction, suppression, and performative maintenance all eased together — followed by the post-2000 ratchet. Resistance is high (0.75) and sustained: two intifadas, international litigation culminating in the 2024 ICJ advisory opinion, UN action, boycott movements, and internal Israeli dissent. Accessibility_collapse is 0.6: alternatives (two-state frameworks, rights-based frames, conditional covenant readings) exist but are progressively foreclosed by facts on the ground and coalition hardening — far from mountain-like collapse, but tightening. Coalition potential among the powerless victims is real — shared narrative, solidarity infrastructure, the 2005 boycott call — but is fragmented by host-state divergence, intra-Palestinian governance rivalry, and a separation architecture that physically prevents coalition formation; the victims are numerous and structurally unable to act as one. Inter-institutionally, the arrangement runs through three interfaces: state-to-PA (the Oslo architecture as managed subordination), state-to-international-institutions (lawfare absorption), and movement-to-state (the settlement constituency as internal veto player).",
+    "perspectival_gap": "Seats should compute sharply different types from the same verses. The payer seats — refugees, West Bank and Gaza residents — sit inside a structure that takes land, home, and legal personhood while returning nothing; from their position the arrangement has no coordination content whatsoever. The beneficiary seats experience genuine goods: the settlement movement receives meaning, community, and warrant; moderate Israelis receive a state narrative that answers why here; diaspora supporters receive an identity anchor — from those seats the same structure computes rope-like. The agenda-setter seat experiences self-legitimation: the state both administers the arrangement and is legitimated by it, so its self-assessment is not evidence about the structure. Same-level lateral divergence: the ishmael-line communities and the settlement movement are both organized, transgenerational constituencies reading the same text — what differentiates their positions is not power but which side of the title claim the reading places them on, and the framework gives one side an adjudicating apparatus and the other none.",
+    "directionality_logic": "Beneficiaries declared: israeli_state_apparatus and religious_zionist_settlement_movement — these seats sit near the beneficiary end of directionality; the state's d is partially offset by the costs it bears (security expenditure, international isolation, coalition dependence), which is why it is authored as agenda_setter with secondary beneficiary rather than pure collector. Victims declared: displaced_palestinian_refugees and west_bank_palestinian_residents, joined on the stakeholder surface by gaza_palestinian_residents and palestinian_citizens_of_israel — trapped exit, powerless to moderate power, these seats sit near the full-target end; trapped and identity-locked positions amplify effective extraction, and the refugees' generational horizon means the extraction transmits rather than amortizes. The excluded seat (ishmael_line_covenant_communities) pays a discursive cost — its reading of the same text has no standing — which the derivation should read as target-side. The international legal institutions are analytical: they assess but collect and pay nothing. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled, and the arrangement's large spatial scope (a claim administered across contested territory with global discursive reach) amplifies verification difficulty for the extraction it embeds.",
+    "mandatrophy_analysis": "The founding problem the territorial-grant reading was built to solve — giving a landless, exiled people a transgenerational warrant that possession could be restored — is dead: the sovereign exists, the exile-warrant function is obsolete, and the reading now performs a different function (legitimating control over another population). The R5 mismatch (status=dead with disappearance_verdict=world_rearranges) flags capture: the arrangement persists because a named seat captures its gains — the state apparatus — not because anyone still needs the original function. The classification prevents mislabeling in both directions: it is not a rope — the coordination goods are real but they are the cover that makes the extraction politically durable, not the operative function; and it is not a piton — the arrangement is not inertially maintained by nobody-in-charge, it is actively captured and enforced by a named agenda-setter, so the piton cost-asymmetry (the administrator could change it but the cost to fix exceeds what it bears) does not describe it: here the administrator bears the cost of fixing, which is why fixing_cost is prohibitive and why the arrangement persists. The mandate is resolved-as-captured, not resolved-as-atrophied."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "isaac_covenant_reading",
+      "ishmael_covenant_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the Abrahamic covenant' conflates at least three structurally distinct claims: lineage-election (who carries the covenant — the isaac_covenant_reading), continuation/inclusion (whether it extends through Ishmael — the ishmael_covenant_reading), and territorial grant (what it promises — this story). Their epsilon values differ sharply: the lineage readings' extraction turns on identity-boundary exclusion; the territorial reading's epsilon is dominated by the modern displacement arrangement. This story instantiates only the territorial-grant reading. The lineage readings are upstream: their exclusivity premise is cited as warrant by the territorial reading's holders, which is why the edges run from this story to both siblings and the family decomposition must be read as a unit."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unconditional_eternal_land_grant",
+    "drift_state": {
+      "moment": "contemporary_post_1967_occupation_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "isaac_covenant_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ishmael_covenant_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "territorial_grant_is_covenant_substance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "covenant_title_persists_across_exile",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "isaac_covenant_reading",
+      "ishmael_covenant_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

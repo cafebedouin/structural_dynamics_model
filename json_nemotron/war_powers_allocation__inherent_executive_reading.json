@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__inherent_executive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "77841169-963f-487c-b221-9e722ad8f491"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Inherent Executive Authority to Deploy Force Without Prior Congressional Authorization",
+    "topic_domain": "constitutional/law/separation_of_powers/war_powers",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "executive_branch",
+      "national_security_establishment"
+    ],
+    "victims": [
+      "congress_legislative_authority",
+      "public_accountability_mechanisms"
+    ]
+  },
+  "interval": {
+    "start": 1945,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1964,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1973,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1964,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1973,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1964,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1973,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.35
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the inherent executive reading a distinct constraint with its own ε, or does it merely describe a different observable of the same war powers allocation constraint?",
+      "resolution_mechanism": "Compare extraction profiles across readings: if congressional_primacy_reading shows near-zero extractiveness and functional_accommodation_reading shows moderate, context-dependent extractiveness while this reading shows sustained low-moderate extractiveness with different beneficiary/victim structure, they are distinct constraints per ε-invariance.",
+      "impact": "If distinct, each reading gets its own constraint story and classification; if not, the framework must model observable-dependent ε within a single constraint (which the ε-invariance principle forbids).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three war powers readings instantiate separate constraints or one constraint measured differently."
+    },
+    {
+      "id": "appropriations_ratification_mechanism",
+      "question": "Does post-hoc appropriations ratification constitute genuine congressional consent or a coerced ratification that masks extraction?",
+      "resolution_mechanism": "Track legislative behavior: if Congress consistently funds operations it did not authorize but cannot politically defund once deployed, the mechanism is extractive ratification; if Congress genuinely endorses after the fact with power to decline, it functions as delayed coordination.",
+      "impact": "If ratification is coerced, the constraint's extraction is higher and its suppression is structural (Congress trapped); if genuine, the constraint operates as functional_accommodation with lower extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether appropriations-as-ratification is a coordination mechanism or extraction trap."
+    },
+    {
+      "id": "national_interests_definition",
+      "question": "Who defines 'national interests' that trigger inherent authority — the executive alone, or does the constraint require inter-branch contestation over the definition?",
+      "resolution_mechanism": "Analyze historical cases where Congress contested the scope of 'national interests': if the executive's definition prevails without judicial or legislative check, the constraint is self-certifying (higher extraction); if definition is genuinely contested, the constraint has built-in resistance.",
+      "impact": "Self-certifying definition makes the constraint a snare (extraction with no structural check); contested definition makes it tangled_rope (coordination with asymmetric extraction).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether 'national interests' is an executive monopoly or a contested boundary."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the inherent_executive_reading of the war_powers_allocation kernel. It claims that Article II's Commander-in-Chief clause grants the president inherent authority to deploy military force in defense of national interests without prior congressional authorization — congressional approval becomes courtesy, not requirement. The constraint's coordination function is executive agility in crisis; its transfer function moves war-initiation authority from the legislative to the executive branch, with post-hoc appropriations serving as ratification mechanism. The claimed type is tangled_rope: genuine coordination (rapid response capability) coexists with asymmetric extraction (Congress loses its constitutional gatekeeping role, public accountability is degraded). Active enforcement is required — the executive branch actively resists statutory constraints like the War Powers Resolution through signing statements, OLC opinions, and operational practice. This reading does not describe the same constraint as congressional_primacy_reading or functional_accommodation_reading; per ε-invariance, each reading has a distinct ε, distinct beneficiary/victim structure, and distinct classification.",
+    "key_agents": [
+      "executive_branch: Primary beneficiary (institutional/arbitrage) — gains unilateral deployment authority",
+      "national_security_establishment: Secondary beneficiary (institutional/arbitrage) — gains operational freedom and bureaucratic autonomy",
+      "congress_legislative_authority: Primary victim (institutional/constrained) — loses constitutional gatekeeping function",
+      "public_accountability_mechanisms: Secondary victim (organized/constrained) — loses transparent authorization record",
+      "judiciary: Observer (institutional/analytical) — invoked sporadically but avoids merits via political question doctrine",
+      "international_actors: Excluded (powerful/trapped) — affected by deployments but no structural voice"
+    ],
+    "logic_rationale": "Extractiveness (0.28) reflects that the executive gains substantial authority but the constraint is not pure extraction — rapid response to genuine threats is a real coordination function. Suppression (0.35) is moderate: the War Powers Resolution exists but is treated as advisory; Congress's power of the purse is structurally intact but politically unusable once forces are deployed. Theater ratio (0.22) captures the performative nature of 'consultation' rituals and post-hoc briefings that do not constrain action. Accessibility collapse (0.38) is low-moderate: alternatives (AUMFs, declarations, functional_accommodation frameworks) remain conceptually available but are politically disfavored. Resistance (0.42) reflects sustained congressional and judicial pushback that fails to alter structural operation. The measurement series shows extraction rising through Cold War and post-9/11 peaks, then modestly declining as functional_accommodation norms reassert.",
+    "perspectival_gap": "From the executive seat (beneficiary, institutional power, arbitrage exit), the constraint is genuine coordination — the only structure that permits timely defense. From the congressional seat (victim, institutional power, constrained exit), the same structure is extraction — their constitutional role is hollowed out while they retain nominal authority. From the public accountability seat (victim, organized power, constrained exit), the constraint degrades democratic control over war. The judiciary (observer) sees a political question it cannot resolve. These seats compute different types: the executive seat sees rope; the congressional seat sees snare; the engine will compute this divergence from the structural data.",
+    "directionality_logic": "The executive branch and national security establishment are beneficiaries: they collect deployment authority and operational autonomy (d near 0.1-0.2). Congress as an institution is a victim: it bears the cost of lost gatekeeping and political accountability for wars it did not authorize (d near 0.7-0.8). Public accountability mechanisms are victims: transparency and democratic deliberation are degraded (d near 0.6-0.7). The executive's exit is arbitrage (can shift between readings as politically convenient); Congress's exit is constrained (institutional role prevents full exit but political cost of confrontation is high). The 'national interests' definition is self-certifying by the executive, making the constraint's scope effectively universal for deployment decisions.",
+    "mandatrophy_analysis": "The founding problem — executive agility against sudden attack — remains live (nuclear age, cyber threats, non-state actors). However, the constraint has expanded far beyond its founding scope: from 'repel sudden attacks' to 'deploy force in defense of national interests broadly defined.' The mandate has atrophied in the sense that the coordination function (speed) no longer requires the extraction component (total exclusion of Congress). The appropriations-as-ratification mechanism is a Mandyatrophy artifact: it preserves the form of congressional consent while inverting its substance. The constraint persists not because the founding problem demands this specific structure, but because the executive branch benefits from the expanded authority and no structural force compels reversion.",
+    "kernel_context": "This constraint is the inherent_executive_reading of the war_powers_allocation kernel. Sibling readings: congressional_primacy_reading (explicit congressional authorization required as constitutional necessity) and functional_accommodation_reading (context-dependent allocation: imminent threats permit unilateral action; prolonged campaigns require authorization). This reading claims the broadest executive authority and the weakest congressional role. The three readings have distinct ε values, distinct beneficiary/victim structures, and are linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "war_powers_allocation__congressional_primacy_reading",
+      "war_powers_allocation__functional_accommodation_reading",
+      "war_powers_resolution_1973",
+      "aumf_2001",
+      "aumf_2002"
+    ],
+    "dual_formulation_note": "The war_powers_allocation kernel decomposes into three constraint stories with distinct ε and structural profiles. This reading (inherent_executive) claims the widest executive authority and shows the highest sustained extraction. The congressional_primacy_reading claims the narrowest executive authority and near-zero extraction. The functional_accommodation_reading sits between with context-dependent extraction. All three are linked as a constraint family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "executive_branch",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Claims inherent authority to deploy force globally without prior congressional approval. Collects the operational freedom to initiate military action on its own timeline and terms. Uses OLC opinions, signing statements, and practice to maintain the reading. Can shift between inherent_executive and functional_accommodation framings as politically convenient."
+    },
+    {
+      "name": "national_security_establishment",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The military-intelligence bureaucracy gains operational autonomy and reduced congressional oversight. Its planning and procurement cycles assume executive discretion. It advocates for the reading through institutional channels and leaks. Exit is arbitrage — it serves whichever reading the executive adopts."
+    },
+    {
+      "name": "congress_legislative_authority",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Constitutionally designated to declare war and regulate captures, but structurally excluded from initiation decisions. Retains power of the purse but faces political impossibility of defunding deployed forces. Can pass War Powers Resolutions but lacks enforcement mechanism. Exit is constrained — institutionally cannot abandon war powers but politically cannot exercise them effectively."
+    },
+    {
+      "name": "public_accountability_mechanisms",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The apparatus of democratic war control: public debate, authorization votes, casualty reporting, congressional hearings. These mechanisms are degraded when deployments bypass authorization. They persist formally but operate on a delayed, reactive basis. Exit is constrained — the mechanisms exist but their trigger (prior authorization) is removed."
+    },
+    {
+      "name": "judiciary",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Invoked by all sides but consistently avoids merits via political question doctrine, standing barriers, and equitable discretion. Provides no structural check on the constraint's operation. Its analytical seat sees the full structure but its institutional role prevents intervention."
+    },
+    {
+      "name": "international_actors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Foreign governments and populations affected by U.S. military deployments have no structural voice in the authorization process. They bear the consequences of unilateral executive decisions but cannot access the constraint's decision mechanism. Their exclusion is structural — the constraint operates entirely within U.S. constitutional architecture."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables rapid military response to threats without the delay of congressional deliberation and voting — the genuine coordination problem of executive agility in crisis.",
+    "transfer_function": "Moves war-initiation authority from Congress (constitutional gatekeeper) to the Executive (operational decision-maker), with post-hoc appropriations serving as ratification mechanism that legitimizes but does not constrain.",
+    "absent_voices": "Foreign populations affected by deployments, future generations bearing blowback costs, and the constitutional text itself (which is read differently by each reading). Congress as an institution is present but its constitutional role is hollowed out — its voice is structurally present but functionally absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished overnight, the executive would lose its claim to unilateral deployment authority. Congress would resume its gatekeeping role (either via congressional_primacy or functional_accommodation). The War Powers Resolution would become binding. Deployment decisions would require prior authorization or fit within narrow emergency exceptions. The global deployment posture would contract significantly.",
+    "founding_problem": "The constitutional design required a single executive capable of responding to sudden attacks when Congress could not convene — the 'repel sudden attacks' function identified in the Federalist and early practice.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem (executive agility against sudden attack) is attested as live by the executive branch and national security establishment. It is contested by congressional_primacy and functional_accommodation proponents who argue the problem is real but does not require the *breadth* of authority this reading claims. No disinterested third party corroborates that the *specific scope* of 'defense of national interests broadly defined' was the founding problem — the historical record supports only the narrower 'repel sudden attacks' formulation."
+  },
+  "gain_flow": "executive_branch",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "congressional_primacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "functional_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "commander_in_chief_inherent_deployment_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "congressional_authorization_as_courtesy_not_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "appropriations_as_ratification_mechanism",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_era_executive_agility",
+    "drift_state": {
+      "moment": "post_9_11_permanent_authorization",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "war_powers_allocation"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

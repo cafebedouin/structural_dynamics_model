@@ -1,0 +1,316 @@
+{
+  "header": {
+    "constraint_id": "constitutional_text__judicial_supremacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_constitutional_text__judicial_supremacy_reading",
+    "measurement_id_prefix": "ct_jsr",
+    "story_uid": "6ec8d5da-876c-423c-a8ff-82a797d3099b"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Judicial Supremacy Reading of Constitutional Text",
+    "topic_domain": "constitutional_theory/political_philosophy/comparative_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "rights_claimants_against_majoritarian_overreach",
+      "judicial_institutions"
+    ],
+    "victims": [
+      "democratic_responsiveness",
+      "legislative_majorities"
+    ],
+    "vindicated_propositions": [
+      "constitutional_supremacy_doctrine",
+      "judicial_review_as_constitutional_guardian"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint instantiates the judicial_supremacy_reading of the constitutional_text kernel; how do the sibling readings (legislative_sovereignty_reading, popular_sovereignty_reading) alter the structural classification?",
+      "resolution_mechanism": "Author separate constraint stories for each sibling reading with their own ε, beneficiaries, victims, and cs_structure; compare computed per-seat types across the kernel family.",
+      "impact": "If sibling readings compute different constraint types (e.g., legislative_sovereignty_reading as rope or scaffold), the kernel itself is not a single constraint but a family of structurally distinct constraints linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee structure: judicial_supremacy_reading vs. legislative_sovereignty_reading vs. popular_sovereignty_reading"
+    },
+    {
+      "id": "democratic_responsiveness_as_victim",
+      "question": "Is democratic responsiveness a genuine victim (bearing extraction) or a contested normative claim about what the constraint suppresses?",
+      "resolution_mechanism": "Empirical study of legislative output pre/post judicial invalidation regimes; measure policy responsiveness to electoral shifts under strong vs. weak judicial review.",
+      "impact": "If democratic responsiveness is structurally extracted from (legislatures cannot enact preferred policies even with sustained majorities), victim declaration stands; if it is a normative disagreement about policy substance, the victim label may be a frame dispute rather than extraction evidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether democratic responsiveness bears extraction or expresses normative contestation"
+    },
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "Does the coordination function (stable constitutional meaning, rights protection against majoritarian drift) genuinely require judicial finality, or is legislative override with supermajority thresholds a viable coordination alternative?",
+      "resolution_mechanism": "Comparative analysis of constitutional systems with notwithstanding clauses (Canada) or legislative override mechanisms (Israel pre-2023, UK Human Rights Act) vs. strong judicial supremacy systems (US, Germany); measure rights protection outcomes and constitutional stability.",
+      "impact": "If viable coordination alternatives exist that do not concentrate interpretive authority in courts, the constraint's extraction component is higher (suppressed alternatives); if judicial finality is structurally necessary for the coordination function, the tangled_rope classification is warranted.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether judicial finality is necessary for the coordination function or suppresses viable alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1857,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1937,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1973,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1857,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1937,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1973,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1857,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1937,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1973,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 1789,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the judicial supremacy reading of constitutional text: the constitution grants courts final interpretive authority, and judicial invalidation of legislation is the conclusive determination of constitutional meaning. This reading is instantiated in systems like the United States (Marbury v. Madison), Germany (Constitutional Court), and South Africa. The constraint operates as a tangled rope: it coordinates by providing stable constitutional meaning and protecting rights against majoritarian overreach (beneficiaries: rights-claimants, judicial institutions), but extracts by foreclosing legislative override and democratic responsiveness (victims: democratic responsiveness, legislative majorities). Active enforcement is required — courts must maintain institutional independence and the political branches must comply with adverse rulings.",
+    "logic_rationale": "Extractiveness (0.38) reflects the asymmetric transfer: legislative majorities lose the ability to enact their preferred policies when courts invalidate them, and this loss is not reciprocated by a comparable gain to courts (they gain authority but not policy preferences). Suppression (0.42) is moderate: legislative override is structurally impossible (no notwithstanding clause), but legislatures retain amendment power and appointment influence. Theater ratio (0.25) is low-moderate: judicial review performs genuine rights-protection work, but a growing share of high-profile cases involve culture-war issues where the coordination function is contested. Accessibility collapse (0.35) is moderate: alternative interpretive frameworks (departmentalism, popular constitutionalism) persist in academic and political discourse but have no institutional pathway. Resistance (0.65) is high: court-curbing proposals, jurisdiction stripping, and non-compliance threats are recurring features.",
+    "directionality_logic": "Rights-claimants and judicial institutions are beneficiaries (d near 0.0): the constraint subsidizes their position by making rights claims judicially enforceable against majorities. Legislative majorities and democratic responsiveness are victims (d near 1.0): they bear the cost of foreclosed policy pathways. The analytical observer seat (constitutional theorists) sees the full structure. Judicial institutions hold a dual position: they benefit from the authority grant (beneficiary) but also bear legitimacy costs when rulings are contested (partial payer).",
+    "perspectival_gap": "From the rights-claimant seat, the constraint appears as a rope (genuine coordination protecting fundamental rights). From the legislative majority seat, it appears as a snare (extraction of democratic authority). From the judicial institution seat, it appears as a tangled rope (coordination function they administer, but with legitimacy maintenance costs). The engine computes these per-seat divergences from the structural data.",
+    "mandatrophy_analysis": "The founding problem (preventing legislative tyranny, securing stable constitutional meaning) remains live but contested. The constraint has not resolved its mandatrophy: the coordination function (rights protection) is real, but the extraction component (judicial finality foreclosing legislative correction) has accumulated as the scope of judicial review expanded beyond the founding generation's contemplation. The tangled_rope classification captures this dual character — neither pure coordination nor pure extraction.",
+    "kernel_context": "This constraint is the judicial_supremacy_reading of the constitutional_text kernel. Sibling readings: legislative_sovereignty_reading (parliament supreme, courts advise; e.g., UK, NZ, Canada with notwithstanding clause) and popular_sovereignty_reading (constituent power of the demos supreme; e.g., constitutional convention/amendment pathways). The structural delta: courts enter constraint generation as gatekeepers; legislative override impossible; high rigidity in interpretation; beneficiary is rights-claimants against majoritarian overreach; victim is democratic responsiveness."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_text__legislative_sovereignty_reading",
+      "constitutional_text__popular_sovereignty_reading",
+      "judicial_independence_institutional_design",
+      "constitutional_amendment_difficulty"
+    ],
+    "dual_formulation_note": "The constitutional_text kernel decomposes into three structurally distinct readings with different ε values, beneficiary/victim structures, and constraint types. This story (judicial_supremacy_reading) has ε=0.38 (tangled_rope). The legislative_sovereignty_reading would have lower ε (rope or scaffold) with legislative majorities as beneficiaries. The popular_sovereignty_reading would have variable ε depending on amendment accessibility. All three are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "judicial_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Courts hold final interpretive authority and administer the constraint. They benefit from the institutional prestige and authority grant, but bear legitimacy costs when rulings are perceived as political. Their exit options are high (arbitrage) — individual judges can move to academia, private practice, or international tribunals; the institution itself cannot exit but can modulate its assertiveness."
+    },
+    {
+      "name": "rights_claimants_against_majoritarian_overreach",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Minority groups, civil liberties organizations, and individuals whose rights claims would lose in majoritarian politics. They gain enforceable constitutional protection against legislative majorities. Exit is constrained: they can seek rights protection in other jurisdictions (forum shopping) or through international bodies, but domestic judicial supremacy is their primary structural guarantee."
+    },
+    {
+      "name": "legislative_majorities",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elected legislatures that lose the ability to enact preferred policies when courts invalidate them. They bear the extraction directly: their democratic mandate is overridden by unelected judges. Exit is constrained: they can pursue constitutional amendment (extremely difficult), court-packing or jurisdiction stripping (politically costly and institutionally dangerous), or wait for judicial turnover (uncertain, slow)."
+    },
+    {
+      "name": "democratic_responsiveness",
+      "role": "payer",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The systemic capacity of the political system to translate sustained popular majorities into policy outcomes. When courts foreclose legislative action on salient issues, democratic responsiveness is extracted from — the feedback loop between voter preferences and policy results is severed on constitutionalized issues. This is a non-agent entity (a systemic property) but bears the extraction structurally."
+    },
+    {
+      "name": "constitutional_theorists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academic observers who analyze the constraint's operation across systems and time. They neither collect nor pay; they map the structural relationships. Their analytical exit is costless."
+    }
+  ],
+  "gain_flow": "judicial_institutions",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides stable, authoritative constitutional meaning that binds all branches; protects fundamental rights against majoritarian drift; resolves constitutional disputes conclusively without political crisis.",
+    "transfer_function": "Moves final interpretive authority from legislative majorities to courts; moves policy discretion on constitutionalized issues from elected branches to judicial institutions; moves the cost of constitutional error from rights-claimants (who would suffer rights violations) to democratic majorities (who lose preferred policies).",
+    "absent_voices": "Future generations (who inherit constitutional interpretations they did not authorize), citizens in jurisdictions without strong judicial review (who experience alternative coordination mechanisms), and political minorities who would use legislative override mechanisms to protect their interests (excluded by the constraint's foreclosure of legislative correction).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If judicial supremacy vanished overnight, legislative majorities would become the final interpreters of constitutional meaning (subject to amendment processes). Rights-claimants would lose their strongest structural guarantee. Constitutional crises would increase as branches dispute meaning. The political system would reorganize around legislative constitutional interpretation — either through explicit notwithstanding mechanisms, departmentalism, or popular constitutionalism.",
+    "founding_problem": "Preventing legislative tyranny and majority faction from violating fundamental rights; securing stable constitutional meaning against shifting political majorities; providing a conclusive dispute-resolution mechanism for constitutional questions that avoids political violence or systemic paralysis.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by Federalist Papers (Madison, Hamilton) and the Marbury Court as live. It is contested by: (1) legislative sovereignty theorists (Waldron, Tushnet) who argue the problem was misdiagnosed — legislatures are better rights protectors; (2) popular sovereignty theorists (Ackerman, Levinson) who argue the founding problem was constituent power, not judicial guardianship; (3) comparative evidence from parliamentary supremacy systems (UK, NZ) where rights protection occurs without judicial finality. Corroboration from outside judicial beneficiaries: political scientists (Rosenberg, Whittington) documenting court constraints; historians (Kramer) on popular constitutionalism tradition."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "constitutional_text"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "marbury_constitutional_supremacy",
+    "drift_state": {
+      "moment": "contemporary_rights_jurisprudence_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "legislative_sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "popular_sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "judicial_finality_as_constitutional_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "countermajoritarian_difficulty_as_feature_not_bug",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

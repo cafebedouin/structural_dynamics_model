@@ -1,0 +1,377 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vmb_bap",
+    "story_uid": "2439bc5b-99bb-45ff-88c3-727e409bf7dd"
+  },
+  "base_properties": {
+    "extractiveness": 0.84,
+    "suppression": 0.56,
+    "theater_ratio": 0.33,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Compelled Medical Intervention Regime (Bodily-Autonomy-Primary Reading)",
+    "topic_domain": "public_health_ethics/constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "immunocompromised_medically_vulnerable",
+      "public_health_authorities",
+      "institutional_employers_schools",
+      "vaccinated_compliant_majority"
+    ],
+    "victims": [
+      "unvaccinated_coerced_individuals"
+    ],
+    "vindicated_propositions": [
+      "herd_immunity_threshold_theory",
+      "police_power_doctrine",
+      "utilitarian_harm_prevention"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.86
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.84
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.56
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is the bodily_autonomy_primary reading of kernel vaccine_mandate_balance; what structurally changes if a sibling reading (public_health_primary, proportionality_reading) is adopted instead?",
+      "resolution_mechanism": "Classify the sibling story files over the identical referent (standing mandate regimes) and compare victim sets, epsilon, and per-seat types across the three readings.",
+      "impact": "public_health_primary shrinks the victim set toward empty and drops epsilon toward the coordination floor; proportionality_reading partitions mandates into proportional and disproportionate subclasses with intermediate epsilon. The disagreement is located in the victim-set boundary and the permissibility axiom, not in the facts of coverage or contagion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed classification: same referent, three constraints, three epsilon values."
+    },
+    {
+      "id": "immunocompromised_victim_status",
+      "question": "Are immunocompromised people exposed by others' non-vaccination victims of THIS constraint, or does the reading's risk-acceptance premise correctly exclude them from the victim set?",
+      "resolution_mechanism": "Counterfactual exposure attribution: compare outbreak burden reaching the medically vulnerable under voluntary-coverage regimes versus mandate regimes, and test whether liberty's known externalized risk constitutes harm the constraint imposes or risk inherent to a liberty-respecting order.",
+      "impact": "Counting them as victims would enlarge the victim set and force the reading to reconcile inviolability with lethal third-party exposure; excluding them (current authoring, per the reading's structural delta) confines victims to the coerced and keeps epsilon indexed purely to compulsion mechanisms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Victim-set boundary: exposure-risk bearer versus coerced body."
+    },
+    {
+      "id": "conditionality_coercion_boundary",
+      "question": "Where does priced conditionality become compulsion — do employment terms, school-entry conditions, and benefit ties count as state compulsion when formal alternatives remain open?",
+      "resolution_mechanism": "Constructive-compulsion doctrinal analysis combined with labor-market evidence on how real the nominally voluntary alternatives are (monopsony power, credential gating, geographic concentration of employers).",
+      "impact": "A broader boundary pushes effective extraction above the authored 0.84 and pulls the computed classification toward snare; a narrower boundary lowers it toward proportionality territory. The classification of borderline mandate instruments flips on this line.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Compulsion threshold: mandate versus conditioned option."
+    },
+    {
+      "id": "precedent_ratchet_irreversibility",
+      "question": "Does each emergency normalization of medical compulsion permanently lower the threshold for the next imposition (a ratchet), or do post-emergency repeals restore the prior baseline?",
+      "resolution_mechanism": "Cross-jurisdiction longitudinal comparison of mandate scope before, during, and after successive public-health emergencies, controlling for disease severity.",
+      "impact": "A confirmed ratchet supports a rising long-run extraction trajectory and strengthens the entrenchment reading of the suppression series; baseline restoration supports a cyclical model in which enforcement oscillates around a stable mean without secular growth.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency compulsion leaves a permanent residue of lowered thresholds."
+    },
+    {
+      "id": "refusal_identity_lock",
+      "question": "Is sustained refusal driven by structural accommodation available to refusers, or by identity fusion with refusal itself?",
+      "resolution_mechanism": "Post-repeal behavior tracking: if refusers accept the intervention once penalties lift, refusal was strategic and exit was real; if refusal persists cost-free, it is identity-constituted and exit was never the binding constraint.",
+      "impact": "Identity-locked refusers sit nearer the full-target end of directionality (higher effective extraction per seat); strategic refusers retain arbitrage-grade exit and compute lower. The mixture determines how much of the payer seat's extraction is amplified by lock-in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus identity-constituted basis of sustained refusal."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates ONE reading — bodily_autonomy_primary — of the contested kernel vaccine_mandate_balance. The standing arrangement under contest (the epsilon referent, fixed across all readings of this kernel) is the state-compelled medical intervention regime: school-entry mandates, occupational conditions in healthcare and beyond, and emergency-powers compulsion, together with their enforcement machinery. Assessed by this reading's own lights, that regime extracts bodily self-determination categorically: whatever the collective benefit, a non-consensual intervention is a non-consensual intervention, so epsilon is authored high and indexed to coercion mechanisms rather than to penalty magnitudes. Per the epsilon-invariance principle, the colloquial label 'the vaccine mandate debate' decomposes into three structurally distinct constraints over this one referent: this file (autonomy-primary, high epsilon, victim set = the coerced), public_health_primary (low epsilon, victim set collapses toward the unvaccinated-exposed vulnerable), and proportionality_reading (intermediate, victim set = those coerced below threshold). The siblings are separate files linked via network.affects_constraints; their differing epsilon values over the shared referent are reading-indexed values, not measurement error. KEY AGENTS (by structural relationship): - unvaccinated_coerced_individuals: primary target (moderate/constrained) — bears the compelled intervention and its exclusion penalties - immunocompromised_medically_vulnerable: declared beneficiary (powerless/trapped) — receives the herd-protection the regime produces - public_health_authorities: agenda-setter (institutional/arbitrage) — designs, administers, and enforces; captures authority and penalty receipts - institutional_employers_schools: enforcer-beneficiary (institutional/mobile) — imposes conditions, offloads liability - vaccinated_compliant_majority: incidental beneficiary (moderate/mobile) — supplies the compliance the regime rides on - coercive_medicine_survivors: excluded voice (powerless/trapped) — absent from deliberation, carrying the historical record of normalized compulsion - courts_constitutional_reviewers: analytical observer (institutional/analytical) — sets the legitimacy boundary. Claim/metric independence: claimed_type is authored from this reading's structural read (genuine coordination function plus categorical asymmetric extraction under active enforcement = tangled_rope); the metrics are authored as descriptive of the regime's actual operation; the engine computes per-seat classifications and any divergence from the claim is the datum, not a defect.",
+    "key_agents": [
+      "unvaccinated_coerced_individuals: primary target (moderate/constrained) — bears bodily compulsion, exclusion, and termination; some fraction identity-locked in refusal",
+      "immunocompromised_medically_vulnerable: declared beneficiary (powerless/trapped) — depends on surrounding coverage; cannot exit exposure except by isolation",
+      "public_health_authorities: agenda-setter (institutional/arbitrage) — sets coverage targets and exemption criteria; collects authority, budget, and penalties",
+      "institutional_employers_schools: secondary enforcer and beneficiary (institutional/mobile) — converts mandate authority into liability insulation and operational continuity",
+      "vaccinated_compliant_majority: incidental beneficiary (moderate/mobile) — bears minor burden, receives reduced transmission risk, sustains legitimacy by consent",
+      "coercive_medicine_survivors: excluded voice (powerless/trapped) — historical witnesses against normalized medical compulsion, absent from advisory tables",
+      "courts_constitutional_reviewers: analytical observer (institutional/analytical) — adjudicates the police-power/personal-liberty boundary"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.84 because this reading counts compelled bodily intervention as near-total extraction of bodily self-determination regardless of penalty size — the violation is categorical, so the metric tracks the mechanism (compulsion), not its intensity dial. Suppression is 0.56: enforcement is real and structural (school and workplace exclusion, licensure conditions, fines, termination) but exits partially persist — jurisdictional arbitrage, homeschooling, private employment, variable exemption regimes — so the constraint does not fully close the option space. Theater ratio is 0.33: the regime functionally raises coverage, but a growing share of its activity is performative — booster requirements persisting past marginal benefit, solidarity rituals, exemption gauntlets designed to deter rather than process — and the temporal series shows that layer thickening after the acute emergency. Accessibility collapse is 0.45 (alternatives survive in attenuated form, characteristic of a contested construct rather than a natural law); resistance is 0.7 (litigation, exemption movements, electoral backlash, and organized refusal — the highest-resistance profile a health instrument routinely meets). The three measurement series run on ONE shared nine-point grid; the suppression_requirement series deliberately traces the enforcement ratchet-and-release cycle across the emergency arc (build-up to 0.74 at peak, partial stand-down to 0.56) — the oscillation is documented rather than smoothed, and its ratchet component (whether each cycle resets to a higher baseline) is carried by the precedent_ratchet_irreversibility omega rather than asserted. Suppression is authored as a raw structural property; only extractiveness gets scaled downstream by directionality and scope.",
+    "perspectival_gap": "The seats should compute divergent types from identical structural data. From the coerced payer seat, the regime presents as enforced extraction of the body itself — near-full-target directionality, amplified by trapped or identity-locked exit, plausibly computing snare-flavored at that seat. From the immunocompromised beneficiary seat, the same structure presents as life-protecting coordination it cannot provision for itself. From the agenda-setter seat, it presents as legitimate crisis governance and routine preventive administration. None of these perceptions is authored as a classification; the engine derives each from power, exit, and directional position. The gap between the payer seat's computed type and the beneficiary seats' computed type is precisely the measurement this story exists to take.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: unvaccinated_coerced_individuals are the declared victims with constrained exit (and an identity-locked subset), placing them near d = 1.0 — full target — with effective extraction amplified by national scope and verification difficulty. immunocompromised_medically_vulnerable are declared beneficiaries with trapped exit: they receive the regime's protective product and cannot arbitrage it, sitting near d = 0.0 — full subsidy — which is the honest structural fact even though this reading denies the coercion producing their subsidy is legitimate. public_health_authorities combine agenda-setting with concentrated receipts (authority, budget, penalties), keeping their d low but their capture legible. institutional_employers_schools and vaccinated_compliant_majority sit low-to-mid: real benefit, minor burden. The excluded survivors' seat feeds the consensus-provenance check, not directionality. No directionality overrides are authored: the beneficiary/victim-plus-exit derivation captures every seat's relationship without correction.",
+    "mandatrophy_analysis": "The founding problem — recurrent epidemic threat when voluntary coverage undershoots interruption thresholds — is live and externally corroborated, so no mandatrophy resolution is declared at the regime level: the arrangement has not outlived its function, and mandatrophy_resolved is left false. Instance-level atrophy is nonetheless visible in the theater_ratio series (measures persisting past marginal benefit after the acute phase), which is the signature the lifecycle detector should flag without reclassifying the whole regime. The classification discipline cuts both ways: the genuine, externally attested coordination function (free-rider-prone coverage of a public good) blocks labeling the regime a snare despite high epsilon — the coordination story is not cover, it is real and merely outweighed in this reading's moral accounting — while the categorical extraction of bodily integrity blocks labeling it a rope. Tangled_rope is the honest structural read from this seat. The R5 mismatch consumer reads founding_problem_status=live against disappearance_verdict=world_rearranges: aligned, no zombie flag.",
+    "kernel_context": "Kernel: vaccine_mandate_balance — the stabilized commitment governing when collective health aims may override individual medical consent, codified in mandate statutes and the police-power case lineage. This file instantiates the bodily_autonomy_primary reading: consent is inviolable and compulsion impermissible regardless of collective benefit. Sibling readings, each a separate constraint file over the same referent: public_health_primary (collective protection supersedes consent when voluntary coverage fails and the vulnerable face lethal exposure) and proportionality_reading (mandates permissible only under strict severity/transmission/safety thresholds with robust exemptions). All three author epsilon over the standing mandate regime; the values differ because epsilon is a property of the reading, not the topic."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_balance__proportionality_reading",
+      "vaccine_mandate_balance__public_health_primary"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'vaccine mandate debate' decomposes, per the epsilon-invariance principle, into three readings of one kernel, each a separate story with its own epsilon, victim set, and classification over the SHARED referent of standing mandate regimes. This file is the bodily_autonomy_primary member (epsilon 0.84, victims = the coerced). Siblings: vaccine_mandate_balance__public_health_primary (historically dominant; low epsilon; doctrinal victories in the Jacobson lineage shape the operating environment of the other two, making it the upstream member) and vaccine_mandate_balance__proportionality_reading (intermediate epsilon; partitions instruments into proportional and disproportionate subclasses). Every member links the others via affects_constraints; the decomposition note appears in all three files. The epsilon differences are reading-indexed values over a fixed referent (OQ-26), not observables switching within one constraint."
+  },
+  "stakeholders": [
+    {
+      "name": "unvaccinated_coerced_individuals",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decline a mandated medical intervention and face escalating consequences: school and workplace exclusion, licensure conditions, fines, terminated employment. Some hold refusal as settled conscience or faith and experience the choice as renouncing identity rather than declining a service; others would accept the intervention if conditions were priced transparently. Exit runs through relocation, homeschooling, job change, or exemption processes of uneven availability, each carrying real cost."
+    },
+    {
+      "name": "immunocompromised_medically_vulnerable",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cannot mount protective responses to vaccination and depend on surrounding coverage to reduce exposure. Mandate regimes name them as the principal justified beneficiaries; they receive the protective effect whether or not they endorse the coercion used to produce it. Their alternative is isolation, which trades physical safety for social existence, so they cannot exit the exposure question at all."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design coverage targets, define exemption criteria, and operate enforcement. Compulsion availability brings authority, budget, crisis discretion, and penalty receipts; judicial narrowing removes instruments but rarely the office. They can shift between voluntary campaigns and mandates as politics allow, and coordinate standards across jurisdictions."
+    },
+    {
+      "name": "institutional_employers_schools",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hospitals, universities, and school systems impose vaccination as a condition of entry or employment, converting mandate authority into liability insulation, insurance positioning, and outbreak-containment cost transfer onto individuals. They adopt or drop conditions with personnel consequences but little existential risk to themselves."
+    },
+    {
+      "name": "vaccinated_compliant_majority",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Accept the intervention voluntarily and receive reduced transmission risk plus uninterrupted access; their direct burden is minor. Their compliance supplies the coverage the mandate rides on, and their polling support sustains the regime's political legitimacy."
+    },
+    {
+      "name": "coercive_medicine_survivors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Survivors of historical state medical coercion — sterilization programs, non-consensual experimentation — carry the lived record of what bodily compulsion becomes once normalized. They hold no seat on immunization advisory bodies; their testimony reaches deliberation only obliquely through ethics scholarship and apology commissions."
+    },
+    {
+      "name": "courts_constitutional_reviewers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the boundary between police power and personal liberty, setting the doctrinal threshold at which compulsion stands or falls. They neither collect the regime's products nor bear its interventions; their output is the legitimacy line itself, revisable case by case."
+    }
+  ],
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the free-rider problem in infectious-disease control: vaccination carries individual costs and risks while its benefits are diffuse and shared, so voluntary uptake undersupplies the coverage needed to interrupt transmission; compulsion internalizes the externality and coordinates coverage toward the herd-immunity threshold.",
+    "transfer_function": "Moves bodily compliance and its associated risk-bearing from mandate-refusing individuals into the population's immune commons; moves penalty and exclusion costs from refusers to enforcing authorities and institutions; moves residual disease risk away from protected institutions and onto those who refuse.",
+    "absent_voices": "Survivors of historical coercive medicine are absent from contemporary mandate deliberation; seated at the table, they would contest the state's standing as custodian of bodily consent and force the precautionary history into the record. Minority-faith objectors similarly lack seats on immunization advisory committees that draft the exemption criteria governing them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mandate regime vanished overnight, coverage would sag below interruption thresholds in identifiable pockets, institutions would scramble to rebuild private condition policies, litigation dockets would surge in both directions, and outbreak risk to the medically vulnerable would rise measurably — the arrangements of schools, hospitals, and health departments visibly depend on the regime's continuing operation.",
+    "founding_problem": "Recurrent epidemic threats — smallpox, polio, measles, and most recently a novel coronavirus — in which voluntary uptake fell below the threshold needed to interrupt transmission, exposing communities, and especially the medically vulnerable, to preventable severe disease and death.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independently attested outside the benefiting parties: pre-vaccine mortality and morbidity series in historical demography, ongoing outbreak surveillance reported by academic epidemiology, and judicial findings in mandate litigation that accept the factual reality of contagion while contesting remedies. No serious party disputes that the founding problem exists or is recurrent; the parties dispute exclusively whether it licenses compulsion — which is the kernel this reading instantiates."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "absolute_bodily_sovereignty",
+    "drift_state": {
+      "moment": "contemporary_public_health_emergency_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_integrity_requires_affirmative_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "collective_welfare_never_trumps_informed_refusal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

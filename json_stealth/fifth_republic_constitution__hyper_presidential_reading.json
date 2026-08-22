@@ -1,0 +1,402 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__hyper_presidential_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "ee12cc10-c7b2-49e4-b1f7-9c1d08e10bab"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fifth Republic Hyper-Presidential Reading — President as Direct Sovereign, Minimally Constrained by the Legislature",
+    "topic_domain": "political/constitutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_president",
+      "french_presidency_institution",
+      "presidential_majority_deputies"
+    ],
+    "victims": [
+      "national_assembly_deputies",
+      "french_senate",
+      "french_electorate",
+      "french_trade_unions"
+    ],
+    "vindicated_propositions": [
+      "rationalized_parliamentarism_doctrine",
+      "direct_suffrage_mandate_superiority"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 66
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 11,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 33,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 44,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 55,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 66,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 11,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 33,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 44,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 66,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 11,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 22,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 33,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 44,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 55,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 66,
+      "value": 0.68,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sibling_reading_classification_delta",
+      "question": "How would per-seat classification shift if the parliamentary_constraint_reading of the same kernel were instantiated instead of this hyper-presidential reading?",
+      "resolution_mechanism": "Generate the sibling reading as its own constraint file and compare computed per-seat types, victim sets, and epsilon values across the family.",
+      "impact": "Under the parliamentary reading the legislature leaves the victim set, base extractiveness falls toward coordination-cost levels, and the computed type moves toward rope; the divergence between the two files is the measure of how much the reading choice, not the text, determines the classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame uncertainty: this constraint is one reading of the fifth_republic_constitution kernel; sibling readings instantiate different constraints."
+    },
+    {
+      "id": "embodiment_premise_electoral_stress",
+      "question": "Does the president's mandate still track a unified national will, given record abstention in the 2022 runoff and the fragmented chambers returned in 2022 and 2024?",
+      "resolution_mechanism": "Abstention and fragmentation time series, mandate-perception polling, and comparison of presidential vote share to subsequent legislative support for the president's program.",
+      "impact": "Sustained failure of the embodiment premise overrides this reading's foundational empirical axiom; the legitimacy cover thins and reclassification pressure toward snare increases, since enforcement would then be holding an arrangement whose justifying claim has failed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's core empirical premise survives contact with contemporary electoral data."
+    },
+    {
+      "id": "article_16_dormancy_status",
+      "question": "Is Article 16 a dormant safeguard of last resort or a usable standing instrument, given its single invocation (1961) and recurring speculation during the 2024 budget deadlock?",
+      "resolution_mechanism": "Constitutional Council jurisprudence on emergency measures, doctrinal analysis of invocation thresholds, and stress-testing against plausible deadlock scenarios.",
+      "impact": "Activation would spike suppression and drive accessibility collapse sharply upward, pushing the computed type toward snare; confirmed dormancy supports the tangled_rope reading with the emergency clause as unused backstop.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistence question over the emergency-power component of the reading."
+    },
+    {
+      "id": "force_passage_normalization_trajectory",
+      "question": "Is the rising reliance on Article 49.3 an enforcement ratchet (each use lowering the threshold for the next) or arithmetic adaptation to hung chambers that any government would face?",
+      "resolution_mechanism": "Compare force-passage rates under majority governments versus minority governments across the interval, controlling for legislative workload; cross-case comparison with other rationalized-parliament systems.",
+      "impact": "The ratchet reading supports the suppression-intensification trend in the measurement series and predicts continued escalation; the adaptation reading caps the trend at chamber-arithmetic necessity and softens the drift interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the enforcement trajectory reflects institutional ratchet or environmental necessity."
+    },
+    {
+      "id": "kernel_framing_text_vs_practice",
+      "question": "Is the contested kernel the written 1958 constitutional text, or the Gaullian practice tradition layered above it that gives the text its operative meaning?",
+      "resolution_mechanism": "Test whether the readings diverge on the text's semantic content alone or only on accumulated practice (49.3 usage norms, tolerated Article 16 episodes, Council deference patterns); if practice carries the divergence, the practice tradition is the operative kernel.",
+      "impact": "Under a practice-kernel framing, kernel_codification shifts from fixed_text toward distributed or implicit, drift migrates from textual interpretation into custom, and the authority structure's accountability for drift changes correspondingly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination: two coherent framings of the same kernel produce different commitment-system classifications."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 1958 Fifth Republic Constitution is a contested kernel: one persistent text, three live readings. This file instantiates the hyper-presidential reading — the president as direct sovereign embodying the national will, minimally constrained by the legislature. Under this reading the operative arrangement concentrates agenda control, dissolution, appointment, and (via Article 16) emergency authority in the Élysée, while Article 49.3 lets the government adopt legislation without a vote unless an absolute majority assembles against it. The reading is exercised, not merely asserted: force-passage migrated from rare exception to routine instrument (23 uses under a single government, 2022–2024), and the 2024 cycle — a government censured, budgets carried by special law, appointments disputed — stressed the reading's embodiment premise directly. Sibling readings (parliamentary_constraint_reading, cohabitation_equilibrium_reading) are separate constraint files with their own victim sets, epsilon values, and classifications; the family is linked through network edges. Claim and metrics are authored independently: the claimed type is tangled_rope (a genuine coordination function joined to an asymmetric burden), while the metrics describe strongly extractive, actively enforced operation — the engine computes per-seat types from the structural data and measures any divergence from the claim.\n\nKEY AGENTS (by structural relationship):\n- incumbent_president: primary beneficiary and agenda-setter (institutional/arbitrage) — collects decision authority and sets the reading through practice\n- french_presidency_institution: institutional beneficiary (institutional/identity_locked) — accumulates prerogative precedent with each exercise\n- prime_minister: enforcement instrument and contingent payer (powerful/constrained) — deploys force-passage, loses office on censure\n- national_assembly_deputies: primary target (moderate/constrained) — deliberation bypassed by Article 49.3\n- french_senate: secondary target (moderate/constrained) — delay power only\n- presidential_majority_deputies: dual-positioned (moderate/identity_locked) — collects coalition patronage, pays in hollowed deliberative role\n- french_electorate: diffuse target (organized/constrained) — policy adopted without representative consent between elections\n- french_trade_unions: excluded objectors (organized/constrained) — outside the conversation, recourse is the street\n- constitutional_council: analytical observer (institutional/analytical) — reviews but has historically deferred",
+    "key_agents": [
+      "incumbent_president: primary beneficiary and agenda-setter (institutional/arbitrage) — collects decision authority, dissolves chambers, appoints and dismisses, sets the reading through practice",
+      "french_presidency_institution: institutional beneficiary (institutional/identity_locked) — the permanent Élysée apparatus, fused with the strong-presidency function it transmits",
+      "prime_minister: enforcement instrument and contingent payer (powerful/constrained) — administers force-passage on the president's behalf and forfeits the office when censure succeeds",
+      "national_assembly_deputies: primary target (moderate/constrained) — debate and amend under a procedure that can erase their vote",
+      "french_senate: secondary target (moderate/constrained) — indirect mandate, delay without final word",
+      "presidential_majority_deputies: dual-positioned (moderate/identity_locked) — advanced by the coalition while stripped of the deliberative function of their office",
+      "french_electorate: diffuse target (organized/constrained) — elects the president directly; between elections, opposed policy is adopted without their representatives' consent",
+      "french_trade_unions: excluded objectors (organized/constrained) — no seat in the Élysée–Matignon channel where decisive bargains occur",
+      "constitutional_council: analytical observer (institutional/analytical) — reviews referrals, historically deferential to the political branches"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.72 at interval end) because decision authority concentrates in one office while the chamber's consent is dispensable under Article 49.3; the series rises from 0.35 at founding as force-passage migrated from exception to routine. Suppression (0.68) is authored as a raw structural property — dissolution threat held over the chamber, the censure-or-passage dilemma, and a historically deferential constitutional review — and is deliberately left unscaled; the engine owns any context scaling, and extractiveness alone is scaled. Theater ratio (0.55) reflects deliberation that continues procedurally while its outcome is predetermined: committee work and amendments persist, but a growing share of the process performs decisions the Élysée has already settled. Accessibility collapse stays moderate (0.45): alternatives survive — censure succeeded in 1962 and again in 2024, the Council reviews measures, the Senate delays, courts and EU law bind, and presidential elections recur every five years. Resistance is substantial (0.62): mass protest waves, successful censures, and fragmented chambers that deny the president a working majority. All three tracked series share one time grid (seven points spanning 1958–2024) so no metric is ever sampled against another's end-state; the plateau around t=33 records the cohabitation years, when alternating majorities temporarily damped the reading's operation without reversing its long drift.",
+    "perspectival_gap": "From the agenda-setter seat the arrangement is a working machine the president operates and profits from — coordination achieved, instability solved, crisis command unified. From the chamber seats the same machine reads as enforced passage: deliberation that cannot lose, opposition priced at governmental risk. Majority deputies occupy a third position: protected and advanced by the coalition while stripped of the deliberative function that defines their office. Identity-lock operates on two seats: majority deputies through career path dependence (leaving the coalition ends advancement), and the presidency institution through institutional fusion (its self-concept is the strong-presidency function, so no exit exists to imagine). If the career-fusion frame broke — through proportional representation or a coalition realignment — majority deputies would recompute as ordinary payers and the chamber's resistance capacity would rise sharply. Suppression here is overwhelmingly structural (procedure, dissolution threat, appointment power) rather than internalized, though the normalized vocabulary of 'presidential legitimacy' among deputies supplies a thin internalized layer.",
+    "directionality_logic": "Beneficiary declarations map to low directionality for the president and the presidency institution: the arrangement subsidizes both, with decision authority and precedent accruing to them. Victim declarations map to high directionality: deputies, senators, electors, and unions bear the arrangement's costs under constrained exit. The prime minister receives an explicit override (powerful → 0.45): the automatic chain would leave this unlisted agent on the power-atom fallback, missing his dual position — he administers the force-passage machinery (pulling toward the beneficiary end) yet pays with his office whenever a censure succeeds (pulling toward the target end); his net structural position is near-symmetric. Presidential-majority deputies are declared on the beneficiary side for the patronage they collect, but their payer side (hollowed deliberative role, career fusion) pulls their effective position toward the middle; the scalar derivation approximates this duality and the residual error is acknowledged rather than overridden, because a power-atom override would also drag the opposition deputies' correctly high directionality downward.",
+    "mandatrophy_analysis": "The founding problem — Fourth Republic cabinet instability — is substantially solved: five-year stable governments are the norm, and the 2024 censure produced a functioning caretaker arrangement rather than collapse. But the status is contested rather than dead: the arrangement's defenders point to post-2024 fragmentation as proof the problem recurs, so the dead-problem-plus-world-rearranges mismatch does not fire; the story records a live dispute over obsolescence instead. Classification discipline cuts both ways. The genuine coordination achievement (instability ended, unified crisis and nuclear command, a decisive counterweight to fragmented chambers) blocks a pure-extraction reading; the measured asymmetry (chamber bypassed, dissent priced at censure risk, gains concentrating in one office) blocks a pure-coordination reading. The tangled_rope claim encodes both halves, and the engine's per-seat computation is what tests them against each seat's actual position.",
+    "kernel_context": "Kernel: the Constitution of the Fifth Republic (1958, as amended) — a fixed text whose operative meaning is contested across three readings. This file instantiates the hyper_presidential_reading: the president as directly mandated sovereign, minimally constrained by the legislature — the Gaullian line running from the 1962 direct-election reform through the 1964 doctrine of the president as the nation's chosen arbiter. Sibling readings, authored as separate constraints: the parliamentary_constraint_reading (the president as coordinated executive requiring legislative authorization) and the cohabitation_equilibrium_reading (dual executive with negotiated authority allocation varying with chamber arithmetic). The disagreement is located in the operative force of Articles 5, 49.3, and 16: whether they institute presidential supremacy, exceptional last resorts, or equilibrium devices. On relations: this reading's core premise (minimal constraint) directly contradicts the parliamentary reading's core premise (authorization required) — no single framework can hold both as operative rules for the same provisions, hence forecloses; but the cohabitation reading is compatible within one framework as seasonal sovereignty (hyper-presidential in majority times, negotiated in minority times), hence coexists_with. The drift_state records that the reading's foundational empirical premise — that the president embodies a unified national will — has been substantially challenged by the fragmented chambers and record abstention of 2022–2024, a gap the reading's holders do not acknowledge, treating force-passage reliance as ordinary tooling rather than as evidence against the premise."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "parliamentary_constraint_reading",
+      "cohabitation_equilibrium_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: 'the Fifth Republic presidency' is one colloquial label covering three structurally distinct constraints. This file (hyper_presidential_reading) carries the high-extraction variant — the legislature in the victim set, force-passage as a standing instrument. The parliamentary_constraint_reading carries a low-extraction variant (authorization required; chamber as partner) and the cohabitation_equilibrium_reading a conditional variant (authority allocation varies with chamber arithmetic). Each has its own epsilon, beneficiaries, and victims. Upstream, this reading's accumulated precedents (routine 49.3 usage, tolerated Article 16 episodes, Council deference) supply the legitimacy raw material the sibling readings must argue against, so influence edges run from this file to both siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "incumbent_president",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Elected directly for a five-year renewable-once term. Appoints and dismisses the prime minister, presides over the council of ministers, commands the armed forces, holds the nuclear authority, may dissolve the National Assembly, and may invoke Article 16 emergency powers. Shapes the constitution's operative meaning through practice: each force-passage tolerated and each emergency episode weathered thickens the precedent available to successors. Can reshape the game itself — dissolution, referendum, appointment timing — so exit from the arrangement's pressures is effectively unrestricted."
+    },
+    {
+      "name": "french_presidency_institution",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The permanent apparatus — secretariat-general, military staff, diplomatic network, legal cell — that outlasts individual incumbents. Collects prerogative interpretation with every exercise of the strong-presidency reading and transmits it to the next occupant. Its self-concept is constituted by the strong-presidency function; the possibility of reverting to a narrowly ceremonial role is not one it can picture from inside, so no exit exists to take."
+    },
+    {
+      "name": "prime_minister",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Appointed by and dismissible at will by the president. Deploys Article 49.3 on the government's behalf, staking the cabinet's survival each time: adoption without vote unless an absolute majority assembles against it. When a censure succeeds the officeholder falls, as in December 2024. Runs the arrangement's daily operation and absorbs its political fallout, holding office strictly at the president's pleasure."
+    },
+    {
+      "name": "national_assembly_deputies",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "577 elected members who debate, amend, and vote legislation — except when the government forces adoption without a vote under Article 49.3, which happened 23 times under one government between 2022 and 2024. A censure motion requires an absolute majority assembled across mutually hostile factions, and toppling a government without an alternative majority risks dissolution and fresh elections. Recent fragmented chambers have made both the censure route and the arithmetic alternative narrow."
+    },
+    {
+      "name": "french_senate",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Upper chamber with an indirect mandate and delay power only: it can slow texts and force second readings, but the government may cut off the shuttle and impose a final reading. Bears the arrangement's costs as a permanently outranked partner whose consent is never finally required."
+    },
+    {
+      "name": "presidential_majority_deputies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Deputies of the president's coalition. Committee chairs, ministerial pipelines, campaign resources, and electoral protection flow through membership; in exchange they vote the government's texts regardless of chamber arithmetic, and force-passage spares them awkward recorded votes. Crossing the president ends advancement, so careers fuse with the coalition — while the same force-passage that protects them hollows out the deliberative function their office exists to perform."
+    },
+    {
+      "name": "french_electorate",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elects the president directly every five years and the Assembly every five years on offsetting calendars. Between elections, policy the plurality opposed — pension age, immigration law, budgets — is adopted without their representatives' consent via force-passage. Recourse within the interval is street mobilization and the next election; the 2024 snap election returned a more fragmented chamber rather than a working majority, deepening the deadlock the arrangement then manages by force-passage."
+    },
+    {
+      "name": "french_trade_unions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organized labor has no seat in the Élysée–Matignon channel where reform bargains are struck. When the 2023 pension reform was forced through despite months of strikes and demonstrations uniting the main federations, their objection channel had already been closed inside the legislature; what remained was the street. Would negotiate settlement terms if admitted to the conversation their exclusion defines."
+    },
+    {
+      "name": "constitutional_council",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews laws and, since the 2008 reform, Article 16 measures on referral. Has historically declined to police the political branches' use of emergency and force-passage instruments, dismissing the 1961 and 1988 Article 16 referrals on procedural grounds. Takes testimony, weighs doctrine, and its rulings can alter the arrangement's enforcement — a reviewing seat whose deference is itself part of the arrangement's operating condition."
+    }
+  ],
+  "gain_flow": "incumbent_president",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the Fourth Republic's chronic cabinet instability — roughly twenty-two governments in twelve years, most lasting months — by concentrating agenda-setting, confidence, and crisis command in a single directly elected executive; provides unified foreign-policy and nuclear command and a decisive counterweight to fragmented multiparty chambers.",
+    "transfer_function": "Moves decision authority from the legislative chamber to the president: budget priorities, reform content, and the timing of adoption flow from Élysée preference; deputies' votes are replaced by government-imposed adoption when arithmetic fails; public attention and accountability concentrate on one office.",
+    "absent_voices": "Trade unions, civil-society associations, and the parliamentary opposition are outside the conversation when Article 49.3 forces adoption; their objections surface as street mobilization and censure attempts requiring an absolute majority across hostile factions. Regional authorities and the overseas territories are likewise unrepresented in the bilateral Élysée–Matignon channel where the decisive bargains occur.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Government formation would reorganize around negotiated chamber majorities; amendment bargaining and committee compromise would regain decision weight; the presidency would revert toward the arbiter-and-foreign-policy role its rival readings assign it; budget and reform timelines would lengthen, and coalition maintenance would replace force-passage as the central executive skill.",
+    "founding_problem": "Chronic governmental instability of the Fourth Republic: cabinets averaging months in office, parliamentary fragmentation blocking decisive action, and executive paralysis exposed during the 1958 Algeria crisis.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The instability itself is corroborated by historiography and comparative-politics scholarship wholly outside the benefiting parties — standard accounts of the 1958 transition and the Fourth Republic's collapse record the problem independently. What is contested is liveness: the claim that the problem still requires a minimally constrained president is attested mainly by the presidency's own defenders and allied commentators, while constitutional scholars critical of current practice — noting that the 2024 censure produced a functioning caretaker arrangement rather than collapse — argue the original problem is largely solved. No disinterested source attests the live-status claim; that absence is itself signal."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "gaullian_direct_sovereign_presidency",
+    "drift_state": {
+      "moment": "post_2024_fragmented_chamber",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "parliamentary_constraint_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "cohabitation_equilibrium_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "direct_suffrage_confers_sovereign_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "president_embodies_unified_national_will",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "rationalized_parliamentarism_requires_disciplined_chamber",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

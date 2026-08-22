@@ -1,0 +1,334 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_kernel__performance_only_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "892b5177-5d7c-47a0-9009-3fc700b85310"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.65,
+    "theater_ratio": 0.85,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.4,
+    "claimed_type": "piton",
+    "human_readable": "Standing Sacrificial Command Requiring Physical Performance (Performance-Only Reading)",
+    "topic_domain": "religious law / halakhic authority / commitment system dynamics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "victims": [
+      "jewish_people_commanded_collective"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1200,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.83
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.65
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_status_disagreement",
+      "question": "This constraint is one reading (performance_only_reading) of the sacrifice_obligation_kernel. Which present normative status does the framework hold for the sacrificial command: standing and unfulfilled (this reading), divinely suspended until restoration (messianic_suspension_reading), discharged through study (study_as_exercise_reading), or no live halakhic claim at all (symbolic_archive_reading)?",
+      "resolution_mechanism": "Not resolvable by evidence inside the framework: each reading's core premise strictly negates the others'. Resolution would be an act of interpretive authority (a ruling), not a discovery. Track institutional adoption of readings over time as the observable proxy.",
+      "impact": "Sibling adoption collapses this story's epsilon: suspension removes the standing debt, study-as-exercise discharges it, archive status denies it. This story's high-extraction profile exists only under this reading; the other three stories author their own epsilon over the same kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the sacrifice kernel governs; the disagreement is located at the command's present normative status and mode of fulfillment."
+    },
+    {
+      "id": "extraction_without_collector",
+      "question": "Does a standing normative debt with no collecting creditor, no enforcement mechanism, and no discharge path constitute extraction (burden borne by victims), or is the gap a structural impossibility closer to a natural-law profile wearing interpretive clothing?",
+      "resolution_mechanism": "Classify by counterfactual comparison: a debt nobody can collect or pay, enforced by nothing, whose only operative effect is liturgical acknowledgment. If the framework's own authorities would dissolve rather than collect the debt upon capacity restoration, the debt functions as orientation rather than extraction.",
+      "impact": "If the gap is impossibility rather than extraction, epsilon falls toward a natural-law profile and the piton claim weakens toward a contested mountain shape; if it is extraction, the piton classification holds and victim declarations stand.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the unfulfilled obligation is extractive burden or structural impossibility."
+    },
+    {
+      "id": "suppression_structural_vs_identity",
+      "question": "Is the constraint's closure of alternatives structural (the reading's interpretive logic forecloses every in-framework substitute) or internalized (covenantal identity makes the obligation constitutive, so exit is unthinkable even where formally available)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: individuals who leave the observant framework — does the sense of a standing undischarged obligation persist (internalized) or lapse with the framework (structural)?",
+      "impact": "If internalized, effective suppression exceeds the structural measure and the debt travels with leavers; if structural, exit fully dissolves it and suppression is confined to the framework's jurisdiction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural interpretive foreclosure versus internalized covenantal identity as the suppression mechanism."
+    },
+    {
+      "id": "capacity_restoration_transform",
+      "question": "Is the constraint's inertial character contingent on the venue's continued absence — would restored sacrificial capacity (a functioning altar, qualified priests, ritually fit offerings) convert the standing debt into an operative performance demand?",
+      "resolution_mechanism": "Observe the restoration movements' trajectory: vessel fabrication, altar-readiness work, priestly preparation, ritual fitness verification. Any restored capacity converts the demand from unfulfillable to fulfillable and makes the constraint's operation observable in performance.",
+      "impact": "On restoration, this constraint transforms from an inertial standing debt toward an operative worship coordination with real beneficiaries and real costs; the epsilon referent changes with the arrangement, and the story should be re-authored against the new arrangement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether restored capacity would reactivate the constraint's original function."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading — performance_only_reading — of the sacrifice_obligation_kernel: the standing commitment that the sacrificial commandments bind the Jewish people. Under this reading the command remains fully in force after the Temple's destruction (70 CE): the obligation requires physical performance, study of the sacrificial orders is preparatory — it maintains readiness and memory but does not fulfill the command — and the community has therefore carried a standing, undischarged command for roughly nineteen centuries. The epsilon referent is this standing arrangement (the binding, currently unperformable command as this reading holds it), never the restoration this reading awaits. Constraint-family note (epsilon-invariance decomposition): the colloquial label 'the sacrifice obligation' covers four structurally distinct claims, authored as four linked stories. This reading authors the high-epsilon standing-debt claim (about 0.78: an entire people commanded and unable). The study_as_exercise sibling authors a low-epsilon arrangement (the debt is discharged through study — coordination, not extraction). The messianic_suspension sibling authors near-zero epsilon (no standing debt — the command is divinely paused, not transformed). The symbolic_archive sibling authors epsilon near zero (a cultural-historical archive making no halakhic claim). They are linked via network.affects_constraints; this story does not adjudicate between them — it authors one reading cleanly. No beneficiaries are declared, deliberately: no agent, human or divine, collects from the standing debt. The tradition's own texts deny divine need for the service, and the interpreting authority receives interpretive standing, not the debt's proceeds. The absence of a collector is the structural fact that drives this story's classification.",
+    "key_agents": [
+      "halakhic_authority_community: agenda-setter (institutional/identity_locked) — poskim, academies, and liturgy-maintainers who rule the command binding and study non-fulfilling; they administer the interpretation they are also bound by",
+      "jewish_people_commanded_collective: primary target/payer (organized/identity_locked) — the commanded addressee of the communal sacrifices; bears the standing debt; its daily liturgy rehearses the inability to discharge it",
+      "temple_restoration_movements: debt-bearers acting on the debt (moderate/identity_locked) — organized efforts to restore performance capacity, converting longing into engineering",
+      "secular_jewish_community: excluded constituency (organized/mobile) — holds the archive-style reading; outside the halakhic conversation the constraint's maintenance never consults",
+      "academic_historian_of_religion: analytical observer (analytical/analytical) — sees the full four-reading structure and documents the recitation apparatus as memory practice",
+      "the command's author: noted here, deliberately not staked — the tradition itself denies that the command's author collects anything; no power atom accommodates this seat, and declaring it a beneficiary would misstate the structure the delta describes"
+    ],
+    "logic_rationale": "Extractiveness 0.78: the arrangement levies a standing command the entire commanded collective cannot discharge, for nineteen centuries, with no in-framework discharge path — the reading's own liturgy attests the weight daily in its lament formulas and restoration petitions. This is epsilon authored from the reading's own lights: it holds the command legitimate and eternal, and authors the gap between command and capacity as the burden the arrangement imposes. Suppression 0.65 (a raw structural property, unscaled — the engine scales only effective extraction): the reading's interpretive logic forecloses every in-framework substitute — study does not fulfill, the command is not suspended, no archive status applies — and covenantal identity makes exit unthinkable from inside; there is no coercion because there is nothing enforceable. Theater_ratio 0.85: the entire operative apparatus — daily recitation of the sacrificial orders, fixed curriculum study, remembrance liturgy — is activity the reading itself explicitly denies fulfilling status; this is theater with the curtain open, an atrophied function maintained by acknowledged rehearsal rather than deception. Accessibility_collapse 0.85: within the reading, alternatives collapse completely once the constraint is understood — that collapse is the reading's content. Resistance 0.4: soft in-framework evasion (the mainstream study-as-exercise comfort is precisely a coalition path around the debt, and the framework's center of gravity has drifted toward it), formal repudiation outside the framework (the 1885 platform repudiation of the restoration-and-sacrifice program), acceleration rather than resistance from the restoration movements; little active resistance inside the observant core, where the debt is carried as longing. Claimed type piton, authored independently of the metrics: the sacrificial-Temple system was a functioning coordination (worship, calendar, pilgrimage flows, atonement channel); its primary function has been unexecutable since 70 CE; the constraint persists by interpretive inertia, identity fusion, and acknowledged theatrical maintenance; no party profits enough to maintain it for gain and no party is hurt enough to fix it — the interpreting authority could adopt the study-as-exercise reading, but the fidelity-cost to it exceeds what the standing debt costs the institution. The reading itself would claim mountain-shape (eternal divine command); this story authors the structural truth — constructed, interpreted, contested, inertial — and leaves the divergence to the engine. Coordination type identity_coordination is declared for the residual function: the apparatus synchronizes communal memory and the restoration claim across generations. The identity-framing gaming risk is answered by the reading's own structure — it explicitly denies the identity apparatus any fulfilling effect, so the residual coordination cannot serve as a cover story for the performance demand; the divergence between residual function and standing demand is the piton signature itself. Measurements share one grid (8 points, all 3 metrics at every point); suppression_requirement is tracked because this story specifically traces interpretive-maintenance capacity: the machinery bounding the study-substitute and holding the performance-only line grew from near nothing at the destruction to a settled apparatus.",
+    "perspectival_gap": "The payer seat and the agenda-setter seat compute differently from identical doctrine. From the commanded collective's position the arrangement is a standing debt it cannot discharge — the structure operates as burden. From the authority's position the same structure is the covenant's fidelity: the debt's undischarged standing IS the framework's integrity, and transforming it (study-as-exercise) or pausing it (suspension) would be the failure, not the relief. From the excluded secular seat the entire structure is memory-work mistaken for obligation — no debt, no burden, only archive. The engine computes these per-seat classifications from the structural data (overlapping power atoms, divergent exit options and directionalities); the authored claim does not adjudicate them.",
+    "directionality_logic": "Victims drive the derivation: the jewish_people_commanded_collective is the declared victim and sits near the full-target end (high d), amplified by identity_locked exit and global scope, which the engine applies when scaling effective extraction from base epsilon. No beneficiary declarations exist anywhere: the command's author collects nothing per the tradition's own texts, and the interpreting authority receives interpretive standing, not the debt's proceeds — hence gain_flow 'diffuse' is an affirmative finding, checked seat by seat, not a default. One override is declared: the halakhic_authority_community (institutional) is authored at d=0.55 because it is dual-positioned — bound by the same command it administers (its members bear the debt) yet buffered by administrative agency and identity-investment in the kernel's stability; the derivation from victim declarations alone cannot see this dual position. The restoration movements sit near the target end with unusual agency: they respond to the debt by attacking its cause (capacity absence) rather than its terms. The secular constituency sits effectively outside the constraint's jurisdiction — the constraint does not reach them, so their d is not target-like despite their rejection of it.",
+    "mandatrophy_analysis": "The founding function — providing the performable channel of commanded worship and atonement — died with the venue in 70 CE and has stayed dead for nineteen centuries; the arrangement persists. Mandatrophy is unresolved: the framework refuses both transformation (the study-as-exercise discharge) and suspension (the divine-pause ruling), so the mandate-outlived-function condition holds without the resolution that would end it. The piton classification prevents two mislabelings. It is not a snare: no collector exists, no coercion operates, and the coordination story is not cover — there is no coordination story left at all, only the debt and its rehearsal. It is not a mountain: the constraint is constructed, interpreted, and contested — three sibling readings negate it, its persistence requires continuous interpretive maintenance, and it fails the naturality profile outright. The honest middle is the piton: a dead-mandate arrangement maintained by identity and interpretation, whose fix is prohibitive from inside the framework — restoration is messianic-scale, reinterpretation is fidelity-dissolving. The R5 mismatch is documented rather than resolved: founding status contested (the parties dispute whether the owed service is live), disappearance contested (the parties dispute whether anything real depends on the debt).",
+    "kernel_context": "Kernel: sacrifice_obligation_kernel — the standing commitment that the sacrificial commandments bind the Jewish people. This story instantiates the performance_only_reading: the command remains in force, requires physical performance, and study is preparatory only. Sibling readings, authored as separate constraints: study_as_exercise_reading (study constitutes genuine exercise of the command — the obligation is occupied through intellectual engagement), messianic_suspension_reading (the obligation is divinely suspended, not transformed, until messianic restoration; study maintains operational readiness), and symbolic_archive_reading (sacrifice law is a cultural-historical archive making no halakhic claim). The disagreement's location is precise: the command's PRESENT NORMATIVE STATUS (standing vs suspended vs discharged vs absent) and its MODE OF FULFILLMENT (physical performance vs study vs none). The relations are all-foreclose: each reading's core premise strictly negates the others' — a single halakhic framework cannot simultaneously hold that the obligation stands unfulfilled and that it is suspended, discharged, or absent — making this kernel a genuine all-foreclose set rather than a coexisting-opinions set. All four readings agree that study maintains readiness and memory; they divide entirely on whether that readiness discharges anything."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_kernel__study_as_exercise_reading",
+      "sacrifice_obligation_kernel__messianic_suspension_reading",
+      "sacrifice_obligation_kernel__symbolic_archive_reading"
+    ],
+    "dual_formulation_note": "Family decomposition of the sacrifice_obligation_kernel per the epsilon-invariance principle: the colloquial label 'the sacrifice obligation' covers four structurally distinct claims that cannot share one epsilon. This story (performance_only_reading) authors the high-epsilon standing-debt claim. Siblings: study_as_exercise_reading (low epsilon — the arrangement discharges through study and coordinates), messianic_suspension_reading (near-zero epsilon — no standing debt; divinely paused), symbolic_archive_reading (epsilon near zero — archive, no live claim). All four stories link via affects_constraints. There is no upstream/downstream empirical structure among them: each reading cites the same fixed text and diverges at the interpretation layer, so the links record shared-kernel coupling, not causal dependency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "halakhic_authority_community",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Poskim, Talmudic academies, and liturgy-maintainers who rule that the sacrificial command remains binding, that study of the sacrificial orders is preparatory remembrance rather than fulfillment, and that the daily recitation carries the debt's memory without discharging it. They composed and maintain the lament liturgy that attests the community's inability. They are themselves members of the commanded collective — bound by what they administer. Adopting a sibling reading would dissolve the interpretive role they occupy; their fidelity to the kernel's standing is constitutive of their authority."
+    },
+    {
+      "name": "jewish_people_commanded_collective",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The addressee of the communal sacrifices — the daily offering and the festival offerings — commanded as a collective and unable to perform for nineteen centuries. Its members recite the sacrificial orders daily, study them on the fixed curriculum, and petition for restoration in every prayer. The debt is carried in the liturgy's own words: obligations that stand unfulfilled. Exit would mean leaving the covenant the obligation is addressed to — not a live option from inside."
+    },
+    {
+      "name": "temple_restoration_movements",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Organized groups preparing restored sacrificial capacity: fabricating vessels, training priests, verifying ritual fitness of candidate animals, mapping the altar site. They experience the standing undischarged command as intolerable and respond by attacking its cause — the absence of a venue — rather than its terms. Their project's success would convert the debt from unpayable to payable."
+    },
+    {
+      "name": "secular_jewish_community",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Jews outside the halakhic framework who regard the sacrificial law as heritage and history rather than standing command. They would say the archive-style reading is the honest one: the texts preserve identity and memory and make no live claim on anyone. They are not bound by the obligation in their own lights, do not participate in the recitation apparatus, and are not consulted by the framework that maintains the debt's standing."
+    },
+    {
+      "name": "academic_historian_of_religion",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of liturgy and religious history who study the recitation apparatus, the lament calendar, and the restoration movements as observable practice. They see the full four-reading structure of the kernel contest, collect nothing from the arrangement, and owe nothing to it. Their analyses document the apparatus's growth and the drift of the framework's center of gravity toward the comfort readings."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Originally: centralized national worship — one venue, one calendar, one atonement channel, with pilgrimage and provision flows coordinating the whole people. Currently, under this reading: the arrangement coordinates memory, not worship — the daily recitation of the sacrificial orders and the fixed lament calendar keep the entire community oriented to the same lost service and the same restoration claim. The reading itself denies this residual coordination any fulfilling effect.",
+    "transfer_function": "Currently nothing material moves. The arrangement holds a normative debit in place against the entire commanded collective and draws attentional labor: daily recitation, curriculum study of the sacrificial orders, and liturgical acknowledgment of the inability to discharge — flows of attention and acknowledgment from the community toward the command's standing, which this reading explicitly rules out as payment. Historically the arrangement moved animals, grain, wine, and service labor from the people to the Temple cult.",
+    "absent_voices": "The secular and academic constituency holding the archive-style reading would object that a nineteen-century unfulfillable command binds no one and that its maintenance is memory-work, not obligation; it is outside the halakhic conversation entirely and the constraint's maintenance never consults it. Inside the framework, the holders of the study-as-exercise comfort are present but subordinated — this reading's logic overrules their discharge claim rather than engaging it. The individual who experiences the standing debt as weight without the longing-frame has no seat in the ruling structure.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the performance-only standing obligation vanished overnight — the framework adopting suspension or study-as-exercise — the liturgical lament apparatus would lose its warrant, the restoration movements would lose their halakhic urgency, and a standing-debt category would leave halakhic discourse; but no material flow changes, the recitation would likely continue as custom, and messianic hope is carried independently of this constraint. The reading's own parties hold the covenantal architecture would be genuinely altered; the archive parties hold nothing real ever depended on it. The parties dispute which world we are in — hence contested rather than world_rearranges.",
+    "founding_problem": "The arrangement was constituted by the command itself rather than built to solve a problem in the policy sense; the nearest founding-problem statement is: providing the divinely-prescribed channel through which the covenant community discharges worship and atonement — a standing service owed by the collective, performable only at the central venue.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "No beneficiary set exists to self-attest, but the maintaining authority attests from inside, and its attestation is the kernel's own authority structure — flagged here as structural, not dispositive. Outside corroboration: the liturgy's institutionalized lament (composed and maintained by the authority itself, so internal but self-implicating — the maintaining parties daily attest their inability to discharge); academic liturgy scholarship attests the recitation apparatus functions as memory of a lapsed practice, corroborating the gap's reality while bracketing the obligation's standing; and the Reform movement's formal 1885 repudiation of the restoration-and-sacrifice program attests, from outside the reading's community, that the founding problem is not live for repudiating parties. Stated plainly: no in-framework source independent of the interpreting authority attests the obligation's present bindingness — the attesting structure and the maintained constraint are the same structure."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "sinaitic_command_performance_owed",
+    "drift_state": {
+      "moment": "nineteen_centuries_post_destruction",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_exercise_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "messianic_suspension_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "symbolic_archive_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_performance_sole_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "obligation_persists_without_venue",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "versailles_reparations_clauses__punitive_liability_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "RESOLVED MANDATROPHY",
+    "measurement_id_prefix": "versailles_punitive",
+    "story_uid": "8e43d2b9-f214-4d7c-bf3c-5563dc9ca77b"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.72,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Versailles Article 231 Punitive-Liability Regime (Unlimited Reparations Reading)",
+    "topic_domain": "international_relations/legal_history/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "allied_creditor_states"
+    ],
+    "victims": [
+      "german_workers_taxpayers",
+      "ruhr_industrial_communities"
+    ]
+  },
+  "interval": {
+    "start": 1919,
+    "end": 1932
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1919,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1921,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1923,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1925,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1927,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1929,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1931,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1932,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1919,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1921,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1923,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1925,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1927,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1929,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1931,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1932,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1919,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1921,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1923,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1925,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1927,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1929,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1931,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1932,
+      "value": 0.18
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading of the versailles_reparations_clauses kernel; what structural differences would the sibling readings produce if instantiated?",
+      "resolution_mechanism": "Classify the sibling stories (versailles_reparations_clauses__limited_responsibility_reading, versailles_reparations_clauses__repudiation_reading) over the same referent and compare per-seat types, epsilon, and victim sets across the family.",
+      "impact": "The limited reading bounds claims by capacity (lower epsilon, weaker victim asymmetry, bargaining-centered enforcement); the repudiation reading voids the obligation outright (claim-side epsilon collapses toward zero, enforcement becomes purely defensive). The divergence locates the dispute in the semantic force of Article 231 and the validity of a dictated treaty.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: kernel membership, reading identity, and expected sibling deltas."
+    },
+    {
+      "id": "article_231_semantic_force",
+      "question": "Is the word 'responsibility' in Article 231 a moral judgment of unique guilt (this reading) or a legal formality fixing civil liability for civilian damage as a precondition to a capped schedule?",
+      "resolution_mechanism": "Drafting history — Phillimore and Smuts memoranda, the Franco-American exchange of letters of June 1919 — together with subsequent official Allied usage of the clause.",
+      "impact": "If formality, the quasi-unlimited claim lacks textual warrant and this reading's epsilon rests on political imposition rather than the clause itself; if moral judgment, the clause is the extraction instrument and the reading's warrant is internal to the text.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the kernel contest is located: the semantic force of the war-guilt clause."
+    },
+    {
+      "id": "german_transfer_capacity",
+      "question": "What was Germany's sustainable external transfer capacity in the 1920s relative to the scheduled annuities?",
+      "resolution_mechanism": "Balance-of-payments reconstruction from contemporary sources (Keynes, the Dawes and Young committee data) and later quantitative historiography.",
+      "impact": "If capacity sat far below schedule, realized extraction was enforcement-limited rather than claim-limited and the suppression series carries more of the burden story; if capacity approached schedule, the claim's size rather than enforcement explains the payment collapse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capacity-versus-claim gap underlying the payment record."
+    },
+    {
+      "id": "hyperinflation_strategic_or_collapse",
+      "question": "Was the 1923 mark collapse a deliberate strategy to destroy the mark-denominated basis of the claims, or fiscal collapse under occupation costs?",
+      "resolution_mechanism": "Reichsbank and Finance Ministry records, Cuno-era cabinet minutes, and discount-policy decisions assessed against the contemporary alternatives.",
+      "impact": "Strategic inflation raises the resistance attributable to the payer seat and lowers realized extraction independently of enforcement; accidental collapse attributes the same erosion to state incapacity instead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of the inflation episode within the resistance record."
+    },
+    {
+      "id": "lausanne_finality",
+      "question": "Did the Lausanne settlement extinguish the punitive claim structure or leave it dormant behind the token bond?",
+      "resolution_mechanism": "Legal status of the never-issued Lausanne bond, subsequent German legislation of 1933, and creditor-government archives on revivability.",
+      "impact": "If dormant, the late-interval theater measures a living claim maintained performatively (piton-direction drift inside a tangled-rope life); if extinguished, the theater measures wind-down of a dead mandate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "End-state status of the claim structure after 1932."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "allied_creditor_states",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "The victorious coalition that wrote the schedule. Through the London ultimatum they fixed a nominal sum and delivery program, then collected in gold, marks, coal, timber, ships, and livestock. Receipts went to reconstruction budgets in Belgium and France and to servicing inter-allied war debts. Their enforcement ladder ran from blockade and sanctions threats to occupying the Ruhr when deliveries lapsed. Loosening the claims meant telling their own publics the money was forgone; France resisted that above all."
+    },
+    {
+      "name": "allied_reparations_commission",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The standing body created by the treaty to assess German capacity, fix annuities, supervise delivery, and declare default. Its findings triggered sanctions automatically. It could inspect German budgets and customs administration. Its authority existed only so long as the claims it administered did."
+    },
+    {
+      "name": "german_workers_taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Carried the payments as taxes, wage restraint, and shortages — food and coal were short through 1919-1923. They had no vote in the schedule and no way to move their labor abroad at scale; capital could flee, wages could not. Occupation-era unemployment and the currency collapse destroyed savings and normalized precarity."
+    },
+    {
+      "name": "ruhr_industrial_communities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lived inside the enforcement action itself: after the 1923 occupation, mines and railways passed under the occupier's control, workers conducted passive resistance on strike pay printed in Berlin, and the region absorbed the direct costs — deportations, shootings, halted production — of the collision between the schedule and German default."
+    },
+    {
+      "name": "german_heavy_industrialists",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Formally liable through corporate taxation and delivery quotas, but the currency collapse let them repay mark debts in worthless paper, reprice plant against foreign competitors, and buy assets cheaply; some firms took occupation-era contracts and benefited from the reconstruction demand the payments financed next door. Their exposure to the schedule was real but hedged in ways the worker-taxpayer seat's was not."
+    },
+    {
+      "name": "german_reich_government",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Owed the deliveries and administered their raising: taxation, customs, the printing press. It chose the resistance instruments — passive-resistance subsidies, discount-rate passivity — and negotiated every adjustment from Spa through Lausanne. Its fiscal sovereignty was the thing the schedule reached into; its room to refuse was bounded by occupation."
+    },
+    {
+      "name": "american_treasury_and_banks",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Refused to ratify the treaty and held no seat in its machinery, yet sat upstream of the whole money flow: the Allied governments owed Washington for war purchases, and after 1924 private American lending to Germany recycled the annuities back across the Atlantic. When the lending stopped in 1929, the payment chain broke within two years."
+    },
+    {
+      "name": "independent_economic_expertise",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analysts outside every government delegation — most prominently the Treasury economist who resigned in 1919 — argued the schedule exceeded any payable figure and that the moral framing was expedient cover. Their capacity estimates became the working basis of every later adjustment plan, and the expert committees of 1924 and 1929 institutionalized their method."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provided a single negotiated machinery for allocating the financial burdens of a continental war: fixed schedules, a joint commission to assess capacity and supervise delivery, and automatic sanctions for default — replacing piecemeal seizure by individual victors and giving the creditor coalition one common settlement instrument. It also anchored the victors' expectations for settling inter-allied war debts out of German receipts.",
+    "transfer_function": "Moved gold, foreign exchange, coal, coke, timber, dyestuffs, merchant shipping, and livestock from the German economy to the Allied creditor states — Belgium and France first in kind and cash, Britain applying receipts to its own transatlantic war-debt service — with American private lending recycling a large share of the payments between 1924 and 1929.",
+    "absent_voices": "The German delegation was handed the terms without negotiation and signed under threat of resumed blockade and invasion; German fiscal authorities could appear before the Reparations Commission but held no vote. Neutral economic expertise was outside the room in 1919 — Keynes resigned rather than attach his name to the schedule — and entered only when crisis forced the Dawes inquiry. The populations whose taxes and wages would carry the payments had no seat anywhere in the process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Remove the clauses overnight in 1919 and there is no London ultimatum, no Ruhr occupation, no hyperinflationary passive resistance financed by printing, no Dawes loan cycle tying German revival to American credit, and no grievance narrative ready-made for the movement that repudiated the treaty outright. Allied reconstruction budgets and inter-allied debts require some other settlement mechanism; the political history of the Weimar Republic and the timing of its collapse are not plausibly the same.",
+    "founding_problem": "The victors faced reconstruction bills in Flanders and northern France, inter-allied war debts, and domestic electorates unwilling to tax themselves for the whole cost. Article 231 was drafted to establish a legal basis for charging Germany with civilian damage — its authors' notes describe a liability-framing device — but the punitive reading converted it into a moral warrant for the total cost of the war.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: Keynes's contemporaneous dissent (his resignation letter and The Economic Consequences of the Peace) attests the schedule exceeded any defensible reading of the damage provision; the American government declined to subscribe to the war-guilt premise and stayed outside the treaty; the mixed-nationality Dawes and Young committees attested that capacity, not culpability, set what could be paid. After 1929 no Allied government defended the unlimited claim in substance — the silence at Lausanne is itself corroboration that the founding problem no longer lived."
+  },
+  "gain_flow": "allied_creditor_states",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "versailles_reparations_clauses__limited_responsibility_reading",
+      "versailles_reparations_clauses__repudiation_reading"
+    ],
+    "dual_formulation_note": "Constraint family: one fixed treaty text (Articles 231-247), three structurally distinct claims. This punitive reading carries the highest epsilon and the enforcement-heavy victim structure; the limited_responsibility_reading shares the referent but authors lower epsilon over a capacity-bounded claim with bargaining-centered enforcement; the repudiation_reading voids the obligation and authors the claim-side epsilon near zero. The punitive reading is upstream historically (operative 1919-1923), and its enforcement crises created the institutional conditions in which the limited reading was codified (Dawes, Young); the repudiation reading captured German politics by 1933. Epsilon differs across the family because the readings locate the claim's warrant differently, not because they measure different arrangements."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "victor_adjudicated_unlimited_liability",
+    "drift_state": {
+      "moment": "lausanne_settlement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "limited_responsibility_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "repudiation_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "german_unique_war_guilt",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "total_cost_liability_entitlement",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the Versailles reparations kernel: the punitive-liability reading, under which Germany bears unique moral and financial responsibility for the total cost of the war and Article 231 warrants claims bounded only by what can be collected. The standing arrangement under contest is the Article 231-anchored claim structure as it operated from the treaty's signature through the London Schedule, the Ruhr occupation, the Dawes and Young restructurings, and the collapse of payments by 1932. The reading's own lights supply the warrant for the claims — they do not shrink the measured burden, because a claim uncapped by design is maximally extractive as a structure regardless of whether one endorses its moral premise. Sibling readings (capacity-bounded liability; repudiation of a dictated treaty) are separate constraint files linked through the network section.\n\nKEY AGENTS (by structural relationship):\n- allied_creditor_states: Primary beneficiary (institutional/mobile) — receive the transfers and set the schedule\n- allied_reparations_commission: Agenda setter (institutional/constrained) — administers assessment, supervision, default declarations\n- german_workers_taxpayers: Primary target (powerless/trapped) — bear the payments through taxes, wages, and shortages\n- ruhr_industrial_communities: Secondary target (moderate/trapped) — bear occupation and passive-resistance costs directly\n- german_heavy_industrialists: Dual-positioned payer (powerful/arbitrage) — formally liable, materially cushioned by inflation and asset repricing\n- german_reich_government: Payer and domestic administrator (institutional/constrained) — delivers payments, chooses the resistance instruments\n- american_treasury_and_banks: Excluded creditor (institutional/mobile) — outside the treaty, upstream in the debt chain, funds the 1924-29 recycling\n- independent_economic_expertise: Analytical observer (analytical/analytical) — capacity assessments every adjustment plan adopted",
+    "logic_rationale": "Extractiveness is authored high (0.85) because the claim architecture was uncapped by design: the London Schedule's nominal 132 billion gold marks dwarfed any plausible annuity, and the A+B bond structure kept the unpaid balance outstanding as a permanent lien. The scalar characterizes the punitive-liability structure at its operative peak (1921-1923); the temporal series traces realized operation, which escalated to the Ruhr occupation and then decayed through Dawes, Young, the Hoover Moratorium, and Lausanne — the 1931-1932 points document enforcement failure, not redesign of the claim, which is why the series endpoint sits below the structural scalar. Suppression (0.72) is authored as a raw structural property, unscaled by power or scope: the regime's persistence required blockade leverage, sanctions machinery, and finally military occupation; unilateral default was punished, not merely discouraged. Theater is low (0.18) across the operative life because enforcement was materially real — coal trains, inspectors, troops — and turns upward only as the machinery outlives the payments. Accessibility collapse is moderate (0.58): exit routes existed — default, negotiation, inflation erosion, revisionist diplomacy — but each carried severe punishment, so alternatives were degraded rather than erased. Resistance is high (0.78): passive resistance, hyperinflation, serial default, and final repudiation. All three tracked series run on one shared eight-point grid (1919, 1921, 1923, 1925, 1927, 1929, 1931, 1932). Suppression_requirement is authored because enforcement capacity is the dynamic this story traces — a ratchet to occupation in 1923, then decay as force gave way to supervised borrowing.",
+    "perspectival_gap": "The creditor seat computes a settlement it built and polices: lawful satisfaction of an admitted debt, with the commission as neutral administration. The German payer seats compute the same structure as open-ended liability enforced by hunger and occupation. Inside the creditor coalition the seats diverge further: France's receipt-and-security interest favored pressing the claim regardless of capacity, while Britain's trade interest required a solvent Germany and pushed toward capacity-bounded schedules — same power atom, different exit horizons, different experienced constraint. German heavy industry sits between: formally a payer, materially hedged by inflation and asset repricing, so its experienced burden sits well below the worker-taxpayer seat's.",
+    "directionality_logic": "Allied creditor states derive d near the beneficiary pole: declared beneficiaries with mobile exit and institutional power. German workers and taxpayers and the Ruhr communities derive d near the target pole: declared victims, trapped exit, little organized power. The Reich government is a payer with administrative duties — high d, slightly damped by its seat at every negotiating table. Heavy industrialists are the structural exception: absent from the victim roll, formally paying but positioned to arbitrage the currency collapse, so their effective directionality sits well below the other German seats — the derivation from the beneficiary/victim rolls alone would miss this, which is why their dual position is declared on the stakeholder surface rather than forced into the victim array. American creditors are outside the governed set entirely: an excluded seat, upstream in the debt chain, feeding the system with recycled credit rather than drawing from it.",
+    "mandatrophy_analysis": "The founding problem — financing reconstruction and inter-allied settlement out of German transfers — was dead by 1931: the Hoover Moratorium suspended payments and Lausanne abandoned the claim in substance. The machinery persisted past its function: the commission's apparatus, the transfer bureaucracy built under Young, and the token bond at Lausanne were maintained for face-saving and legal continuity, which is the rising theater series after 1929. Declaring mandatrophy resolved keeps the classification honest in both directions: the arrangement is not pure extraction with coordination as cover, because a real allocation-and-settlement function operated and was repeatedly renegotiated through bargaining channels (Spa, Wiesbaden, Dawes, Young); nor is it clean coordination, because the same channels enforced asymmetric payment under threat of occupation. The dead-status-plus-world-rearranges mismatch is the intended signal here: the structure outlived its mandate by roughly a decade of increasingly theatrical maintenance.",
+    "kernel_context": "This story instantiates the punitive_liability_reading of the versailles_reparations_clauses kernel — the fixed treaty text (Articles 231-247) read as a moral judgment of unique German guilt grounding quasi-unlimited claims. Sibling readings: the limited_responsibility_reading (Article 231 as legal formality, payments bounded by capacity) and the repudiation_reading (a treaty imposed under duress is void; no binding obligation beyond token gestures). The punitive and limited readings coexist as rival live positions within the creditor coalition — neither logically eliminates the other, and hybrid practice (unique-guilt rhetoric over capacity-bounded schedules) held both at once. The punitive reading forecloses the repudiation reading within any single framework: its foundational premise that a binding, guilt-grounded obligation exists directly contradicts the repudiation premise that duress voids the obligation. The reading's foundational guilt axiom remains holdable as a historical-moral claim; its operational entitlement axiom (total-cost liability) was formally superseded within the creditor tradition itself by the Young terminal date and the Lausanne renunciation."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

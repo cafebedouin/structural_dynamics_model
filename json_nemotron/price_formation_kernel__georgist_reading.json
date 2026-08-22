@@ -1,0 +1,391 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__georgist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-24",
+    "status": "ACTIVE",
+    "story_uid": "2d859ac3-3377-4aa1-b56d-d568e06c4a08"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Georgist Price Formation Reading — Land Rent Extraction from Improvement Production",
+    "topic_domain": "political_economy/housing/institutional_analysis",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "landowning_interests",
+      "speculative_holders",
+      "rentier_capital"
+    ],
+    "victims": [
+      "wage_earners",
+      "tenant_households",
+      "productive_enterprises",
+      "new_entrants"
+    ],
+    "vindicated_propositions": [
+      "land_value_tax_justification",
+      "unearned_increment_capture",
+      "factor_separation_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the Georgist reading of price formation a distinct constraint from the naturalist, institutional, and financialization readings, or a measurement frame on a single phenomenon?",
+      "resolution_mechanism": "Per ε-invariance: if the land component's ε differs from the improvement component's ε by >0.25, they are structurally distinct constraints. This reading declares the land component as mountain+snare hybrid (ε≈0.75) and improvement as rope (ε≈0.15). A single ε would average to ~0.45 — the gap validates decomposition.",
+      "impact": "If decomposition fails, the kernel collapses to one constraint with observer-dependent ε — the engine would flag the violation. The reading structure assumes successful decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Validates ε-invariance decomposition of the price_formation_kernel"
+    },
+    {
+      "id": "land_rent_extraction_mechanism",
+      "question": "Is land rent capture structurally extractive (snare) or coordination (rope) when landowners hold location monopolies without producing improvements?",
+      "resolution_mechanism": "Empirical: measure rent share of housing cost in supply-constrained markets. If rent share >40% and correlates with landowner income without improvement investment, extraction is structurally demonstrated. Policy counterfactual: land value tax adoption — if extraction falls without supply collapse, the snare classification holds.",
+      "impact": "If extraction is structural, the land component is a snare riding on a mountain (fixed supply). If coordination, the land component is a rope on a mountain. The Georgist reading claims the former.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether location monopoly rent is coordination or extraction"
+    },
+    {
+      "id": "improvement_coordination_purity",
+      "question": "Does the improvement component operate as pure coordination (rope) or does it carry extractive coupling to the land component?",
+      "resolution_mechanism": "Measure whether improvement investment decisions are distorted by land rent capture (e.g., underbuilding to reduce tax base, speculative vacancy). If improvement allocation tracks productivity signals without land-rent distortion, rope holds. If land rent signals dominate, the rope is contaminated.",
+      "impact": "If contaminated, the improvement component is tangled_rope, not rope — the whole constraint collapses to tangled_rope from every seat. This reading claims rope purity for improvements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether production coordination is distorted by land rent extraction"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of land-value-tax alternatives structural (vested interest capture of policy) or internalized (ideological normalization of rent as property right)?",
+      "resolution_mechanism": "Post-reform suppression trajectory: in jurisdictions that adopted LVT (e.g., Pennsylvania split-rate, Danish land tax), measure whether ideological resistance persists after structural barriers are removed. If suppression persists, internalized component is significant.",
+      "impact": "If internalized, effective suppression > structural measure — targets carry the suppression with them. This reading claims structural suppression dominates but acknowledges internalized residue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of land-value-tax alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Georgist reading of price formation asserts a structural separation between land rent (unearned, arising from fixed location scarcity and community-generated value) and improvement value (earned, arising from labor and capital applied to land). The land component is a mountain — fixed supply is a physical fact — but the capture of its rent by private titleholders operates as a snare: landowners extract from wage-earners and productive enterprise without contributing to production. The improvement component is a rope — it coordinates production by rewarding labor and capital. The constraint is the price formation system that entangles these: market prices conflate the two, making rent extraction appear as return to capital. This reading is one of four instantiations of the price_formation_kernel.",
+    "key_agents": [
+      "landowning_interests: Primary beneficiary (institutional/arbitrage) — captures location rent through private title",
+      "speculative_holders: Secondary beneficiary (powerful/constrained) — holds land for appreciation without improvement",
+      "rentier_capital: Beneficiary (institutional/arbitrage) — financializes land rent into income streams",
+      "wage_earners: Primary victim (organized/trapped) — pays rent from labor income, cannot exit location dependence",
+      "tenant_households: Primary victim (powerless/trapped) — bears full rent incidence with zero equity accumulation",
+      "productive_enterprises: Victim (powerful/constrained) — pays location rent as business cost, distorts investment",
+      "new_entrants: Victim (moderate/trapped) — faces capitalized rent barrier to housing and business location",
+      "georgist_advocates: Excluded (organized/constrained) — proposes land value tax to separate rent from improvement",
+      "mainstream_economists: Observer (analytical/analytical) — treats rent as factor return, not extraction",
+      "policy_makers: Agenda_setter (institutional/constrained) — maintains title system, resists LVT adoption"
+    ],
+    "logic_rationale": "Base extractiveness (0.68) reflects the land component's dominance in high-value urban markets — rent share of housing cost often exceeds 50% in supply-constrained cities. The improvement component's low ε (~0.15) is averaged in, yielding the composite. Suppression (0.42) is moderate: structural barriers to LVT (vested interest lobbying, constitutional property protections) are real but not total — some jurisdictions have adopted split-rate taxation. Theater ratio (0.28) reflects the performative defense of 'property rights' that masks rent extraction. Accessibility collapse (0.65) is high for victims: exit from land rent requires geographic mobility that wage-earners lack. Resistance (0.58) is significant: tenant movements, Georgist advocacy, and some policy adoption show active contestation. The claimed_type tangled_rope captures the hybrid: land component = mountain (fixed supply) + snare (rent capture); improvement component = rope (production coordination). The engine will compute per-seat types from the structural data.",
+    "perspectival_gap": "From landowning_interests and rentier_capital seats, the constraint appears as mountain+rope: land title is 'natural property,' improvements are rewarded. From wage_earners and tenant_households, it appears as snare: they pay for location value they created through community but cannot capture. From productive_enterprises, it appears as tangled_rope: they coordinate production (rope) but pay extractive location rent (snare). The engine computes this divergence from power/exit/role data.",
+    "directionality_logic": "Beneficiaries (landowning_interests, speculative_holders, rentier_capital) collect rent without producing location value — d near 0.0 (beneficiary end). Victims (wage_earners, tenant_households, productive_enterprises, new_entrants) pay rent from earned income with constrained exit — d near 1.0 (target end). Geogist_advocates are excluded from the policy conversation despite structural relevance — d not computed (excluded role). Policy_makers as agenda_setters have d ~0.3: they administer the title system but face electoral pressure. Mainstream_economists as observers have d=0.5 (analytical). The land component's mountain nature (fixed supply) creates the extraction floor; the title system converts it into private capture.",
+    "mandatrophy_analysis": "The founding problem (efficient land allocation via private title) is dead — title no longer allocates land to highest productive use but to highest rent-capture capacity. The arrangement persists as zombie coordination: the rope (improvement incentive) is real but the snare (rent capture) has hypertrophied. Mandatrophy is unresolved: the mandate (secure tenure for improvement) has been captured by the extraction (rent capitalization). The constraint prevents mislabeling: without the Georgist reading, the snare component is invisible — rent looks like 'return to capital.' The reading restores the coordination/extraction distinction.",
+    "kernel_context": "This constraint is the georgist_reading of the price_formation_kernel. Sibling readings: naturalist_reading (price as natural equilibrium, ε≈0.1), institutional_reading (price as policy construct, ε≈0.4), financialization_reading (price as credit-driven asset inflation, ε≈0.75). This reading decomposes the kernel into land component (mountain+snare, ε≈0.75) and improvement component (rope, ε≈0.15). The structural delta from siblings: naturalist denies extraction; institutional sees policy not structure; financialization sees credit not land. This reading uniquely separates land rent from improvement value as the structural axis."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "price_formation_kernel__naturalist_reading",
+      "price_formation_kernel__institutional_reading",
+      "price_formation_kernel__financialization_reading",
+      "land_value_tax_implementation",
+      "zoning_regulatory_capture",
+      "housing_financialization_feedback"
+    ],
+    "dual_formulation_note": "This constraint decomposes the price_formation_kernel into land (mountain+snare) and improvement (rope) components. The naturalist_reading treats the kernel as mountain (ε≈0.1). The institutional_reading treats it as scaffold/tangled_rope (ε≈0.4). The financialization_reading treats it as snare (ε≈0.75). This reading is the only one that structurally separates the components. All four readings form a constraint family linked by affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "landowning_interests",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold title to land in high-value locations. Collect ground rent from tenants and businesses without producing the location value — it arises from public infrastructure, agglomeration, and community. Can diversify across markets, use financial instruments to hedge, and influence policy to protect the title system. Exit is near-arbitrage: they can sell appreciated assets and reallocate globally."
+    },
+    {
+      "name": "speculative_holders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Acquire and hold land for capital appreciation, often leaving it vacant or underimproved. Benefit from the same rent capture as landowning_interests but with shorter time horizons and higher leverage. Exit is constrained by market cycles and carrying costs — they cannot instantly liquidate without loss, but have more mobility than wage-earners."
+    },
+    {
+      "name": "rentier_capital",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Financial intermediaries (REITs, pension funds, sovereign wealth) that securitize land rent into financial products. They capture the rent stream at scale, lobby for favorable tax treatment (e.g., REIT pass-through), and diversify globally. Exit is arbitrage-grade: they can reallocate across asset classes and jurisdictions instantly."
+    },
+    {
+      "name": "wage_earners",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Pay 30-50% of income on housing in high-rent cities. The rent component is a pure transfer to landowners — they receive no improvement service for it. Labor mobility is constrained by job networks, family ties, and the same rent barrier in destination cities. Union organization provides some political voice but not exit from the rent relation."
+    },
+    {
+      "name": "tenant_households",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the full incidence of land rent with zero equity accumulation. Face displacement risk from rent increases. Exit options are near-zero: moving costs, deposit barriers, and the universality of rent in all rental markets trap them. No meaningful collective organization in most jurisdictions."
+    },
+    {
+      "name": "productive_enterprises",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pay location rent as a business cost (commercial lease or owned-premises opportunity cost). This distorts investment: firms underinvest in high-rent areas or relocate to lower-rent peripheries, reducing agglomeration benefits. Exit is constrained by workforce, supply chains, and market access — they cannot simply move to where rent is zero."
+    },
+    {
+      "name": "new_entrants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "First-time buyers and new businesses face capitalized rent barriers: down payments reflect future rent streams. They pay for location value created by prior generations. Exit is trapped — the only 'exit' is accepting the rent burden or leaving the market entirely (delaying household formation, foregoing business entry)."
+    },
+    {
+      "name": "georgist_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for land value tax to capture rent for public revenue and untax improvements. Structurally excluded from mainstream policy discourse — their proposal threatens the primary beneficiary groups. They have intellectual organization but no institutional power. Exit from exclusion requires policy window (crisis, reform moment) which is constrained and rare."
+    },
+    {
+      "name": "mainstream_economists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Treat land rent as a factor return equivalent to wages and interest. The dominant neoclassical framework merges land into 'capital,' obscuring the unearned/earned distinction. Their analytical frame naturalizes the rent capture. Exit is analytical: they can adopt the Georgist frame intellectually but the professional incentives and textbook canon constrain the shift."
+    },
+    {
+      "name": "policy_makers",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer the property title system, zoning, and tax code that sustain the rent capture. Face electoral pressure from both beneficiaries (campaign finance, lobbying) and victims (housing affordability anger). Constrained exit: they cannot abolish private land title without constitutional crisis, but can adopt LVT at margins (split-rate, exemptions). Their agenda-setting power maintains the hybrid constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The improvement component coordinates production by rewarding labor and capital applied to land — builders build, firms invest, households improve — because they capture the value they create. The land component does NOT coordinate: fixed supply cannot be elicited by price. The hybrid system partially coordinates (improvements) while extracting (land rent).",
+    "transfer_function": "Moves location rent (community-generated land value) from wage-earners, tenants, productive enterprises, and new entrants to landowning_interests, speculative_holders, and rentier_capital via the price system. The transfer is embedded in every rent payment and purchase price — the land share is capitalized rent.",
+    "absent_voices": "Future generations who will inherit the rent-capitalized asset structure; displaced communities who have already exited high-rent areas (their absence is the suppression evidence); informal economy workers whose housing is entirely rent-burdened with no policy representation. Geogist_advocates are the excluded stakeholders who would object if present.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the land-rent-capture component vanished (e.g., via full LVT), land prices would collapse to near-zero, improvement values would remain, housing costs would fall dramatically, speculative vacancy would end, and productive investment would reallocate to highest-use locations. The world would rearrange: landowners lose rent income; wage-earners and tenants gain disposable income; productive enterprises face lower location costs. The improvement coordination (rope) would persist and strengthen.",
+    "founding_problem": "Early political economy (Smith, Ricardo, Mill) identified land rent as unearned and proposed taxing it to fund public revenue without distorting production. The Georgist reading (Henry George, Progress and Poverty, 1879) built a mass movement around this: the founding problem was 'how to secure the producer's full product while socializing the unearned increment.' Private land title was the compromise — secure tenure for improvement, but rent capture persisted.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (secure tenure for improvement) is corroborated as dead by: (1) empirical vacancy and underuse rates in high-rent cities — title no longer allocates to productive use; (2) the rise of financialized land holding (REITs, corporate landlords) where tenure security serves rent extraction, not improvement; (3) even mainstream urban economists (Glaeser, Gyourko) acknowledge 'zoning tax' and 'superstar city' rent capture as distinct from improvement returns. No non-beneficiary source corroborates that the founding problem is live — only landowner lobbyists claim 'property rights' require rent capture."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "price_formation_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "naturalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "institutional_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "financialization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "land_rent_is_unearned_income",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "improvement_value_is_earned_income",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "land_value_tax_captures_rent_without_distortion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "classical_political_economy_rent_theory",
+    "drift_state": {
+      "moment": "contemporary_financialized_housing",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

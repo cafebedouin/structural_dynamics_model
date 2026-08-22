@@ -1,0 +1,384 @@
+{
+  "header": {
+    "constraint_id": "udhr_article_3__positive_entitlement_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "udhr_a3_pos",
+    "story_uid": "075bea34-2220-42fd-8dc6-cc6cb155d2ea"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.58,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UDHR Article 3 — Positive Entitlement Reading (State Obligation to Provide Material Conditions)",
+    "topic_domain": "constitutional law / human rights / political philosophy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "low_income_households",
+      "uninsured_chronically_ill",
+      "homeless_persons"
+    ],
+    "victims": [
+      "affluent_property_holders",
+      "middle_class_taxpayers",
+      "expression_rights_holders"
+    ],
+    "vindicated_propositions": [
+      "positive_entitlement_doctrine",
+      "material_preconditions_of_dignity",
+      "progressive_realization_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.58,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "article_3_reading_contest",
+      "question": "Which reading of the udhr_article_3 kernel is structurally authoritative — this positive_entitlement_reading, the negative_liberty_reading, or the procedural_hybrid_reading?",
+      "resolution_mechanism": "Comparative constitutional practice and treaty-body jurisprudence over time: track whether domestic orders converge on justiciable social rights, revert to procedural floors, or stabilize a dual structure holding both.",
+      "impact": "If the negative_liberty_reading prevails, the entire transfer structure dissolves from the constraint's victim set (only persons facing state violence remain) and epsilon collapses toward zero; if the procedural_hybrid_reading prevails, the substantive welfare obligation is stripped and this story decomposes into a thin due-process floor. If this reading prevails, the authored structure stands as written.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: this constraint is one reading of the Article 3 kernel; the disagreement is located in whether 'security of person' imposes positive provision duties, negative abstention duties, or only procedural guarantees."
+    },
+    {
+      "id": "natural_right_vs_constructed_transfer",
+      "question": "Is the material-security entitlement a pre-political human right that states merely recognize, or a constructed fiscal arrangement whose shape tracks identifiable political coalitions?",
+      "resolution_mechanism": "Cross-national variation analysis: if benefit structures track governing-coalition turnover and fiscal capacity rather than converging on a stable invariant content, the constructed reading is supported.",
+      "impact": "If constructed, the constraint's persistence depends on active political maintenance (consistent with the authored enforcement profile); if a recognized natural right, part of the measured extraction is better read as the cost of honoring an antecedent duty.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-law versus constructed-status ambiguity of the entitlement core."
+    },
+    {
+      "id": "demographic_fiscal_sustainability",
+      "question": "Can the current transfer level survive the projected dependency-ratio deterioration, or does effective extraction on future cohorts rise sharply as the worker-to-beneficiary ratio falls?",
+      "resolution_mechanism": "Actuarial projection reconciliation against realized contribution rates and retirement-age reforms across the OECD over the next two decades.",
+      "impact": "If unsustainable, directionality shifts intergenerationally — future_taxpayers move from excluded bystanders to primary targets, and the constraint's victim set widens without any change in statute.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether aging demographics convert the arrangement into escalating intergenerational transfer."
+    },
+    {
+      "id": "speech_restriction_separability",
+      "question": "How tightly are the expression restrictions coupled to the material-provision core of this reading, versus being separable state-capacity expansions riding on the same security rationale?",
+      "resolution_mechanism": "Doctrinal tracing: compare speech-restriction intensity in jurisdictions with strong social-rights codification but weak speech regulation against jurisdictions where both intensify together.",
+      "impact": "If separable, the epsilon attributable to the entitlement core drops materially and the expression_rights_holders victim entry belongs to a different constraint story; if coupled, the authored victim set stands.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether hate-speech and public-order restrictions are intrinsic to this reading or contingent riders."
+    },
+    {
+      "id": "mutual_aid_crowding_out",
+      "question": "Did compulsory state provision displace private mutual aid net of coverage gains — that is, were alternatives suppressed or merely superseded by a better solution to the same problem?",
+      "resolution_mechanism": "Historical econometrics on friendly-society and union-fund membership density before and after scheme introduction, controlling for income growth.",
+      "impact": "If displacement exceeded efficiency gains, accessibility_collapse is understated and the suppression component rises; if the state scheme simply outcompeted, the current authored values stand.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Crowding-out versus supersession of pre-existing private provision."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "UDHR Article 3 ('everyone has the right to life, liberty and security of person') is a contested kernel with three declared readings; this story instantiates exactly one of them, the positive_entitlement_reading, as a clean epsilon-invariant constraint. On this reading the article obligates state provision of the material conditions — welfare income, healthcare, housing — necessary for life and security. Instantiated as constitutional and statutory practice (postwar welfare states; justiciable social rights in Germany, South Africa, India, and much of Latin America), the reading produces a standing arrangement: compulsory fiscal transfers and service guarantees administered by states, together with speech and property regulations justified by the same life-and-security rationale. Per the epsilon-referent rule, epsilon is authored for THIS arrangement as it operates — the transfer-and-guarantee structure itself — never for the negative-liberty counterfactual a sibling reading would install. The claim/metric pair is independent by design: the constraint is CLAIMED as tangled_rope (a genuine coordination function carrying an asymmetric compulsory transfer) while the metrics are authored from observed operation, and the engine computes per-seat classifications from the structural data without reference to the claim.\n\nKEY AGENTS (by structural relationship):\n- low_income_households: Primary beneficiary (powerless/constrained) — receives cash transfers, housing support, coverage\n- uninsured_chronically_ill: Primary beneficiary (powerless/trapped) — obtains care unavailable on private terms\n- homeless_persons: Primary beneficiary (powerless/trapped) — target of the housing guarantee\n- affluent_property_holders: Primary target (powerful/arbitrage) — bears the steepest schedules, widest exit\n- middle_class_taxpayers: Target with dual position (moderate/constrained) — pays in, draws services back out\n- expression_rights_holders: Secondary target (moderate/constrained) — bears security-rationale speech restrictions\n- constitutional_legislatures: Agenda setter (institutional/constrained) — writes the statutes and tax schedules\n- constitutional_review_courts: Agenda setter (institutional/constrained) — adjudicates the obligation's scope\n- private_mutual_aid_traditions: Excluded actor (organized/trapped) — displaced predecessor provision\n- future_taxpayers: Excluded actor (powerless/trapped) — bear unfunded liabilities, not in the room\n- un_treaty_monitoring_bodies: Analytical observer (institutional/analytical) — compiles the comparative record",
+    "logic_rationale": "Extractiveness is authored high (0.68 at interval end) because the arrangement moves a large, continuing share of national income by compulsion, with no individual-level consent mechanism and rates decoupled from any marginal service the payer personally receives. Suppression (0.58) is authored as a raw structural property — it is NOT scaled by power or scope in the engine's arithmetic; only extractiveness is scaled. It reflects compulsory tax enforcement plus categorical speech restrictions, moderated by the existence of ordinary democratic revision channels. Theater ratio (0.30) is moderate-low: benefits are really delivered, but a growing share of activity is reporting performance — periodic state reports to treaty bodies, indicator dashboards, and compliance ceremonies that document the guarantee faster than they extend it. Accessibility_collapse (0.45) is well below mountain range: private insurance, charity, and market housing persist as partial alternatives, crowded and regulated but not eliminated. Resistance (0.58) is persistent and institutionalized — tax-limit movements, property-rights litigation, speech litigation, and recurring electoral contests over benefit generosity. The temporal series run on ONE shared grid (points 0, 15, 30, 45, 60, 75; every tracked metric authored at every point) so the engine samples aligned rows: extractiveness climbs with welfare-state buildout and never fully retrenches (austerity trims programs while healthcare and pension costs grow past them); suppression_requirement rises steeply during the enforcement-machinery buildout of the early decades and then flattens as the apparatus matures — that flattening is why the series is authored at all, since the story specifically traces enforcement-capacity formation; theater_ratio drifts slowly upward as documentation displaces delivery at the margin. The dynamics are monotonic drift, not cyclical, so no intermittent-reinforcement reading applies.",
+    "perspectival_gap": "The seats should classify differently and the engine computes that divergence from the structural data. From the recipient seats the arrangement is a guarantee: the same structure that extracts from a taxpayer is the floor beneath a household whose alternative is destitution. From the affluent_property_holder seat it is a levy with an exit door — experienced as taking, softened by mobility. From the middle_class_taxpayer seat it is ambiguous by construction: money out through the tax schedule, services back through healthcare, pensions, and schooling, with the net position varying household by household. From the agenda-setter seats it is a mandate being administered. No authored scalar reconciles these; the per-seat computation is the measurement.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: low_income_households, uninsured_chronically_ill, and homeless_persons sit near the full-beneficiary end (d near 0), with trapped exit pushing the chronically ill and homeless deepest into subsidized position. Victim declarations drive the opposite pole: affluent_property_holders derive near-full-target d, amplified by scope and verification difficulty at national scale, though their arbitrage-grade exit pulls them back toward the middle relative to a trapped payer. Expression_rights_holders derive high d from their victim declaration. Middle_class_taxpayers are the genuinely dual-positioned seat: rather than authoring a directionality_override (which keys on power atom and would smear across every moderate-power agent in the story), the dual position is carried structurally via secondary_role beneficiary, letting the derivation weigh both flows. No directionality_overrides are used: the beneficiary/victim-plus-exit derivation already produces the right qualitative ordering, and an override would add nothing the structural data does not say.",
+    "mandatrophy_analysis": "The founding problem is live, so no mandatrophy resolution is declared: destitution, uninsurable illness, and homelessness persist in every jurisdiction, and the arrangement's justification remains the transition it has not finished making. The tangled_rope classification is what prevents both symmetric mislabels. Reading the arrangement as pure rope would erase the compulsory asymmetry — the transfer is not consented to at the individual level and falls unevenly by design. Reading it as pure snare would erase the coordination function — universal pooling solves adverse-selection and public-health problems that voluntary markets demonstrably failed to solve, and the services are actually delivered to actually-dependent populations. The engine's per-seat computation preserves both facts: coordination for the pooled, extraction for the levied, with the middle-class seat straddling.",
+    "kernel_context": "Kernel: udhr_article_3 — the UDHR Article 3 text. This file instantiates the positive_entitlement_reading: Article 3 obligates state provision of the material conditions necessary for life and security. Sibling readings, each a separate constraint story with its own epsilon and victim set: negative_liberty_reading (Article 3 as a prohibition on state deprivation of life and liberty absent narrow procedural justice — security as freedom from state violence) and procedural_hybrid_reading (due-process guarantees such as habeas corpus and torture prohibition, with the substantive liberty-versus-welfare question deliberately left unresolved). Committer structure is routed to the omega variables per the committer-frame rules; the article_3_reading_contest omega records what each sibling would change structurally and locates the disagreement in whether 'security of person' carries positive provision content."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "udhr_article_3__negative_liberty_reading",
+      "udhr_article_3__procedural_hybrid_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'UDHR Article 3'. The single article text covers three structurally distinct claims with different epsilon values, different beneficiary/victim sets, and different failure modes: the negative_liberty_reading (prohibition on state deprivation — negligible transfer content, victims only where states act violently), this positive_entitlement_reading (obligation to provide — large compulsory transfers, victims among property and expression rights holders), and the procedural_hybrid_reading (due-process floor — thin, largely uncontested). Genealogically the negative and procedural readings are upstream: they dominated the immediate postwar settlement and are cited as the interpretive baseline from which the positive reading expanded. Per the epsilon-invariance principle these are separate stories linked by network edges, not one constraint with a measurement parameter; the family link runs in both directions so contamination analysis can trace how codification success in one reading pressures the others' operating environments."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "material_conditions_guarantee",
+    "drift_state": {
+      "moment": "contemporary_welfare_pluralism",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "negative_liberty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "procedural_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "life_security_requires_positive_provision",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_as_primary_material_guarantor",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "constitutional_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact and amend the welfare, health, and housing statutes that operationalize the guarantee; set benefit levels, eligibility rules, and the tax schedules that fund them. Bound by electoral cycles, constitutional review, and fiscal limits; withdrawing provision outright would strand dependent populations and invite judicial reversal, so revision happens at the margins rather than at the root."
+    },
+    {
+      "name": "constitutional_review_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the obligation's scope: whether housing policy meets a reasonableness standard, whether denial of healthcare access violates the guarantee, how far the security rationale reaches into speech regulation. Once social rights are justiciable in their order they cannot decline the question; each ruling expands or contracts the duty for everyone else."
+    },
+    {
+      "name": "low_income_households",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive cash benefits, housing support, and coverage eligibility keyed to income. Household budgets and tenure depend on continued provision; relocating abroad forfeits most entitlements, and private-market substitutes are priced beyond reach. The dependence is the condition the guarantee exists to address."
+    },
+    {
+      "name": "uninsured_chronically_ill",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Need continuous treatment whose private cost exceeds lifetime earnings; on private terms they are uninsurable by construction. Under the arrangement they obtain care through public systems. Their alternative is untreated illness, so participation is not voluntary in any ordinary sense — the need itself binds them to the system."
+    },
+    {
+      "name": "homeless_persons",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the residual population the housing guarantee targets: shelter access, emergency accommodation, and rehousing programs reach them conditionally. Exit consists of obtaining market housing, which their circumstances price out; many cycle between street, shelter, and institution."
+    },
+    {
+      "name": "affluent_property_holders",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Bear the steepest schedules: progressive income taxation, wealth and inheritance levies, and the regulatory discount the guarantee places on development and property rights. They hold the widest exit portfolio of any seat — offshore structures, foreign residency, asset relocation — and exercise it measurably, which caps how far the effective burden can ratchet."
+    },
+    {
+      "name": "middle_class_taxpayers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pay the payroll and income taxes that fund the bulk of transfers while drawing services back from the same systems: healthcare, pensions, schooling, unemployment insurance. The net position varies household by household and over the life course. Exit means emigration at the cost of career, family, and language, so most stay and contest the terms politically instead."
+    },
+    {
+      "name": "expression_rights_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Publishers, platforms, and individual speakers governed by hate-speech, public-order, and security regulations enacted under the same life-and-security rationale that grounds the provision duty. They bear categorical restrictions on what may be said and circulated; recourse runs through slow litigation and partial jurisdictional arbitrage."
+    },
+    {
+      "name": "private_mutual_aid_traditions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Friendly societies, union funds, and parish charities that insured working populations before state provision absorbed the function. Compulsory schemes made their membership redundant and their scale unrecoverable; they survive at the margins. They would argue for pluralistic provision but no longer command the membership base to demonstrate it."
+    },
+    {
+      "name": "future_taxpayers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will service the debt and the demographic gap the current contribution schedule leaves behind. Not yet enfranchised or not yet born, they can object only through proxies; the size of their share is set entirely by seats that will not bear it."
+    },
+    {
+      "name": "un_treaty_monitoring_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Review periodic state reports and issue concluding observations on progressive realization of the material guarantees. They compile the comparative record that advocates and critics alike cite; they compel nothing directly and hold an analytical seat above the domestic contest."
+    }
+  ],
+  "gain_flow": "low_income_households",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves collective-action problems that voluntary markets repeatedly failed to solve at scale: adverse selection in insurance pools, communicable-disease and public-health externalities, regionally concentrated poverty and its destabilizing effects, and the absence of any private mechanism able to guarantee a subsistence floor when family, employer, and market all fail at once.",
+    "transfer_function": "Moves taxed income and property value from economically active and asset-holding households toward low-income households, patients, and tenants through cash benefits, in-kind healthcare, and housing programs; separately, it moves expressive freedom from speakers to state-defined public-order and security objectives through categorical speech regulation.",
+    "absent_voices": "Future taxpayers who will carry the unfunded liabilities are not in the room and object only through proxy advocates. Private mutual-aid traditions displaced by compulsory schemes lost their platform when membership became redundant. Outvoted property and expression minorities participate electorally but lose persistently, and their constitutional objections are adjudicated by the same agenda-setting courts that uphold the guarantee. Dissent exists; it is outvoted and outlasted rather than unheard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would strand the dependent population immediately: households losing transfer income, patients losing coverage mid-treatment, shelter systems closing. Fiscal relief for payers would arrive years later and partially, since private substitutes cannot be rebuilt at scale quickly. Political order in every affected jurisdiction would convulse; the world rearranges around the hole.",
+    "founding_problem": "Industrialization and urbanization destroyed the family, village, guild, and parish safety nets that previously caught destitution, producing mass exposure to unemployment, disease, and slum housing; the postwar settlement added the lesson that material desperation feeds political extremity. The arrangement was built to guarantee that no member of the polity falls below subsistence when every private fallback fails.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: historical demography of pre-welfare-state destitution (workhouse records, mortality tables), current ILO and OECD poverty and homelessness statistics, epidemiological studies of mortality gradients by income, and — decisively — the testimony of the arrangement's critics, who concede the underlying destitution while disputing the remedy. No element of the founding problem rests on recipient-side assertion alone."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

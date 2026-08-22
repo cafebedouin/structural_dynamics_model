@@ -1,0 +1,307 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__functional_protection_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_combatant_status_definition__functional_protection_reading",
+    "measurement_id_prefix": "combatant_status_definition__functional_protection_reading",
+    "story_uid": "4f090438-7081-4ea5-8cad-9a53b280f97d",
+    "created_at": "2026-08-03T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Common Article 3 Universal Floor — Functional Protection Reading",
+    "topic_domain": "international_law/armed_conflict",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "all_detained_persons",
+      "detaining_authorities"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "human_dignity_in_armed_conflict",
+      "ius_cogens_prohibition_torture",
+      "fair_trial_as_customary_law"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this constraint instantiate the functional_protection_reading of the combatant_status_definition kernel, or does it describe a distinct constraint?",
+      "resolution_mechanism": "Structural comparison: if the ε and beneficiary/victim profile matches low extraction for all detainees with status-independent protections, this is the functional_protection_reading. If status determination remains a precondition for any protection tier, it is a different constraint.",
+      "impact": "Confirms this JSON is the correct reading instantiation. Misidentification would route committer content to the wrong constraint file.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading identity confirmation for the combatant_status_definition kernel"
+    },
+    {
+      "id": "natural_law_vs_constructed_ambiguity",
+      "question": "Is the universal floor of Common Article 3 protections a genuine natural law (Mountain) or a constructed norm that benefits identifiable actors (False Summit candidate)?",
+      "resolution_mechanism": "Track whether detaining authorities who invoke the floor to limit their obligations (e.g., claiming 'we only owe CA3') also benefit from the status ambiguity that lets them deny higher protections. If the floor functions as a ceiling, the constraint may be a false summit.",
+      "impact": "If the floor operates as a ceiling in practice, FSM would reclassify to tangled_rope via the false_summit_mountain signature. This omega documents the ambiguity for the engine.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the CA3 universal floor is a genuine Mountain or a False Summit masking extraction"
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Does the functional_protection_reading's core premise (status-independent CA3 floor) logically foreclose the state_centric_reading (status-dependent POW protections) within a single legal framework?",
+      "resolution_mechanism": "Legal doctrine analysis: can a single framework hold both 'all detainees get CA3 regardless of status' and 'only Article 4 combatants get POW protections'? The former is a floor; the latter is a ceiling. They occupy different protection tiers and can coexist structurally.",
+      "impact": "If they coexist, the relation is 'coexists_with' not 'forecloses'. This determines cs_structure.reading_relations for the kernel family.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between functional_protection_reading and state_centric_reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1949,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1949,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1949,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 1949,
+    "end": 2016
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the functional_protection_reading of the combatant_status_definition kernel. It asserts that Common Article 3 of the Geneva Conventions establishes a universal floor of humane treatment and fair trial rights for ALL detained persons in armed conflict, irrespective of combatant status determination. The reading removes status determination as a precondition for the CA3 minimum — the protections attach to the fact of detention itself. This is a low-extraction constraint (ε ≈ 0.08) because it imposes a baseline that costs detaining authorities minimal marginal compliance burden while protecting all detainees from the most severe abuses. The constraint is claimed as Mountain because the CA3 floor has achieved customary international law status and is treated as non-derogable; it emerges from the structural logic of humanity in war rather than from state consent alone.",
+    "key_agents": [
+      "all_detained_persons: Primary beneficiary (powerless/trapped) — receives universal floor of protections regardless of status",
+      "detaining_authorities: Agenda setter and secondary beneficiary (institutional/identity_locked) — administers detention, gains legal clarity from bright-line floor, but constrained by non-derogable obligations",
+      "state_armed_forces: Beneficiary (powerful/constrained) — their personnel receive reciprocal protections when detained",
+      "non_state_armed_groups: Beneficiary (organized/constrained) — their members receive CA3 protections without needing Article 4 status",
+      "international_courts_tribunals: Observer (analytical/analytical) — adjudicates compliance, develops jurisprudence on the floor's scope",
+      "icrc: Observer (institutional/analytical) — monitors detention conditions, promotes compliance through confidential dialogue"
+    ],
+    "logic_rationale": "Base extractiveness is low (0.08) because the CA3 floor imposes minimal affirmative obligations — it primarily prohibits certain acts (torture, cruel treatment, outrages on personal dignity, summary execution) rather than requiring resource-intensive positive measures. Suppression is low (0.12) because the constraint operates through legal obligation and reputational cost, not active coercion of detainees; detainees cannot 'exit' detention but the constraint does not suppress their alternatives — it creates them. Theater ratio is near zero (0.05) because compliance is substantially real where it occurs; the gap between law and practice is an enforcement deficit, not performative compliance. Accessibility collapse is very high (0.92) because once the CA3 floor is recognized as customary law, no legal alternative exists that permits lower treatment — the constraint collapses the option space for detaining authorities. Resistance is low (0.08) because the core prohibitions (torture, summary execution) face no serious normative contestation; resistance appears only at the margins (e.g., scope of 'fair trial' in non-international conflicts).",
+    "perspectival_gap": "The detaining_authorities seat experiences this as a coordination constraint (legal clarity, reciprocal protection for own personnel) with mild extractive friction (compliance monitoring). The all_detained_persons seat experiences it as a Mountain — the protections are non-derogable, status-independent, and survive even if the detaining authority denies their applicability. The engine computes this divergence from the structural data: detaining_authorities have institutional power and constrained exit (identity_locked to their role as lawful detainers), while all_detained_persons are powerless and trapped. The analytical observer seat sees the full structure: a genuine Mountain with a potential False Summit ambiguity (omega: natural_law_vs_constructed_ambiguity).",
+    "directionality_logic": "Beneficiaries declared: all_detained_persons (primary — receive protections without preconditions) and detaining_authorities (secondary — gain legal certainty and reciprocal protections for own forces). No victims declared because the constraint imposes a floor, not a ceiling; it does not extract from detaining authorities beyond the marginal cost of refraining from prohibited acts. The directionality derivation chain assigns d ≈ 0.05 to all_detained_persons (full beneficiary, trapped), d ≈ 0.25 to detaining_authorities (agenda_setter with identity_locked exit — they administer the constraint but are bound by it), d ≈ 0.15 to state_armed_forces and non_state_armed_groups (beneficiaries with constrained exit). No override needed — the derivation matches structural reality.",
+    "mandatrophy_analysis": "The founding problem (1949): establishing a minimum standard of humanity in non-international armed conflicts where the full Geneva framework did not apply. Status: live — the problem persists because armed conflicts continue to generate detention outside the Article 4 framework, and new detention contexts (counterterrorism, transnational conflicts) revive the need for a status-independent floor. The mandate has not atrophied; if anything, the constraint's relevance has expanded. No mandatrophy resolution needed — the constraint remains functionally alive.",
+    "kernel_context": "This constraint instantiates the functional_protection_reading of the combatant_status_definition kernel (kernel_id: combatant_status_definition). Sibling readings: state_centric_reading (combatant status requires formal state military organization; non-state actors excluded from POW protections) and national_liberation_reading (combatant status extends to non-state groups fighting colonial/occupation/racist regimes under AP I Art 1(4) if organized and command-controlled). This reading differs structurally: it posits a universal CA3 floor attaching to detention itself, not to status. The other readings contest who qualifies for HIGHER protections (POW status); this reading secures the BASELINE for everyone. All three readings can coexist in a single legal framework because they operate at different protection tiers."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__national_liberation_reading",
+      "geneva_conventions_common_article_3",
+      "additional_protocol_i_article_75",
+      "additional_protocol_ii_article_6"
+    ],
+    "dual_formulation_note": "This reading (functional_protection) and the state_centric_reading form a constraint family linked by the combatant_status_definition kernel. The functional reading establishes the universal floor (CA3); the state_centric reading defines the ceiling (POW protections under Article 4). They are not competing measurements of the same constraint — they are structurally distinct constraints at different protection tiers. The national_liberation_reading sits between them: it expands the ceiling downward to certain non-state actors while the functional reading secures the floor for all. The ε values differ substantially: functional_protection ε ≈ 0.08 (Mountain), state_centric ε ≈ 0.35 (Tangled Rope — coordinates interstate war but extracts from non-state actors), national_liberation ε ≈ 0.25 (Rope/Tangled Rope boundary — coordinates anti-colonial struggle but conditions protection on political criteria)."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "all_detained_persons",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Any person deprived of liberty in connection with an armed conflict receives the CA3 minimum protections — humane treatment, prohibition of torture and cruel treatment, prohibition of outrages on personal dignity, prohibition of summary execution, fair trial guarantees — without any requirement to prove combatant status. They are physically detained and cannot exit the constraint's scope; the constraint is the only legal structure protecting them from the most severe abuses."
+    },
+    {
+      "name": "detaining_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "State or non-state authorities who detain persons in armed conflict. They administer the detention system and gain legal clarity from the bright-line CA3 floor (no status determination needed for baseline compliance). Their own personnel receive reciprocal protections when detained by adversaries. They are identity-locked to their role as detainers — they cannot exit the constraint without ceasing to be a detaining authority in armed conflict. They bear the marginal cost of refraining from prohibited acts, which is minimal."
+    },
+    {
+      "name": "state_armed_forces",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Formal state military personnel. They benefit from the CA3 floor when detained by any adversary (state or non-state). They also benefit from the higher POW protections under Article 4 when the adversary recognizes their status. Their exit is constrained — they cannot individually opt out of the protections, and their state's participation in the Geneva system is a strategic commitment."
+    },
+    {
+      "name": "non_state_armed_groups",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organized non-state armed groups party to non-international armed conflicts. Their members receive CA3 protections when detained, regardless of whether the group meets Article 4 criteria or AP I Art 1(4) criteria. This is the key structural difference from the state_centric_reading (which would deny them any protections) and the national_liberation_reading (which would grant them POW protections only if fighting colonial/occupation/racist regimes). Their exit is constrained — they are bound by the conflict's dynamics and cannot individually exit the constraint's protections."
+    },
+    {
+      "name": "international_courts_tribunals",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Judicial bodies (ICC, ICTY, ICTR, ICJ, regional courts) that adjudicate violations of Common Article 3. They develop the jurisprudence defining the floor's scope (e.g., what constitutes 'humane treatment,' 'fair trial' in non-international conflicts). They neither collect nor pay; they interpret and enforce. Their analytical exit is absolute."
+    },
+    {
+      "name": "icrc",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The International Committee of the Red Cross monitors detention conditions worldwide through confidential dialogue with detaining authorities. It promotes compliance with the CA3 floor without public condemnation. It is an institutional observer with a unique mandate; its analytical exit is structural (it could withdraw from specific contexts but not from its mandate)."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the problem of protection gaps in non-international armed conflicts and status-determination disputes by establishing a universal, status-independent floor of humane treatment and fair trial rights for all detained persons. The coordination is among all parties to armed conflicts: each accepts the floor for enemy detainees in exchange for the floor protecting their own personnel.",
+    "transfer_function": "Moves the burden of status determination off the baseline protections. The constraint transfers zero resources; it transfers legal risk from detainees (who no longer must prove status to claim basic protections) to detaining authorities (who must comply without status verification). The 'gain' is the universalization of the floor — no seat captures extraction.",
+    "absent_voices": "Detained persons in active conflict zones who cannot access courts or monitoring bodies — their voices are absent not by design but by circumstance. Also absent: detaining authorities who deny the constraint's applicability (e.g., states claiming 'unlawful combatants' fall outside CA3) — they are not excluded from the conversation but reject its premises.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the CA3 universal floor vanished overnight, detainees in non-international armed conflicts and status-disputed contexts would lose all treaty-based minimum protections. Detaining authorities would face no legal baseline for treatment. The legal architecture of detention in armed conflict would collapse to raw power. The world would rearrange violently — this is not a natural fact but a constructed norm whose disappearance would be catastrophic.",
+    "founding_problem": "In 1949, the Geneva Conventions regulated international armed conflicts comprehensively but left non-international armed conflicts (civil wars) largely unregulated. The founding problem was the total absence of minimum humanitarian standards for detainees in civil wars, where status determination was impossible and the full POW framework inapplicable. Common Article 3 was the 'mini-convention' designed to fill this gap.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ICRC (institutional observer, not a beneficiary) attests the problem is live: contemporary conflicts (Syria, Yemen, Ukraine, Sahel, Myanmar) generate mass detention in non-international and status-disputed contexts where the CA3 floor is the only applicable standard. International tribunals (ICTY, ICC) corroborate through jurisprudence: the Tadić judgment (1995) confirmed CA3 as customary law applicable to all armed conflicts. No state or armed group credibly claims the problem is solved; the constraint's expansion to transnational counterterrorism detention (Hamdan v. Rumsfeld, 2006) confirms its continuing relevance."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "geneva_conventions_1949",
+      "customary_international_law"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "state_centric_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "national_liberation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ca3_universal_floor_status_independent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "humane_treatment_as_ius_cogens",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "geneva_1949_ca3_adoption",
+    "drift_state": {
+      "moment": "contemporary_customary_law_consolidation",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

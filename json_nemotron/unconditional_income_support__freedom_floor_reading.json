@@ -1,0 +1,378 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "0cb5cf5d-383a-4f5b-b78f-0d813ba61f77"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Autonomy-Enabling Floor",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "informal_caregivers",
+      "artists_creative_workers",
+      "abuse_survivors",
+      "long_term_unemployed"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "universal_basic_income_autonomy_thesis",
+      "labor_decommodification_principle",
+      "welfare_stigma_elimination_hypothesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers in gig, contract, and low-wage jobs who face unpredictable schedules, no benefits, and immediate income loss from any disruption. The floor lets them refuse exploitative shifts, invest in skills, or bridge gaps between contracts without catastrophic loss. Exit from bad jobs becomes possible rather than theoretical."
+    },
+    {
+      "name": "informal_caregivers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "People (disproportionately women) providing unpaid care for children, elders, or disabled relatives. Current welfare systems either ignore this work or condition support on labor-market attachment. The floor recognizes care as socially necessary work and gives caregivers leverage to negotiate support or exit abusive dynamics."
+    },
+    {
+      "name": "artists_creative_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Cultural producers whose work has high social value but unreliable market returns. The floor decouples creative production from immediate commercial viability, enabling risk-taking and long-form work. Many currently rely on precarious side work or grant cycles that shape output toward funder priorities."
+    },
+    {
+      "name": "abuse_survivors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "People in financially coercive relationships (domestic abuse, exploitative employment, trafficking-adjacent situations) who cannot leave because they have no independent income. The floor provides the material basis for exit — a rare structural intervention that directly reduces the coercion enabling abuse."
+    },
+    {
+      "name": "long_term_unemployed",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers displaced by structural change (automation, trade, regional decline) who face stigma, skill atrophy, and welfare conditionality that penalizes retraining. The floor removes the 'job search' performance requirement and lets them pursue genuine reintegration on their own timeline."
+    },
+    {
+      "name": "taxpayers_high_income",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "High-income earners and capital owners who bear the primary fiscal incidence of funding the floor through progressive taxation. They have political voice, capital mobility, and access to tax optimization — their exit option is structural (lobbying, relocation, avoidance) rather than personal."
+    },
+    {
+      "name": "taxpayers_middle_income",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Middle-income households who pay net positive taxes but also face precarity risk. They experience the floor as both a contribution and insurance — the net position depends on life trajectory. Their exit is constrained by lack of mobility and dependence on the same labor market the floor modifies."
+    },
+    {
+      "name": "welfare_bureaucracy",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administrative apparatus of means-tested programs (caseworkers, eligibility systems, compliance enforcement). The floor threatens their institutional rationale and headcount — but also absorbs the most punitive, stigmatizing, and error-prone functions. Their situation is ambivalent: loss of mission vs. relief from administering cruelty."
+    },
+    {
+      "name": "employers_low_wage",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Employers in sectors relying on desperate labor (hospitality, agriculture, care, logistics). The floor raises the reservation wage — workers can refuse dangerous, degrading, or underpaid jobs. This is experienced as a cost increase and 'labor shortage' narrative, but structurally it forces productivity investment or business model change."
+    },
+    {
+      "name": "policy_analysts_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers evaluating labor supply effects, fiscal sustainability, inflation dynamics, and distributional outcomes. Their seat is analytical — they do not collect or pay but shape the evidence base that legitimizes or delegitimizes the floor. Key debate: whether Alaska Permanent Fund and Kenya UBI trial minimal labor supply effects generalize to national-scale implementation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of providing a universal, non-stigmatizing income floor that enables genuine labor market exit without means-testing bottlenecks, administrative exclusion errors, or moral hazard traps. The floor coordinates: (1) risk-pooling across the population for market-income volatility, (2) recognition of unpaid care and creative work as socially necessary, (3) a baseline bargaining position for every worker.",
+    "transfer_function": "Moves fiscal resources from progressive taxation (primarily high-income/wealth) to universal individual payments. Net transfer is negative for top deciles, positive for bottom half, near-zero for middle deciles depending on tax design. No behavioral conditionality — the transfer is not contingent on job search, training, family structure, or disability certification.",
+    "absent_voices": "Future generations (fiscal sustainability debate), undocumented migrants (excluded from most proposals despite high precarity), people with high disability-related costs (floor may not cover extraordinary needs without supplements), Global South workers whose labor produces the wealth taxed for Northern floors. The excluded are those the universal claim 'everyone' does not structurally reach.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the floor vanished overnight, millions of precarious workers would lose refusal power, caregivers would lose leverage, abuse survivors would lose exit capital, and the welfare bureaucracy would revert to full means-testing with its stigma, errors, and coercion. The labor market would re-coerce at the bottom. The world rearranges because the floor changes the structural conditions of participation, not just distribution.",
+    "founding_problem": "The post-war welfare state was built around the male breadwinner in stable industrial employment. It fails: (1) the rise of precarious, fragmented, low-wage labor; (2) the invisibility of unpaid care work; (3) the stigmatizing, coercive machinery of means-testing; (4) the inability of targeted programs to reach the most excluded. The floor was proposed as a structural update — replacing conditionality with universality, stigma with rights, bureaucracy with infrastructure.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by: (a) OECD labor market insecurity indicators (rising non-standard work, 2010-2024), (b) feminist political economy (care work undervaluation, Nancy Folbre, Marilyn Waring), (c) welfare rights organizations documenting means-test exclusion errors (UK DWP own estimates: 1M+ eligible non-recipients), (d) abuse survivor advocacy (financial coercion as primary barrier to exit). No major institution outside the UBI advocacy coalition disputes the problem diagnosis; the contest is over whether a floor solves it or creates worse problems."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'freedom_floor_reading' of the unconditional_income_support kernel. The reading frames universal basic income as an autonomy infrastructure — a coordination mechanism that solves the structural coercion embedded in labor markets dependent on desperation, the invisibility of care work, and the stigmatizing machinery of means-tested welfare. The claimed type is rope: a genuine coordination function with minimal extraction, where participants are net beneficiaries and alternatives (targeted welfare, charity, family dependence) are not suppressed but rendered unnecessary. The metrics reflect this: low extractiveness (0.28, mostly fiscal transfer from high-income), very low suppression (0.12, no behavioral conditionality), near-zero theater (0.08, administrative simplicity is real not performed). The kernel contest is documented in omegas and cs_structure; this story stands alone as an ε-invariant constraint.",
+    "logic_rationale": "Extractiveness is moderate (0.28) because the floor is funded by progressive taxation — a transfer from high-income/wealth to universal recipients. This is not extractive in the DR sense (no party collects rents from constraint operation); the 'extraction' measured is the fiscal cost to payers. Suppression is minimal (0.12) because the constraint operates by expanding options, not foreclosing them — no work requirements, no means-tests, no compliance machinery. Theater is near-zero because the administrative apparatus is genuinely simpler than the means-tested system it replaces (no eligibility verification, no caseworker discretion, no appeals system). Accessibility collapse is low (0.25) because targeted programs, charity, and family support remain legally and practically available — the floor makes them less necessary, not impossible. Resistance is moderate (0.42) from fiscal conservatives, low-wage employers, and welfare bureaucracy — but this is political contestation, not resistance from the constrained (who are beneficiaries).",
+    "directionality_logic": "Beneficiaries (precarious workers, caregivers, artists, abuse survivors, long-term unemployed) are structurally powerless or moderate with constrained/identity-locked/trapped exit — they gain autonomy, bargaining power, and exit capacity. The floor subsidizes them (d ≈ 0.0-0.2). Payers: high-income taxpayers (powerful, arbitrage exit) bear net fiscal cost but gain social stability and reduced coercion externalities — d ≈ 0.4-0.5 (near-symmetric). Middle-income taxpayers (moderate, constrained exit) are near-neutral net (payer + beneficiary) — d ≈ 0.5. Low-wage employers (organized, mobile exit) face higher reservation wages — they experience the constraint as extractive (d ≈ 0.7) but their exit is capital mobility, not personal coercion. Welfare bureaucracy (institutional, constrained exit) is ambivalent: loses mission but sheds worst functions — d ≈ 0.4. The engine will compute per-seat χ from these structural positions.",
+    "perspectival_gap": "The payer seats (especially high-income taxpayers and low-wage employers) will compute higher effective extraction than beneficiary seats. The analytical observer seat sees the full structure: a transfer that is Pareto-improving in autonomy terms but redistributive in fiscal terms. The engine's per-seat classification should show: beneficiaries → rope (coordination with subsidy), high-income payers → rope with mild extraction, low-wage employers → tangled_rope (coordination of labor standards via floor, but they pay), welfare bureaucracy → piton (atrophied means-test mission, theatrical maintenance of relevance). The claimed type 'rope' is the analytical observer's synthesis; seat divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (post-war welfare mismatch with contemporary labor markets and care structures) remains live — corroborated by independent labor economists, feminist political economy, welfare rights orgs, and abuse survivor advocates. The floor is not a solution to a dead problem; it is a structural response to intensifying precarity. Mandatrophy risk is low for this reading: the coordination function (autonomy floor) strengthens as labor markets fragment further. The risk is capture by sibling readings — dependency_trap_reading frames the same policy as extraction; universality_paradox_reading warns the coalition is unstable. This reading's mandatrophy status: unresolved but live, not atrophied.",
+    "kernel_context": "This constraint is the freedom_floor_reading of the contested kernel unconditional_income_support. Sibling readings: dependency_trap_reading (frames UBI as incentive-distorting subsidy rewarding idleness, crowding out targeted aid, redistributing upward) and universality_paradox_reading (frames UBI as politically ambiguous Trojan horse where cross-ideological appeal masks incompatible implementation paths converging on similar fiscal outcomes). This reading claims Pareto improvement via autonomy; siblings claim net extraction or political incoherence. The structural delta: beneficiaries = precarious workers, caregivers, artists, abuse survivors; victims = none claimed; epsilon = moderate (0.28); type = rope."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the freedom_floor_reading a distinct constraint from its siblings, or a different measurement of the same constraint?",
+      "resolution_mechanism": "Apply the ε-invariance test: if changing the reading changes the beneficiary/victim structure, the extractiveness referent, or the coordination/extraction decomposition, they are different constraints. This reading has beneficiaries (precarious workers, caregivers, artists, abuse survivors), no victims, ε=0.28, type=rope. Dependency_trap_reading would have victims (taxpayers, 'deserving poor' crowded out), beneficiaries (alleged 'idle'), higher ε. Universality_paradox_reading would have contested beneficiaries, implementation-dependent ε. The structural deltas are disjoint — these are three constraints linked by network.affects_constraints, not one constraint with three measurements.",
+      "impact": "If readings are distinct constraints, the engine classifies each independently and contamination analysis traces influence across the family. If they are one constraint, the classification becomes observer-relative and the framework's core principle (ε-invariance) fails. This omega documents the decomposition commitment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's readings are structurally distinct constraints (per ε-invariance) or observer perspectives on one constraint."
+    },
+    {
+      "id": "labor_supply_effects_generalizability",
+      "question": "Do the minimal labor supply effects from Alaska Permanent Fund and Kenya UBI trials generalize to a national-scale, permanent, livable floor?",
+      "resolution_mechanism": "Large-scale saturation pilots (e.g., 3-5 year universal pilots in diverse OECD regions) with rigorous labor market tracking, or natural experiments from policy adoption in smaller nations. Key variables: permanence (vs. temporary), level (survival vs. supplemental), universality (vs. targeted), and macroeconomic feedback (inflation, wage floors, sectoral shifts).",
+      "impact": "If labor supply effects are substantially negative at scale, extractiveness rises (fiscal cost increases, political sustainability drops) and the constraint may shift toward tangled_rope (coordination function eroded by extraction). If effects remain minimal, the rope classification holds. This is the central empirical uncertainty for the reading's metric stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Generalizability of minimal labor supply response evidence to national permanent floor."
+    },
+    {
+      "id": "care_work_recognition_vs_commodification",
+      "question": "Does an unconditional floor recognize care work as socially necessary, or does it commodify care by pricing it at the floor level and enabling state withdrawal from care infrastructure?",
+      "resolution_mechanism": "Comparative analysis of care infrastructure investment pre/post floor implementation in jurisdictions with strong vs. weak pre-existing care systems. Track: public childcare/eldercare funding, care worker wages, family leave policy, and care quality metrics.",
+      "impact": "If the floor triggers care infrastructure retrenchment (state says 'families now have money, they can buy care'), the coordination function for caregivers degrades — the floor becomes a subsidy to private care markets rather than recognition of unpaid care. This would shift the constraint toward tangled_rope (coordination + extraction via privatization). If care infrastructure expands (floor enables political demand for quality care), the rope classification strengthens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the floor structurally recognizes care or enables its commodification and public retreat."
+    },
+    {
+      "id": "fiscal_sustainability_under_shocks",
+      "question": "Can the floor's funding mechanism (progressive taxation) withstand correlated macroeconomic shocks (recession + inflation + demographic shift) without degrading the floor's real value or triggering austerity that converts it into a targeted, stigmatized residual?",
+      "resolution_mechanism": "Stress-test modeling of floor financing under 2008-style financial crisis, 1970s-style stagflation, and 2030s-style demographic aging scenarios. Key variables: tax base elasticity, sovereign currency issuance capacity, political coalition durability, and automatic stabilizer design.",
+      "impact": "If the floor collapses into means-tested residual under stress, the coordination function fails — the constraint becomes a scaffold that didn't sunset but degraded. If it holds as universal, the rope classification is robust. This omega captures the temporal dimension: the floor's type may be path-dependent on crisis performance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the floor's universal character survives correlated macro-fiscal shocks."
+    },
+    {
+      "id": "abuse_survivor_exit_actualization",
+      "question": "Does the floor materially enable abuse survivors to exit coercive situations, or do structural barriers (housing shortage, legal dependency, immigration status, trauma) prevent actualization of the theoretical exit option?",
+      "resolution_mechanism": "Mixed-methods studies tracking abuse survivor outcomes in jurisdictions with vs. without income floors: shelter utilization, return-to-abuser rates, housing stability, legal independence, child custody outcomes. Control for co-occurring services (legal aid, counseling, housing vouchers).",
+      "impact": "If the floor's autonomy promise for abuse survivors is largely theoretical (exit blocked by other constraints), the beneficiary claim for this group is overstated. The constraint remains a rope for other beneficiaries but has a snare-like gap for the most vulnerable. This would require decomposing the constraint by population segment — violating ε-invariance unless the floor is modeled as a constraint family with population-specific ε.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the floor's theoretical exit provision for abuse survivors translates to actualized autonomy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__dependency_trap_reading",
+      "unconditional_income_support__universality_paradox_reading",
+      "means_tested_welfare_conditionality",
+      "labor_market_coercion_floor",
+      "care_infrastructure_public_provision"
+    ],
+    "dual_formulation_note": "This reading decomposes the unconditional_income_support kernel into an autonomy-enabling floor (rope). The dependency_trap_reading models the same policy as extraction (snare/tangled_rope). The universality_paradox_reading models the political coalition instability. All three are linked here. The means_tested_welfare_conditionality constraint is the status quo this floor would replace (coordination via coercion). The labor_market_coercion_floor constraint is the structural coercion this floor dismantles. The care_infrastructure_public_provision constraint is a complementary (or competing) coordination mechanism for care work recognition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "autonomy_as_freedom_from_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "universal_provision_eliminates_stigma",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_welfare_state_conditionality",
+    "drift_state": {
+      "moment": "contemporary_precarity_intensification",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

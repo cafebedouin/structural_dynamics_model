@@ -1,0 +1,344 @@
+{
+  "header": {
+    "constraint_id": "technology_legitimacy_kernel__reliability_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "f522f3ba-14a8-4bed-98ba-dd0bb8b32299"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.58,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reliability-Primacy Technology Legitimacy Gate (Dispatchable Baseload Reading)",
+    "topic_domain": "energy policy/climate mitigation/technology governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_power_industry",
+      "gas_generation_industry",
+      "hydropower_operators",
+      "storage_technology_developers"
+    ],
+    "victims": [
+      "intermittent_renewable_developers",
+      "electricity_ratepayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_power_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Operates and builds reactors whose output is dispatchable and runs at high capacity factors. Under this criterion its product qualifies as legitimate climate mitigation by definition, and the industry's public case — clean firm power — is built almost entirely on that qualification. Its trade associations, vendor pipelines, and workforce programs are organized around the reliability argument; if the qualifying property were reframed around deployment speed or waste boundedness, the industry's central claim would need rebuilding rather than adjusting."
+    },
+    {
+      "name": "gas_generation_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Owns the dispatchable thermal fleet that currently collects the majority of capacity-market and reserve payments worldwide. The criterion protects that revenue by making firm capacity a precondition of climate-policy standing. Its exposure sits on the fuel side — carbon limits could strand assets — so it hedges through CCS pilots and hydrogen-ready retrofits rather than exiting the arrangement."
+    },
+    {
+      "name": "hydropower_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Runs reservoir fleets that deliver dispatchable energy and storage services where geography permits. Qualifies cleanly under the criterion and collects firm-capacity premiums in markets that adopt it. Assets are site-fixed; expansion is capped by remaining river sites and ecological licensing."
+    },
+    {
+      "name": "storage_technology_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sells the battery and long-duration systems that variable-output projects must procure to pass the criterion's dispatchability test. Every tightening of the qualification bar enlarges its addressable market. Its commercial position depends on the criterion persisting even as its own products erode the criterion's technical necessity."
+    },
+    {
+      "name": "intermittent_renewable_developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Builds wind and solar whose output follows weather. To qualify as legitimate under the criterion they must buy storage or firming capacity, raising project costs, or accept exclusion from clean-energy procurements and reduced capacity accreditation. They cannot relocate out of the policy environments where the criterion governs; they contest accreditation rules continuously and invest in hybridization to satisfy the test."
+    },
+    {
+      "name": "electricity_ratepayers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Pay the bills that fund reliability premiums: capacity payments to firm plants, storage mandates passed through in rates, and the fixed costs of maintaining redundant dispatchable capacity. They also receive the reliability those payments purchase, though they experience the arrangement chiefly as line items. They cannot leave the grid, and they hold few seats in the resource-adequacy dockets where the criteria are set."
+    },
+    {
+      "name": "resource_adequacy_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "System operators, utility commissions, and energy ministries that define capacity accreditation, resource-adequacy margins, and clean-energy-standard eligibility. They operationalize the criterion in tariff schedules and procurement rules. They answer politically for blackouts in a way they never answer for slow decarbonization, and their discretion is bounded by statute and by the engineering staffs they depend on."
+    },
+    {
+      "name": "climate_velocity_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Climate scientists and campaign organizations holding that legitimacy should track deployment speed against the remaining carbon budget. They publish feasibility studies of high-renewables grids and lobby legislatures, but they rarely hold seats in the resource-adequacy and accreditation proceedings where the reliability criterion is actually enforced."
+    },
+    {
+      "name": "precautionary_waste_critics",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Environmental justice organizations and anti-nuclear campaigns holding that legitimacy should track bounded, reversible worst-case failures and legacy costs within a generation. They contest reactor relicensing and waste siting, but the venues where the reliability criterion operates — capacity markets, adequacy dockets, procurement rules — are not forums where their evidence enters."
+    },
+    {
+      "name": "energy_systems_modelers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and consulting teams running capacity-expansion and production-cost simulations of future grids under varying technology mixes. Their results feed every faction's argument; they hold no procurement authority and bear none of the arrangement's costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Electricity systems must balance supply and demand continuously at stable frequency through plant outages and weather extremes. Resource-adequacy planning, capacity accreditation, and reserve requirements solve that physical coordination problem once, centrally, instead of leaving each consumer to hedge blackout risk alone.",
+    "transfer_function": "Moves policy legitimacy, subsidy eligibility, capacity-market revenue, and procurement preference toward dispatchable, firm-generation technologies; moves qualification costs (storage and firming purchases) onto variable-output developers and reliability premiums onto ratepayers.",
+    "absent_voices": "Holders of the velocity reading — climate scientists oriented to the carbon-budget timeline — and holders of the precautionary reading — communities bearing legacy-waste and failure-mode risks — are structurally absent from the accreditation and adequacy proceedings where the criterion is enforced. Ratepayer advocates appear but are thinly resourced against utility and generator intervenors.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the criterion vanished overnight, capacity-accreditation rules, clean-energy-standard definitions, and subsidy eligibility would reorganize around whichever legitimacy test each jurisdiction adopted next; nuclear's policy standing would shift sharply, gas capacity revenues would be renegotiated, and variable-renewable procurement would expand where speed became the qualifying property.",
+    "founding_problem": "Early decarbonization policy needed a defensible way to decide which technologies deserved public support, and grid institutions facing proposals for high-renewables systems answered with the oldest test they had: a technology counts if it can be relied upon to keep the lights on. The criterion fused professional reliability practice to climate-mitigation legitimacy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent reliability assessments (NERC Long-Term Reliability Assessments, ENTSO-E adequacy reviews) and blackout post-mortems corroborate, from outside the benefiting parties, that resource adequacy is a live and recurring problem. No external party attests that the iff-legitimacy formulation is the correct response to it — velocity-oriented analysts explicitly dispute that framing — so corroboration covers the founding problem, not the criterion built on it."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of a contested legitimacy kernel in climate-technology governance: the claim that a mitigation technology is legitimate if and only if it provides dispatchable, baseload-capable generation for grid stability. The standing arrangement under contest — and the sole referent of epsilon here — is the reliability-primacy gate as it actually operates: capacity-accreditation regimes, clean-energy-standard eligibility rules, and subsidy criteria that condition climate-policy standing on firm, dispatchable output. Under this reading nuclear power enters the beneficiary set outright, hydro qualifies cleanly, gas collects the largest share of reliability-linked revenue, storage developers gain a mandated market, variable-output renewables carry a qualification cost, and ratepayers absorb the premiums. The arrangement has a genuine coordination core (grids really do need adequacy and reserves) and an enforceable asymmetric incidence (the firms that already possess the qualifying property collect; those that do not pay to acquire it or are excluded). Per the epsilon-invariance principle, the sibling readings of the same kernel — velocity_primacy_reading and precautionary_reading — are separate constraint files with their own epsilon values and stakeholder sets; nothing about their classifications is averaged into this one.\n\nKEY AGENTS (by structural relationship):\n- resource_adequacy_regulators: Agenda setter (institutional/constrained) — writes accreditation and eligibility rules\n- nuclear_power_industry: Primary legitimacy beneficiary (institutional/identity_locked) — qualifies by definition\n- gas_generation_industry: Primary revenue beneficiary (institutional/constrained) — collects most reliability payments\n- hydropower_operators: Secondary beneficiary (powerful/constrained)\n- storage_technology_developers: Contingent beneficiary (organized/mobile) — sells the qualification\n- intermittent_renewable_developers: Primary payer among producers (organized/constrained)\n- electricity_ratepayers: Diffuse payer (powerless/trapped) — bears premiums with minimal voice\n- climate_velocity_advocates, precautionary_waste_critics: Excluded seats — hold sibling readings, absent from enforcement venues\n- energy_systems_modelers: Analytical observer — sees the full structure, bears nothing",
+    "kernel_context": "This constraint is the reliability_primacy_reading of the technology_legitimacy_kernel: the contested commitment that climate-mitigation legitimacy is a single property a technology either has or lacks. Sibling readings — velocity_primacy_reading (legitimacy iff deployable at scale within the remaining carbon budget) and precautionary_reading (legitimacy iff worst-case failures and legacy costs are bounded and reversible within a generation) — instantiate different constraints with different beneficiary and victim sets: under the velocity reading nuclear's decade-long build times push it toward the paying side; under the precautionary reading its waste legacy does the same. The disagreement is located in the iff-condition itself — which property constitutes legitimacy — and each reading's proponents cite the others' blind spots as evidence for their own criterion.",
+    "logic_rationale": "Extraction is 0.65 because the gate converts a real engineering requirement into a distributive instrument: capacity payments, subsidy eligibility, and procurement access flow disproportionately to incumbents of the qualifying property, while qualification costs (storage mandates, firming purchases) and reliability premiums land on variable-output developers and captive ratepayers. Suppression is 0.58 and is a raw structural property, unscaled by power or scope: enforcement operates through accreditation downgrades and procurement exclusion inside governed venues rather than through blanket prohibition — wind and solar still deploy, but on worse terms wherever the criterion binds. Theater_ratio is 0.35: adequacy planning and reserve engineering are functional to the core, but a growing share of reliability rhetoric in policy debate exceeds its engineering content, invoked where the operative question is subsidy allocation. Accessibility_collapse is 0.48: within an adopting institution the alternatives collapse almost completely once the criterion is accepted (non-qualifying technologies are ineligible by definition), yet the wider policy space retains live alternatives — several jurisdictions reject the criterion outright and renewables deploy regardless. Resistance is 0.62: sustained contest from renewables industries, velocity-oriented scientists, and legacy-cost campaigners. The three measurement series run on one shared time grid (t=0,4,8,12,16,20) so every metric is authored at every examined point; the trajectories show extraction accumulating and enforcement hardening together as accreditation reform tightened capacity credit for variable resources. Claimed type and metrics are authored independently: tangled_rope is claimed from the structure (genuine coordination function plus enforced asymmetric extraction), not tuned to any predicted verdict.",
+    "perspectival_gap": "The seats compute differently from the same text. From the agenda-setter seat the criterion is prudent engineering: regulators answer politically for blackouts, never for slow decarbonization, so reliability-first selection is the defensible default. From the nuclear seat it is overdue recognition of a property its product uniquely possesses. From the ratepayer seat it is an opaque set of bill lines funding capacity it cannot inspect. From the excluded velocity seat it is a timeline hazard dressed as engineering prudence. Nothing in the arrangement contradicts any of these experiences simultaneously — the divergence is structural, driven by position, exit, and horizon, and the engine computes it from the authored data rather than from this claim.",
+    "directionality_logic": "Beneficiaries derive low directionality: nuclear (identity_locked — its self-concept is constituted by the qualifying property), gas (collects the largest payment stream), hydro (site-fixed premium collector), and storage developers (whose market exists because the gate exists). Victims derive high directionality: ratepayers are trapped with no arbitrage exit and bear diffuse premiums, and variable-output developers are constrained — they can deploy but only by paying the qualification cost or accepting degraded accreditation. The regulator seat administers rather than collects, sitting nearer the middle with enforcement obligations on one side and incumbent pressure on the other. Storage developers occupy an unstable position worth flagging: the derivation reads them as beneficiaries, correctly for current cash flows, but their product erodes the criterion's necessity — the omega on storage-cost dissolution tracks this instability.",
+    "mandatrophy_analysis": "The founding problem — keeping lights on through outages and extremes — remains live, so this is not a mandatrophy case and the classification guards against mislabeling in both directions. A pure-extraction reading would erase the genuine coordination core: adequacy shortfalls kill people, and firm capacity provides a real service no accounting trick removes. A pure-coordination reading would erase the asymmetric incidence: the same rules that purchase reliability channel legitimacy and revenue to whoever already holds the qualifying property, and impose acquisition costs on those who do not. Holding both facts simultaneously is what the tangled_rope claim asserts; the temporal series (rising extraction alongside hardening enforcement) shows the extraction share growing within a still-functional arrangement rather than a mandate that has died."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "This constraint is one reading of the technology_legitimacy_kernel; would instantiating a sibling reading (velocity_primacy_reading or precautionary_reading) restructure the beneficiary and victim sets so thoroughly that the classification itself changes?",
+      "resolution_mechanism": "Author and compile the sibling stories and compare computed per-seat classifications across the family; the delta in beneficiary/victim composition and effective extraction is the answer.",
+      "impact": "Under the velocity reading nuclear migrates toward the paying side (build-time disqualification) and storage developers rise; under the precautionary reading nuclear pays through legacy-waste liability. The reliability reading's specific shape — nuclear beneficiary, ratepayer victim — holds only within this reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which reading of the legitimacy kernel this story instantiates and what siblings would change."
+    },
+    {
+      "id": "baseload_necessity_contest",
+      "question": "Does modern grid physics actually require baseload-class plants, or do flexibility, storage, transmission, and demand response suffice to maintain stability at high variable-renewable penetration?",
+      "resolution_mechanism": "Operating record of high-penetration systems (South Australia, Denmark, Iberia, ERCO-T style interconnections) combined with production-cost modeling of credible 2035 mixes; watch for unserved-energy events attributable to insufficient firm capacity versus to market or transmission failures.",
+      "impact": "If flexibility-plus-storage suffices, the criterion's coordination core shrinks and its extraction share grows — pushing the arrangement toward pure extraction; if firm capacity remains physically necessary, part of the measured extraction is the price of the coordination itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the vindicated baseload doctrine is empirically true or an incumbent-preserving overstatement."
+    },
+    {
+      "id": "reliability_cost_attribution",
+      "question": "Are the reliability premiums borne by ratepayers attributable to the legitimacy criterion as operated, or to underlying physical reliability needs that any governance regime would impose?",
+      "resolution_mechanism": "Counterfactual costing across jurisdictions with differing accreditation regimes, holding reliability outcomes constant; decompose capacity-payment differences into service-value and gate-rent components.",
+      "impact": "If most of the premium is gate rent, the victim set deepens and effective extraction rises; if most is service value, the arrangement is closer to priced coordination than the scalar suggests.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution of ratepayer costs between genuine reliability service and criterion-induced rent."
+    },
+    {
+      "id": "storage_cost_dissolution",
+      "question": "Will falling storage costs make the criterion's qualification bar cheap enough to satisfy that the gate stops binding — dissolving its extractive force without formal repeal?",
+      "resolution_mechanism": "Track storage cost curves against accreditation and firming requirements per megawatt of variable capacity; identify the price threshold at which qualification ceases to be a material project cost.",
+      "impact": "If dissolution occurs, the arrangement decays from enforced gate toward harmless formality — a drift the temporal series should eventually register as falling suppression and rising theater; if accreditation bars ratchet upward in step with storage costs, the gate is self-hardening instead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technological change erodes the criterion's bite faster than enforcement can rebuild it."
+    },
+    {
+      "id": "authority_framing_underdetermination",
+      "question": "Is the authority behind this criterion best framed as engineering expertise applying a technical standard, or as an incumbent-defense instrument layered above a technical claim — with the engineering content doing justificatory rather than causal work?",
+      "resolution_mechanism": "Venue and authorship analysis of accreditation rule changes: who drafts them, whose cost models they cite, and whether the qualifying bar moves with measured reliability outcomes or with incumbent portfolio composition.",
+      "impact": "Under the expertise framing the arrangement is a credentialed body interpreting a real standard; under the incumbent-defense framing the authority structure extracts benefit from preventing revision of the kernel, and the classification shifts toward extraction-grounded commitment-system dynamics.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Two coherent framings of the same authority structure yield different commitment-system classifications."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "velocity_primacy_reading",
+      "precautionary_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'legitimate climate technology' decomposes, per the epsilon-invariance principle, into three structurally distinct constraint stories — one per reading of the technology_legitimacy_kernel. This file carries the reliability-primacy reading (epsilon 0.65; nuclear and the firm fleet in the beneficiary set, ratepayers and variable-output developers paying). velocity_primacy_reading and precautionary_reading carry their own epsilon values and inverted or shifted stakeholder sets. They are linked as a constraint family because each reading's proponents cite the others' blind spots as evidence for their own criterion: reliability advocates point to blackout risk under velocity-run systems; velocity advocates point to build-time incompatibility with the carbon budget; precautionary advocates point to legacy costs both others ignore. The reliability reading is upstream in institutional lineage — adequacy planning predates climate policy — which gives it structural influence over the operating environment of the newer readings without logically eliminating either."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "dispatchable_baseload_grid_norm",
+    "drift_state": {
+      "moment": "contemporary_high_renewables_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "velocity_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "precautionary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "grid_stability_requires_dispatchable_baseload",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "mitigation_legitimacy_tracks_grid_service_contribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "gas_generation_industry",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

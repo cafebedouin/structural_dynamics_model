@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "gold_fiat_transition_mechanism__creditor_discipline_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_gold_fiat_transition_mechanism__creditor_discipline_reading",
+    "measurement_id_prefix": "gftm_cdr",
+    "story_uid": "0bcbaf4d-1d64-4dd0-b731-ad17683a8d91"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.58,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Elimination of Creditor Gold Redemption Veto (Debtor-Flexibility Reading)",
+    "topic_domain": "monetary_economics/political_economy/history_of_economic_thought",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "debtor_nations",
+      "reserve_currency_issuer_us"
+    ],
+    "victims": [
+      "creditor_nations",
+      "non_reserve_holders"
+    ]
+  },
+  "interval": {
+    "start": 1971,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a reading of the gold_fiat_transition_mechanism kernel, and if so, which structural elements distinguish it from sibling readings?",
+      "resolution_mechanism": "Compare beneficiary/victim structure, epsilon referent, and coordination/extraction decomposition across the three declared readings; convergence on distinct structural profiles confirms kernel decomposition.",
+      "impact": "Confirms this constraint is one instantiation of a contested kernel rather than a standalone constraint; requires sibling stories for complete family mapping.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to kernel/reading frame and structural distinctness from siblings."
+    },
+    {
+      "id": "creditor_discipline_vs_automatic_constraint",
+      "question": "Does the elimination of creditor veto power represent a qualitatively different constraint mechanism than the elimination of automatic gold-reserve limits on money creation?",
+      "resolution_mechanism": "Trace whether post-1971 balance-of-payments adjustment operated through creditor discretion (this reading) or central bank discretion (automatic_constraint_reading) by examining IMF conditionality, swap lines, and reserve accumulation patterns.",
+      "impact": "If mechanisms are distinct, the two readings instantiate different constraints with different epsilon profiles; if they collapse to the same discretionary authority, the kernel decomposition over-splits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether creditor-discipline and automatic-constraint are separable mechanisms or two framings of the same discretionary shift."
+    },
+    {
+      "id": "reserve_issuer_asymmetry",
+      "question": "Is the constraint genuinely eliminated for the reserve issuer, or does it mutate into a different discipline mechanism (e.g., inflation targeting, swap-line conditionality)?",
+      "resolution_mechanism": "Measure effective constraint on US fiscal/monetary policy post-1971: compare pre-1971 gold drain episodes to post-1971 inflation/twin-deficit episodes and their policy responses.",
+      "impact": "If a mutated discipline mechanism exists, the 'eliminated' claim overstates beneficiary freedom and understates residual extraction on the reserve issuer itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reserve-issuer freedom is absolute or constrained by successor mechanisms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1971,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1971,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1971,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the creditor-discipline reading of the gold-to-fiat transition: the structural elimination of gold redemption as a creditor veto over debtor-nation fiscal and monetary policy. Under Bretton Woods, creditor nations (holding dollar reserves) could threaten gold conversion, forcing deficit countries into contractionary adjustment. The 1971 Nixon Shock removed this veto, but the resulting arrangement is not a pure coordination gain — it extracts from creditor nations (who lost redemption leverage and hold depreciating reserves) and from non-reserve holders (who face tighter external constraints without the reserve currency's exorbitant privilege), while benefiting debtor nations and especially the US as reserve issuer. The constraint persists through active enforcement: the dollar system's network effects, IMF conditionality, swap-line architecture, and the lack of a viable alternative reserve asset. This reading treats the transition as a geopolitical power shift from creditor to reserve-currency issuer, not merely a technical monetary reform.",
+    "key_agents": [
+      "reserve_currency_issuer_us: Primary beneficiary (institutional/arbitrage) — issues the world's reserve currency, faces no external gold constraint",
+      "debtor_nations: Beneficiaries (organized/constrained) — gained fiscal/monetary flexibility, but remain subject to dollar-denominated discipline",
+      "creditor_nations: Victims (powerful/constrained) — lost gold redemption leverage, hold dollar reserves subject to US policy",
+      "non_reserve_holders: Victims (moderate/trapped) — face balance-of-payments discipline without reserve-currency privilege",
+      "imf_bis_network: Agenda setter (institutional/generational) — administers the post-gold discipline architecture"
+    ],
+    "logic_rationale": "Base extractiveness (0.72) reflects the asymmetric transfer: creditor nations and non-reserve holders bear the cost of dollar-system stability through reserve depreciation and balance-of-payments discipline, while the reserve issuer and debtor nations capture the flexibility gains. Suppression (0.58) is moderate — the constraint does not rely on overt coercion but on the structural impossibility of exiting the dollar system (no alternative reserve asset of sufficient depth). Theater ratio (0.32) captures the genuine coordination function (global liquidity provision, crisis lending) alongside the extractive overlay (seigniorage, asymmetric adjustment). Accessibility collapse (0.64) is elevated because alternatives (gold, SDRs, euro, RMB) have not materialized as full substitutes. Resistance (0.48) reflects periodic challenges (1970s SDR push, 2000s euro reserve aspirations, 2010s RMB internationalization) that have not displaced the core structure.",
+    "directionality_logic": "Directionality derives from structural position in the dollar system: the US as reserve issuer sits at d ≈ 0.1 (full beneficiary — the constraint subsidizes its fiscal/monetary autonomy). Debtor nations sit at d ≈ 0.35 (net beneficiaries but still subject to dollar-denominated discipline). Creditor nations (e.g., Germany, Japan, China at various periods) sit at d ≈ 0.75 — they provide real goods for dollar claims they cannot convert to gold, and their exit is constrained by trade dependence and reserve management needs. Non-reserve holders (most developing economies) sit at d ≈ 0.9 — they bear the full discipline of dollar-funded balance-of-payments adjustment without the seigniorage offset. The IMF/BIS network sits at d ≈ 0.2 as agenda setter that administers the system and captures institutional rents.",
+    "perspectival_gap": "From the US/reserve-issuer seat, the post-1971 system appears as genuine coordination (liquidity provision, lender of last resort, stable trade invoicing) — a rope-like structure. From creditor-nation seats, the same system appears as extraction without veto power — a snare-like structure. From non-reserve-holder seats, it appears as imposed discipline with no voice — a piton-like structure of inertial persistence. The engine computes these per-seat divergences from the structural data; the claimed_type (tangled_rope) reflects the system-level hybrid of coordination and asymmetric extraction.",
+    "mandatrophy_analysis": "The founding problem (creditor veto causing deflationary adjustment) was live in 1971. By the 1980s, the problem had mutated: the veto was gone but a new asymmetric adjustment burden fell on non-reserve holders. The arrangement persists not because the original problem remains, but because the reserve issuer and institutional administrators benefit from the extracted seigniorage and control. This is a classic mandatrophy: the coordination function (solving the creditor-veto deflation trap) has been overlaid with persistent extraction that the beneficiaries (US, debtor nations) have no incentive to dismantle, while the victims (creditors, non-reserve holders) lack the collective power to force revision.",
+    "kernel_context": "This constraint is the creditor_discipline_reading of the gold_fiat_transition_mechanism kernel. Sibling readings: automatic_constraint_reading (focuses on elimination of automatic gold-reserve limits on money creation, central bank discretion as the new constraint) and composite_overdetermination_reading (focuses on convergence of telecommunications, Bretton Woods collapse, labor shifts, legal tender maturation — Nixon Shock as symbolic marker). This reading distinguishes itself by centering the geopolitical power shift from creditor to reserve-currency issuer and the asymmetric extraction on creditor nations and non-reserve holders."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "gold_fiat_transition_mechanism__automatic_constraint_reading",
+      "gold_fiat_transition_mechanism__composite_overdetermination_reading",
+      "dollar_reserve_system_persistence",
+      "imf_conditionality_architecture",
+      "swap_line_network_governance"
+    ],
+    "dual_formulation_note": "This constraint family (gold_fiat_transition_mechanism) decomposes the colloquial 'end of gold standard' into three structurally distinct claims with different epsilon profiles, beneficiary/victim structures, and coordination/extraction decompositions. The creditor_discipline_reading has the highest epsilon (0.72) because it centers the asymmetric transfer from creditors/non-reserve-holders to the reserve issuer. The automatic_constraint_reading has lower epsilon (coordination function of central bank discretion dominates). The composite_overdetermination_reading has distributed epsilon across multiple causal strands."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "reserve_currency_issuer_us",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Issues the world's primary reserve currency; faces no external convertibility constraint; captures seigniorage and sets monetary policy for domestic objectives with global spillovers; administers swap lines and influences IMF governance; can always issue more dollars to meet obligations."
+    },
+    {
+      "name": "debtor_nations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Gained fiscal/monetary flexibility after 1971 — no gold drain forces contraction; but remain subject to dollar-denominated balance-of-payments discipline, IMF conditionality, and sudden stops; exit requires building reserve buffers or alternative financing (regional arrangements, swap lines) which is slow and incomplete."
+    },
+    {
+      "name": "creditor_nations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Lost gold redemption leverage post-1971; hold large dollar reserves that depreciate with US inflation and policy choices; cannot convert claims to gold; exit requires developing alternative reserve assets (euro, RMB, gold) or bilateral swap networks — structurally difficult due to dollar network effects and trade invoicing in dollars."
+    },
+    {
+      "name": "non_reserve_holders",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face full balance-of-payments discipline in dollars without reserve-currency privilege; sudden stops trigger IMF programs with conditionality; no seigniorage offset; limited voice in governance; exit is near-impossible individually — collective alternatives (regional monetary funds, SDR allocation) remain marginal."
+    },
+    {
+      "name": "imf_bis_network",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the post-gold discipline architecture: IMF surveillance, lending programs, conditionality design; BIS coordinates central bank cooperation, swap lines, and financial stability standards; captures institutional rents and agenda-setting power; not directly extracting from the constraint but its mandate and resources depend on the system's persistence."
+    }
+  ],
+  "gain_flow": "reserve_currency_issuer_us",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides global liquidity and a common unit of account for international trade and finance; enables countercyclical policy by the reserve issuer that stabilizes the system; operates swap lines as emergency backstops.",
+    "transfer_function": "Moves real goods and services from creditor nations and non-reserve holders to the reserve issuer (via seigniorage and dollar depreciation) and to debtor nations (via fiscal flexibility financed by dollar issuance); moves adjustment burden from reserve issuer to all other participants.",
+    "absent_voices": "Future generations who inherit the dollar-system's distributional consequences; populations in non-reserve-holder countries subject to IMF conditionality without democratic input; potential alternative reserve architects (eurozone, China) whose structural exit is blocked by network effects.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dollar reserve system and its asymmetric discipline vanished overnight, global trade invoicing would fragment, US fiscal/monetary autonomy would contract sharply, creditor nations would regain leverage over debtors, non-reserve holders would face chaotic repricing, and the IMF/BIS architecture would lose its operational foundation — a fundamental rearrangement of the international monetary order.",
+    "founding_problem": "The gold-exchange standard's creditor veto (gold redemption threat) forced deficit countries into deflationary adjustment, transmitting recession globally and preventing countercyclical policy — the 'golden fetters' that worsened the Great Depression.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Economic historians (Eichengreen, Temin) and contemporary policymakers (Triffin, 1960) attest the creditor-veto deflation trap was the founding problem; the problem is dead because gold convertibility is gone and the reserve issuer faces no external constraint — but the arrangement persists and has accumulated extraction, corroborated by the Triffin dilemma literature and post-2008 reform debates (Zhou Xiaochuan 2009, Stiglitz commission) from outside the beneficiary set."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "gold_fiat_transition_mechanism__automatic_constraint_reading",
+      "gold_fiat_transition_mechanism__composite_overdetermination_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "automatic_constraint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_overdetermination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creditor_veto_elimination_as_geopolitical_shift",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "reserve_issuer_captures_asymmetric_flexibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "bretton_woods_creditor_veto_framework",
+    "drift_state": {
+      "moment": "contemporary_dollar_system",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

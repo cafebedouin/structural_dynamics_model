@@ -1,0 +1,342 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__sanctity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_end_of_life_authority__sanctity_reading",
+    "measurement_id_prefix": "eol_sanctity",
+    "story_uid": "eb8eb694-0e15-4722-a9cd-e6cc0d7b61af",
+    "created_at": "2026-08-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.76,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sanctity-Based Prohibition on Assisted Dying",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "physician_guardians",
+      "institutional_ethics_committees",
+      "religious_healthcare_networks",
+      "disability_rights_organizations"
+    ],
+    "victims": [
+      "terminal_patients_seeking_aid",
+      "pressured_vulnerable_populations",
+      "autonomy_claimants"
+    ],
+    "vindicated_propositions": [
+      "sanctity_of_human_life",
+      "non_maleficence_principle",
+      "physician_as_life_preserver"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Is the categorical prohibition on assisted dying a genuine natural law constraint (Mountain) or a constructed institutional constraint that benefits identifiable actors (Tangled Rope/Snare)?",
+      "resolution_mechanism": "Cross-jurisdictional comparison of patient outcomes and physician role definitions in regimes with and without assisted dying laws; structural analysis of who materially benefits from the prohibition's enforcement.",
+      "impact": "If natural law, the constraint is a Mountain with negligible extraction; if constructed, the beneficiary structure and extraction profile are real and the constraint is a Tangled Rope (coordination + asymmetric extraction) or Snare (pure extraction). This reading's claimed_type is contested at the meta-level.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the sanctity reading instantiates a natural law or a constructed institutional constraint."
+    },
+    {
+      "id": "coercion_measurement_ambiguity",
+      "question": "How much of the measured suppression is structural (legal barriers, professional sanctions) versus internalized (patients who believe requesting death is morally wrong, families who would never consider it)?",
+      "resolution_mechanism": "Longitudinal study of patient attitudes and request rates in jurisdictions that legalize assisted dying: if request rates remain low after legalization, internalized suppression is high; if rates rise sharply, structural suppression was the dominant mechanism.",
+      "impact": "If internalized suppression is substantial, the constraint's effective suppression exceeds the legal/structural measure — the target carries the prohibition internally after structural barriers are removed. This affects both the victim set definition and the extraction calculation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in interpersonal/institutional end-of-life contexts."
+    },
+    {
+      "id": "victim_set_boundary",
+      "question": "Does the pressured-vulnerable victim set (elderly, disabled, economically disadvantaged) experience this constraint as extraction (coercion to live) or as protection (coercion against premature death)?",
+      "resolution_mechanism": "Revealed preference and stated preference studies of vulnerable populations in jurisdictions with and without assisted dying; analysis of safeguard effectiveness and abuse rates in existing regimes.",
+      "impact": "If protection, the victim declaration is wrong — the constraint coordinates a genuine protection function. If extraction, the victim set is real and the constraint's asymmetric extraction is confirmed. The ambiguity is structural: the same constraint can be protection for some vulnerable people and extraction for others simultaneously.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether pressured-vulnerable populations are victims of extraction or beneficiaries of protection under the sanctity reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.76
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The sanctity reading of end-of-life authority instantiates a categorical prohibition on intentional life-ending, grounded in the intrinsic value of human life. This reading operates as the default legal and professional framework in most jurisdictions: physicians are prohibited from assisting death, patients have no legal right to request it, and the healthcare system is organized around life preservation as a non-negotiable goal. The reading coordinates a genuine function — protecting vulnerable populations from coercion and preventing the normalization of killing as care — while simultaneously extracting from terminal patients who experience unbearable suffering and would choose a different outcome. The pressured-vulnerable populations (elderly, disabled, economically disadvantaged) are declared as victims because the constraint's enforcement machinery (legal prohibition, professional discipline, institutional policy) falls on them asymmetrically: they bear the costs of continued suffering when they would prefer death, while the beneficiaries (physician guardians, ethics committees, religious networks) collect the moral authority and institutional coherence the prohibition provides.",
+    "logic_rationale": "Base extractiveness (0.68) reflects the substantial transfer of suffering-time from terminal patients to the constraint's maintenance: patients who would choose assisted dying are denied it, and the constraint's enforcement requires active legal and professional machinery. Suppression (0.76) is high because alternatives (assisted dying, voluntary euthanasia) are legally foreclosed and professionally sanctioned — exit is blocked by law and license. Theater ratio (0.22) is moderate-low: the protection function for vulnerable populations is real and not merely performative, but a growing share of enforcement energy defends the categorical line rather than addressing individual cases. Accessibility collapse (0.71) is high: once the sanctity principle is accepted, alternative frameworks (autonomy-based, quality-of-life) become difficult to articulate within the same moral vocabulary. Resistance (0.58) is substantial: autonomy claimants, some bioethicists, and jurisdictions that have legalized assisted dying constitute active resistance.",
+    "directionality_logic": "Physician guardians and institutional ethics committees are structural beneficiaries (d near 0.15): they hold moral authority, professional coherence, and legal protection under the prohibition. Religious healthcare networks benefit from doctrinal alignment and institutional identity (d ~0.2). Disability rights organizations occupy a complex position: they benefit from the protection function but may also be constrained by the same categorical logic (secondary_role could be payer). Terminal patients seeking aid are full targets (d ~0.85): they bear the suffering the constraint forbids relieving, with trapped exit (no legal option, professional gatekeepers block access). Pressured-vulnerable populations are identity_locked targets (d ~0.75): their vulnerability is constituted through the constraint itself — the prohibition defines them as protectable, making exit from that identity frame cognitively and socially difficult. Autonomy claimants are constrained payers (d ~0.65): they advocate for a competing framework but operate within the constraint's suppression.",
+    "perspectival_gap": "The physician guardian seat experiences this as a Rope (genuine coordination: protects patients, structures professional identity, prevents moral injury). The terminal patient seat experiences it as a Snare (pure extraction: suffering is prolonged, exit is blocked, no benefit received). The pressured-vulnerable seat is the pivot: if the constraint protects them from coercion, it is a Rope for them; if it traps them in unwanted suffering, it is a Snare. The engine computes this divergence from the structural data — the authored claim (tangled_rope) reflects the hybrid reality that the constraint IS both coordination and extraction simultaneously.",
+    "mandatrophy_analysis": "The founding problem (preventing euthanasia abuses, protecting vulnerable populations from state-sanctioned killing) remains live but contested. The constraint's mandate has NOT atrophied — the protection function is still cited as necessary by disability rights groups and many physicians. However, the extraction component has accumulated: as medical technology extends dying processes, the suffering denied relief grows, and the constraint's coordination function (protection) covers a shrinking proportion of the cases it governs. This is a classic Tangled Rope: the coordination function is real but the extraction has grown disproportionate.",
+    "kernel_context": "This constraint is the sanctity_reading of the end_of_life_authority kernel. It instantiates a categorical prohibition on intentional life-ending grounded in the intrinsic value of human life. Sibling readings: autonomy_reading (individual autonomy grounds a right to control death timing), slippery_slope_mechanism (autonomy frameworks empirically expand beyond competent terminal cases). The sanctity reading forecloses the autonomy reading within any single legal-professional framework — a jurisdiction cannot simultaneously hold that life is intrinsically inviolable AND that individuals have a right to choose death. It coexists with the slippery_slope_mechanism reading as a distinct empirical claim about what happens when autonomy frameworks are adopted. The sanctity reading's axioms (sanctity_of_life_as_intrinsic_value, physician_role_as_life_preserver) are foundational and holdable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__autonomy_reading",
+      "end_of_life_authority__slippery_slope_mechanism",
+      "physician_conscience_protections",
+      "palliative_care_access_mandates",
+      "advance_directive_legal_frameworks"
+    ],
+    "dual_formulation_note": "This is one of three constraint stories decomposing the end_of_life_authority kernel. The sanctity_reading claims Mountain-like naturalness but operates as a Tangled Rope with identifiable beneficiaries and victims. The autonomy_reading claims Rope-like coordination but may operate as a Snare for vulnerable populations (per the slippery_slope_mechanism reading). The slippery_slope_mechanism is an empirical claim about constraint dynamics, not a normative reading. All three are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "physician_guardians",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Define and enforce the professional boundary: physicians preserve life, do not end it. They hold license authority, set medical standards, and testify in policy debates. The prohibition protects their role coherence and shields them from moral injury of participating in killing. They can move between jurisdictions or specialties if the constraint changes."
+    },
+    {
+      "name": "institutional_ethics_committees",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Adjudicate end-of-life cases under the sanctity framework. Their authority derives from applying the categorical prohibition. They collect institutional legitimacy and decision-making power. If the constraint changed, their role would transform but not disappear."
+    },
+    {
+      "name": "religious_healthcare_networks",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Operate hospitals and care systems under doctrinal commitments that prohibit assisted dying. The legal prohibition aligns secular law with their religious identity. Their identity is fused with the constraint — changing it would require doctrinal revision, not just policy change."
+    },
+    {
+      "name": "disability_rights_organizations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for the prohibition as protection against coercion and devaluation of disabled lives. They benefit from the constraint's shield function. However, some disabled individuals experience the constraint as denying them autonomy — the organization's position may not match every constituent's interest. Exit from the organizational position is constrained by coalition politics."
+    },
+    {
+      "name": "terminal_patients_seeking_aid",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face terminal illness with unbearable suffering and would choose assisted dying if legal. They bear the full cost of the constraint: prolonged suffering, loss of control, dependence on others. No legal exit exists in prohibition jurisdictions; travel to permissive jurisdictions requires resources and capacity they often lack. Their situation is the extraction referent."
+    },
+    {
+      "name": "pressured_vulnerable_populations",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Elderly, disabled, and economically disadvantaged people who may face subtle or overt pressure to choose death if it were an option. The constraint protects them from that pressure (beneficiary). Simultaneously, those among them who WOULD choose death are denied it (payer). Their identity as 'vulnerable' is constituted by the constraint — exit from that identity frame is cognitively and socially difficult."
+    },
+    {
+      "name": "autonomy_claimants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for legal assisted dying frameworks. They include bioethicists, civil liberties organizations, and some patient advocacy groups. They bear the cost of the constraint's suppression: their preferred policy is blocked, their arguments are marginalized in professional discourse. They have constrained exit — they can work for legal change but face high barriers."
+    },
+    {
+      "name": "palliative_care_specialists",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Provide symptom management within the prohibition framework. Some support the constraint (it protects palliative care's distinct identity from assisted dying); some argue it limits their ability to relieve suffering fully. They observe the constraint's operation from a clinical seat without setting its agenda."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Prevents the normalization of killing as a medical act; protects vulnerable populations from coercion toward death; maintains professional integrity of medicine as a life-preserving enterprise; provides a clear legal-moral boundary that prevents case-by-case erosion.",
+    "transfer_function": "Transfers the burden of continued suffering from the healthcare system/society onto terminal patients who would choose death; transfers moral authority and professional coherence to physician guardians and institutional ethics committees; transfers legal risk from the state to individual physicians who might otherwise face pressure to assist dying.",
+    "absent_voices": "Terminal patients who cannot advocate (cognitive impairment, communication barriers); future patients who will face extended dying processes under advancing medical technology; healthcare workers in jurisdictions where assisted dying is legal who report moral distress from participation — their experience is excluded from the sanctity framework's evidence base.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical prohibition vanished overnight, jurisdictions would rapidly implement assisted dying frameworks (as seen in Canada, Netherlands, Oregon). Physician roles would be redefined, legal liability structures would shift, palliative care would face identity pressure, and vulnerable populations would lose their primary legal shield against coercion. The world would rearrange substantially.",
+    "founding_problem": "Preventing the abuses of state-sanctioned killing (eugenics programs, involuntary euthanasia) that demonstrated how quickly 'choice' frameworks become coercion frameworks for vulnerable populations; protecting the medical profession's identity as healers rather than killers; establishing a clear legal boundary that prevents case-by-case erosion of the prohibition on killing.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by disability rights organizations (Not Dead Yet, TASH), many religious traditions, and the World Medical Association — sources outside the physician guardian beneficiary set. However, autonomy advocates and jurisdictions with legal assisted dying (Oregon, Netherlands, Canada) attest that the founding problem is substantially solved by robust safeguards, and that the constraint now persists as extraction from terminal patients. No neutral arbiter exists; the corroboration is contested."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "end_of_life_authority__autonomy_reading",
+      "end_of_life_authority__slippery_slope_mechanism"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "hippocratic_life_preservation_tradition",
+    "drift_state": {
+      "moment": "contemporary_bioethics_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "slippery_slope_mechanism",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sanctity_of_life_as_intrinsic_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "physician_role_as_life_preserver",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "killing_versus_allowing_to_die_distinction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

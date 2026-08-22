@@ -1,0 +1,352 @@
+{
+  "header": {
+    "constraint_id": "territorial_legitimacy_dual__palestinian_autochthony_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pal_autochthony",
+    "story_uid": "99a429d8-55ee-41ea-b055-0a8272e51ce6"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.88,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.85,
+    "claimed_type": "snare",
+    "human_readable": "Palestinian Autochthony Reading — Territorial Legitimacy from Continuous Habitation and Right of Return",
+    "topic_domain": "political/theoretical/territorial_sovereignty",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "palestinian_refugee_population",
+      "palestinian_civil_society",
+      "arab_state_actors_supporting_return"
+    ],
+    "victims": [
+      "palestinian_refugee_population",
+      "palestinians_under_occupation",
+      "internally_displaced_palestinians"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading of the contested kernel 'territorial_legitimacy_dual'. What does the committer structure imply for classification?",
+      "resolution_mechanism": "Treat as separate constraint per DP-001 (ε-invariance). The other readings (zionist_refuge_reading, two_state_coexistence_reading) instantiate different constraints with different ε, different victim/beneficiary structures, different classifications. Do not average or hedge across readings.",
+      "impact": "Ensures this reading's ε=0.82, suppression=0.88, claimed_type=snare are authored for this reading's structural position only. Sibling readings will have their own scores.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commiter-frame routing: this reading instantiates one specific constraint; other readings are other files."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.88) primarily structural (military occupation, legal barriers, geographic enclosure) or internalized (Palestinian political fragmentation, normalized dependency, internalized inferiority), or both?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if suppression persists for Palestinians who exit the immediate occupation zone (diaspora, citizenship elsewhere), reclassify as partially internalized. Compare suppression scores across Gaza, West Bank, 1948 territories, diaspora.",
+      "impact": "If internalized component is significant, the constraint's effective suppression is higher than the structural measure suggests — the target carries suppression with them after geographic exit. Would increase χ for identity_locked agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the Palestinian autochthony reading"
+    },
+    {
+      "id": "natural_law_vs_constructed_legitimacy",
+      "question": "Does the autochthony claim function as a genuine natural-law constraint (mountain-like: 'continuous habitation grounds title regardless of power') or as a constructed political claim that extracts recognition from the international system?",
+      "resolution_mechanism": "Track whether the claim operates without active enforcement (mountain) or requires continuous diplomatic, legal, and resistance effort to maintain (snare/tangled_rope). The high suppression and resistance scores suggest the latter.",
+      "impact": "If mountain-like, ε would be near 0 and the claim would be self-sustaining. The authored metrics (high ε, high suppression, active resistance) indicate it functions as an enforced claim — a snare from the Palestinian seat, contested by Israeli power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Natural-law framing vs. enforced political claim in autochthony discourse"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1987,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 1948,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "The Palestinian autochthony reading grounds territorial legitimacy in continuous habitation from the pre-1948 population, the trauma of the Nakba (displacement of 700,000+ Palestinians), and the non-negotiable right of return. From this reading's seat, the 1948 displacement is an ongoing injustice requiring remedy, not a historical event resolved by time. The Israeli state's legitimacy is contested because it was established through displacement and continues to enforce territorial reduction (78% of historic Palestine in 1948, 100% after 1967) and denial of return. The constraint operates as a snare from the Palestinian seat: high extraction (land, sovereignty, return denied), high suppression (military occupation, legal barriers, geographic fragmentation), active resistance (intifadas, diplomatic campaigns, BDS, sumud), and the coordination story ('two-state solution') functions as cover for continued extraction. The claim/metric gap is deliberate: Palestinian leadership and international actors often frame this as a rope (negotiated two-state coordination) while the metrics describe a snare — the engine measures that divergence.",
+    "key_agents": [
+      "palestinian_refugee_population: Primary target (powerless/identity_locked) — bears extraction of land, sovereignty, return; structural beneficiary of the claim but victim of its non-realization",
+      "palestinians_under_occupation: Primary target (powerless/trapped) — bears daily extraction via settlements, checkpoints, permit regime; identity_locked to land",
+      "internally_displaced_palestinians: Primary target (powerless/identity_locked) — citizens of Israel but denied return to original lands; trapped within Israeli legal framework",
+      "palestinian_civil_society: Agenda setter (organized/identity_locked) — maintains the claim, organizes resistance, bears costs of advocacy; derives identity from the struggle",
+      "israeli_state: Agenda setter (institutional/mobile) — administers the extraction, controls territory, suppresses alternatives; benefits from territorial control",
+      "arab_state_actors_supporting_return: Beneficiary (organized/mobile) — uses the claim for regional legitimacy; limited material cost",
+      "international_legal_order: Observer (institutional/analytical) — holds the legal framework (UNRWA, ICC, ICJ) but fails enforcement; analytical seat",
+      "zionist_constituency: Excluded from this reading's framework (powerful/mobile) — would contest the autochthony premise; their exclusion is structural to this reading"
+    ],
+    "logic_rationale": "Extractiveness is 0.82 because the constraint denies return to 5-7 million refugees, confiscated 78-100% of historic Palestine, and extracts sovereignty via permit regimes, settlements, and resource control. The 'coordination function' (two-state negotiations) has delivered negative returns for Palestinians — each round of talks coincided with accelerated settlement expansion. Theater ratio is low (0.15) because the constraint's operation is overtly extractive and suppressive; the Palestinian Authority's performance of state-building is a minor theater layer atop the occupation's reality. Accessibility collapse is 0.92 because alternatives (return, full sovereignty, binational state) are structurally foreclosed by Israeli power and international complicity. Resistance is 0.85 (intifadas, diplomatic warfare, cultural sumud, BDS) — the constraint meets sustained, multi-modal resistance. These metrics are authored from the Palestinian autochthony reading's seat; the engine will compute different χ for other seats.",
+    "perspectival_gap": "From the Palestinian refugee seat (identity_locked, powerless, universal scope): the constraint is a snare — total extraction, no exit, active suppression. From the Palestinian civil society seat (organized, identity_locked): tangled_rope — they coordinate resistance and extract diplomatic capital, but the coordination is inseparable from the extraction they suffer. From the Israeli state seat (institutional, mobile): mountain — they treat their control as natural fact, the Palestinian claim as nonexistent. From the international legal order seat (institutional, analytical): scaffold — they maintain a 'peace process' structure with a sunset that never arrives. The engine computes these per-seat types from the structural data; this commentary explains the structural asymmetries.",
+    "directionality_logic": "The Palestinian refugee population is the primary victim (d→1.0): they bear the full extraction (denied return, lost property, statelessness) with identity_locked exit — their self-concept is constituted by the right of return; exit means self-erasure. Palestinians under occupation are also victims (d→0.95): trapped by permit regime, walls, checkpoints; constrained exit (can leave but lose land claim). Internally displaced Palestinians: d→0.9 — citizens but denied return, trapped in Israeli legal order. Palestinian civil society: secondary_role beneficiary (collects diplomatic recognition, NGO funding, political identity) but primary_role payer (organizes resistance, bears repression) — d≈0.4 (mixed). Israeli state: agenda_setter and primary beneficiary of extraction (d→0.05) — collects land, water, security control; mobile exit (could withdraw but chooses not to). Arab state actors: beneficiaries (d→0.1) — low cost, rhetorical gain. International legal order: observer (d=0.5 analytical). The directionality derivation from beneficiary/victim declarations + exit options produces this structure.",
+    "mandatrophy_analysis": "The 'peace process' scaffold (Oslo, 1993) declared a sunset clause (5-year interim period ending 1999) but the mandate persisted without the founding problem (interim self-government leading to state) being resolved. The mandatrophy is unresolved: the scaffold became a piton (PA security coordination serves Israeli occupation) and the autochthony reading exposes this. The right of return remains the non-negotiable core — no Palestinian leadership can surrender it without losing legitimacy. The snare classification prevents mislabeling the extraction as coordination: the two-state framework extracts Palestinian acquiescence while delivering continued dispossession.",
+    "kernel_context": "This constraint is the palestinian_autochthony_reading of the contested kernel 'territorial_legitimacy_dual'. Sibling readings: zionist_refuge_reading (Israel's legitimacy from persecution, divine promise, UN partition), two_state_coexistence_reading (mutual recognition, 1967 boundaries as compromise). This reading forecloses the zionist_refuge_reading's core premise (divine promise / historical right overriding displacement) within any single framework — the Nakba as ongoing injustice and the right of return are logically incompatible with Zionist legitimacy as exclusive. It coexists_with the two_state_coexistence_reading as a live position held by different parties (Palestinian civil society vs. international diplomats), but exerts influences on it: the autochthony reading's insistence on return shifts the two-state framework's parameters, making 'land swaps' and 'just resolution' language necessary. The founding problem (per R5): the arrangement (international recognition of Palestinian rights) was built to remedy the 1948 displacement — that problem is dead (displacement persists, return denied) but the arrangement (UNRWA, resolutions, negotiations) persists as zombie infrastructure."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "territorial_legitimacy_dual__zionist_refuge_reading",
+      "territorial_legitimacy_dual__two_state_coexistence_reading",
+      "oslo_accords_scaffold",
+      "unrwa_mandate",
+      "right_of_return_legal_framework"
+    ],
+    "dual_formulation_note": "This constraint is the palestinian_autochthony_reading of the territorial_legitimacy_dual kernel. The zionist_refuge_reading and two_state_coexistence_reading are sibling constraints with different ε, different beneficiary/victim structures, different claimed types. The ε-invariance principle (DP-001) requires separate stories: this reading's ε=0.82 reflects the standing arrangement (Israeli control + denial of return) assessed by the autochthony reading's lights. The zionist reading would author ε≈0.1 (Israeli sovereignty as mountain). The two-state reading would author ε≈0.4 (negotiated compromise as tangled_rope). Different referents, different ε — different constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.98
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "palestinian_refugee_population",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "5-7 million refugees and descendants denied return to lands from which they were displaced in 1948 and 1967. They hold the right of return as constitutive of their identity — exit from the claim means self-erasure. They bear the extraction (statelessness, lost property, camp conditions) while the claim's diplomatic recognition provides minimal material benefit. UNRWA services are a palliative, not a remedy."
+    },
+    {
+      "name": "palestinians_under_occupation",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "3+ million Palestinians in West Bank and Gaza living under military occupation: permit regime for movement, settlement expansion confiscating land, resource extraction (water, agriculture), home demolitions, administrative detention. Exit is geographically trapped (Gaza blockade, West Bank checkpoints) — leaving means abandoning the land claim. The constraint extracts daily; resistance is survival (sumud)."
+    },
+    {
+      "name": "internally_displaced_palestinians",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "~400,000 Palestinian citizens of Israel displaced from their original villages (1948) but remaining inside the 1948 lines. They hold Israeli citizenship (formal beneficiary of rights) but are denied return to their lands (Absentee Property Law, Jewish National Fund). Their identity is locked to the displaced villages; exit means assimilating into Israeli national identity and surrendering the return claim."
+    },
+    {
+      "name": "palestinian_civil_society",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "PLO, PA, factions, NGOs, BDS movement, cultural institutions — they maintain the autochthony claim, organize resistance (diplomatic, legal, popular, cultural), and extract diplomatic recognition and aid. But they also bear costs: repression, co-optation (PA security coordination), fragmentation. Their organizational existence is fused to the struggle; exit means dissolution."
+    },
+    {
+      "name": "israeli_state",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "situation": "Administers the occupation, controls 100% of historic Palestine, extracts land/water/labor/security, suppresses Palestinian alternatives (settlements, walls, legal framework, military force). Benefits from territorial control and international impunity. Could withdraw (mobile exit) but the Zionist project's logic and domestic politics prevent it. The constraint's suppression machinery is the Israeli state's enforcement apparatus."
+    },
+    {
+      "name": "arab_state_actors_supporting_return",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Arab League, individual states (varies) — rhetorically support right of return for regional legitimacy and domestic stability (refugee populations). Material support is limited and declining (normalization agreements). Low cost, rhetorical gain. Mobile exit: can shift policy (Abraham Accords) without existential cost."
+    },
+    {
+      "name": "international_legal_order",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "UN (UNRWA, Security Council resolutions 194, 242, 338), ICC, ICJ, human rights treaty bodies — hold the legal framework affirming Palestinian rights (return, self-determination, end of occupation) but fail enforcement. Analytical seat: they see the full structure but lack coercive power to alter it. Their 'peace process' scaffolding (Oslo, Quartet) functions as a piton — theatrical maintenance of a failed coordination."
+    },
+    {
+      "name": "zionist_constituency",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "situation": "Israeli Jewish public, world Zionist organizations, Christian Zionist networks — they contest the autochthony premise, ground Israeli legitimacy in persecution history, divine promise, and UN partition acceptance. Structurally excluded from this reading's framework: the autochthony reading treats Zionist legitimacy as the extractive force, not a coordinating partner. Their exclusion is not accidental — it is the structural condition of this reading's coherence."
+    }
+  ],
+  "gain_flow": "israeli_state",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "The autochthony claim coordinates Palestinian collective identity, resistance strategy, and international legal advocacy around a single non-negotiable core: return. It solves the fragmentation problem — without return as the anchor, Palestinian politics fractures into local accommodations (PA security coordination, Gaza isolation, citizenship assimilation).",
+    "transfer_function": "Moves land, water, sovereignty, and demographic control from the Palestinian people (refugees, occupied, internally displaced) to the Israeli state and its settler population. The transfer is enforced by military occupation, legal frameworks (Absentee Property Law, Planning Law), and international diplomatic cover. The 'peace process' transfers Palestinian acquiescence (recognition, security coordination) for continued extraction.",
+    "absent_voices": "Palestinian refugees in Lebanon, Syria, Jordan — denied civil rights, barred from professions, stateless — would object to any framework that trades return for statehood. They are structurally excluded from Palestinian decision-making (no vote in PLO/PA) and from Israeli politics. Their absence is not accidental: their inclusion would make the right of return non-negotiable in practice, not just rhetoric.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the autochthony claim and its enforcement machinery (UNRWA, right of return legal framework, resistance infrastructure) vanished overnight: the Israeli state would consolidate full sovereignty without demographic challenge; Palestinian refugees would lose their legal anchor and face permanent statelessness or forced assimilation; the international legal order would lose its most persistent test case; Arab states would lose a legitimating rhetoric. The territorial order would rearrange toward Israeli annexation as settled fact.",
+    "founding_problem": "The arrangement (international recognition of Palestinian rights via UNRWA, UNGA 194, PLO recognition) was built to remedy the 1948 Nakba — the displacement of 700,000+ Palestinians, confiscation of their property, and denial of return. The founding problem was: how to secure remedy for a displaced people whose land was taken by a state recognized by the international community.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Israeli historians (Benny Morris, Ilan Pappé, Tom Segev) document the 1948 displacement and property confiscation from Israeli archives — corroboration from outside the Palestinian beneficiary set. UNRWA's own mandate renewal reports (annual, 1950-present) document the unresolved refugee condition. ICJ 2004 Wall Advisory Opinion and 2024 Occupation Advisory Opinion confirm the ongoing illegality from the international legal seat. The founding problem (remedy for 1948 displacement) is dead: no return, no restitution, no compensation — only management."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "pre_1948_palestinian_majority_territory",
+    "drift_state": {
+      "moment": "post_oslo_accords_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "zionist_refuge_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "two_state_coexistence_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "right_of_return_nonnegotiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "id_1948_displacement_as_ongoing_injustice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "nakba_as_ongoing_structure"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

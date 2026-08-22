@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__naturalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "ddb0912f-9270-4209-8560-8ef6f5c3caf2"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Price Formation as Natural Equilibrium (Naturalist Reading)",
+    "topic_domain": "economic/political/housing",
+    "emerges_naturally": true,
+    "vindicated_propositions": [
+      "marginal_utility_price_theory",
+      "walrasian_equilibrium_existence",
+      "scarcity_as_objective_constraint",
+      "preference_revelation_via_market"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is the naturalist reading's claim that price formation is a mountain of natural law, or is it a constructed constraint that benefits identifiable agents by presenting market outcomes as inevitable?",
+      "resolution_mechanism": "Compare the naturalist reading's structural profile (zero extraction, zero suppression, emerges_naturally) against the sibling readings' profiles. If sibling readings document extraction and suppression at the same referent, the naturalist reading is a false summit candidate.",
+      "impact": "If the naturalist reading is a false summit, FSM triggers reclassification to tangled_rope. If genuine mountain, all sibling readings address a different referent or are false readings of the same constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the naturalist reading's mountain claim is structurally valid or a false summit masking extraction"
+    },
+    {
+      "id": "reading_relations_ambiguity",
+      "question": "Does the naturalist reading's core premise (price as discovered natural equilibrium) logically foreclose the institutional reading's premise (price as constructed by policy), or do they coexist as descriptions of different analytical layers?",
+      "resolution_mechanism": "Test whether a single policy framework could coherently hold both: that prices reflect scarcity AND that zoning/lending standards construct the scarcity reflected. If yes, coexists_with; if the naturalist reading treats any policy construction as distortion of a pre-existing natural order, forecloses.",
+      "impact": "Forecloses means the readings cannot occupy the same framework; coexists_with means different parties hold them simultaneously in live dispute; influences means the naturalist reading's dominance shifts the institutional reading's operating conditions without resolving it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between naturalist and institutional readings of the price_formation_kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.0,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the naturalist reading of the price_formation_kernel: the claim that housing prices emerge from a natural equilibrium process reflecting objective scarcity and subjective preferences, with no constructed or extractive element. The reading asserts that price is discovered through market processes, not constructed by policy, and that interventions (rent control, zoning reform, affordability mandates) create deadweight loss by distorting the natural price signal. This is a Mountain claim — zero extractiveness, zero suppression, perfect accessibility collapse, negligible resistance. The reading carries no beneficiaries or victims in its own structural logic; all distributive outcomes are treated as the natural consequence of scarcity and preference.",
+    "key_agents": [
+      "price_formation_process: Natural law-like mechanism — discovers equilibrium, bears no cost, collects no rent",
+      "market_participants: Symmetric participants — buyers and sellers both face the discovered price, neither privileged",
+      "policy_makers: External interveners — treated as distorters of the natural process, not constitutive of it"
+    ],
+    "logic_rationale": "All metrics are authored at the structural minimum for a genuine mountain: extractiveness = 0 (no transfer extracted by the constraint itself), suppression = 0 (no coercion required to maintain the natural law), theater_ratio = 0 (no performative maintenance of a natural process), accessibility_collapse = 0.95 (alternatives genuinely collapse once the equilibrium logic is understood — you cannot choose a different market-clearing price without creating shortage or surplus), resistance = 0.05 (only resistance is from parties who mistake the natural constraint for a constructed one). The claimed_type is mountain, matching the metric profile. This reading's ε is zero by its own lights — the referent is the standing arrangement (market price formation) assessed as natural law.",
+    "directionality_logic": "No beneficiary or victim groups declared because the naturalist reading's structural logic has none — price formation as natural equilibrium extracts from no one and subsidizes no one. All agents face the same discovered price symmetrically. The directionality derivation finds no structural asymmetry: d = 0.5 for all market participants (symmetric costs ≈ benefits from the price signal itself). Policy makers are not governed by the constraint; they are external would-be interveners.",
+    "mandatrophy_analysis": "Not applicable — a mountain has no mandate to atrophy. The naturalist reading claims the constraint is a feature of reality, not an institutional arrangement with a founding problem.",
+    "kernel_context": "This constraint is the naturalist_reading of the price_formation_kernel. The kernel is the contested claim 'price formation in housing markets.' Sibling readings: institutional_reading (price as constructed by zoning, lending standards, tax treatment, intermediary platforms), georgist_reading (price as separation of land rent from improvement value), financialization_reading (price as driven by credit expansion and housing-as-financial-asset demand). The naturalist reading claims the kernel is a mountain of natural law; the sibling readings claim it is a constructed, extractive, or rent-bearing arrangement. The structural delta for this reading is: Mountain constraint — no beneficiaries, no victims, no extractiveness. Price is discovered, not constructed. Policy interventions create deadweight loss."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "price_formation_kernel__institutional_reading",
+      "price_formation_kernel__georgist_reading",
+      "price_formation_kernel__financialization_reading"
+    ],
+    "dual_formulation_note": "Price formation kernel decomposed into four readings per ε-invariance principle: naturalist (this story, ε=0, mountain), institutional (ε>0, extraction from policy-constructed scarcity), georgist (ε>0, rent extraction via land monopoly), financialization (ε>0, extraction via credit-asset feedback). The naturalist reading is upstream in the family — its claim of natural equilibrium is often cited as evidence against the extractive readings. All siblings link back to this reading as the baseline they contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "institutional_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "georgist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "financialization_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "price_is_discovered_not_constructed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intervention_creates_deadweight_loss",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "natural_market_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_housing_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__hybrid_dependency",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "09a50676-b4d1-4f33-8f44-6239d44cfdb9"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.15,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Competence Exercise Requirement — Hybrid Dependency",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "operating_crews",
+      "safety_regulators",
+      "training_organizations"
+    ],
+    "victims": [
+      "operating_crews",
+      "training_organizations"
+    ],
+    "vindicated_propositions": [
+      "competence_requires_periodic_real_world_anchoring",
+      "simulation_alone_creates_fragile_equilibrium"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "stakeholders": [
+    {
+      "name": "operating_crews",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Crews benefit from maintained competence through hybrid simulation/line operations regimes. They bear costs through mandatory line audits, non-jeopardy evaluations, and actual aircraft time requirements that compete with revenue operations and personal recovery time. Exit from the regime means loss of certification; lateral movement to other operators carries the same requirements."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Regulators set and enforce the competence exercise standards — defining simulation fidelity requirements, mandating line operation checks, and specifying minimum real aircraft exposure. They collect no direct revenue from the regime but derive legitimacy and mandate fulfillment from demonstrated safety outcomes. Their exit is analytical: they observe and adjust the constraint but are not personally subject to its operational burdens."
+    },
+    {
+      "name": "training_organizations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Training organizations (simulator manufacturers, airline training departments, third-party providers) benefit from mandated hybrid regimes that sustain demand for both high-fidelity simulation and line-check infrastructure. They bear costs of maintaining simulator fleets, qualifying instructors for line operations, and meeting regulatory audit standards. Their exit is mobile — they can serve different regulatory jurisdictions or pivot to adjacent training markets."
+    },
+    {
+      "name": "simulation_purists",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Advocates and researchers who argue high-fidelity simulation with structured debriefing constitutes adequate competence exercise. They are excluded from the regulatory standard-setting process where line-operation mandates are codified. Their preferred reading (simulation_as_adequate_exercise) is structurally foreclosed by the hybrid regime's requirement for real-world anchoring. Exit from the exclusion requires shifting the regulatory consensus — effectively trapped in the current framework."
+    },
+    {
+      "name": "catastrophe_anchoring_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Proponents of the view that only real catastrophic events or near-misses provide irreducible competence exercise. They are excluded because the hybrid regime explicitly substitutes controlled line operations and non-jeopardy audits for catastrophe-dependent learning. Their reading (catastrophe_as_necessary_anchor) coexists as a live critique but cannot be instantiated as policy without abandoning the controlled-anchoring premise. Exit requires a paradigm shift in safety philosophy — trapped in current discourse."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Safety science researchers, organizational learning theorists, and accident investigators who study the constraint from outside. They evaluate whether the hybrid regime actually maintains competence or whether simulation decay and line-operation ritualization undermine it. They bear no operational costs and collect no rents; their exit is analytical."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine collective-action problem of maintaining operator competence in high-reliability domains where individual operators and organizations under-invest in proficiency without a shared standard — coordination prevents free-riding on others' safety investments and ensures baseline readiness across the system.",
+    "transfer_function": "Moves training capacity, line-operation slots, and real aircraft time from revenue operations and organizational budgets into mandated competence exercise. Operators and training organizations supply the resources; crews receive the exercise; the safety outcome is the collective return.",
+    "absent_voices": "Simulation purists (who would argue high-fidelity simulation with debriefing is adequate) and catastrophe-anchoring advocates (who would argue only real events exercise competence) are structurally excluded from the regulatory consensus that codifies hybrid requirements. They would object to the cost and operational disruption of mandated line audits and real-aircraft minimums, but their exclusion is what makes the hybrid regime enforceable.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid competence exercise requirement vanished overnight, operators would regress to simulation-only or reduced-training regimens within 2–3 budget cycles. Competence would degrade unevenly — some organizations maintaining voluntary standards, others cutting to minimum regulatory floors — creating a patchwork of readiness that would manifest in increased incident rates within 5–7 years. The safety regulator's mandate would be materially undermined.",
+    "founding_problem": "Post-deregulation and post-automation expansion (1980s–2000s), multiple high-profile accidents revealed that simulator-trained crews encountered catastrophic skill degradation when faced with real-world anomalies that simulators could not replicate — sensory cues, physiological stress, organizational pressure, and emergent system interactions. The hybrid regime was built to guarantee periodic real-world anchoring without requiring actual catastrophes.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by accident investigation boards (NTSB, AAIB, BEA) across multiple jurisdictions — independent of training organizations and regulators. Simulation purists contest the status, arguing modern high-fidelity simulation with physiological stress induction and scenario variability now covers the anchoring gap. Catastrophe-anchoring advocates contest from the other side, arguing controlled line operations lack the irreducible stakes of real events. No single party's self-assertion settles it."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The hybrid competence exercise requirement mandates that operators in high-reliability domains (aviation, nuclear, maritime) maintain proficiency through a combination of high-fidelity simulation AND periodic real-world exposure — line operations under observation, non-jeopardy audits, and minimum actual aircraft/plant time. The constraint emerged after automation-era accidents revealed that simulation-alone training produced crews competent in scripted scenarios but fragile in novel real-world conditions. It is a tangled rope: it coordinates a genuine safety need (baseline competence across the system) while extracting asymmetric costs (crews lose recovery time, training organizations bear infrastructure costs, operators lose revenue capacity) and requires active enforcement (regulatory audits, certificate actions). The claim/metric gap is deliberate: the constraint is CLAIMED as tangled_rope from this reading's seat, while the metrics describe a coordination function with moderate but rising extractiveness — the engine measures divergence from other readings' claims.",
+    "logic_rationale": "Base extractiveness (0.28) reflects the real resource transfer: crews give up off-duty time and physiological recovery; operators give up revenue flight hours for training; training organizations maintain dual infrastructure. The cost is not trivial but is bounded and reciprocated by safety outcomes. Suppression (0.15) is low — the constraint operates through professional standards and certificate maintenance, not coercion; exit options exist (career change, jurisdiction shift) but are constrained by industry-wide adoption. Theater ratio (0.22) is moderate and rising: line checks increasingly become ritualized box-ticking rather than genuine competence tests, and simulator scenarios drift toward the testable rather than the challenging. Accessibility collapse (0.45) is moderate — alternatives (pure simulation, voluntary proficiency) exist but are structurally discouraged by insurance, regulation, and industry norms. Resistance (0.35) is meaningful: operators negotiate minimums, crews resist schedule intrusions, and training organizations lobby for simulator-only credit.",
+    "directionality_logic": "Operating crews are dual-positioned: beneficiaries of the safety outcome (d ~ 0.3 toward beneficiary) but payers of the time/physiological cost (d ~ 0.6 toward payer) — net directionality near symmetric. Safety regulators are near-pure agenda setters (d ~ 0.1) — they set standards, bear no operational cost, collect legitimacy. Training organizations are dual: beneficiaries of sustained demand (d ~ 0.25) but payers of dual-infrastructure costs (d ~ 0.55) — net slight payer tilt. Simulation purists and catastrophe advocates are excluded — their directionality is not computed as they hold no structural seat in the enforced regime. The analytical observer is neutral (d = 0.5).",
+    "perspectival_gap": "From the regulator's seat, the hybrid regime is a rope with minor extractive overhead — coordination dominates. From the crew's seat, it is a tangled rope — genuine safety coordination experienced as enforced extraction of personal time. From the training organization's seat, it is a resource_allocation coordination mechanism with extractive compliance costs. The engine computes these per-seat types from the structural data; the declared claim (tangled_rope) represents the analytical observer's synthesis.",
+    "mandatrophy_analysis": "The founding problem (automation-era competence fragility) is contested: simulation purists argue it is substantially solved by modern fidelity; catastrophe advocates argue the hybrid regime substitutes controlled exposure for irreducible stakes. The mandate persists because no faction has enough power to rewrite the standard, and the safety record since adoption is cited by all sides as vindication. This is mandatrophy in the narrow sense — the original justification is contested but the arrangement persists because the cost of resolution exceeds any faction's willingness to bear it. The hybrid structure itself prevents collapse into either pure simulation (which would be a snare on crews) or catastrophe-dependence (which would be a snare on the public).",
+    "kernel_context": "This constraint is the 'hybrid_dependency' reading of the contested kernel 'competence_exercise_requirement'. The kernel asks: what constitutes adequate exercise of the competence kernel in high-reliability domains? Three readings exist: (1) simulation_as_adequate_exercise — high-fidelity simulation with debriefing suffices; (2) catastrophe_as_necessary_anchor — only real catastrophic events or near-misses provide irreducible exercise; (3) hybrid_dependency (this reading) — simulation is necessary but insufficient; competence requires both simulation foundation and periodic real-world anchoring (line operations, non-jeopardy audits, actual aircraft time). This reading structurally forecloses the simulation-as-adequate reading within any single regulatory framework (you cannot simultaneously mandate real-world anchoring and treat simulation as adequate), coexists with the catastrophe-anchoring reading as a live alternative critique, and influences the catastrophe reading by providing a controlled substitute that reduces its policy appeal."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "At what fidelity level does simulation become adequate for competence maintenance, making real-world anchoring marginally redundant?",
+      "resolution_mechanism": "Longitudinal studies comparing incident rates between operators with simulation-only vs. hybrid regimes, controlling for fleet type, operational tempo, and crew demographics. Requires regulatory permission for controlled simulation-only cohorts.",
+      "impact": "If a threshold exists, the hybrid regime's real-world component becomes extractive overhead above that threshold — reclassification toward snare for operators above the threshold. If no threshold exists, the hybrid regime remains tangled_rope indefinitely.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether simulation technology can eventually close the anchoring gap."
+    },
+    {
+      "id": "line_operation_ritualization",
+      "question": "Is the rising theater ratio driven by structural ritualization of line audits (making them performative) or by genuine improvement in baseline competence making deep testing less necessary?",
+      "resolution_mechanism": "Comparative analysis of line-check findings vs. subsequent incident trajectories; auditor interviews on whether checks probe edges or verify minimums; correlation of theater_ratio trajectory with independent competence metrics (e.g., simulator scenario performance on novel failures).",
+      "impact": "If ritualization, the constraint is drifting toward piton — coordination function atrophying while enforcement persists. If genuine competence improvement, the theater rise is a false signal and the constraint remains tangled_rope with improving efficiency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether increasing performativity signals functional decay or success."
+    },
+    {
+      "id": "committer_structure_hybrid_dependency",
+      "question": "How does this reading's structural relationship to its sibling readings affect its classification stability?",
+      "resolution_mechanism": "Track regulatory adoption patterns: if jurisdictions adopting hybrid_dependency subsequently resist simulation-as-adequate proposals, the forecloses relation is structurally real. If simulation-as-adequate gains traction in hybrid jurisdictions, the forecloses claim is overstated and the relation is coexists_with.",
+      "impact": "If forecloses is real, this reading's classification is stabilized by its structural dominance in the regulatory frame. If coexists_with, the classification is contestable and may drift as the regulatory consensus shifts.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committee frame: this reading forecloses simulation_as_adequate_exercise within a single regulatory framework, coexists_with catastrophe_as_necessary_anchor, and influences the catastrophe reading by providing a controlled substitute for its irreducible anchor."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_fidelity_standards",
+      "line_operation_audit_regime",
+      "crew_duty_time_limits"
+    ],
+    "dual_formulation_note": "Part of the competence_exercise_requirement constraint family with simulation_as_adequate_exercise and catastrophe_as_necessary_anchor. This reading (hybrid_dependency) is the instantiated regulatory standard; the others are live alternative framings that contest its extraction-coordination boundary. All three share the kernel but instantiate different ε values and beneficiary/victim structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_adequate_exercise",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "real_world_anchoring_irreducible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_foundation_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_automation_accident_reform",
+    "drift_state": {
+      "moment": "contemporary_high_fidelity_simulation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "hebrew_vitality__liturgical_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_hebrew_vitality__liturgical_reading",
+    "measurement_id_prefix": "hebrew_vitality__liturgical_reading",
+    "story_uid": "5dbc3ad1-289e-4681-a920-f4590ad2027c",
+    "created_at": "2026-08-03T14:22:11Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Liturgical Preservation as Vitality (Hebrew)",
+    "topic_domain": "sociolinguistics/language_revitalization/jewish_studies",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "rabbinic_authorities",
+      "liturgical_institutions"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "unbroken_liturgical_use_suffices_for_vitality",
+      "ritual_continuity_preserves_national_identity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does the liturgical reading instantiate a genuinely distinct constraint from the kernel's other readings, or does it merely describe a different measurement basis for the same constraint?",
+      "resolution_mechanism": "Test whether ε changes when the referent shifts from liturgical domain to vernacular daily life. If ε remains low and the beneficiary/victim structure is stable, the reading shares the kernel's constraint; if ε rises and victims appear, they are distinct constraints.",
+      "impact": "If distinct, this reading stands alone with its own classification; if shared, the kernel has a single constraint with multiple observational windows.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading is a separate constraint or an observational window on the kernel's single constraint."
+    },
+    {
+      "id": "liturgical_beneficiary_nature",
+      "question": "Do rabbinic authorities benefit materially from the liturgical constraint, or is their benefit purely status/authority within the ritual frame?",
+      "resolution_mechanism": "Trace resource flows: synagogue funding, educational appointments, communal leadership positions tied to liturgical authority. If material flows exist, the beneficiary declaration is structural; if only symbolic authority, the benefit may be internal to the commitment system.",
+      "impact": "Material benefit would support tangled_rope classification if extraction from laity exists; symbolic benefit keeps this reading in rope territory.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether rabbinic beneficiary status involves material extraction or symbolic authority."
+    },
+    {
+      "id": "vernacular_absence_as_victimlessness",
+      "question": "Is the absence of a victim set genuine, or does the liturgical reading's domain restriction mask extraction that would appear if the referent included daily life?",
+      "resolution_mechanism": "Compare resource demands (time, education, communal obligation) imposed on lay participants by liturgical Hebrew versus the native_daily_reading's demands. If liturgical participation imposes costs without vernacular payoff, victims exist but are domain-restricted.",
+      "impact": "Hidden victims would reclassify toward tangled_rope or snare; confirmed victimlessness supports rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether domain restriction conceals extractive costs on lay participants."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.18,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the liturgical reading of Hebrew vitality: the claim that unbroken ritual use of Hebrew in prayer, study, and ceremonial life constitutes genuine vitality, regardless of vernacular status. The reading treats the liturgical domain as a self-sufficient kernel — Hebrew lives because it is used in the synagogue, the beit midrash, and the lifecycle rituals that structure Jewish time. Rabbinic authorities and liturgical institutions are the primary beneficiaries, deriving authority, institutional continuity, and communal cohesion from the constraint's operation. No victim set is declared because the reading's domain restriction (ritual only) excludes the costs of vernacular acquisition; lay participants opt into liturgical Hebrew voluntarily within the religious frame. The claimed type is rope: a genuine coordination mechanism (shared liturgical language enabling cross-communal prayer, study, and identity) with minimal coercive overhead and no identified extraction.",
+    "logic_rationale": "Extractiveness is low (0.12) because the constraint operates as a coordination standard: a shared liturgical language allows Jews across diaspora to pray together, study the same texts, and maintain textual continuity. The cost is learning liturgical Hebrew, but this cost is internal to the religious commitment — not extracted by an external party. Suppression is low (0.18) because alternatives (vernacular prayer, translated texts) exist and are used in liberal movements; the constraint persists through communal norm, not enforcement. Theater ratio (0.25) reflects that some liturgical performance is performative — maintained for continuity's sake rather than communicative function — but the core coordination function remains genuine. Accessibility collapse (0.72) is moderately high because once the liturgical frame is adopted, alternatives (praying in vernacular) feel like a loss of authenticity, but this is internal to the frame, not externally imposed. Resistance (0.15) is low because the constraint is largely self-sustaining within committed communities.",
+    "directionality_logic": "Rabbinic authorities and liturgical institutions sit at the beneficiary end (d ≈ 0.15): they gain authority, institutional purpose, and communal cohesion from the constraint's operation. Their exit options are arbitrage — they can shift between denominations, roles, or institutions while retaining liturgical authority. Lay participants sit near symmetric (d ≈ 0.5): they bear the learning cost but gain the coordination benefit (communal prayer, textual access, identity). Their exit is constrained — leaving the liturgical frame means leaving the community — but within the frame, participation is voluntary. No agent sits at the target end (d ≈ 1.0) because the reading's domain restriction excludes vernacular costs.",
+    "perspectival_gap": "The rabbinic seat experiences this as a mountain — an immutable feature of Jewish continuity that cannot be changed without losing authenticity. The lay seat experiences it as a rope — a coordination mechanism they voluntarily maintain because it works. The analytical seat (sociolinguist) sees a historically contingent arrangement that persisted because it solved a genuine coordination problem (diaspora unity) but now coexists with a vernacular revival that changes the constraint's function. The engine computes this divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (diaspora coordination via shared liturgical language) remains live — Jewish communities still use Hebrew liturgy for cross-communal unity. However, the native_daily_reading's success in creating vernacular Hebrew introduces a mandatrophy question: does the liturgical constraint now serve a different function (identity boundary maintenance) than its founding one? The reading itself does not declare mandatrophy resolved; the founding problem persists but its urgency has shifted.",
+    "kernel_context": "This constraint is the liturgical_reading of the contested kernel 'hebrew_vitality'. The kernel asks: what constitutes Hebrew vitality? Three readings instantiate distinct constraints: (1) liturgical_reading (this file) — ritual preservation constitutes vitality; unbroken liturgical use occupies the kernel; low ε, rabbinic beneficiaries, no victims. (2) native_daily_reading — only native generation constitutes vitality; ritual recitation is preservation, not life; higher ε, native speakers as beneficiaries, diaspora learners as potential victims. (3) hybrid_continuity_reading — liturgical preservation was necessary enabler but insufficient; vernacular revival required both substrate and reconstruction; moderate ε, multiple beneficiary/victim sets across domains. This reading coexists with both siblings: different communities hold different readings simultaneously without logical foreclosure."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "hebrew_vitality__native_daily_reading",
+      "hebrew_vitality__hybrid_continuity_reading"
+    ],
+    "dual_formulation_note": "This reading and its siblings decompose the kernel 'hebrew_vitality' per the ε-invariance principle: each reading assigns a different ε to a different referent (liturgical domain vs. vernacular daily life vs. combined trajectory). The liturgical reading's ε (0.12) reflects ritual-domain coordination only. The native daily reading's ε would be higher (vernacular acquisition costs). The hybrid reading's ε would be intermediate (both domains, transitional). They are linked via affects_constraints because the liturgical substrate historically enabled the vernacular revival, and the vernacular revival now reshapes the liturgical constraint's function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "rabbinic_authorities",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold interpretive authority over liturgical Hebrew: determine pronunciation standards, textual variants, and ritual correctness. Their authority derives from the constraint's operation — if liturgical Hebrew were abandoned or vernacularized, their specialized role would diminish. They can move between denominations, communities, or educational institutions while retaining liturgical authority (arbitrage exit). They do not bear the learning costs imposed on lay participants."
+    },
+    {
+      "name": "liturgical_institutions",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Synagogues, yeshivas, and religious courts whose institutional identity and funding depend on maintaining Hebrew liturgy. They coordinate communal practice, train ritual leaders, and preserve textual traditions. Their institutional continuity is bound to the constraint; they benefit from the coordination function (shared liturgy enables communal cohesion) and from the authority structure it sustains. Exit means institutional transformation or dissolution."
+    },
+    {
+      "name": "observant_lay_participants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Invest significant time in acquiring liturgical Hebrew literacy (prayer book fluency, Torah reading, textual study) to participate fully in communal ritual. They bear the learning cost but gain the coordination benefit: ability to pray in any synagogue worldwide, access to canonical texts, communal belonging. Exit is constrained — leaving the liturgical frame means leaving the religious community — but within the frame, participation is experienced as voluntary religious commitment, not extraction."
+    },
+    {
+      "name": "liberal_denomination_participants",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Reform, Reconstructionist, and some Conservative communities that have substantially vernacularized liturgy while retaining Hebrew elements. They would object to the claim that Hebrew vitality requires unbroken liturgical use in its traditional form, arguing that vitality includes adaptation. They are excluded from the liturgical_reading's frame because that reading defines vitality in terms of traditional liturgical continuity, which their practice modifies. Their exit is mobile — they have built alternative liturgical frameworks."
+    },
+    {
+      "name": "sociolinguists_of_jewish_languages",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze Hebrew's trajectory as a case study in language revitalization. They observe the constraint's operation across all three readings but do not participate in the liturgical frame as insiders. Their analytical frame treats the liturgical reading as one of several competing vitality criteria, not as the definition of vitality itself."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a shared liturgical language enabling Jews across geographic, temporal, and denominational boundaries to pray together, study the same canonical texts, and maintain communal cohesion without a shared vernacular.",
+    "transfer_function": "Moves learning effort (time, education, cognitive load) from lay participants toward the maintenance of a shared liturgical standard; the coordination benefit (communal unity, textual access, identity continuity) flows back to all participants. No material transfer to rabbinic authorities beyond the status/authority inherent in the coordination role.",
+    "absent_voices": "Secular Hebrew speakers (native_daily_reading proponents) who would argue that vitality requires living vernacular use, not ritual preservation. They are absent from the liturgical frame because that frame defines vitality in ritual terms, making vernacular absence irrelevant to its criterion. Also absent: historical communities that lost liturgical Hebrew (e.g., some medieval communities that shifted to Judeo-Arabic liturgy) — their disappearance is the counterfactual the reading treats as vitality loss.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the liturgical Hebrew constraint vanished overnight, diaspora Jewish communities would lose their primary cross-communal coordination mechanism: shared prayer texts, Torah reading cycles, and the textual substrate that enables halakhic discourse across boundaries. Communities would fragment into vernacular isolates, textual study would require translation infrastructures, and the rabbinic authority structure would lose its common language. The world would rearrange — new coordination mechanisms would need to be built or existing ones (English, local languages) would replace Hebrew in liturgy.",
+    "founding_problem": "Diaspora Jewish communities needed a shared language for prayer, study, and legal discourse to maintain unity across geographic dispersion and vernacular diversity, without a shared spoken language.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by historical sources outside the rabbinic tradition: Geniza documents showing cross-communal correspondence in Hebrew, responsa literature demonstrating halkhic coordination across diaspora, and contemporary sociolinguistic analysis (e.g., Joshua Fishman's work on Hebrew as a 'sanctified language' maintaining ethnic boundaries). The problem remains live because diaspora communities still lack a shared vernacular and still use Hebrew liturgy for coordination — though the native_daily_reading's success in Israel creates a new vernacular center that changes the coordination geometry."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "native_daily_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_continuity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liturgical_continuity_suffices_for_vitality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "vernacular_use_not_required_for_vitality",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "unbroken_liturgical_chain",
+    "drift_state": {
+      "moment": "contemporary_vernacular_revival",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

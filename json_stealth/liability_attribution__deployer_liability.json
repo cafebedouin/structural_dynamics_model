@@ -1,0 +1,374 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__deployer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "deployer_liability",
+    "story_uid": "7cb489e8-0ed7-469b-bfcc-688afdbcd624"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.55,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Deployer-Primary AI Liability Allocation",
+    "topic_domain": "technology governance/legal theory/regulatory design",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "foundation_model_providers",
+      "liability_insurers",
+      "ai_safety_auditors",
+      "open_source_model_maintainers",
+      "harmed_third_parties"
+    ],
+    "victims": [
+      "enterprise_deployers",
+      "small_deployers"
+    ],
+    "vindicated_propositions": [
+      "deployment_control_principle",
+      "cheapest_cost_avoider_deterrence"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "foundation_model_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Train and license general-purpose foundation models, selling API access and enterprise licenses. Under this allocation they are not the defendants when deployed systems cause harm; deployment risk sits with the customer. Their standard contracts disclaim warranties, cap their own exposure, and place monitoring and compliance duties on the licensee. If the allocation changed they could restructure licensing terms, move serving infrastructure between jurisdictions, or shift to provider-managed deployment tiers."
+    },
+    {
+      "name": "enterprise_deployers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Integrate foundation models into customer-facing products and internal decisions, underwriting, hiring triage, clinical support, and make the deployment decisions the rule treats as decisive. They carry the legal exposure when systems misbehave, negotiate for indemnification that providers rarely grant, and fund diligence programs that cannot fully inspect the models they run. They also gain a cost moat: the compliance burden falls harder on smaller rivals. They can self-insure, reprice contracts, or drop AI features, but their installed operations depend on the capabilities."
+    },
+    {
+      "name": "small_deployers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Run AI tools inside small businesses such as clinics, agencies, and retailers, with no legal department, no negotiated license terms, and no ability to audit the underlying model. They accept the provider's standard terms as-is and carry the same primary exposure as large deployers. A single adverse judgment or regulatory action can exceed their capitalization, and stopping AI use is often competitively impossible once workflows depend on it."
+    },
+    {
+      "name": "ai_decision_subjects",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are the people on the receiving end of AI-informed decisions such as loan applicants, job candidates, patients, and benefit claimants. They bear the first incidence of deployment failures but have no seat in the design of the liability allocation; they enter the system only after injury, as claimants against whichever party the rule names."
+    },
+    {
+      "name": "harmed_third_parties",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold a direct claim against the deployer, who is identifiable, local, and present in the courtroom in a way a model provider is not. Their recovery, however, is bounded by the deployer's solvency and insurance limits, and they carry the burden of proving what an opaque system did."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Underwrite the deployer-side exposure the allocation creates, collecting premiums on a near-mandatory insurable interest and shaping deployer safety practice through policy terms and exclusions. They can reprice, exclude model classes, or withdraw from the line entirely if the allocation shifts."
+    },
+    {
+      "name": "ai_safety_auditors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Sell the diligence that the rule makes the deployer's burden: bias audits, red-teaming, documentation review. Demand for their services is created by the allocation rather than demonstrated by harm reduction, and their findings function in litigation as evidence of care or negligence."
+    },
+    {
+      "name": "open_source_model_maintainers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publish model weights without warranty, support, or contractual relationship with downstream users. The allocation leaves them outside the liability chain entirely while every business that downloads a checkpoint inherits the full deployer exposure with no recourse upward. Most operate without legal review of any kind and can stop maintaining or relicense at will."
+    },
+    {
+      "name": "legislative_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Enact and revise the allocation through statutes, directives, and safe-harbor provisions, guided by industry consultation in which provider interests are professionally represented and deployer interests arrive fragmented. Revisiting the allocation means unwinding insurance and contract structures that have already organized around it."
+    },
+    {
+      "name": "tort_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Trace the allocation to the control principle's doctrinal lineage in employer liability, products liability, and data-controller regimes, and publish on whether the principle survives model opacity and provider fine-tuning. They bear nothing and collect nothing under the rule."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the defendant-allocation problem for a harm chain spanning multiple parties: a default rule naming one primarily answerable party lets victims sue without litigating the whole value chain first, lets insurers price a defined exposure, and concentrates ex ante prevention incentives on the party that chooses the deployment context, the oversight arrangements, and the go-live decision.",
+    "transfer_function": "Moves expected liability costs, diligence costs, and insurance premiums from capability providers to deployers, regressively since small deployers carry the same exposure with less capacity, and moves compensation from deployers and their insurers to harmed parties where the deployer is solvent. It also moves the epistemic burden: model opacity becomes the deployer's diligence problem rather than the provider's disclosure duty.",
+    "absent_voices": "People who will be harmed by deployed systems (ai_decision_subjects) have no seat in the allocation debate and arrive only as claimants after injury. Small deployers are represented mainly by associations dominated by large ones; open-source maintainers and downstream users of open-weight models were largely absent from legislative consultation. Capability-provider interests, by contrast, are professionally represented throughout.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the deployer-primary rule vanished overnight, every AI harm case would reopen the who-is-answerable fight across the value chain; insurers would withdraw or reprice pending clarity; deployment contracts would be rewritten; and risk-averse sectors such as health, finance, and hiring would pause deployment while providers faced direct claims they currently never see. The AI deployment economy is organized around this allocation.",
+    "founding_problem": "Capability providers argued they cannot anticipate or govern downstream uses of general-purpose models, early deployers wanted a clear answerable counterparty, and regulators wanted prevention incentives on the party making deployment decisions. The rule was built to assign primary responsibility by control, since the deployer chooses the context, the data, the oversight, and the go-live, while keeping open-ended downstream claims off a nascent foundation-model industry.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Deployer associations and enterprise counsel attest the control rationale's descriptive core, that deployers do make the deployment decisions, while contesting the allocation it grounds; tort-law scholarship traces the control principle to employer-liability and data-controller doctrine from outside the benefiting parties; insurer actuarial analyses, though from a beneficiary seat, attest on pricing evidence that deployer-side exposure is real and insurable. The shield-for-providers component of the founding problem is attested mainly by providers themselves and their trade associations; no source outside the benefiting parties independently attests that the shield remains necessary."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.55,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.57,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.52,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.54,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The deployer-primary liability allocation assigns primary legal responsibility for AI-system harm to the party that controls the deployment context and makes the deployment decision, shielding capability creators from downstream claims. The rule has a genuine coordination function: a default defendant makes AI exposure insurable, gives victims an answerable counterparty, and concentrates prevention incentives where deployment choices are made. It also carries a substantial asymmetric transfer: foundation model providers externalize deployment risk through warranty disclaimers and capped exposure, while deployers, regressively by size, bear exposure they cannot fully govern because model opacity converts the provider's information advantage into the deployer's diligence burden. The colloquial question 'who is liable for AI harm' is a kernel, not a constraint: it decomposes into three structurally distinct allocations with different epsilon values, beneficiary/victim structures, and failure modes. This file instantiates only the deployer_liability reading, with epsilon 0.58 describing the deployer-primary arrangement as this reading assesses it. Under the developer_liability sibling the victim and beneficiary sets invert; under shared_liability the sharp deployer-provider asymmetry diffuses along the value chain. The three files link via network.affects_constraints. The expected structural delta is realized in the authored data: deployers sit in the victim set, providers in the beneficiary set, and opacity appears as the diligence burden that generates the auditor stakeholder.",
+    "key_agents": [
+      "foundation_model_providers: Primary beneficiary (institutional/arbitrage) — shielded from downstream claims; deployment risk sits with customers",
+      "enterprise_deployers: Payer seat with partial incumbent benefit (powerful/constrained) — bears primary exposure; the compliance burden also raises smaller rivals' costs",
+      "small_deployers: Primary payer (moderate/trapped) — same exposure as large deployers with none of the capacity",
+      "ai_decision_subjects: Excluded seat (powerless/trapped) — first incidence of deployment failures, no seat in the design",
+      "harmed_third_parties: Dual beneficiary/payer seat (powerless/constrained) — identifiable defendant, solvency-bounded recovery",
+      "liability_insurers: Beneficiary (institutional/arbitrage) — underwrites and shapes the deployer-side exposure",
+      "ai_safety_auditors: Beneficiary (organized/mobile) — sells the diligence the rule makes the deployer's burden",
+      "open_source_model_maintainers: Beneficiary without profit (moderate/mobile) — shielded, while their downstream users inherit full exposure",
+      "legislative_bodies: Agenda-setter (institutional/constrained) — enacts the allocation and would have to unwind entrenched structures to change it",
+      "tort_law_scholars: Analytical observer (analytical/analytical) — traces the control principle's doctrinal lineage"
+    ],
+    "logic_rationale": "Claimed type tangled_rope: the allocation has both a genuine coordination function (a default defendant rule that makes AI risk insurable and assigns prevention incentives) and an asymmetric transfer (capability providers shielded while deployers carry exposure they cannot fully inspect). The metrics are authored independently of the claim. Extractiveness 0.58 reflects a substantial but not total transfer: deployers retain real context control that partially justifies their position, and harmed parties gain an identifiable defendant. Suppression 0.55 is a raw structural property, unscaled by power or scope (the engine owns that arithmetic): deployers cannot contract out of the allocation because providers refuse indemnification, cannot choose a different allocation within a jurisdiction, and face active court enforcement. Theater 0.32: a growing share of diligence activity functions as litigation armor rather than harm reduction. Accessibility collapse 0.35 is low because the alternative allocations remain live legislative proposals in multiple jurisdictions; the design space has not closed. Resistance 0.6: deployer associations, insurer pricing pushback, and jurisdictional competition actively contest the allocation. All three measurement series run on one shared time grid (t = 0, 3, 6, 9, 12, 15 over a 2020-2035 window); points at t >= 9 are marked projected. The rising base_extractiveness series models the transfer deepening as deployment broadens to small deployers and capability opacity grows; the rising theater_ratio models audits becoming shields; the rising suppression_requirement models the enforcement machinery (case law, contractual indemnity enforcement, regulatory guidance) hardening around the allocation.",
+    "perspectival_gap": "The beneficiary and payer seats should compute different types from the same structure. From foundation_model_providers the allocation is a clean enabling rule that keeps open-ended downstream claims off capability development and prices deployment risk where deployment decisions are made. From small_deployers it operates as an uninsurable-in-practice exposure attached to a capability they cannot inspect, negotiate, or refuse. Enterprise deployers sit between and are genuinely dual-positioned: they bear the exposure but also gain a cost moat, since the diligence burden falls harder on smaller rivals — a same-level divergence where actors with equal nominal status (deployer) split by capacity and exit. The agenda-setter seat experiences neither the exposure nor the shield and reads the rule as policy design; the excluded seat experiences only the downstream decisions, never the allocation that governs who answers for them.",
+    "directionality_logic": "The beneficiary declarations put foundation_model_providers, liability_insurers, ai_safety_auditors, open_source_model_maintainers, and harmed_third_parties at the low-directionality end: the liability shield, the premium stream, the audit demand, and the identifiable defendant are all receipts of this arrangement. The victim declarations put enterprise_deployers and small_deployers at the high-directionality end, with small_deployers' trapped exit pushing them nearest the full-target position. Harmed third parties are genuinely mixed: declared beneficiary because the rule names them an answerable counterparty, carrying a secondary payer position because recovery is bounded by deployer solvency; the deployer_solvency_recovery_gap omega tracks whether the beneficiary declaration overstates their position. No directionality overrides are authored: beneficiary/victim declarations plus exit options already separate the seats correctly, and the derivation distinguishes enterprise from small deployers through their different power atoms and exit options.",
+    "mandatrophy_analysis": "The tangled_rope classification blocks two mislabels. A pure-extraction reading ('the rule just shifts risk onto the weak') would erase the real coordination function: without a default defendant rule, AI exposure is uninsurable, victims litigate the whole value chain, and prevention incentives diffuse to nobody. A pure-coordination reading (the provider framing that clear rules enable innovation) would erase the asymmetric transfer: the shield for providers and the diligence burden on deployers who cannot inspect what they run. The founding problem is still partially live, since deployers do control context, but contested, because provider fine-tuning services, unilateral model updates, and opacity have moved control toward the provider in exactly the dimensions the rule assigns to the deployer. If the control premise fails empirically, this reading's own logic routes toward the shared_liability sibling rather than toward pure extraction; the founding_problem_status 'contested' plus world_rearranges verdict correctly produces no dead-mandate mismatch flag.",
+    "kernel_context": "This story is one reading, deployer_liability, of the liability_attribution kernel: the question of where legal responsibility for AI-system harm primarily rests. Sibling readings are developer_liability (primary locus at the capability creator) and shared_liability (distribution along the value chain by causal contribution and control). The disagreement is located in the liability-grounding relation itself: this reading holds that deployment-context control and decision authority ground primary responsibility; the developer reading holds that capability creation does; the shared reading rejects any single primary locus. This file instantiates only the deployer reading with its own stable epsilon; the siblings are separate constraint files with their own beneficiary/victim structures and classifications."
+  },
+  "omegas": [
+    {
+      "id": "liability_kernel_reading_contest",
+      "question": "Is deployer-primary liability the correct resolution of the liability_attribution kernel, or would the developer_liability or shared_liability reading produce a structurally different and better-grounded constraint?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions adopting different allocations, legislative outcomes, and case-law development on which party courts actually hold answerable when deployment-context control and capability creation point in different directions.",
+      "impact": "Under developer_liability, deployers exit the victim set and foundation model providers enter it, inverting this reading's beneficiary/victim structure. Under shared_liability, the sharp deployer-pays/provider-shielded asymmetry dissolves into a diffused value-chain distribution and the concentrated gain_flow disappears.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "This constraint is one reading of the liability_attribution kernel; sibling readings would restructure the beneficiary and victim sets."
+    },
+    {
+      "id": "opacity_control_mismatch",
+      "question": "Does the deployer's control over deployment context suffice to justify primary liability when the underlying capability is opaque, updated unilaterally by the provider, and not fully auditable by the deployer?",
+      "resolution_mechanism": "Empirical study of deployer diligence efficacy under opacity, disclosure mandates, and case law on what counts as adequate diligence when the deployer cannot inspect the capability; natural experiments from jurisdictions requiring provider disclosure.",
+      "impact": "If deployer control is illusory in the capability dimensions that cause harm, the control principle's justificatory core fails and this reading drifts toward the shared_liability sibling; if deployers genuinely select and shape deployment outcomes, the allocation holds as authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deployment-context control remains a sound liability-grounding relation under model opacity."
+    },
+    {
+      "id": "deployer_solvency_recovery_gap",
+      "question": "Is harmed parties' recovery under this allocation systematically bounded by deployer solvency, such that the beneficiary declaration for harmed_third_parties overstates their position?",
+      "resolution_mechanism": "Claims data comparing awarded damages against actual recovery by deployer size class, and insurance-market analysis of coverage availability and pricing for small deployers.",
+      "impact": "A systematic recovery gap would move harmed_third_parties toward the payer side, raise measured extractiveness, and strengthen the case that the allocation's coordination benefit accrues mainly to providers and insurers rather than to the injured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the rule delivers compensation or an empty chair when deployers are undercapitalized."
+    },
+    {
+      "id": "provider_shield_rationale_status",
+      "question": "Is the shield for foundation model providers still justified by industry nascence, or does it now operate as risk externalization from a mature industry with pricing power and insurance access of its own?",
+      "resolution_mechanism": "Market maturity analysis: provider margins, availability and cost of provider-side liability coverage, and whether providers now sell deployment-adjacent services (fine-tuning, guardrails, managed deployment) that give them deployment-context knowledge the founding problem assumed they lacked.",
+      "impact": "If the industry has matured, the shield's coordination justification decays, the arrangement's extractive component grows, and this reading drifts toward the shared_liability sibling or toward reclassification; if genuine nascence persists in frontier capabilities, the shield retains its founding-problem warrant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the developer shield still serves its founding rationale or now functions as pure risk transfer."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__shared_liability"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'AI liability attribution' covers three structurally distinct allocations, decomposed per the epsilon-invariance principle. This story (deployer_liability, tangled_rope, epsilon 0.58, victims = deployers) is the reading where the control principle grounds primary liability. The developer_liability sibling inverts the beneficiary/victim structure (providers become the target seat, deployers the shielded beneficiary); the shared_liability sibling diffuses extraction along the value chain and eliminates the concentrated gain_flow seat. This reading structurally influences the shared reading: once insurance markets, contractual indemnity architectures, and case law organize around deployer-primary liability, any shift to distributed allocation carries path-dependent switching costs. This reading forecloses the developer reading within any single framework, since both claim the unique primary locus. The upstream/downstream epistemic link runs through the control principle's doctrinal lineage: the stronger the empirical case that deployers control what matters, the stronger this reading and the weaker its siblings."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liability_follows_deployment_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "provider_shield_preserves_capability_investment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "deployment_context_control_baseline",
+    "drift_state": {
+      "moment": "contemporary_foundation_model_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "foundation_model_providers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

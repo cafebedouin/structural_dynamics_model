@@ -1,0 +1,346 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__tradition_scripture_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_biblical_authority__tradition_scripture_reading",
+    "story_uid": "44145c41-5ff2-44f1-aac9-465a246b0d67"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Scripture Requires Tradition for Authoritative Interpretation; Magisterium Guards Deposit of Faith",
+    "topic_domain": "theological/ecclesial",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "clerical_hierarchy",
+      "magisterial_institutions",
+      "sacramental_ministry"
+    ],
+    "victims": [
+      "lay_interpretive_agency",
+      "non_magisterial_theologians",
+      "charismatic_movements"
+    ],
+    "vindicated_propositions": [
+      "apostolic_succession_continuity",
+      "sacramental_causality",
+      "deposit_of_faith_integrity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'biblical_authority' (reading_id: tradition_scripture_reading), distinct from sola_scriptura_reading and conciliar_reading?",
+      "resolution_mechanism": "Structural decomposition: if changing the observable (which authority interprets Scripture) changes the extraction profile, the observer is looking at different constraints. This reading instantiates high clerical extraction and centralized adjudication; siblings instantiate different beneficiary/victim structures.",
+      "impact": "Confirms ε-invariance: this constraint has a stable ε (0.78) assessed from this reading's lights on the standing arrangement. Sibling readings would author different ε values over the same referent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the biblical_authority kernel; sibling readings are separate constraints with distinct structural profiles."
+    },
+    {
+      "id": "tradition_as_coordination_vs_extraction",
+      "question": "Does the magisterium's interpretive monopoly serve a genuine coordination function (preventing doctrinal fragmentation) or is coordination the cover for clerical extraction?",
+      "resolution_mechanism": "Counterfactual observation: in polities where magisterial authority weakened (post-Reformation, post-Vatican II dissent), did doctrinal fragmentation increase proportionally to the loss of coordination, or did pluralism stabilize without centralized adjudication?",
+      "impact": "If fragmentation is low without magisterial monopoly, coordination is a cover and the constraint is snare; if fragmentation is high and costly, genuine tangled_rope with asymmetric extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether centralized interpretive authority is structurally necessary for doctrinal unity or a rent-extraction mechanism."
+    },
+    {
+      "id": "sacramental_mediation_necessity",
+      "question": "Is sacramental mediation (clerical administration of grace) a structural requirement of the system or an extractive institutional design?",
+      "resolution_mechanism": "Comparative ecclesiology: traditions with non-clerical sacraments or lay presidency (some Protestant, Orthodox economia) — do they exhibit grace-conferring failure or merely institutional difference?",
+      "impact": "If lay-administered sacraments are functionally equivalent, clerical mediation is extractive gatekeeping; if not, it is a coordination necessity with extraction layered atop.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the clerical monopoly on sacramental grace-conferral is structurally necessary or extractive."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 325,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1054,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1517,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1563,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1870,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 325,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1054,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1517,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1563,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1870,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 325,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1054,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1517,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1563,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1870,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 325,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the Catholic/Orthodox reading of biblical authority: Scripture is materially insufficient for doctrine without Tradition, and the magisterium (teaching office) exercises authoritative interpretation guarding the deposit of faith. The arrangement claims to solve the coordination problem of doctrinal unity across time and cultures; the extraction is the clerical monopoly on sacramental mediation and interpretive adjudication. Lay interpretive agency is structurally excluded — the victim class. The claim/metric divergence is deliberate: the constraint is CLAIMED as tangled_rope (genuine coordination with asymmetric extraction) while the authored metrics describe substantially extractive operation with active enforcement. The engine measures this divergence.",
+    "logic_rationale": "Extractiveness (0.78) is high because the magisterium's interpretive monopoly and sacramental gatekeeping concentrate authority and status in the clerical hierarchy, with lay agency bearing the cost of exclusion. Suppression (0.72) is substantial because the constraint persists through canonical penalties (excommunication, silencing), institutional control of formation, and exclusion of dissenting voices from教职 — not merely social pressure. Theater ratio (0.35) reflects genuine coordination (doctrinal stability, sacramental assurance) mixed with performative defense of institutional prerogatives. Accessibility collapse (0.65) is moderate: alternatives exist (Protestant, Orthodox conciliar models) but are structurally delegitimated within this reading. Resistance (0.58) is significant: historical Reformation, modern dissent, and ongoing theological contestation demonstrate the constraint meets active opposition.",
+    "directionality_logic": "Clerical hierarchy and magisterial institutions are structural beneficiaries (d near 0.0): they collect interpretive authority, sacramental control, and institutional rents. Lay interpretive agency and non-magisterial theologians are structural victims (d near 1.0): they bear exclusion costs with constrained exit (identity_locked — ecclesial identity fused to magisterial communion). Sacramental ministry sits dual: beneficiary of monopoly, payer of formation/obedience costs. The engine computes per-seat χ from these structural declarations.",
+    "perspectival_gap": "From the magisterial seat, the constraint is genuine coordination preserving apostolic continuity; from the lay seat, it is enforced extraction denying interpretive agency; from the analytical seat (this story), it is a tangled_rope where coordination and extraction are inseparable. The engine computes this divergence from beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "The founding problem (doctrinal unity against heresy/fragmentation) remains contested — the magisterium claims it is live; critics argue the problem has shifted to relevance/credibility. The arrangement persists with intensified extraction (Trent, Vatican I) and partial relaxation (Vatican II) but no sunset. Mandatrophy is unresolved: the coordination function (unity) is real but the extraction mechanism (clerical monopoly) has outgrown its justification.",
+    "kernel_context": "This constraint is the tradition_scripture_reading of the biblical_authority kernel. Sibling readings: sola_scriptura_reading (Scripture alone sufficient, self-interpreting) and conciliar_reading (Scripture interpreted through ecumenical councils and patristic consensus). This reading instantiates high clerical extraction via magisterial interpretive monopoly and sacramental mediation; low doctrinal fragmentation via centralized adjudication. The kernel contest centers on where interpretive authority resides: in the text alone, in conciliar reception, or in the living magisterium."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__sola_scriptura_reading",
+      "biblical_authority__conciliar_reading",
+      "sacramental_economy",
+      "clerical_celibacy_discipline",
+      "papal_infallibility_scope"
+    ],
+    "dual_formulation_note": "This reading of the biblical_authority kernel differs from sola_scriptura_reading (which eliminates the magisterial mediation layer, reducing extraction but increasing fragmentation) and conciliar_reading (which distributes interpretive authority across episcopal collegiality, reducing centralization). All three share the referent (Scripture's authority) but instantiate different beneficiary/victim structures and ε values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "clerical_hierarchy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Exercises the magisterium: defines doctrine, authorizes sacramental ministry, adjudicates orthodoxy. Collects institutional authority, status, and material support from the faithful. Exit would mean abandoning the clerical identity and sacramental ontology that constitutes their vocation — identity_locked, not merely constrained."
+    },
+    {
+      "name": "magisterial_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Congregations, tribunals, universities, and curial offices that administer the interpretive and sacramental monopoly. They accrue resources, personnel, and legal privileges from the constraint's operation. Can shift emphasis between coordination and extraction functions (arbitrage) but cannot exit the structure without institutional dissolution."
+    },
+    {
+      "name": "sacramental_ministry",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Priests and bishops who administer sacraments as grace-conferring acts requiring valid ordination. They benefit from the monopoly on sacramental mediation (status, authority, livelihood) but pay obedience costs (canonical submission, celibacy discipline, doctrinal conformity). Exit means laicization — identity rupture."
+    },
+    {
+      "name": "lay_interpretive_agency",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Baptized faithful who seek to interpret Scripture for themselves or their communities. Structurally excluded from authoritative interpretation; their interpretive acts are licensed only within magisterial boundaries. Exit requires leaving the communion (identity rupture) or internalizing subordination — identity_locked by baptismal ecclesiology."
+    },
+    {
+      "name": "non_magisterial_theologians",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "Academic theologians whose work is subject to magisterial review (nihil obstat, mandatum). They bear censorship risk, career constraints, and silencing penalties for dissent. Exit options: move to secular academia (constrained — loss of ecclesial vocation), submit (identity_locked), or migrate to other traditions (constrained — institutional barriers)."
+    },
+    {
+      "name": "charismatic_movements",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Spiritual movements claiming direct pneumatic authority bypassing clerical mediation. Structurally excluded from magisterial recognition unless they submit to hierarchical oversight. Their charism is either domesticated (becomes lay movement under supervision) or suppressed — trapped by the constraint's exclusion logic."
+    },
+    {
+      "name": "ecumenical_dialogue_partners",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Orthodox, Protestant, and Anglican bodies engaged in formal dialogue. They analyze this constraint as an obstacle to communion (papal primacy, magisterial infallibility) but have no structural power to alter it. Their analytical seat computes the constraint's type from outside the identity_lock."
+    }
+  ],
+  "gain_flow": "clerical_hierarchy",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Prevents doctrinal fragmentation across time and cultures by anchoring Scripture interpretation in a living, authoritative Tradition guarded by a teaching office — solves the problem of 'what does Scripture mean?' without splintering into competing private judgments.",
+    "transfer_function": "Moves interpretive authority, sacramental mediation, and ecclesial governance from the baptized body (lay agency, charismatic gifts, local discernment) to the clerical hierarchy (magisterium, ordained ministry, canonical structures) — the transfer is authority and grace-access, not primarily money.",
+    "absent_voices": "The laity as a class (not merely individual laypersons) — their sensus fidelium is invoked but never structurally empowered; women excluded from ordained ministry and thus from magisterial participation; Eastern Catholic churches whose conciliar tradition is subordinated to Roman centralization; victims of clerical abuse whose interpretive testimony was suppressed by the same machinery.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the magisterial interpretive monopoly vanished overnight, the Catholic/Orthodox communion would fracture into competing interpretive communities within years — sacramental validity would be contested, canonical unity would dissolve, and the institutional church would lose its defining structural coherence. The world rearranges because the constraint IS the institutional form.",
+    "founding_problem": "The early church faced proliferating heresies (Gnosticism, Arianism, etc.) claiming Scripture for contradictory doctrines. The founding problem: how to adjudicate Scripture's meaning authoritatively without either endless schism or imperial coercion. The solution: apostolic Tradition guarded by episcopal succession, later centralized in the Roman magisterium.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The magisterium attests the problem is live (ongoing doctrinal confusion, relativism). Historians (Harnack, Pelikan, Ratzinger) corroborate the historical founding problem but disagree on its persistence: Harnack sees early Catholicism as the problem's institutionalization; Ratzinger sees the problem as permanent. Protestant theologians (Barth, Kung) attest the problem was solved by the founding solution but the solution became a new problem (institutionalization of authority). No single corroboration outside the beneficiary set commands consensus."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sola_scriptura_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "conciliar_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scripture_requires_tradition_for_interpretation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "magisterium_guards_deposit_of_faith",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sacraments_require_valid_ordination",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "apostolic_deposit_guarded_by_episcopal_succession",
+    "drift_state": {
+      "moment": "post_vatican_ii_reception_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

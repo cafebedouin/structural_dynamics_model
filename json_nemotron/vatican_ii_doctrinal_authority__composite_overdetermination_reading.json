@@ -1,0 +1,415 @@
+{
+  "header": {
+    "constraint_id": "vatican_ii_doctrinal_authority__composite_overdetermination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_vatican_ii_doctrinal_authority__composite_overdetermination_reading",
+    "story_uid": "1b25f944-cc36-4bc9-900c-cba0b02d7d58"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vatican II Composite Overdetermination — Convergent Structural Changes Packaged as Unified Reform",
+    "topic_domain": "ecclesiology/institutional_history/hermeneutics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "progressive_episcopate",
+      "liturgical_reform_movement",
+      "ecumenical_establishment",
+      "reformist_theologians"
+    ],
+    "victims": [
+      "traditionalist_laity",
+      "pre_conciliar_formation_clergy",
+      "traditionalist_bishops",
+      "traditionalist_religious_orders"
+    ],
+    "vindicated_propositions": [
+      "collegiality_doctrine",
+      "religious_freedom_principle",
+      "liturgical_vernacularization",
+      "ecumenical_necessity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a single reading of the contested kernel 'vatican_ii_doctrinal_authority', and does the composite_overdetermination_reading instantiate a distinct constraint with its own ε from sibling readings?",
+      "resolution_mechanism": "Per Rule 1: generate only this reading as a clean ε-invariant constraint. The other readings (continuity_reading, rupture_progressive_reading, rupture_traditionalist_reading) are other constraints in other files. This omega records the kernel/reading identity so the committer frame is traceable.",
+      "impact": "If this reading were folded into a single constraint with siblings, ε would become measurement-dependent (violating ε-invariance). The decomposition into separate stories with network.affects_constraints links is the structural fix.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel/reading identity and ε-invariance compliance for composite_overdetermination_reading of vatican_ii_doctrinal_authority"
+    },
+    {
+      "id": "component_extractiveness_independence",
+      "question": "Do the liturgical, ecumenical, ecclesiological, and political components of Vatican II have independently measurable extractiveness values, or does the composite packaging force a single ε?",
+      "resolution_mechanism": "Separate constraint stories for each component (liturgical_reform_constraint, religious_freedom_constraint, ecumenical_engagement_constraint, ecclesiological_collegiality_constraint) with their own ε measurements, linked via network.affects_constraints to this composite story. If ε values differ significantly across components, the composite_overdetermination_reading is validated.",
+      "impact": "If components have divergent ε (e.g., liturgical = 0.65 extraction, religious_freedom = 0.25, ecumenism = 0.30, collegiality = 0.40), the single-ε continuity/rupture debate is a category error. This reading's claim that 'ambiguities are structural feature not bug' is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Independent extractiveness of Vatican II's convergent structural components"
+    },
+    {
+      "id": "ambiguity_as_feature_vs_bug",
+      "question": "Are the documented ambiguities in Vatican II texts (e.g., 'subsistit in', 'seeds of the Word', 'active participation') deliberately overdetermined to hold the coalition together, or are they genuine failures of conciliar precision?",
+      "resolution_mechanism": "Historical analysis of conciliar debates (acta synodalia), periti interventions, and voting records on ambiguous formulations. If ambiguities correlate with coalition-maintenance votes rather than theological precision votes, they are structural features.",
+      "impact": "If ambiguities are deliberate overdetermination, the constraint functions as a tangled_rope holding a coalition; if genuine failures, the constraint is a piton (degraded coordination) or snare (extraction via ambiguity). This reading asserts the former.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether conciliar ambiguities are structural features enabling coalition or bugs enabling heterodox capture"
+    },
+    {
+      "id": "enforcement_mechanism_post_conciliar",
+      "question": "What enforces the composite packaging post-conciliar — magisterial authority, institutional inertia, or the coalition's self-policing?",
+      "resolution_mechanism": "Trace post-conciliar disciplinary actions (e.g., 1974 Catechetical Directory, 1983 Code of Canon Law liturgical norms, 1990 Ex Corde Ecclesiae, 2007 Summorum Pontificum / 2021 Traditionis Custodes arc) to see whether enforcement targets deviation from the composite package or from individual components.",
+      "impact": "If enforcement selectively targets traditionalist dissent on liturgy while tolerating progressive dissent on ecclesiology, the composite is maintained by asymmetric enforcement (snare dynamics). If enforcement is even, it is genuine coordination maintenance (rope/tangled_rope).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Post-conciliar enforcement asymmetry across the composite's components"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1965,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "Vatican II (1962-1965) is conventionally treated as a single event — either a rupture or a continuity — but structurally it is a convergence of four distinct changes: (1) liturgical vernacularization and reform, (2) ecumenical engagement and religious freedom, (3) ecclesiological shift to collegiality and communio, (4) political reorientation toward modernity and human rights. These were negotiated by different conciliar coalitions, have different extractiveness profiles, and are enforced by different mechanisms post-conciliar. The 'composite overdetermination' reading holds that the Council's texts deliberately overdetermine key formulations (e.g., 'subsistit in', 'seeds of the Word') to hold the reform coalition together — the ambiguities are not bugs but the structural glue. This constraint story models the COMPOSITE PACKAGING as the constraint: the demand that all four components be accepted or rejected as a unified 'spirit of the Council' rather than evaluated on their independent merits.",
+    "key_agents": [
+      "progressive_episcopate: Primary beneficiary (institutional/biographical) — captures reform agenda, controls implementation",
+      "traditionalist_laity: Primary victim (organized/biographical) — bears liturgical/ecclesiological disruption, constrained exit",
+      "pre_conciliar_formation_clergy: Victim (moderate/biographical) — formation rendered obsolete, identity disruption",
+      "liturgical_reform_movement: Beneficiary (organized/biographical) — institutionalizes vernacular liturgy as career/life project",
+      "ecumenical_establishment: Beneficiary (institutional/generational) — gains structural foothold for interfaith infrastructure",
+      "reformist_theologians: Beneficiary (moderate/biographical) — professional validation, academic positions",
+      "traditionalist_bishops: Victim (powerful/biographical) — marginalized in governance, see authority structure inverted",
+      "traditionalist_religious_orders: Victim (organized/biographical) — vocations collapse, charism questioned",
+      "magisterium_post_conciliar: Agenda setter (institutional/civilizational) — administers composite enforcement",
+      "historical_theologian: Observer (analytical/civilizational) — sees component independence"
+    ],
+    "logic_rationale": "Extractiveness (0.42) is moderate: the composite packaging extracts assent to components a party might reject (e.g., a bishop accepting collegiality but resisting liturgical reform) by making the package the unit of loyalty. Suppression (0.38) is moderate: dissent is managed through canonical irregularity declarations, faculty restrictions, and appointment control — not total silencing. Theater ratio (0.55) is high: by 2025, a majority of 'conciliar implementation' activity is performative maintenance of the coalition (synodal processes, commemorative documents) rather than functional coordination. Accessibility collapse (0.45) is partial: component-level alternatives exist (extraordinary form, Eastern Catholic praxis, Orthodox ecclesiology) but are marginalized by the composite frame. Resistance (0.58) is significant: traditionalist movements, sedevacantism, and 'reform of the reform' demonstrate ongoing contestation. The measurement series shows extraction rising 1965-1985 as implementation hardens, then stabilizing; theater rising monotonically as functional coordination atrophies; suppression spiking 1965-1985 then flat — the enforcement infrastructure matured early.",
+    "directionality_logic": "Progressive episcopate and reformist theologians are structural beneficiaries (d ≈ 0.15-0.25): they collect institutional power, academic prestige, and control of the hermeneutic. Traditionalist laity and pre-conciliar clergy are structural targets (d ≈ 0.75-0.85): they bear the disruption of identity, liturgy, and formation with constrained exit (schism costs are existential). Traditionalist bishops are powerful but targeted (d ≈ 0.65): they have institutional platform but are disciplined by the composite's enforcement. Liturgical reform movement and ecumenical establishment are organized beneficiaries (d ≈ 0.2): they built careers/institutions on specific components. Magisterium is agenda_setter with analytical exit (d ≈ 0.3): it administers but is also constrained by the composite's internal logic.",
+    "mandatrophy_analysis": "The founding problem (1965) was: 'How does the Church engage modernity without losing identity?' — a genuine coordination problem across four fronts. The composite package solved it by overdetermination. By 2025, the modernity-engagement problem has mutated (secularism, not modernity, is the context), and the composite's components have diverged: liturgy shows high extraction/theater, religious freedom shows low extraction, ecumenism shows moderate coordination, collegiality shows contested implementation. The mandate has atrophied differentially across components. The composite_overdetermination_reading prevents mislabeling: it is not a snare (there is real coordination in religious freedom/ecumenism), not a rope (liturgical enforcement is extractive), not a mountain (it is constructed, not natural), not a scaffold (no sunset), not a piton (active enforcement persists). Tangled rope captures the hybrid: genuine coordination on some components, asymmetric extraction on others, held by active enforcement of the package.",
+    "kernel_context": "This constraint is the composite_overdetermination_reading of the contested kernel 'vatican_ii_doctrinal_authority'. Sibling readings: continuity_reading (organic development, no rupture), rupture_progressive_reading (spirit authorizes ongoing reform beyond texts), rupture_traditionalist_reading (rupture with tradition, ambiguities enable heterodoxy). This reading rejects the single-ε framing: each component has independent extractiveness; the continuity/rupture debate is a category error. The kernel's ambiguity is the structural feature enabling the composite's persistence."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "vatican_ii_liturgical_reform",
+      "vatican_ii_religious_freedom",
+      "vatican_ii_ecumenical_engagement",
+      "vatican_ii_ecclesiological_collegiality"
+    ],
+    "dual_formulation_note": "This constraint is the composite packaging story. The four affected constraints are the component-level stories, each with independent ε. The composite story extracts by making the package the unit of loyalty; component stories extract (or coordinate) on their own terms. The BGS pattern applies: upstream components (religious_freedom ≈ mountain/rope, ecumenism ≈ rope) influence downstream composite (tangled_rope), while liturgical_reform (snare/tangled_rope) and collegiality (tangled_rope) are contested mid-level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "progressive_episcopate",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control the conciliar implementation apparatus: episcopal conferences, liturgical commissions, catechetical offices, seminary formation. They collect the institutional prestige of 'being the Council's true interpreters' and direct resources to aligned movements. Exit is arbitrage-grade: they could defect to traditionalist positions but would lose all accumulated institutional capital."
+    },
+    {
+      "name": "traditionalist_laity",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bear the lived disruption of liturgical vernacularization, ecclesiological reorientation, and pastoral practices that treat their formation as obsolete. Their exit is identity-locked: the traditional Mass and pre-conciliar catechesis constitute their Catholic self-understanding; leaving the Church is existentially costly, staying means internal exile. They organize (FSSPX, traditionalist associations, online communities) but remain structurally targeted by the composite's enforcement."
+    },
+    {
+      "name": "pre_conciliar_formation_clergy",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ordained and formed in the pre-conciliar framework (Latin liturgy, Thomistic manuals, juridical ecclesiology). Their professional identity and spiritual formation are rendered discontinuous by the composite. Exit options are constrained: too old for re-formation, too invested for laicization, too loyal for schism. They become 'living anachronisms' in their own dioceses."
+    },
+    {
+      "name": "liturgical_reform_movement",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Consensus of periti, composers, pastoral musicians, and liturgists who built careers on the vernacular reform. They benefit from the composite's enforcement of the Novus Ordo as exclusive ordinary form. Exit is mobile: their skills transfer to academic, publishing, and consultancy roles even if the composite weakened."
+    },
+    {
+      "name": "ecumenical_establishment",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Pontifical Council for Promoting Christian Unity, World Council of Churches Catholic delegates, national ecumenical commissions. The composite's religious freedom and ecumenical components gave them structural mandate and funding. Exit is arbitrage-grade: the ecumenical infrastructure is now embedded in global Christianity; they would retain position even if the composite framing changed."
+    },
+    {
+      "name": "reformist_theologians",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Rahner, Küng, Schillebeeckx, Congar, Ratzinger (early), and their institutional heirs. The composite validated their theological methods (historical-critical, ressourcement) and secured academic chairs. Exit is mobile: theological prestige transfers across ecclesiastical boundaries; many already operate in secular academia."
+    },
+    {
+      "name": "traditionalist_bishops",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bishops like Lefebvre, Castro Mayer, Burke, Schneider — they hold episcopal authority but are disciplined by the composite's enforcement (canonical irregularity, restricted faculties, exclusion from synods). Their power is real but constrained: they can ordain, govern dioceses, attract vocations, but operate under permanent suspicion. Exit is constrained: schism (Lefebvre) carries excommunication; silence carries irrelevance."
+    },
+    {
+      "name": "traditionalist_religious_orders",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Orders founded on pre-conciliar charisms (e.g., traditional Franciscans, Dominicans, contemplatives using 1962 books). The composite's liturgical and ecclesiological components undermine their founding identity. Vocations collapse when the charism is questioned. Exit is identity-locked: the order IS the charism; reforming the charism dissolves the order. They bear diffuse costs across generations."
+    },
+    {
+      "name": "magisterium_post_conciliar",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Paul VI through Francis: the papal office administers the composite, interprets its texts, and enforces its unity. It is both author and prisoner of the composite — it cannot dissolve the package without delegitimizing its own authority (which rests on 'faithful implementation'). Exit is analytical: the magisterium can reinterpret but cannot externally exit the constraint it embodies."
+    },
+    {
+      "name": "historical_theologian",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars (O'Malley, Hahnenberg, Gaillardetz, traditionalist historians) who study the Council as historical event. They see the four components' independent negotiation histories, voting coalitions, and reception trajectories. They neither collect nor pay; they map the structure this constraint story models."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The composite package solved a genuine multi-front coordination problem: how to simultaneously (1) make liturgy accessible without fracturing rite unity, (2) engage other Christians without relativizing truth claims, (3) redefine Church-world relations without surrendering mission, (4) restructure episcopal authority without dissolving papal primacy. The overdetermined formulations ('subsistit in', 'seeds of the Word', 'active participation') were the coordination mechanism — they held the coalition together across theological differences.",
+    "transfer_function": "The composite transfers interpretive authority and institutional resources from the pre-conciliar framework (Roman Curia central control, Latin liturgy, juridical ecclesiology, confessional state model) to the post-conciliar coalition (episcopal conferences, vernacular liturgy, communio ecclesiology, religious freedom advocacy). It transfers liturgical agency from clergy to laity ('active participation'), ecumenical initiative from center to periphery, and political theology from integralism to human rights. The transfer is asymmetric: traditionalist positions lose institutional footing; progressive positions gain it.",
+    "absent_voices": "The 'silent majority' of 1960s Catholics who experienced the transition as disorientation without consultation — they were not at the Council, not in the periti groups, not in the implementation commissions. Their absence is structural: the composite was negotiated by elites (bishops, periti, curial officials) and imposed as reception. Also absent: Eastern Catholic voices (their liturgical/ecclesiological traditions were marginalized by Latin-centric reform), Global South bishops (collegiality promised voice but curial implementation recentralized), and lay women (excluded from periti/minority roles until late).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the composite packaging vanished overnight — meaning each component (liturgy, religious freedom, ecumenism, collegiality) were evaluated independently — the coalitions would fracture. Progressive bishops would lose the liturgical lever that enforces ecclesiological conformity. Traditionalist laity would lose the single target that unifies their resistance. The magisterium would lose the hermeneutic that legitimates its authority. The four component constraints would float free, each finding its own equilibrium (some rope, some snare, some mountain). The world rearranges because the composite IS the structure holding the post-conciliar Church together.",
+    "founding_problem": "How can the Catholic Church engage the modern world (secularism, pluralism, scientific rationality, human rights discourse) without either retreating into ghettoization or dissolving into accommodation? The Council's four components were the negotiated answer: vernacular liturgy for accessibility, religious freedom for pluralism, ecumenism for Christian unity, collegiality for governance reform. The composite packaging was the political technology that made the package pass the Council's voting thresholds.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Progressive theologians (O'Malley, Gaillardetz) attest the problem is live — modernity has mutated into post-modernity, new engagement needed. Traditionalist scholars (de Mattei, Kwasniewski) attest the problem was misdiagnosed — the Church should have converted the world, not accommodated it. Independent historians (Chenu's periti archives, Alberigo's five-volume history) corroborate the negotiated, coalition-dependent nature of the composite. No single party's attestation is definitive; the contested status is the structural fact."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rupture_progressive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rupture_traditionalist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "conciliar_texts_are_deliberately_overdetermined",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "continuity_rupture_debate_is_category_error",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "component_independent_extractiveness",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "conciliar_coalition_unity",
+    "drift_state": {
+      "moment": "post_synodal_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

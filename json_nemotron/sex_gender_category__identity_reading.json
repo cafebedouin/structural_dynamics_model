@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "sex_gender_category__identity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "8b68f315-7b4f-4fb2-93c9-44efc888be94"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Category Membership by Subjective Gender Identity (Self-Identification)",
+    "topic_domain": "social_ontology/legal_classification",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "trans_women",
+      "nonbinary_people"
+    ],
+    "victims": [
+      "cis_women",
+      "trans_women"
+    ],
+    "vindicated_propositions": [
+      "gender_self_determination",
+      "trans_inclusion_in_women_spaces"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity_vs_biology",
+      "question": "Is sex/gender category membership a reading of the contested kernel 'sex_gender_category' (identity_reading vs biology_reading vs hybrid_reading)?",
+      "resolution_mechanism": "Meta-analysis of how different institutional frameworks (legal, medical, social) instantiate different readings; track which reading governs in each domain and what structural consequences follow.",
+      "impact": "If multiple readings coexist as live institutional options, the kernel is genuinely contested and each reading should be modeled as a separate constraint. If one reading has been legally foreclosed in a jurisdiction, that reading's constraint there is inert.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this constraint is one reading of a multi-reading kernel rather than a standalone constraint."
+    },
+    {
+      "id": "cis_women_as_victim_and_beneficiary",
+      "question": "Are cis women simultaneously victims (losing exclusive sex-based protections) and beneficiaries (of expanded gender-inclusive frameworks) under the identity reading?",
+      "resolution_mechanism": "Empirical study of cis women's lived experience in jurisdictions with self-ID laws: do they report net loss of sex-based protections, net gain from inclusive frameworks, or both simultaneously?",
+      "impact": "If cis women are dual-positioned, the constraint's extraction profile is more complex than simple beneficiary/victim partition. The engine's per-seat computation would need to reflect this duality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cis women occupy a structurally dual position under identity-based category membership."
+    },
+    {
+      "id": "trans_women_as_dual_positioned",
+      "question": "Are trans women simultaneously beneficiaries (gaining category access) and victims (experiencing misogyny after inclusion) under the identity reading?",
+      "resolution_mechanism": "Longitudinal study of trans women's experiences post-legal transition: track both category access benefits and misogyny exposure to measure net structural position.",
+      "impact": "Dual positioning of trans women would make the constraint a classic tangled rope — coordination (inclusion) AND asymmetric extraction (misogyny exposure) in the same structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the primary beneficiary group also bears extraction within the same constraint."
+    },
+    {
+      "id": "enforcement_cost_vs_conflict_intensity",
+      "question": "Why are boundary enforcement costs low but space-access conflicts high under self-identification?",
+      "resolution_mechanism": "Compare administrative costs of self-ID systems vs gatekept systems; separately measure conflict frequency/intensity over single-sex spaces, sports, prisons, shelters.",
+      "impact": "If enforcement is cheap but conflict is intense, the constraint's suppression operates through social contest rather than state coercion — a different structural signature than high-enforcement snares.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The dissociation between low formal enforcement cost and high social conflict under self-ID."
+    },
+    {
+      "id": "suppression_mechanism_identity_reading",
+      "question": "Is suppression under the identity reading primarily structural (legal/administrative barriers to biology-based claims) or internalized (social pressure to accept self-ID, fear of ostracism for dissent)?",
+      "resolution_mechanism": "Post-policy-change suppression trajectory: if suppression persists or shifts form after legal barriers are removed, reclassify as partially internalized. Survey dissenters' reported costs of non-compliance.",
+      "impact": "If internalized, the constraint's effective suppression is higher than structural measures suggest — the target carries suppression with them after formal exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in identity-based category systems."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the identity reading of the contested kernel 'sex_gender_category': category membership in 'woman' (and related legal/social categories) is determined solely by subjective gender identity (self-identification). Under this reading, trans women are included in the category 'woman' without medical gatekeeping, expanding the victim set to include trans women experiencing misogyny while cis women lose exclusive claim to sex-based protections. Boundary enforcement costs are low (administrative self-declaration replaces medical/legal gatekeeping) but conflict over space access (shelters, prisons, sports, changing rooms) is high. The constraint functions as a tangled rope: it solves a genuine coordination problem (providing clear, accessible category membership for trans and nonbinary people) while simultaneously creating asymmetric extraction (cis women lose exclusive protections; trans women gain inclusion but enter misogyny-exposed positions). Active enforcement is required to maintain inclusion against biology-based challenges.",
+    "key_agents": [
+      "trans_women: Primary beneficiary (gain category access) and victim (enter misogyny-exposed positions) — identity_locked exit",
+      "cis_women: Primary victim (lose exclusive sex-based protections) — constrained exit",
+      "nonbinary_people: Beneficiary (gain recognition pathway) — constrained exit",
+      "biology_reading_advocates: Excluded (would object but structurally locked out of self-ID frameworks) — trapped exit",
+      "institutions_courts_employers: Agenda setter (administer category rules) — institutional power, arbitrage exit"
+    ],
+    "logic_rationale": "Extractiveness (0.35) is moderate: the constraint transfers sex-based protections from an exclusive to an inclusive basis, which is a real resource transfer but not pure rent extraction. Suppression (0.25) is low-moderate: formal enforcement is cheap (self-declaration), but social/institutional pressure to conform to the reading creates internalized suppression for dissenters. Theater ratio (0.4) is significant: much institutional discourse performs 'inclusion' while material conditions for both trans women and cis women remain contested. Accessibility collapse (0.55) reflects that alternatives (biology-based, hybrid models) are not fully collapsed — they remain live in law, medicine, and social practice. Resistance (0.6) is high: the reading faces sustained challenge from biology_reading and hybrid_reading proponents across legal, political, and cultural domains.",
+    "perspectival_gap": "From the trans_women seat: the constraint is primarily coordination (access to correct category, dignity, legal recognition) with secondary extraction (misogyny exposure). From the cis_women seat: the constraint is primarily extraction (loss of sex-based protections, forced inclusion of male-bodied people in female spaces) with minimal coordination benefit. From the institutions seat: the constraint is coordination (administrative simplicity, legal clarity) with manageable conflict costs. The engine computes these divergent seat types from the structural data — the authored claim (tangled_rope) does not adjudicate them.",
+    "directionality_logic": "Trans women are structural beneficiaries (d ~ 0.2) — they gain category access and legal recognition. But they are also victims (d ~ 0.7 for misogyny exposure post-inclusion) — identity_locked exit means they cannot leave the 'woman' category without undoing their transition. Cis women are structural victims (d ~ 0.8) — they lose exclusive protections with constrained exit (cannot opt out of the inclusive category system). Nonbinary people are beneficiaries (d ~ 0.3) with constrained exit. Institutions are agenda setters (d ~ 0.4) — they administer the system but face conflict costs. Biology_reading advocates are excluded (d ~ 0.9) — trapped, their preferred framework is legally foreclosed in self-ID jurisdictions.",
+    "mandatrophy_analysis": "The founding problem (coordination: how to categorize trans people without medical gatekeeping) is live but contested. The identity reading resolves it by making self-ID sufficient, but creates new extraction (cis women's lost protections, trans women's misogyny exposure). The constraint is not a piton — it is actively maintained and expanded, not theatrically preserved. It is not a snare — the coordination function is genuine and the beneficiary group (trans people) is not a cover for extraction. The tangled rope classification captures the real duality: inclusion IS coordination, but it redistributes vulnerability asymmetrically.",
+    "kernel_context": "This constraint is the identity_reading of the contested kernel 'sex_gender_category'. Sibling readings: biology_reading (category membership by immutable reproductive biology) and hybrid_reading (category membership by biology + social transition with medical gatekeeping). The identity_reading forecloses the biology_reading's core premise (biology as necessary condition) within any single legal framework — a jurisdiction cannot simultaneously require biology AND accept self-ID as sufficient. It coexists with hybrid_reading in practice (some jurisdictions use hybrid models, others self-ID). It influences hybrid_reading by making medical gatekeeping appear increasingly illegitimate, creating downstream pressure toward self-ID."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "sex_gender_category__biology_reading",
+      "sex_gender_category__hybrid_reading",
+      "single_sex_space_access",
+      "sports_category_eligibility",
+      "prison_placement_policy"
+    ],
+    "dual_formulation_note": "Part of the sex_gender_category constraint family. The identity_reading treats self-identification as sufficient for category membership; the biology_reading treats reproductive biology as necessary; the hybrid_reading requires both biology and transition. Each reading instantiates a different constraint with different beneficiary/victim structures and different ε values. This decomposition follows the ε-invariance principle: the label 'gender category membership' covers structurally distinct claims with different extraction profiles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "trans_women",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Gain legal recognition and access to women's spaces/services through self-declaration. This inclusion is the coordination function. But they also enter positions exposed to misogyny (harassment, violence, reproductive control) that they would not face as men — a structural extraction that comes with the category. Exit from the 'woman' category means detransition, which is identity-locked (core self-concept fused with gender identity)."
+    },
+    {
+      "name": "cis_women",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose exclusive claim to sex-based protections (shelters, prisons, sports, shortlists, healthcare). The category 'woman' now includes people they regard as male-bodied, which they experience as extraction of their sex-class protections. Exit is constrained: they cannot opt out of the legal category system; they can only advocate for biology-based exemptions or separate categories."
+    },
+    {
+      "name": "nonbinary_people",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gain recognition pathway through self-ID systems that often include nonbinary markers. The coordination benefit is real (legal recognition without medical gatekeeping). But they may face new vulnerabilities in a binary legal system that still mostly recognizes only 'man' and 'woman'. Exit is constrained — they need the recognition system to function."
+    },
+    {
+      "name": "biology_reading_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold that sex is immutable and category membership should track biology. In self-ID jurisdictions, their framework is legally foreclosed — they cannot implement biology-based policies. They are structurally excluded from the conversation; their objections are treated as illegitimate. Exit is trapped — they must operate under a categorization system they reject as false."
+    },
+    {
+      "name": "institutions_courts_employers",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administer the self-ID system: process declarations, adjudicate space-access disputes, implement policies. They benefit from administrative simplicity (self-declaration is cheaper than medical gatekeeping) but bear conflict costs (litigation, policy challenges, public controversy). They have arbitrage exit — they can modify implementation details or seek legislative clarification without losing institutional legitimacy."
+    },
+    {
+      "name": "trans_men",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Gain legal recognition as men through self-declaration. Coordination benefit is real (correct category, dignity). Extraction is lower than for trans women — they gain male privilege rather than entering misogyny-exposed positions. Exit is identity-locked (detransition required to leave 'man' category)."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides an accessible, administratively simple pathway for trans and nonbinary people to have their gender legally recognized and access corresponding spaces/services without medical gatekeeping.",
+    "transfer_function": "Moves sex-based protections and category access from an exclusive (biology-based) basis to an inclusive (identity-based) basis. Cis women lose exclusive protections; trans women and nonbinary people gain inclusion. The transfer is not monetary but status/protection/access.",
+    "absent_voices": "Biology-reading feminists and gender-critical advocates are structurally excluded from self-ID policy processes — their framework is treated as illegitimate. Detransitioners (who would testify to the costs of easy entry/exit) are often marginalized in trans advocacy spaces. Parents of gender-questioning youth are sometimes excluded from medical/legal decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If self-ID vanished overnight, trans people would revert to medical-gatekept or biology-based systems, losing accessible recognition. Cis women would regain exclusive sex-based protections. Institutions would face higher administrative costs for gatekeeping. The legal/social landscape would reorganize around whatever reading replaced it (likely hybrid or biology).",
+    "founding_problem": "How to provide legal recognition and social inclusion for trans people without requiring medical transition as a prerequisite — the medical gatekeeping model excluded many trans people (cost, access, medical contraindications, nonbinary identities).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Trans advocacy organizations and medical bodies (WPATH, major psychiatric associations) attest the problem is live — medical gatekeeping still excludes many. Gender-critical feminists and some legal scholars attest the problem is contested — they argue the founding problem was misdiagnosed and the solution creates new harms. No neutral third party corroborates either side exclusively."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "sex_gender_category"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "biology_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gender_identity_sufficient_for_category_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "self_determination_grounds_legal_recognition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "medical_gatekeeping_model",
+    "drift_state": {
+      "moment": "self_id_legislative_wave",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

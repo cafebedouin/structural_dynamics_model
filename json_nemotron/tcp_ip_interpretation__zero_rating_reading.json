@@ -1,0 +1,338 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__zero_rating_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_tcp_ip_interpretation__zero_rating_reading",
+    "measurement_id_prefix": "tcp_ip_interpretation__zero_rating_reading",
+    "story_uid": "167f1cb6-90fb-4fb3-81e8-3368dc90190c"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Zero-Rating Sponsored Data Exemptions under TCP/IP Interpretation",
+    "topic_domain": "technology_governance/internet_policy/telecommunications_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_platforms",
+      "isp_carriers"
+    ],
+    "victims": [
+      "competitive_entrants",
+      "end_users_non_partnered",
+      "content_providers_non_partnered"
+    ],
+    "vindicated_propositions": [
+      "network_management_flexibility_doctrine",
+      "sponsored_data_as_business_model"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "isp_carriers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate the network infrastructure and administer zero-rating programs. Negotiate sponsorship deals with content providers, collect sponsorship fees (directly or via data plan upsells), and enforce the technical exemptions at the packet-inspection layer. Justify the arrangement as network management flexibility and consumer choice."
+    },
+    {
+      "name": "incumbent_platforms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Large, established content and application providers (video streaming, social media, messaging) that can afford sponsorship fees. Gain competitive advantage: their traffic is zero-rated while rivals' traffic counts against user caps. This entrenches market position and raises entry barriers for new competitors who cannot match sponsorship costs."
+    },
+    {
+      "name": "competitive_entrants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "New or smaller content providers, startups, and niche platforms. Cannot afford zero-rating sponsorship fees at scale. Their traffic consumes user data caps while incumbent traffic does not, creating a structural cost disadvantage that distorts competition on the merits. Exit means abandoning the market or accepting the disadvantage."
+    },
+    {
+      "name": "content_providers_non_partnered",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Mid-sized content providers and independent creators who lack sponsorship deals. Their audiences face data-cap penalties for consuming their content, while zero-rated competitors do not. They bear the extraction indirectly through audience attrition and reduced engagement."
+    },
+    {
+      "name": "end_users_non_partnered",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Subscribers on capped data plans whose usage of non-zero-rated services consumes their allowance. They pay the opportunity cost: either restrict usage to zero-rated services (reducing choice) or pay overage fees. In markets with limited ISP competition, switching providers is not feasible."
+    },
+    {
+      "name": "consumer_advocacy_groups",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Represent user interests in regulatory proceedings. Argue zero-rating violates non-discrimination principles and harms competition. Their participation is permitted in rulemaking but their preferred outcome (prohibition) is structurally opposed by the agenda-setters who benefit from the arrangement."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "FCC, Ofcom, BEREC, and national telecom regulators. Oversee whether zero-rating complies with net neutrality or open internet rules. Can impose remedies (transparency requirements, case-by-case review, outright bans) but face industry lobbying and jurisdictional fragmentation. Their enforcement posture shifts with political cycles."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allows ISPs to manage network congestion and offer differentiated service tiers by exempting sponsored traffic from data caps, theoretically lowering consumer cost for popular services and enabling new business models for content delivery.",
+    "transfer_function": "Moves competitive advantage and audience access from non-partnered content providers to partnered incumbents; moves sponsorship revenue from platforms to ISPs (or from users to ISPs via plan upsells); moves data-cap burden from zero-rated traffic to all other traffic.",
+    "absent_voices": "Small content creators, niche platforms, and users in monopolistic ISP markets who cannot switch providers. They would object to the competitive distortion and reduced choice but are not represented in the sponsorship negotiation between ISPs and incumbent platforms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If zero-rating exemptions vanished overnight, ISPs would lose a sponsorship revenue stream and a network-management tool; incumbent platforms would lose their data-cap advantage and face renewed competitive pressure; competitive entrants would gain a more level playing field; users would see uniform data-metering but potentially higher baseline costs if ISPs recoup lost sponsorship revenue.",
+    "founding_problem": "Growing mobile data demand strained network capacity; ISPs sought traffic-management tools and new revenue streams; large content providers sought guaranteed quality of experience for their users; consumers faced rising data costs.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "ISPs and incumbent platforms attest the founding problem (congestion, cost, quality) remains live and zero-rating is a valid response. Consumer advocates, competition authorities, and independent economic analyses (e.g., BEREC 2016 guidelines, FCC 2015 Open Internet Order record, academic studies on zero-rating competitive effects) attest the founding problem has been substantially addressed by capacity expansion and that the arrangement now functions primarily as rent extraction and competitive foreclosure."
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the zero-rating reading of the contested TCP/IP interpretation kernel. Under this reading, the protocol suite's silence on application-layer discrimination is read as permission for ISPs to exempt sponsored content from data caps. The arrangement presents as a coordination mechanism (traffic management, consumer savings) but operates with substantial asymmetric extraction: incumbent platforms pay for privileged access, competitive entrants are structurally disadvantaged, and users on capped plans face distorted choice sets. The claim/metric gap is deliberate — the reading claims coordination (rope/tangled_rope framing) while the authored metrics describe a substantially extractive, actively enforced structure that advantages powerful incumbents.",
+    "logic_rationale": "Extractiveness (0.68) is substantial because the sponsorship model transfers competitive advantage and revenue to incumbents and ISPs while the coordination justification (congestion management) has weakened as capacity expanded. Suppression (0.72) is high because the constraint's persistence depends on active enforcement: deep-packet inspection to identify zero-rated traffic, contractual exclusivity terms, and regulatory capture that prevents prohibition. Theater ratio (0.38) reflects that the network-management justification is real but declining in proportion to the rent-extraction function. The measurement series uses a shared time grid (2010-2025, 6 points) so every metric is authored at every examined point.",
+    "directionality_logic": "ISP carriers are structural beneficiaries (collect sponsorship revenue, control the rules, arbitrage-grade exit — d near beneficiary end). Incumbent platforms are beneficiaries (gain competitive moat, mobile exit — d near beneficiary end). Competitive entrants and non-partnered content providers are targets (bear competitive disadvantage, constrained exit — d near target end). End users on capped plans are targets (bear opportunity cost, trapped exit in monopoly markets — d near target end). Consumer advocates are excluded (would object, constrained exit). Regulators are observers (analytical seat).",
+    "perspectival_gap": "The agenda-setter/beneficiary seats (ISPs, incumbents) experience this as a legitimate business model and network management tool — genuine coordination from their position. The payer seats (entrants, non-partnered providers, capped users) experience the same structure as enforced extraction that distorts competition and choice. The engine computes this per-seat divergence from the structural data; the authored claim (tangled_rope) acknowledges both functions exist simultaneously.",
+    "mandatrophy_analysis": "The founding problem (congestion, cost, quality) is contested: ISPs and incumbents say it persists; independent evidence says capacity expansion has largely solved it while the arrangement persists as rent extraction. This is a classic mandatrophy signature — a coordination arrangement whose founding justification has atrophied but whose enforcement machinery remains active and expands. The theater trajectory (rising) and extractiveness trajectory (rising) confirm the drift from coordination toward extraction.",
+    "kernel_context": "This is the zero_rating_reading of the tcp_ip_interpretation kernel. Sibling readings: neutrality_reading (TCP/IP embodies end-to-end non-discrimination), prioritization_reading (TCP/IP permits differentiated QoS as network management). This reading instantiates the permission for selective sponsored-content exemptions. The structural delta from the neutrality reading is the authorization of commercial discrimination at the application layer; from the prioritization reading, the delta is that exemptions are commercially sponsored rather than technically managed."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_structure",
+      "question": "This constraint is one reading (zero_rating_reading) of the contested tcp_ip_interpretation kernel. What would the sibling readings change structurally?",
+      "resolution_mechanism": "Comparative analysis of the three readings' beneficiary/victim structures, extractiveness profiles, and enforcement requirements. The kernel context declares the expected deltas: ISPs authorized to partner with content providers for data cap exemptions; incumbent platforms advantaged; competitive entry barriers raised.",
+      "impact": "If the neutrality_reading were instantiated instead, extractiveness would be near-zero (mountain/rope), beneficiaries would be end-users generally, victims would be absent. If prioritization_reading were instantiated, extractiveness would be moderate (technical QoS management), beneficiaries would be latency-sensitive applications, victims would be best-effort traffic. The reading choice IS the constraint identity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee frame: this constraint is one reading of a contested kernel; sibling readings instantiate different constraints with different ε and structural profiles"
+    },
+    {
+      "id": "congestion_justification_validity",
+      "question": "Does zero-rating materially reduce network congestion, or is the congestion-management justification a cover for rent extraction?",
+      "resolution_mechanism": "Empirical analysis of traffic patterns in jurisdictions with and without zero-rating; ISP internal capacity-planning documents; comparative network performance metrics during peak hours with zero-rated vs. non-zero-rated traffic.",
+      "impact": "If congestion reduction is negligible, the coordination function is largely theatrical and the constraint trends toward snare. If substantial, the tangled_rope classification is sustained but the extraction/coordination boundary remains contested.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the stated coordination function (congestion management) materially operates or is pretextual"
+    },
+    {
+      "id": "competitive_foreclosure_magnitude",
+      "question": "How large is the competitive disadvantage imposed on non-zero-rated entrants, and does it constitute foreclosure or merely distortion?",
+      "resolution_mechanism": "Market-entry rates and survival analysis for content providers in zero-rating vs. non-zero-rating markets; user engagement differentials between zero-rated and metered competitors; econometric estimation of sponsorship cost as barrier to entry.",
+      "impact": "If foreclosure is demonstrated (entrants systematically fail or cannot enter), the extraction is structural and the constraint's persistence is actively harmful to market structure. If merely distortionary, the constraint is harmful but potentially remediable by transparency or non-discrimination rules.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude and nature of competitive harm to non-partnered content providers"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__prioritization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one member of the tcp_ip_interpretation constraint family (kernel: tcp_ip_interpretation). The three readings — neutrality_reading, prioritization_reading, zero_rating_reading — decompose the colloquial label 'TCP/IP interpretation' into structurally distinct claims with different ε values, beneficiary/victim structures, and enforcement profiles. They are linked via affects_constraints to enable contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "neutrality_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "prioritization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protocol_silence_permits_commercial_discrimination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sponsored_data_enables_consumer_savings",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "early_mobile_broadband_expansion",
+    "drift_state": {
+      "moment": "post_capacity_expansion_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__prioritization_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

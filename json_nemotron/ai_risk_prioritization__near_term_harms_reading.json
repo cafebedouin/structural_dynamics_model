@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_prioritization__near_term_harms_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "2e3a6c55-84e3-4bc3-afd2-6494b2338e6c"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.42,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Near-Term AI Harm Prioritization Frame",
+    "topic_domain": "technology_governance/ai_safety/risk_assessment",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "marginalized_communities",
+      "fairness_accountability_researchers",
+      "labor_rights_advocates",
+      "digital_rights_organizations"
+    ],
+    "victims": [
+      "x_risk_research_funding",
+      "longtermist_institutional_attention"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "marginalized_communities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Experience algorithmic discrimination in hiring, lending, policing, and healthcare today. Their lived reality is the evidence base for this reading. They have no structural exit from the systems that classify, score, and gatekeep them — exit would mean opting out of employment, credit, public services, or freedom of movement."
+    },
+    {
+      "name": "low_wage_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear displacement and surveillance harms from algorithmic management, gig platforms, and workplace AI. They pay through lost autonomy, wage theft via algorithmic opacity, and biometric monitoring. They benefit from this reading's push for worker protections and transparency mandates, but their exit options are constrained by economic necessity — they cannot refuse algorithmic work arrangements without losing livelihood."
+    },
+    {
+      "name": "surveilled_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Subject to facial recognition, predictive policing, social scoring, and border AI systems. They bear the false-positive costs, chilling effects, and democratic erosion. Exit is structurally blocked — these systems are embedded in state infrastructure, public space, and migration pathways. This reading centers their experience as the primary harm evidence."
+    },
+    {
+      "name": "fairness_accountability_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build the technical and policy infrastructure for bias audits, impact assessments, and regulatory compliance. They gain funding, institutional recognition, and field-defining authority from this reading's dominance. Their exit options are mobile — they can move between academia, industry labs, civil society, and regulatory bodies. They are not trapped by the frame; they help construct it."
+    },
+    {
+      "name": "labor_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Leverage this reading to win algorithmic transparency laws, worker data rights, and collective bargaining over AI deployment. They gain policy traction and membership relevance. Exit is mobile — they operate in established labor law frameworks and can pivot strategies. They benefit from the reading's resource allocation toward worker protections."
+    },
+    {
+      "name": "digital_rights_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Campaign against biometric surveillance, predictive policing, and automated decision-making in public services. They gain litigation opportunities, donor visibility, and legislative windows from this reading's framing. Mobile exit — they operate across jurisdictions and issue areas. Not trapped by the frame."
+    },
+    {
+      "name": "x_risk_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "See funding and talent diverted from alignment research to near-term auditing. They argue the reading suppresses consideration of catastrophic tail risks that require long-horizon investment. Their exit is constrained — the field's epistemology and funding structures are shaped by the dominant risk frame. They cannot easily rebuild a displaced research agenda."
+    },
+    {
+      "name": "longtermist_institutions",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Philanthropic and research organizations (e.g., Open Philanthropy, Future of Life Institute) that prioritize existential risk. They lose narrative control over the 'AI safety' brand and see policy windows captured by near-term frames. Their exit is arbitrage-grade — they command independent capital, global networks, and multi-decade horizons. They are not trapped; they contest the frame from a position of structural power."
+    },
+    {
+      "name": "ai_policy_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Write and enforce AI acts, executive orders, and sectoral rules. They must allocate finite enforcement capacity. This reading gives them a clear, measurable, politically legible mandate: audit deployed systems, ban harmful uses, protect rights now. They gain bureaucratic legitimacy and congressional mandate. Their analytical exit means they can evaluate frames without being captured by any single one — but their institutional role forces a choice of priority."
+    },
+    {
+      "name": "industry_ai_labs",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Bear compliance costs for bias audits, transparency reporting, and deployment restrictions. They also benefit: near-term regulation is legible, finite, and creates moats against smaller competitors. They can afford compliance; startups cannot. Their arbitrage exit means they can shape, lobby, relocate, or acquire their way through regulatory regimes. They are not trapped by this reading — they instrumentalize it."
+    },
+    {
+      "name": "academic_ai_ethics_field",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces the evidence base for this reading: audit methodologies, disparity measurements, harm taxonomies. They observe the frame's construction and contest its boundaries from within. Analytical exit — they evaluate the reading's epistemic adequacy, not just its political utility. Their situation is to maintain methodological rigor while the policy world instrumentalizes their output."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates attention, funding, and regulatory capacity toward measurable, documentable harms from deployed AI systems — discrimination, displacement, surveillance — creating a shared evidentiary and policy framework for justice interventions.",
+    "transfer_function": "Moves research funding, policy attention, regulatory enforcement capacity, and narrative authority from long-horizon existential risk research toward near-term algorithmic justice work: bias audits, worker data rights, surveillance bans, impact assessments. From x-risk researchers and longtermist institutions to fairness/accountability researchers, labor advocates, digital rights orgs, and affected communities.",
+    "absent_voices": "Future generations who would bear existential catastrophe costs — they are structurally excluded from present deliberation. Also excluded: populations in Global South regions where both near-term deployment harms AND long-term capability externalities concentrate, but who lack representation in either research community. The x-risk reading's 'future stakeholders' are a rhetorical construct, not a seated voice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished overnight, regulatory agendas would shift toward capability control and alignment metrics; funding would flow to interpretability and scalable oversight rather than bias audits and worker protections; affected communities would lose their primary policy lever. The material arrangements of AI governance would reorganize around a different harm ontology.",
+    "founding_problem": "AI systems deployed at scale since ~2016 were producing documented, measurable harms — racial bias in criminal risk scores, gender bias in hiring algorithms, worker exploitation via algorithmic management, mass biometric surveillance — while the dominant 'AI safety' discourse focused on speculative future AGI scenarios. This reading was built to force the field to account for harms happening now, to people who cannot wait.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Documented by independent investigative journalism (ProPublica's COMPAS exposé, 2016), academic audit literature (Buolamwini & Gebru 2018, Raji et al. 2020), labor organizing (Alphabet Workers Union, App Workers Alliance), and regulatory findings (EU AI Act high-risk categories, FTC algorithmic disgorgement cases). Corroboration comes from outside the benefiting research community — from courts, journalists, workers, and regulators who had no stake in the 'AI ethics' field's formation."
+  },
+  "interval": {
+    "start": 2016,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'near-term harms' reading of the contested kernel 'AI risk prioritization.' The reading asserts that AI risk is primarily constituted by measurable, deployed-system harms — algorithmic discrimination in lending/hiring/policing, worker displacement and surveillance via algorithmic management, biometric mass surveillance — and that justice interventions (bias audits, worker protections, surveillance regulation) are the paramount response. The kernel is contested: the sibling 'existential_risk_reading' frames AI risk as primarily extinction-level threat from misaligned AGI, demanding alignment research as the paramount intervention. This story authors ONLY the near_term_harms_reading as a clean ε-invariant constraint. The committer structure (kernel_id, reading_id, sibling relations) is routed to omega variables and cs_structure per Rules 2 and 4.",
+    "logic_rationale": "Extractiveness is low (0.25) because this reading's operation primarily coordinates resources toward documented harms rather than extracting from a trapped population. The 'victims' declared (x_risk_research_funding, longtermist_institutional_attention) experience resource diversion, not material extraction — they remain powerful actors with arbitrage exit. Suppression (0.42) reflects the reading's rhetorical marginalization of x-risk concerns as 'speculative distraction,' which shapes funding and hiring but does not physically prevent x-risk work. Theater ratio (0.18) captures the growing performative compliance by industry labs (ethics boards, published principles) that do not change deployment practices. Accessibility collapse (0.35) is moderate — alternatives (x-risk framing) remain institutionally viable and well-funded. Resistance (0.58) is significant: the reading faces active contestation from longtermist institutions, industry labs, and parts of the AI research community.",
+    "directionality_logic": "Marginalized communities, low-wage workers, and surveilled populations are structural payers (bear harms) and beneficiaries (gain protections) — their exit is trapped or constrained, so directionality is high target. Fairness researchers, labor advocates, and digital rights orgs are beneficiaries with mobile exit — directionality near zero. X-risk researchers and longtermist institutions are declared victims of resource diversion but hold moderate-to-institutional power with constrained-to-arbitrage exit — their effective extraction is dampened by exit quality. Industry labs are payers (compliance costs) and beneficiaries (moat creation) with arbitrage exit — directionality near symmetric. Regulators are agenda_setters with analytical exit. The engine computes per-seat χ from these structural declarations.",
+    "perspectival_gap": "From the marginalized community seat, this reading is a rope — genuine coordination toward justice. From the x-risk researcher seat, it functions as a snare — their research agenda is suppressed by a frame that declares their core concern 'speculative.' From the industry lab seat, it is a tangled rope — real compliance burden (coordination) that also creates competitive moats (extraction). The engine computes this divergence; the claim 'rope' reflects the authoring seat's assessment of the constraint's dominant structural character.",
+    "mandatrophy_analysis": "The founding problem (documented near-term harms ignored by x-risk discourse) remains live — harms have intensified with LLM deployment. No mandatrophy: the reading's function has not atrophied. However, the reading's own success creates a new risk: as near-term regulation matures (EU AI Act, US executive orders), the coordination function may be captured by compliance theater, and the reading could drift toward piton if the justice interventions become performative checkboxes. The theater_ratio trajectory (0.05→0.18) warrants monitoring.",
+    "kernel_context": "This constraint is the near_term_harms_reading of the ai_risk_prioritization kernel. The sibling reading is existential_risk_reading. The kernel contest centers on: (1) victim set — present marginalized populations vs. future generations; (2) resource allocation — bias audits/worker protections/surveillance regulation vs. alignment research/interpretability/scalable oversight; (3) timescale — 0-5 years vs. 10-50+ years; (4) beneficiary — marginalized communities/fairness researchers vs. alignment researchers/longtermist institutions; (5) suppression mechanism — x-risk framed as speculative distraction vs. near-term harms framed as 'tractable but not existential.'"
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the ai_risk_prioritization kernel a single commitment with multiple readings, or are these two distinct constraint stories artificially linked by a shared label?",
+      "resolution_mechanism": "Trace whether the two readings share a stabilized kernel (fixed text, formal rule, practice-based norm) that both sides accept as authoritative ground for adjudication. If no shared kernel exists — if the 'contest' is merely two advocacy frames using the same words — then the kernel_id is a category error and each reading should stand as an independent constraint without cs_structure.",
+      "impact": "If no shared kernel exists, cs_structure fields (reading_relations, axioms, reference_frame, drift_state) are inapplicable and should be removed. The two stories would be unrelated constraints in the same domain, linked only by network.affects_constraints if they compete for the same resources.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the declared kernel has ontological standing or is a linguistic artifact."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.42) structural (funding structures, hiring norms, conference gatekeeping) or internalized (x-risk researchers self-censor, adopt near-term vocabulary to remain fundable)?",
+      "resolution_mechanism": "Survey x-risk researchers on perceived speech constraints; analyze funding acknowledgment patterns in papers; track hiring committee deliberations (where accessible). If suppression persists after structural barriers are removed (e.g., dedicated x-risk funding streams exist), reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them. This would increase effective extraction for the x-risk researcher seat and could shift their computed type toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for x-risk researchers."
+    },
+    {
+      "id": "extraction_referent_stability",
+      "question": "Does this reading's ε (0.25) refer to the standing arrangement of AI governance prioritization, or has it been influenced by the reading's own endorsed alternative (a justice-centered governance regime)?",
+      "resolution_mechanism": "Per OQ-258 ruling: ε's referent for a kernel-reading story is the standing arrangement under contest — the current AI governance field as the near-term reading sees it — assessed by the reading's own lights. Verify the authored ε describes the extraction inherent in the current prioritization frame, not the extraction of the reading's proposed reforms.",
+      "impact": "If ε was inadvertently measured against the reading's endorsed alternative (where near-term justice interventions are centered and extraction would be near-zero), the value is invalid and must be re-authored against the actual standing arrangement where both readings contest.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "ε-invariance compliance for kernel-reading stories: referent discipline."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_risk_prioritization__existential_risk_reading"
+    ],
+    "dual_formulation_note": "The ai_risk_prioritization kernel decomposes into two constraint stories with divergent ε and victim structures: near_term_harms_reading (ε=0.25, victims=present marginalized populations, claimed rope) and existential_risk_reading (expected ε=0.15, victims=future generations, claimed mountain/tangled_rope). They compete for the same research funding, policy windows, and 'AI safety' brand authority. The near-term reading's dominance in regulatory venues (EU AI Act, US EO) structurally pressures the existential reading's resource base — this is an 'influences' relation from near-term to existential."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "existential_risk_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_harm_epistemic_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "justice_intervention_paramountcy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "emergent_ai_governance_field_2016",
+    "drift_state": {
+      "moment": "post_llm_deployment_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "908233ec-1a09-48f0-a07a-cad30826c143"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.58,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficiency Doctrine for Competence-Kernel Occupation",
+    "topic_domain": "organizational/safety_training/high_reliability_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_vendors",
+      "corporate_training_departments",
+      "safety_regulators",
+      "operating_organizations"
+    ],
+    "victims": [
+      "frontline_operators",
+      "host_communities"
+    ],
+    "vindicated_propositions": [
+      "transfer_of_training_assumption",
+      "compliance_evidences_competence"
+    ]
+  },
+  "interval": {
+    "start": 1994,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.6,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.47,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.58,
+      "basis": "projected"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sells simulators, scenario libraries, fidelity upgrades, and compliance-tracking platforms to regulated industries. Revenue scales with mandated drill hours and hardware refresh cycles. Shapes the industry working groups that define what counts as adequate exercise, so the standard and the product line co-evolve. Exit is realistic: the same product stack sells into healthcare simulation, defense, and maritime training."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mandates minimum drill frequencies and durations, audits completion records, and weighs training compliance heavily in licensing decisions. Gains a legible, countable observable that survives legal challenge. Conceding that the count does not measure competence would expose decades of prior oversight to retrospective attack, so the metric is defended even as its adequacy is questioned."
+    },
+    {
+      "name": "corporate_training_departments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Schedules and runs the drills, owns completion metrics, and reports compliance upward. Departmental headcount and budget scale with program volume. Careers, professional credentials, and internal standing are built on administering the exercise regime; acknowledging that the regime may not occupy the competence it certifies would dissolve the department's reason to exist in its current form."
+    },
+    {
+      "name": "operating_organizations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Funds the programs and collects the compliance artifact, which serves as evidence of diligence to regulators, insurers, plaintiffs, and courts. The artifact shields liability while the residual risk of undetected skill decay stays on the organization's own books. Cannot exit the regime without surrendering its license to operate."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Spends mandated hours in drills calibrated to compliance counting. Gains genuine rehearsal of scripted scenarios, crew routines, and emergency procedures. Bears the gap when real events couple failures in ways the scenario library did not anticipate, and cannot decline participation without employment consequences; changing employers only moves between equivalent regimes."
+    },
+    {
+      "name": "host_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Lives downstream, downwind, or alongside facilities operated on the strength of training-compliance records. Bears the residual accident risk that drilled-but-incompletely-occupied competence leaves uncovered. Has no seat where training adequacy is defined and would demand demonstrated competence rather than documented drill hours."
+    },
+    {
+      "name": "skill_decay_researchers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies transfer of training, retention curves, and the decoupling of simulated from field performance under stress. Publishes findings that both vendors and critics cite selectively. Holds no formal seat in standard-setting bodies and cannot alter mandates, only document their effects."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Gives a geographically distributed workforce recurrent, safe exposure to rare-event and emergency conditions that cannot be rehearsed on operating systems without creating the event; standardizes exercise content, duration, and frequency across sites so that qualification is portable, comparable, and auditable.",
+    "transfer_function": "Moves operator hours and organizational training budgets toward simulator vendors and internal training departments; moves completion records from operating organizations to regulators, insurers, and courts as evidence of diligence; leaves the residual skill decay that drills do not occupy with operators, host communities, and the organizations' own loss accounts.",
+    "absent_voices": "Host communities bear the uncovered residual risk but have no seat where training adequacy is defined. Frontline operators' field experience enters only through filtered debrief forms, not as evidence about what the drills failed to occupy. Independent transfer-of-training researchers have no vote in the industry working groups that set fidelity and frequency standards.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the simulation-sufficiency regime vanished overnight, training would reorganize around mixed mechanisms — line audits, procedural reinforcement, structured incident review — because the founding problem (safe rehearsal of rare events) is real and unsolved by other means. Vendor revenue would contract sharply, compliance auditing would lose its object, and licensing frameworks built on hour counts would require wholesale rewrite.",
+    "founding_problem": "Catastrophic and rare-event conditions cannot be practiced on live systems, and early simulators demonstrated dramatic value for procedural and emergency training; the founding problem was how to give distributed workforces recurrent exposure to those conditions safely and at scale.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Accident investigation boards and the independent human-factors literature attest the founding problem from outside the beneficiary set: post-event reports repeatedly find that crews performed drilled sequences competently while failing on undrilled couplings, confirming both the need for off-line rehearsal and the incompleteness of simulation alone. No source outside the vendor and training-establishment set attests the sufficiency claim itself."
+  },
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the regulatory-training complex built on the premise that simulator-based drills constitute sufficient exercise to occupy the competence kernel: mandated drill hours, audited completion records, fidelity-upgrade cycles, and licensing weight placed on training compliance. The claim/metric gap is deliberate and load-bearing: the reading CLAIMS simulation sufficiency (its own framing, and the regime's official doctrine), while the authored metrics describe what the regime's operation actually shows — a genuine coordination core (safe rehearsal of unrehearsable events) with extraction accumulating on top as compliance-counting substitutes for competence measurement and vendor revenue scales with the mandate. Epsilon's referent is this standing simulation-centric regime, assessed by this reading's own lights: because this reading is the incumbent doctrine, its lights partially endorse the arrangement's core, so epsilon sits at moderate-high (0.60) rather than extreme — the extraction measured here is what rides ON the sufficiency claim (rent-seeking, metric substitution, crowding-out of alternative occupation mechanisms), not disagreement with the claim itself. This file instantiates ONE reading of the competence_occupation kernel; the sibling readings (real_incident_necessity, hybrid_occupation) are separate constraints with their own epsilon values, linked via network.affects_constraints.",
+    "key_agents": [
+      "simulation_vendors: Primary beneficiary (institutional/arbitrage) — collects revenue scaled to the mandate; co-authors the standard it sells against",
+      "safety_regulators: Agenda-setter (institutional/constrained) — mandates and audits the compliance observable; legitimacy invested in the metric",
+      "corporate_training_departments: Administrator-beneficiary (organized/identity_locked) — runs the regime internally; professional identity fused with program volume",
+      "operating_organizations: Dual-positioned (institutional/constrained) — collects the liability-shielding compliance artifact, pays when decayed competence meets real events",
+      "frontline_operators: Primary payer with partial benefit (moderate/constrained) — supplies the hours, gains scripted rehearsal, bears the undrilled gap",
+      "host_communities: Excluded risk-bearer (powerless/trapped) — holds the residual risk, holds no seat",
+      "skill_decay_researchers: Analytical observer (moderate/analytical) — documents the transfer gap without authority to alter the mandate"
+    ],
+    "logic_rationale": "Extractiveness (0.60) reflects extraction that is real but bounded: the coordination core is genuine, so the arrangement is not a pure rent machine, yet the sufficiency overclaim converts a competence question into a procurement schedule — revenue tracks mandated hours, not demonstrated retention. Suppression (0.58) is structural first: participation is mandated, audits are consequential, and licensure rides on completion; roughly seventy percent of the suppressive force is external (mandate, audit, career consequence) and thirty percent internalized (operators calibrate confidence to drill pass/fail — see the calibration omega). Theater ratio (0.47) is the Goodhart signal: a growing share of drill activity repeats scripted scenarios to log countable hours, and the series shows steady substitution of the proxy for the goal. Accessibility collapse (0.55): once the sufficiency premise is accepted inside a regulated frame, alternative occupation mechanisms (line audits, procedural reinforcement, structured incident review) collapse to token status — but they remain conceptually available, and the hybrid reading keeps them live, so collapse is incomplete. Resistance (0.40): operator grumbling, critical transfer literature, and occasional post-incident findings of drilled-response failure constitute real but non-mass resistance. The three temporal series share one grid (1994, 2001, 2008, 2015, 2020, 2026) so every metric is authored at every examined point; the suppression series is included because enforcement capacity visibly ratcheted — each major incident horizon (circa 2010-2011: Deepwater Horizon, Fukushima) added mandates and audit intensity, producing the visible step between 2008 and 2015 before plateauing.",
+    "perspectival_gap": "The seats compute different constraints from identical structure. From the vendor seat the arrangement is a coordination service it supplies and continuously improves; from the regulator seat it is auditable order imposed on an unruly risk landscape; from the training-department seat it is a profession; from the operator seat it is mandatory hours whose adequacy is asserted rather than shown; from the host-community seat it is paperwork standing in for protection. Three actors share the institutional power atom — vendors, regulators, operating organizations — yet experience opposite directionalities because their exits differ: vendors hold arbitrage (the regime is one market among several), while regulators and licensees are constrained (their legitimacy and licenses are inside the regime). That exit asymmetry, not raw power, drives the per-seat divergence the engine computes.",
+    "directionality_logic": "Beneficiary declarations map to low-directionality seats: vendors (pure collector, arbitrage exit — nearest the beneficiary pole), regulators (collect a legible observable), training departments (collect budget and standing), operating organizations (collect the compliance artifact). Victim declarations map to high-directionality seats: frontline_operators supply the hours and bear the undrilled gap, though their secondary beneficiary role (genuine scripted-scenario rehearsal) pulls them short of the full-target pole; host_communities bear pure residual risk with trapped exit and no compensating flow — effectively the deepest-target seat despite holding the least power. Operating organizations sit near symmetric: the artifact they collect is funded by the budgets they pay, and the residual risk they retain offsets the liability shield. No directionality overrides were authored: the derivation from role declarations plus exit options already separates the three institutional actors (via arbitrage versus constrained exit) and the two victim-side actors (via secondary benefit versus none), which is the differentiation an override would otherwise have been used for.",
+    "mandatrophy_analysis": "The classification guards against mislabeling in both directions. Reading the arrangement as pure snare would erase the genuine coordination function — catastrophic scenarios genuinely cannot be rehearsed live, and centralized curriculum standardization solves a real collective-action problem no single organization could solve alone. Reading it as pure rope would launder the sufficiency overclaim, under which the observable (completed hours) has been progressively substituted for the goal (occupied competence) and a concentrated vendor class captures revenue indexed to the mandate rather than to retention. The tangled-rope classification holds both facts: coordination function present, asymmetric extraction riding the same structure, active enforcement required to keep the compliance observable authoritative. The founding problem is live (attested from outside the beneficiary set), so this is not mandatrophy resolution territory; the forward risk is piton drift — if theater_ratio continues its climb and the compliance ritual fully detaches from retention, the arrangement degrades toward administered performance. The theater_ratio series is the tripwire for that transition.",
+    "kernel_context": "This constraint is the simulation_sufficiency reading of the competence_occupation kernel: the stabilized commitment that workforce competence against rare events must be actively occupied or it decays. The kernel itself is not contested — all parties accept occupation is required — but the readings disagree on WHAT occupies it. This reading holds that simulation-based drills suffice; real_incident_necessity holds that only actual catastrophic events provide authentic occupation conditions; hybrid_occupation holds that continuous multi-mechanism exercise is required with no settled optimal configuration. The disagreement is located in the sufficiency quantifier: whether one mechanism is sufficient, whether one mechanism is even necessary, or whether only a portfolio is adequate. This reading won the institutional contest — it is the doctrine the standing regime encodes — which is why its structural signature (compliance-as-observable, optimization framing, vendor primacy) is written into the arrangement itself rather than proposed against it."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading (simulation_sufficiency) of the competence_occupation kernel; what structurally changes if a sibling reading displaces it?",
+      "resolution_mechanism": "Track adoption of competency-based assessment frameworks replacing hour counts (hybrid_occupation ascendant) or post-incident findings that no simulated preparation predicted field performance (real_incident_necessity ascendant).",
+      "impact": "Under hybrid_occupation displacement, extraction diffuses across multiple mechanism providers and the single-vendor capture structure dissolves; under real_incident_necessity displacement, training adequacy becomes unmeasurable ex ante and the entire audit apparatus loses its object — a categorically different constraint with a different victim set.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position: this file instantiates one of three mutually exclusive readings; sibling files carry the others."
+    },
+    {
+      "id": "transfer_validity",
+      "question": "Does simulated performance on known scenarios predict field performance under novel, coupled, high-stress conditions — the conditions that actually arrive?",
+      "resolution_mechanism": "Longitudinal studies correlating drill scores with subsequent field-event performance, and natural experiments where drilled crews faced unprecedented event configurations.",
+      "impact": "If transfer is weak, the arrangement maintains the observable rather than the competence and effective extraction rises sharply toward snare territory; if transfer is strong for the skill classes that matter, epsilon falls toward rope and the sufficiency claim is vindicated on its own terms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical hinge of the sufficiency axiom: transfer of training from simulator to field."
+    },
+    {
+      "id": "counterfactual_occupation_attribution",
+      "question": "What share of occupied competence-kernel capacity is attributable to simulation specifically, versus routine line operations and procedural reinforcement that would occur under any regime?",
+      "resolution_mechanism": "Comparative analysis across organizations and eras varying simulation intensity while holding line experience roughly constant, isolating the marginal contribution of drill hours.",
+      "impact": "If most occupation comes from ordinary work, the constraint takes credit for occupancy it does not cause — its coordination function shrinks, its extraction share grows, and the classification slides toward snare; genuine marginal contribution stabilizes the tangled-rope reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution problem: how much kernel occupation the drills actually cause."
+    },
+    {
+      "id": "metric_substitution_lock_in",
+      "question": "Is hour-count compliance a transitional scaffold toward outcome-measured competence, or a self-reinforcing equilibrium in which every actor's incentives favor keeping the countable proxy?",
+      "resolution_mechanism": "Observe whether any major regulator completes a shift from completion-hour metrics to demonstrated-competency assessment without an intervening catastrophe forcing it.",
+      "impact": "Transitional dynamics support eventual rope-like maturation; lock-in dynamics predict continued theater_ratio growth and eventual piton drift as the ritual detaches from function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the compliance observable is a bridge or a trap."
+    },
+    {
+      "id": "calibration_internalization",
+      "question": "Is the suppressive force on operators purely structural (mandate, audit, career consequence), or has an internalized layer formed — confidence calibrated to drill pass/fail such that operators believe themselves occupied because they passed?",
+      "resolution_mechanism": "Post-regime confidence and performance tracking: if operators who scored well on drills show miscalibrated field readiness that persists even where mandates relax, the internalized layer is real.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — operators carry the miscalibration with them across employers, and removing the mandate would not remove the constraint's grip on self-assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression in professional drill compliance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "real_incident_necessity",
+      "hybrid_occupation"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'keeping operators competent against rare events' decomposes into three structurally distinct constraints — competing readings of the competence_occupation kernel. This file (simulation_sufficiency) carries the incumbent reading: single-mechanism sufficiency, compliance-as-observable, vendor-primary capture; moderate-high epsilon reflecting extraction riding a genuine coordination core. The sibling real_incident_necessity (only real catastrophes authentically occupy the kernel) carries a different epsilon structure entirely — its verification problem is unsolvable ex ante, making its arrangement unfalsifiable by design. The sibling hybrid_occupation (multi-mechanism necessity, unsettled configuration) carries diffuse beneficiaries and no single capturer. The upstream reading influences the downstream ones: the sufficiency doctrine's institutional victory defines the baseline against which the other two readings argue, and its compliance observable is precisely what the hybrid reading proposes to replace. Each member links the others via network.affects_constraints; contamination propagates across the family because all three draw on the same training-budget pool and the same regulatory attention."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulation_competence_equivalence",
+    "drift_state": {
+      "moment": "contemporary_transfer_research_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_exercise_transfers_to_field_performance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "training_compliance_evidences_kernel_occupation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "simulation_vendors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

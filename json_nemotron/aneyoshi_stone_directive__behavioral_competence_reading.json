@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "aneyoshi_stone_directive__behavioral_competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_aneyoshi_stone_directive__behavioral_competence_reading",
+    "measurement_id_prefix": "aneyoshi_stone_directive_bcr",
+    "story_uid": "e8b526c4-f644-432b-8a7c-f649f4d02e38",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.05,
+    "theater_ratio": 0.03,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Aneyoshi Stone Directive — Behavioral Competence Reading (Tsunami Inundation Line)",
+    "topic_domain": "disaster_anthropology/institutional_memory/land_use_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "topographic_hazard_zoning_principle",
+      "intergenerational_risk_transmission_efficacy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_framing_ambiguity",
+      "question": "Is the Aneyoshi stone directive a single constraint or two distinct constraints (behavioral land-use restriction vs. commemorative artifact)?",
+      "resolution_mechanism": "Compare ε values across readings: if behavioral_competence_reading yields ε ≈ 0.02 (physical geography) and commemorative_husk_reading yields substantially higher ε (social extraction), they are distinct constraints per ε-invariance principle. Empirical measurement of compliance cost and enforcement structure across the two framings would resolve.",
+      "impact": "If the framings produce different ε values, they must be modeled as separate constraint stories linked by network.affects_constraints, not as one story with measurement-dependent classification. The current decomposition into two stories with distinct constraint_ids follows this principle.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel label 'Aneyoshi stone directive' conflates structurally distinct constraints."
+    },
+    {
+      "id": "intergenerational_transmission_mechanism",
+      "question": "What mechanism sustained the directive's behavioral force across 78 years without formal validation — oral tradition, institutional embedding, or repeated near-miss reinforcement?",
+      "resolution_mechanism": "Ethnographic reconstruction of Aneyoshi community decision-making 1933-2011: household interviews, municipal records, school curricula analysis. Identify whether compliance was enforced by social sanction, internalized norm, or physical salience of the stone itself.",
+      "impact": "If transmission relied on active social enforcement (sanctions for building below the line), the constraint has a coordination-enforcement structure (rope/tangled_rope). If compliance was self-enforcing through physical geography salience, it remains mountain. The very low ε and suppression scores assume the latter; evidence of the former would require reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of behavioral persistence across the inter-catastrophe period."
+    },
+    {
+      "id": "commemorative_husk_divergence",
+      "question": "Does the commemorative_husk_reading describe the same physical constraint with a different ε, or a genuinely different constraint (the stone as memorial rather than behavioral directive)?",
+      "resolution_mechanism": "Measure whether the commemorative reading identifies beneficiaries (e.g., tourism operators, heritage agencies, municipal identity entrepreneurs) who extract value from the stone's symbolic status while the behavioral directive has lapsed. If beneficiaries exist with asymmetric extraction, the commemorative reading is a snare/tangled_rope, not a mountain.",
+      "impact": "Confirms the ε-invariance decomposition: behavioral_competence_reading = mountain (ε ≈ 0.02), commemorative_husk_reading = snare/tangled_rope (ε > 0.3). The two stories must carry distinct metrics and stakeholder sets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural distinction between the two kernel readings."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1933,
+      "value": 0.01
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.01
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1933,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.03
+    }
+  ],
+  "interval": {
+    "start": 1933,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The Aneyoshi stone directive (\"Do not build your homes below this point\") was erected after the 1896 Meiji-Sanriku tsunami and remained the sole land-use constraint governing the village's settlement pattern through the 1933 Showa-Sanriku tsunami and until the 2011 Tohoku earthquake. The behavioral_competence_reading treats the directive as a physical geography constraint: the stone marks the empirically verified tsunami inundation line. Compliance costs are near-zero (building above the line is topographically natural), no party extracts rents from the restriction, and the constraint would persist unchanged if all human institutions vanished — the topography remains. The 78-year persistence without formal validation reflects the constraint's mountain nature: it is a physical fact encoded in social memory, not a social fact maintained by enforcement.",
+    "key_agents": [
+      "aneyoshi_households: Primary agents subject to the directive (powerless/identity_locked) — bear no extraction cost, benefit from survival",
+      "aneyoshi_municipal_authority: Agenda setter for land-use formalization (institutional/biographical) — could codify or ignore the directive",
+      "disaster_anthropologists: Observers (analytical/analytical) — study the transmission mechanism",
+      "commemorative_husk_beneficiaries: NOT in this reading — tourism/heritage actors who would benefit from the stone's symbolic status (appear in commemorative_husk_reading)"
+    ],
+    "logic_rationale": "Extractiveness is near-zero (0.02) because the constraint imposes no transfer — building above the inundation line is what topography would dictate regardless. Suppression is negligible (0.05) because no enforcement mechanism exists or is needed; the stone is a marker, not a mandate. Theater ratio is minimal (0.03) — the directive's function (survival) is its only operation. Accessibility collapse is very high (0.92) because the physical geography allows no viable alternative settlement sites below the line. Resistance is near-zero (0.08) because the constraint aligns with survival interest; the 1933 tsunami validated it empirically. These metrics are authored independently of the claimed_type; the engine will compute mountain from them.",
+    "perspectival_gap": "The engine computes per-seat classifications from the structural data. For aneyoshi_households (powerless/identity_locked, local scope), directionality derives toward beneficiary (d ≈ 0.1) because the constraint subsidizes survival. For municipal_authority (institutional, regional scope), d ≈ 0.3 — the authority could formalize or ignore but bears no extraction cost. The analytical observer sees the full mountain structure. The commemorative_husk_reading would compute differently because its beneficiary/victim structure differs.",
+    "directionality_logic": "No beneficiaries or victims declared in this reading — the constraint extracts from no one. The directionality derivation chain finds no structural extraction relationship. The stone's physical geography function (marking the inundation line) is the referent for ε, not any social enforcement. If the commemorative_husk_reading identifies heritage/tourism beneficiaries, that reading's ε will differ — confirming they are distinct constraints per ε-invariance.",
+    "mandatrophy_analysis": "Not applicable — the constraint's founding problem (tsunami survival) remains live (2011 validation). The directive has not atrophied; its function was re-validated by the 2011 event. Mandatrophy would apply only if the stone were maintained as a ritual after the inundation risk vanished (e.g., sea wall construction eliminated the hazard).",
+    "kernel_context": "This constraint is the behavioral_competence_reading of the aneyoshi_stone_directive kernel. The sibling reading is commemorative_husk_reading, which treats the stone as a memorial artifact whose behavioral directive lapsed during the inter-catastrophe period and whose current operation extracts symbolic/conomic value for heritage stakeholders. The two readings produce structurally distinct ε values (this reading: ε ≈ 0.02; sibling: ε > 0.3) and distinct beneficiary/victim structures. Per ε-invariance, they are separate constraints linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "aneyoshi_stone_directive__commemorative_husk_reading"
+    ],
+    "dual_formulation_note": "This constraint and commemorative_husk_reading form the aneyoshi_stone_directive constraint family. The behavioral_competence_reading models the physical geography constraint (mountain, ε ≈ 0.02, no beneficiaries). The commemorative_husk_reading models the heritage/commemoration constraint (snare/tangled_rope, ε > 0.3, beneficiaries = tourism/heritage actors). They share the same physical artifact but are distinct constraints per ε-invariance: changing the observable (survival compliance vs. heritage designation) changes ε, so they are different constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "aneyoshi_households",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Households in Aneyoshi village who have built and lived above the stone's marked line for generations. The directive imposes no cost — the topography makes building below the line physically hazardous. Their compliance is survival-rational, not socially enforced. Exit would mean abandoning ancestral land and community; identity is fused with the place and its survival practice."
+    },
+    {
+      "name": "aneyoshi_municipal_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Local government with formal land-use planning authority. Could codify the stone's line into zoning law, ignore it, or contradict it. Bears no extraction cost from the directive's operation. Has institutional incentive to formalize validated survival practices but no structural benefit from the directive itself."
+    },
+    {
+      "name": "disaster_anthropologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers studying intergenerational disaster memory transmission. They analyze the Aneyoshi case as a rare instance of behavioral directive persistence across catastrophic intervals. They neither benefit from nor bear costs of the directive; their seat is analytical."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates settlement location with physical tsunami inundation boundary — a genuine information coordination problem where the cost of error is death. The stone transmits the empirically discovered safe zone across generations without requiring each generation to rediscover it through catastrophe.",
+    "transfer_function": "Moves no resources between parties. The constraint is a pure information standard: the stone marks the line; households build above it; no transfer occurs.",
+    "absent_voices": "No excluded voices in this reading — the constraint's operation affects only Aneyoshi households (who comply voluntarily) and the municipal authority (which could formalize it). The commemorative_husk_reading would identify excluded voices: descendants of 1933 tsunami victims who might contest the stone's heritage framing, or would-be developers excluded by the commemorative designation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stone and its directive vanished overnight, the physical topography would remain — but the intergenerational transmission of the inundation line would be degraded. Without the marker, a future generation might rebuild in the inundation zone before the next tsunami validates the boundary anew. The world rearranges because the information coordination function would be lost, not because extraction would cease.",
+    "founding_problem": "After the 1896 Meiji-Sanriku tsunami destroyed the original coastal settlement, survivors needed a durable, non-institutional method to transmit the tsunami inundation boundary to future generations — a method that would survive institutional collapse, language change, and the 30-40 year inter-catastrophe interval.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The 2011 Tohoku tsunami empirically validated the directive: houses above the stone survived; the inundation line matched the stone's position. This corroboration comes from physical geography, not from the beneficiary set (which is empty in this reading). The founding problem (transmitting the boundary without institutional continuity) remains live because tsunami recurrence intervals exceed institutional memory spans."
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "commemorative_husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "stone_marks_physical_inundation_line",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "intergenerational_transmission_without_institution_is_possible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "meiji_sanriku_survivor_knowledge",
+    "drift_state": {
+      "moment": "post_2011_tohoku_validation",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

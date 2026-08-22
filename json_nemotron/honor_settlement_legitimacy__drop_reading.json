@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "honor_settlement_legitimacy__drop_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "e9f0b35c-dd5b-41e3-a542-39fe383a46e9"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.68,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.41,
+    "claimed_type": "scaffold",
+    "human_readable": "Honor Settlement Legitimacy — Drop Reading (Fringe Dueling Persistence)",
+    "topic_domain": "historical_sociology/legal_history/cultural_anthropology",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "rural_gentry_families",
+      "frontier_community_elders",
+      "military_officer_corps_traditionalists"
+    ],
+    "victims": [
+      "younger_sons_disenfranchised",
+      "women_in_honor_households",
+      "mercantile_professional_new_entrants"
+    ],
+    "vindicated_propositions": [
+      "personal_honor_requires_violent_defense",
+      "legal_courts_cannot_adjudicate_honor",
+      "blood_price_settles_moral_debt"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the drop_reading a genuine structural reading of the honor_settlement_legitimacy kernel, or a residual observation mistaken for a stable reading?",
+      "resolution_mechanism": "Trace whether the fringe practitioners articulate a coherent normative framework inheriting from the kernel's authority structure, or merely perform vestigial rituals without interpretive continuity.",
+      "impact": "If no interpretive continuity, the drop_reading collapses into a piton observation of the composite_reading's aftermath — not a live kernel reading. This reclassifies the constraint from scaffold to piton.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether fringe dueling constitutes a live reading of the honor kernel or mere residue"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of dueling in fringe niches structural (legal prosecution, social ostracism) or internalized (practitioners' own doubt about legitimacy)?",
+      "resolution_mechanism": "Compare suppression trajectories in niches with active legal enforcement vs. niches where law is nominal but practitioners still decline to duel — persistent suppression without legal pressure indicates internalization.",
+      "impact": "If substantially internalized, the constraint's effective suppression exceeds the structural measure; the fringe practitioners carry the suppression with them, making the scaffold's sunset irreversible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in residual honor niches"
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Does the fringe dueling practice still coordinate dispute resolution among adherents, or has it become pure performative extraction (status signaling without settlement function)?",
+      "resolution_mechanism": "Track outcomes of fringe duels: do they actually terminate disputes and restore social standing, or do they generate new grievances requiring further duels? Settlement rate vs. escalation rate.",
+      "impact": "If coordination function collapsed (settlement rate near zero), the scaffold's justification is gone — the constraint is piton, not scaffold. If coordination persists, scaffold classification holds for the niche.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether fringe dueling retains coordination function or has become pure theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The drop_reading of honor_settlement_legitimacy captures the persistence of dueling as a fringe practice in specific geographic and social niches (rural Southern US, frontier military posts, aristocratic European officer corps) after the mainstream culture had contracted around legal-bureaucratic settlement. The constraint is the *legitimacy claim* that honor disputes require violent personal settlement — a claim that has lost general currency but retains local normative force. The reading's structural delta: honor culture remains a live option in niches; dueling is suppressed by state law and majority opinion but not eliminated from the normative repertoire of adherents. This is a scaffold: the coordination function (settling honor disputes without state courts) was meant to be transitional toward legal order, but the sunset clause (state monopoly on violence) has been only partially enforced in these niches. The claimed_type is scaffold; the metrics show rising extractiveness and theater as the coordination function atrophies and the practice becomes increasingly performative.",
+    "logic_rationale": "Extractiveness (0.32) is moderate: the constraint extracts compliance from younger sons, women, and outsiders who must defer to honor logic they don't endorse, but the fringe scale limits total extraction. Suppression (0.68) is high because state law and majority culture actively prosecute and stigmatize dueling — persistence requires active resistance to suppression. Theater ratio (0.22) is rising: an increasing share of duels are performative (first blood, prescribed rituals) rather than lethal settlement, indicating the coordination function is decaying. Accessibility collapse (0.45) is moderate: legal courts exist and are accessible, but honor adherents treat them as illegitimate for honor matters — alternatives are cognitively collapsed, not structurally absent. Resistance (0.41) is moderate: the constraint meets resistance from state authorities and modernizing elites, but fringe adherence is genuine, not coerced.",
+    "directionality_logic": "Rural gentry families and frontier elders are beneficiaries (agenda_setters): they administer the honor code, settle disputes on their terms, and extract deference. Military traditionalists are secondary beneficiaries: the code structures officer identity and promotion. Younger sons, women in honor households, and mercantile newcomers are victims (payers): they bear the risk of violence, the cost of deference, and exclusion from honor-standing without the power to shape the code. The directionality derivation from beneficiary/victim + exit options captures this: beneficiaries have constrained exit (identity_locked to honor identity), victims have trapped or constrained exit depending on niche.",
+    "perspectival_gap": "From the beneficiary seat (rural gentry elder), the constraint is a living coordination mechanism — the only way to settle honor without surrendering to a legal system they view as alien. From the victim seat (younger son), it is an extractive trap — risk death or accept subordination. From the observer seat (state prosecutor), it is a suppressed anachronism. The engine computes these divergences from the structural data; the claimed scaffold type reflects the authoring seat's judgment that the coordination function was transitional and its sunset is underway but incomplete.",
+    "mandatrophy_analysis": "The mandate was: settle honor disputes without state courts. That problem is largely dead (state courts function, majority culture uses them). The arrangement persists in niches where the mandate is contested — adherents claim the problem is live (legal courts cannot adjudicate honor). The mandatrophy is unresolved: the constraint's coordination function has atrophied in the mainstream but the sunset clause (state monopoly) is only partially enforced in niches. This creates the scaffold classification: transitional support whose transition is stalled in pockets.",
+    "kernel_context": "This constraint is the drop_reading of the honor_settlement_legitimacy kernel. The kernel is the stabilized commitment that personal honor disputes legitimately require violent settlement. Sibling readings: contraction_reading (dueling became cognitively unthinkable through cultural framework transformation) and composite_reading (dueling's decline overdetermined by multiple reinforcing mechanisms with contraction edge). The drop_reading asserts the kernel remains live in specific niches — the commitment was not transformed or overdetermined into extinction, but fragmented into residual strongholds."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_settlement_legitimacy__contraction_reading",
+      "honor_settlement_legitimacy__composite_reading",
+      "state_monopoly_violence_enforcement"
+    ],
+    "dual_formulation_note": "The honor_settlement_legitimacy kernel decomposes into three readings with distinct ε and beneficiary/victim structures. The drop_reading has the lowest extractiveness (fringe scale) but highest theater_ratio (performative decay). The contraction_reading has near-zero extractiveness (cognitive unthinkability eliminates the constraint). The composite_reading has moderate extractiveness (mainstream transition costs). All three share the vindicated_proposition 'personal_honor_requires_violent_defense' but differ in whether that proposition remains normatively active."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "rural_gentry_families",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Maintain the honor code as the governing norm for dispute settlement among their class. They host duels, arbitrate challenges, and define what counts as an insult. Their authority derives from lineage and landholding; exit from the honor frame would mean surrendering the social capital that distinguishes them from merchant-planters and state officials. They are identity-locked: the honor code constitutes their self-concept and class position."
+    },
+    {
+      "name": "frontier_community_elders",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "In territories where state courts are distant or distrusted, elders administer honor settlements as the primary dispute resolution mechanism. They benefit from the coordination function (order without state apparatus) but are constrained by territorial incorporation — as state law advances, their exit from the honor frame becomes possible but costly (loss of local authority). They are not identity-locked; their commitment is instrumental to governance vacuum."
+    },
+    {
+      "name": "military_officer_corps_traditionalists",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Officer corps in several European and American armies maintain dueling as a ritual of professional honor. The practice coordinates status hierarchy and courage signaling within the corps. They are institutional beneficiaries: the constraint structures their professional identity and promotion logic. Exit is identity-locked — an officer who refuses a challenge loses the corps' trust; the institution has 'become' its honor code. State military law prohibits dueling but enforcement is selective."
+    },
+    {
+      "name": "younger_sons_disenfranchised",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Excluded from inheritance and honor-standing, younger sons must prove worth through dueling or accept permanent subordination. They bear the mortality risk and the cost of deference. Exit is trapped: leaving the niche means abandoning family, land, and the only status ladder available. They have no voice in the honor code's administration."
+    },
+    {
+      "name": "women_in_honor_households",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the consequences of male honor violence (widowhood, economic ruin, social stigma) and enforce honor norms on sons/daughters to maintain household standing. They cannot duel but are bound by the code's logic. Exit is trapped: patriarchal property and custody laws, plus cultural internalization, make leaving the honor frame nearly impossible. They are the constraint's silent substrate."
+    },
+    {
+      "name": "mercantile_professional_new_entrants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Merchants, lawyers, and professionals entering honor-dominated regions must either adopt the code (duel to defend commercial reputation) or accept exclusion from local networks. They pay the 'honor tax' in risk and conformity. Exit is constrained: they can relocate to legal-bureaucratic zones but lose regional market access. They are the leading edge of the sunset clause — their presence erodes the niche."
+    },
+    {
+      "name": "state_legal_authorities",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Prosecute dueling as murder or assault; the constraint's persistence measures their enforcement failure in niches. They view the honor code as an obstacle to state monopoly on violence. Their analytical seat sees the full structure: the coordination function (local order), the extraction (victim subordination), and the sunset dynamic (state capacity advancing)."
+    },
+    {
+      "name": "honor_ethnographers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Document the fringe practice as a living cultural system. Their analytical seat is external but immersive — they see the internal logic beneficiaries and victims experience. They do not collect from the constraint; their presence slightly increases suppression (documentation aids prosecution) but also preserves the practice's record."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Settles honor disputes within closed communities without recourse to state courts, which adherents view as illegitimate for honor matters. Coordinates status hierarchy, courage signaling, and dispute closure through ritualized violence.",
+    "transfer_function": "Moves risk of death/injury and deference-costs from agenda_setters (elders, officers, gentry) to payers (younger sons, women, newcomers). Moves authority to define insult and satisfaction from state law to local honor administrators.",
+    "absent_voices": "The dead (those killed in duels that the drop_reading claims 'settled' disputes), the permanently maimed, and the women and younger sons who internalized the code so completely they never articulated objection. Also absent: state authorities in niches where enforcement is nominal — they are physically absent, not merely excluded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fringe honor code vanished overnight, rural gentry would lose their primary dispute-resolution authority; younger sons and women would lose the structure that subordinates them but also the only status ladder they know; frontier elders would face governance vacuum; military traditionalists would lose the ritual that structures officer identity. The niches would reorganize — some toward state law, some toward new informal codes.",
+    "founding_problem": "In stateless or weak-state frontier/aristocratic zones, no trusted impartial tribunal existed to settle disputes over reputation, property boundaries, and personal insult. Violent personal settlement was the only mechanism that commanded compliance from all parties.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State legal authorities and mercantile newcomers attest the founding problem is dead — courts now function, reputation markets substitute for honor. Rural gentry elders and military traditionalists attest it is live — courts cannot adjudicate honor, only peers can. No neutral corroboration exists; the dispute is the kernel contest itself."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "honor_settlement_legitimacy__composite_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "composite_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_remains_live_in_niches",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_law_illegitimate_for_honor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "aristocratic_frontier_honor_order",
+    "drift_state": {
+      "moment": "late_state_incorporation_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

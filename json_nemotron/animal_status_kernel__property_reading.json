@@ -1,0 +1,400 @@
+{
+  "header": {
+    "constraint_id": "animal_status_kernel__property_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_animal_status_kernel__property_reading",
+    "measurement_id_prefix": "animal_status_kernel__property_reading",
+    "story_uid": "8cf2a1e1-76ba-457c-88c7-9a1c3b70a52b",
+    "created_at": "2026-08-14T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.82,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Animals as Property: Ownership-Derived Moral Considerability",
+    "topic_domain": "moral_philosophy/animal_ethics/legal_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "animal_owners",
+      "animal_agriculture_industry",
+      "biomedical_research_institutions",
+      "commercial_breeders",
+      "entertainment_animal_operators"
+    ],
+    "victims": [
+      "farmed_animals",
+      "laboratory_animals",
+      "companion_animals_in_neglect",
+      "wild_animals_in_captivity",
+      "breeding_stock_animals"
+    ],
+    "vindicated_propositions": [
+      "property_rights_absolutism",
+      "economic_value_as_sole_metric",
+      "ownership_entails_unrestricted_use"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "animal_owners",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Define the legal and moral boundaries of animal use through property rights. Set the terms of anti-cruelty statutes (which protect their property value, not animal interests). Exercise unrestricted use rights over animals they own. Lobby against welfare regulations that constrain profitable uses. Their exit from the constraint is trivial — they authored it and benefit from it."
+    },
+    {
+      "name": "animal_agriculture_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate at industrial scale using animals as property. The property framework enables confinement, selective breeding, early slaughter, and commodity treatment that maximize throughput per unit cost. Welfare regulations that do exist are shaped by industry lobbying to avoid meaningful constraints on production methods. Economic value is the only relevant metric — animals are inputs."
+    },
+    {
+      "name": "biomedical_research_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Use animals as research tools under property rights that permit invasive procedures, genetic modification, and terminal experiments. The constraint that moral considerability derives from ownership means no intrinsic limit on what can be done to an animal in research — only procedural oversight (IACUC) that protects institutional legitimacy, not animal interests. They capture the scientific and economic value; animals bear all costs."
+    },
+    {
+      "name": "commercial_breeders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Produce animals as inventory — puppies, exotic pets, livestock genetics. Property status means breeding stock can be kept in conditions that maximize reproductive output without regard for psychological or physical welfare beyond what affects market value. Culling of surplus or defective animals is a routine property management decision."
+    },
+    {
+      "name": "entertainment_animal_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Use animals in circuses, films, racing, fighting, and displays. Property rights allow training methods, confinement, and performance demands that would be impermissible if animals had independent moral standing. Anti-cruelty laws apply only when the abuse reduces the animal's economic value to the owner — not when it causes suffering that doesn't affect market price."
+    },
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Born into property status with no exit. Their entire existence — confinement, mutilation without analgesia, separation from offspring, transport, slaughter — is structured by the owner's economic calculus. Anti-cruelty statutes do not protect them from standard industry practices (e.g., gestation crates, battery cages, maceration of male chicks) because those practices are deemed economically necessary and therefore not 'cruel' under the property framework. They bear 100% of the extraction."
+    },
+    {
+      "name": "laboratory_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bred or captured for use as research tools. Property status means they have no claim against pain, distress, isolation, or death inflicted in experiments — only the procedural requirement that the research protocol be approved. The constraint that moral considerability derives from ownership means their suffering counts only if it threatens data validity or institutional reputation. They are the primary extraction sink for biomedical knowledge production."
+    },
+    {
+      "name": "companion_animals_in_neglect",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Legally property of owners who may neglect, abandon, or kill them with minimal legal consequence — anti-cruelty statutes require 'unnecessary' suffering, and neglect that doesn't destroy economic value often falls below enforcement thresholds. No right to veterinary care, social interaction, or freedom from chronic distress. Their moral considerability is entirely contingent on the owner's discretion."
+    },
+    {
+      "name": "wild_animals_in_captivity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Held in zoos, aquariums, private collections, roadside attractions. Property status permits lifetime confinement in enclosures that prevent species-typical behaviors, breeding programs that treat individuals as genetic stock, and 'surplus' management (killing healthy animals). Welfare regulations address physical health for display value, not psychological well-being or autonomy."
+    },
+    {
+      "name": "breeding_stock_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Kept alive solely for reproductive output — dairy cows, sow lines, stud animals, laboratory colonies. Property framework permits repeated forced impregnation, separation from offspring, and culling when productivity declines. Their bodies are capital equipment; moral considerability extends only to maintaining their economic function."
+    },
+    {
+      "name": "animal_welfare_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce anti-cruelty statutes that are structurally constrained by the property framework: they can only prohibit suffering that is 'unnecessary' — where necessity is defined by the owner's economic purpose. Their enforcement activity legitimizes the system by creating the appearance of protection while the fundamental extraction continues unchanged."
+    },
+    {
+      "name": "veterinary_profession",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Provide medical care to animals within the property framework. Their ethical obligations are mediated by the client (owner) relationship — they cannot advocate for the animal against the owner's economic decisions. The property constraint shapes veterinary ethics: 'patient advocacy' stops at the owner's property rights."
+    },
+    {
+      "name": "animal_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the legal architecture of animal property status. Document how the constraint operates: animals as legal objects, standing barriers, the 'unnecessary suffering' loophole, the economic necessity defense. Their work maps the constraint's mechanics but does not alter its operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, enforceable legal framework for the allocation, use, and disposition of animal bodies and labor. Resolves disputes over animal control by assigning exclusive rights to owners. Enables markets in animal products, research, and entertainment by making animals transferable property.",
+    "transfer_function": "Moves the entire value of animal lives — bodies, labor, reproductive output, genetic material, suffering capacity — from animals to owners. Owners capture all economic value; animals bear all physical and psychological costs. Anti-cruelty statutes transfer only the marginal cost of avoiding 'unnecessary' suffering (where necessity = owner's economic interest) back to owners as compliance burden.",
+    "absent_voices": "Animals themselves — the primary subjects of the constraint — have no voice in the legal or moral framework that defines them as property. Their interests are represented only insofar as they align with owner economic interests. Wild animal populations, future generations of farmed animals, and animals in jurisdictions without even minimal anti-cruelty laws are entirely absent from the conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the property reading vanished overnight — if animals were recognized as having moral considerability independent of ownership — the entire architecture of animal agriculture, biomedical research, commercial breeding, and animal entertainment would face existential legal and economic disruption. Markets in animal bodies would require new justification. Anti-cruelty statutes would become floors, not ceilings. The global food system, pharmaceutical pipeline, and companion animal trade would reorganize around a fundamentally different moral-legal baseline.",
+    "founding_problem": "Pre-modern legal systems needed a stable framework for resolving disputes over animal control, enabling agricultural production, and protecting human economic interests in livestock. The property classification provided a ready-made, well-understood legal category that could be extended to animals without inventing new jurisprudence.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal historians (e.g., Favre, Sunstein, Francione) document that the property classification was a pragmatic legal expedient, not a moral discovery. The founding problem — dispute resolution and economic coordination in agrarian societies — is acknowledged as substantially transformed by industrialization, scientific understanding of sentience, and the scale of modern animal use. However, beneficiaries (animal agriculture, biomedical research) assert the problem remains live: they claim property status is still necessary for 'efficient' production and research. No corroborating source outside the beneficiary set endorses the claim that the original founding problem justifies the current scope of the constraint."
+  },
+  "interval": {
+    "start": 1800,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.82
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the property_reading of the animal_status_kernel. It asserts that animals are property, that any moral considerability they possess derives entirely from the property rights of their owners, and that economic value is the only relevant metric for evaluating their treatment. This is the dominant legal framework globally: animals are legal objects, not subjects. Anti-cruelty statutes exist but are interpreted to protect the owner's property interest — suffering is 'unnecessary' only when it serves no economic purpose for the owner. The constraint extracts the full value of animal lives for human economic benefit while suppressing the moral recognition of animal sentience and interests. The claimed type is snare: pure extraction masked by a thin coordination veneer (anti-cruelty laws that protect property value, not animals).",
+    "logic_rationale": "Base extractiveness (0.88) is very high because the constraint places zero intrinsic moral limit on what owners may do to animals — the only limits are instrumental (protecting economic value). Suppression (0.82) is high because the property framework actively excludes animals from legal personhood, denies them standing, and uses the 'unnecessary suffering' standard to legitimize economically necessary suffering. Theater ratio (0.25) reflects that anti-cruelty laws perform a protective function while structurally ensuring that the vast majority of suffering (industrial agriculture, standard research protocols) remains legal. Accessibility collapse (0.75) is high because the property framework makes it conceptually difficult to imagine animals as anything but property — the legal category colonizes moral imagination. Resistance (0.45) is moderate: welfare reforms occur but operate within the property framework; abolitionist challenges remain marginal in legal practice.",
+    "directionality_logic": "Animal owners and industries (agenda_setters, beneficiaries) sit at d ≈ 0.05–0.15: they capture the full economic value of animal use, control the regulatory framework, and face trivial exit costs. Animals (farmed, laboratory, companion in neglect, captive wild, breeding stock) are powerless, trapped, immediate-horizon payers at d ≈ 0.95–1.0: they bear 100% of the physical and psychological costs with zero exit, zero voice, and zero legal standing. Regulators, veterinarians, scholars (observers) sit at d ≈ 0.5 (analytical): they see the structure but are neither primary extractors nor primary victims. The property framework's directionality is maximally asymmetric — it is designed to be.",
+    "perspectival_gap": "From the agenda_setter/beneficiary seats, the property framework looks like a stable, efficient coordination mechanism: it allocates animal resources, resolves disputes, enables markets. From the payer seats (animals), it is totalizing extraction with no exit and no recourse. The observer seats see both: the legal architecture is coherent and stable (mountain-like from the institutional perspective) while being maximally extractive from the subject perspective. The engine computes this divergence from the structural data — the property reading's claim that this is 'just how ownership works' is the cover story the framework tells itself.",
+    "mandatrophy_analysis": "The founding problem (agrarian dispute resolution and economic coordination) is substantially transformed — industrial animal use operates at a scale, intensity, and moral distance that the original property framework never contemplated. Yet the constraint persists and has intensified (extraction rising from 0.65 to 0.88 over the interval). The property classification has become a snare: it extracts massively from animals while using anti-cruelty statutes as a performative shield. The mandatrophy is unresolved — the constraint's mandate (stable property allocation) has been overtaken by its extraction function (industrial animal use), but the legal system treats the extraction as the mandate.",
+    "kernel_context": "This constraint is the property_reading of the contested kernel animal_status_kernel. The kernel is the question: 'What is the moral and legal status of animals?' This reading instantiates the property framework: animals as legal objects, moral considerability derived from ownership, economic value as the only metric. Sibling readings: welfare_reading (animals as sentient property with welfare constraints) and abolitionist_reading (animals as moral persons with the right not to be property). The property_reading forecloses the abolitionist_reading within any single legal framework — one cannot simultaneously hold that animals are property with no independent rights AND that animals have the basic right not to be property. The property_reading coexists_with the welfare_reading in contemporary law: most jurisdictions retain property status while adding welfare regulations, and the two readings are held by different factions (industry vs. welfare advocates) without logical contradiction. The property_reading influences the welfare_reading by setting the baseline: welfare regulations are interpreted as modifications to property rights, not recognitions of animal rights, and the 'economic necessity' defense limits welfare protections to what doesn't threaten the property framework's core extraction."
+  },
+  "omegas": [
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Is the animal_status_kernel best framed as (a) the legal classification of animals, (b) the moral considerability of animals, or (c) the relationship between legal status and moral considerability? Different framings yield different constraint boundaries and different ε values.",
+      "resolution_mechanism": "Trace how each framing structures the beneficiary/victim sets and the coordination/extraction boundary. The legal-classification framing centers property law; the moral-considerability framing centers sentience and interests; the relationship framing centers the derivation claim (moral considerability derives from ownership). The three framings are not equivalent — they produce different constraint identities.",
+      "impact": "If the kernel is the legal classification, the property_reading is a mountain (positive law is what it is). If the kernel is moral considerability, the property_reading is a snare (deriving morality from ownership is extractive cover). If the kernel is the derivation claim, the property_reading is a tangled_rope (coordination via property law + extraction via derivation). The classification depends on which framing the engine adopts — an irreducible conceptual ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's identity is legal, moral, or the derivation relation between them — and how that choice determines the constraint's classification."
+    },
+    {
+      "id": "welfare_regulation_as_coordination_or_theater",
+      "question": "Do anti-cruelty and welfare statutes represent genuine coordination (reducing suffering) or theatrical maintenance of the property framework (legitimizing extraction)?",
+      "resolution_mechanism": "Measure the proportion of animal suffering that welfare regulations actually prevent vs. the proportion they render legally 'necessary.' Track whether welfare reforms reduce total suffering or merely shift its legal characterization. Compare jurisdictions with stronger vs. weaker welfare laws on aggregate animal welfare outcomes.",
+      "impact": "If welfare regulations are genuine coordination, the property_reading has a tangled_rope component (coordination + extraction). If they are theater, the property_reading is a pure snare. The theater_ratio trajectory (rising from 0.1 to 0.25) suggests increasing theatricality, but the coordination function (dispute resolution, market enablement) persists independently.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the welfare-regulation layer is a real coordination function or a performative legitimization of the extraction core."
+    },
+    {
+      "id": "sentience_evidence_as_axiom_overriding_pressure",
+      "question": "Does the accumulation of scientific evidence for animal sentience, cognition, and emotional complexity constitute axiom_overriding pressure on the property_reading's foundational axiom (ownership_entails_unrestricted_use)?",
+      "resolution_mechanism": "Track whether the property_reading's defenders modify their axioms in response to sentience evidence (e.g., shifting from 'animals don't feel pain' to 'pain doesn't matter if economically necessary' to 'we minimize pain within economic constraints'). Document whether the authority structure (legal system, industry) explicitly acknowledges the gap between sentience evidence and the property framework.",
+      "impact": "If sentience evidence creates substantial axiom_overriding pressure that is unacknowledged by the authority structure, the property_reading's drift_state magnitude is at least 'substantial' and the constraint is in active drift toward reclassification. If the authority structure has already absorbed the evidence via reinterpretation (economic necessity as the filter), the drift is acknowledged but managed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether scientific evidence of sentience functions as an overriding pressure on the property_reading's core derivation claim, and whether that pressure is acknowledged or suppressed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status_kernel__welfare_reading",
+      "animal_status_kernel__abolitionist_reading",
+      "anti_cruelty_statutes",
+      "animal_welfare_acts",
+      "ag_gag_laws",
+      "animal_enterprise_terrorism_act",
+      "vivisection_regulations",
+      "pet_trade_regulations",
+      "zoo_licensing_acts",
+      "laboratory_animal_welfare_regulations"
+    ],
+    "dual_formulation_note": "The animal_status_kernel decomposes into three constraint stories: property_reading (this file), welfare_reading, and abolitionist_reading. They share the kernel (the status question) but instantiate different constraints with different ε values, different beneficiary/victim structures, and different classifications. The property_reading (snare, ε=0.88) is the dominant legal framework. The welfare_reading (tangled_rope, ε≈0.45) is the regulatory overlay. The abolitionist_reading (mountain or scaffold depending on framing, ε≈0.05) is the aspirational counter-framework. The property_reading forecloses the abolitionist_reading and influences the welfare_reading. All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.97
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "animal_status_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "welfare_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "animals_are_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "moral_considerability_derives_from_ownership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "economic_value_is_sole_relevant_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "classical_property_law_framework",
+    "drift_state": {
+      "moment": "contemporary_sentience_evidence_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

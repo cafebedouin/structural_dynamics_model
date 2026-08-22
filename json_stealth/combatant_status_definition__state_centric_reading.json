@@ -1,0 +1,410 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__state_centric_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "csd_state_centric",
+    "story_uid": "a209a520-580b-4de9-862d-7ebfad04a5b5"
+  },
+  "base_properties": {
+    "extractiveness": 0.67,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Centric Combatant Status Gate (Geneva III Article 4 Reading)",
+    "topic_domain": "legal/international_humanitarian_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_armed_forces",
+      "high_contracting_states"
+    ],
+    "victims": [
+      "non_state_fighters"
+    ],
+    "vindicated_propositions": [
+      "westphalian_state_monopoly_on_lawful_force",
+      "positivist_textual_supremacy_of_article_4"
+    ]
+  },
+  "interval": {
+    "start": 1949,
+    "end": 2026
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Is the state-affiliation requirement intrinsic to the combatant_status_definition kernel, or is it one contestable reading of a fixed text that other readings reinterpret?",
+      "resolution_mechanism": "Comparative structural analysis across the three sibling readings: each reading's victim set, epsilon profile, and foreclosure relations are authored in separate files; convergence or divergence in computed classifications locates whether the disagreement lives in the text or in the readers.",
+      "impact": "Adopting the national_liberation_reading removes non_state_fighters from the victim set for covered conflicts; adopting the functional_protection_reading dissolves the status gate's practical bite entirely, converting this constraint's extraction into a labeling exercise atop a status-independent floor.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this constraint is the state_centric_reading of the combatant_status_definition kernel; sibling readings would restructure the victim set."
+    },
+    {
+      "id": "customary_status_drift",
+      "question": "Does the categorical exclusion of non-state fighters remain customary international law, or has state practice and jurisprudence converged on functional criteria that bypass the Article 4 gate?",
+      "resolution_mechanism": "Systematic survey of state practice and opinio juris: detention practice in non-international armed conflicts, Tadic-line tribunal criteria, Additional Protocol II acceptance rates, and detaining-power status-review procedures.",
+      "impact": "If functional criteria are now customary, the state-centric reading operates as minority practice sustained by major-power weight, which raises measured suppression (more active defense required per unit of persistence) and strengthens the case that the exclusion component is inertial rather than functional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's operative rule still tracks living law or persists against it."
+    },
+    {
+      "id": "compliance_incentive_feedback",
+      "question": "Does categorical denial of status remove non-state armed groups' incentive to comply with conduct-of-hostilities rules, creating a nothing-to-lose feedback loop that degrades the very distinction the arrangement exists to protect?",
+      "resolution_mechanism": "Compare distinction-compliance indicators across organized armed groups facing credible status pathways versus groups facing categorical denial, controlling for conflict intensity and group ideology.",
+      "impact": "A strong feedback loop makes the constraint partially self-undermining: the extraction imposed on non-state fighters erodes the coordination benefit delivered to civilians, supporting functional readings even on state-centric premises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the exclusion's incentive effects corrode the arrangement's own coordination function."
+    },
+    {
+      "id": "civilian_protection_tradeoff",
+      "question": "Would extending combatant status to organized, disciplined non-state armed groups strengthen or weaken civilian immunity in practice?",
+      "resolution_mechanism": "Empirical study of distinction-compliance in conflicts where status pathways exist (Additional Protocol I contexts, bilateral special agreements) versus conflicts where denial is categorical.",
+      "impact": "Resolves the policy core of the sibling dispute: if civilian protection improves with status pathways, the closed-class axiom loses its instrumental grounding and the state-centric reading's secondary justification fails; if protection degrades, the reading's rationale holds against its critics.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The tradeoff underlying the closed-combatant-class axiom; resolution depends on both evidence and weighting of fighter incentives against civilian risk."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1949,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1972,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1949,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1972,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1949,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1972,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.65,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the state-centric reading of combatant status in the law of armed conflict: prisoner-of-war status and the combatant privilege attach only to members of formal state military organizations meeting the Article 4 criteria of Geneva Convention III, and non-state fighters are excluded categorically, whatever their organization, discipline, or conduct. The arrangement performs a real coordination function - a closed, verifiable class of lawful fighters keeps civilians outside the target set and gives captured soldiers a treatment floor - while transferring legal security asymmetrically: state forces hold immunity and guaranteed treatment; non-state fighters, once captured, enter the domestic criminal track, prosecutable for the act of fighting itself. The claim and the metrics are authored independently: the claimed type records the structure I believe true (genuine coordination plus asymmetric extraction under active enforcement), and the metrics record the arrangement's actual operation as this reading's own lights assess it over the standing arrangement under contest. Sibling readings of the same kernel text are separate constraint files linked through the network block.",
+    "key_agents": [
+      "- high_contracting_states: Agenda-setter and collecting seat ([institutional]/[arbitrage]) - drafted, administers, and interprets the Article 4 criteria; declines revisions that would dilute the closed class",
+      "- state_armed_forces: Primary beneficiary ([institutional]/[mobile]) - holds combatant immunity and prisoner-of-war guarantees as a condition of membership, not conduct",
+      "- non_state_fighters: Primary target ([powerless]/[trapped]) - bears prosecution exposure and detention without prisoner-of-war guarantees; no conduct-based route into the protected class",
+      "- national_liberation_movements: Excluded claimant ([organized]/[constrained]) - won a rival codification over major-power objection; outside the conversation in conflicts against states that rejected it",
+      "- civilians_in_conflict_zones: Dual-positioned ([powerless]/[trapped]) - protected by the fighter/civilian line, exposed by its erosion where fighters gain nothing by identifying themselves",
+      "- icrc: Institutional observer ([institutional]/[analytical]) - visits, registers, documents, advocates; determines no one's status",
+      "- international_war_crimes_tribunals: Judicial observer ([institutional]/[analytical]) - applies functional criteria that quietly bypass the categorical rule"
+    ],
+    "logic_rationale": "Extractiveness 0.67 records the magnitude of the legal-security transfer: a captured fighter's exposure to domestic prosecution and non-POW detention is a large, concentrated loss falling on every member of the excluded class regardless of discipline or conduct. Suppression 0.65 is structural rather than rhetorical: the class is closed at capture, no conduct-based route into POW status exists for the excluded, and persistence depends on detaining powers actively maintaining the denial through status-review procedures and commission systems built around the no-status category. Theater 0.38 reflects the growing share of legal activity that defends the exclusion rather than performs the identification function - unlawful-combatant determinations, commission jurisprudence, and the memorandum literature elaborating justifications for a category whose core work the text already does. Accessibility_collapse 0.62: for a captured fighter the alternatives collapse almost completely, since nothing changes the category; at the system level, however, rival codifications remain live (Additional Protocol I, Common Article 3 jurisprudence), so collapse is partial rather than total. Resistance 0.58: the exclusion has met organized, sustained resistance - the entire 1974-77 diplomatic conference, decades of ICRC advocacy, judicial pushback - without displacing the text. The three series share one ten-point grid (1949-2026) so every metric is authored at every examined time point. Suppression_requirement is tracked because the enforcement history is genuinely dynamic, not static: a ratchet through 2001-2006 as detention architecture was deliberately constructed around the no-status category, followed by partial retreat after Hamdan and Boumediene. The 1977 step-change across all three series marks Additional Protocol I's adoption, which hardened major-power attachment to the unrevised text rather than softening it.",
+    "perspectival_gap": "From the high_contracting_states seat the arrangement computes as a workable legal framework those states built and staff - coordination with a fee attached. From the non_state_fighters seat the same structure computes as categorical exposure: every operative element (closed class, discretionary determination, domestic prosecution track) points at them, and their trapped exit amplifies effective extraction toward the full-target pole. Tribunals occupy a third position: their functional criteria treat the categorical rule as unworkable in practice while stopping short of granting status, so the judicial seat experiences the arrangement as a rule honored in the breach. The engine derives these divergent per-seat classifications from the structural data; this story's claim does not adjudicate among them.",
+    "directionality_logic": "state_armed_forces sits nearest the beneficiary pole: the arrangement subsidizes its members with immunity and guaranteed treatment at no administrative cost to them, and their mobility across conflicts preserves the subsidy. high_contracting_states collects the residual - prosecutorial discretion over captured irregulars and the ordering benefit of a closed fighter class - so its derived directionality is low but not zero, tempered by reciprocity risk to its own captured personnel. non_state_fighters sits near the full-target pole, amplified by trapped exit: no action available to them at capture alters their category. civilians_in_conflict_zones derives near-symmetric with a slight beneficiary tilt - protected by the line's existence, exposed by its erosion under no-status incentives. The observers (icrc, international_war_crimes_tribunals) take the analytical seat and feed no extraction arithmetic.",
+    "mandatrophy_analysis": "The founding problem - regularizing identification of lawful fighters after the partisan warfare of the Second World War - remains half-live: interstate war still occurs, and for it the identification function works. What has atrophied is the exclusion's justification: the categorical denial was calibrated to a world of interstate war plus exceptional insurgency, while contemporary armed conflict is predominantly non-international, where the identification work is performed by functional criteria (Tadic-line organization and command tests, Additional Protocol II) that bypass the status gate entirely. The R5 mismatch read pairs founding_problem_status=contested with disappearance_verdict=world_rearranges: the arrangement is load-bearing enough that overnight removal would reorganize detention practice in every active conflict, yet the parties dispute whether the problem it was built for still needs this solution. That profile blocks both failure modes - it prevents mislabeling the whole regime as pure extraction, because the identification function is genuine and would be rebuilt in some form, while flagging the exclusion component as persisting past its justification rather than serving it.",
+    "kernel_context": "Kernel: combatant_status_definition - the fixed Article 4 text of Geneva Convention III, which all three readings treat as authoritative. This file instantiates the state_centric_reading: combatant status requires formal state military organization meeting the Article 4 criteria, and the exclusion of non-state actors is categorical. Sibling readings, each a separate constraint file with its own epsilon and victim set: national_liberation_reading (Additional Protocol I Article 1(4) extends status to organized forces fighting colonial domination, occupation, and racist regimes) and functional_protection_reading (Common Article 3 minimums attach regardless of status, dissolving the gate's practical bite). Because this reading endorses the arrangement it describes, it authors epsilon by its own lights - recording the magnitude of the legal-security transfer while treating much of it as the legitimate price of the fighter/civilian distinction; a functionalist sibling would author a higher epsilon over the identical referent. The divergence between those authored values is data about the readers, not noise about the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "national_liberation_reading",
+      "functional_protection_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'combatant status under IHL' covers three structurally distinct claims sharing one kernel text (Geneva III Article 4): who may hold combatant status (this state-centric reading versus the national_liberation_reading) and whether minimum protections depend on status at all (functional_protection_reading). Each is authored separately with its own stable epsilon per the epsilon-invariance principle: this reading's extraction concentrates on non-state fighters; the liberation reading's concerns non-recognition of the AP I extension by major powers; the functional reading's concerns the adequacy and reach of the status-independent floor. The upstream text (Article 4) is cited as authority by all three, so this reading links to both siblings; the functional reading exerts downstream pressure on this one through tribunal practice without foreclosing it."
+  },
+  "stakeholders": [
+    {
+      "name": "high_contracting_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Drafted and ratified the Third Geneva Convention and administer its Article 4 status criteria. Each detaining power decides, under its own procedures, which captured fighters receive prisoner-of-war status and which are remanded to domestic criminal process. Major military powers declined to ratify the 1977 protocol that would have extended status to certain non-state movements, preserving the original text they administer. As parties to conflicts against irregular forces, they retain the choice to prosecute captured fighters for the fact of fighting, and they bear the reciprocity risk that their own captured personnel someday face an adversary unconstrained by the same text."
+    },
+    {
+      "name": "state_armed_forces",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Soldiers of recognized state militaries carry the combatant privilege: lawful acts of war cannot be prosecuted as murder, and captured service members must receive prisoner-of-war treatment with named protections through repatriation. Their entitlement rests on membership in a state's armed forces rather than on conduct, discipline, or distinctive insignia. When captured by adversaries, they invoke the same convention their government administers, and their treatment becomes a test of the adversary's compliance rather than of their own category."
+    },
+    {
+      "name": "non_state_fighters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Members of organized armed groups - insurgents, guerrillas, militia fighters - fight under command structures and often with uniforms or open arms carriage, yet fall outside Article 4's categories because their group lacks state affiliation. Once captured, no determination of their discipline or conduct changes their category: they face prosecution under domestic law for acts that would be lawful for a uniformed soldier, and detention without prisoner-of-war guarantees. Nothing available to them at capture alters the classification; their routes out of the category are demobilization, escape, or their side's victory."
+    },
+    {
+      "name": "national_liberation_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Anti-colonial and national liberation movements campaigned through the 1974-77 diplomatic conferences for combatant status for organized forces fighting occupation and racist regimes, winning Additional Protocol I Article 1(4) over the objection of major military powers. Movements in conflicts against states that never accepted that protocol remain outside the conversation their campaign addressed; captured fighters from these movements are processed under the same domestic-law track as any other irregular, and their political representatives negotiate status, if at all, bilaterally with the states that hold the pen."
+    },
+    {
+      "name": "civilians_in_conflict_zones",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Civilians rely on the fighter/civilian line for protection from deliberate attack. The line's value to them depends on fighters having reasons to identify themselves; where fighters gain nothing by wearing insignia - because status is closed to them regardless - distinguishing marks fade and the population the fighters move among absorbs the targeting risk. Civilians also host the prosecutions, detentions, and security operations the regime produces, and bear the escalation that follows when captured fighters are tried as common criminals."
+    },
+    {
+      "name": "icrc",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Visits detention facilities in most armed conflicts, registers detainees, and publishes commentaries and periodic reports on how status categories operate in practice. It advocates that all detainees receive at least the Common Article 3 floor and presses detaining powers on treatment gaps, but holds no authority to determine anyone's status and depends on state consent for access."
+    },
+    {
+      "name": "international_war_crimes_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Ad hoc tribunals and the International Criminal Court adjudicate which organized armed groups count as parties to a conflict and which individuals may lawfully be targeted or prosecuted. The Tadic jurisprudence articulated functional criteria - organization, command responsibility, conduct of hostilities - that courts now apply independently of whether a group has state affiliation, shaping the environment in which detaining states make status calls without itself conferring prisoner-of-war status on anyone."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the wartime identification problem: a closed, verifiable class of lawful fighters lets adversaries know whom they may attack and detain as fighters, keeps civilians outside the target set, and gives captured soldiers a treatment floor tied to their category rather than to their captor's discretion.",
+    "transfer_function": "Moves legal security asymmetrically: state service members receive combatant immunity and prisoner-of-war guarantees; non-state fighters, whatever their organization or conduct, are moved onto the domestic criminal track - prosecutable for the act of fighting, detainable without POW protections - while the administrative power to make that call remains with the detaining state.",
+    "absent_voices": "Non-state armed groups had no delegation at the 1949 Diplomatic Conference and none in the Article 4 drafting room; captured fighters appear in the regime only as objects of determination, never as participants. National liberation movements forced entry into the 1974-77 conferences and won a rival codification over major-power objection, but fighters in conflicts against states that rejected that protocol remain outside the conversation. Today's organized armed groups negotiate status bilaterally, if at all, with the governments that administer the criteria applied to them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical exclusion vanished overnight, every detaining power's processing of captured irregulars would reorganize: status-determination boards would convene, pending prosecutions for the fact of fighting would collapse or convert, and detention regimes built around the no-status category - military commissions, security-internment tracks - would lose their legal basis. State forces' own protections would survive untouched; the rearrangement falls entirely on the non-state side of the line, which is itself a measure of where the arrangement's weight sits.",
+    "founding_problem": "After the Second World War's partisan and resistance warfare, states codifying the 1949 conventions needed to regularize who may lawfully fight: Article 4's categories were drawn to cover organized militias and resistance movements belonging to a party to the conflict while preserving the state monopoly on lawful belligerency and denying legitimacy to irregulars outside state command structures.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Outside the benefiting parties: the ICRC's official commentaries and customary-IHL studies attest that the identification problem the article was built for persists while documenting the costs of categorical exclusion; the 1974-77 diplomatic conference record shows non-aligned and socialist states contesting the exclusion from outside the major-power bloc that benefits from it; Tadic-line jurisprudence attests that courts found the categorical rule unworkable for modern conflict and substituted functional criteria. No attestation comes from non-state armed groups themselves in the 1949 conference - they had no seat - which is itself signal about whose problem the founding text was written to solve."
+  },
+  "gain_flow": "high_contracting_states",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "westphalian_state_monopoly_on_lawful_force",
+    "drift_state": {
+      "moment": "contemporary_asymmetric_conflict_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "national_liberation_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "functional_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_affiliation_prerequisite_for_combatant_privilege",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "closed_combatant_class_preserves_civilian_immunity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

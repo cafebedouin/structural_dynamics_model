@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_treaty__sovereignty_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "281e39ec-95c9-4c6b-8810-1191f09b4492"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federation Membership Treaty: Sovereignty-Primary Reading of Free Movement",
+    "topic_domain": "political_economy/federalism/migration_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "member_state_governments",
+      "national_labor_unions",
+      "domestic_welfare_administrators"
+    ],
+    "victims": [
+      "mobile_workers",
+      "cross_border_commuters",
+      "migrant_families"
+    ],
+    "vindicated_propositions": [
+      "national_sovereignty_doctrine",
+      "labor_market_protection_principle",
+      "welfare_state_autonomy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "This constraint is one reading (sovereignty_primary) of the contested kernel federation_membership_treaty. What structural changes would the integration_primary or subsidiarity_balance readings produce?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim sets, enforcement structures, and ε values. The sovereignty_primary reading places local labor markets as beneficiaries and mobile workers as victims; integration_primary would invert this structure. Subsidiarity_balance would produce an intermediate structure with proportionality-based restrictions.",
+      "impact": "If the sibling readings produce materially different ε values and structural relationships, the kernel label 'free movement' conflates multiple constraints — the decomposition is warranted. If they converge, the label describes a single constraint with interpretive variance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel decomposition: whether sovereignty_primary, integration_primary, and subsidiarity_balance are structurally distinct constraints"
+    },
+    {
+      "id": "national_consent_mechanism_ambiguity",
+      "question": "Does 'member state consent' operate as a genuine coordination mechanism (states mutually recognize each other's labor market protections) or as a unilateral veto power (each state blocks mobility that threatens its domestic arrangement)?",
+      "resolution_mechanism": "Analyze treaty invocation patterns: count mutual recognition agreements vs. unilateral restriction notifications. Track whether restrictions are reciprocated or asymmetrically imposed.",
+      "impact": "If mutual recognition dominates, the constraint has stronger rope characteristics (coordination). If unilateral veto dominates, extraction is higher and the constraint leans toward snare for mobile workers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the consent mechanism coordinates or extracts"
+    },
+    {
+      "id": "welfare_protection_vs_exclusion_boundary",
+      "question": "Where is the boundary between legitimate welfare system protection and exclusionary extraction? At what point does protecting national welfare become extracting from mobile workers who contribute but cannot access?",
+      "resolution_mechanism": "Longitudinal fiscal incidence analysis: compare mobile workers' tax/social contributions against benefit access over 5-10 year horizons across member states.",
+      "impact": "If mobile workers are net contributors with restricted access, the welfare protection framing masks extraction. If they are net beneficiaries, the protection claim has stronger coordination grounding.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether welfare protection framing covers net extraction from mobile workers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the sovereignty-primary reading of the federation membership treaty's free movement provisions. The treaty establishes a federal union with nominal free movement of persons, but this reading holds that movement is conditional on member state consent — each state retains authority to restrict inflow to protect its national labor market and welfare system. The constraint operates as a coordination mechanism among states (mutual recognition of labor market sovereignty) while simultaneously extracting from mobile workers who face restricted access, delayed rights recognition, and contributory exclusion. The coordination function is real: states avoid a race-to-the-bottom in labor standards and welfare generosity by preserving national policy space. The extraction function is also real: mobile workers pay into systems they cannot fully access, accept wage discounts in protected sectors, and bear the cost of regulatory fragmentation. The engine will compute per-seat classifications from the structural data below.",
+    "key_agents": [
+      "member_state_governments: Primary agenda_setter (institutional/arbitrage) — sets restriction policy, controls welfare access rules",
+      "national_labor_unions: Beneficiary (organized/constrained) — protects domestic wage floors and sectoral agreements from competitive pressure",
+      "domestic_welfare_administrators: Beneficiary (institutional/mobile) — preserves fiscal sustainability of national systems by controlling access",
+      "mobile_workers: Primary payer (moderate/constrained) — bears restricted access, delayed portability, sectoral exclusion",
+      "cross_border_commuters: Payer (moderate/constrained) — faces daily regulatory friction, double taxation risk, social security gaps",
+      "migrant_families: Payer (powerless/trapped) — experiences compounded exclusion from housing, education, healthcare systems",
+      "federal_commission: Observer (institutional/analytical) — monitors treaty compliance, initiates infringement proceedings, proposes harmonization",
+      "employers_in_shortage_sectors: Excluded (powerful/constrained) — would benefit from open access but lacks voice in restriction decisions"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the substantial transfer from mobile workers to protected domestic arrangements: restricted labor market access depresses wages in exposed sectors; welfare contribution/benefit asymmetries persist for 5-10 years; professional qualification recognition delays create deskilling. Suppression (0.72) is high because the constraint actively prevents exit from national regulatory regimes — workers cannot choose a more favorable member state's labor law or welfare system without physical relocation, and even relocation triggers new restriction cycles. Theater ratio (0.28) is moderate: the labor market protection and welfare sustainability justifications are genuine coordination rationales, but a growing share of restriction invocations target sectors with documented shortages rather than genuine displacement risks. Accessibility collapse (0.58) reflects that alternatives exist (irregular migration, remote work, sectoral niche strategies) but are costly and incomplete. Resistance (0.52) is significant: mobile workers litigate, commuters organize, employers lobby — but the constraint's federal treaty foundation gives it deep legitimacy.",
+    "perspectival_gap": "From the member state government seat, this is a rope: a genuine coordination mechanism that prevents destructive competition among welfare states and labor markets. From the mobile worker seat, this is a snare: the coordination story is cover for extracting labor and contributions while denying access. From the national union seat, this is a scaffold (they would say rope): temporary protection while domestic systems adjust — but the sunset never arrives. From the federal commission seat, this is a tangled rope: the coordination function is real but the extraction asymmetry has widened beyond what proportionality allows. The engine computes this divergence from the declared structural relationships.",
+    "directionality_logic": "Member state governments are structural beneficiaries (d ~ 0.15): they control the restriction regime, collect the policy autonomy rents, and face minimal exit costs (arbitrage-grade exit via treaty opt-outs). National labor unions are beneficiaries (d ~ 0.25): they gain wage protection and bargaining leverage, with constrained exit (organized at national level). Domestic welfare administrators are beneficiaries (d ~ 0.20): they preserve fiscal control, with mobile exit options. Mobile workers are primary targets (d ~ 0.85): they bear the access restrictions, contribution/benefit gaps, and deskilling, with constrained exit (relocation triggers new restrictions). Cross-border commuters are targets (d ~ 0.75): daily regulatory friction, trapped by geography. Migrant families are deep targets (d ~ 0.90): compounded exclusion, identity-locked through settlement and family ties. Employers in shortage sectors are excluded (d ~ 0.70): they would benefit from openness but lack agenda-setting power. Federal commission is observer (d ~ 0.50): symmetric analytical position.",
+    "mandatrophy_analysis": "The founding problem (preventing a race-to-the-bottom in labor standards and welfare generosity during federal integration) remains partially live — but the coordination solution has accumulated extraction layers: sectoral restrictions now cover documented shortage occupations; welfare waiting periods exceed integration timelines; qualification recognition delays serve protectionist rather than quality-assurance functions. The constraint has not resolved its mandatrophy; it has drifted from coordination into extraction while retaining the original justification. The declared claimed_type (tangled_rope) captures this hybrid state: genuine coordination function + asymmetric extraction + active enforcement required.",
+    "kernel_context": "This constraint is the sovereignty_primary reading of the contested kernel federation_membership_treaty. Sibling readings: integration_primary (free movement as constitutive single market right, restrictions presumptively illegitimate) and subsidiarity_balance (proportionality-bounded mobility, legitimate national interests constrain but do not eliminate rights). This reading structurally differs by: (1) placing local labor markets and welfare administrators in the beneficiary set; (2) placing mobile workers, cross-border commuters, and migrant families in the victim set; (3) assigning high preservation of national regulatory autonomy as the coordination function. The ε-invariance principle requires separate constraint stories for each reading — they have different ε values, different beneficiary/victim structures, and different enforcement logics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_treaty__integration_primary",
+      "federation_membership_treaty__subsidiarity_balance",
+      "federal_labor_law_harmonization",
+      "cross_border_social_security_coordination",
+      "professional_qualification_recognition_directive"
+    ],
+    "dual_formulation_note": "This story is one member of the federation_membership_treaty constraint family. The three readings (sovereignty_primary, integration_primary, subsidiarity_balance) decompose the colloquial label 'free movement provisions' into structurally distinct constraints with different ε values, different beneficiary/victim structures, and different enforcement logics. This reading (sovereignty_primary) has the highest ε (0.68) and strongest preservation of national autonomy. The integration_primary reading would have lower ε (~0.25) and mobile workers as beneficiaries. The subsidiarity_balance reading would sit intermediately (~0.45) with proportionality-based restrictions. All three are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "member_state_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Each member state government controls its labor market restriction policy, welfare access rules, and professional recognition procedures. They negotiate mutual recognition agreements bilaterally and invoke treaty safeguard clauses unilaterally. They collect the policy autonomy rent: the ability to set wages, benefits, and standards without federal harmonization pressure. Exit is arbitrage-grade: they can threaten treaty opt-out or non-compliance with minimal domestic cost."
+    },
+    {
+      "name": "national_labor_unions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Domestic unions in protected sectors (construction, public services, regulated professions) gain wage floors and bargaining leverage from restricted labor supply. They lobby for restriction invocation and defend sectoral agreements against liberalization. Their exit is constrained: organized at national level, they cannot easily shift to federal-level bargaining without losing institutional recognition and membership base."
+    },
+    {
+      "name": "domestic_welfare_administrators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "National social security agencies, health insurance funds, and employment services preserve fiscal control by managing access rules for mobile workers: waiting periods, contribution portability limits, benefit export restrictions. They coordinate through federal technical committees but retain decision authority. Exit is mobile: they could harmonize systems but choose not to, preserving national administrative autonomy."
+    },
+    {
+      "name": "mobile_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Workers who move across member state borders for employment face: restricted access to regulated professions (recognition delays of 12-36 months), sectoral employment bans in protected occupations, welfare waiting periods (3-5 years for full access), and wage discounts in exposed sectors (15-30% below domestic equivalents). They contribute to social systems immediately but access benefits delayed. Exit is constrained: moving to another member state triggers a new restriction cycle; returning home means career disruption."
+    },
+    {
+      "name": "cross_border_commuters",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Workers living in one member state and employed in an adjacent state face daily regulatory friction: double social security liability risk, tax coordination gaps, healthcare access fragmentation, and pension accrual discontinuities. They are geographically trapped — their housing, family, and community ties fix them in the cross-border zone. Exit is constrained: changing employer or residence breaks the commuting arrangement; full relocation to the employment state triggers new restriction cycles."
+    },
+    {
+      "name": "migrant_families",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Families with mixed migration statuses (one spouse mobile worker, children born in host state, elderly dependents) experience compounded exclusion: children face education tracking into vocational streams, spouses face labor market access barriers, elderly dependents face healthcare access denials. Their identity is fused to the host society — children are educated there, families put down roots — making exit identity-locked rather than merely constrained. They bear the intergenerational cost of the restriction regime."
+    },
+    {
+      "name": "federal_commission",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The federal executive monitors treaty compliance, initiates infringement proceedings against disproportionate restrictions, and proposes harmonization directives. It takes testimony from all seats, commissions economic analyses, and can impose remedies — but its enforcement is politically constrained by member state governments in the council. It occupies the analytical seat: it sees the full structure but cannot unilaterally change it."
+    },
+    {
+      "name": "employers_in_shortage_sectors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Employers in healthcare, construction, hospitality, and tech sectors face documented labor shortages but cannot access mobile workers due to professional recognition barriers and sectoral restrictions. They would benefit from open access and lobby for liberalization, but their voice is excluded from the restriction invocation process — which is controlled by member state governments responding to domestic union pressure. Their exit is constrained: they cannot relocate production easily (care work is local, construction is site-bound) and face domestic political costs for advocating foreign labor."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents a race-to-the-bottom in labor standards and welfare generosity among member states by preserving national policy autonomy: each state can maintain higher wages, stronger protections, and more generous welfare without losing its workforce to lower-standard competitors or attracting only net-benefit migrants.",
+    "transfer_function": "Moves labor market access, welfare benefits, and professional recognition rights from mobile workers/cross-border commuters/migrant families to member state governments/national unions/domestic welfare administrators — mobile workers pay contributions immediately but access benefits delayed; they accept wage discounts in protected sectors; they bear deskilling from recognition delays.",
+    "absent_voices": "Mobile workers and migrant families are structurally present but politically muted — they lack voting rights in host states, their unions are weak or non-existent, and their advocacy is fragmented. Cross-border commuters have no dedicated representation in any national parliament. Employers in shortage sectors are excluded from the restriction decision process despite bearing documented economic costs. The federal parliament has consultative but not legislative authority over restriction invocations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sovereignty-primary restriction regime vanished overnight: member states would face immediate competitive pressure to harmonize labor standards downward or raise welfare contributions; mobile workers would gain immediate access to regulated professions and full welfare portability; cross-border commuters would see regulatory friction dissolve; national unions would lose wage protection leverage; welfare administrators would face fiscal pressure from expanded access; federal harmonization directives would accelerate. The federal labor market and welfare architecture would reorganize around either integration_primary or subsidiarity_balance logics.",
+    "founding_problem": "At federation founding, member states feared that unrestricted free movement would trigger a race-to-the-bottom: capital and high-skill workers would concentrate in low-tax, low-regulation states, while low-skill workers and net-benefit migrants would concentrate in high-welfare states — destroying the fiscal basis of national welfare systems and undermining collectively bargained labor standards.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Member state governments and national unions attest the founding problem remains live, citing persistent wage and welfare differentials. The federal commission, independent economic institutes, and mobile worker advocacy organizations attest the problem is substantially mitigated by existing coordination (minimum wage directives, social security coordination regulations, posting of workers rules) and that current restrictions exceed what the founding problem justifies — the arrangement persists as protectionism masked as coordination."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "federation_membership_treaty"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "integration_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "subsidiarity_balance",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "national_labor_market_sovereignty_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "welfare_state_autonomy_precedes_mobility_rights",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_treaty_sovereignty_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_enlargement_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

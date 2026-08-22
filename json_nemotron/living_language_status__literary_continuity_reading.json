@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "living_language_status__literary_continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_living_language_status__literary_continuity_reading",
+    "measurement_id_prefix": "living_language_status__literary_continuity_reading",
+    "story_uid": "dcf5e601-0043-41dc-ab32-c17d5b2dbbb8",
+    "created_at": "2026-08-15T14:22:10Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.25,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Literary Continuity as Vitality Criterion for Living Language Status",
+    "topic_domain": "sociolinguistics/religious_studies/nationalism_studies",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "maskilim_intellectuals",
+      "secular_hebrew_writers",
+      "revivalist_cultural_authorities"
+    ],
+    "victims": [
+      "traditional_yiddish_speakers_excluded_from_literary_vitality",
+      "illiterate_or_non_literary_speakers",
+      "liturgical_hebrew_practitioners_without_secular_output"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is literary_continuity_reading a distinct constraint from the sibling readings of the living_language_status kernel, or do the readings represent different observables of the same constraint?",
+      "resolution_mechanism": "Apply the epsilon-invariance test: if evaluating vitality by literary output vs. liturgical transmission vs. native generation yields different epsilon values, different beneficiary/victim structures, or different suppression profiles, they are separate constraints. The Haskalah case shows literary continuity operates with low extraction (elite coordination) while native_generation_reading imposes high extraction on non-transmitting communities — different epsilon referents confirm separate constraints.",
+      "impact": "If separate constraints, each gets its own classification and the kernel is a family linked by network.affects_constraints. If one constraint, the epsilon variance would violate epsilon-invariance and require decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three declared readings of living_language_status are structurally distinct constraints (per epsilon-invariance) or competing observables of one constraint"
+    },
+    {
+      "id": "literary_vitality_exclusion_mechanism",
+      "question": "Does the literary continuity criterion structurally exclude non-literary speakers from vitality recognition, or does it merely fail to include them without active suppression?",
+      "resolution_mechanism": "Trace institutional consequences: when literary vitality is the criterion for state recognition, funding, or educational status, do non-literary speaking communities lose material resources? Compare pre-Haskalah communal recognition (all Yiddish speakers counted) vs. post-Haskalah nationalist recognition (only literary Hebrew producers counted).",
+      "impact": "If exclusion carries material consequences (funding, status, educational access), suppression is higher and victims are structurally identifiable — the constraint leans toward tangled_rope. If exclusion is purely definitional without enforcement, it remains a low-extraction rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the literary criterion's exclusion of non-literary speakers is a passive omission or an active extraction mechanism"
+    },
+    {
+      "id": "maskilim_authority_vs_mass_adoption",
+      "question": "Does the literary continuity reading genuinely coordinate without requiring mass adoption, or does it covertly depend on the eventual national adoption that the maskilim could not guarantee?",
+      "resolution_mechanism": "Analyze the historical trajectory: Haskalah periodicals had tiny circulations (hundreds to low thousands) but claimed to represent the language's vitality. Did the criterion work as coordination among the literary elite alone, or did it parasitically rely on the later Zionist mass-revival that the maskilim neither controlled nor all supported?",
+      "impact": "If the criterion only functioned because mass adoption later arrived, the low epsilon is retrospective luck — the constraint was actually a scaffold (transitional) or a bet on future coordination. If it genuinely coordinated elite literary production without mass adoption, the rope classification holds.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether literary continuity as a vitality criterion is self-sufficient coordination or retrospectively validated by outcomes its authors could not ensure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1780,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1820,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1860,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1880,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1780,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1820,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1860,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1880,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1780,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1820,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1860,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1880,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 1780,
+    "end": 1920
+  },
+  "commentary": {
+    "narrative_context": "The literary continuity reading of living language status emerges from the Haskalah (Jewish Enlightenment) periodicals of the late 18th and 19th centuries — Ha-Me'assef, Bikurei Ha-Ittim, Ha-Shachar, and others — which demonstrated that Hebrew could produce new literary, scientific, and philosophical work despite having no native speakers for centuries. This reading declares a language 'living' if it remains a productive medium for new intellectual and literary creation, regardless of whether anyone acquires it as a mother tongue. The constraint coordinates an elite literary revival without requiring mass adoption, benefiting the maskilim (Enlightenment intellectuals) and later secular Hebrew writers who gained cultural authority from this criterion. It excludes traditional Yiddish-speaking masses and liturgical Hebrew practitioners who maintained the language through daily use and ritual but did not produce secular literary output. The extraction is low (elite coordination around literary production) but the exclusion is real: when this criterion later informed Zionist language policy, communities that maintained Hebrew only liturgically or spoke only Yiddish were structurally marginalized in the emerging national culture.",
+    "key_agents": [
+      "maskilim_intellectuals: Primary beneficiaries (organized/mobile) — gain cultural authority and intellectual leadership through literary production criterion",
+      "secular_hebrew_writers: Beneficiaries (organized/constrained) — the criterion validates their work as 'vitality' rather than 'revival of a dead language'",
+      "revivalist_cultural_authorities: Agenda setters (institutional/constrained) — later Zionist cultural institutions that adopted and institutionalized the literary criterion",
+      "traditional_yiddish_speakers_excluded_from_literary_vitality: Victims (organized/trapped) — the largest Jewish linguistic community, excluded from vitality recognition despite maintaining daily spoken language",
+      "illiterate_or_non_literary_speakers: Victims (powerless/trapped) — anyone who used Hebrew or Yiddish without producing literary work, rendered invisible by the criterion",
+      "liturgical_hebrew_practitioners_without_secular_output: Victims (moderate/constrained) — rabbinic scholars and communities maintaining Hebrew through study and prayer, excluded because their output was not 'new literary work'",
+      "analytical_observer: Observer (analytical/analytical) — sees the full structural divergence between literary, liturgical, and native-generation criteria"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint primarily coordinates literary production among a self-selected elite — the maskilim and their successors — without extracting from the broader population directly. The coordination function is genuine: it solved a real collective-action problem (how to justify Hebrew literary work without native speakers) with minimal coercion. Suppression (0.25) reflects the definitional exclusion that later acquired institutional force when the criterion was adopted by nationalist frameworks. Theater ratio is low (0.12) — the literary production is real, not performative. Accessibility collapse (0.35) is moderate: alternatives (liturgical vitality, spoken vitality) remain conceptually available and were actively advocated by rival readings. Resistance (0.45) is significant: traditionalists, Yiddishists, and later Hebraists contested the criterion throughout the period. The claimed type is rope because the constraint coordinates a genuine function (literary production as vitality proof) with beneficiaries but without asymmetric extraction requiring enforcement — the extraction that appears later comes from institutional adoption, not the criterion itself.",
+    "perspectival_gap": "From the maskilim's seat, this is pure coordination: they found a way to make Hebrew literary work meaningful without waiting for native speakers. From the traditional Yiddish speaker's seat, the same criterion erases their living language by declaring only literary Hebrew 'vital.' From the liturgical practitioner's seat, it redefines their centuries of textual transmission as 'preservation of a corpse.' The analytical observer sees three distinct constraints (literary_continuity, liturgical_preservation, native_generation) each with different epsilon, beneficiaries, and victims — not one constraint viewed three ways.",
+    "directionality_logic": "The maskilim and secular Hebrew writers are structural beneficiaries (d ~ 0.1-0.2): they gain cultural authority, intellectual legitimacy, and later institutional positions from the criterion. They have mobile exit options (they could write in German, Russian, Yiddish) but choose Hebrew for ideological reasons. Traditional Yiddish speakers are structural victims (d ~ 0.7-0.8): the criterion excludes their living language from vitality recognition, and when institutionalized, this exclusion carries material consequences (education, publishing, state recognition). They are trapped — Yiddish was their daily language, and the literary Hebrew criterion renders it 'non-vital' by definition. Liturgical practitioners are intermediate victims (d ~ 0.5-0.6): they maintain Hebrew but the 'wrong way' per this criterion. Their exit is constrained — they cannot easily become secular literary producers. Revivalist cultural authorities are agenda setters (d ~ 0.3): they adopt and enforce the criterion but also bear costs of building the institutional infrastructure.",
+    "mandatrophy_analysis": "The literary continuity criterion was built to solve a real coordination problem: justifying Hebrew literary production in the absence of native speakers. That problem was live in the Haskalah period and remains contested today (is literary output sufficient for vitality?). The constraint has not atrophied — it actively structures debates about language revival (Cornish, Manx, Hawaiian) and digital language vitality (programming languages, constructed languages). However, when institutionalized by nationalist movements, it acquired extraction properties it did not originally possess — the mandate expanded beyond its founding coordination function. This is not mandatrophy (the original function persists) but mandate creep (institutional adoption added extraction layers).",
+    "kernel_context": "This constraint is the literary_continuity_reading of the living_language_status kernel. The kernel is the concept 'a language is living if...' — a stabilized commitment that different readings instantiate as different constraints. Sibling readings: liturgical_preservation_reading (vitality = continuous ritual transmission; beneficiaries = rabbinic authorities, traditional communities; victims = secular revivalists, non-ritual speakers) and native_generation_reading (vitality = intergenerational mother-tongue transmission; beneficiaries = nationalist language planners, state education systems; victims = revivalists without native speakers, liturgical-only communities). All three readings coexist as live positions in contemporary sociolinguistics and language policy. This reading's epsilon is low (0.18) because it coordinates elite literary production; the native_generation_reading has high epsilon (mass transmission demands) and the liturgical_preservation_reading has moderate epsilon (institutional maintenance of ritual)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "living_language_status__liturgical_preservation_reading",
+      "living_language_status__native_generation_reading",
+      "zionist_hebrew_revival_policy",
+      "modern_hebrew_standardization"
+    ],
+    "dual_formulation_note": "The living_language_status kernel decomposes into three constraint stories linked by affects_constraints. This reading (literary_continuity) is the upstream coordination constraint — low epsilon, elite beneficiaries, coordination function. The native_generation_reading is downstream — high epsilon, mass extraction, institutional enforcement. The liturgical_preservation_reading is parallel — moderate epsilon, institutional maintenance. The literary criterion historically preceded and enabled the nationalist adoption (influences relation), but does not foreclose the other readings — all three remain live in contemporary discourse."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "maskilim_intellectuals",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Enlightenment intellectuals (Mendelssohn, Wessely, Lefin, Satanow) who produced Hebrew periodicals, translations, and original literary work. They gained cultural authority as 'revivers' of Hebrew without needing to create native speakers. Their exit was mobile — they participated in German, Russian, and Polish intellectual spheres — but they chose Hebrew for ideological cohesion. The literary vitality criterion legitimized their project as 'living language work' rather than 'antiquarian revival.'"
+    },
+    {
+      "name": "secular_hebrew_writers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Writers of the Hebrew renaissance (Mendele, Bialik, Agnon, Brenner) who produced modern Hebrew literature. They benefited from the criterion because it validated their work as proof of vitality, not resurrection. But they also paid costs: the criterion demanded continuous innovation, and writers who turned to Yiddish or other languages were treated as defectors. Their exit was constrained by ideological commitment and the emerging Hebrew literary field's gatekeeping."
+    },
+    {
+      "name": "revivalist_cultural_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Zionist cultural institutions (Va'ad HaLashon, Hebrew University, Histadrut cultural committee) that adopted the literary continuity criterion as the basis for Hebrew's status as a 'living language' deserving of national revival. They set the agenda by institutionalizing the criterion in education, publishing, and language planning. Their exit was constrained — once the criterion became state policy, reversing it would undermine the legitimacy of the entire revival project."
+    },
+    {
+      "name": "traditional_yiddish_speakers_excluded_from_literary_vitality",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "The millions of Yiddish-speaking Jews in Eastern Europe whose daily language was a fully developed, native-speaker vernacular with rich oral and emerging literary culture. The literary continuity criterion excluded Yiddish from 'vitality' because its literary output was deemed 'derivative' or 'folk' rather than 'intellectual.' When Zionist institutions adopted the criterion, Yiddish speakers were structurally marginalized in cultural funding, education, and national recognition — trapped because Yiddish was their mother tongue and shifting to literary Hebrew required ideological conversion they largely rejected."
+    },
+    {
+      "name": "illiterate_or_non_literary_speakers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The majority of Jews in the Pale of Settlement and Ottoman Palestine who used Hebrew liturgically and Yiddish/Judeo-Arabic/Judeo-Spanish vernacularly but produced no literary work. The criterion renders their linguistic lives invisible — they neither count as 'vitality' (no literary output) nor as 'preservation' (not ritual specialists). They had no exit: they could not become literary producers, and their languages were excluded from the vitality framework that later drove resource allocation."
+    },
+    {
+      "name": "liturgical_hebrew_practitioners_without_secular_output",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Rabbinic scholars, yeshiva students, and traditional communities who maintained Hebrew through continuous study, prayer, and halakhic discourse. The literary continuity criterion classifies their output as 'preservation' not 'vitality' because it is not 'new literary and intellectual work' in the secular sense. Their exit is constrained — becoming secular literary producers requires abandoning the traditional framework that gives their Hebrew practice meaning. Some (like Bialik) made the transition; most could not."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The sociolinguistic or historical observer who sees the living_language_status kernel as a contested concept with three structurally distinct readings. From this seat, the literary continuity reading is one constraint among three — each with its own epsilon, beneficiaries, victims, and enforcement profile. The observer notes that the maskilim's coordination function (proving Hebrew can do new things) was real and low-extraction, but its later institutional adoption created extraction the original criterion did not contain."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of justifying Hebrew literary production without native speakers: by defining vitality as literary productivity, the maskilim and their successors could coordinate a literary revival without waiting for or guaranteeing mass adoption. The criterion operates as a self-fulfilling coordination device — if enough intellectuals accept it, their collective production makes it true.",
+    "transfer_function": "Moves cultural authority and intellectual legitimacy from traditional religious elites (rabbinic authorities, liturgical practitioners) to secular literary intellectuals (maskilim, Hebrew writers). The transfer is not primarily material — it is status, recognition, and the right to define what counts as 'the language.' Later, when institutionalized, it transfers material resources (funding, education slots, publishing infrastructure) to literary Hebrew producers and away from Yiddish and liturgical-only communities.",
+    "absent_voices": "The vast majority of Yiddish-speaking Jews who had no access to Hebrew literary circles and no stake in the vitality debate — they simply lived in Yiddish. Women in traditional communities, largely excluded from both Hebrew literary production and rabbinic study, whose linguistic practices (tkhines, Yiddish oral culture) were invisible to all three readings. Sephardic and Mizrahi communities maintaining Judeo-Arabic, Judeo-Spanish, and other vernaculars with their own literary traditions, excluded from the Ashkenazi-centered Hebrew/Yiddish binary.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the literary continuity criterion vanished overnight, the conceptual framework that validates Hebrew literary production as 'vitality' rather than 'revival of a dead language' would collapse. Modern Hebrew literature's self-understanding would shift. Language revival movements worldwide (Cornish, Manx, Hawaiian, constructed languages) would lose a key theoretical justification for claiming vitality without native speakers. The Zionist adoption of Hebrew would lose its pre-state intellectual legitimacy. The world of language status classification would rearrange toward native-generation or liturgical criteria.",
+    "founding_problem": "How to justify producing new Hebrew literature in the late 18th century when Hebrew had no native speakers and was widely considered a 'dead language' by European intellectuals and many Jewish traditionalists alike. The maskilim needed a criterion that would make their literary work meaningful without requiring them to create a speech community first.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The maskilim themselves (Mendelssohn's Biur, Wessely's Divrei Shalom Ve'Emet) attest the problem was live for them. Traditionalist opponents (Eybeschütz, Landau) attest the problem was manufactured — Hebrew was never 'dead' for liturgical use. Modern sociolinguists (Fishman, Harshav, Fellman) corroborate from outside the beneficiary set: the 'dead language' characterization was a European categorical error; Hebrew had continuous native-speaker-like functions in study and prayer. The founding problem was real for the maskilim's project but not for Hebrew's actual condition."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "living_language_status__liturgical_preservation_reading",
+      "living_language_status__native_generation_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "liturgical_preservation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "native_generation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "literary_productivity_suffices_for_vitality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "native_speakers_not_required_for_living_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_haskalah_hebrew_status",
+    "drift_state": {
+      "moment": "post_zionist_institutionalization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__opportunity_cost_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cmi_oc_read",
+    "story_uid": "2626f9c2-9144-4a74-a5cf-967694a81f85"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speed-First Mitigation Allocation Rule (Opportunity-Cost Reading)",
+    "topic_domain": "energy/climate/governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "renewable_energy_developers",
+      "grid_storage_manufacturers",
+      "climate_advocacy_coalitions"
+    ],
+    "victims": [
+      "nuclear_vendor_utilities",
+      "nuclear_skilled_workforce",
+      "plant_host_communities"
+    ],
+    "vindicated_propositions": [
+      "cumulative_carbon_budget_arithmetic",
+      "levelized_cost_of_electricity_ranking",
+      "marginal_abatement_cost_curve_priority"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "renewable_energy_developers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build and operate wind, solar, and storage projects worldwide. The allocation rule channels concessional finance, procurement preference, and political goodwill toward their product category, and project pipelines expand accordingly. Their skills deploy anywhere, but their business case inside climate finance depends on the prioritization staying in place."
+    },
+    {
+      "name": "grid_storage_manufacturers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Manufacture batteries and flexibility equipment whose economics improve as variable renewables dominate build-outs. Order books scale directly with the pace of renewable deployment that the speed criterion accelerates."
+    },
+    {
+      "name": "climate_advocacy_coalitions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Campaign networks whose post-Paris strategy crystallized around speed-and-cost arguments. The rule gives their fundraising, messaging, and coalition discipline a concrete target. Members who publicly break with the exclusion of long-build generation find speaking slots, funder access, and allyship harder to come by; leaving the position would forfeit standing built over decades."
+    },
+    {
+      "name": "multilateral_lenders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Public development banks and climate funds that screen generation investments. Several maintain de facto or explicit policies against new reactor lending while scaling renewable credit lines; portfolio officers apply the speed test project by project. Their capital is mobile across sectors and countries, letting them hold the line without concentrating balance-sheet risk in any single technology."
+    },
+    {
+      "name": "national_energy_ministries",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set procurement auctions, permitting queues, and capacity-market design. Ministries persuaded by the speed criterion sequence renewables first and leave reactors out of planning scenarios or relegate them to post-2035 placeholders. Reversing course means reopening integrated resource plans and absorbing criticism from governing coalitions and campaign partners."
+    },
+    {
+      "name": "nuclear_vendor_utilities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Developers and operators of reactor technology: state-owned incumbents, vendor-engineering firms, and utilities holding licenses for potential builds. They face closed doors in climate finance, exclusion from green taxonomies in major jurisdictions, and licensing environments that stretch timelines further. Assets and skills are long-lived and technology-specific, so exiting the sector means writing down decades of accumulated capability."
+    },
+    {
+      "name": "nuclear_skilled_workforce",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Welders, engineers, and tradespeople whose expertise is reactor-specific. Employment tracks a thin order book; when a national program is cancelled the workforce disperses and the apprenticeship pipeline breaks for a generation. Relocation abroad is realistic for a mobile minority; most are tied to plant regions by family and housing."
+    },
+    {
+      "name": "plant_host_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Towns hosting existing stations or promised new ones, where jobs, tax base, and school enrollment ride on plant operations and construction. When portfolio rules steer investment elsewhere, replacement industries arrive slowly or not at all, and these towns hold no seat in the finance committees making the call."
+    },
+    {
+      "name": "gas_generation_interests",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fossil generator owners and fuel suppliers, absent from climate-finance conversations entirely. Whenever firm low-carbon capacity is deferred, their plants run the gap hours and their revenue streams lengthen. They lobby neither for nor against the rule; they collect what the sequencing leaves behind."
+    },
+    {
+      "name": "energy_systems_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Independent modelers and grid engineers publishing capacity-expansion studies, firm-power cost analyses, and deployment-timeline audits. They hold no capital and take no institutional side; their work is the main external check on whether the speed arithmetic still holds as technology costs move."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the capital-scarcity triage problem: with finite mitigation finance and a closing carbon budget, it provides lenders, ministries, and campaign networks a shared decision rule that ranks technologies by avoided tonnes per dollar per year and directs capital to the front of that ranking.",
+    "transfer_function": "Moves mitigation capital, permitting priority, and political legitimacy away from long-duration, capital-intensive generation toward fast-deploying renewables and storage; within campaign networks, it moves standing and funder access toward members who adhere to the speed criterion.",
+    "absent_voices": "Nuclear host communities and the reactor-specific skilled trades have no seat in portfolio deliberations that determine their regions' economic futures. Fossil generator interests are absent yet absorb the gap-hours the sequencing creates. Populations exposed to the consequences of getting the sequencing wrong are represented by no one in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rule vanished overnight, screening policies at development banks would lose their organizing test, national procurement sequences would be reopened, campaign coalitions would lose the allocation logic that disciplines their messaging and funding, and capital currently routed by speed-ranking would renegotiate its destination across every low-carbon technology simultaneously.",
+    "founding_problem": "Post-Paris urgency: cumulative carbon budgets reward speed, and planners feared that waiting for perfect firm power would burn the remaining budget while deploying nothing.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IPCC and IEA scenario literature corroborates the speed-weighting core from outside the benefiting parties; nuclear engineering bodies and independent grid analysts dispute the exclusion corollary, citing standardized fleet builds completed inside a decade."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A widely adopted allocation rule directs climate-mitigation capital, procurement priority, and campaign legitimacy toward whichever low-carbon technologies deliver the most avoided emissions per dollar per year, fastest. Under this rule, generation options with heavy upfront capital and decade-scale build times are scored as net-negative uses of a shrinking carbon budget: money and years spent on them are treated as tonnes forgone elsewhere. The rule operates through development-bank screening policies, green-taxonomy design, national procurement sequencing, and movement norms, and it must be actively maintained — lender policies renewed, taxonomies defended, planning scenarios rewritten — because capital otherwise migrates back toward excluded options when electricity systems tighten. Time mapping for the interval: t=0 corresponds to approximately 2015 (Paris entry into force), t=10 to 2025.",
+    "key_agents": [
+      "- renewable_energy_developers: Primary beneficiary (institutional/mobile) — receives redirected capital, procurement preference, and political goodwill",
+      "- grid_storage_manufacturers: Secondary beneficiary (institutional/mobile) — order books scale with accelerated renewable build-out",
+      "- climate_advocacy_coalitions: Beneficiary with agenda-setting reach (organized/identity_locked) — the rule disciplines their messaging, funding, and coalition boundaries",
+      "- multilateral_lenders: Agenda setter (institutional/arbitrage) — administers the exclusion through screening policy without concentrating balance-sheet risk",
+      "- national_energy_ministries: Agenda setter (institutional/constrained) — sequences procurement and planning scenarios; reversal is politically costly",
+      "- nuclear_vendor_utilities: Primary target (institutional/constrained) — bears capital denial, taxonomy exclusion, and stretched licensing",
+      "- nuclear_skilled_workforce: Target (moderate/trapped) — carries the employment and pipeline-break costs",
+      "- plant_host_communities: Target (powerless/trapped) — bear regional economic loss with no seat in the deciding forums",
+      "- gas_generation_interests: Excluded actor (powerful/arbitrage) — collects the gap-hours the sequencing leaves behind",
+      "- energy_systems_analysts: Analytical observer (analytical/analytical) — external check on whether the speed arithmetic still holds"
+    ],
+    "logic_rationale": "Extraction is moderate-substantial (0.58 at interval end): the rule does not seize existing assets, but it denies a class of actors access to the capital, taxonomies, and planning scenarios that determine whether their technology exists in 2040, and the denial is decoupled from any harm the technology's operation causes. Suppression (0.52) is a mix of structural and normative mechanisms — roughly 60% structural (lender screens, taxonomy design, licensing environments) and 40% internalized (movement norms that make deviation professionally and socially expensive within climate institutions); the internalized share is why suppression persists even where formal policies soften. Theater ratio (0.30) is rising: early-period activity was dominated by genuine cost and deployment analysis, while a growing share of current activity defends the exclusion rhetorically as its empirical premises age. Accessibility collapse is low-moderate (0.40) because alternatives remain genuinely open — efficiency, demand flexibility, geothermal, hydro, and other firm-clean options stay investable; the rule narrows the option space without collapsing it. Resistance (0.62) is real and organized: industry advocacy, national reactor programs, and international pledges press against the rule continuously, which is why suppression_requirement rose across the interval before easing slightly as counter-mobilization forced partial accommodations. All three tracked series run on one shared time grid (t = 0, 2, 4, 6, 8, 10) so every metric is authored at every examined point; the dynamics are monotonic-with-plateau rather than cyclical, driven by enforcement hardening against rising resistance rather than by oscillating external shocks.",
+    "perspectival_gap": "The seats compute very different arrangements from the same structure. From the agenda-setter seats (lenders, ministries), the rule is prudent triage they administer and can defend line-by-line from published cost data. From the target seats (vendor utilities, skilled workforce, host communities), the same structure is a coordinated denial of livelihood and regional future enforced by actors who bear none of its costs. From the beneficiary seats, it is merely the correction of a historical distortion that favored the incumbent technology. The advocacy-coalition seat is the sharpest divergence: identity fusion with the exclusion makes the rule constitutive of member standing, so its holders experience the constraint as self-expression rather than imposition. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for renewable developers, storage manufacturers, and advocacy coalitions — the rule subsidizes them, and their exit options (mobile capital, portable skills) push them toward the beneficiary end. Victim declarations drive high directionality for vendor utilities, the skilled workforce, and host communities; trapped and constrained exit keeps them near the full-target end, since they cannot redeploy reactor-specific assets or region-bound labor. Agenda setters sit intermediate: lenders hold arbitrage-grade exit (their d is damped by mobility even while they administer the exclusion), while ministries are more bound to national planning commitments. Gas interests are excluded from the conversation yet incidentally subsidized by the sequencing — a qualitative asymmetry noted here rather than handled with a per-atom override, since an override keyed to their power level would misapply to unrelated agents.",
+    "mandatrophy_analysis": "No mandatrophy is declared: the founding problem — allocating scarce mitigation capital under a closing carbon budget — remains live, so the rule has not outlived its function. The classification prevents two opposite mislabelings. Calling the arrangement pure coordination erases the identifiable actors who bear its asymmetric costs without consent; calling it pure extraction erases the genuine triage function that would persist even under a neutral allocator, since speed-weighted capital ranking solves a real collective-action problem. The forward risk is inertial drift: if storage costs and alternative firm-clean options mature until the speed premium collapses, the rule's analytic core would hollow out while its enforcement machinery persisted — the rising theater_ratio series is the early symptom to watch, and the fossil-leakage omega tests whether the rule is already failing by its own metric."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "This constraint is one reading of the climate_mitigation_imperative kernel — the opportunity_cost_reading, which scores options by carbon-per-dollar-per-year. Sibling readings instantiate structurally different constraints: the portfolio_optimization_reading treats all low-carbon sources as complements and removes nuclear from the victim set (reliability value offsets cost), while the systems_transition_reading makes centralized generation the target regardless of technology and relocates the victim set to governance form rather than capital cost. Where is the disagreement located?",
+      "resolution_mechanism": "The disagreement sits in the selection criterion itself: speed-weighted yield versus portfolio reliability versus governance form. Resolution requires the parties to converge on what the mitigation imperative optimizes for — an empirical question (which criterion minimizes realized warming) entangled with a conceptual one (whether the imperative is a triage problem or a transformation problem).",
+      "impact": "Under the portfolio reading, this constraint's victim set shrinks or dissolves and its extraction measure falls sharply; under the systems reading, the victim set expands to include centralized renewables as well. The computed type could move from tangled_rope toward rope (if the exclusion dissolves) or toward snare (if the target set generalizes).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-membership omega: this story is one reading of a contested imperative; sibling readings change the victim set and the metric of merit."
+    },
+    {
+      "id": "nuclear_timeline_learning_curve",
+      "question": "Is the disqualifying timeline premise empirically robust — do standardized fleet construction programs compress build times enough to flip the opportunity-cost arithmetic?",
+      "resolution_mechanism": "Compare completed fleet builds (multi-unit programs delivered inside a decade under serial standardization) against first-of-a-kind projects; if median delivery times for standardized designs fall below the threshold at which cumulative avoided carbon dominates alternatives, the premise fails.",
+      "impact": "If timelines compress, the constraint loses its coordination justification and its extraction becomes uncovered — pushing classification toward snare; if they do not, the exclusion retains its empirical warrant and the tangled_rope reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reactor build-time distributions invalidate the speed-disqualification premise."
+    },
+    {
+      "id": "counterfactual_capital_substitution",
+      "question": "Does capital denied to long-build generation actually substitute into faster alternatives at the margin, or was the counterfactual rhetorical — would the money have sat idle or leaked to non-mitigation uses absent the rule?",
+      "resolution_mechanism": "Trace marginal deployment responses to exogenous shifts in available mitigation finance: if renewable build rates track available capital closely, substitution is real and the rule's transfer function operates as described; if build rates are permitting- or interconnection-limited instead, the binding constraint lies elsewhere.",
+      "impact": "If substitution is weak, the rule's measured extraction buys little coordination benefit — the tangled_rope reading degrades toward snare; if strong, the extraction purchases genuine additional avoided emissions and the hybrid classification is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the capital-transfer counterfactual underlying the opportunity-cost claim is real."
+    },
+    {
+      "id": "fossil_bridge_leakage",
+      "question": "Did deferring firm low-carbon capacity extend fossil generation through the transition gap — making the rule net-harmful by its own carbon-per-dollar metric?",
+      "resolution_mechanism": "Decompose dispatch data in jurisdictions that followed the sequencing strictly: attribute gap-hour generation to fossil units and compare realized cumulative emissions against counterfactual portfolios including firm clean capacity; grid-operator reliability interventions during tight periods provide natural experiments.",
+      "impact": "If leakage is material, the constraint fails its own vindicated proposition (cumulative carbon budget arithmetic) — the strongest possible internal refutation, converting the coordination story into cover and supporting reclassification toward snare; if immaterial, the rule survives its sharpest internal critique.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the sequencing extended fossil operation enough to negate its own speed advantage."
+    },
+    {
+      "id": "movement_identity_enforcement",
+      "question": "Is the enforcement carried by campaign networks materially structural (funder access, platform control) or internalized (identity fusion in which the exclusion constitutes member standing)?",
+      "resolution_mechanism": "Observe the standing and funding trajectories of members who publicly deviate: if deviation costs persist even where formal policies have softened, the mechanism is internalized; if costs track specific institutional gatekeepers, it is structural.",
+      "impact": "If internalized, the constraint's effective suppression outlasts any formal-policy reversal — dismantling lender screens would not dismantle the rule, and lifecycle decay models would overpredict how quickly the constraint dissolves.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural versus internalized split in the movement-level enforcement mechanism."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "portfolio_optimization_reading",
+      "systems_transition_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition: the colloquial label 'the climate mitigation imperative' covers three structurally distinct claims with distinct epsilon values, beneficiary/victim sets, and failure modes, and is therefore authored as three linked stories. This story (opportunity_cost_reading) holds epsilon for the speed-first allocation arrangement as this reading assesses it; portfolio_optimization_reading instantiates a complementarity-maximizing constraint in which nuclear sits outside the victim set; systems_transition_reading instantiates a governance-form constraint in which centralization itself is the target. The opportunity-cost reading exerts downstream influence on the portfolio reading by starving it of the capital its premise assumes, and coexists with the systems reading as rival live positions held by different factions. Per the epsilon-invariance principle, no single story averages across these readings; each carries its own stable epsilon over the standing arrangement it contests."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "speed_first_abatement_triage",
+    "drift_state": {
+      "moment": "post_cop28_nuclear_pledge_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "portfolio_optimization_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "systems_transition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployment_speed_dominates_selection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "capital_scarcity_makes_per_dollar_yield_binding",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "renewable_energy_developers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

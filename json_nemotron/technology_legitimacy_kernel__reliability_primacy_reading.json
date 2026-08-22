@@ -1,0 +1,363 @@
+{
+  "header": {
+    "constraint_id": "technology_legitimacy_kernel__reliability_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "9614f461-9b09-4d43-af5c-e0ce5753ebf6"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reliability Primacy Legitimacy Constraint on Climate Mitigation Technologies",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_industry",
+      "gas_turbine_manufacturers",
+      "grid_operators",
+      "baseload_plant_owners"
+    ],
+    "victims": [
+      "ratepayers",
+      "solar_wind_developers",
+      "storage_developers",
+      "developing_country_grids"
+    ],
+    "vindicated_propositions": [
+      "grid_stability_requires_dispatchable_capacity",
+      "intermittency_penalty_justifies_baseload_preference",
+      "reliability_as_supreme_public_good"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_industry",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Nuclear plants provide high-capacity-factor, dispatchable generation that automatically satisfies the legitimacy criterion. The constraint channels policy support, subsidies, and streamlined licensing toward nuclear new-build and life extensions, creating a structural revenue advantage over non-qualifying technologies."
+    },
+    {
+      "name": "gas_turbine_manufacturers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Combined-cycle and peaker gas turbines provide dispatchable capacity that qualifies under the constraint. Manufacturers benefit from sustained demand for flexible fossil capacity as a 'bridge' or 'firming' complement to renewables, locking in fossil infrastructure."
+    },
+    {
+      "name": "grid_operators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "System operators (ISOs, TSOs) define and enforce reliability standards (LOLE, SAIDI, reserve margins) that operationalize the constraint. They control interconnection queues, capacity markets, and resource adequacy filings — effectively deciding which technologies count as 'legitimate' for meeting reliability obligations."
+    },
+    {
+      "name": "baseload_plant_owners",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Owners of existing coal, nuclear, and hydro baseload plants receive capacity payments and reliability-must-run designations that subsidize uneconomic units. The constraint transforms reliability requirements into a revenue floor for incumbent assets."
+    },
+    {
+      "name": "ratepayers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Residential, commercial, and industrial electricity customers bear the full cost of reliability procurement (capacity payments, ancillary services, uplift charges) through retail rates. They have no meaningful exit from the grid and no voice in reliability standard-setting; cost increases are passed through automatically."
+    },
+    {
+      "name": "solar_wind_developers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Developers of variable renewable energy (VRE) must pair projects with storage or firming contracts to qualify as 'legitimate' under the constraint, adding $20–40/MWh to levelized cost. They face interconnection delays, curtailment risk, and market designs that undervalue energy-only contributions — the constraint structurally disadvantages their core product."
+    },
+    {
+      "name": "storage_developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Battery and long-duration storage developers face a dual position: the constraint creates demand for their product (beneficiary) but only as a costly adder to make VRE 'legitimate' (payer). They are locked into a derivative market whose size is dictated by the reliability standard, not by standalone economics."
+    },
+    {
+      "name": "developing_country_grids",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Grids in emerging economies face the constraint's strictest form: international finance (World Bank, MDBs) ties funding to 'reliable' generation, which in practice means fossil or large hydro. They cannot afford the storage overbuild required to make VRE qualify, locking them into capital-intensive, high-emission pathways."
+    },
+    {
+      "name": "climate_policy_analysts",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analysts model system costs under different legitimacy criteria. They observe that the reliability-primacy framing produces higher cumulative system cost and slower decarbonization than velocity-primacy or precautionary framings, but their analysis is advisory — they do not set standards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures electricity system reliability by defining a clear, enforceable standard for what counts as 'firm' capacity, solving the coordination problem of resource adequacy across generators, grids, and regulators.",
+    "transfer_function": "Transfers wealth from ratepayers and VRE/storage developers to nuclear, gas, and baseload plant owners via capacity payments, reliability-must-run contracts, and the implicit subsidy of qualifying technologies in interconnection queues and market designs.",
+    "absent_voices": "Energy-poor households in developing countries (would object to capital-cost barriers), future generations (bear climate risk from delayed decarbonization), distributed energy resource aggregators (excluded from capacity markets), and communities near fossil infrastructure (bear local pollution from 'reliable' generation).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished, capacity markets would shift to technology-neutral reliability metrics (e.g., ELCC, LOLE contributions), VRE+storage would compete directly with thermal firm capacity on cost, interconnection queues would clear faster, and developing-country finance would unlock for least-cost decarbonization portfolios. The entire institutional architecture of 'firm capacity' qualification would reorganize.",
+    "founding_problem": "Post-1970s grid reliability crises (Northeast blackout 1965, New York 1977) created a regulatory paradigm where 'firm capacity' was the sole metric of system adequacy. The constraint was built to prevent blackouts by ensuring sufficient dispatchable generation online at peak.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Grid operators and reliability councils (NERC, regional ISOs) attest the problem remains live — extreme weather and load growth create new adequacy risks. Independent system analysts (NREL, IEA, academic centers) and climate finance institutions attest the founding problem has mutated: reliability is now achievable with inverter-based resources + storage + demand response, and the original paradigm now impedes the deeper problem (decarbonization). No corroborating source outside the beneficiary set supports the claim that the *original* framing remains adequate."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2035
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2035,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2035,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2035,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The reliability-primacy reading of the technology legitimacy kernel asserts that only dispatchable, baseload-capable generation qualifies as legitimate climate mitigation. This reading dominates grid planning, capacity markets, and international energy finance. It creates a structural beneficiary set (nuclear, gas, existing baseload) and a victim set (ratepayers, VRE developers, developing-country grids) by defining legitimacy through a technical criterion that correlates with incumbent asset characteristics. The constraint is a tangled rope: it solves a genuine coordination problem (resource adequacy) while extracting rents for incumbents and imposing costly qualification barriers on challengers. Its persistence requires active enforcement through capacity market rules, interconnection standards, and finance conditionality.",
+    "logic_rationale": "Extractiveness (0.72) is high because the constraint channels vast financial flows (capacity payments, subsidized licensing, finance access) to qualifying technologies while imposing qualification costs ($20-40/MWh storage adder, interconnection delays) on non-qualifying ones. Suppression (0.68) is substantial because the constraint is enforced through mandatory reliability standards, FERC/NERC rules, and MDB loan conditions — alternatives (VRE-only portfolios) are not merely discouraged but structurally excluded from 'legitimate' status. Theater ratio (0.42) is moderate and rising: reliability coordination is real, but a growing share of enforcement defends the *specific technical form* of firm capacity rather than the reliability outcome itself. Accessibility collapse (0.65) reflects that once the reliability-primacy frame is accepted, alternative framings (ELCC, weather-dependent capacity) appear technically incoherent to practitioners. Resistance (0.58) is significant from VRE industry, consumer advocates, and climate finance reformers, but fragmented across jurisdictions.",
+    "directionality_logic": "Grid operators (agenda_setter, institutional) sit near d=0.2 — they administer the constraint and benefit from its authority but also bear operational accountability. Nuclear/gas/baseload owners (beneficiaries, institutional/organized) sit near d=0.1-0.15 — they collect concentrated rents. Ratepayers (payer, powerless, trapped) sit near d=0.95 — they pay all costs with zero exit. VRE/storage developers (payer, moderate, constrained) sit near d=0.7 — they bear qualification costs but retain some market access. Developing-country grids (payer, powerless, trapped) sit near d=0.9 — they face the constraint as an external conditionality with no negotiating power. Analysts (observer, analytical) sit at d=0.5 by definition.",
+    "perspectival_gap": "The agenda_setter (grid operators) experiences the constraint as necessary coordination — without firm capacity definitions, resource adequacy cannot be enforced. Beneficiaries (nuclear, gas) experience it as justified value recognition — their technical attributes *are* reliability. Payers (ratepayers, VRE developers, developing grids) experience it as extraction — they pay for a reliability standard that could be met more cheaply with technology-neutral metrics. The engine will compute this divergence from the structural data; the claimed_type (tangled_rope) reflects the author's assessment that both coordination and extraction are structurally present.",
+    "mandatrophy_analysis": "The founding problem (preventing blackouts via firm capacity) was live in 1970. By 2020, inverter-based resources + storage + demand response can provide equivalent reliability at lower cost and emissions — the founding problem is *technically* solved but *institutionally* alive. The constraint persists because the institutional architecture (capacity markets, reliability standards, finance rules) was built around the firm-capacity paradigm and its beneficiaries (incumbents, operators) control the revision process. This is mandatrophy: the mandate (reliability) has outlived its original technical justification (only thermal/hydro can provide it) but the constraint persists through institutional inertia and beneficiary capture.",
+    "kernel_context": "This constraint is the reliability_primacy_reading of the technology_legitimacy_kernel. Sibling readings: velocity_primacy_reading (legitimacy = deployable within carbon budget timeline) and precautionary_reading (legitimacy = bounded, reversible failure modes). This reading forecloses the velocity reading in any single regulatory framework (a technology cannot be both 'legitimate only if baseload' and 'legitimate only if fast-deploying' as governing criteria), coexists with the precautionary reading (different parties hold each), and influences both by shaping the institutional landscape they must navigate (capacity markets, finance rules)."
+  },
+  "omegas": [
+    {
+      "id": "reliability_metric_adequacy",
+      "question": "Do current reliability metrics (LOLE, SAIDI, reserve margins) adequately capture the reliability contribution of inverter-based resources, storage, and demand response, or do they systematically undervalue non-synchronous resources?",
+      "resolution_mechanism": "Empirical validation through grid-forming inverter demonstrations, ELCC studies for VRE+storage hybrids, and operational data from high-VRE grids (South Australia, California, Germany).",
+      "impact": "If metrics are adequate, the constraint's coordination function is genuine and its extraction is the price of a necessary standard. If metrics systematically undervalue non-synchronous resources, the constraint's coordination story is a cover for extracting rents from incumbent technical forms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination metric is technically sound or structurally biased"
+    },
+    {
+      "id": "committer_frame_disagreement_location",
+      "question": "The kernel's three readings disagree on which structural element defines legitimacy: dispatchability (this reading), deployment speed (velocity), or failure reversibility (precautionary). Where exactly is the disagreement located in the commitment structure?",
+      "resolution_mechanism": "Trace each reading's axioms to their grounding: this reading grounds in grid physics + institutional continuity (conventional), velocity in carbon budget arithmetic (empirically_contingent), precautionary in intergenerational ethics (deontological). The disagreement is located in the authority_grounding layer — each reading invokes a different warrant for the kernel.",
+      "impact": "If the disagreement is at the grounding layer, no amount of technical evidence (ELCC studies, cost curves) can resolve it — the readings operate in different epistemic registers. This makes the kernel a permanent site of contestation, not a resolvable technical dispute.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural location of the kernel's reading-level disagreement"
+    },
+    {
+      "id": "developing_country_lockin_mechanism",
+      "question": "Is the constraint's application to developing-country finance (MDB 'reliable generation' conditionality) a necessary safeguard or an extractive barrier that transfers wealth from poor grids to rich-country technology exporters?",
+      "resolution_mechanism": "Counterfactual analysis: compare least-cost decarbonization pathways for 10+ developing grids under current MDB rules vs. technology-neutral reliability metrics. Track capital cost differential and emissions outcomes.",
+      "impact": "If the constraint adds >15% to system cost and delays decarbonization >5 years for majority of analyzed grids, it functions as a wealth transfer from ratepayers in poor countries to nuclear/gas exporters in rich countries — strengthening the snare characterization for that stakeholder subset.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's international finance dimension is coordination or extraction"
+    },
+    {
+      "id": "storage_derivative_market_capture",
+      "question": "Does the constraint create a genuine market for storage, or does it capture storage as a derivative adjunct to VRE — preventing storage from competing as standalone firm capacity?",
+      "resolution_mechanism": "Analyze capacity market clearing prices for standalone storage vs. hybrid VRE+storage. Track whether storage developers can access reliability revenue without a VRE pairing.",
+      "impact": "If storage only qualifies as 'legitimate' when paired with VRE, the constraint extracts from storage developers twice: they pay the VRE integration cost AND their standalone value is suppressed. This would shift storage_developers from dual-role toward pure payer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage qualifies independently or only as VRE enabler"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "technology_legitimacy_kernel__velocity_primacy_reading",
+      "technology_legitimacy_kernel__precautionary_reading",
+      "capacity_market_design",
+      "mdb_energy_finance_conditionality",
+      "interconnection_queue_rules"
+    ],
+    "dual_formulation_note": "The technology_legitimacy_kernel decomposes into three readings with distinct ε values: reliability_primacy (ε=0.72, tangled_rope), velocity_primacy (ε≈0.35, scaffold→rope transition), precautionary (ε≈0.45, rope). This reading's high ε reflects the extraction embedded in the firm-capacity qualification regime; velocity's lower ε reflects its transitional justification (carbon budget deadline); precautionary's intermediate ε reflects its ethical grounding with some institutional enforcement. All three share the kernel_id and are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "firm_capacity_paradigm",
+    "drift_state": {
+      "moment": "post_inverter_based_resource_maturity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "velocity_primacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "precautionary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dispatchability_as_necessary_condition_for_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "grid_stability_as_supreme_mitigation_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "technology_legitimacy_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

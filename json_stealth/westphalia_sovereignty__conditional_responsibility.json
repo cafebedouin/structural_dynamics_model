@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "westphalia_sovereignty__conditional_responsibility",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "161d4c08-3526-4f5d-a19a-cee7640c22f8"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.5,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Conditional Sovereignty: Protection Failure as Forfeiture of Territorial Inviolability",
+    "topic_domain": "international law/political theory/state systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "humanitarian_intervention_coalitions",
+      "global_governance_institutions",
+      "protected_civilian_populations"
+    ],
+    "victims": [
+      "intervention_target_states",
+      "small_weak_states"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.5
+    }
+  ],
+  "omegas": [
+    {
+      "id": "westphalia_kernel_reading_contest",
+      "question": "This constraint instantiates the conditional_responsibility reading of the westphalia_sovereignty kernel; what structural changes would the sibling readings (absolute_non_intervention, graded_sovereignty) produce?",
+      "resolution_mechanism": "Comparative classification of the sibling stories against this one: identical referent (the standing sovereignty/intervention arrangement), but different victim sets, epsilon, and adjudicative structure per reading.",
+      "impact": "Under absolute_non_intervention the forfeiture mechanism vanishes entirely: no victim set, negligible extraction, and the humanitarian coalition and governance seats lose the authority they currently collect. Under graded_sovereignty the trigger shifts from conduct to capacity, converting atrocity-exposed populations into one subclass of a broader capacity-deficient population and raising the standing burden on weak states across the board.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this is one of three live readings of the Westphalian sovereignty kernel; sibling readings are separate constraint files."
+    },
+    {
+      "id": "adjudication_neutrality",
+      "question": "Is the forfeiture determination applied by the declared criterion (failure to protect populations from mass atrocity) or by the permanent members' strategic interests?",
+      "resolution_mechanism": "Cross-case analysis of intervention decisions regressed on atrocity severity while controlling for permanent-member strategic exposure (alliance ties, resource interests, geographic proximity to veto holders).",
+      "impact": "Interest-driven selection would establish the protective criterion as cover for a power-politics allocation and would invert several beneficiary designations; criterion-driven application would confirm the coordination function as dominant and stabilize the hybrid profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the conditionality trigger tracks atrocity facts or veto-holder interests."
+    },
+    {
+      "id": "protection_net_effect",
+      "question": "Does invocation of the standard improve survival outcomes for threatened populations, net of intervention harms and of the deterrence lost when the standard is invoked but not enforced?",
+      "resolution_mechanism": "Matched comparison of atrocity trajectories in cases with authorized protective action (Kenya 2008, Cote d'Ivoire 2011, Gambia 2017) against closely matched non-cases (Myanmar 2017, Ethiopia 2020-2022).",
+      "impact": "Net-negative outcomes would flip protected_civilian_populations from beneficiary toward payer and raise measured extraction substantially; net-positive outcomes would stabilize the current hybrid coordination-plus-transfer profile.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the arrangement delivers net protection to the populations it names as its object."
+    },
+    {
+      "id": "forfeiture_threshold_definition",
+      "question": "Where does 'failing to protect' begin: manifest commission or permission of mass atrocity, or mere incapacity to prevent it?",
+      "resolution_mechanism": "Doctrinal analysis of World Summit Outcome Document paragraphs 138-139 drafting history, plus subsequent state practice distinguishing unwilling from unable governments.",
+      "impact": "A broad incapacity reading converts every fragile state into a standing candidate for forfeiture, drifting the arrangement toward the graded_sovereignty sibling; a narrow commission-only reading renders the condition nearly inert, drifting back toward absolute_non_intervention.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threshold ambiguity in the forfeiture condition determines which states are exposed."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Since the 2005 World Summit Outcome Document, the operative international settlement holds that territorial inviolability is not unconditional: a state that commits or fails to prevent mass atrocities may have its immunity from external interference set aside, case by case, through Security Council authorization. The arrangement solves a real collective-action problem (no state intervenes against atrocity alone at acceptable cost) while transferring adjudicative authority over every state's borders to a small council of veto holders, whose application of the trigger has tracked strategic interest as often as atrocity severity. This file authors ONE reading of the westphalia_sovereignty kernel, per the epsilon-invariance rule: the conditional_responsibility reading, with its own epsilon, beneficiary/victim structure, and classification. The sibling readings (absolute_non_intervention, graded_sovereignty) are separate constraint stories linked through network.affects_constraints; they are not folded into this one. The claim/metric independence rule applies: the claimed type is stated from structural analysis, the metrics from descriptive record, and the engine computes per-seat classifications from the structural data.",
+    "key_agents": [
+      "un_security_council_p5: Agenda-setting seat (institutional/arbitrage) — administers the forfeiture determination case by case and collects the adjudicative authority the arrangement concentrates; simultaneously bears exposure, since its members' own conduct is judged by the standard they wield",
+      "humanitarian_intervention_coalitions: Primary beneficiary (powerful/constrained) — supplies the capability that turns authorization into protection and receives legitimation and burden-sharing unavailable to unilateral action",
+      "global_governance_institutions: Secondary beneficiary (institutional/identity_locked) — UN organs and regional bodies gain mandate, staffing, and budget as designated adjudicators and implementers",
+      "protected_civilian_populations: Intended beneficiary with no procedural seat (powerless/trapped) — the parties the standard exists to shield; receive protection only when authorization and coalition capacity align",
+      "intervention_target_states: Primary payer (moderate/trapped) — governments accused of atrocity failure lose the expectation that borders shield them",
+      "small_weak_states: Structural payer (powerless/constrained) — carry a standing discount on inviolability because application of the standard is likelier against them than against strong states",
+      "international_humanitarian_ngos: Advocacy beneficiary (organized/mobile) — gain agenda influence, funding, and access from the framing of atrocity response as international duty",
+      "international_legal_scholars: Analytical observer (analytical/analytical) — track doctrine-practice divergence and supply interpretive ammunition to every faction"
+    ],
+    "logic_rationale": "Extractiveness is 0.62: the arrangement genuinely transfers something of value (border security, adjudicative autonomy) away from all states and concentrates decision authority in five capitals, with application weighted toward the weak; but it also delivers real protective coordination in some cases, so extraction is substantial rather than dominant. Suppression is 0.50 and is authored as a raw structural property, unscaled by power or scope: the arrangement's coercive machinery (sanctions, referral, authorized force) matured through the 2011 Libya operation and has since decayed as veto-holder consensus eroded, producing the inverted-U suppression_requirement series. Theater_ratio is 0.52 and rising: invocation without deployment (Myanmar, Ethiopia, Sudan debates) now rivals actual protective delivery, as rhetorical maintenance substitutes for enforcement. Accessibility_collapse is 0.35: the alternatives remain fully live — categorical non-intervention is still argued by powerful states, and unauthorized unilateral intervention recurs — so understanding the arrangement does not close off exits. Resistance is 0.60: vetoes, the Brazilian 'responsibility while protecting' initiative, and sustained Group of 77 objection constitute organized, ongoing pushback. All three tracked metrics run on one shared seven-point grid (t=0 maps to the 2001 ICISS report, t=24 to 2025) so every metric is authored at every examined time point.",
+    "perspectival_gap": "The seats compute differently from identical structure. From the permanent-member seat the arrangement is discretionary authority: near-zero personal exposure, full control of when the condition binds, and the standing option to shield allies. From the small-state payer seat it is a standing hazard: a border guarantee that is weaker for them than for the strong, defended mainly through procedural argument and bloc voting. From the protected-population seat it is promissory protection whose delivery depends on other parties' politics in chambers they cannot enter. From the coalition seat it is legitimation plus burden-sharing. The engine derives these divergent per-seat classifications from the power, exit, and directional data; nothing in the authored claim adjudicates among them.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for the coalition, governance, and population seats: the arrangement subsidizes them with authority, mandate, and (contingently) protection. Victim declarations drive high directionality for target and small states: they bear the transfer of border security and adjudicative autonomy, with trapped exit amplifying their position toward the full-target end. The permanent members occupy a genuinely dual position: they administer and collect the arrangement's principal yield (the discretion itself), yet their own domestic conduct stands exposed to the standard, which is why they carry a payer secondary role. Humanitarian NGOs sit as modest beneficiaries with mobile exit; scholarly observers sit at the analytical pole with no flow in either direction.",
+    "mandatrophy_analysis": "The founding problem is live: mass atrocities continue and each case reopens the question the arrangement was built to answer, so no mandatrophy resolution is declared. Two mislabeling risks are guarded against. First, mistaking this for pure extraction ignores the demonstrated coordination deliveries (diplomatic protection in Kenya 2008, authorized action in Cote d'Ivoire 2011 and Gambia 2017) — the coordination function is real, which is why the hybrid classification rather than a pure-extraction one. Second, mistaking the rising theater_ratio for terminal atrophy ignores the capture structure: unlike an inertial leftover that nobody profits from maintaining, a specific seat (the permanent members) demonstrably collects the arrangement's principal yield, which sustains active maintenance. The trajectory to watch is rhetorical maintenance outpacing functional delivery; if enforcement capacity continues decaying while invocation continues rising, the arrangement drifts toward performance-dominated operation with the captured seat still collecting.",
+    "kernel_context": "Kernel: westphalia_sovereignty — the commitment, fixed in UN Charter Article 2(4) and renegotiated in the 2005 World Summit Outcome Document, that territorial authority is inviolable. This file instantiates the conditional_responsibility reading: inviolability holds until protection fails. Sibling readings, authored as separate constraints: absolute_non_intervention (inviolability categorical regardless of internal conduct) and graded_sovereignty (inviolability scalar, calibrated to state capacity). This reading splits between them by conduct rather than capacity. Each reading carries its own epsilon, beneficiaries, and victims over the same underlying arrangement; the siblings are linked through network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolute_non_intervention",
+      "graded_sovereignty"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the westphalia_sovereignty kernel per the epsilon-invariance principle. The colloquial label 'sovereignty' conflates three structurally distinct claims: categorical inviolability (no forfeiture mechanism, no victim set, negligible extraction), conduct-triggered conditionality (this file: forfeiture on protection failure, adjudicated centrally, hybrid coordination/extraction), and capacity-graded authority (scalar calibration, extraction weighted to weak states). The absolute_non_intervention reading is upstream in lineage terms (Charter text) and is cited by skeptics as evidence against this reading; the graded_sovereignty reading exerts practical pressure on this one because implementing a conduct trigger requires capacity judgments about who can protect. Each member of the family links to the others through affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "un_security_council_p5",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Five permanent members hold veto over any determination that a state's protection has failed and any consequent authorization. They decide case by case whether territorial inviolability yields, which makes their discretion the arrangement's principal yield. Their own domestic conduct stands equally exposed to the standard they administer, and they pay diplomatically when the standard is turned toward their allies or themselves; their arbitrage position lets them shield clients and deflect application from their own affairs."
+    },
+    {
+      "name": "humanitarian_intervention_coalitions",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ad hoc groupings of capable states supply the aircraft, troops, logistics, and funding that turn an authorization into deployed protection. They receive legitimation and burden-sharing that unilateral action cannot obtain, and their reputational investment in the framework raises the cost of abandoning it. Declining any particular operation remains open to them, but acting outside the authorization channel costs alliances, domestic support, and legal cover."
+    },
+    {
+      "name": "global_governance_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "United Nations organs, regional organizations, and treaty bodies gain mandate, staffing, budget, and moral standing from serving as the designated adjudicators and implementers of atrocity response. Their constitutive charters define them partly through this protective purpose, so relinquishing the role would dissolve institutional self-conception; the identity is fused with the function."
+    },
+    {
+      "name": "protected_civilian_populations",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Civilians facing massacre, expulsion, or starvation inside failing or predatory states are the parties the standard exists to shield. What reaches them depends entirely on whether authorization passes and coalitions deploy; when either fails, they retain no recourse except flight. They hold no seat in the chambers where the determination about their protection is made, entering the record only through testimony gathered by others."
+    },
+    {
+      "name": "intervention_target_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Governments accused of committing or permitting mass atrocities lose the working assumption that borders shield internal conduct. They face sanctions, judicial referral, or authorized force; once targeted, diplomatic isolation closes off most exits short of capitulation, negotiation from weakness, or state collapse. Their objections register in the authorizing chamber only as the position of the accused."
+    },
+    {
+      "name": "small_weak_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "States without nuclear deterrents, large economies, or patron protectors carry a standing discount on their inviolability: the standard is more likely to be applied to them than to strong states with equivalent or worse records, and they cannot credibly threaten costs against those who would apply it. Their defense is procedural argument, bloc voting in the General Assembly, and cultivation of veto-holder patrons. They coordinate with similarly positioned states through non-aligned and Group of 77 structures, which is the main coalition lever available to them."
+    },
+    {
+      "name": "international_humanitarian_ngos",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocacy and aid organizations gain agenda influence, donor funding, and operational access from a norm that frames atrocity response as an international duty. They document failures, lobby the authorizing chamber, and supply the evidentiary record on which determinations rest. Their attachment is professional rather than existential: if the framework loses traction they can redirect effort to other causes."
+    },
+    {
+      "name": "international_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and jurists track the doctrine's internal consistency, document divergence between declaration and practice, and supply the interpretive arguments that every faction deploys. They neither collect nor pay under the arrangement; their stake is the coherence of the legal order the arrangement claims to serve."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared threshold and an authorizing procedure for collective response to mass atrocity: states that would never intervene alone at acceptable cost gain a legitimate, burden-shared channel, and threatened populations gain a focal point for appeal beyond their own government.",
+    "transfer_function": "Moves adjudicative authority over territorial inviolability from individual states to the Security Council and its authorized coalitions; moves intervention costs onto participating coalition members; moves a standing security discount onto every state's borders, weighted toward those least able to resist application; and moves protection, when authorization and capacity align, to threatened civilian populations.",
+    "absent_voices": "Populations of targeted states have no formal seat in the chamber deciding intervention against their government. Small states without permanent representation shape outcomes only through General Assembly resolutions the Council may disregard. Target governments object loudly but enter the record solely as the accused. The strongest procedural dissenters (skeptical veto holders) are present but exercise their voice through obstruction rather than argument.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would return atrocity response to pure coalition-of-the-willing politics or categorical abstention: the Council would lose its case-by-case gatekeeping role, humanitarian advocacy would lose its legal hook, weak states would reprice border security sharply upward, and every atrocity would be negotiated anew with no shared threshold, no pre-built coalition templates, and no legitimation channel for those inclined to act.",
+    "founding_problem": "The 1990s demonstrated that categorical non-intervention left Rwanda and Srebrenica unprotected while unilateral intervention lacked legitimacy. The arrangement was built to reconcile territorial inviolability with a duty to stop mass atrocity by making protection the condition of sovereign immunity from external interference.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the African Union's Constitutive Act (Article 4(h), adopted 2000) independently asserted a right of intervention in grave circumstances before the Western coalition embraced the framing, attesting the problem from a non-permanent-member seat. United Nations commissions of inquiry and human rights organizations document continuing atrocity in Sudan, Myanmar, Ethiopia, and Syria. Norm-skeptical Group of 77 statements concede the occurrence of mass atrocities while disputing the remedy, which attests the founding problem even among parties that reject the solution."
+  },
+  "gain_flow": "un_security_council_p5",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "sovereignty_conditioned_on_protection",
+    "drift_state": {
+      "moment": "post_libya_backlash_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "absolute_non_intervention",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "graded_sovereignty",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protection_failure_forfeits_inviolability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "council_adjudicates_forfeiture",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

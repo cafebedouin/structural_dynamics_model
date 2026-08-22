@@ -1,0 +1,350 @@
+{
+  "header": {
+    "constraint_id": "substance_control_legitimacy__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "0b815a63-c4fa-4a51-a827-48a57dd75f77"
+  },
+  "base_properties": {
+    "extractiveness": 0.56,
+    "suppression": 0.35,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Legalization Reading: Adult Autonomy Bounded by Third-Party Harm",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "adult_substance_users",
+      "licensed_market_corporations"
+    ],
+    "victims": [
+      "impaired_driving_victims",
+      "secondhand_exposure_nonsmokers",
+      "addiction_susceptible_consumers"
+    ],
+    "vindicated_propositions": [
+      "millian_harm_principle",
+      "liberty_interest_jurisprudence"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.35
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This file instantiates only the legalization reading of the substance_control_legitimacy kernel; which reading governs a given jurisdiction, and how would the victim set and epsilon assessment change under each sibling?",
+      "resolution_mechanism": "Per-jurisdiction electoral, legislative, and judicial outcomes selecting among readings; cross-jurisdiction comparison of victim-set composition under whichever reading governs.",
+      "impact": "Under the prohibition reading, users re-enter the victim set and measured extraction rises sharply; under the harm-reduction reading, the corporate layer is reframed as a manageable health cost and the autonomy axiom loses its foundational status in favor of a duty-to-minimize-harm premise.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a three-reading kernel; sibling readings change the victim set and the assessment of the same referent."
+    },
+    {
+      "id": "cultivated_competence_boundary",
+      "question": "Does dependence cultivated by legal-market product design and marketing void the competence premise for a substantial class of consumers, returning them to the protected set this reading otherwise excludes?",
+      "resolution_mechanism": "Longitudinal cohort data on dependence onset among consumers recruited by high-potency products versus autonomous-choice patterns, plus litigation discovery of internal marketing and product-design documents.",
+      "impact": "If competence fails broadly, the reading's own terms license state intervention in the market and epsilon rises well above the authored value; if competence generally holds, the current profile stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commercially engineered dependence dissolves the competence premise the autonomy grant rests on."
+    },
+    {
+      "id": "third_party_harm_attribution",
+      "question": "How much observed third-party harm (traffic fatalities, emergency-department burden, secondhand exposure) is caused by the legalized arrangement versus displaced from the illicit market it replaced?",
+      "resolution_mechanism": "Difference-in-differences designs across legalization boundaries and staggered adoption timing, controlling for border spillover.",
+      "impact": "If harms are largely displaced rather than added, the harm-side component of extraction shrinks and the profile moves toward the coordination pole; if harms are added, extraction grows and the third-party payer seats harden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of third-party harm between the legal regime and the displaced illicit market."
+    },
+    {
+      "id": "market_entrenchment_irreversibility",
+      "question": "Has the licensed market become entrenched enough that repeal is no longer a realistically available alternative, converting a maintained balance into a one-way ratchet?",
+      "resolution_mechanism": "Tracking repeal attempts, capitalized license values, and state-budget dependence on excise revenue over successive fiscal cycles.",
+      "impact": "Rising entrenchment raises accessibility collapse, narrows the live alternative set, and shifts the persistence mechanism from ongoing justification to accumulated sunk investment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the legal market's sunk capital has foreclosed repeal as a practical alternative."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates the legalization reading of the substance_control_legitimacy kernel: the standing arrangement in jurisdictions where competent adults may lawfully possess and use specified substances, state authority confined to conduct that reaches others (impaired driving, diversion to minors, public nuisance), and supply running through licensed markets. Relative to the kernel's other readings the structural delta is decisive: users as such sit outside the harmed set (use is a protected exercise of autonomy, not a condition to be prevented), the constraint's operative edge is third-party harm, and a corporate layer enters through the legal market, whose revenue scales with consumption volume. The claim/metric split is deliberate: the arrangement is CLAIMED as tangled_rope — a genuine liberty-and-boundary coordination function carrying an asymmetric extraction layer — while the metrics are authored from the arrangement's observed operation, including rising corporate extraction as markets consolidate. Sibling readings are separate constraints linked in the network section, not folded into this file's epsilon.\n\nKEY AGENTS (by structural relationship):\n- adult_substance_users: primary beneficiary (moderate/mobile) — hold the autonomy the arrangement grants\n- licensed_market_corporations: concentrated beneficiary and de facto agenda-shaper (powerful/arbitrage) — collect the legal market's rents and fund the politics that shapes the line\n- impaired_driving_victims: primary third-party payer (powerless/trapped) — bear crash risks they cannot opt out of\n- secondhand_exposure_nonsmokers: payer (organized/constrained) — bear exposure costs with partial recourse through smoke-free rules\n- addiction_susceptible_consumers: extraction payer (powerless/trapped) — the class whose consumption is commercially cultivated past the competence premise\n- state_regulators_and_legislatures: agenda_setter (institutional/constrained) — draw licensing, age, and marketing lines; collect tax revenue\n- constitutional_courts: agenda_setter (institutional/analytical) — adjudicate the self/other boundary\n- neighborhood_residents_near_venues: excluded (moderate/constrained) — bear localized externalities, rarely seated in licensing decisions\n- public_health_epidemiologists: analytical observer (analytical/analytical) — measure third-party harm and market behavior",
+    "logic_rationale": "Epsilon is 0.56 with the referent fixed as the standing legalized arrangement, assessed by this reading's own lights: the autonomy core is not extraction by the reading's own endorsement, but the reading itself must count what its own terms condemn — corporate profit-maximization aimed at dependence-prone consumers, and third-party harms left unpriced until they cross the harm threshold. Suppression is 0.35 and is authored as a raw structural property, unscaled by power or scope: the arrangement suppresses state paternalism by design (that is its function, not a cost borne by the governed), and its residual suppressive force falls on unlicensed competitors and on third parties who cannot decline exposure. Theater_ratio is 0.35: early build-out was largely functional, but social-equity programs functioning as licensing fig leaves, industry-funded 'responsibility' campaigns, and warning labels nobody reads have grown the performative share. Accessibility_collapse is 0.35 — the alternatives (criminalization, public-health management) remain fully live in sibling jurisdictions and in rollback politics; nothing collapses on understanding. Resistance is 0.60: prohibitionist movements, federal-state conflict, neighborhood opposition, and industry resistance to marketing limits all press on the line continuously. The measurement series run on one shared seven-point grid (T=0 corresponds to the first broad recreational legalization era, roughly 2012; T=14 to the present) so every tracked metric is authored at every examined time point; trajectories are monotonic rather than cyclical, so no intermittent-reinforcement analysis applies.",
+    "directionality_logic": "Beneficiary declarations put adult_substance_users near the subsidized end: the arrangement exists to protect their choice space, and declining the market costs them nothing the arrangement imposed. Licensed_market_corporations derive near-full-beneficiary directionality from the beneficiary declaration plus arbitrage-grade exit across jurisdictions. Victim declarations put impaired_driving_victims and addiction_susceptible_consumers near the full-target end, amplified by trapped exit; secondhand_exposure_nonsmokers sit somewhat less extreme because organized advocacy has won partial recourse. One override is declared: the institutional atom (state_regulators_and_legislatures, constitutional_courts) is set to 0.45 because the structural derivation has no beneficiary/victim data for administrators — they collect excise revenue on the benefit side and bear enforcement and administration costs on the cost side, landing near-symmetric with a slight beneficiary tilt from tax receipts. The derivation alone would fall back to a generic default for these seats; the override records their actual dual position.",
+    "perspectival_gap": "From the licensed_market_corporations seat the arrangement is a lawful market it helped design and defends through ordinary politics; from the impaired_driving_victims and addiction_susceptible_consumers seats the same arrangement is unpriced risk transfer and engineered compulsion. The regulator seat experiences it as a defensible line requiring constant maintenance against both prohibitionist rollback and commercial expansion. The engine computes these divergent per-seat classifications from power, exit, and directional position; the widest divergence in the story runs between the arbitrage-grade corporate seat and the trapped payer seats.",
+    "mandatrophy_analysis": "The founding problem — where the police power stops — remains live, so no obsolescence flag attaches: the arrangement is not administering a dead mandate, and every novel product re-presents the boundary question. The tangled_rope claim guards against mislabeling in both directions. Reading the arrangement as pure coordination (the rope label the reading's own rhetoric invites) would erase the corporate extraction layer that a legal market scaling revenue with consumption volume predictably produces. Reading it as pure extraction (the prohibitionist label) would erase the genuine autonomy function that distinguishes this arrangement from criminalization and that its beneficiaries actually receive. Both halves are structurally present in the same channels: the same licensed market that delivers autonomy delivers engineered dependence, which is why the classification holds them together instead of splitting the arrangement into a benign core and a separable abuse.",
+    "kernel_context": "Kernel: substance_control_legitimacy — the contested question of what grounds state authority over substance use. This file instantiates the legalization_reading: competent-adult autonomy with state authority limited to third-party harm. Siblings: the prohibition_reading (use inherently harmful; criminalization as moral duty) and the harm_reduction_reading (public-health management without criminalization). This reading forecloses the prohibition reading's core premise within any single framework and coexists with the harm-reduction reading across parties and jurisdictions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_legitimacy__prohibition_reading",
+      "substance_control_legitimacy__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "One colloquial concept — how societies should govern substance use — decomposes into three structurally distinct constraints sharing the kernel substance_control_legitimacy. Each reading assigns a different victim set and therefore a different epsilon over the same subject matter: the prohibition reading places users themselves in the victim set; this legalization reading removes users from the victim set and locates harm at the third-party boundary plus the corporate layer; the harm-reduction reading reframes the entire subject as managed public health. The family is linked pairwise rather than ordered, because each jurisdiction's choice among readings reshapes the evidence the others cite."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "adult_substance_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Purchase and consume alcohol, cannabis, or other lawful substances for their own purposes. The arrangement guarantees that their choice to use or abstain is theirs to make, with the state stepping in only when their conduct reaches others. Within the arrangement they move freely in and out of the market; losing it would mean criminal liability for private choices."
+    },
+    {
+      "name": "licensed_market_corporations",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Produce, brand, and retail lawful substances at scale. Revenue scales with consumption volume, so product design, potency, and marketing budgets aim at heavier use. They fund ballot committees, lobbying, and trade associations that shape licensing and advertising rules, and can shift capital, brands, and formulations across jurisdictions when rules tighten."
+    },
+    {
+      "name": "impaired_driving_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Share roads with drivers under the influence of alcohol or drugs. They did not choose the risk and cannot price it; their recourse begins only after a crash, through prosecution and civil claims. Many are injured or bereaved before any remedy attaches."
+    },
+    {
+      "name": "secondhand_exposure_nonsmokers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Breathe smoke or vapor in homes, multi-unit housing, workplaces, and public spaces they do not control. Organized advocacy has won smoke-free indoor-air rules in many jurisdictions, but exposure in private homes and near venues persists, and moving away is costly."
+    },
+    {
+      "name": "addiction_susceptible_consumers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Began using through lawful channels and progressed to compulsive use that survives price increases, health warnings, and their own stated intentions. High-potency products and loyalty pricing are aimed at exactly this segment. Stopping typically requires treatment, relapse is common, and their spending continues regardless."
+    },
+    {
+      "name": "state_regulators_and_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Write and administer licensing, age-verification, potency, advertising, and taxation rules; prosecute impaired driving; and collect excise revenue that funds public services. They face simultaneous pressure from industry to widen the market, from constituents to limit it, and from neighboring governments to harmonize."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Hear challenges asking whether a given measure regulates conduct that reaches others or punishes a choice that does not. Their rulings define where the line sits, and they can strike down measures on either side of it."
+    },
+    {
+      "name": "neighborhood_residents_near_venues",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Live near clusters of retail outlets, consumption lounges, or grow operations. They bear noise, loitering, odor, and property-value effects, and are frequently informed of licensing decisions after approval rather than consulted before."
+    },
+    {
+      "name": "public_health_epidemiologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track emergency-department visits, traffic fatalities, dependence prevalence, and youth-use trends across jurisdictions and over time. They publish findings that feed legislative debate and litigation, and hold no stake in market outcomes."
+    }
+  ],
+  "gain_flow": "licensed_market_corporations",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Draws an administrable boundary between private conduct and legitimate public concern: adults' self-regarding choices about ingestion are removed from the criminal docket, freeing enforcement capacity for genuinely other-regarding harms — impaired driving, sales to minors, public nuisance — and replacing case-by-case moral litigation over private life with a stable rule.",
+    "transfer_function": "Moves decision authority over ingestion from the state to individuals; moves former illicit-market revenue into licensed corporate channels and public treasuries through taxation; and leaves the residual costs of use — crash injuries, secondhand exposure, treatment burdens — on third parties, households, and the heaviest consumers.",
+    "absent_voices": "Those who bear diffuse harms before they aggregate into identifiable cases: residents near retail clusters learn of licenses after approval; children in households with a dependent user hold no seat anywhere; future heavy users not yet recruited by marketing are represented by no one in licensing or advertising proceedings, where industry presence is dense and continuous.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the line vanished overnight the world rearranges in whichever direction it collapsed: toward prohibition, large numbers of users become defendants overnight, licensed markets and their tax streams dissolve, and illicit supply refills the demand; toward no limit at all, age gates, licensing, and impaired-driving enforcement lose their doctrinal anchor and every paternalist measure becomes constitutionally available. Court dockets, public budgets, and market structures all depend on the line holding where it holds.",
+    "founding_problem": "Overbroad criminal law was punishing self-regarding conduct — filling dockets, fueling illicit markets, and being enforced selectively — without eliminating use, while the deeper question went unanswered: on what ground may the state coerce a competent adult about their own body?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: constitutional-law scholarship and judicial opinions articulate the boundary question independently of market interests; public-health ethics literature frames it as a standing governance problem; and prohibitionist organizations themselves attest the question is live — they dispute the answer, not the existence of the question. No party in the dispute denies that the boundary problem exists."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "millian_self_other_boundary",
+    "drift_state": {
+      "moment": "contemporary_commercial_market_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competent_adult_autonomy_over_ingestion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "police_power_limited_to_other_regarding_harms",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-12",
+    "status": "ACTIVE",
+    "story_uid": "fa5dbcb9-ce11-4290-ad6e-c64dd3fd4296"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.38,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Dependency Mechanism (Dependency Trap Reading)",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "labor_supply_reducing_recipients",
+      "transfer_dependent_households"
+    ],
+    "victims": [
+      "net_taxpaying_workers",
+      "labor_supply_reducing_recipients",
+      "children_in_workless_households"
+    ],
+    "vindicated_propositions": [
+      "labor_supply_elasticity_doctrine",
+      "welfare_dependency_hypothesis",
+      "human_capital_depreciation_theory",
+      "reservation_wage_thesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 54
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 27,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 54,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 27,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 54,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 27,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 54,
+      "value": 0.38
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading (dependency_trap_reading) of the income_support_commitment kernel; which structural features of the arrangement would change under the sibling readings freedom_floor_reading and targeting_efficiency_reading?",
+      "resolution_mechanism": "Author the sibling stories as separate epsilon-invariant constraints and compare extractedness, victim sets, and computed types across the family; the disagreement is located in the sign and magnitude of the labor-supply/atrophy mechanism and in whether unconditionality or universality is the operative defect.",
+      "impact": "Under freedom_floor_reading the same standing arrangement computes with low extraction and reversed polarity (recipients as pure beneficiaries, no atrophy victims); under targeting_efficiency_reading the defect relocates from unconditionality to universality, changing the agenda-setter seat and the candidate fix. Classification of THIS file is valid only for this reading's seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story instantiates one of three live readings of the income-support kernel."
+    },
+    {
+      "id": "labor_supply_response_magnitude",
+      "question": "How large are the labor-supply reductions attributable to unconditional transfers, relative to the security value of the income floor?",
+      "resolution_mechanism": "Long-horizon randomized and quasi-experimental evidence: negative income tax experiment follow-ups, the Finnish basic income evaluation, Alaska Permanent Fund dividend studies, GiveDirectly village trials.",
+      "impact": "Near-zero persistent responses collapse this reading toward the freedom_floor reading and drive measured extraction toward the coordination-cost floor; large persistent responses confirm elevated extraction and activate the atrophy mechanism as a distinct harm channel.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of the disincentive effect that carries this reading's core claim."
+    },
+    {
+      "id": "atrophy_vs_adverse_selection",
+      "question": "Does observed non-participation reflect transfer-caused erosion of skills and work capacity, or adverse selection of people already inclined toward non-work?",
+      "resolution_mechanism": "Exogenous variation in benefit generosity paired with longitudinal measures of wages, hours, and skill proxies, distinguishing within-person trajectories from cross-sectional composition.",
+      "impact": "Causal atrophy makes the arrangement an active corrosive agent and raises the recipient seat's effective burden despite its beneficiary position; pure selection shifts responsibility off the arrangement and lowers the recipient-side directionality toward the beneficiary pole.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the arrangement corrodes capacity or merely reveals pre-existing preferences."
+    },
+    {
+      "id": "intergenerational_transmission_channel",
+      "question": "Does growing up in a transfer-dependent household causally depress children's later labor-market attachment and earnings, or does childhood income security improve their outcomes?",
+      "resolution_mechanism": "Sibling and cross-cohort comparisons around program expansions and contractions, tracking adult employment, earnings, and program receipt of exposed children.",
+      "impact": "Confirmed transmission makes children_in_workless_households full targets with high directionality and hardens the state-dependence claim; null results flip that seat toward incidental beneficiary and weaken the intergenerational leg of the reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dependence transmits across generations or childhood security is protective."
+    },
+    {
+      "id": "fiscal_scale_stability",
+      "question": "Is the transfer-and-tax equilibrium stable as population aging shrinks the contributor base relative to the recipient population?",
+      "resolution_mechanism": "Actuarial projection of contribution and payout streams under demographic aging scenarios, with sensitivity to labor-force participation assumptions.",
+      "impact": "Instability would intensify the enforcement burden on the contributor side (holding taxpayers in the arrangement as their numbers thin) and push the arrangement toward crisis-driven restructuring rather than steady-state drift.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Long-run sustainability of the contributor base beneath the transfer commitment."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A polity operates unconditional income support: transfers arrive regardless of work status, financed by compulsory taxation of employed households. This story instantiates the DEPENDENCY TRAP READING of that standing arrangement: the transfer raises recipients' reservation wages above declining market productivity, labor supply contracts, skills depreciate during non-employment, and dependence deepens across household generations — while the tax base funds the non-participation it subsidizes. The reading concedes a genuine floor function (destitution is prevented) and locates the defect in what the floor does to capacity over time. Per the epsilon-invariance principle, the colloquial label 'unconditional income support' decomposes into three structurally distinct claims held by different parties; this file authors only the dependency-trap instantiation, with epsilon assessed for the standing unconditional arrangement as THIS reading sees it (reading-indexed value over a fixed referent — never the reading's endorsed alternative). The sibling readings are separate constraint files linked through the network.\n\nKEY AGENTS (by structural relationship):\n- labor_supply_reducing_recipients: Primary beneficiary-turned-bearer (powerless/trapped) — collects the transfer, sheds labor supply, bears skill depreciation\n- transfer_dependent_households: Multi-generation beneficiary unit (powerless/trapped) — household budgets equilibrate around the transfer\n- net_taxpaying_workers: Primary target (organized/constrained) — funds non-participation through compulsory taxation\n- children_in_workless_households: Involuntary bearer (powerless/trapped) — inherits the dependence trajectory without voice\n- transfer_program_legislators: Agenda setter (institutional/mobile) — enacts, adjusts, and could sunset the arrangement\n- low_wage_sector_employers: Secondary bearer (organized/mobile) — faces contracted low-wage labor supply\n- labor_economists_and_evaluators: Analytical observer (analytical/analytical) — runs the experiments all three readings argue from",
+    "key_agents": [
+      "labor_supply_reducing_recipients: primary beneficiary seat that simultaneously bears the atrophy cost — dual-listed in beneficiaries and victims because the reading's mechanism pays this population and corrodes it through the same channel",
+      "transfer_dependent_households: beneficiary seat at generational horizon — the unit across which dependence compounds",
+      "net_taxpaying_workers: primary target seat — compulsory contributors with no opt-out from the taxing jurisdiction",
+      "children_in_workless_households: involuntary bearer seat — no voice, no consent, longest exposure",
+      "transfer_program_legislators: agenda-setter seat — holds the dial that could condition, taper, or sunset the arrangement",
+      "low_wage_sector_employers: secondary bearer seat — experiences the labor-supply contraction at the bottom of the market",
+      "labor_economists_and_evaluators: analytical observer seat — produces the elasticity and atrophy evidence on which every reading of the kernel depends"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.60 (moderate-substantial) because, on this reading's assessment, a significant share of transfer-financed non-participation is disincentive-driven rather than incapacity-driven: real productive capacity is drawn out of the market and replaced by taxed transfers, and the recipient population pays a second, non-monetary cost in depreciated skills. Suppression is authored LOW relative to extraction (0.38) and is deliberately NOT scaled by anything — it is a raw structural property. Pure unconditionality coerces no one into taking the transfer and builds no benefit cliff; the suppressive content sits almost entirely on the contributor side (compulsory taxation with no exit from the jurisdiction) and in political entrenchment (entitlement status that insulates the arrangement from ordinary revision). Theater ratio 0.30: the floor function is real, but a growing share of activity is performative — pilot programs launched and evaluated without scaling decisions, administrative rituals maintained past usefulness, pilot findings cited selectively by every faction. Accessibility collapse is low (0.30): work-conditioned support, earned-income subsidies, and targeted transfers remain politically available alternatives; nothing about the arrangement forecloses them. Resistance is substantial (0.55): fiscal-conservative coalitions, work-requirement legislation, and taxpayer mobilization persistently contest the arrangement, and the rising suppression_requirement series tracks the growing enforcement effort needed to hold the arrangement against that resistance — the narrative here specifically traces enforcement-capacity change, which is why the third series is authored at all. The three series share one time grid (T=0..54 at nine-unit steps, roughly 1970–2024: negative income tax experiments through the contemporary pilot era); every tracked metric is authored at every shared point, and the interval-end values equal the base_properties scalars. The drift is monotonic rather than cyclical: expansion, evidence, partial retrenchment, renewed expansion — each cycle ratcheting the baseline slightly higher, which is why the series trend rather than oscillate.",
+    "perspectival_gap": "The seats should compute differently and the divergence is the finding. From the agenda-setter seat (legislators) the arrangement is a policy dial: adjustable, reversible, one line item among many — low personal stakes, mobile exit via electoral turnover. From the primary target seat (net taxpayers) the same arrangement is enforced transfer: compulsory, unconsented, with no jurisdictional exit at acceptable cost. From the beneficiary seat (recipients) the arrangement is security that quietly reprices re-entry — each year out of work lowers the wage the market will pay relative to the transfer, so the seat that collects the cash is also the seat being locked in. From the observer seat the arrangement is a live empirical dispute whose parameters (elasticities, atrophy rates, transmission coefficients) determine which of the three kernel readings is even coherent. The engine computes per-seat classifications from the structural data; this story does not adjudicate between them.",
+    "directionality_logic": "Beneficiary declarations pull labor_supply_reducing_recipients and transfer_dependent_households toward the beneficiary pole; their trapped exit status pushes back toward the target pole — and that tension is exactly the reading's thesis, so the derived mid-range directionality for the recipient seats is the honest output, not an artifact to be overridden. The dual listing of labor_supply_reducing_recipients in both beneficiaries and victims encodes the same ambivalence structurally. Net_taxpaying_workers and children_in_workless_households are declared victims with constrained or trapped exit, placing them near the full-target end; children sit furthest because their exposure is longest and wholly unchosen. Legislators derive near-symmetric institutional directionality (they administer what they neither significantly pay into nor collect). Employers and economists are peripheral: employers bear diffuse second-order costs, economists hold the analytical seat with no material flow. No directionality overrides are authored — the structural data (declarations plus exit atoms) already produces the relationships this reading asserts, and the guidance reserves overrides for cases the derivation gets wrong.",
+    "mandatrophy_analysis": "The founding warrant — a subsistence floor WITHOUT the traps of conditional poor relief — is, on this reading, half-eclipsed: destitution prevention remains live, but the arrangement now manufactures the dependence it was designed to avoid, so mandatrophy is partial and contested rather than resolved (the resolved flag is therefore left undeclared; the R5 fields carry the genealogy). Classifying as tangled_rope rather than snare preserves what the reading itself concedes: the floor genuinely protects people who cannot work, and erasing the arrangement would immiserate them — which is also why fixing_cost is prohibitive. Refusing the rope classification registers what the reading insists on: the same structure that coordinates the floor moves resources from productive to non-productive use and corrodes the recipients' capacity, with identifiable bearers on both sides. The temporal series guards against the two mislabelings in opposite directions: if theater_ratio kept climbing while the floor function hollowed out, the arrangement would drift toward theatrical maintenance of a commitment nobody efficiently defends; if the gains ever concentrated behind an administering seat rather than diffusing to recipient households, the capture signature would surface. Coalition dynamics matter on the target side: net taxpayers already constitute a voting bloc (organized power), which is why resistance is high; the recipient seats lack equivalent coalition capacity, which is precisely the asymmetry the dependence mechanism exploits.",
+    "kernel_context": "Kernel: income_support_commitment — the standing public commitment to unconditional income support. This file instantiates the dependency_trap_reading. Sibling readings, authored as separate constraints: freedom_floor_reading (the same arrangement read as an autonomy and exit-capacity enabler — low extraction, recipients as pure beneficiaries, no atrophy victims) and targeting_efficiency_reading (the defect located in universality rather than unconditionality — the fix is means-testing, the agenda-setter seat changes accordingly). The disagreement is located in the sign and magnitude of the labor-supply/atrophy mechanism and in whether unconditionality or universality is the operative defect. Relation choices: this reading COEXISTS WITH freedom_floor_reading because the two core premises are jointly holdable descriptions (exit capacity exists AND atrophy occurs) — factions disagree over weighting and valuation, not over a logical contradiction; this reading INFLUENCES targeting_efficiency_reading because the dependency-trap evidence base (elasticity estimates, atrophy findings) supplies the legitimacy conditions under which targeting arguments gain force, without logically ruling targeted support in or out. Reference frame: this reading takes the kernel's legitimate state to be conditional support with a reciprocity expectation; the drift vector runs from that baseline to the contemporary unconditional-expansion practice, substantial and unacknowledged by the arrangement's defending authority structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__targeting_efficiency_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'unconditional income support' decomposes into three structurally distinct claims per the epsilon-invariance principle. This file (dependency_trap_reading) authors epsilon ~0.60 for the standing arrangement as seen from the dependency-trap seat: beneficiaries are the voluntarily non-participating recipient class, victims are contributing workers and capacity-eroded recipients. The freedom_floor sibling authors LOW epsilon over the SAME referent with reversed polarity (no atrophy victims; recipients as unambiguous beneficiaries) — the upstream/downstream structure runs through the shared empirical record, where each reading cites the same trials (negative income tax experiments, Finnish basic income evaluation) as vindication. The targeting_efficiency sibling changes the defect locus rather than the polarity: its victims are the misallocated dollars and the excluded needy, not contributors as such. All three files link one another through affects_constraints; no single file hedges epsilon across readings."
+  },
+  "stakeholders": [
+    {
+      "name": "labor_supply_reducing_recipients",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Working-age adults who receive the unconditional transfer and respond by reducing hours, declining low-wage offers, or leaving the labor market altogether. The transfer arrives without conditions, so nothing obliges job search; meanwhile each year of non-employment lowers the wage employers will offer and lets skills and contacts depreciate, so the gap between the transfer and achievable market earnings widens over time. Leaving the arrangement would mean accepting a wage now well below the transfer plus lost leisure — an exit that gets more expensive the longer the arrangement is used."
+    },
+    {
+      "name": "transfer_dependent_households",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Households in which transfer receipt has become the stable budgetary baseline across adult generations. Work attachment weakens cohort by cohort: parents model non-employment, local networks contain fewer employed contacts, and the household's spending, housing, and time patterns equilibrate around the guaranteed payment. The household collects the income and simultaneously absorbs the slow loss of the habits, references, and expectations that market re-entry would require."
+    },
+    {
+      "name": "net_taxpaying_workers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Employed households whose taxes finance the transfers. They cannot opt out of the taxing jurisdiction short of emigration, and their marginal rates rise as the recipient population grows. On this reading's account they fund not only subsistence but voluntary non-participation, and they carry the political burden of contesting an arrangement that is insulated by entitlement status. Their coalition power is real — they vote, lobby, and occasionally win work-requirement legislation — but the arrangement's core flows survive each contest."
+    },
+    {
+      "name": "children_in_workless_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children raised in households where adult work is largely absent. They had no voice in the arrangement that shapes their environment: the neighborhood role models, parental work norms, school engagement, and expectation-setting they absorb all form around transfer-supported non-employment. Their exposure is the longest in the system and their outcomes — adult earnings, employment, and eventual program receipt — unfold decades after the decisions that shaped them were made by others."
+    },
+    {
+      "name": "transfer_program_legislators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legislative majorities and budget committees that enact eligibility rules, set benefit levels, and could condition, taper, or sunset the arrangement. They face electoral cycles shorter than the dependence dynamics they administer, so the visible costs of tightening (immiserating current recipients) arrive before the visible benefits (restored labor supply), while expansion buys immediate constituency support. Individually they bear little of the arrangement's cost and can leave office before its long-run consequences mature."
+    },
+    {
+      "name": "low_wage_sector_employers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Firms relying on entry-level and low-wage labor, which face thinner applicant pools and upward wage pressure as transfer-supported workers decline offers below their new reservation wage. They bear a second-order cost of the arrangement — a contracted labor supply at the bottom of the market — and respond with automation, relocation, or restructuring rather than political defense of any particular labor-market configuration. They sit outside the transfer arrangement's design conversation while absorbing one of its market consequences."
+    },
+    {
+      "name": "labor_economists_and_evaluators",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers who design and evaluate the experiments — the negative income tax trials, the Finnish basic income evaluation, dividend and cash-transfer studies — estimating labor-supply responses, skill trajectories, and intergenerational outcomes. Every reading of the income-support commitment argues from their output, and their findings are contested, re-analyzed, and selectively cited by all factions. They collect no transfer and pay no tax into the arrangement; their stake is interpretive authority over what the evidence shows."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a guaranteed income floor decoupled from employment status: people whose market earnings fall below subsistence — or who exit the market entirely — are supported without means-testing investigations, work-search bureaucracy, or the stigma machinery of conditional poor relief. The coordination problem solved is subsistence security at minimal administrative overhead.",
+    "transfer_function": "Moves purchasing power from net-taxpaying employed households to transfer recipients regardless of work status. On this reading's account the arrangement also moves something else over time: labor-market attachment, skills, and work norms drain out of the recipient population and across household generations, while the contributor side finances the drainage.",
+    "absent_voices": "Children in recipient households would object if consulted — they bear the longest exposure with zero voice in the design. Future generations bearing compounded dependence and a thinned contributor base are structurally absent (no seat exists for them). Taxpayers in high-contribution brackets participate only through blunt electoral instruments, and low-wage employers experience the labor-supply contraction without a seat in the arrangement's design conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, recipient household budgets would break immediately — with atrophied skills and stale references, most long-term recipients could not replace the transfer with wages at comparable speed, producing a destitution spike the arrangement's critics concede. Low-wage labor supply would loosen over subsequent years, contributor tax burdens would fall, and the political economy of the welfare state would reorganize around whatever conditional or targeted replacement was erected. Household formation, migration, and local labor markets in high-dependence regions would all rearrange.",
+    "founding_problem": "Conditional poor relief humiliated applicants, invaded households, and trapped recipients between inadequate benefits and punitive work tests; unconditional income support was proposed (from Friedman's negative income tax onward) to guarantee subsistence security without surveillance, stigma, or the poverty traps that phase-out rates built into means-tested systems.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties by the historical record on conditional poor relief (poor-law scholarship documenting the surveillance and trap effects of earlier systems) and by the fiscal and evaluative literature (VATT's Finnish basic income evaluation, SIME/DIME follow-ups, actuarial analyses by independent fiscal authorities). No corroborator attests the founding problem is simply solved: destitution risk persists in attenuated forms while this reading attests the solution now regenerates the dependence it was designed to avoid, and the freedom-floor reading attests the opposite — the status is genuinely disputed between camps, with the evaluation record itself the disputed terrain."
+  },
+  "gain_flow": "labor_supply_reducing_recipients",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "reference_frame": "conditional_reciprocity_baseline",
+    "drift_state": {
+      "moment": "contemporary_post_pilot_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_transfer_erodes_work_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "contribution_reciprocity_is_owed",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

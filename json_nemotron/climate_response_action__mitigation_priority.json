@@ -1,0 +1,401 @@
+{
+  "header": {
+    "constraint_id": "climate_response_action__mitigation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_climate_response_action__mitigation_priority",
+    "measurement_id_prefix": "climate_response_action__mitigation_priority",
+    "story_uid": "c0047578-c229-426f-a643-8160a55ad9f8"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Climate Response: Mitigation Priority Reading",
+    "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_innovation_capacity_nations",
+      "carbon_market_intermediaries",
+      "clean_technology_sectors",
+      "financial_institutions_carbon_finance"
+    ],
+    "victims": [
+      "high_emitting_industrial_sectors",
+      "vulnerable_global_south_regions",
+      "future_generations",
+      "fossil_fuel_dependent_workers",
+      "low_innovation_capacity_nations"
+    ],
+    "vindicated_propositions": [
+      "technological_optimism_carbon_removal_feasibility",
+      "green_growth_narrative",
+      "market_mechanism_sufficiency"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Is this constraint a single reading of the contested climate_response_action kernel, or does it capture the kernel's totality?",
+      "resolution_mechanism": "Compare structural profiles across all declared readings (mitigation_priority, adaptation_priority, degrowth_transformation). If each reading has distinct ε, beneficiary/victim structures, and coordination/extraction balances, they are separate constraints from one kernel. Document the structural delta this reading instantiates.",
+      "impact": "If this is one reading, its ε=0.68 and claimed_type=tangled_rope apply ONLY to the mitigation_priority reading. The sibling readings would instantiate different constraints with different classifications. The kernel itself is not classified — only its readings are.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this constraint is a kernel reading requiring decomposition discipline (DP-001 ε-invariance)."
+    },
+    {
+      "id": "carbon_removal_feasibility_assumption",
+      "question": "Does the mitigation_priority reading's structural viability depend on the assumption that large-scale carbon removal will become technologically and economically feasible?",
+      "resolution_mechanism": "Track empirical progress of carbon dioxide removal (CDR) technologies against the scale assumed in integrated assessment models (IAMs) that underpin the <2°C pathway. If CDR deployment falls short of assumed gigatonnes/year, the reading's coordination function collapses and its extraction shifts from tangled_rope toward snare.",
+      "impact": "If CDR feasibility fails, the mitigation_priority reading's coordination story (technological innovation enabling emissions reductions while maintaining growth) is falsified — the constraint becomes predominantly extractive (shifting burden to future generations who must bear unmet removal burden). This would reclassify from tangled_rope to snare for the future_generations seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural dependency on unproven carbon removal at scale."
+    },
+    {
+      "id": "growth_emissions_decoupling_evidence",
+      "question": "Is absolute decoupling of GDP growth from emissions reductions occurring at the pace and scale the mitigation_priority reading assumes?",
+      "resolution_mechanism": "Longitudinal analysis of territorial and consumption-based emissions vs. GDP across major economies. If decoupling is only relative (emissions intensity falls but absolute emissions rise with growth) or requires offshoring, the reading's coordination function is empirically unsupported.",
+      "impact": "If decoupling fails, the green_growth_narrative vindicated_proposition is falsified. The constraint's coordination function collapses; extraction concentrates on high_emitting_sectors without the promised innovation offset. Reclassifies toward snare for those sectors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's core coordination claim (growth-compatible deep decarbonization) holds empirically."
+    },
+    {
+      "id": "intergenerational_beneficiary_asymmetry",
+      "question": "Does the mitigation_priority reading structurally extract from future generations by deferring the hardest mitigation (carbon removal) to them while claiming present benefits?",
+      "resolution_mechanism": "Intergenerational accounting of mitigation burden: compare present-cost emissions reductions vs. future-cost CDR deployment assumed in IAM pathways. If >50% of cumulative mitigation burden falls post-2050, future_generations are net payers, not beneficiaries.",
+      "impact": "Confirms future_generations as structural victims (high directionality) rather than beneficiaries. The reading's claimed coordination function obscures an intergenerational transfer. This is the core structural delta from adaptation_priority (which front-loads protection costs).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the reading's temporal burden distribution makes future generations net extractees."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 1992,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The mitigation_priority reading of the climate_response_action kernel frames climate response as achieving <2°C through emissions reductions driven by technological innovation and carbon markets, while maintaining GDP growth. This reading became dominant post-UNFCCC (1992), cemented in Kyoto (1997) and Paris (2015). Its structural operation: concentrates near-term mitigation costs on high-emitting sectors (fossil energy, heavy industry, transport) in industrialized nations; creates revenue streams for carbon market intermediaries and clean tech sectors; assumes carbon removal technologies will mature to handle residual emissions; defers adaptation costs to vulnerable regions (Global South) who lack innovation capacity; shifts the burden of unproven CDR deployment to future generations. The reading is structurally a tangled_rope: it coordinates global mitigation effort (genuine coordination function) while extracting asymmetrically from high-emitting sectors, vulnerable regions, and future generations (asymmetric extraction). Requires active enforcement (NDCs, carbon market rules, technology transfer commitments). The claimed_type is tangled_rope; metrics describe substantial and rising extraction (0.35→0.68), moderate suppression (0.25→0.55), and growing theater (0.15→0.42) as the gap between pledged pathways and implemented policy widens.",
+    "logic_rationale": "Extractiveness rises from 0.35 (1992, UNFCCC framework — broad coordination, low immediate cost) to 0.68 (2026, post-Paris — binding NDCs, carbon markets operational, CDR assumed at scale, growth-maintenance mandate locks in high mitigation burden on emitters). Suppression rises from 0.25 to 0.55: early framework was voluntary; Paris introduced ratchet mechanism, transparency framework, and Article 6 carbon markets that actively exclude non-participants. Theater rises from 0.15 to 0.42: the gap between collective NDC ambition and 2°C pathway widens each stocktake; performative pledges substitute for structural transformation. Accessibility_collapse=0.58: alternative framings (adaptation_priority, degrowth_transformation) are marginalized in formal negotiations but persist in civil society and Global South advocacy — not fully collapsed. Resistance=0.62: significant pushback from fossil sectors, Global South (climate justice), and degrowth advocates; but resistance is fragmented across seats. The metrics and claim are independent: claimed_type=tangled_rope acknowledges the genuine coordination function; metrics capture the extraction that has accumulated atop it.",
+    "perspectival_gap": "Seat divergence is structural: high_innovation_capacity_nations and carbon_market_intermediaries experience this as rope/beneficiary (d low, χ negative) — they gain technology rents, market fees, and geopolitical leverage. High_emitting_industrial_sectors experience as snare/target (d high, χ high) — they bear stranded asset risk, compliance costs, and transition mandates with constrained exit. Vulnerable_global_south_regions experience as snare/target (d high, χ high) — they pay adaptation costs the reading defers, lack innovation capacity to capture benefits, and face locked-in impacts from others' emissions. Future_generations experience as snare/target (d=1.0 structural, χ maximal) — they inherit CDR deployment burden, residual damages, and pathway dependency with zero exit. Fossil_fuel_dependent_workers experience as tangled_rope/payer (d moderate-high) — they bear concentrated transition costs with constrained exit (skills, geography). The engine computes these from beneficiary/victim declarations + power/exit. No overrides needed — structural derivation is accurate.",
+    "directionality_logic": "Beneficiaries declared: high_innovation_capacity_nations (institutional power, arbitrage exit — capture technology rents and set rules), carbon_market_intermediaries (organized power, mobile exit — extract fees from every transaction), clean_technology_sectors (powerful, mobile — capture subsidy flows and market share), financial_institutions_carbon_finance (institutional, arbitrage — create asset classes). Victims declared: high_emitting_industrial_sectors (powerful but constrained exit — stranded assets, regulatory lock-in), vulnerable_global_south_regions (moderate power, constrained exit — adaptation costs, technology access barriers), future_generations (powerless, trapped — zero exit, maximal inheritance), fossil_fuel_dependent_workers (moderate, constrained — skills/geography lock-in), low_innovation_capacity_nations (moderate, constrained — technology dependency). Vindicated propositions are NOT beneficiaries — they are doctrines the reading's operation validates (technological_optimism_carbon_removal_feasibility, green_growth_narrative, market_mechanism_sufficiency).",
+    "mandatrophy_analysis": "The founding problem (stabilizing climate at safe temperature) remains live — but the mitigation_priority reading's specific coordination mechanism (growth-compatible, market-mediated, innovation-dependent deep decarbonization) shows mandatrophy signals: the growth-maintenance mandate has become the binding constraint, not the temperature target. CDR assumption papers over the gap. Theater rise (0.15→0.42) indicates performative substitution. The reading persists because beneficiaries (innovation nations, carbon finance) capture concentrated gains; victims (Global South, future generations) lack coalition power to force revision. This is not a degraded piton — the coordination function is still actively pursued — but the extraction has accumulated atop it, making it a tangibly extractive tangled_rope.",
+    "kernel_context": "This constraint is the mitigation_priority reading of the contested kernel 'climate_response_action' (kernel_id: climate_response_action, reading_id: mitigation_priority). Sibling readings: adaptation_priority (constraint_id: climate_response_action__adaptation_priority) — prioritizes immediate resilience investment, accepts temperature rise, protects vulnerable populations; degrowth_transformation (constraint_id: climate_response_action__degrowth_transformation) — rejects GDP growth, prioritizes sufficiency/equity/reduced throughput. All three are separate constraints with distinct ε, beneficiary/victim structures, and classifications. This reading concentrates costs on current high-emitting sectors, defers adaptation to Global South, assumes CDR feasibility, benefits innovation-capacity nations, shifts residual impacts to future generations. The kernel itself is not classified — only its readings are."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_action__adaptation_priority",
+      "climate_response_action__degrowth_transformation",
+      "carbon_market_architecture",
+      "cdr_deployment_governance",
+      "climate_finance_obligations"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the climate_response_action kernel. The mitigation_priority reading (this file) frames response as growth-compatible technological mitigation; adaptation_priority frames it as resilience-first acceptance; degrowth_transformation frames it as structural economic transformation. The three readings have mutually incompatible beneficiary/victim structures and coordination/extraction balances — they are distinct constraints linked by network.affects_constraints. The mitigation_priority reading influences both siblings: it draws financial/technological resources toward mitigation and away from adaptation (resource competition), and its growth mandate structurally forecloses degrowth_transformation within formal governance frameworks (though degrowth persists as civil society position)."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "high_innovation_capacity_nations",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the mitigation agenda through UNFCCC/Paris governance, IPCC authorship, and climate finance control. Capture technology rents from clean energy, carbon removal, and efficiency innovations. Their innovation capacity lets them meet NDCs while growing GDP — they arbitrage the constraint by turning compliance into competitive advantage. Exit is arbitrage-grade: they can relocate production, shift supply chains, or buy offsets."
+    },
+    {
+      "name": "carbon_market_intermediaries",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate the Article 6 and voluntary carbon market infrastructure: registries, verification, brokering, financial structuring. Extract fees from every tonne traded. The constraint's enforcement machinery (NDC accounting, carbon market rules) creates their market. Mobile exit: they can shift to other environmental asset classes if carbon markets contract."
+    },
+    {
+      "name": "clean_technology_sectors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive massive subsidy flows (IRA, EU Green Deal, carbon contracts for difference) and guaranteed market creation via regulation. Their growth is policy-dependent but they hold market power in key technologies (solar, batteries, electrolyzers). Mobile exit: they can pivot to adjacent markets or jurisdictions if policy support shifts."
+    },
+    {
+      "name": "financial_institutions_carbon_finance",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Structure carbon-linked financial products (transition bonds, sustainability-linked loans, CDR offtake agreements). Capture the financialization rents of the mitigation pathway. Arbitrage exit: they control capital allocation across the entire energy system and can reprice risk faster than policy adjusts."
+    },
+    {
+      "name": "high_emitting_industrial_sectors",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the concentrated costs of emissions reductions: stranded assets (coal plants, oil reserves, blast furnaces), carbon pricing compliance, mandated technology switching. Their political power delays but cannot escape the constraint — assets are geography-bound, workforces are specialized, and regulators hold permitting authority. Constrained exit: they can lobby for slower phase-out or free allocation, but structural decline is locked in by the mitigation pathway."
+    },
+    {
+      "name": "vulnerable_global_south_regions",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pay the adaptation costs the mitigation_priority reading defers: sea-level rise, extreme heat, agricultural collapse, climate migration. Lack innovation capacity to capture clean tech rents; face technology access barriers (IP, finance, skills). The $100B climate finance pledge remains unmet. Constrained exit: they can advocate in negotiations (G77, AOSIS) but structural dependency on emitters' mitigation and financiers' terms limits leverage. Excluded from agenda-setting: the mitigation pathway is designed by and for high-innovation nations."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Inherit the CDR deployment burden (gigatonnes/year assumed post-2050), residual climate damages from overshoot risk, and pathway dependency locked in by today's infrastructure choices. Zero voice in current negotiations, zero exit from the planetary system. The mitigation_priority reading's growth mandate makes their burden structural: every year of delayed absolute emissions reduction increases their CDR requirement non-linearly."
+    },
+    {
+      "name": "fossil_fuel_dependent_workers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear concentrated transition costs: job loss, community decline, skill obsolescence in coal, oil, gas regions. Just transition rhetoric exists but funded transition programs are minimal. Constrained exit: retraining is partial, geographic mobility is limited by community ties and housing markets, age discrimination limits re-entry. They are payers within high-emitting nations — the constraint extracts from their livelihoods to fund the mitigation pathway."
+    },
+    {
+      "name": "low_innovation_capacity_nations",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on technology transfer and finance from high-innovation nations to meet NDCs. Pay monopoly pricing for patented clean tech, lack domestic R&D capacity to adapt solutions. Constrained exit: they can form technology transfer coalitions (African Group, LDCs) but WTO TRIPS and bilateral investment treaties lock in IP regimes. They are payers in the technology access dimension of the constraint."
+    },
+    {
+      "name": "climate_justice_civil_society",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for adaptation_priority and degrowth_transformation readings. Excluded from formal negotiation text-drafting (observer status only). Their mobilization creates political pressure but does not shift the mitigation_priority reading's structural parameters. Mobile exit: they can shift advocacy to national courts, shareholder actions, direct action — but these are peripheral to the UNFCCC constraint."
+    },
+    {
+      "name": "ipcc_scientific_assessment_body",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Produces the assessment reports that define the <2°C pathway, CDR feasibility assumptions, and mitigation cost curves. Their scenarios (SSPs, IAMs) structurally encode the mitigation_priority reading's assumptions. Analytical exit: they can refine scenarios but the kernel framing (growth-compatible mitigation) is baked into the request from governments."
+    }
+  ],
+  "gain_flow": "carbon_market_intermediaries",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates global emissions reductions toward a collective temperature target (<2°C) through a common metric (CO2e), a ratchet mechanism (NDCs), and market-based cost allocation (carbon markets, Article 6). Solves the free-rider problem of atmospheric commons by creating a unified accounting and incentive framework.",
+    "transfer_function": "Moves mitigation costs from the global atmosphere (avoided damages) to high-emitting sectors (compliance costs, stranded assets) and vulnerable regions (adaptation costs, residual damages). Moves financial rents to carbon market intermediaries, clean tech sectors, and financial institutions. Moves CDR deployment burden to future generations. Moves geopolitical leverage to high-innovation-capacity nations.",
+    "absent_voices": "Future generations (structurally excluded — no voice, maximal stake). Indigenous peoples and local communities in Global South (marginalized in NDC design, their territories host CDR/offset projects). Degrowth and climate justice advocates (excluded from formal text, present only as observers). Fossil fuel dependent communities in Global South (no just transition framework for their contexts).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mitigation_priority reading vanished overnight: NDCs and carbon markets would collapse; high-emitting sectors would face no coordinated phase-out; clean tech subsidy flows would stop; Global South adaptation finance would lose its institutional home; future generations would lose the (fragile) CDR deployment pathway. The world would rearrange into either uncoordinated national responses (likely higher emissions) or a shift to adaptation_priority/degrowth_transformation framings — but the institutional architecture, financial flows, and technology deployment trajectories would fundamentally restructure.",
+    "founding_problem": "The UNFCCC (1992) was built to solve: 'How to stabilize greenhouse gas concentrations at a level that prevents dangerous anthropogenic interference with the climate system, while enabling sustainable economic development for all nations.' The mitigation_priority reading narrowed this to: 'How to achieve <2°C through emissions reductions compatible with continued GDP growth, using markets and innovation.'",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (stabilization) is corroborated by IPCC Working Group I (physical science) — the problem is live and worsening. The mitigation_priority reading's SPECIFIC framing (growth-compatible, market-mediated, innovation-dependent) is contested: high_innovation_capacity_nations and carbon_market_intermediaries attest it remains viable; vulnerable_global_south_regions (via G77 statements, loss_and_damage negotiations) and climate_justice_civil_society attest it has shifted function to extraction; future_generations (via youth litigation, intergenerational equity scholarship) attest it shifts burden to them. No corroboration from outside the beneficiary set for the growth-compatible claim — independent economic analyses (Hickel, Kallis, Jackson, Timmer) find absolute decoupling insufficient at required pace."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "unfccc_framework",
+      "kyoto_protocol",
+      "paris_agreement"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "adaptation_priority",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "degrowth_transformation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "growth_compatible_deep_decarbonization_feasible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "carbon_removal_at_gigatonne_scale_achievable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_mechanisms_sufficient_for_global_coordination",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unfccc_1992_stabilization_mandate",
+    "drift_state": {
+      "moment": "post_paris_2026",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

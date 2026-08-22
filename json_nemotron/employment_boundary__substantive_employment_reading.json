@@ -1,0 +1,311 @@
+{
+  "header": {
+    "constraint_id": "employment_boundary__substantive_employment_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_employment_boundary__substantive_employment_reading",
+    "story_uid": "2242c0db-9347-4e30-874b-19e175a661e9"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substantive Employment Boundary — Platform Workers as Employees",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_workers",
+      "traditional_employers",
+      "social_insurance_funds"
+    ],
+    "victims": [
+      "platform_operators",
+      "independent_contractors_genuine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "platform_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Depend economically on a single platform for livelihood; work is allocated, rated, and terminated by opaque algorithms. Currently classified as independent contractors, bearing all risk (no sick pay, no unemployment insurance, no collective bargaining). Reclassification as employees would grant full social insurance, job security, and collective rights — but platforms may exit markets or automate tasks in response."
+    },
+    {
+      "name": "platform_operators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate algorithmic labor markets (ride-hail, delivery, freelance platforms). Currently avoid employment costs by classifying workers as contractors; business models priced on that arbitrage. Reclassification imposes direct payroll costs (social contributions, benefits, severance) and indirect costs (scheduling rigidity, collective bargaining exposure). Can relocate capital, lobby for carve-outs, or automate — exit is structurally easy."
+    },
+    {
+      "name": "traditional_employers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear full employment costs while platform competitors externalize them. Substantive boundary levels the playing field: if platform workers are employees, platforms cannot undercut on labor cost arbitrage. But they also fear boundary creep — if 'economic dependence' expands, their own contractors (franchisees, agency staff) may be reclassified."
+    },
+    {
+      "name": "independent_contractors_genuine",
+      "role": "payer",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Genuinely autonomous professionals (consultants, tradespeople, creatives) who choose contracting for flexibility and tax efficiency. A broad 'economic dependence' test sweeps them into employment, stripping chosen autonomy and imposing compliance costs on their clients. They are not platform workers but the boundary captures them unless carefully carved out."
+    },
+    {
+      "name": "social_insurance_funds",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Receive contributions from newly covered platform workers and their platforms. Solvency improves with broader base; administrative simplicity increases if boundary is clear. But they also administer the boundary — ambiguous cases create litigation load and contribution gaps."
+    },
+    {
+      "name": "labor_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce the employment boundary through inspections, audits, and test cases. Substantive test requires fact-intensive inquiry (algorithm transparency, economic dependence metrics) — more resource-heavy than contract review. Political pressure from both platforms and worker advocates shapes enforcement intensity."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study boundary effects across jurisdictions: California AB5, EU Platform Work Directive, UK worker status cases. Track whether substantive tests reduce misclassification or create new gray zones, and whether platforms adapt by restructuring work or exiting markets."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates social protection (insurance, security, voice) to those who bear economic dependence on a single counterparty, regardless of contractual label. Solves the free-rider problem where platforms externalize risk onto workers and the public safety net.",
+    "transfer_function": "Moves employment costs (social contributions ~20-30% of pay, benefits, severance liability, collective bargaining obligations) from platform workers and the public purse to platform operators. In reverse, moves autonomy and tax advantages from genuine contractors to the state if boundary overreaches.",
+    "absent_voices": "Platform workers in jurisdictions without test cases (Global South platforms, emerging gig sectors) — they live the dependence but have no regulatory lever. Small-platform operators who cannot absorb compliance costs and simply exit, leaving workers with nothing. Tax authorities who see classification arbitrage erode the contribution base but are not in the labor-law conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the substantive boundary vanished overnight, platforms would revert to pure contractor classification within weeks — contributions stop, workers lose coverage, traditional employers face renewed undercutting. The labor market would reorganize around the arbitrage. Conversely, if the boundary hardened globally, platforms would restructure (employment models, franchise partnerships, automation) or withdraw from some markets.",
+    "founding_problem": "The industrial-era employment contract was built around a single employer, fixed workplace, and direct supervision. Platform work decouples economic dependence from contractual form — workers depend on one platform economically but are supervised by algorithms, not managers. The founding problem is a category mismatch: social protection institutions cannot see the dependence because it wears a contractor's label.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ILO (2021) and OECD (2022) both document the 'dependent self-employment' gap across 30+ countries — independent of platform lobbying. European Court of Justice (Uber, 2020) and UK Supreme Court (Uber, 2021) ruled that subordinate relationship exists despite contractor contracts, citing algorithmic control. These are outside the platform-worker beneficiary set."
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2027,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the substantive employment reading of the contested employment_boundary kernel. It asserts that platform workers are employees because they are economically dependent on a single platform and subject to algorithmic control that functionally replaces managerial supervision. The constraint is not the legal test itself (which varies by jurisdiction) but the structural claim that economic dependence + algorithmic control = employment, regardless of contract form. Platforms resist because their unit economics depend on the contractor classification; workers and traditional employers benefit from reclassification for different reasons; genuine contractors risk over-inclusion.",
+    "logic_rationale": "Extractiveness is moderate (0.48) because the transfer is real but bounded — platforms pay employment costs they previously avoided, but workers gain protections worth more than the raw transfer. Suppression (0.62) reflects active platform resistance: lobbying for carve-outs (Prop 22), litigation, market exits, algorithmic restructuring to weaken 'control' indicators. Theater (0.38) is rising: platforms increasingly adopt 'partnership' rhetoric and limited benefit funds that mimic employment without conceding the classification. Accessibility collapse (0.45) is partial — alternative models (cooperative platforms, franchise hybrids, portable benefits) exist but are marginal. Resistance (0.55) comes from platforms, genuine contractors, and some workers who value flexibility.",
+    "directionality_logic": "Platform workers are structural beneficiaries (d ~0.15) — they receive protections they currently lack, though constrained exit (platform exit risk) moderates this. Platform operators are structural targets (d ~0.85) — they bear the full cost transfer, with arbitrage-grade exit (capital mobility, automation). Traditional employers are moderate beneficiaries (d ~0.3) — they gain competitive parity but fear boundary creep. Genuine contractors are accidental victims (d ~0.6) — over-inclusion risk is real but mobile exit limits damage. Social insurance funds are institutional beneficiaries (d ~0.2) — broader base, clearer administration. Regulators are agenda-setters (d ~0.5) — they enforce but face resource pressure from fact-intensive test.",
+    "perspectival_gap": "From the platform-worker seat, the constraint is a protective mountain — it names a natural category (economic dependence) that the law must recognize. From the platform-operator seat, it is an extractive snare — a retrofit that ignores the novelty of algorithmic coordination. From the genuine-contractor seat, it is a tangled rope with a hidden snare component — coordination (clear boundary) mixed with extraction (over-inclusion). The engine computes these per-seat types from the structural data; the claimed type (tangled_rope) reflects the aggregate structure.",
+    "mandatrophy_analysis": "The constraint solves a live coordination problem (protection allocation for dependent workers) but carries extraction (platform cost transfer, contractor over-inclusion risk). The founding problem remains live — platform work is growing, not shrinking. Mandatrophy is not resolved; the boundary is contested because the coordination function and extraction are both real and the balance shifts with platform adaptation. Theater rise suggests platforms are building performative compliance structures (benefit funds, 'partner' language) that mimic the coordination function without conceding the boundary.",
+    "kernel_context": "This is the substantive_employment_reading of the employment_boundary kernel. Sibling readings: formalist_employment_reading (contract + direct supervision = employment; platform workers are contractors) and hybrid_security_reading (third category with tailored protections). This reading forecloses the formalist reading within any single legal framework — a system cannot simultaneously hold 'economic dependence suffices' and 'only contract+supervision suffices' as the employment test. It coexists with the hybrid reading — different jurisdictions may adopt different resolutions. It influences the hybrid reading by raising the floor: if substantive test is the benchmark, hybrid protections must at minimum match employment protections for dependent workers, or they are visibly lesser."
+  },
+  "omegas": [
+    {
+      "id": "boundary_overreach_risk",
+      "question": "Does the 'economic dependence' test structurally over-capture genuine independent contractors, or can it be precisely calibrated to platform work?",
+      "resolution_mechanism": "Empirical tracking of reclassification cases in jurisdictions with substantive tests (California AB5, Spain Rider Law, EU Directive) — measure false positive rate on genuine autonomy.",
+      "impact": "High over-capture makes the constraint a snare for genuine contractors (extraction without coordination benefit); low over-capture keeps it tangled_rope. Affects victim set breadth and platform operator d-value (if over-capture forces platforms to restructure rather than reclassify).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Precision of the substantive boundary — coordination vs. collateral extraction."
+    },
+    {
+      "id": "platform_adaptation_trajectory",
+      "question": "Will platforms absorb employment costs (restructure as employers), exit markets, or automate/redesign work to escape the boundary?",
+      "resolution_mechanism": "Longitudinal study of platform responses post-reclassification: employment model adoption rates, market withdrawals, algorithmic changes that weaken 'control' indicators, franchise/licensing pivots.",
+      "impact": "Absorption confirms coordination function dominates (tangled_rope stable). Exit/automation suggests extraction resistance dominates — constraint becomes snare-like for workers who lose access. Redesign to escape boundary (e.g., multi-apping as structural feature) indicates the constraint is driving evasion, not compliance.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Platform structural response to substantive boundary enforcement."
+    },
+    {
+      "id": "kernel_committer_structure",
+      "question": "How does the employment_boundary kernel's committer structure shape the three readings' stability?",
+      "resolution_mechanism": "Trace the authority grounding of each reading: formalist = legislative text + precedent (lineage); substantive = purposive interpretation + comparative convergence (extraction-resistant); hybrid = legislative compromise (distributed). Map drift vectors.",
+      "impact": "If formalist reading's authority is textual and the text is stable, it resists drift but may lose legitimacy. If substantive reading's authority is purposive and purpose evolves (what is 'dependence' in AI-mediated work?), it drifts but stays live. Hybrid reading's compromise authority may collapse if one side gains legislative supermajority.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame analysis of the employment_boundary kernel's three readings and their authority groundings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "social_insurance_portability",
+      "algorithmic_management_transparency",
+      "collective_bargaining_scope",
+      "employment_boundary__formalist_employment_reading",
+      "employment_boundary__hybrid_security_reading"
+    ],
+    "dual_formulation_note": "Part of the employment_boundary kernel family. This reading (substantive) defines employment by economic dependence + algorithmic control. The formalist reading defines it by contract + direct supervision. The hybrid reading creates a third category. All three share the referent (platform worker classification) but instantiate different constraints with different ε, victims, and enforcement logics. Linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.6
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "formalist_employment_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_security_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_dependence_suffices_for_employment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "algorithmic_control_is_functional_supervision",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "industrial_employment_paradigm",
+    "drift_state": {
+      "moment": "platform_economy_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

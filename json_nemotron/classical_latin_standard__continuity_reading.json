@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "classical_latin_standard__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "classical_latin_continuity",
+    "story_uid": "327be2a0-8eba-49e8-ba31-49693b060c08"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Latin Standard as Living Continuity (Continuity Reading)",
+    "topic_domain": "historical_linguistics/philology/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "ecclesiastical_institutions",
+      "classical_scholars",
+      "legal_tradition_practitioners",
+      "scientific_nomenclature_bodies"
+    ],
+    "victims": [
+      "barbarism_proponents"
+    ],
+    "vindicated_propositions": [
+      "living_transmission_legitimacy",
+      "drift_as_development_not_corruption"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'classical_latin_standard', and what distinguishes it from the reconstruction_reading and hybrid_reading?",
+      "resolution_mechanism": "Structural comparison of beneficiary/victim sets, suppression mechanisms, and extractiveness profiles across the three readings. Each reading instantiates a different constraint with its own ε.",
+      "impact": "Confirms this story models only the continuity_reading — low suppression, institutional beneficiaries, minimal victims — per the ε-invariance principle. Sibling readings are separate constraint files linked via network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the continuity_reading of kernel classical_latin_standard; sibling readings are separate constraints."
+    },
+    {
+      "id": "barbarism_boundary_ambiguity",
+      "question": "Where exactly does the continuity_reading draw the line between 'legitimate drift' and 'barbarism' — and who has authority to adjudicate that boundary?",
+      "resolution_mechanism": "Analysis of institutional practice: which solecisms are corrected vs. tolerated in ecclesiastical, legal, and scientific Latin usage over the interval. Corpus study of correction patterns.",
+      "impact": "If the boundary is narrow and actively policed, suppression is higher than 0.25 and victim set expands beyond 'barbarism_proponents'. If broad and self-regulating, the rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimate drift vs. barbarism boundary — determines suppression and victim scope."
+    },
+    {
+      "id": "institutional_capture_risk",
+      "question": "Do the beneficiary institutions (Church, legal tradition, scientific bodies) extract rents from gatekeeping the standard, or is their role purely coordinative?",
+      "resolution_mechanism": "Measure whether access to institutional Latin roles (liturgy, legal drafting, taxonomic naming) requires conformity that exceeds communicative necessity — e.g., exclusion of competent users who deviate in non-communicative ways.",
+      "impact": "If gatekeeping exceeds coordination need, extractiveness rises toward tangled_rope; if purely coordinative, rope classification is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether beneficiary institutions' gatekeeping is coordinative or extractive."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The continuity_reading holds that correct Latin is the living form transmitted through unbroken practice — primarily the ecclesiastical, legal, and scientific traditions that never ceased using Latin — and that natural linguistic drift within that transmission is legitimate development, not corruption. This reading inherits the kernel's authority from continuous practice rather than from textual archaeology. It operates as a coordination mechanism: a shared standard enables communication across centuries and domains without requiring each user to reconstruct Classical norms from texts. Beneficiaries are the institutions that use Latin professionally; they gain a stable, mutually intelligible medium. Suppression is low: the reading tolerates drift and only excludes 'barbarisms' — solecisms that break communicative continuity. Extraction is moderate: institutional access requires conformity, but the conformity serves the coordination function. The constraint is claimed as rope (genuine coordination, minimal coercion) and the metrics support this.",
+    "key_agents": [
+      "ecclesiastical_institutions: Primary beneficiary (institutional/organized) — uses Latin liturgically and administratively; transmits the standard",
+      "classical_scholars: Beneficiary (organized/moderate) — curate and teach the living tradition; gatekeep academic legitimacy",
+      "legal_tradition_practitioners: Beneficiary (organized/powerful) — use Latin in canonical law, civil law terminology; depend on stable reference",
+      "scientific_nomenclature_bodies: Beneficiary (institutional/powerful) — taxonomic Latin requires stable forms across centuries",
+      "barbarism_proponents: Victim (powerless/trapped) — users whose innovations break communicative continuity; excluded from institutional Latin",
+      "reconstructionist_philologists: Excluded (analytical/observer) — advocate the competing reconstruction_reading; not served by this constraint",
+      "hybrid_practitioners: Observer (organized/moderate) — navigate between continuity and reconstruction; see value in both"
+    ],
+    "logic_rationale": "Extractiveness (0.35) reflects the moderate cost of conforming to institutional Latin norms — real but not exploitative. Suppression (0.25) is low because the constraint operates through socialization and institutional practice, not active enforcement against alternatives. Theater (0.15) is minimal: the standard's maintenance is functional, not performative. Accessibility collapse (0.4) is moderate: alternatives exist (reconstructionist Latin, neo-Latin experiments) but the living tradition's network effects make them marginal for institutional use. Resistance (0.3) is present but low-intensity: reconstructionists contest the standard's legitimacy but cannot displace it in its domains. The metrics are authored at interval end (t=25, roughly contemporary); the series show slow drift toward slightly higher extractiveness and suppression as institutional Latin becomes more archival and less vernacular.",
+    "perspectival_gap": "From the beneficiary seats (ecclesiastical, legal, scientific), the constraint is experienced as rope: a working coordination tool they maintain and benefit from. From the victim seat (barbarism_proponents), it is experienced as mild exclusion — but the excluded group is defined by communicative failure, not identity, and exit to non-Latin domains is trivial. From the excluded reconstructionist seat, the constraint is experienced as an illegitimate monopoly on 'correctness' — but this seat has no structural power within the constraint's domains. The engine computes these divergences from the structural data.",
+    "directionality_logic": "Beneficiaries (ecclesiastical_institutions, classical_scholars, legal_tradition_practitioners, scientific_nomenclature_bodies) collect coordination value from the shared standard; their directionality is near 0.0 (subsidized). The sole victim group (barbarism_proponents) bears exclusion costs; their directionality is elevated but limited by trivial exit (they can use other languages). The excluded reconstructionist seat is not a participant in this constraint's operation — they contest the kernel, not the reading's internal logic.",
+    "mandatrophy_analysis": "The founding problem — maintaining a mutually intelligible Latin across centuries and domains without a native speech community — remains live. The continuity_reading solves it through living transmission. No mandatrophy: the arrangement's function matches its current operation. The reading's legitimacy derives from the unbroken chain of practice, not from a superseded mandate.",
+    "kernel_context": "This constraint is the continuity_reading of kernel classical_latin_standard. Sibling readings: reconstruction_reading (Classical form recoverable only through philological archaeology, requiring discontinuous return to texts and rejection of medieval drift) and hybrid_reading (requires both textual fidelity to Classical norms AND recognition of legitimate post-Classical developments). This reading differs by treating the living transmission as the sole authority, with drift as legitimate development."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "classical_latin_standard__reconstruction_reading",
+      "classical_latin_standard__hybrid_reading"
+    ],
+    "dual_formulation_note": "Kernel classical_latin_standard decomposes into three constraint stories: continuity_reading (this file, rope), reconstruction_reading (tangled_rope — coordinates textual fidelity but extracts via exclusion of living tradition), hybrid_reading (tangled_rope — coordinates both fidelity and development but suppresses pure forms). The continuity_reading is upstream: its living tradition provides the corpus the reconstruction_reading archaeologizes and the hybrid_reading selectively curates. All three link via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "ecclesiastical_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Use Latin daily in liturgy, canon law, and administration. The living standard is their working language; they transmit it through practice. Conformity is the condition of participation. Exit means abandoning the linguistic medium of their institutional identity — not impossible but identity-destructive."
+    },
+    {
+      "name": "classical_scholars",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Curate, teach, and define the living standard through critical editions, grammars, and pedagogy. They benefit from the standard's stability (it makes their expertise valuable) and shape it through editorial choices. Exit means leaving the field; constrained by career investment."
+    },
+    {
+      "name": "legal_tradition_practitioners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use Latin terminology in canonical law, civil law systems, and international law. The standard provides stable referents across jurisdictions and centuries. They conform because precision requires it. Exit is professionally costly but not identity-destructive."
+    },
+    {
+      "name": "scientific_nomenclature_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Govern taxonomic Latin for biology, anatomy, astronomy. The standard ensures names coined in 1758 remain usable today. They enforce conservative usage to prevent drift that would break nomenclatural stability. Exit means adopting a different nomenclatural code — possible but globally disruptive."
+    },
+    {
+      "name": "barbarism_proponents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Users whose Latin innovations violate communicative continuity (solecisms, neologisms without morphological precedent, syntactic calques from vernaculars). They are excluded from institutional Latin domains — their forms are corrected, not adopted. Exit is trivial: they can use vernaculars or neo-Latin communities. The cost is exclusion from the specific institutional conversations."
+    },
+    {
+      "name": "reconstructionist_philologists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advocate the reconstruction_reading: correct Latin is the Classical form recovered through philology, not the living tradition. They are not participants in the continuity constraint — they contest the kernel itself. Their work exists in parallel; they do not seek inclusion in ecclesiastical or legal Latin practice."
+    },
+    {
+      "name": "hybrid_practitioners",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate in domains requiring both Classical fidelity (textual criticism, epigraphy) and living tradition (neo-Latin composition, spoken Latin). They navigate between readings situationally. They benefit from both constraints and are harmed by neither exclusively. Exit is mobile: they can shift emphasis between domains."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a mutually intelligible Latin across centuries, domains, and geographies without a native speech community, enabling liturgy, law, science, and scholarship to share a stable referential medium.",
+    "transfer_function": "Moves conformity effort from all institutional users into a shared standard; the standard returns communicative stability and cross-temporal interoperability. No systematic wealth/power transfer — the cost is learning and maintaining the norm; the benefit is mutual intelligibility.",
+    "absent_voices": "Reconstructionist philologists (who would argue the living tradition has drifted into error) and vernacular-language advocates (who would argue Latin should be replaced entirely in institutional domains) are structurally excluded from this constraint's governance. The former contest the kernel; the latter contest the domain.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuity standard vanished, ecclesiastical, legal, and scientific Latin would fragment into mutually unintelligible local variants or be replaced by vernaculars — the coordination function would be lost and each domain would bear the cost of establishing its own standard or switching languages.",
+    "founding_problem": "After the collapse of the Western Roman Empire and the end of Latin as a vernacular, how to maintain a single, stable, cross-domain Latin for liturgy, law, administration, and learning across fragmented geographies and centuries — without native speakers to anchor it.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is attested as live by every institution that still uses Latin professionally (Vatican dicasteries, canon law faculties, civil law jurisdictions, ICZN/ICNafp nomenclatural codes). No external party claims the problem is solved; vernacular replacement has occurred in some domains (university lectures, diplomatic correspondence) but the core institutional domains persist."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "reconstruction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "living_transmission_is_sole_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "drift_in_unbroken_practice_is_development_not_corruption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "unbroken_ecclesiastical_legal_scientific_practice",
+    "drift_state": {
+      "moment": "contemporary_institutional_latin",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

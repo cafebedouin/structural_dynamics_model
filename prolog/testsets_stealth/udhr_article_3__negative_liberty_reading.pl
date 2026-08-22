@@ -1,0 +1,372 @@
+% ============================================================================
+% CONSTRAINT STORY: udhr_article_3__negative_liberty_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_udhr_article_3__negative_liberty_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: udhr_article_3__negative_liberty_reading
+ *   human_readable: UDHR Article 3 — Negative Liberty Reading (Security as Freedom from State Violence)
+ *   domain: constitutional law / human rights / political philosophy
+ *
+ * SUMMARY:
+ *   This story instantiates ONE reading of the contested kernel
+ *   udhr_article_3: the negative-liberty reading, under which Article 3
+ *   prohibits state deprivation of life and liberty except through narrow
+ *   procedural justice, and 'security' means freedom from state violence. The
+ *   colloquial label 'Article 3' covers at least three structurally distinct
+ *   claims — immunity from state violence (this file), state obligation to
+ *   provide material conditions of security (positive_entitlement_reading),
+ *   and bare procedural guarantee without resolving the substantive contest
+ *   (procedural_hybrid_reading). Per the epsilon-invariance principle these
+ *   are separate constraints with separate epsilon values, linked through
+ *   network.affects_constraints; this file authors only the negative-liberty
+ *   instantiation. The epsilon referent is the standing arrangement under
+ *   contest — the actual practice of state power over life and liberty
+ *   (retentionist capital punishment, broad force doctrine, thin procedure
+ *   across much of the world) — assessed by this reading's own lights, under
+ *   which that arrangement extracts heavily from individuals. The
+ *   claim/metric independence rule applies: claimed_type is authored from
+ *   structural belief (genuine coordination plus real asymmetric costs),
+ *   metrics from descriptive observation, and the engine computes per-seat
+ *   classifications from the structural data without reconciling them to the
+ *   claim.
+ *
+ * KEY AGENTS:
+ *   - individual_persons: Primary beneficiary (moderate/constrained) — holds immunities against state deprivation of life and liberty; receives protection without administering the constraint
+ *   - detainees_and_criminal_defendants: Most direct beneficiary (powerless/trapped) — protected by habeas, counsel, and detention review precisely while in state custody
+ *   - state_security_apparatus: Primary target/payer (institutional/constrained) — bears loss of capital punishment, broad force authority, and unreviewable detention
+ *   - constitutional_courts: Agenda setter (institutional/constrained) — interprets and enforces the reading; gains docket and stature from its expansion
+ *   - majoritarian_security_publics: Excluded voice (organized/trapped) — majorities whose security preferences are foreclosed by entrenched review
+ *   - positive_rights_advocates: Excluded voice (organized/mobile) — constituency of the sibling entitlement reading, seatless inside this framework
+ *   - international_human_rights_bodies: Analytical observer (institutional/analytical) — monitors diffusion and selective enforcement without coercive power
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(udhr_article_3__negative_liberty_reading, 0.72).
+domain_priors:suppression_score(udhr_article_3__negative_liberty_reading, 0.55).
+domain_priors:theater_ratio(udhr_article_3__negative_liberty_reading, 0.25).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(udhr_article_3__negative_liberty_reading, extractiveness, 0.72).
+narrative_ontology:constraint_metric(udhr_article_3__negative_liberty_reading, suppression_requirement, 0.55).
+narrative_ontology:constraint_metric(udhr_article_3__negative_liberty_reading, theater_ratio, 0.25).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(udhr_article_3__negative_liberty_reading, accessibility_collapse, 0.45).
+narrative_ontology:constraint_metric(udhr_article_3__negative_liberty_reading, resistance, 0.6).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(udhr_article_3__negative_liberty_reading, tangled_rope).
+narrative_ontology:human_readable(udhr_article_3__negative_liberty_reading, "UDHR Article 3 — Negative Liberty Reading (Security as Freedom from State Violence)").
+narrative_ontology:topic_domain(udhr_article_3__negative_liberty_reading, "constitutional law / human rights / political philosophy").
+
+domain_priors:requires_active_enforcement(udhr_article_3__negative_liberty_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(udhr_article_3__negative_liberty_reading, '3da18dba-42e5-4724-9411-086983e763e2').
+narrative_ontology:cs_kernel_codification('3da18dba-42e5-4724-9411-086983e763e2', fixed_text).
+narrative_ontology:cs_authority_grounding('3da18dba-42e5-4724-9411-086983e763e2', lineage).
+narrative_ontology:cs_interpretation_layer_present('3da18dba-42e5-4724-9411-086983e763e2').
+narrative_ontology:cs_reading_relation('3da18dba-42e5-4724-9411-086983e763e2', udhr_article_3__positive_entitlement_reading, coexists_with).
+narrative_ontology:cs_reading_relation('3da18dba-42e5-4724-9411-086983e763e2', udhr_article_3__procedural_hybrid_reading, influences).
+narrative_ontology:cs_axiom('3da18dba-42e5-4724-9411-086983e763e2', foundational, life_liberty_as_prepolitical_immunities).
+narrative_ontology:cs_axiom_status(life_liberty_as_prepolitical_immunities, holdable).
+narrative_ontology:cs_axiom_grounding('3da18dba-42e5-4724-9411-086983e763e2', life_liberty_as_prepolitical_immunities, deontological).
+narrative_ontology:cs_axiom('3da18dba-42e5-4724-9411-086983e763e2', secondary, deprivation_only_via_narrow_procedural_justice).
+narrative_ontology:cs_axiom_status(deprivation_only_via_narrow_procedural_justice, holdable).
+narrative_ontology:cs_axiom_grounding('3da18dba-42e5-4724-9411-086983e763e2', deprivation_only_via_narrow_procedural_justice, conventional).
+narrative_ontology:cs_reference_frame('3da18dba-42e5-4724-9411-086983e763e2', prepolitical_immunities_against_state_violence).
+narrative_ontology:cs_drift_state('3da18dba-42e5-4724-9411-086983e763e2', contemporary, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('3da18dba-42e5-4724-9411-086983e763e2', '').
+narrative_ontology:cs_kernel_id(udhr_article_3__negative_liberty_reading, udhr_article_3).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(udhr_article_3__negative_liberty_reading, individual_persons).
+narrative_ontology:constraint_beneficiary(udhr_article_3__negative_liberty_reading, detainees_and_criminal_defendants).
+narrative_ontology:constraint_victim(udhr_article_3__negative_liberty_reading, state_security_apparatus).
+narrative_ontology:constraint_vindicates(udhr_article_3__negative_liberty_reading, natural_rights_doctrine).
+narrative_ontology:constraint_vindicates(udhr_article_3__negative_liberty_reading, due_process_principle).
+narrative_ontology:constraint_vindicates(udhr_article_3__negative_liberty_reading, proportionality_in_state_force).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Every person subject to state jurisdiction holds immunities against arbitrary deprivation of life and liberty. They receive protection without administering anything; their contribution is diffuse (taxation, jury service, democratic participation). Exit means emigration, which is costly and only partial — extradition treaties, extraterritorial state power, and citizenship ties follow them across borders.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, individual_persons, beneficiary,
+    moderate, biographical, constrained, global).
+
+% The most direct beneficiaries per capita: habeas corpus, counsel, detention review, and narrow use-of-force rules operate on their behalf precisely when they are in state custody. They cannot exit custody and depend entirely on courts activating the constraint; without judicial enforcement their immunities are paper.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, detainees_and_criminal_defendants, beneficiary,
+    powerless, immediate, trapped, national).
+
+% Police forces, prison systems, domestic intelligence services, and militaries acting internally bear the constraint's direct costs: capital punishment is unavailable, lethal-force doctrine is narrow, preventive detention is reviewable, and street-level officers face liability and second-guessing for split-second decisions. They cannot opt out of constitutional review; they adapt through procedure, training, litigation, and sometimes evasion, and can reshape doctrine only slowly through appointments and incremental cases.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, state_security_apparatus, payer,
+    institutional, generational, constrained, national).
+
+% Interpret and enforce the reading case by case: they decide what counts as deprivation, what procedure suffices, and when security claims yield. Expansive due process enlarges their docket and institutional stature, giving them a stake in the reading's breadth. They cannot decline jurisdiction over core cases, and appointment politics and public backlash discipline them from outside.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, constitutional_courts, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Majorities and vocal coalitions favoring harsher instruments — capital punishment for aggravated murder, extended preventive detention, broader officer discretion — find those preferences foreclosed by entrenched judicial review. Their voice sits outside the constraint's adjudication: they can protest and vote, but amending an entrenched rights guarantee is beyond ordinary electoral reach, so they absorb outcomes they cannot reverse.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, majoritarian_security_publics, excluded,
+    organized, biographical, trapped, national).
+
+% Constituency of the sibling entitlement reading: they hold that security means material provision — welfare, healthcare, housing — not merely freedom from state violence. Inside this reading's framework their claims have no purchase; they pursue welfare rights through other constitutional provisions, political channels, and treaty bodies instead, contesting this reading at its margins rather than within it.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, positive_rights_advocates, excluded,
+    organized, generational, mobile, global).
+
+% Treaty-monitoring committees and regional institutions track how the reading diffuses: they issue non-binding interpretations, review state reports, and document compliance gaps. They hold no coercive power over sovereigns and function as the analytical seat from which the reading's spread and selective enforcement are visible.
+narrative_ontology:constraint_stakeholder(udhr_article_3__negative_liberty_reading, international_human_rights_bodies, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(udhr_article_3__negative_liberty_reading, individual_persons).
+narrative_ontology:fixing_cost_class(udhr_article_3__negative_liberty_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Converts the sovereign's unlimited power over subjects' lives into a bounded, predictable, contestable monopoly: by binding every state organ to narrow procedural justice before any deprivation of life or liberty, it solves the collective-action problem of mutual restraint — each subject accepts limits on collective security capacity in exchange for credible assurance that no organ of the state may arbitrarily kill or imprison.
+% TRANSFER_FUNCTION: Moves power over life and liberty from state institutions to individual persons: security capacities (execution, preventive detention, broad lethal-force authority) are withdrawn from state hands; personal security and procedural shields are conferred on individuals; decision authority over the boundary shifts from legislatures and executives to courts.
+% ABSENT_VOICES: Majoritarian security publics and families of homicide victims whose preferred remedies are foreclosed sit outside the constraint's adjudication; positive-rights advocates holding the sibling entitlement reading likewise have no seat — inside this framework their account of security-as-provision registers as a category error. Both would contest the equation of security with freedom from state violence if the conversation were theirs to set.
+% DISAPPEARANCE_RATIONALE: If the constraint vanished overnight, states would reclaim broad authority over life and liberty: retentionist jurisdictions would resume executions, detention regimes would shed review, and the entire adjudicative architecture built on the reading — constitutional courts' rights dockets, habeas practice, treaty-body supervision — would lose its object. Political order would rearrange around unrestrained sovereignty within a generation.
+% FOUNDING_PROBLEM: Unchecked sovereign power over life and liberty: the interwar and Second World War experience of arbitrary execution, detention, and persecution led the Declaration's drafters to subordinate state violence to law, making freedom from state violence itself the content of security.
+% FOUNDING_PROBLEM_CORROBORATION: Corroborated outside the benefiting parties: contemporaneous drafting records cite totalitarian arbitrariness and wartime atrocity; UN treaty bodies and regional courts document continuing state violence against individuals; and retentionist states themselves attest the problem's liveness by invoking perpetual emergency — attestation from an opposed seat, which is stronger evidence than any beneficiary's self-report.
+narrative_ontology:disappearance_verdict(udhr_article_3__negative_liberty_reading, world_rearranges).
+narrative_ontology:founding_problem_status(udhr_article_3__negative_liberty_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(udhr_article_3__negative_liberty_reading, '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(udhr_article_3__negative_liberty_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(udhr_article_3__negative_liberty_reading, 0.72, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(udhr_article_3__negative_liberty_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(udhr_article_3__negative_liberty_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(udhr_article_3__negative_liberty_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is high (0.72) because the reading's referent arrangement — state power over life and liberty as actually practiced — strips life, liberty, and security-from-state-violence from individuals at scale, and because the constraint's own operation continuously withdraws security capacity from the state seat. Suppression (0.55) is structural, not interpersonal: entrenched judicial review forecloses majoritarian security options, but leaves wide lawful space, so foreclosure is real without being total. Theater is low-moderate (0.25): habeas and detention review do continuous functional work, with only a ceremonial layer of commemorative rights-rhetoric. Accessibility collapse is moderate (0.45): alternative security arrangements remain visible and partly available; the constraint narrows the option space rather than collapsing it. Resistance (0.6) is sustained — retentionist defiance, victims'-family mobilization, executive emergency invocations, and periodic populist backlash against courts. The temporal series share one grid (nine points, 1948–2026): base_extractiveness rises monotonically as the reading's grip tightens and costs accumulate on the security seat (abstraction to entrenchment); suppression_requirement rises in parallel, tracking the deliberate build-up of enforcement machinery (constitutional courts, treaty bodies, strategic litigation) — this is an enforcement-intensification story, which is why suppression_requirement is authored rather than left static; theater_ratio declines from declaratory aspiration (0.48) to institutionalized function (0.25), then plateaus with mild ritualization. Endpoint values match the base_properties scalars.
+ *
+ * PERSPECTIVAL GAP:
+ *   The seats compute radically different constraints from identical text. From the individual and defendant seats, Article 3 is a shield — protection arriving without administration, worth more than any forgone security tool. From the state_security_apparatus seat, the same structure is a shackle: institutional, generational, and unable to exit, it pays continuously in capacity and discretion. From the constitutional_courts seat it is vocation and jurisdiction simultaneously — enforcement and institutional gain ride the same docket. From the excluded seats it is respectively usurpation (majoritarian publics, trapped behind entrenchment) or hollowness (positive-rights advocates, for whom freedom from state violence without provision is a formal liberty). The engine computes this divergence from power, exit, and directional position; the authored claim does not adjudicate it.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiary declarations drive the derivation: individual_persons and detainees_and_criminal_defendants sit near the full-beneficiary end (d near 0.0), with the defendants' trapped exit pushing them furthest into subsidized protection. state_security_apparatus sits near the full-target end (d near 1.0): it bears the transfer, is institutionally powerful but exit-constrained, and its constrained exit keeps it near the target pole rather than allowing arbitrage. constitutional_courts are not listed as beneficiary or victim; they take the fallback derivation, which understates their jurisdictional stake in the reading's breadth — flagged here as a known limitation rather than patched with an override, because the override mechanism keys on power atom and would misfire against the institutional victim seat. No directionality_overrides are authored: the beneficiary/victim plus exit data already produce the correct qualitative structure for every seated agent.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem — unchecked sovereign power over life and liberty — remains live: state violence against individuals is documented continuously by monitoring bodies, and retentionist and emergency-invoking states attest its persistence from an opposed seat. The R5 mismatch consumer therefore reads founding_problem_status=live against disappearance_verdict=world_rearranges: no zombie flag, no mandatrophy. The classification work this story performs is boundary-keeping in both directions: the genuine, primary coordination function (credible mutual restraint of state violence, solved at lower coercive overhead than tyranny or civil war) blocks a snare reading despite high epsilon — the coordination story is not cover; and the declared victim seat with real, asymmetric, actively enforced costs blocks a pure rope reading. What remains is the hybrid: real coordination and real extraction through the same structure, which is what tangled_rope names.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    article_3_kernel_reading_contest,
+    'This constraint is one reading of the udhr_article_3 kernel. What would the sibling readings change structurally if adopted — positive_entitlement_reading (security as state-provided material conditions) and procedural_hybrid_reading (procedure without resolving the substantive contest)?',
+    'Track constitutional and treaty-body practice: whether courts and monitoring institutions resolve ''security'' as immunity, provision, or procedure, and which reading''s vocabulary dominates new ratifications and judgments.',
+    'Entitlement adoption flips the beneficiary/victim structure — the state becomes a duty-bearing beneficiary of legitimacy and taxpayers become payers — and changes epsilon''s referent entirely. Hybrid adoption narrows the constraint''s scope to procedure, lowering measured extraction and moving the classification toward rope. The disagreement is located in the semantic content of ''security'' in the kernel text.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(article_3_kernel_reading_contest, conceptual, 'Kernel-level reading contest: which of three readings of udhr_article_3 governs, with structurally divergent consequences.').
+
+omega_variable(
+    natural_law_vs_constructed_immunity,
+    'The reading grounds Article 3 in prepolitical natural rights — a mountain-flavored claim that immunities against state violence exist prior to and independent of enactment — yet the constraint is drafted, interpreted, amendable, and variably adopted. Is the immunity floor a natural limit or a constructed constitutional choice?',
+    'Comparative convergence analysis: do jurisdictions with independent drafting histories converge on identical immunity content (suggesting discovery of a natural limit), or does content track doctrine, litigation strategy, and drafting politics (suggesting construction)?',
+    'A natural-law resolution would support emerges_naturally=true and mountain certification with negligible extraction; a constructed resolution sustains the tangled_rope classification with its declared beneficiaries and victims.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(natural_law_vs_constructed_immunity, conceptual, 'Whether the negative-liberty floor is discovered natural law or enacted constitutional construction.').
+
+omega_variable(
+    aggregate_security_cost_reality,
+    'Does restrictive use-of-force doctrine and capital punishment abolition measurably reduce aggregate public security — the harm the victim seat claims — or is the security-capacity loss largely positional and symbolic?',
+    'Comparative criminology across abolition/retention and restrictive/permissive force jurisdictions, controlling for wealth, inequality, and policing intensity.',
+    'If real security costs are small, the victim seat''s extraction is mostly positional and the classification trends toward rope; if large, the tangled_rope reading firms and snare pressure appears on the security seat.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(aggregate_security_cost_reality, empirical, 'Whether the constraint''s cost to collective security capacity is substantively real or positional.').
+
+omega_variable(
+    selective_enforcement_scope,
+    'The constraint binds rhetorically everywhere but bites mainly in constitutional democracies with empowered courts. Is the measured extraction a property of the constraint itself or an artifact of selective adoption and enforcement?',
+    'Measure enforcement incidence (habeas grants, abolition reversals, detention-review outcomes) across regime types holding formal commitment constant.',
+    'If bite is regime-limited, the scope modifier and the generalization of epsilon change: the universal declaratory claim and the national enforcement reality are different constraints wearing one label, and the story may need decomposing further.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(selective_enforcement_scope, empirical, 'Whether epsilon generalizes beyond the democracies where the constraint is actually enforced.').
+
+omega_variable(
+    judicial_identity_fusion,
+    'Is doctrinal expansion of the reading driven by the constraint''s internal demands, or by courts'' institutional self-interest — docket growth, prestige, and jurisdictional expansion fusing judicial identity with rights-vindication?',
+    'Compare expansion patterns across appointment systems and incentive structures: if expansion tracks judicial self-protection rather than doctrinal logic, the fusion hypothesis gains support.',
+    'If self-interest dominates, the agenda_setter seat''s effective directionality rises toward the beneficiary pole, supporting a captured-enforcement reading and increasing computed extraction asymmetry; if doctrinal logic dominates, the court seat remains a neutral administrator.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(judicial_identity_fusion, empirical, 'Institutional identity fusion of courts with the reading they enforce.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(udhr_article_3__negative_liberty_reading, 1948, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(udhr_a3_neglib_tr_t1948, udhr_article_3__negative_liberty_reading, theater_ratio, 1948, 0.48).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t1958, udhr_article_3__negative_liberty_reading, theater_ratio, 1958, 0.42).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t1968, udhr_article_3__negative_liberty_reading, theater_ratio, 1968, 0.37).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t1978, udhr_article_3__negative_liberty_reading, theater_ratio, 1978, 0.33).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t1988, udhr_article_3__negative_liberty_reading, theater_ratio, 1988, 0.3).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t1998, udhr_article_3__negative_liberty_reading, theater_ratio, 1998, 0.27).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t2008, udhr_article_3__negative_liberty_reading, theater_ratio, 2008, 0.26).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t2018, udhr_article_3__negative_liberty_reading, theater_ratio, 2018, 0.25).
+narrative_ontology:measurement(udhr_a3_neglib_tr_t2026, udhr_article_3__negative_liberty_reading, theater_ratio, 2026, 0.25).
+
+% Extraction over time
+narrative_ontology:measurement(udhr_a3_neglib_be_t1948, udhr_article_3__negative_liberty_reading, base_extractiveness, 1948, 0.4).
+narrative_ontology:measurement(udhr_a3_neglib_be_t1958, udhr_article_3__negative_liberty_reading, base_extractiveness, 1958, 0.46).
+narrative_ontology:measurement(udhr_a3_neglib_be_t1968, udhr_article_3__negative_liberty_reading, base_extractiveness, 1968, 0.52).
+narrative_ontology:measurement(udhr_a3_neglib_be_t1978, udhr_article_3__negative_liberty_reading, base_extractiveness, 1978, 0.57).
+narrative_ontology:measurement(udhr_a3_neglib_be_t1988, udhr_article_3__negative_liberty_reading, base_extractiveness, 1988, 0.61).
+narrative_ontology:measurement(udhr_a3_neglib_be_t1998, udhr_article_3__negative_liberty_reading, base_extractiveness, 1998, 0.65).
+narrative_ontology:measurement(udhr_a3_neglib_be_t2008, udhr_article_3__negative_liberty_reading, base_extractiveness, 2008, 0.68).
+narrative_ontology:measurement(udhr_a3_neglib_be_t2018, udhr_article_3__negative_liberty_reading, base_extractiveness, 2018, 0.7).
+narrative_ontology:measurement(udhr_a3_neglib_be_t2026, udhr_article_3__negative_liberty_reading, base_extractiveness, 2026, 0.72).
+
+% Suppression requirement over time
+narrative_ontology:measurement(udhr_a3_neglib_su_t1948, udhr_article_3__negative_liberty_reading, suppression_requirement, 1948, 0.2).
+narrative_ontology:measurement(udhr_a3_neglib_su_t1958, udhr_article_3__negative_liberty_reading, suppression_requirement, 1958, 0.26).
+narrative_ontology:measurement(udhr_a3_neglib_su_t1968, udhr_article_3__negative_liberty_reading, suppression_requirement, 1968, 0.31).
+narrative_ontology:measurement(udhr_a3_neglib_su_t1978, udhr_article_3__negative_liberty_reading, suppression_requirement, 1978, 0.36).
+narrative_ontology:measurement(udhr_a3_neglib_su_t1988, udhr_article_3__negative_liberty_reading, suppression_requirement, 1988, 0.41).
+narrative_ontology:measurement(udhr_a3_neglib_su_t1998, udhr_article_3__negative_liberty_reading, suppression_requirement, 1998, 0.45).
+narrative_ontology:measurement(udhr_a3_neglib_su_t2008, udhr_article_3__negative_liberty_reading, suppression_requirement, 2008, 0.49).
+narrative_ontology:measurement(udhr_a3_neglib_su_t2018, udhr_article_3__negative_liberty_reading, suppression_requirement, 2018, 0.52).
+narrative_ontology:measurement(udhr_a3_neglib_su_t2026, udhr_article_3__negative_liberty_reading, suppression_requirement, 2026, 0.55).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(udhr_article_3__negative_liberty_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(udhr_article_3__negative_liberty_reading, udhr_article_3__positive_entitlement_reading).
+narrative_ontology:affects_constraint(udhr_article_3__negative_liberty_reading, udhr_article_3__procedural_hybrid_reading).
+
+% DUAL FORMULATION NOTE:
+% Constraint family: the colloquial label 'UDHR Article 3' decomposes into three structurally distinct constraints per the epsilon-invariance principle. This file (negative_liberty_reading) is upstream of the procedural_hybrid_reading: negative-liberty litigation built the procedural arsenal (habeas, exclusion, detention review) that the hybrid reading consolidates, so this story exerts structural downstream pressure without foreclosing it. The positive_entitlement_reading coexists: different parties hold each reading simultaneously, hybrid constitutional orders are common, and neither reading logically eliminates the other within a single party's framework. Epsilon differs sharply across the family: this reading authors high epsilon against the standing arrangement of state power over life and liberty; the entitlement reading authors its epsilon against the arrangement of material deprivation; the hybrid reading authors low epsilon over a deliberately narrowed procedural scope.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

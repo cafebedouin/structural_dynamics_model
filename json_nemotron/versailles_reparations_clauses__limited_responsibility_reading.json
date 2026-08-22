@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "versailles_reparations_clauses__limited_responsibility_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_versailles_reparations_clauses__limited_responsibility_reading",
+    "measurement_id_prefix": "versailles_reparations_limited",
+    "story_uid": "d37f3d14-1a2c-4145-8d05-7d9b72730622"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Versailles Reparations — Limited Responsibility Reading (Capacity-Bounded Payments, Article 231 as Legal Formality)",
+    "topic_domain": "international_relations/legal_history/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "german_elite_negotiators",
+      "weimar_government_officials",
+      "german_industrial_complex"
+    ],
+    "victims": [
+      "allied_creditor_nations",
+      "occupied_territory_populations",
+      "war_veterans_dependents_allied"
+    ],
+    "vindicated_propositions": [
+      "reparations_bounded_by_economic_capacity",
+      "article_231_legal_not_moral",
+      "viability_over_punitive_justice"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the limited_responsibility_reading a distinct constraint from punitive_liability_reading and repudiation_reading, or are they observables of the same underlying arrangement?",
+      "resolution_mechanism": "Apply the ε-invariance test: if changing the reading changes the extraction metric ε, the readings instantiate different constraints. Measure extractiveness from each reading's structural position: punitive reads high extraction from Germany; limited reads partial extraction from Allies; repudiation reads near-zero binding obligation.",
+      "impact": "If distinct, each reading gets its own constraint story with independent ε, beneficiaries, victims, and classification. If unified, the kernel is one constraint with observer-relative metrics — which violates ε-invariance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three declared readings are structurally distinct constraints or observer perspectives on one constraint."
+    },
+    {
+      "id": "naturalness_of_capacity_bound",
+      "question": "Is the 'economic capacity' bound a genuine coordination discovery (what Germany can pay without collapse) or a constructed limit negotiated by German elites to minimize liability?",
+      "resolution_mechanism": "Compare 1921 London Schedule (132B gold marks) against contemporaneous German national income, export capacity, and reparations transfer problem analyses (Keynes, Schuker, Marks). If the bound tracks independent economic estimates, it is discovered coordination; if it tracks German counter-proposals, it is negotiated extraction limit.",
+      "impact": "If discovered, the reading has stronger rope-like coordination character; if negotiated, it is a tangled_rope where German elites coordinate to extract a lower bound from Allied creditors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the capacity bound reflects economic reality or elite negotiation."
+    },
+    {
+      "id": "article_231_functional_role",
+      "question": "Does treating Article 231 as 'legal formality not moral judgment' functionally reduce Allied extraction, or is it a rhetorical concession that leaves the payment machinery intact?",
+      "resolution_mechanism": "Track whether the legal-formality framing correlates with downward payment revisions (Dawes 1924, Young 1929, Lausanne 1932) or whether payments continued on schedule despite the framing. Compare Allied domestic rhetoric vs. diplomatic practice.",
+      "impact": "If rhetorical only, the theater_ratio is higher than measured; if functional, the constraint genuinely shifts toward coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the Article 231 reinterpretation has operational effect or is performative."
+    },
+    {
+      "id": "allied_creditor_coalition_stability",
+      "question": "Can Allied creditor nations maintain a unified maximalist position, or does the capacity-bound reading exploit inter-Allied divisions (French security vs. British trade vs. US loans)?",
+      "resolution_mechanism": "Analyze inter-Allied negotiations 1919-1932: French occupation of Ruhr (1923), British refusal to support, US Dawes/Young plan mediation, Hoover moratorium (1931). If coalition fractures predictably, the reading's extraction reduction is structural; if coalition holds, the reading is marginal.",
+      "impact": "If structural, the reading's tangled_rope character is stable; if marginal, the reading is a transient negotiating position.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Allied disunity is a structural feature the reading exploits or a contingent historical accident."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1919,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1921,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1924,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1929,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1931,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1932,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1919,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1921,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1924,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1929,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1931,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1932,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1919,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1921,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1924,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1929,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1931,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1932,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1919,
+    "end": 1932
+  },
+  "commentary": {
+    "narrative_context": "The Versailles Treaty's reparations clauses (Articles 231-247) generated three competing readings of Germany's obligation. The limited_responsibility_reading — championed by German foreign ministers (Simons, Stresemann, Curtius) and accepted in varying degrees by British and American diplomats — holds that reparations must be bounded by Germany's actual economic capacity to pay, that Article 231 ('war guilt') is a legal basis for liability not a moral condemnation, and that payment schedules must preserve German viability. This reading gained traction through the Dawes (1924) and Young (1929) Plans, culminating in the effective termination at Lausanne (1932). It is a tangled_rope: it coordinates a viable payment mechanism (rope function) while asymmetrically extracting reduced liability from Allied creditors and occupied populations (snare function), requiring active enforcement through international financial commissions and the threat of sanctions.",
+    "key_agents": [
+      "german_elite_negotiators: Primary beneficiary (moderate/organized) — gain reduced liability and negotiating leverage",
+      "weimar_government_officials: Secondary beneficiary (institutional) — gain political breathing room",
+      "german_industrial_complex: Beneficiary (organized) — avoid confiscatory taxation and asset seizures",
+      "allied_creditor_nations: Primary victim (institutional/powerful) — receive reduced compensation for war costs",
+      "occupied_territory_populations: Victim (powerless) — bear occupation costs with diminished reparations",
+      "war_veterans_dependents_allied: Victim (powerless) — pensions and care funded by reparations shrink",
+      "reparations_commission: Agenda setter (institutional) — administers schedules, enforces compliance",
+      "us_treasury_federal_reserve: Observer/agenda setter (institutional) — mediates plans, guarantees loans"
+    ],
+    "logic_rationale": "Base extractiveness (0.42 at interval end) reflects the reading's partial constraint on Allied maximalism — Germany pays significantly less than the 1921 London Schedule (132B gold marks) but more than zero. The reading extracts from Allied creditors and occupied populations by capping liability below their claimed damages. Suppression (0.38) is moderate: the reading reduces the coercive apparatus (no Ruhr occupation after 1925, sanctions threat diminishes) but still requires the Reparations Commission and international financial control. Theater ratio (0.55) is high: the 'capacity' discourse and Article 231 reinterpretation perform coordination while the functional outcome is a negotiated extraction ceiling. Accessibility collapse (0.45) reflects that alternatives (full payment, repudiation, moratorium) remain conceptually available but politically constrained. Resistance (0.52) captures French maximalist opposition, German nationalist rejection of any payment, and Allied domestic pressure.",
+    "perspectival_gap": "From the German elite seat, this is a rope: a genuine coordination mechanism that prevents economic collapse and enables reintegration. From the French creditor seat, it is a snare: a constraint that extracts their legitimate claims through legal reinterpretation. From the US mediator seat, it is a scaffold: a transitional arrangement meant to stabilize Europe until self-sustaining growth returns. The engine computes these seat divergences from the structural data.",
+    "directionality_logic": "German elites (beneficiaries) face d near 0.15 — they gain negotiating leverage and reduced payments. Weimar officials (beneficiaries) face d ~0.20 — political survival depends on the reading's success. Allied creditors (victims) face d ~0.75 — they lose ~60% of claimed damages. Occupied populations (victims) face d ~0.80 — they bear occupation costs without full compensation. The Reparations Commission (agenda_setter) faces d ~0.45 — it administers a declining mechanism. US financial actors face d ~0.30 — they gain influence but risk loan exposure.",
+    "mandatrophy_analysis": "The reading resolves the mandatrophy tension by acknowledging the coordination function (viable payments prevent collapse) while exposing the extraction function (Allied claims are capped below moral/legal entitlement). The founding problem — 'how to make Germany pay for the war without destroying it' — was live in 1919 but dead by 1932 (Germany rearmed, Allies defaulted on inter-allied debts). The reading persists as a historical precedent for 'capacity-to-pay' sovereign debt doctrine.",
+    "kernel_context": "This constraint is the limited_responsibility_reading of the versailles_reparations_clauses kernel. Sibling readings: punitive_liability_reading (Germany bears unlimited moral/financial responsibility; Article 231 as moral condemnation), repudiation_reading (Treaty illegitimate under duress; no binding obligation). This reading instantiates a distinct constraint with its own ε (0.42), beneficiaries (German elites), and victims (Allied creditors/occupied populations). The three readings are not observer perspectives on one constraint — they have different extraction metrics, different victim/beneficiary structures, and different classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "versailles_reparations_clauses__punitive_liability_reading",
+      "versailles_reparations_clauses__repudiation_reading",
+      "dawes_plan_1924",
+      "young_plan_1929",
+      "inter_allied_debt_settlements",
+      "weimar_stabilization_1923_24"
+    ],
+    "dual_formulation_note": "The versailles_reparations_clauses kernel decomposes into three constraint stories: punitive_liability_reading (high extraction from Germany, snare/tangled_rope), limited_responsibility_reading (moderate extraction from Allies, tangled_rope), and repudiation_reading (near-zero binding obligation, piton/snare hybrid). The limited reading structurally influences the punitive reading by providing the negotiated alternative that Dawes/Young Plans instantiate, and influences the repudiation reading by offering the 'responsible' middle ground that makes repudiation politically costly. All three share the same Treaty text but instantiate different constraints per ε-invariance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.8
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "german_elite_negotiators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "German foreign ministers and diplomats (Simons, Stresemann, Curtius, Brüning) who negotiate reparations revisions. They leverage the 'capacity to pay' argument to reduce liability from 132B to effectively ~20B gold marks paid. Their exit is constrained: they cannot repudiate without inviting occupation, but they can threaten collapse to extract concessions. They personally benefit from political survival and international recognition."
+    },
+    {
+      "name": "weimar_government_officials",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Weimar chancellors, finance ministers, and cabinet officials who must implement payment schedules while maintaining domestic legitimacy. They benefit from the reading's political breathing room (avoiding hyperinflation collapse, Ruhr occupation) but also bear the cost of administering a hated system. Their exit is constrained by constitutional oath and Allied enforcement machinery."
+    },
+    {
+      "name": "german_industrial_complex",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Heavy industry (Krupp, Thyssen, IG Farben, Siemens) and export sectors that would face confiscatory taxation or asset seizure under maximalist reparations. They benefit from capacity-bounded payments that preserve capital stock. Their exit is relatively mobile — capital can flee, production can shift — but they are nationally embedded and politically influential."
+    },
+    {
+      "name": "allied_creditor_nations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "France, Britain, Belgium, Italy, and other Allied governments that financed the war through debt and expected German reparations to service that debt. They bear the cost of reduced payments: France faces reconstruction deficits; Britain faces imperial budget strain; Italy faces unpaid war debts. Their exit is constrained by inter-Allied debt obligations and domestic politics — they cannot unilaterally forgive without triggering their own creditor demands."
+    },
+    {
+      "name": "occupied_territory_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Civilian populations in Rhineland, Ruhr, Saar, and Upper Silesia under Allied occupation (1918-1930). They bear occupation costs (billeting, requisitions, movement restrictions) with the expectation of reparations compensation. When payments are reduced, their suffering is uncompensated. They have no exit — they cannot leave the occupied zone, cannot influence negotiations, and have no political representation."
+    },
+    {
+      "name": "war_veterans_dependents_allied",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Widows, orphans, disabled veterans, and dependents in Allied nations whose pensions and care were budgeted against expected reparations receipts. When German payments fall short, their benefits are cut or delayed. They have no exit from the dependency and no voice in intergovernmental negotiations."
+    },
+    {
+      "name": "reparations_commission",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The Inter-Allied Reparations Commission (chaired by French, British, Belgian, Italian, Japanese, US delegates) that sets payment schedules, monitors German compliance, and authorizes sanctions. It administers the constraint but its authority erodes over the interval as Dawes/Young Plans transfer technical control to international bankers and the Bank for International Settlements."
+    },
+    {
+      "name": "us_treasury_federal_reserve",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "US Treasury (Mellon, Ogden Mills) and Federal Reserve (Strong, Harrison) that mediate Dawes/Young Plans, organize international loans to Germany, and shape the 'capacity to pay' methodology. They are not formal Treaty parties but functionally set the agenda. They gain financial influence and European stability but risk loan losses. Their exit is analytical — they can withdraw mediation but face systemic consequences."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a viable, internationally supervised payment mechanism that prevents German economic collapse (which would yield zero payments) while providing Allied creditors with a predictable, if reduced, revenue stream. Solves the transfer problem: how to move real resources from Germany to Allies without destroying the German export capacity that generates the transfer.",
+    "transfer_function": "Moves a capped stream of gold marks / foreign currency from German taxpayers and export earnings to Allied treasuries and reconstruction agencies, at a rate calibrated to German capacity rather than Allied claims. The transfer is mediated through the Reparations Commission, the Agent General for Reparations Payments, and later the Bank for International Settlements.",
+    "absent_voices": "Occupied territory populations (Rhineland, Ruhr, Saar) had no representation at Versailles or in the Reparations Commission. Colonial subjects of Allied empires whose resources financed the war but who received no reparations voice. German working-class taxpayers who bore the inflationary cost of reparations financing but were excluded from 'capacity' calculations (which used industrial/export metrics). Soviet Russia, excluded from Versailles, which repudiated Tsarist debts and claimed German reparations as Allied plunder.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the limited_responsibility_reading vanished overnight in 1924, the Dawes Plan would not exist — France would likely maintain Ruhr occupation, Germany would face maximalist schedules, hyperinflation might not have been stabilized, and the Weimar Republic might have collapsed earlier. If it vanished in 1932, the Lausanne Conference's effective termination would be reversed — but by then the reading had already restructured the European financial order. The world rearranged around this reading.",
+    "founding_problem": "How to extract reparations from a defeated Great Power without destroying its economy (which destroys the capacity to pay) or triggering revolutionary collapse (which destroys the political partner for payment). The 1919 Treaty assumed Germany could pay 132B gold marks; the founding problem of the limited reading is that this assumption was economically false and politically explosive.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Keynes (Economic Consequences of the Peace, 1919) independently attested the 132B figure was economically impossible. Schuker (American 'Reparations' to Germany, 1988) documents that net transfers flowed TO Germany (loans > reparations paid) after 1924. Marks (The Illusion of Peace, 1976) shows French policymakers knew the maximalist schedule was unenforceable by 1922. No major historian outside the 1919 French delegation maintains the original schedule was viable."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "versailles_reparations_clauses__punitive_liability_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "punitive_liability_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "repudiation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reparations_bounded_by_capacity_to_pay",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "article_231_legal_basis_not_moral_condemnation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "versailles_treaty_1919_original_schedule",
+    "drift_state": {
+      "moment": "lausanne_1932_effective_termination",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

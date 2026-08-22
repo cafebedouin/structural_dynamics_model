@@ -1,0 +1,355 @@
+{
+  "header": {
+    "constraint_id": "gendered_category_membership__gender_identity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gendered_category_membership__gender_identity_reading",
+    "story_uid": "5bb3200a-e899-4429-9b8e-458f78a38141"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gender Category Membership via Self-Declaration",
+    "topic_domain": "social_ontology/political_philosophy/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "trans_women",
+      "nonbinary_people_seeking_category_access",
+      "gender_affirming_institutions"
+    ],
+    "victims": [
+      "cis_women_in_segregated_spaces",
+      "female_athletes_in_competitive_sport",
+      "service_providers_facing_compelled_speech"
+    ],
+    "vindicated_propositions": [
+      "gender_self_determination",
+      "trans_inclusion_as_nondiscrimination",
+      "identity_as_authoritative_for_social_category"
+    ]
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.68
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Does the kernel 'gendered_category_membership' properly name the commitment, or does it conflate three distinct constraints (legal recognition, social recognition, material resource allocation) that would each have different ε and different stakeholder structures?",
+      "resolution_mechanism": "Decompose the kernel into three constraint stories: legal_gender_recognition, social_gender_recognition, sex_segregated_resource_allocation. If each decomposes to a different type with different beneficiary/victim sets, the single kernel framing is a category error.",
+      "impact": "If the kernel decomposes, the gender_identity_reading is not one reading of one constraint but three readings of three constraints — the committer frame would be misapplied and the reading_relations would need re-authoring per decomposed constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel itself is a single commitment or a conflation of multiple constraints"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (policy mandates, institutional capture, legal penalties) or internalized (fear of social sanction, moral injury from being labeled exclusionary, identity-fused inability to articulate dissent)?",
+      "resolution_mechanism": "Track suppression trajectory after policy reversal in a jurisdiction: if suppression persists after legal mandates are removed, internalized component is significant. Survey cis women in female-only spaces pre/post policy change measuring willingness to articulate boundaries.",
+      "impact": "If substantially internalized, effective suppression is higher than structural measure suggests — the constraint operates through the target's own cognition, making exit_options 'identity_locked' more prevalent than 'constrained'.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in gender category enforcement"
+    },
+    {
+      "id": "committer_frame_reading_identity",
+      "question": "This constraint is one reading (gender_identity_reading) of the contested kernel gendered_category_membership. What would the sibling readings (biological_sex_reading, social_role_reading) change structurally?",
+      "resolution_mechanism": "Author the sibling constraints as separate JSON files. Compare ε, beneficiary/victim sets, and claimed_type across the three readings. The structural delta between them IS the committer structure.",
+      "impact": "If sibling readings produce different types (e.g., biological_sex_reading = mountain, social_role_reading = rope, gender_identity_reading = tangled_rope), the kernel is a genuine site of structural contestation. If all three produce the same type with only beneficiary relabeling, the contest is perspectival, not structural.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment structure: this reading vs. biological_sex_reading and social_role_reading"
+    },
+    {
+      "id": "extraction_asymmetry_cis_women",
+      "question": "Do cis women in sex-segregated spaces experience net extraction (loss of privacy, safety, fair competition, associative freedom) that is structurally asymmetric — i.e., they pay the costs of inclusion without receiving its benefits — or is the cost symmetric (shared adjustment burden)?",
+      "resolution_mechanism": "Measure material outcomes: competitive records, facility usage patterns, reporting rates for harassment/voyeurism, associative exit rates from single-sex spaces. Compare to pre-policy baselines. If cis women's outcomes degrade while trans women's improve without reciprocity, extraction is asymmetric.",
+      "impact": "Asymmetric extraction with active enforcement and a coordination function (trans inclusion) = tangled_rope. If extraction is symmetric, the constraint may be a rope with transition costs. If no genuine coordination function exists, snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cis women bear asymmetric costs in gender-identity-based category membership"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the gender_identity_reading of the contested kernel 'gendered_category_membership': the claim that category membership in 'woman'/'man' is grounded in subjective gender identity and self-declaration, such that trans women are women by declaration, sex-segregated spaces become gender-segregated, and resistance to this re-categorization is framed as exclusion. The constraint operates through institutional policy (government ID changes, sports federation rules, prison placement, shelter admission, school facilities), corporate HR mandates, and social enforcement (deplatforming, employment loss, social ostracism for dissent). The claimed_type is tangled_rope because there is a genuine coordination function (reducing gatekeeping violence against trans people, simplifying legal recognition) AND asymmetric extraction (cis women lose sex-based protections and single-sex spaces without consent or compensation; female athletes lose fair competition; service providers face compelled speech). Active enforcement is required: the constraint cannot persist without suppressing the biological_sex_reading and social_role_reading alternatives, which remain live in law, science, and public opinion. ε = 0.48 reflects moderate but rising extraction: the coordination function is real but the extraction layer has grown as the constraint expanded from legal recognition into material resource allocation (sports, prisons, shelters, rape crisis centers).",
+    "logic_rationale": "Extraction (0.48) is moderate but rising: trans people gain access to categories/spaces they were excluded from (coordination benefit), while cis women lose sex-segregated spaces and fair competition without compensation (extraction). The asymmetry is structural — the constraint redefines 'woman' to include trans women but does not create new protections for cis women's lost spaces. Suppression (0.62) is high: dissenting women face institutional discipline, social punishment, and legal risk; the biological_sex_reading is suppressed in institutional policy though not in scientific discourse. Theater_ratio (0.28) is moderate: inclusion rhetoric is genuine but a growing share of enforcement activity defends the category boundary against the biological_sex_reading rather than protecting trans people from violence. Accessibility_collapse (0.35) is moderate: alternatives (sex-based categories, third spaces) exist but are institutionally foreclosed. Resistance (0.71) is high: organized feminist resistance, legal challenges, public opinion majorities against self-ID in sports/prisons/shelters.",
+    "perspectival_gap": "The trans_women seat experiences this as a rope (genuine coordination solving real exclusion). The cis_women_in_segregated_spaces seat experiences it as a snare (extraction without consent, suppression of dissent). The gender_affirming_institutions seat experiences it as a scaffold (transitional justice toward full recognition). The analytical_observer seat sees the structural divergence: same constraint, three different computed types. The engine will compute this from the declared structural data; the claim does not adjudicate it.",
+    "directionality_logic": "trans_women: primary beneficiary (d ~ 0.15) — gain category access, legal recognition, protection from gatekeeping. cis_women_in_segregated_spaces: primary target (d ~ 0.85) — lose sex-based spaces, fair competition, associative freedom; constrained exit (cannot leave sex class); identity_locked for those whose feminism is fused with sex-class analysis. female_athletes: target (d ~ 0.80) — lose competitive integrity; constrained exit (sport is biographical horizon). service_providers_facing_compelled_speech: target (d ~ 0.70) — compelled pronoun usage, facility policies; moderate exit (can change profession). gender_affirming_institutions: beneficiary (d ~ 0.20) — institutional mission validated, funding flows. nonbinary_people_seeking_category_access: partial beneficiary (d ~ 0.30) — some access gained but nonbinary category remains unstable. analytical_observer: analytical (d = 0.50) — sees full structure.",
+    "mandatrophy_analysis": "The founding problem (gatekeeping violence against trans people, medicalization of identity) is live but substantially solved in Western jurisdictions — legal recognition exists, medical gatekeeping reduced. The constraint persists and expands into domains (sports, prisons, shelters) where the original coordination problem does not apply. This is mandatrophy: the mandate (protect trans people from exclusion) has outlived its function in the original domain and now extracts in new domains. The identity_coordination floor (0.08) is conservative — the constraint's coordination cost is real but the extraction layer (0.48) far exceeds it.",
+    "kernel_context": "This constraint is the gender_identity_reading of the kernel gendered_category_membership. Sibling readings: biological_sex_reading (category grounded in immutable biological markers — chromosomes, gametes, reproductive anatomy at birth), social_role_reading (category grounded in sustained social performance and recognition by others). The gender_identity_reading forecloses the biological_sex_reading within any single legal/policy framework (a jurisdiction cannot simultaneously define 'woman' by self-ID and by gamete production). It coexists_with the social_role_reading (both can operate in different institutional domains — self-ID for legal documents, social recognition for interpersonal interaction). It influences the social_role_reading by creating institutional pressure to align social recognition with legal self-ID (pronoun mandates, social transition as sufficient)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "gendered_category_membership__biological_sex_reading",
+      "gendered_category_membership__social_role_reading",
+      "sex_segregated_sports_eligibility",
+      "sex_segregated_prison_placement",
+      "sex_segregated_shelter_access",
+      "compelled_pronoun_usage_mandates"
+    ],
+    "dual_formulation_note": "This constraint and its two siblings form the gendered_category_membership constraint family. Each reading instantiates a different constraint with different ε, different beneficiary/victim structures, and different types. The kernel label 'gendered_category_membership' conflates three structurally distinct claims. This decomposition follows the BGS pattern: ehrenfest_barrier (mountain) → bgs_spectral_universality (mountain) → bgs_eigenvector_thermalization (tangled_rope). Here: biological_sex_reading may be mountain (if biological sex is treated as natural law), social_role_reading may be rope (coordination via mutual recognition), gender_identity_reading is tangled_rope (coordination + asymmetric extraction)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "trans_women",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Gain legal recognition and access to women's spaces, sports, services through self-declaration. Their gender identity is fused with self-concept — exit from the category would mean detransition, which is existentially costly. They organize politically to defend and expand the constraint. The coordination benefit (freedom from gatekeeping) is real and substantial."
+    },
+    {
+      "name": "cis_women_in_segregated_spaces",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Lose access to single-sex spaces (changing rooms, shelters, prisons, sports categories) redefined as gender-segregated. Cannot exit the 'woman' sex class — it is a material reality, not an identity choice. Feminist resistance is identity-locked for those whose political self-concept is constituted through sex-class analysis. They bear the costs of inclusion (privacy, safety, fair competition) without receiving its benefits."
+    },
+    {
+      "name": "female_athletes_in_competitive_sport",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face male-puberty-advantaged competitors in female categories under self-ID policies. Sport is a biographical horizon — exit means abandoning athletic career. The constraint extracts competitive integrity and records. Some resist publicly and face sanction; others exit quietly. The extraction is concentrated on a small, visible group."
+    },
+    {
+      "name": "service_providers_facing_compelled_speech",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Required to use preferred pronouns, admit trans women to female-only services (rape crisis centers, domestic violence shelters, women's prisons). Face legal penalties, professional discipline, or loss of funding for non-compliance. Can exit by changing profession but at high biographical cost. The constraint extracts expressive freedom and professional autonomy."
+    },
+    {
+      "name": "gender_affirming_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Major medical associations (WPATH, APA, AMA), human rights organizations, corporate DEI departments, government agencies. They set and enforce the self-ID standard. Their institutional mission, funding, and legitimacy are validated by the constraint's expansion. They have arbitrage-grade exit — they could pivot to other frameworks — but the constraint serves their institutional interests."
+    },
+    {
+      "name": "nonbinary_people_seeking_category_access",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Gain some recognition through self-ID frameworks (X markers on documents, nonbinary categories) but the binary 'woman/man' structure remains dominant. Their category access is partial and unstable — they benefit from the constraint's challenge to biological essentialism but are not its primary beneficiaries. Exit is constrained by the binary architecture of most institutions."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Observes the full constraint structure across all seats. Sees the coordination function (trans inclusion) and the extraction layer (cis women's lost protections) as simultaneous structural facts. Does not collect or pay; computes the per-seat divergence that the engine formalizes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine coordination problem of trans people being excluded from legal recognition, healthcare, and social participation by gatekeeping requirements (medical diagnosis, surgery, court orders). Self-ID replaces institutional gatekeeping with self-declaration, reducing violence, bureaucratic burden, and medicalization.",
+    "transfer_function": "Moves category access, legal protections, and material resources (sports rankings, shelter beds, prison placements) from sex-based allocation to identity-based allocation. Cis women lose sex-segregated spaces and fair competition; trans women gain access to women's categories. The transfer is zero-sum in fixed-resource domains (sports, shelters, prisons) and positive-sum in recognition domains (documents, social acknowledgment).",
+    "absent_voices": "Detransitioners and desisters — people who transitioned and later re-identified with their sex — are structurally excluded from the conversation. Their experience contradicts the 'identity is immutable and authoritative' axiom. Gender-critical feminists in institutional positions (academics, clinicians, journalists) who lose platforms for dissent. Parents of gender-questioning minors who question affirmation-only protocols. These voices would object if present but are kept out by the same suppression machinery the constraint deploys.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If self-ID category membership vanished overnight: legal documents would revert to sex-based classification; sports federations would reinstate sex-based eligibility; prisons and shelters would return to sex-segregated placement; compelled pronoun mandates would lapse. Trans people would lose legal recognition and access gained; cis women would regain sex-based spaces. The world rearranges substantially — arrangements depend on this constraint.",
+    "founding_problem": "Trans people faced systematic exclusion: legal recognition required medical gatekeeping (diagnosis, hormones, surgery), exposing them to violence, unemployment, and healthcare denial. The medical model pathologized gender variance. The founding problem was gatekeeping violence and medicalization of identity.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Trans advocacy organizations and gender clinics attest the problem remains live — citing ongoing violence, healthcare access gaps, and global jurisdictions without recognition. Gender-critical feminists and some clinicians attest the founding problem is substantially solved in Western jurisdictions (legal self-ID exists in 15+ countries, medical gatekeeping reduced, social acceptance risen) and the constraint now expands into domains (sports, prisons, shelters) where the original gatekeeping problem did not exist. Independent longitudinal studies (e.g., Sweden 1973-2003, UK Cass Review 2024) corroborate that medical transition outcomes are mixed and the affirmative model's evidence base is thin — this corroborates the 'contested' status from outside the beneficiary set."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "diffuse_epistemic",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "biological_sex_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "social_role_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gender_identity_is_self_determined_and_authoritative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "trans_women_are_women_without_qualification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sex_based_categories_are_exclusionary_and_obsolete",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "medical_gatekeeping_model",
+    "drift_state": {
+      "moment": "contemporary_self_id_expansion",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

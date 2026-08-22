@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "montevideo_statehood_criteria__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mv_hybrid",
+    "story_uid": "256bc4db-7cd4-4586-afa8-acad2bf98973"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.46,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Reading of Statehood: Objective Criteria Conditioned by Normative Legitimacy",
+    "topic_domain": "international_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_liberal_democracies"
+    ],
+    "victims": [
+      "nonliberal_secessionist_authorities",
+      "populations_of_unrecognized_entities",
+      "democratic_unrecognized_polities"
+    ],
+    "vindicated_propositions": [
+      "democratic_entitlement_doctrine",
+      "conditional_recognition_practice",
+      "ex_injuria_non_oritur_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sibling_reading_structural_delta",
+      "question": "This story is one reading of the montevideo_statehood_criteria kernel; how would the sibling readings restructure the beneficiary and victim sets?",
+      "resolution_mechanism": "Compile the declaratory and constitutive readings as separate constraint stories and compare computed seat classifications. The disagreement between readings is located in one specific element: whether the four objective criteria are sufficient for statehood.",
+      "impact": "Under the declaratory reading the normative victim set empties (only entities failing the objective criteria remain excluded) and the liberal gatekeeping benefit disappears; under the constitutive reading discretion relocates from published criteria to the recognition act itself, changing which seat holds agenda-setting power. This file's epsilon and victim set are valid only for the hybrid reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel indexicality: one of three readings, each instantiating a structurally distinct constraint."
+    },
+    {
+      "id": "criterion_vs_interest_operativity",
+      "question": "Is the operative decision rule the published legitimacy criteria, or great-power interest using the criteria as cover?",
+      "resolution_mechanism": "Code recognition outcomes against compliance scores across a full case set that includes compliant-but-denied polities and non-compliant-but-admitted allies; if outcomes track sponsor interest better than compliance records, the published criteria are performing rather than deciding.",
+      "impact": "If cover, the authored theater_ratio understates the performative share, the effective victim set widens to include fully compliant polities, and the arrangement drifts toward exclusion maintained by ritual rather than standard.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether published criteria or underlying interests drive recognition outcomes."
+    },
+    {
+      "id": "intervention_cover_causality",
+      "question": "Does this reading actually supply legal cover for humanitarian intervention and regime change, or is that cover generated by separate Security Council practice that merely borrows the same legitimacy vocabulary?",
+      "resolution_mechanism": "Trace citation patterns in the justification documents for Kosovo 1999, Libya 2011, and later interventions: count reliance on statehood-legitimacy reasoning (failed statehood, illegitimate authority) versus Charter-based authorization.",
+      "impact": "Determines whether the network edge toward the intervention-doctrine constraint carries real contamination or only rhetorical resemblance; if the cover is separately generated, this reading's downstream responsibility shrinks and the expected structural delta is overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the legitimacy criteria causally feed intervention and regime-change justifications."
+    },
+    {
+      "id": "conditionality_paternalism_boundary",
+      "question": "Is attaching liberal-legitimacy conditions to membership a defensible entry standard that all applicants face equally, or imperial gatekeeping that reserves full sovereignty for the already-liberal?",
+      "resolution_mechanism": "Not resolvable by data alone: turns on whether the conditions are applied symmetrically to incumbents as well as aspirants and whether the governed populations assent. Comparative treatment of incumbent violators versus aspiring ones is the relevant evidence, but the verdict depends on the weight given to consent.",
+      "impact": "If gatekeeping, the burden on aspirants is structural rather than transitional and the arrangement resists reform from within; if a genuine entry standard, part of the measured burden is the price of the coordination itself and the extraction estimate should be discounted accordingly.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Normative framing of conditionality: equal entry standard versus asymmetric gatekeeping."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Since the European Community's December 1991 Guidelines on Recognition of New States and the Badinter process, a substantial strand of recognition practice has held that effective control of territory and population is not enough for statehood: an aspirant must also exhibit democratic governance, respect for human and minority rights, and renunciation of territorial conquest. This file instantiates the hybrid reading of the montevideo_statehood_criteria kernel as a single epsilon-invariant constraint: the standing arrangement under assessment is recognition conditioned on liberal legitimacy, with its own stable beneficiary structure (gatekeeping discretion accruing to established liberal democracies) and victim structure (effective non-liberal authorities denied membership, the populations they govern, and compliant polities denied anyway). The declaratory and constitutive readings are separate constraints in separate files, linked through the network section; their differing structures are documented in the omega variables rather than averaged into this one. The claim/metric gap is deliberate: the reading CLAIMS tangled_rope (genuine coordination core plus asymmetric extraction) while the metrics are authored independently from its observable operation, including a rising theater trajectory.",
+    "key_agents": [
+      "established_liberal_democracies: agenda setter and principal beneficiary (institutional/arbitrage) — administers the recognition consensus and collects the discretion it confers",
+      "nonliberal_secessionist_authorities: primary target (moderate/trapped) — effective territorial control that does not convert into membership",
+      "populations_of_unrecognized_entities: diffuse target (powerless/trapped) — bear the status costs without a seat in the decision",
+      "democratic_unrecognized_polities: compliant-but-denied witnesses (moderate/trapped) — their exclusion despite compliance exposes the selectivity",
+      "nonliberal_great_powers: countervailing institutional actors (institutional/constrained) — contest the standard and absorb its downstream costs",
+      "international_courts_and_scholars: analytical observer (analytical/analytical) — record which justifications were offered and which were honored"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.58 because the legitimacy conditions impose real, uncompensated costs on those they exclude — denial of treaty protections, development finance, accepted documents, and international legal personality — while the conditions themselves are applied selectively enough that compliance does not purchase admission. Suppression is 0.62 as a raw structural property (unscaled by power or scope): collective non-recognition, sanctions exposure, and diplomatic isolation actively close the alternative path of simple effectiveness-based statehood, though de facto persistence remains possible, so alternatives are narrowed rather than eliminated. Theater is 0.46 and rising: election-monitoring rituals, democracy clauses, and legitimacy discourse increasingly decorate decisions made on interest grounds, the classic Goodhart signature of a proxy replacing the target. Accessibility collapse is moderate (0.52) because a genuine exit exists — liberalize on the published terms — but the compliant-but-denied cases show it does not reliably open. Resistance is 0.58: non-liberal great powers contest the standard openly, aspirants denounce it as gatekeeping, and counter-recognition practices blunt its universality. The temporal series run on one shared grid (t=0..35, all three metrics at every point) so no metric inherits another's end-state value; the trajectories encode extraction accumulation, theater drift, and enforcement hardening anchored to the Kosovo recognition split, the Libya-era intervention vocabulary, and the multipolar contestation of the 2020s. Coalition note: the powerless population seat is not without recourse — diaspora advocacy and reputation-building of the kind the compliant polities attempted are the available coalition levers, and their repeated failure is itself evidence registered in the theater series. Identity-lock note: parts of the international-law profession and the EU enlargement bureaucracy have fused professionally with the democratic-entitlement project; if that frame broke, the criteria would be read as one negotiable instrument among others rather than a settled acquis. Suppression mechanism: predominantly structural (roughly 85 percent — collective-action barriers, finance cutoffs, isolation), with an internalized residue in which aspirant elites adopt legitimacy language as the only admissible currency, shaping their own demands.",
+    "perspectival_gap": "The payer seats and the agenda-setter seat should compute differently. From the gatekeeping seat the arrangement is a principled admission standard it built and maintains, with the discretion it confers experienced as stewardship; from the trapped aspirant and population seats the same structure operates as a door that opens only for those who do not need it. The compliant-but-denied seat occupies a third position: it did everything asked and was refused anyway, so it experiences the published criteria as performance. The countervailing great-power seat experiences the standard as weaponized law turned selectively against its clients. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Established liberal democracies sit near the beneficiary end: they wrote the conditions, administer the consensus, and collect the discretion, with arbitrage-grade exit (they can revise or selectively apply the standard at will). Nonliberal secessionist authorities sit near the target end: they bear the full denial burden with trapped exit — effectiveness does not convert, and the sanctioned alternative (great-power sponsorship) is available only to a few. Populations of unrecognized entities sit nearest the full-target end: powerless, trapped, and bearing costs proportional to their exclusion with zero input. Democratic unrecognized polities are the diagnostic anomaly: structurally they should derive as near-beneficiaries of a standard they satisfy, yet they are denied — which is precisely why the theater ratio matters and why the criterion-versus-interest omega is load-bearing. Nonliberal great powers derive mid-to-high: they pay (clients denied, intervention cover used against aligned regimes) but hold countervailing power (vetoes, counter-recognition) that keeps them from the trapped end. No directionality overrides are used: the beneficiary/victim declarations plus exit options produce the right ordering, and the per-power-atom granularity of overrides would misfire across the two institutional seats.",
+    "mandatrophy_analysis": "The founding problem — stabilizing the simultaneous Soviet and Yugoslav dissolutions so that conquest could not manufacture statehood — was real, urgent, and largely specific to that wave. The arrangement built for it was never given a sunset: conditionality hardened from transitional guidance into permanent gatekeeping, and its theater share grew as the original crisis receded. Classifying as tangled_rope rather than snare preserves what is genuinely still coordinated: a shared admission standard does solve a real collective-action problem among dozens of recognizing states, and participants are not uniformly net losers. Classifying as anything purer would mislabel either the surviving coordination function (as pure extraction) or the accumulating asymmetry (as innocent overhead). The mismatch consumer should note the configuration here: a founding problem whose status is contested, attached to a world_rearranges verdict — the arrangement's disappearance would indeed reorganize recognition practice, but whether the problem it was built for still justifies the current form is exactly what the parties dispute.",
+    "kernel_context": "This constraint is the hybrid_reading of the montevideo_statehood_criteria kernel — the contested question of what constitutes a state. The kernel's other readings are instantiated as separate constraints: the declaratory_reading (objective criteria sufficient) and the constitutive_reading (recognition by existing states sufficient). This file generates only the hybrid reading, with its own epsilon, beneficiary/victim structure, and classification; the structural deltas the siblings would introduce are carried in the sibling_reading_structural_delta omega, and the logical relations between readings are declared in cs_structure.reading_relations."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "montevideo_statehood_criteria__declaratory_reading",
+      "montevideo_statehood_criteria__constitutive_reading",
+      "humanitarian_intervention_doctrine"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the criteria for statehood' decomposes into three structurally distinct constraints sharing one kernel. The declaratory reading (upstream, highest empirical confidence in classical doctrine) treats the four Montevideo criteria as sufficient and has a near-empty victim set; the constitutive reading relocates discretion to the recognition act; the hybrid reading (this file) layers normative legitimacy on top of the objective criteria, creating the liberal-gatekeeping beneficiary structure and the non-liberal-aspirant victim set. The upstream declaratory claim is routinely cited as settled background by hybrid-reading instruments, which is why the family edges run declaratory -> hybrid. The edge to humanitarian_intervention_doctrine encodes the expected structural delta that legitimacy-conditioned statehood supplies cover for intervention against non-compliant incumbents; its causal weight is carried by the intervention_cover_causality omega rather than asserted."
+  },
+  "stakeholders": [
+    {
+      "name": "established_liberal_democracies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Act collectively — through the European Union's recognition guidelines, Security Council practice, and coordinated diplomacy — to decide which new entities enter the state system. They drafted the post-1991 guidelines tying recognition to democratic governance, human-rights commitments, and renunciation of conquest. They collect the discretion the standard confers: the ability to admit allies' projects and refuse adversaries' without abandoning a principled vocabulary. Their exit is easy in the relevant sense — they can revise the criteria, apply them selectively, or revert to interest-based recognition whenever the standard becomes inconvenient."
+    },
+    {
+      "name": "nonliberal_secessionist_authorities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Control territory and population effectively — running administrations, collecting revenue, holding borders — but govern without liberal-democratic credentials or decline to pledge the required conduct commitments. No amount of effective state-building converts into membership while the conditions stand unmet. Their realistic paths are indefinite de facto existence, internal liberalization on terms they reject, or sponsorship by a great power willing to recognize them unilaterally — an option open to few."
+    },
+    {
+      "name": "populations_of_unrecognized_entities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live under authorities whose status is withheld. They cannot access the ordinary instruments of statehood — treaty protections, development finance, travel documents accepted abroad, courts with international reach — regardless of their own conduct or preferences. Their voice in the decision reaches the recognizing states only filtered through the very authorities being judged."
+    },
+    {
+      "name": "democratic_unrecognized_polities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Built functioning electoral systems, maintained defensible human-rights records, and renounced conquest — satisfying every published condition — yet remain unrecognized because key gatekeeping states' interests favor the territorial status quo. Their continued exclusion despite compliance is the standing public test of whether the published criteria or the underlying interests drive decisions."
+    },
+    {
+      "name": "nonliberal_great_powers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold permanent seats and veto power yet reject the legitimacy conditions as selectively applied gatekeeping. They absorb costs when the standard is turned against their partners — recognition bids refused, intervention justified against aligned regimes — and answer with counter-recognition, parallel institutions, and their own sphere-of-interest vocabulary. They cannot leave the system that hosts the argument."
+    },
+    {
+      "name": "international_courts_and_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Adjudicate and document: advisory opinions on secession and recognition, arbitration commissions, and the scholarly literature recording which justifications were offered, which were honored, and which were quietly dropped. They collect no revenue from the arrangement and bear none of its status costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared admission standard that coordinates recognition decisions across dozens of states during state-creation events, reducing recognition wars and competitive client-making, and attaches baseline conduct expectations — democratic governance, human-rights compliance, non-aggression — to entry into the state system.",
+    "transfer_function": "Moves admission discretion and normative authority from aspiring entities to the gatekeeping states; moves compliance concessions (elections, minority-rights guarantees, non-aggression pledges) from aspirants to the existing club; moves the reputational and material costs of denial onto the denied and the populations they govern.",
+    "absent_voices": "The populations whose status is decided have no seat — residents of unrecognized entities are represented only by the authorities whose recognition is contested. Compliant-but-denied polities have no forum where their compliance record counts. Non-liberal aspirant elites speak only through sponsoring states. Dissent exists in the record (General Assembly objections, counter-recognition notes) but sits outside the rooms where guidelines are drafted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legitimacy conditions vanished overnight, recognition decisions would revert to pure effectiveness and bilateral interest; several dozen de facto entities would immediately press claims; liberal states would lose their standard vocabulary for coordinated denial and would have to defend refusals on naked interest grounds; intervention justifications currently borrowing the legitimacy vocabulary would need new grounding; the UN membership boundary would churn as counter-recognitions met recognitions.",
+    "founding_problem": "The simultaneous dissolution of the USSR and SFR Yugoslavia (1989–1992) threatened a recognition free-for-all in which armed groups could manufacture facts on the ground and win international legitimacy by conquest. The European Community's 1991 Guidelines and the Badinter process conditioned recognition on democracy, rule of law, human and minority rights, and frontier inviolability, to stabilize the transition and deny reward to aggression.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Outside the benefiting parties: the Badinter Commission's own opinions, the recorded objections of non-aligned and non-liberal states in the recognition debates, and three decades of scholarship (Crawford on statehood, Franck on the democratic entitlement, Coggins on recognition politics) attest both that the dissolution crisis was real and that the conditionality's subsequent selective application is disputed. No neutral body attests that the founding problem remains live in its original form today; the gatekeeping states assert it, the excluded and their sponsors deny it."
+  },
+  "gain_flow": "established_liberal_democracies",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "reference_frame": "criteria_plus_liberal_legitimacy_floor",
+    "drift_state": {
+      "moment": "contemporary_multipolar_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "declaratory_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "normative_legitimacy_gatekeeps_statehood",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "aggressive_acquisition_vetoes_recognition",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

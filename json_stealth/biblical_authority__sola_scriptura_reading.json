@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__sola_scriptura_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "41d0cc39-58f8-401b-be02-588775e20c79"
+  },
+  "base_properties": {
+    "extractiveness": 0.46,
+    "suppression": 0.42,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sola Scriptura — Scripture as Sole Self-Interpreting Authority",
+    "topic_domain": "theological/religious-institutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "lay_believers",
+      "congregational_polities",
+      "bible_publishing_industry"
+    ],
+    "victims": [
+      "minority_interpretation_communities",
+      "unaffiliated_religious_seekers"
+    ],
+    "vindicated_propositions": [
+      "scripture_perspicuity_doctrine",
+      "priesthood_of_all_believers_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 500
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.24,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This constraint is one reading of the kernel biblical_authority; how would the classification change under the sibling readings?",
+      "resolution_mechanism": "Instantiate the sibling files (biblical_authority__tradition_scripture_reading, biblical_authority__conciliar_reading) and compare computed per-seat classifications across the kernel family.",
+      "impact": "The tradition reading restores an adjudicative monopoly (higher clerical extraction, lower fragmentation cost); the conciliar reading distributes adjudication across councils (intermediate on both axes). This file's tangled_rope verdict is contingent on the sola scriptura framing and should not be generalized to the kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame contingency: classification is indexed to one reading of a contested kernel."
+    },
+    {
+      "id": "perspicuity_empirical_status",
+      "question": "Is the perspicuity axiom — that sincere readers can reach essential doctrine from the text alone — empirically supported, or does cross-community fragmentation constitute accumulating counter-evidence?",
+      "resolution_mechanism": "Comparative study of interpretive convergence and divergence among communities sharing the axiom versus communities with adjudicative layers (conciliar, magisterial); hermeneutical research on reader-variance under controlled conditions.",
+      "impact": "Sustained divergence among equally sincere readers undermines the empirically_contingent foundational axiom, driving axiom_overriding drift toward tradition- or council-mediated interpretation; demonstrated convergence would stabilize the reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical status of the self-interpreting-text claim."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (membership discipline, confessional gatekeeping, social sanction) or internalized (fear of error and divine displeasure that persists independent of enforcement)?",
+      "resolution_mechanism": "Post-exit trajectory studies of leavers from high-enforcement and low-enforcement sola-scriptura communities: if fear-of-error and community-loss responses persist after the enforcing community is gone, the internalized share is substantial.",
+      "impact": "If largely internalized, effective suppression stays high even as enforcement machinery decays — reconciling the falling suppression_requirement series with the stable scalar — and exit-based remedies underperform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized composition of suppression."
+    },
+    {
+      "id": "gatekeeper_reconcentration",
+      "question": "Does the arrangement actually eliminate interpretive mediation, or re-brand it in pastors, celebrity teachers, seminaries, and publishers who collect quasi-clerical returns while denying clerical status?",
+      "resolution_mechanism": "Income and authority-flow analysis comparing concentration of interpretive influence and material returns in sola-scriptura systems versus magisterial and conciliar systems.",
+      "impact": "High reconcentration would raise effective extraction toward the sibling readings' levels and erode this reading's distinctive low-extraction claim; low reconcentration would confirm the structural delta.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether anti-clerical form conceals re-constituted clerical function."
+    },
+    {
+      "id": "fragmentation_cost_or_feature",
+      "question": "Is doctrinal fragmentation a cost borne by real parties (coherence-seekers, minority readers) or a competitive process that improves interpretive accuracy over time?",
+      "resolution_mechanism": "Track whether five centuries of fragmentation show convergence on better-supported readings (marketplace model) or stable multiplication of incompatible communities with no adjudication mechanism (fragmentation model).",
+      "impact": "If feature-not-bug, the victim declarations weaken and the classification shifts toward rope; if cost, tangled_rope holds and high-discipline sects within the field become candidates for snare-side dynamics.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the fragmentation externality is a defect or a discovery procedure."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A doctrinal-authority arrangement originating in the sixteenth-century Reformation: the canonical Christian scriptures, held to be divinely inspired, sufficient for doctrine and practice, and clear enough that sincere readers need no binding human interpreter above the text. As instantiated across the Protestant world, the arrangement dismantled a clerical mediation monopoly — vernacular scripture and liturgy, priesthood of all believers, congregational self-governance — while generating its own characteristic costs: interpretive fragmentation into thousands of denominations, discipline of minority readers, and re-concentration of interpretive influence in pastors, confessions, seminaries, and a large publishing economy. Per the epsilon-invariance principle this file instantiates ONE reading of the kernel biblical_authority — the sola_scriptura_reading — with a single stable epsilon assessed over the standing arrangement as it actually operates (text plus its interpretive infrastructure), never over the reading's endorsed ideal of unmediated access. The sibling readings (biblical_authority__tradition_scripture_reading, biblical_authority__conciliar_reading) are separate constraint files with their own epsilon, beneficiary structures, and classifications; the contest between readings is carried in the omega variables, not averaged into this one.\n\nKEY AGENTS (by structural relationship):\n- lay_believers: Intended beneficiary (moderate/identity_locked) — receive direct textual access; carry tithes, unpaid interpretive labor, and fragmentation risk\n- ordained_pastorate: Agenda-setter and residual collector (organized/identity_locked) — administers interpretation weekly; salaried from the arrangement it serves\n- congregational_polities: Beneficiary (organized/mobile) — self-governance without hierarchical tribute\n- confessional_denominations: Enforcement agenda-setter (institutional/arbitrage) — confessional subscription, credentialing, church planting\n- minority_interpretation_communities: Primary payer (powerless/constrained) — bear discipline and exclusion for divergent readings of the same text\n- unaffiliated_religious_seekers: Payer (powerless/mobile) — bear search costs in an unadjudicated interpretive marketplace\n- bible_publishing_industry: Commercial beneficiary (powerful/arbitrage) — monetizes the universal-access premise\n- ecumenical_dialogue_bodies: Excluded voice (institutional/mobile) — seeks cross-community coherence the arrangement provides no mechanism to produce\n- academic_biblical_scholars: Analytical observer (analytical/analytical) — sees the full transmission and interpretation structure",
+    "logic_rationale": "The claim and the metrics are authored independently. Claimed type is tangled_rope: the arrangement possesses a genuine coordination function (a common written referent letting hierarchically unconnected congregations claim shared doctrinal ground; direct lay access; congregational autonomy) AND asymmetric costs running through the same structure (fragmentation borne by coherence-seekers and minority readers; discipline machinery; re-concentrated gatekeeping), held in place by active enforcement (confessional subscription, credentialing, membership discipline) — hence requires_active_enforcement. Metrics describe actual operation. Extractiveness 0.46 is low relative to magisterial arrangements — the founding extraction economy (indulgences, salvific mediation rents) was abolished, which is the reading's real achievement — but materially above zero because tithes, tuition, and publishing revenue flow to a re-constituted interpretive class and because fragmentation imposes real search and security costs on the least protected parties. Suppression 0.42 is mostly social and internalized rather than juridical: the enforcement series peaks in the confessional age (T~200, catechisms, subscription oaths, discipline courts) and decays under disestablishment and religious liberty, while the scalar stays elevated because fear-of-error and community-loss persist independently of enforcement machinery (see omega suppression_mechanism_ambiguity). Theater 0.38 and rising: the founding generations were martyred for the principle; contemporary adherence increasingly performs an inherited identity ('we just read the Bible') while relying on an interpretive infrastructure the slogan denies. Accessibility_collapse 0.52: rival readings persist and conversion out occurs, but within committed communities the magisterial alternative is foreclosed by the axiom itself. Resistance 0.55: five centuries of Catholic and Orthodox counter-argument, ecumenical pressure, and perpetual internal splintering. All three series share one time grid (T=0..500, mapping 1517 to the present); no metric is sampled on a private grid.",
+    "perspectival_gap": "Seats compute differently from the same structure. Congregational polities and the publishing industry (mobile/arbitrage beneficiaries) experience a workable, even flourishing coordination order. Lay believers (identity_locked, moderate) sit nearer symmetric: subsidized access shadowed by transfer costs they cannot itemize. Minority interpretation communities and unaffiliated seekers (powerless payers) experience enforced interpretive insecurity — the same 'everyone can read' promise that liberates the majority exposes them with no recourse, because the arrangement validates every sincere reading while disciplining the conclusions it dislikes. The pastorate experiences stewardship from inside and gatekeeping from outside; its dual position (agenda_setter/beneficiary) is the hinge on which the arrangement's costs turn. The engine computes these per-seat divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Declarations map to directionality as follows. Beneficiaries (lay_believers, congregational_polities, bible_publishing_industry) derive low d; victims (minority_interpretation_communities, unaffiliated_religious_seekers) derive high d, amplified by powerless power atoms and constrained exits. One override is authored: moderate -> 0.35. The derivation would read lay_believers — a declared beneficiary — as near-subsidized, but they simultaneously fund the pastorate through tithes, perform the unpaid interpretive labor the arrangement runs on, and carry fragmentation risk personally; their net position is beneficiary-leaning-symmetric, not subsidized. The override targets the moderate atom, which in this story only lay_believers occupy, so no other seat is disturbed. Vindicated propositions (perspicuity doctrine, priesthood of all believers) are recorded as propositions, not beneficiaries: they collect no rents.",
+    "mandatrophy_analysis": "The founding problem — a clerical monopoly over salvation-knowledge, indulgence finance, an unreadable liturgy — was substantially addressed within a century of the arrangement's adoption; even the Council of Trent's own reform decrees concede most of the indictment. The arrangement nonetheless persists and expanded, sustained by functions the founding problem never named: Protestant identity maintenance, congregational governance, and a publishing economy built on the access premise. The R5 mismatch consumer will register status=contested x verdict=world_rearranges, and correctly so — but the persistence is not mere inertia: theater_ratio 0.38 sits below piton range, enforcement still operates wherever doctrine is contested, and the coordination function remains load-bearing for hundreds of millions. The live drift hypotheses run in opposite directions: continued enforcement decay plus rising identity-performance would push theater past 0.5 and strand the arrangement as maintained habit (piton trajectory), while high-discipline sects within the field show the opposite pull, toward snare-side dynamics. The tangled_rope classification prevents both mislabels: reading the arrangement as pure extraction erases the real liberation of lay access that motivated it; reading it as pure coordination erases the discipline machinery and the identifiable parties who pay for everyone else's interpretive freedom.",
+    "kernel_context": "This constraint is the sola_scriptura_reading of the kernel biblical_authority — the sixteenth-century settlement locating doctrinal authority in the canonical text alone, self-interpreting and sufficient. Sibling readings of the same kernel: biblical_authority__tradition_scripture_reading (Scripture requires tradition for authoritative interpretation; the magisterium guards the deposit of faith) and biblical_authority__conciliar_reading (Scripture interpreted through ecumenical councils and patristic consensus). Those readings are separate constraint files; nothing about them is averaged into this one. The contest between readings lives in the omega variables, chiefly kernel_reading_contingency."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__tradition_scripture_reading",
+      "biblical_authority__conciliar_reading"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the kernel biblical_authority per the epsilon-invariance principle. The colloquial label 'biblical authority' conflates three structurally distinct arrangements: this file instantiates the sola scriptura reading (epsilon ~0.46: low clerical extraction, fragmentation costs, re-concentrated gatekeeping); the tradition_scripture_reading file authors a higher epsilon over magisterial mediation with coherent doctrine; the conciliar_reading file authors an intermediate profile. Coupling runs both ways: the tradition reading cites patristic continuity against this reading's perspicuity claim, while this reading's vernacular-literacy and translation legacy reshapes the operating environment of both siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "lay_believers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Read and interpret scripture directly in vernacular translations, individually and in congregational settings, without requiring a priestly intermediary for access to doctrine. Contribute tithes that fund pastors, buildings, seminaries, and media ministries; supply enormous unpaid interpretive labor; and choose among thousands of denominations, each claiming the same text. Leaving a community typically costs family ties, friendships, and an entire metaphysical framework, so most remain within the tradition that formed them even when disputing particular teachers."
+    },
+    {
+      "name": "ordained_pastorate",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Trained in seminaries, ordained or commissioned by congregations or denominations, preach and teach weekly, set the local teaching agenda, administer membership and discipline, and officiate rites. Supported financially by tithes and offerings. Their standing rests on being trusted readers of the text they serve, and they are accountable to congregations and confessions that claim the same authority. Leaving the vocation mid-career usually means forfeiting livelihood, professional identity, and community standing at once."
+    },
+    {
+      "name": "congregational_polities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Self-governing local churches that select their own pastors, set doctrine statements and budgets, and hold property without remitting tribute to a hierarchical center. They may join, leave, or switch denominational affiliations comparatively freely, which is the tradition's hallmark. They bear the practical burdens the removed hierarchy used to carry: finding and vetting trustworthy teachers, policing doctrine internally, and absorbing splits."
+    },
+    {
+      "name": "confessional_denominations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Trans-local bodies — Presbyterian, Lutheran, Baptist, Reformed, nondenominational networks — that maintain confessional standards such as the Westminster Confession or the Augsburg Confession, require ministerial subscription, credential pastors, plant churches, and publish curricula. They compete with one another for members and market share, and can merge, divide, or rebrand in response to doctrinal disputes; the fragmentation of the field is also their field of operation."
+    },
+    {
+      "name": "minority_interpretation_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups whose readings diverge from majority confessional standards — non-Trinitarian readers, radical restorationists, strict separatists, and others — who appeal to the same text and the same method as their neighbors and reach condemned conclusions. They face discipline, exclusion, and heresy labels from larger bodies, and their members face social costs. They can exit to other denominations but seldom find acceptance anywhere within the tradition, since every body reserves the right to declare its own reading the biblical one."
+    },
+    {
+      "name": "unaffiliated_religious_seekers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "People approaching the text without membership in any interpretive community — converts, deconstructing believers, the simply curious. They confront a marketplace of mutually contradictory teachings, each presented as plain biblical truth, with no institution responsible for the reliability of what they encounter. They bear the full search cost of distinguishing careful teaching from charismatic improvisation, and they are the population most exposed to high-demand teachers operating under the same banner."
+    },
+    {
+      "name": "bible_publishing_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Commercial publishers, software makers, and media companies producing translations, study Bibles, commentaries, curricula, and apps for a market premised on every believer's need for direct access. Revenue scales with interpretive demand; new translations and study formats continually refresh the product line. They bear no responsibility for doctrinal outcomes and face no adjudicative review of their interpretive aids."
+    },
+    {
+      "name": "ecumenical_dialogue_bodies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Councils of churches and bilateral dialogue commissions seeking recoverable doctrinal agreement across the divided heirs of the Reformation. The arrangement gives them no seat: each party arrives citing the same self-interpreting text and leaves with different conclusions, and no proposal binds anyone. Decades of agreed statements have documented convergence without changing any community's doctrine."
+    },
+    {
+      "name": "academic_biblical_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Textual critics, historians, and philologists studying the transmission, translation history, and interpretation of the canon. They document the manuscript complexity, translation choices, and reception histories that stand between the original texts and any modern reader, and they observe the distance between the 'plain reading' ideal and the interpretive infrastructure every community actually relies on. They hold no disciplinary seat in any confessing body."
+    }
+  ],
+  "gain_flow": "ordained_pastorate",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a common written normative referent that lets geographically dispersed, hierarchically unconnected congregations claim shared doctrinal ground without a central adjudicator; gives ordinary believers direct access to the founding texts in vernacular translation; supports congregational self-governance by locating legitimacy in the text rather than in a distant office.",
+    "transfer_function": "Moves interpretive labor from a professional clerical class to individual believers and local congregations; moves money (tithes, book sales, tuition) from lay believers to pastors, seminaries, denominational bureaucracies, and publishers; moves doctrinal decision rights from councils and tradition offices to whoever can plausibly claim the text's meaning — in practice, trained teachers and popular communicators.",
+    "absent_voices": "Ecumenical dialogue bodies and minority interpretation communities: anyone seeking a binding answer to cross-community disagreement finds no seat, because the arrangement recognizes no adjudicator above text-and-reader. Historic episcopal and conciliar churches object from outside the framework. Patristic voices are cited selectively as witnesses rather than seated as judges.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Several hundred million believers' devotional and congregational life is organized around direct textual authority; congregational governance, seminary systems, denominational structures, and a large publishing economy all presuppose it. Overnight removal would force every pulpit and pew to renegotiate where doctrine comes from — the landscape of Protestant institutions would rearrange within a generation.",
+    "founding_problem": "Late-medieval Western Christendom routed salvation-knowledge through a clerical monopoly: an untranslated liturgy, doctrine governed by papal and conciliar decree layered atop accumulated tradition, and devotional practices — indulgences foremost — that reformers read as selling what the text offered freely. The arrangement was built to place an unmediated, translatable authority above pope and council alike.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Outside the benefiting parties: Catholic, Orthodox, and secular historians of Christianity broadly corroborate the sixteenth-century crisis — indulgence finance, simony, clerical illiteracy — and the Council of Trent's own reform decrees concede much of the indictment. What no outside party corroborates is that the founding problem remains live in its original form: adherents attest its persistence, while ecumenical and Catholic interlocutors locate the live problem elsewhere, in the interpretive fragmentation the solution itself produced."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reference_frame": "self_authenticating_clear_canonical_text",
+    "drift_state": {
+      "moment": "contemporary_mass_literacy_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "tradition_scripture_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "conciliar_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scripture_alone_sufficient_for_doctrine_and_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "scripture_perspicuous_to_sincere_reader",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "no_binding_human_interpreter_above_text",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

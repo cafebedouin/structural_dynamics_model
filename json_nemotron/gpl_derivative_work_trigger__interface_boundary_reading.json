@@ -1,0 +1,368 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "story_uid": "b2886539-6180-4d0f-b1d1-7a2ae54faf59"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.52,
+    "claimed_type": "scaffold",
+    "human_readable": "GPL Derivative Work Trigger — Interface Boundary Reading",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "ecosystem_integrators",
+      "commercial_dual_license_vendors",
+      "modular_framework_maintainers"
+    ],
+    "victims": [
+      "copyleft_expectant_users",
+      "community_contributors_expecting_full_stack_freedom"
+    ],
+    "vindicated_propositions": [
+      "modular_architecture_enables_mixed_licensing",
+      "interface_specification_is_not_derivative_work"
+    ]
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the GPL derivative work trigger kernel, or an independent constraint?",
+      "resolution_mechanism": "Structural comparison of beneficiary/victim sets and ε values across declared readings of gpl_derivative_work_trigger kernel",
+      "impact": "If same kernel, ε differs from broad_copyleft_reading (high) and narrow_linking_permissive_reading (low); linkage via network.affects_constraints required",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment kernel identity for this reading"
+    },
+    {
+      "id": "scaffold_transition_target",
+      "question": "What stable state does this scaffold transition toward — broad copyleft enforcement, narrow linking permission, or persistent mixed-licensing equilibrium?",
+      "resolution_mechanism": "Track judicial rulings, FSF guidance evolution, and ecosystem licensing patterns over the next decade",
+      "impact": "If transition target is broad copyleft, scaffold resolves to tangled_rope/snare; if narrow linking, resolves to rope; if equilibrium, becomes piton",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scaffold sunset resolution ambiguity"
+    },
+    {
+      "id": "interface_boundary_definition",
+      "question": "What constitutes a 'clean API boundary' sufficient to avoid derivative work status under this reading?",
+      "resolution_mechanism": "Circuit court rulings on API copyrightability (Google v. Oracle lineage) and FSF FAQ updates",
+      "impact": "Boundary vagueness enables strategic ambiguity — integrators claim clean boundaries while maintaining tight coupling; clarification would shift extraction profile",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural ambiguity of the coordination function's boundary condition"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal threat, license termination) or internalized (community norm compliance, fear of ostracism)?",
+      "resolution_mechanism": "Post-litigation behavior: if developers comply without active enforcement, reclassify as partially internalized",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — the constraint persists without active enforcement",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in license compliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'interface boundary reading' of the GPL's derivative work trigger — the position that clean API boundaries (well-defined interfaces, stable ABIs, documented contracts) constitute mere aggregation rather than derivative works, even when the coupling between modules is tight (frequent calls, shared data structures, synchronous interaction). This reading emerged as a practical accommodation in the 1990s-2000s to allow proprietary kernel modules, commercial extensions, and mixed-licensing ecosystems (Linux kernel + proprietary drivers, GCC + proprietary plugins, Qt dual-licensing). The reading functions as a scaffold: it enables a transitional modular architecture where GPL and proprietary code coexist, justified by the transition to componentized software ecosystems, but carries an implicit sunset — if courts or the FSF definitively rule that tight coupling across API boundaries creates derivative works, the scaffold collapses and the broad copyleft reading takes over. Beneficiaries are ecosystem integrators (Linux distributors, Android OEMs, commercial framework vendors) who build modular stacks mixing GPL and proprietary components. Victims are users and community contributors who expect the GPL's copyleft to propagate across module boundaries, securing full-stack source freedom. The constraint requires active enforcement (FSF compliance lab, kernel community social pressure, dual-license vendor audits) to maintain the boundary.",
+    "key_agents": [
+      "ecosystem_integrators: Primary beneficiary (institutional/arbitrage) — builds mixed-licensing stacks on the boundary",
+      "commercial_dual_license_vendors: Primary beneficiary (institutional/arbitrage) — sells proprietary licenses enabled by the boundary",
+      "modular_framework_maintainers: Secondary beneficiary (organized/constrained) — gains adoption through proprietary-friendly boundaries",
+      "copyleft_expectant_users: Primary victim (powerless/trapped) — loses full-stack source when boundary is invoked",
+      "community_contributors_expecting_full_stack_freedom: Primary victim (organized/identity_locked) — contributes under GPL expecting copyleft propagation",
+      "fsf_compliance_lab: Agenda setter (institutional/analytical) — defines and enforces the boundary through guidance and litigation",
+      "kernel_maintainers: Agenda setter (institutional/constrained) — sets practical boundary through symbol export policy (EXPORT_SYMBOL vs EXPORT_SYMBOL_GPL)",
+      "court_system: Observer (institutional/analytical) — ultimate arbiter of derivative work definition"
+    ],
+    "logic_rationale": "Extractiveness is low (0.22) because the reading primarily enables coordination (modular architecture) rather than extracting value — the extraction that occurs is the differential value captured by commercial vendors who keep proprietary modules closed while benefiting from GPL infrastructure. Suppression is low (0.18) because compliance is largely voluntary and community-norm-driven; active litigation is rare. Theater ratio is moderate-high (0.41) because the 'clean API boundary' criterion is inherently vague and strategically deployed — integrators claim clean boundaries while maintaining deep coupling, and the boundary definition shifts with legal risk. Accessibility collapse is moderate (0.35) because alternatives exist (fully free stacks, permissive-licensed alternatives) but are often practically inferior. Resistance is moderate-high (0.52) because the copyleft community actively contests this reading and pushes for broader derivative work definitions. The claimed type is scaffold because the reading explicitly serves as a transitional accommodation for modular architecture with a sunset clause (GPLv3's anti-tivoization provisions and FSF's evolving guidance signal the transition).",
+    "perspectival_gap": "From the ecosystem integrator seat (arbitrage exit, institutional power), the constraint is a genuine coordination scaffold enabling modular innovation. From the copyleft-expectant user seat (trapped exit, powerless), the same constraint is a snare that extracts their expected freedom through definitional capture. From the kernel maintainer seat (constrained exit, institutional power), the constraint is a tangled rope — they coordinate the module interface but bear pressure from both sides. The engine computes these divergent seat classifications from the structural data.",
+    "directionality_logic": "Beneficiaries (ecosystem_integrators, commercial_dual_license_vendors, modular_framework_maintainers) collect value from the boundary — they build businesses on mixed licensing, gain adoption, avoid GPL obligations on proprietary modules. Their exit is arbitrage/constrained (they can switch licenses or frameworks but lose ecosystem position). Victims (copyleft_expectant_users, community_contributors) bear the cost — they lose source access and modification freedom for proprietary modules that the boundary shields. Their exit is trapped/identity_locked (users cannot practically reconstruct full stacks; contributors have fused identity with the GPL's promise). Agenda setters (FSF, kernel maintainers) administer the boundary — FSF through guidance and litigation, maintainers through symbol export policy. Their directionality is near-symmetric (they both enforce and are constrained by the boundary). Rival proprietary module vendors are excluded — they would compete but the boundary defines the terms of their participation.",
+    "mandatrophy_analysis": "The constraint's founding problem (enabling modular architecture in a world where GPL's viral copyleft would otherwise prevent mixed-licensing ecosystems) was live in 1991-2010. By 2025, the problem is contested: permissive-licensed alternatives (BSD, MIT, Apache) now provide modular foundations without copyleft ambiguity; cloud deployment models shift the derivative work question to network boundaries (AGPL); and the FSF's guidance has narrowed. The scaffold's sunset clause (GPLv3's anti-tivoization, FSF's 'mere aggregation' FAQ narrowing) is being triggered but the transition is incomplete — the constraint persists as a piton candidate in mature ecosystems (Linux kernel, Qt) where the modular architecture is entrenched. Mandatrophy is partially resolved: the coordination function remains but the extraction profile has shifted toward commercial capture.",
+    "kernel_context": "This constraint is the interface_boundary_reading of the gpl_derivative_work_trigger kernel. Sibling readings: broad_copyleft_reading (linking creates derivative work, triggers source disclosure) and narrow_linking_permissive_reading (linking is aggregation, only modifications trigger obligations). This reading instantiates a scaffold allowing modular mixed-licensing; ε=0.22 reflects the extraction differential captured by commercial integrators. The broad reading would have high ε (strong copyleft enforcement); the narrow reading would have low ε (permissive linking). All three share the kernel_id but instantiate different constraints with different beneficiary/victim structures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+      "gplv3_anti_tivoization_provision",
+      "agpl_network_boundary_trigger",
+      "linux_kernel_symbol_export_policy",
+      "qt_dual_licensing_model"
+    ],
+    "dual_formulation_note": "This constraint family (gpl_derivative_work_trigger kernel) decomposes the single colloquial claim 'GPL derivative work trigger' into three structurally distinct constraints with different ε values, beneficiary sets, and classifications. The interface_boundary_reading (this story) is a scaffold (ε=0.22) enabling mixed licensing. The broad_copyleft_reading is a tangled_rope/snare (high ε) enforcing full copyleft propagation. The narrow_linking_permissive_reading is a rope (low ε) enabling permissive linking. They are linked via network.affects_constraints because the upstream kernel claim is cited as evidence for each downstream reading."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "ecosystem_integrators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build and distribute mixed-licensing software stacks (Linux distributions, Android, embedded systems) that combine GPL core with proprietary modules. They rely on the interface boundary reading to avoid GPL obligations on proprietary components. They can switch to permissive-licensed alternatives (BSD, MIT) but lose the GPL ecosystem's scale and maturity."
+    },
+    {
+      "name": "commercial_dual_license_vendors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell proprietary licenses for GPL-licensed frameworks (Qt, MySQL, Redis Enterprise) enabled by the interface boundary reading. The boundary lets them keep proprietary modules closed while the GPL core drives adoption. They can relicense or open-source but lose the dual-license revenue model."
+    },
+    {
+      "name": "modular_framework_maintainers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain GPL frameworks (GCC, GNOME, KDE) that gain adoption through proprietary-friendly plugin boundaries. They benefit from ecosystem growth but bear maintenance costs and community pressure to tighten boundaries. Their exit is constrained by contributor dependence and project governance."
+    },
+    {
+      "name": "copyleft_expectant_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Use GPL software expecting full-stack source freedom. When vendors invoke the interface boundary to keep drivers/plugins proprietary, users lose the ability to modify, audit, or replace those components. They cannot practically reconstruct full stacks; switching to fully-free alternatives often means accepting inferior hardware support or features."
+    },
+    {
+      "name": "community_contributors_expecting_full_stack_freedom",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Contribute code to GPL projects under the expectation that copyleft propagates across module boundaries. When the interface boundary reading shields proprietary modules, their contributions indirectly enable commercial capture. Their identity is fused with the GPL's promise — leaving the community means abandoning their professional and ideological commitment."
+    },
+    {
+      "name": "fsf_compliance_lab",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Publishes guidance on derivative work boundaries, pursues compliance actions, and shapes the FSF's official reading. They administer the constraint through interpretive authority but are constrained by the kernel's text and community legitimacy. Their exit is analytical — they observe and shape but do not personally bear extraction."
+    },
+    {
+      "name": "kernel_maintainers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Set practical boundaries through Linux kernel symbol export policy (EXPORT_SYMBOL vs EXPORT_SYMBOL_GPL). They directly define which interfaces are 'clean' enough for proprietary modules. They face pressure from both commercial vendors (want more symbols) and copyleft advocates (want fewer). Their exit is constrained by the kernel's institutional position."
+    },
+    {
+      "name": "court_system",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Ultimate arbiter of derivative work definition in copyright law. Rulings on API copyrightability (Google v. Oracle) and software structure/sequence/organization determine whether the interface boundary reading holds legally. They observe the dispute but do not collect from or pay into the constraint."
+    },
+    {
+      "name": "proprietary_module_vendors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Would compete to provide proprietary modules but are bound by the boundary definitions set by kernel maintainers and FSF. They benefit from the reading's existence but have no voice in shaping it — they are price-takers of the boundary definition."
+    }
+  ],
+  "gain_flow": "commercial_dual_license_vendors",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Enables modular software architecture where GPL-licensed cores and proprietary modules interoperate through stable interfaces, allowing componentized development and commercial sustainability without requiring full-source disclosure.",
+    "transfer_function": "Moves the value of proprietary module differentiation (features, hardware support, performance) from users (who lose modification freedom) to commercial vendors (who capture monopoly rents on proprietary modules), while the GPL core provides the coordination substrate (shared infrastructure, community maintenance).",
+    "absent_voices": "End users of embedded systems (routers, IoT devices, mobile phones) who cannot practically exercise GPL rights even when source is available; they would object to proprietary modules blocking device ownership but are structurally excluded from licensing discourse. Also absent: future contributors who would have joined a fully-free ecosystem but are deterred by the mixed-licensing equilibrium.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the interface boundary reading vanished overnight (courts/FSF definitively rule tight coupling = derivative work), proprietary kernel modules and plugins would face immediate GPL compliance demands. Vendors would either open-source modules, withdraw them, or migrate to permissive-licensed kernels. The Linux/Android/embedded ecosystem would reorganize around either full copyleft or permissive foundations — a major structural rearrangement.",
+    "founding_problem": "Early GPL enforcement (1990s) threatened to prevent modular architectures where proprietary components (drivers, plugins, libraries) needed to interoperate with GPL cores. The interface boundary reading emerged as a practical accommodation to allow Linux kernel modules, GCC plugins, and Qt commercial licensing — enabling the componentized software ecosystems that dominated 2000s-2010s.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Linux kernel maintainers and commercial vendors attest the problem remains live (hardware diversity requires proprietary drivers). FSF and copyleft advocates attest the problem is substantially solved by permissive-licensed alternatives and cloud deployment models. Independent analysis (academic licensing studies, EU Commission reports) corroborates the shifted-function reading: the coordination benefit persists but the extraction profile has tilted toward commercial capture."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "gpl_derivative_work_trigger"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "narrow_linking_permissive_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "interface_specification_is_not_derivative_work",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "modular_architecture_requires_licensing_boundaries",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "gplv2_mere_aggregation_doctrine",
+    "drift_state": {
+      "moment": "post_gplv3_agpl_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

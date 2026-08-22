@@ -1,0 +1,303 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "89e248ab-71ba-4083-908b-c88dd75a4f6f"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.12,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Outcome Contract with Implementation Latitude",
+    "topic_domain": "technological/coordination",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "tcp_stack_implementers",
+      "application_developers",
+      "network_operators",
+      "internet_end_users",
+      "congestion_control_designers"
+    ],
+    "vindicated_propositions": [
+      "end_to_end_principle",
+      "outcome_specification_sufficiency"
+    ]
+  },
+  "interval": {
+    "start": 1981,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.08,
+      "basis": "observed"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "ietf_tcp_working_group",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Authors and maintains the TCP specification through the IETF's working-group and consensus process: decides which behaviors are normative requirements, which are recommendations, and which are left to implementer choice, and consolidates decades of updates from RFC 793 through RFC 9293. Its members operate the specification's normative keyword structure; the group can revise the text but cannot dictate what deployed implementations do, and its standing rests on demonstrated engineering competence and open participation rather than mandate."
+    },
+    {
+      "name": "tcp_stack_implementers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operating-system and kernel teams (Linux, Windows, BSD, embedded vendors) implement the connection semantics and ship the world's TCP stacks. They spend engineering effort conforming to the behavioral contract — state handling, reliable reassembly, congestion-safe sending — and in exchange every conformant peer on the internet can talk to their stacks. Inside the contract they choose their own algorithms and tune aggressively; outside it they can build userspace transports (as the QUIC effort demonstrated), though the installed base of peers pulls them back toward conformance."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build on the reliable, ordered byte-stream abstraction without implementing transport themselves; the shared behavioral contract is what lets one codebase talk to every peer operating system. Their choice set is bounded by the sockets-style APIs their platforms expose, though userspace transports are widening it. They bear no conformance labor of their own."
+    },
+    {
+      "name": "network_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Carry TCP traffic at scale and rely on endpoints' shared congestion discipline to keep queues manageable and flows shareable. They gain predictable endpoint behavior; they also absorb the costs when optimizations push burden into the network — deep buffers and latency inflation, fairness disputes between algorithm generations — and their main levers are queue management and traffic shaping rather than leaving."
+    },
+    {
+      "name": "internet_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Get working communication across every network and device without knowing the transport exists. They pay nothing directly and choose nothing directly; their experience of the arrangement is that connections work, and occasionally that they are slow when optimization choices push latency into shared queues."
+    },
+    {
+      "name": "congestion_control_designers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Researchers and engineers who design senders — Reno, CUBIC, DCTCP, BBR and successors. The specification's choice to bind outcomes rather than algorithms is what makes their work deployable at all: a new algorithm can ship in one stack and interoperate with every conformant peer. Their exit is genuinely open — they publish, prototype, and can carry designs to other transport efforts."
+    },
+    {
+      "name": "interoperability_test_labs",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Independent laboratories that run conformance suites and cross-vendor interoperation events, documenting where stacks diverge from the behavioral contract and where divergence is harmless. They are paid by their customers either way and adjudicate nothing; their measurements are the shared evidence base every seat cites."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the interoperability collective-action problem: independently developed TCP stacks worldwide interoperate because all conform to the same observable behavioral contract — connection establishment and teardown semantics, reliable in-order byte-stream delivery, congestion-safe sending — while each optimizes internal algorithms, buffering, and pacing freely inside those bounds.",
+    "transfer_function": "Moves conformance labor and design discipline from each implementing stack into a shared behavioral contract, and returns universal interoperability and a stable application platform to every participant; optimization externalities (queueing burden, fairness disputes) move from sender choices onto network operators and coexisting flows. No monetary transfer occurs.",
+    "absent_voices": "End users and small-stack implementers are underrepresented when the community adjudicates where the semantic bounds sit — the bounds debates are dominated by large-stack maintainers and major platform operators. Operators who absorb optimization externalities participate through industry bodies but rarely as equals of the big sender designers. No party is formally barred; the process is open, and the asymmetry is in attention and standing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the outcome contract vanished overnight, independently developed stacks could no longer assume common connection semantics; every operating-system pair would need bespoke negotiation or a successor standard before traffic flowed, the application layer's reliable-byte-stream assumption would break until a replacement contract deployed, and the loss of shared congestion discipline would reopen the door to congestion collapse. The internet's transport layer would reorganize around whatever successor arrangement emerged.",
+    "founding_problem": "Hosts from different manufacturers needed a common host-to-host protocol providing reliable, ordered byte streams over a lossy packet network (RFC 793, 1981); early operational experience — above all the 1986 congestion collapse — added the requirement that endpoints share the burden of congestion control rather than pushing it onto the network.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Interoperability test laboratories and the academic network-measurement literature corroborate the founding problem from outside the beneficiary set: measurement studies continue to document congestion-collapse episodes and flow-unfairness failures when endpoint discipline lapses or new sender designs misbehave. No party disputes that the problem is real; contest exists only over where the semantic bounds of sender responsibility sit."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "strict_invariance_reading",
+      "middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'the TCP specification' covers at least three structurally distinct claims about what the text is and what it binds. This story authors the outcome-contract/latitude claim with its own low epsilon (0.08): the text binds observable behavior and opens implementation paths, which is what lets high-performance variants (BBR, DCTCP) ship without breaking interoperability. The strict-invariance sibling authors the exact-replication claim, under which latitude-exercising stacks are non-conformant and epsilon is high; the middlebox-realism sibling authors the path-dependence claim, under which the epsilon referent is the deployed network rather than the text. All three presuppose the same established semantic core (wire format and connection semantics), which is the upstream member of the family; the two contested readings are downstream. Each member carries its own beneficiaries, victims, metrics, and classification, linked through affects_constraints on both sides."
+  },
+  "commentary": {
+    "narrative_context": "Under this reading, RFC 9293 is an outcome contract: it binds implementations to what peers can observe — connection semantics, reliable in-order delivery, congestion-safe sending — while explicitly leaving internal algorithms, buffering, and performance mechanisms to implementer choice. That division of normative labor is the constraint's content: a new congestion-control algorithm can ship in one stack and interoperate with every conformant peer, which is exactly the operating condition under which DCTCP entered datacenters and BBR entered production. The arrangement's parties all net-benefit: implementers trade conformance labor for universal reach, applications get transport they never build, operators get endpoint discipline, algorithm designers get a deployable canvas, and end users get working communication they never think about. This story is one member of a linked constraint family decomposing the TCP-specification kernel; the family relationship and the sibling readings are recorded in commentary.kernel_context and the omega variables, not adjudicated here. Claim and metrics are independent authored facts: the rope claim reflects the structure (a genuine collective-action problem, net-benefiting participants, unsuppressed alternatives), and the metrics describe observed operation without being tuned to any predicted engine output.",
+    "key_agents": [
+      "ietf_tcp_working_group: agenda-setter (institutional/constrained) — authors and maintains the outcome contract through consensus; can revise the text, cannot command deployed stacks",
+      "tcp_stack_implementers: primary participant-beneficiary bearing compliance costs (powerful/mobile) — builds the stacks, chooses the algorithms, could build userspace alternatives",
+      "application_developers: pure beneficiary (moderate/constrained) — consumes the byte-stream abstraction without conformance labor",
+      "network_operators: beneficiary bearing optimization externalities (organized/constrained) — gains endpoint discipline, absorbs queueing and fairness costs",
+      "internet_end_users: passive beneficiary (powerless/constrained) — receives the arrangement's output with no seat in its administration",
+      "congestion_control_designers: beneficiary through latitude (moderate/mobile) — the implementation latitude is their deployable design space",
+      "interoperability_test_labs: analytical observer — measures conformance and divergence, adjudicates nothing, collects nothing from the arrangement's operation"
+    ],
+    "logic_rationale": "Extractiveness is low (0.08) because the contract takes only conformance labor, and that labor is repaid in interoperability to the same parties who spend it — there is no seat the arrangement systematically takes from and gives to another. Suppression is very low (0.05): alternatives (UDP, userspace transports, private datacenter protocols) are not barred by this arrangement, and under this reading their openness is the point. Theater ratio is low (0.08): interoperation events, conformance suites, and the specification's own maintenance test and exercise real behavior; the small residual is ritual in standards-process ceremony. Accessibility collapse is low (0.12): understanding the contract does not foreclose substitutes — workable alternatives exist at moderate friction, which is precisely what the QUIC migration demonstrated. Resistance is low (0.10): disputes concentrate at the boundary of the latitude (algorithm-generation fairness, loss-response obligations), not against the contract itself. Suppression is authored as a raw structural property, unscaled; only extractiveness is scaled by the engine through directionality and scope. The measurement series run on one shared six-point grid (1981–2025) so both tracked metrics are authored at every examined time point; suppression_requirement series are deliberately omitted because the enforcement picture is static and self-enforcing (non-conformant stacks lose peers), a picture already carried by the scalar suppression value.",
+    "perspectival_gap": "Seat divergence here is mild because every seat nets benefit — the divergence shows up in cost incidence, not in experienced type. Implementers experience the arrangement as conformance labor plus reach (their secondary payer role lifts their directionality slightly above the pure-beneficiary floor); operators experience endpoint discipline as a gain but optimization externalities as a cost they did not choose; end users experience only the benefit and hold no voice in bounds adjudication; the working group experiences authority plus the maintenance burden of adjudicating boundary disputes. The sharper perspectival gaps for this kernel live in the sibling stories' seats, where the same text reads as an invariant machine to replicate or as a description subordinate to deployed-path behavior; those divergences are computed by the engine from the siblings' structural data, not asserted in this file.",
+    "directionality_logic": "Every declared party is a net beneficiary, so derived directionality sits near the beneficiary end across seats. The secondary payer declarations on tcp_stack_implementers and network_operators lift those seats modestly above the floor — they bear real costs (conformance labor; externalized queueing burden) alongside their gains. Exit options differentiate the rest: congestion_control_designers and tcp_stack_implementers hold mobile exit (arbitrage-grade alternatives exist and have been exercised), which pushes them toward the beneficiary end; internet_end_users and application_developers are constrained but unharmed. No directionality overrides are needed: the derivation from declared roles plus exit options matches the structural read, so the override chain is left untouched.",
+    "mandatrophy_analysis": "The founding problem is live: heterogeneous hosts over lossy networks still need exactly this contract, and the measurement record shows the failure mode (congestion collapse) returning when endpoint discipline lapses. Function and mandate coincide, nothing has atrophied, and the theater series stays flat and low across the whole interval — the opposite of the rising-theater signature that would indicate performance replacing function. The rope classification guards against two mislabels in both directions: reading the compliance costs as extraction (they are the price of a good every seat collects) and reading the latitude as absence of constraint (the outcome contract binds; only the means are free). The migration risk this story carries is not atrophy but externality accumulation: if optimization costs pushed into networks grow with deployment scale (omega optimization_externality_trajectory), the operator and end-user seats' effective extraction rises and the story could migrate toward a hybrid coordination/extraction classification. That migration would show in the temporal series before it showed in the claim.",
+    "kernel_context": "Kernel: rfc9293_tcp_specification — the persisting commitment that the TCP specification governs conformant implementations. This story instantiates the optimization_latitude_reading: the specification is an outcome contract (reliable ordered byte stream, congestion-safe sending) that deliberately leaves implementation paths open inside semantic bounds, which is what makes high-performance variants (BBR, DCTCP) deployable without breaking interoperability. Sibling readings, authored as separate constraints: strict_invariance_reading (the text mandates an invariant state machine that implementations must replicate exactly) and middlebox_realism_reading (specification authority is subordinate to the deployed middlebox population). The disagreement is located in what the text binds — implementation path versus observable behavior — and in whether the text's authority is primary or subordinate to deployed-path behavior."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story instantiates one reading of the kernel rfc9293_tcp_specification: that the specification binds observable behavioral outcomes while leaving implementation paths open. Do the sibling readings — strict_invariance_reading (the text mandates an invariant state machine replicated exactly) and middlebox_realism_reading (specification authority is subordinate to the deployed middlebox population) — describe the same text better, and where exactly does the disagreement bind?",
+      "resolution_mechanism": "Corpus comparison of the three sibling stories' computed classifications, anchored on the empirical discriminator: whether latitude-exercising variants (BBR, DCTCP) interoperate without specification revision (supports this reading), fail interoperability (supports strict invariance), or interoperate only through per-path accommodation (supports middlebox realism).",
+      "impact": "Under the strict-invariance sibling the same text's epsilon rises sharply — latitude becomes non-conformance — and this story's classification dissolves; under the middlebox-realism sibling the epsilon referent moves from the text to the deployed path and this constraint is absorbed into the sibling's story.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the TCP-specification kernel the text itself best supports."
+    },
+    {
+      "id": "semantic_bounds_location",
+      "question": "Where exactly do the semantic bounds sit: does the contract bind only the byte-stream and connection-management semantics, or also sender responsibilities such as loss response, ECN reaction, and inter-flow fairness?",
+      "resolution_mechanism": "Standards-track adjudication and deployment evidence: the BBRv1 fairness controversy and its BBRv2/v3 convergence, AQM/ECN deployment studies, and cross-vendor interoperation events reveal which sender behaviors the community treats as contract-bound versus discretionary.",
+      "impact": "A wider reading of the bounds raises effective extraction at sender seats (more latitude foreclosed) without changing the coordination function; a narrower reading keeps extraction low and shifts more sender behavior into voluntary recommendation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The boundary of implementer latitude inside the outcome contract."
+    },
+    {
+      "id": "optimization_externality_trajectory",
+      "question": "Are the costs optimizations push into the network — queueing latency from deep buffers, fairness disputes between algorithm generations — bounded, or growing with deployment scale?",
+      "resolution_mechanism": "Longitudinal measurement of queueing latency and flow fairness under the deployed algorithm mix: bufferbloat measurement series, operator telemetry, and cross-deployment comparison as BBR-class senders spread.",
+      "impact": "Growing externalities raise effective extraction at the operator and end-user seats and could migrate the story toward a hybrid coordination/extraction classification; stable externalities keep the pure-coordination reading intact.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether optimization externalities are accumulating across the deployed population."
+    },
+    {
+      "id": "self_enforcement_sufficiency",
+      "question": "Does interoperability alone still enforce conformance as the implementation population grows, or is active conformance policing (certification regimes, procurement requirements) becoming load-bearing?",
+      "resolution_mechanism": "Track whether procurement and certification regimes attach to TCP conformance, and whether non-conformant stacks still lose peers in practice; the QUIC migration and embedded-stack proliferation are the natural test cases.",
+      "impact": "If active policing becomes load-bearing, suppression rises and the enforcement picture flips, moving the story away from pure coordination; if self-enforcement holds, the low-suppression profile stands.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether conformance remains self-enforcing at current deployment scale."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "semantic_outcome_contract",
+    "drift_state": {
+      "moment": "post_bbr_deployment_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "outcome_contract_implementation_latitude",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "latitude_serves_interoperability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__expansive_shield_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "bb1b1825-97af-4626-a6af-aa4d52e4de21"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Beta Designation as Comprehensive Liability Waiver (Expansive Shield Reading)",
+    "topic_domain": "technology law/software liability/consumer protection",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "software_vendors_publishers",
+      "early_adopter_testers"
+    ],
+    "victims": [
+      "end_users",
+      "enterprise_licensees",
+      "critical_system_operators",
+      "involuntary_third_parties"
+    ],
+    "vindicated_propositions": [
+      "contractual_risk_allocation_doctrine",
+      "as_is_disclaimer_enforceability"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_vendors_publishers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Drafts the license terms that define what the beta label disclaims, chooses which products carry the label and for how long, and enforces the waiver through click-through acceptance, arbitration clauses, and class-action waivers. Collects the avoided liability directly: every defect cost the waiver shifts is a cost off its balance sheet. Its exit is easy in the relevant sense — it can relabel a product, restructure its terms, re-incorporate, or select favorable governing law; the constraint binds its customers, not it."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Accepts non-negotiable license terms to obtain software they need for work, communication, or daily life, and bears data loss, security compromise, and functional failure with no recourse beyond individual arbitration. No alternative terms exist: competing products carry equivalent disclaimers, and the products with the strongest network effects are distributed only under beta or as-is terms."
+    },
+    {
+      "name": "early_adopter_testers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receives early access to new capability and a channel of influence over the product in exchange for accepting defect risk, and genuinely wants that exchange at the margin. Also bears uncompensated losses when defects destroy data or compromise accounts, and cannot negotiate the waiver's scope — the terms arrive fixed."
+    },
+    {
+      "name": "enterprise_licensees",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploys beta-labeled or as-is software in production because vendor roadmaps leave no fully supported alternative; negotiates indemnification on large contracts but rarely escapes the core defect disclaimer, and absorbs operational losses, outage costs, and security incidents internally. Exit means re-platforming entire workflows — possible in principle, prohibitive in practice for embedded systems."
+    },
+    {
+      "name": "critical_system_operators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Runs beta-labeled software in hospitals, banks, utilities, and transport under the all-contexts rule, bearing life-safety and financial-catastrophe exposure that no insurance market fully prices because the waiver makes vendor liability unenforceable. Locked into vendor ecosystems by certification and integration costs, and unable to obtain a non-beta version of systems the vendor has chosen never to graduate."
+    },
+    {
+      "name": "involuntary_third_parties",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears the risks of beta software without any contractual relationship at all — pedestrians near vehicles running beta autonomy stacks, patients downstream of beta clinical decision support, counterparties to financial transactions routed through beta infrastructure. Never accepted any terms, has no privity, and would object to the all-contexts rule but has no seat in the licensing conversation."
+    },
+    {
+      "name": "consumer_protection_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigates whether comprehensive beta disclaimers are unfair terms, brings enforcement actions, and in some jurisdictions voids them. Observes the arrangement from outside and can alter its enforceability through rulemaking, but its reach is jurisdictional while the terms are engineered globally."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Channels pre-release software into real-world use: vendors obtain scaled usage data and defect discovery before general release, and some users obtain early access to new capability in exchange for tolerating defects. The beta label marks which software sits inside that exchange.",
+    "transfer_function": "Moves the entire cost of software defects — data loss, security compromise, financial loss, and physical harm — from vendors to users, licensees, and non-consenting third parties, and moves the corresponding legal risk off vendor balance sheets; the consideration flowing back is early access and a feedback channel.",
+    "absent_voices": "Involuntary third parties — pedestrians near vehicles running beta autonomy stacks, patients downstream of beta clinical decision support, counterparties to transactions routed through beta infrastructure — bear the all-contexts rule's catastrophic tail and have no seat anywhere in the licensing conversation. Consumer-side drafters are absent by construction: terms are unilaterally drafted and the agreement is a non-negotiable click. Regulators enter only after harm, jurisdiction by jurisdiction.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Vendors would internalize defect costs overnight: prices and release practices would adjust, insurance markets for software defects would form, beta labeling would revert to a bounded testing disclosure or disappear, and products now parked in perpetual beta would either graduate or carry priced warranties. The transfer the arrangement performs — shifting all defect costs to users and third parties — is the arrangement.",
+    "founding_problem": "Early commercial software distribution needed a way to ship imperfect software for real-world testing: vendors feared liability for inevitable pre-release defects and users wanted early access, and the beta disclaimer emerged as the disclosure that balanced the two during a bounded testing phase.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: court opinions declining to enforce beta disclaimers on products years past any genuine testing phase (finding the label fictional as to duration), consumer-protection agency findings treating perpetual beta as a commercial practice rather than a testing phase, and software-engineering literature documenting perpetual-beta release models. No source outside the vendor set attests that an indefinite, all-contexts waiver continues to serve a live testing-disclosure function; the external corroboration uniformly attests the founding problem is dead while the arrangement persists."
+  },
+  "gain_flow": "software_vendors_publishers",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 1995,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the expansive shield reading, a vendor's beta designation operates as a comprehensive liability waiver: designating software beta disclaims all defect liability — data loss, security compromise, financial harm, physical harm — for as long as the designation persists, in any context of use, with no temporal or severity boundary. The arrangement is instantiated through click-through license terms, binding arbitration clauses, and class-action waivers, and it is maintained by the vendor's unilateral control of the label: a product remains beta exactly as long as the waiver is worth more than the label's signaling cost. The coordination story — real-world testing in exchange for early access — still exists at the margin, but under this reading it has no boundary that would limit the transfer: testing phases never formally end, and the waiver follows the software into hospitals, banks, and vehicles. KEY AGENTS (by structural relationship): software_vendors_publishers — agenda setter (institutional/arbitrage), drafts and enforces the waiver, collects the avoided liability; end_users — primary target (powerless/trapped), bears defect costs under non-negotiable terms; early_adopter_testers — incidental beneficiary and payer (moderate/constrained); enterprise_licensees — secondary target (powerful/constrained); critical_system_operators — catastrophic-loss target (institutional/trapped); involuntary_third_parties — excluded non-party (powerless/trapped); consumer_protection_regulators — analytical observer (institutional/analytical).",
+    "logic_rationale": "Extractiveness is authored high (0.82) because under this reading the waiver is comprehensive: every class of defect cost, including catastrophic life-safety and financial loss, lands on users and third parties, and the waiver's value to the vendor scales with exactly the harms it shifts. Suppression (0.78) is authored as a raw structural property — it is not scaled by power or scope in the engine's computation; only extractiveness is. The suppression here is structural rather than internalized: terms are unilaterally drafted and non-negotiable, needed software is distributed only under as-is terms, competing products carry equivalent disclaimers, and arbitration clauses paired with class-action waivers close the judicial exit — the class waiver is specifically the mechanism that suppresses the coalition power powerless users would otherwise hold. Theater_ratio (0.55): the feedback-exchange function is real at the margin, but under indefinite duration the label outlives any testing phase — products run as de facto production systems for years while retaining the label, so a majority of the label's operational work is liability positioning rather than testing coordination. Accessibility_collapse (0.5): alternatives do not fully collapse — competing and open-source products exist — but for products with network effects or unique function there is no non-beta version to switch to, so understanding the waiver does not open an exit. Resistance (0.55): unconscionability doctrine, consumer-protection enforcement, and EU unfair-terms law actively push back, but enforcement is jurisdictional while the terms are engineered globally. The measurement series run on one shared time grid (1995/2002/2009/2016/2021/2026) with every tracked metric authored at every point; the suppression_requirement series is authored because this story specifically tracks enforcement-capacity buildup — shrink-wrap to click-wrap enforceability, then the arbitration-plus-class-waiver architecture of the 2010s — not merely extraction drift.",
+    "perspectival_gap": "The agenda-setter seat and the payer seats should compute differently. From the vendor seat the arrangement is voluntary exchange: users accept beta terms knowingly in exchange for early access, risk allocation is priced into the product, and the label is honest disclosure. From the trapped end-user and involuntary third-party seats there is no bargaining, no alternative terms, and no forum — consent is a click, and for third parties there is not even a click. Same-level dynamics differentiate the payer seats further: enterprise licensees hold nominal market power yet remain constrained because vendor roadmaps leave no fully supported alternative and re-platforming embedded workflows is prohibitive; critical-system operators hold institutional power yet are trapped by certification and integration lock-in; end users hold neither power nor exit. The engine computes per-seat classifications from this structural data; the divergence between the vendor's coordination story and the payers' extraction experience is the quantity the corpus exists to measure.",
+    "directionality_logic": "software_vendors_publishers is the structural beneficiary with arbitrage-grade exit — it can relabel, restructure terms, re-incorporate, and select governing law — so its directionality sits near the beneficiary end and its effective extraction damps toward subsidy. end_users, critical_system_operators, and involuntary_third_parties sit near the full-target end: trapped exit (or no contractual seat at all) under the full defect-cost transfer. enterprise_licensees are powerful but constrained — negotiated indemnification damps their directionality below the trapped users' but nowhere near symmetry. early_adopter_testers are the override case: the derivation chain would read the declared beneficiary status plus constrained exit as damped directionality near 0.25, but their actual position is near-symmetric — the early access they receive is worth less than the uncompensated defect losses they bear on fixed terms — so a directionality override moves moderate to 0.48. Moderate is uniquely held by this agent in the story, so the override is precise rather than coarse.",
+    "mandatrophy_analysis": "The classification discipline cuts both ways here. Reading the arrangement as pure coordination — the vendor's own story, that beta is a testing disclosure users accept — would miss the asymmetric transfer: with no temporal or severity boundary, the testing function the waiver nominally serves cannot limit the extraction, because a testing phase that never ends is not a boundary. Reading it as extraction with no coordination function would miss the residual real exchange: early-access feedback is genuine at the margin and some participants net-benefit. The snare claim captures the structure the metrics describe: a coordination story functioning as cover, persistence depending on actively enforced adhesion terms rather than participant preference, and an identifiable victim set that includes parties who never contracted at all. On the genealogy: the founding problem — disclosing genuine pre-release testing — is dead under this reading, since the label persists on production systems; what is maintained is the waiver, not the disclosure. The dead founding problem combined with a world_rearranges disappearance verdict is the capture signature, and it is consistent with the computed snare path rather than a piton one, because a concentrated seat (the vendor) both captures the gains and actively maintains the enforcement machinery.",
+    "kernel_context": "This constraint instantiates the expansive_shield_reading of the beta_designation_doctrine kernel — the contested question of what legal effect a beta designation has on software defect liability. Sibling readings: narrow_warning_reading (the label is a time-bounded testing disclosure; base product liability survives; duration must track a genuine testing phase) and severity_carve_out_reading (the label is categorically unavailable for life-safety, financial, or other critical systems regardless of testing status or disclosure). This file authors only the expansive reading — comprehensive waiver, indefinite duration, all contexts. Epsilon here is authored for the standing arrangement under contest, the beta-waiver practice as this reading holds it fully operative, not for either sibling's bounded regime."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary_contest",
+      "question": "This constraint is the expansive_shield_reading of the beta_designation_doctrine kernel; the irreducible structural question is which boundary rule governs the beta waiver — comprehensive and indefinite (this reading), time-bounded to a genuine testing phase (narrow_warning_reading), or categorically unavailable for critical systems (severity_carve_out_reading)? The disagreement between readings is located exactly at the waiver's duration and severity boundaries.",
+      "resolution_mechanism": "Doctrinal adjudication or legislation fixing the waiver's duration and severity boundaries; the sibling stories model the alternative boundary rules and their divergent epsilon values.",
+      "impact": "Under narrow_warning_reading the victim set regains recourse after any genuine testing phase and epsilon drops sharply; under severity_carve_out_reading life-safety and financial harm leave the transfer entirely. Both siblings shrink this constraint's victim set and move its classification toward tangled_rope or rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the beta_designation_doctrine kernel; the contest lives at the waiver's duration and severity boundaries."
+    },
+    {
+      "id": "click_through_consent_validity",
+      "question": "Does click-through acceptance of a comprehensive, indefinite beta waiver constitute assent capable of bearing the full liability transfer, or is it an unconscionable adhesion term that fails reasonable-expectations review?",
+      "resolution_mechanism": "Unconscionability and reasonable-expectations outcomes across jurisdictions; unfair-terms rulings by consumer-protection authorities.",
+      "impact": "If assent fails, the waiver loses enforcement and the constraint degrades toward an inertial label (piton drift with high theater_ratio); if it holds, the snare structure is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the consent mechanism can bear the comprehensive waiver's legal weight."
+    },
+    {
+      "id": "genuine_testing_vs_production_use",
+      "question": "What fraction of beta-labeled deployments are genuine testing-phase use versus de facto production use running under a retained label?",
+      "resolution_mechanism": "Deployment telemetry, vendor release histories, and industry surveys of beta-label duration and usage patterns.",
+      "impact": "Drives theater_ratio: if most labeled use is production, the testing function is cover and theater drift accelerates; if testing is substantial, part of the measured extraction is the price of real coordination and the tangled_rope reading strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The functional-versus-performative split of beta-label activity."
+    },
+    {
+      "id": "third_party_waiver_reach",
+      "question": "Does the all-contexts rule actually reach harms to non-consenting third parties, or do privity limits and tort duties keep them outside the waiver's coverage?",
+      "resolution_mechanism": "Case law on disclaimers asserted against third parties — privity limits, tort preemption of contractual waivers for physical harm, and indemnification structures that route third-party claims back to vendors.",
+      "impact": "If privity blocks third-party application, involuntary_third_parties exit the victim set and epsilon falls materially; if waiver-plus-indemnification structures reach them, the catastrophic-harm transfer stands and extraction stays high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the waiver's scope extends to the non-consenting catastrophic-loss tail."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__narrow_warning_reading",
+      "beta_designation_doctrine__severity_carve_out_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'beta disclaimer' decomposes into three structurally distinct constraints over one kernel (beta_designation_doctrine): the expansive shield reading (this file — comprehensive waiver, indefinite duration, all contexts; high epsilon; victims include users and non-consenting third parties), the narrow_warning_reading (time-bounded testing disclosure preserving base product liability; bounded epsilon), and the severity_carve_out_reading (waiver categorically unavailable for critical systems; bounded epsilon). The readings differ at the waiver's boundaries — duration and severity scope — and that is where the epsilon divergence lives. The narrow_warning_reading is the upstream family member, closest to the doctrine's original testing-disclosure function; the expansive reading is the stretched downstream form that cites the same disclosure rationale to justify the unbounded transfer. Each file links the others via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.48
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "contractual_risk_allocation_autonomy",
+    "drift_state": {
+      "moment": "contemporary_consumer_protection_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "severity_carve_out_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "beta_disclosure_constitutes_informed_risk_assumption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "contracting_parties_may_allocate_all_defect_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "comprehensive_waivers_maximize_testing_and_innovation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

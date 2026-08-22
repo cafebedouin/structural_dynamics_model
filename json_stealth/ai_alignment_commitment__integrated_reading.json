@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_commitment__integrated_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aic_ir",
+    "story_uid": "a154dc26-e1ae-45a6-8455-abbe73e75a6c"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.6,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Siloed Alignment Practice Assessed Under the Integrated Reading",
+    "topic_domain": "technology governance/AI ethics/risk assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontier_lab_safety_divisions",
+      "fairness_audit_industry",
+      "ai_funding_institutions"
+    ],
+    "victims": [
+      "marginalized_user_populations",
+      "future_persons",
+      "integrated_alignment_researchers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_funding_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Administers philanthropic and public research portfolios bucketed into separate AI-safety and AI-ethics/fairness programs, each with its own call text, review panel, and success metrics. Cross-cutting proposals routinely fail the eligibility screen of both buckets. Moving to integrated funding would mean dismantling established program categories and renegotiating with both grantee communities; the institutions themselves bear little of the cost of fragmented attention."
+    },
+    {
+      "name": "frontier_lab_safety_divisions",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Staff the control, robustness, and misuse-prevention teams inside frontier AI labs. Headcount, prestige, and internal leverage rest on alignment being framed as a technical control problem owned by their discipline. Researchers who drift toward justice questions tend to be reassigned out of the safety track; abandoning the framing altogether would forfeit the professional identity and career capital built inside it."
+    },
+    {
+      "name": "fairness_audit_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Consultancies, audit shops, and academic groups that measure and certify deployed systems for bias and disparate impact. Revenue and citation streams depend on fairness remaining a separately procured service with its own standards and liability regime; absorbing control questions would dissolve the niche that defines the firms and the field."
+    },
+    {
+      "name": "marginalized_user_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Communities that absorb the present-day failures of deployed systems — discriminatory lending decisions, surveillance miscalibration, wrongful content-filter flags — while the majority of alignment funding chases longer-horizon control risks. They hold no seat in lab roadmapping or grant review; their recourse is after-the-fact complaint or litigation against systems they did not choose."
+    },
+    {
+      "name": "future_persons",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "People not yet alive who will inherit whatever control properties today's systems lock in. Every budget cycle that allocates alignment attention exclusively to present-day audits leaves their exposure unrepresented; they appear on no review panel, hold no veto, and cannot exit the arrangements made on their behalf."
+    },
+    {
+      "name": "integrated_alignment_researchers",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers working across both problem classes — dual-use dynamics, bias inside safety classifiers, justice implications of containment policy. Their papers fit neither community's flagship venues cleanly, their grant applications fail both buckets' eligibility screens, and hiring committees in each specialty discount the half of the portfolio that belongs to the other."
+    },
+    {
+      "name": "community_advocacy_orgs",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Civil-society organizations documenting deployment harms and campaigning for affected communities. They request seats in safety evaluations and red-team exercises and are generally admitted only as consulted outsiders after design decisions are already made."
+    },
+    {
+      "name": "ai_governance_standards_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Standards consortia and advisory councils drafting evaluation frameworks for advanced AI systems. They take input from both communities, watch the boundary's effect on coverage gaps, and can recommend integrated assessment requirements, but they control no research funding."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Divides scarce alignment expertise between two deep specializations — control/robustness research and bias/justice auditing — so that each develops tools, metrics, benchmarks, and review communities the other cannot easily replicate.",
+    "transfer_function": "Moves funding, talent, and publication attention away from generalist or integrated alignment work and into the two specialist pipelines; moves the residual costs — unmitigated bias harms today, unmitigated capability risks later — onto populations with no seat in either pipeline.",
+    "absent_voices": "Marginalized user populations have no seat in frontier-lab roadmapping; future persons have no seat anywhere; community advocacy organizations sit outside both grant review and conference programming; integrated researchers are scattered along the margins of both communities rather than seated in either.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the siloed structure vanished overnight, funders would re-bucket portfolios within a budget cycle, merged review tracks and hybrid roles would proliferate, and the two specialist communities would lose the protected funding lines and distinct identities the boundary maintains; deployment decisions would face combined control-and-justice review instead of sequential or absent review.",
+    "founding_problem": "When both fields scaled in the early 2010s, expertise was genuinely thin: too few qualified researchers to staff rigorous control research and rigorous bias auditing simultaneously, so institutions specialized and built separate pipelines, each treating the other's problem class as either speculative or parochial.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The specialist communities attest that scarcity persists and justifies triage. Corroborating sources outside the benefiting parties — national AI advisory reports recommending integrated assessment frameworks, science-of-science studies of funding fragmentation, and published incident audits cataloguing harms each pipeline failed to catch — attest that the scarcity is now partly manufactured by portfolio design, and affected-community documentation attests the justice half was never adequately resourced at all."
+  },
+  "gain_flow": "frontier_lab_safety_divisions",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the kernel ai_alignment_commitment. Would instantiating safety_control_reading or ethics_justice_reading instead produce a different victim set and a different epsilon for the same underlying commitment?",
+      "resolution_mechanism": "Comparative classification across the three sibling stories: the safety reading narrows the victim set to future persons exposed to loss-of-control; the justice reading narrows it to present marginalized populations; the integrated reading carries both. Divergent computed types across the family locate the disagreement.",
+      "impact": "Under a sibling reading, epsilon shifts materially (each sibling prices the other's neglected harm class as outside the constraint), and the tangled_rope verdict here would not transfer — the family exists precisely because the readings are not one constraint measured three ways.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which reading of the alignment kernel is instantiated, and what the siblings would change."
+    },
+    {
+      "id": "scarcity_real_or_manufactured",
+      "question": "Is the expert scarcity that ostensibly forces triage between control and justice work genuine, or is it produced by the portfolio architecture that separates the two funding streams?",
+      "resolution_mechanism": "Longitudinal funding-flow analysis tracking whether integrated proposals are rejected for quality or for category ineligibility, plus counterfactual evidence from jurisdictions or funders that ran integrated programs and retained specialist depth.",
+      "impact": "If scarcity is manufactured, the coordination defense of the silo weakens, effective extraction rises, and the arrangement slides toward snare; if genuine, part of the measured extraction is the unavoidable price of depth under constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding scarcity is a fact of the world or an artifact of the arrangement."
+    },
+    {
+      "id": "intersection_harm_attribution",
+      "question": "What fraction of realized harms — biased deployments, unmitigated capability risks, interaction failures such as biased safety classifiers — is attributable to silo neglect rather than to irreducible technical uncertainty?",
+      "resolution_mechanism": "Structured incident audits coding each harm by which community's existing tools would plausibly have caught it, reviewed by assessors outside both communities.",
+      "impact": "Higher attribution raises epsilon and strengthens the case for mandated integration; lower attribution supports the specialization-efficiency defense and lowers the extractive reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much of the harm record the silo itself caused, as opposed to the underlying difficulty of the problems."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is specialist resistance to integration primarily structural (eligibility screens, review gatekeeping, hiring signals) or internalized (professional identities that make cross-work feel like defection)?",
+      "resolution_mechanism": "Post-exit trajectory study: track researchers who leave specialist communities and observe whether anti-integration stances persist once the gatekeeping incentives are removed.",
+      "impact": "If a substantial share is internalized, effective suppression exceeds the structural measure — the boundary travels inside the agents and survives formal reform of funding categories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized mechanism behind the enforced boundary."
+    },
+    {
+      "id": "kernel_codification_framing",
+      "question": "Is the alignment kernel best modeled as distributed (an ambiguous commitment with no adjudicating authority, as authored here) or as quasi-formalized around a small canon of landmark alignment proposals that function as de facto authoritative texts?",
+      "resolution_mechanism": "Citation-genealogy analysis: if a handful of papers operate as load-bearing references that practitioners treat as settling what alignment means, the quasi-formalized framing fits; if meaning is negotiated community-by-community, distributed fits.",
+      "impact": "Under the quasi-formalized framing, the commitment system acquires designated interpreters and the drift analysis reroutes through interpretive-layer dynamics rather than diffuse negotiation, changing the computed CS pattern.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative framings of how the alignment kernel is codified and adjudicated."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "safety_control_reading",
+      "ethics_justice_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'AI alignment' decomposes into three structurally distinct constraints corresponding to the three declared readings of the kernel ai_alignment_commitment. The safety_control_reading instantiates a constraint whose victim set is future persons exposed to loss-of-control; the ethics_justice_reading instantiates one whose victim set is present marginalized populations; this integrated_reading instantiates one whose victim set is both, priced by the siloed arrangement that separates the other two. The epsilon values differ across the family because each reading assesses the standing arrangement by its own lights — the readings are not one constraint measured three ways. The two specialist readings are upstream in the sense that their institutional products (control benchmarks, fairness audit standards) are cited as evidence that the separated pipelines suffice; this reading exerts structural pressure on both by contesting their exclusivity premises."
+  },
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the institutional practice of AI alignment as it is actually organized: separate funding buckets, separate conferences, separate career ladders, and separate vocabularies for control problems (loss of control, misuse, robustness) and justice problems (bias, disparate impact, deployment harm). This story instantiates the integrated reading of the kernel ai_alignment_commitment, which holds that alignment requires simultaneous attention to both problem classes as non-exclusive components of one obligation. Epsilon's referent is that siloed arrangement, assessed by the integrated reading's own lights — not the integrated arrangement the reading would put in place. On that referent the reading finds substantial extraction: duplicated infrastructure, systematically uncovered intersection harms, and the pricing of residual risk onto parties with no seat. The sibling readings (safety_control_reading, ethics_justice_reading) are separate constraints in separate files, linked through network.affects_constraints; their contest is recorded in omegas, not averaged into this story's numbers.",
+    "key_agents": [
+      "- ai_funding_institutions: Agenda setter (institutional/arbitrage) — administers the separate portfolios whose category boundaries constitute the constraint; bears almost none of its costs",
+      "- frontier_lab_safety_divisions: Primary beneficiary (powerful/identity_locked) — collects headcount, prestige, and internal leverage from the control-only framing",
+      "- fairness_audit_industry: Secondary beneficiary (organized/identity_locked) — collects revenue and citation streams from fairness remaining a separately procured service",
+      "- marginalized_user_populations: Primary target (powerless/trapped) — absorbs present-day deployment harms while alignment attention flows elsewhere",
+      "- future_persons: Co-target (powerless/trapped, civilizational horizon) — inherits whatever control properties the under-resourced side fails to secure",
+      "- integrated_alignment_researchers: Target of the enforcement machinery (moderate/constrained) — pays career costs for crossing the boundary the constraint maintains",
+      "- community_advocacy_orgs: Excluded voice (organized/constrained) — documents harms, admitted only as consulted outsiders",
+      "- ai_governance_standards_bodies: Analytical observer (institutional/analytical) — sees the coverage gaps, controls no funding"
+    ],
+    "logic_rationale": "Extraction is 0.65 because the silo misallocates a large share of total alignment effort: infrastructure is duplicated, intersection harms fall between the two pipelines' mandates, and each community systematically prices its uncovered risks onto the other's jurisdiction and onto unseated parties. Suppression is 0.60 and is a raw structural property, unscaled by power or scope — it reflects the enforcement machinery itself: eligibility screens that reject cross-cutting grants in both buckets, reviewer-pool composition, hiring signals, and reputational sanction against integrators. Theater is 0.41 and rising: joint statements, responsible-AI summits, and ethics boards without authority now consume a meaningful share of boundary-crossing energy while changing little. Accessibility collapse is 0.48 — integrated alternatives exist and are visible (hybrid roles, interdisciplinary venues) but carry measurable penalties, so alternatives persist rather than collapsing as they would under a natural law. Resistance is 0.58: integrators keep publishing, some funders experiment with pooled calls, and the boundary requires continuous maintenance rather than passive acceptance. The three measurement series share one grid (points 0, 3, 6, 9, 12, 15) so every metric is authored at every examined time point; all trajectories rise monotonically — extraction accumulates as deployed-system stakes grow, theatrical integration substitutes for functional integration, and enforcement hardens as integration pressure mounts. Identity-lock dynamics matter at the beneficiary seats: safety divisions are fused with the existential-steward identity and audit firms with the civil-rights-technologist identity; if either frame broke, the cost of integration would drop sharply for that seat.",
+    "perspectival_gap": "The payer seats and the beneficiary/agenda seats compute differently from the same structure. From the funding institutions' position the arrangement is a legible, administrable division of labor they built and can defend; from the safety and audit seats it is a protected niche fused with professional identity; from the marginalized-population and future-persons seats it is pure unrepresented exposure; from the integrated-researcher seat it is a gatekeeping regime that taxes exactly the work the moment demands. The engine derives these per-seat classifications from the structural data; the divergence between seats is the finding, not something the authored claim adjudicates.",
+    "directionality_logic": "Beneficiaries (frontier_lab_safety_divisions, fairness_audit_industry, and the funding institutions in their secondary role) sit near the beneficiary end of directionality — the constraint subsidizes them, and their identity_locked exit does not push them toward the target end because they are not targets. The victims sit near the full-target end: marginalized_user_populations and future_persons are powerless and trapped, so their effective extraction is amplified; integrated_alignment_researchers are moderate-power and constrained, targeted by the enforcement layer specifically. The funding institutions' arbitrage-grade exit damps their personal exposure further. No directionality overrides were needed: the beneficiary/victim declarations plus exit options reproduce the structural relationships without correction.",
+    "mandatrophy_analysis": "The tangled_rope classification is what prevents mislabeling in both directions. Reading the arrangement as pure rope (specialization is just efficient division of labor) would erase the asymmetric extraction — the unseated parties who carry the residual risk and the integrators taxed by the boundary. Reading it as pure snare (the coordination story is mere cover) would erase the genuine coordination value: deep control research and deep audit methodology are real goods that shallow generalism would not produce. The founding problem — expertise too thin to staff both fronts — is contested rather than dead: specialists attest it lives, external corroboration (advisory-body reports, funding-fragmentation studies, incident audits) attests it is now partly manufactured by the portfolio design itself. Because the status is contested rather than dead, the mismatch consumer does not fire a zombie flag, but the rising theater_ratio series marks the arrangement as accumulating the raw material of a later piton phase if integration continues to be performed rather than practiced.",
+    "kernel_context": "This story is the integrated_reading of the kernel ai_alignment_commitment. The kernel — the commitment that advanced AI systems be aligned — is construed by three live readings: the safety_control_reading (alignment means preventing catastrophic loss of control), the ethics_justice_reading (alignment means preventing reproduction of social bias and present-day harm), and this integrated_reading (alignment requires simultaneous attention to both, as non-exclusive). The integrated reading's foundational axiom, alignment_problems_non_exclusive, directly negates the exclusivity premise built into each sibling's construal of what alignment means, so within any single normative framework this reading forecloses both siblings — a party holding it cannot coherently hold that alignment is constituted by either problem class alone. The siblings remain live positions held by other parties; the contest among readings is carried by the omega variables, and the family is linked through network.affects_constraints. Drift is authored from this reading's own epistemic position: its reference frame (unified_stewardship_mandate) is intact as an ideal, but contemporary practice has substantially departed from it, and the departure is openly acknowledged — integration is rhetorically endorsed nearly everywhere and institutionally enacted almost nowhere."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "unified_stewardship_mandate",
+    "drift_state": {
+      "moment": "contemporary_deployment_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "safety_control_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "ethics_justice_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "alignment_problems_non_exclusive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "silo_neglect_compounds_harms",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

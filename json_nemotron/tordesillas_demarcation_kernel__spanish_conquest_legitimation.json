@@ -1,0 +1,332 @@
+{
+  "header": {
+    "constraint_id": "tordesillas_demarcation_kernel__spanish_conquest_legitimation",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_tordesillas_demarcation_kernel__spanish_conquest_legitimation",
+    "measurement_id_prefix": "tordesillas_spanish_conquest",
+    "story_uid": "377f7072-1a66-4f1e-8c4f-200688d127c6"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.92,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Papal Grant as License for Spanish Conquest West of Tordesillas Line",
+    "topic_domain": "international_law/colonial_history/sovereignty_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "spanish_colonial_administration",
+      "spanish_crown_treasury",
+      "encomenderos"
+    ],
+    "victims": [
+      "indigenous_populations_west_of_line"
+    ],
+    "vindicated_propositions": [
+      "papal_temporal_authority_over_infidels",
+      "discovery_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1494,
+    "end": 1820
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the Spanish conquest legitimation reading a distinct constraint from the Portuguese exploration legitimation reading, or two angles on the same structural mechanism?",
+      "resolution_mechanism": "Compare beneficiary/victim structures and extractiveness profiles: Spanish reading has indigenous populations as primary victims and encomienda as extraction mechanism; Portuguese reading has rival European powers as excluded parties and exploration monopoly as benefit. Different ε referents (standing arrangements under contest) confirm distinct constraints per ε-invariance.",
+      "impact": "If distinct, each reading gets its own classification (snare vs. rope/tangled_rope). If same, a single constraint story must accommodate both victim sets — unlikely given divergent extraction mechanisms.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system kernel decomposition: this constraint is the spanish_conquest_legitimation reading of the tordesillas_demarcation_kernel; the portuguese_exploration_legitimation reading is a sibling constraint."
+    },
+    {
+      "id": "indigenous_resistance_agency",
+      "question": "Does the measured resistance (0.65) adequately capture organized indigenous military, legal, and cultural resistance, or does the suppression apparatus obscure its scale?",
+      "resolution_mechanism": "Historiographic recovery of indigenous archival sources, archaeological evidence of sustained rebellions, and legal petitions to Spanish courts (e.g., Valladolid debate, requerimiento refusals).",
+      "impact": "If resistance is systematically undercounted, the constraint's snare classification is reinforced — high suppression meeting higher-than-recorded resistance is the snare signature. If resistance was genuinely low after initial contact, the constraint's persistence mechanism shifts toward demographic collapse rather than active suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Resistance measurement in colonial contexts where the suppressed population's records were destroyed or never created."
+    },
+    {
+      "id": "theater_of_christianization",
+      "question": "Is the theater_ratio (0.25) an accurate reflection of genuine evangelical effort vs. extraction cover, or does the theological frame genuinely motivate institutional behavior beyond rent-seeking?",
+      "resolution_mechanism": "Compare resource flows: missionary staffing and funding vs. encomienda revenue extraction; track institutional persistence of missions after economic value extraction exhausted.",
+      "impact": "If evangelical effort was substantial and independent of extraction, theater_ratio should be lower and the constraint edges toward tangled_rope (genuine coordination function: religious integration). If conversion was primarily a legal prerequisite for encomienda legitimacy, theater_ratio is higher and snare classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the religious justification is a coordination function or extraction cover."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1494,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1520,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1570,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1820,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1494,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1520,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1570,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1820,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1494,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1520,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1570,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.93
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.94
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1820,
+      "value": 0.92
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 1494 Treaty of Tordesillas, mediated by Pope Alexander VI, divided the non-European world between Spain and Portugal along a meridian 370 leagues west of Cape Verde. The Spanish reading treats the papal bull Inter caetera (1493) and the treaty as a grant of dominion — not merely a European non-interference agreement — authorizing conquest, settlement, and forced conversion of indigenous peoples west of the line. This reading powered the requerimiento (legal ritual demanding submission), the encomienda system (forced labor grants), and the Patronato Real (crown control over church appointments in the Indies). The extraction is material (silver, labor, land) and spiritual (forced conversion as legal prerequisite for 'just' war). The Portuguese reading, by contrast, treats the same instruments as confirming Portugal's exploration monopoly east of the line and excluding Spanish rivals — a coordination mechanism among European powers with minimal indigenous victim structure in the Portuguese zone at this period. The two readings are distinct constraints sharing a kernel; they have different beneficiary/victim structures, different extractiveness profiles, and different temporal trajectories.",
+    "key_agents": [
+      "spanish_colonial_administration: Primary agenda-setter (institutional/arbitrage) — writes and enforces the laws of the Indies, collects the quinto real, appoints officials",
+      "spanish_crown_treasury: Primary beneficiary (institutional/arbitrage) — receives 20% of all precious metals and tribute; the extraction flows here",
+      "encomenderos: Secondary beneficiary / local enforcer (organized/constrained) — hold grants of indigenous labor and tribute; their wealth depends on the constraint's enforcement",
+      "indigenous_populations_west_of_line: Primary victims (powerless/trapped) — subjected to forced labor, tribute, displacement, epidemic disease, and forced conversion; exit options structurally eliminated by military conquest and legal disablement",
+      "missionary_orders: Dual-positioned (organized/constrained) — genuine evangelical mission but institutionally dependent on Patronato Real; their presence legitimizes the conquest while some members (Las Casas, Montesino) become internal critics",
+      "portuguese_crown: Excluded rival (institutional/arbitrage) — holds the sibling reading; its interest is the eastern hemisphere monopoly, not the western conquest mechanism",
+      "papacy: Observer / authority ground (institutional/analytical) — issued the founding bulls; later popes (Paul III, Sublimis Deus 1537) attempted to limit the reading's excesses without retracting the grant"
+    ],
+    "logic_rationale": "Base extractiveness (0.88) reflects the scale of material transfer: the quinto real alone moved ~180 tons of silver to Seville 1503-1660; encomienda tribute in kind and labor was the primary extraction mechanism for the first century. Suppression (0.92) is near-maximum: the requerimiento ritualized surrender; refusal triggered 'just war' enslavement; indigenous legal personhood was denied until the 1537 bull (which was ignored in practice); the Laws of the Indies (1542, 1573) regulated but did not dismantle the extraction. Theater ratio (0.25) captures the genuine but subordinated evangelical effort: missions were real and costly, but their legal function was to certify conversion as a condition for 'peaceful' incorporation — the conversion certificate was the administrative gateway to encomienda assignment. Accessibility collapse (0.85): alternatives (indigenous sovereignty, trade relations, voluntary conversion) were militarily and legally foreclosed. Resistance (0.65) is substantial but fragmented: major rebellions (Mixtón, Chichimeca, Pueblo Revolt, Tupac Amaru) and persistent legal resistance in Spanish courts, but demographic collapse (90%+ mortality in many regions) and military asymmetry prevented coordinated overthrow.",
+    "directionality_logic": "The Spanish Crown and colonial administration are full beneficiaries (d ≈ 0.05): they collect extraction, write the rules, hold arbitrage-grade exit (could abandon colonies but chose not to). Encomenderos are partial beneficiaries (d ≈ 0.25): they extract locally but depend on crown enforcement; their exit is constrained (land grants non-transferable, revocable). Missionary orders sit near symmetric (d ≈ 0.5): they invest real resources in conversion but gain institutional position and spiritual authority. Indigenous populations are full targets (d ≈ 0.95): identity-locked (conquest fuses their political existence to Spanish sovereignty), trapped (no exit from the spatial scope of the constraint), and the primary source of extracted value. Portuguese Crown is excluded from this constraint's beneficiary/victim structure — its reading operates on a different spatial scope (east of line) with a different victim set (minimal at this period).",
+    "perspectival_gap": "From the Spanish administrative seat, the constraint appears as a tangled_rope: genuine coordination problems (governing vast territories, integrating diverse populations, preventing Portuguese incursion) solved by a system that extracts heavily but provides administrative order. From the indigenous seat, it is a pure snare: the coordination story is cover; the system's persistence depends on suppressing indigenous political forms and extracting labor/land. The missionary seat experiences the constraint as a scaffold: a transitional structure meant to produce Christian societies that would eventually be self-governing (the 'republic of Indians' ideal) — but the sunset never arrived. The engine computes these seat divergences from the structural data; the single claimed_type (snare) represents the analytical observer's assessment of the constraint's dominant structural character.",
+    "mandatrophy_analysis": "The founding problem (papal mediation of Iberian rivalry to prevent European war over Atlantic claims) was substantially resolved by 1529 (Treaty of Zaragoza). The constraint persisted for 300 years after its founding problem died, maintained by the extraction machinery it built (encomienda, silver fleets, colonial bureaucracy). This is mandatrophy in its purest form: the arrangement outlived its justification by centuries, and the extraction became the function. The mandate was not resolved — it was inverted: the papal grant became the license for an extraction system that the papacy itself later condemned but could not dismantle.",
+    "kernel_context": "This constraint is the spanish_conquest_legitimation reading of the tordesillas_demarcation_kernel. The kernel is the 1493-1494 papal-Iberian settlement dividing the non-European world. The sibling reading is portuguese_exploration_legitimation, which treats the same instruments as confirming Portugal's exploration monopoly east of the line and excluding European rivals. The Spanish reading has high extractiveness (indigenous populations as victims, encomienda as mechanism); the Portuguese reading at this period has low extractiveness (European rivals excluded, minimal indigenous subjugation east of line until later Brazilian expansion). The two readings coexist as live positions held by different imperial administrations; neither forecloses the other within a single framework because the kernel's ambiguity (dominion vs. exploration rights) was structurally useful to both crowns."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "tordesillas_demarcation_kernel__portuguese_exploration_legitimation",
+      "requerimiento_legal_ritual",
+      "encomienda_system",
+      "patronato_real",
+      "laws_of_the_indies"
+    ],
+    "dual_formulation_note": "This constraint and portuguese_exploration_legitimation are sibling readings of the tordesillas_demarcation_kernel. The Spanish reading instantiates a high-extraction snare targeting indigenous populations; the Portuguese reading instantiates a lower-extraction coordination mechanism among European powers (at least in its initial period). The ε values differ by >0.5, confirming they are distinct constraints per ε-invariance. They are linked via affects_constraints because the Spanish conquest legitimation reading cites the Portuguese exclusion as partial justification for its own western monopoly, and the Portuguese reading's eastern monopoly was the quid pro quo for Spanish western claims."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "spanish_colonial_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Writes and enforces the Laws of the Indies, appoints viceroys and audiencias, collects the quinto real (20% of precious metals), and administers the encomienda system. The administration's legitimacy and revenue depend entirely on the papal grant's interpretation as dominion. It could theoretically abandon the colonies (arbitrage exit) but the extraction is too valuable; the constraint is maintained by choice, not necessity."
+    },
+    {
+      "name": "spanish_crown_treasury",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Receives the quinto real and other colonial revenues — ~180 tons of silver 1503-1660, plus customs duties and tribute. The treasury is the ultimate sink of the constraint's extraction. It has arbitrage-grade exit (could renounce claims) but the revenue stream is foundational to Habsburg and Bourbon fiscal-military power."
+    },
+    {
+      "name": "encomenderos",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold grants of indigenous labor and tribute in exchange for 'protection' and Christianization. They extract locally but depend on crown enforcement to maintain grants; they pay taxes and military service to the crown. Their exit is constrained: grants are non-transferable, revocable, and tied to residence; they cannot easily liquidate and leave."
+    },
+    {
+      "name": "indigenous_populations_west_of_line",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Subjected to forced labor (encomienda, mita, repartimiento), tribute payments in kind and specie, land dispossession, forced relocation (reducciones), and forced conversion. Legal personhood denied until 1537 (Sublimis Deus), and the bull was ignored in practice. No exit: military conquest destroyed independent polities; disease demolished demographic capacity to resist; Spanish law forbade indigenous departure from assigned pueblos. Identity-locked: the conquest fused their political existence to Spanish sovereignty — 'subjects of the king' replaced 'nations' as their legal status."
+    },
+    {
+      "name": "missionary_orders",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Franciscans, Dominicans, Jesuits, Augustinians: run missions, schools, hospitals; produce indigenous-language grammars and catechisms; some (Las Casas, Montesino, Sahagún) document abuses and advocate reform. They invest real resources and personnel — genuine evangelical effort. But they operate under Patronato Real: crown appoints bishops, funds missions, controls entry. Their institutional position depends on the constraint; their critiques are internal, not structural. Exit is constrained: leaving means abandoning converts and infrastructure; the crown can expel orders (Jesuits 1767)."
+    },
+    {
+      "name": "portuguese_crown",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Holds the sibling reading (portuguese_exploration_legitimation). Its interest is the eastern hemisphere monopoly confirmed by the same kernel. It is excluded from the Spanish conquest mechanism — not a victim of it, but a rival claimant to the kernel's authority. The Portuguese reading's beneficiary is the Portuguese crown; its victim set at this period is minimal (Brazilian indigenous subjugation intensifies later, under a different constraint story)."
+    },
+    {
+      "name": "papacy",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Issued the founding bulls (Inter caetera, Eximiae devotionis). Later popes attempted to limit excesses: Paul III's Sublimis Deus (1537) affirmed indigenous rationality and banned enslavement; Urban VIII's Commissum nobis (1639) condemned slavery. But the papacy never retracted the dominion grant, and the Patronato Real gave the Spanish crown control over church appointments in the Indies — the papacy became a captive legitimator. Its seat is analytical: it sees the full structure but cannot change it without undermining its own historical authority."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Mediated the Iberian rivalry over Atlantic claims to prevent European war; provided a legal framework for Spanish governance of vast territories (the Laws of the Indies); established a nominally universal Christian order in the Americas replacing indigenous political forms.",
+    "transfer_function": "Moves land, labor, and precious metals from indigenous populations to Spanish crown treasury (quinto real), encomenderos (tribute/labor), and missionary orders (indigenous labor for mission infrastructure). Moves spiritual authority from indigenous cosmologies to Catholic Church (forced conversion as legal prerequisite). Moves political sovereignty from indigenous polities to Spanish crown (requerimiento ritual).",
+    "absent_voices": "Indigenous political authorities (tlatoani, Inca, caciques) were physically present at first contact but structurally excluded from the treaty negotiation and the legal framework it authorized. Their objections were recorded only in Spanish transcripts (requerimiento responses, later legal petitions). African populations (later brought as slaves) were never consulted. The Portuguese crown was a party to the treaty but not to the Spanish conquest reading's victim structure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the papal grant's interpretation as conquest license vanished overnight: the legal basis for requerimiento, encomienda, and Patronato Real collapses; indigenous polities could claim legal sovereignty under natural law (Vitoria's arguments); the Spanish crown would lose its primary legitimating title; the silver fleet system would lose its legal foundation; the entire colonial administrative structure would require reconstruction on a new basis (conquest by force alone, or negotiated treaties). The world rearranges because the constraint is the keystone of the Spanish imperial legal order in the Americas.",
+    "founding_problem": "Prevent war between Spain and Portugal over competing Atlantic discoveries; provide papal mediation that both Catholic monarchs would accept; replace Portuguese-sponsored exploration monopoly with a bilateral division recognized by the highest Christian authority.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (Iberian rivalry mediation) was resolved by 1529 Treaty of Zaragoza, which completed the global division. The Spanish crown's own historians (Herrera, Solís) and the Portuguese chronicles (Barros, Correa) attest the rivalry was settled. The constraint persisted 300 years after — the Council of the Indies, the Laws of the Indies, the Patronato Real, the silver fleet system all operated long after the Iberian war risk vanished. No non-beneficiary source attests the founding problem remained live; the continuation is attested only by the extraction machinery's beneficiaries."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "tordesillas_demarcation_kernel__portuguese_exploration_legitimation"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "portuguese_exploration_legitimation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "papal_grant_confers_full_dominion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "infidel_sovereignty_extinguished_by_christian_discovery",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "alexandrine_partition_1493",
+    "drift_state": {
+      "moment": "post_valladolid_debate_1550",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

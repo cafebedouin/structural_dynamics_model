@@ -1,0 +1,522 @@
+{
+  "header": {
+    "constraint_id": "salic_prohibition__sovereign_override_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_salic_prohibition__sovereign_override_reading",
+    "measurement_id_prefix": "salic_sov",
+    "story_uid": "8e07f40e-737a-44e8-922f-ccf472dd030d",
+    "created_at": "2026-06-15T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.65,
+    "claimed_type": "rope",
+    "human_readable": "Salic Prohibition as Revocable Positive Law (Sovereign Override Reading)",
+    "topic_domain": "constitutional_law/dynastic_succession/political_history",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "reigning_monarch",
+      "dynastic_house",
+      "pragmatic_sanction_beneficiaries"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "sovereign_legislative_supremacy",
+      "positive_law_revocability",
+      "pragmatic_sanction_legitimacy",
+      "dynastic_continuity_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Is the Salic prohibition a kernel admitting multiple readings, and does this reading correctly identify its structural relationship to the immutable_mandate_reading and cognatic_reversion_reading?",
+      "resolution_mechanism": "Comparative analysis of how each reading instantiates the constraint: which stakeholder seats experience which types, where extraction/suppression metrics diverge, and whether the readings foreclose or merely coexist.",
+      "impact": "If the readings are distinct constraints with different ε values and stakeholder structures, the kernel is a label for a constraint family, not a single constraint. This reading's classification as rope depends on its structural independence from the snare-class immutable_mandate_reading and the tangled_rope-class cognatic_reversion_reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading is a structurally distinct constraint from its sibling readings of the same kernel."
+    },
+    {
+      "id": "sovereign_override_authenticity",
+      "question": "Does the sovereign override (Pragmatic Sanction) represent genuine legislative authority or a constitutional fiction masking continued Salic constraint?",
+      "resolution_mechanism": "Historical analysis of the Pragmatic Sanction's enactment, acceptance, and subsequent operation: whether it was recognized as binding by domestic estates, foreign powers, and subsequent monarchs, or whether it required continuous enforcement against Salic loyalists.",
+      "impact": "If the override was a fiction, the constraint operates as immutable_mandate (snare) despite the sovereign_override framing. If genuine, the constraint is revocable positive law (rope) with the sovereign as agenda_setter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the Pragmatic Sanction actually revoked Salic Law or merely suspended it under duress."
+    },
+    {
+      "id": "extraction_referent_stability",
+      "question": "Is the extractiveness of this reading measured against the standing Salic arrangement (high extraction for excluded females) or the post-override arrangement (low extraction)?",
+      "resolution_mechanism": "Apply the ε-invariance principle: the referent is the standing arrangement under contest, assessed by THIS reading's lights. This reading treats the Pragmatic Sanction as the legitimate current arrangement, so extraction should be low. The immutable_mandate_reading would measure high extraction against the same referent.",
+      "impact": "Confirms ε is reading-indexed: different readings of the same kernel author different ε for the same referent. Prevents conflating the kernel's contested status with a single constraint's metrics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading's low ε correctly uses the post-override arrangement as referent per kernel-reading rules."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1713,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1720,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1740,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1713,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1720,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1740,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1713,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1720,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1740,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 1713,
+    "end": 1789
+  },
+  "coercion_grid": {
+    "t0": 1713,
+    "tn": 1789,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1713,
+        "value": 0.9,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1789,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1713,
+        "value": 0.8,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1789,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1713,
+        "value": 0.85,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1789,
+        "value": 0.18,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1713,
+        "value": 0.75,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1789,
+        "value": 0.22,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1713,
+        "value": 0.85,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1789,
+        "value": 0.1,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1713,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1789,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1713,
+        "value": 0.75,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1789,
+        "value": 0.12,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1713,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1789,
+        "value": 0.18,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1713,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1789,
+        "value": 0.08,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1713,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1789,
+        "value": 0.12,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1713,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1789,
+        "value": 0.1,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1713,
+        "value": 0.5,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1789,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1713,
+        "value": 0.75,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1789,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1713,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1789,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1713,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1789,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1713,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1789,
+        "value": 0.75,
+        "basis": "observed"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the SOVEREIGN OVERRIDE READING of the Salic prohibition kernel. Under this reading, the Salic Law is positive law enacted by Frankish kings, revocable by the sovereign's legislative authority. The 1713 Pragmatic Sanction of Charles VI is the constitutive act: it declares female succession permissible, names his daughter Maria Theresa as heir, and binds the Habsburg lands to this new succession order. Challengers to this arrangement (e.g., Charles Albert of Bavaria, Frederick II of Prussia) are rebels against legitimate authority; the War of Austrian Succession (1740–1748) is a defensive war to protect dynastic continuity established by sovereign act. The constraint's extraction is low because the Pragmatic Sanction removes the exclusionary barrier; its suppression is low because the arrangement is sustained by recognition and treaty, not active coercion of the excluded. The theater ratio is low because the sovereign's legislative act is the functional mechanism, not a performance masking extraction.",
+    "key_agents": [
+      "reigning_monarch: agenda_setter (institutional/analytical) — enacts the Pragmatic Sanction, sets the succession order",
+      "dynastic_house: beneficiary (organized/generational) — gains continuity and legitimacy through the sanctioned heir",
+      "pragmatic_sanction_beneficiaries: beneficiary (organized/biographical) — female heirs and their lines who gain succession rights",
+      "salic_loyalist_estates: excluded (powerful/biographical) — would maintain male-only succession, displaced by the override",
+      "foreign_powers: payer (institutional/biographical) — bear costs of recognizing or contesting the new succession",
+      "constitutional_lawyers: observer (analytical/civilizational) — analyze the legal validity of the sovereign override"
+    ],
+    "logic_rationale": "Base extractiveness (0.25 at interval end) reflects that the Pragmatic Sanction removes the structural barrier to female succession; the constraint no longer extracts succession rights from female heirs. The 1713 measurement (0.70) captures the pre-Sanction Salic regime's high extraction; the drop to 0.30 by 1720 shows the override taking effect. Theater ratio remains low (0.10) because the sovereign's legislative act is the genuine coordination mechanism — no performance of Salic compliance while extracting. Suppression drops from 0.60 to 0.10 as the arrangement shifts from enforced exclusion to recognized succession. Resistance remains moderately high (0.65) because Salic loyalists and foreign powers continue to contest the override's legitimacy, but this is resistance TO the constraint (the override), not resistance BY the constraint. Accessibility collapse is low (0.20) because alternatives (male heirs, elective succession, partition) remain conceptually available even if politically marginalized.",
+    "directionality_logic": "The reigning monarch (Charles VI) is the agenda_setter with d near 0.0 (full beneficiary of legislative authority). The dynastic house and Pragmatic Sanction beneficiaries (Maria Theresa line) are beneficiaries with d ~ 0.2 — they gain succession rights without bearing enforcement costs. Salic loyalist estates are excluded: they would be payers under the old regime but are displaced; their d is ambiguous because they are neither coordinated nor extracted from by the new constraint. Foreign powers are payers (d ~ 0.6) — they bear diplomatic/military costs of recognizing the new succession. Constitutional lawyers are observers (d = 0.5). The engine will compute per-seat χ from these structural positions.",
+    "mandatrophy_analysis": "The founding problem (ensuring male succession in Frankish tribal context) is dead — the Pragmatic Sanction explicitly addresses a new problem: securing dynastic continuity when no male heir exists. The constraint is not a piton because the sovereign actively legislated the change; it is not a snare because no party extracts from the excluded. The mandate is resolved: the arrangement serves its new function (female succession) without atrophying into theater. The high resistance reflects genuine contestation, not extraction.",
+    "kernel_context": "This constraint is the SOVEREIGN OVERRIDE READING of the contested kernel 'salic_prohibition'. Kernel: the Salic Law prohibition on female succession. Sibling readings: (1) immutable_mandate_reading — Salic Law as irrevocable natural/divine law embedded in dynastic constitution (classifies as snare/mountain); (2) cognatic_reversion_reading — Salic Law as Frankish anachronism never properly binding on non-Frankish territories (classifies as tangled_rope). This reading instantiates Salic Law as revocable positive law subject to sovereign legislative authority (classifies as rope). The structural delta: female succession permissible via sovereign act; challengers are rebels; defensive war protects dynastic continuity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "pragmatic_sanction_1713",
+      "war_of_austrian_succession",
+      "salic_prohibition__immutable_mandate_reading",
+      "salic_prohibition__cognatic_reversion_reading"
+    ],
+    "dual_formulation_note": "This reading is one of three in the Salic prohibition constraint family. The immutable_mandate_reading treats Salic Law as irrevocable (high ε, snare/mountain); the cognatic_reversion_reading treats it as inapplicable outside Frankish core (medium ε, tangled_rope); this reading treats it as revocable positive law (low ε, rope). The ε values differ because each reading assesses the standing arrangement under contest by its own lights. They are linked via affects_constraints to enable contamination analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "reigning_monarch",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Charles VI (1711–1740) enacts the 1713 Pragmatic Sanction as an exercise of sovereign legislative authority, declaring his daughter Maria Theresa heir to the Habsburg hereditary lands. He spends his reign securing recognition from domestic estates and foreign powers. His exit from the constraint is analytical: he authored it and could revoke it, but doing so would destroy the dynastic continuity he seeks."
+    },
+    {
+      "name": "dynastic_house",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "The House of Habsburg gains a legitimate succession path through Maria Theresa, avoiding extinction or partition. The dynasty's institutional continuity is the primary coordination benefit. As a collective actor, it can negotiate recognition treaties (arbitrage-grade exit) but its identity is fused with the succession arrangement."
+    },
+    {
+      "name": "pragmatic_sanction_beneficiaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Maria Theresa and her descendants gain succession rights previously denied by Salic Law. Their position depends on the Pragmatic Sanction's recognition; if the arrangement collapses, they lose their claim. Exit is constrained — they cannot easily renounce their dynastic role, but they could marry into other houses."
+    },
+    {
+      "name": "salic_loyalist_estates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Estates and nobles in Habsburg lands who uphold traditional Salic succession. They are excluded from the new arrangement — their preferred succession order is displaced. They can resist (as some did in 1740) but cannot easily exit the sovereign's jurisdiction. Their power is substantial but constrained by the monarch's legislative authority."
+    },
+    {
+      "name": "foreign_powers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Prussia, Bavaria, France, Spain, Saxony — bear diplomatic and military costs of recognizing or contesting the Pragmatic Sanction. They extract territorial concessions (Silesia, Bavaria) in the War of Austrian Succession. Their exit is mobile: they can recognize, contest, or ignore the arrangement based on interest. They are payers because the constraint imposes recognition costs on them."
+    },
+    {
+      "name": "constitutional_lawyers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Jurists (e.g., Pufendorf, Vattel, later scholars) analyze whether sovereign legislative authority can override fundamental dynastic law. They neither collect nor pay; their analytical frame shapes how the constraint is understood across time. Their exit is analytical — they can change their interpretation without material cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the dynastic continuity problem when a monarch lacks male heirs: the sovereign's legislative act designates a female heir and binds the realm to accept her succession, preventing partition, election, or foreign imposition.",
+    "transfer_function": "Moves the succession right from the Salic-prescribed male line (extinct or absent) to the sovereign's designated female line. The transfer is from 'no legitimate heir under Salic Law' to 'legitimate heir by sovereign act.' The cost is borne by foreign powers and Salic loyalists who must recognize the new heir; the benefit accrues to the dynastic house and the designated heir.",
+    "absent_voices": "The hypothetical male heirs who would have succeeded under Salic Law (absent because extinct or never existed). The Frankish tribal assemblies whose custom originated the law (absent because centuries dead). The peasantry and common subjects whose consent was never sought (structurally excluded from dynastic politics).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Pragmatic Sanction vanished overnight, the Habsburg lands would revert to Salic succession — but with no male heir, the result would be partition, elective succession, or war of competing claims. The world rearranges because the constraint is the ONLY thing designating Maria Theresa as heir; without it, the succession is genuinely contested.",
+    "founding_problem": "The Frankish Salic Law (c. 500 CE) was built to solve: preventing fragmentation of the kingdom among multiple heirs and excluding female lines from claiming the throne in a tribal context where military leadership was male-coded.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem is dead per the Pragmatic Sanction's own preamble (Charles VI, 1713): 'the ancient Salic Law... was established for other times and circumstances.' Contemporary jurists (Pufendorf, 1672; Vattel, 1758) attest that fundamental dynastic laws can be changed by sovereign authority. The immutable_mandate_reading disputes this, but its adherents are the benefiting parties of the old arrangement — no independent corroboration exists for the claim that the Frankish tribal context still governs 18th-century sovereign succession."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "salic_prohibition"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "frankish_tribal_succession_custom",
+    "drift_state": {
+      "moment": "pragmatic_sanction_1713",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "immutable_mandate_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "cognatic_reversion_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereign_legislative_supremacy_over_dynastic_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "pragmatic_sanction_as_valid_exercise_of_sovereign_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

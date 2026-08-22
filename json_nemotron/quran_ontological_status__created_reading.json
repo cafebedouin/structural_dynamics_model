@@ -1,0 +1,313 @@
+{
+  "header": {
+    "constraint_id": "quran_ontological_status__created_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_quran_ontological_status__created_reading",
+    "story_uid": "8c92121d-fd00-4574-bf0d-2ec2a5273eca"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Qur'an as Created Divine Speech (Rationalist Mu'tazilite Reading)",
+    "topic_domain": "theological/philosophical/political",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "rationalist_theologians",
+      "reform_movements",
+      "philosophical_schools"
+    ],
+    "victims": [
+      "traditionalist_jurists",
+      "literalist_communities"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "Is this constraint one reading of a contested kernel (quran_ontological_status) rather than a standalone constraint?",
+      "resolution_mechanism": "Authoring discipline: this reading instantiates one specific constraint with one stable ε. The kernel and sibling readings are tracked via omega, not folded into this constraint's classification.",
+      "impact": "Confirms DP-001 (ε-invariance) compliance: one reading, one constraint, one ε. Sibling readings (uncreated_reading, state_enforced_creation_reading) are separate constraint stories linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is a kernel reading instantiation, not a standalone constraint."
+    },
+    {
+      "id": "divine_transcendence_vs_textual_fixity",
+      "question": "Does classifying revelation as a coordination artifact (rope) preserve divine transcendence more faithfully than classifying it as an ontic constraint (mountain)?",
+      "resolution_mechanism": "Theological debate across Ash'arite, Maturidi, and Mu'tazilite traditions; philosophical analysis of divine simplicity and speech acts.",
+      "impact": "If transcendence is preserved by the created reading, its rope classification is theologically motivated, not reductive. If transcendence requires uncreated speech, the created reading is structurally extractive against divine attributes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the created reading's rope status serves transcendence or undermines it."
+    },
+    {
+      "id": "state_power_capture_risk",
+      "question": "Does the created reading's interpretive flexibility create an opening for state enforcement (mihna) that the reading itself does not entail?",
+      "resolution_mechanism": "Historical analysis of the Abbasid mihna (833–848 CE): did the created doctrine structurally enable inquisition, or was state enforcement an independent political capture?",
+      "impact": "If the doctrine enabled state enforcement, its effective extraction rises and classification shifts toward tangled_rope/snare. If enforcement was contingent capture, the reading remains a low-extraction rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interpretive flexibility structurally enables coercive state power."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 250
+  },
+  "commentary": {
+    "narrative_context": "The Mu'tazilite doctrine that the Qur'an is created (makhlūq) divine speech — articulated against the view that the Qur'an is uncreated and coeternal with God's essence — functions as a coordination artifact (rope) rather than an ontic mountain. By locating God's essence above all temporal artifacts including revelation, this reading preserves divine transcendence while making textual meaning interpretively flexible. The constraint solves a genuine coordination problem: how to maintain divine unity (tawḥīd) and transcendence while accounting for revelation's temporal occurrence. Rationalist theologians, later reform movements, and philosophical schools benefit from the hermeneutic authority this opens; traditionalist jurists whose authority rests on textual fixity and literalist communities whose identity depends on unmediated divine speech bear the cost of interpretive destabilization. The constraint's low extractiveness and suppression in its pure theological form distinguish it from the state-enforced variant (mihna), which is a separate constraint story.",
+    "key_agents": [
+      "rationalist_theologians: Primary beneficiary (intellectual/organized) — gains hermeneutic authority and rational theology's legitimacy",
+      "traditionalist_jurists: Primary victim (institutional/identity_locked) — loses authority derived from textual fixity and unmediated divine speech",
+      "literalist_communities: Victim (organized/identity_locked) — identity fused with uncreated speech doctrine; exit is existentially costly",
+      "philosophical_schools: Beneficiary (organized/mobile) — gains space for rational inquiry into revelation's nature",
+      "reform_movements: Beneficiary (moderate/constrained) — gains doctrinal resources for reinterpretation",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure across readings"
+    ],
+    "logic_rationale": "Base extractiveness (0.25) reflects the reading's primary function as coordination: it solves the theological problem of divine transcendence vs. temporal revelation without extracting significant rents. Suppression (0.15) is low because the reading relies on argumentative persuasion, not coercion — though it rises during the mihna period (t=100), captured in measurements as a separate enforcement spike. Theater ratio (0.1) is low; the coordination function is genuine. Accessibility collapse (0.35) is moderate: alternatives (uncreated reading) remain structurally available and historically persistent. Resistance (0.55) is substantial from traditionalist and literalist seats whose authority and identity are threatened. The claimed type 'rope' reflects the structural truth: genuine coordination with minimal coercive overhead, participants as net beneficiaries.",
+    "perspectival_gap": "From the rationalist theologian seat (beneficiary, organized, mobile exit), the constraint is experienced as liberating coordination — divine transcendence secured, reason authorized. From the traditionalist jurist seat (victim, institutional, identity_locked exit), the same constraint is experienced as extractive destabilization — authority undermined, the fixed text that grounds their role made fluid. From the literalist community seat (victim, organized, identity_locked), it is an existential threat to self-understanding. The engine computes this divergence from the structural data: beneficiaries have low directionality (d ≈ 0.1–0.2), victims have high directionality (d ≈ 0.8–0.9) due to identity_locked exit and institutional power.",
+    "directionality_logic": "Beneficiaries (rationalist_theologians, reform_movements, philosophical_schools) gain hermeneutic authority, intellectual space, and doctrinal resources without running the constraint — they collect the coordination dividend. Victims (traditionalist_jurists, literalist_communities) bear the cost: their authority structures and identity formations depend on the uncreated reading's fixity. The created reading does not actively suppress them (low suppression), but it structurally undermines their position by making the alternative (uncreated) theologically contestable. Directionality is derived from beneficiary/victim declarations + exit options: identity_locked victims (literalist_communities) sit near d=1.0; institutional victims (traditionalist_jurists) sit near d=0.85; organized beneficiaries with mobile exit sit near d=0.15.",
+    "mandatrophy_analysis": "The constraint's founding problem — preserving divine transcendence while accounting for temporal revelation — remains live (founding_problem_status: contested). The created reading has not atrophied into piton; its coordination function persists in contemporary reform movements. No mandatrophy resolution declared because the founding problem is still structurally active across the kernel's readings.",
+    "kernel_context": "This constraint is the created_reading of kernel quran_ontological_status. Sibling readings: uncreated_reading (Qur'an as uncreated eternal speech — mountain classification), state_enforced_creation_reading (created doctrine + state inquisition — tangled_rope/snare). This reading instantiates the pure theological coordination artifact; state enforcement is a separate constraint (state_enforced_creation_reading) linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "quran_ontological_status__uncreated_reading",
+      "quran_ontological_status__state_enforced_creation_reading"
+    ],
+    "dual_formulation_note": "This reading (created_reading) and uncreated_reading are dual formulations of the same kernel: one preserves transcendence by locating God above text (rope), the other by locating text within God's essence (mountain). The state_enforced_creation_reading adds coercive enforcement to the created doctrine, shifting it toward tangled_rope/snare. All three form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "rationalist_theologians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Mu'tazilite and allied rationalist theologians (8th–10th century) who articulate and defend the createdness doctrine. They gain hermeneutic authority: reason becomes the arbiter of theological truth, revelation is subject to rational criteria. Their institutional position (kalām circles, court patronage under early Abbasids) lets them shape discourse. Exit is mobile — they can shift intellectual frameworks without existential loss."
+    },
+    {
+      "name": "traditionalist_jurists",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Traditionalist scholars (Ahl al-Ḥadīth, early Ash'arites) whose juristic authority derives from the Qur'an's uncreated fixity. The created reading makes textual meaning contingent on interpretation, undermining the fixed textual anchor their authority rests on. Exit is identity_locked: their professional identity, institutional role, and self-concept are fused with textual fixity; abandoning it dissolves their authority structure."
+    },
+    {
+      "name": "literalist_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Communities whose religious identity is constituted by direct, unmediated access to divine speech. The created reading interposes interpretation between believer and revelation, threatening the immediacy that grounds their practice and self-understanding. Exit is identity_locked: the uncreated Qur'an is not a belief they hold but a world they inhabit; leaving it is existential dislocation, not opinion change."
+    },
+    {
+      "name": "philosophical_schools",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Falsafa (Islamic philosophy) traditions and later hikma schools that treat revelation as a symbolic/imaginative faculty output rather than literal divine speech. The created reading legitimizes their hermeneutic: philosophy gains equal or superior epistemic standing to revelation. Exit is mobile — intellectual frameworks are their native medium."
+    },
+    {
+      "name": "reform_movements",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Modernist and reformist movements (19th–21st century) that invoke createdness to authorize reinterpretation of seemingly fixed texts. They gain doctrinal resources but operate within traditions where the uncreated reading dominates, making their position contingent and contested. Exit is constrained — they can adopt the reading but cannot easily escape the dominant framework's social weight."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The analytical seat that sees the full kernel structure: three readings (created, uncreated, state-enforced) contesting the same ontological commitment. This seat neither collects nor pays; it maps the structural relationships across the constraint family."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the theological problem of divine transcendence (tawḥīd) vs. temporal revelation: how can God be absolutely one and beyond time if His speech occurs in time? The created reading coordinates Muslim theology around a single answer — God creates speech as an act, preserving divine unity and transcendence.",
+    "transfer_function": "Moves hermeneutic authority from fixed textual literalism (traditionalist jurists, literalist communities) to rational interpretation (rationalist theologians, philosophical schools, reform movements). The transfer is intellectual authority and interpretive control, not material wealth.",
+    "absent_voices": "Pre-theological believers for whom the Qur'an's ontological status is not a question — the text simply *is* divine speech, unmediated by doctrine. Also marginalized communities (women, non-elite believers) whose relationship to revelation is mediated by both traditionalist and rationalist male elites. They are structurally excluded from the theological debate that shapes how the constraint operates on them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the created reading vanished overnight, the coordination it provides — a theologically articulated solution to transcendence vs. revelation — would disappear. Rationalist theology would lose its foundational doctrinal anchor; reform movements would lose a key hermeneutic resource; traditionalist and literalist positions would face less contestation but also lose the dialectical pressure that shaped their own articulations. The theological landscape would rearrange around the remaining readings (uncreated, state-enforced).",
+    "founding_problem": "How to preserve absolute divine transcendence and unity (tawḥīd) while accounting for the Qur'an's temporal occurrence as revealed speech in history. The created reading was built to solve this by making revelation an act of God (created) rather than an attribute coeternal with God's essence.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Mu'tazilite texts (e.g., al-Naẓẓām, al-Jāḥiẓ, ʿAbd al-Jabbār) explicitly articulate transcendence as the motive. Ash'arite opponents (al-Ashʿarī, al-Bāqillānī) attest the problem is live but argue the created solution undermines divine speech's reality. Modern scholars (Wolfson, van Ess, Rudolph) corroborate from outside the benefiting parties: the transcendence/revelation tension is a genuine structural problem in Islamic theology, not a Mu'tazilite invention."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "uncreated_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "state_enforced_creation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "divine_transcendence_requires_created_speech",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "reason_authorized_as_theological_arbiter",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "classical_mutazilite_tauhid_framework",
+    "drift_state": {
+      "moment": "post_mihna_ashari_synthesis",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "header": {
+    "constraint_id": "latin_correctness__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "f5f12e6e-0fe6-413c-b3fa-33b41d4eac69"
+  },
+  "base_properties": {
+    "extractiveness": 0.14,
+    "suppression": 0.08,
+    "theater_ratio": 0.11,
+    "accessibility_collapse": 0.22,
+    "resistance": 0.28,
+    "claimed_type": "rope",
+    "human_readable": "Continuity Reading of Latin Correctness: Medieval Latin as Organic Continuation",
+    "topic_domain": "intellectual_history/philology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "medievalists",
+      "critical_editors_of_medieval_texts",
+      "scholastic_theologians",
+      "medieval_latin_authorship"
+    ],
+    "vindicated_propositions": [
+      "descriptive_historical_linguistics",
+      "latin_romance_continuity"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.11,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This file instantiates only the continuity_reading of the latin_correctness kernel; how would the sibling readings (rupture_reading, hybrid_reading) change the structural classification if compiled as their own constraints?",
+      "resolution_mechanism": "Compile the sibling files and compare computed per-seat types: the rupture reading should show sharply higher epsilon with a victim set appearing (medieval scribes and scholastics condemned as corrupt); the hybrid reading should land intermediate, splitting legitimacy by domain.",
+      "impact": "If the siblings compute as expected, the kernel decomposition is confirmed and this file's low-extraction rope profile is specific to the continuity reading rather than an artifact of the topic; if they converge on this profile, the reading distinction is doing less structural work than the contest suggests.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this constraint is one reading of a contested kernel; sibling readings are separate files."
+    },
+    {
+      "id": "organic_vs_schooled_transmission",
+      "question": "Was medieval Latin's development genuinely organic (native-speaker transmission) or school-maintained (a learned second language in diglossia with the emerging Romance vernaculars)?",
+      "resolution_mechanism": "Sociolinguistic and paleographic evidence on when Latin ceased to be natively acquired: acquisition patterns in Carolingian educational reforms, vernacular glossing density, Romance strata in inscriptions and charters.",
+      "impact": "If transmission was substantially schooled rather than native, 'organic linguistic change' needs qualification and the reading drifts toward the hybrid sibling; the legitimacy claim survives but its grounding shifts from natural growth to institutional maintenance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the continuity reading's core 'organic' premise describes native transmission or schooled maintenance."
+    },
+    {
+      "id": "development_error_boundary",
+      "question": "Where, under this reading, does legitimate development end and individual error begin?",
+      "resolution_mechanism": "Statistical analysis of variant distributions in manuscript traditions: systematic innovations shared across scribes and regions versus idiosyncratic lapses confined to single witnesses.",
+      "impact": "If the boundary blurs in practice, the reading carries a hidden epistemic cost — editors under-correct genuine errors by invoking development — and effective extraction rises above the authored base; if the boundary is robust, the residual extraction stays negligible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between sanctioned innovation and unsanctioned error inside the continuity frame."
+    },
+    {
+      "id": "professional_interest_contamination",
+      "question": "Does the reading's coordination function partly serve medievalist professional self-interest — devaluing the corrective competence of rival specialists?",
+      "resolution_mechanism": "Compare error rates and emendation quality in editions produced under continuity-framed versus normative-framed editorial protocols on the same corpora.",
+      "impact": "If contamination is real, the theater_ratio understates performative maintenance and the classification trends toward tangled_rope with classicists as a mild victim seat; if not, the coordination function is clean.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's low extraction conceals interest-driven coordination."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the normative regime by which post-classical Latin is evaluated. This file instantiates ONE reading of that regime — the continuity reading: medieval Latin is the legitimate continuation of classical Latin through organic linguistic change, so vernacular-shifted phonology, expanded vocabulary, and altered syntax are developmental stages rather than faults. Under this reading the regime operates as light coordination: a shared evaluative protocol that lets scholars read, date, localize, and edit a millennium of texts cumulatively. Beneficiaries are the scholarly communities working on medieval materials and, retrospectively, the historical authors whose practice the frame legitimizes; costs are mild and diffuse. There is no victim set. The sibling readings (rupture_reading, hybrid_reading) are separate constraint files linked through the network section; this file's epsilon is indexed to the standing arrangement AS THIS READING SEES IT, per the kernel-referent rule. Temporal mapping: interval units are years, t=0 corresponds to 1960 (postwar consolidation of medieval Latin lexicography and corpus-building) and t=60 to 2020.\n\nKEY AGENTS (by structural relationship):\n- medievalists: primary beneficiary (organized/constrained) — the frame makes their archive legible on its own terms\n- critical_editors_of_medieval_texts: beneficiary (organized/mobile) — preservation-over-correction editorial license\n- scholastic_theologians: beneficiary (organized/constrained) — scholastic corpus secured as continuous inheritance\n- medieval_latin_authorship: retrospective beneficiary (powerless/trapped) — historical writers legitimized, unable to respond\n- classical_philologists: mild payer with offsetting gain (institutional/mobile) — corrective jurisdiction narrows to antiquity\n- rupture_tradition_classicists: excluded (institutional/mobile) — corrective program finds little purchase where this reading sets defaults\n- historical_linguists: analytical observer — supplies the descriptive apparatus, takes no editorial side",
+    "key_agents": [
+      "medievalists: primary beneficiary (organized/constrained) — reads medieval usage as evidence, not fault",
+      "critical_editors_of_medieval_texts: beneficiary (organized/mobile) — preserves manuscript forms instead of normalizing",
+      "scholastic_theologians: beneficiary (organized/constrained) — seven-century corpus kept mutually intelligible",
+      "medieval_latin_authorship: retrospective beneficiary (powerless/trapped) — historical practice legitimized from outside",
+      "classical_philologists: mild payer, secondary beneficiary (institutional/mobile) — lost jurisdiction offset by longer record",
+      "rupture_tradition_classicists: excluded (institutional/mobile) — hold the fixed-standard view outside the governing conversation",
+      "historical_linguists: analytical observer (analytical/analytical) — descriptive apparatus, no editorial stake"
+    ],
+    "logic_rationale": "Claim and metrics are independent authored facts. The claimed type is rope on structural grounds: a genuine collective-action problem (making non-classical Latin usable as evidence) solved with minimal overhead, net beneficiaries, and no suppressed alternative. The metrics describe actual operation: extractiveness 0.14 — residual extraction consists of a mild status transfer away from classicist gatekeeping plus episodic under-correction excused as development; far below any tangled-rope or snare range. Suppression 0.08 is a raw, unscaled structural value: nothing bars anyone from adopting rupture norms; the reading persists by demonstrated usefulness, not coercion. Theater_ratio 0.11 — the work is mostly real (dating, localization, edition policy); ritual invocations of 'organic development' as a credential phrase creep upward slowly, which the measurement series tracks. Accessibility_collapse 0.22 — grasping the frame leaves the rupture alternative fully available; low collapse is rope-consistent. Resistance 0.28 — steady classicist critique and periodic flare-ups (dictionary controversies, diglossia debates), no organized opposition. Both tracked metrics run on one shared seven-point grid (t=0,10,...,60) so every metric is authored at every examined time point; a suppression_requirement series is deliberately omitted because the enforcement picture is static — there is no enforcement machinery to build up or decay — and the scalar suppression carries that fact. Receipt surface: the small extraction dissipates as diffuse status adjustment across the field; no seat administers the reading or collects its effects, so gain_flow is authored 'diffuse' as an affirmative checked claim, not a default. fixing_cost is 'cheap': nothing entrenches the reading — no machinery to dismantle — and a sustained editorial-pedagogical movement could replace it within a generation; its persistence reflects ongoing assent, which is what keeps it a rope rather than a piton.",
+    "perspectival_gap": "Seats compute differently from identical global standing. The medievalist seat experiences the frame as liberating: their material becomes legible on its own terms, and their chi sits near the beneficiary end. The classical_philologists seat is near-symmetric: a real but mild cost (jurisdiction narrowed) offset by a real gain (freedom from adjudicating a millennium of variation, plus a longer laboratory). The excluded rupture_tradition_classicists seat would compute the very same texts as corrupted — but that computation belongs to the sibling constraint's file, not this one; within this reading's frame their objection registers only as the resistance metric. Same-power differentiation: classical_philologists and rupture_tradition_classicists share institutional power and mobile exit, yet occupy different relations to the norm — the former accepts its jurisdiction limit, the latter rejects the frame outright — which is exactly the constraint-specific factor the per-seat computation should surface.",
+    "directionality_logic": "Declared beneficiaries (medievalists, critical editors, scholastic theologians, and retrospectively the historical authorship) derive directionality near the beneficiary end (d roughly 0.05-0.15): the frame subsidizes their practice and their exit costs are ordinary career costs, not trap or identity-lock — medievalists could retrain, at price. Classical_philologists are the only seat bearing a cost, and it is mild: the derivation from their payer role alone would overshoot toward the target end because it cannot see the offsetting benefit (a longer diachronic record, freedom from unbounded correction duty); a directionality override sets institutional-seat d to 0.55 to encode the near-symmetric reality. No agent approaches the full-target end; with base epsilon small and no trapped targets, effective extraction stays low across every seat. Global spatial scope raises verification difficulty modestly, but there is little extraction to amplify.",
+    "mandatrophy_analysis": "The founding problem — making a millennium of non-classical Latin usable as evidence rather than condemning it as barbarous — is still live: every newly digitized corpus re-poses it, so the mandate has not outlived its function and no sunset applies. Classifying this as rope prevents two characteristic mislabels. As mountain it would be wrong: the reading is a constructed, revisable scholarly norm that meets real resistance and has a documented history of formation (Du Cange through historical linguistics), not a natural law. As snare it would be equally wrong: there are no victims, no coercion, and no suppressed exit — the rival reading publishes freely. The live drift risk is Goodhart's: theater_ratio rising slowly as 'organic development' hardens from a research posture into a credential phrase; the measurement series watches exactly that slope, and the development_error_boundary omega names the mechanism by which drift would convert into real epistemic cost.",
+    "kernel_context": "Kernel: latin_correctness — the normative standard for evaluating Latinity across periods. This file instantiates the continuity_reading: legitimacy flows through unbroken transmission, and medieval forms are developmental stages of a living tradition. Siblings, each a separate constraint file: rupture_reading (classical Latin as a fixed textual standard recovered from ancient sources; medieval usage as corruption — expected to compute with sharply higher epsilon and an appearing victim set) and hybrid_reading (classical norms govern literary/rhetorical domains; medieval forms remain legitimate for technical/practical domains — expected intermediate). The disagreement is located in the status of post-classical deviation: development, corruption, or domain-relative legitimacy. This file does not hedge or average across readings; its epsilon is indexed to this reading's own lights over the shared referent, the standing evaluative arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_correctness__rupture_reading",
+      "latin_correctness__hybrid_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Latin correctness' covers one thing in ordinary discourse but decomposes into three structurally distinct constraints — continuity_reading (this file), rupture_reading, and hybrid_reading — with different epsilon values, different beneficiary/victim structures, and therefore different classifications; per the epsilon-invariance principle they are authored as separate linked stories rather than one story with a measurement parameter. The rupture reading is historically upstream: humanist reconstruction of the fixed classical standard created the corrective norm to which the other two readings respond. This reading's success exerts downstream pressure on the hybrid reading, since a fully continuous tradition leaves the hybrid's domain-split with less work to do."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "medievalists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Research and teach the Latin writing of the Middle Ages. The frame lets them treat manuscript spellings, mixed declensions, new compounds, and shifted word order as evidence for dating, localizing, and attributing texts rather than as faults awaiting repair. Their training, journals, conferences, and the scholarly standing of their archives all presuppose this way of reading; moving to another specialty would mean retraining and abandoning accumulated expertise."
+    },
+    {
+      "name": "critical_editors_of_medieval_texts",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Produce critical editions and digital corpora of medieval texts. Under the frame they preserve manuscript forms, record variants, and annotate innovations instead of silently normalizing them to classical usage; linguistic difference becomes sortable data. Their skills transfer readily to other philological and documentary projects."
+    },
+    {
+      "name": "scholastic_theologians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Read Aquinas, canon-law commentaries, liturgical exposition, and university disputations as continuous with patristic and classical inheritance. The frame keeps a seven-century corpus mutually intelligible and authoritative across generations of faculties; their institutions' self-understanding depends on that continuity holding."
+    },
+    {
+      "name": "medieval_latin_authorship",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Wrote charters, theology, science, histories, and letters in the Latin of their own region and century, without classical pronunciation, without the full classical lexicon, and often with late-antique and Christian models rather than Cicero. The frame legitimizes their practice retrospectively. They cannot respond to it, profit from it, or object to it; the frame is applied to their texts by others."
+    },
+    {
+      "name": "classical_philologists",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain the classical corpus and its norms as the reference point for Latinity. Under the frame their corrective jurisdiction stops at antiquity's edge: they no longer grade a millennium of post-classical prose against Cicero. That narrows their gatekeeping over correct Latin, while freeing them from adjudicating endless medieval variation and handing them a longer diachronic record to work with."
+    },
+    {
+      "name": "rupture_tradition_classicists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold that classical Latin is a fixed textual standard recoverable from ancient sources and that medieval deviation is corruption to be corrected. Where the continuity frame sets editorial defaults — medieval-studies series, corpus projects, graduate training — their corrective program finds little purchase, and their objections circulate mainly in classicist venues outside that conversation."
+    },
+    {
+      "name": "historical_linguists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Trace sound change, morphology, and vocabulary from classical Latin through the medieval period into the Romance languages. They supply the descriptive apparatus — comparative method, chronology of shifts, dialect geography — that the continuity frame relies on, and they examine how the norm operates without taking sides in editorial disputes."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Provides a shared evaluative standard under which scholars can read, date, localize, attribute, and edit medieval Latin texts cumulatively: treating the language as one continuing tradition turns lexical, phonological, and syntactic innovation into evidence instead of defect.",
+    "transfer_function": "Moves interpretive legitimacy and editorial authority: status flows from classical-norm gatekeeping toward the communities that work directly on medieval usage; classical philologists' corrective jurisdiction over post-classical texts narrows correspondingly. Nothing material is extracted — what moves is standing.",
+    "absent_voices": "Holders of the rupture reading are largely absent from the venues where this frame sets editorial defaults (medieval-studies journals, monograph series, digital corpus projects); their objection — that continuity framing licenses under-correction of genuine error — circulates mainly in classicist outlets. The historical authors and scribes whom the frame legitimizes cannot speak at all; their practice is described by modern specialists who benefit from the frame doing the describing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuity reading vanished overnight, medieval studies would rearrange around a corrective norm: editions would normalize spelling and syntax to classical usage, dating and localization by linguistic features would lose their evidentiary basis, and a millennium of charters, theology, and scientific writing would be reframed as degraded imitation. The field's infrastructure — dictionaries, corpora, graduate training — would rebuild around reconstruction from ancient sources, and the scholastic corpus's cross-century intelligibility would fracture.",
+    "founding_problem": "The humanist encounter with medieval texts: applying Ciceronian norms made a millennium of European writing look barbarous and unusable. Scholars needed a standard under which charters, scholastic theology, and scientific Latin could be read as evidence rather than condemned — Du Cange's glossary and, later, historical linguistics supplied it by re-describing difference as development.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal and social historians who depend on charters and records attest the practical necessity from outside the named beneficiary disciplines: without a continuity frame the documents resist use. Romance linguists independently demonstrate continuous development out of Latin. Even classicist critics concede the descriptive facts while disputing the normative conclusion. Corroboration is disciplinary-adjacent rather than fully external — historians are heavy users of the frame's outputs — and no body outside philology polices the claim; that partial externality is itself signal."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "living_language_continuum",
+    "drift_state": {
+      "moment": "contemporary_sociolinguistic_era",
+      "direction": "axiom_overriding",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rupture_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unbroken_transmission_confers_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "diachronic_deviation_is_development",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

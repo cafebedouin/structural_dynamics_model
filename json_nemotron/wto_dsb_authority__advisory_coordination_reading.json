@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "wto_dsb_authority__advisory_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_wto_dsb_authority__advisory_coordination_reading",
+    "measurement_id_prefix": "wto_dsb_advisory",
+    "story_uid": "10be1742-7df9-489f-ba87-6a1125923a11",
+    "created_at": "2026-08-04T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "WTO DSB Advisory Coordination Function",
+    "topic_domain": "international_law/trade_governance/institutional_legitimacy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "member_states",
+      "developing_economies",
+      "trade_negotiators"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "sovereign_policy_discretion_preserved",
+      "consensus_based_compliance",
+      "expert_advisory_legitimacy"
+    ]
+  },
+  "interval": {
+    "start": 1995,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "advisory_vs_binding_ambiguity",
+      "question": "Is the DSB's advisory character a structural feature of the WTO treaty design, or a pragmatic accommodation that could shift toward binding enforcement without treaty amendment?",
+      "resolution_mechanism": "Trace the drafting history of DSU Articles 3.2, 19.1, and 21.3; measure the frequency and consequence of non-compliance with panel/advisory body recommendations across the interval; assess whether the Appellate Body's judicialization (pre-2019) represented drift or design.",
+      "impact": "If structural, the low-extraction advisory reading is the only faithful one; if accommodation, the binding_referee_reading describes a real available mode that states have chosen not to activate — changing the constraint's ε profile and type classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the advisory character is constitutional or contingent"
+    },
+    {
+      "id": "enforcement_asymmetry",
+      "question": "Does the reliance on bilateral power dynamics for enforcement create de facto extraction from weaker members, despite the advisory formal structure?",
+      "resolution_mechanism": "Compare compliance outcomes for disputes involving symmetrical vs. asymmetrical power dyads; measure the concession extraction rate when the complainant is a major economy vs. a developing economy.",
+      "impact": "If enforcement asymmetry systematically disadvantages weaker members, the advisory coordination mask conceals a power-based extraction function — the constraint would compute as tangled_rope or snare from the weaker-member seat despite the author's rope claim.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether bilateral enforcement substitutes power for law in a way that extracts from the weak"
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the advisory_coordination_reading a distinct constraint from the binding_referee_reading and judicial_activism_reading, or are they observer-relative framings of one institutional practice?",
+      "resolution_mechanism": "Apply the ε-invariance test: do the three readings author different ε values for the same standing arrangement? If yes, they are distinct constraints linked by network.affects_constraints. If no, they are perspectival variants of one constraint.",
+      "impact": "Determines whether this JSON describes one constraint in a family of three, or whether the kernel frame is misapplied. The engine requires ε-invariance per constraint story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel vs. reading boundary validity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The WTO Dispute Settlement Body operates as an advisory coordination mechanism under this reading. Panels issue expert legal opinions on treaty interpretation that facilitate negotiated settlements between member states. States retain ultimate policy discretion — compliance is voluntary, achieved through diplomatic bargaining and bilateral power dynamics rather than institutional compulsion. The arrangement coordinates by providing a shared epistemic baseline (the panel's legal analysis) that reduces information asymmetry in trade disputes. Extraction is low because no party is compelled to concede; the constraint persists because the coordination benefit (predictable dispute resolution, reduced retaliation spirals) exceeds the cost of participation for most members. The binding_referee_reading and judicial_activism_reading describe different structural claims about the same institutional machinery — they are sibling constraints in a family, not perspectival variants.",
+    "key_agents": [
+      "member_states: Primary participants (institutional/biographical/arbitrage) — use DSB opinions as negotiation inputs; sovereignty preserved",
+      "developing_economies: Beneficiaries of epistemic leveling (organized/biographical/constrained) — gain access to legal reasoning that offsets power asymmetry in bilateral talks",
+      "trade_negotiators: Operational users (organized/biographical/mobile) — deploy panel findings as bargaining chips; exit via alternative forums or unilateral action",
+      "major_economies: Power holders in enforcement (institutional/biographical/arbitrage) — compliance leverage derives from market size, not DSB authority",
+      "analytical_observer: Observes full structure (analytical/civilizational/analytical) — sees coordination function and its power-contingent limits"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12) because the constraint does not compel transfers — it provides an epistemic good (expert legal analysis) that parties use voluntarily. Suppression is low (0.18) because alternatives (bilateral negotiation, regional forums, unilateral measures) remain fully accessible; the DSB does not foreclose exits. Theater ratio is modest (0.22) — some procedural ritual exists (panel composition, appellate review pre-2019) but the core function is genuine coordination. Accessibility collapse is low (0.25) — states routinely resolve disputes outside the DSB. Resistance is moderate (0.35) — the US blockage of Appellate Body appointments (2019–) reflects resistance to judicialization, not to the advisory coordination function itself. The claimed type is rope: genuine coordination with minimal coercion, net beneficiaries across seats.",
+    "directionality_logic": "Member states are structural beneficiaries (d ~ 0.15–0.25): they gain a shared epistemic baseline for disputes without surrendering policy discretion. Developing economies benefit disproportionately (d ~ 0.1) because the advisory opinions offset power asymmetry in bilateral negotiations. Major economies sit closer to symmetric (d ~ 0.4–0.5): they provide the enforcement capacity the system lacks and extract concessions through power, not DSB authority. Trade negotiators are operational users with mobile exit (d ~ 0.3). The directionality derivation from beneficiary declarations + exit options captures this gradient; no overrides needed.",
+    "perspectival_gap": "The advisory_coordination_reading computes as rope from the member-state and developing-economy seats (genuine coordination, low extraction). From the major-economy seat it may compute as mountain-like (the constraint barely binds them). The binding_referee_reading would compute as tangled_rope or snare from developing-economy seats (binding rulings + power-based enforcement = asymmetric extraction). The judicial_activism_reading computes as snare from the sovereignty-prioritizing seat. The engine computes these per-seat divergences from the structural data authored here.",
+    "mandatrophy_analysis": "The founding problem (1995): provide a rules-based dispute resolution mechanism that prevents trade wars without supranational adjudication. Status: live — trade disputes persist, the coordination need remains, and the advisory function continues to deliver epistemic value. No mandatrophy: the constraint's function has not atrophied; the Appellate Body crisis reflects resistance to a *different* reading (binding_referee) gaining traction, not failure of the advisory coordination function. The constraint remains a rope, not a piton.",
+    "kernel_context": "This constraint is the advisory_coordination_reading of the wto_dsb_authority kernel. Sibling readings: binding_referee_reading (DSB rulings are binding treaty obligations; member states surrendered discretion) and judicial_activism_reading (panels exceed mandate through interpretive drift). The three readings author different ε values for the standing arrangement: advisory_coordination ε≈0.12 (coordination), binding_referee ε≈0.45 (asymmetric extraction via power-enforced compliance), judicial_activism ε≈0.65 (illegitimate extraction via interpretive capture). They are distinct constraints linked by network.affects_constraints, not perspectival variants."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_dsb_authority__binding_referee_reading",
+      "wto_dsb_authority__judicial_activism_reading"
+    ],
+    "dual_formulation_note": "The wto_dsb_authority kernel decomposes into three constraint stories with distinct ε values and structural profiles. The advisory_coordination_reading (this story) claims rope with low extraction; the binding_referee_reading claims tangled_rope with power-asymmetric extraction; the judicial_activism_reading claims snare with illegitimate extraction. They share the same institutional machinery (panels, Appellate Body, DSU procedures) but disagree on what the machinery *is* structurally. The upstream (advisory) reading influences the downstream (binding/judicial) readings because the advisory function is often cited as the legitimate basis that the other readings exceed or distort."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "member_states",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Use DSB panel opinions as expert legal inputs to bilateral negotiations. Retain full policy discretion — compliance is a political choice, not a legal compulsion. Can exit to bilateral deals, regional agreements, or unilateral measures at any time. The coordination benefit is a shared epistemic baseline that reduces information asymmetry and retaliation risk."
+    },
+    {
+      "name": "developing_economies",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Gain disproportionate benefit from the advisory function: panel opinions provide legal reasoning that offsets power asymmetry when negotiating with major economies. Without the DSB's epistemic baseline, they would face raw power bargaining. Exit is constrained — alternative forums are fewer and less authoritative — but the DSB's advisory character means they are not bound by adverse rulings."
+    },
+    {
+      "name": "trade_negotiators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operational users who deploy panel findings as bargaining chips in negotiations. They bear the cost of preparing and litigating cases (legal teams, time, political capital) but gain the coordination benefit of an authoritative legal analysis. Exit is mobile — they can shift disputes to other forums or bilateral tracks — which keeps their directionality near symmetric."
+    },
+    {
+      "name": "major_economies",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the de facto enforcement terms through market power. When a panel opinion favors them, they leverage market access to extract compliance; when it disfavors them, they can delay, negotiate concessions, or ignore it (as the US did pre-2019 and post-2019). They benefit from the system's predictability for their own exporters but pay no extraction cost — their power substitutes for institutional enforcement."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Observes the full structure: a genuine coordination mechanism (epistemic baseline for trade disputes) that functions because states find it useful, not because they are compelled. Sees the power-contingent enforcement gap that the binding_referee_reading denies and the judicial_activism_reading condemns. Neither collects nor pays."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Provides a shared, authoritative epistemic baseline (expert legal analysis of treaty obligations) that reduces information asymmetry in trade disputes, enabling negotiated settlements without requiring states to surrender policy discretion to a supranational adjudicator.",
+    "transfer_function": "Moves epistemic authority and negotiation leverage from the DSB's expert panels to the disputing parties. No mandatory resource transfer occurs; the 'transfer' is the informational good (the panel's reasoning) that both parties use to structure their bargain. Major economies gain additional leverage from their enforcement capacity, but this is a power effect, not a constraint-mediated transfer.",
+    "absent_voices": "Future member states (not yet acceded) who would inherit the advisory system without having consented to its design. Domestic constituencies (labor, environmental, consumer groups) in member states who bear trade policy consequences but have no standing in DSB proceedings. These voices are excluded by the intergovernmental design of the WTO.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the DSB's advisory function vanished overnight, states would lose the shared epistemic baseline for dispute resolution. Trade disputes would revert to pure power bargaining or fragment into bilateral/regional forums with inconsistent legal standards. Retaliation spirals would increase. The coordination function is real and its absence would rearrange the trade governance landscape.",
+    "founding_problem": "1995: Create a rules-based dispute resolution mechanism that prevents trade wars by providing authoritative legal interpretations, without establishing a supranational court that could override domestic policy sovereignty.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The WTO Secretariat and most member states attest the problem is live — trade disputes persist and the advisory function continues to deliver settlement-facilitating epistemic goods. The US (major economy) has contested whether the *Appellate Body* (a judicial layer added atop the advisory panels) serves the founding problem, but has not contested the panel advisory function itself. Independent legal scholarship (e.g., Hudec, Mavroidis) corroborates that the panel advisory function remains the system's core coordination mechanism."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "wto_dsb_authority__binding_referee_reading",
+      "wto_dsb_authority__judicial_activism_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "binding_referee_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "judicial_activism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereign_discretion_preserved_in_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "panel_opinions_are_negotiation_inputs_not_judgments",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "dsb_advisory_coordination_framework",
+    "drift_state": {
+      "moment": "post_appellate_body_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

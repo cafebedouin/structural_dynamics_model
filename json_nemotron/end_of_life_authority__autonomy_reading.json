@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "9b8a8f9d-5b7f-4bc2-8f85-0073b45b0ada"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.72,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autonomy-Based Right to Assisted Death for Unbearable Suffering",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "terminally_ill_patients",
+      "patients_with_unbearable_suffering",
+      "autonomy_advocacy_organizations"
+    ],
+    "victims": [
+      "suffering_prolonged_patients",
+      "families_of_suffering_patients",
+      "clinicians_forced_into_complicity"
+    ],
+    "vindicated_propositions": [
+      "bodily_self_determination_principle",
+      "relief_of_suffering_as_medical_goal"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "stakeholders": [
+    {
+      "name": "terminally_ill_patients",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face terminal diagnoses with predictable suffering trajectories. The autonomy reading grants them legal access to assisted death, converting what would be prolonged dying into a chosen exit. They must navigate eligibility assessments, waiting periods, and clinician availability — exit is legally possible but practically constrained."
+    },
+    {
+      "name": "patients_with_unbearable_suffering",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Include non-terminal patients with severe chronic conditions (neurodegenerative, psychiatric, intractable pain) whose suffering meets the 'unbearable' threshold. In jurisdictions where eligibility has expanded, they gain access; where it has not, they remain in the suffering_prolonged victim set. Their exit depends on legislative and judicial interpretation of 'unbearable.'"
+    },
+    {
+      "name": "autonomy_advocacy_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Civil society groups (e.g., Dying With Dignity, Exit International) that lobby for legislative change, fund litigation, and provide navigational support to patients. They gain organizational legitimacy, membership, and policy influence from the constraint's operation. Their exit is mobile — they can shift focus to other rights campaigns."
+    },
+    {
+      "name": "suffering_prolonged_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Patients who meet the autonomy reading's moral criteria for assisted death but are denied access by current law — either because their jurisdiction has not adopted the reading, or because eligibility criteria exclude their condition (e.g., psychiatric suffering, advance dementia, non-terminal chronic illness). They endure suffering that the reading says should be controllable. No legal exit exists; extralegal exit (suicide, travel) carries high risk and cost."
+    },
+    {
+      "name": "families_of_suffering_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear witness to prolonged suffering of loved ones when assisted death is denied. Absorb emotional, financial, and caregiving burdens that the autonomy reading would alleviate. Some face legal jeopardy for assisting extralegal exits. Their exit is constrained — they cannot 'leave' the family situation, but can advocate or relocate."
+    },
+    {
+      "name": "clinicians_forced_into_complicity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Physicians and nurses who object to assisted death on conscience grounds but practice in jurisdictions where the autonomy reading is law. They must either refer (which they may view as complicity), exit the specialty, or risk disciplinary action. Their exit is constrained — leaving obstetrics, oncology, or palliative care is professionally costly; conscientious objection protections vary."
+    },
+    {
+      "name": "palliative_care_specialists",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Clinical gatekeepers who assess eligibility, manage suffering, and implement or decline assisted death requests. They shape the constraint's operation through interpretation of 'unbearable suffering,' capacity assessments, and referral pathways. They benefit professionally from the expanded clinical infrastructure around assisted death. Their exit is mobile — they can shift to pure palliative practice where the constraint does not operate."
+    },
+    {
+      "name": "legislators_and_judges",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Write and interpret the laws that instantiate the autonomy reading. Define eligibility criteria, procedural safeguards, and clinician obligations. They respond to advocacy pressure, court challenges, and public opinion. Their exit is arbitrage — they can move between legislative, judicial, and academic roles."
+    },
+    {
+      "name": "sanctity_of_life_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Religious organizations, disability rights groups, and bioethicists who argue that intentional life-ending is intrinsically wrong. They are structurally excluded from the constraint's beneficiary logic — their moral framework is treated as an obstacle to be overridden rather than a position to be accommodated. They cannot exit the political contest without abandoning their core conviction."
+    },
+    {
+      "name": "bioethics_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars who study the evolution of end-of-life law, track eligibility expansion patterns, and analyze the autonomy/sanctity/slippery_slope triangle. They neither collect nor pay; they map the structural dynamics. Their exit is analytical — they can redirect research attention."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a legally regulated pathway for individuals facing unbearable suffering to end their lives with medical assistance, replacing clandestine suicide, untreated suffering, and prosecutorial lottery with a transparent, assessed, and documented process.",
+    "transfer_function": "Transfers decisional authority over death timing from state prohibition and clinical paternalism to the suffering individual (subject to eligibility gates). Transfers clinical labor from life-prolongation to assisted-death provision. Transfers legal risk from patients and families to the state (which authorizes) and clinicians (who implement).",
+    "absent_voices": "Future patients whose conditions will fall outside current eligibility but inside the autonomy reading's moral logic — e.g., advance dementia patients with prior directives, minors with terminal illness, psychiatric patients whose competence is contested. They are absent because they do not yet exist or cannot presently articulate a claim. Also absent: clinicians who left the profession rather than participate, whose silence is treated as resolution rather than exclusion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the autonomy reading vanished overnight, jurisdictions with assisted death laws would revert to criminal prohibition. Patients currently using the pathway would lose legal access; clinicians would face prosecution risk; advocacy organizations would shift to civil disobedience or underground networks. The suffering_prolonged victim set would expand to include all current beneficiaries. The world rearranges because the constraint currently organizes a legally recognized transfer of authority and clinical labor.",
+    "founding_problem": "The absolute prohibition on assisted death forced individuals facing unbearable suffering into three untenable positions: clandestine violent suicide, prolonged suffering without relief, or dependence on clinician willingness to risk prosecution for mercy. The autonomy reading was built to replace this trilemma with a regulated, transparent, patient-controlled option.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The autonomy reading's proponents (advocacy organizations, some bioethicists, legislative sponsors) attest the founding problem remains live — eligibility gaps persist, access is uneven, and new conditions (e.g., psychiatric suffering) remain excluded. Opponents (sanctity_advocates, some palliative care bodies, disability rights organizations) attest the founding problem is substantially solved where the reading operates, and further expansion constitutes a new problem rather than completion of the original one. Independent corroboration comes from longitudinal studies of jurisdictions with 20+ years of operation (Netherlands, Oregon, Belgium) showing steady eligibility expansion beyond the original terminal-illness frame — cited by both sides as evidence for their reading of the founding problem's status."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The autonomy reading of end-of-life authority asserts that individual self-determination grounds a right to medical assistance in dying when suffering is unbearable. This reading operates as a tangled rope: it coordinates a genuine collective-action problem (replacing clandestine suffering and suicide with a regulated pathway) while extracting asymmetric costs from those denied access (the suffering_prolonged), clinicians compelled to participate or refer, and families bearing witness to legally mandated prolongation. The constraint requires active enforcement — eligibility assessments, waiting periods, clinician oversight, prosecutorial discretion — to maintain its boundary against both the sanctity prohibition and the slippery_slope expansion. Over the interval (0–30 years of operation in early-adopter jurisdictions), base extractiveness rises modestly as eligibility expands beyond the founding terminal-illness frame; suppression requirement falls as the constraint normalizes and enforcement shifts from prohibition to regulation; theater ratio rises slightly as procedural safeguards accumulate performative compliance elements. The claim/metric independence is deliberate: the reading claims to be a pure coordination mechanism (rope), but the authored metrics reveal asymmetric extraction and enforcement dependence (tangled_rope).",
+    "logic_rationale": "Extractiveness is low but nonzero (0.18) because the constraint's primary function is coordination (enabling chosen death) and the extraction falls on those excluded from eligibility — a structural asymmetry, not a transfer from beneficiaries to payers. Suppression is high (0.72) because the constraint's persistence depends on actively maintaining the legal boundary: without enforcement, the sanctity prohibition reasserts (criminalization) or the slippery_slope expansion proceeds unchecked (legislative drift). Theater ratio is low (0.12) — the clinical and legal machinery is functionally necessary, though expanding procedural checklists show early Goodhart drift. Accessibility collapse is moderate-high (0.68) because once the autonomy principle is accepted, alternatives (palliative sedation, voluntary stopping of eating/drinking, clandestine suicide) are structurally inferior for the coordination function. Resistance is moderate (0.58) from sanctity advocates, some clinician groups, and disability rights organizations — sufficient to contest expansion but not to repeal where established.",
+    "directionality_logic": "Beneficiaries (terminally_ill_patients, patients_with_unbearable_suffering, autonomy_advocacy_organizations) sit at low directionality (d ~ 0.15–0.25): the constraint subsidizes their agency. Victims (suffering_prolonged_patients, families, clinicians_forced_into_complicity) sit at high directionality (d ~ 0.75–0.90): the constraint extracts from them by denying access, imposing caregiving burdens, or compelling professional complicity. Palliative_care_specialists and legislators (agenda_setters) sit near symmetric (d ~ 0.45–0.55): they administer the constraint and bear its operational costs while gaining professional authority and political legitimacy. Excluded sanctity advocates are structurally locked out (d irrelevant — they are not governed by the constraint's logic). Observers sit at analytical (d = 0.5 by definition).",
+    "perspectival_gap": "From the beneficiary seats, the constraint is experienced as liberation — a rope that solves the coordination problem of dying well. From the suffering_prolonged seat, it is a snare — the autonomy principle is proclaimed but the gate remains closed. From the clinician_forced_into_complicity seat, it is a tangled rope — they coordinate the process they morally oppose. The engine computes this divergence from the structural data; the authored claim (tangled_rope) reflects the structural truth that all three experiences are simultaneously real.",
+    "mandatrophy_analysis": "The founding problem (replacing the prohibition trilemma) is partially solved where the reading operates but contested in scope. The constraint does not show mandatrophy — its function has not atrophied; rather, its eligibility boundary is the site of active contestation. Expansion to non-terminal and psychiatric conditions represents either completion of the autonomy logic (proponents) or slippery_slope drift (opponents). The classification prevents mislabeling: calling this a pure rope ignores the suffering_prolonged victim set; calling it a snare ignores the genuine coordination for beneficiaries. Tangled rope captures the hybrid structure.",
+    "kernel_context": "This constraint is the autonomy_reading of the end_of_life_authority kernel. Sibling readings: sanctity_reading (intrinsic value of life prohibits intentional life-ending) and slippery_slope_mechanism (autonomy frameworks empirically expand beyond competent terminal cases). The autonomy reading instantiates a constraint where individual self-determination is the grounding axiom; suffering_prolonged patients are the primary victim set; high suppression of paternalistic restrictions is required; eligibility criteria expand over time per the empirical pattern documented in Netherlands, Belgium, Oregon, Canada, and Colombia."
+  },
+  "omegas": [
+    {
+      "id": "autonomy_sanctity_logical_incompatibility",
+      "question": "Does the autonomy reading's core premise (self-determination grounds a right to assisted death) logically foreclose the sanctity reading's core premise (intrinsic value of life prohibits intentional life-ending) within a single legal framework, or do they coexist as competing but structurally compatible positions?",
+      "resolution_mechanism": "Constitutional court jurisprudence: if a framework can simultaneously recognize a right to assisted death AND protect conscientious objection for clinicians who hold the sanctity view, the readings coexist. If recognition of the right structurally requires the sanctity view to be legally irrelevant (no conscience protection, no institutional opt-out), the autonomy reading forecloses the sanctity reading.",
+      "impact": "If forecloses, the kernel is structurally binary — jurisdictions must choose one reading as authoritative. If coexists_with, the kernel supports stable pluralism with contested boundaries. This determines whether the autonomy reading's expansion is completion or drift.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the autonomy and sanctity readings are logically incompatible within one framework"
+    },
+    {
+      "id": "slippery_slope_as_structural_drift_vs_completion",
+      "question": "Is the documented expansion of eligibility criteria (terminal → non-terminal → psychiatric → advance directives → minors) a structural drift of the autonomy reading beyond its founding problem, or the logical completion of the autonomy principle itself?",
+      "resolution_mechanism": "Longitudinal comparative analysis: if expansion correlates with weakening of safeguards (shorter waiting periods, fewer independent assessments, reduced clinician involvement), it signals drift. If expansion correlates with stable or strengthening safeguards, it signals principled completion. Track the safeguard-to-eligibility ratio over 30+ years in multiple jurisdictions.",
+      "impact": "If drift, the autonomy reading shows mandatrophy — its founding problem is solved but the constraint expands via institutional momentum. If completion, the reading's extractiveness on the suffering_prolonged is decreasing as eligibility catches up to the principle. The engine's drift detection (T17) uses this distinction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether eligibility expansion represents drift or principled completion of the autonomy reading"
+    },
+    {
+      "id": "clinician_complicity_as_extraction_mechanism",
+      "question": "Is the burden on conscience-objecting clinicians a necessary coordination cost (they are the only ones who can assess and implement) or an extractive transfer (their moral injury is the price of the autonomy reading's legitimacy)?",
+      "resolution_mechanism": "Compare jurisdictions with strong vs. weak conscientious objection protections. If access metrics (wait times, geographic availability, patient satisfaction) are equivalent, the burden is extractive — strong protections would not impair coordination. If access degrades with strong protections, the burden is a coordination cost.",
+      "impact": "If extractive, the clinician_forced_into_complicity victim set is a structural feature of the autonomy reading, not a bug — the reading requires moral injury to demonstrate state authority over the sanctity objection. This would raise the constraint's effective extraction for that seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clinician conscience burden is coordination cost or extractive transfer"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__sanctity_reading",
+      "end_of_life_authority__slippery_slope_mechanism"
+    ],
+    "dual_formulation_note": "The end_of_life_authority kernel decomposes into three constraint stories: autonomy_reading (this file), sanctity_reading, and slippery_slope_mechanism. The autonomy reading's ε (0.18) is substantially lower than the sanctity reading's ε would be for those it governs (prohibition extracts from all suffering patients) but higher than a pure rope due to the suffering_prolonged victim set. The slippery_slope_mechanism is not a separate constraint but a structural drift hypothesis about the autonomy reading's trajectory — it is linked via affects_constraints because the slippery_slope reading's empirical claims about expansion patterns are evidence for or against the autonomy reading's mandatrophy status."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "slippery_slope_mechanism",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_self_determination_includes_death_timing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unbearable_suffering_grounds_relief_claim",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_prohibition_framework",
+    "drift_state": {
+      "moment": "contemporary_autonomy_expansion_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

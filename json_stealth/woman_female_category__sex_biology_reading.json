@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "woman_female_category__sex_biology_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wfcat_sbr",
+    "story_uid": "86db872f-d808-49d8-84ae-51676c8e0190"
+  },
+  "base_properties": {
+    "extractiveness": 0.44,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sex-Biology Determination of Female Category Membership",
+    "topic_domain": "political philosophy/bioethics/gender studies/law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "natal_females_seeking_sex_based_protections",
+      "womens_category_athletes",
+      "female_prisoners_and_shelter_residents"
+    ],
+    "victims": [
+      "trans_women_excluded_from_female_provisions",
+      "intersex_dsd_individuals_subject_to_testing"
+    ],
+    "vindicated_propositions": [
+      "human_sexual_dimorphism_doctrine",
+      "gamete_based_binary_sufficiency"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading (sex_biology_reading) of the shared kernel woman_female_category; what structurally changes if a sibling reading is adopted instead?",
+      "resolution_mechanism": "Track which determinant each jurisdiction's statutes, facility policies, and federation rules actually adopt; the adopted reading determines the operative victim and beneficiary sets.",
+      "impact": "Under gender_identity_reading the victim set inverts (natal females lose guaranteed access; trans women gain it); under hybrid_contextual_reading the victim set fragments by context, with extraction concentrated wherever the context assigns the biological test. This story's epsilon, victims, and beneficiaries are valid only for the sex-biology instantiation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three readings of the woman/female category kernel."
+    },
+    {
+      "id": "exclusion_harm_weighting",
+      "question": "Is denial of access to female-designated provisions a welfare harm of the kind this counting framework weighs — and how heavily — relative to the physical-safety and category-integrity interests the reading prioritizes?",
+      "resolution_mechanism": "Not resolvable by data alone: it depends on whether gender identity constitutes a welfare-relevant interest comparable to bodily-safety interests. Comparative outcome studies can bound the physical-safety side; the identity-affirmation side is a framing commitment.",
+      "impact": "This is the precise location of disagreement between the sibling readings. Weighting exclusion costs heavily pushes effective extraction toward snare levels; discounting them keeps the constraint in tangled_rope territory. The epsilon authored here reflects this reading's own weighting.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Where the readings disagree: the normative weight of identity-affirmation harm versus protection harm."
+    },
+    {
+      "id": "intersex_edge_case_load",
+      "question": "How much of the measured extraction is generated by the bright-line rule's treatment of intersex/DSD individuals whose biology does not cleanly match the binary the rule presupposes?",
+      "resolution_mechanism": "Epidemiological and administrative counts of classification disputes: sports eligibility cases, facility-placement challenges, documentation contests involving DSD conditions.",
+      "impact": "A heavy edge-case load strains the reading on its own terms — the criterion fails precisely where it claims biological determinacy is strongest — raising epsilon and pressuring the foundational axiom; a light load supports the criterion's administrability claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extraction contribution of binary-rule misclassification at biological edge cases."
+    },
+    {
+      "id": "protective_efficacy_uncertainty",
+      "question": "Does biologically-keyed single-sex provision actually deliver the safety and category-integrity outcomes that justify its exclusion costs?",
+      "resolution_mechanism": "Comparative outcome studies across jurisdictions operating different determinants: assault incident rates in custodial and shelter settings, competitive-fairness measures in female categories, quality of sex-stratified medical evidence.",
+      "impact": "If protective efficacy is low, the coordination half of the constraint weakens and the structure slides toward snare; if high, the rope-side reading strengthens. Current comparative data is thin and politicized, leaving this open.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the coordination function delivers the outcomes that offset exclusion costs."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel 'woman/female category': the sex-biology reading, under which category membership is determined by chromosomal sex, reproductive anatomy, and developmental biology. The standing arrangement under contest — the referent of epsilon — is the existing regime that keys access to female-designated provisions (refuges, custodial placement, sporting categories, medical cohorts) to biological sex. Per the epsilon-invariance principle, the colloquial label 'what makes someone a woman' decomposes into three structurally distinct constraints sharing this kernel: this reading (victims: trans women excluded, intersex/DSD individuals misclassified; beneficiaries: natal females), the gender_identity_reading (which inverts the victim set), and the hybrid_contextual_reading (which fragments the victim set by context). All three assess the SAME referent with reading-indexed values: this reading authors epsilon at 0.44 because it weights the protective delivery heavily and the exclusion costs moderately; the gender_identity_reading authors the same referent far higher because it counts identity-denial as the central harm; the hybrid reading splits epsilon across contexts. The values diverge because the readings weigh harms differently, not because the referent differs. The claim/metric gap is deliberate: the reading CLAIMS tangled_rope (genuine coordination it defends as necessary) while the metrics describe real, actively enforced exclusion costs — the engine measures the divergence per seat.",
+    "key_agents": [
+      "natal_females_seeking_sex_based_protections: Primary beneficiary (organized/constrained) — the protected class the criterion subsidizes",
+      "female_prisoners_and_shelter_residents: Captive beneficiary (powerless/trapped) — highest-stakes protection seat, no exit from placement regimes",
+      "womens_category_athletes: Beneficiary (organized/constrained, global scope) — category-integrity seat bearing occasional verification burdens",
+      "trans_women_excluded_from_female_provisions: Primary target (moderate/trapped) — bears the exclusion costs the criterion imposes",
+      "intersex_dsd_individuals_subject_to_testing: Secondary target (powerless/trapped) — bears the bright-line rule's misclassification and testing costs",
+      "sports_governing_bodies: Agenda setter (institutional/arbitrage) — writes and rewrites eligibility criteria",
+      "prison_and_shelter_administrators: Agenda setter (institutional/constrained) — applies the criterion to placement decisions daily",
+      "legislators_and_courts: Agenda setter (institutional/mobile) — sets and adjudicates the statutory definition",
+      "academic_bioethicists_and_jurists: Analytical observer (analytical/analytical) — sees the full structure without administrative power"
+    ],
+    "logic_rationale": "Extractiveness 0.44: the reading's own lights acknowledge real exclusion costs borne by trans women and testing costs borne by intersex/DSD individuals, while holding the protective delivery dominant; the value is reading-indexed over the fixed referent, not tuned to any predicted output. Suppression 0.48: enforcement is structural, not internalized — statutes, facility placement rules, and eligibility protocols actively police the boundary, but alternatives short of the foreclosed one remain (unisex provision, male-category access, third-space proposals), so accessibility_collapse is low at 0.35. Theater_ratio 0.35: a growing share of activity is culture-war symbolism (declarations, pledges, symbolic bans) while core operations (placement, eligibility, cohort assembly) remain functional. Resistance 0.70: the constraint meets heavy, organized, two-sided contest — litigation, legislation, protest — among the highest-resistance profiles in the corpus. Measurements run on ONE shared seven-point grid (interval roughly 1995-2025). The suppression_requirement series is deliberately non-monotonic: mass chromosome screening in elite sport (high enforcement infrastructure) was dismantled around t=10, then enforcement rebuilt in new form as targeted DSD regulations and facility-placement litigation — this is an enforcement-machinery substitution, not decay, which is why the scalar suppression ends slightly above its trough. Extractiveness rises as the excluded class became mobilized and the exclusion became salient, plateauing at the current litigation equilibrium. Theater rises monotonically with the symbolization of the dispute.",
+    "perspectival_gap": "The payer seats and the beneficiary seats must compute differently. Trans women (trapped, moderate power, national scope) sit near the full-target end: the constraint forecloses their access and they cannot exit the categorization regime that imposes it. Intersex/DSD individuals (trapped, powerless, global scope via sport) bear the rule's failure at its own edge cases. The beneficiary seats sit near the subsidy end — with an important intra-class gradient: female prisoners (powerless, trapped, immediate horizon) hold the highest-stakes dependence on the criterion, while elite athletes (global scope, biographical horizon) hold a weaker, integrity-based stake. Agenda setters experience administration, not extraction: sports federations (arbitrage-grade freedom — they have repeatedly re-specified criteria) face the constraint differently from prison administrators (constrained — they must apply whatever definition the law supplies). Adherents of this reading additionally exhibit ideological identity fusion — the biological frame functions as a worldview making concession to context-relativity feel like betrayal — which inflates the resistance the constraint meets and would change the picture if the identity frame broke.",
+    "directionality_logic": "No directionality overrides are needed: the derivation chain captures the relationships from the declared structure. Beneficiary declarations (three natal-female seats) drive d toward the beneficiary end, damped further by organized power; victim declarations with trapped exit drive d toward the full-target end, and national-to-global spatial scope scales effective extraction upward modestly for the targets — verification is hardest exactly where the excluded class is weakest. The vindicated propositions (sexual dimorphism doctrine, gamete-binary sufficiency) collect no rents and feed no directionality.",
+    "mandatrophy_analysis": "The classification guards against two opposite mislabels. Against rope: declaring victims and active enforcement blocks pure-coordination certification despite the genuine coordination function — the same structure that delivers protection extracts exclusion, which is the tangled_rope signature. Against snare: the founding problem is live and externally corroborated (violence statistics, performance physiology, sex-differentiated epidemiology attested by agencies outside the beneficiary coalition), so the coordination story is not mere cover. Mandatrophy is NOT resolved — the mandate has not outlived its function. The lifecycle risk to watch is the theater trajectory (0.12 to 0.35): if symbolic maintenance continues displacing operational function while the rule persists, piton drift becomes the long-run hazard; the current plateau in extractiveness suggests the system has reached a contested equilibrium rather than continuing accumulation.",
+    "kernel_context": "Kernel: woman_female_category — the persisting commitment that there is a determinate answer to who counts as female/woman for the allocation of sex-based provisions. This file instantiates the sex_biology_reading: membership determined by chromosomal sex, reproductive anatomy, and developmental biology. Sibling readings: gender_identity_reading (membership by internal self-identification, independent of biology) and hybrid_contextual_reading (membership context-indexed: biology for medical/sports/safety, identity for social/legal recognition). The disagreement is located in two places: the determinant of membership (uniform biological versus identity versus plural) and the weighting of identity-affirmation harm against physical-protection harm. On the determinant question this reading stands in genuine logical contradiction with both siblings — a single framework cannot hold that membership is biologically fixed and also that it is identity-fixed or context-relative — which is why both reading_relations are forecloses rather than coexists_with: unlike the capital-punishment triplet, where readings differ in values over a shared factual frame, these readings return contradictory answers to the same determinative predicate, on the personhood-boundary pattern."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "gender_identity_reading",
+      "hybrid_contextual_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial concept 'who counts as female/woman' decomposes into three stories sharing the kernel woman_female_category. This story (sex_biology_reading) is the upstream member in most jurisdictions' current practice — its criterion is cited as the settled baseline that the gender_identity_reading attacks and the hybrid_contextual_reading partially incorporates. Each member has its own epsilon over the shared referent: this reading 0.44 (protective weighting), the identity reading substantially higher (identity-harm weighting), the hybrid reading fragmented by context. Family members are linked via affects_constraints; orphaning any one would break contamination-propagation analysis across the definitional contest."
+  },
+  "stakeholders": [
+    {
+      "name": "natal_females_seeking_sex_based_protections",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Rely on biologically-keyed eligibility for refuges, custodial placement, sporting categories, and medical cohorts. They cannot individually exit the categorization regime — their protection exists only while the criterion holds — and they organize legally and politically to defend it. What flows to them is protected access; what they bear is the defense burden of keeping the criterion in place."
+    },
+    {
+      "name": "female_prisoners_and_shelter_residents",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are housed, searched, and accommodated under sex-based placement rules inside institutions they cannot leave. They hold the highest-stakes dependence on the criterion: their day-to-day physical environment is set by whichever membership rule their institution applies, and they have no market or geographic exit from custody or crisis accommodation."
+    },
+    {
+      "name": "womens_category_athletes",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Compete in a female category whose eligibility is biologically determined. Their stake is competitive integrity and the record structure of their sport; they occasionally bear verification burdens when eligibility is challenged. Their career horizon is bounded, and their recourse is their federation's rules rather than exit from competitive sport."
+    },
+    {
+      "name": "trans_women_excluded_from_female_provisions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are denied access to female-designated spaces, categories, and services under the biological criterion. They hold legal-advocacy capacity but limited structural power against the institutions that set placement and eligibility rules. Exit from the constraint's effects is unavailable: the categorization is imposed by statute and institutional policy wherever they live, and their stake in the question is bound up with identity they cannot set down."
+    },
+    {
+      "name": "intersex_dsd_individuals_subject_to_testing",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Have bodies that do not cleanly match the binary the criterion presupposes. They bear eligibility testing, disqualification, documentation disputes, and medical scrutiny — the bright-line rule's misclassification costs concentrate on them precisely where biology is supposed to be most determinate. Sporting governance is international, so they face the rule wherever they compete."
+    },
+    {
+      "name": "sports_governing_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write and rewrite eligibility rules for the female category. They have repeatedly re-specified the criterion — from mass chromosome screening, to its abolition, to targeted testosterone and DSD frameworks — demonstrating freedom to move between criteria regimes that no participant seat possesses. Whatever rule they set, they administer it globally."
+    },
+    {
+      "name": "prison_and_shelter_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Apply the membership criterion to placement decisions daily. Unlike federations, they cannot redefine membership — they must operate whatever definition statute and case law supply, and they face litigation from contending parties whichever way they decide individual cases. Their discretion is operational, not definitional."
+    },
+    {
+      "name": "legislators_and_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Enact and adjudicate the statutory definition of the category. They can rewrite the rule — some jurisdictions have moved toward self-ID, others have hardened biological definitions — but each move carries electoral, constitutional, and cross-jurisdictional cost. They are the only seat that can replace the criterion outright."
+    },
+    {
+      "name": "academic_bioethicists_and_jurists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the structure of the category, publish competing frameworks, and supply the conceptual vocabulary all contending parties use. They hold no administrative power over placement or eligibility and collect nothing from the criterion's operation; their seat is the analytical vantage from which the full three-reading structure is visible."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "six_questions": {
+    "coordination_function": "Supplies a single administrable criterion — chromosomal sex, reproductive anatomy, developmental biology — by which shelters, prisons, sports federations, and medical research programs allocate female-designated provisions, avoiding case-by-case adjudication of membership claims.",
+    "transfer_function": "Moves access to female-designated spaces, competition categories, and data cohorts toward natal females; moves the costs of exclusion and verification onto trans women and intersex/DSD individuals whose bodies or identities do not match the criterion.",
+    "absent_voices": "Trans women were absent from the administrative rooms where most facility-placement and service policies were first drafted; intersex individuals were absent from the standard-setting that produced sex-verification protocols later applied to them without consent; gender-nonconforming cis women who bear collateral verification burdens rarely hold a seat in eligibility proceedings that concern them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the biological determinant vanished overnight, every institution keying provisions to it would need a replacement — self-ID, context-indexed rules, or de-segregation — simultaneously rearranging custodial placement, shelter admission, elite sport eligibility, and decades of sex-stratified medical data collection. Nothing about the current arrangement survives the criterion's removal unchanged.",
+    "founding_problem": "Male violence against women and the demand for protected single-sex provision; preserving meaningful female competition categories given average physiological performance differences; and collecting valid sex-stratified medical evidence. The category boundary was built to serve these problems.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Criminal-justice statistics on sexual and domestic violence recorded by agencies outside the beneficiary coalition, sports-physiology literature on performance gaps, and epidemiological findings on sex-differentiated disease all attest the underlying hazards independently of the arrangement's defenders. What remains disputed — and what the sibling readings contest — is whether the biological determinant is the necessary response to those hazards; the corroboration covers the founding problem, not the reading's answer to it."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "natural_kind_biological_binary",
+    "drift_state": {
+      "moment": "contemporary_self_identification_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "gender_identity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_contextual_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gametic_biology_determines_female_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "sex_based_protection_requires_biologically_stable_boundary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "829e9be3-9a2d-459f-aeb6-1515215ded91"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.35,
+    "theater_ratio": 0.24,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Drill-and-Inspection Regime as Live Competence Transmission (Competence Reading)",
+    "topic_domain": "institutional/civil-defense",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regional_inspection_corps",
+      "hazard_zone_residents",
+      "mutual_aid_partner_networks"
+    ],
+    "victims": [
+      "small_rural_response_agencies"
+    ],
+    "vindicated_propositions": [
+      "deliberate_practice_retention_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.24,
+      "basis": "observed"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__husk_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'drills keep us ready' conflates three structurally distinct claims about the same performance regime: that practice transmits live competence (this file, low epsilon, coordination-dominant), that identical performances persist as memorial husks after operational knowledge has hollowed out (separate file, high theater, inertia-dominated), and that transmission is stratified across domains with engineering competence live while civilian coordination knowledge decays (separate file, split victim/beneficiary structure). Per the epsilon-invariance principle these are authored as separate constraints with separate epsilon values and separate stakeholder valences. This file is the upstream optimistic baseline; the rival readings are downstream contestations that take this regime's audited operation as their object, so this file links both siblings."
+  },
+  "stakeholders": [
+    {
+      "name": "national_civil_defense_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Writes the national drill-frequency mandates, inspection standards, and certification criteria for civil defense and disaster-response organizations. Funds much of the exercise calendar through grants conditioned on compliance. Can rewrite the regime, but depends on the inspection corps and participating agencies to make it real on the ground."
+    },
+    {
+      "name": "regional_inspection_corps",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Career inspectors and exercise evaluators who travel between jurisdictions verifying plans, equipment, and drill performance. Their professional standing, promotion paths, and later consulting prospects are built on the inspection calendar. Many are veterans of major incidents whose judgment shapes which findings matter and which scenarios get designed next cycle."
+    },
+    {
+      "name": "county_emergency_management_agencies",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Run the local drill calendar, host exercises, and absorb inspection visits while carrying day-to-day response duties. Drill hours come out of the same staff time and budgets as actual service delivery, but the same rehearsals are what make multi-agency response work when an incident lands. Leaving is not an option: the statutory duties and the hazards stay where they are."
+    },
+    {
+      "name": "small_rural_response_agencies",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Volunteer-heavy fire, EMS, and rescue services with a handful of paid staff. Every mandated drill hour displaces fundraising, backfill training, or call coverage, and inspection preparation falls on the same three people who run everything else. Waivers exist on paper but are slow and stigmatizing; not participating means losing grant eligibility and mutual-aid standing, and the hazard exposure cannot be relocated."
+    },
+    {
+      "name": "hazard_zone_residents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Live in flood plains, wildfire interfaces, seismic zones, or downwind of industrial sites. They fund the exercise system through taxes and occasionally have roads closed for full-scale drills. What they receive is mostly invisible: response organizations that arrive already knowing each other's procedures, equipment that works, and plans that have been physically rehearsed rather than filed."
+    },
+    {
+      "name": "mutual_aid_partner_networks",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Neighboring jurisdictions and specialized teams — urban search and rescue, hazmat, medical surge — that deploy across jurisdictional boundaries during major events. Standardized drills are how they learn each other's radio protocols, command structures, and equipment quirks before the incident rather than during it."
+    },
+    {
+      "name": "academic_disaster_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Study whether exercise participation predicts incident performance, using after-action data, survey panels, and controlled scenario-injection experiments. Publish findings that feed back into mandate design; hold no operational role in the regime they study."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes rehearsed interoperability among dispersed response organizations before incidents: shared procedures, common vocabulary, tested equipment, and personal familiarity across agency lines, renewed often enough that skills and relationships do not decay between uses.",
+    "transfer_function": "Moves staff hours, budget, and attention out of routine service delivery into rehearsal and verification, converting them into a shared readiness stock held across agencies; moves certification authority and career standing to the inspection corps; moves grant funds from the national authority to compliant local agencies.",
+    "absent_voices": "Rural volunteer agencies have the weakest seat at mandate-design tables dominated by metro agencies and the national authority; residents affected by past incidents rarely sit on the after-action panels that write future scenarios; front-line volunteers' tacit knowledge enters only through formal channels. Their objections — drill fatigue, unrealistic scenarios, unfunded mandates — surface mainly in surveys, not in the rooms where frequencies and standards are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Response organizations would drift apart procedurally within a few years — radio protocols, command habits, and personal familiarity decay without rehearsal — and the first major cross-boundary incident after lapse would expose the gaps, as comparable historical lapses have. Grant conditioning, certification, and the inspection economy would unwind with it.",
+    "founding_problem": "Mid-century civil defense reviews and successive disaster inquiries found that paper plans failed under stress: organizations that had never operated together could not coordinate in the first hours, equipment sat unmaintained, and skills decayed between rare real events. The drill-and-inspection regime was built to convert written plans into practiced capability and to detect decay before an incident did.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent disaster inquiries and after-action commissions — seated outside the benefiting parties — repeatedly attribute poor incident outcomes to unrehearsed coordination and credit exercised ones; peer-reviewed studies of exercise-to-performance transfer corroborate the founding problem from academic seats. No serious seat disputes that unpracticed coordination fails under stress."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "A national civil defense system mandates recurring multi-agency drills and periodic inspections of plans, equipment, and personnel readiness. Under the competence reading authored here, these performances are live exercised knowledge: each generation of responders re-validates capability by practicing it, inspectors accumulate the pattern recognition to spot novel failure signatures, and participants improvise successfully when scenarios deviate from script. The regime's costs are real but convert into the readiness its participants and publics consume. This file is one member of the preparedness_transmission constraint family; the sibling readings are separate constraint files linked through network.affects_constraints, and this file's epsilon and stakeholder valences are valid only under this reading.\n\nKEY AGENTS (by structural relationship):\n- national_civil_defense_authority: Agenda-setter (institutional/arbitrage) — writes and funds the mandate, can restructure the regime\n- regional_inspection_corps: Primary beneficiary with enforcement discretion (organized/mobile) — collects career standing and certification authority\n- county_emergency_management_agencies: Dual payer/beneficiary (moderate/constrained) — bears drill costs, draws readiness returns\n- small_rural_response_agencies: Primary target (powerless/trapped) — bears disproportionate compliance burden with thinnest capacity\n- hazard_zone_residents: Diffuse beneficiary (moderate/constrained) — consumes readiness indirectly, funds it through taxes\n- mutual_aid_partner_networks: Secondary beneficiary (organized/mobile) — gains cross-boundary interoperability\n- academic_disaster_researchers: Analytical observer — measures whether practice transfers to performance",
+    "logic_rationale": "Extraction is low (0.20) because the regime's costs — drill hours, inspection preparation, exercise budgets — convert directly into the readiness the participants themselves consume; the residual is administrative overhead plus the disproportionate burden falling on thin-staffed rural agencies. Suppression (0.35) reflects statutory compulsion and grant conditioning rather than closed alternatives: agencies can shape scenario design, seek waivers, and vary exercise formats, but cannot exit the mandate while holding response duties. Suppression is authored as a raw structural property and is left unscaled — only extractiveness is scaled by directionality and scope in the engine's computation. Theater ratio (0.24) is low but nonzero: photo-op exercises and checkbox inspections exist inside an otherwise functional calendar, and the series shows slow creep (0.18 to 0.24) worth monitoring. Accessibility collapse (0.45): alternatives to formal drills exist — real-incident experience, apprenticeship, simulation platforms — and partially substitute, but none reproduces multi-agency rehearsal at scale. Resistance (0.30): grumbling, waiver-seeking, and occasional non-participation by rural agencies, without organized opposition. The suppression_requirement series is omitted deliberately: enforcement capacity is stable across the interval, so the static scalar carries the picture. All temporal series share one grid (t=0 to 24, step 4) so no metric row is sampled against another's gaps.",
+    "perspectival_gap": "From the inspection corps' seat the regime is a vocation: each visit exercises judgment that matters, and the corps' own competence grows with exposure to varied jurisdictions. From the rural agency's seat the same visit is an unfunded mandate consuming its scarcest resource. Metro county agencies sit near the midpoint — they pay heavily and draw heavily on the interoperability the drills build. Residents experience the regime almost entirely through its outputs, or their absence. The engine computes these divergent per-seat classifications from the structural data; the authored coordination-dominant claim does not adjudicate them.",
+    "directionality_logic": "Declared beneficiaries (inspection corps, residents, mutual-aid networks) derive low directionality — the regime subsidizes them. The declared victim group (rural agencies) derives high directionality — they bear extraction with the least return, and their trapped exit position pushes them toward the full-target end. County agencies are authored as dual-positioned (payer with secondary beneficiary) precisely so the engine sees both flows rather than a single valence; no power-atom override is used because overrides apply at power-atom granularity and would collide with residents sharing the moderate atom. The national authority sits near the beneficiary end through arbitrage-grade exit — it writes the rules it administers and can restructure rather than endure them.",
+    "mandatrophy_analysis": "The founding problem remains live — disasters recur and capability decays without practice — and its status is corroborated from outside the benefiting parties by independent after-action commissions and academic transfer studies. The live-status pairing with a world-rearranges disappearance verdict yields no obsolescence flag. The classification discipline cuts both ways: it prevents the regime's genuine function from being misread as pure ritual (the error a hollowed-out reading of the same performances would make), while the theater_ratio series and the rural-burden omega mark exactly where decay would show first. If theater crossed roughly 0.5 alongside failing transfer measures, the same structural data would support reclassification pressure toward inertial-performance territory. Mandatrophy here is a monitoring posture, not a verdict.",
+    "kernel_context": "Kernel: preparedness_transmission — the standing commitment that recurring drills and inspections carry response capability across generations of personnel. This file instantiates the competence_reading: practice genuinely re-validates capability, so the regime's performances are load-bearing. Sibling readings: husk_reading (identical performances, hollowed content — memorial ritual sustaining memory without operational knowledge) and hybrid_reading (stratified transmission — physical and engineering competence live, civilian coordination knowledge decayed). Epsilon, stakeholder valences, and type are reading-indexed; the siblings are separate constraint files linked through network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the preparedness_transmission kernel (competence_reading). Would adopting the husk_reading or hybrid_reading instead change the structural classification, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Reading choice is settled by the transfer evidence: longitudinal drill-to-performance studies and scenario-injection tests of improvisation under novel signatures. Adoption of husk_reading would re-author the same performances with high theater_ratio, inverted beneficiary structure, and an inertia-dominated type; adoption of hybrid_reading would split this file into stratified sub-constraints with divergent epsilon per domain.",
+      "impact": "Epsilon (0.20), the beneficiary/victim valences, and the coordination-dominant claim are all valid only under this reading; the sibling files carry the same performances under different structural commitments.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is the competence reading of the preparedness_transmission kernel; rivals are separate constraints, and the disagreement lives in whether drill participation produces transferable operational competence."
+    },
+    {
+      "id": "drill_to_performance_transfer",
+      "question": "Does drill participation causally improve incident performance — novel-signature recognition by inspectors, improvised coordination by participants under scenario variation — or does measured readiness reflect selection effects and self-report?",
+      "resolution_mechanism": "Blinded scenario-injection evaluations with unannounced variations, and matched-jurisdiction comparisons of cumulative drill hours against realized incident outcomes.",
+      "impact": "Confirmation stabilizes the low-theater, low-extraction profile authored here; failure would push theater_ratio sharply upward and shift classification pressure toward the rival husk reading's structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the regime's performances transmit live capability or merely sustain the appearance of it."
+    },
+    {
+      "id": "rural_burden_asymmetry_tolerance",
+      "question": "Is the disproportionate compliance burden on small rural agencies a stable coordination cost, or a growing inequity that will erode participation and mutual-aid cohesion?",
+      "resolution_mechanism": "Track rural drill-hour displacement of service delivery, waiver uptake rates, and rural agency attrition from mutual-aid rosters across successive mandate cycles.",
+      "impact": "If the burden grows faster than rural capacity, effective extraction on the rural seat rises and the coordination-dominant classification trends toward a hybrid coordination/extraction structure with the rural seat as systematic payer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the regime's main internal asymmetry is bounded or accumulating."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "practice_validated_capability",
+    "drift_state": {
+      "moment": "contemporary_after_action_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_live_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "findings_must_close_the_learning_loop",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

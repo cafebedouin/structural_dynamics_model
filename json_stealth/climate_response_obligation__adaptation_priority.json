@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "climate_response_obligation__adaptation_priority",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "0e271a77-0634-49b4-859a-6178ae576fbb"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.58,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Adaptation-Priority Climate Response (2-3C Acceptance Regime)",
+    "topic_domain": "climate policy/political economy/intergenerational ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fossil_capital_owners",
+      "current_generation_consumers",
+      "adaptation_engineering_contractors",
+      "wealthy_region_municipalities"
+    ],
+    "victims": [
+      "future_generations",
+      "global_south_populations",
+      "low_lying_island_communities"
+    ],
+    "vindicated_propositions": [
+      "warming_inevitability_thesis",
+      "market_discount_rate_adequacy",
+      "adaptation_sufficiency_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.64,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.67,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.69,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.7,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.26,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.29,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.31,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.32,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.51,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.54,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.57,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "projected"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading of the climate_response_obligation kernel: does the epsilon, beneficiary/victim structure, and classification authored here hold only for the adaptation_priority reading, and what would the mitigation_priority or degrowth_reading instantiations change structurally?",
+      "resolution_mechanism": "Author the sibling readings as separate constraints (mitigation_priority, degrowth_reading) and compare per-seat classifications. The disagreement is located in what the response obligation IS - protection within committed warming versus prevention versus sufficiency - not in the climate science all readings share.",
+      "impact": "Under mitigation_priority, current_generation_consumers and fossil_capital_owners move into the payer set and future_generations into the beneficiary set, inverting the directionality profile; under degrowth_reading, wealthy consumers join the payer set and the throughput question enters the coordination function. This story's high epsilon does not transfer to the siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; sibling readings instantiate different constraints with different victim sets."
+    },
+    {
+      "id": "warming_lockin_contingency",
+      "question": "Is warming of 2-3C actually locked in given current technology, costs, and remaining carbon budgets, or is the inevitability premise a policy artifact that the arrangement itself produces through self-fulfilling delay?",
+      "resolution_mechanism": "Integrated assessment of remaining carbon budgets against declining mitigation costs (IEA/IRENA cost series, IPCC feasibility assessments); natural experiments from jurisdictions that decoupled emissions from economic growth.",
+      "impact": "If prevention remains feasible at declining cost, the inevitability premise fails and the arrangement's cost transfer is chosen rather than forced - effective extraction rises toward the pure-extraction end and the vindicated inevitability thesis is exposed as cover. If lock-in is genuine, part of the measured extraction is misattributed necessity and the coordination share is larger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the inevitability premise is physical fact or produced by the arrangement that invokes it."
+    },
+    {
+      "id": "adaptation_sufficiency_limits",
+      "question": "Can resilience investment actually protect welfare at 2-3C of warming, or does protection capacity hit hard limits (tipping elements, compound extremes, non-linear damages) that the resilience-suffices premise ignores?",
+      "resolution_mechanism": "Adaptation-gap assessments, tipping-point literature, and stress tests of adaptation portfolios against compound-event scenarios at 2.5C and 3C.",
+      "impact": "If adaptation has hard limits below 3C, the reading's foundational axiom fails on its own instrumental terms - resilience cannot be the sufficient response it claims to be, and the arrangement loses even its prudence justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the resilience-suffices axiom survives contact with high-warming damage functions."
+    },
+    {
+      "id": "discount_rate_normativity",
+      "question": "Does market-rate discounting adequately represent intergenerational obligation, or is the choice of discount rate itself the normative decision that manufactures the arrangement's apparent efficiency?",
+      "resolution_mechanism": "Not resolvable by data alone: requires an explicit normative commitment on the moral weight of future persons. Empirical damage functions bound the stakes but do not settle the rate.",
+      "impact": "A near-zero discount rate inverts the cost-benefit case: prevention becomes the efficient priority and the deprioritization axiom loses its conventional warrant; the arrangement's efficiency claim is revealed as a value choice rather than a finding.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the discounting convention that justifies deprioritizing prevention is a technical input or a smuggled ethical premise."
+    },
+    {
+      "id": "mitigation_foreclosure_mechanism",
+      "question": "Is the suppression of the prevention alternative primarily structural (budget lock-in, infrastructure path dependency, electoral time horizons) or internalized (fatalism - the belief that it is too late to act - among publics and policymakers)?",
+      "resolution_mechanism": "Post-framing attitude trajectories: if support for prevention recovers when the inevitability framing is challenged with cost data, the suppression is substantially internalized; if budget structures persist regardless of public support, it is structural.",
+      "impact": "If internalized, effective suppression exceeds the structural measure - the fatalism travels with the policymakers and outlives any single budget cycle, shifting the enforcement machinery's characterization toward identity-lock dynamics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized mechanism maintaining the foreclosure of the prevention alternative."
+    },
+    {
+      "id": "adaptation_distribution_skew",
+      "question": "Does adaptation investment in fact concentrate in wealthy regions while residual risk accumulates in the Global South, or do finance mechanisms (adaptation funds, loss-and-damage commitments) materially offset the skew?",
+      "resolution_mechanism": "Track adaptation-finance flows by recipient region against exposure-weighted need, using UNEP Adaptation Gap reports and COP finance-commitment delivery records.",
+      "impact": "If the skew holds, the global_south_populations seat sits near the full-target end and the arrangement's effective extraction is amplified by its global scope; if finance delivery closes the gap, the victim structure narrows and the arrangement moves toward the coordination end of the hybrid spectrum.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the declared geographic concentration of adaptation benefit is real and persistent."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the adaptation_priority reading of the climate_response_obligation kernel: the standing arrangement under which public authorities treat 2-3C of warming as a settled planning baseline, allocate marginal climate budgets to resilience rather than prevention, and frame mitigation as prohibitively costly or already foreclosed. The referent of epsilon is this standing arrangement itself - the adaptation-priority budget-and-framing regime as it operates - never the mitigation-priority arrangement this reading declines to build, and never the sibling readings (mitigation_priority, degrowth_reading), which are separate constraints in the same kernel family. The arrangement has a genuine coordination core (adaptation to already-committed warming is needed under every reading of the obligation) wrapped around an asymmetric transfer (the costs of not-preventing land on parties with no seat in any budget process). Claim and metrics are authored independently: the authoring seat reads the structure as a hybrid - real coordination function, real asymmetric extraction, actively maintained inevitability framing - and the metrics describe that structure descriptively without being tuned to any predicted engine output.",
+    "key_agents": [
+      "fossil_capital_owners: primary beneficiary (powerful/arbitrage) - holds assets whose value depends on the arrangement, funds the inevitability framing",
+      "wealthy_national_governments: agenda_setter (institutional/constrained) - sets the budget priority, answers to present electorates",
+      "current_generation_consumers: beneficiary (moderate/constrained) - avoids transition costs, receives visible resilience goods",
+      "adaptation_engineering_contractors: secondary beneficiary (organized/mobile) - collects the adaptation budget as contract revenue",
+      "wealthy_region_municipalities: secondary beneficiary (organized/constrained) - receive the concentrated adaptation investment",
+      "future_generations: primary target (powerless/trapped) - inherit unmitigated impacts with no seat and no exit",
+      "global_south_populations: primary target (powerless/trapped) - highest exposure, lowest adaptation finance per exposed person",
+      "low_lying_island_communities: existential target (powerless/trapped) - territory and political community at stake",
+      "youth_climate_litigants: excluded challenger (organized/constrained) - argues for the seatless from outside budget processes",
+      "global_south_finance_negotiators: excluded claimant (organized/constrained) - present in treaty forums, excluded from enforceable outcomes",
+      "ipcc_scientific_assessors: analytical observer (institutional/analytical) - attests mitigation feasibility and adaptation limits without budget authority"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.70 for the standing arrangement: the regime delivers real resilience goods (the coordination core) while the inevitability framing transfers the costs of not-preventing onto parties with no seat - high, but short of pure extraction because the adaptation function is genuine and partially delivered. Suppression is authored at 0.58 as a raw structural property, unscaled by power or scope: the foreclosure of the prevention alternative is budgetary and discursive (framing, lobbying, infrastructure path dependency, electoral horizons) rather than physically coercive, but it is real and actively maintained. Theater ratio 0.32: announced resilience systematically exceeds delivered resilience (the documented adaptation-finance gap), so roughly a third of the arrangement's visible activity is performative. Accessibility collapse 0.45: the prevention alternative has not collapsed - it remains technically available and increasingly cheap - the collapse is political, not technical. Resistance 0.62: litigation, mass mobilization, island-state diplomacy, and Global South finance demands meet the arrangement continuously. All three series run on one shared grid (T0 approximately 2015, points every 6 years to T30 approximately 2045); points 0 and 6 are observed, later points projected. The trajectories are monotonic ratchets, not cycles: committed warming and the adaptation gap accumulate, and enforcement effort must rise as mitigation gets cheaper because the suppressed alternative keeps becoming more attractive - there is no reconciliation phase to oscillate around.",
+    "perspectival_gap": "The agenda-setter seat and the payer seats should compute differently. From wealthy_national_governments the arrangement appears as prudent risk management: adaptation addresses certain near-term harms while prevention's benefits are diffuse, delayed, and discounted. From fossil_capital_owners it appears as realism. From future_generations, global_south_populations, and low_lying_island_communities the identical structure operates as a transfer of harm across time and borders to seats with no vote. The coalition problem is structural: the three payer groups are disjoint across time, borders, and generation, so their combined stake - the largest in the arrangement - never converts into agenda-setting power. The engine computes per-seat classifications from the declared power, exit, and directionality data; the divergence between seats is the measurement, not something the authored claim adjudicates.",
+    "directionality_logic": "fossil_capital_owners and current_generation_consumers are declared beneficiaries with arbitrage and constrained exit respectively - the derivation places them near the beneficiary end, damping their effective extraction. adaptation_engineering_contractors and wealthy_region_municipalities are secondary beneficiaries: they collect contract revenue and concentrated investment without running the arrangement. future_generations, global_south_populations, and low_lying_island_communities are declared victims with trapped exit - the derivation places them near the full-target end, amplifying their effective extraction, and the arrangement's global scope scales that amplification further. wealthy_national_governments hold the agenda_setter seat with no declared beneficiary or victim position; their derived directionality reflects administration of the arrangement rather than a declared stake, and no directionality override is needed because the derivation from the declared structure is adequate.",
+    "mandatrophy_analysis": "Reading the arrangement as pure extraction would erase the genuine adaptation function - populations do need protection from warming already committed by historical emissions, and defunding resilience would harm the very parties the extraction reading claims to defend. Reading it as pure coordination would license the inevitability cover and erase the transfer to the seatless. The hybrid classification holds both: the coordination function (adaptation to committed warming) and the asymmetric extraction (the inevitability framing transfers prevention costs across time and borders) coexist in one structure and require active enforcement to stay combined. The mandatrophy question - whether the founding problem (protecting against committed warming) has been superseded by asset protection - is carried by the R5 mismatch: a contested founding-problem status paired with a world_rearranges disappearance verdict flags an arrangement held in place by allocation and framing rather than by necessity.",
+    "kernel_context": "Kernel: climate_response_obligation - the contested commitment about what present agents owe in response to climate change. This story instantiates the adaptation_priority reading: accept 2-3C of warming as the planning baseline, fund resilience, treat prevention as prohibitively costly. Sibling readings - mitigation_priority (rapid decarbonization as the intergenerational obligation) and degrowth_reading (sufficiency within planetary boundaries) - are separate constraints with their own epsilon values and victim sets; this story's epsilon refers only to the adaptation-priority arrangement and is not averaged across readings."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mitigation_priority",
+      "degrowth_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'climate response' decomposes into three structurally distinct readings of the climate_response_obligation kernel. This story authors the adaptation_priority arrangement only: epsilon 0.70 refers to the standing adaptation-priority budget-and-framing regime, with current-generation consumers and fossil capital in the beneficiary set and future generations, Global South populations, and island communities in the victim set. The mitigation_priority sibling authors the prevention arrangement with an inverted beneficiary/victim structure; the degrowth_reading authors the throughput-sufficiency arrangement with wealthy consumers added to the payer set. Relation choices: adaptation_priority to mitigation_priority is 'influences' because the adaptation-priority allocation consumes the carbon budget and legitimacy space that the mitigation reading's feasibility depends on - structural downstream pressure without logical foreclosure; adaptation_priority to degrowth_reading is 'coexists_with' because both remain live positions held by different parties and neither reading's core premise logically eliminates the other."
+  },
+  "stakeholders": [
+    {
+      "name": "fossil_capital_owners",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold reserves, pipelines, and processing assets whose booked value depends on continued fossil throughput. Fund think tanks, advertising, and lobbying that promote the framing that warming of 2-3C is already locked in and that resilience spending is the responsible use of public money. Capital is mobile: portfolios can be rebalanced, firms rebranded, holdings shifted toward adaptation-adjacent assets, so exit from the framing's protection is cheap even though the assets themselves lose value if prevention resumes at scale."
+    },
+    {
+      "name": "current_generation_consumers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Avoid the energy-price increases, carbon taxes, and transition levies that a prevention-first budget would require, and receive visible resilience goods - flood defenses, heat-action plans, hardened grids - paid from the same budgets. Their costs under the arrangement are modest and their immediate benefits tangible; they cannot cheaply exit their national energy systems, and their attention is on present prices rather than the distribution of future climate harm."
+    },
+    {
+      "name": "adaptation_engineering_contractors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Win public contracts for sea walls, resilient infrastructure, climate-risk consulting, and managed-retreat engineering. Revenue scales with adaptation budget lines, so the arrangement's spending priorities are their order book; they can move crews and bids to other infrastructure markets if priorities shift."
+    },
+    {
+      "name": "wealthy_national_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set the budget priority between prevention and resilience, publish national adaptation plans, and administer the finance commitments made in treaty processes. They answer to electorates whose prevention costs would be immediate and concentrated while prevention benefits are diffuse and delayed, and they are locked to their own territories' climate exposure - they cannot exit the arrangement they administer without electoral cost."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Will inherit whatever warming accumulates plus whatever resilience was built, bearing unmitigated impacts - heat mortality, crop stress, sea-level rise, extreme-event damages - with no seat in any current budget process and no exit from the climate they inherit. Their interests are represented only vicariously, by litigants and advocates who hold no vote."
+    },
+    {
+      "name": "global_south_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Live in regions with the highest climate exposure and the lowest adaptation finance per exposed person. Adaptation investment concentrates elsewhere, migration options are narrowed by border regimes, and the impacts they bear grow with every year of deprioritized prevention. They hold little leverage over the budget decisions made in wealthy capitals."
+    },
+    {
+      "name": "low_lying_island_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face existential exposure to sea-level rise and storm intensification. Adaptation finance reaches them late and small; their territory, freshwater lenses, and political community cannot be relocated intact. Their delegations attend treaty processes but cannot enforce finance or prevention commitments against large emitters."
+    },
+    {
+      "name": "wealthy_region_municipalities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive the concentrated share of adaptation investment - defenses, cooling infrastructure, water security - that protects their property values and tax bases. Their demand shapes where adaptation budgets land, and their geography makes them the last constituencies to be abandoned, but they cannot exit their exposure either."
+    },
+    {
+      "name": "youth_climate_litigants",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bring suits and mobilize for binding prevention obligations, arguing on behalf of the parties with no seat. They stand outside budget-setting processes; their standing to represent future interests is contested in most jurisdictions, and their wins to date have been declaratory or narrowly procedural."
+    },
+    {
+      "name": "global_south_finance_negotiators",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Press in treaty negotiations for binding adaptation-finance and loss-and-damage commitments. Their demands are acknowledged in preambles and excluded from enforceable budget outcomes; exiting the treaty process would cost them the only forum where their claims are heard at all."
+    },
+    {
+      "name": "ipcc_scientific_assessors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Assess mitigation feasibility, adaptation limits, and remaining carbon budgets. Their findings bear directly on both premises of the arrangement - that warming of 2-3C is locked in and that resilience suffices - but they hold no budget authority, and their assessments enter the policy process only as advice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Adapting settlements, water systems, agriculture, and health systems to warming that is already committed to the climate system regardless of near-term policy choice - sea defenses, heat-action plans, drought-tolerant crops, and early-warning systems solve a real protection problem that exists under every reading of the obligation.",
+    "transfer_function": "Moves the cost of climate response away from present emitters and asset holders (who would bear prevention costs) onto future generations and low-adaptation-capacity regions (who bear unmitigated impacts); moves public adaptation budgets toward infrastructure in wealthy regions; protects fossil asset values from stranding.",
+    "absent_voices": "Future generations have no seat in any budget process. Youth litigants argue from outside the room; Global South finance negotiators are present in treaty forums but structurally unable to convert demands into enforceable outcomes; island-state delegations are formally seated without leverage over the finance or prevention decisions that determine their exposure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the adaptation-priority allocation and its inevitability framing vanished overnight, marginal public climate spending would reflow toward prevention (the funds are fungible and mitigation capacity exists), fossil assets would reprice toward stranding, and the distribution of climate harm would shift toward present emitters - the arrangement, not the climate system, holds the current allocation in place.",
+    "founding_problem": "Some warming was already committed by historical emissions, so populations needed protection from impacts no near-term policy could prevent; simultaneously, prevention's costs are concentrated on present voters and industries while its benefits are diffuse and delayed - a collective-action problem stretched across generations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IPCC impact and adaptation chapters corroborate the genuine need for adaptation to committed warming, from outside the arrangement's benefiting parties. No independent source corroborates the arrangement's stronger premise - that warming of 2-3C is inevitable and prevention is not worthwhile; IPCC mitigation pathways, IEA cost analyses, and national engineering assessments attest that rapid decarbonization remains technically and economically feasible, actively contradicting the inevitability premise. The adaptation need is corroborated; the deprioritization of prevention is attested only by the arrangement's beneficiaries."
+  },
+  "gain_flow": "fossil_capital_owners",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "mitigation_priority",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "degrowth_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resilience_suffices_for_committed_warming",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "market_discounting_justifies_prevention_deprioritization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "resilience_within_committed_warming",
+    "drift_state": {
+      "moment": "post_renewables_cost_decline",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "waitangi_sovereignty_allocation__crown_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "e9cfcafc-16a8-46f7-bc42-fac7495b37d3"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Crown Sovereignty Reading of Treaty of Waitangi Article I",
+    "topic_domain": "constitutional/indigenous/post-colonial",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "crown_executive",
+      "parliamentary_majority",
+      "settler_institutions"
+    ],
+    "victims": [
+      "maori_iwi_hapu",
+      "maori_land_owners",
+      "taonga_guardians"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_frame",
+      "question": "This constraint is one reading (crown_sovereignty_reading) of the contested kernel waitangi_sovereignty_allocation. What structural elements would change if a sibling reading (partnership_reading or rangatiratanga_reading) were instantiated instead?",
+      "resolution_mechanism": "Comparative constraint analysis across the three readings: map beneficiary/victim sets, extraction vectors, and enforcement requirements for each reading of the same kernel.",
+      "impact": "Sibling readings instantiate different constraints with different ε, different stakeholder structures, and potentially different DR types. The kernel is the contested commitment; each reading is a distinct constraint story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system kernel with multiple readings: crown_sovereignty_reading, partnership_reading, rangatiratanga_reading"
+    },
+    {
+      "id": "english_vs_maori_text_divergence",
+      "question": "Does the English text Article I ('ceded complete sovereignty') and Māori text Article II ('tino rangatiratanga') represent a genuine translation ambiguity or a structural incompatibility between the readings?",
+      "resolution_mechanism": "Linguistic and historical analysis of the 1840 texts; Waitangi Tribunal findings on translation and understanding at signing.",
+      "impact": "If genuine ambiguity, multiple readings can coexist as defensible interpretations. If structural incompatibility, one reading must foreclose the others within any single legal framework.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Translation ambiguity vs. structural incompatibility between English and Māori texts"
+    },
+    {
+      "id": "extraction_legitimacy_boundary",
+      "question": "Where does the coordination function of Crown governance (law, order, infrastructure) end and the extractive function (unilateral resource allocation, legislative override of Māori interests) begin?",
+      "resolution_mechanism": "Historical analysis of Crown actions 1840-present: measure proportion of legislative/regulatory activity that coordinates settler society vs. activity that dispossesses or subordinates Māori interests without consent.",
+      "impact": "If coordination and extraction are inseparable, the tangled_rope classification holds. If separable, the extraction component could be removed while preserving coordination, shifting toward rope for the coordination residue.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Boundary between genuine governance coordination and extractive override of Māori interests"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 150
+  },
+  "commentary": {
+    "narrative_context": "The Crown sovereignty reading of Treaty of Waitangi Article I treats the English text ('ceded complete sovereignty to the Crown') as establishing Westminster-style parliamentary supremacy over New Zealand. This reading empowers the Crown executive and Parliament to exercise plenary legislative authority without a requirement for Māori consent, enabling unilateral resource allocation and subordination of Māori interests to parliamentary will. The constraint operates as a tangled rope: it provides genuine coordination for settler governance (law, courts, infrastructure, market regulation) while simultaneously extracting from Māori through legislative override of tino rangatiratanga claims, land alienation, and resource decisions made without consent. Active enforcement is required through courts, police, and legislative machinery to maintain the sovereignty claim against ongoing Māori resistance and international indigenous rights norms.",
+    "key_agents": [
+      "crown_executive: Primary beneficiary (institutional/arbitrage) — exercises plenary power, controls resource allocation",
+      "parliamentary_majority: Primary beneficiary (institutional/arbitrage) — legislates without Māori consent requirement",
+      "settler_institutions: Beneficiary (organized/constrained) — gain stable governance framework on Māori land",
+      "maori_iwi_hapu: Primary victim (powerless/identity_locked) — bear legislative override, land loss, cultural suppression",
+      "maori_land_owners: Victim (powerless/constrained) — subject to unilateral Crown acquisition and alienation",
+      "taonga_guardians: Victim (powerless/identity_locked) — cultural treasures subordinated to Crown authority",
+      "waitangi_tribunal: Observer (institutional/analytical) — investigates breaches but lacks binding remedial power",
+      "international_indigenous_rights_bodies: Excluded (organized/analytical) — would object but lack domestic enforcement"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint enables systematic resource transfer from Māori to Crown/settlers without consent or fair compensation. Suppression (0.72) is substantial because maintaining the sovereignty claim requires active legal and political enforcement against Māori assertions of tino rangatiratanga. Theater ratio (0.28) is moderate — the coordination function (settler governance) is real but a growing share of enforcement activity defends extractive overrides. The measurement series shows extractiveness rising from 0.45 (1840s, early coordination-dominant phase) to 0.78 (present, extraction-dominant) as the coordination function matured and extraction layered on. Theater ratio rises in parallel as coordination infrastructure becomes theater for extraction. Suppression requirement rises as Māori resistance intensifies and international norms challenge the claim.",
+    "directionality_logic": "Crown executive and parliamentary majority are structural beneficiaries (d near 0.0) — they collect legislative power and resource control. Settler institutions are moderate beneficiaries (d ~ 0.2) — they gain stable governance but face some constraint from Māori resistance. Māori iwi/hapū are structural targets (d near 1.0) — identity_locked exit (tino rangatiratanga is constitutive of identity), bear the full extraction. Land owners and taonga guardians similarly targeted. Waitangi Tribunal sits at analytical distance (d = 0.5) — observes but cannot compel. International bodies are excluded — their objection is structurally blocked from domestic effect.",
+    "perspectival_gap": "From Crown/Parliament seats: the constraint is genuine coordination (rope-like) — it built the legal and institutional framework of NZ. From Māori seats: the same structure is extractive override (snare-like) — it dispossesses and subordinates. The engine computes this divergence from the structural data: same constraint, different χ per seat. The claimed type (tangled_rope) acknowledges both functions are structurally present and inseparable in current operation.",
+    "mandatrophy_analysis": "The founding problem (governance of a settler colony) was live in 1840 but is now dead — the coordination function has matured into stable institutions that no longer require the sovereignty claim's extractive edge. The arrangement persists because the extraction (resource control, legislative supremacy) benefits the agenda-setters, not because the founding problem requires it. Mandatrophy is unresolved: the constraint's mandate has outlived its coordination function but the extraction continues.",
+    "kernel_context": "This constraint is the crown_sovereignty_reading of the waitangi_sovereignty_allocation kernel. Sibling readings: partnership_reading (Crown-Māori partnership requiring good faith consultation) and rangatiratanga_reading (Māori retained tino rangatiratanga; Crown gained only kāwanatanga over settlers). This reading treats English Article I as establishing plenary Crown sovereignty; the sibling readings treat the Māori text Article II as retaining Māori authority. The disagreement is located in the structural relationship: who holds ultimate decision-making authority over resources and taonga."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "waitangi_sovereignty_allocation__partnership_reading",
+      "waitangi_sovereignty_allocation__rangatiratanga_reading",
+      "nz_resource_management_act",
+      "maori_land_alienation_constraints"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the Treaty of Waitangi into three readings of the same kernel. The crown_sovereignty_reading (this story) claims English Article I establishes plenary Crown sovereignty. The partnership_reading claims an ongoing partnership requiring consultation. The rangatiratanga_reading claims Māori retained tino rangatiratanga. Their ε values differ substantially: this reading shows high extraction (0.78) because it subordinates Māori interests; the rangatiratanga_reading would show low extraction from Māori but high coordination cost for Crown; the partnership_reading sits between. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "crown_executive",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Exercises executive power under the sovereignty claim: controls legislative agenda, resource allocation, Treaty settlements process, and Crown-Māori relations. Collects the benefits of plenary authority (decision control, resource access, international legal personality). Exit is arbitrage-grade: the Crown could concede authority without institutional collapse, as seen in other post-colonial transitions."
+    },
+    {
+      "name": "parliamentary_majority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislates without Māori consent requirement. Gains legislative supremacy and resource allocation authority. The sovereignty claim protects parliamentary privilege and electoral mandate from Māori constitutional challenge. Exit is arbitrage-grade: Parliament could adopt a partnership framework without losing its core lawmaking function."
+    },
+    {
+      "name": "settler_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Courts, local government, regulatory bodies, and commercial sectors gain a stable, predictable governance framework. Their operations depend on the certainty of Crown title and parliamentary law. Exit is constrained: they benefit from the framework but would face legal and commercial disruption if the sovereignty basis shifted."
+    },
+    {
+      "name": "maori_iwi_hapu",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the extraction: legislative override of rangatiratanga, historical land alienation (raupatu, native land court), resource decisions without consent, cultural suppression. Tino rangatiratanga is constitutive of iwi/hapū identity — exit means cultural dissolution, not merely institutional change. They resist through Waitangi Tribunal claims, political advocacy, and cultural revitalization, but the constraint's enforcement machinery (courts, police, legislation) maintains the override."
+    },
+    {
+      "name": "maori_land_owners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Subject to Crown pre-emption, compulsory acquisition, and planning regimes that prioritize national development over Māori land retention. The sovereignty claim underpins the legal framework that makes Māori land alienable and developable by others. Exit is constrained: they can use legal channels (Māori Land Court, Treaty settlements) but the framework itself is Crown-defined."
+    },
+    {
+      "name": "taonga_guardians",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Guardians of cultural treasures (language, ancestral remains, sacred sites, mātauranga) subordinated to Crown authority. The sovereignty claim enables Crown control over taonga through legislation (e.g., Protected Objects Act, resource management). Exit is identity_locked: the guardianship relationship is constitutive of identity and cannot be relinquished without cultural loss."
+    },
+    {
+      "name": "waitangi_tribunal",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigates Treaty breaches and makes recommendations but lacks binding remedial power. Its findings create moral and political pressure but the Crown sovereignty reading treats its recommendations as advisory only. Sits at analytical distance: observes the constraint's operation without collecting or paying."
+    },
+    {
+      "name": "international_indigenous_rights_bodies",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "UN Permanent Forum, Special Rapporteur, EMRIP, and treaty bodies consistently criticize the Crown sovereignty reading as inconsistent with UNDRIP and self-determination. Their objections are structurally excluded from domestic legal effect — the constraint's enforcement machinery (domestic courts, parliamentary privilege) blocks international norms from overriding the sovereignty claim."
+    }
+  ],
+  "gain_flow": "crown_executive",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a single, recognized sovereign authority for the territory: settler governance, law courts, property system, infrastructure, and international legal personality. Solves the coordination problem of governing a diverse population with a unified legal framework.",
+    "transfer_function": "Moves legislative supremacy, resource allocation authority, and decision-making control from Māori (who would exercise tino rangatiratanga under sibling readings) to Crown executive and Parliament. The transfer is unilateral — no consent mechanism exists under this reading.",
+    "absent_voices": "Māori signatories of 1840 who understood they were ceding kāwanatanga (governorship over settlers) not sovereignty; contemporary iwi/hapū leadership excluded from constitutional decision-making; international indigenous rights bodies whose findings are advisory only. They are absent because the sovereignty claim structurally blocks their participation in the constitutional framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Crown sovereignty reading vanished overnight, the constitutional basis for plenary parliamentary authority over Māori would collapse. Resource allocation would require Māori consent. Legislation affecting taonga would need partnership agreement. The Treaty settlements process would transform from Crown-determined to negotiated constitutional reform. The entire legal framework of NZ would reorganize around a partnership or rangatiratanga model.",
+    "founding_problem": "Governance of a British settler colony in 1840: establishing law, order, and administration over a geographically dispersed population with competing land claims, in a context of inter-iwi conflict and European lawlessness.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Waitangi Tribunal (Te Roroa Report 1992, Te Urewera Report 2012) and constitutional scholars (Sir Geoffrey Palmer, Dr. Moana Jackson) attest the 1840 governance problem is solved — NZ has stable institutions. The Crown concedes the founding problem is historical but argues the sovereignty solution remains necessary. No independent corroborator outside Crown/Parliament supports the claim that the 1840 problem requires today's plenary sovereignty."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "waitangi_sovereignty_allocation"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "partnership_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "rangatiratanga_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "crown_plenary_sovereignty_unqualified",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "english_text_authoritative_over_maori_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "parliamentary_supremacy_entrenched",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "id_1840_crown_sovereignty_acquisition",
+    "drift_state": {
+      "moment": "contemporary_treaty_settlements_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

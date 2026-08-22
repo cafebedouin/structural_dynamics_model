@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "first_amendment_speech_protection__categorical_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fed36cdd-51ed-4733-bc05-14fb3cf6c6d5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.55,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.32,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Amendment Protected/Unprotected Category System via Case-by-Case Judicial Balancing",
+    "topic_domain": "constitutional law/political philosophy/speech regulation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "us_supreme_court",
+      "federal_appellate_judiciary",
+      "constitutional_law_academy",
+      "mainstream_speakers_and_press"
+    ],
+    "victims": [
+      "dissident_and_minority_speakers",
+      "state_legislatures_and_regulators",
+      "legal_predictability"
+    ]
+  },
+  "interval": {
+    "start": 1919,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1919,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1942,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1969,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1919,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1942,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1969,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1919,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1942,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1969,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sibling_reading_restructuring",
+      "question": "This constraint is one reading of the kernel first_amendment_speech_protection (reading: categorical_balancing_reading). What would adoption of a sibling reading — absolutist_reading or harm_limited_reading — change structurally?",
+      "resolution_mechanism": "Appointment composition shifts or explicit overruling that installs a sibling reading as the operative doctrine; observe whether the beneficiary set (judicial interpretive control) and victim set (sorting of minority speech, predictability losses) dissolve or migrate.",
+      "impact": "An absolutist sibling would eliminate the judicial-discretion beneficiary structure entirely and collapse the category apparatus, driving measured extraction toward zero; a harm-limited sibling would re-center victims as harm-claimants and move the extraction burden onto speakers facing harm allegations. The disagreement is located in WHO draws the protected/unprotected line: the text itself, the harm suffered, or the court.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: sibling readings of the same kernel would restructure this constraint's beneficiary and victim sets."
+    },
+    {
+      "id": "necessity_vs_institutional_interest",
+      "question": "Is judicial administration of speech categories a structural necessity of any workable free-speech constitution (an unavoidable coordination cost), or a constructed arrangement that serves the judiciary's institutional interest in interpretive monopoly?",
+      "resolution_mechanism": "Comparative constitutional analysis of jurisdictions that allocate speech-line-drawing differently (legislative definitions, proportionality review, citizen juries), plus counterfactual analysis of whether an administrable regime without judicial category stewardship is coherent.",
+      "impact": "If necessity, part of the measured burden is the irreducible price of coordination and the classification sits closer to rope; if institutional interest, the discretion rents are extractive overhead and the classification sits closer to snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the category system is an unavoidable coordination cost or a self-serving judicial construction."
+    },
+    {
+      "id": "invisible_chilling_population",
+      "question": "How large is the population of speakers who never reach a courtroom because the regime's retrospective, litigation-dependent protection structure deters them from speaking at all?",
+      "resolution_mechanism": "Survey and natural-experiment data on speech abstention correlated with doctrinal uncertainty (e.g., comparing speech activity before and after category-narrowing decisions).",
+      "impact": "The regime's largest cost is systematically invisible to the case record; a larger unseen population raises true extractiveness above the measured 0.58 and strengthens the target-side directionality of dissident speakers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Size of the chilled-speaker population invisible to adjudicated cases."
+    },
+    {
+      "id": "vestigial_category_theater",
+      "question": "Which declared categories (obscenity, fighting words, group libel remnants) are load-bearing regulators of real disputes versus theatrical remnants maintained in doctrine but producing almost no operative applications?",
+      "resolution_mechanism": "Empirical census of applications per category across reported decisions over the interval; categories with near-zero successful applications while retaining doctrinal prominence are theatrical.",
+      "impact": "A higher share of vestigial categories raises the functional theater ratio above the authored 0.50 and pushes the regime toward inertial maintenance; a lower share confirms the categories do real sorting work.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Load-bearing versus vestigial composition of the unprotected-category set."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "first_amendment_speech_protection__absolutist_reading",
+      "first_amendment_speech_protection__harm_limited_reading"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the kernel first_amendment_speech_protection. The colloquial label 'First Amendment speech protection' conflates three structurally distinct claims with distinct epsilon values: the absolutist reading (protection categorical except narrow historical exclusions; negligible discretionary extraction), this categorical balancing reading (judicially administered categories with case-by-case valuation; moderate extraction — discretion rents to the bench, sorting costs to minority speakers, predictability losses), and the harm-limited reading (protection yields to demonstrable unconsented harm; extraction shifts onto speakers facing harm allegations). The fixed constitutional text is upstream of all three; the siblings are parallel instantiations, not stages. Linked via affects_constraints for contamination propagation: degradation of this reading's legitimacy (originalist critique) pressures both siblings' environments."
+  },
+  "stakeholders": [
+    {
+      "name": "us_supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Nine justices decide which speech categories receive protection and which fall outside it, writing the multi-factor tests lower courts must apply. Each term the Court chooses which speech disputes to hear, controlling the speed and direction in which the category lines move. Its authority and institutional self-understanding are bound up with being the body that says what the Constitution's speech guarantee means; abandoning that role would mean redefining the institution itself."
+    },
+    {
+      "name": "federal_appellate_judiciary",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hundreds of circuit and district judges apply the Supreme Court's categories to novel fact patterns. The doctrine supplies their opinions with structure, citable standards, and reversal-avoidance heuristics; it also exposes them to reversal when their weighing diverges from the current majority's instincts. Life tenure removes career pressure, but their professional identity forms around faithful administration of the framework."
+    },
+    {
+      "name": "dissident_and_minority_speakers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Protesters, dissidents, sexual-minority publishers, radical organizers, and nonmainstream religious or political speakers learn only after the fact whether their speech landed in a protected or excluded category. Historically the excluded categories — incitement, obscenity, fighting words, threats — have been filled disproportionately with their speech. Speaking is their principal lever for changing their circumstances, so silence is not a usable exit; the realistic options are speak and risk prosecution or litigation, or self-censor."
+    },
+    {
+      "name": "mainstream_speakers_and_press",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Large media organizations and established political speakers operate almost entirely inside the strongly protected core. They collect the regime's protections at low operating cost — their speech rarely approaches the excluded categories — though they finance litigation when boundaries are tested. Their resources and platforms give them exits unavailable to smaller speakers, including relocating operations or distribution channels."
+    },
+    {
+      "name": "state_legislatures_and_regulators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "State governments repeatedly attempt to regulate speech adjacent to the excluded categories — obscenity, harassment, election misinformation, intimate-image sharing — and see their statutes struck down or narrowed when they cross a line drawn elsewhere. They can redraft around the lines at the cost of staff time and litigation risk, but they cannot opt out of the framework that reviews their work."
+    },
+    {
+      "name": "legal_predictability",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The rule-of-law interest in knowing in advance what speech is punishable. Case-by-case valuation determines the protected set retrospectively, one dispute at a time, so no speaker or regulator can consult a stable rule; this interest loses ground with each new multi-factor test. Recorded here as a non-agent bearer of cost for completeness."
+    },
+    {
+      "name": "constitutional_law_academy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Law professors, treatise writers, and casebook authors build careers explicating, defending, and critiquing the category system. The doctrine's complexity generates the scholarly output the field runs on; a radically simplified or dismantled framework would shrink the interpretive enterprise that employs them."
+    },
+    {
+      "name": "civil_liberties_bar",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Litigators at civil-liberties organizations see the whole structure across hundreds of cases: which clients win, which categories absorb which speech, where the tests diverge from their stated rationales. They take no rent from the arrangement and analyze it from outside the bench-legislature axis."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The category system solves a real problem: unconditional protection of all speech is untenable (threats, fraud, defamation require regulation), and standardless ad hoc judgment is worse. Judicially defined categories give lower courts, legislatures, and speakers shared reference points for what regulation is permissible, making speech law administrable across thousands of disputes and giving speakers rough ex ante signals about risk.",
+    "transfer_function": "Moves interpretive authority over the boundaries of permissible speech from speakers and legislatures to the federal judiciary — specifically the power to define, case by case, which speech counts as valuable enough to protect. It also moves litigation costs from the public purse to individual speakers, who must sue to discover whether their speech is protected.",
+    "absent_voices": "The speakers chilled into silence never appear — the regime's heaviest costs fall on those who never file suit because they cannot afford it or cannot risk it. Also absent: the absolutist juristic tradition (the Black-Douglas line) whose reading lost and whose descendants stand outside the doctrinal conversation, and ordinary citizens whose speech lives are governed by tests they have never heard of.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the category-and-balancing regime vanished overnight, speech law would rearrange immediately: either protection would become near-absolute (content-based regulation collapsing wholesale) or legislative regulation would flood previously excluded zones. Thousands of precedents would lose their organizing structure, every pending speech prosecution and statute would become newly contestable, and the judiciary would lose the gatekeeping role that organizes its docket.",
+    "founding_problem": "Early twentieth-century courts faced an unworkable text: 'no law' could not literally mean no law, yet ad hoc punishment of dissent (Debs, Schenck-era prosecutions) threatened to reduce the guarantee to nothing. The founding problem was how to reconcile the absolute text with the undeniable need to regulate some speech, without handing legislators unlimited discretion — answered by inventing judicially administered categories and case-by-case valuation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional historians outside the judiciary corroborate the genealogy: the balancing apparatus is documented as a pragmatic judicial invention evolving from Hand's Masses opinion through Holmes and Brandeis to Brandenburg, not a textual command. Justice Black's dissenting opinions explicitly attested, from inside the institution but outside the benefiting faction, that the category-and-balance approach had no basis in the amendment's text. Textualist and originalist scholarship continues to corroborate that the framework is constructed rather than discovered."
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel first_amendment_speech_protection: the categorical balancing reading, under which the First Amendment's protected speech set is constituted by judicially drawn categories (obscenity, incitement, true threats, fighting words excluded) refined through case-by-case weighing of speech value against asserted harm. The sibling readings — absolutist_reading and harm_limited_reading — are separate constraints in separate files; per the epsilon-invariance principle this file contains one reading with one stable epsilon, and the contest among readings is routed to omega variables rather than averaged into the metrics. The epsilon referent is the standing categorical-balancing arrangement itself, assessed from the authoring seat: a regime that genuinely coordinates speech law while concentrating interpretive authority in the bench, imposing retrospective uncertainty on speakers, and sorting disproportionate shares of dissident and minority speech into the excluded categories. Claim and metrics are independent authored facts: the claimed type is what I believe structurally true; the metrics describe the regime's actual operation as I read the historical record.",
+    "key_agents": [
+      "- us_supreme_court: Agenda-setter and primary beneficiary (institutional/identity_locked) — administers the category system, controls its rate of change, collects interpretive authority",
+      "- federal_appellate_judiciary: Secondary beneficiary (institutional/identity_locked) — applies the categories, gains doctrinal structure and legitimacy from the framework",
+      "- dissident_and_minority_speakers: Primary target (moderate/trapped) — bear retrospective sorting into excluded categories and the chilling cost of uncertainty",
+      "- mainstream_speakers_and_press: Incidental beneficiary with payer secondary role (powerful/mobile) — collect robust core protection at low cost, finance boundary litigation",
+      "- state_legislatures_and_regulators: Regulated payer (institutional/constrained) — regulatory programs subject to category-line vetoes drawn elsewhere",
+      "- legal_predictability: Non-agent bearer of cost (rule-of-law interest) — eroded by retrospective case-by-case valuation",
+      "- constitutional_law_academy: Secondary beneficiary (organized/identity_locked) — careers ride on expounding the categories",
+      "- civil_liberties_bar: Analytical observer (organized/analytical) — sees the full structure across the case stream, collects no rent"
+    ],
+    "logic_rationale": "Extractiveness 0.58: the regime delivers real protection to most speech, but its costs are concentrated and structural — protection is retrospective, litigation-dependent, and category-mediated, and the excluded categories have historically absorbed dissident and minority speech at disproportionate rates. Suppression 0.55 is authored as a raw structural property (unscaled by the engine): the framework's persistence depends on active machinery — certiorari gatekeeping, stare decisis hardening, the judicial-supremacy norm — that forecloses rival interpretive frameworks inside adjudication. Theater ratio 0.50: the multi-factor tests perform rigorous neutral methodology over what is often substantive judicial preference; roughly half the doctrinal activity constrains outcomes, half rationalizes them. Accessibility collapse 0.40: alternatives persist outside the courtroom (speaking with risk, drafting around lines, advocating rival readings) but collapse inside it. Resistance 0.32: persistent scholarly and dissenting critique, periodic legislative pushback, none effectively organized against the framework itself. The temporal series share one grid and tell a U-shaped story: the early regime was highly extractive (sedition prosecutions routinely sustained, 1919), liberalized to peak protection around Brandenburg (1969), then re-hardened as doctrine ossified into preference-driven balancing and the enforcement machinery rebuilt to defend the framework against originalist assault. The suppression_requirement series is authored deliberately: this story traces enforcement-capacity change (intensive early deployment of judicial authority against dissent, relaxation during the broad-protection era, re-intensified gatekeeping late in the interval), which the scalar base_properties.suppression alone cannot carry.",
+    "perspectival_gap": "The seats compute different types from identical structure. From the agenda-setter seat (the Court), the arrangement is faithful stewardship of an unworkable text — the categories are discoveries, the balancing is necessity. From the trapped payer seats (dissident speakers), the same structure operates as a categorization lottery: protection arrives only after the fact, priced in prosecution risk, and the excluded categories function as containers their speech keeps falling into. From the legislature seat, it is an unaccountable veto player over democratically enacted programs. The engine derives this divergence from power, exit, and directional position; the divergence is the measurement, not noise to be reconciled.",
+    "directionality_logic": "The Court and appellate judiciary sit at the beneficiary pole: they collect interpretive authority and doctrinal centrality, and their identity-lock (the Marbury function fused with institutional self-concept) places them deep at the subsidized end — effective extraction inverts toward subsidy for them. The academy adds a second low-directionality seat: complexity is its payroll. Mainstream press is a near-pure beneficiary with arbitrage-grade mobility, damping its already-low directionality further. Dissident and minority speakers sit at the target pole: victims of the sorting function, trapped because silence forfeits their only lever, so effective extraction amplifies toward the full-target end. State legislatures are targets with power but constrained exit — materially extracted-from, unable to leave the review framework. Legal predictability is authored as a non-agent victim: it feeds no directionality arithmetic (by design), but records the diffuse rule-of-law cost the delta identifies. Note the scaling asymmetry the engine applies: only extractiveness scales with directionality and scope; suppression enters raw.",
+    "mandatrophy_analysis": "The tangled_rope classification blocks two symmetrical mislabels. Reading the regime as pure coordination (rope) — the judiciary's own self-description — would erase the asymmetric extraction: discretion rents flowing to the bench, sorting costs borne by minorities, predictability losses borne by everyone. Reading it as pure extraction (snare) — the absolutist critique's framing — would erase the genuine coordination function: administrability across thousands of disputes, shared reference points, real protection for core speech. Mandatrophy status: the founding problem (reconciling an absolute text with regulable speech) is live, so the mandate has not outlived its function and no atrophy declaration is authored. However, the rising theater_ratio series tracks Goodhart drift within the live mandate: the tests increasingly perform justification rather than constrain outcomes, which is the leading indicator that would convert this tangled_rope toward piton if the coordination function continued atrophying while the apparatus persisted.",
+    "kernel_context": "Kernel: first_amendment_speech_protection — the fixed constitutional text 'Congress shall make no law... abridging the freedom of speech.' This file instantiates the categorical_balancing_reading: the protected set is constituted by judicial categories plus case-by-case weighing of speech value against harm. Sibling readings, held as separate constraints: the absolutist_reading ('no law' means no law; categorical protection except narrow historical exclusions) and the harm_limited_reading (protection yields to demonstrable unconsented-to harm). The disagreement is located in who draws the line — the text, the harm suffered, or the court. This reading's authority structure presents itself as lineage (continuity with the founding text) but operates as extraction: its institutional benefit flows from keeping interpretive authority centralized and the kernel's meaning resistant to revision from any source but itself. The drift_state records substantial, unacknowledged authority erosion under the contemporary originalist challenge to balancing methodology."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "court_administered_category_system",
+    "drift_state": {
+      "moment": "contemporary_originalist_challenge",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "speech_protection_is_judicially_administered",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "category_boundaries_require_case_by_case_valuation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "us_supreme_court",
+  "fixing_cost": "prohibitive",
+  "directionality_overrides": [],
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

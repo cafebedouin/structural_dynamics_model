@@ -1,0 +1,334 @@
+{
+  "header": {
+    "constraint_id": "state_killing_authority__deterrence_instrument",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_state_killing_authority__deterrence_instrument",
+    "story_uid": "53d7223e-4c27-4c80-a1a5-fcb7ef072a7f"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.91,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Capital Punishment as Deterrence Instrument",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "future_potential_victims",
+      "state_prosecutorial_authority",
+      "law_enforcement_agencies"
+    ],
+    "victims": [
+      "condemned_persons",
+      "families_of_condemned",
+      "wrongfully_convicted"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "deterrence_effect_magnitude",
+      "question": "What is the actual marginal deterrent effect of capital punishment over life imprisonment without parole?",
+      "resolution_mechanism": "Natural experiments from abolition/reinstatement cycles, cross-jurisdiction panel studies with adequate controls for confounding variables, or randomized policy experiments where ethically feasible.",
+      "impact": "If the marginal deterrent effect is zero or statistically indistinguishable from zero, the constraint's claimed coordination function collapses and it reclassifies as snare (pure extraction of condemned lives without deterrence benefit). If positive but below the 'acceptable cost' threshold, it remains tangled_rope but with contested calibration.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the deterrence benefit claimed by the reading actually exists at the magnitude required to justify the extraction."
+    },
+    {
+      "id": "acceptable_cost_threshold_definition",
+      "question": "Who defines and how is calculated the 'acceptable cost' threshold for state killing — including error rates, racial disparities, and fiscal expenditure?",
+      "resolution_mechanism": "Legislative record analysis, judicial opinions on proportionality, cost-benefit frameworks in correctional policy, and democratic deliberation records.",
+      "impact": "If the threshold is undefined or defined solely by the benefiting authorities (prosecutors, legislators), the constraint extracts without accountable calibration — strengthening snare classification. If an independent body sets and enforces the threshold, coordination function is more credible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the 'acceptable cost' condition has determinate content or functions as a blank check for the benefiting authorities."
+    },
+    {
+      "id": "reading_of_kernel_state_killing_authority",
+      "question": "This constraint is the deterrence_instrument reading of the state_killing_authority kernel. How does the kernel's structural ambiguity across readings affect this constraint's classification?",
+      "resolution_mechanism": "Compare classification outputs across the three declared readings (deterrence_instrument, retributive_desert, categorical_abolition) holding the same referent arrangement. Divergence in computed type signals that the kernel's reading under-determines the constraint's structure.",
+      "impact": "If deterrence_instrument computes as tangled_rope while categorical_abolition computes as mountain (from the abolitionist seat) and retributive_desert computes as rope (from the desert-theorist seat), the kernel's reading is a decisive structural variable — not merely interpretive. This validates the ε-invariance decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-reading structural delta: this reading instantiates a deterrence-calibrated constraint with future victims as beneficiaries and condemned persons as instrumental costs; sibling readings instantiate different constraints from the same kernel."
+    },
+    {
+      "id": "wrongful_execution_rate_uncertainty",
+      "question": "What is the true rate of wrongful conviction in capital cases, and how does it factor into the 'acceptable cost' calculation?",
+      "resolution_mechanism": "Post-conviction DNA exoneration data, innocence project caseloads, judicial error-rate estimates, and systematic review of capital case reversals.",
+      "impact": "A non-trivial wrongful execution rate that is excluded from the cost calculus converts the constraint from tangled_rope (coordination with asymmetric extraction) to snare (extraction with cover story) because the coordination function's own terms — 'acceptable cost' — are violated by uncounted costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncounted costs in the deterrence calculus: wrongful executions as unpriced extraction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.86
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.91
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the deterrence-instrument reading of the state killing authority kernel: capital punishment is justified if and only if it prevents future murders at acceptable cost. The arrangement under contest is the standing practice of state-sanctioned execution in retentionist jurisdictions, assessed by the deterrence reading's own lights — i.e., does this practice actually deter at acceptable cost? The condemned person is the instrumental cost; future potential murder victims are the claimed beneficiaries; the state's authority to kill is grounded in consequentialist crime-prevention efficacy rather than retributive desert or inherent rights. Over the 40-year interval (roughly 1976–present, post-Gregg v. Georgia), the constraint has accumulated extraction (rising base_extractiveness) as the deterrence evidence base has weakened while the machinery of death penalty administration has expanded, and suppression has hardened as procedural barriers to execution have been erected to manage constitutional challenges. The theater ratio has risen as 'deterrence' becomes an increasingly performative justification for a machinery that persists for institutional and political reasons.",
+    "key_agents": [
+      "condemned_persons: Primary target (powerless/identity_locked) — bears the ultimate extraction (life)",
+      "future_potential_victims: Primary beneficiary (powerless/trapped) — claimed beneficiaries of deterrence, cannot consent or exit",
+      "state_prosecutorial_authority: Agenda setter (institutional/arbitrage) — administers the machinery, collects political capital",
+      "law_enforcement_agencies: Beneficiary (organized/constrained) — gains investigative leverage, resource allocation",
+      "families_of_condemned: Victim (powerless/trapped) — bears collateral extraction, no voice in calibration",
+      "wrongfully_convicted: Victim (powerless/trapped) — bears the cost of systemic error, excluded from cost calculus",
+      "abolitionist_advocates: Excluded (organized/mobile) — would object to the arrangement's existence",
+      "retributive_desert_theorists: Observer (analytical/analytical) — holds a sibling reading of the same kernel",
+      "deterrence_criminologists: Observer (analytical/analytical) — empirical seat on the deterrence question"
+    ],
+    "logic_rationale": "Base extractiveness (0.82) is high because the arrangement takes a life (the condemned person's) as an instrumental cost for a claimed deterrence benefit that is empirically contested and likely marginal or zero. The 'acceptable cost' threshold is defined by the benefiting authorities themselves (prosecutors, legislators) with no independent calibration — this self-calibration is an extraction amplifier. Suppression (0.91) is very high because the constraint's persistence depends on actively suppressing alternatives: abolition, moratoria, life-without-parole substitution, and empirical challenge to the deterrence claim. The condemned person has zero exit (identity_locked/trapped); future potential victims are trapped in the beneficiary role (cannot opt out of being 'protected'); prosecutorial authorities have arbitrage-grade exit (can decline to seek death, can plea-bargain). Theater ratio (0.28) is moderate: the deterrence justification is increasingly performative as the evidence base erodes, but the machinery (death rows, execution protocols, appellate review) has real operational costs that are not purely theatrical.",
+    "directionality_logic": "The deterrence reading positions future potential victims as beneficiaries (d → low, constraint subsidizes them via claimed deterrence). Condemned persons are the instrumental cost — full targets (d → 1.0, constraint extracts their lives). Prosecutorial authorities are agenda-setters who benefit politically and institutionally (d → 0.15, near beneficiary end). Law enforcement agencies benefit from leverage and resources (d → 0.25). Families of condemned and wrongfully convicted bear diffuse unpriced costs (d → 0.85). The derivation chain from beneficiary/victim declarations + power + exit produces these directionalities; no overrides are needed because the structural positions are cleanly differentiated by exit options and power.",
+    "perspectival_gap": "From the prosecutor's seat (agenda_setter, institutional, arbitrage exit), the constraint appears as genuine coordination: a calibrated tool that deters at acceptable cost. From the condemned person's seat (victim, powerless, trapped), it is pure extraction: their life is taken for a benefit they do not receive and a deterrence claim that may be false. From the future potential victim's seat (beneficiary, powerless, trapped), it is a coordination benefit they cannot refuse and did not consent to. The engine computes these seat divergences from the structural data — the claimed_type (tangled_rope) reflects the authoring seat's assessment that both coordination and extraction are structurally present, not that they are balanced.",
+    "mandatrophy_analysis": "The founding problem (deterring murder at acceptable cost) is contested: deterrence criminologists and abolitionists argue the problem is either unsolved by this means (deterrence fails) or solved by alternatives (life without parole). The arrangement persists despite the contested founding problem because the machinery serves institutional interests (prosecutorial leverage, political capital, correctional employment) that are distinct from the stated deterrence function. This is mandatrophy: the mandate (deterrence) has atrophied relative to the arrangement's persistence, but the constraint is not a piton because active enforcement is required and concentrated beneficiaries (prosecutorial authorities) exist. The 'acceptable cost' condition functions as a moving goalpost — as evidence against deterrence accumulates, the cost threshold is implicitly raised rather than the arrangement abandoned.",
+    "kernel_context": "This constraint is the deterrence_instrument reading of the state_killing_authority kernel. Sibling readings: retributive_desert (murderers forfeit right to life; lex talionis requires death for death) and categorical_abolition (state killing inherently impermissible regardless of consequence). This reading's structural delta: future potential victims enter the beneficiary set (lives saved via deterrence); condemned person is instrumental cost; state authority grounded in crime-prevention efficacy rather than desert or rights. The three readings instantiate three different constraints from the same kernel, each with distinct beneficiary/victim structures and ε values."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_authority__retributive_desert",
+      "state_killing_authority__categorical_abolition",
+      "penal_proportionality_doctrine",
+      "due_process_death_penalty_jurisprudence"
+    ],
+    "dual_formulation_note": "This constraint is one member of the state_killing_authority constraint family (kernel_id: state_killing_authority). The three readings — deterrence_instrument, retributive_desert, categorical_abolition — decompose the kernel's colloquial label into structurally distinct claims with different ε values, beneficiary/victim sets, and classifications. deterrence_instrument: ε≈0.82, tangled_rope (coordination + asymmetric extraction). retributive_desert: ε≈0.45, rope (coordination of desert-proportionality, minimal extraction if desert is accepted). categorical_abolition: ε≈0.95 from the abolitionist seat, mountain (natural law prohibition) or snare (if viewed from the state's seat). The family is linked by network.affects_constraints edges; the upstream empirical claim (deterrence effect) influences the downstream desert and abolition claims through the legitimacy conditions of state killing authority."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "condemned_persons",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Sentenced to death under the deterrence-instrument arrangement. Their life is the instrumental cost paid for the claimed deterrence benefit. They have no exit from the constraint once sentenced; appeals are procedural delays within the machinery, not exits. The constraint extracts their entire future."
+    },
+    {
+      "name": "future_potential_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The class of persons whose lives the deterrence claim says are saved by the threat of execution. They cannot consent to this protection, cannot opt out of being 'beneficiaries,' and have no way to verify whether the protection is real. Their beneficiary status is assigned by the arrangement's logic, not chosen."
+    },
+    {
+      "name": "state_prosecutorial_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Controls the machinery: decides when to seek death, negotiates pleas, manages the political capital of 'tough on crime' positioning. Collects the primary institutional benefit (conviction leverage, political resource). Can decline to use the constraint in any given case — has arbitrage-grade exit from the extraction side while controlling its deployment."
+    },
+    {
+      "name": "law_enforcement_agencies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gains investigative leverage (death-eligible charges as plea bargaining chips), resource allocation (capital case units, specialized prosecutors), and institutional prestige. Constrained exit: the institution is committed to the machinery but individual actors can transfer or advocate reform."
+    },
+    {
+      "name": "families_of_condemned",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bears collateral extraction: the killing of their kin, the prolonged uncertainty of appeals, the social stigma, the financial burden of legal defense. No voice in the 'acceptable cost' calculus; their costs are not counted in the deterrence accounting."
+    },
+    {
+      "name": "wrongfully_convicted",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The subset of condemned persons who are factually innocent. Bears the ultimate unpriced cost: execution for a crime they did not commit. Their existence is the empirical falsifier of the 'acceptable cost' threshold, yet they are structurally excluded from the cost calculus. No exit once convicted."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Would object to the arrangement's existence on categorical grounds. Their exclusion from the calibration of 'acceptable cost' is structural: the deterrence reading only counts costs internal to its consequentialist framework (deterrence failure, fiscal cost), not the categorical moral cost abolitionists assert."
+    },
+    {
+      "name": "retributive_desert_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Holds the sibling reading (retributive_desert) of the same kernel. Sees the deterrence reading as a category error: desert, not consequences, grounds the authority to kill. Their seat is analytical — they do not collect or pay under this constraint but their reading competes for the kernel's legitimacy."
+    },
+    {
+      "name": "deterrence_criminologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Empirical seat on the deterrence question. Their research (panel studies, natural experiments, meta-analyses) produces the evidence base that the 'acceptable cost' threshold claims to respect. Their findings (mostly null or marginal deterrence effects) are the primary challenge to the constraint's coordination function."
+    }
+  ],
+  "gain_flow": "state_prosecutorial_authority",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates a consequentialist justification for state killing: if killing some deters others from killing, the net lives saved validates the arrangement. Solves the legitimacy problem of state killing by grounding it in crime prevention rather than retribution or inherent authority.",
+    "transfer_function": "Moves the lives of condemned persons (and collateral costs to their families, risk of wrongful execution) to the credit of future potential victims (claimed lives saved) and institutional beneficiaries (prosecutorial leverage, law enforcement resources, political capital). The transfer is mediated by the 'acceptable cost' threshold — a calculus controlled by the benefiting authorities.",
+    "absent_voices": "The wrongfully convicted (who cannot speak post-execution), future potential victims (who cannot consent to being 'protected' by killing), and abolitionist advocates (whose categorical objection is excluded from the consequentialist framework). Also absent: the deterrence criminologists whose null findings are systematically discounted in the 'acceptable cost' calibration.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the deterrence-instrument justification vanished overnight, retentionist jurisdictions would either abandon capital punishment (revealing the deterrence claim was load-bearing) or fall back on retributive_desert (revealing the deterrence reading was a cover for a different justification). The machinery of death rows, execution protocols, and capital appeals would face immediate legitimacy crisis. The world rearranges because the constraint's claimed coordination function is its primary public legitimation.",
+    "founding_problem": "Post-Furman (1972) constitutional crisis: the Supreme Court struck down existing death penalty statutes as arbitrary and capricious. The deterrence-instrument reading offered a reconstitution: if capital punishment is calibrated to deter murder at acceptable cost, it satisfies the Eighth Amendment's proportionality requirement and the Fourteenth's due process requirement. The founding problem was legitimating state killing under a constitutional framework that rejected arbitrary authority.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The deterrence-instrument reading's founding problem is attested by the Joint Opinion in Gregg v. Georgia (1976) and subsequent deterrence-justification jurisprudence. However, the corroboration from OUTSIDE the benefiting parties is mixed: the National Research Council (2012) concluded deterrence research is not informative; the American Law Institute withdrew its death penalty framework (2009) citing irreparable structural defects; multiple state-level abolition commissions found the deterrence justification unsupported. No independent body affirms the founding problem remains live on the deterrence reading's own terms."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "state_killing_authority__retributive_desert",
+      "state_killing_authority__categorical_abolition"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_desert",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_abolition",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deterrence_justifies_state_killing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "acceptable_cost_threshold_is_calibratable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_gregg_deterrence_calibration",
+    "drift_state": {
+      "moment": "contemporary_empirical_challenge_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

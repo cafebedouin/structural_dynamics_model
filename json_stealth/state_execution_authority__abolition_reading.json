@@ -1,0 +1,378 @@
+{
+  "header": {
+    "constraint_id": "state_execution_authority__abolition_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "state_exec_abolition",
+    "story_uid": "2659e97f-2402-47c8-aa7a-e86fc8e1089d"
+  },
+  "base_properties": {
+    "extractiveness": 0.94,
+    "suppression": 0.85,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "State Execution Authority — Abolition Reading (Categorical Impermissibility)",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "prosecuting_authorities",
+      "elected_officials",
+      "closure_seeking_victim_families"
+    ],
+    "victims": [
+      "all_executed_persons",
+      "death_row_inmates",
+      "capital_charge_defendants"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.86
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.91
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.93
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.94
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_location",
+      "question": "This constraint is one reading of the kernel state_execution_authority (reading: abolition_reading). Where exactly is the disagreement with the sibling readings located, and what would adopting a sibling change structurally?",
+      "resolution_mechanism": "Comparative structural audit of the sibling story files: the retributive reading shrinks the victim set to wrongfully executed persons only and installs closure-seeking constituencies as legitimate beneficiaries; the deterrence reading makes epsilon contingent on an empirical preventive effect and weighs executed persons against hypothetically saved lives. The disagreement is located in the justifiability premises, not in any factual predicate both sides share.",
+      "impact": "If a sibling reading were adopted instead, the victim set contracts sharply, beneficiaries appear where this reading finds none, and epsilon drops from ~0.94 to a fraction of that value; the categorical axiom is what fixes the victim set at all executed persons and epsilon at its maximum.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is the abolition reading of the state_execution_authority kernel; sibling readings instantiate different constraints with different victim sets and epsilon."
+    },
+    {
+      "id": "deterrence_effect_null_question",
+      "question": "Is the deterrent effect of execution actually null, as this reading asserts, or merely unmeasured?",
+      "resolution_mechanism": "Natural experiments: moratoria and matched-jurisdiction comparisons of homicide rates; the National Research Council's 2012 review found the existing literature insufficient to conclude any deterrent effect.",
+      "impact": "This reading's classification is consequence-insensitive (the categorical axiom holds regardless), so even a large measured effect would not flip the type; it would however change the transfer-function analysis and strengthen the retentionist coalition's cover story, raising measured resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination cover story (deterrence) has any empirical content."
+    },
+    {
+      "id": "closure_gain_authenticity",
+      "question": "Do surviving family members genuinely receive a benefit (closure, settlement) from execution, or is that gain imputed onto them by the state's procedure?",
+      "resolution_mechanism": "Longitudinal studies of surviving families in execution versus life-sentence cases; the documented internal division of victims' families (organizations of family members opposing execution) is already partial evidence.",
+      "impact": "If the closure gain is imputed rather than received, the beneficiary declaration for closure_seeking_victim_families weakens toward pure rhetorical deployment and the extraction profile approaches unanimity of victimhood; if genuine, a real (though, per this reading's axiom, insufficient) benefit stream exists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the closure-seat beneficiary declaration reflects received gain or state-imputed gain."
+    },
+    {
+      "id": "lwop_substitutability",
+      "question": "Is life imprisonment without parole a qualitative substitute for execution (making the marginal extraction smaller) or categorically different, as this reading holds?",
+      "resolution_mechanism": "Conceptual analysis of irreversibility, and revealed preference: jurisdictions that substituted LWOP report no loss of incapacitation function, while this reading holds that remediability is itself the morally decisive property.",
+      "impact": "If substitution were accepted, effective extraction of the marginal execution falls and the arrangement looks more like a harsh-but-revisable sanction; this reading's categorical stance denies substitutability, which is what keeps epsilon at its ceiling.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the no-substitution premise of the categorical prohibition holds."
+    },
+    {
+      "id": "death_sentence_error_rate",
+      "question": "What is the true rate of wrongful conviction among death sentences?",
+      "resolution_mechanism": "Exoneration registries and survival-analysis of death-row exonerations (the leading study estimates roughly 4% of death-sentenced defendants would be exonerated if left under sentence indefinitely); DNA-era reversal data.",
+      "impact": "Under this reading any nonzero rate is dispositive given irreversibility — wrongful execution is treated as proof of systemic illegitimacy, not as a tunable error budget — so higher discovered rates raise epsilon and resistance but do not change the type.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical error rate feeding the systemic-illegitimacy axiom."
+    },
+    {
+      "id": "persistence_preference_vs_suppression",
+      "question": "Why does a mechanically cheap-to-fix constraint persist — genuine constituent preference for the sanction, or political risk manufactured and enforced by the constraint's own beneficiaries?",
+      "resolution_mechanism": "Compare jurisdictions where repeal passed with versus without prior polling majorities; track officeholder statements and primary-challenge patterns around repeal votes; observe post-repeal electoral outcomes in abolishing jurisdictions.",
+      "impact": "If persistence is manufactured risk, the suppression component is beneficiary-produced and the snare classification tightens; if genuine preference, disappearance would be slower and more contested than the mechanical cheapness suggests.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether persistence rests on authentic demand or beneficiary-enforced political risk."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel state_execution_authority: the abolition reading, which holds that state execution is categorically impermissible regardless of crime severity or procedural safeguards. Per the committer-frame rules, the sibling readings (retributive_reading, deterrence_reading) are OTHER constraints in OTHER files; they are not averaged, hedged, or described inside this one. The epsilon referent is the standing arrangement under contest — the operating capital-punishment machinery of retentionist jurisdictions — assessed by this reading's own lights: the state takes life itself, irreversibly, from condemned persons who include the wrongfully convicted, under procedural safeguards that this reading holds legitimate the taking rather than cure it. Because the categorical axiom admits no substitution (life imprisonment is held qualitatively different, not a lesser dose of the same thing), epsilon sits at its practical ceiling and rises slightly across the interval as accumulated exonerations convert abstract fallibility into demonstrated systemic error. KEY AGENTS (by structural relationship): see key_agents; the defining structural fact is that the only seats with arbitrage-grade exit from this constraint are the seats that wield it.",
+    "key_agents": [
+      "all_executed_persons: primary target (powerless/trapped) — bears the terminal extraction; per this reading the victim set includes the guilty, since the axiom rejects the act itself, not its misapplication",
+      "death_row_inmates: primary target (powerless/trapped) — bears years-to-decades of confinement under sentence of death while every exit (appeal, clemency) is controlled by the same apparatus",
+      "capital_charge_defendants: secondary target (powerless/constrained) — extracted from before trial via plea leverage, conceding guilt and waiver rights to escape the death charge",
+      "prosecuting_authorities: agenda-setter and collector (institutional/arbitrage) — decides which cases carry the death charge, converts the threat into pleas and convictions, and can step down to lesser charges at will",
+      "elected_officials: beneficiary (institutional/arbitrage) — converts the sanction into electoral capital and blocks repeal through manufactured political risk",
+      "closure_seeking_victim_families: beneficiary seat, internally divided (organized/identity_locked) — receive the symbolic settlement the procedure offers; a substantial minority of survivors reject it",
+      "execution_administrators: administering arm (institutional/constrained) — corrections systems that must procure drugs, staff executions, and absorb the documented attrition and refusal the task produces",
+      "appellate_judiciary: gatekeeping arm (institutional/constrained) — operates the review layer that this reading holds performs scrutiny while ratifying the overwhelming majority of outcomes",
+      "abolition_advocacy_movement: excluded from operative decision points (organized/constrained) — litigates, documents exonerations, and lobbies, but sits outside charging decisions and clemency boards where outcomes are actually determined",
+      "international_human_rights_bodies: analytical observer (institutional/analytical) — monitor, report, and treat the practice as a rights violation; no enforcement reach inside retentionist states",
+      "taxpayers: diffuse payer (moderate/mobile) — fund the capital track, whose trial, appellate, and death-row costs substantially exceed life-imprisonment costs in every audited jurisdiction"
+    ],
+    "logic_rationale": "Claim and metrics are independent authored facts. The claimed type is snare because, from this reading's seat, the arrangement's coordination stories (deterrence, retribution, incapacitation) are cover: the categorical axiom denies that any quantity of deterrence or proportionality could justify the act, so the stories cannot launder the extraction into coordination. The metrics describe the practice's actual operation as this reading assesses it. Extractiveness 0.94: the extracted good is life itself, taken irreversibly, from a set that provably includes the innocent; no substitute exists under the reading's axiom. Suppression 0.85 is a raw structural property, unscaled: the condemned cannot exit, alternatives are statutorily foreclosed for capital crimes, clemency is discretionary, and repeal-facing officeholders face beneficiary-managed political risk. Theater_ratio 0.52: the procedural layer is partly real (DNA-era exonerations prove the review machinery occasionally functions) but predominantly legitimation-performance — it ratifies the overwhelming majority of death judgments while displaying scruple. Accessibility_collapse 0.78: for a defendant inside the capital process, alternatives collapse nearly completely; at the societal level comparative abolitionist jurisdictions keep alternatives visibly alive, which keeps the value below mountain-range collapse. Resistance 0.62: sustained moratoria, declining death sentences, exoneration-driven litigation, juror reluctance, and lethal-injection drug shortages impose real friction without yet displacing the practice in retentionist jurisdictions. The temporal series share one grid (T0=1972 Furman vacuum through T50=2022). Note the deliberate dissociation in the series: suppression_requirement peaks around T30 (post-AEDPA enforcement hardening) and then decays as drug shortages, sentencing decline, and moratoria erode active enforcement capacity, while base suppression stays high — the trap's structure now does the coercive work the machinery used to do. Base_extractiveness creeps upward as accumulated exonerations deepen the demonstrated-illegitimacy record; theater_ratio climbs as the procedural display grows relative to the shrinking number of carried-out executions.",
+    "perspectival_gap": "The seats compute radically different constraints from identical legal material. The prosecuting_authorities seat experiences a lawful discretionary tool with arbitrage-grade exit — the charge is a lever it may pull or release, so effective extraction toward it is minimal and possibly negative (the lever subsidizes its conviction statistics). The condemned seats experience total, irreversible extraction with zero exit. The closure_seeking_victim_families seat receives a symbolic settlement whose authenticity is itself contested (see omega closure_gain_authenticity). The appellate_judiciary experiences a functioning review institution; the abolition movement experiences a review theater. The engine computes these divergences from power, exit, and role data; this story authors the structure and refuses to reconcile the seats.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation and no overrides are needed. all_executed_persons and death_row_inmates: payer role plus trapped exit places them at the full-target end — the highest effective extraction the engine can compute, appropriate for a constraint whose extracted good is life. capital_charge_defendants: payer with constrained exit (the plea is the only door, and it is the extraction mechanism) — high d. prosecuting_authorities: agenda_setter with secondary beneficiary role and arbitrage exit — derived d sits near the beneficiary end; the arbitrage atom matters because their exposure to the constraint is voluntary and reversible. elected_officials: beneficiary with arbitrage exit — low d. closure_seeking_victim_families: beneficiary, identity_locked — low d; the reading's objection to this gain is registered in the omegas and axioms, not in d, because directionality encodes structural receipt, not legitimacy of receipt. taxpayers: payer, mobile — moderate-high d, diluted by diffuseness. The excluded and observer seats feed the consensus-provenance picture rather than the arithmetic.",
+    "mandatrophy_analysis": "The founding problem — permanent removal of offenders deemed beyond redemption in an era before long-term incarceration existed, plus sovereign display of ultimate punitive authority — is dead on its own terms: the penitentiary and life-without-parole solve the removal problem everywhere, and every abolitionist democracy manages identical crimes without the terminal sanction. The arrangement persists past its function, which is the classic mandatrophy signature; the R5 mismatch (founding_problem_status=dead x disappearance_verdict=world_rearranges) should fire the zombie/capture flag, and per this reading that flag is correct rather than spurious. The classification discipline matters here in both directions: calling this a rope would launder the cover stories (deterrence, closure) into genuine coordination the participants endorse; calling it a piton would miss that concentrated collectors exist (prosecutorial leverage, electoral capital) and that the extraction is acute, not vestigial. The snare classification holds both facts: real coordination-shaped activity surrounds the practice, and the practice itself is extraction whose persistence depends on coercion and on suppressing the exits (repeal, clemency, refusal) that would dissolve it.",
+    "kernel_context": "Kernel: state_execution_authority — the persisting commitment that the state may lawfully put convicted persons to death. This file instantiates the abolition_reading: execution is categorically impermissible regardless of crime severity or procedural safeguards. Sibling readings, authored as separate constraints: the retributive_reading (execution restores moral balance when proportionate to heinous crime) and the deterrence_reading (execution prevents future murders by raising the price of capital crime). The disagreement is located in the justifiability premises: this reading's categorical form is consequence-insensitive and severity-insensitive, which is exactly what fixes its victim set at all executed persons and its epsilon at the ceiling. The kernel's own interpretive layer — judicial doctrine absorbing pressure as 'evolving standards of decency' — is, from this reading's seat, the mechanism by which drift is absorbed without the kernel ever being revised."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_execution_authority__retributive_reading",
+      "state_execution_authority__deterrence_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'capital punishment' conflates three structurally distinct constraints corresponding to the three declared readings of the state_execution_authority kernel. This file authors the abolition reading (epsilon ~0.94, victim set = all executed persons including the guilty, no legitimate beneficiaries, categorical no-substitution premise). The sibling files author the retributive reading (victim set contracted to the wrongfully executed; closure-seeking constituencies enter as legitimate beneficiaries; epsilon materially lower) and the deterrence reading (epsilon contingent on an empirical preventive effect; executed persons weighed against hypothetically saved lives). Upstream/downstream structure: the deterrence reading's empirical claims have historically been cited as the load-bearing justification for retention, so the deterrence file influences the other two; the abolition reading contests both siblings' justifiability premises outright. Each file links the others via network.affects_constraints; contamination analysis should expect abolition-side purity findings to propagate hardest onto the deterrence file, whose empirical floor is the first thing exoneration data erodes."
+  },
+  "stakeholders": [
+    {
+      "name": "all_executed_persons",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Persons the state has put to death after capital trial and appeal. Under this reading the victim set includes those guilty as charged, because the axiom condemns the act rather than its misapplication; it necessarily includes the wrongfully convicted, whose execution is held to be proof of the system's illegitimacy rather than an anomaly within it. Every exit ran through the apparatus itself: appeals decided by its courts, clemency granted or withheld by its officers. The harm is total and irreversible, and the seat is permanently silenced once the procedure completes."
+    },
+    {
+      "name": "death_row_inmates",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Living prisoners under sentence of death, confined in restrictive death-row conditions for years to decades while their cases move through review. Their conduct, cooperation, and rehabilitation have no bearing on the outcome except at the margins of clemency discretion. Some will be exonerated after the fact; some will die by execution; some will die of age or illness inside the sentence. Exit from the category exists only through the machinery that imposed it."
+    },
+    {
+      "name": "capital_charge_defendants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Defendants facing a potential death charge at the charging and plea stage. The threat of the capital charge is used to extract guilty pleas, waiver of trial and appeal rights, and cooperation against others in exchange for a life or term sentence. Their realistic options are accepting the extracted plea or gambling their life on trial; declining both is not available."
+    },
+    {
+      "name": "closure_seeking_victim_families",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Surviving family members of homicide victims who accept and articulate the settlement the capital process offers them: a verdict, an execution date, and a public ritual of finality. The state cites them as the constituency the sanction serves. The seat is internally divided — organized groups of survivors oppose execution and report the decades of appeals as renewed trauma rather than closure — and their standing in the process is fused with the case's identity, making dissent costly within it. Whether the gain is genuinely received or imputed by the procedure is an open question this story carries as an omega."
+    },
+    {
+      "name": "prosecuting_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "District attorneys and attorneys general who decide which cases carry the death charge, negotiate pleas under its shadow, and try capital cases. The charge converts directly into plea concessions, convictions, and career capital; the same office can step down to a lesser charge whenever the lever loses value, which is why its exposure to the constraint is voluntary and reversible. It sets the agenda for whom the machinery runs on at all."
+    },
+    {
+      "name": "elected_officials",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Governors, legislators, and executives who campaign on the sanction, sign death warrants or commute them, and block or advance repeal. The issue yields reliable electoral capital at low personal risk because the risk of supporting repeal is managed by primary challenges and advertising funded around the issue. Their horizon is the next election cycle, which shapes every clemency and repeal decision they touch."
+    },
+    {
+      "name": "execution_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Corrections departments and their staff who operate death rows and carry out executions. They are bound by statute once a warrant issues, and they absorb the operational frictions the task generates: pharmaceutical suppliers refusing to sell, staff turnover and refusal among execution teams, litigation over protocol secrecy, and botched procedures. They administer the constraint rather than profit from it, and their exit is statutory rather than chosen."
+    },
+    {
+      "name": "appellate_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State and federal judges who operate the review layer: direct appeal, post-conviction, habeas. They vacate a small fraction of death judgments and ratify the overwhelming majority, working within doctrines (harmlessness, procedural default, deference standards) that channel what scrutiny can reach. Their legitimacy rests on the appearance of exhaustive review; they are bound by precedent and statute and cannot exit the role the constraint assigns them."
+    },
+    {
+      "name": "abolition_advocacy_movement",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Defense lawyers, innocence organizations, advocacy coalitions, and religious bodies working to end the practice. They litigate post-conviction, document exonerations, support repeal campaigns, and accompany the condemned. They are absent from the rooms where outcomes are actually determined — charging decisions, clemency boards, warrant signings — and their influence must route through the same courts and legislatures the constraint's beneficiaries control. Their knowledge of the machinery's failures is the most detailed of any seat and carries no formal vote."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Treaty bodies, regional courts, and rights organizations that classify the practice as a violation of evolving international norms and press retentionist states through reporting, review, and diplomatic pressure. They take testimony from every seat, compile comparative data, and hold no enforcement power inside retentionist jurisdictions. Their analytical distance is their contribution: they document the direction of travel of the norm itself."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Residents who fund the capital track: capital-case prosecution and defense, the extended appellate pipeline, death-row housing, and execution operations, which audited comparisons place substantially above the lifetime cost of life imprisonment. The cost is diffuse and invisible in ordinary budget perception, and individual exit (moving jurisdictions) is weakly related to the fiscal flow. They bear a real, documented cost without choosing it."
+    }
+  ],
+  "gain_flow": "prosecuting_authorities",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Caps the criminal-penalty hierarchy with a terminal sanction above which no further escalation exists, and channels public demand for maximal response to heinous crimes into a regulated judicial procedure; historically it also coordinated the sovereign's display of ultimate punitive authority in eras before long-term incarceration existed.",
+    "transfer_function": "Moves life itself, plus the years of death-row confinement preceding it, from condemned persons to the state's punitive account; moves plea concessions and waived rights from capital defendants to prosecutors; moves fiscal resources from taxpayers to the capital track, which costs more than the life-imprisonment alternative; moves a symbolic settlement to closure-seeking constituencies; and moves electoral capital to officials who defend it.",
+    "absent_voices": "The executed are the structurally absent voice: the seat with the most complete knowledge of the constraint's operation is the one the constraint deletes, and it cannot testify. With them: the wrongfully convicted exonerated only after decades or posthumously, the condemned's families and communities, foreign nationals processed without consular access, and the minority of surviving family members whose opposition to execution is absorbed out of the official narrative. Unanimity in favor of the arrangement is procured partly by the absence of the seat best positioned to describe it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sanction vanished overnight, charging patterns, plea-bargaining leverage, penalty hierarchies, clemency machinery, death-row infrastructure, and tough-on-crime political rhetoric would all reorganize around the new terminal point; victim-services framing and international human-rights posture would shift with them. The rearrangement is not hypothetical: dozens of abolitionist jurisdictions have already performed it and continue to prosecute the same categories of crime, which maps the route the retentionist world would follow.",
+    "founding_problem": "In eras before the penitentiary existed, the sovereign faced two problems at once: how to permanently remove offenders deemed beyond redemption when no long-term incarceration infrastructure was available, and how to display the ultimacy of its authority to punish. Capital punishment solved both with a single instrument.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Penal-history scholarship on the emergence of the penitentiary documents both halves of the founding problem and their solution by incarceration rather than execution. Comparative practice corroborates from outside the beneficiary set: every abolitionist democracy prosecutes and contains the same categories of crime using life imprisonment, demonstrating the removal function survives the instrument's removal. Exoneration registries maintained independent of the state attest the error burden the arrangement carries. Retentionist offices dispute the 'dead' status by asserting continuing retributive demand, but no source outside the benefiting parties attests that the founding problem remains unsolved by other means."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "nonexecution_dignity_baseline",
+    "drift_state": {
+      "moment": "contemporary_abolition_majority_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "deterrence_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "execution_categorical_impermissibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "wrongful_execution_systemic_illegitimacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

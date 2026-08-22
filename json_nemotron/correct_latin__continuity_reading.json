@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "correct_latin__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_correct_latin__continuity_reading",
+    "measurement_id_prefix": "correct_latin_continuity",
+    "story_uid": "079c6409-d305-43a4-bd35-cf89bfd8b6e5"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.28,
+    "claimed_type": "rope",
+    "human_readable": "Continuity Reading of Correct Latin: Medieval Latin as Legitimate Evolution",
+    "topic_domain": "intellectual_history/philology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "medieval_scribes",
+      "scholastic_theologians",
+      "ecclesiastical_administrators",
+      "vernacular_writers_using_latin_models"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "linguistic_continuity_principle",
+      "living_practice_as_standard",
+      "internal_reform_legitimacy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the continuity_reading a distinct constraint with its own ε, or merely a perspective on the same constraint as discontinuity_reading?",
+      "resolution_mechanism": "Apply the ε-invariance test: if measuring extraction via textual fidelity gives low ε (continuity) but measuring via classical norm adherence gives high ε (discontinuity), they are distinct constraints. The engine will classify them separately.",
+      "impact": "If distinct, each reading gets its own constraint story with independent metrics and classifications. If unified, a single story must reconcile contradictory extraction measurements.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether continuity and discontinuity readings instantiate the same kernel as one constraint or two structurally distinct constraints."
+    },
+    {
+      "id": "medieval_forms_legitimacy_source",
+      "question": "Does the legitimacy of medieval Latin forms derive from continuous transmission alone, or does it require ratification by later humanist or ecclesiastical authority?",
+      "resolution_mechanism": "Historical analysis of which medieval forms were accepted without comment versus which required explicit defense or papal bull. Corpus linguistics of medieval texts showing unselfconscious usage patterns.",
+      "impact": "If legitimacy is purely immanent to practice, extraction remains low (rope). If external ratification is required, the constraint acquires an authority layer that may increase suppression and extraction (tangled_rope or scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of normative force for medieval Latin legitimacy in the continuity reading."
+    },
+    {
+      "id": "vernacular_emergence_effect",
+      "question": "Did the continuity reading's inclusivity toward medieval Latin accelerate or delay vernacular literary development?",
+      "resolution_mechanism": "Comparative timeline analysis: regions where continuity reading dominated (Italy, France) versus regions where discontinuity reading drove early humanist Latin purification (Germany, England) — correlate with vernacular literary flowering dates.",
+      "impact": "If continuity accelerated vernacular emergence, the constraint has positive externalities for excluded voices. If it delayed vernacular development by satisfying literary needs in Latin, it extracts from vernacular potential.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Effect of continuity reading on the excluded constituency of vernacular writers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1350,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1200,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1350,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1350,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 500,
+    "end": 1500
+  },
+  "commentary": {
+    "narrative_context": "The continuity reading holds that correct Latin is whatever form has been transmitted through uninterrupted living practice from antiquity through the medieval period. Medieval Latin is not a corruption but the legitimate evolved state of the language — reform, when it occurs, is internal adjustment (e.g., Carolingian standardization) not external reconstruction from ancient texts. This reading governed Western intellectual life from roughly 500–1350 CE, when humanist philology began challenging it. The constraint is the normative force of continuous practice: what Latin users actually do becomes the standard, not what ancient texts prescribe.",
+    "key_agents": [
+      "medieval_scribes: Primary coordinators (organized/mobile) — transmit and adapt the language through daily practice",
+      "scholastic_theologians: Primary beneficiaries (organized/constrained) — inherit a flexible, living medium for technical discourse",
+      "ecclesiastical_administrators: Agenda setters (institutional/constrained) — maintain administrative continuity across generations",
+      "vernacular_writers_using_latin_models: Beneficiaries (moderate/constrained) — draw on medieval Latin's flexibility for vernacular development",
+      "humanist_philologists: Excluded (powerful/trapped) — their textual-reconstruction program is structurally incompatible with this reading",
+      "analytical_observer: Observer (analytical/analytical) — sees the full structural field"
+    ],
+    "logic_rationale": "Extraction is low (0.18) because the constraint primarily coordinates — it provides a shared medium where none would exist without continuous transmission. Suppression is low (0.12) because alternatives (vernacular writing, regional Latin variants) are not actively suppressed; they coexist. Theater ratio is modest (0.22) — some performative archaism exists (Carolingian minuscule as 'restoration') but the core practice is genuine coordination. Accessibility collapse is moderate (0.35) — the constraint makes Latin accessible to new users but collapses the alternative of a purified classical standard. Resistance is low (0.28) — the reading dominated for a millennium with minimal internal challenge until humanism.",
+    "directionality_logic": "Medieval scribes and scholastics are beneficiaries (d ~ 0.2) — they gain a living, adaptable language without coercive overhead. Ecclesiastical administrators are near-symmetric (d ~ 0.45) — they maintain the system but also depend on it. Vernacular writers are beneficiaries (d ~ 0.3) — Latin's flexibility aids vernacular calibration. Humanist philologists are excluded — their project requires this reading's displacement, so they experience it as a barrier (d ~ 0.8) but are not its targets; they are the counter-reading's agenda-setters.",
+    "mandatrophy_analysis": "The founding problem — maintaining a transregional intellectual and administrative language across the post-Roman fragmentation — was live throughout the medieval period. The reading resolves mandatrophy by internal reform (Carolingian correction, not replacement). Mandatrophy risk emerges only when the founding problem shifts: from 'maintain continuity' to 'recover classical purity.' The continuity reading does not become extractive; it becomes obsolete for the new problem.",
+    "kernel_context": "This constraint is the continuity_reading of the correct_latin kernel. It instantiates the claim that medieval Latin is legitimate evolved Classical Latin through continuous living practice. Sibling readings: discontinuity_reading (correct Latin = classical form in ancient texts; medieval = corrupt), hybrid_reading (correct Latin = classical form transmitted through medieval practice but correctable via textual evidence). The continuity reading coexists with both siblings as a live position in intellectual history — it was the dominant reading 500–1350, displaced but not logically foreclosed by humanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "correct_latin__discontinuity_reading",
+      "correct_latin__hybrid_reading",
+      "vernacular_literary_emergence",
+      "carolingian_standardization",
+      "humanist_latin_reform"
+    ],
+    "dual_formulation_note": "Part of the correct_latin constraint family (3 readings). This reading (continuity) has the lowest ε (~0.18) because it treats lived practice as self-validating. The discontinuity reading has higher ε (textual reconstruction requires active suppression of living usage). The hybrid reading sits between. All three share the kernel 'correct Latin' but instantiate different constraints with different extraction profiles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.8
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "medieval_scribes",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Copy, transmit, and adapt Latin texts daily in scriptoria across Europe. Their practice *is* the transmission chain — they introduce medieval forms (new vocabulary, syntactic shifts, orthographic conventions) unselfconsciously. Exit means leaving the scriptorium or the clerical estate; mobile within the ecclesiastical system."
+    },
+    {
+      "name": "scholastic_theologians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Use Latin as a technical language for university disputation, commentary, and summae. They inherit a flexible medium that absorbs Aristotelian terminology and theological precision without requiring ancient authority for every neologism. Constrained by the university system's Latin requirement; cannot switch to vernacular for technical work."
+    },
+    {
+      "name": "ecclesiastical_administrators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Run chancanceries, dioceses, and papal bureaucracy in Latin. The continuity reading ensures administrative formulas, legal terms, and documentary practices remain valid across generations without re-legislation. They set standards (e.g., Carolingian reform) but are constrained by the need for cross-generational intelligibility."
+    },
+    {
+      "name": "vernacular_writers_using_latin_models",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Compose in Old French, Old Italian, Middle High German, etc., using medieval Latin as a lexical and syntactic reservoir. The living Latin they observe provides ready-made models for abstract vocabulary, legal registers, and poetic forms. Constrained by diglossia — Latin remains the high register; vernacular legitimacy is derivative."
+    },
+    {
+      "name": "humanist_philologists",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Advocate reconstructing Latin from classical texts (Cicero, Caesar) as the sole standard. Their program requires displacing the continuity reading — they are structurally excluded from the medieval system's legitimacy but gain institutional power 1350–1500. Trapped in the sense that their intellectual project *is* the overthrow of this constraint; they cannot 'exit' to a world where it doesn't exist without achieving their goal."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Modern philologist or intellectual historian analyzing the constraint from outside. Sees the full field: continuity reading as dominant coordination mechanism for 800+ years, its displacement by humanism, and the hybrid compromises that followed. No stake in the outcome; evaluates structural dynamics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a transregional, cross-generational Latin medium for intellectual, administrative, and liturgical communication without requiring each generation to re-learn or reconstruct the language from ancient texts. Solves the coordination problem of shared reference across time and space through living transmission.",
+    "transfer_function": "Moves linguistic authority from ancient textual prescriptions to living practice. The 'cost' is tolerating deviation from classical norms (morphology, syntax, vocabulary); the 'gain' is a functional, adaptable language that serves medieval needs without rupture. No monetary transfer; the currency is legitimacy and intelligibility.",
+    "absent_voices": "Vernacular communities who might have developed literary languages earlier if Latin had not remained a flexible high register; early humanist critics (Petrarch, Salutati) who were marginalized in the university system before 1350; non-Latinate intellectual traditions (Arabic, Hebrew, Byzantine Greek) that interacted with Latin but had no voice in its internal norms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuity reading vanished overnight (e.g., if all medieval Latin users suddenly accepted the humanist claim that only classical Latin is correct), the entire medieval textual tradition would be delegitimized — university curricula, legal codes, liturgical texts, administrative records would all require 'correction' or replacement. The intellectual infrastructure of medieval Europe would collapse or require massive reconstruction.",
+    "founding_problem": "After the fragmentation of the Western Roman Empire (5th–6th c.), maintain a single language for church, law, and learning across linguistically diverse successor kingdoms without a central imperial academy to enforce standards.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by Cassiodorus (Institutiones, 6th c.) and Alcuin (Carolingian reform correspondence, 8th c.) — both outside the narrow beneficiary set, writing from the perspective of preserving civilization's tools. The problem remained live through the 12th-century renaissance (John of Salisbury, Metalogicon). No serious medieval voice claims the problem is solved; the continuity reading *is* the ongoing solution."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "discontinuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "living_practice_legitimates_usage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "no_rupture_between_classical_and_medieval",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "continuous_latin_transmission",
+    "drift_state": {
+      "moment": "humanist_challenge_1350",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_1970__withdrawal_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_npt_treaty_1970__withdrawal_sovereignty_reading",
+    "story_uid": "c9c90522-fac8-49f1-bada-c3314e4a3217"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Article X Withdrawal Right as Legitimate Sovereign Option",
+    "topic_domain": "international_law/nuclear_nonproliferation/regime_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "threshold_nuclear_states",
+      "great_power_patrons"
+    ],
+    "victims": [
+      "non_nuclear_weapon_states_parties",
+      "regime_stability_norm"
+    ],
+    "vindicated_propositions": [
+      "sovereign_withdrawal_right_under_article_x",
+      "security_environment_conditionality_of_treaty_obligations",
+      "nuclear_deterrence_as_legitimate_security_practice"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the withdrawal_sovereignty_reading a distinct constraint with its own ε, or a perspectival slice of the NPT kernel?",
+      "resolution_mechanism": "The ε-invariance test: if the extraction profile, beneficiary/victim structure, and classification remain stable under this reading's own structural logic without reference to sibling readings, it is a distinct constraint. The fact that sibling readings produce different ε and different victims confirms distinctness.",
+      "impact": "If confirmed as distinct, this reading is authored as a standalone constraint story with its own metrics and stakeholders, linked to siblings via network.affects_constraints. If treated as a perspectival slice, the metrics would be unstable and the framework would misclassify.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to ε-invariance: this reading is a separate constraint, not a measurement variant of the kernel."
+    },
+    {
+      "id": "withdrawal_threat_credibility_extraction",
+      "question": "Does the withdrawal right itself (as opposed to actual withdrawal) function as an extractive mechanism by allowing threshold states to hold compliance hostage?",
+      "resolution_mechanism": "Trace concession patterns: do non-nuclear weapon states make disproportionate security assurances or technology transfers to states that credibly threaten Article X invocation? Compare North Korea (2003) and Iran (post-2018) concession landscapes against baseline.",
+      "impact": "If credible, the withdrawal threat is not a dormant option but an active extraction lever — raising ε for this reading and strengthening the tangled_rope classification (coordination of nonproliferation + extraction via threat). If not, the reading overstates the structural function of Article X.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the Article X threat operates as extractive leverage in practice."
+    },
+    {
+      "id": "regime_norm_as_victim",
+      "question": "Can a normative standard (regime stability) be a victim in the same sense as an agent?",
+      "resolution_mechanism": "The framework treats vindicated_propositions as non-agents that collect no rents. But regime_stability_norm is listed as a victim because its erosion has structural consequences: when the norm degrades, the coordination function collapses and extraction becomes unchecked. The omega records whether this analytical move is sound or whether regime stability should be modeled as a system property rather than a victim seat.",
+      "impact": "If regime_stability_norm is a valid victim seat, the tangled_rope gate (coordination + asymmetric extraction) is satisfied with two victim categories. If invalid, the reading may need an additional agent victim (e.g., 'future_generations_entering_nuclear_risk') to satisfy the gate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ontological status of a normative standard as a victim of extraction."
+    },
+    {
+      "id": "suppression_mechanism_article_x",
+      "question": "Is the suppression in this constraint structural (enforcement of non-withdrawal norms, security assurances that bind) or internalized (non-nuclear weapon states accept the bargain as legitimate)?",
+      "resolution_mechanism": "Post-withdrawal trajectory analysis: if states that withdraw (or threaten to) face sustained structural penalties (sanctions, isolation, security guarantees withdrawn) rather than merely reputational costs, suppression is structural. If the primary cost is normative condemnation that fades, suppression is partly internalized.",
+      "impact": "If internalized, the effective suppression experienced by non-nuclear weapon states is higher than the structural measure suggests — they carry the constraint's legitimacy even when enforcement lapses. This affects directionality for the non_nuclear_weapon_states_parties seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the nonproliferation regime under the withdrawal reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The NPT (1970) contains Article X, which permits any party to withdraw upon deciding 'that extraordinary events, related to the subject matter of this Treaty, have jeopardized the supreme interests of its country.' The withdrawal_sovereignty_reading treats this as a genuine, exercisable sovereign right — not a dead letter, not a provision so hedged by customary law as to be inoperable. Under this reading, the NPT's obligations are contingent on the security environment: if a party's supreme interests are jeopardized, the treaty ceases to bind. This reading is held by threshold nuclear states (and their great-power patrons) who value the option to acquire nuclear weapons if the security environment deteriorates. The constraint coordinates nonproliferation (the NPT's overt function) while extracting from non-nuclear weapon states, who must accept a bargain that can be unilaterally revoked by the most security-threatened parties. The regime stability norm — the shared expectation that the NPT is a permanent, binding framework — is a structural victim: its erosion undermines the coordination function and leaves extraction unchecked.",
+    "key_agents": [
+      "threshold_nuclear_states: Primary beneficiaries (powerful/identity_locked) — hold withdrawal option as strategic asset",
+      "great_power_patrons: Secondary beneficiaries (institutional/arbitrage) — use threshold states' withdrawal option as leverage",
+      "non_nuclear_weapon_states_parties: Primary victims (organized/constrained) — bear compliance costs while bargain is revocable",
+      "regime_stability_norm: Structural victim — erodes when withdrawal option is exercised or credibly threatened",
+      "nuclear_weapon_states_npt: Agenda setters (institutional/arbitrage) — administer the regime while benefiting from its asymmetry",
+      "international_observers_analytical: Observer seat (analytical/analytical) — track regime health"
+    ],
+    "logic_rationale": "Extractiveness (0.38) reflects that the withdrawal option is not continuously exercised but structurally embedded — the threat of withdrawal is the extraction mechanism, not the act. Suppression (0.42) is moderate: non-nuclear weapon states comply partly because the regime delivers genuine coordination (security assurances, technology access) and partly because withdrawal threats trigger structural penalties. Theater ratio (0.28) captures the growing gap between the NPT's proclaimed permanence and the operational reality of Article X as a live option. The measurements show a clear trajectory: extraction and theater rise after the Cold War (1995) and especially after North Korea's 2003 withdrawal, as the regime's asymmetry becomes more visible. The reading is claimed as tangled_rope because it coordinates (nonproliferation, verification, technology transfer) AND extracts asymmetrically (threshold states hold option value; non-nuclear weapon states bear the cost of a revocable bargain). Active enforcement is required: the regime's verification machinery (IAEA safeguards) and the security assurance architecture (negative/positive security assurances) must actively suppress withdrawal incentives to maintain the coordination function.",
+    "directionality_logic": "Threshold nuclear states are structural beneficiaries (d ~ 0.15-0.25): they hold the withdrawal option as strategic leverage, gaining option value without paying the full cost of weaponization. Great power patrons are secondary beneficiaries (d ~ 0.2-0.3): they use client states' withdrawal threats as diplomatic leverage while maintaining plausible deniability. Non-nuclear weapon states are targets (d ~ 0.7-0.8): they bear compliance costs (foregone nuclear option, safeguards acceptance) under a bargain that can be unilaterally revoked by the most security-threatened parties. The regime_stability_norm is a structural victim (d ~ 0.9): its coherence is the direct casualty of withdrawal exercises. Nuclear weapon states sit near symmetric (d ~ 0.45-0.55): they administer the regime and benefit from its asymmetry but are bound by Article VI obligations (under other readings). The directionality derivation from beneficiary/victim declarations + exit options captures this gradient without overrides.",
+    "perspectival_gap": "From the threshold state seat, the constraint is a sovereign insurance policy — the withdrawal right makes the NPT bearable, and its exercise is a legitimate response to existential threat. From the non-nuclear weapon state seat, the same structure is a trap: they complied in good faith, but the bargain's core symmetry (nonproliferation for disarmament) is broken when the most powerful parties treat their obligations as contingent. The engine computes this seat divergence from the declared power/exit/beneficiary structure; the claimed type (tangled_rope) reflects the author's structural reading, not a reconciliation of perspectives.",
+    "mandatrophy_analysis": "The NPT was founded on a reciprocal bargain: non-nuclear weapon states forego nuclear weapons in exchange for access to peaceful nuclear technology and a binding commitment by nuclear weapon states to pursue disarmament (Article VI). Under the withdrawal_sovereignty_reading, the founding problem (preventing nuclear proliferation) is contested — some parties argue the problem is solved by the regime's existence, others that it persists and the regime is failing. The withdrawal right itself was not the founding problem's solution; it was a sovereign concession to get states to join. Its persistence as a live option, rather than a dead letter, means the constraint has not atrophied into a piton — it is actively maintained by threshold states as strategic optionality. The mandatrophy question is whether the regime's coordination function (nonproliferation) still justifies the asymmetric extraction (revocable bargain). This reading says yes — the coordination is real and the extraction is the price of universal participation. The sibling readings disagree.",
+    "kernel_context": "This constraint is the withdrawal_sovereignty_reading of the npt_treaty_1970 kernel. Sibling readings: oligopoly_enforcement_reading (Articles I-II as primary binding obligation; Article VI contingent), reciprocal_disarmament_reading (Article VI as binding with temporal urgency; horizontal/vertical nonproliferation as reciprocal bargain). This reading treats Article X as the structural key: the withdrawal right makes the entire treaty contingent on security environment, turning binding obligations into revocable commitments. The three readings are distinct constraints with different ε, different victim sets, and different classifications — linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_1970__oligopoly_enforcement_reading",
+      "npt_treaty_1970__reciprocal_disarmament_reading"
+    ],
+    "dual_formulation_note": "The npt_treaty_1970 kernel decomposes into three constraint stories with distinct ε and victim structures. This reading (withdrawal_sovereignty) has ε=0.38 and victims including regime_stability_norm. The oligopoly_enforcement reading has lower ε (~0.15) and treats non-nuclear weapon states as coordinated beneficiaries. The reciprocal_disarmament reading has higher ε (~0.55) and treats nuclear weapon states as victims of their own unfulfilled Article VI obligations. All three are required to model the NPT's contested structure."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "threshold_nuclear_states",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "States with latent nuclear capacity (enrichment, reprocessing, weaponization knowledge) that remain non-nuclear weapon state parties but treat Article X as a live strategic option. Their nuclear latency is their leverage; the withdrawal right makes that leverage credible. They gain option value (deterrence potential, diplomatic leverage) without paying weaponization costs. Exit from the constraint means exercising Article X — which is identity-locked because nuclear latency has become constitutive of their security doctrine and great-power alignment."
+    },
+    {
+      "name": "great_power_patrons",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Nuclear weapon states (especially US, Russia, China) that extend security umbrellas to threshold states. They benefit when clients' withdrawal threats extract concessions from adversaries, while maintaining plausible deniability. They administer the nonproliferation regime (IAEA, UNSC, export controls) and can modulate enforcement. Their exit is arbitrage-grade: they can reinterpret or ignore regime constraints when strategic interests demand, as great-power prerogative."
+    },
+    {
+      "name": "non_nuclear_weapon_states_parties",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The 180+ NNWS parties that have foregone nuclear weapons and accepted IAEA safeguards. They bear the compliance costs (safeguards, export controls, foregone nuclear option) under a bargain where the most powerful parties can legally withdraw. Their exit is constrained: withdrawing triggers severe structural penalties (sanctions, loss of nuclear cooperation, security guarantee withdrawal) but staying means accepting a revocable deal. They are coordinated into the regime but extractively positioned."
+    },
+    {
+      "name": "regime_stability_norm",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The shared normative expectation that the NPT is a permanent, binding framework whose obligations are not contingent on individual security calculations. This norm is not an agent but a structural property of the regime. It is victimized when withdrawal threats or exercises erode the expectation of permanence, degrading the coordination function (states hedge, compliance becomes conditional, verification loses authority). Its 'exit' is analytical: the norm persists or collapses as a system property."
+    },
+    {
+      "name": "nuclear_weapon_states_npt",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The five NPT-recognized nuclear weapon states (US, Russia, UK, France, China) that administer the regime through the UNSC, IAEA Board of Governors, and export control regimes (NSG, Zangger Committee). They benefit from the regime's asymmetry (they retain nuclear weapons; others cannot acquire them) but are notionally bound by Article VI. Under this reading, their Article VI obligation is also contingent on security environment — making them partial beneficiaries of the same contingency logic that benefits threshold states."
+    },
+    {
+      "name": "international_observers_analytical",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analytical actors (IAEA Secretariat, think tanks, academic researchers, NGOs) who monitor regime health, verify compliance, and document the gap between the NPT's proclaimed permanence and Article X's operational reality. They neither collect nor pay but their assessments shape the regime's legitimacy and the credibility of withdrawal threats."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The NPT coordinates global nonproliferation by providing a single legal framework for verification (IAEA safeguards), technology transfer (Article IV), and security assurances (negative/positive). It solves the collective action problem of mutual nuclear restraint: without it, more states would hedge or weaponize, triggering cascades.",
+    "transfer_function": "Moves compliance costs (safeguards acceptance, foregone nuclear option, export control adherence) from non-nuclear weapon states to the regime, while moving option value (credible withdrawal threat, nuclear latency as leverage) to threshold states and their patrons. The transfer is not monetary but strategic: security assurance for restraint, maintained only while the security environment permits.",
+    "absent_voices": "Future generations who inherit the nuclear risk environment shaped by today's withdrawal decisions; states that never joined the NPT (India, Pakistan, Israel, South Sudan) and thus have no voice in its interpretation but are affected by its stability; civil society movements for nuclear abolition whose framing of the NPT as a disarmament treaty is undermined by the withdrawal reading's contingency logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the withdrawal_sovereignty_reading vanished (i.e., Article X were interpreted as a dead letter or so hedged by customary law as to be inoperable), threshold states would lose their strategic option value, great-power patrons would lose a lever, and the regime would become more symmetric — but non-nuclear weapon states might also lose the assurance that the NPT is a voluntary bargain they can exit if betrayed. The world rearranges because the constraint's existence shapes the strategic calculus of every party.",
+    "founding_problem": "The NPT was built to prevent a world of 20+ nuclear weapon states (the 'nth country problem' projected in the 1960s). The withdrawal right (Article X) was the sovereign concession required to get states to join a treaty that permanently foreclosed their nuclear option — a guarantee that if the bargain failed them existentially, they were not trapped.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The 1968 negotiating record (UNGA First Committee, Eighteen-Nation Disarmament Committee) corroborates that Article X was a sovereign insistence, not a regime design choice. The 1995 NPT Review Conference (indefinite extension decision) records the contestation: non-nuclear weapon states accepted indefinite extension only with 'principles and objectives' strengthening Article VI, precisely because they feared the bargain was becoming permanently asymmetric. The withdrawal_sovereignty_reading's claim that the founding problem is contested is corroborated by the Review Conference record, not merely asserted by beneficiaries."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "oligopoly_enforcement_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "reciprocal_disarmament_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "article_x_as_exercisable_sovereign_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "treaty_obligations_contingent_on_security_environment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "npt_as_voluntary_bargain_with_sovereign_exit",
+    "drift_state": {
+      "moment": "post_2003_north_korea_withdrawal",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

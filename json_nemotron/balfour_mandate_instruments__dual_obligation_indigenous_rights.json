@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "balfour_mandate_instruments__dual_obligation_indigenous_rights",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_balfour_mandate_instruments__dual_obligation_indigenous_rights",
+    "measurement_id_prefix": "balfour_dual_obligation",
+    "story_uid": "890d4e18-2449-46bd-a41c-1b3c0c15a9c3",
+    "created_at": "2026-08-03T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Balfour Mandate Dual Obligation - Indigenous Rights Primacy",
+    "topic_domain": "international_law/colonial_administration/state_formation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "palestinian_arab_elites",
+      "palestinian_arab_communities"
+    ],
+    "victims": [
+      "zionist_organizations",
+      "british_administrators"
+    ],
+    "vindicated_propositions": [
+      "self_determination_norm",
+      "minority_protection_principle",
+      "indigenous_land_tenure_right"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the Balfour mandate kernel, or a separate constraint entirely?",
+      "resolution_mechanism": "Compare epsilon and beneficiary/victim structure across the three declared readings (dual_obligation_indigenous_rights, jewish_national_home_primacy, mandatory_interpretive_discretion). If epsilon differs by >0.25 or beneficiary sets are disjoint, they are separate constraints per ε-invariance.",
+      "impact": "If separate constraints, each gets its own classification and network links. If same constraint viewed differently, the framework must model perspectival divergence within one story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three declared readings constitute one constraint with perspectival variance or three ε-distinct constraints in a family"
+    },
+    {
+      "id": "naturalness_vs_construction",
+      "question": "Are the Arab civil/political rights and land tenure protections natural-law obligations of the mandate system, or constructed interpretations serving British imperial management?",
+      "resolution_mechanism": "Analyze League of Nations Permanent Mandates Commission records for whether Article 22 obligations were treated as jus cogens or as discretionary policy. Cross-reference with contemporary minority treaties (e.g., Polish Minority Treaty).",
+      "impact": "If natural-law, the constraint trends toward Mountain/Roep with lower extraction. If constructed interpretation, the high ε (0.72) reflects British extraction via interpretive control — the mandate system extracts compliance from both Arab and Zionist parties while maintaining administrative discretion.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the dual obligation is a fixed feature of international law or a constructed reading that benefits the mandatory power"
+    },
+    {
+      "id": "beneficiary_capture_risk",
+      "question": "Do Palestinian Arab elites genuinely benefit from the dual obligation, or are they coordinated into a management structure that extracts their political agency while preserving land tenure?",
+      "resolution_mechanism": "Examine 1920s-1930s Palestinian Arab political organization: did the mandate's representative-institution proposals (Legislative Council, Arab Agency) confer genuine self-government or create a controlled interlocutor class?",
+      "impact": "If elites are coordinated beneficiaries, the constraint is a genuine tangled_rope. If they are managed into a controlled opposition, the beneficiary declaration masks a snare structure where both Arab and Zionist populations are extracted from.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Arab elite beneficiaries are net winners or managed participants in a dual-extraction system"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1923,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1929,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1939,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1947,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1923,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1929,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1939,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1947,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1923,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1929,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1936,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1939,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1947,
+      "value": 0.82
+    }
+  ],
+  "interval": {
+    "start": 1920,
+    "end": 1947
+  },
+  "commentary": {
+    "narrative_context": "This constraint captures the reading of the British Mandate for Palestine (1920-1947) that treats the mandate's dual obligation — facilitating a 'national home for the Jewish people' while protecting 'the civil and religious rights of existing non-Jewish communities' — as imposing an equal or superior duty to protect Arab civil/political rights and land tenure. Under this reading, the 'national home' clause is subordinated to the self-determination norm in Article 22 of the League Covenant and to minority-protection principles from the post-WWI treaty system. Land transfer restrictions (e.g., 1930 Passfield White Paper, 1940 Land Transfer Regulations) and immigration quotas (1939 White Paper) are the operational expressions of this reading. The constraint is a tangled_rope: it coordinates Arab land tenure and political representation (genuine coordination function) while actively suppressing Zionist land acquisition and demographic growth (asymmetric extraction), requiring continuous British enforcement. Beneficiaries are Palestinian Arab elites and communities; victims are Zionist organizations blocked from land acquisition and demographic parity, and British administrators constrained in satisfying Zionist demands they were simultaneously mandated to facilitate.",
+    "key_agents": [
+      "palestinian_arab_elites: Primary beneficiary (organized/constrained) — gains land tenure protection and political representation claims",
+      "palestinian_arab_communities: Primary beneficiary (powerless/trapped) — gains land security but remains subject to mandate authority",
+      "zionist_organizations: Primary victim (powerful/constrained) — blocked from land acquisition and demographic parity",
+      "british_administrators: Secondary victim/agenda_setter (institutional/arbitrage) — constrained by dual mandate, extracts administrative rent from interpretive discretion",
+      "league_of_nations_pmc: Observer (institutional/analytical) — supervises mandate compliance but lacks enforcement capacity"
+    ],
+    "logic_rationale": "Extraction (0.72) is high because the mandate system extracts compliance from both populations: Zionist organizations are denied land/immigration access they were promised; Arab communities are denied sovereign self-government despite being the majority. Suppression (0.68) reflects active enforcement: land transfer bans, immigration quotas, dissolution of Arab political institutions (1936-39 revolt suppression), censorship. Theater ratio (0.45) rises over time as British administration increasingly performs 'even-handedness' while the constraint's actual function shifts toward managing an unresolvable conflict. Accessibility collapse (0.55) is moderate — alternatives (binational state, partition, independence) existed but were systematically foreclosed by British policy. Resistance (0.75) is high from both Zionist and Arab nationalist movements. The interval-end metrics reflect 1947 terminus when the mandate collapsed.",
+    "perspectival_gap": "From the Palestinian Arab seat (powerless/trapped), the constraint appears as a snare: land protections are real but political sovereignty is denied; the mandate extracts compliance without delivering self-determination. From the Zionist seat (powerful/constrained), it appears as a snare: the 'national home' promise is actively subverted by the mandatory power. From the British administrator seat (institutional/arbitrage), it appears as a tangled_rope: genuine coordination of a dual-obligation mandate that requires active enforcement to prevent either side from overturning the balance — but the enforcement itself becomes the extraction mechanism (administrative rent, strategic control). The engine computes these seat divergences from the structural data.",
+    "directionality_logic": "Palestinian Arab communities are structural beneficiaries of land tenure protections (d ~ 0.2-0.3) but victims of political suppression (d ~ 0.7) — the net directionality depends on which obligation (land vs. sovereignty) is weighted. The schema's beneficiary/victim arrays capture the land-tenure dimension as primary. Zionist organizations are unambiguous victims (d ~ 0.8-0.9) — blocked from land purchase and immigration. British administrators are the agenda_setters who extract interpretive rent (d ~ 0.15 as beneficiary of mandate authority) but bear enforcement costs (d ~ 0.6 as payer of suppression). The dual role creates the tangled_rope structure.",
+    "mandatrophy_analysis": "The mandate's founding problem (administering former Ottoman territories toward self-government per Article 22) was live in 1920 but became dead for Palestine by the 1930s: the dual obligation proved irreconcilable, and the mandate persisted as a structure for managing conflict rather than advancing self-determination. The constraint did not resolve its mandatrophy — it escalated into a snare-like enforcement regime (1939 White Paper) that satisfied neither population. The British withdrawal in 1947 was not a resolution but an abandonment. The classification as tangled_rope (not snare) rests on the genuine coordination function (land tenure protection) persisting alongside extraction — but the rising theater_ratio and extraction trajectory suggest drift toward snare.",
+    "kernel_context": "This constraint is the 'dual_obligation_indigenous_rights' reading of the 'balfour_mandate_instruments' kernel. Sibling readings: 'jewish_national_home_primacy' (mandate directs demographic/territorial transformation for Jewish sovereignty) and 'mandatory_interpretive_discretion' (British authority to adjudicate between readings without external review). This reading subordinates the 'national home' to self-determination and minority-protection norms; the sibling readings invert or relativize that hierarchy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "balfour_mandate_instruments__jewish_national_home_primacy",
+      "balfour_mandate_instruments__mandatory_interpretive_discretion",
+      "palestine_land_transfer_regulations_1940",
+      "palestine_immigration_quotas_1939"
+    ],
+    "dual_formulation_note": "This constraint and its two siblings form a constraint family decomposing the 'Balfour Mandate' label. Each has distinct epsilon, beneficiaries, victims, and claimed_type. dual_obligation_indigenous_rights: ε=0.72, tangled_rope, beneficiaries=Arab elites/communities. jewish_national_home_primacy: ε≈0.65, tangled_rope, beneficiaries=Zionist organizations. mandatory_interpretive_discretion: ε≈0.55, snare, beneficiaries=British administrators. The family link is structural: the mandatory power's interpretive discretion (third constraint) is the mechanism that instantiates either of the first two readings as operational policy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "palestinian_arab_elites",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Gained land tenure protections and limited political representation (e.g., Supreme Muslim Council, Arab Higher Committee) under the mandate. Extracted political rent from their intermediary position between British authorities and Arab communities. But remained constrained: no sovereign authority, dependent on British toleration, ultimately displaced by 1948. Exit meant rejecting mandate institutions — which some did (1936-39 revolt) — but with no viable alternative sovereignty path."
+    },
+    {
+      "name": "palestinian_arab_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Benefited from land transfer restrictions that prevented dispossession (1930s-1940s regulations preserved ~85% Arab land ownership in 1947). But bore costs: no political self-determination, subject to British emergency regulations, village structures disrupted by mandate taxation and Zionist land purchases that did occur. Exit was structurally impossible — no neighboring state offered citizenship, no international body enforced self-determination. Identity-locked to the land; displacement in 1948 confirmed the trap."
+    },
+    {
+      "name": "zionist_organizations",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Blocked from land acquisition (1940 Land Transfer Regulations restricted purchases to 5% of Palestine) and demographic parity (1939 White Paper capped immigration at 75,000 over 5 years). Built parallel institutions (Histadrut, Jewish Agency, Haganah) that functioned as a state-in-waiting. Gained international legitimacy (Balfour Declaration, League mandate) and British tolerance for institution-building. Exit meant accepting demographic minority status or pursuing armed confrontation (Irgun/Lehi). Constrained by dependence on British goodwill for immigration certificates and international recognition."
+    },
+    {
+      "name": "british_administrators",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Held mandatory authority to interpret and enforce the dual obligation. Extracted strategic value: control of Suez-adjacent territory, air routes, oil pipeline termini, and imperial prestige. But bore escalating enforcement costs: 100,000+ troops deployed 1936-39, administrative burden of managing irreconcilable claims, international criticism (PMC reports, US pressure). Exit was always available (and exercised in 1947) — Britain could refer the problem to UN and withdraw. The mandate was a choice, not a trap, making British administrators the only seat with genuine arbitrage-grade exit."
+    },
+    {
+      "name": "league_of_nations_pmc",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Supervised mandate compliance through annual reports and petitions. Had no enforcement capacity beyond moral pressure and delayed supervision. Produced critical reports (e.g., 1930 Passfield White Paper genesis) but could not compel British policy changes. Exit: the League itself dissolved in 1946, transferring supervisory role to UN. Pure analytical seat — neither collected rents nor bore costs from the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates Arab land tenure security and collective political representation against demographic displacement, providing a legal-administrative framework that recognizes indigenous majority rights within a mandatory system.",
+    "transfer_function": "Moves land-title security and political representation claims from British mandatory authority to Palestinian Arab communities, while moving land-acquisition rights and immigration access from Zionist organizations to British administrative control (which restricts both).",
+    "absent_voices": "Palestinian peasantry (fallahin) — structurally excluded from mandate institutions, represented only through elite intermediaries. Jewish refugees from Europe (1930s-1940s) — excluded by immigration quotas, their voices mediated through Zionist organizations. Neither had direct access to the Permanent Mandates Commission or British policy-making.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dual-obligation reading vanished overnight (e.g., British adopted jewish_national_home_primacy as sole reading), land transfer restrictions would lift, immigration quotas would rise, Arab land tenure would collapse, and the mandate would accelerate toward Jewish state formation without minority protections — the 1948 war and Palestinian displacement would likely occur earlier and more completely. If it vanished in the opposite direction (mandate ended, independence granted), the region would rearrange into a sovereign Arab state with Jewish minority — a different rearrangement.",
+    "founding_problem": "The post-WWI settlement needed to administer former Ottoman Arab territories toward self-government (Article 22) while honoring Britain's wartime commitment to a 'national home for the Jewish people' (Balfour Declaration 1917). The dual obligation was the legal architecture attempting to reconcile these contradictory promises.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (reconciling Article 22 self-determination with Balfour Declaration) is dead: the mandate terminated without achieving self-government for the Arab majority, and the 'national home' was realized as a sovereign state (Israel) through UN partition, not through the mandate's dual-obligation framework. Corroboration: British Foreign Office records (1947 referral to UN), UNSCOP report (1947) documenting the irreconcilability, and the League of Nations' own failure to resolve the contradiction. No party outside the British-Zionist alliance attested the dual obligation as workable; Arab leadership consistently rejected it as insufficient; Zionist leadership consistently treated it as an obstacle."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "balfour_mandate_instruments__jewish_national_home_primacy",
+      "balfour_mandate_instruments__mandatory_interpretive_discretion"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "jewish_national_home_primacy",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "mandatory_interpretive_discretion",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "article_22_self_determination_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "minority_protection_binds_national_home",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "mandate_article_22_self_determination_framework",
+    "drift_state": {
+      "moment": "post_1939_white_paper",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

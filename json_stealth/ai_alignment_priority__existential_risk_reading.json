@@ -1,0 +1,406 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aip_xrisk",
+    "story_uid": "d2877485-f08c-4979-9155-e6a9c6b42945"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.6,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Existential-Risk-First Alignment Priority (Loss-of-Control Reading)",
+    "topic_domain": "technology governance / research ethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "xrisk_research_labs",
+      "longtermist_funders",
+      "frontier_capability_labs",
+      "junior_safety_researchers"
+    ],
+    "victims": [
+      "nearterm_harm_affected_populations",
+      "deployment_ethics_researchers",
+      "general_public"
+    ],
+    "vindicated_propositions": [
+      "instrumental_convergence_thesis",
+      "longtermist_moral_weight_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "xrisk_research_labs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Define what counts as alignment work: publish the field's research agendas, run the benchmark evaluations, and staff the review panels that decide which safety problems receive attention and funding. Senior careers, reputations, and institutional identities are built on the claim that this is the most important problem facing humanity; leaving the agenda would mean abandoning that identity mid-career."
+    },
+    {
+      "name": "longtermist_funders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Grant-making foundations and donors supplying the majority of dedicated alignment funding, conditioning grants on existential-risk framing. Capital is fully mobile across causes within a quarter, and overlapping board seats across labs and think tanks give agenda influence disproportionate to headcount."
+    },
+    {
+      "name": "frontier_capability_labs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build and scale the most capable AI systems. They fund internal safety teams and endorse the existential-risk framing, which secures talent, regulatory goodwill, and investor patience during rapid scaling. They pay for the safety apparatus they endorse, while the framing's headline claim — that safe advanced AI requires building advanced AI — directs the field's resources toward their core activity."
+    },
+    {
+      "name": "junior_safety_researchers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Early-career scientists whose fellowships, residencies, and first publications sit almost entirely inside the existential-risk pipeline. Training, citation networks, and job prospects are formed by the agenda; moving to adjacent fields means restarting credential accumulation mid-career regardless of private doubts."
+    },
+    {
+      "name": "nearterm_harm_affected_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People subject to deployed AI systems today — loan screening, hiring filters, welfare eligibility automation, predictive policing — whose documented harms are ranked below speculative future risks in funding and attention. They did not consent to the trade-off, are rarely present where priorities are set, and cannot exit the systems that affect them."
+    },
+    {
+      "name": "deployment_ethics_researchers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers in fairness, accountability, and deployment-harm traditions who produced much of the field's earlier safety knowledge. Grant lines and top-venue attention shifted toward existential-risk topics over the decade; many continue working with shrinking resources, and some moved into industry compliance roles."
+    },
+    {
+      "name": "general_public",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the arrangement's diffuse costs — public research subsidies, policy attention, and the opportunity cost of a decade of safety capacity concentrated on scenarios distant from deployed systems. They are not seated in lab governance, funder strategy, or agenda-setting workshops, and learn of priority decisions after they are made."
+    },
+    {
+      "name": "interdisciplinary_governance_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic observers of AI governance who study how safety priorities are set, publish comparative analyses of the framing's effects, and testify to policy bodies. They hold no stake in the agenda's continuation and can adopt whichever framing the evidence supports."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a real collective-action problem: preventing loss of control over increasingly capable systems is a global public good no single lab captures; a shared technical agenda (evaluations, interpretability, control methods) lets scattered safety effort compound instead of duplicating.",
+    "transfer_function": "Moves money, talent, publication slots, and moral legitimacy from present-harm remediation and alternative safety programs toward frontier capability development and speculative-risk research; moves deference from deployment-affected publics to a small group claiming unique insight into future system behavior.",
+    "absent_voices": "Deployment-affected communities, data workers, and global-South populations bearing labeling and moderation labor are absent from agenda-setting venues; future generations are present only through self-appointed proxies; dissenting safety traditions attend but with reduced standing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the existential-risk-first priority vanished overnight, funding would redistribute toward deployment harms and plural safety agendas, capability labs would lose the safety license that currently accompanies scaling, career pipelines would re-route, and the field's attention would re-anchor on documented present harms — the AI safety landscape would reorganize within a few grant cycles.",
+    "founding_problem": "The prospect that advanced AI systems could escape human control and cause irreversible catastrophe — a coordination failure among labs racing ahead without safety guarantees.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International AI-safety report processes and national risk assessments — bodies outside the funding ecosystem — corroborate that loss-of-control risk is a real object of concern, and published surveys show ML researchers critical of the framing nonetheless acknowledging tail risk. No external body attests the priority ranking itself: the ordering of existential safety above present harms is attested almost exclusively by the agenda's beneficiaries, and that gap is itself signal."
+  },
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.7,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.62,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Over roughly 2012-2026 the center of gravity of AI safety consolidated around a single framing: alignment means preventing catastrophic loss of control over advanced AI systems, and existential safety takes lexical priority over every other safety concern. The arrangement this story describes is that priority structure in operation — the funding lines, career ladders, venue hierarchies, and evaluation practices that route money, talent, and moral legitimacy toward speculative-risk research and, through the claim that safe advanced AI requires building advanced AI, toward frontier capability development itself. Documented present-day harms of deployed systems are formally acknowledged but subordinated; researchers in deployment-ethics traditions lost grant share and venue standing across the interval. This file is one member of a three-story constraint family decomposing the kernel of what alignment means and what gets priority; the sibling files instantiate the near-term-harms and integrated readings and author different epsilon values over their own arrangements — the decomposition exists because the colloquial label 'alignment' covers structurally distinct claims (epsilon-invariance).",
+    "key_agents": [
+      "- xrisk_research_labs: Agenda setter (institutional/identity_locked) — defines what counts as alignment work and administers field-wide evaluation",
+      "- longtermist_funders: Primary beneficiary (powerful/arbitrage) — supplies conditioned funding, collects agenda influence",
+      "- frontier_capability_labs: Dual-positioned beneficiary/payer (institutional/arbitrage) — pays for safety teams, receives the framing's material returns",
+      "- junior_safety_researchers: Beneficiary with identity-locked exit (moderate/identity_locked) — careers fused with the agenda",
+      "- nearterm_harm_affected_populations: Primary target (powerless/trapped) — bears deprioritized present harms",
+      "- deployment_ethics_researchers: Secondary target (organized/constrained) — lost resources and standing",
+      "- general_public: Excluded diffuse bearer (powerless/trapped) — opportunity costs without representation",
+      "- interdisciplinary_governance_scholars: Analytical observer (analytical/analytical) — sees the full structure"
+    ],
+    "logic_rationale": "Epsilon 0.70 is authored from this reading's own lights applied to the standing arrangement it governs: even granting the reading's values — that catastrophe-prevention is paramount — the arrangement's operation routes a growing share of safety resources toward capability scaling under a safety license, defers documented present harms indefinitely, and concentrates interpretive authority in a small group whose claims about speculative future system behavior are not externally auditable. It is not higher because the coordination function is genuine: evaluations, interpretability, and control research are real public goods the arrangement demonstrably funds. Suppression 0.60 reflects enforcement without prohibition — grant conditions keyed to existential framing, venue and citation hierarchies, hiring pipelines, and social sanction against 'distraction' arguments; no alternative is banned, all are disadvantaged. Theater_ratio 0.42: substantive interpretability and evaluation work coexists with unfalsifiable scenario literature and lab safety-washing whose output is positioning rather than risk reduction. Accessibility_collapse 0.50: alternatives remain workable at the field's margins but collapse inside major-lab and funder decision loops where the priority is treated as settled. Resistance 0.60: sustained contestation from near-term and integrated coalitions, public criticism of doom framing, and organizing inside labs. Claim and metrics are independent authored facts: claimed_type tangled_rope follows from structure — a real collective-action problem plus asymmetric, actively enforced extraction — while the metrics were authored from observed operation; the engine computes per-seat types from the structural data. All three tracked series share one time grid (t=0..14, step 2); the rising base_extractiveness series is accumulation evidence for investigation, not something reconciled into the claim.",
+    "perspectival_gap": "The agenda-setter seat should compute a coordination-dominant experience: from inside, the priority is a rational response to the largest stake in history, and enforcement feels like rigor. The payer seats compute extraction: nearterm_harm_affected_populations experience the same structure as their concerns being permanently outranked by scenarios they cannot verify and did not consent to; deployment_ethics_researchers experience it as dispossession from a program they built. frontier_capability_labs occupy the pivotal dual seat — they pay for safety teams yet receive the framing's largest material return, so their computed position sits nearer the beneficiary pole than their safety spending suggests. junior_safety_researchers show identity-lock dynamics: professional identity fused with 'the most important problem' makes exit costly regardless of private belief, so their nominal beneficiary position overstates their comfort. Victim heterogeneity — dispersed, unorganized, differently situated — limits coalition formation among payers, which is why powerless seats stay powerless here.",
+    "directionality_logic": "Declarations map to directionality as follows. xrisk_research_labs: agenda control plus mission funding places them near the beneficiary pole (d approximately 0.05-0.10). longtermist_funders: collect agenda influence at near-zero cost with fully mobile capital (d approximately 0.10). frontier_capability_labs: declared beneficiary with a real payer secondary role — they fund safety teams but receive the framing's material returns; net position moderately beneficiary-side (d approximately 0.25). junior_safety_researchers: nominal beneficiaries whose identity-locked exit amplifies effective extraction beyond their raw d (d approximately 0.15 before lock adjustment). nearterm_harm_affected_populations: full targets, trapped (d approximately 0.90). deployment_ethics_researchers: targets with constrained exit (d approximately 0.75). general_public: diffuse target bearing opportunity costs without representation (d approximately 0.60). Receipt diverges from agenda control: gain_flow lands on frontier_capability_labs, not on the labs that set the agenda — the priority's material returns accrue to those it licenses to build. No directionality overrides were needed: beneficiary/victim declarations plus exit options reproduce these relationships without correction.",
+    "mandatrophy_analysis": "The founding problem — loss of control over advanced systems — remains live, so mandatrophy is not resolved and no sunset applies. The tangled_rope classification does anti-mislabeling work in both directions: a pure-snare verdict would erase the genuine public-good coordination (evaluations, interpretability, control research) and hand the agenda a persecution defense it would exploit; a pure-rope verdict would erase the documented asymmetric costs borne by unconsenting present populations and the resource channel toward capability scaling. The rising base_extractiveness series (0.40 to 0.70) is the lifecycle signal to watch: if the coordination share of spend keeps falling while the license function grows, the structure drifts toward snare; if enforcement decays as the frame loses dominance, drift runs toward piton. Neither transition is asserted here — the series is accumulation evidence for investigation.",
+    "kernel_context": "Kernel: ai_alignment_priority — what 'alignment' names and which harms take priority. This file instantiates the existential_risk_reading: alignment's content is preventing catastrophic loss of control, ordered lexically above present harms. Siblings: ai_alignment_priority__nearterm_harms_reading (inverts the ordering; the victim set becomes identified present populations) and ai_alignment_priority__integrated_reading (rejects the ordering; compresses the epsilon asymmetry). Disagreement location: (a) the definition of alignment's core problem, (b) the priority ordering, (c) victim-set granularity — abstract humanity-and-future versus identified present populations. Reading relations: this reading's lexical-ordering premise directly contradicts both siblings' core premises (an inverted ordering; a rejected ordering), so both edges are forecloses at the framework level — while all three remain live positions held by different parties across the field, which is why the family persists rather than resolving. Per epsilon-invariance this file authors epsilon only for the standing x-risk-priority arrangement as this reading's own lights assess it; sibling files carry their own values over their own referents."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of the kernel ai_alignment_priority (reading: existential_risk_reading). What structurally changes under the sibling readings?",
+      "resolution_mechanism": "Compile the sibling stories and compare computed per-seat types and epsilon over the shared referent; divergence localizes the disagreement to priority ordering and victim-set granularity.",
+      "impact": "Under nearterm_harms_reading the victim set becomes identified present populations and measured suppression rises; under integrated_reading the beneficiary/target asymmetry compresses and epsilon falls toward the coordination floor.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three readings of the alignment-priority kernel."
+    },
+    {
+      "id": "speculative_harm_verifiability",
+      "question": "Are catastrophic loss-of-control scenarios probable and well-characterized enough that the arrangement's present costs are justified, or does unverifiability insulate the agenda from accountability?",
+      "resolution_mechanism": "Adversarial evaluation results, incident databases, and forecasting track records scored against the agenda's own published predictions over time.",
+      "impact": "Low verifiability raises the extraction component (an accountability vacuum) and pushes computed type toward snare; strong verifiability strengthens the coordination component and stabilizes rope-like computation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the evidential basis for the priority can bear the resource weight placed on it."
+    },
+    {
+      "id": "safety_license_vs_coordination",
+      "question": "Does the existential-risk framing function primarily as coordination on safety research, or as a moral license that accelerates capability development?",
+      "resolution_mechanism": "Compare capability-versus-safety milestone ratios and funding flows in labs adopting the framing versus comparable labs that do not; audit whether safety-team findings bind deployment decisions.",
+      "impact": "License-dominant operation pushes the computed type toward snare and confirms gain_flow on capability labs; coordination-dominant operation supports the tangled-rope claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The arrangement's dominant causal channel: safety coordination or capability license."
+    },
+    {
+      "id": "undifferentiated_victim_abstraction",
+      "question": "The reading's declared protected class — all of humanity, weighted toward the future — is undifferentiated and cannot answer back. Does that abstraction itself serve enforcement by making harm claims unanswerable?",
+      "resolution_mechanism": "Trace which concrete populations bear measurable costs now against the abstract class the arrangement claims to protect; test whether identified-victim counterarguments change allocation anywhere.",
+      "impact": "If abstraction is load-bearing, effective suppression is higher than the scalar suggests and victim-seat extraction should be computed against identified payers rather than the abstract class.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether victim-set abstraction functions as accountability insulation."
+    },
+    {
+      "id": "redteam_methodology_sufficiency",
+      "question": "Is adversarial red-teaming adequate verification for claims that discipline field-wide resource allocation?",
+      "resolution_mechanism": "Audit the uptake of red-team findings against agenda continuity: do negative results ever reroute funding, or only refine the same agenda?",
+      "impact": "If findings never bind allocation, theater_ratio is understated and the methodology functions as legitimation; if they bind, the methodology vindicates a real feedback loop.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Adequacy of the reading's characteristic verification method."
+    },
+    {
+      "id": "identity_fusion_persistence",
+      "question": "Is the agenda sustained by its evidential position or by identity fusion of researchers and funders with the 'most important problem' frame?",
+      "resolution_mechanism": "Post-exit interviews with departing researchers; funding continuity across founder turnover and after publicized prediction failures.",
+      "impact": "Fusion-dominant persistence predicts piton-direction drift if the evidential position weakens; evidence-dominant persistence predicts stable tangled-rope operation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Persistence mechanism: evidence or identity."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__nearterm_harms_reading",
+      "ai_alignment_priority__integrated_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'AI alignment priority' decomposes into three structurally distinct claims — existential-risk-first (this file), near-term-harms-first, and integrated — because assigning a single epsilon across them would violate epsilon-invariance (the observable 'whose harms count and in what order' changes the measured extraction). This upstream reading influences the siblings' operating environment: its funding and venue dominance is the background condition against which the near-term and integrated readings define themselves. Sibling files must link back via network.affects_constraints."
+  },
+  "gain_flow": "frontier_capability_labs",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "existential_control_lexical_priority",
+    "drift_state": {
+      "moment": "contemporary_deployment_harm_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "nearterm_harms_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "loss_of_control_is_defining_alignment_problem",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "future_humanity_stakes_dominate_present_distribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

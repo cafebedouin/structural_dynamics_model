@@ -1,0 +1,325 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "47c15401-7a0b-4f99-adba-30f66d1588fc"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.15,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "TCP Specification Optimization Latitude (RFC 9293 Reading)",
+    "topic_domain": "network_protocol_engineering/internet_standards/distributed_systems_coordination",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "protocol_implementers",
+      "end_users",
+      "network_operators"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "interoperability_through_outcome_specification",
+      "performance_innovation_without_breaking_compatibility",
+      "decentralized_protocol_evolution"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protocol_implementers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop TCP stacks for operating systems, kernels, and user-space libraries. The specification's outcome-oriented contract gives them freedom to implement congestion control (CUBIC, BBR, DCTCP), loss recovery, and pacing algorithms without seeking standards-body approval for each variant. They benefit from a large installed base that interoperates regardless of their internal choices. Exit is mobile — they can switch implementations or contribute to multiple stacks."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Experience faster, more reliable connections as implementers deploy optimized congestion control and loss recovery. They do not choose the TCP implementation directly (it comes with their OS/device) but benefit from the innovation the latitude enables. Exit is constrained — they cannot easily change the transport protocol their applications use, but the protocol's universality means they rarely need to."
+    },
+    {
+      "name": "network_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate the routers, middleboxes, and links that carry TCP traffic. They benefit from a protocol that adapts to diverse network conditions without requiring coordinated upgrades. They bear operational costs when new congestion control variants interact poorly with their traffic management (e.g., BBR vs. bufferbloat, ECN marking policies). Their exit is constrained by the protocol's universality — they cannot replace TCP, but they can deploy AQM, ECN, and pacing to shape its behavior."
+    },
+    {
+      "name": "middlebox_vendors",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build firewalls, NATs, load balancers, and WAN optimizers that inspect or modify TCP headers. The optimization latitude means they must handle a wider range of valid TCP behaviors (e.g., varied window scaling, selective acknowledgments, congestion control signals) without breaking flows. They pay in engineering complexity and ongoing firmware updates. Their exit is constrained — the installed base of middleboxes must interoperate with evolving endpoint implementations."
+    },
+    {
+      "name": "rfc_editor_iesg",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Steward the TCP specification through the IETF standards process. They maintain the semantic contract (reliable, ordered byte stream) while adjudicating whether proposed changes preserve interoperability. They do not extract from the constraint; they administer its evolution. Their exit is analytical — they observe the system from the standards-body seat."
+    },
+    {
+      "name": "congestion_control_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Design and evaluate new congestion control algorithms (BBR, Copa, PCC, etc.). The optimization latitude is their research substrate — it permits deploying novel algorithms without standards-track approval. They observe the constraint's operation but do not administer or pay for it directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates interoperability across independently developed TCP implementations by specifying only the observable behavioral contract (reliable, in-order byte delivery) while leaving the internal algorithms (congestion control, loss recovery, pacing) to implementers. This solves the collective-action problem of global deployment: no single party controls all endpoints, but all must interoperate.",
+    "transfer_function": "Transfers implementation freedom from a hypothetical central authority (which would dictate algorithms) to distributed implementers. No material transfer occurs — the constraint prevents extraction by any single party over the protocol's evolution. The 'gain' is the innovation velocity enabled by permissionless algorithm deployment.",
+    "absent_voices": "Legacy middlebox deployments that ossify the protocol (e.g., boxes that drop packets with unknown TCP options, or that reset connections on non-standard congestion signals). These are not represented in the IETF process but their behavior constrains what optimization latitude is practically usable. Also absent: users on severely pathologically managed networks (captive portals, heavy-handed traffic shaping) where the protocol's semantic guarantees are violated by the path, not the endpoints.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the optimization latitude vanished — if RFC 9293 mandated a single congestion control algorithm and exact state-machine replication — the TCP ecosystem would lose the ability to adapt to new network conditions (datacenter, wireless, satellite, high-BDP paths) without a coordinated global standards action. Innovation would shift to application-layer transports (QUIC) or require a new transport protocol. The current arrangement enables continuous, decentralized evolution.",
+    "founding_problem": "Early TCP (RFC 793) specified a single congestion control algorithm (Tahoe/Reno) that became inadequate for high-bandwidth, high-latency, and wireless paths. The Internet needed a way to evolve transport performance without breaking global interoperability or requiring flag-day upgrades.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The IETF TSVWG and TCPM working groups explicitly charter congestion control as an area for continuous innovation (RFC 8087, RFC 8312). Independent research (Cardwell et al. on BBR, Alizadeh et al. on DCTCP, the IRTF ICCRG) demonstrates ongoing deployment of novel algorithms within the RFC 9293 semantic bounds. No party claims the founding problem is solved; the latitude is the mechanism that keeps it live."
+  },
+  "interval": {
+    "start": 1981,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1981,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 (the 2022 consolidation of TCP specifications) specifies the semantic contract of TCP — reliable, in-order byte-stream delivery — while explicitly permitting implementation latitude in how that contract is achieved. Congestion control algorithms, loss recovery mechanisms, and pacing strategies are not mandated; implementers may deploy CUBIC, BBR, DCTCP, Copa, or future innovations provided they preserve the observable semantics. This reading treats the specification as a coordination mechanism (Rope) that enables decentralized performance innovation without breaking global interoperability. The constraint's extractiveness has declined over decades as the latitude was formalized and the ecosystem adapted.",
+    "logic_rationale": "Base extractiveness is low (0.08) because no party collects rents from the latitude — implementers gain performance, users gain throughput, operators gain adaptability. Suppression is low (0.15) because alternatives (QUIC, SCTP, application-layer transports) exist and are deployable; the constraint does not suppress exits. Theater ratio is low (0.12) because the specification's administrative overhead (IETF process) is small relative to the functional coordination it provides. Accessibility collapse is moderate (0.35) because the semantic contract (reliable byte stream) does constrain what transports can do — but the space of valid implementations is wide. Resistance is low (0.25) because the latitude is broadly supported by implementers and researchers; the only resistance comes from middlebox ossification, which is a path property, not a specification property.",
+    "perspectival_gap": "From the implementer seat, the constraint is a genuine rope — they coordinate on outcomes, innovate on means. From the middlebox vendor seat, the same latitude appears as a cost (handling diverse valid behaviors) — but they are payers by virtue of their position in the path, not because the specification extracts from them. From the end-user seat, the constraint is invisible infrastructure that simply works better over time. The engine will compute these per-seat classifications from the structural data.",
+    "directionality_logic": "Protocol implementers are structural beneficiaries (d ~ 0.1): they gain implementation freedom and a global interoperability surface. End users are beneficiaries (d ~ 0.15): they gain performance without action. Network operators are dual-positioned: beneficiaries of adaptability (d ~ 0.2), payers of operational complexity (d ~ 0.4). Middlebox vendors are payers (d ~ 0.6): they bear compatibility costs from the latitude. The RFC Editor/IESG is the agenda setter (d ~ 0.5): they administer but do not extract. Researchers are observers (d ~ 0.5).",
+    "mandatrophy_analysis": "The mandate (interoperable reliable transport) remains live and the coordination function (outcome specification enabling algorithmic diversity) is the active mechanism — not an atrophied remnant. The specification has not become theatrical; the IETF process actively maintains it while preserving the latitude. No mandatrophy is present.",
+    "kernel_context": "This constraint is the optimization_latitude_reading of kernel rfc9293_tcp_specification. Sibling readings: strict_invariance_reading (specification as invariant state machine requiring exact replication) and middlebox_realism_reading (specification as subordinate to deployed middlebox behavior). This reading treats the semantic contract as the coordination anchor and the implementation latitude as the functional degree of freedom. The sibling readings differ on what the specification's authority binds: strict_invariance_reading binds the internal algorithm; middlebox_realism_reading binds neither (the path decides); this reading binds only the observable outcome."
+  },
+  "omegas": [
+    {
+      "id": "middlebox_ossification_practical_latitude",
+      "question": "Does deployed middlebox behavior practically reduce the optimization latitude below what the specification permits, making the constraint's coordination function partially illusory?",
+      "resolution_mechanism": "Longitudinal measurement of TCP option tolerance, ECN propagation, and congestion signal handling across the global middlebox population (e.g., via traceroute-style probes, QUIC vs. TCP differential measurement).",
+      "impact": "If middleboxes effectively forbid certain valid optimizations (e.g., dropping packets with unrecognized options, resetting on ECN), the practical latitude is narrower than the specified latitude — the constraint's rope function is degraded by path ossification, not by the specification itself. This would increase effective extractiveness for implementers (who must work around middleboxes) and shift the classification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether path ossification makes the specified latitude partially theoretical."
+    },
+    {
+      "id": "quic_displacement_trajectory",
+      "question": "Will QUIC's encrypted transport model (which moves congestion control to user space and hides it from middleboxes) displace TCP's optimization latitude as the primary substrate for transport innovation?",
+      "resolution_mechanism": "Track QUIC adoption share, TCP congestion control deployment velocity, and whether new algorithms deploy first on QUIC or TCP over the next decade.",
+      "impact": "If QUIC becomes the dominant innovation substrate, TCP's optimization latitude becomes a legacy coordination mechanism — the constraint persists but its functional relevance declines, potentially shifting toward piton. If TCP and QUIC co-evolve, the latitude remains live.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination function will be superseded by a competing transport."
+    },
+    {
+      "id": "reading_relations_ambiguity",
+      "question": "Does the optimization_latitude_reading genuinely coexist with strict_invariance_reading and middlebox_realism_reading, or does it structurally foreclose one of them within a single implementation framework?",
+      "resolution_mechanism": "Analyze whether a single TCP implementation can simultaneously honor the semantic contract (this reading), replicate an invariant state machine (strict_invariance_reading), and defer to middlebox behavior (middlebox_realism_reading) — or whether satisfying one reading's core premise requires violating another's.",
+      "impact": "If the readings foreclose each other within a single framework, the kernel's contest is a genuine logical partition (different implementation philosophies cannot be reconciled). If they coexist, the kernel supports pluralism — different parties hold different readings while the protocol functions. This determines the reading_relations values.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between the three declared readings of the RFC 9293 kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading",
+      "quic_transport_protocol",
+      "congestion_control_algorithms_deployment"
+    ],
+    "dual_formulation_note": "Part of the RFC 9293 kernel family (constraint_id: rfc9293_tcp_specification). This reading (optimization_latitude) treats the specification as an outcome contract enabling algorithmic diversity. The strict_invariance_reading treats it as a state-machine invariant. The middlebox_realism_reading treats it as descriptive of ideal endpoints but subordinate to path reality. All three share the same referent (RFC 9293 text) but instantiate different constraints with different ε values and stakeholder structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "semantic_contract_suffices_for_interoperability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "algorithmic_diversity_improves_global_performance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "rfc793_single_algorithm_mandate",
+    "drift_state": {
+      "moment": "rfc9293_consolidation_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

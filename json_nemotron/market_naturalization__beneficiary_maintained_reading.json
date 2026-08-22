@@ -1,0 +1,366 @@
+{
+  "header": {
+    "constraint_id": "market_naturalization__beneficiary_maintained_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_market_naturalization__beneficiary_maintained_reading",
+    "measurement_id_prefix": "market_naturalization_beneficiary",
+    "story_uid": "064fea5b-8c62-4da7-8b56-a01ec7e219e3",
+    "created_at": "2026-08-03T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Dominance as Actively Defended by Incumbent Capital Holders",
+    "topic_domain": "political_economy/economic_history/institutional_analysis",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_capital_holders",
+      "dominant_firm_executives",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "competing_firms",
+      "new_entrants",
+      "workers_displaced_by_monopsony",
+      "consumers_facing_monopoly_pricing",
+      "small_businesses_excluded_from_dominant_channels"
+    ],
+    "vindicated_propositions": [
+      "efficient_market_hypothesis_as_ideology",
+      "natural_monopoly_narrative",
+      "shareholder_primacy_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the market_naturalization kernel (beneficiary_maintained_reading), or does it collapse into the hybrid or lapsed readings under scrutiny?",
+      "resolution_mechanism": "Compare beneficiary/victim structure and enforcement dynamics across the three readings. If the hybrid_reading shows both lapsed and active elements without a clear beneficiary class, and the lapsed_alternative_reading shows no active suppression, this reading is structurally distinct by its identifiable beneficiary class and active enforcement profile.",
+      "impact": "If readings are not structurally distinct, the kernel decomposition is invalid and the three stories should be merged. If distinct, each reading carries its own ε and classification — the beneficiary_maintained_reading as tangled_rope, the others as their metrics dictate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural distinctness of the beneficiary_maintained_reading from sibling readings of the market_naturalization kernel."
+    },
+    {
+      "id": "natural_vs_constructed_dominance",
+      "question": "Is market dominance a natural outcome of competitive efficiency (Mountain) or a constructed constraint maintained by identifiable beneficiaries (Tangled Rope/Snare)?",
+      "resolution_mechanism": "Historical analysis of entry barriers: if dominance persists after efficiency advantages erode, if incumbents lobby for regulatory barriers, if enforcement machinery (IP, lobbying, predatory pricing, acquisition) is actively deployed — the constraint is constructed. If dominance correlates with persistent efficiency differentials and no active suppression, the natural-law framing holds.",
+      "impact": "If natural, claimed_type Mountain with emerges_naturally: true, low extractiveness, low suppression. If constructed, high extractiveness, high suppression, active enforcement, identifiable beneficiaries — the current metrics. This is the core ε-invariance test for this kernel.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether market dominance reflects natural competitive superiority or constructed extraction."
+    },
+    {
+      "id": "enforcement_cost_burden_distribution",
+      "question": "Who bears the enforcement costs of maintaining market dominance — the beneficiaries (capital holders) or the victims (taxpayers, workers, competitors)?",
+      "resolution_mechanism": "Track public expenditure on competition enforcement, regulatory capture, IP litigation subsidies, and bailout exposures. If enforcement costs are socialized while rents are privatized, extraction is higher than the commission rate alone suggests.",
+      "impact": "If enforcement costs are socialized, effective extraction for victims increases (they pay for their own suppression). If beneficiaries bear full enforcement costs, the constraint may be a Rope with genuine coordination function (market order) at a price.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of enforcement costs between beneficiaries and victims."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.85
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 32
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the beneficiary_maintained_reading of the market_naturalization kernel. The reading holds that market dominance is not a natural law or a lapsed historical accident, but an actively maintained arrangement: identifiable capital holders (incumbent firms, financial intermediaries, dominant executives) deploy enforcement machinery — regulatory capture, predatory acquisitions, IP thickets, lobbying, narrative control — to suppress alternatives and extract rents. The constraint presents itself as the 'natural' outcome of competition (the efficient market hypothesis, natural monopoly narratives), but its persistence depends on active suppression of exits and alternatives. The claimed_type is tangled_rope because there IS a genuine coordination function (market order, scale economies, network effects) AND asymmetric extraction — the same structure coordinates and extracts. The hybrid_reading sees both lapsed and active elements; the lapsed_alternative_reading sees only historical inertia. This reading sees active beneficiary maintenance as the dominant dynamic.",
+    "key_agents": [
+      "incumbent_capital_holders: Primary beneficiary (institutional/arbitrage) — collect rents, control enforcement",
+      "dominant_firm_executives: Primary beneficiary (institutional/arbitrage) — manage extraction, set strategy",
+      "financial_intermediaries: Secondary beneficiary (organized/mobile) — extract fees from dominance maintenance",
+      "competing_firms: Primary victim (organized/constrained) — blocked from markets, acquired or crushed",
+      "new_entrants: Primary victim (moderate/trapped) — face insurmountable barriers",
+      "workers_displaced_by_monopsony: Primary victim (powerless/trapped) — wage suppression, reduced mobility",
+      "consumers_facing_monopoly_pricing: Primary victim (organized/constrained) — pay monopoly prices, lose choice",
+      "small_businesses_excluded_from_dominant_channels: Primary victim (moderate/trapped) — platform dependency, fee extraction",
+      "competition_authorities: Observer (institutional/analytical) — investigate but often captured",
+      "economic_orthodoxy_institutions: Agenda_setter (institutional/identity_locked) — legitimize naturalization narrative"
+    ],
+    "logic_rationale": "Base extractiveness (0.78) reflects rent extraction above competitive returns plus enforcement costs socialized onto victims. Suppression (0.85) is high because alternatives are actively crushed: predatory pricing, exclusive dealing, regulatory barriers, acquisition of rivals, narrative suppression of alternatives. Theater ratio (0.32) is moderate: the 'competition' and 'innovation' narratives are real coordination functions but increasingly performative as enforcement of dominance becomes the primary activity. Accessibility collapse (0.68): alternatives exist in theory (new firms, cooperatives, public options) but collapse in practice due to capital requirements, network effects, and legal barriers. Resistance (0.72): significant — antitrust actions, worker organizing, regulatory reform attempts, alternative platform building — but fragmented and often co-opted. The measurement grid shows rising extraction and suppression over 32 periods (roughly 1990–2022), with theater slowly increasing as the coordination cover story thins.",
+    "directionality_logic": "Incumbent capital holders and dominant executives are structural beneficiaries (d ≈ 0.1–0.2): they collect rents, control the rules, have arbitrage-grade exit (capital mobility). Financial intermediaries are secondary beneficiaries (d ≈ 0.25): they profit from the arrangement but have mobile exit. Competing firms and new entrants are targets (d ≈ 0.85–0.95): constrained exit, bear suppression costs. Workers and consumers are targets (d ≈ 0.8–0.9): trapped by monopsony/monopoly, identity-locked through consumption norms and labor market dependence. Small businesses are targets (d ≈ 0.85): constrained exit (platform dependency). Competition authorities are observers (d = 0.5): analytical seat. Economic orthodoxy institutions are agenda_setters (d ≈ 0.3): they benefit from the narrative but are partly captured by it — identity_locked through professional formation.",
+    "perspectival_gap": "From the beneficiary seat, the constraint is a Rope: market order, innovation incentives, efficient allocation — they genuinely believe the coordination story. From the victim seats, it is a Snare: extraction enforced by suppressed alternatives. The engine computes this divergence from the structural data. The claimed_type tangled_rope captures the structural truth: BOTH coordination AND extraction are real and inseparable in the same mechanism. The hybrid_reading would compute differently from the lapsed seats; the lapsed_alternative_reading would compute as Mountain or Piton from every seat.",
+    "mandatrophy_analysis": "The founding problem (coordinating complex production at scale) is contested: beneficiaries claim it is live (scale economies, network effects require dominance); victims and reformers argue it is dead (digital coordination can be decentralized, platform cooperatives exist, public alternatives work). The constraint persists because the mandate (market efficiency) has been captured by the beneficiaries — the coordination function is real but the extraction has hypertrophied. Mandatrophy is NOT resolved: the arrangement has outlived its proportional justification but the beneficiaries actively prevent sunset. This is not a Piton (inertial decay) — it is actively, expensively maintained.",
+    "kernel_context": "This is the beneficiary_maintained_reading of the market_naturalization kernel. Sibling readings: hybrid_reading (market dominance combines lapsed elements with active maintenance) and lapsed_alternative_reading (market dominance is a lapsed closure requiring no active maintenance). This reading asserts identifiable beneficiaries (incumbent capital holders), active suppression, and high extractiveness as the core structural features. The other readings would show different beneficiary/victim structures and enforcement profiles."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "market_naturalization__hybrid_reading",
+      "market_naturalization__lapsed_alternative_reading",
+      "intellectual_property_regime",
+      "financial_regulation_capture",
+      "labor_market_monopsony",
+      "platform_governance_extraction"
+    ],
+    "dual_formulation_note": "The market_naturalization kernel decomposes into three readings with distinct ε and structural profiles: (1) beneficiary_maintained_reading — active enforcement by identifiable capital holders, high ε, tangled_rope; (2) hybrid_reading — mixed lapsed/active, contested beneficiary structure, likely tangled_rope or snare depending on measurement; (3) lapsed_alternative_reading — no active enforcement, low ε, likely piton or mountain. The decomposition follows the ε-invariance principle: each reading has a stable ε when assessed by its own lights on the same referent (the standing arrangement of market dominance)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "incumbent_capital_holders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Own controlling stakes in dominant firms across sectors. Collect monopoly rents, financial engineering returns, and capital gains from enforced scarcity. Deploy capital to shape regulation, acquire rivals, fund narrative production. Exit is trivial — capital is globally mobile and diversified. They set the agenda through board control, lobbying, and think-tank funding."
+    },
+    {
+      "name": "dominant_firm_executives",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Manage the daily enforcement of dominance: pricing strategy, acquisition targets, regulatory engagement, narrative management. Compensated via equity tied to dominance metrics. They are the operational layer of beneficiary maintenance. Exit is mobile — executive labor market rewards dominance experience. They administer the constraint and benefit from it."
+    },
+    {
+      "name": "financial_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Investment banks, private equity, asset managers, and corporate law firms that structure and finance dominance maintenance: M&A advisory, leverage for buybacks, index fund voting, regulatory arbitrage. They collect fees proportional to the scale of dominance. Exit is mobile — they serve capital wherever it flows. They are secondary beneficiaries who amplify the primary beneficiaries' power."
+    },
+    {
+      "name": "competing_firms",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Established firms in adjacent or overlapping markets. Face predatory pricing, exclusive dealing, acquisition pressure, and IP litigation from dominants. Some are acquired (exit with payout); most are marginalized or forced into niche segments. Exit is constrained — they have resources to fight but not to overcome structural barriers. They bear enforcement costs (legal, compliance, lost markets)."
+    },
+    {
+      "name": "new_entrants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Startups and potential competitors. Face capital requirements inflated by dominant incumbents' pricing power, network effects that lock users, data advantages, and regulatory barriers shaped by incumbents. Most fail or are acquired before scaling. Exit is trapped — the only viable paths are acquisition by a dominant or niche survival. They bear the full suppression of the constraint."
+    },
+    {
+      "name": "workers_displaced_by_monopsony",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Workers in labor markets dominated by few employers (tech, healthcare, logistics, retail). Face wage suppression, non-compete enforcement, algorithmic management, and reduced mobility. Exit is trapped — geographic mobility is costly, skills are specific, and the monopsony is sector-wide. They bear extraction through lower wages and worse conditions, and pay taxes that subsidize enforcement."
+    },
+    {
+      "name": "consumers_facing_monopoly_pricing",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "End users of dominant platforms and products. Pay monopoly prices, surrender data, accept degraded service/quality. Organized as 'users' or 'consumers' but structurally fragmented. Exit is constrained — alternatives exist but lack network effects, interoperability, or feature parity. They bear extraction directly (prices) and indirectly (privacy, attention, reduced innovation)."
+    },
+    {
+      "name": "small_businesses_excluded_from_dominant_channels",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Merchants, developers, creators dependent on dominant platforms (app stores, marketplaces, ad networks, search). Pay escalating fees (15–30%), accept opaque rules, face algorithmic demotion. Exit is constrained — building independent distribution is prohibitively expensive. They bear extraction as platform fees and suppression as rule changes that favor the platform's own services."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Regulatory bodies (FTC, DOJ, EU Commission, CMA, etc.) tasked with enforcing competition law. Investigate dominance abuse, review mergers, impose remedies. Often captured intellectually (Chicago School framework) and resource-constrained. Exit is analytical — they observe and intervene but do not bear the constraint's costs or benefits directly. Their effectiveness varies by political cycle."
+    },
+    {
+      "name": "economic_orthodoxy_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Economics departments, central banks, international financial institutions (IMF, World Bank, BIS), major journals, and Nobel committees. Produce and legitimize the 'efficient markets' and 'natural monopoly' narratives that frame dominance as natural law. Tenure, funding, and prestige depend on the paradigm. Exit is identity_locked — professional identity is constituted through the framework. They set the intellectual agenda that makes active maintenance invisible."
+    }
+  ],
+  "gain_flow": "incumbent_capital_holders",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates large-scale production, distribution, and innovation through hierarchical firms and financial markets — solves the problem of mobilizing capital and labor at scale across time and uncertainty.",
+    "transfer_function": "Moves economic surplus (rents, suppressed wages, monopoly prices, platform fees, socialized enforcement costs) from competing firms, new entrants, workers, consumers, and small businesses to incumbent capital holders, dominant executives, and financial intermediaries.",
+    "absent_voices": "Workers in the global supply chain (especially Global South), future generations bearing ecological costs of growth-at-all-costs dominance, mutualist/cooperative enterprises that never form due to capital barriers, and the unemployed/underemployed rendered redundant by monopoly efficiency. They are structurally excluded from the conversation — no seat at the table, no organized representation in the forums where dominance is negotiated.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If active maintenance of dominance vanished overnight (no predatory acquisitions, no regulatory capture, no IP thickets, no narrative enforcement), markets would fragment: new entrants would flood in, platform cooperatives would emerge, workers would gain bargaining power, prices would fall toward marginal cost, and capital would flee dominant firms for competitive opportunities. The world would rearrange dramatically — the constraint is not a natural law but an active construction.",
+    "founding_problem": "Late 19th/early 20th century: coordinating industrial production at unprecedented scale required concentrated capital, hierarchical management, and stable markets — the 'visible hand' of the corporation replaced the 'invisible hand' of the market for complex, capital-intensive goods.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Beneficiaries (incumbent capital, executives, orthodoxy) attest the problem is LIVE: scale economies, network effects, and innovation risk still require dominance. Critics (Chandlerian historians, institutional economists, labor economists, platform cooperative movement, antimonopoly revival) attest the problem is DEAD: digital coordination, distributed ledger, public infrastructure, and stakeholder governance solve the founding problem without extraction. No consensus outside the beneficiary set."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "market_naturalization__hybrid_reading",
+      "market_naturalization__lapsed_alternative_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "lapsed_alternative_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dominance_requires_active_maintenance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "beneficiaries_are_identifiable_capital_holders",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competitive_market_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_platform_capitalism",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

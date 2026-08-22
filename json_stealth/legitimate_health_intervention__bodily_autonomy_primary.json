@@ -1,0 +1,456 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bap_lhi",
+    "story_uid": "4351a804-da21-4bc8-b101-a5f0e142c319"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.68,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Coerced Medical Intervention Regime (Bodily Autonomy Primary Reading)",
+    "topic_domain": "public_health/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_public_health_authorities",
+      "high_risk_medically_vulnerable_individuals",
+      "employers_and_access_institutions"
+    ],
+    "victims": [
+      "mandate_coerced_individuals",
+      "livelihood_penalized_refusers",
+      "adverse_event_bearers_without_recourse"
+    ],
+    "vindicated_propositions": [
+      "police_powers_doctrine",
+      "population_immunity_externality_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.68,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading (bodily_autonomy_primary) of the kernel legitimate_health_intervention — what would adopting a sibling reading change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Per-seat computation across the three sibling stories: compare victim sets, epsilon, and classification across the constraint family. The disagreement is located in whether population benefit can ever supply the legitimacy that individual consent supplies — this reading answers never, the siblings answer conditionally or straightforwardly.",
+      "impact": "This reading holds 'regardless of public benefit' as an absolutist threshold, so it structurally forecloses both siblings within a single framework; the siblings would remove the coerced from the victim set and drop epsilon toward the coordination-cost range.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story instantiates the bodily_autonomy_primary reading of the legitimate_health_intervention kernel."
+    },
+    {
+      "id": "public_health_primary_structural_delta",
+      "question": "What would the public_health_primary sibling change if adopted as the governing reading of the same arrangement?",
+      "resolution_mechanism": "Generate and classify the sibling story: mandate-coerced individuals leave the victim set (refusal recast as externality imposition), the state seat moves from extractor to coordinator, and epsilon drops toward the coordination-cost floor.",
+      "impact": "The same arrangement classifies near the coordination end from that seat; the family comparison isolates the legitimacy premise as the entire classification delta.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Sibling delta: public_health_primary recasts refusal as externality and the state as coordinator."
+    },
+    {
+      "id": "proportionality_reading_structural_delta",
+      "question": "What would the proportionality_reading sibling change if adopted as the governing reading of the same arrangement?",
+      "resolution_mechanism": "Generate and classify the sibling story: permissibility becomes a function of disease characteristics (severity, transmissibility, mortality), so the victim set shrinks to individuals subjected to disproportionate interventions and epsilon becomes threat-indexed rather than fixed.",
+      "impact": "Classification becomes regime-dependent on epidemiological conditions; the absolutist consent threshold of this reading is replaced by a weighting function the engine cannot evaluate without disease-characteristic inputs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Sibling delta: proportionality_reading makes legitimacy threat-weighted rather than consent-absolute."
+    },
+    {
+      "id": "consent_under_leverage_validity",
+      "question": "Is consent given under employment or access leverage genuine informed consent, or does the leverage itself void the consent — determining whether the victim set is only outright refusers or all leverage-compliers?",
+      "resolution_mechanism": "Legal doctrine on economic coercion plus empirical study of compliance decision-making under threat (would the complier accept the intervention absent the penalty?); judicial treatment of consent under conditions of dependency.",
+      "impact": "If leveraged consent counts, epsilon drops substantially and the victim set shrinks to refusers and the harmed; if it does not, the coerced-complier class dominates the victim set and epsilon rises toward the crisis-peak level as the standing condition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether consent under livelihood leverage is consent for legitimacy purposes."
+    },
+    {
+      "id": "enforcement_severity_regimes",
+      "question": "Does realized extraction track enforcement severity across jurisdictions and eras as the expected structural delta predicts?",
+      "resolution_mechanism": "Cross-jurisdiction comparison of enforcement intensity (termination regimes, exclusion rules, fines) against realized refusal costs and uptake; natural experiments where courts barred enforcement.",
+      "impact": "Low-enforcement jurisdictions may compute near the coordination end while termination regimes compute near the pure-extraction end; a single story-level epsilon would then misdescribe the family of local arrangements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Epsilon variance across enforcement severity regimes."
+    },
+    {
+      "id": "adverse_event_recourse_adequacy",
+      "question": "Are the compensation channels for mandated-intervention injuries adequate recourse, or does their narrowness (injury tables, filing deadlines, damage caps) make the required intervention a forced transfer of bodily risk?",
+      "resolution_mechanism": "Actuarial and legal audit of compensation program coverage against observed injury claims: approval rates, payout adequacy relative to harm, exclusion categories.",
+      "impact": "Adequate recourse would move the adverse-event seat from target toward symmetric risk-sharing; inadequate recourse confirms a forced risk transfer and raises epsilon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether injury compensation adequacy determines the harmed seat's structural position."
+    },
+    {
+      "id": "crisis_ratchet_permanence",
+      "question": "Is the post-crisis relaxation a return toward baseline, or does each emergency permanently raise the enforcement floor (ratchet)?",
+      "resolution_mechanism": "Track the post-2024 trajectory of enforcement infrastructure: whether digital pass systems, normalized employment conditions, and expanded emergency authority demobilize or persist into the next crisis.",
+      "impact": "Full demobilization would date the ratchet reading as crisis noise; persistence would confirm the oscillation as an accumulation mechanism and project rising floors into future crises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the crisis cycle ratchets or mean-reverts."
+    },
+    {
+      "id": "suppression_structural_vs_normative",
+      "question": "Is the measured suppression carried by formal enforcement machinery alone, or also by internalized civic-duty and social-pressure norms that would persist if formal enforcement were removed?",
+      "resolution_mechanism": "Compare compliance and uptake in jurisdictions that removed formal enforcement against those that retained it; decompose compliance motivations into penalty-avoidance versus norm-internalization.",
+      "impact": "If internalized norms carry a large share, removing enforcement would not collapse the arrangement and the suppression metric overstates the formal machinery's necessity; the omega separates structural from internalized suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism in mandate compliance."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set intervention requirements through statute and emergency order and enforce them through school entry rules, employment conditions, and exclusion from public facilities. Collect compliance, surveillance data, and expanded emergency authority when requirements are upheld. Their alternatives are bounded by legislation, judicial review, and funding conditions; relinquishing the requirement power carries political cost they rarely absorb."
+    },
+    {
+      "name": "mandate_coerced_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Undergo required interventions because refusal would cost employment, schooling, or access to services. Their decision space contains refusal-with-penalty, exemption applications of uncertain availability, and jurisdiction change; each alternative carries costs they bear personally while the intervention's benefits diffuse across the population."
+    },
+    {
+      "name": "livelihood_penalized_refusers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Declined required interventions and lost jobs, educational enrollment, military standing, or access as a result. Re-entering covered institutions requires accepting the intervention; their remaining alternatives are informal-economy work, relocation, or enduring the penalty. They carry the enforcement's realized cost."
+    },
+    {
+      "name": "adverse_event_bearers_without_recourse",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffered injuries following required interventions and find the compensation channels narrow: injury tables, filing deadlines, and damage caps exclude many claims. Their harm is done and cannot be exited; the adequacy of recourse determines whether the risk they bore was assumed or imposed."
+    },
+    {
+      "name": "high_risk_medically_vulnerable_individuals",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Rely on high population uptake of immunization for protection their own bodies cannot provide (contraindicated or less effective for them). They gain from the participation the requirements produce and have no individual exit from exposure to circulating disease."
+    },
+    {
+      "name": "employers_and_access_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Administer the requirements at the point of employment, enrollment, or entry, gaining a standardized risk-management instrument and liability cover. They can drop requirements when political or labor-market costs rise — many did after the pandemic surge — which makes their enforcement conditional rather than committed."
+    },
+    {
+      "name": "medical_licensing_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Discipline physicians who issue exemptions outside accepted medical criteria, policing the exemption channel the requirements depend on for legitimacy. Their authority over professional practice expands with each requirement regime; their alternative is a narrower disciplinary mandate bounded by their own evidence standards."
+    },
+    {
+      "name": "institutionalized_persons",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Live inside institutions — prisons, military, long-term care — where intervention requirements attach with the least possibility of refusal and the least access to counsel or public voice. Their situation would draw the strongest objection from the consent tradition, and they are the least present in the conversation."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the legitimacy contest between bodily-integrity claims and police-power doctrines, applying precedents that balance individual liberty against public health authority. They collect no compliance and bear no intervention; their rulings reconfigure which enforcement forms survive."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Raises participation in protective health interventions above what voluntary choice supplies when benefits are diffuse and free-riding is available, and standardizes institutional risk policy across workplaces, schools, and care settings; epidemic control has historically required participation thresholds that individual consent decisions under-provide.",
+    "transfer_function": "Moves bodily decision-rights from individuals to state and institutional controllers; moves intervention compliance from refusers to public health authorities; under employment and access conditions, moves livelihood continuity from refusers to complying participants; moves disease risk away from the medically vulnerable and onto those who bear interventions or penalties.",
+    "absent_voices": "Institutionalized persons (prisoners, service members, long-term-care residents) face the strongest forms of the requirement with the least voice; children are subjected through school-entry rules without consent capacity of their own; future persons inherit emergency-power precedents they had no part in. Refusers enter the record mainly through litigation after penalties have landed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Participation would fall toward voluntary levels and outbreak risk would concentrate among the unprotected; employers and schools would renegotiate risk policies individually; the medically vulnerable would lose protection they cannot self-supply; and the state's emergency health powers would contract toward their pre-requirement scope. Every named seat is positioned around this arrangement — its removal reorganizes each of those positions.",
+    "founding_problem": "Acute epidemic control: in smallpox-era and early twentieth-century outbreaks, voluntary participation could not reach the thresholds needed to interrupt transmission of high-mortality disease, and Jacobson v. Massachusetts (1905) established state authority to require vaccination as an exercise of police power.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Epidemiological evidence from outside the beneficiary set corroborates that the founding problem is live for high-consequence pathogens (measles resurgence data, smallpox eradication history). Independent corroboration of the overreach reading comes from judicial decisions narrowing requirement authority, historical scholarship documenting the expansion of requirements from acute epidemic response into routine employment condition, and bioethics literature outside public health institutions. No party disputes that epidemic control was the founding problem; the parties dispute whether the standing arrangement still serves it."
+  },
+  "gain_flow": "state_public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__public_health_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'legitimate health intervention' decomposes into three structurally distinct readings of one kernel. This reading (bodily_autonomy_primary) authors epsilon 0.65 with mandate-coerced individuals, penalized refusers, and adverse-event bearers in the victim set and the state as extractor via employment/access leverage. The public_health_primary sibling removes the coerced from the victim set (refusal recast as externality imposition) and drops epsilon toward coordination-cost range. The proportionality_reading sibling makes epsilon a function of disease characteristics, confining victims to disproportionate interventions. Each family member carries its own epsilon, stakeholders, and classification; this file links to both siblings."
+  },
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the state-coerced medical intervention regime: immunization and treatment requirements enforced through school entry, employment conditions, institutional residence, and exclusion from public facilities, with legitimacy claimed from population-level health benefit. The bodily_autonomy_primary reading assesses that arrangement by its own lights: consent is the legitimacy condition for medical intervention, so requirements enforced by livelihood and access leverage take bodily decision-rights without consent. The claim/metric gap is deliberate: the constraint is CLAIMED as tangled_rope (a real epidemic-control coordination function with asymmetric extraction through the same structure) while the authored metrics describe substantially extractive, actively enforced operation with crisis-driven ratcheting — the engine measures the divergence; do not reconcile the claim to the metrics. This story is one member of a three-reading constraint family (with public_health_primary and proportionality_reading); the colloquial label 'legitimate health intervention' decomposes because the readings assign different victim sets, different epsilon, and different authority structures to the same arrangement.",
+    "key_agents": [
+      "state_public_health_authorities: agenda setter (institutional/constrained, national) — administers the requirement machinery, collects compliance and expanded emergency authority",
+      "mandate_coerced_individuals: primary target (powerless/constrained) — undergo required interventions under threat of employment, schooling, or access loss",
+      "livelihood_penalized_refusers: primary target (powerless/trapped) — refuse and bear realized termination and exclusion costs",
+      "adverse_event_bearers_without_recourse: primary target (powerless/trapped) — bear intervention injuries through narrow compensation channels",
+      "high_risk_medically_vulnerable_individuals: beneficiary (powerless/constrained) — depend on population uptake they cannot self-supply",
+      "employers_and_access_institutions: secondary beneficiary and local enforcer (powerful/mobile) — administer requirements at the point of entry, drop them when costs rise",
+      "medical_licensing_bodies: enforcement node (institutional/constrained) — discipline exemption issuance, expanding professional authority with each requirement regime",
+      "institutionalized_persons: excluded seat (powerless/trapped) — face the strongest requirement forms with the least voice (prisons, military, long-term care)",
+      "constitutional_courts: analytical observer (institutional/analytical) — adjudicate the legitimacy contest between bodily-integrity claims and police-power doctrine"
+    ],
+    "logic_rationale": "Extraction is authored at 0.65 end-state because the requirement regime transfers bodily decision-rights, livelihood, and bodily risk under threat, while retaining a real epidemic-control function and exemption channels that keep it short of pure extraction. Suppression (0.68) is a raw structural property — it is NOT scaled by power or scope; the engine scales only extractiveness. The series shows a crisis ratchet rather than monotonic drift: baseline rose slowly across the first eighteen points as requirements expanded from school entry into employment and university conditions, spiked sharply at the pandemic peak (termination regimes, exclusion from public venues, federal contractor requirements), then receded only partially — the end-state trough (0.65) sits well above the pre-crisis baseline (0.56). The oscillation is itself partly an extraction mechanism: each emergency leaves behind enforcement infrastructure (digital pass systems, normalized employment conditions, expanded emergency authority) that does not fully demobilize, so successive crises start from a higher floor. Theater peaks during the crisis (crisis messaging, symbolic compliance performances) and recedes with enforcement. Accessibility collapse is moderate (0.50): refusal-with-penalty, exemptions, and jurisdiction change remain available but costly. Resistance is high (0.65): litigation, exemption movements, and state-level limits on enforcement produced the post-crisis relaxation — the powerless seats are not without coalition capacity, and their measured per-seat powerlessness understates their organized class action.",
+    "perspectival_gap": "The payer seats and the agenda-setter seats should compute differently. From the state and licensing seats the arrangement is a legitimate exercise of police power they administer; from the coerced, penalized, and harmed seats the same structure operates as a bodily-integrity violation enforced through livelihood leverage. The public_health_primary sibling reading would compute this arrangement near the coordination end (refusal as externality); this reading's seat computes it near the extraction end. Employers sit between: they enforce and benefit but can exit by dropping requirements. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "directionality_logic": "State authorities and licensing bodies sit near the beneficiary end: they collect compliance, authority, and expanded disciplinary reach. Employers benefit (risk instrument, liability cover) but bear administration costs and political exposure — near-beneficiary, slightly above the beneficiary pole. The medically vulnerable are genuine beneficiaries with no exit from the disease environment. Mandate-coerced individuals, penalized refusers, and adverse-event bearers sit near the full-target end: they transfer decision-rights, livelihood, or bodily risk under threat, with constrained or no exit. Institutionalized persons are targets whose exclusion from the conversation is part of the structure itself. Courts are analytical. The receipt surface names the state seat: compliance, expanded emergency authority, and precedent accrue there; employers collect secondary benefit, but the arrangement's gains land on the administering authority. Fixing cost is prohibitive for whoever could fix it: dismantling requires statutory repeal across jurisdictions, confronting institutional identity, and absorbing political blame for outbreaks.",
+    "mandatrophy_analysis": "The founding problem — acute epidemic control of high-mortality disease — remains live for some pathogens and dead for others; the standing arrangement spans both. The tangled-rope classification prevents two mislabels: the public-health move that reads the whole arrangement as coordination (which would hide the employment-leverage coercion of refusers and the recourse gap for the harmed), and the pure-liberty move that reads it all as extraction (which would erase the genuine epidemic-control function protecting those who cannot self-protect). Mandatrophy is partial and contested: requirements aimed at eradication-scale threats have atrophied into routine employment conditions where the threat is endemic and low-mortality — that segment shows mandate-outlived-function dynamics — while the acute-threat segment retains live function. The mismatch between the founding problem's contested status and the world_rearranges verdict flags the arrangement for exactly this split evaluation rather than a single verdict.",
+    "kernel_context": "This constraint instantiates the bodily_autonomy_primary reading of the kernel legitimate_health_intervention: legitimacy requires informed consent, and state coercion violates bodily integrity regardless of public benefit. Sibling readings: public_health_primary (legitimacy from measurable population-level morbidity/mortality reduction; refusal as externality imposition) and proportionality_reading (threat-weighted balance of population harm and individual autonomy). The disagreement is located in whether population benefit can ever supply the legitimacy that consent supplies: this reading says never — an absolutist threshold — while the siblings say conditionally or straightforwardly. Epsilon here is authored for the standing mandate arrangement as this reading assesses it, never for the consent-respecting arrangement this reading would endorse."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "informed_consent_baseline",
+    "drift_state": {
+      "moment": "contemporary_post_pandemic_mandate_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_integrity_requires_affirmative_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "public_benefit_never_legitimates_nonconsensual_intervention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "emergency_conditions_do_not_suspends_consent_rights",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

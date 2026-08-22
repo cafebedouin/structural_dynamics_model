@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__nearterm_harms_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_ai_alignment_priority__nearterm_harms_reading",
+    "measurement_id_prefix": "ai_alignment_priority__nearterm_harms_reading",
+    "story_uid": "b88a449b-6b3d-48a8-a3ef-7fe22938ce52",
+    "created_at": "2026-06-12T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Alignment Priority: Near-Term Harm Prevention for Marginalized Populations",
+    "topic_domain": "AI Governance / Technology Ethics / Risk Assessment",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "marginalized_populations",
+      "civil_rights_organizations",
+      "academic_bias_researchers"
+    ],
+    "victims": [
+      "ai_deployers_under_audit",
+      "foundation_model_providers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "marginalized_populations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Experience discriminatory outcomes from deployed AI systems in hiring, lending, healthcare, policing, and social services. They bear the harms the constraint seeks to prevent but have no structural power to enforce audits or demand remediation. Exit from algorithmic systems is often impossible — credit scores, background checks, and benefits determinations are mandatory and opaque."
+    },
+    {
+      "name": "civil_rights_organizations",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Litigate, advocate, and organize around algorithmic discrimination. They set the policy agenda for bias audits, disparate impact standards, and participatory design requirements. They do not deploy AI systems but shape the regulatory and normative environment that constrains deployers. Their power derives from legal standing, public legitimacy, and coalition-building."
+    },
+    {
+      "name": "academic_bias_researchers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop sociotechnical audit methodologies, fairness metrics, and harm taxonomies. Their work gains legitimacy and funding when the constraint treats bias mitigation as a priority. They are not directly harmed by deployed systems but their professional standing and resource flows depend on the constraint's enforcement regime."
+    },
+    {
+      "name": "ai_deployers_under_audit",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Corporations and agencies deploying AI in high-stakes domains (hiring, lending, healthcare, policing). They bear the cost of bias audits, model retraining, compliance infrastructure, and potential liability. They can modify systems but cannot exit the domains where audits are mandated. Some capture the audit process through voluntary standards bodies."
+    },
+    {
+      "name": "foundation_model_providers",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build and license the base models that downstream deployers fine-tune. They face pressure to implement guardrails, release model cards, and fund bias research. They have significant resources to shape standards through industry consortia and can relocate development across jurisdictions. Their dual role reflects both paying compliance costs and setting de facto technical standards."
+    },
+    {
+      "name": "affected_workers_and_applicants",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individual workers denied jobs, borrowers denied loans, patients misdiagnosed by AI systems. They experience the concrete harms the constraint addresses but have no individual recourse — litigation is prohibitively expensive, and opting out of algorithmic systems is often not an option. Their situation is the ground truth the constraint measures itself against."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Research catastrophic AI risk scenarios (loss of control, deception, power-seeking). They argue that prioritizing near-term bias mitigation diverts talent and funding from alignment research on advanced systems. They are excluded from the near-term harm framing's resource allocation but influence the sibling reading's agenda."
+    },
+    {
+      "name": "policy_makers_and_regulators",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Allocate enforcement resources, write rules, and adjudicate between competing alignment priorities. They observe both the near-term harm frame and the existential risk frame, and their decisions determine which constraint gets state backing. They do not directly bear costs or collect benefits from either reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the sociotechnical infrastructure for detecting and mitigating discriminatory harms from deployed AI: shared audit methodologies, fairness metrics, harm reporting channels, and participatory design norms. Solves the problem that no single actor can comprehensively assess system impacts across diverse populations.",
+    "transfer_function": "Moves compliance costs (audit infrastructure, model retraining, legal liability, participatory design processes) from AI deployers and foundation model providers toward bias mitigation outcomes that benefit marginalized populations. Also moves research funding and institutional attention toward sociotechnical audit methods and away from other alignment approaches.",
+    "absent_voices": "Individual harmed persons (affected_workers_and_applicants) are structurally absent from standard-setting bodies and audit design processes. Existential risk researchers are excluded from the resource allocation this reading governs. Global South populations affected by AI deployed by Western corporations have no seat in the governance forums where this constraint's priorities are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the near-term harm priority vanished overnight, bias audit requirements would lapse, participatory design norms would lose regulatory force, funding for sociotechnical fairness research would contract, and deployers would revert to unmonitored deployment. Marginalized populations would lose the only structural mechanism currently requiring their harms to be measured. The world of deployed AI would rearrange toward less accountability.",
+    "founding_problem": "Deployed AI systems were producing systematic discriminatory harms against marginalized groups (racial bias in hiring algorithms, disability discrimination in benefits determination, age discrimination in lending) with no accountability mechanism. The founding problem was the absence of any structural requirement to measure, disclose, or mitigate these harms before deployment.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Documented by independent investigations (ProPublica's COMPAS analysis, Gender Shades audit, NIST face recognition vendor tests), civil rights litigation (EEOC guidance on algorithmic discrimination, state law enforcement audits), and academic literature from researchers outside the AI industry (Crawford, Noble, Benjamin, Buolamwini). Industry-funded research acknowledges the problem but contests the priority ranking relative to existential risk."
+  },
+  "interval": {
+    "start": 2018,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2028,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2028,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2028,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the nearterm_harms_reading of the ai_alignment_priority kernel. It asserts that alignment's primary meaning is preventing discriminatory and extractive harms from currently deployed AI systems, with priority given to justice for marginalized populations. The constraint operates through sociotechnical audit mandates, disparate impact liability, participatory design requirements, and bias mitigation resource allocation. It extracts compliance costs from AI deployers and foundation model providers while coordinating a harm-detection infrastructure that benefits marginalized populations. The reading coexists with but structurally competes against the existential_risk_reading (which prioritizes catastrophic loss-of-control scenarios) and the integrated_reading (which treats both as complementary). This story authors ONLY the nearterm_harms_reading as a clean ε-invariant constraint per Rule 1.",
+    "logic_rationale": "Base extractiveness (0.62) reflects substantial compliance costs imposed on powerful institutional actors (deployers, foundation model providers) that flow toward bias mitigation — a genuine transfer, not merely coordination overhead. Suppression (0.58) captures active enforcement: audit mandates, liability regimes, and exclusion of non-compliant systems from high-stakes domains. Theater ratio (0.28) is moderate: some audit activity performs compliance without substantive harm reduction (checklist audits, gaming metrics), but the core function remains harm detection. Accessibility collapse (0.35) is low because alternative alignment framings (existential risk, integrated) remain live and resourced. Resistance (0.45) reflects industry pushback, regulatory capture of standards bodies, and jurisdictional arbitrage. The constraint is claimed as tangled_rope because it has a genuine coordination function (harm detection infrastructure) AND asymmetric extraction (deployers pay, marginalized groups benefit) requiring active enforcement.",
+    "directionality_logic": "Marginalized populations are full beneficiaries (d near 0.0): the constraint's entire justification is their protection, they collect the harm-reduction benefit, and they are trapped in the systems the constraint governs. Civil rights organizations and academic bias researchers are beneficiaries with mobility (d ~0.15-0.25): they gain professional standing and resources but can exit to other domains. AI deployers are primary payers (d ~0.85): they bear concentrated costs, have constrained exit (cannot leave high-stakes domains), and face active enforcement. Foundation model providers are payers with arbitrage-grade exit (d ~0.65): they pay compliance costs but can relocate development and shape standards. Affected workers are identity-locked victims (d ~0.95): they experience direct harm, cannot exit algorithmic systems, and their self-concept is often fused with the domains where harm occurs (employment, credit, healthcare). Existential risk researchers are excluded (not in the constraint's beneficiary/victim structure). Policymakers are analytical observers (d=0.5).",
+    "perspectival_gap": "From the marginalized population seat, this constraint is a rope (genuine coordination solving a real harm-detection problem with minimal coercive overhead from their perspective — they would not call audits 'coercion'). From the deployer seat, it computes as snare/tangled_rope (substantial extraction, active enforcement, constrained exit). From the foundation model provider seat, it computes as scaffold/tangled_rope hybrid (transitional compliance costs with arbitrage exit). The engine computes this per-seat divergence from the structural data authored here.",
+    "mandatrophy_analysis": "The founding problem (discriminatory harms from deployed AI with no accountability) is LIVE — harms persist and evolve with new deployment domains. The constraint has not outlived its function. However, mandatrophy risk exists if the audit infrastructure becomes ritualized (theater ratio rising) while harms shift to unmonitored domains. The integrated_reading sibling attempts to capture this constraint's mandate while diluting its priority — a potential mandatrophy vector where the near-term harm frame is absorbed into a broader frame that deprioritizes its specific beneficiary set.",
+    "kernel_context": "This constraint is the nearterm_harms_reading of the ai_alignment_priority kernel. Sibling readings: existential_risk_reading (alignment = preventing catastrophic loss of control; priority = existential safety) and integrated_reading (alignment = addressing both catastrophic and present harms as complementary). The kernel contest centers on resource allocation (talent, funding, regulatory attention), priority ordering, and harm ontology (distributive justice vs. existential safety). This reading's structural delta: high ε on deployed system audits; victim set = specific marginalized groups (age, race, disability); beneficiary = present vulnerable populations; methodology = sociotechnical audit; resource flow = bias mitigation."
+  },
+  "omegas": [
+    {
+      "id": "priority_crowding_out",
+      "question": "Does prioritizing near-term harm prevention structurally crowd out existential risk research, or do they draw from disjoint talent/funding pools?",
+      "resolution_mechanism": "Track funding flows, hiring patterns, and research output across both subfields over 5+ years. Control for overall AI investment growth.",
+      "impact": "If crowding out is real, the integrated_reading's claim of complementarity is empirically false — the readings are zero-sum competitors for resources. If disjoint, the integrated_reading's framing is structurally viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the nearterm and existential readings compete for the same scarce resources."
+    },
+    {
+      "id": "audit_effectiveness_vs_theater",
+      "question": "What fraction of mandated bias audit activity produces genuine harm reduction versus performative compliance?",
+      "resolution_mechanism": "Longitudinal study of audit findings vs. subsequent harm metrics in deployed systems. Compare jurisdictions with strong vs. weak enforcement.",
+      "impact": "If theater dominates, the constraint's coordination function is decaying toward piton. If audits drive real mitigation, the tangled_rope classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The coordination/extraction boundary within the audit infrastructure itself."
+    },
+    {
+      "id": "kernel_framing_contestation",
+      "question": "Is 'alignment' a single kernel with competing readings, or are these fundamentally different concepts sharing a label?",
+      "resolution_mechanism": "Trace the genealogy of 'alignment' usage in technical safety vs. fairness communities. Identify whether the term's stabilization masked a conceptual split.",
+      "impact": "If different concepts, the kernel frame is a category error — each reading should be a standalone constraint with no structural relationship. If single kernel, the reading_relations and drift analysis are valid.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the ai_alignment_priority kernel is a genuine single commitment or a conflation of distinct projects."
+    },
+    {
+      "id": "beneficiary_capture_of_audit_standards",
+      "question": "Do civil rights organizations and academic bias researchers (beneficiaries) capture the audit standard-setting process to entrench their methodological preferences over deployer feasibility?",
+      "resolution_mechanism": "Analyze standard-setting body composition, comment periods, and adoption rates of competing audit frameworks.",
+      "impact": "If capture exists, the constraint's coordination function is compromised — beneficiaries become agenda_setters extracting methodological rents. This would increase theater_ratio and shift classification toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether beneficiary groups have become de facto agenda_setters capturing the coordination mechanism."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__existential_risk_reading",
+      "ai_alignment_priority__integrated_reading",
+      "algorithmic_audit_mandate",
+      "disparate_impact_liability_regime",
+      "participatory_design_standard"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the ai_alignment_priority kernel. The existential_risk_reading prioritizes catastrophic loss-of-control prevention with a different victim set (humanity at civilizational scale) and different methodology (interpretability, control theory, scalable oversight). The integrated_reading attempts to combine both as complementary priorities. The three readings share the label 'alignment' but have disjoint ε referents (deployed system audits vs. future system control), disjoint victim sets, and disjoint resource flows. They are linked via network.affects_constraints because they compete for the same governance bandwidth and talent pool."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.02
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_harm_prevention_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "marginalized_justice_as_alignment_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sociotechnical_audit_necessity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "algorithmic_accountability_movement",
+    "drift_state": {
+      "moment": "generative_ai_deployment_wave",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

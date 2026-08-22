@@ -1,0 +1,377 @@
+{
+  "header": {
+    "constraint_id": "state_killing_authority__retributive_desert",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "22b5ff3d-3961-4478-9aca-c9be7ed6524f"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.85,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Killing Authority — Retributive Desert Reading (Lex Talionis Proportionality)",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "state_execution_authority",
+      "murder_victims_families",
+      "murdered_victims_posthumous"
+    ],
+    "victims": [
+      "condemned_convicted_murderers",
+      "wrongly_convicted_defendants"
+    ],
+    "vindicated_propositions": [
+      "lex_talionis_proportionality_doctrine",
+      "murderer_rights_forfeiture_doctrine",
+      "state_punitive_authority_claim"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.85,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexing",
+      "question": "This constraint is the retributive_desert reading of the state_killing_authority kernel; which structural facts of the standing arrangement would the sibling readings (deterrence_instrument, categorical_abolition) re-author, and how would classification shift under them?",
+      "resolution_mechanism": "The sibling stories themselves: each sibling authors its own epsilon, beneficiary set, and victim set over the same referent arrangement; cross-reading comparison of the three files locates the disagreement structurally rather than inside this story.",
+      "impact": "The categorical_abolition reading would move every condemned person into the rights-holder set regardless of guilt (epsilon near maximal); the deterrence_instrument reading would ground beneficiaries in the protected population and author epsilon from failed-deterrence cost. This story's values are valid only for the retributive seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexing: epsilon, victim sets, and classification are properties of this reading, not of the kernel."
+    },
+    {
+      "id": "capital_error_rate",
+      "question": "What is the true rate of wrongful capital convictions — the extraction component this reading's own proportionality premise must concede?",
+      "resolution_mechanism": "Survival-analysis estimates on exoneration data, expanded post-conviction DNA and non-DNA testing, and systematic review of executed-case doubt files.",
+      "impact": "Reading-indexed epsilon scales with the conceded error component: a rate near zero collapses epsilon toward the apparatus-disproportionality floor; a substantially higher rate pushes the arrangement toward snare (coordination story intact, extraction dominant).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Error rate of capital convictions as the dominant conceded-extraction component."
+    },
+    {
+      "id": "posthumous_vindication_status",
+      "question": "Is the murdered person's posthumous vindication a benefit anyone actually holds, or a framing that routes the arrangement's real yield to the living (survivors' closure, the state's authority display)?",
+      "resolution_mechanism": "Moral philosophy on posthumous interests combined with survivor-outcome studies comparing families who witness executions with those who do not.",
+      "impact": "If vindication is wholly a living-person good, the posthumous beneficiary entry drops out of the structural set and the coordination function re-weights toward survivor and state interests — tightening the measured extraction asymmetry.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the posthumous beneficiary seat collects anything real."
+    },
+    {
+      "id": "selective_application_vs_talionic_frame",
+      "question": "The reference frame requires death for death; practice applies death to a small, discretion- and geography-shaped subset of murders. Does selective application violate the reading's own proportionality premise (self-undermining), or count as permissible administration?",
+      "resolution_mechanism": "Jurisprudential analysis of the arbitrariness line from Furman through contemporary disparity studies, assessed against the talionic standard the reading itself endorses.",
+      "impact": "If selection violates the premise, the arrangement fails by its own lights — the proportionality function becomes partly theatrical and classification drifts toward piton or snare; if permissible, practice drift is an administration cost rather than a premise failure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether selective application breaks the reading's own proportionality premise."
+    },
+    {
+      "id": "apparatus_disproportionality",
+      "question": "Do death-row conditions and multi-decade delay over-punish relative to desert by the reading's own proportionality standard — a conceded extraction from even the guilty?",
+      "resolution_mechanism": "Comparative review of death-row duration trends, retributivist scholarship on delay, and execution-method litigation outcomes.",
+      "impact": "Sets the apparatus component of reading-indexed epsilon independently of the error component; a large apparatus component raises epsilon even under a low error rate and fuels expedited-execution reform pressure from inside the reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Conceded over-punishment embedded in the modern death-row apparatus."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the capital-punishment regime as grounded in retributive desert: the state kills convicted murderers because murder forfeits the killer's right to life and proportional justice (lex talionis) requires a life for a life. This file instantiates the retributive_desert reading of the state_killing_authority kernel as one clean, epsilon-invariant constraint; the deterrence and abolition readings are separate stories with their own epsilon and victim sets, linked through the network. Epsilon's referent is the existing arrangement assessed by this reading's own lights: the reading concedes no extraction from the guilty condemned (execution delivers what desert owes, as collecting a debt is not extraction) but must concede the wrongly convicted (its own proportionality premise counts their execution as the gravest injustice), the apparatus's over-punishment (multi-decade death-row delay), and collateral costs to the condemned's innocent kin. The claimed type and the metrics are authored independently: the claim states tangled_rope — a genuine coordination function (feud-suppression and a proportional answer to murder) carrying real conceded extraction — while the metrics describe what the reading itself must concede of the arrangement's operation.",
+    "key_agents": [
+      "state_execution_authority: agenda-setter and beneficiary (institutional/arbitrage) — administers the capital statutes and collects the vindicated punitive authority each execution demonstrates",
+      "murder_victims_families: primary beneficiary (moderate/constrained) — receives the arrangement's vindication; cannot exit the demand for an answer",
+      "murdered_victims_posthumous: nominal beneficiary, non-agent (powerless/trapped) — admitted to the beneficiary set by the reading's own vindication claim; collects nothing",
+      "condemned_convicted_murderers: primary target (powerless/trapped) — bears the maximal cost; by this reading's own lights the guilty among them receive desert, not extraction",
+      "wrongly_convicted_defendants: pure target (powerless/trapped) — the conceded extraction component the reading's own proportionality premise condemns",
+      "execution_personnel: cost-bearing instrument (moderate/constrained) — administers the acts and bears their psychological and moral costs",
+      "abolitionist_advocates: excluded voice (organized/mobile) — contests the forfeiture premise from outside the sentencing conversation",
+      "international_human_rights_bodies: analytical observer (institutional/analytical) — documents error, disparity, and method-of-execution practice against evolving standards"
+    ],
+    "logic_rationale": "Extractiveness 0.45 is the reading-indexed concession: near-zero for the guilty-desert component, weighted by the conceded error class (survival-analysis estimates put roughly 4% of the death-sentenced at actually innocent), the apparatus over-punishment (average death-row stay has roughly tripled since the interval's start, exceeding what retributivist scholarship itself argues desert requires), and collateral costs to the condemned's innocent kin. Suppression 0.85 is structural and reading-invariant: the condemned has no exit, and the arrangement runs on the full coercive apparatus — death-qualified juries, prosecutorial charging discretion, restricted post-conviction review. Theater 0.32: the killing itself is functional; the ceremonial layer (final statements, execution protocols) and the comparative-proportionality review that almost never grants relief are the performative share. Accessibility collapse 0.40: the alternative — life without parole — is fully workable, widely used, and expanding; the constraint does not close alternatives, it is losing to them. Resistance 0.62: organized abolition movements, innocence litigation, religious bodies, and international pressure meet majority-but-declining public support in retentionist jurisdictions. The measurement series run on one shared grid (decade steps across the 60-year interval) with all three metrics authored at every point. The suppression_requirement series is authored because this story genuinely tracks enforcement-capacity change: the mid-interval dip marks the Furman-era lapse, the subsequent rise marks the post-Gregg rebuild and the 1990s hardening (restriction of federal post-conviction review), and the plateau reflects a suppressive legal structure that persists even as execution counts decline.",
+    "perspectival_gap": "From the state's seat the arrangement is authority vindicating itself: each execution demonstrates that the proportionality norm is real, and the seat computes coordination-with-benefit. From the condemned's seat the same structure is maximal extraction with zero exit. From the victims'-families seat it is a delivered good — vindication — with the cost borne elsewhere. From the wrongly-convicted seat it is pure injustice that the reading's own premise condemns. The engine computes these divergences from the structural data (power, exit, role); the authored claim does not adjudicate them. Note the coarsest seam: execution_personnel and murder_victims_families share the moderate power atom but sit on opposite sides of the transfer, so per-seat directionalities inherit that coarseness.",
+    "directionality_logic": "Beneficiary declarations drive low d: the state (near the beneficiary end — it collects authority and legitimacy), victims' families (low d — they receive vindication and closure), and the posthumous victim (excluded from derivation entirely via agent:false — the dead collect nothing, and the reading's own beneficiary claim for them is symbolic). Victim declarations drive high d: the condemned (near full target — maximal cost, zero exit) and the wrongly convicted (full target — cost with no desert to answer, the component the reading itself counts as extraction). Execution personnel derive as payers with constrained exit — a moderate overestimate of their true position, accepted because directionality overrides key on power atoms and would also displace the victims'-families seat. Abolitionist advocates and international bodies carry no beneficiary/victim declaration and fall to canonical fallback — they contest or observe rather than collect or pay. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled downstream.",
+    "mandatrophy_analysis": "The classification guards both directions. Against mislabeling as pure snare: the coordination function is genuine and ancient — the talionic rule originated as an escalation cap on blood feud, and the vindication demand it answers is sincerely held by the surviving victims it serves; a snare reading would erase the real collective-action problem the arrangement solves. Against mislabeling as rope: the extraction is real and the reading itself concedes it — the wrongly convicted pay with lives they do not owe, the apparatus over-punishes by the reading's own proportionality standard, and the state captures durable authority from each execution. The founding problem is live (murder persists; the demand for a proportional answer persists), so no mandatrophy is declared. The drift risk is toward piton rather than zombie-mandate: as executions become rarer and more ritualized while proportionality review almost never grants relief, the theater_ratio series tracks whether the arrangement is becoming performance around a function it no longer performs at talionic scale — the reference frame says death for death; practice delivers death for a discretion-shaped few.",
+    "kernel_context": "Kernel: state_killing_authority — the standing commitment that the state may kill as punishment. This file instantiates the retributive_desert reading: authority grounded in forfeiture and proportionality rather than in outcome (the deterrence sibling) or in categorical denial (the abolition sibling). The readings share the referent arrangement but author different epsilon and different victim sets; the disagreement is located in the condemned person's moral status (forfeited vs inalienable vs outcome-contingent) and in what counts as the authority's ground. The retributive reading forecloses the abolition reading within any single framework — forfeiture and inalienability cannot both hold — and coexists with the deterrence reading, which many retentionist coalitions hold simultaneously."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_authority__deterrence_instrument",
+      "state_killing_authority__categorical_abolition"
+    ],
+    "dual_formulation_note": "The colloquial label 'capital punishment' decomposes, per epsilon-invariance, into three readings of one kernel: this file (retributive_desert — authority grounded in forfeiture and proportionality), state_killing_authority__deterrence_instrument (authority grounded in outcome), and state_killing_authority__categorical_abolition (denial of the authority). Same referent arrangement; different epsilon, different victim sets, different classification. The retributive reading is upstream of the deterrence reading historically (desert claims secured retention while deterrence evidence was being assembled) and is the direct logical opposite of the abolition reading. Edges declared accordingly."
+  },
+  "stakeholders": [
+    {
+      "name": "state_execution_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enacts and maintains capital statutes, charges capital cases, and carries out sentences through its courts and corrections apparatus. Grounds its punitive authority in the proportionality norm — the claim that answering death with death is what justice requires — and collects the legitimacy that flows from visibly delivering it. It can amend, commute, or abolish the arrangement by ordinary legislative or executive act; numerous jurisdictions have done exactly that."
+    },
+    {
+      "name": "murder_victims_families",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Lost a family member to homicide. The arrangement delivers its answer to them: an execution framed as the proportionate response to their loss and as vindication of the person killed. They cannot recover what was taken and cannot exit the demand for an answer; the state's channel is the only one on offer, though a documented minority of such families publicly reject execution and advocate life imprisonment instead."
+    },
+    {
+      "name": "murdered_victims_posthumous",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The person killed. The reading's structure admits them to the beneficiary set posthumously: the execution is said to vindicate their moral standing by answering their killing in kind. They cannot collect anything; the vindication accrues to their memory and to the living. Listed for structural completeness of the reading's own beneficiary claim; excluded from derivation as a non-collecting entity."
+    },
+    {
+      "name": "condemned_convicted_murderers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Convicted of capital murder and sentenced to death. Bears the arrangement's ultimate cost: the loss of life, preceded by years or decades in death-row conditions. By this reading's own lights the guilty among them are receiving what they owe rather than being extracted from; structurally they bear the maximal cost and have no exit — commutation or exoneration runs entirely through the state's own machinery."
+    },
+    {
+      "name": "wrongly_convicted_defendants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Convicted and sentenced for murders they did not commit. The reading's own proportionality premise counts their execution as the gravest possible injustice — a life taken with no desert to answer. Exonerations from death row outnumber those from any other sentence category; some exit exists through appeals and DNA testing, but it is slow, procedurally barred in places, and for the executed it arrives only posthumously."
+    },
+    {
+      "name": "execution_personnel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Corrections officers, execution teams, and chaplains who administer the arrangement's acts. They bear its psychological and moral costs — documented stress, turnover, and conscientious refusal — without setting policy or collecting the vindication. Exit means resigning from an apparatus that replaces them."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations and movements that reject the arrangement outright — innocence networks, religious bodies, international human rights campaigns. Within retentionist jurisdictions they are heard in litigation and at referendum but excluded from the desert framing itself: the proportionality question is decided by legislatures, prosecutors, and juries operating inside the forfeiture premise they deny. Their venue is the long campaign, not the sentencing hearing."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Treaty bodies and courts that assess the arrangement against evolving human-rights standards and document its application — error rates, method-of-execution litigation, racial and geographic disparity. They impose no direct domestic enforcement in retentionist states but supply the external record the domestic debate cites."
+    }
+  ],
+  "gain_flow": "state_execution_authority",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Converts the private demand for vengeance into a single state-administered, rule-bound act: it solves the feud-escalation problem by monopolizing the answer to murder and calibrating it to the talionic standard (death for death), and it supplies the vindication channel through which the community answers the killing of one of its members.",
+    "transfer_function": "Moves the condemned person's remaining life from the convicted to the state's punitive account; moves vindication and closure to the murder victim's survivors; moves demonstrated sovereign authority to the state; moves the moral burden of the killing itself to execution personnel.",
+    "absent_voices": "The executed innocent — permanently silent, their exonerations arriving only as case files; the condemned's own families, whose loss the proportionality ledger does not count; abolitionist advocates, who are heard in court and at referendum but excluded from the desert framing inside which sentencing decisions are made; and the murdered victims' family members who oppose execution, whose objection the vindication frame does not accommodate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Capital statutes would fall to life-without-parole regimes within a legislative cycle in retentionist jurisdictions; death rows would be commuted en masse; victims' families would lose the specific vindication channel and a portion would redirect into advocacy; the state would need a different ground for its punitive-authority claim; the wrongly convicted would face grave but reversible rather than irreversible error. The world rearranges because every named seat's arrangements depend on the constraint.",
+    "founding_problem": "Before the state monopolized punishment, murder was answered by kin vendetta: blood feud with escalation cycles that consumed whole communities. Lex talionis — an eye for an eye, a life for a life — was built as an escalation cap: a proportionality ceiling administered by authority, replacing open-ended retaliation with a bounded, state-executed answer. The founding problem: how to answer murder proportionately without feud.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: criminal-law historians document the talionic rule's origin as an escalation cap on kin vendetta in ancient Near Eastern, biblical, and Roman law; abolitionist philosophers concede the standing demand for proportionate response to grave crime while disputing that death is its required form; innocence-project litigators corroborate that the problem murder poses remains live. No serious party attests the founding problem itself is dead — the dispute is over the answer, not the problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "lex_talionis_proportional_authority",
+    "drift_state": {
+      "moment": "contemporary_post_innocence_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "deterrence_instrument",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_abolition",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "murder_forfeits_right_to_life",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "death_required_for_proportional_justice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

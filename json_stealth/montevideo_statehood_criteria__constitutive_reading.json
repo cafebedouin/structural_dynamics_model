@@ -1,0 +1,333 @@
+{
+  "header": {
+    "constraint_id": "montevideo_statehood_criteria__constitutive_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "montevideo_constitutive",
+    "story_uid": "cd2e2d1e-9a92-4956-bfc7-3797ee99ebc7"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.7,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Constitutive Recognition Gate on Statehood",
+    "topic_domain": "international_law/political_philosophy/state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_recognized_states",
+      "great_power_gatekeepers"
+    ],
+    "victims": [
+      "unrecognized_de_facto_regimes",
+      "populations_of_unrecognized_territories"
+    ],
+    "vindicated_propositions": [
+      "territorial_integrity_norm",
+      "westphalian_sovereignty_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.7
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_location",
+      "question": "This constraint instantiates the constitutive reading of the montevideo_statehood_criteria kernel: recognition by existing states is NECESSARY for legal personality. Where exactly does the sibling disagreement sit, and what would the sibling readings change structurally?",
+      "resolution_mechanism": "The sibling files montevideo_statehood_criteria__declaratory_reading and montevideo_statehood_criteria__hybrid_reading carry the alternative structures; doctrinal analysis of state practice and opinio juris locates the live disagreement at the necessity-of-recognition premise.",
+      "impact": "Under the declaratory sibling the victim set largely empties (polities meeting the four objective criteria gain legal personality automatically, and the incumbent veto dissolves); under the hybrid sibling the victim set shifts toward polities failing legitimacy tests rather than lacking recognition. This file's epsilon, victims, and classification are valid only for the constitutive structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the statehood-criteria kernel; siblings instantiate different constraints with different victim sets."
+    },
+    {
+      "id": "naturalness_of_acknowledgment_gate",
+      "question": "Is some act of acknowledgment unavoidable in ANY legal order (making the recognition gate near-natural, an irreducible price of ordered membership), or is the incumbent veto a constructed privilege that identifiable agents maintain for their own benefit?",
+      "resolution_mechanism": "Compare membership systems that operate on objective filing rather than incumbent consent (domestic incorporation registries, Montevideo-style declaratory operation). If functioning large-scale systems exist where status follows criteria satisfaction without incumbent sign-off, the gate is constructed rather than necessary.",
+      "impact": "If constructed, pressure toward reclassification as pure extraction strengthens and the beneficiary declarations become the load-bearing fact; if near-natural, the residual burden on unrecognized polities is closer to the irreducible cost of having any membership rule at all.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the acknowledgment requirement is a structural feature of legal order or an incumbent-maintained construct."
+    },
+    {
+      "id": "attribution_of_unrecognized_deprivation",
+      "question": "How much of the material deprivation of unrecognized polities and their populations is caused by non-recognition itself, versus underlying conflict, poverty, or governance failure that would persist under any membership rule?",
+      "resolution_mechanism": "Matched comparison of unrecognized de facto regimes against recognized states with comparable instability histories, isolating the recognition variable across financing access, treaty capacity, investment flows, and mobility documents.",
+      "impact": "If non-recognition accounts for most of the measurable gap, the authored epsilon of 0.62 understates the burden on trapped seats; if deprivation is mostly endogenous, the arrangement's marginal contribution is materially smaller than the victim declarations suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal share of non-recognition in the observed deprivation of unrecognized polities."
+    },
+    {
+      "id": "veto_coordination_vs_border_defense",
+      "question": "Does the incumbent veto persist because it solves a genuine membership-coordination problem for the international system, or primarily because incumbent governments defend existing borders against secession and revision?",
+      "resolution_mechanism": "Examine recognition episodes where coordination needs and incumbent interests diverge: the rapid mass recognition of post-Soviet and post-Yugoslav successor states despite some incumbents' objections shows coordination logic operating; sustained non-recognition of economically useful partners (trade and investment continuing with formally unrecognized entities) shows interest logic overriding the coordination story.",
+      "impact": "If border defense dominates, the arrangement slides from hybrid coordination-plus-burden toward pure extraction riding on a coordination cover story; if coordination dominates, the burden on unrecognized polities is bounded by the real service the gate performs.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Relative weight of coordination function versus incumbent border-defense interest in sustaining the veto."
+    },
+    {
+      "id": "internalized_futility_of_claims",
+      "question": "Is the comparatively low escalation of statehood claims by long-unrecognized polities structural (the gates are genuinely closed) or partly internalized (learned futility suppressing claim-making, as in Somaliland's deliberate restraint about asserting independence from Somalia in order to preserve internal clan settlement)?",
+      "resolution_mechanism": "Track claim activity after partial openings: if polities escalate claims when a door cracks (the wave of recognition-seeking after the Kosovo episode), suppression was structural; if claim-making stays quiet even as formal barriers loosen, internalization is carrying part of the load.",
+      "impact": "An internalized component means the scalar suppression measure understates total suppressive force: exit remains locked in practice even where formal barriers ease, and removal of the formal gate would not immediately release pent-up claims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized share of suppressed statehood claims."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the constitutive reading, a polity becomes a state only when existing states recognize it; satisfying the four Montevideo criteria (permanent population, defined territory, effective government, capacity for foreign relations) is necessary but never sufficient. The standing arrangement under contest — and the sole epsilon referent for this file — is that recognition-gated regime: treaty participation, UN and IFI membership, market access, passport validity, and contractual enforceability all run through recognition acts that incumbent states confer or withhold at discretion. Polities meeting every objective criterion (Somaliland, Transnistria, Northern Cyprus, and historically others) remain outside the legal universe, while their residents carry the costs in mobility, finance, and legal protection. Per the committer-frame discipline, this file authors ONLY the constitutive reading as a clean, epsilon-invariant constraint: the declaratory and hybrid readings are separate constraints in separate files, linked through the network section, and no averaging or hedging across readings appears here.",
+    "key_agents": [
+      "- incumbent_recognized_states: agenda-setter and beneficiary (institutional/arbitrage) — administers recognition bilaterally and through multilateral admission, collects border stability and membership control",
+      "- great_power_gatekeepers: primary beneficiary (powerful/arbitrage) — their consent effectively controls multilateral admission; they convert recognition discretion into geopolitical leverage",
+      "- unrecognized_de_facto_regimes: primary target (moderate/trapped) — control territory and populations but are denied legal personality despite meeting the objective criteria",
+      "- populations_of_unrecognized_territories: primary target (powerless/trapped) — bear denied documents, financing exclusion, and absence from treaty protections",
+      "- self_determination_movements: excluded voice (powerless/trapped) — would argue for criteria-based inclusion but have no seat in the admission process except through sponsoring states",
+      "- multilateral_admission_bodies: administering gate (institutional/constrained) — run the admission votes but are bound by member-state control",
+      "- international_law_doctrine: analytical observer (non-agent) — the scholarly corpus recording and contesting the two theories; listed for completeness, excluded from directionality as a non-agent"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.62 for the standing recognition-gated arrangement as this reading assesses it: the burden is concentrated on a minority of trapped seats but severe in kind (total exclusion from treaty capacity, financing, and legal personality rather than a marginal fee). Suppression is authored at 0.70 as a RAW STRUCTURAL property, unscaled by power or scope: maintaining the gate requires organized non-recognition campaigns, pressure on third states considering recognition, and blocking of admission votes — the arrangement does not persist by participant preference. Theater ratio is moderate-low (0.28): the gate performs real work (settling counterpart status for billions of daily interactions), but a growing share of activity is symbolic — ceremonial recognitions, non-recognition statements aimed at domestic audiences, recognition exchanged for concessions with no operational content. Accessibility collapse is 0.50: alternatives genuinely persist (the declaratory doctrine is codified in Montevideo Article 3, de facto relations and informal cooperation channels operate around the gate, observer statuses exist), so understanding the gate does not eliminate every workaround. Resistance is 0.55: unrecognized polities lobby, litigate, seek advisory opinions, and exchange mutual recognitions among themselves, but escalation is muted (see the internalized_futility omega). The measurement series run on ONE SHARED GRID (t=0..100 at intervals of 20) with all three metrics authored at every point: base extractiveness climbs from 0.40 to 0.62 as recognition shifted from a post-imperial housekeeping act to a weaponized instrument of bloc politics and secession management; suppression_requirement climbs from 0.42 to 0.70 as organized non-recognition campaigns institutionalized; theater_ratio rises from 0.10 to 0.28 as symbolic recognition grew. The trajectory is monotonic rather than cyclical — enforcement machinery accumulated rather than oscillated.",
+    "perspectival_gap": "The seats should compute differently and the divergence is the finding. From the incumbent_recognized_states seat, the arrangement presents as the modest price of orderly coexistence — a membership rule every club needs, experienced as rope-like coordination. From the trapped unrecognized seats, the identical structure presents as a closed gate that converts full compliance with objective criteria into nothing — experienced as pure denial with a coordination cover story. Same-level actor dynamics sharpen the gap among nominally equal sovereigns: great powers hold arbitrage-grade exit (they choose recognition strategically and suffer no denial themselves), while small recognized states are constrained followers who must align with bloc leaders under pressure and cannot independently open the gate for anyone. The engine computes per-seat classifications from the declared power, exit, and directional data; this commentary explains why the divergence is structural rather than notational.",
+    "directionality_logic": "incumbent_recognized_states and great_power_gatekeepers are declared beneficiaries: the gate subsidizes them with border stability, membership control, and veto leverage, placing them near the beneficiary end of directionality (low d, damped or inverted effective burden). unrecognized_de_facto_regimes and populations_of_unrecognized_territories are declared victims with trapped exit: they cannot leave the international system, form no alternative legal universe, and sit near the full-target end (high d, amplified effective burden). multilateral_admission_bodies administer the gate without collecting its product — near-symmetric administrators whose position derives from member-state control. international_law_doctrine is authored with agent:false precisely so the doctrine feeds no directionality computation: a proposition collects nothing and must not masquerade as a beneficiary. No directionality overrides are authored: the beneficiary/victim declarations plus exit atoms already produce the correct qualitative placement for every seat, and the two beneficiary seats are differentiated by power atom (institutional vs powerful) rather than by override.",
+    "mandatrophy_analysis": "The founding problem — settling membership of the society of states after imperial collapse and revolution without war over every claim — is LIVE, not dead: new secession crises, contested annexations, and de facto regimes keep regenerating it. The R5 mismatch consumer therefore reads status=live paired with verdict=world_rearranges: a consistent profile, no zombie flag. Mandatrophy discipline matters here in both directions. Labeling the arrangement a pure snare would erase the real coordination service (a single shared answer to 'who may act as a state' settles counterpart status once for the entire system, and the mass-recognition episodes show that service operating even against some incumbents' wishes). Labeling it a pure rope would erase the concentrated veto rents and the trapped minority paying for them. The tangled_rope claim holds both halves: genuine coordination function, asymmetric burden, active enforcement required to sustain the asymmetry. Theater is tracked separately (0.28 and rising slowly) so performative recognition is visible without being mistaken for the test of the whole structure.",
+    "kernel_context": "Kernel: montevideo_statehood_criteria — the contested question of what establishes statehood, codified in stabilized form by the 1933 Montevideo Convention and a century of doctrinal debate. This file instantiates the CONSTITUTIVE READING: recognition by existing states is necessary for legal personality. Sibling readings, instantiated as separate constraints: the DECLARATORY READING (criteria satisfaction establishes statehood as legal fact; recognition is merely evidentiary — Montevideo Article 3's own position) and the HYBRID READING (objective criteria plus normative legitimacy conditions such as democratic governance and non-aggression). The structural delta of this reading relative to its siblings: unrecognized polities enter the victim set, existing states retain a structural veto over new state creation, and treaty participation and economic access depend on recognition. The disagreement is located at a single premise — whether recognition is necessary (this file) or merely evidentiary (declaratory sibling) or supplementable by legitimacy filters (hybrid sibling)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "montevideo_statehood_criteria__declaratory_reading",
+      "montevideo_statehood_criteria__hybrid_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'statehood criteria' conflates three structurally distinct claims with different epsilon values, victim sets, and failure modes. This file authors the constitutive reading (epsilon 0.62, referent: the standing recognition-gated arrangement; victims: unrecognized polities and their populations). The declaratory sibling (older codified baseline, Montevideo Article 3) carries negligible gate-extraction because no incumbent veto exists in its structure; the hybrid sibling relocates the victim set onto polities failing legitimacy tests. Upstream/downstream: the declaratory text is the codified baseline from which constitutive practice diverged, and constitutive recognition discretion is the structural opening within which hybrid conditionality operates (recognition-with-conditions presupposes discretionary recognition). All three files cross-link through network.affects_constraints; orphaning any one would sever the family."
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_recognized_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Confer or withhold recognition through bilateral declarations and multilateral admission votes, and maintain the shared expectation that unrecognized entities cannot sign treaties, join organizations, or issue internationally honored documents. Each retains full freedom over its own recognition decisions and suffers no denial of personality itself; what flows to them is a stable map of permissible counterparties and insulation of existing borders from unilateral revision."
+    },
+    {
+      "name": "great_power_gatekeepers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "A handful of states whose consent effectively decides multilateral admission and whose non-recognition campaigns other states broadly follow. They trade recognition and non-recognition for concessions, basing rights, votes, and alignment, and their own clients and protégés are reliably admitted while adversaries' protégés are reliably blocked. Withholding recognition costs them nothing they cannot replace; granting it is a resource they allocate strategically."
+    },
+    {
+      "name": "unrecognized_de_facto_regimes",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Govern territories, collect taxes, run courts and schools, and satisfy every objective criterion of statehood, yet cannot accede to treaties, borrow from international financial institutions, join technical bodies, or obtain enforceable judgments abroad. Their officials travel on documents most states do not honor; their firms bear risk premiums that recognized competitors do not. Mutual recognition exchanged among similarly situated entities unlocks almost nothing, because the resources behind the gate are held by the states refusing to recognize them. Leaving the international system entirely is not an option — their economies and security depend on it."
+    },
+    {
+      "name": "populations_of_unrecognized_territories",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live under administrations whose status blocks ordinary life at the margins: passports and diplomas not honored abroad, bank transfers routed through intermediaries at added cost, investment deterred by unenforceable contracts, humanitarian and development programs structured around their territory's legal limbo. They chose none of the arrangement and have no channel to contest it except through the very governments whose recognition campaigns produced it."
+    },
+    {
+      "name": "self_determination_movements",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Peoples seeking independent statehood who would argue for criteria-based automatic inclusion — meet the four tests, gain legal personality — but hold no seat in any admission process. They reach the conversation only through sponsoring states willing to spend capital on their behalf, and the prevailing reading treats their aspirations as matters for the parent states' consent rather than their own showing."
+    },
+    {
+      "name": "multilateral_admission_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run the formal admission machinery — security council recommendation, general assembly vote, membership of technical agencies — under rules that give a single permanent-member objection blocking force. They administer the gate faithfully but control neither its criteria nor its outcomes; member states set both, and the bodies cannot admit an entity the gatekeepers decline to pass."
+    },
+    {
+      "name": "international_law_doctrine",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The scholarly and judicial corpus — treatises, advisory opinions, commission reports — that records both theories, notes that the declaratory position is codified in the Montevideo Convention's own third article, and observes that practice runs constitutive anyway. It attests and critiques but collects nothing and decides nothing; it is retained in the record for completeness and excluded from any computation over actors."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides one shared, settled answer to the question 'who may act as a state' for the entire international system: every treaty signature, embassy exchange, loan agreement, and airline landing right presupposes a determinate counterparty, and the recognition rule settles that determination once system-wide instead of case-by-case in each interaction.",
+    "transfer_function": "Moves legal personality, treaty capacity, financing access, and document validity away from polities lacking recognition and concentrates allocation discretion over those goods in the hands of incumbent governments — above all the small set of gatekeeper states whose consent controls multilateral admission.",
+    "absent_voices": "The residents of unrecognized territories and the self-determination movements seeking statehood are the structurally absent voices: no seat, no vote, no treaty capacity, heard only through sponsoring states. They would argue for criteria-based automatic inclusion and against a rule that makes their status a gift of the governments they are trying to leave. Their absence is not incidental — the admission machinery is composed entirely of incumbents.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the recognition gate vanished overnight, every de facto regime meeting the objective criteria would immediately assert full statehood, dozens of frozen conflicts would reopen as legal questions, treaty systems would face a flood of new counterparties with unsettled obligations, and every existing border would become negotiable by whichever movement could field an effective administration. The entire architecture of membership, admission, and territorial settlement would have to be rebuilt — the world does not stay the same without this rule.",
+    "founding_problem": "After the collapse of dynastic empires and the wave of revolutions and decolonizations, the society of states needed a rule for deciding which new polities count as sovereign members — without fighting a war over each claim and without treating every effective territorial control as automatically entitled to full membership.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the doctrinal literature (Crawford's treatment of state creation; Lauterpacht's own argument that recognition duties attach to facts shows the tradition's internal critics), the International Court of Justice's Kosovo advisory opinion recording both theories as live, and the Montevideo Convention's signatories — including the United States' reservation expressly rejecting the constitutive implication — all attest that the membership problem is real and recurring. No source outside the incumbent states asserts that the problem is dead; the dispute is over the solution, not the problem."
+  },
+  "gain_flow": "great_power_gatekeepers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "recognition_gated_membership_order",
+    "drift_state": {
+      "moment": "contemporary_post_kosovo_opinion",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "declaratory_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "recognition_necessary_for_legal_personality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "recognition_discretion_sovereign_prerogative",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

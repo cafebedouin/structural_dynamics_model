@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "mandate_legitimacy_scope__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mandate_proportionality",
+    "story_uid": "945ceb55-06e5-4f43-8022-774236279bf5"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Test for Vaccine Mandate Legitimacy",
+    "topic_domain": "public_health_ethics/constitutional_law/medical_autonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vulnerable_populations",
+      "public_health_institutions"
+    ],
+    "victims": [
+      "mandate_subjects_high_risk_pathogen",
+      "mandate_subjects_low_risk_pathogen"
+    ],
+    "vindicated_propositions": [
+      "proportionality_principle",
+      "least_restrictive_means_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_proportionality",
+      "question": "Is the proportionality_reading of mandate_legitimacy_scope a distinct constraint from its sibling readings, or a parameterization of a single constraint?",
+      "resolution_mechanism": "Apply the ε-invariance test: if the proportionality reading's ε varies by pathogen while siblings' ε does not, they are distinct constraints. Confirm by checking whether the victim set is structurally conditional on disease parameters.",
+      "impact": "If distinct, the proportionality reading instantiates a tangled_rope whose extraction is conditional and whose victim set partitions by disease severity; siblings are separate constraint stories linked by affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the proportionality reading is a separate constraint from public_health_primary and bodily_autonomy_primary"
+    },
+    {
+      "id": "severity_threshold_ambiguity",
+      "question": "Where is the disease severity threshold that flips a mandate from legitimate to illegitimate under proportionality?",
+      "resolution_mechanism": "Analyze case law and public health guidance for the operational threshold where 'less restrictive alternatives' become sufficient. Measles and flu are clear poles; the boundary is contested.",
+      "impact": "Threshold location determines the victim set partition. A high threshold means fewer pathogens trigger legitimate mandates (smaller victim set, lower ε); a low threshold means more pathogens trigger mandates (larger victim set, higher ε).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The disease severity threshold that partitions the victim set under proportionality"
+    },
+    {
+      "id": "vaccine_safety_efficacy_measurement",
+      "question": "How are vaccine safety and efficacy measured for the proportionality test, and does measurement method change the extraction profile?",
+      "resolution_mechanism": "Compare regulatory approval standards (FDA/EMA) against real-world effectiveness data across populations. If EUA vs full approval creates different victim sets, the constraint's ε becomes measurement-dependent.",
+      "impact": "If safety/efficacy measurement changes the victim set, the proportionality reading may decompose further. High efficacy/safety = lower extraction on subjects; low efficacy/safety = higher extraction on subjects.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vaccine safety/efficacy measurement method affects the proportionality constraint's extraction profile"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the proportionality_reading of the mandate_legitimacy_scope kernel. Under this reading, a vaccine mandate's legitimacy is not absolute but conditional on three parameters: disease severity, vaccine safety/efficacy, and availability of less restrictive alternatives. This creates a structurally partitioned victim set: mandate subjects facing a high-severity pathogen with a safe/effective vaccine and no alternatives (e.g., measles) are not victims — the constraint operates as genuine coordination for them. Subjects facing a low-severity pathogen, or a vaccine with questionable safety/efficacy, or where alternatives exist (e.g., seasonal influenza) are victims — the constraint extracts from them without sufficient coordination justification. The engine computes per-seat classification from this structural asymmetry. The other two readings of this kernel — public_health_primary (mandates legitimate when necessary to protect vulnerable populations) and bodily_autonomy_primary (mandates violate bodily integrity regardless of collective benefit) — are separate constraint stories with different ε, different victim sets, and different types.",
+    "key_agents": [
+      "vulnerable_populations: Primary beneficiary (institutional/biographical) — protected by mandates when proportionality conditions met",
+      "public_health_institutions: Agenda setter/beneficiary (institutional/generational) — administers mandates, gains legitimacy and compliance infrastructure",
+      "mandate_subjects_high_risk_pathogen: Conditional beneficiary/payer (moderate/biographical/constrained) — measles context: gains herd immunity, bears minor intrusion",
+      "mandate_subjects_low_risk_pathogen: Victim/payer (moderate/biographical/constrained) — flu context: bears mandate burden without proportional justification",
+      "courts_judicial_review: Observer/analytical (institutional/generational/analytical) — adjudicates proportionality in specific cases",
+      "vaccine_skeptic_communities: Excluded (organized/biographical/trapped) — would challenge mandate legitimacy but structurally excluded from proportionality calculus"
+    ],
+    "logic_rationale": "The proportionality reading is a tangled_rope because it has BOTH a genuine coordination function (protecting vulnerable populations from severe disease via high-efficacy vaccines when no alternatives exist) AND asymmetric extraction (subjects bear mandate burdens for low-severity diseases, marginal vaccine efficacy, or where alternatives exist). Extraction is moderate (0.42) and varies by pathogen — the ε-invariance principle demands separate stories for measles vs flu mandates, but this reading's structure is the conditional test itself. Suppression (0.38) reflects legal enforcement (school exclusion, employment mandates) but is not total — exemptions exist. Theater (0.25) captures performative 'science-based' framing that sometimes masks policy preferences. Accessibility collapse (0.45) and resistance (0.55) reflect that alternatives (masking, testing, remote work) partially mitigate but don't eliminate the mandate's force.",
+    "directionality_logic": "Vulnerable populations are full beneficiaries (d ≈ 0.0) — they gain protection without bearing mandate costs. Public health institutions are agenda setters with beneficiary subsidy (d ≈ 0.15) — they administer and gain institutional capacity. Mandate subjects split: high-risk-pathogen subjects are near-symmetric (d ≈ 0.45) — they gain herd immunity but bear intrusion; low-risk-pathogen subjects are targets (d ≈ 0.85) — they bear costs without proportional benefit. Courts are analytical observers (d ≈ 0.5). Vaccine-skeptic communities are excluded/trapped (d ≈ 1.0) — they bear suppression without voice.",
+    "mandatrophy_analysis": "The proportionality test prevents mislabeling coordination as pure extraction by making extraction conditional on disease parameters. A mandate that persists after the founding problem (severe disease threat) is resolved becomes a piton or snare. The conditional victim set is the structural signal: when the same legal form applies to both measles and flu, the extraction on flu subjects is not coordination — it is the constraint's extractive component riding on the measles coordination story.",
+    "kernel_context": "This constraint is the proportionality_reading of kernel mandate_legitimacy_scope. Sibling readings: public_health_primary (state authority legitimate when necessary to protect vulnerable populations) and bodily_autonomy_primary (medical intervention without consent violates bodily integrity regardless of collective benefit). The proportionality reading coexists_with both siblings — all three are live positions in constitutional jurisprudence and public discourse. It does not foreclose either: a court can apply proportionality while acknowledging the state's protective authority (public_health_primary) or while recognizing bodily integrity interests (bodily_autonomy_primary). It influences both: proportionality analysis structures how public_health_primary's 'necessity' is operationalized and how bodily_autonomy_primary's 'regardless of benefit' claim is adjudicated in practice."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "mandate_legitimacy_scope__public_health_primary",
+      "mandate_legitimacy_scope__bodily_autonomy_primary",
+      "school_vaccine_requirements",
+      "healthcare_worker_mandates"
+    ],
+    "dual_formulation_note": "This is the proportionality_reading of the mandate_legitimacy_scope kernel family. The three readings share the kernel 'state authority to compel medical intervention' but instantiate different constraints with different ε, victim sets, and types. Proportionality = tangled_rope (conditional extraction). Public_health_primary = rope or tangled_rope depending on enforcement scope. Bodily_autonomy_primary = mountain from the autonomy seat, snare from the state seat."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised, elderly, and medically fragile people who gain indirect protection from herd immunity when mandates achieve high coverage. They do not bear the mandate's direct costs but depend on its coordination function. Their exit from vulnerability is medically constrained."
+    },
+    {
+      "name": "public_health_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Health departments, CDC, WHO — they design, justify, and administer mandate policies. They gain institutional legitimacy, compliance infrastructure, and budgetary authority from successful mandates. They can shift between pathogens and policy tools (arbitrage-grade exit from any single mandate)."
+    },
+    {
+      "name": "mandate_subjects_high_risk_pathogen",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parents, workers, students subject to mandates for severe diseases (measles, polio). They bear the intrusion of compelled vaccination but gain direct protection and contribute to herd immunity that protects them. Their exit is constrained — school/work access depends on compliance, but the trade-off is favorable."
+    },
+    {
+      "name": "mandate_subjects_low_risk_pathogen",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Same demographic as above but facing mandates for low-severity diseases (seasonal flu, COVID-19 post-variant) where vaccine efficacy wanes, alternatives exist, or severity is low. They bear the mandate's full intrusion without proportional benefit. Exit remains constrained (employment, education access) but the cost-benefit is inverted."
+    },
+    {
+      "name": "courts_judicial_review",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts applying intermediate scrutiny or strict scrutiny to mandate challenges. They do not bear costs or collect benefits directly but structurally determine where the proportionality line falls. Their analytical seat sees the full victim set partition across pathogens."
+    },
+    {
+      "name": "vaccine_skeptic_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Communities that reject vaccine mandates on philosophical, religious, or safety grounds. They are structurally excluded from the proportionality calculus — their objections are heard in court but the test's parameters (severity, efficacy, alternatives) are set by public health institutions. They bear suppression (mandates apply regardless) without voice in the calibration."
+    }
+  ],
+  "gain_flow": "public_health_institutions",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of achieving herd immunity for severe diseases: individual vaccination decisions under-protect vulnerable populations; mandates align individual incentives with collective protection when disease severity, vaccine efficacy, and lack of alternatives make the trade-off favorable.",
+    "transfer_function": "Moves bodily autonomy and medical decision-making authority from mandate subjects to public health institutions, conditional on disease parameters. For severe pathogens with effective vaccines and no alternatives, the transfer is reciprocated with protection. For marginal cases, the transfer is one-way extraction.",
+    "absent_voices": "Vaccine-skeptic communities and philosophical objectors are structurally excluded — their voices enter only through litigation, not through the proportionality test's parameter-setting. Future generations (who inherit precedent) are also absent. The proportionality test's parameters are set by the institutions that benefit from mandates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality test vanished, mandates would either become absolute (public_health_primary reading dominates — all vaccines mandatory regardless of severity) or forbidden (bodily_autonomy_primary reading dominates — no mandates ever). The conditional structure is what partitions the victim set by pathogen. Without it, the legal landscape reorganizes completely.",
+    "founding_problem": "Early 20th century smallpox mandates (Jacobson v. Massachusetts) established state police power to compel vaccination during epidemics. The proportionality reading emerged later as courts required the state to show the mandate was necessary and not excessive relative to the threat.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Jacobson v. Massachusetts (1905) and subsequent jurisprudence (Zucht v. King, Prince v. Massachusetts) corroborate the state's police power origin. The proportionality refinement is corroborated by modern constitutional scholars (e.g., Gostin, Jacobson) and international human rights frameworks (Siracusa Principles) — sources outside the public health institutions that benefit from mandate authority."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandate_legitimacy_conditional_on_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "least_restrictive_means_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "jacobson_police_power_framework",
+    "drift_state": {
+      "moment": "post_covid_mandate_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "mandate_legitimacy_scope"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

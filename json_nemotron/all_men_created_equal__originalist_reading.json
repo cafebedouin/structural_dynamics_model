@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "all_men_created_equal__originalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "all_men_created_equal__originalist_reading",
+    "story_uid": "0b3774bc-1241-4314-b909-5a82c7961097"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Equality Bounded by 18th-Century Social Taxonomy (Originalist Reading)",
+    "topic_domain": "constitutional_law/political_philosophy/american_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founding_elite_descendants",
+      "institutional_originalists",
+      "property_holding_classes"
+    ],
+    "victims": [
+      "enslaved_persons_and_descendants",
+      "women_excluded_from_franchise",
+      "indigenous_nations",
+      "propertyless_males"
+    ],
+    "vindicated_propositions": [
+      "original_public_meaning_doctrine",
+      "constitutional_fixity_at_ratification",
+      "limited_government_by_enumerated_powers"
+    ]
+  },
+  "interval": {
+    "start": 1787,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is this constraint one reading of a contested kernel (all_men_created_equal) or an independent constraint?",
+      "resolution_mechanism": "Compare the ε and victim/beneficiary structure of this story against sibling readings (universalist_reading, textualist_paradox_reading). If ε and structural positions differ substantially across readings, they are distinct constraints linked by kernel_id.",
+      "impact": "If kernel-structured, the three readings form a constraint family with network.affects_constraints linking them. Classification divergence between readings measures the kernel's interpretive extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this story instantiates a kernel reading and its structural relationship to sibling readings"
+    },
+    {
+      "id": "originalist_naturalness_ambiguity",
+      "question": "Does the originalist reading describe a genuine interpretive constraint (Mountain of legal method) or a constructed constraint that benefits identifiable agents (Tangled Rope/Snare)?",
+      "resolution_mechanism": "Track whether originalist method produces outcomes that systematically benefit founding-elite-descendant classes across doctrinal domains, or whether it constrains all interpreters symmetrically regardless of outcome.",
+      "impact": "If outcomes systematically benefit identifiable classes, the reading operates as extraction cover. If it symmetrically binds all interpreters, it is a genuine methodological Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether originalist interpretive method is a natural constraint or an extraction mechanism"
+    },
+    {
+      "id": "founder_intent_recoverability",
+      "question": "Is the 'founders' intent' that governs scope recoverable as a determinate historical fact, or is it an underdetermined construct that the reading's beneficiaries fill with preferred content?",
+      "resolution_mechanism": "Historiographical consensus on whether the historical record yields a single coherent intent on equality's scope, or a contested field that originalist selection navigates.",
+      "impact": "If intent is underdetermined, the reading's claim to be bound by history is a cover for beneficiary-driven selection. If determinate, the constraint is genuinely historical.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the historical referent the reading claims to follow is structurally fixed or selector-dependent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1787,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1865,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1896,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1954,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1787,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1865,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1896,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1954,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1787,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1896,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1954,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.82
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the originalist reading of the Declaration's 'all men are created equal' — the reading that bounds equality's scope by the 18th-century social taxonomy its authors inhabited. The reading claims the constraint is a Mountain of interpretive method (original public meaning fixes meaning at ratification); the authored metrics describe a Tangled Rope that coordinates legal interpretation around a fixed historical referent while extracting from groups the 1787 taxonomy excluded. The constraint requires active enforcement (judicial appointment, doctrinal policing, Federalist Society infrastructure) to maintain the boundary against universalist pressure. Beneficiaries are the founding elite's institutional and ideological descendants who inherit the fixed meaning as a bulwark against redistributive claims. Victims are the historically excluded groups whose exclusion the reading treats as historically settled rather than morally contestable. The claim/metric divergence is deliberate: the reading CLAIMS Mountain; the metrics describe Tangled Rope. The engine measures this divergence.",
+    "logic_rationale": "Extractiveness (0.78) is high because the reading's operation systematically insulates founding-era power distributions from equality claims — the fixed meaning functions as a barrier to inclusion that benefits descendant classes. Suppression (0.82) is high because maintaining the boundary requires active exclusion of rival readings (judicial selection, law school curricula, originalist infrastructure). Theater (0.45) is moderate: the historical scholarship is genuine, but a substantial fraction of originalist activity is boundary defense rather than interpretive discovery. Accessibility collapse (0.65) reflects that alternatives (universalist expansion) exist but are treated as illegitimate by the reading's internal logic. Resistance (0.58) is substantial: universalist and textualist-paradox readings contest the boundary across courts, academy, and public discourse.",
+    "directionality_logic": "Founding elite descendants and institutional originalists are structural beneficiaries (d near 0.0-0.2): they collect interpretive authority, institutional position, and protection from equality claims that would redistribute status or resources. Their exit is arbitrage-grade — they can shift to textualist or pragmatic frames if originalism becomes costly. Historically excluded groups are structural targets (d near 0.8-1.0): they bear the exclusion the reading treats as settled, with identity-locked exit (the constraint defines their standing in the polity). Property-holding classes are secondary beneficiaries (d ~0.3): they benefit from the fixed property-rights regime the reading protects but face some constraint from originalist limits on state power. Observers (legal academy, foreign courts) sit near analytical (d=0.5).",
+    "perspectival_gap": "From the originalist seat, the constraint is coordination: a shared interpretive method that prevents judicial improvisation. From the excluded-group seat, the same structure is extraction: a method that freezes their exclusion at the founding taxonomy. The engine computes this divergence from beneficiary/victim declarations + power + exit. The reading's claim that it is 'bound by history' is the coordination story; the victim structure reveals the extraction.",
+    "mandatrophy_analysis": "The founding problem (legitimating a slaveholding republic's equality claim without extending equality to the enslaved) is dead — slavery is abolished, the 13th/14th/15th Amendments exist. But the arrangement persists because the originalist reading repurposes the founding fixity as a general barrier to equality expansion. The constraint has undergone mandatrophy: its founding problem is dead, but the reading persists as a coordination mechanism for a conservative legal movement that benefits from the barrier. The theater ratio captures this repurposing.",
+    "kernel_context": "This constraint is the originalist_reading of kernel all_men_created_equal. Sibling readings: universalist_reading (equality as universal principle requiring iterative expansion regardless of founder intent) and textualist_paradox_reading (universal language irreconcilable with restricted application reveals performative contradiction). This reading bounds equality by 1787 social taxonomy; universalist_reading expands it iteratively; textualist_paradox_reading treats the gap between universal language and restricted application as the constraint's defining feature. All three share the kernel's text but instantiate different constraints with different ε, different victim sets, different types."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "all_men_created_equal__universalist_reading",
+      "all_men_created_equal__textualist_paradox_reading"
+    ],
+    "dual_formulation_note": "This is one of three constraint stories decomposing the 'all men are created equal' kernel. originalist_reading (this story): high ε, narrow victim set, Tangled Rope. universalist_reading: low ε, expanding victim set, Rope/Scaffold. textualist_paradox_reading: moderate ε, focuses on the performative gap, Snare/Tangled Rope. The three stories form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "founding_elite_descendants",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Inherit the fixed constitutional meaning as a bulwark against redistributive equality claims. Their wealth, status, and institutional position are protected by the reading's barrier to inclusion. They can shift interpretive frameworks if originalism becomes inconvenient (arbitrage-grade exit)."
+    },
+    {
+      "name": "institutional_originalists",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Produce, police, and enforce the originalist interpretive method through judicial appointments, law school hiring, think tanks, and judicial networks. They administer the constraint and benefit from its institutionalization. Their exit is mobile — they could adopt other methodologies but have invested careers in this one."
+    },
+    {
+      "name": "property_holding_classes",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the fixed property-rights regime the originalist reading protects (regulatory takings, contract clause, due process). They also bear some constraint when originalism limits state power they might otherwise use. Exit is constrained — they need the constitutional order but could lobby for living constitutionalism on specific issues."
+    },
+    {
+      "name": "enslaved_persons_and_descendants",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the founding exclusion the reading treats as historically settled. The originalist boundary fixes their ancestors' exclusion as the constitutional baseline, making every expansion of equality a departure from 'original meaning' rather than its fulfillment. Exit is identity-locked: the constraint defines their standing in the polity; leaving the polity is the only exit."
+    },
+    {
+      "name": "women_excluded_from_franchise",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The reading treats the 1787 taxonomy's exclusion of women from 'men' as determinative. Every feminist constitutional claim must overcome the originalist barrier that the founders did not intend women's equality. Exit is identity-locked — the constraint constitutes their political standing."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The founding taxonomy treated indigenous nations as foreign sovereigns or obstacles, not as 'men' within the equality claim. Originalist reading freezes this exclusion. Exit is trapped: they exist in a domestic-dependent sovereignty the reading helped construct, with no constitutional exit to full equality."
+    },
+    {
+      "name": "propertyless_males",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Formally included in 'men' but historically excluded from full political participation by property qualifications the founding taxonomy accepted. The reading's fixed meaning protects the property regime that facilitated their historical exclusion. Exit is constrained — they have formal standing but the constraint shapes the terms of their inclusion."
+    },
+    {
+      "name": "legal_academy_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the reading's doctrinal coherence, historical accuracy, and distributive effects from outside the constraint. They neither collect nor pay but their analysis shapes the legitimacy contest."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a fixed interpretive anchor that prevents judicial improvisation and democratic majorities from rewriting constitutional meaning — coordinates legal interpretation around a single historical referent.",
+    "transfer_function": "Moves interpretive authority and protection from equality claims from historically excluded groups to founding-elite-descendant classes and their institutional representatives. The fixed meaning transfers the burden of proof: excluded groups must overcome the founding taxonomy; included groups need not justify their inclusion.",
+    "absent_voices": "The enslaved persons at the founding, women denied the franchise, indigenous nations — the very groups the 1787 taxonomy excluded — are structurally absent from the originalist conversation. They cannot participate in recovering 'original public meaning' because that meaning was constructed without them. Their descendants remain excluded from the interpretive community that polices the boundary.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the originalist reading vanished overnight, the fixed historical barrier to equality expansion would collapse. Courts would adopt living constitutionalist or universalist frameworks within a generation. The Federalist Society infrastructure would lose its organizing methodology. Excluded groups' equality claims would face a lower doctrinal barrier. The conservative legal movement would reorganize around a different constraint.",
+    "founding_problem": "Legitimating a slaveholding republic's declaration of equality without extending equality to the enslaved, to women, to indigenous nations, or to the propertyless — the founding problem was reconciling 'all men are created equal' with a social taxonomy that denied equality to most humans in the polity.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem is dead: slavery abolished (13th Amendment), citizenship and equal protection extended (14th), franchise expanded (15th, 19th, 24th, 26th Amendments). Historians outside the originalist tradition (Foner, Wood, Bailyn, Gordon-Reed) corroborate that the founding taxonomy was contested even in 1776-1787 and that the Constitution's amendments were designed to overcome it. Originalist beneficiaries contest this status, claiming the amendments did not alter the original meaning's scope — but no non-originalist scholar accepts this reading of the Reconstruction Amendments."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "universalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "textualist_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "meaning_fixed_at_ratification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "equality_scope_bounded_by_founding_taxonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_original_public_meaning",
+    "drift_state": {
+      "moment": "post_reconstruction_amendments",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

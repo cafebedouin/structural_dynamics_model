@@ -1,0 +1,259 @@
+{
+  "header": {
+    "constraint_id": "hebrew_living_language__liturgical_continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-27",
+    "status": "ACTIVE",
+    "story_uid": "e058cb11-07d6-4ddd-a41b-d07b37be7546"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "Hebrew as Living Language via Unbroken Liturgical Recitation and Textual Study",
+    "topic_domain": "historical_linguistics/language_revitalization/commitment_systems",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "liturgical_communities",
+      "traditional_scholars"
+    ],
+    "vindicated_propositions": [
+      "textual_continuity_suffices_for_liveness",
+      "liturgical_recitation_preserves_generative_capacity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_continuity",
+      "question": "Is Hebrew's continuity through liturgy a genuine natural-law-like property of the language system, or a constructed constraint benefiting identifiable communities?",
+      "resolution_mechanism": "Comparative analysis of other liturgical-only languages that did not revive (e.g., Ge'ez, Classical Syriac) vs. Hebrew's unique trajectory; test whether the continuity claim predicts revival outcomes.",
+      "impact": "If constructed, the mountain claim is a false summit masking beneficiary capture; if natural, the low extractiveness is intrinsic to the linguistic structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's naturalness is intrinsic or conferred by beneficiary communities"
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is one reading (liturgical_continuity_reading) of the contested kernel hebrew_living_language. What would the sibling readings (native_generation_reading, literary_revival_reading) change structurally?",
+      "resolution_mechanism": "Formalize each reading as a separate constraint story with its own ε, stakeholder set, and cs_structure; compare computed per-seat types.",
+      "impact": "Sibling readings instantiate different constraints: native_generation_reading declares a victim set (those without native acquisition) and higher ε; literary_revival_reading declares different beneficiaries (maskilim, Hebrew writers). The kernel_id links them; the engine computes divergence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment structure: this reading of hebrew_living_language kernel; siblings are native_generation_reading and literary_revival_reading"
+    },
+    {
+      "id": "generative_capacity_from_recitation",
+      "question": "Does liturgical recitation and textual study alone sustain generative linguistic competence, or does it only preserve receptive/performative capacity?",
+      "resolution_mechanism": "Psycholinguistic studies of liturgical communities' productive vs. receptive abilities; historical evidence of generative innovation within liturgical Hebrew (piyyut, responsa, new lexical formations).",
+      "impact": "If generative capacity is not sustained, the continuity claim is performative — the constraint would compute as piton (theatrical maintenance of a degraded function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liturgical practice sustains full generative competence or only ritual performance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.03
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.04
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the liturgical continuity reading of the Hebrew living language kernel: the claim that Hebrew remained a living language across two millennia of diaspora through unbroken liturgical recitation and textual study, without requiring native daily speech. The constraint is the standing arrangement of liturgical Hebrew as the vehicle of continuity — assessed by this reading's own lights. Extractiveness is low (0.15) because participation is voluntary, the symbolic capital circulates within the community, and no party extracts rents from the arrangement. Suppression is negligible (0.05) because alternatives (vernaculars, other liturgical languages) were never actively suppressed by this constraint; the constraint's persistence derives from internal communal valuation, not coercion. Theater ratio is low (0.1) because the liturgical function is genuine, not performative cover. The mountain claim asserts this continuity is a structural property of the language-tradition system, not a human policy choice — hence emerges_naturally: true.",
+    "key_agents": [
+      "liturgical_communities: Primary beneficiary (organized/identity_locked) — maintains the tradition, receives identity and continuity",
+      "traditional_scholars: Primary beneficiary (organized/identity_locked) — custodians of textual study, interpretive authority",
+      "diaspora_jewish_populations: Secondary beneficiary (organized/constrained) — inherits the symbolic capital without direct liturgical obligation",
+      "linguistic_observers: Observer (analytical/analytical) — analyzes the continuity claim from outside the tradition"
+    ],
+    "logic_rationale": "The metrics describe a constraint with minimal extraction, negligible suppression, and low theatricality — consistent with a mountain. Accessibility_collapse (0.3) is moderate: alternatives (vernacular shift, language death) existed but the liturgical channel remained open; the constraint did not collapse them. Resistance (0.1) is low: the arrangement meets little active opposition because participation is voluntary and the costs are internalized as devotion. The claimed_type mountain and the authored metrics are independent — the claim is structural (this is a natural-law-like continuity), the metrics are descriptive (this is how the system operates). FSM is triggered by beneficiary declarations on a mountain; the omegas document the ambiguity.",
+    "perspectival_gap": "From inside the liturgical community, the constraint is experienced as gift and birthright — directionality near 0 (beneficiary). From the analytical seat, it appears as a self-sustaining symbolic system with near-zero extraction. The engine will compute per-seat types from the structural data; the divergence between the community's lived experience (mountain-as-gift) and the analytical classification (mountain-as-structure) is the measurement.",
+    "directionality_logic": "Beneficiaries: liturgical_communities and traditional_scholars — they maintain the system and receive its primary symbolic returns (identity, authority, continuity). Their exit is identity_locked: leaving means abandoning the self-concept constituted through the tradition. No victims declared: participation is voluntary, costs are devotional not extractive. Vindicated propositions are the continuity claim itself and the generative-capacity thesis — these are doctrines, not actors, and correctly belong in vindicated_propositions.",
+    "mandatrophy_analysis": "The founding problem (preserving covenantal language across exile) remains live per this reading — the mandate has not atrophied. The constraint is not a degraded institution; it is the active vehicle of the tradition's self-understanding. Mandatrophy is not resolved because the problem persists.",
+    "kernel_context": "This constraint is the liturgical_continuity_reading of kernel hebrew_living_language. Sibling readings: native_generation_reading (Hebrew becomes living only via native generative speech) and literary_revival_reading (Hebrew lives through Haskalah literary production). This reading asserts continuity through liturgy alone; the siblings locate liveness in different registers (native speech, secular literature). All three are live positions in contemporary discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "hebrew_living_language__native_generation_reading",
+      "hebrew_living_language__literary_revival_reading"
+    ],
+    "dual_formulation_note": "The hebrew_living_language kernel decomposes into three constraint stories: this liturgical continuity reading (mountain, low ε), the native generation reading (likely tangled_rope or snare, higher ε, victims = non-native-acquirers), and the literary revival reading (rope or scaffold, beneficiaries = maskilim/Hebrew writers). They are linked by network.affects_constraints. Each has distinct ε, stakeholders, and cs_structure."
+  },
+  "stakeholders": [
+    {
+      "name": "liturgical_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities that maintain daily and festival liturgical recitation in Hebrew across diaspora. The language is the medium of prayer, lifecycle ritual, and communal cohesion. Participation is voluntary but identity-constituting; exit means leaving the community's self-understanding. They receive symbolic capital (continuity, covenantal identity) and bear devotional costs (study, transmission)."
+    },
+    {
+      "name": "traditional_scholars",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Custodians of textual study (Torah, Talmud, responsa, piyyut) who interpret, transmit, and innovate within the liturgical language. They set the standards of correct recitation and textual interpretation. Their authority derives from mastery of the tradition; exit would mean abandoning the epistemic community that constitutes their role."
+    },
+    {
+      "name": "diaspora_jewish_populations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Broader populations who inherit Hebrew as symbolic heritage — liturgical literacy varies, but the language functions as a boundary marker and continuity claim. They benefit from the tradition's maintenance without direct liturgical obligation. Exit is constrained by communal belonging; the language is part of the collective identity package."
+    },
+    {
+      "name": "linguistic_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars of historical linguistics, language revitalization, and commitment systems who analyze the Hebrew case from outside the tradition. They neither collect nor pay; they evaluate the continuity claim against comparative evidence (Ge'ez, Syriac, Sanskrit, etc.). Their exit is analytical — they can change frameworks without personal cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective identity and covenantal continuity across diaspora and time through a shared liturgical language that requires no central enforcement — the text and its recitation are the coordination mechanism.",
+    "transfer_function": "Moves devotional effort (study, recitation, transmission) from participants into symbolic capital (continuity, identity, interpretive authority) that circulates within the community. No material extraction; the transfer is internal to the symbolic economy.",
+    "absent_voices": "Those who experienced Hebrew only as an opaque liturgical barrier (e.g., uneducated members of traditional communities, women historically excluded from advanced textual study) — their absence from the custodial conversation is structural, not incidental. Also absent: the native_generation_reading proponents who would argue liturgical Hebrew is not 'living' in the linguistic sense.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the liturgical continuity constraint vanished overnight, the primary vehicle of Hebrew's textual transmission across two millennia would dissolve. The language might survive as academic object or national symbol, but the unbroken chain of recitation and study that this reading identifies as the source of its liveness would be severed — the world of the tradition rearranges.",
+    "founding_problem": "Preserving the covenantal language of revelation and prayer across exile, dispersion, and vernacular shift — maintaining a textual standard that could survive without a territorial base or native speech community.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the tradition's own self-understanding (liturgical communities, traditional scholars) AND by external scholars of language preservation (e.g., Joshua Fishman on Hebrew as unique case of revival via liturgical maintenance; sociolinguistic literature on 'sacred language' as survival mechanism). The external corroboration confirms the problem's structural reality, not just the tradition's self-narrative."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "sinaitic_revelation_continuity",
+    "drift_state": {
+      "moment": "modern_secular_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "native_generation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "literary_revival_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liturgical_recitation_sustains_generative_liveness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "textual_continuity_requires_no_native_speech",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

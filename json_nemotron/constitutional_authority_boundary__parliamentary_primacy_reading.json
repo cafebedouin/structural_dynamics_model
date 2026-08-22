@@ -1,0 +1,300 @@
+{
+  "header": {
+    "constraint_id": "constitutional_authority_boundary__parliamentary_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_constitutional_authority_boundary__parliamentary_primacy_reading",
+    "story_uid": "b8790e07-b3db-4e67-ab54-da4d4b8b2036"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.35,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Parliamentary Primacy Reading of Constitutional Authority",
+    "topic_domain": "constitutional_law/political_philosophy/institutional_design",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "elected_legislature",
+      "majority_parliamentary_party"
+    ],
+    "victims": [
+      "constitutional_courts",
+      "minority_rights_claimants"
+    ],
+    "vindicated_propositions": [
+      "parliamentary_sovereignty_doctrine",
+      "democratic_legitimacy_of_legislative_supremacy",
+      "legislative_final_authority_over_constitutional_meaning"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the parliamentary primacy reading of constitutional authority a distinct constraint from the judicial supremacy and coordinate construction readings, or merely a different emphasis on the same constitutional arrangement?",
+      "resolution_mechanism": "Test whether the three readings produce different epsilon values, different beneficiary/victim structures, and different enforcement requirements when evaluated against the same constitutional text. If they do, they are structurally distinct constraints.",
+      "impact": "If distinct, each reading generates its own classification and drift trajectory; if not, the kernel boundary was misidentified and the readings are perspectival variants of one constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether parliamentary primacy, judicial supremacy, and coordinate construction are one constraint with three observers or three constraints sharing a kernel label"
+    },
+    {
+      "id": "extraction_ambiguity_parliamentary_vs_constitutional",
+      "question": "Does the legislative power to define constitutional meaning constitute genuine coordination (solving the problem of final interpretive authority) or extraction (legislature capturing interpretive rents at the expense of judicial independence and minority protection)?",
+      "resolution_mechanism": "Examine historical instances where parliamentary primacy was exercised to override judicial rights protections — did the legislature produce a more legitimate resolution, or did it extract advantage for the majority at minority expense? Cross-jurisdictional comparison of parliamentary sovereignty systems.",
+      "impact": "If genuine coordination, the constraint is tangled_rope with low effective extraction; if extraction-dominant, the constraint approaches snare for judicial and minority seats despite the low base epsilon.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether legislative interpretive finality is coordination or extraction in disguise"
+    },
+    {
+      "id": "entrenched_legislation_boundary",
+      "question": "Does the availability of entrenched legislation (supermajority requirements, special procedures) meaningfully constrain legislative interpretive power, or is it a procedural formality that the legislative majority can bypass when motivated?",
+      "resolution_mechanism": "Empirical study of constitutional amendment and override rates in parliamentary sovereignty systems — how often are entrenched provisions actually used versus ordinary legislation achieving the same interpretive effect?",
+      "impact": "If entrenchment is a real constraint, the arrangement has a genuine coordination scaffold element; if it is routinely bypassed, the constraint's extraction on judicial and minority seats is higher than the formal structure suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether entrenched legislation functions as a real constraint on legislative interpretive power or a procedural theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the parliamentary primacy reading of the contested kernel 'constitutional_authority_boundary'. The reading holds that constitutional text is subordinate to parliamentary sovereignty, with the elected legislature retaining final interpretive authority through ordinary or entrenched legislation. This reading is one of three sibling readings (judicial_supremacy_reading, coordinate_construction_reading, parliamentary_primacy_reading) that produce structurally distinct constraints from the same kernel label. The constraint is claimed as tangled_rope: it solves the genuine coordination problem of final interpretive authority (someone must decide what the constitution means) while extracting from judicial independence and minority rights protection — the legislature gains interpretive finality, courts and minority claimants lose binding constitutional constraint.",
+    "key_agents": [
+      "elected_legislature: Primary beneficiary (institutional/arbitrage) — holds final interpretive authority",
+      "majority_parliamentary_party: Secondary beneficiary (powerful/constrained) — exercises legislative power to define constitutional meaning",
+      "constitutional_courts: Primary victim (institutional/constrained) — reduced to advisory or easily-overridden review",
+      "minority_rights_claimants: Secondary victim (powerless/trapped) — lose entrenched constitutional protection against legislative majorities",
+      "constitutional_scholars: Observer (analytical/analytical) — analyze the structural implications of each reading"
+    ],
+    "logic_rationale": "Base extractiveness is low (0.22) because the constraint's primary function is coordination — resolving the problem of who finally interprets the constitution. The extraction falls on judicial independence and minority rights, not on the general population. Suppression (0.35) is moderate because the constraint actively constrains judicial power (courts cannot bind the legislature) but does not suppress alternative constitutional visions — coordinate and judicial supremacy readings remain live in discourse. Theater ratio is low (0.15) because the legislative interpretive role is genuinely exercised, not merely performed. Accessibility collapse (0.65) is moderately high: once parliamentary primacy is accepted as the interpretive framework, alternative arrangements (judicial supremacy, coordinate construction) become difficult to instantiate without constitutional rupture. Resistance (0.45) reflects ongoing contestation from judicial supremacy advocates and minority rights defenders.",
+    "perspectival_gap": "The legislature and its majority party experience this constraint as coordination (rope-like): it solves the problem of interpretive finality and empowers democratic accountability. Constitutional courts experience it as extraction (snare-like): their binding authority is removed without their consent. Minority rights claimants experience it as extraction with no exit (trapped): their constitutional protections exist only at legislative sufferance. The engine computes this divergence from the structural data — beneficiary/victim declarations plus exit options.",
+    "directionality_logic": "Elected legislature is the structural beneficiary: it gains final interpretive authority without external constraint (d near 0.0). Majority parliamentary party benefits as the agent exercising that authority (d near 0.1). Constitutional courts are primary victims: their binding review power is structurally eliminated, with constrained exit (d near 0.8). Minority rights claimants are secondary victims: they lose entrenched protection with no institutional exit (d near 0.9, identity_locked via rights-claimant identity). The coordination function (resolving interpretive finality) is real but asymmetrically distributed.",
+    "mandatrophy_analysis": "The founding problem — who has final authority to interpret the constitution — remains live (status: contested). The parliamentary primacy reading was constructed to solve the democratic legitimacy deficit of unelected judges overriding elected representatives. Whether that problem is solved or whether the solution has become extraction depends on whether legislative majorities exercise interpretive power responsibly or opportunistically. The mandate has not atrophied into piton because the coordination function (final interpretive authority) is actively exercised and contested, not merely performed.",
+    "kernel_context": "This constraint is the parliamentary_primacy_reading of the kernel constitutional_authority_boundary. Sibling readings: judicial_supremacy_reading (courts as final unchallengeable arbiters), coordinate_construction_reading (three co-equal branches with distributed interpretive authority, no single final arbiter). The parliamentary primacy reading forecloses strong-form judicial review — it cannot coexist with judicial supremacy in the same framework — but coexists with coordinate construction as a competing live position in constitutional discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_authority_boundary__judicial_supremacy_reading",
+      "constitutional_authority_boundary__coordinate_construction_reading"
+    ],
+    "dual_formulation_note": "This reading and its two siblings form the constitutional_authority_boundary constraint family. All three instantiate different constraints from the same kernel label. The parliamentary primacy reading has the lowest base extractiveness (0.22) because its coordination function (legislative finality) is most directly aligned with democratic legitimacy, but it extracts from judicial independence and minority protection. The judicial supremacy reading likely has higher base extractiveness (judiciary extracting from legislative will) and the coordinate construction reading sits between them (distributed authority with higher transaction costs)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "elected_legislature",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Holds final authority to define constitutional meaning through ordinary or entrenched legislation. This interpretive power is exercised through the normal legislative process — the legislature can override judicial interpretations, amend constitutional understanding, and define the scope of rights and powers. The institution has no external constraint on its interpretive authority and can change constitutional meaning at will (subject only to political consequences)."
+    },
+    {
+      "name": "majority_parliamentary_party",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "As the controlling party in the legislature, it exercises the legislative interpretive power in practice. It can define constitutional meaning to advance its policy agenda, protect its legislative achievements from judicial invalidation, and structure the constitutional order to its advantage. Its power is constrained by electoral cycles, coalition dynamics, and the need to maintain democratic legitimacy — it cannot simply ignore political consequences."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Reduced to advisory review or easily-overridden review. Courts may issue opinions on constitutional questions, but the legislature retains final authority and can override judicial interpretations through subsequent legislation. The courts' institutional role is to advise and legitimate, not to bind. Their exit is constrained — they cannot leave the system, and their independence is structurally limited by legislative supremacy. They retain some influence through the persuasive force of their reasoning and the political cost to the legislature of openly defying judicial consensus."
+    },
+    {
+      "name": "minority_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Constitutional rights protections exist only at legislative sufferance. Minority claimants cannot rely on judicial enforcement of entrenched rights against legislative majorities — any protection can be overridden by ordinary or entrenched legislation. Their identity as rights-bearers is fused to the constitutional text that the parliamentary primacy reading subordinates; they cannot exit this identity without abandoning their claim to constitutional protection. They have no institutional exit and no political leverage to change the arrangement."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze and critique the structural implications of parliamentary primacy versus its sibling readings. They do not bear the constraint's costs or collect its benefits directly, but their work shapes the intellectual environment in which the constitutional order operates. They can advocate for any of the three readings and influence how the kernel is understood across jurisdictions and generations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves the problem of final interpretive authority over constitutional meaning — someone must have the last word on what the constitution means, and this reading assigns that authority to the democratically elected legislature rather than unelected judges or a fragmented coordinate system.",
+    "transfer_function": "Moves final interpretive authority from judicial bodies to the elected legislature, and moves the power to define rights and structural limits from entrenched constitutional text to legislative majorities (or supermajorities via entrenched legislation). The transfer is authority and constraint-definition, not material resources.",
+    "absent_voices": "Future generations who would inherit a constitutional order without entrenched protection against legislative majorities; minority groups not yet organized as rights-claimants but who would be subject to legislative definition of their status; constitutional courts in other jurisdictions that look to this system as a model — their structural interests are not represented in the current discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If parliamentary primacy vanished overnight, the constitutional order would immediately confront the question of who holds final interpretive authority. Either judicial supremacy would fill the vacuum (courts becoming final arbiters) or coordinate construction would emerge (branches negotiating interpretive settlements). The legislative majority would lose its interpretive trump card; minority rights claimants would gain judicial enforcement of entrenched protections. The constitutional order would fundamentally restructure.",
+    "founding_problem": "The democratic legitimacy crisis of unelected judges exercising final authority to invalidate legislation enacted by elected representatives — the 'counter-majoritarian difficulty.' Parliamentary primacy was constructed to resolve this by making the legislature the final interpreter of constitutional meaning, accountable to the electorate.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Parliamentary sovereignty theorists (Dicey, contemporary UK and NZ scholars) attest the founding problem remains live — judicial review still threatens democratic legitimacy. Judicial supremacy advocates (Dworkin, Ely, constitutional courts in Germany, India, South Africa) attest the problem is misdiagnosed — the counter-majoritarian difficulty is a feature, not a bug, protecting minorities from majoritarian tyranny. Coordinate construction proponents (Tushnet, Waldron, Canadian 'dialogue' theorists) attest the problem is real but the solution is wrong — distributed interpretive authority better serves both democracy and rights. No single corroboration settles the dispute."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coordinate_construction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legislative_final_interpretive_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "constitutional_text_subordinate_to_parliamentary_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "parliamentary_sovereignty_framework",
+    "drift_state": {
+      "moment": "contemporary_rights_based_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

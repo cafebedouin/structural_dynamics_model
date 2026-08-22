@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "dsm_taxonomy_kernel__biomedical_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "80449d33-67a0-4f93-ad4c-d3043619b3c8"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.65,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DSM Taxonomy as Objective Neurobiological Disease Map (Biomedical Reading)",
+    "topic_domain": "medical_epistemology/psychiatric_taxonomy/social_construction_of_illness",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "psychiatric_establishment",
+      "pharmaceutical_industry",
+      "institutions_requiring_behavioral_conformity",
+      "insurance_reimbursement_systems",
+      "legal_competence_gatekeepers"
+    ],
+    "victims": [
+      "people_meeting_diagnostic_thresholds",
+      "involuntarily_committed_patients",
+      "children_in_foster_care_psychiatrized",
+      "prisoners_subjected_to_forced_medication",
+      "immigrants_subject_to_psychiatric_screening"
+    ],
+    "vindicated_propositions": [
+      "psychiatric_diagnoses_are_natural_kinds",
+      "psychotropic_drugs_correct_underlying_pathophysiology",
+      "diagnostic_reliability_entails_validity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "psychiatric_establishment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Controls diagnostic criteria through DSM revision processes, accreditation of training programs, and editorial gatekeeping of major journals. Derives professional authority, insurance reimbursement codes, and legal expert-witness status from the claim that categories map to neurobiological entities. Can pivot to dimensional models (RDoC, HiTOP) while retaining institutional control."
+    },
+    {
+      "name": "pharmaceutical_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Uses DSM categories as regulatory gateways for drug approval (FDA requires DSM indication), marketing authorization, and insurance formulary placement. Funds key opinion leaders, CME, and patient advocacy groups that reinforce category validity. Would lose blockbuster indication monopolies if categories dissolved but retains R&D pipelines and direct-to-consumer channels."
+    },
+    {
+      "name": "institutions_requiring_behavioral_conformity",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Schools, prisons, child welfare systems, immigration courts, and employers use DSM diagnoses to authorize containment, medication, special education placement, disability determination, and fitness-for-duty evaluations. The diagnostic label is the administrative key that unlocks coercive power. These institutions would resist decategorization because it removes their legitimating framework."
+    },
+    {
+      "name": "insurance_reimbursement_systems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Public and private payers require DSM codes for claims payment. The categorical system enables automated adjudication, utilization review, and cost containment. Moving to dimensional or functional assessment would increase administrative complexity and reduce denial automation. They benefit from the current system's rigidity."
+    },
+    {
+      "name": "legal_competence_gatekeepers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Courts, guardianship boards, and competency evaluators treat DSM diagnoses as presumptive evidence of incapacity. The categorical framework provides bright-line rules for legal determinations that would otherwise require individualized functional assessment. They benefit from the epistemic shortcut."
+    },
+    {
+      "name": "people_meeting_diagnostic_thresholds",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receive diagnoses that determine access to care, disability benefits, and legal protections but also authorize involuntary treatment, loss of parental rights, firearm prohibitions, and immigration bars. Cannot opt out of the diagnostic system when institutions impose it. Some gain needed services; others lose liberty. Exit requires rejecting the diagnostic framework entirely — socially and clinically costly."
+    },
+    {
+      "name": "involuntarily_committed_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Detained and medicated solely on the basis of DSM criteria applied by clinicians with institutional authority. No meaningful exit: release requires accepting the diagnostic framework. The category IS the legal warrant for confinement. Experience the constraint as pure extraction — their autonomy is the resource transferred."
+    },
+    {
+      "name": "children_in_foster_care_psychiatrized",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Diagnosed at rates 3-4x general population; medicated with antipsychotics for behavioral control rather than psychosis. The DSM category legitimates pharmacological management of trauma reactions. No capacity to refuse; child welfare system controls their care. Life-long consequences for identity, insurance, and legal status."
+    },
+    {
+      "name": "prisoners_subjected_to_forced_medication",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Diagnosed with DSM categories (often antisocial personality disorder, schizophrenia) to authorize involuntary medication for institutional manageability. The diagnostic threshold is lowered in correctional settings. No exit: refusal extends solitary confinement. The category functions as a chemical restraint warrant."
+    },
+    {
+      "name": "immigrants_subject_to_psychiatric_screening",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Screened for DSM categories at borders and in detention; diagnoses trigger mandatory detention, deportation bars, or forced treatment. Cultural expressions of distress are misread as pathology. No exit from the screening regime; the diagnostic framework is the border enforcement tool."
+    },
+    {
+      "name": "critical_psychiatry_scholars",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publish structural critiques of DSM validity, pharmaceutical influence, and diagnostic inflation. Systematically excluded from DSM workgroups, major journal editorial boards, and guideline committees. Their exclusion is what maintains the consensus that categories are neurobiologically validated."
+    },
+    {
+      "name": "neurodiversity_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organize against pathologization of autism, ADHD, and other neurological variations. Demand removal of categories that function as conformity enforcement. Excluded from diagnostic revision processes because their framing (difference not disease) contradicts the biomedical premise. Some achieve accommodation victories; the categorical structure remains."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Traces the constraint's operation across epistemic, economic, and coercive dimensions. Sees the coordination function (shared clinical language, research aggregation, insurance interoperability) and the extraction function (market creation, coercive authorization, professional monopoly) as structurally intertwined. The constraint persists because both functions are real and the beneficiaries of extraction control the coordination infrastructure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared categorical language enabling clinical communication, research aggregation, insurance reimbursement, legal adjudication, and regulatory drug approval across disparate institutions and jurisdictions. Solves the coordination problem of how to talk about distress and deviance in standardized, actionable terms.",
+    "transfer_function": "Moves clinical authority, pharmaceutical markets, insurance reimbursement streams, legal coercion warrants, and professional monopoly rents from diagnosed populations and payers to the psychiatric establishment, pharmaceutical industry, and conformity-enforcing institutions. The diagnostic category is the transfer instrument — it converts human variation into billable, regulatable, detainable units.",
+    "absent_voices": "People diagnosed in childhood who grow up to reject their labels; cultural healers and indigenous knowledge-keepers whose frameworks were displaced; former patients who experienced diagnosis as iatrogenic harm; historians of psychiatry who trace category construction. They are absent because the diagnostic system's epistemic authority depends on their exclusion — their testimony would falsify the natural-kind claim.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If DSM categories vanished overnight, the entire edifice of psychiatric reimbursement, involuntary commitment statutes, disability determination, special education law, immigration psychiatric screening, and pharmaceutical indication regulation would lose its operational foundation. Clinicians would need new languages; courts would need new standards; pharma would need new approval pathways; schools would need new accommodation frameworks. The world would rearrange chaotically — proof that arrangements depend on the constraint.",
+    "founding_problem": "Late 19th/early 20th century psychiatry faced a legitimacy crisis: no reliable diagnostic language, no scientific credibility, no place in medical education, no insurance recognition, no legal standing. The categorical disease model (Kraepelin, then DSM-III) solved this by mimicking the rest of medicine — giving psychiatry the epistemic form of a natural science.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The psychiatric establishment attests the founding problem is live: 'we still need reliable diagnosis for clinical care and research.' Critical psychiatry scholars (Moncrieff, Double, Timimi) and historians (Shorter, Scull, Kirk & Kutchins) attest the founding problem was institutional legitimacy, not scientific discovery — the disease model was adopted because it worked politically, not because it was validated. The NIMH's own RDoC initiative (Insel 2013) implicitly corroborates by declaring DSM categories 'lack validity' for research. Corroboration from outside the beneficiary set exists and contradicts the establishment's self-account."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1987,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The biomedical reading of the DSM taxonomy kernel asserts that diagnostic categories (e.g., major depressive disorder, schizophrenia, ADHD) correspond to discrete neurobiological disease entities discoverable through empirical research — analogous to diabetes or tuberculosis in general medicine. This reading instantiates a constraint that coordinates clinical practice, research funding, drug regulation, insurance reimbursement, and legal coercion around a shared categorical ontology. The coordination function is genuine: a common language enables interoperability across fragmented systems. The extraction function is equally real: the categories authorize involuntary treatment, create pharmaceutical markets worth hundreds of billions, and legitimize institutional control over disfavored populations. The constraint is a tangled rope because both functions are structurally necessary to its persistence — the coordination infrastructure IS the extraction infrastructure. Beneficiaries (psychiatric establishment, pharma, conformity institutions) control the diagnostic revision process; victims (diagnosed populations subject to coercion) have no exit. The claimed_type is tangled_rope from the analytical seat; the engine will compute per-seat classifications from the structural data.",
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint enables massive resource transfers (pharma revenue, insurance payments, disability budgets) and liberty deprivations (involuntary commitment, forced medication, guardianship) that flow from diagnosed populations to beneficiary institutions. The marginal cost of diagnosis is near zero; the transferred value is enormous. Suppression (0.65) is substantial but not total: critical psychiatry and neurodiversity movements exist and publish, but are excluded from the authoritative revision process and guideline committees. Theater ratio (0.25) is moderate-low: the scientific rhetoric (biomarkers coming soon, RDoC will validate) performs a legitimating function but the core coordination (billing codes, legal warrants) is genuinely functional. Accessibility collapse (0.55) is partial — alternatives exist (formulation-based approaches, Open Dialogue, neurodiversity frameworks) but are marginalized by the institutional infrastructure. Resistance (0.58) is significant — survivor movements, critical psychiatry, neurodiversity advocacy — but has not displaced the constraint because beneficiaries control the coordination levers.",
+    "directionality_logic": "The psychiatric establishment (agenda_setter, institutional, arbitrage exit) sits at the beneficiary end: it controls the constraint and can pivot to dimensional models without losing authority. Pharma (beneficiary, powerful, mobile) benefits enormously but could adapt to new indication frameworks. Conformity institutions (beneficiary/agenda_setter, institutional, arbitrage) depend on the categorical form for legal-administrative operations — they would resist decategorization most fiercely. Diagnosed populations (payers, powerless to moderate, trapped to constrained) bear extraction with minimal exit: involuntary patients are trapped; community-diagnosed people are constrained by insurance/legal systems that require the code. Critical psychiatry and neurodiversity advocates (excluded, organized, mobile/constrained) are kept out of the revision room — their exclusion is the suppression mechanism. The analytical observer sees the full structure without bearing its costs.",
+    "perspectival_gap": "From the psychiatric establishment's seat, the constraint is a rope: genuine coordination with minimal coercion (they see the scientific aspiration, not the coercive implementation). From involuntarily committed patients' seat, it is a snare: pure extraction with no coordination benefit (the category is the warrant for their confinement). From neurodiversity advocates' seat, it is a snare wearing a rope's clothes: the coordination story is cover for conformity enforcement. The engine computes this divergence from the structural data — power, exit_options, and role declarations drive the per-seat directionality that yields different effective extraction values and thus different computed types.",
+    "mandatrophy_analysis": "The founding problem (psychiatry's legitimacy crisis) was real but has been substantially solved — psychiatry is now a medical specialty with insurance recognition, legal standing, and research funding. Yet the categorical disease model persists and expands (DSM-III 265 categories → DSM-5-TR 541 categories). The mandate has atrophied: the coordination function no longer requires the disease ontology (RDoC proves dimensional approaches work for research; HiTOP proves transdiagnostic approaches work for clinical utility). But the extraction function requires the disease ontology — pharma needs categories for FDA indications; courts need categories for bright-line rulings; schools need categories for IEP eligibility. The constraint persists because the beneficiaries of extraction control the coordination infrastructure. This is not a piton (the function hasn't atrophied — it has been captured); it is a tangled rope where the coordination and extraction functions have fused and the extraction function now drives the coordination function's evolution.",
+    "kernel_context": "This constraint is the biomedical_reading of the dsm_taxonomy_kernel. Sibling readings: critical_psychiatry_reading (categories are reverse-engineered from pharma treatments to construct markets) and neurodiversity_reading (categories pathologize natural neurological variation that conflicts with institutional norms). All three readings share the same referent (the DSM taxonomic system) but instantiate different constraints with different ε, different victim/beneficiary structures, and different claimed types. This reading's ε (0.78) is assessed by the biomedical reading's own lights on the standing arrangement — the arrangement it defends as scientifically valid."
+  },
+  "omegas": [
+    {
+      "id": "biomarker_validation_trajectory",
+      "question": "Will empirically validated neurobiological biomarkers for DSM categories emerge at scale, retroactively justifying the disease ontology, or will the biomarker search continue to fail as it has for 40 years?",
+      "resolution_mechanism": "Longitudinal tracking of NIMH RDoC biomarker yields, FDA biomarker qualification decisions, and large-scale consortium genetics/neuroimaging studies (ENIGMA, ABCD, UK Biobank). If biomarkers with clinical utility (PPV > 0.8 for treatment response) emerge for >50% of major categories within 15 years, the biomedical reading's natural-kind claim gains empirical support.",
+      "impact": "If biomarkers validate the categories, the constraint shifts toward mountain (natural law) or rope (genuine coordination on discovered structure). If biomarkers fail, the constraint's extractive character is confirmed and the tangled_rope classification hardens toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the disease ontology will be empirically vindicated or remains a promissory note."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Can the DSM's coordination function (shared clinical language, research aggregation, billing interoperability) be preserved while decoupling it from the disease ontology that enables extraction (pharma indications, involuntary commitment warrants, disability gatekeeping)?",
+      "resolution_mechanism": "Natural experiments from jurisdictions implementing ICD-11 dimensional approaches, Open Dialogue services, or neurodiversity-affirming frameworks. If clinical communication, research, and reimbursement function without categorical disease labels, the functions are separable and the extraction is gratuitous.",
+      "impact": "If separable, the biomedical reading's claimed coordination justification is falsified — the disease ontology is maintained FOR its extraction function. If inseparable, some extraction is the price of coordination and the tangled_rope classification is structurally necessary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's two functions are structurally separable or fused."
+    },
+    {
+      "id": "reading_framing_underdetermination",
+      "question": "Does the biomedical reading's framing (categories as discovered natural kinds) represent the only coherent interpretation of DSM's epistemic structure, or does the critical psychiatry framing (categories as constructed market infrastructure) fit the same empirical record equally well?",
+      "resolution_mechanism": "Comparative analysis of predictive success: does the natural-kind framing or the market-construction framing better predict DSM revision trajectories, pharma indication patterns, and category expansion/contraction dynamics? Historical tracing of category construction (e.g., ADHD, PTSD, Bipolar II, ASD) against pharmaceutical patent timelines.",
+      "impact": "If the critical psychiatry framing has superior explanatory power, the biomedical reading is a self-serving ideology rather than a scientific conclusion — the constraint's claimed_type (tangled_rope per this reading) masks a snare. If the biomedical framing uniquely predicts empirical outcomes, its claimed_type is more warranted.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel admits multiple equally coherent readings or one reading is structurally privileged."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of critical psychiatry and neurodiversity voices structural (editorial gatekeeping, funding exclusion, credentialing barriers) or internalized (clinicians genuinely believe the disease ontology, patients internalize diagnostic identities)?",
+      "resolution_mechanism": "Post-exit trajectory studies: do clinicians who leave institutional psychiatry retain the disease ontology? Do diagnosed people who encounter neurodiversity frameworks experience reduced self-stigma? If suppression persists after structural barriers are removed, internalized component is significant.",
+      "impact": "If internalized suppression is substantial, the constraint's effective suppression is higher than structural measures suggest — the target carries the suppression with them. This would increase effective extraction for identity-locked victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in the psychiatric epistemology constraint."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "dsm_taxonomy_kernel__critical_psychiatry_reading",
+      "dsm_taxonomy_kernel__neurodiversity_reading",
+      "psychiatric_involuntary_commitment_statutes",
+      "pharmaceutical_indication_regulatory_framework",
+      "special_education_idea_eligibility_categories",
+      "social_security_disability_mental_listings"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the dsm_taxonomy_kernel. The biomedical_reading claims categories map to neurobiological entities (high extractiveness, tangled_rope). The critical_psychiatry_reading claims categories are reverse-engineered from pharma treatments (very high extractiveness, snare). The neurodiversity_reading claims categories pathologize natural variation (moderate extractiveness, tangled_rope with different victim set). All three share the DSM taxonomic infrastructure but disagree on its ontology, beneficiaries, and victims."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "critical_psychiatry_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "neurodiversity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dsm_categories_are_natural_kinds",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "diagnostic_validity_requires_biological_markers",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "kraepelinian_disease_ontology",
+    "drift_state": {
+      "moment": "post_rdo_c_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

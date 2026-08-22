@@ -1,0 +1,338 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-13",
+    "status": "ACTIVE",
+    "story_uid": "ea144051-9430-408d-81f0-d458bc4cbd6a"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.62,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "HOA Covenant Fine-and-Lien Apparatus — Extraction Reading",
+    "topic_domain": "property_law/collective_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "board_members",
+      "property_management_firms",
+      "legal_counsel"
+    ],
+    "victims": [
+      "financially_vulnerable_homeowners",
+      "renters_via_pass_through"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "board_members",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Volunteer owners elected to set the annual budget, adopt fine schedules, decide which violations to pursue, and initiate lien proceedings. They contract the management firm, approve attorney engagements, and routinely waive or reduce penalties for allies while pressing collection against others. They also pay the same dues and live under the same recorded restrictions they enforce; stepping down or selling is possible, but their standing in the community is tied to the office."
+    },
+    {
+      "name": "property_management_firms",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Contracted companies running day-to-day operations: sending violation notices, levying late charges, forwarding files to counsel, and collecting a percentage of recoveries plus per-letter and per-hearing fees. Revenue scales with enforcement volume, which gives a standing incentive to widen the sanctionable surface. They serve many communities at once and can decline or drop unprofitable contracts."
+    },
+    {
+      "name": "legal_counsel",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Law firms on retainer to associations, paid from association accounts and, under fee-shifting provisions, awarded costs against owners who contest and lose. Demand letters and suits are a revenue line; the volume of contested violations tracks billable work."
+    },
+    {
+      "name": "compliant_homeowners",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Owners who pay assessments on time and keep their lots within the recorded rules. They receive maintained roads, commons, and a uniformity many value, funded by the dues everyone pays. Practical alternatives are limited: the declaration runs with the deed, and amending it requires supermajority participation that annual meetings rarely reach."
+    },
+    {
+      "name": "financially_vulnerable_homeowners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Owners living close to the margin, for whom a few hundred dollars in fines plus interest, collection costs, and attorney fees compounds quickly into a lien that clouds title and, in states granting associations priority, can end in foreclosure. Contesting means a hearing before the same board that fined them, then court. Selling under a pending lien forfeits equity; staying means the balance grows."
+    },
+    {
+      "name": "renters_via_pass_through",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tenants in covenant-covered homes. Landlords fold fines, assessments, and fee-driven cost increases into lease pricing, so tenants bear part of the burden while board elections are limited to owners. Moving is possible but costly in tight rental markets, and the rules bind wherever they rent within covered housing stock."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Bodies weighing bills to cap fines, require pre-lien notices and payment plans, bar foreclosure for small balances, and regulate management contracting. They hold hearings, take testimony from owners, industry groups, and researchers, and can rewrite the statutory ground the enforcement machinery stands on."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains shared common elements (roads, roofs, pools, landscaping) and enforces recorded use restrictions across many individually owned parcels, solving free-rider and externality problems where municipal services stop at the lot line.",
+    "transfer_function": "Moves cash from fined and assessed households — disproportionately those with thin financial buffers — into association accounts administered by boards and management firms and into attorney-fee awards; moves discretionary power over neighbors' property and social standing into board hands.",
+    "absent_voices": "Renters — bound by the rules, priced into the costs, and barred from the vote in most associations; delinquent owners, whose only formal audience is a hearing before the board that fined them; first-time buyers, who meet the fine schedule only after closing; and tenants of investor-owned units, who learn of violations only through their landlord.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal of the fine-and-lien machinery would force reorganization: common-element funding would shift to bare assessments or special levies, management contracts would be renegotiated around fixed fees, counsel retainers would lapse, and boards would lose the sanction lever that disciplines dissent — reopening municipal-service debates in many suburbs.",
+    "founding_problem": "Common-interest subdivisions needed a mechanism to fund and maintain shared infrastructure and enforce recorded restrictions where public provision ended at the parcel line.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Original declaration preambles and developer disclosure packets attest the maintenance-and-restriction purpose. Outside the benefiting parties, state legislative findings, court opinions reviewing fine-to-foreclosure pipelines, and academic surveys of association finances corroborate that enforcement activity has grown disproportionate to upkeep needs and tracks revenue; industry testimony contests this and attests the upkeep problem remains live. No source outside the benefiting parties attests that revenue generation was the founding purpose — the revenue characterization rests on pattern evidence, not founding documents."
+  },
+  "gain_flow": "property_management_firms",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "Recorded covenants in common-interest communities come paired with fine schedules, violation-processing workflows, lien placement, and attorney-fee recovery, administered by elected boards and contracted management firms. Under the extraction reading instantiated here, the apparatus's operative function is revenue generation and board power consolidation: fine proliferation widens the sanctionable surface, selective enforcement concentrates on violations carrying the largest fees and on households least able to contest, expedited lien statutes convert unpaid fines into foreclosure leverage, and fee-shifting converts disputes into counsel revenue. The epsilon referent is the standing arrangement under contest — the existing covenant-plus-fine-plus-lien operation as this reading assesses it — never a reformed alternative. Per the committer frame, this file authors ONLY the extraction reading; the coordination and behavioral-control readings are separate constraint files linked through the network section. Assumptions stated: the interval models roughly 1985-2025 US common-interest community maturation; provenance commit identifiers are session-local placeholders; the scenario was sourced directly from the task brief.\n\nKEY AGENTS (by structural relationship):\n- board_members: agenda-setting seat (organized/constrained) — sets fine schedules, selects targets, initiates liens; also bears the dues regime it administers\n- property_management_firms: primary beneficiary (institutional/arbitrage) — collects management and per-violation processing fees; drafts enforcement agendas\n- legal_counsel: secondary beneficiary (institutional/arbitrage) — recovers statutory attorney fees from contested violations\n- compliant_homeowners: incidental beneficiaries (moderate/constrained) — receive maintained commons while funding the apparatus through dues\n- financially_vulnerable_homeowners: primary targets (powerless/trapped) — absorb fines, interest, lien costs; least able to contest\n- renters_via_pass_through: indirect targets and excluded voice (powerless/constrained) — bear passed-through costs without voting rights\n- state_legislatures: analytical observer (institutional/analytical) — weighs reform of fine caps, lien priority, and foreclosure thresholds",
+    "key_agents": [
+      "board_members: agenda-setting seat (organized/constrained) — sets fine schedules, selects enforcement targets, initiates liens; also bears the dues regime it administers",
+      "property_management_firms: primary beneficiary (institutional/arbitrage) — collects management and per-violation processing fees; drafts enforcement agendas",
+      "legal_counsel: secondary beneficiary (institutional/arbitrage) — recovers statutory attorney fees from contested violations",
+      "compliant_homeowners: incidental beneficiaries (moderate/constrained) — receive maintained commons while funding the apparatus through dues",
+      "financially_vulnerable_homeowners: primary targets (powerless/trapped) — absorb fines, interest, lien costs; least able to contest",
+      "renters_via_pass_through: indirect targets and excluded voice (powerless/constrained) — bear passed-through costs without voting rights",
+      "state_legislatures: analytical observer (institutional/analytical) — weighs reform of fine caps, lien priority, and foreclosure thresholds"
+    ],
+    "logic_rationale": "Extractiveness is high (0.66) because fine schedules are decoupled from harm, collection contracts pay firms a percentage of recoveries, and fee-shifting converts every contested violation into counsel revenue. Suppression (0.62) is a raw structural property, deliberately unscaled: the declaration runs with the title, membership is mandatory, several states grant association liens priority, and the foreclosure threat backs the entire collection chain. Theater (0.30) reflects hearing rituals and community-standards framing whose performative share has risen even though the underlying maintenance function is real. Accessibility collapse is moderate-low (0.48): selling, litigating, and amendment exist as alternatives but are costly, and amendment quorums are nearly unreachable in practice. Resistance (0.58) is substantial — litigation waves, state reform bills, and board-recall campaigns — which is what a defended construct, not a natural law, looks like. Claim and metrics are independent authored facts: I claim tangled_rope because I believe genuine maintenance coordination and asymmetric extraction ride the same structure; the engine computes per-seat types from the structural data, and any divergence between my claim and a computed seat type is the measurement, not an error. All three tracked metric series run on one shared time grid (t=0,8,16,24,32,40) so no metric row borrows another's end-state values. The suppression_requirement series is authored because the story specifically tracks enforcement-capacity hardening: streamlined lien procedures, expanded self-help powers, and fee-statute amendments across the interval.",
+    "perspectival_gap": "The payer seats and the agenda-setting/beneficiary seats should compute differently. From the board and management-firm positions the apparatus is administration they operate and income that scales with diligence; from the financially vulnerable owner's position it is a sanction pipeline ending in lien and possible foreclosure; from the renter's position it is costs levied without a vote; from the compliant owner's position it sits near symmetric — real upkeep received, real dues paid. The engine computes this divergence from power, exit, and directionality data; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Declared beneficiaries (board_members, property_management_firms, legal_counsel) derive low d — the structure subsidizes them; declared victims (financially_vulnerable_homeowners, renters_via_pass_through) derive high d. Trapped exit pushes vulnerable owners toward the full-target end; arbitrage exit keeps firms and counsel nearer the beneficiary end; renters sit slightly off full-target because physical mobility partially offsets fiscal immobility. Two overrides correct derivations the structural data alone would misread: compliant_homeowners (moderate) are declared beneficiaries, which would derive a strongly beneficiary-side d, but they fund the apparatus through the same dues-and-fine structure they benefit from — d 0.5, near symmetric. Board members (organized) as agenda-setters would derive a near-zero d, but they pay the same dues and live under the same rules; selective self-exemption keeps them net beneficiaries without making them pure ones — d 0.3.",
+    "mandatrophy_analysis": "The founding maintenance problem is partly live — commons do need funding — but the enforcement mandate has outgrown any proportional relation to it: fine proliferation now tracks revenue and control, not upkeep. Holding tangled_rope prevents mislabeling in both directions: a pure-extraction reading would erase the real coordination that legitimately justifies assessments, while a pure-coordination reading would erase the asymmetric extraction the fee architecture imposes on precisely the households least able to carry it. The genealogy interview carries the obsolescence verdict: founding_problem_status is contested, and the mismatch consumer — not the narrative — decides whether the arrangement persists as zombie mandate or live function.",
+    "kernel_context": "Kernel: hoa_covenant_scope — the recorded covenant-plus-enforcement arrangement of common-interest communities. This file instantiates the extraction_reading: the apparatus's operative function is revenue generation and board power consolidation via fine proliferation and selective enforcement. Sibling readings — coordination_reading (shared-maintenance coordination) and behavioral_control_reading (aesthetic conformity as property-value maximization) — are separate constraint files, not positions inside this one. The disagreement is located in the primary-function attribution of the fine/lien machinery: which function best explains fine proliferation, selective enforcement, and the fee architecture. Per the one-reading rule, epsilon here is authored only under this reading's lights against the standing arrangement, with no hedging or averaging across readings."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This file instantiates the extraction_reading of the hoa_covenant_scope kernel. Would instantiating coordination_reading or behavioral_control_reading instead change the structural classification?",
+      "resolution_mechanism": "Author the sibling files against the same referent and compare computed per-seat classifications; the disagreement is located in the primary-function attribution of the fine/lien machinery.",
+      "impact": "Under coordination_reading, epsilon falls toward the rope band and board power consolidation drops out of the beneficiary structure; under behavioral_control_reading, the victim set shifts toward aesthetic-rule violators and fines reframe as value-maximization instruments. This file's high-epsilon tangled_rope profile holds only under the extraction attribution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: one of three readings of the hoa_covenant_scope kernel; siblings are separate constraints, not hedges inside this one."
+    },
+    {
+      "id": "selective_enforcement_intent",
+      "question": "Is the targeting of high-fee violations and low-contest households a deliberate revenue strategy, or an artifact of administrative capacity and complaint-driven workflows?",
+      "resolution_mechanism": "Discovery of board and management-firm correspondence, violation-ledger audits against fine schedules, and comparison of enforcement rates across comparable violations.",
+      "impact": "Deliberate strategy supports the high end of epsilon and strengthens the revenue-mechanism attribution; capacity artifacts would lower attributable extraction and soften the reading toward workflow bias.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether selective enforcement reflects intent or workflow bias."
+    },
+    {
+      "id": "renter_pass_through_incidence",
+      "question": "What share of fines, assessments, and fee-driven cost increases actually reaches tenants through rent pass-through, versus being absorbed by investor owners?",
+      "resolution_mechanism": "Lease-level rent regressions against association fee changes in covered versus uncovered housing stock.",
+      "impact": "Full pass-through confirms renters as weighted victims; partial absorption thins their weight and recenters the victim set on financially vulnerable owners.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incidence of enforcement costs on tenants via landlord pricing."
+    },
+    {
+      "id": "board_capture_direction",
+      "question": "Are boards principals consolidating their own power, or agents captured by management firms and counsel whose revenue scales with enforcement volume?",
+      "resolution_mechanism": "Analysis of contract terms (percentage-of-collections clauses), board-election competitiveness data, and recall outcomes.",
+      "impact": "Principal boards concentrate the receipt seat in the board itself; captured boards confirm management firms as the receipt seat and reframe boards as intermediaries.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Which seat ultimately directs the enforcement agenda."
+    },
+    {
+      "id": "lien_foreclosure_severity",
+      "question": "How often do association liens actually proceed to foreclosure rather than serving as collection leverage?",
+      "resolution_mechanism": "Court records and association financial statements distinguishing liens filed, judgments obtained, and completed foreclosure sales.",
+      "impact": "Frequent completed foreclosures raise the suppression estimate toward the top of its band and sharpen the target-end directionality of vulnerable owners; rare completions support a leverage-only reading with lower suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Severity of the lien endpoint in practice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__coordination_reading",
+      "hoa_covenant_scope__behavioral_control_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'HOA covenants' conflates three structurally distinct claims with different epsilon values — coordination_reading (shared-maintenance coordination, low extraction), behavioral_control_reading (aesthetic conformity as value maximization, mid extraction), and extraction_reading (revenue and power consolidation, high extraction; this file). The upstream coordination claim is the one the other two cite as cover, so the family links run from the established claim toward the contested ones. Each member carries its own epsilon, beneficiary/victim structure, and classification; none averages across the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "developer_installed_revenue_instrument",
+    "drift_state": {
+      "moment": "contemporary_mature_hoa_phase",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "behavioral_control_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fine_apparatus_is_revenue_mechanism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "selective_enforcement_consolidates_board_power",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

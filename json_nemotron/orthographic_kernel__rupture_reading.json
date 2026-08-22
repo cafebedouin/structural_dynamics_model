@@ -1,0 +1,385 @@
+{
+  "header": {
+    "constraint_id": "orthographic_kernel__rupture_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_orthographic_kernel__rupture_reading",
+    "measurement_id_prefix": "orthographic_rupture",
+    "story_uid": "4af05709-3463-4b28-a007-0b2dd9f824d3"
+  },
+  "base_properties": {
+    "extractiveness": 0.92,
+    "suppression": 0.88,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.84,
+    "resistance": 0.76,
+    "claimed_type": "snare",
+    "human_readable": "1928 Turkish Script Reform — Rupture Reading",
+    "topic_domain": "political_linguistics/state_formation/commitment_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "post_reform_state_apparatus",
+      "republican_elite",
+      "kemalist_ideological_institutions"
+    ],
+    "victims": [
+      "pre_reform_literate_population",
+      "ottoman_islamic_scholarly_class",
+      "religious_education_institutions",
+      "cultural_continuity_practitioners"
+    ],
+    "vindicated_propositions": [
+      "national_identity_requires_script_severance",
+      "cultural_rupture_as_state_founding_act",
+      "script_as_political_boundary_marker"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested orthographic_kernel, or an independent constraint?",
+      "resolution_mechanism": "Structural analysis of whether the beneficiary/victim structure and ε value are stable under this reading alone — if changing to another reading (continuity_reading, modernization_reading) produces a different ε and different victim set, this is a kernel reading.",
+      "impact": "If kernel reading, the structural delta between readings is the signal; the engine should track the orthographic_kernel family as linked constraints with different ε values. If independent, this story stands alone.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this story instantiates a kernel reading or an independent constraint."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal enforcement, educational prohibition, state violence) or internalized (population self-censorship, identity fusion with new script, generational amnesia)?",
+      "resolution_mechanism": "Post-reform trajectory analysis: if suppression metrics persist after formal enforcement relaxes (e.g., after multi-party period 1946+), reclassify as partially internalized. Compare with sibling readings where suppression dynamics differ.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them. This would amplify χ for identity_locked agents and alter the Snare classification durability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in cultural rupture"
+    },
+    {
+      "id": "beneficiary_capture_vs_coordination",
+      "question": "Does the post-reform state apparatus genuinely benefit from coordination (literacy expansion, technological integration) or is the coordination story cover for ideological capture?",
+      "resolution_mechanism": "Decompose literacy gains: how much came from script change vs. compulsory education, Latin-script printing infrastructure, and demographic transition? Compare with continuity_reading's coordination claims (Ottoman script literacy was rising pre-1928).",
+      "impact": "If coordination gains are separable from rupture, the constraint is a Snare with coordination cover. If inseparable, it approaches Tangled Rope. The engine computes this from beneficiary/victim asymmetry — this omega documents the ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether coordination function is genuine or cover for extraction"
+    },
+    {
+      "id": "founding_myth_versus_empirical_function",
+      "question": "Does the rupture_reading's foundational axiom (cultural_severance_as_national_birth) remain holdable given empirical outcomes (literacy expansion, Western integration, but also cultural loss)?",
+      "resolution_mechanism": "Test whether the axiom's predicted outcomes (clean break enabling modernization) match observed trajectory vs. continuity_reading's counterfactual (gradual script adaptation preserving textual continuity). The axiom's status may shift from holdable to overridden within the reading's own tradition if later Kemalist discourse acknowledges cultural cost.",
+      "impact": "If the founding axiom is overridden within the reading's tradition, the constraint's CS classification shifts — the authority_grounding 'extraction' gains evidence. If holdable, the rupture narrative remains the legitimate kernel reading.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the rupture founding myth withstands empirical challenge within its own tradition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1928,
+      "value": 0.95
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1935,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1946,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1928,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1935,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1946,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1928,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1935,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1946,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 1928,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "The 1928 Turkish script reform replaced the Arabic-based Ottoman script with a modified Latin alphabet in a matter of months, enacted by law under Atatürk's single-party regime. The rupture_reading interprets this not as modernization or practical necessity but as a deliberate cultural severance: the new script made the entire Ottoman-Islamic textual tradition (centuries of literature, law, theology, science, private correspondence) inaccessible to the new generation without mediated translation. The pre-reform literate population (victims) lost direct access to their own cultural heritage; the post-reform state apparatus (beneficiaries) gained a controllable semantic field where national identity could be rewritten. The constraint persists because the script change is irreversible — the Ottoman script is not returning — and the cultural rupture it created is now constitutive of Turkish national identity. The claimed type is Snare: pure extraction of cultural continuity with coordination (literacy, modernization) as cover.",
+    "key_agents": [
+      "post_reform_state_apparatus: Primary beneficiary (institutional/arbitrage) — controls the new semantic field, collects legitimacy from rupture",
+      "kemalist_ideological_institutions: Beneficiary (institutional/generational) — universities, military, CHP party apparatus that administer the rupture narrative",
+      "pre_reform_literate_population: Primary victim (organized/identity_locked) — entire generation cut off from its own textual heritage; exit requires learning a new script AND accepting the rupture narrative",
+      "ottoman_islamic_scholarly_class: Victim (powerless/trapped) — ulema, medrese teachers, Sufi orders whose authority rested on Arabic-script textual mastery; structurally eliminated",
+      "religious_education_institutions: Victim (organized/trapped) — medreses, tekkes, vakıf libraries; legally dissolved or rendered non-functional by script change",
+      "cultural_continuity_practitioners: Victim (moderate/identity_locked) — poets, historians, calligraphers, manuscript scholars; forced into translation labor or silence",
+      "republican_elite: Beneficiary (powerful/arbitrage) — the cohort that engineered the rupture and staffed the new institutions; dual-positioned as both architects and inheritors",
+      "post_1950_opposition_politicians: Excluded (organized/constrained) — Democrat Party and successors who could not contest the script without contesting the republic's founding act; structurally silenced on this axis",
+      "contemporary_turkish_citizens: Observer (analytical/analytical) — inherit the rupture as natural fact; the constraint appears as Mountain from this seat"
+    ],
+    "logic_rationale": "Extraction is extremely high (0.92 at origin, declining to 0.72 by 2000) because the constraint transfers an entire cultural inheritance from the pre-reform population to a state-controlled translation/interpretation monopoly. The victim set is the entire pre-reform literate population — not a subset, but the whole class of agents who could read their own tradition. Suppression is high (0.88) because the constraint required active enforcement: banning Arabic script from public life, dissolving medreses, controlling printing presses, penalizing Ottoman script use. Theater ratio is low (0.22) initially because the enforcement was genuine and brutal; it rises over time as the rupture becomes 'natural' and enforcement shifts from coercion to curriculum. Accessibility collapse is high (0.84) — alternatives (Ottoman script education, private manuscript culture) were legally and materially eliminated. Resistance is significant (0.76) — petitions, underground manuscript preservation, continued private instruction in Arabic script, religious opposition — but was structurally outmatched by state monopoly on education and print. The metrics are authored at six shared time points on one grid (1928, 1935, 1946, 1960, 1980, 2000) so temporal analysis can trace the Snare-to-Piton drift.",
+    "directionality_logic": "The post-reform state apparatus and republican elite are structural beneficiaries (d ≈ 0.15): they collect the legitimacy rents of 'founding the nation,' control the new educational and bureaucratic field, and face no exit cost — they built the constraint. The pre-reform literate population is the primary target (d ≈ 0.95): they bear the full cost of cultural severance, are identity_locked (their self-concept is constituted through the very tradition the constraint severs), and have no exit — the Ottoman script world is gone. The Ottoman-Islamic scholarly class is even more extremely targeted (d ≈ 0.98): powerless, trapped, their entire institutional basis dissolved. Cultural continuity practitioners sit at d ≈ 0.85: moderate power but identity_locked through their craft. Republican elite have a secondary_role as both agenda_setter and beneficiary — they authored the constraint and collect its rents. Post-1950 opposition politicians are excluded: they would object to the rupture's permanence but cannot enter the conversation without delegitimizing the republic itself. Contemporary citizens are analytical observers: from their seat the constraint appears as a Mountain (script is just 'how Turkish is written'), which is exactly the false_summit_mountain signature the engine should detect if beneficiaries are declared on a Mountain claim.",
+    "perspectival_gap": "The payer seats (pre-reform literate population, scholarly class, continuity practitioners) experience this as a Snare: active extraction of cultural capital with no consent and no exit. The agenda-setter seat (republican elite) experiences it as a Scaffold with a sunset that never came: 'we needed this rupture to become modern, and once modern we would reconcile with our past' — but the reconciliation never happened, the extraction persisted. The beneficiary seat (post-reform state apparatus) experiences it as a Rope: 'this script coordinates our national unity and technological integration.' The analytical observer seat (contemporary citizens) experiences it as a Mountain: 'Turkish has always been written this way.' The engine computes these four different types from the same structural data — the divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (create a modern national identity capable of surviving in a Western-dominated world) was live in 1928. By 1960 it was contested — Turkey was recognized, NATO member, industrializing. By 2000 the founding problem was dead — the nation exists, the script is universal, the rupture is complete. Yet the constraint persists with no sunset clause. The mandate (script as rupture instrument) has atrophied into pure extraction of cultural continuity. The beneficiaries (state apparatus, ideological institutions) maintain the constraint not because the founding problem requires it, but because the rupture is now their legitimacy foundation. This is exactly mandatrophy: the arrangement persists after its function is gone, and the beneficiaries are the ones who would have to authorize its revision. The engine should flag this via founding_problem_status=dead + disappearance_verdict=world_rearranges mismatch.",
+    "kernel_context": "This constraint is the rupture_reading of the orthographic_kernel. The kernel is the Turkish script reform of 1928 as a persisting commitment. Three readings instantiate three constraints: continuity_reading (Arabic script preserves Ottoman-Islamic continuity), modernization_reading (Latin script enables technological integration while preserving Turkish linguistic identity), and this rupture_reading (script change as deliberate cultural severance to found a new national identity). The rupture_reading has the highest ε (0.92) because its victim set is the entire pre-reform literate population and its beneficiary set is the post-reform state apparatus. The continuity_reading would have near-zero ε (it treats the constraint as Mountain — script as neutral carrier). The modernization_reading would have moderate ε (~0.45) — coordination function genuine but asymmetric costs on religious/traditional populations. This story authors ONLY the rupture_reading's structural data; the sibling readings are separate constraint files linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "orthographic_kernel__continuity_reading",
+      "orthographic_kernel__modernization_reading"
+    ],
+    "dual_formulation_note": "The orthographic_kernel decomposes into three constraint stories with distinct ε values and victim/beneficiary structures. Rupture_reading (this file) has ε=0.92, victims=pre_reform_literate_population+, beneficiaries=post_reform_state_apparatus+, claimed_type=snare. Continuity_reading would have ε≈0.05, victims=[], beneficiaries=[], claimed_type=mountain. Modernization_reading would have ε≈0.45, victims=[religious_traditional_populations], beneficiaries=[state_modernization_apparatus], claimed_type=tangled_rope. The ε-invariance principle requires separate stories because the observable (script change) yields different ε under different readings — they are different constraints, not different measurements of one constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.98
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "post_reform_state_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enacted the 1928 script law, controls all public education, printing, bureaucracy, and legal publication in the new script. Collects legitimacy rents as the 'founder' of modern Turkish identity. Can revise the constraint (e.g., permit Ottoman script education) but chooses not to because the rupture is its founding legitimacy. Exit is arbitrage-grade — it could open the script field tomorrow with a cabinet decision."
+    },
+    {
+      "name": "kemalist_ideological_institutions",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Universities (especially language/history faculties), Turkish Language Association (TDK), Turkish Historical Society, military academies, CHP party apparatus. Their institutional identity and curricula are built on the rupture narrative. They benefit from controlling the official history and language planning. Exit is constrained — abandoning the rupture narrative would delegitimize their institutional mission, but they could adapt incrementally."
+    },
+    {
+      "name": "republican_elite",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The 1920s-30s cohort that engineered the reform: Atatürk, İnönü, Atatürk's ministers, early TDK members. They authored the constraint and directly collected its status rents. Dual-positioned as architects (agenda_setter) and inheritors (beneficiary). Exit was arbitrage-grade for them — they could have chosen a different path in 1928 but chose rupture. Their descendants inherit the beneficiary position without the agency."
+    },
+    {
+      "name": "pre_reform_literate_population",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The entire generation (approx. 10-15% literacy rate in 1927, concentrated in urban men, religious scholars, bureaucrats, merchants) who could read Ottoman Turkish in Arabic script. They lost direct access to: their own family letters, property records, religious texts, literature, newspapers, scientific works. Forced to either learn the new script (costly, ideologically loaded) or depend on state-mediated translations. Exit is identity_locked — their self-concept as 'literate Muslims/Ottomans' is constituted through the very textual tradition the constraint severs. Learning the new script feels like betraying that identity; not learning it means illiteracy in the new order."
+    },
+    {
+      "name": "ottoman_islamic_scholarly_class",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Ulema (Islamic judges/scholars), medrese (theological school) teachers, muftis, Sufi sheikhs, vakıf (endowment) administrators. Their entire professional authority, legal reasoning, and spiritual practice depended on mastery of Arabic-script Islamic texts (Quran, hadith, fiqh, tasawwuf). The 1924 abolition of the caliphate and 1925 closure of tekkes (Sufi lodges) preceded the script reform; the script change completed their structural elimination by making their textual capital illegible to the next generation. No exit — their institutions were legally dissolved, their professional status revoked, their textual heritage rendered inaccessible."
+    },
+    {
+      "name": "religious_education_institutions",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Medreses (Ottoman theological colleges), tekkes (Sufi lodges), vakıf libraries, mekteps (elementary religious schools). The 1924 Tevhid-i Tedrisat Law (Unification of Education) placed all education under the Ministry of Education; the 1928 script law made their Arabic-script curricula illegal. Their libraries (millions of manuscripts) were transferred to state institutions or left to decay. No exit — the legal framework prohibited their operation, and the script change ensured no new generation could maintain them."
+    },
+    {
+      "name": "cultural_continuity_practitioners",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Ottoman poets, calligraphers, manuscript copyists, historians, chroniclers, private scholars, families with manuscript collections. Their craft and identity were embedded in the Arabic-script tradition. Forced into translation labor (rendering Ottoman works into Latin script for state publishers) or silence. Some preserved manuscripts privately at great risk. Exit is identity_locked — calligraphy is not a transferable skill; Ottoman paleography requires the script. The constraint did not just change their tools; it made their epistemic world invisible."
+    },
+    {
+      "name": "post_1950_opposition_politicians",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Democrat Party (1950-60), Justice Party (1960s-70s), National Salvation Party (1970s), Welfare Party (1990s), AK Party (2000s+). Each opposition wave represented constituencies with Ottoman-Islamic cultural memory. They could not contest the script reform without appearing to contest the republic's founding. Some permitted limited Ottoman script education (imam-hatip schools, university electives) but never challenged the Latin script monopoly. Their exclusion is structural: the rupture_reading makes the script change synonymous with the republic itself."
+    },
+    {
+      "name": "contemporary_turkish_citizens",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Born into a Latin-script Turkey where the reform is taught as a natural, necessary modernization. The Ottoman script appears as decorative calligraphy or historical curiosity, not a living literacy. From this seat the constraint looks like a Mountain — 'Turkish has always been written this way.' The extraction and suppression are invisible because the victims are dead and the beneficiaries are the state itself. This is the false_summit_mountain seat: if the engine ever classifies this constraint as Mountain from any seat, this observer seat is where it happens."
+    }
+  ],
+  "gain_flow": "post_reform_state_apparatus",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Created a uniform, phonemic script for Turkish that enabled mass literacy campaigns, standardized education, and integration with Western scientific/technical print culture — solving the coordination problem of a multi-script, multi-dialect empire transitioning to a nation-state.",
+    "transfer_function": "Transferred cultural capital (direct access to 600 years of Ottoman textual production) from the pre-reform literate population and scholarly institutions to a state-controlled translation/interpretation monopoly. The state became the sole authorized gatekeeper of what the Ottoman past means, filtering it through the new script and republican ideology.",
+    "absent_voices": "The pre-reform literate population (dead by 1960s), Ottoman scholarly class (structurally eliminated), and religious education institutions (legally dissolved) are physically absent. Their would-be successors (Islamic intellectuals, traditionalist scholars, manuscript specialists) are excluded from the legitimate discourse by the rupture_reading's equation of script reform with the republic itself — to question the script is to question the nation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the script law and its enforcement vanished overnight: Ottoman script education would re-emerge in religious and cultural institutions; manuscript libraries would become directly accessible; a dual-script public sphere would develop; the state's monopoly on interpreting the Ottoman past would break; the republican elite's founding legitimacy would face its first genuine challenge. The cultural rupture would become a contested choice rather than a settled fact.",
+    "founding_problem": "The Ottoman Empire's collapse created a legitimacy vacuum: the new Turkish state needed a national identity that could survive in a Western-dominated international system, unify a heterogeneous Anatolian population, and break the religious-legal authority of the ulema who had opposed the nationalist movement. The script reform was engineered as the irreversible act that would make the new nation legible to itself and the West, and the old order illegible.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem's death is attested by: (1) Turkey's 1945 UN founding membership and 1952 NATO accession — international recognition achieved; (2) 1950 peaceful democratic transition — internal legitimacy consolidated; (3) 1980s-90s economic integration with Europe — modernization achieved without script reversal; (4) Independent historians (Erik Jan Zürcher, Şerif Mardin, Niyazi Berkes) documenting that the nation-state consolidation was complete by 1960. The republican elite (beneficiaries) contest this, citing ongoing threats to 'national unity' — but no non-beneficiary source corroborates the founding problem as live."
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "modernization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "cultural_severance_as_national_birth",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "script_as_sovereign_boundary_marker",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "revolutionary_rupture_1928",
+    "drift_state": {
+      "moment": "contemporary_post_kemalist_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

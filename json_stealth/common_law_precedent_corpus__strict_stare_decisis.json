@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "common_law_precedent_corpus__strict_stare_decisis",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "28d58371-6f5f-4db0-af46-55a3be80ddd3"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Strict Stare Decisis — Precedent as Backward Constraint",
+    "topic_domain": "legal/jurisprudential/constitutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "repeat_player_litigants",
+      "incumbent_right_holders",
+      "judiciary_as_institution"
+    ],
+    "victims": [
+      "novel_claim_litigants",
+      "changed_circumstance_parties",
+      "stare_decisis_bound_justices"
+    ],
+    "vindicated_propositions": [
+      "rule_of_law_predictability",
+      "equal_justice_like_cases_alike",
+      "judicial_restraint_norm"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "judiciary_as_institution",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The body of courts across the hierarchy, considered as a continuing institution. Every holding a court issues joins the stock of law that later courts apply; the institution collects legitimacy from consistency, saves decision costs whenever a settled rule answers a recurring question, and accumulates governing authority as its past decisions govern its future ones. Its self-conception is constituted by fidelity to accumulated law — a court that stopped treating prior holdings as governing would cease, in its own understanding, to be a common-law court. Leaving that position would mean dissolving the institution's identity rather than adopting an alternative policy."
+    },
+    {
+      "name": "apex_court_majority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sets which prior holdings govern and how hard they bind: grants or denies review, writes the opinions that extend or narrow earlier holdings, and decides — rarely — when a line of cases falls. It is also partially bound by its own prior decisions, which it may revisit only through the same demanding justification standard it applies to every court below. Its members rotate; the seat's horizon is the institution's, not any individual's career."
+    },
+    {
+      "name": "intermediate_appellate_courts",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sit between the apex court and the trial courts: they enforce settled holdings against trial courts below, reversing judges who depart, while remaining bound by the apex court's decisions above. They administer the arrangement daily and bear it at the same time; their maneuvering room consists in choosing how narrowly to read a holding they must apply."
+    },
+    {
+      "name": "trial_court_judges",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Decide cases under holdings they did not make and cannot revisit. A trial judge who reads a binding holding more narrowly than the appellate court above will accept is reversed; the practical alternative to applying the settled rule is error. They can register disagreement in opinions and certified questions, but the outcome of the case before them is governed by the accumulated stock."
+    },
+    {
+      "name": "repeat_player_litigants",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Corporations, agencies, insurers, and institutional parties that litigate the same questions repeatedly. Settled rules are an asset: they structure contracts, compliance programs, and litigation strategy around known outcomes, and they can afford to shape the stock of holdings across decades of cases. If the rules reopened, their planning advantage would be the first thing to go — but they can also shift forums, draft around unsettled edges, and seek legislative codification, so their exposure to any single holding is hedged."
+    },
+    {
+      "name": "incumbent_right_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Parties whose entitlements — property interests, licenses, settled liability limits, doctrines running in their favor — rest on existing holdings. The stock of law protects what they already hold; each departure from precedent puts a specific entitlement back in play. They can transact, sell, or restructure around their entitlements freely, so their position inside the settled regime is comfortable rather than confined."
+    },
+    {
+      "name": "novel_claim_litigants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parties whose claims conflict with an existing holding. Their arguments are rejected on the authority of the earlier decision regardless of the merits they can marshal today; their paths are to distinguish the holding if the facts permit, to lose and await a possible future overruling, or to take the question to the legislature. Within the case in front of them, the earlier holding decides the outcome."
+    },
+    {
+      "name": "changed_circumstance_parties",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parties bound by holdings crafted for conditions that no longer obtain — technology, markets, and social understandings have moved while the governing decision has not. They carry the fit cost between old holdings and new facts, and their remedies (legislative correction or an eventual overruling) operate on timelines longer than their own case."
+    },
+    {
+      "name": "stare_decisis_bound_justices",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Judges and justices who adhere to holdings they believe were wrongly decided because their own committed methodology — fidelity to accumulated law — requires it. Their professional identity is fused with the practice of following precedent: departing would resolve a case but break the methodological identity that makes their other decisions coherent. They write opinions honoring holdings they would not have joined, and the way out of the bind runs through abandoning the methodology itself, not through winning an argument."
+    },
+    {
+      "name": "legal_academy_reformers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Scholars and reform movements who argue the binding force of precedent should be relaxed, domain-weighted, or reoriented toward present norms. They publish, cite comparative practice, and advise litigants and legislatures, but they hold no seat in the adjudicative conversation their proposals target; the justification standard for departing from settled law is set by the courts that apply it."
+    },
+    {
+      "name": "comparative_jurisprudence_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers who compare how different legal systems manage the tension between settled law and legal change — civil-law jurisprudence constante, apex-court overruling practices across jurisdictions, historical swings in how strongly holdings bind. They take no side in the dispute and collect nothing from any resolution; their seat is analytic."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Answers recurring legal questions once so like cases are treated alike across courts and over time: litigants, lower courts, and planners can rely on settled holdings instead of relitigating every question, and the appellate hierarchy can concentrate its attention on genuinely open questions.",
+    "transfer_function": "Moves decisional authority backward — from present litigants and present judges to the majorities of past courts, whose holdings govern outcomes they never foresaw. Concretely, it delivers the benefits of settled rules (predictability, planning value, protected entitlements) to repeat players and incumbents, and delivers the costs of settled error (foreclosed arguments, outdated rules applied to changed facts) to the parties whose claims conflict with the stock.",
+    "absent_voices": "The parties bound by holdings made without them: future litigants whose claims will be foreclosed by decisions issued today, and groups whose rights were adjudicated in eras when they lacked access to the courts that set the holdings. Also legislatures, whose corrective role the doctrine formally channels ('the correction is yours to make') while settled law simultaneously discourages legislative reopening of what courts have settled. Academic reformers speak from outside the adjudicative room entirely.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the binding force of precedent vanished overnight, every settled question would reopen at once: a wave of relitigation would hit the appellate courts, planning value built on settled rules would evaporate, and every entitlement resting on a holding would become provisional. The appellate hierarchy's workload and the legal system's basic operating assumption — that yesterday's decisions govern today's cases — would both have to be rebuilt from nothing.",
+    "founding_problem": "Pre-doctrinal adjudication was arbitrary and inconsistent: each judge decided anew, like cases came out differently across courts, judicial power appeared to be personal will, and no one could plan around the law. The doctrine was built to anchor adjudication in accumulated decisions — to make judicial authority an application of settled law rather than an exercise of preference.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: litigants who attack particular holdings still argue in precedential form (distinguishing rather than denying binding force), which attests the coordination problem is real even to those the stock harms; academic critics of the strict reading dispute the remedy, not the existence of the inconsistency problem; and civil-law systems independently converged on doctrine-like practices (jurisprudence constante), attesting the problem is structural rather than an artifact of one tradition. No corroborating source attests the founding problem is dead."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading — strict_stare_decisis — of the common_law_precedent_corpus kernel; what would change structurally if a sibling reading (evolutionary_framework or pluralist_balancing) were the operative doctrine instead?",
+      "resolution_mechanism": "Generate and compile the sibling reading stories and compare victim sets, beneficiary sets, and epsilon across the family. Under the evolutionary reading the foreclosed-claimant victim class contracts to parties bound by holdings whose subject matter has genuinely evolved, and epsilon falls; under the pluralist reading extraction becomes domain-variable rather than uniform.",
+      "impact": "The classification of the precedent corpus as a whole depends on which reading governs; this file's claim and its rising-extraction series describe only the strict reading's arrangement, and cross-reading comparison is family-level analysis, never a property of this file.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of a contested kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "departure_threshold_location",
+      "question": "Where exactly do the three readings disagree? The candidate location is the justification threshold for departing from a holding — extraordinary justification in this reading, ordinary norm-evolutionary sufficiency in evolutionary_framework, case-by-case balancing in pluralist_balancing — not whether precedent has any force at all.",
+      "resolution_mechanism": "Doctrinal analysis of what each reading treats as a sufficient ground for departure: changed circumstances alone, normative evolution alone, domain-weighted balancing, or none short of an extraordinary showing.",
+      "impact": "Epsilon and the victim set are functions of the threshold: the higher the threshold, the larger the class of foreclosed claimants and the higher the extraction the stock imposes. The disagreement is located at this single structural element, which is why the kernel decomposes into exactly these readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel contest is located at the departure-justification threshold, not at precedent's force per se."
+    },
+    {
+      "id": "vertical_horizontal_decomposition",
+      "question": "Vertical stare decisis (lower courts bound, reversal-enforced, near-absolute) and horizontal stare decisis (the apex court self-bound, with a rare overruling valve) have structurally different enforcement and cost profiles — is this one constraint or two?",
+      "resolution_mechanism": "Seat-level analysis of the compiled story: if per-seat computed types for trial-level seats and apex-level seats diverge materially, decompose into vertical and horizontal stare decisis stories linked by network.affects_constraints, per the epsilon-invariance rule.",
+      "impact": "If decomposed, the vertical story carries higher extraction and near-total accessibility collapse for bound trial seats, while the horizontal story carries the overruling valve, the theater, and the drift series; the unified label would then denote a family rather than a single constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vertical and horizontal stare decisis are one constraint or a two-story family."
+    },
+    {
+      "id": "distinguishing_vs_overruling_share",
+      "question": "How much of the stock's adaptation happens through formal overruling versus interpretive narrowing (distinguishing, limiting readings, narrowing language) that leaves the holding nominally intact?",
+      "resolution_mechanism": "Empirical study of how precedent lines actually move: track holdings over time for formal overrulings versus effective nullification by narrowing; compare the nominal stock with the operative stock.",
+      "impact": "If most adaptation runs through narrowing, the strict frame's formal rigidity is partly theatrical — theater_ratio is understated and the formal rule's accessibility_collapse overstates the practical bind; if overruling dominates, the formal rule tracks practice and the authored values stand.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Share of precedent adaptation via formal overruling versus interpretive narrowing."
+    },
+    {
+      "id": "coordination_cost_vs_overhead",
+      "question": "Is the extraction this reading itself acknowledges — foreclosed claims, bound discretion — the intrinsic price of the coordination the doctrine provides, or extractive overhead that a weaker binding rule would avoid without losing the coordination goods?",
+      "resolution_mechanism": "Compare civil-law systems operating on jurisprudence constante (persuasive rather than strictly binding apex practice): if they achieve like-case consistency and planning reliability without the strict binding rule, part of the strict arrangement's extraction is overhead rather than coordination cost.",
+      "impact": "If the coordination goods survive weaker binding, the strict reading's justification narrows to the residue only strict binding delivers, and the balance of this arrangement shifts toward the extractive side; if civil-law systems show the predicted inconsistency costs, the extraction is closer to intrinsic cost.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the doctrine's acknowledged costs are intrinsic coordination price or extractive overhead."
+    },
+    {
+      "id": "apex_overruling_drift",
+      "question": "Is the rising frequency of apex-court overruling in contested domains a permanent practice drift away from the strict reference frame, or a composition-driven oscillation that reverses with the court's membership?",
+      "resolution_mechanism": "Longitudinal analysis of overruling rates across multiple court compositions: a monotonic rise across compositions indicates permanent drift; alternating rises and falls that track membership indicate a cycle.",
+      "impact": "If permanent, the strict frame's drift moves from practice_drift toward repudiation_pressure and the theater_ratio series should be read as a transition signature; if cyclical, practice_drift stands and the magnitude over a full cycle may be minor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether apex overruling practice is permanently drifting from or oscillating around the strict reference frame."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the strict stare decisis doctrine itself: within the adjudicative hierarchy, a holding of a competent court binds subsequent courts, and departure requires extraordinary justification. Vertical binding is enforced by appellate reversal; horizontal binding at the apex is self-imposed and carries a rare overruling valve. This file instantiates the strict_stare_decisis reading of the common_law_precedent_corpus kernel (see kernel_context and the committer omegas); the sibling readings are separate constraint files and are not averaged here. The epsilon referent is the strict doctrine as it operates, assessed by the reading's own lights: the reading endorses the bindingness as the core of legality, and simultaneously acknowledges the costs the binding imposes — foreclosed claims, bound discretion, outdated holdings applied to changed facts. Those costs are authored descriptively, not discounted for being endorsed. Claim and metrics are independent: claimed_type records the structure I believe true of this reading's arrangement (genuine coordination with asymmetric foreclosure costs and active enforcement), while the metrics record its observed operation, including the drift series showing extraction deepening as the corpus accumulates.\n\nKEY AGENTS (by structural relationship):\n- apex_court_majority: agenda-setter (institutional/generational) — administers which holdings bind and the overruling threshold; partially bound horizontally\n- judiciary_as_institution: primary beneficiary (institutional/identity_locked) — collects legitimacy, decision-cost savings, and authority accumulation\n- repeat_player_litigants: primary beneficiary (powerful/arbitrage) — planning rents of settled rules\n- incumbent_right_holders: beneficiary (organized/mobile) — entitlements protected by the stock\n- novel_claim_litigants: primary target (moderate/constrained) — foreclosed arguments\n- changed_circumstance_parties: secondary target (moderate/constrained) — fit costs of outdated holdings\n- stare_decisis_bound_justices: identity-locked target (institutional) — adhere to holdings they believe wrongly decided\n- trial_court_judges and intermediate_appellate_courts: bound enforcer-payer seats (institutional/constrained)\n- legal_academy_reformers: excluded voice — proposes relaxation from outside the adjudicative room\n- comparative_jurisprudence_scholars: analytical observer — sees the full cross-system structure",
+    "logic_rationale": "Extraction is moderate (0.48 at interval end) and rising (0.38 to 0.48 across the interval): each new holding deepens the backward constraint and forecloses a wider class of future arguments — accumulation, not escalation, drives the trend. Suppression (0.55 scalar) is a raw structural property, unscaled by power or scope: vertical binding is reversal-enforced and near-absolute at the trial level, while the apex's horizontal self-binding has loosened as overruling normalized in contested domains — hence the suppression_requirement series falls gently (0.62 to 0.55) while theater_ratio rises (0.15 to 0.30), the signature of a doctrine increasingly maintained performatively at the top while its enforcement machinery below stays real. Theater 0.30: the 'extraordinary justification' ritual, citation of holdings narrowed in practice toward nullity, and ceremonial reaffirmations are real but remain a minority of the doctrine's operation. Accessibility_collapse 0.58: within adjudication, the alternative to following a binding holding collapses almost entirely for bound seats, but legislative correction, constitutional amendment, and distinguishing remain genuine (if slow or costly) channels, so collapse is partial. Resistance 0.55: sustained doctrinal scholarship, overruling campaigns by parties on the losing side of the stock, and periodic apex pushback keep the doctrine contested rather than naturalized. All three series run on one shared time grid.",
+    "perspectival_gap": "The seats compute differently by construction. From the apex seat the doctrine is self-constituting: it made the stock that binds it, and the binding is the source of its authority. From a novel-claim litigant's seat the same structure is a wall — the outcome is decided by people not in the room who cannot hear the merits. From the identity-locked justice's seat it is a duty that costs them their own best judgment. From the repeat player's seat it is an asset. The engine computes these per-seat types from the structural data; the divergence between the agenda-setter's coordination experience and the payer seats' foreclosure experience is the measurement this story exists to take.",
+    "directionality_logic": "Beneficiaries sit near the subsidized end: repeat players (arbitrage-grade exit — they hedge, forum-shift, and draft around any single holding), incumbents (mobile within the settled regime), and the institution itself, which collects legitimacy and decision-cost savings from every act of compliance it does not pay for. Victims sit near the full-target end: foreclosed claimants and changed-circumstance parties (constrained exit — their channels run on longer timelines than their cases), with the identity-locked justice pushed furthest toward full target because identity_locked exit removes even the methodological exit route. The agenda-setter seats sit mid-low: they administer the arrangement and are subsidized by its authority accumulation while bearing part of the binding horizontally. No directionality overrides were used: the beneficiary/victim declarations plus exit options produce the right d for every declared seat, and the coarse power-atom keying of overrides would misstate the mixed institutional set.",
+    "mandatrophy_analysis": "The founding problem — arbitrary, inconsistent adjudication anchored in personal judicial will — is live, so no mandatrophy is declared, and the mismatch consumer finds status=live against verdict=world_rearranges: no capture or zombie flag. The classification work this story does is boundary-keeping in both directions: the genuine, still-functioning coordination function (settled rules, like cases alike, decision-cost savings) blocks a pure-extraction reading, while the asymmetric foreclosure costs borne by claimants and bound judges block a pure-coordination reading. The tangled_rope claim holds both facts. The drift series guards the boundary over time: if theater_ratio continues rising while suppression_requirement falls, the arrangement slides toward inertial maintenance at the apex even as vertical enforcement below stays functional — the apex_overruling_drift omega tracks exactly that possibility.",
+    "kernel_context": "This constraint is the strict_stare_decisis reading of the kernel common_law_precedent_corpus — the accumulated body of common-law holdings together with the doctrine governing their force. The kernel is contested: evolutionary_framework holds that contemporary normative evolution permits reinterpretation of the stock; pluralist_balancing holds that precedent's weight varies by domain and is balanced case-by-case; this file instantiates the strict reading — precedent binds as backward constraint and departure requires extraordinary justification. Per the one-reading rule, the contest is not adjudicated here: the siblings are separate constraint files with their own epsilon, victim sets, and types, and the structural deltas they would introduce are recorded in the kernel_reading_commitment and departure_threshold_location omegas."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "common_law_precedent_corpus__evolutionary_framework",
+      "common_law_precedent_corpus__pluralist_balancing"
+    ],
+    "dual_formulation_note": "Constraint family: the natural-language concept 'the binding force of precedent' decomposes, per the epsilon-invariance principle, into three readings of the common_law_precedent_corpus kernel, each with its own stable epsilon, victim set, and type. This file instantiates strict_stare_decisis: departure requires extraordinary justification; foreclosed-claimant and changed-circumstance victim classes; epsilon rising with corpus accumulation. The siblings — evolutionary_framework and pluralist_balancing — are separate files: under the evolutionary reading the foreclosed-claimant class contracts sharply and epsilon falls; under the pluralist reading extraction becomes domain-variable rather than uniformly accumulating. The strict reading is upstream in one respect: its formal rule is what both siblings relax, so each sibling's story links back here."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "precedent_corpus_as_settled_law",
+    "drift_state": {
+      "moment": "contemporary_apex_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "evolutionary_framework",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pluralist_balancing",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "precedent_binds_absent_extraordinary_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "accumulated_law_over_contemporary_judgment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "judiciary_as_institution",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

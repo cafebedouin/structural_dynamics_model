@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__prioritization_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "8129d926-c7a5-41d7-948d-2f7045b48e18"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP Prioritization Reading — Differentiated Service Quality as Network Management",
+    "topic_domain": "technology_governance/internet_policy/telecommunications_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tier1_isps",
+      "cdn_operators",
+      "latency_sensitive_application_providers"
+    ],
+    "victims": [
+      "edge_service_providers",
+      "nonprofit_digital_services",
+      "rural_community_networks",
+      "end_users_without_premium_tiers"
+    ],
+    "vindicated_propositions": [
+      "network_investment_incentive_through_qos_revenue"
+    ]
+  },
+  "interval": {
+    "start": 1998,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "tier1_isps",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the backbone and last-mile infrastructure; interpret 'reasonable network management' to include paid prioritization tiers. Collect revenue from fast-lane contracts while controlling the technical standards bodies where QoS parameters are set. Can shift capital allocation across service tiers at will."
+    },
+    {
+      "name": "cdn_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deploy edge caches inside ISP networks under paid peering agreements that function as de facto prioritization. Benefit from the reading's legitimacy because their business model is structurally aligned with differentiated service — they pay for the fast lane and pass costs to their customers. Can relocate cache nodes if a single ISP's terms become unfavorable."
+    },
+    {
+      "name": "latency_sensitive_application_providers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Real-time gaming, videoconferencing, telemedicine, and high-frequency trading platforms that purchase prioritized delivery. Gain deterministic latency at the cost of recurring payments to ISPs and CDNs. Cannot build their own last-mile infrastructure; locked into purchasing quality from the incumbents."
+    },
+    {
+      "name": "edge_service_providers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Startups, independent developers, and small-to-mid SaaS operators who cannot afford paid prioritization. Their traffic is relegated to best-effort queues that degrade under congestion. Exit means accepting slower user experience or abandoning markets where competitors buy fast lanes."
+    },
+    {
+      "name": "nonprofit_digital_services",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Wikipedia, Internet Archive, public-interest journalism, civic tech platforms, and educational resources that operate on donated or grant funding. Have zero budget for paid prioritization; their traffic competes with commercial fast-lane traffic on congested best-effort paths. No exit — their mission requires universal accessibility, which the reading structurally undermines."
+    },
+    {
+      "name": "rural_community_networks",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Cooperatives, municipal broadband, and tribal networks building last-mile infrastructure in underserved areas. Depend on wholesale transit from Tier 1 ISPs; cannot negotiate prioritization terms. Their users experience compounded disadvantage: sparse infrastructure plus best-effort treatment on backbone links."
+    },
+    {
+      "name": "end_users_without_premium_tiers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Residential and mobile subscribers on standard plans. Experience degraded performance for non-prioritized services (buffering video, laggy VoIP, slow software updates) while ISPs market 'premium' tiers that restore baseline quality. Exit is limited by local monopoly/duopoly conditions."
+    },
+    {
+      "name": "ietf_participants",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Engineers and standards authors in the IETF who maintain DiffServ (RFC 2474/2475), IntServ (RFC 1633), and subsequent QoS architectures. Their work provides the technical vocabulary the reading invokes, but the standards themselves are neutral — they specify mechanisms, not policy. They observe the policy debate from the protocol layer."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "FTC, DOJ Antitrust Division, European Commission DG COMP, and national regulators investigating whether paid prioritization constitutes anti-competitive leveraging of bottleneck infrastructure. Can impose structural remedies but operate on multi-year enforcement timelines."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables network operators to manage finite capacity by allocating bandwidth and latency guarantees to applications with different quality requirements — solving the genuine coordination problem of heterogeneous traffic sharing a common medium.",
+    "transfer_function": "Moves revenue from edge service providers, nonprofit digital services, rural networks, and standard-tier end users to Tier 1 ISPs and CDN operators, in exchange for QoS guarantees that the best-effort baseline no longer reliably provides.",
+    "absent_voices": "Future entrepreneurs whose services don't exist yet because the capital barrier to entry includes paid prioritization budgets; users in jurisdictions without net neutrality protections who have no regulatory recourse; the global south where wholesale transit costs amplify the fast-lane penalty.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the prioritization reading vanished overnight and non-discrimination became the enforced default, ISPs would lose a primary revenue lever for capacity expansion, CDN peering economics would shift toward settlement-free models, edge services would compete on product quality rather than delivery tier, and the investment-incentive argument would be tested against actual capital expenditure data.",
+    "founding_problem": "Early commercial Internet faced unpredictable congestion as traffic grew beyond academic volumes; operators needed a mechanism to guarantee service quality for emerging real-time applications (voice, video) without over-provisioning the entire network.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "ISPs and equipment vendors attest the problem persists and worsens with traffic growth (Cisco VNI reports, ITU-T SG13 submissions). Public-interest researchers and former FCC technologists attest that over-provisioning and protocol improvements (QUIC, BBR, L4S) have substantially solved the original congestion problem, and that current prioritization primarily extracts rent from the new baseline scarcity the reading itself helps create (Free Press, Public Knowledge, and EFF technical filings; 2015 Open Internet Order record)."
+  },
+  "commentary": {
+    "narrative_context": "The prioritization reading of TCP/IP interprets the protocol suite's differentiated services architecture (DiffServ, ECN, QoS bits) as authorizing commercial paid prioritization — 'fast lanes' for latency-sensitive traffic — under the banner of 'reasonable network management.' This reading gained regulatory traction after the 2017 FCC Restoring Internet Freedom Order vacated the 2015 bright-line rules. The constraint is the standing arrangement where ISPs may legally offer, and edge services may be compelled to purchase, prioritized delivery. The reading's claimed type is tangled_rope: it solves a real coordination problem (heterogeneous QoS requirements on shared infrastructure) while simultaneously extracting asymmetric rents from those who cannot pay. The engine computes per-seat types from the structural data; this story authors the structural data independently.",
+    "logic_rationale": "Extractiveness (0.68) reflects that the fast-lane premium is decoupled from marginal cost of priority queueing — it is priced at willingness-to-pay, not cost-plus. The rising trajectory (0.25→0.68 over 1998–2024) tracks the shift from DiffSpec as an engineering tool to paid prioritization as a revenue pillar. Suppression (0.55) is moderate: the constraint does not ban alternatives (anyone can build a CDN, use QUIC, or over-provision), but the structural disadvantage of best-effort traffic under congestion creates de facto coercion. Theater (0.42) captures the growing gap between 'network management' rhetoric and the commercial terms of paid peering / fast-lane contracts. Accessibility collapse (0.38) is partial: alternatives exist but are economically nonviable for many victims. Resistance (0.71) is high: sustained advocacy, litigation, state-level net neutrality laws, and protocol-level workarounds (encrypted traffic hiding, L4S) all contest the reading.",
+    "directionality_logic": "Tier 1 ISPs are structural beneficiaries (collect fast-lane revenue, set terms — d near 0.1). CDN operators and latency-sensitive app providers are secondary beneficiaries who also pay (d ~0.3–0.4). Edge providers, nonprofits, rural networks, and standard-tier users are targets (d 0.7–0.9) — they bear the cost of degraded best-effort service and the barrier to entry. IETF participants and competition authorities are analytical observers (d ~0.5, analytical exit). The derivation chain from beneficiary/victim declarations + power + exit produces these directionalities; no overrides needed.",
+    "perspectival_gap": "From the ISP seat, the constraint is genuine coordination: they built the pipes, they manage congestion, and QoS markets fund capacity. From the edge-provider and nonprofit seats, the same structure is extraction: the congestion that makes prioritization valuable is partly endogenous to under-investment in best-effort capacity, and the fast-lane price is monopoly rent. The engine computes this divergence.",
+    "mandatrophy_analysis": "The founding problem (congestion management for early real-time apps) has been substantially addressed by protocol evolution and bandwidth growth, but the arrangement persists and has expanded into a general revenue model. The mandatrophy is contested: ISPs claim the problem is live and growing; critics claim the arrangement has metastasized beyond its founding justification. The engine will flag the founding_problem_status=contested + disappearance_verdict=world_rearranges mismatch as a zombie/capture signal.",
+    "kernel_context": "This constraint is the 'prioritization_reading' of the contested kernel 'tcp_ip_interpretation'. Sibling readings: 'neutrality_reading' (TCP/IP embodies end-to-end non-discrimination) and 'zero_rating_reading' (TCP/IP allows selective exemptions for sponsored content). This reading instantiates the constraint where ISPs are authorized to implement paid fast lanes; network investment is incentivized; unfunded edge services are disadvantaged. The other readings are separate constraint stories with their own ε, beneficiaries, and classifications."
+  },
+  "omegas": [
+    {
+      "id": "prioritization_revenue_vs_capex",
+      "question": "What fraction of paid prioritization revenue is actually reinvested in capacity expansion versus extracted as shareholder return?",
+      "resolution_mechanism": "Regulatory financial reporting requirements compelling ISP capex disaggregation by funding source; independent audit of capital allocation before/after prioritization revenue recognition.",
+      "impact": "If reinvestment fraction is high, the coordination function is substantiated and extraction is lower; if low, the reading is predominantly rent extraction and ε should be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fast-lane revenue funds the capacity it claims to manage."
+    },
+    {
+      "id": "congestion_endogeneity",
+      "question": "To what extent is the congestion that makes prioritization valuable created or maintained by ISP under-investment in best-effort capacity?",
+      "resolution_mechanism": "Longitudinal analysis of ISP capacity per subscriber, congestion metrics, and capex trends before and after paid prioritization authorization; natural experiments from jurisdictions with/without net neutrality rules.",
+      "impact": "If congestion is endogenous, the reading creates the scarcity it sells relief from — a self-reinforcing extraction loop. ε and suppression would both be understated.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint manufactures the problem it coordinates."
+    },
+    {
+      "id": "protocol_neutrality_of_qos_mechanisms",
+      "question": "Do the IETF QoS mechanisms (DiffServ, IntServ, L4S) structurally require commercial prioritization, or are they neutral tools that can implement non-discriminatory management?",
+      "resolution_mechanism": "Technical analysis of whether the protocol mechanisms can enforce per-flow fairness without paid tiers; deployment evidence from networks that use QoS for internal traffic engineering only.",
+      "impact": "If mechanisms are neutral, the reading's appeal to 'TCP/IP permits' is a policy choice masquerading as protocol necessity. If mechanisms require commercialization, the protocol itself embeds the extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the technical standards structurally entail the commercial reading."
+    },
+    {
+      "id": "kernel_reading_relationship_prioritization_vs_neutrality",
+      "question": "Does the prioritization reading logically foreclose the neutrality reading within a single regulatory framework, or do they coexist as competing policy positions?",
+      "resolution_mechanism": "Legal analysis of whether a jurisdiction can simultaneously enforce 'no paid prioritization' (neutrality) while permitting 'reasonable network management' that includes QoS — the 2015 Open Internet Order attempted this synthesis; the 2017 reversal rejected it.",
+      "impact": "If they foreclose, the kernel admits only one stable reading per framework. If they coexist, the kernel is a permanent contested zone. Affects cs_structure.reading_relations classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and the neutrality_reading sibling."
+    },
+    {
+      "id": "kernel_reading_relationship_prioritization_vs_zero_rating",
+      "question": "Does the prioritization reading structurally influence the zero_rating_reading (creating downstream pressure on sponsored-content exemptions) without foreclosing it?",
+      "resolution_mechanism": "Policy genealogy tracing whether paid prioritization frameworks normalize the principle that 'some traffic deserves better treatment,' which then legitimates zero-rating as a downstream variant.",
+      "impact": "If influences, the readings form a cascade: prioritization reading → zero_rating_reading. If they coexist independently, each stands on its own policy logic.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and the zero_rating_reading sibling."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__zero_rating_reading",
+      "interconnection_disputes",
+      "cdn_peering_economics",
+      "rural_broadband_deployment"
+    ],
+    "dual_formulation_note": "This story is the prioritization_reading of the tcp_ip_interpretation kernel family. The neutrality_reading (ε ≈ 0.15, claimed mountain) and zero_rating_reading (ε ≈ 0.45, claimed tangled_rope) are separate constraint stories with distinct ε values, stakeholder structures, and classifications. All three share the kernel_id 'tcp_ip_interpretation' and are linked via network.affects_constraints. The prioritization reading's ε (0.68) is substantially higher because it authorizes commercial extraction; the neutrality reading's ε is near-zero because it prohibits discrimination; the zero_rating reading sits between — it permits discrimination but only for sponsored content, not general paid prioritization."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "neutrality_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "zero_rating_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "qos_mechanisms_authorize_commercial_prioritization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "network_investment_requires_differentiated_revenue_streams",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "original_tcp_ip_architecture_as_open_interconnection",
+    "drift_state": {
+      "moment": "post_2017_restoring_internet_freedom_order",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

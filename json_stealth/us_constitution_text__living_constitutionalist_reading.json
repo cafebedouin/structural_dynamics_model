@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "us_constitution_text__living_constitutionalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "35516ecd-8c57-4f05-91ae-f3cf284714ec"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Living-Constitution Interpretive Arrangement (Adaptive Reading of the U.S. Constitutional Text)",
+    "topic_domain": "legal/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rights_claimants_changed_contexts",
+      "federal_judiciary"
+    ],
+    "victims": [
+      "democratic_majorities_overridden",
+      "state_legislatures_invalidated",
+      "fixed_meaning_advocates"
+    ],
+    "vindicated_propositions": [
+      "substantive_due_process_doctrine",
+      "evolving_standards_of_decency_doctrine",
+      "incorporation_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 72
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 72,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 72,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 72,
+      "value": 0.25,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_decomposition",
+      "question": "This constraint is one reading of the us_constitution_text kernel; what structurally changes if a sibling reading (originalist or positivist) is instantiated instead?",
+      "resolution_mechanism": "Author the sibling readings as separate constraint files per the epsilon-invariance principle; compare computed types, beneficiary sets, and epsilon across the family file-to-file.",
+      "impact": "Under the originalist reading the beneficiary and victim sets invert (fixed-meaning claimants gain standing, evolved-rights claimants lose judicially secured protections) and the epsilon referent shifts to a different standing arrangement; cross-reading comparisons are valid only between files, never averaged.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame decomposition of the constitutional-text kernel into rival readings."
+    },
+    {
+      "id": "counter_majoritarian_cost_or_capture",
+      "question": "Is the transfer of interpretive authority from elected bodies to federal courts a justified coordination cost of keeping an 18th-century text governable, or capture of democratic authority by an insulated institution?",
+      "resolution_mechanism": "Comparative institutional analysis across jurisdictions with different interpretive regimes; measure rights protection, doctrinal stability, and democratic responsiveness against interpretive-method variables.",
+      "impact": "If capture, effective extraction rises and the arrangement trends toward pure extraction; if justified cost, it trends toward pure coordination with the judiciary's authority treated as overhead.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the authority transfer embedded in adaptive interpretation is priced coordination or rent."
+    },
+    {
+      "id": "hollow_hope_beneficiary_ambiguity",
+      "question": "Do rights claimants in changed social contexts benefit net from judicially managed adaptation, or does court-centered rights protection substitute for and weaken more durable legislative and movement-based gains?",
+      "resolution_mechanism": "Longitudinal comparison of rights trajectories pursued through litigation versus legislation and social movements; update court-centrism outcome studies with current data.",
+      "impact": "If the substitution critique holds, the beneficiary declaration weakens, directionality for rights claimants rises above pure-beneficiary levels, and the arrangement reads more extractive than authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net beneficiary status of litigation-dependent rights claimants."
+    },
+    {
+      "id": "standing_arrangement_survival",
+      "question": "Will the adaptive-interpretive arrangement survive the current originalist ascendancy, or is it being displaced — and if displaced, what residue persists in lower-court practice and entrenched precedent?",
+      "resolution_mechanism": "Track appointment pipelines, the overruling trajectory of evolved-meaning precedents, and lower-court citation patterns to adaptive doctrines over the coming decade.",
+      "impact": "If displacement completes, this constraint becomes historical and residual enforcement may persist mainly as performance in legacy doctrine; if the arrangement holds, the repudiation-pressure drift reverses.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Survival prospects of the standing adaptive arrangement under a hostile bench."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Holds itself out, through case-and-controversy jurisdiction, as the working interpreter of the constitutional text. Declares what broad principles mean under present conditions, binds lower courts and states through precedent, and defends that role against political pushback. Individual justices come and go; the institution's authority is fused with the interpretive practice itself — stepping outside it would mean ceasing to be the Supreme Court. Its members currently disagree sharply about whether the adaptive approach should continue."
+    },
+    {
+      "name": "rights_claimants_changed_contexts",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals and groups seeking constitutional protection for conduct, relationships, or decisions the 18th-century text does not name — patients, same-sex couples, criminal defendants, unpopular speakers. Their practical route to protection runs through federal litigation; no other forum secures constitutional rights against state action. Wins arrive slowly, depend on counsel and standing, and can be undone by later courts."
+    },
+    {
+      "name": "democratic_majorities_overridden",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Voters and their representatives who settle contested questions by statute or ballot initiative, then see those settlements invalidated when courts read the text's principles to reach further. Their levers are indirect: electing presidents who nominate judges, pressuring senators, and — rarely achievable — the amendment process."
+    },
+    {
+      "name": "state_legislatures_invalidated",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "State governments whose policy choices — on marriage, education, policing, morality regulation — are struck down under nationally evolved readings of equal protection and due process. Bound by supremacy; their recourse is litigation, lobbying for sympathetic nominees, and a formal amendment process they cannot realistically trigger alone."
+    },
+    {
+      "name": "fixed_meaning_advocates",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Scholars, lawyers, litigants, and citizens who hold that the text's meaning was fixed when adopted and that departures from that meaning lack democratic warrant. Long outside the interpretive mainstream, they built durable alternative infrastructure — societies, journals, nomination pipelines — and now hold significant institutional leverage. They can pursue their program through appointments and scholarship regardless of what the courts currently do."
+    },
+    {
+      "name": "constitutional_law_academy",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Law professors, historians, and commentators who map the interpretive contest, test each methodology against the cases, and train the next generation of clerks and judges. Observes and critiques; decides nothing."
+    },
+    {
+      "name": "future_citizens_bound_by_precedent",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People not yet born or not yet enfranchised who will live under precedents set now. They take no part in today's rulings but inherit their binding force. Kept as a narrative-completeness seat rather than a participating actor."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Keeps a brief, old, deliberately hard-to-amend charter operable as supreme law across radically changed conditions: it lets 1787 language govern industrialization, mass media, electronic surveillance, and new family forms without an Article V amendment for each development, and gives officials and citizens a stable method for resolving what the text permits.",
+    "transfer_function": "Moves ultimate decision authority over contested social questions from enacting majorities and state governments to federal courts; moves enforceable rights protections to litigants who obtain them under evolved meanings rather than through the amendment process.",
+    "absent_voices": "The adopting generation cannot appear — the dead cannot litigate — and ordinary voters enter only indirectly, through appointment politics. Citizens who would settle contested moral questions legislatively, and state governments defending their own settlements, object from outside the courtroom where the method is applied.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If adaptive interpretation vanished overnight, the large body of doctrine resting on evolved meanings — incorporation of the Bill of Rights against the states, the anti-discrimination reading of equal protection, the privacy line — would lose its warrant simultaneously; hundreds of precedents would become unstable, state and federal law would lurch into re-litigation of settled questions, and the system would reorganize around either recovered original meaning or a wave of amendment attempts the Article V process cannot absorb.",
+    "founding_problem": "A short 18th-century charter written in broad principles could not anticipate the society it would govern; without a method for applying its principles to unforeseen conditions, the text would either freeze governance in 1791 categories or require constant amendment the supermajority process makes impractical. Early interpreters adopted adaptive construction so the instrument could, in Marshall's phrase, endure for ages to come.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: originalist scholars concede the text-society distance — their entire project is a response to it, disputing the remedy rather than the gap; legal historians across methodologies document that the framers and early commentators anticipated change (ratification debates, McCulloch v. Maryland, Jefferson's letters on intergenerational obligation). No serious participant in the contest denies the founding problem exists; the dispute is over the solution."
+  },
+  "gain_flow": "federal_judiciary",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_constitution_text__originalist_reading",
+      "us_constitution_text__positivist_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'what the Constitution requires' decomposes into three structurally distinct readings of one kernel (us_constitution_text). This living-reading story links to the originalist and positivist sibling files via affects_constraints. Upstream/downstream structure: the originalist reading cites the fixed text's enactment pedigree against this reading; this reading cites post-ratification practice lineage (Marshall through the Warren Court) as its warrant. Epsilon differs across the family because each reading assesses a different standing arrangement by its own lights; values are never averaged across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In United States constitutional practice, the dominant 20th-century interpretive arrangement treats the Constitution's broad principles as adaptable: meaning evolves with society, and judges apply principles to contemporary circumstances. This story instantiates the LIVING-CONSTITUTIONALIST READING of the us_constitution_text kernel as a clean, epsilon-invariant constraint; the originalist and positivist readings are separate constraints in separate files, linked through network edges. The epsilon referent is the standing adaptive-interpretive arrangement as this reading assesses it: a genuine coordination achievement — keeping a 1787 charter operative across transformed conditions — carrying a real but bounded cost, namely interpretive authority concentrated in an unelected judiciary and paid by democratic majorities, state governments, and fixed-meaning claimants. Claim and metrics are independent authored facts: claimed_type tangled_rope records this reading's structural self-understanding (real coordination function plus real asymmetric payment through the same structure); the metrics record descriptive best estimates of how the arrangement actually operates.\n\nKEY AGENTS (by structural relationship):\n- federal_judiciary: agenda_setter (institutional/identity_locked) — administers adaptive interpretation through judicial review and stare decisis; collects interpretive authority\n- rights_claimants_changed_contexts: primary beneficiary (powerless/constrained) — obtains protections under evolved meanings\n- democratic_majorities_overridden: primary payer (organized/constrained) — loses policy questions to judicial settlement\n- state_legislatures_invalidated: payer (organized/constrained) — enactments fall under evolved equal-protection and due-process readings\n- fixed_meaning_advocates: payer (powerful/mobile) — originalist scholars, litigants, and citizens whose fixed-meaning claims are displaced by the standing arrangement\n- constitutional_law_academy: observer (moderate/analytical)\n- future_citizens_bound_by_precedent: excluded (non-agent seat) — bound by precedents set before they could participate",
+    "logic_rationale": "Extractiveness 0.35: the arrangement transfers real decision authority from elected bodies to courts — a cost this reading itself acknowledges as the counter-majoritarian price — but the reading regards most of that transfer as the purchase price of governability, not rent. Suppression 0.25: adaptive interpretation suppresses almost nothing — originalism competes openly, amendment remains formally available, and coercion is confined to binding precedent on case losers; suppression is authored as a raw structural property and is not scaled by power or scope anywhere in the computation. Theater 0.15: the practice performs real doctrinal work; rhetorical performance ('evolving standards') is a minor fraction. Accessibility collapse 0.25: understanding the arrangement does not close off alternatives — rival methodologies remain fully available, which is precisely why the contest persists. Resistance 0.55: an organized originalist counter-movement, recurring political backlash, and explicit recent repudiations of evolved-meaning reasoning impose continuous pressure. The measurement series run on ONE shared time grid (T=0 approximates 1953, the opening of the Warren Court era; T=72 approximates 2025; one unit ≈ one year), with every tracked metric authored at every point. The suppression_requirement series is non-monotonic by design: enforcement demand ratcheted upward as rights-revolution rulings drew defiance and jurisdiction-stripping threats (culture-war cycle: ruling, backlash, partial settlement, accumulation), then decayed as the coalition sustaining the arrangement lost control of the bench — enforcement-capacity change is the dynamic this story traces, which is why the series is authored at all.",
+    "perspectival_gap": "The seats compute differently from identical structural inputs. From the agenda_setter seat (federal_judiciary), the arrangement is the institution's own craft and the source of its authority — coordination it performs and maintains. From the beneficiary seat (rights_claimants_changed_contexts), the same structure is liberation: protections that no amendment process would have delivered in time. From the payer seats (democratic_majorities_overridden, state_legislatures_invalidated, fixed_meaning_advocates), the identical structure is displacement — questions they regard as theirs, settled elsewhere. The engine computes these per-seat classifications from the structural data; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiary declarations drive rights_claimants_changed_contexts toward the subsidized end (d near 0.0): the arrangement delivers protections they could obtain nowhere else, and their exit options are poor. Victim declarations drive the three payer seats toward the target end: democratic_majorities_overridden and state_legislatures_invalidated are constrained (supremacy binds them; amendment is out of reach), so their effective extraction is amplified by trap-weighting; fixed_meaning_advocates carry high d despite power and mobility — their structural relationship is target-of-displacement, and their arbitrage-grade exit (parallel institutions, appointment pipelines) moderates what they effectively pay but not their directional position. One override is declared: the federal_judiciary derives from its beneficiary declaration a d near 0.1, but the seat is split — half the current bench rejects the reading outright, and the institution collectively pays legitimacy costs for maintaining it — so d is overridden to 0.25 to reflect a partially captured, partially resisting administrator rather than a pure collector.",
+    "mandatrophy_analysis": "The founding problem — the gap between a fixed 18th-century text and a changing society — is live, so no mandatrophy resolution is declared. The classification guards against two symmetric mislabels. Calling the arrangement pure coordination ignores the documented authority transfer that democratic and state seats pay through the same structure that protects claimants. Calling it pure extraction ignores the genuine coordination function (an unamendable-in-practice charter made operable) and the absence of suppressed exits — the arrangement's rivals are thriving, not silenced. On the R5 mismatch consumer: founding_problem_status=live combined with disappearance_verdict=world_rearranges produces no zombie flag; the arrangement's persistence tracks its function, and its current vulnerability comes from a rival reading's institutional ascent, not from atrophy of its own purpose.",
+    "kernel_context": "Kernel: us_constitution_text — the ratified U.S. constitutional text as a stabilized commitment. This file instantiates the living_constitutionalist_reading: constitutional meaning evolves with society, and interpretation must adapt principles to contemporary circumstances. Sibling readings, each a separate constraint file: the originalist_reading (meaning fixed at ratification; interpretation recovers original public understanding) and the positivist_reading (validity derives from formal enactment procedures, indifferent to moral content or historical meaning). Per the committer frame, each reading carries its own epsilon, beneficiary structure, and type; this file authors only the living reading and routes all cross-reading structure to omegas and reading_relations."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "originalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "positivist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_meaning_adapts_to_contemporary_circumstances",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "past_generations_cannot_bind_present_ones_to_fixed_meanings",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "living_framework_of_principles",
+    "drift_state": {
+      "moment": "contemporary_originalist_ascendancy",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

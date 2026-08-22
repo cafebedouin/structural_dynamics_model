@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "sovereign_legitimacy__monarchical_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "c75ad592-4171-4784-9b7b-4521d6bc2999",
+    "created_at": "2026-08-05T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.6,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hereditary Sovereign Legitimacy — Monarchical Reading",
+    "topic_domain": "political philosophy / constitutional theory / legitimacy studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "hereditary_ruling_dynasty",
+      "titled_aristocracy",
+      "established_church_hierarchy",
+      "crown_officeholders"
+    ],
+    "victims": [
+      "common_subjects",
+      "republican_dissidents"
+    ],
+    "vindicated_propositions": [
+      "divine_right_doctrine",
+      "primogeniture_succession_rule",
+      "hereditary_transmission_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 320,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 320,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 160,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 240,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 320,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_sibling_structural_delta",
+      "question": "This constraint is one reading of the sovereign_legitimacy kernel (reading: monarchical_reading). What structurally changes if a sibling reading is adopted instead?",
+      "resolution_mechanism": "Adoption of republican_reading relocates legitimacy's source from inheritance to consent: the dynasty converts from agenda-setter to abolished office or symbolic residue, common_subjects convert from victims to citizen-principals, and epsilon falls toward the coordination floor. Adoption of constitutional_hybrid_reading splits authority by function, leaving the dynasty a bounded ceremonial beneficiary with political authority delegated onward.",
+      "impact": "Sibling adoption changes the victim set, the beneficiary set, and the effective-extraction profile wholesale; classifications computed on this file do not transfer to sibling files, and cross-reading comparison must run per-file.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: what each sibling reading of the sovereign_legitimacy kernel would change structurally relative to this monarchical reading."
+    },
+    {
+      "id": "divine_sanction_coordination_effect",
+      "question": "Does divine sanction carry observable coordination effects independent of individual belief, or is the sacral layer purely conventional decoration on coercion?",
+      "resolution_mechanism": "Compare legitimacy durability under succession stress across regimes matched on coercion capacity but differing on sacral validation depth; if sacral regimes survive equivalent shocks with less enforcement, the sanction layer does independent coordinating work.",
+      "impact": "If purely conventional, the arrangement's persistence reduces to enforcement plus inertia and the snare-leaning reading strengthens; if belief-independent coordination effects exist, part of the measured stability is genuine rope-function and the tangled_rope classification firms up.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the theological validation layer contributes coordination value beyond coercion."
+    },
+    {
+      "id": "succession_stability_net_advantage",
+      "question": "Does hereditary succession actually reduce succession conflict relative to consent-based selection, net of wars triggered by disputed lines, royal minorities, and dynastic extinction?",
+      "resolution_mechanism": "Comparative dataset of transition episodes per century across hereditary, elective, and consent-based regimes, coding contested-succession frequency and severity; the founding-problem corroboration record supplies the baseline.",
+      "impact": "If the net advantage is illusory, the coordination half of the tangled_rope claim weakens toward snare (coordination story as cover); if robust, the hybrid classification holds and part of the measured extraction is the price of the order function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net coordination advantage of bloodline succession over consent-based selection."
+    },
+    {
+      "id": "deference_internalization_share",
+      "question": "How much of subject compliance with the hereditary order is structural (treason statutes, censorship, religious tests) versus internalized (deference norms, sacral awe, habituated obedience)?",
+      "resolution_mechanism": "Post-abolition compliance trajectories: if deferential behavior and legitimacy sentiment persist after the enforcement machinery is removed, the internalized share is large; rapid reversion to rival legitimacy claims indicates the structural share dominated.",
+      "impact": "If largely internalized, effective suppression exceeds the structural measure and outlives the regime that installed it, predicting post-transition instability and inflating the constraint's durable footprint; if largely structural, abolition releases compliance quickly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized composition of the arrangement's suppression of alternative legitimacy claims."
+    },
+    {
+      "id": "ceremonial_vestige_mislabeling",
+      "question": "In surviving instances, is the operating arrangement still this monarchical reading (substantive inherited authority) or has it silently become the constitutional_hybrid_reading while retaining monarchical vocabulary?",
+      "resolution_mechanism": "Test whether the crown retains any discretionary act that binds without elected-body consent: if none exists, the surviving instance is governed by the hybrid reading and this file's end-state metrics describe vestige wearing the old name.",
+      "impact": "If vestige, the end-state extractiveness and suppression attributed here belong to the sibling's file and this reading's true current domain shrinks to the strongholds where discretion survives; epsilon-invariance requires the decomposition rather than one averaged story.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether residual monarchical instances are this reading or the hybrid sibling operating under monarchical labels."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A hereditary monarchy claims and exercises supreme authority on the ground that legitimate power descends through bloodline, sanctified at accession by religious rite and armored by tradition. The arrangement solves a real problem — it fixes, before the fact, who commands — while channeling taxation, service, and obedience upward to the dynasty and its grantee hierarchy, and excluding the governed from any procedural role in authorizing any of it. Alternative accounts of legitimacy are not merely mistaken under this arrangement; they are criminal. This file instantiates the monarchical_reading of the sovereign_legitimacy kernel only (see kernel_context); the interval runs in years from a c. 1600 baseline (t=0 is approximately 1600 CE, t=400 approximately 2000 CE), spanning the reading's ascendancy, contestation, and contraction.\n\nKEY AGENTS (by structural relationship):\n- hereditary_ruling_dynasty: Primary beneficiary and agenda-setter (institutional/identity_locked) — holds and transmits supreme authority; collects the arrangement's revenues\n- titled_aristocracy: Secondary beneficiary (powerful/constrained) — collects titles, estates, immunities, and offices\n- established_church_hierarchy: Beneficiary and co-administrator (institutional/constrained) — validates accession, collects establishment privileges\n- crown_officeholders: Beneficiary (organized/constrained) — careers and pensions flow through the patronage pyramid\n- common_subjects: Primary target (powerless/trapped) — bears taxation, conscription, and labor dues; no procedural voice\n- republican_dissidents: Excluded challenger (organized/trapped) — advances consent-based legitimacy claims under treason law\n- legitimacy_theorists: Analytical observer (analytical/analytical) — sees the full structure from outside",
+    "key_agents": [
+      "hereditary_ruling_dynasty: Primary beneficiary and agenda-setter (institutional/identity_locked) — holds and transmits supreme authority by blood; collects the arrangement's revenues",
+      "titled_aristocracy: Secondary beneficiary (powerful/constrained) — collects lands, titles, tax immunities, and reserved offices",
+      "established_church_hierarchy: Beneficiary and co-administrator (institutional/constrained) — administers the sacral validation of accession; collects establishment privileges",
+      "crown_officeholders: Beneficiary (organized/constrained) — judges, governors, and household officers whose advancement runs through loyal service",
+      "common_subjects: Primary target (powerless/trapped) — bears taxation, conscription, and labor exactions with no authorizing voice",
+      "republican_dissidents: Excluded challenger (organized/trapped) — publishes and organizes for consent-based legitimacy under treason and sedition statutes",
+      "legitimacy_theorists: Analytical observer (analytical/analytical) — assesses the structure's claims from outside its offices"
+    ],
+    "logic_rationale": "Claim and metrics are authored independently. The claimed type is tangled_rope because the structure exhibits both a genuine coordination function — a pre-committed succession rule that removes the recurring question of who rules and channels elite rivalry into court competition — and asymmetric extraction: revenues, service, and decision-rights flow upward to the dynasty and its grantees while the governed hold no authorizing voice, all held in place by active enforcement (treason and sedition statutes, licensing, religious conformity). Metrics describe the arrangement's operation at interval end: extractiveness 0.68 (high but not total — the order and succession-clarity functions are real and consumed by every seat); suppression 0.60 (enforcement machinery real but past its seventeenth–eighteenth-century peak); theater_ratio 0.62 (above the Goodhart marker because the aggregate blends strongly enforced strongholds with residual instances where ceremony carries most of the legitimating load — see the ceremonial_vestige_mislabeling omega); accessibility_collapse 0.55 (rival legitimacy accounts remained thinkable, publishable abroad, and eventually victorious across much of the world — alternatives never fully collapsed); resistance 0.72 (civil war, revolution, and sustained dissident networks across the interval). All three tracked series run on one shared six-point grid (t = 0, 80, 160, 240, 320, 400). Extraction deepened through the fiscal-military absolutist era (0.62 to 0.74), then eased slightly as dynasties ceded fiscal control to representative bodies while retaining core revenues in their strongholds. suppression_requirement is authored because enforcement capacity is the traced dynamic here: it built to a peak (0.78 at t=160 — licensing acts, seditious-libel prosecutions, conformity tests) and then decayed (0.60) as rivals were accommodated, defeated, or driven into exile. Theater rose monotonically as ritual absorbed a growing share of the legitimating work. Succession crises punctuate the record episodically (local spikes in resistance and enforcement around contested accessions), but the grid samples the secular trend rather than the episodic spikes; the oscillation driver is demographic accident in succession lines, not intermittent reinforcement. Suppression composes structural machinery (statutes, licensing, conformity tests) with internalized deference (sacral awe, habituated obedience); the scalar cannot separate the two, so the composition is routed to the deference_internalization_share omega. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled, by directionality and national scope, in the engine's computation.",
+    "perspectival_gap": "From the throne's seat the arrangement presents as the natural shape of the cosmos — authority descending as light from the sun, with no alternative even grammatically available; a seat computing there should return something mountain-like. From the subject's seat the same structure is a one-way flow of obligations with no authorizing consent and no exit; a seat computing there should return something heavily extractive. From the aristocrat's and churchman's seats it is earned-and-owed privilege, experienced as fair exchange of service for station. The theorist's seat sees a contingent construction with a measurable founding problem. The engine computes these divergences from the structural data; the gap between the throne's mountain-like experience and the subject's extraction experience is the perspectival content this story exists to preserve.",
+    "directionality_logic": "Beneficiary declarations drive low d: the dynasty sits nearest the beneficiary pole (it writes the rules, collects the revenues, and is locked into its own subsidy); titled_aristocracy, established_church_hierarchy, and crown_officeholders sit nearby, collecting granted shares, with constrained exit keeping them invested in the arrangement's continuation. Victim declarations drive high d: common_subjects sit near the full-target pole, amplified by trapped exit (no procedural voice, costly and licensed emigration); republican_dissidents sit at the target pole through direct exposure to the enforcement apparatus itself. National spatial scope modestly amplifies effective extraction for targets by raising the verification cost of abuses at distance — the distant province sees the tax collector, not the court. No directionality_overrides are authored: the derivation from beneficiary/victim declarations plus exit options reproduces the structural relationships without correction. Identity-lock note: the dynasty's exit is identity_locked through institutional fusion — the house has become the crown; a renouncing heir does not step outside the arrangement so much as trigger a succession crisis inside it. If that identity frame broke (a dynasty voluntarily dissolving its own claim), the arrangement would lose its holder-class abruptly rather than decaying.",
+    "mandatrophy_analysis": "The founding problem — an unambiguous, continuously occupied locus of supreme authority — is contested rather than dead: comparative-historical scholarship corroborates that it was real and that hereditary succession reduced some classes of transition violence, while consent-based mechanisms now solve it at lower cost in most polities. Where the reading still substantively governs, the function persists and mandatrophy is not resolved; where only ceremony remains, the mandate is dead and the instance drifts toward theatrical maintenance — visible in the monotonic theater_ratio rise to 0.62. Classifying the structure as tangled_rope prevents the two symmetrical mislabels: a pure-snare reading would erase the real succession-coordination achievement that even hostile historians corroborate; a pure-rope reading would erase the exclusion rents and criminalized alternatives that the victim declarations record. The R5 mismatch consumer reads founding_problem_status=contested against disappearance_verdict=world_rearranges, which raises no zombie flag — correctly, since the arrangement's persistence tracks a disputed-but-live problem, not a dead one.",
+    "kernel_context": "This constraint instantiates the monarchical_reading of the sovereign_legitimacy kernel: the claim that legitimate authority flows downward from the sovereign through inherited right, grounded in divine sanction, tradition, and bloodline continuity. Sibling readings — republican_reading (authority flows upward from the people through delegated consent) and constitutional_hybrid_reading (dual-sourced: inherited ceremonial authority, delegated political authority, constitutional mediation) — are separate constraints with their own epsilon values and beneficiary structures, authored in their own files. The disagreement is located at the SOURCE of legitimate authority: this reading grounds it in transmission (birth, anointing, continuity); the republican sibling grounds it in consent; the hybrid partitions authority by function. Per the one-reading-one-constraint discipline, this file authors only the monarchical reading's arrangement; committer deltas are routed to the kernel_sibling_structural_delta omega."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "republican_reading",
+      "constitutional_hybrid_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'sovereign legitimacy' decomposes, per the epsilon-invariance principle, into three structurally distinct readings of one kernel: monarchical (this file — legitimacy by downward transmission; dynasty and aristocracy as beneficiaries, subjects as victims, high suppression of alternatives), republican_reading (legitimacy by upward consent; the citizenry as principal, a different victim/beneficiary structure and epsilon), and constitutional_hybrid_reading (dual-sourced legitimacy; partitioned victim and beneficiary sets). Each is authored as its own story with its own stable epsilon; this file links its siblings here. Direction of influence: this reading's crisis episodes (wars of succession, absolutist overreach) created the structural conditions under which the sibling readings gained adoption ground — an influences-edge recorded in cs_structure.reading_relations toward the hybrid, whose very existence as a coherent mediating framework is why the two pure readings coexist rather than foreclose each other."
+  },
+  "stakeholders": [
+    {
+      "name": "hereditary_ruling_dynasty",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Holds supreme executive, legislative, and judicial authority by right of birth, transmitted through the house's succession line. Confirms law, declares war, appoints ministers and judges, and controls the demesne revenues. Each reign is validated at accession by anointing and coronation oath administered by the established church. Members of the house cannot decline the role without breaking the succession claim itself; abdication is treated as rupture, not retirement."
+    },
+    {
+      "name": "titled_aristocracy",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold hereditary titles, landed estates, tax immunities, and reserved seats in the upper chamber and officer corps, all granted and confirmed by the crown. Their rank, marriage alliances, and legal privileges are denominated in the monarchical order; converting wealth into commerce does not carry rank with it. Military service and court loyalty are exchanged for continued privilege."
+    },
+    {
+      "name": "established_church_hierarchy",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the anointing and coronation that validate each reign, preaches the duty of obedience, and holds established status, tithes, and seats in the upper chamber. Its liturgical calendar and doctrinal authority are woven into the state's ceremonies. Endorsing a rival account of where authority comes from would dissolve its own established position, so it co-administers the arrangement it benefits from."
+    },
+    {
+      "name": "crown_officeholders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Serve as judges, governors, ambassadors, and household officers at the crown's pleasure. Salaries, pensions, and honors flow through the patronage pyramid; advancement depends on demonstrated loyalty. Their careers have no equivalent ladder outside the court's service."
+    },
+    {
+      "name": "common_subjects",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Owe taxes, military service, and labor dues fixed by law and custom, without participating in any body that authorizes them. Compliance is owed from birth; there is no procedure by which they confer or withhold allegiance. They consume the order and continuity the arrangement provides, but cannot consent to or refuse its terms. Emigration is possible in principle yet costly, licensed, and sometimes barred; political exit does not exist."
+    },
+    {
+      "name": "republican_dissidents",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Publish, conspire, and organize for a rival account of where authority comes from — that it originates in the governed. Prosecuted under treason and sedition statutes; pamphleteers face censorship, organizers face prison or exile, and exile circles sustain the argument from abroad. Their exclusion from lawful political speech is maintained by the same statutes that protect the succession."
+    },
+    {
+      "name": "legitimacy_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Assess the arrangement's claims from outside its offices — writing on the origin of authority, comparing regimes, and recording succession outcomes across borders and centuries. They hold no stake in the patronage pyramid and can say what participants cannot."
+    }
+  ],
+  "gain_flow": "hereditary_ruling_dynasty",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a pre-committed, unambiguous answer to who holds supreme authority at every moment, including at succession, anchoring elite expectations and mass obedience without recurring negotiation; channels elite rivalry into court competition rather than open war; synchronizes law, war-making, and appointment under a single recognized head.",
+    "transfer_function": "Moves taxation, conscription, corvee labor, and fealty upward from subjects to the dynastic treasury and its grantee hierarchy (aristocracy, church, officeholders); moves legitimation downward from sacral ritual to the crown; moves offices, titles, and jurisdiction as inheritable or revocable grants along patronage lines.",
+    "absent_voices": "Common subjects without any procedural voice, and republican dissidents criminalized under treason and sedition law, would object that authority's source was never theirs to confer; they stand outside the conversation by design — their exclusion is the enforcement object. Peasant and burgher assemblies that once negotiated obligations were dissolved or converted into ceremonial estates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, succession would be immediately contested among pretenders, elites, and armies; the legitimacy vacuum would be filled by election, conquest, or written constitution; the church would lose its establishment anchor; aristocratic titles and immunities would void; and the patronage pyramid supporting the officeholding class would collapse into whatever new authority-allocating mechanism emerged.",
+    "founding_problem": "Early territorial states needed an unambiguous, continuously occupied locus of supreme authority: every interregnum invited elite war and peasant devastation. Hereditary right plus divine sanction answered 'who rules?' before the question could be asked — succession settled by birth, obedience anchored by sacral ritual, elite rivalry channeled into court competition rather than open warfare.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Comparative-historical scholarship on state formation and succession violence — outside the benefiting parties — corroborates that the founding problem was real and that hereditary succession measurably reduced some classes of transition conflict. Whether the problem remains live is disputed: dynastic apologists and some political scientists attest its persistence wherever consent mechanisms fail or are absent, while republican theorists and constitutional historians attest that consent-based and legal-rational mechanisms now solve it at lower cost. No corroboration exists for the divine-sanction warrant itself outside the established church's own testimony."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "divine_right_hereditary_order",
+    "drift_state": {
+      "moment": "contemporary_mass_politics_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "republican_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimate_authority_transmitted_by_inheritance_under_divine_sanction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "precommitted_bloodline_succession_is_necessary_for_political_order",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

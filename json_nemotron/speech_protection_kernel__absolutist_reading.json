@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "c0098e7c-039d-4fb3-a6e2-5c3672a44005"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Absolutist Speech Protection — Listener Harm Not Grounds for Restriction",
+    "topic_domain": "constitutional_law/political_philosophy/communication_rights",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "speakers",
+      "publishers",
+      "press_institutions"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "speaker_autonomy_maximized",
+      "listener_harm_not_restriction_ground",
+      "categorical_protection_boundary"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the speech_protection_kernel, and which reading does it instantiate?",
+      "resolution_mechanism": "Structural: this story instantiates the absolutist_reading of the speech_protection_kernel. Sibling readings are harm_threshold_reading, marketplace_reading, dignity_reading, democratic_participation_reading — each a separate constraint with its own ε and beneficiary/victim structure.",
+      "impact": "Confirms this is not a single constraint with variable measurement, but a distinct constraint within a kernel family. Prevents ε-averaging across readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this story is the absolutist_reading of the speech_protection_kernel."
+    },
+    {
+      "id": "sibling_reading_structural_deltas",
+      "question": "What would each sibling reading change structurally relative to this absolutist reading?",
+      "resolution_mechanism": "Comparative constraint authoring: each sibling reading gets its own story file with distinct base_properties, beneficiaries, victims, and claimed_type.",
+      "impact": "Documents the structural deltas: harm_threshold_reading adds victims (harmed listeners) and raises extractiveness; marketplace_reading adds coordination function (truth-discovery) and beneficiaries (audience); dignity_reading adds victims (subordinated groups) and suppression; democratic_participation_reading narrows protection to political speech and adds agenda_setter role for democratic institutions.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural differences between absolutist_reading and its four sibling readings of the speech_protection_kernel."
+    },
+    {
+      "id": "natural_law_vs_constitutional_construction",
+      "question": "Is the near-categorical protection a structural feature of liberal constitutionalism (natural law) or a constructed constraint that benefits identifiable agents?",
+      "resolution_mechanism": "Historical and comparative analysis: if every stable liberal order converges on near-categorical protection regardless of origin, natural-law claim strengthens; if protection boundaries track power configurations of speakers/publishers, constructed claim strengthens.",
+      "impact": "If natural law, mountain classification holds; if constructed with beneficiaries, false_summit_mountain signature triggers reclassification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether absolutist speech protection is a natural limit or a constructed constraint benefiting speakers and publishers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The absolutist reading of speech protection holds that protection operates near-categorically: listener harm is not a valid ground for restricting speech. Only narrow, pre-defined categorical exclusions (incitement to imminent lawless action, true threats, obscenity as narrowly defined) may restrict speech. The constraint instantiates the widest possible protection boundary, maximizing speaker autonomy and rejecting victim harm claims as restriction grounds. This is one reading of the contested speech_protection_kernel; sibling readings (harm_threshold, marketplace, dignity, democratic_participation) impose different structural boundaries.",
+    "key_agents": [
+      "speakers: Primary beneficiary (powerful/arbitrage) — gains maximal protection for expression",
+      "publishers: Primary beneficiary (institutional/arbitrage) — gains maximal protection for dissemination",
+      "press_institutions: Primary beneficiary (institutional/arbitrage) — gains institutional protection for newsgathering and publication",
+      "harmed_listeners: Excluded (powerless/trapped) — bears harm with no structural remedy under this reading",
+      "democratic_institutions: Observer (institutional/analytical) — monitors whether absolutist boundary destabilizes self-governance",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure of kernel and all readings"
+    ],
+    "logic_rationale": "Metrics reflect the absolutist reading's structural claim: near-zero extraction (0.15) because the constraint imposes almost no positive obligations or transfers; near-zero suppression (0.1) because alternatives (silence, counter-speech, exit) remain open; near-zero theater (0.05) because the protection boundary is genuinely enforced, not performative. High accessibility_collapse (0.92) because the categorical rule leaves almost no room for case-by-case harm balancing; low resistance (0.08) because the constraint is structurally stable within liberal orders that adopt it. The claimed_type mountain is structurally asserted — the reading treats the protection boundary as a natural limit of liberal constitutionalism, not a contingent policy choice.",
+    "perspectival_gap": "From the speaker/publisher seats (beneficiaries), the constraint appears as mountain — a natural law of liberal order. From the harmed_listener seat (excluded), the same constraint would compute as snare if their harm claims were recognized: they bear costs (psychic harm, dignity injury, structural subordination) with zero structural remedy and trapped exit. The engine computes this divergence from the structural data; the absolutist reading's exclusion of listener harm as a cognizable category is exactly what produces the mountain classification for beneficiaries and would produce snare for excluded parties if they were recognized as victims.",
+    "directionality_logic": "Speakers, publishers, and press_institutions are declared beneficiaries — they collect the protection rent (maximal autonomy, minimal restriction) without administering the constraint. Harmed_listeners are NOT declared victims in this reading because the reading's structural premise rejects listener harm as a cognizable category. This is the defining move of the absolutist reading: by refusing to recognize listener harm as a valid claim, the reading structurally eliminates victims. Democratic_institutions and analytical_observer hold observer seats. Directionality for beneficiaries derives toward 0.0 (full beneficiary); for excluded parties, if they were recognized, it would derive toward 1.0 (full target).",
+    "mandatrophy_analysis": "The absolutist reading's founding problem (preventing state censorship of dissent) remains live — authoritarian regression is a persistent threat. The constraint has not atrophied into piton because its coordination function (protecting the speech floor) remains necessary and actively invoked. Mandatrophy is not resolved; the mountain classification holds because the constraint's natural-law claim is internally coherent within the reading's framework.",
+    "kernel_context": "This constraint is the absolutist_reading of the speech_protection_kernel. Sibling readings: harm_threshold_reading (protection conditional on no demonstrable harm), marketplace_reading (protection serves truth-discovery via more speech), dignity_reading (protection conditional on not subordinating target groups), democratic_participation_reading (strongest protection for political expression necessary for self-governance). This reading instantiates the widest protection boundary: speaker autonomy maximized, victim harm claims rejected unless speech crosses narrow categorical exclusions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__marketplace_reading",
+      "speech_protection_kernel__dignity_reading",
+      "speech_protection_kernel__democratic_participation_reading"
+    ],
+    "dual_formulation_note": "The speech_protection_kernel decomposes into five constraint stories, one per reading. This absolutist_reading claims mountain with ε≈0.15. Sibling readings author higher extractiveness and distinct beneficiary/victim structures. All five are linked via affects_constraints. The kernel's colloquial label 'free speech' conflates structurally distinct claims with different ε values — this decomposition follows the ε-invariance principle."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "speakers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Speakers gain maximal protection for expression: the constraint places the burden of restriction on the state to prove speech falls within narrow categorical exclusions. They can speak on any topic, in any forum, without anticipating harm-based liability. Exit is arbitrage-grade: they can move across jurisdictions, platforms, and media to find protection."
+    },
+    {
+      "name": "publishers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Publishers gain maximal protection for dissemination: they can publish without prior restraint and with near-immunity from harm-based liability for content. The constraint structures the entire publishing ecosystem around speaker/publisher autonomy. Exit is arbitrage-grade: they operate across jurisdictional boundaries and platform infrastructures."
+    },
+    {
+      "name": "press_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Press institutions gain structural protection for newsgathering, source protection, and publication — the constraint treats press freedom as a categorical component of speech protection. They benefit from the widest possible shield against state compulsion and harm-based liability. Exit is arbitrage-grade: institutional infrastructure spans jurisdictions."
+    },
+    {
+      "name": "harmed_listeners",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Harmed listeners bear the costs of absolutist protection: exposure to hate speech, harassment, disinformation, and dignitary harm with no structural remedy under this reading. The reading's premise rejects their harm as a cognizable ground for restriction. They are structurally excluded from the constraint's beneficiary/victim calculus — their injury is not recognized as a claim. Exit is trapped: they cannot avoid exposure in a public sphere structured by absolutist protection, and the reading provides no mechanism for their harm to register."
+    },
+    {
+      "name": "democratic_institutions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Democratic institutions (legislatures, courts, election bodies) monitor whether the absolutist boundary destabilizes self-governance — e.g., whether disinformation, hate speech, or coordinated manipulation undermine democratic deliberation. They do not collect from or pay into the constraint directly but bear systemic risk if the protection boundary proves incompatible with democratic stability. Their seat is analytical: they observe the constraint's systemic effects."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The analytical observer sees the full kernel structure: all five readings, their structural deltas, and the classification each would compute. This seat does not collect from or pay into any single reading; it maps the constraint family. Exit is analytical: the observer can shift between readings as analytical frames."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of establishing a stable speech floor in a liberal order: by categorically rejecting listener harm as a restriction ground, the constraint creates a clear, predictable boundary that speakers, publishers, and institutions can rely on without case-by-case negotiation.",
+    "transfer_function": "The constraint does not move resources in a transfer sense — it allocates immunities and liabilities. It transfers the burden of restriction entirely to the state (must prove narrow categorical exclusion) and transfers the cost of harm to listeners (who bear it without remedy). No monetary or status flow occurs between seats.",
+    "absent_voices": "Harmed listeners — especially members of historically subordinated groups targeted by hate speech, harassment, and structural subordination — would object if present. They are structurally excluded by the reading's premise that listener harm is not a cognizable category. Their absence is not accidental; it is the reading's defining structural move.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If absolutist protection vanished overnight, the speech floor would collapse into case-by-case harm balancing. States would restrict speech on harm grounds routinely; publishers would face liability for content; speakers would self-censor. The entire liberal speech ecosystem would reorganize around harm-threshold or dignity-based boundaries. The world rearranges because arrangements (publishing models, platform governance, protest rights, press freedom) depend on the categorical boundary.",
+    "founding_problem": "The arrangement was built to solve the problem of state censorship of dissent: in pre-liberal and authoritarian orders, the state restricted speech by claiming it harmed public order, morality, or state security. The absolutist boundary was constructed to make such censorship structurally difficult by rejecting harm as a restriction ground and limiting exclusions to narrow, pre-defined categories.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Authoritarian regression in contemporary states (Hungary, Turkey, Russia, etc.) demonstrates the founding problem remains live: states still use harm-based justifications to restrict dissent. Corroboration from outside the beneficiary set: human rights organizations (Article 19, PEN International), democratic theorists (Schauer, Waldron — though they contest the absolutist remedy), and courts in transitional democracies all attest that state censorship of dissent via harm claims is a persistent threat. The beneficiaries (speakers, publishers) are not the sole attestors."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "harm_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "marketplace_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "democratic_participation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "listener_harm_never_restriction_ground",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "speaker_autonomy_lexically_prior",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_liberal_speech_floor",
+    "drift_state": {
+      "moment": "contemporary_digital_speech_ecosystem",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

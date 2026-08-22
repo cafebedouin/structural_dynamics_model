@@ -1,0 +1,352 @@
+{
+  "header": {
+    "constraint_id": "kami_buddha_ontology__domain_partition",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_kami_buddha_ontology__domain_partition",
+    "measurement_id_prefix": "kb_domain_partition",
+    "story_uid": "3ffccf7d-23b0-42a7-a599-dca1902be08d"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.36,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Kami-Buddha Domain Partition: Life/Purity versus Death/Impurity Jurisdictions",
+    "topic_domain": "religious/institutional/cultural",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "buddhist_temple_establishment",
+      "shinto_shrine_establishment",
+      "tokugawa_bakufu"
+    ],
+    "victims": [
+      "commoner_households",
+      "hidden_christian_communities",
+      "dual_practice_ascetics"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "buddhist_temple_establishment",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operates the death domain exclusively: funerals, memorial services (hōji), grave custody, and posthumous ordination names (kaimyō). Holds every commoner household as a registered danka parishioner obligated to route all mortuary rites through its temple, and collects funerary fees, memorial stipends, and annual dues. Administers the household registers that certify orthodoxy, and polices the boundary that keeps death rites out of shrine precincts. Its sacred mission and its revenue base are the same territory; abandoning the death-domain monopoly would mean surrendering the economic foundation of most rural temples."
+    },
+    {
+      "name": "shinto_shrine_establishment",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Conducts purification rites, festivals (matsuri), agricultural ceremonies, and life-cycle blessings — births, childhood milestones, weddings, construction purifications. Receives offerings, festival contributions, and purification fees from the same households that pay the temples. Maintains death taboos rigorously: no funerals on shrine grounds, priests avoid corpse contact, mourners undergo purification before approaching the kami. Major shrines hold landed endowments; rural shrines survive on parishioner offerings and often sit administratively under nearby temples."
+    },
+    {
+      "name": "tokugawa_bakufu",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislates the arrangement from above: the temple-certification (terauke) system makes registration at a Buddhist temple compulsory for every household, legally cementing the death-domain monopoly. Regulates both establishments through the jisha bugyō magistrates, adjudicates jurisdictional disputes, and uses the temple registration network as its Christian-suppression surveillance infrastructure. Collects no ritual fees itself but gains a totalizing population-control lever; restructuring the arrangement would require rebuilding that control apparatus from scratch."
+    },
+    {
+      "name": "commoner_households",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pays both sides of the partition across every lifecycle: funerary and memorial fees, grave maintenance, and danka dues to the temple; festival levies, offering obligations, and purification fees to the shrine. Receives genuine services from each. Cannot obtain a legitimate burial outside the temple system, cannot skip shrine obligations without community sanction, and cannot change temples or move villages without certification chains that the temple controls. The compulsory character of the payments, not their existence, is what households contest."
+    },
+    {
+      "name": "hidden_christian_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Communities, concentrated in the Nagasaki region, whose conscience forbids Buddhist mortuary rites and kami veneration alike. They tread on fumie tablets, maintain nominal temple registration, and perform Buddhist-form funerals outwardly while practicing secretly. Discovery means persecution, execution, or forced conversion. Their objection — that the death-domain monopoly leaves them no lawful way to bury their dead according to conscience — never enters any official deliberation; the arrangement's unanimity is manufactured by their exclusion."
+    },
+    {
+      "name": "dual_practice_ascetics",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Shugendō adepts, itinerant holy men, and mountain practitioners whose entire repertoire straddles the partition — kami invocations and esoteric Buddhist rites in a single practice. As the binary hardens, they are forced to affiliate with either a temple line or a shrine line, pay affiliation and licensing fees, and abandon the mixed rites that constitute their tradition. Their syncretic practice is rendered administratively illegible by the two-domain scheme; compliance costs them their distinctive identity."
+    },
+    {
+      "name": "kokugaku_scholars",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Nativist philologists of the Motoori and Hirata lineages who read the classical corpus, argue for the antiquity and primacy of the kami cult, and attack the buddha-centric death economy as a foreign accretion. They see the whole structure — the fused practice, the funerary rents, the purity doctrine — from outside any establishment's payroll. Their analysis circulates among mid-ranking samurai and educated rural elites, and becomes the intellectual ammunition for the state movement that finally tears the arrangement apart."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Divides ritual labor between two specialist institutions so that no rite has two competing providers and no provider lacks a jurisdiction: life, fertility, and purity rites route to shrine lineages; death, funerary, and afterlife rites route to temple lineages. This prevents jurisdictional conflict over the same households, matches each rite to the institution holding the relevant doctrinal apparatus, and operationalizes the pollution rule that keeps death impurity (kegare) away from kami spheres.",
+    "transfer_function": "Moves money, labor, and status recognition from commoner households to both establishments — compulsory funerary fees, memorial stipends, grave custody, and danka dues to temples; offerings, festival levies, and purification fees to shrines — and moves compliance information (household orthodoxy certifications) from households through temples to the bakufu.",
+    "absent_voices": "Hidden Christian communities are excluded by persecution; their objection to a death-domain monopoly that criminalizes conscientious burial is structurally silenced. Dual-practice ascetics sit inside the system but their tradition has no seat where the binary's terms are set. The dead themselves — the purported beneficiaries of the mortuary apparatus — have no voice anywhere; all mortuary choices are made by survivors under compulsion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the partition vanished overnight, households would still need birth and death rites handled, but the compulsory payment structure, the temple registration monopoly, and the bakufu's certification-based surveillance would all dissolve. Ritual provision would open to competition, funerary prices would fall toward service cost, the danka system's dues would become voluntary, and the state would lose its conversion-detection network — the religious economy would reorganize around whichever providers households actually chose.",
+    "founding_problem": "Managing death pollution relative to purity-centered kami cults while guaranteeing every household an authorized ritual provider for each stage of life. The purity/death division is attested in classical liturgy and statute (the Ōharae no kotoba litany, Engishiki pollution regulations) centuries before either establishment had an economic stake in it; the early modern arrangement grafted a compulsory funerary economy and a surveillance apparatus onto that older coordination problem.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The pre-institutional textual record corroborates the founding problem from outside all benefiting parties: classical norito and ritsuryō-code pollution regulations attest death-purity separation long before temple funerary revenues existed, and modern historiography of kegare confirms the division's antiquity. The beneficiary establishments obviously attest liveness as well, but they are not the load-bearing witnesses. Contested corroboration cuts the other way too: Kuroda-line scholarship argues the partition was never the operative medieval frame at all — that contest is carried explicitly in the omega variables rather than resolved here."
+  },
+  "interval": {
+    "start": 1600,
+    "end": 1868
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1640,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1690,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1740,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1790,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1830,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1853,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1640,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1690,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1740,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1790,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1830,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1853,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1640,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1690,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1740,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1790,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1830,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1853,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.78
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Is the domain partition a genuinely operative pre-Meiji structure steering practice, or a nativist-and-Meiji retrojection imposed on a reality whose operative frame was honji suijaku fusion?",
+      "resolution_mechanism": "Period practice records predating 1800 — where funerals were actually held, whether shrine death-taboos were enforced against ordinary households, household ritual diaries, village ordinance books — assessed independently of Meiji-era ideological writing.",
+      "impact": "If retrojection, this reading's epsilon misattributes two centuries of extraction to a doctrine that was not steering practice until 1868; the extraction history migrates to the enforcement moment and the classification collapses toward the sibling readings' accounts of the same terrain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the partition reading describes the standing arrangement or a later imposition — the core contest between this reading and its siblings."
+    },
+    {
+      "id": "monopoly_vs_partition_extraction",
+      "question": "How much of the measured extraction belongs to the partition principle itself, versus the terauke/danka surveillance machinery that rode on the death-domain monopoly?",
+      "resolution_mechanism": "Compare extraction intensity across regions and periods where a funerary monopoly existed without compulsory state-backed registration, isolating the doctrinal division from the legal compulsion layered onto it.",
+      "impact": "Determines whether the tangled-rope verdict attaches to the doctrine (coordination with rents) or to its state capture (a snare wearing a doctrine); the two resolutions license different remedies in the sibling analyses.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Attribution split between the partition doctrine and the compulsory registration apparatus built on it."
+    },
+    {
+      "id": "pollution_logic_naturalness",
+      "question": "Is the life/death division a deep feature of the religious grammar — pollution logic that recurs independently across cultures — or a contingent institutional settlement particular to these two establishments?",
+      "resolution_mechanism": "Comparative analysis of ritual-pollution systems cross-culturally, plus internal Japanese variation across class, region, and period (court versus village practice, frontier settlements with weak institutional reach).",
+      "impact": "High naturalness raises the coordination-function weight and pulls the classification rope-ward; demonstrated contingency raises the extraction weight and pulls it snare-ward.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the partition instantiates a general purity structure or a negotiable institutional deal."
+    },
+    {
+      "id": "household_counterfactual_demand",
+      "question": "Absent compulsion, would households have voluntarily purchased both establishments' services at anything like the observed rates?",
+      "resolution_mechanism": "Frontier and remote-region records where enforcement was thin, and the magnitude of mortuary-demand collapse after 1871 when the danka obligation was abolished.",
+      "impact": "A large post-liberation collapse implies compulsion carried the arrangement and the suppression scalar is understated; persistent demand implies genuine service value and supports the coordination-function component of the tangled-rope reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Revealed-preference test of how much of the arrangement's volume compulsion was supplying."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In early modern Japan, the religious field was organized by a division of ontological labor: kami governed life, fertility, and purity; buddhas and bodhisattvas governed death, impurity, and the afterlife. The arrangement solved a real coordination problem — no rite had two providers, death pollution stayed out of kami spheres per a purity doctrine far older than either establishment's economics — and simultaneously built the largest compulsory revenue stream in the religious economy: the temple funerary monopoly, cemented by the bakufu's temple-certification (terauke) system, which made every household a registered parishioner owing mortuary fees, memorial stipends, and dues. This file instantiates ONE reading of the kami_buddha_ontology kernel — the domain_partition reading — as a clean epsilon-invariant constraint: two parallel ontologies, functional complementarity without fusion, no hierarchy, practical coordination without theoretical unity. The sibling readings (honji_suijaku_monism, incoherent_bundle) are separate constraints, not positions described inside this one. The claim/metric gap is deliberate and load-bearing: the reading CLAIMS complementary coordination of distinct domains; the authored metrics describe an arrangement whose death side accumulated compulsory rents for two centuries and whose enforcement turned violent the moment the reading seized state power in 1868. The engine measures that divergence; nothing here reconciles claim to metrics.",
+    "key_agents": [
+      "- commoner_households: primary target (powerless/trapped) — bears the compulsory dual payments across every lifecycle stage",
+      "- buddhist_temple_establishment: primary beneficiary (institutional/constrained) — collects the funerary-monopoly rents and administers the death domain",
+      "- shinto_shrine_establishment: secondary beneficiary (institutional/constrained) — collects life-side offerings and maintains the purity boundary",
+      "- tokugawa_bakufu: agenda_setter and indirect beneficiary (institutional/arbitrage) — legislates the arrangement and harvests its surveillance yield",
+      "- hidden_christian_communities: excluded objectors (powerless/trapped) — bear persecution for refusing the death-domain monopoly",
+      "- dual_practice_ascetics: squeezed middle (organized/constrained) — straddler tradition forced into single-domain affiliation",
+      "- kokugaku_scholars: analytical observer (moderate/analytical) — sees the whole structure from outside every establishment's payroll"
+    ],
+    "logic_rationale": "Extraction is substantial (0.62 scalar; series rising 0.44 to 0.67) because the death-side payments were compulsory, decoupled from service cost, and backed by law — the danka system converted a pastoral relationship into a tax relationship. Suppression (0.58) reflects structural compulsion: registration was mandatory, temple-switching required certification the temple controlled, and refusal on conscience grounds was persecuted. Theater (0.36) is moderate: the life-side rites deliver real services and the purity boundary does real coordinative work, but a growing share of activity across the interval is formulaic memorial performance and doctrinal self-justification. Accessibility_collapse (0.60) is partial: once the partition is understood, lawful alternatives are largely foreclosed — no legitimate burial outside the temple, no shrine death rites — yet folk practice persisted underneath and conscience communities survived underground. Resistance (0.45) is real but scattered: hidden Christian defiance, household resentment of fees, and the kokugaku intellectual assault that ultimately armed the state's demolition. The three measurement series share one eight-point grid (1600-1868) so every metric is authored at every examined time point; trajectories are monotonic rather than cyclical — enforcement machinery matured steadily (customary boundary, to legalized compulsion in the 1630s-50s, to violent state enforcement in 1868), with the terminal suppression spike (0.78) marking the shinbutsu bunri edicts and the anti-temple violence that followed, and the terminal theater dip (0.28) marking the moment enforcement became brutally functional rather than ceremonial.",
+    "perspectival_gap": "Four seats inhabit the same structure as four different arrangements. From the temple seat, the partition is sacred order and livelihood as one indivisible thing — the funerary monopoly IS the dharma work; questioning the fees questions the salvation it funds. From the household seat, the same structure is a compulsory double-payment regime in which the services are real but the compulsion is theft-adjacent. From the bakufu seat, it is administrative infrastructure — a population registry wearing liturgical clothing. From the kokugaku seat, it is a foreign usurpation of the native cult's proper sphere. The engine computes per-seat classifications from the structural data; the divergence between the beneficiary seats' coordination experience and the payer seats' extraction experience is the measurement, not a defect to be averaged away.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation. The temple establishment sits nearest the beneficiary pole (collects the largest compulsory transfer, administers the rules, constrained exit because its endowment is the arrangement). The shrine establishment is a beneficiary at slightly higher d — it collects real revenue but its take is less compulsory and its rural members were often administratively subordinate to temples. The bakufu declares as agenda_setter with secondary beneficiary: it pays administration costs and collects control-yield rather than fees, placing it near-symmetric but structurally protected. Commoner households are the primary target — high d, amplified by trapped exit (certification chains bind mobility). Hidden Christian communities are targets at maximum effective extraction: trapped, persecuted, and paying compliance costs for rites they reject. Dual-practice ascetics are targets whose organized networks soften but cannot remove the squeeze. Kokugaku scholars occupy the analytical seat with no directional stake. No directionality overrides are authored: the beneficiary/victim declarations plus exit options produce the correct differentiation without correction.",
+    "mandatrophy_analysis": "The tangled-rope classification is what prevents two symmetric misreadings. Reading the arrangement as pure rope (as the establishments' framing does) erases the compulsory funerary economy and the persecuted consciences — the coordination story is real but it is not the whole story. Reading it as pure snare (as the kokugaku polemic and a naive secular reading do) erases the genuine life-side coordination and the antiquity of the pollution logic the arrangement operationalizes — the extraction rides on a real division of labor, not on a fabricated one. The mandatrophy question resolves cleanly here: the founding problem (death-purity management with guaranteed ritual provision) is still live — it predates the arrangement, survived its 1868 demolition, and persists in contemporary disputes over Shinto funerals — while the particular institutional form that carried it (danka compulsion, terauke certification) is dead. A constraint whose problem outlives its form is precisely the case where the six-questions mismatch check earns its keep: status=live with verdict=world_rearranges flags that what rearranged in 1868 was the carrier, not the need."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "honji_suijaku_monism",
+      "incoherent_bundle"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Shinto-Buddhist relations' decomposes, per the epsilon-invariance principle, into three structurally distinct claims that must not share one story. (1) honji_suijaku_monism — an identity-hierarchy claim with its own epsilon, beneficiary structure (the temple complex atop the hierarchy), and medieval empirical career. (2) This file, domain_partition — a distinctness-complementarity claim whose epsilon tracks the compulsory funerary economy built on the death-domain monopoly. (3) incoherent_bundle — a meta-claim denying the kernel's coherence altogether, whose epsilon attaches to the institutional machinery sustaining contradictions. Upstream/downstream structure: honji_suijaku_monism was the operative medieval frame and is cited as evidence AGAINST this reading's historical reality (the partition may be retrojection — see omega kernel_reading_contestation); conversely, this reading's 1868 enforcement episode supplies the principal data the incoherent_bundle reading theorizes. All three files link one another via affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "complementary_domain_sovereignty",
+    "drift_state": {
+      "moment": "meiji_separation_edicts",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "honji_suijaku_monism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "incoherent_bundle",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "kami_buddha_distinct_jurisdictions",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "death_impurity_barred_from_kami_sites",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "buddhist_temple_establishment",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

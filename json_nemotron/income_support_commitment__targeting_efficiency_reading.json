@@ -1,0 +1,363 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_income_support_commitment__targeting_efficiency_reading",
+    "measurement_id_prefix": "isc_ter",
+    "story_uid": "06e63137-b26b-4ada-b84c-ba7334690368"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.65,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Targeted Income Support — Efficiency Reading (UBI Cannibalization)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "program_administrators",
+      "means_testing_bureaucracy",
+      "universal_basic_income_proponents_funded_by_reallocation"
+    ],
+    "victims": [
+      "targeted_program_recipients",
+      "low_income_households_with_high_benefit_cliffs",
+      "caregivers_losing_targeted_supplements"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "program_administrators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and enforce means-testing regimes, eligibility thresholds, and benefit formulas. Their institutional budgets, staffing, and rule-making authority expand with program complexity. They control the administrative machinery that determines who receives what, and they capture career and budgetary rents from the system's operational demands."
+    },
+    {
+      "name": "means_testing_bureaucracy",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Frontline caseworkers, eligibility technicians, fraud investigators, and appeals adjudicators whose employment and professional identity depend on the targeted system's procedural demands. They process applications, verify income, monitor compliance, and administer sanctions. Their institutional interests align with procedural complexity, not beneficiary outcomes."
+    },
+    {
+      "name": "universal_basic_income_proponents_funded_by_reallocation",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocates and policymakers who propose financing UBI by eliminating or cannibalizing existing targeted programs. They gain a universal floor but structurally require the extraction of targeted benefits from current recipients to fund it. Their policy model treats the poor's existing support as a fungible revenue pool."
+    },
+    {
+      "name": "targeted_program_recipients",
+      "role": "payer",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Households receiving means-tested benefits (e.g., a Queens parent with $31,100 in combined benefits: housing, nutrition, childcare, Medicaid). Under UBI replacement funded by program elimination, they lose $19,100 net because the universal payment does not replicate the targeted stack's depth for high-need configurations. They have no exit from the policy choice — they cannot opt out of the reform, cannot access alternative safety nets, and bear the full cost of the transition."
+    },
+    {
+      "name": "low_income_households_with_high_benefit_cliffs",
+      "role": "payer",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Families whose targeted benefits phase out steeply with small income increases. The targeted system already extracts via high effective marginal tax rates; UBI replacement flattens the benefit but at a level far below their current total support. They lose the specific supplements (childcare, disability, housing) that the universal payment does not differentiate for."
+    },
+    {
+      "name": "caregivers_losing_targeted_supplements",
+      "role": "payer",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Parents of disabled children, elderly caregivers, and others receiving targeted supplements for care-related costs. A flat UBI does not cover the marginal cost of care that targeted programs address. They are structurally unable to exit the care obligation, making them captive to the benefit reduction."
+    },
+    {
+      "name": "fiscal_conservatives_targeting_spending",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislators and budget officials who use targeting rhetoric to justify spending caps. They benefit from the constraint's framing because it legitimizes austerity: 'we help those who truly need it' becomes the rationale for not expanding the pie. They do not administer programs but set the fiscal envelope that makes targeting a zero-sum allocation rule."
+    },
+    {
+      "name": "social_policy_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze distributional impacts, labor supply effects, and administrative costs of targeted vs. universal designs. They see the full structure: the administrative burden on recipients, the fiscal tradeoffs, the political coalition dynamics. Their seat is analytical — they neither collect nor pay, but their evidence shapes the legitimacy of each reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the allocation of a finite fiscal pool to households with demonstrated material need, using means-testing as the allocation mechanism. Solves the problem: given limited resources, how to direct them to the most deprived without universal outlay.",
+    "transfer_function": "Moves fiscal resources from the general tax base to targeted beneficiaries via a bureaucratic filtering apparatus. The apparatus itself consumes a share (administrative costs, compliance costs imposed on applicants). Under UBI replacement, the transfer reverses: resources move FROM current targeted recipients (who lose net support) TO the universal pool that funds UBI for all, including non-poor households.",
+    "absent_voices": "Future cohorts who would face a permanently lowered targeted-support ceiling if UBI cannibalization becomes the financing norm. Also absent: recipients in jurisdictions without targeted programs who are told the 'universal' model is the only feasible path — they never had the targeted stack to lose, so their absence is structural, not incidental.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the targeting-efficiency constraint vanished overnight, the fiscal politics of income support would reorganize: either universal programs expand without cannibalizing targeted ones (new revenue), or targeted programs expand without the 'efficiency' discipline (deficit spending), or a hybrid emerges. The current zero-sum framing — UBI *requires* cutting targeted aid — is the constraint's active suppression of alternatives. Remove it, and the budget constraint becomes a political choice, not a structural necessity.",
+    "founding_problem": "Post-war welfare states faced fiscal limits and political resistance to broad taxation. Targeting emerged as the compromise: concentrate limited funds on the 'truly needy' to maximize poverty reduction per dollar, buying political viability for redistribution. The administrative state built the means-testing machinery to operationalize this compromise.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical institutionalists (e.g., Skocpol, Pierson) document the political coalition that produced targeting as a fiscal-political compromise, not a technical optimum. Feminist economists (e.g., Folbre, England) show the founding problem excluded care work from 'need' calculations. The 'efficiency' claim is corroborated as a political settlement by scholars outside the benefiting administrative coalition; the technical optimality claim is not corroborated by independent evidence — it is the administrators' self-justification."
+  },
+  "interval": {
+    "start": 1965,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'targeting efficiency' reading of the income support commitment kernel. The reading holds that scarce fiscal resources should be concentrated on those with demonstrated need via means-tested programs, and that universal basic income financed by eliminating those programs is a legitimate reform path. The structural delta is stark: the primary beneficiaries of the current targeted system (low-income households receiving stacked benefits) become the primary victims under the proposed UBI replacement, losing an average of $19,100 in net support (Queens parent example: $31,100 targeted stack vs. ~$12,000 UBI). The constraint operates as a snare — it presents as coordination (fair allocation of scarce resources) but functions as extraction from the poor to fund a universal floor that does not replicate their current support depth. The coordination story is cover; the constraint's persistence depends on suppressing the alternative of additive UBI (funded by new revenue, not cannibalization) and on the administrative machinery that makes targeting appear technically necessary rather than politically chosen.",
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint's operational logic — UBI funded by targeted-program elimination — transfers resources from the most vulnerable to a universal pool that includes the non-poor. Suppression (0.65) is substantial: the 'fiscal necessity' framing actively suppresses additive UBI proposals and treats the targeted stack as a fungible revenue source rather than a floor. Theater ratio (0.22) is moderate-low: the administrative apparatus performs genuine filtering work, but a growing share of its complexity serves to defend the zero-sum framing rather than improve targeting accuracy. Accessibility collapse (0.48) is moderate: alternatives exist (additive UBI, negative income tax, universal child allowance) but are rendered 'unrealistic' by the constraint's fiscal discipline discourse. Resistance (0.55) is significant: recipients, advocates, and some policymakers resist benefit cuts, but the power asymmetry is extreme.",
+    "directionality_logic": "Program administrators and means-testing bureaucracy are structural beneficiaries (d near 0.1-0.2): they capture budgetary and career rents from the system's complexity. UBI-proponents-funded-by-reallocation are also beneficiaries (d ~0.3): they gain a universal program at the cost of current recipients. Targeted recipients, low-income households with cliffs, and caregivers are structural targets (d near 0.9-1.0): they bear the full extraction with trapped or constrained exit. Fiscal conservatives are agenda-setters with arbitrage exit (d ~0.2): they use the constraint to cap spending. Social policy researchers are analytical observers (d=0.5): they see the structure but do not collect or pay.",
+    "perspectival_gap": "From the administrator seat, the constraint is genuine coordination: limited funds, fair allocation, bureaucratic rationality. From the targeted recipient seat, the same structure is a snare: the 'efficiency' rationale extracts their support to fund a universal benefit that leaves them worse off, and they have no exit. The engine computes this divergence from the declared power/exit/role structure — the claimed type (snare) reflects the analytical seat's reading, not the administrator's self-justification.",
+    "mandatrophy_analysis": "The founding problem (fiscal limits + political resistance to broad taxation) is contested: fiscal limits are softer in a sovereign currency context; political resistance is endogenous to the targeting discourse itself. The targeting machinery has atrophied into a self-justifying apparatus — its complexity is now the rationale for its persistence. The mandatrophy is unresolved: the constraint persists because the administrative coalition and the fiscal-conservative coalition jointly benefit from the zero-sum framing, even as the original compromise conditions have shifted.",
+    "kernel_context": "This is the targeting_efficiency_reading of the income_support_commitment kernel. Sibling readings: freedom_floor_reading (UBI as autonomy enabler, additive not cannibalizing), dependency_trap_reading (unconditional support as work disincentive). This reading structurally differs by treating the targeted benefit stack as a revenue pool for UBI, making current recipients the extraction victims. The freedom_floor_reading would fund UBI additively; the dependency_trap_reading opposes UBI entirely. This reading's core premise (targeted programs are the fiscally responsible way to help the needy, and UBI must replace them to be affordable) coexists with the freedom_floor_reading's premise (UBI enables autonomy and should be additive) in public discourse but forecloses the dependency_trap_reading's premise (unconditional support corrodes agency) within any framework that accepts UBI as legitimate — though in practice all three coexist as live political positions."
+  },
+  "omegas": [
+    {
+      "id": "additive_ubi_feasibility",
+      "question": "Is UBI funded by new revenue (taxation, sovereign money, resource dividends) politically achievable, or is cannibalization the only feasible path?",
+      "resolution_mechanism": "Legislative history of UBI proposals: track whether any major proposal funds UBI additively vs. by program elimination. Political economy analysis of revenue-side coalitions.",
+      "impact": "If additive UBI is feasible, the targeting-efficiency constraint's suppression of alternatives is exposed as political choice, not structural necessity — the snare classification strengthens. If cannibalization is the only path, the constraint's coordination function gains empirical grounding (though extraction from poor remains).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the zero-sum framing reflects political reality or ideological construction."
+    },
+    {
+      "id": "administrative_cost_vs_extraction",
+      "question": "How much of the targeted system's administrative cost is genuine coordination overhead vs. extraction-enabling complexity (e.g., benefit cliffs, sanctions, fraud investigation that exceeds fraud losses)?",
+      "resolution_mechanism": "Comparative administrative cost studies: targeted vs. universal delivery. Audit of sanction regimes vs. measured fraud rates. Micro-simulation of benefit cliff effective marginal tax rates.",
+      "impact": "If administrative costs are predominantly extraction-enabling, the theater ratio is understated and the snare classification deepens. If costs are genuine coordination overhead, the rope component of the constraint is larger than measured.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Decomposition of administrative burden into functional vs. extractive components."
+    },
+    {
+      "id": "targeting_efficiency_naturalness",
+      "question": "Is the 'targeting efficiency' axiom a genuine technical principle or a constructed doctrine that serves the administrative and fiscal-conservative coalitions?",
+      "resolution_mechanism": "Genealogy of the targeting efficiency concept: trace its emergence in welfare economics (Mirrlees, Besley-Coate) vs. its deployment in policy discourse. Test whether the technical literature's conditions (perfect information, no transaction costs, no behavioral responses) hold in practice.",
+      "impact": "If the axiom is a constructed doctrine deployed to legitimize extraction, the false_summit_mountain signature would apply to any mountain-like framing of 'technical necessity' — but this reading already claims snare, so the omega documents the epistemic status of its own coordinating myth.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Epistemic status of the constraint's coordinating justification."
+    },
+    {
+      "id": "committer_frame_disagreement_location",
+      "question": "Where exactly do the three kernel readings disagree structurally — on the beneficiary set, the extraction mechanism, the coordination function, or the founding problem?",
+      "resolution_mechanism": "Map each reading's beneficiary/victim declarations, transfer functions, and founding problem status. The disagreement is located in the transfer function (cannibalization vs. additive funding) and the victim set (current recipients as losers vs. non-recipients as gainers).",
+      "impact": "Clarifies that the kernel contest is not about 'UBI good/bad' but about the structural relationship between universal and targeted layers. This reading's victim set IS the freedom_floor_reading's beneficiary set — the same households appear on opposite sides of the extraction ledger.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural locus of disagreement across the income_support_commitment kernel's readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the income_support_commitment kernel. The freedom_floor_reading and dependency_trap_reading are sibling constraints with different beneficiary/victim structures, transfer functions, and founding problem statuses. All three share the kernel_id but instantiate distinct constraints with independent ε values. The targeting_efficiency_reading's high ε (0.78) contrasts with the freedom_floor_reading's lower ε (additive funding) and the dependency_trap_reading's different victim set (future dependents, not current recipients)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "income_support_commitment"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "targeted_allocation_maximizes_poverty_reduction_per_dollar",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ubi_must_be_financed_by_existing_program_elimination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "postwar_targeted_welfare_settlement",
+    "drift_state": {
+      "moment": "ubi_cannibalization_proposal_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

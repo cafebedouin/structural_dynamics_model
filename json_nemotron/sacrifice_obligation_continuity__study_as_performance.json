@@ -1,0 +1,282 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_continuity__study_as_performance",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "story_uid": "9bfc132e-554e-4f2a-8541-9b23bfd077c6"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Study of Sacrifice Law as Fulfillment of the Commandment",
+    "topic_domain": "religious_law/ritual_studies/textual_tradition",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "textual_scholars",
+      "study_practitioners",
+      "interpretive_communities"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "torah_study_equivalence_doctrine",
+      "commandment_persistence_through_text",
+      "interpretive_fulfillment_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading_structure",
+      "question": "This constraint instantiates the study_as_performance reading of the sacrifice_obligation_continuity kernel. What structural elements would change under sibling readings, and where is the disagreement located?",
+      "resolution_mechanism": "Comparative constraint analysis across the kernel family: each sibling reading (performance_only, messianic_suspension, archival_preservation) instantiates a distinct constraint with its own beneficiary/victim structure, extractiveness profile, and CS axioms. The disagreement is located on whether study constitutes fulfillment (this reading), preparation (performance_only), readiness-maintenance (messianic_suspension), or cultural preservation without normative force (archival_preservation).",
+      "impact": "If study is mere preparation (performance_only), extraction rises (study effort required without satisfaction). If suspended (messianic_suspension), obligation persists but fulfillment is deferred — study bears opportunity cost without discharge. If archival (archival_preservation), obligation is void — study becomes optional cultural practice, extracting only voluntary attention. The reading choice structurally determines whether a victim set exists and what extractiveness the obligation carries.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system framing: which reading of the sacrifice_obligation_continuity kernel this constraint instantiates, and the structural delta across sibling readings."
+    },
+    {
+      "id": "study_accessibility_vs_mastery_barrier",
+      "question": "Is the study practice genuinely accessible (low extractiveness) or does mastery of sacrificial law require gatekept expertise, creating an implicit beneficiary class of certified interpreters?",
+      "resolution_mechanism": "Empirical survey of study-practice communities: distribution of textual authority, barriers to recognized fulfillment, whether lay engagement counts as fulfillment or whether institutional certification is required.",
+      "impact": "If mastery barriers exist, extractiveness rises and a beneficiary class of gatekeeping authorities emerges (certified rabbis, institutional academies). The current low extractiveness assumes open textual engagement; gatekeeping would shift the constraint toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the accessibility of sacrificial study is structurally open or mediated by certified interpreters."
+    },
+    {
+      "id": "cs_framing_under_determination",
+      "question": "Does the study_as_performance reading ground its authority in the interpretive tradition (lineage) or in the practice of study itself (practice)? The CS structure claims both: authority_grounding=lineage and interpretation_layer_present=true. But the practice-grounded framing (study IS the authority) would set authority_grounding=practice and interpretation_layer_present=false. Which framing is the actual structural commitments of this reading?",
+      "resolution_mechanism": "Internal discourse analysis: when challenged on a novel interpretive move, does this reading appeal to chain-of-transmission (lineage) or to the internal coherence of the study practice itself (practice)? The former makes interpretation_layer_present coherent; the latter would make the kernel directly govern practice.",
+      "impact": "If authority_grounding=practice, the reading has no interpretive buffer — drift in study practice directly alters the kernel's content. This reading would be structurally brittle but more responsive. The current lineage+practice hybrid may be an unstable equilibrium.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the study_as_performance reading's authority derives from transmission lineage or from the study practice itself — a framing ambiguity that changes CS structure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.075
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.115
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "In the rabbinic tradition following the destruction of the Second Temple, the obligation to offer sacrifices (korbanot) was transformed: study of the sacrificial laws (seder kodashim) was declared equivalent to the physical performance of the sacrifices themselves. This reading — 'study as performance' — holds that the commandment persists through textual engagement; the obligation is fulfilled when the practitioner learns the laws of the olah, minchat, chatat, and asham offerings. The constraint is the standing interpretive arrangement: the sacrificial obligation continues, but its mode of fulfillment has shifted from physical act to intellectual-ritual engagement. No party is victimized — the obligation is satisfied through study. Beneficiaries are the communities of scholars, students, and interpretive traditions that maintain continuity through this equivalence. Extractiveness is low: texts are accessible, study is voluntary in form (though communally expected), and no extraction apparatus enforces participation. The theater ratio captures the performative dimension: study sessions may emphasize the *enactment* of learning over comprehension, but the functional core (mastery of the material) remains dominant.",
+    "key_agents": [
+      "textual_scholars: Primary beneficiary (organized/biographical) — maintain interpretive authority through mastery of sacrificial law",
+      "study_practitioners: Primary beneficiary (moderate/biographical) — fulfill obligation through accessible textual engagement",
+      "interpretive_communities: Secondary beneficiary (organized/generational) — preserve continuity of obligation without physical temple",
+      "analytical_observer: Observer (analytical/civilizational/universal) — sees full structural transformation from physical to textual fulfillment"
+    ],
+    "logic_rationale": "Extractiveness (0.08) reflects the low cost of textual engagement relative to the physical sacrifice it replaces — animals, pilgrimage, priestly mediation all eliminated. Suppression (0.12) is minimal: no enforcement mechanism compels study; communal expectation and identity provide soft pressure only. Theater ratio (0.15) acknowledges that some study is performative (recitation without comprehension, status signaling through textual mastery), but the functional core dominates. Accessibility collapse (0.2) is low because alternatives exist: one can study alone, in chevruta, in formal institutions, or through digital media; the constraint does not close exits. Resistance (0.05) is near zero — the reading was adopted voluntarily by communities seeking continuity, not imposed. The claimed type 'rope' reflects genuine coordination: the arrangement solves the collective-action problem of maintaining sacrificial obligation without a Temple, with minimal coercive overhead and net benefit to participants.",
+    "perspectival_gap": "From the study_practitioner seat, the constraint is pure coordination (rope) — a accessible path to fulfill a binding obligation. From the textual_scholar seat, there is a secondary benefit: interpretive authority and institutional position are maintained through mastery of this specific corpus. The analytical observer sees the full transformation: a high-extraction physical system (animal sacrifice, priestly monopoly, pilgrimage cost) replaced by a low-extraction textual system. The engine will compute per-seat types from these structural positions; the analytical seat should compute mountain-like (near-zero extraction, no suppression), while scholar seats may show slightly higher effective extraction if gatekeeping exists (captured in omega_study_accessibility_vs_mastery_barrier).",
+    "directionality_logic": "Beneficiaries declared: textual_scholars, study_practitioners, interpretive_communities — all collect the primary benefit (obligation fulfillment, continuity, identity) without bearing extraction costs. No victims declared: the obligation is satisfied, not extracted from anyone. The directionality derivation from beneficiary declarations yields d ≈ 0.15 for beneficiaries (subsidy-like), and the analytical observer sits at d = 0.0. The low extractiveness is not scaled up by directionality because no seat is a target.",
+    "mandatrophy_analysis": "The founding problem (how to maintain sacrificial obligation without a Temple) remains live in the sense that the Temple is not rebuilt and the obligation persists. The arrangement has not atrophied — study practice is vigorous and expanding (digital platforms, new commentaries, renewed interest in kodashim). Mandatrophy is not resolved; the coordination function is active. The constraint would be a piton only if study practice became purely performative with no one actually learning the material — the rising theater_ratio trend (0.10→0.15) warrants monitoring but has not crossed the threshold.",
+    "kernel_context": "This constraint instantiates the study_as_performance reading of the sacrifice_obligation_continuity kernel. Sibling readings: performance_only (physical performance required; study is preparation), messianic_suspension (obligation suspended pending messianic restoration; study maintains readiness), archival_preservation (obligation void; study preserves cultural memory without normative force). This reading declares study IS fulfillment — the obligation persists through textual engagement, no victim set, low extractiveness. The disagreement is located on the fulfillment condition: what counts as discharging the obligation?"
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_continuity__performance_only",
+      "sacrifice_obligation_continuity__messianic_suspension",
+      "sacrifice_obligation_continuity__archival_preservation"
+    ],
+    "dual_formulation_note": "This constraint is one member of the sacrifice_obligation_continuity kernel family. The kernel decomposes into four structurally distinct constraints with different ε values and beneficiary/victim structures: study_as_performance (ε=0.08, rope, no victims), performance_only (ε≈0.35, tangled_rope — study prepares but physical performance still required, creating opportunity cost), messianic_suspension (ε≈0.15, scaffold — obligation deferred, study maintains readiness with sunset at restoration), archival_preservation (ε≈0.02, mountain — obligation void, study is optional cultural preservation). All four linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "textual_scholars",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Master and teach the sacrificial law corpus (seder kodashim, relevant talmudic tractates, codes). Their authority derives from certified mastery; they define what counts as adequate study. They benefit from the arrangement's persistence — it secures their interpretive role and institutional position. Exit is constrained: leaving the interpretive community means losing the authority that mastery confers, but they could shift to other areas of Torah study."
+    },
+    {
+      "name": "study_practitioners",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Engage in regular study of sacrificial laws — through daily daf yomi, shiurim, chevruta, or digital platforms. They fulfill the obligation through this engagement. The texts are accessible (translated, commented, digitized); no certification gatekeeps participation. Exit is mobile: they can study more or less, switch topics, or stop without institutional penalty — the obligation is communal, not personally enforced."
+    },
+    {
+      "name": "interpretive_communities",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Communities (yeshivas, synagogue study groups, online learning platforms) that organize and transmit the study practice. They benefit from the continuity the arrangement provides — a living link to Temple ritual without the Temple. Their institutional identity is bound to this continuity. Exit is constrained: abandoning the study-as-fulfillment framework would require adopting a different reading of the kernel, which disrupts communal self-understanding."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structural transformation: a high-extraction physical sacrificial system replaced by a low-extraction textual system. No personal stake in the obligation's fulfillment; analyzes the coordination function, the identity maintenance, and the historical contingency of the reading."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Maintains continuity of the sacrificial obligation across the rupture of Temple destruction by transmuting physical performance into textual engagement — solving the collective-action problem of how a dispersed people sustain a Temple-centered commandment without a Temple.",
+    "transfer_function": "Moves the fulfillment-locus from physical act (animal, grain, priestly mediation, pilgrimage) to intellectual-ritual act (study, comprehension, recitation). No material transfer; the 'payment' is attention and cognitive effort, and the 'receipt' is obligation-discharge and communal continuity.",
+    "absent_voices": "Those who hold the performance_only reading (physical sacrifice still required, study is mere preparation) — they would object that study-as-fulfillment empties the commandment of its substance. They are located in factions awaiting literal Temple restoration (some messianic groups, Temple Institute adherents). Also absent: the archival_preservation reading proponents (secular/academic scholars) who would say the obligation is void and study is cultural preservation — they are in university departments and non-observant intellectual circles.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the study-as-fulfillment equivalence vanished overnight, the sacrificial obligation would either (a) become unfulfillable (no Temple, no physical performance possible), creating a crisis of unmet obligation for observant communities, or (b) revert to the performance_only reading, requiring physical restoration as the only path — either way, the communal-arrangement landscape would rearrange. The interpretive communities organized around this equivalence would lose their structuring logic.",
+    "founding_problem": "After the destruction of the Second Temple (70 CE), the sacrificial system — central to Israelite worship, atonement, and communal identity — became physically impossible. The founding problem: how to maintain the binding force of the sacrificial commandments when their physical performance is structurally precluded?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested as live by the continuing centrality of seder kodashim in yeshiva curricula, the proliferation of new commentaries on sacrificial law (e.g., Steinsaltz, ArtScroll, digital platforms), and the Temple Institute's ongoing preparation of physical vessels — the latter corroborates from OUTSIDE the study-as-fulfillment reading (performance_only proponents agree the problem is live but differ on the solution). No single tradition monopolizes the problem's persistence."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "performance_only",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "messianic_suspension",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "archival_preservation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_equals_sacrifice_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "obligation_persists_through_textual_engagement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "rabbinic_equivalence_declaration",
+    "drift_state": {
+      "moment": "contemporary_digital_study_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

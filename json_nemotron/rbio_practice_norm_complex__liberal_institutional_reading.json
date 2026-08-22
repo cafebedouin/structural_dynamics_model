@@ -1,0 +1,420 @@
+{
+  "header": {
+    "constraint_id": "rbio_practice_norm_complex__liberal_institutional_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rbio_practice_norm_complex__liberal_institutional_reading",
+    "measurement_id_prefix": "rbio_liberal_inst",
+    "story_uid": "900bd059-28cf-4c3d-b909-4df064a5068a",
+    "created_at": "2026-08-04T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "RBIO Norms — Liberal Institutional Reading",
+    "topic_domain": "international_relations/international_law/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "intervening_states",
+      "security_contractors",
+      "multilateral_institutions",
+      "humanitarian_ngos"
+    ],
+    "victims": [
+      "targeted_states",
+      "civilian_populations_under_sanctions",
+      "displaced_populations"
+    ],
+    "vindicated_propositions": [
+      "collective_security_doctrine",
+      "responsibility_to_protect_norm",
+      "multilateral_legitimacy_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint one reading of the contested rbio_practice_norm_complex kernel, and does it instantiate the liberal_institutional_reading as distinct from the hegemonic_extraction_reading and sovereignty_maximalist_reading?",
+      "resolution_mechanism": "Structural comparison of the three readings' beneficiary/victim structures, claimed types, and cs_structure axioms. If the liberal institutional reading's axioms (multilateral_consent_basis, legitimate_process_revisability) are mutually holdable with sibling axioms, they coexist; if they logically contradict, they foreclose.",
+      "impact": "Confirms this story correctly isolates one reading per the ε-invariance principle. Misidentification would collapse distinct constraints into one, violating DP-001.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment of this story to the liberal_institutional_reading of the rbio_practice_norm_complex kernel"
+    },
+    {
+      "id": "selectivity_capacity_vs_legitimacy",
+      "question": "Is enforcement selectivity genuinely a capacity problem (resource constraints, geopolitical complexity) rather than a legitimacy problem (systematic bias toward powerful states' interests)?",
+      "resolution_mechanism": "Longitudinal analysis of intervention authorization rates by UNSC permanent members vs. non-permanent members; correlation of intervention outcomes with intervening states' material interests; independent commissions' assessments of mandate implementation.",
+      "impact": "If selectivity is a legitimacy problem, the constraint's extractiveness is structurally higher than authored; the liberal institutional reading's claimed_type (tangled_rope) would understate extraction and the reading would compute closer to the hegemonic_extraction_reading's profile. If capacity, the current metrics hold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement selectivity reflects capacity limits or extractive bias"
+    },
+    {
+      "id": "revisability_in_practice",
+      "question": "Are RBIO norms genuinely revisable through legitimate multilateral processes, or does P5 veto power and institutional path-dependency make revision practically impossible?",
+      "resolution_mechanism": "Track record of successful norm revisions since 1945; failed revision attempts and their blockers; structural analysis of UN Charter amendment procedures vs. customary international law evolution.",
+      "impact": "If revision is practically blocked, the constraint's theater_ratio is understated (more performative than functional) and the claimed_type shifts toward piton or snare. If genuinely revisable, the current coordination function (rope-like) holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multilateral revisability is operational or theoretical"
+    },
+    {
+      "id": "civilian_harm_as_extraction",
+      "question": "Do sanctions' civilian population impacts constitute extraction from targeted states' populations, or are they acceptable collateral damage of legitimate pressure?",
+      "resolution_mechanism": "Epidemiological studies of sanctions' mortality/morbidity effects; comparison of sanction design (targeted vs. comprehensive) with humanitarian outcomes; legal analysis of proportionality under international humanitarian law.",
+      "impact": "If civilian harm is structural extraction rather than collateral, the victim group 'civilian_populations_under_sanctions' bears higher effective extraction, raising the constraint's overall extractiveness and strengthening the snare/tangled_rope classification for the payer seat.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Classification of sanctions' civilian impacts as extraction vs. collateral damage"
+    },
+    {
+      "id": "contractor_beneficiary_capture",
+      "question": "Do security contractors and intervening states' defense industries capture the intervention economy such that their benefit becomes the constraint's driver rather than a byproduct?",
+      "resolution_mechanism": "Financial tracking of contract flows in UN-authorized interventions; revolving door analysis between government decision-makers and contractor boards; lobbying expenditure correlation with intervention authorization.",
+      "impact": "If contractor capture drives intervention decisions, the beneficiary structure shifts from 'incidental benefit' to 'structural driver' — the constraint becomes more snare-like for the intervening states seat and more extractive overall.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether security contractor interests drive intervention decisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 1945,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The Rules-Based International Order (RBIO) as read through the liberal institutional lens presents itself as a universal, consent-based normative framework revisable through legitimate multilateral processes. This reading claims that enforcement selectivity — the observed pattern where powerful states intervene more freely while weaker states face sanctions — reflects capacity constraints and geopolitical complexity rather than structural illegitimacy. The constraint coordinates collective security through UNSC authorization and humanitarian intervention norms, but simultaneously extracts via economic conditionality (IMF/World Bank structural adjustment), sanctions regimes that harm civilian populations, and a security contractor economy that profits from intervention. Beneficiaries include intervening states (primarily P5 and their allies), their defense/security contractors, multilateral institutions that administer conditionality, and humanitarian NGOs that gain operational access. Victims include targeted states facing regime-change pressure, civilian populations bearing sanctions' humanitarian costs, and displaced populations from intervention zones. The constraint requires active enforcement (UNSC resolutions, sanctions committees, peacekeeping mandates, conditionality enforcement). The claimed_type is tangled_rope because the reading genuinely coordinates collective security (rope function) while asymmetrically extracting from targeted populations (snare function) — the engine will compute per-seat divergence.",
+    "key_agents": [
+      "intervening_states: Primary beneficiary (institutional/arbitrage) — initiates and profits from interventions",
+      "security_contractors: Beneficiary (powerful/constrained) — captures intervention economy",
+      "multilateral_institutions: Agenda setter (institutional/generational) — administers norms and conditionality",
+      "humanitarian_ngos: Beneficiary (organized/mobile) — gains access and legitimacy",
+      "targeted_states: Primary victim (powerless/trapped) — bears intervention and sanctions",
+      "civilian_populations_under_sanctions: Victim (powerless/trapped) — bears humanitarian costs",
+      "displaced_populations: Victim (powerless/trapped) — bears intervention displacement",
+      "sovereignty_maximalist_states: Excluded (moderate/constrained) — rejects intervention legitimacy",
+      "global_south_coalition: Excluded (organized/constrained) — demands reform of selectivity",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure"
+    ],
+    "logic_rationale": "Extractiveness (0.38) reflects the asymmetric transfer: intervening states and contractors gain materially; targeted states and civilians lose. The coordination function (collective security, humanitarian protection) is real but partial — extraction is not merely incidental. Suppression (0.22) is moderate: the constraint does not rely on total coercion but on institutional legitimacy and the lack of viable alternatives for weaker states. Theater_ratio (0.31) captures the gap between the universalist rhetoric and the selective enforcement reality — the legitimacy performance exceeds functional delivery. Accessibility_collapse (0.45) is moderate: alternatives exist (regional security arrangements, non-aligned movement) but are structurally disadvantaged. Resistance (0.52) is significant: sovereignty-maximalist states, Global South coalitions, and critical scholars actively contest the constraint's legitimacy. The temporal series shows gradual extraction accumulation and theater creep from 1945 to 2024, with suppression stabilizing post-Cold War.",
+    "perspectival_gap": "From the intervening states seat (institutional power, arbitrage exit), the constraint appears as genuine coordination — they built it, benefit from it, and can exit via veto power. From the targeted states seat (powerless, trapped), the same structure operates as enforced extraction with no meaningful exit. The civilian populations seat experiences pure extraction (sanctions mortality, displacement) with zero coordination benefit. The multilateral institutions seat (agenda_setter) experiences the constraint as both their mandate and their legitimacy source — they coordinate but also extract through conditionality. The engine computes this divergence from the structural data: power atoms, exit options, and beneficiary/victim declarations produce different effective extraction per seat.",
+    "directionality_logic": "Intervening states and security contractors are structural beneficiaries: they collect material gains (contracts, strategic position, resource access) and face near-arbitrage exit (veto power, alternative alliances). Multilateral institutions are agenda_setters with institutional power and generational horizon — they administer the constraint and extract legitimacy/budget from it. Humanitarian NGOs are beneficiaries with organized power and mobile exit — they gain operational access but could redirect to other crises. Targeted states, civilian populations under sanctions, and displaced populations are victims with powerless/trapped profiles — they bear costs with no exit. Sovereignty-maximalist states and Global South coalitions are excluded: they would object but are structurally locked out of the agenda-setting process. The analytical observer sees the full structure without material stake.",
+    "mandatrophy_analysis": "The founding problem (1945): prevent great-power war and provide collective security after WWII. Status: contested — the great-power war prevention function holds (no direct P5 conflict), but the collective security function has degraded into selective intervention. Corroboration: UN Charter preamble and Chapter VII attest the founding problem; Global South statements (Non-Aligned Movement, G77) and critical IR scholarship attest its contested status. The constraint shows mandatrophy signals: theater_ratio rising (0.12→0.31) while extractiveness rises (0.18→0.38), suggesting the coordination function is being hollowed out while extraction persists. The liberal institutional reading resists this diagnosis (capacity problem frame), while the hegemonic extraction reading treats it as confirmation.",
+    "kernel_context": "This constraint instantiates the liberal_institutional_reading of the rbio_practice_norm_complex kernel. Sibling readings: hegemonic_extraction_reading (RBIO as frozen hegemonic project with extractive enforcement selectivity) and sovereignty_maximalist_reading (absolute sovereignty; RBIO legitimate only when protecting sovereignty). This reading asserts universal consent-based norms with legitimate revisability; enforcement selectivity is a capacity problem. The three readings coexist as live positions in international discourse — no single framework resolves them."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "rbio_practice_norm_complex__hegemonic_extraction_reading",
+      "rbio_practice_norm_complex__sovereignty_maximalist_reading",
+      "imf_conditionality_regime",
+      "unsc_sanctions_architecture",
+      "humanitarian_intervention_doctrine"
+    ],
+    "dual_formulation_note": "This is the liberal_institutional_reading of the rbio_practice_norm_complex kernel. The hegemonic_extraction_reading treats the same normative complex as a frozen hegemonic project with extraction as primary function. The sovereignty_maximalist_reading treats it as illegitimate except when protecting sovereignty. All three readings share the same referent (the post-1945 institutional architecture) but author different ε, beneficiary/victim structures, and claimed_types. They are linked via affects_constraints to enable contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "intervening_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Initiate and authorize interventions through UNSC; gain strategic positioning, resource access, and regime-change leverage. Contractors from these states capture intervention economies. They hold veto power over enforcement decisions, giving them near-arbitrage exit from the constraint's costs while collecting its benefits."
+    },
+    {
+      "name": "security_contractors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Capture the intervention economy: logistics, training, private security, reconstruction contracts. Their profits depend on intervention volume. They lobby for intervention authorization and influence doctrine development. Exit is constrained by dependency on state contracts and regulatory licenses."
+    },
+    {
+      "name": "multilateral_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Administer the RBIO architecture: UNSC, IMF, World Bank, ICC, peacekeeping operations. They set enforcement priorities, design conditionality packages, and legitimize interventions. Their institutional identity is fused with the RBIO — they cannot exit without ceasing to be what they are. They extract budget and legitimacy from the constraint while coordinating collective security."
+    },
+    {
+      "name": "humanitarian_ngos",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Gain operational access, funding, and legitimacy through RBIO frameworks (R2P, humanitarian corridors, UN partnership). They deliver genuine aid but their access depends on the constraint's enforcement architecture. They can redirect to other crises (mobile exit) but lose the RBIO's institutional platform."
+    },
+    {
+      "name": "targeted_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face regime-change pressure, sanctions, military intervention, and conditionality. They bear the costs of enforcement selectivity. Exit is trapped: no veto, no alternative security architecture, surrender means regime death. They resist through sovereignty claims, regional alliances, and asymmetric warfare."
+    },
+    {
+      "name": "civilian_populations_under_sanctions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the humanitarian costs of comprehensive sanctions: mortality, morbidity, malnutrition, healthcare collapse, educational disruption. They have no political voice in the sanctioning decisions, no exit from the territory, and no alternative survival structures. The constraint extracts their wellbeing as leverage on their governments."
+    },
+    {
+      "name": "displaced_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Displaced by interventions and conflicts authorized under RBIO norms. Bear the costs of intervention (bombing, infrastructure destruction, sectarian violence unleashed). No exit from displacement camps, no political representation in authorizing bodies, no compensation mechanism."
+    },
+    {
+      "name": "sovereignty_maximalist_states",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Reject the legitimacy of humanitarian intervention and R2P as pretexts for regime change. They would object to the constraint's enforcement selectivity but are excluded from the agenda-setting process (no UNSC veto, limited influence in General Assembly). They build alternative frameworks (Shanghai Cooperation Organization, BRICS) but remain constrained by the dominant system."
+    },
+    {
+      "name": "global_south_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Collectively demand reform of UNSC, end to unilateral coercive measures, and equitable development governance. They articulate the selectivity-as-legitimacy-problem critique but lack structural power to change the constraint. Their exit is constrained by economic dependency on the RBIO's financial architecture (IMF, World Bank, dollar system)."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structure: the coordination function (collective security, humanitarian norms) and the extraction function (contractor economy, sanctions harm, conditionality) operating simultaneously. No material stake; the analytical seat computes the per-seat divergence the engine formalizes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a universal framework for collective security (UNSC authorization), humanitarian protection (R2P), and economic cooperation (multilateral trade/development institutions) — solving the problem of great-power conflict and mass atrocity through legitimate multilateral processes rather than unilateral force.",
+    "transfer_function": "Moves strategic leverage, contractor revenue, and institutional legitimacy from intervening states and their agents to targeted states and civilian populations via sanctions, conditionality, and military intervention. Moves humanitarian access and operational mandates to NGOs. Moves normative authority to multilateral institutions.",
+    "absent_voices": "Civilian populations under sanctions and displaced populations have no voice in UNSC decisions. Global South states are structurally excluded from veto power. Future generations (who inherit the institutional architecture) are not represented. The sovereignty-maximalist and hegemonic-extraction readings' constituencies are present in discourse but excluded from the liberal institutional reading's internal legitimacy calculus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the liberal institutional reading's constraint vanished overnight, the UNSC authorization regime would collapse, sanctions architectures would lose legitimacy, conditionality enforcement would cease, and the contractor intervention economy would lose its legal basis. Great-power relations would revert to raw power balancing; humanitarian intervention would lose its legal framework; the Global South would lose its primary institutional platform for development claims. The world would rearrange around either raw sovereignty (sovereignty_maximalist outcome) or explicit hegemonic management (hegemonic_extraction outcome).",
+    "founding_problem": "Prevent great-power war and provide collective security after WWII; establish universal norms for state conduct; create legitimate multilateral processes for norm revision and enforcement.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "UN Charter (1945) and Nuremberg Principles attest the founding problem. The great-power war prevention function is corroborated by the absence of direct P5 conflict (SIPRI, Correlates of War data). The contested status is corroborated by Non-Aligned Movement summits (1961-present), G77 declarations, UNGA resolution voting patterns on intervention/conditionality, and critical IR scholarship (Chomsky, Chomsky & Herman, Petras, Third World Approaches to International Law scholars) — all from outside the intervening states/contractor beneficiary set."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "un_charter_framework",
+      "nuremberg_principles"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hegemonic_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sovereignty_maximalist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "multilateral_consent_basis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legitimate_process_revisability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "selectivity_as_capacity_not_legitimacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_collective_security_framework",
+    "drift_state": {
+      "moment": "contemporary_selective_enforcement_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

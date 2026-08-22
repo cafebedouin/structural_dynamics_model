@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "digital_money_emergence_boundary__consumer_holdings_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_digital_money_emergence_boundary__consumer_holdings_reading",
+    "measurement_id_prefix": "dmeb_chr",
+    "story_uid": "6c1a57ef-db30-4cb2-9052-4ece5ab48f83",
+    "created_at": "2026-08-15T14:32:17Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.31,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Money Emergence: Consumer Holdings Boundary (1990s E-Purses, 2000 EMD)",
+    "topic_domain": "monetary_economics/financial_history/technology_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "emi_regulators",
+      "ecb_supervisors",
+      "fintech_issuers",
+      "payment_network_operators"
+    ],
+    "victims": [
+      "unbanked_consumers",
+      "cash_dependent_populations",
+      "small_merchants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "emi_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "European electronic money institution regulators who authored the 2000 EMD and subsequent PSD2/EMR frameworks. They define the legal category of e-money, set issuance rules, and supervise compliance. Their regulatory authority creates the market structure fintech firms operate within. They can exit by revising the framework but have no structural incentive to do so."
+    },
+    {
+      "name": "ecb_supervisors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "European Central Bank supervisors who oversee monetary aggregates and payment system stability. The M4/M5 distinction gives them analytical tools to separate bank deposits from e-money liabilities. They benefit from clearer monetary transmission visibility but also enforce the boundary through supervisory expectations."
+    },
+    {
+      "name": "fintech_issuers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "E-money institutions and fintech firms (e.g., PayPal EU, Wise, Revolut pre-banking license) that issue e-money products. They gain a regulatory passport to operate across the EEA without a full banking license, capturing revenue from stored value and transaction fees. Their exit is mobile — they can pivot to banking licenses or other jurisdictions — but the e-money license is a lower-barrier entry point they benefit from."
+    },
+    {
+      "name": "payment_network_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Card networks (Visa, Mastercard) and scheme operators that process e-money transactions. They collect interchange and scheme fees on e-money flows. The regulatory boundary legitimizes their role in the e-money ecosystem. Exit is constrained by network effects and scheme rules."
+    },
+    {
+      "name": "unbanked_consumers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals without access to traditional bank accounts who rely on e-money products for digital payments. They pay fees for loading, holding, and transacting with e-money that banked consumers avoid. Their exit options are trapped — cash exclusion and lack of banking access force dependence on the very products that extract from them."
+    },
+    {
+      "name": "cash_dependent_populations",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Populations (elderly, rural, informal economy workers) who remain cash-dependent as digital payments become the norm. The e-money boundary accelerates cash infrastructure withdrawal. They bear the cost of digital exclusion but have no voice in the regulatory frameworks that define the boundary. Exit is trapped — they cannot adopt what they cannot access."
+    },
+    {
+      "name": "small_merchants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Merchants who must accept e-money payments to remain competitive, paying scheme fees and acquiring costs they cannot easily pass through. The regulatory boundary mandates acceptance infrastructure. Exit is constrained — refusing digital payments loses customers, but fee structures are set by networks and issuers."
+    },
+    {
+      "name": "monetary_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Central bank researchers and academic monetary economists who track M4/M5 aggregates and debate the boundary's analytical validity. They observe the constraint's operation but neither collect from nor pay into it. Their exit is analytical — they can revise their models without material consequence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a legally recognized category for stored-value digital instruments that are not bank deposits, enabling non-bank firms to issue payment products and consumers to hold digital value without a banking relationship. Solves the coordination problem of trust in private digital liabilities by subjecting issuers to prudential safeguards (safeguarding funds, capital requirements) and giving holders a clear legal claim.",
+    "transfer_function": "Moves seigniorage-like revenue (float on stored value, transaction fees, interchange) from e-money holders and merchants to issuers and payment networks. Moves regulatory compliance costs onto issuers. Moves analytical clarity (separation of money-like liabilities) to supervisors. The M4/M5 distinction transfers classification authority to regulators.",
+    "absent_voices": "Unbanked consumers and cash-dependent populations are structurally excluded from the regulatory process that defined the e-money boundary. They would object to fee structures that extract from the least resourced and to the acceleration of cash displacement, but they have no seat at EMI/ECB working groups. Consumer advocacy NGOs are occasionally consulted but hold no veto.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the consumer-holdings boundary vanished overnight, the legal distinction between e-money and bank deposits would collapse. Fintech issuers would lose their regulatory passport (reverting to banking licenses or unregulated status), supervisors would lose M4/M5 analytical separation, unbanked consumers would lose the specific protections (safeguarding, redemption rights) the boundary created, and the 2000 EMD/PSD2 regulatory architecture would require fundamental reconstruction.",
+    "founding_problem": "The 1990s e-purse pilots (Mondex, Visa Cash, Proton) and early internet payments created a regulatory vacuum: private digital liabilities that looked like money but fell outside banking regulation. The founding problem was how to accommodate innovation in digital stored value without compromising monetary stability, consumer protection, or the integrity of the banking monopoly on deposit-taking.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "EMI regulators and ECB supervisors attest the problem remains live (ongoing stablecoin/crypto challenges, need for consistent framework). Fintech issuers argue the founding problem is substantially solved for traditional e-money but the framework is now overextended to novel instruments. Academic monetary economists (Bindseil, Panetta, Adrian) and consumer advocates (BEUC, Finance Watch) corroborate from outside the beneficiary set that the boundary has shifted from enabling innovation to entrenching a specific industry structure."
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.31
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The consumer-holdings reading of the digital money emergence boundary places the origin of digital money at the moment individuals could directly hold and transact with digital instruments — 1990s e-purse trials (Mondex, Proton, Visa Cash) and the 2000 Electronic Money Directive that gave them legal form. This reading draws the boundary at consumer-facing stored value, distinct from bank deposits, creating the M4/M5 monetary aggregate separation. The constraint is a tangled rope: it genuinely coordinates trust in non-bank digital liabilities (beneficiaries: regulators, fintech issuers) while extracting from those with the least exit power (unbanked consumers, cash-dependent populations, small merchants). The beneficiary structure is asymmetric — regulators and issuers gain authority and revenue; the excluded pay for access.",
+    "logic_rationale": "Extractiveness (0.42) reflects that the boundary enables a revenue model (float, fees, interchange) that disproportionately burdens low-income users while the coordination function (trust in e-money) is real but partial — safeguarding rules work but don't eliminate cost asymmetries. Suppression (0.31) is moderate: the constraint doesn't forcibly prevent cash use but creates structural pressure through infrastructure withdrawal and merchant acceptance norms. Theater (0.28) is present: consumer protection rhetoric accompanies fee structures that extract from the protected. Accessibility collapse (0.45) and resistance (0.38) reflect that alternatives (cash, bank accounts) persist but are eroding. Measurements share a single time grid (1990-2024) across all three metrics.",
+    "directionality_logic": "EMI regulators and ECB supervisors are structural beneficiaries (d near 0.1-0.2): they gain analytical tools and regulatory authority from the boundary. Fintech issuers and payment networks are beneficiaries (d ~0.2-0.3): they collect revenue enabled by the regulatory passport. Unbanked consumers and cash-dependent populations are targets (d ~0.8-0.9): they pay fees for products they have no alternative to, with trapped exit. Small merchants are payers (d ~0.6-0.7): constrained exit, bear costs they cannot fully pass through. Monetary analysts are analytical observers (d=0.5). The boundary's extraction is amplified for trapped agents by the engine's directionality computation.",
+    "perspectival_gap": "From the agenda-setter seat (regulators), the boundary is a coordination achievement: it brought order to a chaotic innovation space, created consumer protections, and enabled fintech competition. From the payer seats (unbanked, cash-dependent, small merchants), the same structure operates as a fee-extraction mechanism that locks them into costly digital rails while cash infrastructure atrophies. The engine computes this divergence from the structural data; the claimed_type (tangled_rope) asserts the hybrid nature without resolving the seat disagreement.",
+    "mandatrophy_analysis": "The founding problem (regulating private digital liabilities without banking them) was live in 2000. By 2024, the original e-money instruments are marginal, but the boundary has been extended to cover prepaid cards, digital wallets, and stablecoin-adjacent products. The mandate has not atrophied — it has expanded. However, the coordination function (enabling non-bank digital money) now serves an industry structure that extracts from the vulnerable. The constraint is not a piton (it's actively maintained and expanded) but a tangled rope where the coordination story legitimizes an extractive edge.",
+    "kernel_context": "This constraint instantiates the 'consumer_holdings_reading' of the contested kernel 'digital_money_emergence_boundary'. The kernel asks: when did digital money emerge? This reading answers: when consumers could directly hold digital instruments (1990s e-purses, 2000 EMD). Sibling readings: 'conceptualization_reading' (1960s/1985 theoretical origin) and 'infrastructure_reading' (1967/1972/1977 infrastructure origin). This reading draws the latest boundary, creates the M4/M5 distinction, and benefits EMI/ECB regulators and fintech issuers."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary_location",
+      "question": "Is the consumer-holdings boundary the structurally correct location for the digital money emergence constraint, or do the sibling readings (conceptualization, infrastructure) capture the coordination function more fundamentally?",
+      "resolution_mechanism": "Counterfactual analysis: if the 2000 EMD had never passed but e-purse technology diffused anyway, would the coordination problem have been solved differently? If Chaum's 1985 formalization had been implemented as a central bank digital currency in 1990, would the consumer-holdings reading still be the relevant boundary?",
+      "impact": "If the sibling readings capture the deeper coordination function, this reading's claimed_type (tangled_rope) may misattribute extractiveness to a boundary that is derivative rather than fundamental. The engine's classification would then reflect a contingent regulatory choice, not the kernel's structural logic.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's boundary is fundamental or derivative relative to the kernel."
+    },
+    {
+      "id": "extraction_coordination_separability",
+      "question": "Can the coordination function (trust in non-bank digital liabilities) be separated from the extractive edge (fee structures burdening the unbanked), or are they structurally fused in the e-money regulatory form?",
+      "resolution_mechanism": "Natural experiment from jurisdictions with different e-money fee caps or public e-money options (e.g., Brazil's Pix, Kenya's M-Pesa regulatory model). If coordination persists without the extractive fee structure, they are separable.",
+      "impact": "If separable, the constraint's extraction is a policy choice, not a structural necessity — the tangled_rope classification would reflect regulatory capture rather than irreducible hybridity. If fused, the tangled_rope is the honest description of the constraint's nature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination and extraction components can be disaggregated."
+    },
+    {
+      "id": "m4_m5_analytical_necessity",
+      "question": "Does the M4/M5 monetary aggregate distinction (separating bank deposits from e-money) serve a genuine analytical function for monetary policy, or is it a regulatory artifact that reifies the boundary this reading draws?",
+      "resolution_mechanism": "ECB internal debate records on whether M4/M5 separation changed any policy decision vs. pre-2000 aggregates. Academic literature on monetary aggregate informativeness post-EMD.",
+      "impact": "If M4/M5 is analytically vacuous, the boundary's coordination function for supervisors (a declared beneficiary) is theatrical — the beneficiary declaration would be a vindicated proposition masquerading as a beneficiary, reducing the constraint's coordination legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the monetary aggregate distinction this reading creates has operational significance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_money_emergence_boundary__conceptualization_reading",
+      "digital_money_emergence_boundary__infrastructure_reading",
+      "stablecoin_regulatory_boundary",
+      "cbdc_design_authority",
+      "payment_services_directive_scope"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the digital_money_emergence_boundary kernel. The conceptualization_reading locates the boundary at theoretical formalization (1960s/1985); the infrastructure_reading at transfer rails (1967/1972/1977); this reading at consumer-held instruments (1990s/2000). Each reading has distinct beneficiaries, victims, and ε values. They are linked as a constraint family via affects_constraints. The ε-invariance principle requires separate stories because the extraction profile changes with the boundary location — the consumer-holdings reading has the highest extractiveness (0.42) because it is the boundary that enables fee extraction from end-users."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "emd_2000_regulatory_framework",
+    "drift_state": {
+      "moment": "post_stablecoin_psd2_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "conceptualization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "infrastructure_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "money_requires_direct_consumer_holding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "emoney_liability_distinct_from_deposit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "m4_m5_separation_improves_monetary_analysis",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

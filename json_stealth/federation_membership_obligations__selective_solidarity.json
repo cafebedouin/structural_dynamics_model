@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_obligations__selective_solidarity",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c1d1a175-4286-4c7f-a633-c158d73ac1dc"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.62,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Contributory Tiering of Federation Mobility and Welfare Access",
+    "topic_domain": "political_economy/federalism/migration_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "host_state_treasuries",
+      "established_mobile_workers",
+      "domestic_employers"
+    ],
+    "victims": [
+      "economically_inactive_migrants",
+      "new_arrival_workers",
+      "informal_caregivers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint instantiates the selective_solidarity reading of the federation_membership_obligations kernel; how would the victim set and effective extraction change if a sibling reading were adopted instead?",
+      "resolution_mechanism": "Observe which reading legislatures and courts operationalize: adoption of integration_primary extends full access to economically inactive citizens and dissolves this reading's victim classes; adoption of member_sovereignty_primary re-keys exclusion to nationality, preserving the burden-shifting while changing who bears it.",
+      "impact": "Under integration_primary this constraint's epsilon collapses toward coordination cost; under member_sovereignty_primary the burden-shifting persists with a re-composed victim set and higher suppression. The disagreement is located in the membership criterion itself — citizenship, contribution, or national discretion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three readings of the membership-obligations kernel; sibling adoptions re-compose the victim set."
+    },
+    {
+      "id": "threshold_calibration_vs_actuarial_need",
+      "question": "Do qualifying periods and activity conditions track the measured fiscal risk posed by short-residence and inactive claimants, or do they systematically exceed it?",
+      "resolution_mechanism": "Actuarial audit comparing net fiscal contribution distributions by months-since-arrival against the thresholds actually imposed, using administrative tax and benefit microdata.",
+      "impact": "Thresholds matched to risk support the coordination framing and lower effective extraction; systematic excess establishes rent layered onto coordination and pushes classification toward pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the screen's calibration is actuarial or padded."
+    },
+    {
+      "id": "care_work_recording_artifact",
+      "question": "Is informal caregivers' exclusion a measurement artifact of contribution-recording rules, or deliberate design?",
+      "resolution_mechanism": "Pilot programs crediting care periods as contribution-equivalent time, with before/after fiscal and take-up analysis.",
+      "impact": "If artifact, the victim class shrinks under reform and the arrangement moves toward cleaner coordination; if design, the exclusion is confirmed as targeted burden placement on unpaid work.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Artifact-versus-design status of the caregiver exclusion."
+    },
+    {
+      "id": "sustainability_counterfactual",
+      "question": "Would unconditional welfare access for mobile citizens actually destabilize host welfare politics, or is the collapse scenario a preference dressed as necessity?",
+      "resolution_mechanism": "Natural experiments from jurisdictions operating shorter or no residence conditions, tracking benefit take-up, fiscal balances, and anti-immigration voting over subsequent electoral cycles.",
+      "impact": "If collapse fails to materialize, the coordination justification weakens and the screen reads as burden-shifting with a sustainability alibi; if strain appears, part of the measured extraction is the price of the mobility regime itself.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Counterfactual status of the political-sustainability justification."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In a multi-jurisdiction federation with unequal welfare systems, access to residence security and social benefits is conditioned on recorded contribution history and current economic activity rather than on membership alone. Workers who cross qualifying thresholds hold full rights; the economically inactive, recent arrivals, and people whose work produces no recorded contributions face restricted residence and closed benefit offices. The arrangement is administered through registration systems, habitual-residence testing, and benefit-office verification, enforced actively and litigated constantly. This story authors the standing arrangement as it operates — who it filters, who it protects, where its gains land — with metrics describing actual operation, independent of the claimed type.",
+    "key_agents": [
+      "host_state_governments: Agenda-setter (institutional/arbitrage) — legislates qualifying periods and residence tests, redesigns the screen at will, collects electoral support from its perceived prudence",
+      "host_state_treasuries: Primary fiscal beneficiary (institutional/arbitrage) — receives avoided outlays as budget headroom and funds the enforcement apparatus",
+      "established_mobile_workers: Protected beneficiary (moderate/constrained) — holds full rights behind accumulated contribution history; exit would forfeit accruals",
+      "domestic_employers: Secondary beneficiary (organized/mobile) — draws a pre-filtered, employment-disciplined labor pool at negligible welfare cost",
+      "new_arrival_workers: Dual-positioned payer (moderate/constrained) — contributes from month one, locked out until thresholds are met, converts to full beneficiary afterward",
+      "economically_inactive_migrants: Primary target (powerless/trapped) — fails activity tests, loses residence security and benefit access together",
+      "informal_caregivers: Hidden target (powerless/trapped) — works full days in care labor that generates no recorded contributions",
+      "prospective_low_wage_movers: Excluded voice (powerless/constrained) — would move for work but has no seat where qualifying periods are set",
+      "supranational_mobility_courts: Analytical observer (institutional/analytical) — strikes down discriminatory test formulations; legislatures answer with narrower drafts"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.62: the arrangement performs real filtering and insurance work, but a calibrated excess falls on groups whose exclusion outruns any fiscal risk they pose — informal caregivers above all, whose exclusion is an artifact of recording rules rather than measured cost. Suppression is authored at 0.62 as a raw structural property (unscaled by the engine's context dimensions, unlike extractiveness, which the engine scales by directionality and scope): the screen is held up by administrative law — tests, deregistration powers, documentation burdens — not by participant preference. Theater_ratio 0.30: the tests sort genuinely, but a growing share of administrative activity is ritualistic re-documentation of already-verified status. Accessibility_collapse 0.50: exits exist (return migration, self-sufficiency, informal work) but each forfeits accrued position. Resistance 0.55: continuous litigation and advocacy produce periodic judicial loosening, always answered by narrower legislative drafts. The three measurement series share one six-point grid across the thirty-year interval; trajectories rise monotonically — an enforcement-and-calibration ratchet, not a cycle — with terminal values matching the base_properties scalars.",
+    "perspectival_gap": "The treasury and government seats experience the arrangement as solvency maintenance and political sustainability — from there it looks like the price of keeping internal borders open at all. The inactive-migrant and caregiver seats experience arbitrary forfeiture: work performed but unrecognized, residence lost alongside benefits. Established workers see earned protection; new arrivals see a deferred promise they are currently paying into. Same-nominal-status actors diverge sharply: two mobile citizens of identical nationality sit on opposite sides of a qualifying line, differentiated solely by contribution-record position. The engine computes these per-seat classifications from the declared structure; the authored claim does not adjudicate them.",
+    "directionality_logic": "The beneficiary declarations place host_state_treasuries nearest the beneficiary pole (receives avoided outlays; funds enforcement as a routine budget line). Governments collect electoral support from the screen's perceived prudence — beneficiary by secondary role — though they also bear enforcement and litigation costs, holding them slightly off the pole. Established workers and employers derive low-to-moderate d from their beneficiary declarations, with workers' constrained exit (forfeitable accruals) pulling them back toward symmetry. Victims derive high d: inactive migrants and caregivers are trapped with no converting exit; new arrivals sit high but not maximal, because their payer role converts to beneficiary at threshold — a prospective subsidy the derivation reads as partial. No directionality overrides were needed: the beneficiary/victim plus exit data yields the correct ordering without correction.",
+    "mandatrophy_analysis": "The founding problem — inter-jurisdictional free-riding threatening both insurance-pool solvency and the political viability of open internal borders — remains live, and is corroborated from outside the benefiting parties by comparative welfare-state scholarship and actuarial analyses of cross-border claim patterns. No mandatrophy resolution is declared. The tangled_rope classification guards against two misreadings: a pure-extraction reading would predict that removing the screen is costless, missing that the coordination half is load-bearing (removal proposals reliably trigger closure politics); a pure-coordination reading would erase the calibrated excess borne by caregivers and the inactive. The residual risk the omegas track is inversion: if actuarial audit shows thresholds far exceeding measured fiscal risk, the coordination story thins toward cover and the structure slides toward pure extraction.",
+    "kernel_context": "Kernel: federation_membership_obligations — the persisting commitment that a multi-state federation owes its members defined bundles of movement and welfare rights. This file instantiates the selective_solidarity reading: entitlement tracks contribution history and economic activity, not nationality. Siblings: integration_primary (movement constitutive of citizenship; welfare boundaries yield) and member_sovereignty_primary (national closure authority retained). Neither sibling is foreclosed by this reading: a party can hold movement constitutive while tiering access, and a state can exercise closure authority through contributory filters, so both relations are coexists_with. The disagreement is located in the criterion of membership — citizenship versus contribution versus national discretion — which fixes the victim set: this reading's targets are the contribution-poor, not foreigners as such."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_obligations__integration_primary",
+      "federation_membership_obligations__member_sovereignty_primary"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'free movement versus welfare' decomposes into three structurally distinct readings of the federation_membership_obligations kernel, each with its own epsilon, victim set, and classification. This file is the selective_solidarity reading. integration_primary supplies the upstream mobility guarantee this reading tiers; member_sovereignty_primary supplies the closure authority this reading channels into contributory form. The stories are linked pairwise through network.affects_constraints so contamination analysis can trace how a shift in any one reading's legitimacy propagates to the others."
+  },
+  "stakeholders": [
+    {
+      "name": "host_state_governments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislates qualifying periods, habitual-residence tests, and benefit-conditionality rules; can rewrite the screen at any session but faces electoral punishment from host publics for loosening it and litigation plus employer complaints for tightening it past court limits. Collects durable electoral support from voters who read the activity conditions as fiscal prudence."
+    },
+    {
+      "name": "host_state_treasuries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Funds the benefit systems and the administrative machinery that screens claimants. Every application refused at a residence or contribution test is budget headroom retained; multi-year forecasts treat the screening yield as a planning input. Gains from the arrangement land here first, as avoided outlays."
+    },
+    {
+      "name": "established_mobile_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Moved jurisdictions years ago, worked continuously, and crossed every threshold; now hold secure residence and full benefit access. The same qualifying rules that exclude newcomers protect the value of what they have already paid in. Leaving for another jurisdiction would mean starting a new contribution clock and risking accrued entitlements, so staying put is the rational move even against better offers abroad."
+    },
+    {
+      "name": "domestic_employers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hire from a labor pool that the activity conditions keep employment-oriented; turnover skews toward workers with reasons to stay attached to jobs. Bear almost none of the welfare cost the conditions offset, and press legislatures to retain or raise activity requirements whenever loosening is proposed."
+    },
+    {
+      "name": "new_arrival_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Arrive, register, and work immediately — paying taxes and contributions from the first month — but sit below qualifying-period lines for most benefits, sometimes for years. Their position flips to full access once thresholds are met, so the rule that excludes them now functions later as insurance they funded. Changing jobs or jurisdictions mid-climb can reset the clock."
+    },
+    {
+      "name": "economically_inactive_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Job seekers, people between contracts, returning nationals, and students without work income. Activity and residence tests remove both benefit access and, in many cases, the right to remain; losing one typically triggers losing the other. Going back to the origin jurisdiction forfeits partial accruals and meets origin-side re-registration hurdles, so the available exits each carry heavy loss."
+    },
+    {
+      "name": "informal_caregivers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Provide childcare, eldercare, and household labor that makes other people's employment possible, but the recording rules generate no contribution history from this work. Classified alongside the genuinely idle despite working full days. No filing category exists through which their hours could become qualifying time."
+    },
+    {
+      "name": "prospective_low_wage_movers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Would move for work if entry terms were known and stable; sit outside every legislature that sets qualifying periods in destination jurisdictions. Objections travel only through NGOs and litigation, never through a seat. Whether they would face the screen's restrictions is decided before they arrive."
+    },
+    {
+      "name": "supranational_mobility_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Hear challenges to residence tests and benefit conditionality against treaty guarantees of movement; strike down formulations judged discriminatory or disproportionate. Each ruling loosens the screen briefly; legislatures respond with narrower drafts that survive review, and the cycle repeats."
+    }
+  ],
+  "gain_flow": "host_state_treasuries",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the free-rider problem that arises when jurisdictions with unequal welfare systems share an open labor market: conditioning access on contribution keeps insurance pools actuarially sound and keeps open borders politically sustainable for host publics who would otherwise demand closure.",
+    "transfer_function": "Moves welfare-system access and residence security away from economically inactive mobile citizens, pre-threshold newcomers, and unpaid caregivers, toward contributing workers, employers, and host treasuries; the avoided cost lands as budget headroom and electoral credit.",
+    "absent_voices": "Prospective movers from lower-wage regions have no seat in any legislature that sets qualifying periods; informal caregivers are present in the statistics but absent from the drafting rooms, since no ministry represents unpaid work; economically inactive migrants object only through NGOs and litigation after the rules bind them. Unanimity behind the contributory principle arises in rooms these parties never entered.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the contributory tiering vanished overnight, welfare access rules would reorganize around either citizenship-based access or restored border controls: treasuries would face uncapped cross-border claim exposure, governments would confront immediate closure politics, established workers' accrued protections would lose their distinguishing force, and millions of mobile citizens' residence and benefit positions would reset — the federation's mobility settlement would rearrange within a single political cycle.",
+    "founding_problem": "Post-war social insurance was built on distinguishing insured contributors from the general population to keep pools solvent, and later enlarged to a multi-state federation where unequal welfare generosity made unmanaged mobility a fiscal and political threat to the open-borders settlement itself.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Comparative welfare-state scholarship and actuarial studies of cross-border claim patterns — sources outside the benefiting parties — corroborate that inter-jurisdictional free-riding pressure on unequal welfare pools is real and ongoing. The same external literature disputes the current calibration: labor economists and migrant-rights organizations attest that existing thresholds exceed any actuarially necessary filter. Corroboration therefore supports the founding problem while contesting the screen's calibration."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "contributory_entitlement_framework",
+    "drift_state": {
+      "moment": "post_enlargement_mass_mobility_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "integration_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "member_sovereignty_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "entitlement_tracks_contribution_not_nationality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "economic_activity_as_movement_threshold",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "ip_category_emergence__first_holding_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_ip_category_emergence__first_holding_reading",
+    "measurement_id_prefix": "ip_first_holding",
+    "story_uid": "6f40cee6-f7de-448d-b89c-a2dbb5d7950f",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Statutory Author Holding (Statute of Anne 1710) — Shift from Stationers' Monopoly to Author-as-Rights-Holder",
+    "topic_domain": "legal_philosophy/intellectual_property/historical_jurisprudence",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "statutory_authors",
+      "parliamentary_legislature",
+      "emerging_publishers"
+    ],
+    "victims": [
+      "stationers_company_monopolists",
+      "unenfranchised_creators",
+      "colonial_subject_creators"
+    ],
+    "vindicated_propositions": [
+      "author_natural_right_in_labor",
+      "limited_monopoly_as_public_bargain",
+      "learning_encouragement_via_statutory_protection"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_vs_statutory_origin_ambiguity",
+      "question": "Does the 1710 Statute of Anne recognize a pre-existing natural right of authors in their works, or does it create a new statutory right ex nihilo?",
+      "resolution_mechanism": "Historical analysis of parliamentary debates (1709-1710), Stationers' petitions, and contemporary juridical commentary (e.g., Millar v Taylor 1769 vs Donaldson v Beckett 1774). If natural-right language is performative (strategic rhetoric to overcome Stationers' opposition) rather than doctrinal, the constraint is statutory construction; if doctrinal, it reflects a mountain-like natural law claim.",
+      "impact": "If natural right is recognized, the constraint has mountain-like immunity from revision (extraction is the price of acknowledging a pre-existing claim). If statutory creation, the constraint is a tangled rope from inception — coordination (learning encouragement) fused with extraction (monopoly grant to authors/publishers). This delta changes ε by ~0.15-0.20 and flips the false_summit_mountain gate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether author's right is discovered (natural) or enacted (statutory) — the core framing ambiguity of the first_holding_reading."
+    },
+    {
+      "id": "stationers_monopoly_continuity",
+      "question": "To what extent did the Stationers' Company retain de facto control over the book trade after 1710 through contractual assignment of authors' new statutory rights?",
+      "resolution_mechanism": "Economic history of the 1710-1774 period: assignment rates, contract terms, Stationers' Register continuity, and the 1737-1739 'Great Copyright' litigation. Measure the fraction of statutory copyrights effectively controlled by Stationers via assignment within 5 years of first publication.",
+      "impact": "High continuity (>70% assignment to Stationers) means the beneficiary shift is nominal — the constraint remains a snare for authors (extraction by Stationers via assignment). Low continuity means the statutory author-holding is genuine coordination. This omega directly modulates the beneficiary/victim structure and effective extraction for author_seat.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the Stationers' monopoly persisted through contractual capture of the new statutory right."
+    },
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is the first_holding_reading structurally foreclosed by the thinkability_reading, or do they occupy independent analytical planes?",
+      "resolution_mechanism": "Formal analysis of the kernel's occupational set: does 'author entered legitimate claimant set' (first_holding) logically require 'ownable expression became legally coherent' (thinkability), or can the membership shift occur without the category emergence? Test via counterfactual: if ownable expression was already coherent pre-1710, does the 1710 shift still constitute a constraint?",
+      "impact": "If foreclosed, the first_holding_reading is a subset of thinkability and should not be a separate constraint story. If coexists_with, both are valid kernel readings with different ε referents. If influences, thinkability creates the semantic space that first_holding populates.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and the thinkability_reading sibling."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Statute of Anne (1710) shifted the legitimate claimant set for IP protection from the Stationers' Company (a royal-charter monopoly of printers/booksellers) to authors as statutory rights-holders. This reading emphasizes the membership change in the occupied set: who holds the enforcement claim. The constraint is a tangled rope because it simultaneously coordinates (solves the problem of incentivizing 'learned men to compose and write useful books' via a limited monopoly) and extracts (the monopoly rent is captured by assignees — initially Stationers via assignment contracts, later publishers — while unenfranchised creators and colonial subjects are excluded from the claimant set). The Stationers' monopoly was a snare; the statutory author-holding is a tangled rope that inherits extraction through assignment markets.",
+    "key_agents": [
+      "statutory_authors: Primary beneficiary (moderate/constrained) — granted limited monopoly but often assign it",
+      "stationers_company_monopolists: Primary victim (powerful/trapped) — lost royal charter monopoly but captured statutory rights via assignment",
+      "parliamentary_legislature: Agenda setter (institutional/generational) — enacted the statute as public bargain",
+      "emerging_publishers: Secondary beneficiary (organized/mobile) — new entrants leveraging statutory framework",
+      "unenfranchised_creators: Victim (powerless/trapped) — domestic creators without access to registration/assignment",
+      "colonial_subject_creators: Victim (powerless/trapped) — imperial subjects excluded from statutory protection",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure across 1710-1774"
+    ],
+    "logic_rationale": "Extractiveness 0.68: the 14+14 year monopoly term (renewable once) grants substantial rent; suppression 0.72: enforcement requires active litigation, registration, and seizure of 'pirated' sheets — the constraint collapses alternatives (common-law perpetual copyright, open reprinting) through state coercion; theater_ratio 0.41: the 'encouragement of learning' preamble performs public benefit while assignment markets channel rent to intermediaries; accessibility_collapse 0.58: common-law perpetual copyright (argued by Stationers in Millar v Taylor) was a live alternative until Donaldson v Beckett (1774) rejected it; resistance 0.61: Stationers resisted via litigation, petitioning, and contractual capture; unenfranchised creators resisted via piracy and petitioning. The 50-year measurement grid (1710-1760) captures the transition from Stationers' capture to publisher-dominated assignment.",
+    "directionality_logic": "statutory_authors: d ~0.3 (beneficiary — granted right but constrained by assignment necessity); stationers_company_monopolists: d ~0.8 (victim of formal monopoly loss but partial beneficiary via assignment capture — net target of the statutory shift); parliamentary_legislature: d ~0.1 (agenda setter, extracts legitimacy not rent); emerging_publishers: d ~0.25 (beneficiary — new market access); unenfranchised_creators: d ~0.9 (victim — excluded from claimant set, no exit); colonial_subject_creators: d ~0.95 (victim — structural exclusion, identity-locked via imperial subjecthood). The engine derives d from these declarations plus exit_options and power.",
+    "perspectival_gap": "From the parliamentary seat: genuine coordination (public bargain for learning). From the author seat: coordination promise, extraction reality (assignment markets). From the Stationers seat: extraction (loss of monopoly) partially offset by capture (assignment contracts). From unenfranchised/colonial seats: pure extraction (exclusion from claimant set). The engine computes per-seat χ from these structural asymmetries.",
+    "mandatrophy_analysis": "The founding problem (encouraging learned composition via limited monopoly) is contested — the monopoly term expanded from 14+14 to life+70, the claimant set expanded to corporate entities, and the 'learning' justification now covers entertainment software. The constraint persists because the agenda_setter (legislature) benefits from the regulatory capture equilibrium; fixing is prohibitive for any single actor. This is not a piton — the function (rent allocation) is active, not atrophied.",
+    "kernel_context": "This constraint is the first_holding_reading of kernel ip_category_emergence. It instantiates the reading that IP marks an occupancy change in the legitimate claimant set (author enters 1710). Sibling readings: thinkability_reading (IP marks category emergence — ownable expression became legally coherent in 1710) and synchronic_diachronic_seam (thinkability and first-holding are formally independent or a temporal framing artifact). This reading emphasizes the membership shift and enforcement beneficiary change (Stationers' monopoly vs statutory author protection)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "ip_category_emergence__thinkability_reading",
+      "ip_category_emergence__synchronic_diachronic_seam",
+      "statutory_copyright_term_extension",
+      "assignment_market_capture",
+      "colonial_copyright_imposition"
+    ],
+    "dual_formulation_note": "Kernel ip_category_emergence decomposes into three readings with distinct ε referents: thinkability (category emergence, ε≈0.35, mountain-like), first_holding (occupancy change, ε≈0.68, tangled rope), synchronic_diachronic_seam (framing test, ε≈0.15, rope). This reading (first_holding) is downstream of thinkability (thinkability creates the coherent category that first_holding populates) and influences statutory_copyright_term_extension (the 1710 membership shift enables later term expansions by establishing author-as-rights-holder as the legitimate claimant)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "statutory_authors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Granted a 14+14 year statutory monopoly in their works by the 1710 Act. In practice, most authors must assign this right to publishers/booksellers to reach markets — the assignment is the price of publication. Their exit from the assignment relationship is constrained by the necessity of distribution networks controlled by the same intermediaries who held the pre-1710 monopoly."
+    },
+    {
+      "name": "stationers_company_monopolists",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lost their royal charter monopoly (1709 expiry) and the perpetual common-law copyright claim (rejected in Donaldson v Beckett 1774). However, they captured the new statutory regime by leveraging their control of the Stationers' Register, distribution networks, and capital to become the primary assignees of authors' statutory rights. They bear the cost of the formal monopoly loss but extract via contractual capture of the new right."
+    },
+    {
+      "name": "parliamentary_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enacted the Statute of Anne (1710) as a public bargain: limited monopoly to authors/purchasers in exchange for 'encouragement of learning.' Parliament sets the term, scope, and enforcement machinery. It extracts legitimacy and regulatory authority, not direct rent. Its exit is analytical — it can amend the statute but does so within the framework it created."
+    },
+    {
+      "name": "emerging_publishers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "New entrants (e.g., London booksellers outside the Stationers' Company, Scottish and Irish reprint publishers) who leverage the statutory framework to compete with the Stationers. They benefit from the shift from perpetual common-law monopoly (Stationers' claim) to limited statutory term — the term limit creates a public domain they can exploit. Their exit is mobile: they can enter/exit the trade based on statutory terms."
+    },
+    {
+      "name": "unenfranchised_creators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Domestic creators (artisans, illustrators, translators, abridgers, oral performers) whose works fall outside the statutory categories or who lack access to registration/assignment infrastructure. They bear the suppression of the constraint (cannot freely copy/build upon protected works) without accessing its benefit (no enforceable claim). Their exit is trapped — the constraint's categories exclude them by design."
+    },
+    {
+      "name": "colonial_subject_creators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Creators in British colonies (India, Caribbean, North America pre-1783) subject to British copyright law via imperial extension but excluded from the claimant set — colonial works are not protected in Britain, British works are enforced in colonies. Their identity as imperial subjects locks them into the extraction relation: they pay for British books via monopoly pricing but cannot claim protection for their own works. Exit requires imperial dissolution."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structural trajectory from Stationers' monopoly (snare) to statutory author-holding (tangled rope) to modern copyright (snare/tangled_rope hybrid). Occupies no material position in the constraint; evaluates the occupancy shift, the coordination/extraction fusion, and the kernel contest across readings."
+    }
+  ],
+  "gain_flow": "stationers_company_monopolists",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of incentivizing creation and dissemination of 'useful books' by granting a limited, tradeable monopoly — replacing the Stationers' perpetual monopoly (which suppressed competition and dissent) with a time-limited statutory right that creates a public domain at term end.",
+    "transfer_function": "Moves monopoly rent from readers/purchasers (via monopoly pricing) to the statutory rights-holder (author or assignee). In practice, the rent flows: readers → publishers/booksellers (via price) → authors (via royalty/assignment fee, typically small fraction). The Stationers capture the rent via assignment contracts; emerging publishers capture via reprint rights after term expiry.",
+    "absent_voices": "Unenfranchised domestic creators (artisans, oral performers, illustrators) and colonial subject creators — both excluded from the legitimate claimant set by statutory category definitions and imperial administration. They would object to the monopoly pricing they pay and the exclusion they suffer, but they are not in the legislative conversation (1710) or the judicial conversation (1769-1774).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the statutory author-holding constraint vanished overnight (reverting to Stationers' perpetual common-law claim or open reprinting), the book trade would reorganize: Stationers would reassert perpetual monopoly via common law; authors would lose even nominal rights; colonial extraction would intensify; the public domain would collapse. The 1774 Donaldson v Beckett rejection of common-law perpetual copyright shows the world *did* rearrange when the constraint's boundary was litigated.",
+    "founding_problem": "The Stationers' Company's perpetual monopoly (via royal charter and common-law claim) suppressed competition, censored dissent, and blocked 'learned men' from controlling their works. The founding problem was: how to encourage learning without granting a perpetual monopoly to a chartered company?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Parliamentary preamble (1710) attests the problem is live (encouragement of learning). Stationers' petitions (1709-1739) attest the problem is dead (their monopoly was the solution). Scottish Enlightenment publishers (e.g., Foulis brothers, 1740s) and colonial petitioners (e.g., 1773 Massachusetts copyright petition) attest the problem is contested — the statutory solution created new exclusions. Independent corroboration: economic historians (Ronan Deazley, Isabella Alexander) show the 'learning encouragement' justification was strategically deployed against Stationers' opposition, not a neutral policy goal."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ip_category_emergence__thinkability_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "thinkability_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "synchronic_diachronic_seam",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "author_as_legitimate_statutory_claimant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "limited_monopoly_as_public_bargain",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "stationers_monopoly_regime",
+    "drift_state": {
+      "moment": "donaldson_v_beckett_1774",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

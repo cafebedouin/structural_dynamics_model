@@ -1,0 +1,298 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_obligation__messianic_suspension",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_temple_sacrifice_obligation__messianic_suspension",
+    "measurement_id_prefix": "temple_sacrifice_obligation__messianic_suspension",
+    "story_uid": "794bf7d1-358c-44e9-be6c-f77e5cd06265",
+    "created_at": "2026-08-03T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Temple Sacrifice Obligation — Messianic Suspension Reading",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "messianic_restoration_deferral",
+      "knowledge_maintenance_without_compliance"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the messianic_suspension reading a distinct constraint with its own ε, or a perspectival variant of the temple_sacrifice_obligation kernel?",
+      "resolution_mechanism": "Compare ε values and beneficiary/victim structures across the three declared readings. If ε differs materially or the victim set changes, they are distinct constraints per ε-invariance.",
+      "impact": "If distinct constraints, each reading gets its own classification. If perspectival variants, they share a constraint with observer-dependent classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings instantiate one constraint or three."
+    },
+    {
+      "id": "suspension_vs_violation_boundary",
+      "question": "Does 'suspended pending restoration' structurally differ from 'violated but excused' in a way that affects extraction on any current agent?",
+      "resolution_mechanism": "Identify any current agent who bears cost, loses standing, or faces penalty under one framing but not the other. If no such agent exists, the distinction is semantic, not structural.",
+      "impact": "If no current agent is differentially affected, the suspension/violation distinction does not generate extractiveness and the constraint remains a mountain from all current seats.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the suspension framing has material structural consequences for present actors."
+    },
+    {
+      "id": "study_function_ambiguity",
+      "question": "Does the study of sacrifice law under this reading serve as knowledge-maintenance-only, or does it functionally substitute for compliance in a way that generates beneficiary structure?",
+      "resolution_mechanism": "Track whether study communities receive material benefits (funding, status, exemption from other obligations) that depend on the 'maintenance of knowledge' claim. If benefits track the claim, study is a coordination function with beneficiaries.",
+      "impact": "If study generates beneficiaries, the constraint may be a rope or tangled_rope rather than a mountain. If study is purely epistemic with no material flows, the mountain classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether 'maintenance of knowledge-in-waiting' masks a coordination function with beneficiaries."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2500,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2500,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2500,
+      "value": 0.12,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2500
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the messianic_suspension reading of the temple_sacrifice_obligation kernel. Under this reading, the biblical obligation to offer sacrifices in the Jerusalem Temple is neither fulfilled nor violated in the present era — it is structurally suspended, awaiting a future messianic restoration that will reactivate the obligation. The authority structure (halakhic tradition) does not treat the current absence of sacrifice as a gap requiring substitute performance; rather, the obligation's dormancy is itself the correct state. Study of sacrifice laws (kodashim) preserves the knowledge for the restoration but does not constitute compliance, preparation, or occupation of the obligation. No current agent is obligated to sacrifice, no agent is penalized for non-sacrifice, and no agent collects rents from the suspension. The constraint's ε is near-zero because there is no standing arrangement extracting from anyone — the arrangement is the absence of an arrangement, grounded in a theological claim about historical epoch.",
+    "key_agents": [
+      "halakhic_authority: agenda_setter (institutional/generational/analytical/universal) — maintains the suspension doctrine, adjudicates the boundary between suspension and violation",
+      "study_communities: observer (organized/biographical/mobile/global) — engage with sacrifice law as theoretical knowledge, no compliance burden",
+      "messianic_restoration_event: non-agent — the future trigger that would reactivate the obligation"
+    ],
+    "logic_rationale": "Extractiveness is 0.08 (near-zero) because no transfer occurs from any current agent to any other — the obligation is structurally absent. Suppression is 0.12 (low but non-zero) because the authority structure maintains a boundary: one may not *invent* a substitute sacrifice or declare the obligation permanently void; the suspension framing is enforced as the only legitimate reading of the kernel. Theater ratio is 0.05 because there is no performative compliance — study is explicitly not compliance. Accessibility collapse is 0.15 because alternative framings (study as occupation, study as archiving) remain live and structurally distinct; the suspension reading does not collapse them. Resistance is 0.05 because no current agent is coerced by this reading — the constraint is accepted as the correct description of the epoch.",
+    "perspectival_gap": "The engine will compute per-seat classifications from the structural data. The halakhic_authority seat (agenda_setter, institutional power, analytical exit) experiences this as a mountain — a theological fact about the epoch. Study_communities (observer, organized power, mobile exit) experience it as a mountain — a domain of knowledge with no compliance demand. The messianic_restoration_event is a non-agent future trigger. No seat experiences extraction because no seat bears cost or transfers value under this reading.",
+    "directionality_logic": "No beneficiaries and no victims declared because the suspension reading creates no transfer. The halakhic authority does not collect from the suspension; it maintains a doctrinal boundary. Study communities do not pay for the suspension; they study voluntarily. The messianic restoration is a future event, not a current agent. Directionality is near-symmetric (d ≈ 0.5) for all current seats because costs ≈ benefits ≈ 0.",
+    "mandatrophy_analysis": "The founding problem (how to relate to a Temple-centered obligation when the Temple is destroyed) is live — the suspension reading is one of three live answers. The mandate has not atrophied because the kernel itself (the obligation) remains the organizing commitment; the suspension reading is the authority structure's current adjudication of that commitment, not a vestigial remnant.",
+    "kernel_context": "This constraint is the messianic_suspension reading of the temple_sacrifice_obligation kernel. Sibling readings: study_as_occupation (study constitutes legitimate occupation of the obligation) and study_as_archiving (study preserves knowledge for future restoration but does not fulfill the obligation). All three readings share the kernel (the biblical sacrifice obligation) but instantiate different constraints with different ε, different beneficiary/victim structures, and different classifications. This reading claims the obligation is suspended — not fulfilled, not violated — pending a future messianic restoration that will reactivate it."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "temple_sacrifice_obligation__study_as_occupation",
+      "temple_sacrifice_obligation__study_as_archiving"
+    ],
+    "dual_formulation_note": "This constraint family (temple_sacrifice_obligation kernel) decomposes the single natural-language concept 'what happens to the sacrifice obligation after the Temple's destruction' into three structurally distinct constraints. The messianic_suspension reading has near-zero ε (no current transfer, no victims). The study_as_occupation reading may have higher ε if study communities receive material benefits tied to 'occupying' the obligation. The study_as_archiving reading sits between — study as knowledge-preservation with possible institutional support. Each reading gets its own constraint_id, its own ε, its own stakeholder surface. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "halakhic_authority",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Maintains the doctrinal boundary that the sacrifice obligation is suspended, not violated, not fulfilled, and not substitutable. Adjudicates disputes about what counts as legitimate engagement with sacrifice law in the Temple's absence. Does not collect revenue or compliance from the suspension itself. Authority derives from lineage (chain of transmission) and the claim to correctly interpret the epoch."
+    },
+    {
+      "name": "study_communities",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Engage with kodashim (sacrifice law) as theoretical study — preserving knowledge, analyzing parameters, maintaining the textual tradition. Under this reading, study is explicitly not compliance, not preparation, not occupation of the obligation. Participation is voluntary; exit is mobile (one can study other topics). No material penalty for non-study, no material reward for study beyond the epistemic value."
+    },
+    {
+      "name": "messianic_restoration_event",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The future messianic restoration that would reactivate the sacrifice obligation. Not a current agent; a structural trigger in the reading's own framework. The suspension reading treats the current epoch as defined by the restoration's absence."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a stable doctrinal framework for relating to a destroyed Temple's central obligation without requiring substitute performance, invented rituals, or declaring the obligation void. Coordinates consensus around 'waiting' as the correct posture.",
+    "transfer_function": "No transfer occurs under this reading. The obligation is suspended — no agent pays, no agent receives. Study of sacrifice law is epistemically motivated, not a transfer mechanism.",
+    "absent_voices": "Those who would argue the obligation is permanently void (rejected by the authority structure) and those who would demand immediate substitute performance (also rejected). Both positions are structurally excluded from the halakhic conversation by the suspension doctrine itself.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the suspension doctrine vanished overnight, the kernel (the biblical obligation) would remain, but the adjudication of its current status would become contested. The world does not rearrange because no current arrangements depend on the suspension — no one is currently sacrificing, no one is currently penalized for not sacrificing, no institution collects from the suspension. The constraint's disappearance would reopen the interpretive question, not restructure material reality.",
+    "founding_problem": "How does a covenantal obligation centered on a specific physical Temple persist when the Temple is destroyed and the priesthood is dispersed, without either inventing substitutes that claim equal status or declaring the obligation void?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The suspension reading is attested by the halakhic authority structure itself (Maimonides, Mishneh Torah, Hilkhot Melakhim; Talmud Bavli, multiple tractates). The founding problem's live status is corroborated by the existence of two other live readings (study_as_occupation, study_as_archiving) held by different communities within the same tradition — the dispute is ongoing and no single reading has achieved consensus."
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "temple_sacrifice_obligation"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_occupation",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "study_as_archiving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "obligation_suspended_not_violated",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "study_is_knowledge_maintenance_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "messianic_epoch_boundary",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

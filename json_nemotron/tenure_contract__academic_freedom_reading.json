@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "tenure_contract__academic_freedom_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tenure_academic_freedom",
+    "story_uid": "f85299e0-6d8a-4ce1-a1ec-a6228541a0ff"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Tenure as Academic Freedom Guarantee",
+    "topic_domain": "higher_education_governance/labor_economics/institutional_theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "tenured_faculty",
+      "students"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "truth_seeking_requires_institutional_independence",
+      "high_risk_inquiry_requires_employment_security"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is tenure a genuine coordination mechanism for truth-seeking, or a cover for extraction/reproduction as the sibling readings claim?",
+      "resolution_mechanism": "Longitudinal comparison of research output variance, demographic flows, and cost structures across tenure vs. contingent-track systems; adjudication of which reading's predicted pattern matches observed outcomes.",
+      "impact": "If academic_freedom_reading is correct, tenure's ε for faculty should be low and its coordination function empirically detectable; if institutional_extraction_reading or demographic_reproduction_reading are correct, the same institution would show high ε for contingent faculty and demographic stasis despite formal academic freedom guarantees.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's coordination claim holds structurally or is a legitimating narrative for extractive/reproductive functions."
+    },
+    {
+      "id": "external_actor_suppression_mechanism",
+      "question": "What specific mechanisms make political suppression 'difficult' under tenure, and do they operate equally for all political vectors?",
+      "resolution_mechanism": "Case-study tracking of political interference attempts (legislative, donor, administrative) against tenured vs. non-tenured faculty across jurisdictions and issue domains.",
+      "impact": "If suppression difficulty is asymmetrical (e.g., protects only certain viewpoints), the reading's universal coordination claim fractures; the constraint would function as selective insulation rather than general truth-seeking infrastructure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tenure's political insulation is structurally symmetric or selectively effective."
+    },
+    {
+      "id": "student_beneficiary_causality",
+      "question": "Do students actually benefit from tenure-enabled research quality, or is this a projected beneficiary claim with weak causal linkage?",
+      "resolution_mechanism": "Natural experiments comparing student outcomes (learning, placement, research exposure) across institutions with varying tenure densities and contingent faculty ratios, controlling for selectivity and resources.",
+      "impact": "If student benefit is negligible or negative, the reading's coordination function narrows to faculty-only; the claimed rope structure loses its broadest beneficiary class.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the student beneficiary claim has empirical support or is a legitimating extension."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the academic_freedom_reading of the tenure_contract kernel. It models tenure as a coordination mechanism that decouples researcher survival from institutional or political displeasure, enabling high-risk inquiry. The reading claims low extractiveness for faculty (coordination benefit), high effective suppression difficulty for external political actors, and neutral benefit for students via research quality. The sibling readings (institutional_extraction_reading, demographic_reproduction_reading) are separate constraint stories with their own ε and structural claims; they are not folded into this one.",
+    "key_agents": [
+      "tenured_faculty: Primary beneficiary (institutional/mobile) — receives employment security enabling independent inquiry",
+      "students: Neutral beneficiary (organized/constrained) — benefits indirectly from research quality and curricular stability",
+      "external_political_actors: Target of suppression difficulty (powerful/trapped) — finds suppression of tenured inquiry structurally costly",
+      "contingent_faculty: Excluded (moderate/constrained) — bears precarity that tenure system structurally depends on; not a party to this reading's coordination claim",
+      "university_administration: Agenda setter (institutional/arbitrage) — administers tenure process, balances external pressures against faculty autonomy",
+      "analytical_observer: Observer (analytical/analytical) — evaluates structural claims across readings"
+    ],
+    "logic_rationale": "Base extractiveness is low (0.18) because the reading's referent is the coordination function — tenure as infrastructure for truth-seeking, not the rent or demographic effects the sibling readings identify. The metrics describe the constraint AS THIS READING SEES IT: a rope with genuine coordination, modest theater (some performative 'shared governance' rituals), low suppression (the constraint doesn't coerce; it insulates), moderate accessibility collapse (alternatives like research institutes exist but are scarce), and moderate resistance (contingent faculty resistance and political attacks on tenure). The slight upward drift in extractiveness and theater over the interval reflects the reading's own acknowledgment that the system has accumulated administrative overhead and performative compliance rituals.",
+    "directionality_logic": "Tenured faculty are structural beneficiaries (d ~ 0.15): the constraint subsidizes their independence. Students are near-neutral beneficiaries (d ~ 0.45): they gain from research quality but bear no direct cost. External political actors are targets of the constraint's insulation (d ~ 0.85 for them): the constraint makes their suppression costly. Contingent faculty are excluded from this reading's beneficiary set — their precarity is the demographic_reproduction_reading's referent, not this one's. Administration sits near symmetric (d ~ 0.5): it both maintains the constraint and bears its rigidities.",
+    "perspectival_gap": "From the tenured faculty seat, tenure is a rope (coordination with negligible extraction). From the contingent faculty seat (excluded here), the same institution computes as snare or tangled_rope. From external political actors, it computes as a mountain (they cannot move it, only route around). The engine computes this divergence from the structural data; this reading authors only its own structural claims.",
+    "mandatrophy_analysis": "The founding problem (insulating inquiry from orthodoxy enforcement) remains live — political interference in research has not disappeared. The reading's mandated function has not atrophied; the coordination problem persists. However, the rising theater_ratio and the existence of sibling readings that claim the structure now serves extraction/reproduction indicate a contested mandatrophy status: the arrangement may be solving its original problem while simultaneously acquiring extractive/reproductive functions the academic_freedom_reading does not claim.",
+    "kernel_context": "This constraint is the academic_freedom_reading of the tenure_contract kernel. Sibling readings: institutional_extraction_reading (tenure as rent extraction by early winners loading costs onto contingent labor) and demographic_reproduction_reading (tenure peer review as demographic gatekeeping via 'fit'/'collegiality'). All three are separate constraint stories with their own ε, stakeholders, and classifications. This reading claims the coordination function is primary and the extraction/reproduction effects are either secondary or misattributed; the siblings claim the reverse."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "tenure_contract__institutional_extraction_reading",
+      "tenure_contract__demographic_reproduction_reading"
+    ],
+    "dual_formulation_note": "This is the academic_freedom_reading of the tenure_contract kernel. The kernel decomposes into three structurally distinct constraints with different ε and beneficiary/victim structures. This reading claims the coordination function (truth-seeking insulation) is the kernel's primary structure; the sibling readings claim extraction and demographic reproduction are primary. They are linked via affects_constraints because the academic_freedom_reading's legitimacy is often cited to defend the institutional structure that the other readings identify as extractive/reproductive."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "tenured_faculty",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hold permanent appointments with strong due-process protections against dismissal. This employment security enables pursuit of long-horizon, high-risk, or politically sensitive research without fear of termination for unpopular conclusions. They administer the tenure evaluation process for junior colleagues, shaping the pipeline. Their exit options include moving to other institutions, research institutes, or industry — the credential is portable."
+    },
+    {
+      "name": "students",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive instruction and mentorship from faculty whose research is insulated from short-term political or administrative pressure. Benefit from curricular stability and exposure to frontier inquiry. Their exit is constrained by enrollment commitments, transfer costs, and institutional prestige signaling. They do not participate in tenure governance and bear no direct cost of the constraint."
+    },
+    {
+      "name": "external_political_actors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Legislators, donors, interest groups, or administrators seeking to suppress or redirect research findings that threaten their interests. Tenure makes this structurally difficult: they cannot directly fire tenured faculty, must work through lengthy and public processes (legislative hearings, budget pressure, accreditation threats), and face reputational costs for visible interference. Their 'payment' is the frustration of their suppression capacity; they are trapped in the sense that the constraint is a structural feature of the university they cannot easily dismantle."
+    },
+    {
+      "name": "contingent_faculty",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold fixed-term, renewable appointments without tenure-track pathways. Perform a majority of undergraduate teaching. Their precarity is the demographic_reproduction_reading's and institutional_extraction_reading's referent; this reading excludes them from its beneficiary structure. They would object to being structurally necessary for the tenure system's cost structure while denied its protections. Exit is constrained by the adjunct labor market's oversupply and lack of portable benefits."
+    },
+    {
+      "name": "university_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers tenure policies, evaluates candidates, manages external political pressure, and balances budgetary rigidity from tenured lines against instructional needs. They are the institutional seat that could reform or abolish tenure but face massive political and cultural costs for doing so. Their exit options are high — they move between institutions, systems, and sectors — making them arbitrage-grade relative to this constraint."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Evaluates the structural claims of all three readings against longitudinal data on research output, demographic flows, cost structures, and political interference patterns. Does not collect rents or bear costs from the tenure system. Provides the cross-reading comparison that the kernel framework requires."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of insulating truth-seeking from power: individual researchers cannot credibly commit to pursuing unpopular truths if their survival depends on institutional or political approval; tenure creates a structural commitment device that makes this credible at the institutional level.",
+    "transfer_function": "Moves employment security and inquiry insulation from the institution's administrative discretion to a rule-governed, peer-reviewed status. The institution gives up unilateral termination power; faculty gain career-long protection. No direct monetary transfer — the transfer is of decision rights over researcher survival.",
+    "absent_voices": "Contingent faculty (excluded stakeholder) are the primary absent voice: they perform the teaching labor that subsidizes tenured research time but are denied the insulation tenure provides. Early-career researchers on the tenure track are partially present (as candidates) but their precarity during the probationary period is the mechanism that selects for conformity — they would object if the selection pressure were framed as extraction rather than merit evaluation. Taxpayers and legislators who fund public universities are partially present as external_political_actors but their interest in institutional accountability is framed as 'political interference' in this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If tenure vanished overnight, universities would lose their primary structural insulation for high-risk inquiry. Faculty would shift toward safer, fundable, politically palatable research. Contingent faculty would not automatically gain security — the institution would likely replace tenure lines with more contingent appointments. Political actors would gain direct leverage over research agendas through hiring/funding control. The research ecosystem would reorganize toward short-horizon, low-risk, externally aligned work.",
+    "founding_problem": "Early 20th-century academic freedom controversies (e.g., Edward Ross at Stanford, 1900; AAUP 1915 Declaration) established that researchers investigating corporate power, labor conditions, or unpopular social theories were fired at trustee/donor behest. The founding problem: how to make inquiry independent of the wealth and orthodoxy that fund the university.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "AAUP historical records, legislative hearing transcripts from the 1900-1940 period, and court cases (e.g., Sweezy v. New Hampshire 1957, Keyishian v. Board of Regents 1967) document the founding problem from outside the beneficiary set. Contemporary corroboration: ongoing legislative attacks on tenure (Florida 2022, Texas 2023, Wisconsin 2015) and donor-driven research agenda setting demonstrate the founding problem persists. The institutional_extraction_reading and demographic_reproduction_reading contest whether the current arrangement still solves it or has been captured."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "institutional_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "demographic_reproduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "inquiry_independence_requires_employment_security",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "peer_review_is_epistemic_not_demographic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "aaip_1940_statement_principles",
+    "drift_state": {
+      "moment": "contemporary_contingent_majority_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "digital_money_emergence_boundary__infrastructure_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_digital_money_emergence_boundary__infrastructure_reading",
+    "measurement_id_prefix": "digital_money_infrastructure",
+    "story_uid": "55768ba6-bd4d-46c1-acdf-51881f523345",
+    "created_at": "2026-08-04T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.28,
+    "claimed_type": "rope",
+    "human_readable": "Digital Money Emergence — Infrastructure Boundary (1967-1977)",
+    "topic_domain": "monetary_economics/financial_history/technology_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "swift_operator",
+      "ach_operators",
+      "atm_network_operators",
+      "correspondent_banks"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "monetary_settlement_finality_requires_centralized_infrastructure",
+      "electronic_bank_transfers_are_functionally_equivalent_to_cash_for_interbank_settlement"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary_dispute",
+      "question": "Is the digital money emergence boundary correctly placed at infrastructure enablement (1967-1977) rather than at theoretical conceptualization (1960s/1985) or consumer accessibility (1990s/2000)?",
+      "resolution_mechanism": "Historical analysis of monetary aggregate redefinitions (M4/M5 collapse timeline) and central bank policy documents distinguishing bank-reserve electronic money from consumer-facing digital instruments. Regulatory treatment of electronic deposits vs. e-money licenses.",
+      "impact": "If boundary is infrastructure, extraction beneficiaries are infrastructure operators from 1967 onward; if conceptualization, the constraint is earlier and more abstract with different beneficiary structure; if consumer holdings, the constraint emerges later with different power dynamics. Classification shifts across rope/tangled_rope/snare depending on when the constraint 'starts' and who benefits.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural ambiguity in kernel boundary placement across three competing readings"
+    },
+    {
+      "id": "infrastructure_coordination_vs_extraction",
+      "question": "Does the interbank electronic transfer infrastructure function primarily as coordination (solving settlement finality) or does it embed extraction (rent-seeking on payment rails)?",
+      "resolution_mechanism": "Cost-structure analysis of SWIFT/ACH/ATM network operations vs. fees charged; comparison with marginal cost of electronic settlement; historical profit data from infrastructure operators; regulatory findings on interchange/access fees.",
+      "impact": "If pure coordination, claimed_type rope holds with low extractiveness. If extraction embedded, effective extraction rises for payer seats (commercial banks, ultimately consumers) and classification may shift toward tangled_rope. The 0.18 base extractiveness assumes predominantly coordination function.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether infrastructure operation is genuinely coordination or contains hidden extraction"
+    },
+    {
+      "id": "m4_m5_collapse_causality",
+      "question": "Did electronic bank deposits genuinely blur monetary aggregates (M4/M5 collapse) starting in the 1970s, or was the collapse a later statistical artifact of measurement changes?",
+      "resolution_mechanism": "Central bank monetary aggregate publications 1970-1990; academic literature on monetary aggregation problems; BIS working papers on electronic money measurement.",
+      "impact": "If M4/M5 collapse began at infrastructure enablement, the constraint marks a genuine structural shift in money definition. If later, the 'middle boundary' claim is retrospective rationalization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal claim about monetary aggregate redefinition timing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'infrastructure reading' of the contested kernel 'digital_money_emergence_boundary'. The reading places the emergence of digital money at the moment banking infrastructure enabled electronic transfer — 1967 (ATMs), 1972 (ACH), 1977 (SWIFT) — arguing that money exists when banks can move it electronically between themselves, even if consumers cannot yet hold digital instruments directly. The constraint is the standing arrangement of interbank electronic settlement infrastructure that emerged in this period. Beneficiaries are the infrastructure operators (SWIFT, ACH operators, ATM network operators, correspondent banks) who control the rails. The constraint functions as coordination infrastructure solving settlement finality, but carries nascent extraction potential as operators gain pricing power over payment rails. This reading coexists with the conceptualization reading (theoretical thinkability, 1960s/1985) and the consumer holdings reading (consumer accessibility, 1990s/2000) — three structurally distinct boundaries that produce different ε values and beneficiary structures.",
+    "key_agents": [
+      "swift_operator: Primary beneficiary (institutional/arbitrage) — operates the messaging/settlement rail, collects fees",
+      "ach_operators: Primary beneficiary (institutional/arbitrage) — operates domestic batch settlement, collects per-transaction fees",
+      "atm_network_operators: Primary beneficiary (institutional/arbitrage) — operates shared cash-access infrastructure, collects interchange",
+      "correspondent_banks: Primary beneficiary (powerful/arbitrage) — provide cross-border settlement access, earn correspondent fees",
+      "commercial_banks: Payer/beneficiary dual (powerful/constrained) — pay infrastructure fees but gain settlement efficiency",
+      "central_banks: Agenda setter (institutional/analytical) — oversee settlement systems, set access rules, mandate participation",
+      "consumers: Excluded at this boundary (moderate/trapped) — cannot directly access electronic money; effects transmit via bank pricing",
+      "monetary_economists: Observer (analytical/analytical) — classify monetary aggregates, debate boundary placement"
+    ],
+    "logic_rationale": "Base extractiveness (0.18) reflects infrastructure fees relative to settlement value — low because the coordination function (finality, speed, risk reduction) dominates. Suppression (0.22) reflects mandatory participation for banks needing settlement access — not coercive toward end users at this boundary. Theater ratio (0.12) is low; the infrastructure performs its stated function. Accessibility collapse (0.35) is moderate: once electronic interbank transfer exists, alternative settlement (physical cash transport, correspondent chains) becomes impractical for high-volume banks but remains technically possible. Resistance (0.28) is low-moderate: banks adopted voluntarily for efficiency; the constraint's persistence is maintained by network effects, not active suppression. The measurement grid (0-30, 6 points per metric) shows gradual extractiveness increase as infrastructure operators gained pricing power, theater creep as 'security/compliance' features were layered on, and suppression hardening as network effects locked in participation.",
+    "perspectival_gap": "From the infrastructure operator seat (SWIFT, ACH), the constraint is pure rope: they built and maintain coordination infrastructure, collect cost-recovery fees, and face competitive pressure from alternatives. From the commercial bank seat, it is rope with extractive tilt: they must participate to operate, fees exceed marginal cost over time, but exit is constrained by network effects. From the consumer seat (excluded at this boundary), the constraint is invisible — they experience only downstream pricing. From the central bank seat, it is scaffold-like: they oversee the infrastructure as transitional toward RTGS and later retail digital money. The engine computes per-seat classifications from these structural positions.",
+    "directionality_logic": "Infrastructure operators (SWIFT, ACH, ATM networks) are structural beneficiaries — they control the rails, collect fees, and have arbitrage-grade exit (could sell/license technology). Commercial banks are payers with constrained exit — they must connect to settle, but can choose among networks (SWIFT vs. alternatives, multiple ACHs). Correspondent banks are beneficiaries with powerful/arbitrage position — they gatekeep cross-border access. Central banks are agenda setters with analytical exit — they set rules but don't pay fees. Consumers are excluded at this boundary (trapped) — they have no direct relationship to interbank infrastructure. The directionality derivation from beneficiary/payer declarations + power + exit produces d values that the engine scales into effective extraction per seat.",
+    "mandatrophy_analysis": "The constraint's founding problem (settlement finality and efficiency for interbank transfers) remains live — the infrastructure continues to solve it. No mandatrophy: the arrangement has not outlived its function. However, the 'middle boundary' framing means this reading captures only the bank-to-bank layer; the consumer-facing digital money constraint (consumer_holdings_reading) is a separate, later constraint with its own mandatrophy dynamics. This reading does not claim the infrastructure is the final form of digital money — only the emergence boundary for the bank-layer.",
+    "kernel_context": "This constraint is the infrastructure_reading of kernel digital_money_emergence_boundary. Sibling readings: conceptualization_reading (theoretical thinkability, 1960s/1985) and consumer_holdings_reading (consumer accessibility, 1990s/2000). This reading places the boundary at infrastructure enablement (1967-1977); the conceptualization reading places it earlier at theoretical possibility; the consumer holdings reading places it later at retail accessibility. All three readings coexist as live positions in monetary economics — they are held by different epistemic communities (payment systems engineers vs. monetary theorists vs. consumer advocates/regulators) and mark different structural transitions. The ε values differ: infrastructure reading has low ε (coordination-dominant); conceptualization reading has near-zero ε (abstract claim); consumer holdings reading has higher ε (retail extraction layer)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_money_emergence_boundary__consumer_holdings_reading",
+      "digital_money_emergence_boundary__conceptualization_reading",
+      "rtgs_settlement_infrastructure",
+      "electronic_money_directive_2000"
+    ],
+    "dual_formulation_note": "Part of digital_money_emergence_boundary constraint family. This reading (infrastructure) is upstream of consumer_holdings_reading: electronic interbank infrastructure is a necessary (but not sufficient) condition for consumer-facing digital money. The conceptualization_reading is parallel upstream — theoretical framing enabled infrastructure investment. All three readings mark distinct emergence boundaries with different ε and beneficiary structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "swift_operator",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operates the SWIFT messaging network (founded 1977) that standardizes cross-border payment instructions. Collects per-message fees from member banks. Has arbitrage-grade exit: the technology is licensable, the network could be sold, and alternative messaging standards exist (though none have achieved comparable adoption). The constraint's persistence directly funds SWIFT's operations and development."
+    },
+    {
+      "name": "ach_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate Automated Clearing House networks for domestic batch settlement (US ACH from 1972, other national systems similar). Collect per-transaction fees from participating financial institutions. Have arbitrage-grade exit: ACH operators are typically owned by member banks or central banks and could restructure fee models; alternative settlement rails (RTGS, instant payments) provide competitive pressure."
+    },
+    {
+      "name": "atm_network_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate shared ATM networks (from 1967) enabling cross-bank cash access. Collect interchange fees from card-issuing banks. Have arbitrage-grade exit: networks can be sold, merged, or restructured; card schemes (Visa/Mastercard) provide alternative rails. The 1967 ATM deployment marks the earliest infrastructure boundary in this reading."
+    },
+    {
+      "name": "correspondent_banks",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide cross-border settlement services to smaller banks lacking direct SWIFT/central bank access. Earn correspondent fees and hold nostro/vostro balances. Have arbitrage-grade exit: can choose which corridors to serve, can shift to direct SWIFT membership or RTGS access where available. Benefit from the infrastructure constraint by controlling access chokepoints."
+    },
+    {
+      "name": "commercial_banks",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must connect to SWIFT, ACH, and ATM networks to offer competitive payment services. Pay infrastructure fees (SWIFT per-message, ACH per-transaction, ATM interchange) but gain settlement efficiency, risk reduction, and customer retention. Exit is constrained: leaving a network means losing reach; multi-homing is costly. Over time, fees have risen above marginal cost as network effects hardened — the payer role strengthens relative to beneficiary role."
+    },
+    {
+      "name": "central_banks",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Oversee payment system stability, set access criteria for settlement infrastructure, mandate participation in systemically important systems (e.g., Fedwire, TARGET2). Do not pay infrastructure fees directly but bear supervisory costs. Have analytical exit: they observe and regulate the constraint but are not subject to its extraction. Their policy choices (e.g., mandating open access, licensing instant payment rails) shape the constraint's evolution."
+    },
+    {
+      "name": "consumers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot directly access interbank electronic transfer infrastructure at this boundary (1967-1977). Experience the constraint only indirectly through bank pricing (account fees, transfer costs, ATM surcharges). Have no voice in infrastructure governance. Their trapped position at this boundary is why the consumer_holdings_reading places the emergence boundary later — when consumers gain direct access (e-purses, EMD, later CBDC/stablecoins)."
+    },
+    {
+      "name": "monetary_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Classify monetary aggregates (M1-M5), debate where 'digital money' begins, advise central banks on measurement. Their boundary placement (infrastructure vs. conceptualization vs. consumer holdings) shapes regulatory treatment and academic consensus. They neither pay nor collect from the infrastructure constraint; they analyze it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves interbank settlement finality and efficiency: replaces physical cash transport and bilateral correspondent chains with electronic messaging and net settlement, enabling high-volume, low-risk, near-instant bank-to-bank transfers.",
+    "transfer_function": "Moves per-transaction/message fees from commercial banks (and ultimately their customers) to infrastructure operators (SWIFT, ACH operators, ATM networks, correspondent banks) as the price of accessing the settlement rail.",
+    "absent_voices": "Consumers and non-bank payment innovators are structurally excluded at this boundary. Consumers would argue for lower retail fees and direct access; non-bank innovators (fintechs, e-money issuers) would argue for direct infrastructure access. Both are absent because the infrastructure was designed by and for banks. Their exclusion is what the consumer_holdings_reading and later regulatory reforms (PSD2, open banking) address.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If interbank electronic transfer infrastructure vanished overnight, banks would revert to physical cash transport, bilateral correspondent settlements, and paper-based clearing — settlement would slow from hours to days, operational risk would spike, cross-border payments would degrade severely, and the monetary system would reorganize around physical settlement constraints. The M4/M5 aggregate distinction would collapse back toward M2/M3 definitions.",
+    "founding_problem": "Interbank settlement in the 1960s relied on physical cash transport, paper checks, and bilateral correspondent relationships — slow, risky, capacity-constrained, and unable to support growing transaction volumes from economic expansion and early globalization.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Central bank payment system oversight reports (BIS CPMI, Fed Payments System Risk policy) attest that settlement finality and efficiency remain live policy objectives. Infrastructure operators attest the problem is live to justify continued investment. No independent party claims the founding problem is dead — the infrastructure has evolved (RTGS, instant payments) but the core coordination function persists."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "digital_money_emergence_boundary__conceptualization_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "conceptualization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "consumer_holdings_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "money_exists_when_banks_can_move_it_electronically",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "interbank_settlement_infrastructure_is_necessary_condition_for_digital_money",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "interbank_electronic_settlement_emergence_1967_1977",
+    "drift_state": {
+      "moment": "contemporary_instant_payment_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

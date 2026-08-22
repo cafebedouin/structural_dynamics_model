@@ -1,0 +1,307 @@
+{
+  "header": {
+    "constraint_id": "public_health_mandate_authority__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_public_health_mandate_authority__proportionality_reading",
+    "measurement_id_prefix": "phma_proportionality",
+    "story_uid": "650abca9-8285-46a9-9d9d-3945222609e2",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Mandate Authority — Proportionality Reading",
+    "topic_domain": "public_health_law/constitutional_rights/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "immunocompromised_population",
+      "healthcare_infrastructure",
+      "public_health_establishment"
+    ],
+    "victims": [
+      "unvaccinated_under_high_threat",
+      "immunocompromised_under_low_threat",
+      "bodily_autonomy_advocates"
+    ],
+    "vindicated_propositions": [
+      "proportionality_principle_in_law",
+      "least_restrictive_alternative_doctrine",
+      "dynamic_assessment_of_threat"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_proportionality",
+      "question": "Is this constraint one reading of the public_health_mandate_authority kernel, and what would sibling readings change?",
+      "resolution_mechanism": "Structural comparison of proportionality_reading with public_health_primary and bodily_autonomy_primary: different ε, different victim sets, different claimed_type. The proportionality_reading instantiates a dynamic constraint with threat-dependent extraction; the sibling readings instantiate fixed constraints.",
+      "impact": "Confirms this is a kernel reading; routes committer structure to omega rather than standard fields. Classification diverges from siblings: proportionality_reading → tangled_rope; public_health_primary → rope; bodily_autonomy_primary → mountain/snare depending on seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the proportionality_reading of the public_health_mandate_authority kernel; siblings are public_health_primary and bodily_autonomy_primary."
+    },
+    {
+      "id": "proportionality_measurement_ambiguity",
+      "question": "How should the sliding scale parameters (severity, alternatives, coercion, duration) be measured and weighted?",
+      "resolution_mechanism": "Judicial precedent analysis across jurisdictions; epidemiological modeling of threat severity; constitutional law scholarship on balancing tests.",
+      "impact": "If measurement converges, the dynamic constraint could stabilize into a predictable coordination mechanism; if measurement remains contested, extractiveness oscillates with political context.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Irreducible ambiguity in operationalizing the proportionality test."
+    },
+    {
+      "id": "victim_set_boundary_shift",
+      "question": "At what threat threshold does the victim set flip from unvaccinated to immunocompromised?",
+      "resolution_mechanism": "Empirical study of judicial rulings and public health orders across pathogen severity gradients; analysis of when courts flip from protecting bodily autonomy to protecting vulnerable populations.",
+      "impact": "Determines whether the constraint is genuinely dynamic (sliding scale) or merely rhetorical cover for fixed extraction. If the flip point is stable and observable, the reading has structural coherence; if it tracks political power, it is a false proportionality.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the victim boundary genuinely slides or is a political variable."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.45,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the proportionality reading of public health mandate authority — the view that mandate legitimacy depends on a sliding scale assessment of threat severity, availability of less restrictive alternatives, magnitude of coercion, and duration of imposition. Unlike the public_health_primary reading (mandates as obligation to protect the vulnerable commons) or the bodily_autonomy_primary reading (mandates as categorical violation of bodily sovereignty), this reading instantiates a dynamic constraint whose extractiveness and victim set shift with the epidemiological and policy context. During a high-threat event (Ebola-like pathogen), extractiveness rises toward the unvaccinated as targets; during a low-threat seasonal virus, extractiveness falls and may invert toward the immunocompromised as victims of inadequate protection. The constraint requires active enforcement (court orders, sanctions, mandates) and coordinates collective action around a genuine public health problem while extracting compliance costs asymmetrically.",
+    "key_agents": [
+      "public_health_authorities: agenda_setter (institutional/biographical/arbitrage/global) — sets threat assessments and mandate scope",
+      "immunocompromised_population: beneficiary (powerless/generational/trapped/local) — gains protection when mandates function",
+      "unvaccinated_under_high_threat: payer (moderate/biographical/constrained/national) — bears compliance costs when threat is high",
+      "immunocompromised_under_low_threat: payer (powerless/generational/trapped/local) — bears infection risk when mandates are relaxed",
+      "bodily_autonomy_advocates: excluded (organized/biographical/identity_locked/national) — categorical objectors structurally excluded from proportionality calculus",
+      "courts: observer (institutional/generational/analytical/national) — adjudicates proportionality challenges"
+    ],
+    "logic_rationale": "Base extractiveness 0.45 reflects the midpoint of the dynamic range: under high threat (Ebola-like) extraction approaches 0.7-0.8 (severe coercion, limited alternatives); under low threat (seasonal virus) extraction approaches 0.1-0.2 (minimal coercion, broad alternatives). The measurement series captures this oscillation over a 90-period cycle (e.g., pandemic waves). Suppression 0.55 reflects that enforcement is active but not total — mandates face legal challenges and compliance varies. Theater ratio 0.25 indicates some performative maintenance (expired mandates kept on books, symbolic enforcement) but genuine coordination function persists. Accessibility collapse 0.4 shows alternatives exist (remote work, masking, testing) but narrow under high threat. Resistance 0.6 reflects sustained legal and political contestation across the cycle.",
+    "perspectival_gap": "The engine will compute per-seat types from structural data: public_health_authorities (d near 0.0) see a rope/tangled_rope coordinating collective protection; immunocompromised (d near 0.0 under high threat, near 1.0 under low threat) experience a constraint that flips between coordination and extraction; unvaccinated (d near 1.0 under high threat, near 0.5 under low threat) experience extraction that varies with threat level; bodily_autonomy_advocates (d=1.0, identity_locked) experience a snare regardless of threat level. This seat divergence is the structural signature of a dynamic proportionality constraint.",
+    "directionality_logic": "Beneficiaries declared: immunocompromised_population (primary), healthcare_infrastructure, public_health_establishment. Victims declared: unvaccinated_under_high_threat (primary under high threat), immunocompromised_under_low_threat (primary under low threat), bodily_autonomy_advocates (always). Directionality derives from these declarations plus power/exit: authorities (institutional/arbitrage) get low d; immunocompromised (powerless/trapped) get high d when threat is low; unvaccinated (moderate/constrained) get high d when threat is high; bodily_autonomy_advocates (organized/identity_locked) get d=1.0 fixed. The sliding scale means d values shift across the interval — the engine's temporal integration handles this via the measurement series.",
+    "mandatrophy_analysis": "The founding problem (preventing catastrophic epidemic spread) is live under high threat but contested/dead under low threat. The constraint persists across the full cycle partly because the institutional machinery built for high-threat moments remains active during low-threat periods (mandatrophy), and partly because the proportionality framework itself is a genuine coordination mechanism that prevents both categorical mandates and categorical refusal. The theater ratio rise during low-threat periods (0.4 at T=60) signals performative maintenance of authority — mandates kept 'on the books' for readiness rather than necessity.",
+    "kernel_context": "This constraint is the proportionality_reading of the public_health_mandate_authority kernel. Sibling readings: public_health_primary (mandates as obligation to protect vulnerable commons — claimed_type rope, fixed beneficiary/victim structure), bodily_autonomy_primary (mandates as categorical violation of bodily sovereignty — claimed_type mountain from autonomy seat, snare from mandate target seat). The proportionality_reading differs structurally by making ε and victim set threat-dependent, creating a dynamic constraint rather than fixed victim boundary. All three readings coexist as live positions in contemporary bioethics and constitutional law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_mandate_authority__public_health_primary",
+      "public_health_mandate_authority__bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "Part of the public_health_mandate_authority constraint family (3 readings of one kernel). This reading (proportionality) creates dynamic ε and sliding victim set; public_health_primary creates fixed coordination with immunocompromised as primary beneficiary; bodily_autonomy_primary creates fixed extraction with unvaccinated as primary victim. The three readings share the same referent (state mandate authority over medical intervention) but instantiate different constraints with different ε, different structural relationships, and different classifications."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Assess threat severity, determine mandate scope, and enforce compliance through legal orders and sanctions. They control the proportionality calculus and can adjust mandates as conditions change. Their institutional position gives them exit via policy revision rather than personal compliance."
+    },
+    {
+      "name": "immunocompromised_population",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Depend on collective mandate compliance for protection from severe disease. Cannot individually exit the risk environment — their vulnerability is biological and structural. Benefit when mandates function at high threat; become victims when mandates are relaxed under low threat but pathogen still circulates."
+    },
+    {
+      "name": "unvaccinated_under_high_threat",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face mandate requirements (vaccination, testing, movement restrictions) when threat assessment triggers high coercion. Can comply, seek exemptions, or resist — but exit from the constraint's reach requires leaving jurisdiction or changing status. Bear concentrated compliance costs during high-threat periods."
+    },
+    {
+      "name": "immunocompromised_under_low_threat",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "When threat assessment deems mandates disproportionate (low severity, high alternatives), mandates relax or lapse. Immunocompromised individuals then bear infection risk without the collective protection the mandate provided. Same biological vulnerability, but now on the victim side of the proportionality calculus."
+    },
+    {
+      "name": "bodily_autonomy_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold categorical objection to non-consensual medical intervention regardless of threat level. Structurally excluded from the proportionality calculus because their position rejects the sliding scale itself. Their exit is identity-locked — abandoning the objection would dissolve their organizational and personal identity. They experience the constraint as snare at all threat levels."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate proportionality challenges to mandates. Apply balancing tests (severity, alternatives, coercion, duration) that instantiate this reading's logic. Their rulings determine where the sliding scale lands in specific cases, making them the operational interpreters of the constraint's dynamic parameters."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective action against infectious disease by calibrating mandate intensity to threat severity, ensuring that coercion is proportional to the public health necessity and that less restrictive alternatives are exhausted first.",
+    "transfer_function": "Moves compliance costs (vaccination, testing, movement restriction, economic burden) from the immunocompromised/vulnerable population to the general population during high-threat periods; moves infection risk from the general population to the immunocompromised during low-threat periods when mandates relax.",
+    "absent_voices": "Future generations who inherit the precedent of state mandate authority; populations in jurisdictions without proportionality frameworks (authoritarian mandates or categorical bans); individuals with medical contraindications to vaccines who are neither immunocompromised nor voluntary refusers — their specific situation is not a recognized category in the proportionality calculus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality framework vanished overnight, mandates would either become categorical (public_health_primary takes over — permanent high coercion) or be categorically banned (bodily_autonomy_primary takes over — zero mandate authority). The dynamic calibration mechanism would disappear, leaving only the two fixed endpoints. The world rearranges because the sliding scale is the only structure that permits mandates to exist at all while containing their coercion.",
+    "founding_problem": "How to authorize state coercion for public health without enabling unlimited state power over bodies — the constitutional problem of defining when collective necessity overrides individual sovereignty in medical intervention.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Constitutional courts in multiple jurisdictions (German Bundesverfassungsgericht, Canadian Supreme Court, US Supreme Court Jacobson lineage) attest the proportionality framework was built to solve this problem. Public health scholars (Gostin, Childress, Kass) corroborate the framing. Bodily autonomy advocates contest whether the problem was ever solved or merely displaced."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_coercion_requires_proportional_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "threat_severity_calibrates_legitimate_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "constitutional_proportionality_framework",
+    "drift_state": {
+      "moment": "post_pandemic_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

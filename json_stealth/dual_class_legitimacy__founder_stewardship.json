@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__founder_stewardship",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "7d595758-6c84-4009-a71f-c353da1f9671"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dual-Class Founder Control Defended as Fiduciary Stewardship (founder_stewardship reading)",
+    "topic_domain": "corporate governance/securities law/organizational economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founder_control_holders",
+      "founder_vision_investors",
+      "company_employees_with_equity"
+    ],
+    "victims": [
+      "class_a_public_shareholders",
+      "index_fund_managers"
+    ],
+    "vindicated_propositions": [
+      "fiduciary_stewardship_doctrine",
+      "patient_capital_thesis",
+      "mission_insulation_hypothesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.48,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stewardship_entrenchment_ambiguity",
+      "question": "When founder control is actually exercised, is it stewardship (long-horizon mission execution that dispersed capital could not otherwise buy) or entrenchment (private benefits of control, dynastic succession, capital misallocation shielded from discipline)?",
+      "resolution_mechanism": "Matched-firm outcome studies separating mission-investment intensity and long-horizon returns under founder control versus one-share-one-vote controls, with succession events and supervoting-block sales as natural experiments.",
+      "impact": "If entrenchment dominates, this reading's foundational axiom fails on its own instrumental ground and the same arrangement reclassifies toward pure extraction wearing a coordination cover story; if stewardship dominates, the coordination reading strengthens and most measured extraction is the priced premium the reading already concedes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed founder control functions as stewardship or entrenchment."
+    },
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is the founder_stewardship reading of the dual_class_legitimacy kernel — how would the sibling readings (minority_extraction, disclosure_consent) restructure the classification of the same arrangement?",
+      "resolution_mechanism": "No in-story resolution: the siblings are separate constraint stories over the same arrangement, linked via the network. The disagreement is located in the legitimacy ground — outcomes (this reading), capital-proportional entitlement (minority_extraction), and IPO-time informed consent under the Securities Act disclosure regime (disclosure_consent).",
+      "impact": "Under minority_extraction, the same structure's epsilon rises sharply and Class A holders re-index as rights-bearing victims rather than priced-in counterparties; under disclosure_consent, legitimacy attaches to the disclosure event and epsilon falls toward the consent price for consenting IPO-era holders while later, consentless acquirers carry the residual.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; siblings instantiate different constraints from the same arrangement."
+    },
+    {
+      "id": "consent_transmission_to_later_holders",
+      "question": "Does the consent obtained through IPO-time disclosure reach holders who acquire Class A shares later — index-mandated funds and investors who arrive after the offering — or is their position consentless?",
+      "resolution_mechanism": "Test whether later-acquirer behavior fully prices the voting discount (no systematic post-IPO re-rating of the discount as the holder base turns over) and whether index-mandated holdings show governance outcomes distinct from consenting IPO-era holders.",
+      "impact": "If consent does not transmit across the holder turnover, the reading's legitimacy base covers only the IPO-era holder set, and the extraction the reading concedes re-indexes onto the later, consentless majority of the Class A seat.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether IPO-time consent extends to subsequent Class A acquirers."
+    },
+    {
+      "id": "sunset_omission_vs_founding_problem",
+      "question": "Does the continuing absence of sunset clauses in modern dual-class charters track a still-live short-termism problem, or the preservation of control rents in firms decades past their founding?",
+      "resolution_mechanism": "Compare charter sunset terms against founding-problem indicators (firm maturity, R&D intensity, takeover vulnerability) across the IPO cohort; if sunset absence tracks maturity rather than mission intensity, the founding problem has gone dead for the persistent cases.",
+      "impact": "If the founding problem is dead for mature firms, the arrangement persists on inertia and the classification drifts toward the atrophied end of the lifecycle; if it is live, the coordination function remains genuine and the hybrid reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sunset omission reflects a live founding problem or rent preservation."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "founder_control_holders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Holds the supervoting share class carrying ten votes per share against one for the public class. Sets board composition, approves or blocks mergers and capital allocation, and decides whether any sunset provision ever reaches a shareholder vote. Receives the control premium embedded in the share price and practical immunity from proxy challenges that the vote differential provides. Selling control would mean surrendering the mission the company exists to execute — an exit that is personally, not just financially, costly."
+    },
+    {
+      "name": "class_a_public_shareholders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Buys shares at the same market price as supervoting holders but receives one vote per share. Cannot assemble a voting coalition capable of changing the charter, replacing the board, or accepting a takeover premium over founder objection, because the vote math makes every such coalition arithmetically futile. Can sell at any time, but the price already reflects the voting discount, and selling forfeits any voice rather than exercising it."
+    },
+    {
+      "name": "index_fund_managers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Must hold the stock in funds tracking major indices, so exit means abandoning the index-tracking product their clients bought. Votes the Class A bloc, runs or joins sunset campaigns, and bears the stewardship workload and reputational exposure of holding a structure its own proxy guidelines criticize. Fee income continues regardless of how the governance question resolves."
+    },
+    {
+      "name": "founder_vision_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deliberately buys the dual-class stock to back the founder's long-horizon plan, treating the vote differential as the admission price for mission exposure. Gains when the insulated strategy pays and takes board-adjacent access without voting parity; can sell if the thesis breaks, and does so more readily than any other holder class."
+    },
+    {
+      "name": "company_employees_with_equity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Holds options and restricted stock whose value rides on the multi-year projects the insulated strategy funds. Gains continuity of mission and protection from activist cost-cutting; bears the risk that a leadership team no one can vote out misallocates capital for years before the error becomes visible. Leaving the company means forfeiting unvested equity."
+    },
+    {
+      "name": "minority_governance_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs sunset-clause campaigns, proxy-access proposals, and listing-standard petitions on behalf of dispersed holders. Would impose vote sunsets or proportional governance but stands outside the charter conversation: the votes needed to put a sunset to a shareholder vote are held by the class the sunset would unseat. Works instead through exchanges, regulators, and public pressure."
+    },
+    {
+      "name": "proxy_advisory_firms",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Publishes voting recommendations that shape how institutional Class A holders vote. Recommends against new dual-class structures and for sunset provisions, and its guidelines are the main coordination point for dispersed institutional opposition. Holds no position in the charter itself and bears no direct cost from the arrangement."
+    },
+    {
+      "name": "securities_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets the disclosure requirements for the offering that creates the structure and polices the accuracy of the offering documents. Has declined to prohibit dual-class listings, leaving permissibility to exchanges and state corporate law; engages the arrangement only at the margins, such as disclosure adequacy and related-party transactions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the control-allocation problem for firms whose value depends on investments that mature over decades: it gives a committed founding team voting control durable enough to carry long-gestation projects — R&D programs, infrastructure, mission bets — through activist campaigns, takeover approaches, and shareholder bases that turn over faster than the investment cycle completes.",
+    "transfer_function": "Moves voting control — and with it agenda-setting power over capital allocation, board composition, and takeover response — from dispersed Class A capital to the founder's supervoting block, at a price embedded in the share price rather than negotiated per decision; and moves the downside risk of governance error onto Class A holders, who hold no vote by which to remove the error-maker.",
+    "absent_voices": "Class A holders who would demand sunset clauses or proportional governance are present in the market but absent from the charter conversation — the votes that would give them a voice are the very thing the structure withholds. Future Class A holders (index-mandated funds, investors who arrive after the IPO) cannot participate in the consent the legitimacy claim relies on. Proxy advisors and governance advocates speak for them partially, after the fact, and through venues outside the charter.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If dual-class structures vanished overnight, control premiums would reprice immediately, founder-led firms would face takeover and proxy pressure their charters currently absorb, and several long-horizon strategies now shielded from quarterly discipline would be re-cut or abandoned. IPO structuring, index inclusion rules, and proxy-voting guidelines would all reorganize around one-share-one-vote; the corporate ecosystem built on insulated founder control would visibly rearrange.",
+    "founding_problem": "Dispersed public ownership exposes mission-critical firms to short-horizon discipline: activist campaigns and hostile bids priced off quarterly earnings, and shareholder bases that churn faster than decade-scale investments complete. Dual-class structures were built and defended to solve that — to give the founding team control durable enough to execute a multi-decade mission that dispersed capital would otherwise interrupt.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The short-termism problem itself is corroborated from outside the benefiting parties: survey and archival evidence in the finance literature on managerial myopia under earnings pressure, and the revealed preference of independent investors who deliberately buy dual-class stock for mission exposure. But the claim that the problem remains live for firms decades past their IPO is attested mainly by founders and their counsel; the Investor Stewardship Group, the Council of Institutional Investors, and the major proxy advisors — all outside the benefiting set — attest the opposite. Partial corroboration: the founding problem's historical reality is corroborated; its continuing liveness for mature firms is not."
+  },
+  "gain_flow": "founder_control_holders",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__minority_extraction",
+      "dual_class_legitimacy__disclosure_consent"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial question 'is dual-class founder control legitimate?' decomposes into three structurally distinct readings of one kernel, each with its own epsilon, beneficiary/victim structure, and type — per the epsilon-invariance principle, one reading per story. This story (founder_stewardship) assesses the standing dual-class arrangement by the stewardship reading's lights (epsilon = 0.32: the voting-dilution cost the reading concedes and prices as a fair premium for mission protection). The minority_extraction sibling assesses the same arrangement as a violation of capital-proportional entitlement (substantially higher epsilon; Class A re-indexed as rights-bearing victims). The disclosure_consent sibling locates legitimacy in the IPO disclosure event (epsilon indexed to consent quality; settled disclosure law makes it the empirically upstream story). Each story links the other two via affects_constraints; the disagreement is over the legitimacy ground, not over the arrangement's observable facts."
+  },
+  "commentary": {
+    "narrative_context": "A dual-class charter gives the founder's share class ten votes per share against one for the public class, decoupling governance control from capital at risk. This story instantiates the founder_stewardship reading of the dual_class_legitimacy kernel: the arrangement is defended as coordination — a fiduciary steward using insulated control to execute a long-horizon mission that fast-turnover dispersed capital would otherwise discipline away, with Class A holders served indirectly through mission success. The epsilon referent is the standing dual-class arrangement itself, assessed by this reading's own lights: the reading concedes that Class A bears a real voting-power cost, prices it as the premium for mission protection, and holds the bargain net-fair. Claim and metrics are independent authored facts: claimed_type tangled_rope is this author's structural assessment of the arrangement (genuine coordination function plus asymmetric extraction plus active enforcement), while the reading's own claim of pure coordination lives in the cs_structure axioms and is tested — not reconciled — by the engine's per-seat computation. The sibling readings over the same arrangement are separate constraint stories, linked in the network and documented in kernel_context.",
+    "key_agents": [
+      "founder_control_holders: primary beneficiary and agenda setter (institutional / identity_locked) — holds supervoting control, collects the control premium, decides whether any sunset ever reaches a vote",
+      "class_a_public_shareholders: primary cost-bearer (moderate / mobile) — one vote per share at the same price; no voting path to charter change; exit only by sale at a price that already embeds the discount",
+      "index_fund_managers: trapped institutional cost-bearer (institutional / trapped) — must hold in index funds, votes the Class A bloc, bears the stewardship cost of a structure its own guidelines criticize",
+      "founder_vision_investors: secondary beneficiary (powerful / mobile) — buys the mission thesis and accepts the vote differential as its admission price",
+      "company_employees_with_equity: indirect beneficiary and secondary cost-bearer (moderate / constrained) — equity value rides on insulated multi-year projects",
+      "minority_governance_advocates: excluded (organized / constrained) — would impose sunsets but lacks the votes the structure withholds",
+      "proxy_advisory_firms: analytical observer (institutional / analytical) — coordinates institutional Class A voting through recommendations",
+      "securities_regulators: institutional observer (institutional / analytical) — polices disclosure at the IPO margin; has not prohibited the structure"
+    ],
+    "logic_rationale": "Extractiveness 0.32 is reading-indexed: even by the stewardship reading's own lights the arrangement transfers a real voting-power cost to Class A, which the reading prices as a fair premium rather than denies; a strict 'serves all, costs none' reading would be boilerplate, not a held position. Suppression 0.48 is a raw structural property, unscaled by power or scope: the voting math structurally forecloses Class A voice and rival bids, while open sale exit and the disclosure regime keep it well below coercive maxima. Theater_ratio 0.28: mission language increasingly doubles as entrenchment cover in mature firms, but the insulation function is real in the R&D-intensive cohort, so performance is a minority share of activity. Accessibility_collapse 0.40: within a dual-class firm, governance alternatives collapse completely once the vote math is understood, but market-level alternatives persist (single-class firms, index exclusions), so collapse is partial. Resistance 0.60: the arrangement meets organized, sustained opposition — proxy-advisor recommend-against policies, index-inclusion exclusions, sunset campaigns. All three tracked series run on one shared time grid (points 0–36 at step 6). The rising trajectories are the story's core temporal finding: even by the reading's own lights, the bargain has degraded — supervoting became perpetual rather than transitional, sunset clauses disappeared from the modern cohort, non-voting share classes were layered on, and enforcement hardened (pills, listing fights) — so extraction accumulation and enforcement intensification proceed together while the mission-necessity case weakens with firm maturity.",
+    "perspectival_gap": "The reading predicts uniform experience: every shareholder seat is served by stewardship. The structural data predict sharp seat divergence, which the engine computes. From the founder seat, the arrangement is a coordination structure it built and personally embodies (identity_locked: exit would dissolve the mission-self). From the Class A seat, the same structure is a priced-but-involuntary subordination: no coalition of Class A holders can outvote the supervoting block, so the usual remedy of dispersed-holder coalition power is arithmetically unavailable — their leverage runs entirely through exit and through venues outside the charter. The index-manager seat experiences it as a trapped mandate: compelled holding, stewardship burden, fee income regardless of outcome. Same nominal status ('shareholder'), three different constraints experienced — that divergence is the measurement this corpus exists to take, and the authored claim does not adjudicate it.",
+    "directionality_logic": "Declared beneficiaries map to low directionality: founder_control_holders (beneficiary, identity_locked, agenda_setter) sit nearest the beneficiary end — the structure subsidizes them with the control premium and agenda power, and their exit lock removes even arbitrage-grade departure. founder_vision_investors (beneficiary, mobile) sit low but slightly above the founder: they pay the same dilution they endorse. company_employees_with_equity (beneficiary/payer, constrained) sit mid-low. Declared victims map to high directionality: class_a_public_shareholders (victim, mobile) are damped from full-target by open sale exit but bear the full premium while held; index_fund_managers (victim, trapped) are pushed toward full-target by their exit lock and damped only by fee compensation. minority_governance_advocates are excluded rather than coordinated — their exclusion is the enforcement object. Suppression (0.48) stays unscaled; effective extraction is scaled by directionality and scope, and the global scope of these firms makes stewardship claims hard to verify, amplifying extraction at the target seats.",
+    "mandatrophy_analysis": "The stewardship reading would classify this arrangement as pure coordination; this story's tangled_rope claim keeps both halves visible — the genuine coordination function (mission insulation, real in the founding cohort) and the asymmetric extraction (a concentrated control premium enforced against Class A). Mandatrophy is not declared resolved: the founding problem's liveness is contested. If omega sunset_omission_vs_founding_problem resolves toward a dead founding problem for mature firms, the arrangement drifts toward the atrophied end of the lifecycle — but the piton reading is barred by the receipt surface: gain_flow names a concentrated capturer (the founder seat), and a piton characteristically has none; a dead-mandate outcome with a concentrated capturer sharpens toward capture, not inertia. The classification therefore keeps the stewardship claim empirically testable instead of letting the mission narrative absorb all disconfirming evidence — which is exactly what the reading's own axioms, being instrumental, invite.",
+    "kernel_context": "Kernel: dual_class_legitimacy — whether concentrated founder control via dual-class shares is a legitimate governance arrangement. This story instantiates the founder_stewardship reading: control is coordination, the founder is a fiduciary steward, the structure protects the mission from short-term market pressure, and Class A holders are served indirectly through mission success. Sibling readings: minority_extraction (governance entitlement proportional to capital and risk borne — would classify the same structure as a rights violation) and disclosure_consent (legitimacy rests on informed consent under Securities Act disclosure, not on control parity — would locate the legitimacy event in the offering document). The readings disagree on the legitimacy ground: outcomes, entitlement, or process. That contest is routed to omega kernel_reading_position and is not adjudicated inside this story."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "founder_as_fiduciary_steward",
+    "drift_state": {
+      "moment": "contemporary_index_investor_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "minority_extraction",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "disclosure_consent",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decoupled_control_legitimately_serves_all_shareholders",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "fiduciary_duty_substitutes_for_voting_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

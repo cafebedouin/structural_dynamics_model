@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "story_uid": "e98683a2-0a75-4fad-b8f0-59c6c307c936"
+  },
+  "base_properties": {
+    "extractiveness": 0.03,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.04,
+    "claimed_type": "mountain",
+    "human_readable": "Operational Readiness Through Live-Exercised Practice",
+    "topic_domain": "institutional/operational/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "practice_maintains_competence",
+      "operational_readiness_is_physical_not_symbolic",
+      "drill_realism_preserves_knowledge"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is preparedness a genuine Mountain-Rope hybrid (this reading), a ritualized husk (husk_reading), or a stratified mix (hybrid_reading)?",
+      "resolution_mechanism": "Empirical audit of drill fidelity vs. incident outcomes across comparable institutions; cross-institutional comparison of inspection regimes that do/don't exercise full response chains.",
+      "impact": "If husk_reading is validated, extractiveness rises sharply (theatrical maintenance of form without function); if hybrid_reading holds, this reading's claim of uniform competence is overbroad and sector-specific. Both would invalidate the pure Mountain-Rope classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the preparedness kernel is structurally accurate."
+    },
+    {
+      "id": "practice_vs_performance_boundary",
+      "question": "Where does live exercise shade into ritual — what fidelity threshold separates Mountain from Piton?",
+      "resolution_mechanism": "Longitudinal tracking of drill realism metrics (unscripted variables, cross-agency integration, consequence severity) correlated with actual incident performance; institutional ethnography of drill culture.",
+      "impact": "If the boundary is lower than assumed, many 'competent' institutions are actually Piton-class — theater_ratio understated, classification shifts. This reading asserts a high threshold (realistic exercise = Mountain); the husk_reading asserts the threshold is routinely breached.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The fidelity threshold that distinguishes live exercise from memorial performance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.03
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the competence_reading of the preparedness_persistence kernel. It holds that drills, exercises, and inspections are not symbolic performances but live-exercised knowledge — the physical and cognitive infrastructure of disaster response is maintained only through realistic practice that exercises full response chains under unscripted conditions. The constraint is Mountain (the physical reality: without exercise, knowledge and coordination decay as a matter of physics and biology) plus Rope (the coordination function: multi-agency response requires practiced interoperability that cannot be improvised). No extraction structure exists — no party profits from the drills themselves, no victim class bears their cost asymmetrically; the cost is the price of the coordination function. The husk_reading claims this is memorial theater; the hybrid_reading claims it is stratified. This reading asserts uniform competence is achievable and empirically observable in institutions that maintain drill fidelity.",
+    "key_agents": [
+      "operational_institutions: Primary agenda_setter (institutional/generational/arbitrage/global) — designs and executes drill regimes; bears cost of realistic exercise; benefits from maintained readiness",
+      "frontline_responders: Primary beneficiary (organized/biographical/mobile/continental) — gains muscle memory, cross-agency fluency, and decision speed from realistic drills; exit is mobile (can transfer skills)",
+      "incident_victims: Secondary beneficiary (powerless/immediate/trapped/local) — bears consequences when readiness fails; not a direct participant but the ultimate stakeholder of the coordination function",
+      "audit_authorities: Observer (institutional/generational/analytical/national) — verifies drill fidelity against standards; does not run drills or bear their cost"
+    ],
+    "logic_rationale": "Extractiveness is near-zero (0.03): the drills extract no rent; their cost is the coordination function's necessary overhead. Suppression is negligible (0.05): alternatives (no drills, paper exercises) are not suppressed — they are known to fail. Theater ratio is low (0.08): the vast majority of drill activity is functional; any performative element is noise, not structure. Accessibility collapse is high (0.92): once you accept that operational knowledge decays without exercise, there is no alternative to live practice — the physical world enforces it. Resistance is near-zero (0.04): no constituency opposes realistic drills; opposition only arises when drills are theatrical (which this reading denies is the norm).",
+    "perspectival_gap": "The husk_reading would compute this as Piton (high theater, low function); the hybrid_reading would compute it as Tangled Rope in some sectors (coordination + extraction). This reading's structural data produces Mountain-Rope uniformly because it asserts the drill fidelity threshold is met. The engine will compute Mountain-Rope from these metrics; the divergence from sibling readings is the measurement.",
+    "directionality_logic": "All named seats are beneficiaries of the coordination function. Operational institutions pay the cost of drills but receive the readiness benefit — symmetric (d ~ 0.5). Frontline responders receive disproportionate benefit relative to their cost share — d < 0.5. Incident victims bear catastrophic cost if readiness fails but have no exit — their d is high for the *absence* of the constraint, but the constraint itself does not extract from them. No victim class exists in this reading; the husk_reading would create one (taxpayers/public paying for theater).",
+    "mandatrophy_analysis": "No mandatrophy risk: the founding problem (operational knowledge decays without exercise) remains live and is corroborated by every major incident after-action report. The arrangement persists because the problem persists; no extraction structure has layered onto it. If drill fidelity decayed into theater, mandatrophy would activate — but this reading asserts that has not occurred.",
+    "kernel_context": "This is the competence_reading of the preparedness_persistence kernel. Sibling readings: husk_reading (drills are memorial performance; form persists while competence atrophies) and hybrid_reading (preparedness is stratified — engineering inspections remain competent, evacuation drills are ritualized). This reading asserts the kernel is uniformly Mountain-Rope: physical infrastructure + coordination function, no extraction. The disagreement is located in the drill fidelity threshold and its empirical status across institutions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__husk_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the preparedness_persistence kernel. The husk_reading and hybrid_reading are sibling constraints with different ε values and stakeholder structures. This reading claims uniform Mountain-Rope classification; the husk_reading claims Piton/Snare; the hybrid_reading claims a constraint family with mixed types. All three share the same kernel_id but instantiate different constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "operational_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Designs, funds, and executes drill regimes across hazard scenarios. Bears the full cost of realistic exercise (personnel time, equipment wear, scenario development, cross-agency coordination overhead). Receives the direct benefit of maintained operational readiness — the institution's core function depends on it. Can shift drill investment across hazards and jurisdictions; exit means accepting degradation of response capacity."
+    },
+    {
+      "name": "frontline_responders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Participates in drills as primary trainees. Gains muscle memory, decision heuristics under stress, cross-agency communication fluency, and equipment familiarity that cannot be acquired in classroom or tabletop settings. The skills are portable across agencies and jurisdictions — exit is mobile. Bears personal cost (time, physical risk in realistic exercises) but receives disproportionate professional benefit."
+    },
+    {
+      "name": "incident_victims",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The population exposed to hazard when readiness fails. Does not participate in drills and cannot exit the hazard zone. Bears catastrophic cost (life, property, displacement) if the coordination function collapses. Is the ultimate stakeholder of the constraint's success but has no voice in its design or execution. This reading treats their interest as the constraint's vindicated proposition (readiness saves lives), not as a victim of the constraint itself."
+    },
+    {
+      "name": "audit_authorities",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Verifies drill fidelity against regulatory and professional standards. Reviews after-action reports, observes exercises, certifies compliance. Does not design or fund drills, does not bear their operational cost, does not receive readiness benefit directly. Their analytical seat sees the full structure — they are the empirical check on whether this reading or the husk_reading describes reality."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Multi-agency disaster response requires practiced interoperability that cannot be improvised during an incident. Live exercises are the only mechanism that maintains the physical-cognitive infrastructure of command, control, communication, and coordination across organizational boundaries under stress.",
+    "transfer_function": "Moves institutional resources (personnel time, equipment, scenario development budget) into maintained operational readiness — the capacity to execute coordinated response under real incident conditions. The transfer is cost-for-function, not rent extraction; no seat captures the transfer as gain.",
+    "absent_voices": "The husk_reading and hybrid_reading would argue that many institutions' drills ARE ritualized — that the excluded voice is the frontline responder who knows the drills are theater but cannot say so. In this reading, that voice is not excluded; the drill regime itself (when run at fidelity) surfaces that feedback through after-action reviews.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If live-exercised drills and inspections disappeared overnight, operational knowledge would decay on a timescale of months to years (empirically observed in post-Cold-War civil defense, post-9/11 hospital surge capacity, etc.). Incident outcomes would deteriorate measurably within the first major event. The physical infrastructure of readiness (knowledge, coordination, muscle memory) cannot be maintained without the exercise that creates it.",
+    "founding_problem": "Operational knowledge and multi-agency coordination decay irreversibly without realistic practice. Tabletop exercises, paper plans, and classroom training do not maintain the physical-cognitive infrastructure required for incident response. The founding problem is the entropy of unexercised competence.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Every major incident after-action report (9/11 Commission, Katrina, Fukushima, COVID-19, Maui wildfires) identifies unexercised coordination failures as primary contributors to poor outcomes. Independent after-action reviews from outside the benefiting institutions (GAO, NAS, international peer reviews) consistently corroborate that drill fidelity predicts incident performance. No credible source contends the problem is solved or gone."
+  },
+  "uke_scope": {
+    "epsilon_bin": "negligible",
+    "hypothesis": "mountain_rope_hybrid",
+    "downstream_of": [
+      "preparedness_persistence"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "exercise_maintains_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "drill_fidelity_threshold_is_achievable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "institutional_practice_standard",
+    "drift_state": {
+      "moment": "post_covid_after_action_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

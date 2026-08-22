@@ -1,0 +1,332 @@
+{
+  "header": {
+    "constraint_id": "woman_category__sex_biology_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "story_uid": "ab269d5a-8112-4fa2-897b-b3be9bc51ec6"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sex-Biology Definition of Woman Category",
+    "topic_domain": "political_philosophy/law/social_policy/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "female_biology_rights_advocates",
+      "sex_based_data_institutions",
+      "women_sports_governing_bodies"
+    ],
+    "victims": [
+      "transgender_women",
+      "intersex_individuals_female_lived"
+    ],
+    "vindicated_propositions": [
+      "sex_based_protection_framework",
+      "biological_sex_binary_in_law"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "Is the woman category a single contested kernel with multiple readings, or are these structurally distinct constraints?",
+      "resolution_mechanism": "Compare the structural relationships (beneficiaries, victims, enforcement) across the three declared readings. If the same institutional arrangements shift their victim/beneficiary assignments depending on the reading, it is one kernel with multiple readings. If the arrangements themselves differ, they are distinct constraints.",
+      "impact": "If one kernel: this reading's extraction is evaluated against a shared referent with sibling readings, and cs_structure fields capture the reading relations. If distinct constraints: each stands alone and network.affects_constraints links them.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three definitions constitute readings of one kernel or separate constraints."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers to self-ID, exclusion from sex-segregated spaces) or internalized (transgender women and intersex individuals accepting exclusion as legitimate)?",
+      "resolution_mechanism": "Post-policy-change trajectory: if suppression persists after legal barriers are removed (e.g., self-ID laws enacted), reclassify as partially internalized. Survey data on whether excluded groups experience the constraint as external or self-imposed.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after legal exit options open.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in interpersonal/institutional constraints."
+    },
+    {
+      "id": "intersex_boundary_ambiguity",
+      "question": "Does this reading's boundary around 'female biology' structurally include or exclude intersex individuals with female-typical anatomy but non-XX chromosomes?",
+      "resolution_mechanism": "Legal and policy analysis of how sex-biology definitions are operationalized in practice — e.g., sports eligibility rules, prison placement, violence-against-women shelter access. If intersex individuals are inconsistently classified, the boundary is ambiguous.",
+      "impact": "If intersex individuals are excluded, the victim set expands and ε increases. If included ambiguously, the constraint's coordination function is unstable — the boundary itself becomes an extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the sex-biology reading's boundary cleanly resolves intersex cases or produces ambiguous/inconsistent classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the sex-biology reading of the woman_category kernel. The reading defines 'woman' exclusively by chromosomal (XX), anatomical, and reproductive biology criteria. It operates as a tangled rope: it coordinates sex-based protections, data collection, and single-sex spaces (genuine coordination function) while simultaneously extracting from transgender women (excluded from protections) and ambiguously classifying intersex individuals (boundary instability as extraction mechanism). The constraint requires active enforcement — legal definitions, sports eligibility rules, prison placement policies, shelter access rules — to maintain the boundary. Extraction has risen over the interval as gender-identity-based frameworks have gained institutional traction, making the sex-biology boundary require more active defense. Theater ratio has risen as 'protecting women's spaces' rhetoric increasingly covers exclusion that does not materially advance safety. The kernel_context field below records the committer-frame structure.",
+    "key_agents": [
+      "female_biology_rights_advocates: Primary beneficiary (institutional/biographical) — collects the protective and resource allocation benefits of the sex-biology boundary",
+      "transgender_women: Primary victim (moderate/constrained) — excluded from sex-segregated protections, sports, prisons, shelters; bears the cost of the boundary",
+      "intersex_individuals_female_lived: Secondary victim (moderate/identity_locked) — ambiguously included/excluded depending on institutional implementation; boundary instability extracts compliance costs",
+      "sex_based_data_institutions: Beneficiary (institutional/generational) — statistical agencies, public health bodies, crime recording systems that rely on binary sex categories",
+      "women_sports_governing_bodies: Beneficiary/agenda_setter (organized/biographical) — use the boundary to justify sex-segregated competition categories",
+      "gender_identity_advocates: Excluded (powerful/biographical) — would argue for self-ID inclusion but are structurally excluded from this reading's framework",
+      "policy_analysts: Observer (analytical/civilizational) — sees the full constraint family across readings"
+    ],
+    "logic_rationale": "Base extractiveness (0.68) reflects that the constraint coordinates genuine collective action problems (violence-against-women data, sports fairness, single-sex spaces) while concentrating costs on a defined victim set (transgender women, ambiguously intersex people). Suppression (0.72) is high because the boundary requires active legal and institutional enforcement against self-ID challenges and intersex boundary cases. Theater ratio (0.38) has risen as the 'biological reality' framing increasingly serves to legitimize exclusion that does not functionally protect the coordination goods. Accessibility collapse (0.75) is high because once the sex-biology boundary is accepted as the legitimating framework, alternative categorization schemes (gender identity, gamete-based, cluster concepts) are treated as conceptually incoherent within the framework. Resistance (0.58) is substantial — legal challenges, policy advocacy, and institutional pushback from gender-identity frameworks — but the constraint persists because its beneficiaries control key agenda-setting institutions (sports governance, statistical agencies, some legislatures).",
+    "perspectival_gap": "From the female_biology_rights_advocates seat: the constraint is a rope — it solves the coordination problem of protecting a biologically defined class. From the transgender_women seat: it is a snare — the coordination story covers exclusion from protections they need. From the intersex_individuals_female_lived seat: it is an unstable tangled rope — sometimes coordinated, sometimes extracted from, depending on which institutional gate they encounter. From the policy_analysts seat: it is one reading in a constraint family where the kernel's referent (who counts as a woman for law/policy) is contested. The engine computes per-seat types from the structural data; this commentary explains the structural asymmetry.",
+    "directionality_logic": "Beneficiaries declared: female_biology_rights_advocates (collect protections/resources), sex_based_data_institutions (collect clean binary data), women_sports_governing_bodies (collect fair-competition framework). Victims declared: transgender_women (excluded from all sex-segregated goods), intersex_individuals_female_lived (boundary ambiguity imposes compliance costs and arbitrary exclusion). The agenda_setter role is shared between women_sports_governing_bodies (operationalize the boundary in competition) and legislatures/courts (codify it in law). Directionality derivation: beneficiaries → low d (subsidized), victims → high d (targeted), excluded → trapped (no exit from the constraint's domain), observers → analytical. The intersex boundary ambiguity means some intersex individuals experience higher d than others depending on institutional implementation — this is captured by the omega variable.",
+    "mandatrophy_analysis": "The founding problem (see six_questions) was coordinating protections for a class defined by reproductive vulnerability. That problem remains live (violence against women, pregnancy discrimination, sports fairness). However, the constraint's mandate has expanded beyond the founding problem: it now governs access to spaces and resources where reproductive biology is not the relevant variable (e.g., domestic violence shelters, prison placement, bathroom access). The extraction from transgender women and intersex individuals is not mandated by the founding problem — it is a boundary-maintenance cost that has become a function. This is classic mandatrophy: the coordination function persists but has accumulated extractive barnacles. The constraint is not resolved mandatrophy because the core coordination problem is still live and the constraint still solves it — but the extraction/exclusion margin has widened beyond what the founding problem justifies.",
+    "kernel_context": "This constraint is the sex_biology_reading of the woman_category kernel. Sibling readings: gender_identity_reading (category membership by self-identified gender), intersex_accommodation_reading (category membership by non-binary biological spectrum acknowledging intersex variations). This reading's structural delta: victim set = people with female biology; excludes transgender women from sex-segregated protections; includes intersex people ambiguously; high ε in sports (performance advantage framework) and violence-against-women policy (sex-based data collection). The three readings compete to define the same legal/policy category — they are readings of one kernel because they contest the same institutional referent (the legal definition of 'woman') and mutually constrain each other's enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "woman_category__gender_identity_reading",
+      "woman_category__intersex_accommodation_reading",
+      "sex_segregated_sports_eligibility",
+      "violence_against_women_data_collection",
+      "single_sex_space_access_policy"
+    ],
+    "dual_formulation_note": "This constraint family (woman_category kernel) decomposes the colloquial 'definition of woman' into three structurally distinct readings with different beneficiary/victim structures and extraction profiles. The sex_biology_reading coordinates sex-based protections but extracts from transgender women and ambiguously classifies intersex individuals. The gender_identity_reading coordinates inclusion but extracts from female-biology advocates who lose sex-based data and spaces. The intersex_accommodation_reading coordinates biological complexity but extracts from binary legal systems that must accommodate spectrum categories. Each reading instantiates a different constraint with its own ε. They are linked via affects_constraints because they contest the same institutional referents."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "female_biology_rights_advocates",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations and advocates who campaign for sex-based rights and protections grounded in reproductive biology. They benefit from the constraint because it secures legal categories, funding streams, and policy frameworks for women-as-a-sex-class. Their exit is mobile — they could shift to gender-identity framing but would lose the specific protections the sex-biology boundary provides. They hold institutional power through legislative access, court precedent, and control of some women's organizations."
+    },
+    {
+      "name": "transgender_women",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Transgender women who are excluded from sex-segregated spaces, sports categories, prison placements, and violence-against-women protections under the sex-biology reading. They bear the costs of the boundary: loss of safety, dignity, and access to resources. Their exit is constrained — they cannot change their biology, and legal gender recognition does not override the sex-biology boundary in this reading's framework. Some pursue litigation or policy advocacy; others accept exclusion. The directionality override reflects their high structural targeting despite moderate nominal power."
+    },
+    {
+      "name": "intersex_individuals_female_lived",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Intersex individuals raised and living as women who face ambiguous classification under the sex-biology reading — included in some contexts (violence protections) but excluded in others (sports, some legal definitions). Their identity is fused with the 'woman' category as socially lived, making exit identity-locked: rejecting the category means rejecting their social self. They sometimes benefit from sex-based protections, sometimes pay the cost of boundary enforcement. The directionality override reflects their intermediate but structurally targeted position."
+    },
+    {
+      "name": "sex_based_data_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Statistical agencies, public health systems, crime recording bodies that rely on binary sex categories for data collection and policy analysis. They benefit from the constraint because it provides a stable, operationalizable category. Their exit is arbitrage-grade — they could adopt gender-identity or multi-category systems (some already do in parallel), but the sex-biology reading remains the default for international comparability and historical continuity."
+    },
+    {
+      "name": "women_sports_governing_bodies",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "International federations (World Athletics, FINA, UCI, etc.) and national Olympic committees that set eligibility rules for women's sport. They administer the constraint by operationalizing the sex-biology boundary (testosterone thresholds, chromosome testing, puberty-based criteria). They are constrained because they face pressure from both sides — human rights bodies demanding inclusion, female athletes demanding exclusion of male-puberty advantage — and cannot easily exit the governance role."
+    },
+    {
+      "name": "gender_identity_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Advocacy organizations and legal actors pushing for gender-identity-based category membership. They are structurally excluded from this reading's framework — their preferred definition is not a live option within the sex-biology reading. They are trapped because the constraint domain (legal/policy definition of woman) directly governs their constituents' lives, and they cannot opt out of its effects. They contest the constraint externally through litigation, legislation, and institutional pressure."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Researchers, legal scholars, bioethicists who study the constraint family across readings. They neither collect nor pay; they map the structural relationships, track the kernel contest, and analyze classification outcomes. Their analytical exit means they can shift frameworks without personal cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates sex-based protections and resources for a class defined by reproductive vulnerability: violence-against-women data collection, single-sex spaces (shelters, prisons, changing rooms), sports fairness categories, pregnancy/maternity rights, and historical redress for sex discrimination. The binary sex category solves the collective-action problem of identifying the beneficiary class for these protections without individualized assessment.",
+    "transfer_function": "Moves access to sex-segregated protections, spaces, and resources from transgender women and ambiguously-classified intersex individuals to female-biology-rights beneficiaries. The transfer is not monetary but positional: inclusion/exclusion from legal categories, competitive divisions, institutional safeguards. The sex-biology boundary acts as the gate; those on the female-biology side collect the goods, those on the other side are excluded.",
+    "absent_voices": "Transgender women and intersex individuals with female-lived experience are the primary absent voices — they are the ones most directly affected by the boundary but have no structural voice within the sex-biology reading's framework. Gender-identity advocates are excluded from the reading's internal logic. In policy venues where the reading is contested, their voices enter as external pressure, not as seated participants.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sex-biology definition vanished overnight, legal frameworks for violence-against-women protections, sports categories, prison placement, shelter access, and anti-discrimination law would lose their operational category. Legislatures and courts would have to adopt a replacement definition (gender identity, gamete-based, cluster concept, or multi-category) — the world would rearrange around a new coordination boundary. The coordination goods (protections, fairness, data) would not disappear but would be recategorized.",
+    "founding_problem": "Coordinating legal protections and resource allocation for the class of people vulnerable to reproductive exploitation, pregnancy discrimination, and male-pattern violence — historically identified by the binary sex category 'woman' as a proxy for this vulnerability cluster.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by female_biology_rights_advocates (beneficiaries) AND by independent epidemiological data on violence against women, maternal mortality, and pregnancy discrimination (outside the beneficiary set). However, gender_identity_advocates and some bioethicists contest whether the sex-biology proxy still tracks the vulnerability cluster given medical transition and changing social conditions — they argue the founding problem is real but the proxy has drifted. Corroboration is thus partial and contested."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "woman_category_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gender_identity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "intersex_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "woman_category_determined_by_gametes_and_anatomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "sex_based_protections_require_binary_category",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "binary_sex_class_protection_framework",
+    "drift_state": {
+      "moment": "contemporary_gender_identity_challenge",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "header": {
+    "constraint_id": "correct_latin_kernel__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "d462b8a0-1097-4f13-ba10-c8e8f4abadc0"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Medieval Latin as Natural Evolution of Classical Latin",
+    "topic_domain": "historical_linguistics/philology/intellectual_history",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "medieval_scribes",
+      "scholastic_authors",
+      "vernacular_latin_users"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "language_change_is_lawful",
+      "usage_authority_resides_in_community",
+      "prescriptive_purism_is_external"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_frame",
+      "question": "Is this constraint one reading of the contested kernel correct_latin_kernel, and if so, which reading does it instantiate?",
+      "resolution_mechanism": "The committer frame is declared by construction: this JSON is the continuity_reading of correct_latin_kernel. Sibling readings (discontinuity_reading, hybrid_reading) instantiate separate constraints with distinct ε and beneficiary/victim structures. The disagreement is located in whether Medieval Latin constitutes legitimate continuity or rupture requiring textual recovery.",
+      "impact": "If the kernel frame is rejected, this constraint would need to be re-authored as a flat story without cs_structure reading_relations/axioms. The structural delta (Medieval innovations as legitimate vs. rupture) is the dividing line.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this constraint is a kernel reading, not a flat story"
+    },
+    {
+      "id": "naturalness_of_evolution_vs_constructed_standard",
+      "question": "Does the 'natural evolution' framing describe a genuine linguistic process, or does it naturalize a socially constructed standard that benefited clerical and scholarly elites?",
+      "resolution_mechanism": "Corpus linguistics comparing actual Medieval usage patterns against the classical norm; sociolinguistic analysis of who enforced which norms and when. If the 'natural' trajectory was selectively curated by institutional power, the constraint carries extraction masked as description.",
+      "impact": "If the continuity narrative was institutionally curated to legitimize clerical Latin against vernacular competition, the rope classification shifts toward tangled_rope — coordination function genuine but extraction present via gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the continuity claim is descriptive fact or constructed legitimacy"
+    },
+    {
+      "id": "humanist_reform_as_purism_vs_recovery",
+      "question": "Are humanist Latin reforms correctly characterized as 'prescriptive purism' (external imposition) rather than 'textual recovery' (internal correction)?",
+      "resolution_mechanism": "Comparative analysis of humanist treatises (e.g., Erasmus, Valla) against Medieval practice: did they appeal to attested Classical usage or to an idealized norm? Philological reception history of their reforms.",
+      "impact": "If humanists recovered genuine Classical forms lost in Medieval transmission, the discontinuity_reading gains empirical ground; if they imposed an idealized standard, the continuity_reading's characterization of them as purists holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether humanist reform was recovery or imposition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1350,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1100,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1350,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1100,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1350,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 500,
+    "end": 1650
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the continuity_reading of the correct_latin_kernel: the position that Medieval Latin is Classical Latin after natural linguistic evolution, and that humanist 'reconstruction' was prescriptive purism imposing an idealized Classical standard on a living, lawfully evolved system. The reading treats Medieval innovations (syntactic, lexical, morphological) as legitimate developments internal to Latin's trajectory, not as corruptions requiring textual recovery. The kernel contest centers on whether the Classical/Medieval boundary is continuous (this reading), a rupture requiring symbolic reoccupation (discontinuity_reading), or a layered continuity with recovery only in syntax/lexicon (hybrid_reading).",
+    "key_agents": [
+      "medieval_scribes: Primary beneficiaries (moderate/identity_locked) — their Latin is the living standard; continuity reading validates their practice",
+      "scholastic_authors: Primary beneficiaries (powerful/identity_locked) — their philosophical/theological Latin is continuous with Classical authority",
+      "vernacular_latin_users: Beneficiaries (organized/constrained) — clergy, administrators, students using evolved Latin daily",
+      "humanist_reformers: Payers/excluded in this reading (powerful/mobile) — framed as external imposers of an artificial standard",
+      "philologists_19th_20th_century: Observers (analytical/analytical) — later scholars adjudicating the kernel contest"
+    ],
+    "logic_rationale": "Low extractiveness (0.12): the continuity claim describes a linguistic process; it does not extract resources. The coordination function is real — it legitimizes the Latin actually in use across Medieval Europe as 'correct' without requiring conformity to an external fossilized norm. Suppression is low (0.18) but nonzero: the reading itself was later suppressed by humanist dominance in education and printing, not by its own operation. Theater ratio (0.22) reflects some performative invocation of 'natural evolution' to resist humanist reform pressure in the 14th-16th centuries. Accessibility collapse (0.78) is high because once the continuity frame is accepted, alternatives (discontinuity, hybrid) appear as misreadings of the same evidence. Resistance (0.35) is moderate: humanist reformers actively contested this reading from the 14th century onward.",
+    "perspectival_gap": "The continuity_reading and discontinuity_reading compute different per-seat types from the same historical facts. For medieval_scribes, continuity is a rope (their practice is the standard); for humanist_reformers, the same continuity claim is a snare (it legitimizes what they see as corruption). The engine computes this divergence from power/exit/beneficiary declarations — the authored claim does not adjudicate it.",
+    "directionality_logic": "Medieval scribes and scholastic authors are structural beneficiaries: the continuity reading validates their Latin as correct without requiring conformity to an external Classical norm — they are coordinated, not extracted from. Vernacular Latin users (clergy, administrators) benefit similarly. Humanist reformers are payers in this reading: they invest in producing a 'purified' Latin that the continuity reading treats as unnecessary and externally imposed. Their exit is mobile (they could and did create new institutions), but within the Medieval university system they were constrained. No victims are declared because this reading does not posit asymmetric extraction — the coordination function is genuine and benefits the community of use.",
+    "mandatrophy_analysis": "The founding problem — 'how to maintain Latin as a living learned language without fossilizing it' — is contested (some say the problem persisted; others say humanist reform solved it by creating a stable Classical standard). The continuity reading declares the problem dead (the living language continued until displaced by vernaculars), but this is not self-attested — 19th-century philologists (e.g., Wilhelm Meyer-Lübke, Francoise Waquet) corroborate that Medieval Latin was a functioning learned language, not a corrupted one. The arrangement did not persist as a zombie; it was displaced by historical forces (print, vernacular rise, humanist education), not by internal extraction.",
+    "kernel_context": "This constraint is the continuity_reading of the correct_latin_kernel. Sibling readings: discontinuity_reading (Classical and Medieval Latin are distinct systems; reconstruction required symbolic reoccupation from texts) and hybrid_reading (core morphology continuous, but syntax and lexicon required textual recovery; reconstruction was layered). The kernel_id is correct_latin_kernel; the reading_id is continuity_reading. The structural disagreement is located in whether Medieval Latin constitutes legitimate continuity (this reading) or rupture requiring textual recovery (discontinuity_reading) or partial continuity with recovery in syntax/lexicon (hybrid_reading)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "correct_latin_kernel__discontinuity_reading",
+      "correct_latin_kernel__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint family (correct_latin_kernel) decomposes the single colloquial label 'the Latin correctness question' into three structurally distinct readings with different ε values and beneficiary structures. The continuity_reading has low ε (0.12) because it describes a coordination function (legitimizing living usage). The discontinuity_reading likely has higher ε because it legitimizes an external standard imposed on a living community. The hybrid_reading sits between. All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "medieval_scribes",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Copy and transmit texts in the Latin they inherited and use daily. Their practice IS the living standard. The continuity reading validates their work as correct Latin without requiring them to conform to a fossilized Classical norm. Exit would mean abandoning their professional identity and the textual tradition they maintain — identity_locked because their craft and self-concept are constituted through this Latin."
+    },
+    {
+      "name": "scholastic_authors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Write philosophy, theology, and science in the evolved Latin of the universities. They set the de facto standard for learned Latin. The continuity reading treats their syntax and vocabulary as legitimate developments, not corruptions. Their intellectual authority is fused with this Latin — identity_locked because their conceptual vocabulary and professional legitimacy depend on the continuity claim."
+    },
+    {
+      "name": "vernacular_latin_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Clergy, administrators, lawyers, physicians, and students who use Latin daily for liturgy, law, medicine, and education. They benefit from a standard that matches their actual usage rather than an idealized Classical norm. Exit is constrained — they need Latin for their roles, but could shift to vernaculars (which many eventually did)."
+    },
+    {
+      "name": "humanist_reformers",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Scholars (Erasmus, Valla, Bude, etc.) who argued that Medieval Latin had corrupted the Classical language and advocated reform based on Classical texts. In this reading, they are payers: they invest effort in producing a 'purified' Latin that the continuity reading treats as unnecessary prescriptivism. They are also excluded from the Medieval university's de facto standard. Their exit is mobile — they created new academies, printed editions, and educational programs outside the university system."
+    },
+    {
+      "name": "philologists_19th_20th_century",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Later linguists and philologists (Meyer-Lübke, Waquet, Herman, Adams) who analyze the kernel contest from outside. They do not collect or pay within the Medieval system. Their analytical seat sees the full structure: continuity as a genuine coordination mechanism for Medieval users, discontinuity as a humanist construction, hybrid as a nuanced middle ground."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Provides a living, lawfully evolved standard for learned Latin that matches the actual usage of the community (scribes, scholars, clergy, administrators) without requiring conformity to an external, fossilized Classical norm. Solves the problem of how Latin remains a functional learned language across centuries of change.",
+    "transfer_function": "Moves legitimacy and authority from an external Classical ideal (which no living community speaks) to the actual evolving usage of the Medieval Latin community. No material transfer; the transfer is epistemic and normative — who counts as 'speaking correct Latin.'",
+    "absent_voices": "Humanist reformers and their allies (printers, patrons, some princes) who argued for Classical purification are the absent voices in the Medieval period — they were present but structurally excluded from the university's de facto standard. Later, the continuity reading itself became the absent voice when humanist Latin dominated education and printing (16th century onward).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuity claim vanished overnight (e.g., if humanist purism had been universally imposed in 1100), Medieval scribes and scholars would have been forced to conform to an artificial Classical standard they did not speak natively, disrupting textual transmission, education, and administration. The living Latin tradition would have been replaced by a learned reconstruction — the world of Medieval Latin practice rearranges.",
+    "founding_problem": "How to maintain Latin as a living learned language across centuries of natural change without fossilizing it into a dead standard or letting it fragment into mutually unintelligible varieties.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The continuity reading's beneficiaries (Medieval scribes, scholastic authors) attest the problem was live and solved by natural evolution. 19th-20th century philologists outside the beneficiary set (Meyer-Lübke, Waquet, Herman) corroborate that Medieval Latin was a functioning learned language with lawful internal development — the problem was real and the continuity solution was genuine. Humanist reformers and their intellectual heirs contest this, attesting the problem was NOT solved (Latin had corrupted) and their reform was the solution."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "discontinuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "language_change_is_lawful_and_continuous",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "usage_authority_resides_in_living_community",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "living_latin_community_practice",
+    "drift_state": {
+      "moment": "humanist_reform_ascendancy",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

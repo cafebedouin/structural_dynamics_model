@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "state_killing_legitimacy__deterrence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "d07cf39b-0c3d-4096-a300-4e47b79f2ea1"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.62,
+    "theater_ratio": 0.36,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Capital Punishment as Rational Deterrence Signal",
+    "topic_domain": "criminal justice/political philosophy/legal theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_murder_victims",
+      "prosecutors_offices",
+      "law_and_order_officeholders",
+      "surviving_co_victims_families"
+    ],
+    "victims": [
+      "condemned_defendants",
+      "wrongfully_executed_innocents"
+    ],
+    "vindicated_propositions": [
+      "deterrence_hypothesis",
+      "rational_actor_model_of_homicide",
+      "costly_signaling_theory_of_punishment"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "condemned_defendants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Convicted of capital murder in a jurisdiction that retains the death penalty. Spends years to decades on death row under a sentence that, if carried out, ends their agency permanently. Their ways out run through appellate reversal or executive clemency, neither of which they control; the process consumes their entire biographical horizon."
+    },
+    {
+      "name": "wrongfully_executed_innocents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Convicted and executed for murders later shown, through DNA testing, witness recantations, or investigative journalism, to be ones they did not commit. They paid the full price of the sanction without the guilt that even this reading's own warrant presupposes, and no remedy reaches them; identification happens posthumously."
+    },
+    {
+      "name": "potential_murder_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The diffuse class of people who might be murdered and whose lives the signal is supposed to save. No organization represents them as such; they cannot verify the protection they are said to receive, and the benefit arrives only if the contested empirical claim holds."
+    },
+    {
+      "name": "prosecutors_offices",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Decide which homicide cases to charge capitally and how hard to press for death. The availability of the death sentence lets them offer life imprisonment as a concession defendants accept to remove execution risk, producing convictions without trial. Offices build reputations and careers on capital cases; they can decline to seek death in any individual case but operate inside statutes they did not write alone."
+    },
+    {
+      "name": "law_and_order_officeholders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact and expand capital statutes, fund prosecution and death-row infrastructure, appoint judges, and campaign on the sanction. They bear essentially none of its costs personally and can leave the position by changing platforms, losing elections, or term-limiting out."
+    },
+    {
+      "name": "surviving_co_victims_families",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Relatives of murder victims. Some report that a death sentence and eventual execution bring closure or deserved finality; many others describe decades of appeals, retrials, and anniversary coverage that repeatedly reopen the loss. Organized co-victim groups exist on both sides of the dispute, and both sides invoke families symbolically in hearings."
+    },
+    {
+      "name": "deterrence_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Criminologists and economists who test whether execution adds a deterrent margin beyond lengthy imprisonment. Their syntheses, most prominently the 2012 National Research Council assessment, found existing studies unable to answer the question in either direction. They hold no stake in outcomes beyond disciplinary standing, which cuts toward candor."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Addresses the collective-action problem of protecting members from homicidal violence: under this reading, a credibly administered death penalty raises the expected price of murder above what imprisonment signals, coordinating general compliance with the homicide prohibition among rationally calculating potential offenders.",
+    "transfer_function": "Moves the condemned defendant's remaining life and liberty-years into the state's sanctioning account; converts death-row risk into plea concessions moved from defendants to prosecutors; delivers an assurance good (perceived safety) to the public and an electoral good to officeholders.",
+    "absent_voices": "The condemned themselves, whose participation ends at execution and who testify posthumously only through investigators; abolition-minded co-victims who reject killings done in their name and sit largely outside retentionist agenda-setting; and the potential victims the signal protects, a diffuse class with no seat anywhere in the process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Prosecutorial charging patterns and plea leverage would reorganize within a budget cycle; the capital litigation machinery (specialized defenders, expedited habeas tracks, death-row facilities) would decommission; officeholders would lose a signature issue. Murder rates, on the best available evidence, would not measurably change, so the rearrangement is institutional rather than criminological.",
+    "founding_problem": "Pre-modern states lacked reliable long-term confinement: prisons were escape-prone, expensive, or nonexistent, so definitive removal of the worst killers and exemplary demonstration of sovereign resolve required death.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historians of punishment (the carceral-transition literature from Spierenburg and Foucault onward) corroborate the confinement-capacity origin, and modern corrections administrators attest that life-without-parole achieves permanent neutralization; retentionist prosecutors and officeholders, by contrast, attest that the exemplary-demonstration need remains live. Corroboration for obsolescence exists outside the benefiting parties; corroboration for continued necessity comes mostly from inside them."
+  },
+  "gain_flow": "prosecutors_offices",
+  "fixing_cost": "cheap",
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the deterrence_reading of the kernel state_killing_legitimacy: the claim that execution is justified as a rational, costly signal that prevents future murders. Per the epsilon-referent rule, extractiveness is authored for the standing arrangement under contest, retentionist capital-punishment regimes as actually practiced, assessed by this reading's own instrumental lights, never for the abolitionist alternative it argues against. The sibling readings (retributive_reading, abolition_reading) are separate constraint files linked through the network section; their structural deltas are routed to omega variables rather than folded into this story. Claim/metric independence is preserved deliberately: the reading's own self-description is 'justified coordination,' while the authored metrics describe a moderately extractive, actively enforced arrangement whose namesake function rests on contested evidence. The engine measures that divergence; this file does not reconcile it.\n\nKEY AGENTS (by structural relationship):\n- condemned_defendants: Primary target (powerless/trapped) — bears the terminal cost; exit runs through clemency and appeal, neither controlled by them\n- wrongfully_executed_innocents: Sharpest target class (powerless/trapped) — bear the full price of the signal with no desert grounding; identified posthumously\n- potential_murder_victims: Declared beneficiary (powerless/constrained) — the diffuse class whose lives the signal is supposed to save; benefit contingent on unverified empirics\n- prosecutors_offices: Agenda-setter and operational beneficiary (powerful/mobile) — convert death-row risk into plea leverage and conviction capital\n- law_and_order_officeholders: Agenda-setter (institutional/arbitrage) — enact, expand, and campaign on the sanction at negligible personal cost\n- surviving_co_victims_families: Dual-positioned beneficiary/payer (organized/constrained) — receive expressive satisfaction while enduring decades of reopened proceedings\n- deterrence_researchers: Analytical observer (analytical/analytical) — hold the evidentiary hinge the whole reading stands on",
+    "logic_rationale": "Extractiveness is authored at 0.55 (interval end): the arrangement takes the condemned's entire remaining life, a maximal per-person taking, but this reading's own lights credit the taking as potentially compensated by lives saved, and the contested evidence base leaves the compensatory claim unbanked, landing the net between justified coordination and pure extraction. Suppression (0.62) reflects the machinery required to hold the practice against resistance: expedited habeas tracks, specialized prosecution units, clemency standards tuned against innocence claims. Suppression is a raw structural property, unscaled by power or scope; only extractiveness is scaled downstream. Theater (0.36) captures the growing share of activity that stages the signal (victim-impact presentation, execution-witness protocol, campaign rhetoric) relative to any demonstrated deterrent output. Accessibility collapse is low (0.35): life-without-parole is a fully functional substitute, and the many jurisdictions that abolished show no coordination breakdown. Resistance is high (0.72): exoneration-driven doubt, moratoria, and multi-decade repeal campaigns meet the practice continuously. The suppression_requirement series is authored because this story specifically tracks enforcement-capacity change: a mid-interval ratchet (aggravating-factor expansion, appeals limitation) followed by partial decay (drug shortages, moratoria, shrinking death rows). All three tracked series share one time grid (points 0 through 50) so no metric row borrows another's end-state values.",
+    "perspectival_gap": "Seats should classify differently. From the prosecutor seat the arrangement is a working policy instrument, an option that settles cases; from the condemned seat it is terminal cost-bearing with no exit; from the potential-victim seat it is insurance whose payout is asserted rather than evidenced; from the research seat it is an unfalsified-but-unconfirmed hypothesis wearing the costume of settled policy. The engine computes these per-seat classifications from the structural data; this story's claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: potential_murder_victims sit near the beneficiary pole, condemned_defendants and wrongfully_executed_innocents near the full-target pole. Two overrides correct derivations the declarations alone would misplace. Surviving co-victims are declared beneficiaries, which would derive a strongly beneficiary-side d, but their situation documents heavy cost-bearing (decades of appeals reopening grief, symbolic conscription by both sides), so their override moves them toward symmetric (0.42). Prosecutors are declared beneficiaries and would derive near-full-beneficiary d, but their gain is option-value and career capital rather than receipt of the taking itself, so their override sits at 0.24. On the receipt surface, the arrangement's gains demonstrably accrue to prosecutors_offices as plea leverage and conviction capital regardless of whether the deterrent claim holds; fixing is cheap in cost-class terms because a fully functional substitute exists off the shelf and abolishing jurisdictions show no coordination breakdown.",
+    "mandatrophy_analysis": "The classification guards both directions. Reading the arrangement as pure extraction would erase its genuine coordination face: incapacitation is uncontested, and the homicide-protection problem it addresses is real. Accepting the deterrence self-description as pure coordination would launder contested cost-bearing behind an unverified empirical claim. The tangled_rope claim holds both faces apart: coordination function present, asymmetric cost-bearing present, enforcement load-bearing. The temporal series shows the failure mode forming: theater rising monotonically while extractiveness plateaus and enforcement capacity decays from its mid-interval peak. If the marginal-deterrence omega resolves null while the practice persists, the mandate has outlived its function and the trajectory bends toward inertial maintenance, performance continuing after function. The founding problem (pre-modern confinement incapacity) is corroborated as solved by historians and corrections practitioners outside the benefiting parties; what persists is the dispute over whether exemplary signaling remains necessary.",
+    "kernel_context": "Kernel: state_killing_legitimacy, the persisting commitment that the state may take life as punishment. This file instantiates the deterrence_reading: execution justified as a rational signal preventing future murders. Siblings: retributive_reading (forfeiture through proportional desert) and abolition_reading (categorical dignity violation), each a separate constraint file. The readings relate as declared in cs_structure.reading_relations; the disagreement between them is located in the legitimizing warrant, not in the physical act."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading (deterrence_reading) of the kernel state_killing_legitimacy; what structural changes would instantiating a sibling reading instead produce?",
+      "resolution_mechanism": "Generate and compare the sibling stories (retributive_reading, abolition_reading) against this one: victim sets, beneficiary sets, epsilon, and axioms should differ along the warrant axis.",
+      "impact": "An abolition instantiation would push epsilon toward the maximum and recast every condemned defendant as categorically wronged rather than instrumentally spent; a retributive instantiation would relocate the beneficiary structure from potential future victims to the moral order satisfied by desert.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one of three readings of the state-killing-legitimacy kernel."
+    },
+    {
+      "id": "warrant_disagreement_location",
+      "question": "Where exactly do the three readings disagree: on the act of state killing, or on the warrant that legitimizes it?",
+      "resolution_mechanism": "Structural comparison of the three stories' axiom sets: if the disagreement localizes to the warrant (empirical utility versus proportional desert versus categorical dignity) while all three describe the same physical arrangement, the kernel is the warrant, not the practice.",
+      "impact": "Locating the dispute in the warrant explains why the same execution can be simultaneously coordinated (deterrence), deserved (retributive), and impermissible (abolition) depending on seat, and predicts that empirical deterrence evidence moves only this reading, not the siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel contest is over the legitimizing warrant, not the physical act."
+    },
+    {
+      "id": "marginal_deterrence_evidence_status",
+      "question": "Does execution add a marginal deterrent effect on homicide beyond life imprisonment, large enough to offset its costs?",
+      "resolution_mechanism": "Quasi-experimental panel designs exploiting execution-propensity variation across jurisdictions and time, held to the standard set by the 2012 National Research Council review (which found no existing study informative in either direction); resolution awaits designs that survive replication.",
+      "impact": "Confirmation lowers effective extraction, since the taking becomes the price of saved lives and strengthens the coordination face; refutation collapses the coordination story and pushes the arrangement toward pure extraction or inertial maintenance, cost-bearing persisting without the function that justified it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical hinge on which this reading's warrant turns."
+    },
+    {
+      "id": "innocent_execution_under_pure_signal_logic",
+      "question": "Under pure signal logic, an innocent execution carries the same signaling value as a guilty one; does the deterrence reading internally tolerate wrongful execution, or does it covertly import desert?",
+      "resolution_mechanism": "Doctrinal analysis of how retentionist systems handle innocence evidence (clemency standards, posthumous exonerations, whether near-certain innocence halts execution) compared against what strict signal optimization would recommend.",
+      "impact": "If tolerated, wrongfully_executed_innocents must be counted as full-price targets and epsilon rises; if desert is imported, the reading is hybridized with the retributive sibling and its distinctness claim weakens.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Internal consistency test of the signal-only warrant."
+    },
+    {
+      "id": "operative_function_drift",
+      "question": "Is the arrangement's operative function today still deterrence, or has it drifted to expressive and electoral functions that ride on deterrence rhetoric?",
+      "resolution_mechanism": "Compare stated justifications in legislation and litigation against revealed behavior (execution pace, victim-impact staging, campaign usage); the theater_ratio series tracks the gap.",
+      "impact": "If drifted, this reading instantiates a constraint whose namesake function is vestigial, meaning the mandate is resolved in fact even while officially contested, bending classification toward inertial maintenance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deterrence remains the live function or a retained label."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_legitimacy__retributive_reading",
+      "state_killing_legitimacy__abolition_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the capital punishment debate' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints sharing one kernel: this deterrence reading (warrant: empirical utility), the retributive reading (warrant: proportional desert), and the abolition reading (warrant: categorical dignity). Each carries its own epsilon, beneficiary/victim structure, and axioms; the warrant axis, not the physical act, is where they differ. The retributive warrant is historically upstream (lex talionis predates utilitarian penology); the deterrence reading cites public-protection evidence downstream of it; the abolition reading contests both warrants at once."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.24
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "rational_deterrence_equilibrium",
+    "drift_state": {
+      "moment": "post_nrc_2012_evidence_review",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "abolition_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deterrence_suffices_for_execution_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "expected_lives_saved_outweigh_wrongful_execution_risk",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

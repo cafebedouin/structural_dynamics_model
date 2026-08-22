@@ -1,0 +1,402 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__civic_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "737cbca1-699a-42b5-8888-f0c49cb9d052"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.38,
+    "theater_ratio": 0.68,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Civic-Militia Conditioned Right (Civic Right Reading)",
+    "topic_domain": "constitutional law/political theory/rights jurisprudence",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "militia_eligible_citizens",
+      "state_militia_authorities"
+    ],
+    "victims": [
+      "compelled_militia_enrollees",
+      "non_participating_arms_seekers"
+    ],
+    "vindicated_propositions": [
+      "anti_standing_army_doctrine",
+      "civic_republican_citizenship_theory"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.68,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_delta",
+      "question": "This constraint is one reading of the second_amendment_scope kernel (reading: civic_right_reading); what structural deltas would the sibling readings (individual_right_reading, collective_right_reading) introduce if instantiated?",
+      "resolution_mechanism": "Author each sibling as its own constraint story and compare beneficiary sets, regulatory authority, and epsilon: the individual reading deletes the service gate (universalizes the beneficiary set, cuts regulatory authority, lowers epsilon); the collective reading deletes individual beneficiaries entirely (vests the protection in state militia institutions).",
+      "impact": "Seat classifications and effective extraction shift wholesale across readings; policy conclusions drawn from this reading's moderate, service-gated profile do not transfer to either sibling.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure of the kernel contest: this file is one of three mutually exclusive readings of one constitutional text."
+    },
+    {
+      "id": "conditioning_reciprocity_vs_gate",
+      "question": "Is the militia-service condition a genuine reciprocal civic bargain (service constitutes the right) or a gating mechanism whose principal effects are excluding non-servers and shifting defense costs onto households?",
+      "resolution_mechanism": "Compare realized benefits and burdens across participant and non-participant seats over the interval: if participants receive proportionate civic benefit (protected arms, standing, political weight) the bargain is reciprocal; if obligations persist while benefits erode (late-period fines without training), the gate is operating extractively.",
+      "impact": "Genuine reciprocity supports a coordination-dominant classification; extraction-dominant gating raises effective epsilon for trapped enrollees and pushes the arrangement toward the extraction pole.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the service condition is constitutive reciprocity or exclusionary gating."
+    },
+    {
+      "id": "founding_vs_decay_constraint_identity",
+      "question": "Are the founding-era civic bargain (roughly t=0 to t=30) and the late-period fine-and-ceremony regime (roughly t=40 to t=70) one constraint or two — does measuring epsilon across the whole interval conflate structurally distinct arrangements?",
+      "resolution_mechanism": "Decompose: author the founding bargain and the decayed shell as separate stories with separate epsilon values; if the decayed shell classifies as inertial-theatrical while the bargain classifies as hybrid coordination, the single label covered two constraints.",
+      "impact": "Single-story treatment dates any type transition late; decomposition reveals the burden-collecting shell persisted for decades after the coordination function died.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Epsilon-invariance check on the civic-militia arrangement across its operational lifetime."
+    },
+    {
+      "id": "eligibility_boundary_authorship",
+      "question": "The militia-eligible beneficiary set was statutorily bounded (able-bodied free men within an age window, with racial exclusions in most states); is that boundary part of this constraint's structure or an external overlay, and how does it redirect the arrangement's costs?",
+      "resolution_mechanism": "Historical analysis of state militia statutes and arms-law enforcement against excluded populations (enslaved and free Black Americans); test whether denial of eligibility correlated with heightened arms prohibition against the excluded.",
+      "impact": "If the boundary is internal, the arrangement's costs concentrated on populations denied both the right and its civic path — widening the effective victim set beyond the authored seats and raising effective epsilon.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the eligibility boundary is structural to the conditioned right or incidental to it."
+    },
+    {
+      "id": "decay_mode_attrition_vs_substitution",
+      "question": "Did the compulsory militia system die by enforcement attrition (capacity decay) or by deliberate substitution (volunteer companies, then federalized guard)?",
+      "resolution_mechanism": "Legislative histories of state repeal acts and the 1903 federalization statute; compare the timing of enforcement collapse against the organization of replacements.",
+      "impact": "Attrition supports an inertia-shaped lifecycle for the drift series; deliberate substitution supports a transition-completed reading — changing the lifecycle verdict attached to the same measurements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mode of the arrangement's operational collapse."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "militia_eligible_citizens",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Able-bodied citizens within the statutory age window hold a constitutionally protected right to keep and bear arms suitable for militia use — protection that attaches only through enrollment and service. Enrollment brings muster obligations, a requirement to equip oneself with musket and accoutrements at private expense, and exposure to fines for non-attendance; it also carries civic standing, a recognized political role, and immunity of one's arms from ordinary regulation. Leaving the arrangement means forfeiting the protected status of one's arms and accepting whatever regulation ordinary law imposes."
+    },
+    {
+      "name": "compelled_militia_enrollees",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Enrolled by statute upon reaching service age, without a consent step: the obligation to appear at musters, train, and answer calls-up attaches automatically and runs to age forty-five. The burden falls unevenly — those with money purchase exemptions or hire substitutes, while those without pay fines or serve. In return they hold the same conditioned arms right as other participants. Evasion is possible but carries legal risk, and relocation to frontier districts was the common escape."
+    },
+    {
+      "name": "state_militia_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Governors, legislatures, and adjutants general write the muster calendar, prescribe acceptable arms, levy and collect fines, and command the force when called. They obtain a defense-ready citizenry without appropriating funds for a standing army, and the fine rolls supplement state revenue. When compliance collapsed they rewrote the terms — cutting muster days, commuting fines, eventually repealing compulsory service — rather than enforcing harder."
+    },
+    {
+      "name": "non_participating_arms_seekers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "People who wish to keep firearms but do not enroll — the infirm, the disinclined, and members of groups barred from militia eligibility. Under this arrangement their arms receive no constitutional protection: whatever they own is regulable, registrable, or confiscable by ordinary law. Their recourse is argument in the political process, where their claim has no textual foothold so long as the conditioning holds."
+    },
+    {
+      "name": "federal_government",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Congress holds the enumerated powers to organize, arm, and discipline the militia and to call it forth; the presidency commands it when called. The arrangement delivers national defense capacity financed by household armament rather than treasury expenditure. Congress can preempt state administration — as it ultimately did by federalizing the militia into the National Guard — and until then collects the defense output while the costs remain with the states' enrollees."
+    },
+    {
+      "name": "volunteer_militia_companies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Self-formed uniformed companies of the 1830s-1850s — predominantly middle-class men who drilled for prestige and sociability rather than under compulsion. As compulsory musters collapsed, these companies absorbed the militia's official identity, received state arms issues and public subsidies, and enjoyed the civic honor the arrangement conferred while bearing none of the compulsory burden carried by the enrolled poor."
+    },
+    {
+      "name": "professional_officer_corps",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Career soldiers and advocates of a regular army, from the founding era onward, who argued that citizen musters produced untrained troops and that defense required a professional force. The arrangement was designed in opposition to their preference; they sat outside its administration and could influence it only by persuasion, which prevailed only after the militia system had decayed on its own."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Legal historians and constitutional theorists who reconstruct the founding settlement, trace the militia system's operational decay, and weigh competing readings of the Amendment's text. They hold no position inside the arrangement; their seat is analytic, and their conclusions feed courts and legislatures rather than musters."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides common defense through a regulated citizen militia: households arm and train themselves to a state-prescribed standard, periodic musters maintain readiness, and the resulting force answers calls-up without the expense — and, to the founding generation, the danger — of a standing army.",
+    "transfer_function": "Moves defense labor and equipment costs from enrolled households to the public defense function (private armament and training supplying a collectively consumed good); moves constitutional protection of arms from non-participants to participants; moves fine revenue and regulatory authority over arms to state militia administrations.",
+    "absent_voices": "Professional-officer and standing-army advocates, whose preferred defense posture the arrangement was built to foreclose; enslaved and free Black Americans, barred from militia eligibility in most states while arms laws were enforced hardest against them; and non-participating arms seekers, whose counterclaim the conditioning leaves without textual footing. Several of these seats were outside the room when the settlement was fixed, and their absence shaped whose interests the bargain encoded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conditioned-right settlement vanished overnight, enrolled households would shed muster duties, equipment costs, and fine exposure immediately; states would face an unfunded defense gap or turn to paid forces; the protected status of arms would redistribute — universalizing under one successor reading, vesting in state institutions under another; and the political settlement trading arms rights for defense service would require renegotiation from scratch.",
+    "founding_problem": "Secure common defense without a standing army: the founding generation treated professional standing armies as engines of tyranny and built defense on an armed, trained citizenry, making arms-bearing simultaneously a personal safeguard and a public duty.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Military historians of the early republic, documenting muster collapse and mass delinquency, and the legislative record of the 1903 federalization of the militia into the National Guard attest — from outside the arrangement's beneficiary set — that the citizen-militia defense problem was dissolved rather than solved; the permanent professional military every branch now maintains confirms the anti-standing-army premise is no longer operative. Adherents of the civic reading dispute obsolescence at the level of constitutional meaning while conceding the operational system is gone."
+  },
+  "gain_flow": "state_militia_authorities",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "This story instantiates the civic right reading of the Second Amendment: an individual right to keep and bear arms that exists only through, and is measured by, service in a well-regulated militia. The arrangement modeled is the founding-era settlement as it actually operated — compulsory enrollment of able-bodied citizens, privately supplied arms to a prescribed standard, periodic musters, fine-backed enforcement, and constitutional protection of arms extending only to participants. The interval indexes years after ratification (t=0 is approximately 1791; t=70 approximately 1861), tracing the bargain from rough reciprocity through functional decay: as frontier threats receded and the anti-standing-army premise eroded, musters degenerated into ceremony, enforcement lapsed, and the operative residue became fine collection, before federalization of the militia replaced the system outright. The claim and the metrics are authored independently: the claimed type states the structure I believe true of the arrangement; the metrics describe its operation, including its decay-phase drift.",
+    "key_agents": [
+      "militia_eligible_citizens: conditioned-rights holders who also bear service costs (moderate/constrained)",
+      "compelled_militia_enrollees: statute-bound obligors, the arrangement's primary burden-bearers (moderate/trapped)",
+      "state_militia_authorities: administrators who set terms, collect fines, and rewrite the bargain when compliance fails (institutional/arbitrage)",
+      "non_participating_arms_seekers: denied protected status entirely, with only political recourse (moderate/constrained)",
+      "federal_government: recipient of defense capacity at private expense, holder of organizing and preemption power (institutional/arbitrage)",
+      "volunteer_militia_companies: late-period honor-holders who absorbed the militia identity without the compulsory burden (organized/mobile)",
+      "professional_officer_corps: excluded advocates of the rival professional-force posture (powerful/mobile)",
+      "constitutional_scholars: analytical observers of the settlement and its decay (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness 0.58 is moderate: the service gate means much of the burden is the coordination cost itself — household armament and training literally constitute the defense force — but two components sit beyond inherent cost: the exclusion of non-participants from any protected status, and the late-period conversion of the arrangement into fine collection once training value collapsed. Suppression 0.38 is authored as a raw structural property, unscaled by power or scope: enrollment was compulsory by statute with fine and court-martial exposure, yet genuine exits existed — forfeiture of the right, exemption purchase, geographic evasion — keeping it below arrangements that must police exits to survive. Theater 0.68 reflects the end-state: by the 1840s-1850s musters were carnivals, training content had vanished, and the operative residue was fine rolls and paperwork. Accessibility_collapse 0.45: alternatives never collapsed — volunteer companies, professional-force advocacy, and unprotected arms-bearing remained live throughout. Resistance 0.55: mass delinquency, a flourishing market in exemptions and hired substitutes, and successive legislative repeals constituted sustained and largely successful resistance. Coordination type is resource_allocation: the arrangement's dominant function is allocating the defense burden across households against a collectively consumed good; its characteristic failure is burden maldistribution, not membership drift. The measurement series share one eight-point grid (decade steps) so every metric is authored at every examined time point, and the series converge on the base_properties end-state values.",
+    "perspectival_gap": "The agenda-setter seat and the payer seats compute differently from the same structure. From state militia authorities the arrangement is an instrument they administer: they set terms, collect fines, receive readiness, and retained the latitude to rewrite the bargain when compliance failed. From enrolled households the same structure operated first as a reciprocal civic bargain and later as a compulsory burden whose promised benefits — trained corps, civic honor, protected arms — eroded faster than the obligations did. Non-participating arms seekers experience flat denial: no seat in the bargain and no protected status. The dual-positioned citizen seat is the hinge: the same population holds the conditioned right on the benefit side and the compulsory obligation on the burden side, and which face dominates varies by era and by income, since exemption purchasing shifted the burden down the wealth distribution.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for militia_eligible_citizens (hold the conditioned right and the civic standing attached to it), state_militia_authorities (collect fines and readiness and control the terms), federal_government (receives defense output financed at private expense), and volunteer_militia_companies (late-period honor and subsidies without obligation). Victim declarations drive high directionality for compelled_militia_enrollees (obligation attaches without consent; exit is blocked by statute and fine exposure) and non_participating_arms_seekers (bear total exclusion from protected status with only political recourse). The overlap between the first two seats — the same citizens appear on both sides — is the intended signature of a structure that coordinates and burdens through the single act of enrollment; the engine's per-seat computation should place the enrolled poor nearer the target end than exempt-purchasing participants, a differentiation the coarse group labels capture only partially and which the eligibility-boundary omega documents.",
+    "mandatrophy_analysis": "Classification discipline cuts both ways here. Reading the arrangement as pure coordination ignores the trapped enrollee and the excluded seeker — the seats through which the bargain billed its costs. Reading it as pure extraction ignores the real defense function that made the bargain rational at founding and that volunteers and professionals eventually had to replace deliberately. The temporal record arbitrates: theater_ratio crosses 0.5 between t=40 and t=50 (the 1830s-40s), marking the point where muster attendance — the proxy — replaced defense readiness as the arrangement's operative content, the classic substitution drift. The founding problem is dead: the anti-standing-army defense problem was dissolved by the National Guard federalization and the accepted permanence of professional forces, while the arrangement's obligations persisted for decades past the function's death. The mismatch between a dead founding problem and a world that rearranges around the settlement flags the zombie configuration: the civic reading survives as interpretive doctrine atop an operational substrate that no longer exists, which is precisely what the genealogy interview exists to catch.",
+    "kernel_context": "One reading of the second_amendment_scope kernel: this file instantiates the civic_right_reading — the Amendment protects an individual right to keep and bear arms, but the right is conditioned on service in a well-regulated militia, making arms-bearing a reciprocal civic office rather than a self-contained liberty. Sibling readings are separate constraints: the individual_right_reading severs the militia condition entirely, and the collective_right_reading denies any individual bearer, vesting the protection in state militia institutions. Together the three readings exhaust the bearer-and-condition space of the kernel; this file authors only the civic reading's structure, epsilon, and seats, and routes all cross-reading comparison to the network layer and the kernel-contest omega."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_scope__individual_right_reading",
+      "second_amendment_scope__collective_right_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the Second Amendment' covers three structurally distinct constraints corresponding to the kernel's three readings. This file authors the civic_right_reading alone: an individual right whose existence is conditioned on militia participation — hence a beneficiary set of militia-eligible citizens, moderate regulatory authority, and service-gated moderate epsilon. The individual_right_reading (separate file) deletes the service gate: universal beneficiary set, minimal regulatory authority, lower epsilon. The collective_right_reading (separate file) deletes the individual bearer: state institutions become the sole rights-holders. The readings are linked as a family through affects_constraints; each file's epsilon is stable within its own reading, and cross-reading comparison happens at the network layer, not inside any single story."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "civic_militia_reciprocity_compact",
+    "drift_state": {
+      "moment": "post_federalization_operational_collapse",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "individual_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "collective_right_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "right_conditioned_on_militia_service",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "arms_bearing_constitutes_citizenship",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "standing_armies_inimical_to_liberty",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

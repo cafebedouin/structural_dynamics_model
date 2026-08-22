@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__behavioral_control_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "87f369d6-2591-4a13-9a8c-353c6150b40c"
+  },
+  "base_properties": {
+    "extractiveness": 0.46,
+    "suppression": 0.65,
+    "theater_ratio": 0.26,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "HOA Covenant as Aesthetic Uniformity and Behavioral Conformity Apparatus (Behavioral-Control Reading)",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "conformist_majority_homeowners",
+      "board_aligned_homeowners"
+    ],
+    "victims": [
+      "nonconformist_homeowners",
+      "marginal_aesthetics_households",
+      "political_speech_households"
+    ],
+    "vindicated_propositions": [
+      "aesthetic_uniformity_value_premium",
+      "covenant_running_with_land_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "stakeholders": [
+    {
+      "name": "board_directors",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Elected owners who interpret the recorded standards, staff architectural review, decide which violations to pursue, and set fine amounts. The standards they administer are deliberately open-textured ('harmony,' 'suitability,' 'consistency'), so interpretation is where the real decisions happen. Their own properties tend to exemplify the approved look, and discretionary enforcement means households friendly to the board rarely hear from the committee. They can sell and leave the community like any owner, but while they hold seats their homes, reputations, and social standing are tied to the rules they run."
+    },
+    {
+      "name": "conformist_majority_homeowners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Owners whose tastes already match the approved palette. They experience the rules as background assurance that no neighbor will paint chartreuse, park a commercial fleet at the curb, or let the lawn go to seed, and they hope the tidy streetscape supports resale prices. They pay the same dues and assessments as everyone else and almost never interact with the review process. Selling remains possible but carries transaction costs and means leaving a home they chose."
+    },
+    {
+      "name": "board_aligned_homeowners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Owners whose renovation plans, vehicles, and display habits coincide with whatever the current board prefers. Their applications are approved quickly, borderline calls resolve in their favor, and complaints lodged against them stall in committee. The rules cost them little because the rules are written in their image; their main expenditure is the same dues everyone pays."
+    },
+    {
+      "name": "nonconformist_homeowners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Owners whose choices fall outside the standard: an unapproved paint color, a pickup with commercial plates, a front yard converted to vegetables. They receive violation notices, accrue per-day fines, and face liens if balances grow, with foreclosure for unpaid assessments as the terminal step. Complying means paying to undo their own improvements; fighting means attorney fees against association counsel funded by everyone's dues. Selling means marketing the one visibly nonconforming house on a uniform street, and the covenant binds any buyer anyway."
+    },
+    {
+      "name": "marginal_aesthetics_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Households whose expression sits just past the line: an ornate mailbox, a rose garden replacing turf, a heritage flag flown year-round, seasonal decorations left up a week too long. Their applications are denied on aesthetic-discretion grounds and the notices recur. The garden, the collection, or the display represents years of personal investment and is how the household presents itself to the world; ending the notices by erasing it would mean dismantling something their daily life is organized around, so they keep applying, appealing, and absorbing small fines rather than walk away from it."
+    },
+    {
+      "name": "political_speech_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Owners who post candidate signs during election season, fly flags beyond the approved pole height and size, or stage religious displays. State statutes and the federal flag-display statute give them partial protection, and litigation periodically restores a removed sign or flag, but each episode begins with demand letters, hearing notices, and accrued fines before the legal shield arrives. They cannot opt out of the covenants while owning, though the statutory overlay gives them a lever most of their neighbors lack."
+    },
+    {
+      "name": "prospective_renters",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Would-be tenants screened out by rental caps and leasing bans that a growing share of associations adopt. They are not members, attend nothing, and vote on nothing; their exclusion is decided entirely by sitting owners. Their alternative is renting somewhere else, which is precisely why the cap is cheap for owners to impose: its costs land on people who were never in the room."
+    },
+    {
+      "name": "management_company",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "A contracted vendor that sends violation letters, photographs alleged infractions, schedules hearings, processes fine payments, and keeps the association's books, for a per-door management fee plus per-action charges on each enforcement event it processes. Its revenue scales with the volume of enforcement activity it administers, and its inspectors effectively set which violations enter the pipeline. It serves many associations at once and can decline renewal and take its book of business elsewhere at contract cycle's end."
+    },
+    {
+      "name": "state_lawmakers_and_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislatures enacting limits on association fines, flag and sign protections, and foreclosure procedure, and courts adjudicating disputes between recorded covenants and statutes. They see patterns across hundreds of associations, move slowly, and can reshape what covenants may reach, but only statute by statute and case by case."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Synchronizes every lot's exterior presentation — paint, roofing, landscaping, fencing, signage, vehicles, decorations — into one continuously maintained visible standard, and channels all decisions about private-property appearance through a single review process instead of leaving them to each owner.",
+    "transfer_function": "Moves decision authority over private exteriors from individual owners to the board and its review committee; moves compliance spending (repainting, re-landscaping, removal of displays) and fine payments from nonconforming households into the association's operating fund, which pays the management company and association counsel; distributes an anticipated resale premium across all member lots.",
+    "absent_voices": "Prospective tenants barred by rental caps hold no seat and would object to the shrinking rental supply; future buyers inherit rules adopted before their purchase and can vote only after the fact; former owners who sold rather than comply carry the counter-testimony out of the community entirely. None attends meetings: the first is structurally outside membership, the second arrives only after the rules are fixed, and the third is gone.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would dissolve the review committee, void the fine schedules, and open leasing; exteriors would diversify within a season as owners repaint, re-landscape, and post signs; the board would shrink to a minimal maintenance function. The resale premium attached to uniformity would face a direct test against a diversified street, and the management company's enforcement-volume revenue line would collapse to bookkeeping.",
+    "founding_problem": "During initial development and sales, a builder needed to promise early buyers that later neighbors could not degrade the streetscape the sales brochures depicted; the recorded covenant was that promise, made enforceable against every future purchaser before the neighborhood existed.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Land-use histories and court opinions trace these covenants to developer sales campaigns that sold uniform character ahead of build-out; document surveys show rulebooks expanding for decades after construction ended, which no sales-phase rationale covers. Legislative findings on fine and foreclosure practices and attorneys-general reports corroborate from outside the membership. Attestation comes from land-use scholars, courts, and state legislatures — no corroboration originates within the benefiting seats alone."
+  },
+  "gain_flow": "management_company",
+  "fixing_cost": "prohibitive",
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.65,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_location",
+      "question": "This story instantiates the behavioral_control_reading of the hoa_covenant_scope kernel; which structural elements would change under the sibling readings?",
+      "resolution_mechanism": "Compile and compare the sibling stories: the coordination_reading shrinks epsilon toward coordination cost and dissolves the speech-expression victim classes; the extraction_reading raises epsilon and relocates the receipt of gains toward the treasury-and-board axis. The disagreement is located in the covenant's legitimate scope — whether subjective aesthetic judgment and expression regulation fall inside the covenant's purpose.",
+      "impact": "Classification is stable only within this reading. A different reading of the same recorded text is a different constraint with its own epsilon, victim set, and type; no averaging across readings is licensed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-membership and sibling-delta record for the behavioral-control reading of hoa_covenant_scope."
+    },
+    {
+      "id": "price_premium_empirics",
+      "question": "Does enforced aesthetic uniformity actually command a measurable resale premium, or is the apparent premium an artifact of self-selection (buyers who prefer order sort into covenant communities regardless of enforcement)?",
+      "resolution_mechanism": "Hedonic pricing studies controlling for self-selection and comparing otherwise-similar covenant and non-covenant subdivisions, plus natural experiments where enforcement lapsed or was enjoined.",
+      "impact": "If no premium survives controls, the value-maximization justification collapses and the cover-story account of this reading strengthens; if a real premium exists, part of the measured burden is compensated by a genuine shared benefit and hybrid classification pressure appears.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the property-value rationale is empirically real or rhetorical."
+    },
+    {
+      "id": "internalized_conformity",
+      "question": "How much of nonconformist acquiescence is structural (fines, liens, foreclosure threat) versus internalized (households adopting the approved aesthetic as their own standard and self-policing)?",
+      "resolution_mechanism": "Post-exit trajectory: households that sell and move to unregulated neighborhoods — if conformity habits, self-censorship about displays, and discomfort with visible difference persist after the enforcement mechanism is gone, the internalized share is material.",
+      "impact": "An internalized component raises effective suppression above the structural measure and predicts persistence of conformity norms even where enforcement weakens or is preempted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized share of observed compliance."
+    },
+    {
+      "id": "preference_authenticity",
+      "question": "Is the conformist majority's preference for uniformity a genuine stable preference, or a produced one — norm cascade, fear of becoming a target, sunk compliance already spent repainting?",
+      "resolution_mechanism": "Revealed-preference comparison: owner behavior during enforcement lapses (board turnover, moratoria, enjoined fine schedules) versus stated survey preference during normal operation.",
+      "impact": "If the preference is produced, the beneficiary seats sit closer to symmetric than their declarations suggest, aggregate effective burden rises, and the majority-consent defense of the arrangement weakens.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Authenticity of the majority's conformity preference."
+    },
+    {
+      "id": "speech_preemption_trajectory",
+      "question": "Will statutory preemption (flag acts, political-sign protections, fine caps) keep amputating the expression-enforcement limb, or will associations migrate scope into unregulated domains (rental caps, vehicle rules, short-term lease bans)?",
+      "resolution_mechanism": "Track state legislative sessions and appellate outcomes over the coming decade; count new covenant amendments targeting domains not yet subject to preemption.",
+      "impact": "Continued preemption cuts suppression and epsilon at the speech margin and pressures the computed type toward a hybrid; successful scope migration holds the profile steady while relocating the victim class from sign-flyers to landlords and vehicle owners.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the expression-enforcement limb shrinks by statute or migrates to new domains."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A mature planned community operates under recorded covenants administered by an elected board and a contracted management company. Read through the behavioral-control lens, the covenant's operative work is enforcing aesthetic uniformity and behavioral conformity as a property-value strategy: architectural review reaches subjective judgments about color, landscaping, and 'harmony'; lifestyle rules cap rentals and restrict pets, vehicles, and occupancy; and expression rules bar or shrink yard signs, flags, and seasonal displays. Enforcement runs on violation letters, per-day fines, liens, and the standing possibility of foreclosure for unpaid balances. The arrangement is claimed here as a snare: the coordination story (protected values, community character) is the cover under which conformity is compelled, persistence depends on the fine-and-lien machinery, exits are contractually sealed, and the victims are nameable.\n\nKEY AGENTS (by structural relationship):\n- board_directors: agenda-setting seat (organized/constrained) — interprets vague standards, selects violations, sets fines; discretion spares aligned households\n- conformist_majority_homeowners: primary beneficiary (moderate/constrained) — enjoys uniformity assurance and hoped-for premium\n- board_aligned_homeowners: secondary beneficiary (moderate/constrained) — approvals resolve in their favor\n- nonconformist_homeowners: primary target (powerless/trapped) — fines, liens, compelled undoing of improvements\n- marginal_aesthetics_households: target with identity-staked expression (powerless/identity_locked)\n- political_speech_households: target with partial statutory shield (powerless/constrained)\n- prospective_renters: excluded voice (powerless/mobile) — barred by rental caps\n- management_company: administrative collector (moderate/arbitrage) — per-door and per-action fees\n- state_lawmakers_and_courts: analytical observer (institutional/analytical)",
+    "logic_rationale": "Extraction is authored at 0.46 — moderate in aggregate because the burden concentrates on a minority of households while the majority experiences the rules as cheap assurance; the engine's per-seat computation is where the concentration shows. Suppression is 0.65 and unscaled by design: it is the raw structural fact of contract-bound ownership, escalating fines, lien and foreclosure exposure, and supermajority amendment thresholds, with statutory carve-outs for flags and signs leaving deliberate leaks. Theater_ratio is 0.26 — enforcement here is real (notices issue, fines post, houses repaint), but a growing share of activity is defensive paper: standards manuals, newsletters celebrating harmony, award programs, and documentation trails built for litigation rather than for upkeep. Accessibility_collapse is 0.58: understanding the covenant does not fully close alternatives (selling, litigating, amending, statutory preemption all exist) but each is costly enough that most households comply instead. Resistance is 0.55: flag-statute litigation, sign cases, state preemption bills, board-recall attempts, and fine-payment refusals are a real and recurring counter-pressure. The temporal series run on one shared grid (points 0, 6, 12, 18, 24, 30) with every tracked metric authored at every point; the trajectories are a ratchet, not a cycle — enforcement capacity built stepwise (photographic violation documentation, per-day fine schedules, post-recession foreclosure practice) rather than oscillating, so no intermittent-reinforcement dynamic is claimed. Claim and metrics are independent authored facts: the snare claim states the structure as this reading sees it; the metrics describe observed operation; any divergence the engine computes is the datum, not an error to reconcile.",
+    "perspectival_gap": "From the conformist majority's seat the arrangement computes as light-touch mutual assurance among people who already agree; from the nonconformist and marginal-aesthetics seats the same recorded text computes as compulsion with no exit and a price on self-presentation; the board's seat sees legitimate self-government of a shared asset. Coalition potential for the powerless seats exists on paper — recall elections, class litigation, amendment campaigns — but collective-action costs (turnout apathy, fear of selective retaliation, confidential hearing outcomes, management-company control of the violation pipeline) keep the targets atomized, which is precisely what the enforcement machinery is positioned to exploit. The engine computes these divergent per-seat classifications from roles, exit options, and enforcement exposure; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Declared beneficiaries (conformist majority, board-aligned owners) sit near the subsidized end of the directionality range: the rules subsidize their preferences at little personal cost. Declared victims (nonconformists, marginal-aesthetics households, political-speech households) sit near the target end, with trapped and identity-locked exit pushing the first two further toward full-target than the statutorily-shielded speech households, whose constrained-but-real legal lever moderates their position. The board holds no beneficiary or victim declaration, so its derived position falls back to its power atom's default; the directionality override moves the organized atom toward the beneficiary end (d = 0.2) because discretionary enforcement systematically spares aligned households, board members' own properties included — the derivation chain cannot see that self-exemption from beneficiary declarations alone. The management company derives a low position from its beneficiary role; its per-action fee structure, which scales revenue with enforcement volume, is why it is not placed at the extreme subsidized end despite collecting from every enforcement event.",
+    "mandatrophy_analysis": "The founding mandate — a builder's sales-phase promise that future neighbors could not degrade the advertised streetscape — expired at build-out, yet the arrangement persisted by re-founding itself around conformity preference and value rhetoric. Keeping this reading as its own constraint prevents the classic laundering error: the genuine maintenance-and-externality coordination that would soften classification lives in the sibling coordination_reading's constraint, not here, so this story's epsilon stays clean for the conformity apparatus alone. The dead founding-problem status paired with a world_rearranges disappearance verdict is the expected signature of a repurposed mandate and routes to the capture/zombie check rather than being smoothed away; the classification resists both directions of mislabeling — it refuses to read the surviving maintenance function as exoneration, and it refuses to deny that real coordination exists somewhere in the family.",
+    "kernel_context": "One reading of the hoa_covenant_scope kernel: this file instantiates behavioral_control_reading — the covenant as an apparatus for aesthetic uniformity and behavioral conformity in service of property-value maximization. Sibling readings, each its own constraint file: coordination_reading (shared-infrastructure maintenance and externality resolution as the covenant's center) and extraction_reading (revenue generation and board power consolidation via fine proliferation and selective enforcement). The disagreement is located in the covenant's legitimate scope: whether subjective aesthetic judgment and expression regulation fall inside the covenant's purpose at all. Sibling deltas: the coordination reading would shrink epsilon toward coordination cost and dissolve the speech-expression victim classes; the extraction reading would raise epsilon and relocate the receipt of gains toward the treasury-and-board axis. This story hedges none of that — it authors one reading, one epsilon, one victim set."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__coordination_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the HOA covenant' decomposes into three structurally distinct constraints sharing one recorded kernel (hoa_covenant_scope): coordination_reading (maintenance and externality resolution; low epsilon, no expression victims), behavioral_control_reading (this file; conformity enforcement with subjective-aesthetic and speech scope; moderate epsilon, minority victim class), and extraction_reading (fine proliferation and board power consolidation; high epsilon, gains captured at the treasury-board axis). The upstream coordination claim is routinely cited as legitimation for the downstream behavioral and extraction operations, so contamination propagates from the coordination story outward. Each member links the others via network.affects_constraints; no story averages across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "aesthetic_conformity_charter",
+    "drift_state": {
+      "moment": "contemporary_post_buildout_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "extraction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "collective_aesthetic_authority_over_private_expression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "uniformity_maximizes_property_values",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

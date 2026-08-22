@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "7214359d-9409-4653-90df-71b9537a2f99"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.34,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.28,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Reciprocity Obligation — Copyleft as Commons Reading",
+    "topic_domain": "legal/technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_software_commons",
+      "gpl_project_maintainers",
+      "downstream_commercial_deployers"
+    ],
+    "victims": [
+      "proprietary_integration_firms",
+      "embedded_systems_vendors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "free_software_commons",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The pooled body of GPL-licensed source code and the communities that maintain it. Every compliant derivative returns its improvements to the pool; the pool grows and no participant can withdraw a piece of it into a closed product. Its continuation depends on the license terms holding across millions of lines contributed by thousands of hands."
+    },
+    {
+      "name": "gpl_project_maintainers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individual developers and small teams who accept patches, cut releases, and decide what enters projects such as the Linux kernel or GNU tools. They receive contributions they did not pay for and give away their own work on reciprocal terms. Leaving usually means abandoning a project they have invested years in and a community whose norms they share."
+    },
+    {
+      "name": "downstream_commercial_deployers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Companies that run GPL software in their infrastructure — web farms, build systems, backend services — without distributing modified binaries. They get industrial-grade shared infrastructure at zero license cost and carry compliance overhead: tracking provenance, honoring attribution, and restructuring products before any distribution triggers source-disclosure duties. Permissively licensed substitutes exist for many components but switching at scale is expensive."
+    },
+    {
+      "name": "proprietary_integration_firms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Firms that want to build closed products incorporating GPL components — shipping modified kernels, libraries, or toolchains inside proprietary appliances and applications. The license offers two doors: publish the derivative source, or forgo the code. For products already architected around GPL parts, unwinding to alternatives means re-engineering; taking the disclosure door can mean handing competitors their differentiation."
+    },
+    {
+      "name": "embedded_systems_vendors",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Manufacturers putting GPL code inside routers, televisions, vehicles, and industrial controllers. Their products ship binaries to customers, which activates the source-disclosure terms, and their industry practice historically favored withholding source. Compliance requires firmware rebuild pipelines and supplier negotiations; refusal invites infringement claims from enforcement organizations."
+    },
+    {
+      "name": "fsf_license_stewards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The Free Software Foundation, which authors the license texts, publishes interpretive guidance, and defines the movement's normative line. Its authority rests on continuity with the founding text and its author's tradition. It collects no fees; its return is the survival of the arrangement it designed and the continued relevance of its stewardship."
+    },
+    {
+      "name": "software_freedom_enforcers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Organizations such as the Software Freedom Conservancy and predecessor enforcement projects that investigate suspected violations, send compliance notices, and litigate when notices fail. They operate on donations, seek compliance rather than damages, and their docket is the visible edge of the license's enforcement."
+    },
+    {
+      "name": "embedded_device_end_users",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Owners of routers, smart TVs, and vehicles containing GPL code. The license grants them rights to the corresponding source, but they rarely know those rights exist, lack the technical means to assert them, and have no seat where compliance norms are negotiated between vendors and enforcement groups."
+    },
+    {
+      "name": "open_source_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic lawyers and economists who track license litigation, measure ecosystem composition, and debate whether reciprocity terms help or hinder adoption. They take no operational side and produce the external record the other seats cite."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the free-rider and enclosure problem for shared source code: improvements made to common infrastructure remain available to every contributor and downstream user, and no single participant can privatize collectively produced value while continuing to draw on the pool.",
+    "transfer_function": "Moves source-code rights and improvement disclosures from derivative-work builders — firms integrating GPL code into shipped products — to the commons and its downstream users; equivalently, it transfers the option value of closure from integrators to the public pool.",
+    "absent_voices": "Embedded-device end users hold license rights they cannot exercise and are absent from every venue where compliance norms are set; firms that quietly avoid GPL code altogether also never enter the conversation, so the obligation's costs are debated mainly by parties already inside it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reciprocity obligation vanished overnight, the existing pool would persist for a time, but new contributions would immediately fragment into proprietary forks: firms shipping GPL-derived kernels and toolchains would stop publishing source, competitors' access to improvements would close, and the infrastructure economy built on guaranteed future sharing would reorganize around permissive licenses with enclosure pressure unopposed.",
+    "founding_problem": "In the early 1980s, commercially developed software was rapidly becoming proprietary and users were losing the ability to study, modify, and share the programs they depended on. The arrangement was built to guarantee that improvements to freely shared software could never again be locked away by whoever got there first.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corporate compliance counsel outside the beneficiary set attest the obligation is real and binding — they build product-review processes around it; courts in Germany and settlement agreements in the United States have enforced it; academic IP scholarship corroborates both the enclosure-prevention record and the argument that cloud delivery has mutated the original problem faster than the license's trigger conditions track it. No attesting source is inside the benefiting parties alone."
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.34
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The GPL's reciprocity clause requires anyone who distributes a derivative of GPL-licensed code to license that derivative under the GPL and supply its source. This story instantiates ONE reading of that kernel — the commons reading — under which the clause is an institutional technology that prevents enclosure of a shared resource by making reciprocity the price of admission: the beneficiary is the commons as a continuing institution, and the cost-bearers are individual exit-maximizers who would otherwise appropriate improvements into closed products. The ε referent is the standing arrangement under contest — the reciprocity obligation as it actually operates — assessed by this reading's own lights, which judge the imposed cost real, deliberate, and a fair price for commons persistence; hence medium extractiveness, not negligible and not predatory. The sibling readings (copyleft_as_freedom_reading, copyleft_as_restriction_reading) instantiate different constraints with different beneficiary sets and ε values and are authored separately; they are linked, not averaged, here.\n\nKEY AGENTS (by structural relationship):\n- free_software_commons: Primary beneficiary (organized/constrained) — the pooled codebase whose persistence the obligation maintains\n- gpl_project_maintainers: Beneficiary-stewards (moderate/identity_locked) — receive and give contributions under the reciprocal terms\n- downstream_commercial_deployers: Net beneficiary with compliance costs (powerful/mobile) — symmetric position\n- proprietary_integration_firms: Primary target (powerful/constrained) — bears the closure-forfeiture cost\n- embedded_systems_vendors: Secondary target (organized/constrained) — the largest historical violation class\n- fsf_license_stewards: Agenda setter (institutional/identity_locked) — authors and interprets the license\n- software_freedom_enforcers: Enforcement arm (organized/identity_locked) — converts the license text into binding force\n- embedded_device_end_users: Excluded rights-holders (powerless/trapped) — hold unexercisable rights\n- open_source_legal_scholars: Analytical observer — produces the external record",
+    "logic_rationale": "Extraction is authored at 0.42 (medium, per the reading's own assessment): the obligation deliberately imposes asymmetric costs on firms seeking proprietary integration, and those costs are sometimes existential for small vendors, but they are avoidable ex ante — the constraint conditions entry rather than trapping occupants — and the reading judges them a fair admission price rather than rent. Suppression is 0.34: enforcement runs through copyright law and litigation, which is real but narrow, and alternatives (permissive-licensed code, clean-room reimplementation, negotiated commercial terms) remain open, so accessibility_collapse is low at 0.28. Resistance is 0.48: three decades of corporate friction, avoidance engineering, and compliance disputes, occasionally litigated. Theater is low (0.22) because the function demonstrably operates — major GPL pools remain unenclosed after decades — with a modest rhetorical surplus where movement rhetoric outruns enforcement reach. The temporal series share one grid (1991–2025, eight points, all three metrics at every point). Base extractiveness rises as industry adoption widens the bound population, peaks around 2011, then eases as dual-licensing and compliance routines normalize. The suppression_requirement series tracks enforcement-capacity history specifically: a quiet first decade, a ramp through the BusyBox-era litigation wave, a plateau, then a dip after the SFC v. Vizio standing setback raised doubts about US enforcement routes.",
+    "perspectival_gap": "The seats compute differently by construction. From the maintainer and commons seats, the obligation is the mechanism that keeps gifted work from being strip-mined — an experience near pure coordination. From the proprietary-integration seat, the same clause reads as confiscation of product strategy — an experience near pure extraction. The deployer seat sits between: genuine subsidy received, real compliance overhead paid. The engine derives these per-seat classifications from the power, exit, and beneficiary/victim data; the authored claim does not adjudicate among them. Inter-institutionally, the FSF and enforcement organizations experience the constraint as their life's work, while corporate legal departments experience it as an external tax on architecture decisions — same instrument, opposite phenomenology. Same-level lateral divergence appears between the two powerful firm classes: deployers (mobile exit, no distribution trigger fired) and integrators (constrained exit, trigger fired) face the identical license text from structurally different positions.",
+    "directionality_logic": "The commons sits nearest the beneficiary pole (d near 0.05): every compelled disclosure lands in the pool it constitutes. Maintainers sit low (d near 0.15): they receive the pool's protection directly. Deployers derive near-symmetric (d near 0.4): large subsidy received, real overhead borne, mobile exit. Integration firms and embedded vendors sit near the target pole (d near 0.8–0.85): they bear the transfer, and their constrained exits (architectural lock-in, re-engineering cost) push them toward full-target rather than mobile-target treatment. Stewards and enforcers derive moderately low (d near 0.2–0.25): they collect mission-relevance rather than rents. Excluded end users derive mildly beneficiary-leaning (d near 0.3) on paper but collect nothing while excluded — the gap between their derived position and their realized position is recorded in the commons_beneficiary_reification omega. No directionality overrides are used: the derivation chain distinguishes the two powerful firm classes through their exit options, which is exactly the axis on which they differ.",
+    "mandatrophy_analysis": "The founding problem — preventing lock-away of improvements to shared software — is contested, not dead: its original trigger (binary distribution) fires less often as delivery moves to cloud services, but the underlying appropriation pressure has mutated rather than disappeared, which is why AGPL exists. Because founding_problem_status is contested and disappearance_verdict is world_rearranges, the mismatch consumer finds no dead-mandate-plus-dependence signature; this is not a zombie arrangement. The classification discipline cuts both ways here: reading the obligation as pure coordination ignores that its asymmetry is deliberate and enforced — someone specific pays through the structure; reading it as pure extraction ignores that the paying class is defined by intent to appropriate and that a functioning, non-theatrical coordination outcome (unenclosed pools) is observable. Tangled rope is the honest claim from this seat, and the medium ε reflects the reading's judgment that the extracted cost is the price of the coordination rather than parasitic on it.",
+    "kernel_context": "This story instantiates the copyleft_as_commons_reading of the kernel gpl_reciprocity_obligation: the license clause understood as an institution-building technology that prevents commons enclosure through mandatory reciprocity. Sibling readings of the same kernel text are copyleft_as_freedom_reading (the clause preserves end-user freedoms against proprietary capture — beneficiary located in individual freedom-holders) and copyleft_as_restriction_reading (the clause constrains business models by prohibiting proprietary integration — beneficiary located nowhere in particular, victims broad). This reading coexists with the freedom reading — many actors hold both simultaneously, and neither premise eliminates the other within a single framework. Toward the restriction reading this reading stands in an influences relation: the commons reading supplies the mainstream legitimacy under which copyleft adoption decisions are made, and each adoption enlarges the surface on which the restriction reading registers grievances, changing its operating environment without resolving the dispute. The disagreement across readings is located in who counts as the beneficiary and whether the imposed reciprocity is a fair admission price or an imposition."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the kernel gpl_reciprocity_obligation — the commons reading, which locates the beneficiary in the commons as an institution and the cost-bearers in individual exit-maximizers. How would the sibling readings restructure the classification?",
+      "resolution_mechanism": "Author the sibling stories (copyleft_as_freedom_reading, copyleft_as_restriction_reading) and compare computed types: the freedom reading shifts the beneficiary to holders of user freedoms and narrows victims to freedom-diminishing distributors; the restriction reading raises epsilon and widens the victim class to bound business models generally.",
+      "impact": "If the freedom reading dominates, the obligation computes closer to a defended coordination norm with weaker measured extraction; if the restriction reading dominates, it computes as substantially extractive with a broad victim class. The disagreement is located in beneficiary identification and in whether mandatory reciprocity is a fair admission price or an imposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the GPL reciprocity kernel governs the beneficiary/victim structure and epsilon."
+    },
+    {
+      "id": "counterfactual_enclosure_threat",
+      "question": "Would the shared codebase actually have been enclosed absent the reciprocity obligation — is mandatory reciprocity load-bearing, or would permissive licensing have preserved an open pool anyway?",
+      "resolution_mechanism": "Compare long-run trajectories of permissive-licensed pools (BSD Unix lineage, Apache, Chromium) for enclosure episodes against copyleft pools; test whether closure attempts correlate with the absence of reciprocal terms.",
+      "impact": "If permissive commons survived comparably, part of the measured extraction is unjustified overhead and the reading's fairness claim weakens; if permissive pools show systematic capture, the obligation is the load-bearing wall and its extraction is the price of persistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the enclosure threat the obligation answers is real or counterfactual."
+    },
+    {
+      "id": "commons_beneficiary_reification",
+      "question": "Does the commons as an institution actually collect the gains, or do the gains pass through to identifiable persons and firms — making 'the commons' a reification of diffuse individual benefit?",
+      "resolution_mechanism": "Trace compelled disclosures to incorporation: who builds returned source into products and captures the resulting savings; measure whether any seat captures disproportionate rents versus universal diffusion.",
+      "impact": "If gains diffuse universally with no capturing seat, receipt behaves as diffuse despite the institutional beneficiary framing, altering capture and piton-side analysis; if specific ecosystems capture disproportionate gains, the arrangement tilts toward managed extraction with an identifiable accruer.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the declared institutional beneficiary is a real collector or a reification."
+    },
+    {
+      "id": "steward_identity_lock",
+      "question": "How much of the enforcement apparatus's persistence rests on internalized ideological identity — career and self-concept fused with free-software stewardship — rather than on structural incentive?",
+      "resolution_mechanism": "Observe enforcement capacity through leadership transitions and funding shocks (the post-2019 FSF controversy, SFC fundraising cycles): if activity persists through personnel turnover the mechanism is structural; if it decays with cohorts, it is identity-carried.",
+      "impact": "If identity-carried, part of the measured suppression is internalized rather than structural, the constraint's coercive surface is thinner than litigation counts suggest, and classification becomes sensitive to steward attrition events.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized basis of enforcement persistence."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyleft_as_freedom_reading",
+      "copyleft_as_restriction_reading"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the colloquial label 'GPL viral licensing' per the epsilon-invariance principle. The single natural-language concept covers three structurally distinct claims: (1) this story — the clause as commons-protecting institutional technology, beneficiary = the commons as institution, victims = exit-maximizing integrators, medium epsilon; (2) copyleft_as_freedom_reading — the clause as a guarantee of end-user freedoms, beneficiary = freedom-holders, different victim set; (3) copyleft_as_restriction_reading — the clause as a business-model prohibition, elevated epsilon, broad victim class. Each member carries its own epsilon, beneficiaries, and victims; the family is linked through network.affects_constraints in all three files. The upstream member (this reading, highest adoption legitimacy) influences the environment in which the restriction reading registers its grievances."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "reciprocity_conditioned_commons",
+    "drift_state": {
+      "moment": "contemporary_cloud_delivery_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "copyleft_as_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_as_restriction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "commons_survival_requires_reciprocity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "enclosure_is_default_failure_mode",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "free_software_commons",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-13",
+    "status": "ACTIVE",
+    "story_uid": "1e8e7026-b587-44cf-a65b-b76fece8f9cd"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Regulated Drug Commerce Regime (Legalization Reading)",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "licensed_producers",
+      "state_treasury",
+      "public_health_systems",
+      "adult_consumers"
+    ],
+    "victims": [
+      "unlicensed_suppliers",
+      "users_exceeding_access_limits"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_regulatory_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes and revises the licensing rules, product-testing standards, purchase limits, and inspection schedules; runs the enforcement arm that raids unlicensed operations and penalizes over-limit sales. Funded through licensing fees and legislative appropriations. Cannot drop the mandate or rewrite its own authority without new legislation."
+    },
+    {
+      "name": "state_treasury",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives excise tax receipts and licensing fees deposited into designated funds. After the first budgets are built on these revenues, the streams become line items that programs depend on; eliminating them would require replacing general-fund money."
+    },
+    {
+      "name": "licensed_producers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hold permits to cultivate, process, and sell; gain court-enforceable protection against unlicensed competitors and access to banking and contracts unavailable to unlicensed operators. Bear testing, tracking, and facility-compliance costs. Can relocate operations across jurisdictions or convert facilities to other uses."
+    },
+    {
+      "name": "adult_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Buy tested, labeled products at licensed shops within possession and purchase caps. Pay excise taxes and compliance-inflated retail prices. May shift some purchases to unlicensed sellers at lower prices and some legal risk."
+    },
+    {
+      "name": "unlicensed_suppliers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Grow or sell outside the permit system. Subject to raid, asset forfeiture, and prosecution; prior convictions and capital requirements commonly bar them from licensure. Their equipment, product, and customer relationships are tied up in the unlicensed trade."
+    },
+    {
+      "name": "users_exceeding_access_limits",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Consume in amounts or settings beyond purchase caps and public-use rules; face civil fines and, for repeat distribution-scale possession, charges. Dependence narrows their practical alternatives regardless of what the rules allow."
+    },
+    {
+      "name": "public_health_systems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive earmarked tax allocations for treatment and prevention, and gain incident reports tied to tested products. Carry the treatment caseload that follows whatever use levels the market settles at."
+    },
+    {
+      "name": "small_market_entrants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would open cultivation or retail operations but face application fees, capital requirements, and license caps that price them out; rule-setting consultations are attended by established license holders."
+    },
+    {
+      "name": "civil_liberties_monitors",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Track the surveillance infrastructure the commerce rules ride on — purchase registries, seed-to-sale tracking, advertising limits — and publish assessments of penalty structures and data-sharing practices."
+    },
+    {
+      "name": "treaty_oversight_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Monitor whether the regulated-commerce scheme stays within international drug-control conventions that presume restriction; issue formal objections and request explanations when signatory states widen lawful supply."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves product-safety and market-order problems that unregulated commerce cannot: standardized contaminant testing and labeling, age verification at point of sale, traceable supply chains enabling recalls, and a single collection point for excise revenue.",
+    "transfer_function": "Moves money from consumers to the treasury via excise taxes and licensing fees, and market share from unlicensed sellers to licensed firms; moves enforcement costs onto unlicensed operators through forfeiture and prosecution.",
+    "absent_voices": "Unlicensed suppliers and purchasers beyond legal caps have no seat in rule-setting; people incarcerated under the prior restrictive regime rarely participate in designing the successor arrangement; advocates of unrestricted access are consulted marginally. Their objections surface mainly through litigation and elections.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Drug commerce would continue overnight but reorganize entirely: quality testing and recalls would stop, tax streams funding treatment and inspection would end, licensed firms would lose enforceable market protection, and the enforcement apparatus would lose its object — every seat's arrangements depend on the scheme persisting in something like its current form.",
+    "founding_problem": "Unregulated drug commerce produced adulterated and mislabeled products, poisonings from unknown potency, and violent disputes over untaxed market share; the arrangement was built to move that commerce into inspectable, taxable, age-gated channels.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public-health surveillance outside the benefiting parties corroborates the problem: contaminant recalls and poisoning reports from unregulated supply persist wherever unlicensed channels operate, and independent market research documents the quality variance. Prohibition advocates dispute whether this arrangement solves the problem, but they corroborate that the underlying hazard exists."
+  },
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A state operates drug markets as lawful commerce under a licensing, testing, and taxation regime: producers and retailers operate by permit, products carry testing and labeling requirements, sales are age-gated and quantity-capped, and an enforcement arm prosecutes supply outside the permit system. This story instantiates ONE reading of the substance_control_authority kernel — the legalization_reading, under which the state's authority runs through market regulation rather than criminal sanction or purely clinical management. The epsilon referent is the standing legalized-and-regulated arrangement itself, assessed as it operates (including its taxes, licensing barriers, and enforcement against unlicensed supply), not the arrangement any sibling reading would install. Sibling readings are separate constraints with their own victim sets and epsilon values; see commentary.kernel_context and network.dual_formulation_note.\n\nKEY AGENTS (by structural relationship):\n- state_regulatory_agency: agenda setter (institutional/constrained) — administers licensing, testing standards, and enforcement\n- state_treasury: primary beneficiary (institutional/constrained) — collects excise and fee receipts\n- licensed_producers: beneficiary (powerful/mobile) — protected legal market access\n- adult_consumers: beneficiary/payer (moderate/constrained) — legal access against taxed prices\n- unlicensed_suppliers: primary target (organized/trapped) — bears enforcement, forfeiture, prosecution\n- users_exceeding_access_limits: secondary target (powerless/trapped) — penalized beyond caps\n- public_health_systems: secondary beneficiary (institutional/constrained) — earmarked funding, incident data\n- small_market_entrants: excluded (moderate/constrained) — priced out of licensure, absent from rule-setting\n- civil_liberties_monitors: analytical observer (organized/analytical)\n- treaty_oversight_bodies: inter-institutional observer (institutional/analytical)",
+    "logic_rationale": "Extraction sits at 0.62 at interval end: excise schedules ratchet upward once budgets depend on them, licensing fees rise with demand for permits, and compliance costs function as entry barriers — while the regime also delivers real testing, recall, and age-gating services. Suppression (0.55) is a raw structural property, unscaled by power or scope: it reflects the standing enforcement machinery aimed at unlicensed supply and over-limit possession, not participant preference; only extractiveness is scaled by directionality and scope downstream. Theater (0.30) tracks the growth of compliance paperwork relative to core quality functions. Accessibility_collapse (0.45): alternatives do not fully collapse — unlicensed channels and home cultivation persist — but the licensed channel captures majority share. Resistance (0.45): illicit operators resist enforcement, consumers resist via tax-driven arbitrage back to street supply, and civil-liberties monitors contest the surveillance layer. All three tracked metrics run on one shared seven-point grid (T=0..12) so temporal reads sample complete rows; the rising suppression_requirement series traces enforcement hardening against the persisting illicit channel, not a static picture.",
+    "perspectival_gap": "From the treasury and regulatory-agency seats the scheme computes as functioning coordination they administer and fund programs from; from the unlicensed-supplier seat the same statutes compute as pure enforcement with no coordination benefit reaching them; the adult-consumer seat straddles — tested products and legal access against taxed prices and purchase caps. The engine derives these per-seat classifications from the declared roles, power atoms, and exit options; the divergence between the administrator's view and the enforced-against view is the measurement, not an inconsistency to reconcile.",
+    "directionality_logic": "Beneficiary declarations (licensed_producers, state_treasury, public_health_systems, adult_consumers) place those seats near the subsidized end; victim declarations (unlicensed_suppliers, users_exceeding_access_limits) place those seats near the full-target end, amplified by trapped exit. adult_consumers carry a secondary payer role — their derived d sits nearer symmetric than a pure beneficiary's, reflecting taxed prices. No directionality overrides are authored: the beneficiary/victim declarations plus exit atoms already differentiate every seat the derivation needs to distinguish; the one borderline case (public_health_systems, which also carries the treatment load) stays close enough to its derived value that an override would add noise rather than signal.",
+    "mandatrophy_analysis": "The founding problem — hazardous unregulated supply — remains live, so no mandatrophy declaration is authored and the R5 mismatch consumer finds status=live paired with verdict=world_rearranges: no zombie flag. The tangled-rope claim keeps both halves visible: reading the scheme as pure rope would erase the enforcement victims and the revenue-maximizing tax drift visible in the measurement series; reading it as pure snare would erase the load-bearing testing, recall, and age-gating functions that unregulated commerce lacks. The classification prevents both mislabels.",
+    "kernel_context": "Kernel: substance_control_authority — the state's claimed authority over psychoactive substance markets. This file instantiates the legalization_reading: authority exercised as regulation of lawful commerce with quality and access controls. Sibling readings, authored as separate constraints: the prohibition_reading (authority exercised as criminal sanction on use and possession; users constitute the victim set) and the harm_reduction_reading (authority exercised as acceptance of use with clinical harm-minimization; no market-regulation layer). The disagreement is located in the mechanism of authority and therefore in who counts as harmed: this reading's victim set is unlicensed suppliers and cap-exceeding users, not users as such. A party adopting this reading is not logically committed to rejecting prohibition for every substance (scheduling regimes mix modes by substance), hence coexists_with toward prohibition_reading; adoption does reshape harm reduction's operating environment by removing criminal status and redirecting its funding base, hence influences toward harm_reduction_reading."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'drug policy' conflates three structurally distinct claims about state authority over substance markets. Per the epsilon-invariance principle they are authored as a three-story family sharing the substance_control_authority kernel: prohibition_reading (criminalization; epsilon assessed over the criminal-sanction arrangement), legalization_reading (this file; epsilon assessed over the regulated-commerce arrangement), and harm_reduction_reading (clinical management; epsilon assessed over the public-health arrangement). Each story links the others via network.affects_constraints; the upstream/downstream ordering among them is empirical, as each reading cites the others' failure modes as evidence for its own."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "reference_frame": "drugs_as_regulable_commerce",
+    "drift_state": {
+      "moment": "post_implementation_review",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "regulated_lawful_commerce_superior_to_criminalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "qualified_adult_access_entitlement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading of the substance_control_authority kernel — does classifying it independently of the prohibition and harm_reduction readings misrepresent the contested structure?",
+      "resolution_mechanism": "Cross-reading comparison: compile all three sibling stories and compare computed types, victim sets, and effective extraction; divergence confirms the readings are distinct constraints rather than one constraint viewed differently.",
+      "impact": "If the three readings collapse into one computable structure, the kernel needs re-decomposition; if they diverge as expected (users as criminals vs users as customers vs users as patients), each reading stands alone with its own stable epsilon.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one-of-three readings; sibling readings would replace the victim set and the mechanism of authority entirely."
+    },
+    {
+      "id": "illicit_market_persistence",
+      "question": "Does regulated legal commerce actually eliminate illegal supply, or do taxation and compliance costs sustain a parallel illicit channel?",
+      "resolution_mechanism": "Longitudinal price-gap analysis between licensed and street channels, seizure volumes, and licensed-market share surveys across the interval.",
+      "impact": "If illicit supply persists at scale, the regime retains an ongoing enforcement target set and its coordination claim weakens toward entrenchment; if illicit share collapses, the victim set shrinks toward historical residue and the reading's elimination premise is vindicated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the illegal-markets-eliminated premise of this reading holds in operation."
+    },
+    {
+      "id": "use_volume_response",
+      "question": "How much does legal access increase population-level use and dependence, and does that shift the third-party protection burden this reading claims to carry?",
+      "resolution_mechanism": "Pre/post epidemiological cohorts tracking prevalence, dependence incidence, and treatment admissions against comparable non-legalizing jurisdictions.",
+      "impact": "Large use-volume increases would tighten access-control calibration, justify higher extraction framed as deterrence, and strengthen sibling readings' critiques; negligible increases would stabilize the commerce frame.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Use-volume elasticity of the access-control settlement."
+    },
+    {
+      "id": "licensing_concentration_capture",
+      "question": "Do licensing cost structures and market caps concentrate the industry into incumbents who then capture the rule-setter?",
+      "resolution_mechanism": "Market concentration indices, license-transfer records, and lobbying-expenditure analysis correlated against rule amendments.",
+      "impact": "Captured rule-setting would push the regime toward snare characteristics for excluded entrants and justify directionality overrides raising licensed_producers' d above its derived value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incumbent-capture trajectory of the licensing architecture."
+    },
+    {
+      "id": "tax_calibration_referent",
+      "question": "Are excise rates calibrated to externality costs (the quality/access-control logic) or to revenue maximization (the extraction logic)?",
+      "resolution_mechanism": "Fiscal records correlating rate schedules with revenue targets versus actuarial externality estimates; legislative history of rate amendments.",
+      "impact": "Revenue-maximizing rates confirm the extraction component is deliberate rather than incidental, supporting the tangled-rope asymmetry; externality-calibrated rates would support a purer coordination reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Referent of the tax schedule: externality pricing or revenue capture."
+    }
+  ],
+  "gain_flow": "state_treasury",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__sovereignty_guarantor_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_eu_council_unanimity__sovereignty_guarantor_reading",
+    "measurement_id_prefix": "eu_council_unanimity_sg",
+    "story_uid": "44c8c792-3596-46c8-a6b9-6e1c0a468d77",
+    "created_at": "2026-08-05T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "EU Council Unanimity as Sovereignty Guarantor",
+    "topic_domain": "political/economic/institutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "small_member_states",
+      "medium_member_states"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "sovereign_equality_principle",
+      "consent_based_governance",
+      "subsidiarity_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disagreement",
+      "question": "Is EU Council unanimity a sovereignty guarantor (this reading), a diplomatic capital mechanism, or a veto trap enabling minoritarian extraction?",
+      "resolution_mechanism": "Track veto usage patterns: if vetoes correlate with sovereignty-implicated domains and small-state protection, this reading holds; if vetoes cluster on narrow economic interests with side-payments, veto_trap_reading gains support; if vetoes trigger iterative negotiation that improves policy quality, diplomatic_capital_reading gains support.",
+      "impact": "Determines whether the constraint's ε is moderate coordination cost (this reading ~0.35), higher with extractive component (veto_trap_reading ~0.6), or lower with legitimacy dividend (diplomatic_capital_reading ~0.25). Classification shifts between rope, tangled_rope, and mountain-adjacent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural disagreement across the three readings of the eu_council_unanimity kernel."
+    },
+    {
+      "id": "coordination_cost_vs_extraction_boundary",
+      "question": "Are the transaction costs of unanimity (delay, lowest-common-denominator outcomes) inherent coordination overhead or evidence of extractive structure?",
+      "resolution_mechanism": "Compare policy domains: sovereignty-implicated areas (tax, foreign policy, treaty change) should show high coordination cost but low extraction if this reading is correct; economic regulation domains should show different patterns if veto_trap_reading captures the structure.",
+      "impact": "If coordination costs are separable from extraction, this reading's ε remains moderate; if inseparable, the constraint may be tangled_rope with coordination function masking extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the costs of unanimity are genuine coordination overhead or contain an extractive component."
+    },
+    {
+      "id": "small_state_coalition_power",
+      "question": "Do small states actually exercise collective blocking power, or is their 'protection' theoretical given great power agenda-setting?",
+      "resolution_mechanism": "Analyze voting records and negotiation outcomes: do small states successfully block or modify sovereignty-implicated proposals, or do they concede under great power pressure?",
+      "impact": "If small states effectively exercise veto, beneficiary declaration is validated and this reading's rope classification holds; if vetoes are theoretical, the constraint may be snare or piton for small states.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the declared beneficiaries (small/medium states) actually benefit from the unanimity rule in practice."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.25,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the sovereignty_guarantor_reading of the eu_council_unanimity kernel. Under this reading, unanimity in the European Council (and Council of Ministers for sensitive domains) is a foundational protection against majoritarian coercion: each member state must consent to collective action that implicates core sovereignty (taxation, foreign policy, treaty change, constitutional architecture). The constraint coordinates by ensuring no state is bound by decisions it has not authorized; it extracts only the transaction costs of consensus-building (delay, negotiation overhead, suboptimal compromise), not systematic rents. Veto use is framed as legitimate rights-exercise, not obstruction. The beneficiary set is all states, with small and medium states as primary beneficiaries because they lack alternative leverage against majoritarian coalitions of large states. The veto_trap_reading and diplomatic_capital_reading are sibling constraints — distinct structural claims about the same institutional rule — not alternative perspectives on this constraint.",
+    "key_agents": [
+      "small_member_states: Primary beneficiary (moderate/constrained) — protected from majoritarian imposition on sovereignty",
+      "medium_member_states: Beneficiary (moderate/constrained) — same structural position as small states but with greater diplomatic capacity",
+      "large_member_states: Payer/coordinator (powerful/mobile) — bear coordination costs of consensus-building, constrained by need for unanimity",
+      "european_commission: Agenda setter (institutional/arbitrage) — proposes legislation but cannot override Council unanimity requirement",
+      "european_parliament: Excluded observer (institutional/analytical) — co-legislator in ordinary procedure but no formal role in unanimity domains",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure across readings"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.35) because the constraint imposes real coordination costs: negotiation time, lowest-common-denominator outcomes, and policy gridlock on sovereignty-implicated domains. These are genuine coordination overhead, not extraction — no party systematically collects rents from the unanimity requirement. Suppression is low (0.25) because the constraint does not coerce compliance; it requires consent. States that object are not suppressed — their objection blocks the action. Theater ratio is low (0.15) because the unanimity rule is genuinely invoked and respected, not performatively maintained. Accessibility collapse is moderate (0.45): alternatives (qualified majority voting) exist for many domains but are structurally blocked for sovereignty-implicated areas by treaty design. Resistance is moderate (0.40): large states periodically push for QMV expansion, but treaty change itself requires unanimity, creating a self-reinforcing structure.",
+    "perspectival_gap": "From the small/medium state seat, the constraint is a protective mountain — without it, they would be subject to majoritarian coercion. From the large state seat, it is a rope with rising coordination costs as the Union expands — they pay in delayed action and compromised policy. From the Commission seat, it is a scaffold-like constraint: a coordination mechanism that complicates the legislative agenda but legitimizes the Union's authority. The engine computes these divergences from the structural data; this reading's claim (rope) reflects the coordination-cost-weighted average.",
+    "directionality_logic": "Small and medium states are declared beneficiaries because the unanimity rule structurally protects their sovereignty from majoritarian coalitions — they gain the right to consent/block. Large states are payers in the coordination sense: they bear the cost of negotiating consensus rather than imposing majority will, but they also benefit from the Union's cohesion (secondary beneficiary role). The Commission is agenda_setter: it proposes but cannot force adoption. The Parliament is excluded from unanimity domains — it would object to its marginalization but has no formal standing there. Exit options: small/medium states are constrained (treaty exit is Article 50, politically costly); large states are mobile (they could pursue intergovernmental alternatives outside EU framework); Commission has arbitrage (can shift agenda to QMV domains).",
+    "mandatrophy_analysis": "The founding problem — preventing majoritarian coercion in a union of sovereign states — remains live (founding_problem_status: contested). Large states argue the problem is solved by democratic legitimacy of QMV; small states argue the threat persists. Corroboration comes from outside beneficiaries: treaty law scholars, small-state diplomatic corps, and constitutional courts have attested the continuing necessity. The constraint is not mandatrophic: its protective function is actively invoked (vetoes on tax, foreign policy, treaty change), not atrophied. Theatricality is low because the constraint's operation is substantive, not performative.",
+    "kernel_context": "This constraint is the sovereignty_guarantor_reading of the eu_council_unanimity kernel. Sibling readings: veto_trap_reading (unanimity as structural vulnerability enabling minoritarian extraction through credible blocking threats) and diplomatic_capital_reading (unanimity as consensus-building requirement that forces iterative negotiation and strengthens policy legitimacy). This reading asserts veto use is legitimate sovereignty defense; beneficiary set = all small/medium states; no systematic extraction — blocking is rights-exercise. ε moderate (~0.35) because coordination costs exist but no systematic extraction occurs."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_qualified_majority_voting_expansion",
+      "eu_treaty_change_procedure",
+      "eu_enhanced_cooperation_mechanism"
+    ],
+    "dual_formulation_note": "Part of eu_council_unanimity constraint family (kernel decomposition). This reading (sovereignty_guarantor_reading) asserts moderate coordination cost, no extraction. veto_trap_reading asserts higher ε with extractive component. diplomatic_capital_reading asserts lower ε with legitimacy dividend. The three readings share the same institutional rule but instantiate structurally distinct constraints with different ε, beneficiary/victim structures, and types. Linked via network.affects_constraints to downstream constraints that depend on unanimity domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "small_member_states",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "States with populations under 10M (e.g., Malta, Luxembourg, Estonia, Latvia, Slovenia). Unanimity gives them a veto on sovereignty-implicated domains (tax, foreign policy, treaty change) that they would lose under QMV. They lack the economic weight or diplomatic networks to shape outcomes through influence alone. Exit via Article 50 is legally possible but politically and economically prohibitive. They use the veto sparingly but credibly — the threat structures negotiations even when not exercised."
+    },
+    {
+      "name": "medium_member_states",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "States with populations 10-30M (e.g., Netherlands, Belgium, Sweden, Austria, Portugal, Greece, Ireland). Same structural protection as small states but with greater diplomatic capacity to build coalitions and shape agendas. They benefit from unanimity but can sometimes achieve aims through QMV coalition-building. More likely to exercise veto as strategic leverage than pure defense. Exit cost similar to small states."
+    },
+    {
+      "name": "large_member_states",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "France, Germany, Italy, Spain, Poland. Bear the coordination costs of unanimity: prolonged negotiations, watered-down proposals, inability to advance integration in sovereignty domains. They have alternative leverage (economic weight, bilateral channels, intergovernmental formats) and could pursue integration outside EU treaties (mobile exit). But they also benefit from the Union's legal unity and single market — unanimity protects the framework they depend on. Secondary beneficiary role reflects this dual position."
+    },
+    {
+      "name": "european_commission",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Proposes legislation and guards the treaties. In unanimity domains, it must build consensus before proposing; its agenda-setting power is constrained by the veto threat. It can shift work to QMV domains (arbitrage) and uses 'package deals' to link unanimity and QMV items. Does not collect extraction from unanimity — its interest is legislative throughput and treaty fidelity."
+    },
+    {
+      "name": "european_parliament",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Co-legislator under ordinary legislative procedure (QMV), but has only consultative role in unanimity domains (tax, foreign policy, treaty change). Would object to marginalization but has no formal blocking power. Its influence is informal: shaping narratives, building public pressure, threatening institutional conflict. Exit is constrained — it is an EU institution with no external platform."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structure across all three readings. Observes that veto use is rare but structuring; that small states do not systematically extract side-payments; that coordination costs are real but not extractive; that the constraint's persistence depends on treaty-embedded self-reinforcement (unanimity required to change unanimity)."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Prevents majoritarian coercion in a union of formally sovereign states by requiring consent for collective action that implicates core sovereignty (taxation, foreign policy, treaty change, constitutional architecture). Solves the credible commitment problem: small states join and remain only if they cannot be outvoted on existential domains.",
+    "transfer_function": "Moves policy autonomy from large-state coalitions to individual member states — each state retains a veto on sovereignty-implicated decisions. The 'transfer' is negative: it blocks the transfer of authority that QMV would effect. Coordination costs (delay, compromise) are distributed across all participants; no party receives a concentrated gain.",
+    "absent_voices": "Citizens of member states — especially in large states — who would prefer faster integration and democratic majoritarianism but have no direct vote on Council voting rules. Subnational regions (Catalonia, Scotland, Flanders) that might seek distinct representation but are excluded by the state-centric design. Future generations who inherit the coordination costs of gridlock.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unanimity vanished overnight, QMV would immediately apply to tax, foreign policy, and treaty change. Large-state coalitions could impose fiscal harmonization, common foreign policy positions, and treaty revisions without small-state consent. Small states would lose their structural protection; the Union's character would shift from a union of sovereign states to a majoritarian federation. Several small states might trigger Article 50. The institutional equilibrium would fundamentally rearrange.",
+    "founding_problem": "The founding problem (1957-1992, from Treaty of Rome through Maastricht) was creating a European union that respects the sovereign equality of member states while enabling collective action. Unanimity was the mechanism that made the original Six — and every subsequent accession cohort — willing to pool sovereignty: no state would be bound on core sovereign domains without its consent. The problem was credible commitment to non-coercion.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Small-state diplomatic corps and constitutional courts (e.g., German Constitutional Court's Lisbon judgment, Irish Supreme Court's Crotty judgment) attest the problem remains live: majoritarian coercion is a structural risk in any union with power asymmetries. Large-state governments and federalist scholars attest the problem is substantially solved: QMV with qualified majorities and democratic legitimacy (EP co-decision) provides sufficient protection. Treaty law scholars (Craig, de Búrca, Klamert) corroborate from outside the beneficiary set that the unanimity rule's protective function is actively invoked in practice (vetoes on tax directives, foreign policy positions, treaty change ratification), not atrophied."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "eu_treaty_framework"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "veto_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diplomatic_capital_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereign_consent_required_for_sovereignty_implicated_action",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unanimity_as_non_derogable_structural_guarantee",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "westphalian_sovereign_equality_in_union",
+    "drift_state": {
+      "moment": "post_lisbon_expansion_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

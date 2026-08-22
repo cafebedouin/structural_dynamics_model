@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_governance_priority__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ai_risk_existential",
+    "story_uid": "bc342807-78e1-471e-831c-fbac88afd1e9"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.45,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Existential Risk Governance Priority",
+    "topic_domain": "technology/governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "x_risk_research_institutions",
+      "ai_labs_claiming_safety_leadership",
+      "alignment_research_community"
+    ],
+    "victims": [
+      "present_harm_mitigation_communities",
+      "marginalized_populations_affected_by_ai",
+      "near_term_ai_ethics_researchers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the ai_risk_governance_priority kernel, and how does it structurally differ from near_term_harms_reading and bridge_reading?",
+      "resolution_mechanism": "Comparative constraint decomposition: each reading must instantiate its own ε, beneficiary/victim structure, and coordination/transfer functions. The kernel_id and reading_id are authoritative for this reading; sibling readings are separate constraint files.",
+      "impact": "If the readings cannot be cleanly decomposed into structurally distinct constraints with stable ε values, the kernel itself is underspecified and the contest is semantic, not structural.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Validates the ε-invariance decomposition of the AI risk governance kernel into three readings"
+    },
+    {
+      "id": "speculative_vs_present_extraction_balance",
+      "question": "Does the high ε on speculative capabilities and low ε on present algorithmic bias reflect the constraint's actual operation, or does it encode the reading's prioritization as a structural fact?",
+      "resolution_mechanism": "Track resource allocation in AI governance funding, policy attention, and research output over time. Compare the share flowing to existential risk frameworks vs. present harm mitigation.",
+      "impact": "If present-harm mitigation is structurally suppressed (suppression rising) rather than merely under-resourced, the constraint operates as a snare for near-term victims. If both receive sustained investment, the bridge_reading's claim of non-mutual-exclusion is structurally vindicated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the extraction profile reflects genuine capability uncertainty or reading-constituted prioritization"
+    },
+    {
+      "id": "future_humanity_victim_operationalization",
+      "question": "Can 'all future humanity' function as a victim group in the engine's directionality derivation, or does the absence of present-day representatives make the victim declaration analytically inert?",
+      "resolution_mechanism": "The engine derives directionality from beneficiary/victim declarations + power + exit. A victim group with no present-day agents, no exit options, and no resistance capacity may not register in the computation. Test by adding a proxy stakeholder (e.g., 'future_generation_representatives') with appropriate exit/power.",
+      "impact": "If the victim declaration does not drive χ amplification for any seat, the constraint's extractive structure is invisible to the classifier — the reading's core moral claim has no structural purchase.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether intergenerational victim declarations can operate in the directionality machinery"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'existential_risk_reading' of the ai_risk_governance_priority kernel. It claims that AI governance must prioritize preventing superintelligence scenarios that could annihilate or permanently curtail humanity's potential. The reading establishes a victim set of all future humanity and beneficiaries including x-risk research institutions and AI labs that claim safety leadership. The constraint operates by directing governance resources, research funding, and policy attention toward alignment-as-control, adversarial testing, and AGI governance frameworks — with correspondingly less resource flow to present algorithmic bias, misinformation, labor displacement, and surveillance harms affecting marginalized populations now. The claimed_type is tangled_rope because the reading posits a genuine coordination function (solving the alignment problem for superintelligent systems) while simultaneously extracting from near-term harm mitigation communities through resource displacement and narrative marginalization. Active enforcement is required because the prioritization must be maintained against competing governance frames.",
+    "logic_rationale": "Extractiveness (0.68) reflects the reading's structural displacement of present-harm mitigation: funding, talent, and policy bandwidth flow to speculative capabilities research while demonstrated harms to existing populations receive less. The ε referent is the standing arrangement of AI governance prioritization as this reading sees it — not the reading's endorsed alternative. Suppression (0.45) is moderate because the constraint operates through agenda-setting and resource allocation rather than direct coercion, but the marginalization of near-term harm voices in governance forums constitutes real structural suppression. Theater ratio (0.32) captures the gap between the reading's stated coordination goal (preventing existential catastrophe) and the growing performative infrastructure of 'AI safety' branding by labs that simultaneously accelerate capabilities. Accessibility collapse (0.42) and resistance (0.58) reflect that alternative governance frames (near-term harms, bridge) remain live and contested — the constraint has not naturalized.",
+    "perspectival_gap": "From the x-risk research seat, the constraint is genuine coordination against a civilization-scale threat — the alignment problem is the central technical challenge. From the present-harm mitigation seat, the same structure operates as extraction: their demonstrated harms are deferred, their communities under-resourced, their epistemic authority displaced by a speculative frame. The AI lab seat experiences both: it gains legitimacy and regulatory cover from safety leadership claims while the constraint's enforcement (adversarial testing, governance frameworks) is calibrated to not impede capabilities progress. The engine will compute per-seat types from these structural positions.",
+    "directionality_logic": "Beneficiaries: x_risk_research_institutions (collect funding, talent, policy access), ai_labs_claiming_safety_leadership (gain regulatory goodwill, recruitment advantage, narrative control), alignment_research_community (field definition, resource concentration). Victims: present_harm_mitigation_communities (bear resource displacement, epistemic marginalization), marginalized_populations_affected_by_ai (harms deferred as 'less important' than speculative risks), near_term_ai_ethics_researchers (field displacement, funding diversion). Future humanity is declared as a victim group but has no present-day agents — this is an omega variable. The agenda_setter is the x-risk research community plus allied policy actors; they set the governance frame. Directionality flows from present-harm seats toward the x-risk frame.",
+    "mandatrophy_analysis": "The reading's founding problem (preventing AI catastrophe) is live and escalating — capabilities advance while alignment remains unsolved. But the constraint risks mandatrophy if the coordination function (solving alignment) atrophies into a permanent governance frame that extracts from present-harm mitigation without delivering existential risk reduction. The theater ratio trajectory suggests this drift is underway. The constraint is tangled_rope, not snare, because the coordination function is genuine and the reading's proponents believe in it — but the extraction from near-term victims is structural and growing.",
+    "kernel_context": "This constraint is the existential_risk_reading of the ai_risk_governance_priority kernel. Sibling readings: near_term_harms_reading (prioritizes demonstrated present harms to marginalized populations) and bridge_reading (addresses both as non-mutually-exclusive, structurally entangled concerns). This reading forecloses the near_term_harms_reading's core premise that present harms should be the primary governance focus — within a single governance framework, prioritizing existential risk structurally displaces present-harm mitigation. It coexists_with the bridge_reading in public discourse (different parties hold each) but influences it by setting the terms of debate: the bridge must accommodate existential risk as a primary concern. The bridge_reading influences this reading by demanding resource allocation to present harms as a condition of coalition."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_risk_governance_priority__near_term_harms_reading",
+      "ai_risk_governance_priority__bridge_reading",
+      "ai_capabilities_acceleration_governance",
+      "ai_alignment_research_funding_allocation"
+    ],
+    "dual_formulation_note": "This constraint family (three readings of the ai_risk_governance_priority kernel) demonstrates ε-invariance decomposition: each reading has a distinct ε, beneficiary/victim structure, and coordination/transfer function. The existential_risk_reading has high ε on speculative capabilities; the near_term_harms_reading has high ε on present algorithmic bias; the bridge_reading claims a unified framework with moderate ε on both. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "x_risk_research_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Receive concentrated funding, talent, and policy access from the existential risk governance frame. They define the research agenda, set evaluation benchmarks, and staff governance bodies. Their exit options are strong — they can pivot to other research domains or take industry roles. They benefit from the constraint's prioritization of speculative capabilities research."
+    },
+    {
+      "name": "ai_labs_claiming_safety_leadership",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the practical agenda for 'AI safety' through voluntary commitments, safety frameworks, and adversarial testing programs. They gain regulatory goodwill, recruitment advantages, and narrative control that insulates capabilities acceleration from stricter oversight. The constraint's enforcement (governance frameworks) is calibrated through their participation to not impede core business. They capture both agenda-setting and benefit extraction."
+    },
+    {
+      "name": "alignment_research_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A research field defined by the existential risk frame. They receive funding and status from the constraint's prioritization but face constrained exit — their expertise is specialized to the alignment-as-control paradigm. Career capital is tied to the reading's continued dominance. They genuinely believe in the coordination function but their institutional position depends on the constraint's persistence."
+    },
+    {
+      "name": "present_harm_mitigation_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Communities working on algorithmic bias, misinformation, labor displacement, and surveillance harms. They experience resource displacement as funding and policy attention flow to existential risk frameworks. Their exit is constrained — their work addresses harms happening now, and they cannot pivot to speculative research without abandoning affected populations. They resist the prioritization through coalition-building and epistemic challenges."
+    },
+    {
+      "name": "marginalized_populations_affected_by_ai",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the brunt of present AI harms (discriminatory systems, surveillance, displacement) while governance resources are directed toward speculative future risks. They have no meaningful exit from the systems harming them and no voice in governance prioritization. Their victimization is structural: the constraint's resource allocation treats their harms as lower priority. They are the 'all future humanity' victim set's present-day proxy — but the reading's frame renders them invisible."
+    },
+    {
+      "name": "near_term_ai_ethics_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers whose work addresses present harms. They face funding diversion, citation displacement, and marginalization in governance forums. Exit is constrained: pivoting to alignment research requires retraining and abandons their domain expertise. They contest the reading's epistemology and resource allocation but lack the institutional power of x-risk institutions."
+    },
+    {
+      "name": "future_generation_representatives",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Proxy stakeholder for the declared victim group 'all future humanity.' No present-day agents occupy this seat — it is a structural placeholder for the reading's intergenerational claim. If instantiated (e.g., through legal standing for future generations, longtermist institutions), they would have zero exit options and absolute dependence on the constraint's coordination function succeeding. Their inclusion tests whether intergenerational victims can register in the directionality machinery."
+    },
+    {
+      "name": "competition_authorities_and_policymakers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Allocate governance resources, set regulatory agendas, and adjudicate between competing risk frames. They observe the constraint's operation from the analytical seat — their decisions determine whether the prioritization becomes binding policy or remains one contested frame among others. They have analytical exit (can change frameworks) but their choices have structural consequences for all other seats."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the alignment problem for superintelligent AI systems: ensures that systems vastly more capable than humans pursue goals compatible with human survival and flourishing, preventing loss of control scenarios.",
+    "transfer_function": "Moves research funding, talent, policy attention, and regulatory capacity from present-harm mitigation (algorithmic bias, misinformation, labor displacement, surveillance) toward alignment research, adversarial testing, and AGI governance frameworks. The transfer is from near-term harm communities to x-risk institutions and safety-claiming labs.",
+    "absent_voices": "Marginalized populations currently harmed by AI systems are structurally excluded from the governance prioritization process — their harms are acknowledged but deferred. Global South AI ethics voices are absent from the x-risk research community's epistemic center. Future generations have no representatives. The bridge_reading's integrative frame is excluded by this reading's foreclosure of equal prioritization.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the existential risk prioritization vanished overnight, governance resources would redistribute toward present-harm mitigation, AI labs would lose safety-leadership regulatory cover, x-risk institutions would lose their primary funding justification, and the alignment research field would fragment. The global AI governance architecture would reorganize around demonstrated harms.",
+    "founding_problem": "The alignment problem: as AI systems approach and exceed human capabilities across domains, we lack technical methods to ensure they pursue goals compatible with human values. Without a solution, superintelligent systems could cause human extinction or permanent curtailment of potential. This problem was identified in early AI safety literature (Yudkowsky, Bostrom) and gained institutional traction after 2015.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the x-risk research community (beneficiaries) AND by independent AI researchers outside the beneficiary set who acknowledge alignment as an open technical challenge (e.g., Russell, Bengio, Hinton). However, the STATUS of the problem as 'requiring prioritization over present harms' is contested: near-term harm communities and bridge_reading proponents attest the problem is live but dispute the prioritization claim. No neutral arbiter exists — the status is structurally contested."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "bridge_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "existential_risk_lexical_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "alignment_problem_requires_dedicated_resources",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_agi_alignment_unsolved",
+    "drift_state": {
+      "moment": "post_gpt4_capabilities_surge",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,375 @@
+{
+  "header": {
+    "constraint_id": "refugee_convention_text__expansive_humanitarian_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "refugee_expansive_reading",
+    "story_uid": "3321a30e-d2a4-45a9-a6fe-b2c3aa9d0281"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Refugee Convention Text Read as Unbendable Humanitarian Mandate (Expansive Reading)",
+    "topic_domain": "international_law/migration_governance/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "asylum_seekers_fleeing_generalized_violence",
+      "lgbtq_and_gender_persecution_claimants",
+      "clan_minority_fleeing_members",
+      "human_rights_litigation_ngos",
+      "smuggling_networks"
+    ],
+    "victims": [
+      "receiving_states",
+      "frontline_transit_states"
+    ],
+    "vindicated_propositions": [
+      "non_refoulement_customary_norm",
+      "non_state_persecution_doctrine",
+      "expansive_particular_social_group_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the refugee_convention_text kernel: what structural changes would the restrictive_sovereignty_reading (minimum floor, individualized persecution proof, immutable-characteristic-only social groups) produce if it displaced this reading?",
+      "resolution_mechanism": "Comparative doctrinal tracking of which reading governs in each major asylum jurisdiction, measured against treaty-body adoption rates and apex-court citation patterns.",
+      "impact": "Under the restrictive reading the victim set collapses to individually targeted state persecution, interdiction and offshore processing become lawful, and effective extraction redistributes away from states toward rejected claimants.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Sibling-reading delta for the refugee convention kernel."
+    },
+    {
+      "id": "customary_status_exit_question",
+      "question": "How robust is the customary-international-law status of non-refoulement — does exit remain effectively closed even for a state that denounces the treaty?",
+      "resolution_mechanism": "Observe the post-denunciation behavior of any withdrawing or persistently non-applying state, and how international and national courts treat customary non-refoulement claims against non-parties.",
+      "impact": "If the customary layer is thin, denunciation becomes a viable exit, the suppression measure drops sharply, and the arrangement drifts toward a voluntary commitment states can price and shed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether treaty exit is genuinely closed by the customary norm."
+    },
+    {
+      "id": "frontline_free_rider_asymmetry",
+      "question": "Does the mandate concentrate hosting costs on frontline and transit states while distant states free-ride, and does that asymmetry erode the coordination function over time?",
+      "resolution_mechanism": "Longitudinal burden-sharing data: hosting shares versus resettlement intakes and earmarked funding contributions by income group.",
+      "impact": "A widening asymmetry would decay the coordination floor for the frontline seats specifically, pushing their computed classification toward pure imposition even if distant-state seats still register coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Burden asymmetry between frontline hosts and distant states."
+    },
+    {
+      "id": "psg_boundlessness",
+      "question": "Is the expansive particular-social-group category bounded by any principled limit, or is it indefinitely extendable to new identity clusters as litigation generates them?",
+      "resolution_mechanism": "Convergence analysis of appellate PSG criteria (protected-characteristic versus social-perception tests) across jurisdictions over successive decades.",
+      "impact": "An unbounded category ratchets state-side costs with no stopping rule and steadily raises effective extraction; a principled boundary stabilizes the reading's scope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Boundary discipline of the particular-social-group doctrine."
+    },
+    {
+      "id": "externalization_theater_ambiguity",
+      "question": "Do offshore-processing and interdiction schemes with abbreviated assessments evade the mandate or adapt it — is the measured theater_ratio capturing evasion or procedural innovation?",
+      "resolution_mechanism": "Track court outcomes on specific schemes (extraterritorial non-refoulement rulings) and whether each redesigned scheme survives subsequent scrutiny or is struck down in turn.",
+      "impact": "If schemes systematically evade, the theater series signals rising evasion and drift toward enforced extraction; if redesigned schemes survive as compliant variants, the theater reflects adaptive procedure rather than decay.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether externalization practices are evasion or adaptation."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the international refugee protection regime anchored in the 1951 Convention and 1967 Protocol text. This story instantiates ONE reading of that fixed text — the expansive humanitarian reading — under which the convention imposes an unbendable mandate: fear of persecution is well-founded even amid generalized violence and at the hands of non-state actors; the particular-social-group ground reaches gender, sexual orientation and gender identity, and clan affiliation; interception on the high seas and offshore transfer arrangements violate the non-return duty; and every arrival who raises a protection claim is owed a substantive assessment. The claim/metric gap is deliberate: the reading CLAIMS a coordination-bearing humanitarian floor while the authored metrics describe a structure that also imposes substantial, asymmetrically distributed, actively enforced costs on states — the engine measures that divergence; neither side was tuned to the other. Time points index years elapsed since the 1967 Protocol (t0 = 1967, t50 approximately the late 2010s).",
+    "key_agents": [
+      "asylum_seekers_fleeing_generalized_violence: Primary protected class (powerless/trapped) — gains admission and status only where the mandate's breadth applies",
+      "lgbtq_and_gender_persecution_claimants: Protected class whose claims exist only under the expansive social-group doctrine (powerless/trapped)",
+      "clan_minority_fleeing_members: Protected class relying on non-state persecution recognition (powerless/trapped)",
+      "receiving_states: Primary bearer of obligations (institutional/constrained) — funds and runs adjudication, resists through externalization designs",
+      "frontline_transit_states: Disproportionate cost bearers (organized/constrained) — host the largest displaced populations under the same duties",
+      "unhcr_supervisory_mission: Interpretive agenda-setter (institutional/analytical) — consolidates the reading through the Handbook and guidelines",
+      "national_and_regional_courts: Enforcement agenda-setter (institutional/analytical) — strike down interdiction and offshore-transfer schemes",
+      "human_rights_litigation_ngos: Enforcement drivers and mission beneficiaries (organized/mobile)",
+      "smuggling_networks: Incidental collectors on the lawful-access gap (organized/arbitrage)",
+      "sovereignist_political_movements: Excluded objectors (organized/constrained) — no seat in the doctrinal conversation",
+      "comparative_refugee_law_scholars: Analytical observers (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is 0.62 because the mandate imposes reception, adjudication, housing, and non-return duties on states at levels decoupled from their capacity or consent — deliberately so, since the reading's defining feature is unbendability — with the load concentrated on whoever sits at the frontier of arrival. Suppression is 0.55 as a RAW structural property (unscaled by power or scope; only extractiveness is scaled downstream): the arrangement is held up by courts voiding removals and transfers, supervisory monitoring, and the claimed customary closure of exit, though states retain real policy levers short of refoulement. Theater_ratio is 0.30: the core activity — individual status determination — is functionally real, but a growing compliance-performance layer (abbreviated offshore assessments, safe-third-country fictions, box-ticking interviews) rides on top of it, which the temporal series shows accumulating. Accessibility_collapse is 0.40 because alternatives — interdiction, offshore transfer, pushback — remain visibly and partially available wherever enforcement is weak, as documented practice shows. Resistance is 0.60: sustained, organized state resistance expressed through externalization schemes, procedural narrowing, and periodic open defiance of rulings. All three temporal series share one grid (t0..t50 at decade steps) so no metric row borrows another's endpoints. On the receipt surface: gains were checked seat by seat — protection value spreads across the three protected classes, doctrinal authority accrues to courts, mandate relevance to the supervisory mission, route rents to smuggling networks — and no single seat captures the majority, hence the affirmative 'diffuse'. Fixing (removing or bending the mandate) is prohibitive for any capable fixer: unilateral defection invites adverse rulings and reputational cost, and collective renegotiation faces holdout problems and humanitarian backlash exceeding the perceived fiscal relief.",
+    "perspectival_gap": "The seats should compute differently and the structural data is what drives that. From the receiving-state seat (institutional power, constrained exit, target-side position) the arrangement presents as imposed obligation with real but partial escape valves. From the three protected-class seats (powerless, trapped) the same structure presents as lifeline — the difference between a hearing and a handover. From the court and supervisory seats the structure presents as a legitimacy-bearing order they administer and expand. From the smuggling seat it presents as a rent surface. The engine derives these per-seat classifications from the declared positions; the authored claim does not adjudicate among them.",
+    "directionality_logic": "The three protected-class groups sit at the beneficiary end (d near 0): the mandate subsidizes them with safety and status at states' expense, and their trapped exit pins them to whatever protection the reading secures. Receiving states and frontline transit states sit at the target end (d near 1): they bear the transfer of duties, with constrained exit — customary-norm claims and reputational exposure close denunciation, and geography closes avoidance for frontline states more tightly than for distant ones. Courts and the supervisory mission are agenda-setters near the symmetric middle: they pay little and collect authority and mandate rather than money. Litigation NGOs benefit incidentally (mission relevance tracks caseload) with mobile exit. Smuggling networks are the sharpest incidental beneficiary: the mandate protects on arrival while leaving lawful channels narrow, and the resulting gap is priced by route sellers whose arbitrage-grade mobility puts them nearest the beneficiary pole. Because the extracted value disperses across protected classes, courts, the supervisory organ, and route rents rather than pooling in any one seat, gain_flow is authored as 'diffuse' after checking every named seat.",
+    "mandatrophy_analysis": "The founding problem — mid-century mass displacement meeting closed borders and automatic handover — is live at larger scale, so this is not a mandate outliving its function and no mandatrophy resolution is declared. The classification discipline cuts both ways here. Against the snare mislabel: the coordination function is genuine — a common floor removing the payoff each state would otherwise collect from pushing arrivals back, which would cascade into chain refoulement — and the cost-bearing seats retain real policy space short of violation. Against the rope mislabel: the imposition is deliberately unbendable, asymmetrically distributed (frontline states pay far more than distant free-riders for the same floor), and requires continuous enforcement against resisting parties. Both halves are structural, which is what the tangled-rope claim asserts.",
+    "kernel_context": "This story instantiates the expansive_humanitarian_reading of the refugee_convention_text kernel — the 1951 Convention and 1967 Protocol text treated as an unbendable humanitarian mandate. Sibling readings are the restrictive_sovereignty_reading (minimum floor permitting maximum sovereign discretion, individualized persecution proof, immutable-characteristic-only social groups) and the procedural_integrity_reading (fair individualized process as the non-negotiable core, outcome secondary). The disagreement is located in three structural elements: the breadth of the persecution threshold, whether manner of arrival limits the non-return duty, and the boundary of the particular-social-group category. Each reading is a separate constraint with its own victim set and epsilon; this file authors only the expansive reading and links to both siblings."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "refugee_convention_text__restrictive_sovereignty_reading",
+      "refugee_convention_text__procedural_integrity_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the Refugee Convention' decomposes into three structurally distinct constraints, one per reading of the fixed text. The expansive reading carries the broadest victim set and the heaviest state-side cost imposition; the restrictive reading narrows victims and maximizes state discretion; the procedural reading holds the threshold flexible while hardening process. This file links to both siblings; influence between them runs through shared jurisprudence, treaty-body practice, and the interpretive authority of the supervisory mission."
+  },
+  "stakeholders": [
+    {
+      "name": "asylum_seekers_fleeing_generalized_violence",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Flee civil war, collapsed governance, or indiscriminate targeting. They cannot return without facing serious harm, and survival depends on reaching a state that accepts jurisdiction and assesses the claim on its merits. Their claim succeeds only where the reading counts generalized violence as grounding fear; under narrower readings most would be returned to the conditions they fled."
+    },
+    {
+      "name": "lgbtq_and_gender_persecution_claimants",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face violence from families, communities, or private actors because of identity or gender transgression, often with the origin state unwilling or unable to protect them. Recognition turns on whether membership in the group counts as a protected ground; the claim is frequently the only lawful path out of return to the persecuting environment."
+    },
+    {
+      "name": "clan_minority_fleeing_members",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Targeted by rival clans or clan-aligned militias in polities where clan affiliation determines physical security. Their protection depends on the reading treating clan membership as a social group and non-state actors as potential persecutors; without both extensions they have no qualifying claim."
+    },
+    {
+      "name": "receiving_states",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Party to the treaty and operator of asylum systems: reception, adjudication, housing, appeals. They shaped the original settlement and retain treaty-making power, but find exit costly given customary-norm arguments and reputational exposure, so resistance runs through externalization designs, safe-third-country designations, and procedural narrowing that courts then review against the mandate."
+    },
+    {
+      "name": "frontline_transit_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Host the largest displaced populations, often for decades, with limited fiscal room. They bear the heaviest hosting load under the same obligations as wealthy distant states, convert the burden into aid negotiations, and cannot close borders without triggering refoulement findings and regional instability."
+    },
+    {
+      "name": "unhcr_supervisory_mission",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Supervises application of the treaty, issued the Handbook and the social-group guidelines that consolidated the expansive reading, intervenes in litigation, and monitors compliance. It depends on state funding while pressing states toward broader application of the duties."
+    },
+    {
+      "name": "national_and_regional_courts",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Adjudicate refoulement, social-group, and extraterritorial-application claims; have struck down maritime interception and offshore-transfer schemes; and accrue docket volume and doctrinal authority as the mandate's breadth widens the flow of justiciable claims."
+    },
+    {
+      "name": "human_rights_litigation_ngos",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Bring strategic cases, publish country-of-origin evidence, and shape doctrine through intervention. Their mission relevance and funding track the volume and salience of protection litigation, and they can redirect effort to adjacent fields if this one closes."
+    },
+    {
+      "name": "smuggling_networks",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell passage along the routes left open by the gap between protection on arrival and scarce lawful channels. Their rents rise when arrival-based protection is generous and legal pathways stay narrow, and they shift routes and methods quickly as enforcement patterns move."
+    },
+    {
+      "name": "sovereignist_political_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mobilize voters against expansive obligations and legislate caps, fast-track procedures, and externalization deals. They hold no seat in the doctrinal conversation where the reading is fixed; their instruments are elections and statutes, which courts then review against the mandate after enactment."
+    },
+    {
+      "name": "comparative_refugee_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Trace the interpretive evolution from treaty text to Handbook to jurisprudence, document the divergence between the affirmed mandate and border practice, and supply the doctrinal genealogy on which courts and advocates draw."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a common floor beneath interstate competition during displacement crises: by fixing who qualifies and forbidding return to harm, it removes the payoff each state would otherwise collect from pushing arrivals back, which unchecked would cascade into chain refoulement and regional destabilization. It also allocates the duty to assess claims through a shared definition rather than bilateral improvisation.",
+    "transfer_function": "Moves protection duties — reception, adjudication, housing, non-return — from arriving asylum seekers onto receiving and transit states; moves legal status and physical safety to recognized refugees; moves interpretive authority over the treaty text to courts and the supervisory mission; and, through the lawful-access gap, moves payment to smuggling networks.",
+    "absent_voices": "Sovereignist constituencies hold no seat in the doctrinal conversation that fixes the reading — they speak through elections and statutes that courts review afterward. Frontline host states were marginal in the interpretive fora where the expansive reading consolidated, despite bearing the largest share of its costs. Rejected claimants rarely appear anywhere once their claim fails. Origin-country persecutors are definitionally absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expansive mandate vanished overnight, maritime interception, offshore transfer, and summary return would resume at scale within months; the millions whose claims rest on generalized-violence, non-state, and social-group grounds would lose their qualifying pathway; the litigation, supervision, and advocacy economy built on the mandate would contract sharply; and bordering states would face renewed chain-refoulement cascades as each neighbor competed to push arrivals further back.",
+    "founding_problem": "Mid-twentieth-century mass displacement met closed borders: Jewish refugees were refused landing before the war, wartime returns delivered people directly to persecution, and postwar displacement had no standing rule for who must assess a protection claim. The convention was built so that flight from persecution would always find a hearing and never an automatic handover.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Displacement totals in UNHCR statistical reporting, persecution findings in court records across jurisdictions, and ICRC and independent journalistic documentation of the conflicts driving flight all attest that the founding problem persists at greater scale than at founding; none of these sources sits inside the population the mandate protects."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unbendable_humanitarian_mandate",
+    "drift_state": {
+      "moment": "contemporary_externalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "restrictive_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "procedural_integrity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "non_refoulement_absolute_regardless_of_arrival_manner",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "persecution_risk_includes_non_state_and_generalized_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

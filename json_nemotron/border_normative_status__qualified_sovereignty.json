@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "border_normative_status__qualified_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_border_normative_status__qualified_sovereignty",
+    "measurement_id_prefix": "border_normative_status__qualified_sovereignty",
+    "story_uid": "5b263aaa-94fd-4762-ad1b-5be5fc7759d6",
+    "created_at": "2026-08-03T14:22:17Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Qualified State Sovereignty Over Borders: Proportionality and Human Rights Conditionality",
+    "topic_domain": "political/legal/migration",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "receiving_state_institutions",
+      "citizen_nationals",
+      "international_legal_order"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "displaced_citizens",
+      "asylum_seekers_denied_entry"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine distinct reading of the border_normative_status kernel, or does it collapse into one of its siblings under scrutiny?",
+      "resolution_mechanism": "Formal comparison of the three readings' structural parameters (beneficiary/victim sets, extraction directionality, coordination claims) in the engine; if two readings produce identical per-seat classifications across all power atoms, they are the same constraint under the ε-invariance principle.",
+      "impact": "If this reading collapses into sovereignty_primary, the 'proportionality' condition is performative theater; if it collapses into freedom_primary, the 'legitimate state interests' carve-out is nominal. Distinctness is what makes the tangled_rope classification analytically meaningful.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Commitment that this is a structurally distinct kernel reading, not a rhetorical variant."
+    },
+    {
+      "id": "proportionality_operationalization",
+      "question": "What operational standard counts as 'proportionate' exercise of border control, and who adjudicates it?",
+      "resolution_mechanism": "Track adjudicative outcomes across supranational courts (ECtHR, IACtHR, UN treaty bodies) and domestic high courts over 2015-2035; code for convergence/divergence on the proportionality threshold.",
+      "impact": "If proportionality adjudication converges on a high threshold (near freedom_primary), this reading's extraction from excluded migrants drops. If it converges on a low threshold (near sovereignty_primary), the human rights condition is decorative. The engine's effective extraction χ is sensitive to this threshold via the suppression metric.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether 'proportionality' has a stable operational meaning that distinguishes this reading from its siblings."
+    },
+    {
+      "id": "adjudication_burden_distribution",
+      "question": "Does the adjudication burden this reading creates fall primarily on states (as compliance cost) or on migrants (as procedural barrier)?",
+      "resolution_mechanism": "Measure asylum processing times, legal aid availability, and appeal success rates across jurisdictions implementing this standard; compare burden distribution pre/post adoption.",
+      "impact": "If the burden falls on states as costly compliance, the constraint is genuinely extractive from state institutions (beneficiary→payer shift). If it falls on migrants as procedural exhaustion, the constraint is more extractive from the excluded. This changes the beneficiary/victim structure and thus χ.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incidence of the adjudication cost this reading's legitimacy condition imposes."
+    },
+    {
+      "id": "displaced_citizens_as_victims",
+      "question": "Are 'displaced citizens' (citizens unable to return, stateless nationals, denaturalized persons) a genuine victim class of this constraint, or are they collateral to other constraints (denaturalization, statelessness conventions)?",
+      "resolution_mechanism": "Isolate cases where border denial directly targets citizens' re-entry rights under the proportionality doctrine vs. cases where exclusion follows from separate status-determination proceedings.",
+      "impact": "If displaced citizens are primarily victims of this constraint, the victim set is broader and the constraint's extraction is more diffuse. If they are victims of adjacent constraints, this reading's victim set narrows to excluded_migrants and asylum_seekers_denied_entry.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary of the victim set for this specific reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'qualified sovereignty' reading of the border_normative_status kernel: states retain authority to control borders, but that authority is conditional on proportionality to legitimate state interests and consistency with human rights obligations. Unlike the sovereignty_primary reading (which treats exclusion as a foundational prerogative) or the freedom_primary reading (which treats movement as a near-absolute right), this reading creates a structured adjudication burden: every exercise of border control must be justified, necessary, and proportionate. The constraint operates as a tangled rope because it performs genuine coordination (establishing a shared normative framework for border governance across the international legal order, preventing a race to the bottom on rights) while simultaneously extracting from excluded migrants, asylum seekers, and displaced citizens through the suppression of entry and the procedural burdens of the proportionality test itself. The adjudication machinery — supranational courts, domestic judicial review, UN treaty bodies — is the active enforcement layer that makes the conditionality real rather than aspirational.",
+    "key_agents": [
+      "receiving_state_institutions: Agenda setter (institutional/biographical/constrained/global) — sets and administers border policy under the proportionality mandate; bears compliance costs but captures sovereignty rents",
+      "citizen_nationals: Beneficiary (organized/biographical/constrained/national) — receive the collective self-determination and security benefits the constraint legitimizes; also bear costs when state overreach rebounds",
+      "international_legal_order: Beneficiary (institutional/civilizational/analytical/universal) — gains a stabilized normative framework that prevents norm fragmentation; collects legitimacy rents",
+      "excluded_migrants: Victim (powerless/biographical/trapped/global) — bear the extraction of denial, detention, removal; exit options structurally collapsed by the very border regime",
+      "displaced_citizens: Victim (moderate/biographical/identity_locked/global) — citizens denied re-entry, rendered stateless, or denaturalized; exit is identity-locked because citizenship is the exit credential",
+      "asylum_seekers_denied_entry: Victim (powerless/immediate/trapped/global) — bear the sharpest extraction: refoulement risk, detention, rights suspension; the proportionality test is often the mechanism of denial",
+      "supranational_courts_treaty_bodies: Agenda setter (institutional/generational/arbitrage/universal) — adjudicate proportionality; their rulings are the enforcement machinery"
+    ],
+    "logic_rationale": "Extractiveness (0.48) is substantial but not extreme: the constraint extracts from the excluded through denial of entry, detention, and procedural exhaustion, but the proportionality condition genuinely limits what states can do — it is not a blank check. Suppression (0.62) is higher than extraction because the constraint's persistence depends on active enforcement: states must be compelled to run proportionality analyses, courts must hear cases, treaty bodies must issue views. The theater ratio (0.38) reflects that a significant share of state 'compliance' is performative — proportionality analyses that rubber-stamp predetermined outcomes, procedural hurdles that exhaust claimants. Accessibility collapse (0.45) is moderate: alternatives (open borders, freedom_primary) are not conceptually collapsed but are politically suppressed. Resistance (0.55) is significant: states resist the adjudication burden, migrants resist through litigation and irregular movement, and the sovereignty_primary reading resists as a competing normative frame.",
+    "perspectival_gap": "The engine will compute per-seat classifications from the structural data. From the receiving_state_institutions seat, the constraint may compute as a scaffold (transitional support for rights-based governance) or a piton (degraded sovereignty ritual). From the excluded_migrants seat, it computes as a snare (extraction via denial). From the international_legal_order seat, it computes as a rope (coordination on shared standards). The citizen_nationals seat likely computes as a beneficiary with moderate extraction (they gain security but lose when the state overreaches). The displaced_citizens seat is distinctive: identity_locked exit makes them experience the constraint as a snare despite formal citizenship. The supranational_courts seat sees the coordination function most clearly but also the enforcement costs.",
+    "directionality_logic": "Beneficiaries declared: receiving_state_institutions (capture sovereignty rents and legitimacy), citizen_nationals (collective self-determination benefit), international_legal_order (normative framework stabilization). Victims declared: excluded_migrants (bear denial/detention/removal), displaced_citizens (bear re-entry denial and status precarity), asylum_seekers_denied_entry (bear refoulement risk and rights suspension). The directionality derivation will assign low d to beneficiaries (subsidy), high d to victims (extraction). The adjudication burden falls on states (compliance cost) and migrants (procedural barrier) — this dual incidence is captured by the omega on adjudication_burden_distribution. The supranational courts are agenda_setters with analytical exit — they enforce but do not bear the extraction.",
+    "mandatrophy_analysis": "The founding problem (post-WWII need to prevent sovereign abuse while preserving state order) is contested: states claim it is live (ongoing migration pressures, security threats), migrants and rights advocates claim it is dead (the proportionality standard has become a management tool for exclusion). The constraint prevents mislabeling coordination as pure extraction by maintaining a genuine coordination function (the shared proportionality framework), but the extraction from the excluded is real and the adjudication machinery is the enforcement layer that sustains it. Without the coordination function, this would be a snare; without the extraction, it would be a rope. The tangled_rope classification captures the hybrid structure.",
+    "kernel_context": "This constraint is the 'qualified_sovereignty' reading of the border_normative_status kernel. Sibling readings: 'sovereignty_primary' (territorial boundaries as legitimate instruments of collective self-determination; foundational authority to exclude) and 'freedom_primary' (freedom of movement as fundamental human right; exclusion requires extraordinary justification). This reading differs structurally by creating an adjudication burden (proportionality test) that distributes costs across states and migrants, and by placing both excluded migrants and displaced citizens in the victim set. The sovereignty_primary reading has no victim set (exclusion is prerogative, not extraction). The freedom_primary reading has states as payers (compliance with open borders) and migrants as beneficiaries."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "border_normative_status__sovereignty_primary",
+      "border_normative_status__freedom_primary",
+      "refugee_convention_non_refoulement",
+      "statelessness_convention_1954",
+      "arbitrary_detention_prohibition"
+    ],
+    "dual_formulation_note": "This constraint is one member of the border_normative_status constraint family (kernel_id: border_normative_status). The three readings decompose the colloquial label 'border sovereignty' into structurally distinct constraints with different ε values, different beneficiary/victim sets, and different classifications. The qualified_sovereignty reading has the highest adjudication burden and the most complex victim set. The sovereignty_primary reading has negligible extraction (mountain-claiming) but high suppression of alternatives. The freedom_primary reading has states as payers and migrants as beneficiaries (rope-claiming). All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "receiving_state_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sets and administers border policy under the proportionality mandate. Captures sovereignty rents (control over membership, territory, resources) but bears compliance costs: running individualized proportionality assessments, defending decisions in domestic and supranational courts, implementing treaty body views. Exit is constrained — withdrawal from human rights treaties carries reputational and diplomatic costs; the proportionality doctrine is embedded in domestic constitutional law in many jurisdictions."
+    },
+    {
+      "name": "citizen_nationals",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive collective self-determination, security, and welfare-state sustainability benefits that the constraint's legitimacy framework protects. Also bear costs when state overreach rebounds (erosion of rule of law, diplomatic isolation, moral injury). Exit is constrained — citizenship is the primary exit credential; renouncing it is costly and often unavailable to those most affected by state overreach."
+    },
+    {
+      "name": "international_legal_order",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Gains a stabilized normative framework that prevents norm fragmentation and a race to the bottom on migrant rights. Collects legitimacy rents: the proportionality doctrine makes the international legal order the authoritative interpreter of state sovereignty. Exit is analytical — this is an observer seat that does not bear extraction but provides the adjudication infrastructure."
+    },
+    {
+      "name": "excluded_migrants",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the extraction of denial, detention, and removal. The proportionality test is often the mechanism of denial: states articulate 'legitimate interests' (deterrence, resource preservation, social cohesion) that courts defer to. Exit is trapped — the border regime itself is the barrier; there is no alternative jurisdiction that does not operate under some variant of this kernel. Irregular movement is not exit from the constraint but deeper exposure to its enforcement layer."
+    },
+    {
+      "name": "displaced_citizens",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Citizens denied re-entry, rendered stateless, or denaturalized under the proportionality doctrine (e.g., 'security' exclusions, deprivation of nationality for 'seriously prejudicial' conduct). Exit is identity-locked: citizenship is the credential that should guarantee entry, but the constraint makes that credential conditional. The self-concept 'I am a citizen, therefore I have a right to return' is fused with the constraint's operation — when the state denies re-entry, the identity frame breaks. This is not mere legal exclusion; it is existential displacement."
+    },
+    {
+      "name": "asylum_seekers_denied_entry",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the sharpest extraction: refoulement risk, detention, suspension of procedural rights. The proportionality test is weaponized — 'legitimate interests' (border integrity, deterrence of irregular migration) outweigh non-refoulement in state arguments, and courts often defer. Exit is trapped: the constraint operates at the moment of arrival; there is no 'outside' from which to challenge it. The adjudication burden falls on them as procedural exhaustion — accelerated procedures, limited appeal, evidentiary barriers."
+    },
+    {
+      "name": "supranational_courts_treaty_bodies",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Adjudicate proportionality: hear cases, issue binding judgments (ECtHR, IACtHR) or authoritative views (UN treaty bodies). Their rulings are the enforcement machinery that makes the conditionality real. They have arbitrage-grade exit — they choose which cases to hear, how to interpret the standard, and when to defer to states. They bear minimal extraction; they capture institutional authority and legitimacy from operating the adjudication layer."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a shared normative framework (proportionality, legitimate interests, human rights conditionality) that prevents a race to the bottom on migrant rights and stabilizes interstate expectations about border governance. Without it, states would compete on exclusion severity; with it, there is a common adjudicative language and a floor of procedural protection.",
+    "transfer_function": "Moves three things: (1) admission rights from excluded migrants to receiving states (the core extraction); (2) compliance costs from states to their administrative apparatus (proportionality assessments, litigation, detention infrastructure); (3) legitimacy and interpretive authority from states to supranational courts and the international legal order (the coordination rent).",
+    "absent_voices": "Irregular migrants who never reach adjudication (intercepted at sea, turned back at land borders, disappeared in transit) — they would object to the proportionality test as a sham but are structurally excluded from the conversation. Stateless persons who fall between state jurisdictions — the constraint assumes a state of origin to return to; for the truly stateless, the proportionality test has no purchase. Future generations who inherit the normalized architecture of conditional rights — they are not present to contest the founding problem's status.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the qualified sovereignty constraint vanished overnight, states would revert to sovereignty_primary (unrestricted exclusion) or face pressure toward freedom_primary (open borders). The supranational adjudication layer would lose its core border jurisdiction. Migrants would lose even the procedural floor of proportionality review. The international legal order would lose a major stabilizing doctrine. The world of border governance would reorganize around either raw sovereignty or rights-absolute frameworks.",
+    "founding_problem": "Post-WWII need to prevent sovereign abuse of border control (denaturalization, mass expulsion, refugee rejection) while preserving the state system's foundational assumption that territorial authority includes membership control. The proportionality doctrine was the compromise: states keep the authority but must justify its exercise.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "States and UNHCR attest the problem is live: ongoing mass displacement, security threats, and resource pressures make conditional sovereignty necessary. Migrants' rights advocates and critical legal scholars attest the problem is dead: the proportionality standard has become a management tool for exclusion, not a constraint on it; the adjudication machinery legitimizes rather than limits. Independent corroboration: the 2018 Global Compact for Migration negotiations revealed that states treat proportionality as a ceiling, not a floor — they negotiated to weaken, not strengthen, the conditionality."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "border_normative_status__sovereignty_primary",
+      "border_normative_status__freedom_primary"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "freedom_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereignty_conditioned_on_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "human_rights_as_limit_on_exclusion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "adjudication_burden_on_state",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "postwar_human_rights_settlement",
+    "drift_state": {
+      "moment": "contemporary_migration_governance",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

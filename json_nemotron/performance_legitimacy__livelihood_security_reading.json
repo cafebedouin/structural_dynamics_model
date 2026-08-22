@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "performance_legitimacy__livelihood_security_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_performance_legitimacy__livelihood_security_reading",
+    "story_uid": "d43d2716-60f1-4ce5-8b6a-b66e133b7bc4"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Performance Legitimacy: Livelihood Security Reading",
+    "topic_domain": "political_economy/development_planning/state_capitalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "service_sector_workers",
+      "urban_households",
+      "elderly_care_recipients",
+      "public_health_users",
+      "education_dependents"
+    ],
+    "victims": [
+      "heavy_industry_capital",
+      "local_government_infrastructure_funding",
+      "export_oriented_manufacturing"
+    ],
+    "vindicated_propositions": [
+      "state_legitimacy_derives_from_lived_welfare",
+      "social_safety_net_as_primary_obligation"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a distinct reading of the performance_legitimacy kernel, or does it merely emphasize a subset of the same underlying legitimacy claim?",
+      "resolution_mechanism": "Compare resource allocation outcomes under sibling readings: if the livelihood_security_reading produces systematically different budget shares, institutional mandates, and policy sequencing than quantitative_growth_reading, the readings instantiate different constraints.",
+      "impact": "If readings are distinct constraints, each gets its own ε and classification; if they are emphasis variants, they share a constraint and the analysis must model intra-constraint variation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sibling readings of performance_legitimacy constitute separate constraints or emphasis variants of one constraint."
+    },
+    {
+      "id": "naturalness_of_welfare_priority",
+      "question": "Does prioritizing livelihood security emerge from an intrinsic state-citizen compact (natural law of legitimacy), or is it a contingent policy choice that benefits identifiable agents?",
+      "resolution_mechanism": "Test against regime transitions: if new regimes that abandon livelihood security lose legitimacy faster than those that abandon growth targets, the priority has natural-law character; if regimes can substitute legitimacy sources, it is contingent.",
+      "impact": "If natural, the constraint trends toward mountain/rope; if contingent with beneficiaries, it is a false summit candidate (tangled_rope or snare).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the welfare-legitimacy link is structural or constructed."
+    },
+    {
+      "id": "redistribution_efficiency_vs_extraction",
+      "question": "Are the strengthened redistribution mechanisms efficient transfers to vulnerable populations, or do they extract from productive sectors beyond the fiscal capacity of the state?",
+      "resolution_mechanism": "Measure fiscal incidence: net transfer to service sectors/households vs. deadweight loss from capital-intensive sector contraction and local government debt service.",
+      "impact": "If efficient, the constraint coordinates genuine welfare gains (rope/tangled_rope); if extractive beyond capacity, it becomes a snare with local government and industrial sectors as structural victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether redistribution strengthens the social contract or extracts beyond sustainability."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint captures the reading of state legitimacy that grounds political authority in the delivery of tangible, daily-life improvements: employment stability, accessible healthcare, quality education, and dignified elderly care. It emerged as the dominant legitimacy frame during the post-2012 leadership transition, when the 'growth at all costs' model generated visible welfare gaps — rural healthcare collapse, urban employment precarity, pension shortfalls. The reading reorients fiscal policy toward consumption support and service delivery, strengthening redistribution mechanisms (targeted transfers, public service expansion, social insurance deepening). This structurally benefits service-sector workers, urban households, and direct users of public health/education/eldercare systems. The victims are capital-intensive industrial expansion (which loses priority in credit allocation and land quotas) and local government infrastructure spending (which bears the unfunded mandate of service delivery without commensurate revenue). The constraint requires active enforcement: fiscal discipline on local governments, credit guidance away from heavy industry, and political suppression of labor unrest in declining sectors. Theater ratio rises over time as 'common prosperity' slogans decorate a structure that increasingly struggles to fund its promises without growth.",
+    "logic_rationale": "Extractiveness (0.42) is moderate: the constraint redirects resources from high-multiplier investment to lower-multiplier consumption, but the transfer is real and measurable — not pure rent extraction. Suppression (0.35) is moderate: local governments resist unfunded mandates; industrial interests lobby against credit tightening; both are managed through political control rather than open coercion. Theater ratio (0.28) reflects genuine service delivery alongside performative 'people-centered' rhetoric that masks fiscal strain. Accessibility collapse (0.38) is low: alternatives (private healthcare, supplemental education, family eldercare) persist but are costly. Resistance (0.52) is significant: local governments hide debt, enterprises underreport employment, citizens circumvent hukou restrictions to access better services. The claimed type is tangled_rope because the constraint genuinely coordinates a welfare floor (coordination function) while asymmetrically extracting from industrial and fiscal capacity (extraction function) and requires active enforcement to maintain the redistribution.",
+    "directionality_logic": "Service sector workers and urban households are structural beneficiaries: they receive expanded public services, employment guarantees in services, and consumption subsidies. Their exit options are constrained — they benefit from the arrangement but cannot easily leave the political system that provides it (identity_locked for elderly care recipients, constrained for others). Heavy industry capital and local government infrastructure funding are structural victims: the former faces credit rationing and demand contraction; the latter bears unfunded service mandates. Their exit options are constrained (capital) to trapped (local governments cannot exit their jurisdiction). The analytical observer (this reading's author) sees the full structure: a genuine coordination function (welfare floor) fused with asymmetric extraction (industrial-to-service transfer).",
+    "perspectival_gap": "From the beneficiary seat (urban household), the constraint appears as a rope: real coordination, tangible benefits, suppression is invisible. From the victim seat (county government financing a new nursing home mandate with land sale revenue that no longer exists), it appears as a snare: extraction without coordination, active suppression of fiscal dissent. The agenda-setter seat (central fiscal authority) experiences it as a scaffold: temporary redistribution to bridge a structural transition, but with no credible sunset because the demographic crisis (aging) makes the welfare floor permanent. The engine computes this divergence from the declared roles and exit options.",
+    "mandatrophy_analysis": "The founding problem (post-growth welfare gaps) remains live and worsening (aging population, youth unemployment). The arrangement has not atrophied — it has intensified. Mandatrophy is not resolved; the constraint's function has expanded, not decayed. The risk is mandatrophy in reverse: the mandate grows faster than the fiscal capacity to fulfill it, converting a tangled_rope toward a snare as extraction hardens and coordination frays.",
+    "kernel_context": "This constraint is the livelihood_security_reading of the contested kernel performance_legitimacy. Sibling readings: quantitative_growth_reading (legitimacy from GDP growth rates), qualitative_development_reading (legitimacy from structural transformation toward high-quality development), techno_nationalist_reading (legitimacy from technological self-sufficiency and strategic industry leadership). This reading prioritizes service delivery and social safety net as primary constraints; consumption support over investment; redistribution mechanisms strengthened. Beneficiaries: service sectors and household consumption. Victims: capital-intensive industrial expansion and local government infrastructure spending."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "performance_legitimacy__quantitative_growth_reading",
+      "performance_legitimacy__qualitative_development_reading",
+      "performance_legitimacy__techno_nationalist_reading",
+      "local_government_fiscal_strain",
+      "industrial_credit_allocation"
+    ],
+    "dual_formulation_note": "The performance_legitimacy kernel decomposes into four structurally distinct constraints (readings), each with different ε, beneficiaries, victims, and enforcement requirements. This reading (livelihood_security) and quantitative_growth_reading are in tension over credit allocation; qualitative_development_reading attempts to synthesize but inherits extraction from both; techno_nationalist_reading competes for the same fiscal space. All four are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "central_fiscal_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets the legitimacy frame, directs credit allocation toward service sectors, mandates local service delivery, and manages the fiscal transfer system. Can adjust the constraint's parameters (transfer levels, mandate scope) but faces hard demographic and fiscal limits. Benefits from regime stability the constraint produces."
+    },
+    {
+      "name": "service_sector_workers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gain expanded employment in healthcare, education, elderly care, and public services. Wages and job security improve relative to manufacturing. Cannot easily exit the political system; their benefits depend on continued state prioritization of services over industry."
+    },
+    {
+      "name": "urban_households",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive better public services, consumption subsidies, and social insurance. Also bear rising costs (housing, education supplements, private care top-ups) and implicit taxes (financial repression, currency depreciation). Exit is constrained by hukou, career, and family ties."
+    },
+    {
+      "name": "elderly_care_recipients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Direct users of expanded public eldercare. Their identity and survival are fused with the service; they cannot conceive of exit. The constraint's legitimacy rests visibly on their welfare. They are the moral core of the arrangement."
+    },
+    {
+      "name": "public_health_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Benefit from expanded insurance coverage, rural clinic upgrades, and drug price controls. Exit options are limited to private insurance (costly) or medical tourism (elite only). The constraint delivers tangible daily value but strains under demographic load."
+    },
+    {
+      "name": "education_dependents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Families with children in public education gain from reduced fees, better rural schools, and tutoring crackdowns that lower competitive pressure. They also lose choice and face intensified exam competition. Exit is constrained by the gaokao system and residential sorting."
+    },
+    {
+      "name": "heavy_industry_capital",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State-owned and private capital in steel, chemicals, machinery, construction face credit tightening, demand contraction from infrastructure slowdown, and regulatory pressure to reduce capacity. They lobby, diversify into services, or seek overseas markets — but exit is constrained by asset specificity and political dependence."
+    },
+    {
+      "name": "local_government_infrastructure_funding",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "County and township governments mandated to deliver expanded services (eldercare, healthcare, education) without commensurate revenue. Land finance revenue collapses; central transfers are insufficient and earmarked. They hide debt, delay payments, and cut discretionary spending. Cannot exit their jurisdiction; trapped in a fiscal vice."
+    },
+    {
+      "name": "export_oriented_manufacturing",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Lose policy priority (land, credit, energy) to service sectors. Face rising labor costs from service-sector competition. Can relocate production to Southeast Asia or Mexico — mobile exit, but at cost of supply chain disruption and market access. Some capture benefits from 'dual circulation' domestic demand push."
+    },
+    {
+      "name": "rural_migrant_workers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Neither full beneficiaries (excluded from urban hukou services) nor pure payers (they fuel the export sector being deprioritized). They would demand portable social insurance and hukou reform if heard. Their exclusion is structural: the constraint's urban service focus leaves them in a liminal zone."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Sees the full structure: a genuine welfare coordination function fused with asymmetric fiscal extraction, enforced through political control, with rising theater as demographic promises outrun fiscal capacity. No stake in the outcome; tracks the constraint's drift across readings."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a welfare floor — employment in services, healthcare access, education quality, eldercare dignity — that the market alone would not deliver at scale, solving the coordination problem of universal basic welfare in a developing economy with weak private safety nets.",
+    "transfer_function": "Moves fiscal resources (tax revenue, credit, land quotas) from capital-intensive industrial sectors and local government infrastructure budgets toward service sectors and household consumption subsidies, mediated by central transfers and directed credit.",
+    "absent_voices": "Rural migrant workers (excluded from urban services, deprioritized in industrial policy), private-sector SMEs in services (crowded out by state expansion), and future taxpayers (bearing the debt service for today's transfers) are not in the room. They would demand portability, market access, and fiscal sustainability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the livelihood-security legitimacy frame vanished overnight, credit would flow back to heavy industry, local governments would slash service mandates to service debt, urban households would lose consumption subsidies, and elderly care would revert to family-only provision. The political coalition sustaining the current regime would fracture; a new legitimacy frame (likely growth or techno-nationalist) would be imposed.",
+    "founding_problem": "Post-2012: the growth-at-all-costs model produced a welfare crisis — rural healthcare collapse, urban employment precarity, pension shortfalls, environmental degradation — that threatened regime legitimacy. The livelihood-security reading was built to solve this by making daily-life welfare the primary metric of governance success.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the central authority itself (common prosperity speeches, 2021 onward), by international development institutions (World Bank China reports on aging and inequality), and by independent scholars outside the benefiting parties (e.g., Martin Whyte on social stability, Karen Eggleston on healthcare access). No beneficiary group corroborates the problem's resolution — all attest it is worsening."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "quantitative_growth_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "qualitative_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "techno_nationalist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_derives_from_lived_welfare",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "social_safety_net_as_primary_state_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_2012_welfare_gap_crisis",
+    "drift_state": {
+      "moment": "common_prosperity_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

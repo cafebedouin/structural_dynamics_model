@@ -1,0 +1,376 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_boundary__balanced_contestation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "18ae17d7-dacf-47f2-82bc-e37a924ab04a"
+  },
+  "base_properties": {
+    "extractiveness": 0.47,
+    "suppression": 0.44,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Balanced Contestation Boundary of Israeli Basic Law Interpretation",
+    "topic_domain": "legal/constitutional-political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supreme_court_justices",
+      "knesset_governing_coalitions",
+      "constitutional_law_professionals"
+    ],
+    "victims": [
+      "rights_dependent_minorities",
+      "civil_society_rights_organizations"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.44,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This file instantiates one reading (balanced_contestation) of the kernel basic_law_interpretive_boundary; what changes structurally if a sibling reading governs instead?",
+      "resolution_mechanism": "Adoption events: a binding override clause or Basic Law amendment transferring final authority to the Knesset selects parliamentary_sovereignty_reading; constitutional entrenchment of review or a binding-finality doctrine selects judicial_supremacy_reading. Each sibling is a separate constraint file with its own beneficiary/victim structure.",
+      "impact": "Under judicial supremacy the bench becomes sole capturer and minority protection stabilizes while burden concentrates on the legislature; under parliamentary sovereignty the coalition becomes capturer and minority protection becomes majoritarian discretion. This file's negotiated structure and its moderate, domain-varying burden profile hold only while the contest itself governs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: one reading of a three-reading kernel; siblings are separate files, not averaged here."
+    },
+    {
+      "id": "epsilon_domain_variance",
+      "question": "Does the single aggregate burden scalar mask wide variation across policy domains — security and occupation legislation versus socio-economic regulation versus religious-status law?",
+      "resolution_mechanism": "Decompose into per-domain stories per the epsilon-invariance rule and compare invalidation rates, override responses, and petitioner populations by domain.",
+      "impact": "The aggregate understates burden in security and religious-status domains, where review bites hardest and override pressure is strongest, and overstates it in technical-economic domains; decomposition could shift the overall type assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Domain-heterogeneous burden hidden under one aggregate scalar."
+    },
+    {
+      "id": "equilibrium_durability",
+      "question": "Is the negotiated boundary a durable equilibrium or a transition that resolves toward one of the sibling readings?",
+      "resolution_mechanism": "Track post-2023 indicators: renewed override attempts, Basic Law amendment frequency, Court docket retrenchment, coalition behavior at the next constitutional flashpoint.",
+      "impact": "Resolution toward either sibling converts this arrangement into a captured structure with a named capturer seat; durability evidence supports the current negotiated classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the balance persists or collapses toward a sibling reading."
+    },
+    {
+      "id": "restraint_mechanism_ambiguity",
+      "question": "Is the legislature's customary restraint — not deploying its formal simple-majority amendment power wholesale — internalized norm-compliance or strategic response to enforcement and reputational risk?",
+      "resolution_mechanism": "Observe coalition behavior when enforcement capacity dips: court-packing windows, supermajority moments, wartime unity governments.",
+      "impact": "If restraint is purely strategic, the boundary decays quickly once enforcement capacity erodes and the durable-balance characterization weakens; if internalized, the arrangement survives enforcement decay and the normative constraint runs deeper than the scalar suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalized versus strategic sources of legislative self-limitation."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Since the 1995 United Mizrahi Bank decision, Israel's Supreme Court has reviewed Knesset legislation against the Basic Laws, but no text fixes the boundary of that power: the Basic Laws contain no entrenched override mechanism and no entrenchment of judicial review itself, while the Knesset retains simple-majority power to amend them. Practice has filled the silence with a negotiated regime — the Court strikes, coalitions re-enact or attach notwithstanding clauses, override proposals surface and recede, the Attorney General brokers compliance, and international obligations enter chiefly through judicial citation. This file authors that negotiated arrangement as ONE reading of the contested kernel basic_law_interpretive_boundary; the judicial-supremacy and parliamentary-sovereignty readings are separate constraint files with their own structures and are not averaged here. The burden referent is the standing negotiated arrangement itself, assessed by this reading's own lights — not the court-dominated or coalition-dominated alternatives this reading argues against.\n\nKEY AGENTS (by structural relationship):\n- supreme_court_justices: agenda-setting beneficiary (institutional/identity_locked) — administers the boundary, gains interpretive territory, fused with the guardian role\n- knesset_governing_coalitions: agenda-setting payer (institutional/immediate horizon) — holds formal amendment power, loses statutes, guards the override option\n- rights_dependent_minorities: primary payer (powerless/trapped) — protection contingent on each negotiation round\n- civil_society_rights_organizations: payer with incidental benefit (organized/constrained) — supplies petitions, absorbs costs\n- constitutional_law_professionals: beneficiary (moderate/mobile) — monetizes contestation\n- attorney_general_office: dual-positioned broker (institutional/constrained)\n- israeli_electorate: near-symmetric beneficiary-payer (organized/identity_locked)\n- international_treaty_bodies: excluded external critic (institutional/no domestic standing)\n- comparative_constitutional_scholars: analytical observer",
+    "key_agents": [
+      "supreme_court_justices: agenda-setting beneficiary (institutional/identity_locked) — administers the boundary through review practice, gains interpretive territory, institutionally fused with the guardian role",
+      "knesset_governing_coalitions: agenda-setting payer (institutional/immediate horizon) — holds formal constituent power, loses statutes to invalidation, guards the unused override option",
+      "rights_dependent_minorities: primary payer (powerless/trapped) — protection arrives case by case and can be undone by the next legislative round",
+      "civil_society_rights_organizations: payer with incidental benefit (organized/constrained) — supplies the petitions, absorbs the litigation costs",
+      "constitutional_law_professionals: beneficiary (moderate/mobile) — monetizes the contest through doctrine, briefs, and personnel",
+      "attorney_general_office: dual-positioned broker (institutional/constrained) — gatekeeps between bench demands and coalition priorities",
+      "israeli_electorate: near-symmetric beneficiary-payer (organized/identity_locked) — receives protection and responsiveness, pays volatility",
+      "international_treaty_bodies: excluded external critic (institutional/constrained) — observes and urges without domestic standing",
+      "comparative_constitutional_scholars: analytical observer (moderate/analytical) — tracks the arrangement against peer systems"
+    ],
+    "logic_rationale": "Claim and metrics are independent authored facts. The claim — tangled_rope — rests on structure: the arrangement solves a real coordination problem (dividing constitutional labor in a polity with no formal constitution) AND moves real costs through the same structure onto identifiable parties (minorities whose protection is contingent, organizations that fund the litigation, legislators whose statutes die), AND it is held up by active enforcement (review practice, opinion gatekeeping, override deterrence) rather than participant unanimity. The metrics describe operation, not aspiration. Burden 0.47 at interval end: real transfers run through the boundary, but roughly half its activity is genuine constitutional production. Suppression 0.44: persistence leans on enforcement risk and reputational exposure rather than heavy coercion, but the 2023 episode showed the machinery hardening fast when challenged — defiance threats, appointment-packing bills, personal intimidation of judges — before partially standing down. Theater 0.38: override-clause cycles, symbolic Basic Laws, and commission choreography consume a large minority of activity without moving the boundary. Accessibility collapse 0.40: the rival arrangements remain visibly available — the 2023 overhaul was a live attempt to walk through one of them — so understanding the boundary does not close exits. Resistance 0.60: the arrangement is contested from both flanks simultaneously, which is precisely what keeps it a negotiation rather than a settlement. All three tracked series share one time grid (T=0–30, mapping 1995–2025 in five-year steps) with end-state values matching the base properties; the trajectories show crisis-driven cycling — contest intensity accumulates, spikes at reform attempts (2017 conscription-law rounds, 2019–2020 coalition warfare, the 2023 overhaul), then partially de-escalates — and the oscillation itself functions as a mobilization mechanism for both camps rather than as noise. Identity-lock note: the bench's exit is locked by institutional identity fusion — abandoning review would dissolve the guardian self-conception that constitutes the institution — so its beneficiary position is not freely revisable; the electorate's lock is national-identity fusion. Suppression here is predominantly structural (enforcement risk, international exposure) rather than internalized; the residual ambiguity is routed to the restraint_mechanism_ambiguity omega.",
+    "perspectival_gap": "Seats compute differently from similar nominal standing. From the bench, the arrangement is a dialogue it moderates and from which it gains terrain; from the coalition table, the same dialogue is an unelected veto that consumes statutes and agenda time; from minority organizations, it is shelter that must be re-purchased each session; from the professional complex, it is a market. Two institutional seats (bench, coalition) share a power atom yet face opposite incentive gradients — the engine derives this divergence from roles and exit structure, not from the power labels. The excluded international seats, and the disenfranchised population governed by the same framework, see a balance negotiated entirely among insiders.",
+    "directionality_logic": "Declared beneficiaries (bench, professional complex, governing coalitions in their agenda-setting capacity) sit near the subsidized end; declared payers (rights-dependent minorities, rights organizations net of their incidental standing) sit near the targeted end; the electorate sits near symmetric, receiving both protection and responsiveness while paying volatility. Exit modulates within groups: the bench's identity lock pins it to its beneficiary position regardless of preference; the professional complex's mobility lets it arbitrage the arrangement's continuation; minorities' trap amplifies their effective burden. No directionality overrides are authored: the seats that most need differentiation (bench versus coalition) share a power atom, and the override mechanism keys on power atoms alone, so a blanket correction would smear across structurally opposite seats; per-seat derivation from roles, exits, and declarations carries the distinction instead. International treaty bodies hold no declaration and fall to the power-atom fallback — a known limitation recorded here rather than papered over with a fabricated override.",
+    "mandatrophy_analysis": "The founding problem — bounding a parliamentary majority in a polity without a formal constitution — is live: every faction concedes the bounding need while disputing its solution, and the 2023 crisis was fought over exactly that question. With founding_problem_status=live and disappearance_verdict=world_rearranges, the mismatch consumer finds no dead-mandate flag, correctly: the arrangement has not outlived its function. The classification guards against both standard mislabels. Reading the arrangement as pure coordination ignores who pays — minorities re-purchase protection each round and the professional complex monetizes the churn. Reading it as pure predation ignores what would vanish with it — the only working channel for constitutional dispute in a constitution-less polity, and the domestic port of entry for international obligations. The tangled-rope claim keeps both halves on the table; the engine's per-seat computation tests whether the halves balance or tip.",
+    "kernel_context": "Kernel: basic_law_interpretive_boundary — the contested allocation of final interpretive authority over Israel's Basic Laws. This file instantiates the balanced_contestation_reading: both institutions legitimately bounded, authority located in the negotiated boundary itself. Siblings: judicial_supremacy_reading (invalidation binds the Knesset; the court as final interpreter) and parliamentary_sovereignty_reading (simple-majority Knesset authority including override). The disagreement is located at a single structural element — the locus of final authority — and each reading assigns it elsewhere; the readings are mutually exclusive as complete accounts, which is why this file declares foreclosure edges to both siblings even while they remain live positions held by opposing factions in the wider contest."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "judicial_supremacy_reading",
+      "parliamentary_sovereignty_reading"
+    ],
+    "dual_formulation_note": "Family decomposition of the colloquial label 'the Israeli Basic Law interpretive boundary': the label covers three structurally distinct arrangements — this negotiated reading, court-captured supremacy, coalition-captured sovereignty — with different beneficiary/victim structures and therefore different intrinsic burden profiles. This file links both siblings per the family rule; influence runs in both directions — each sibling's advocacy cites failures of the balance, and the balance's survival conditions are defined by the siblings' continued availability as live alternatives."
+  },
+  "stakeholders": [
+    {
+      "name": "supreme_court_justices",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Sits atop the review hierarchy: decides which Basic Law provisions anchor scrutiny of statutes, develops the operative doctrines (proportionality; reasonableness until its 2023 statutory narrowing), and strikes or upholds legislation. Gains interpretive territory whenever the boundary stays open, and spends institutional capital defending review against override proposals. Leaving the review role would dissolve the Court's self-conception as guardian of the Basic Laws — the role and the institution have fused. Career paths run through the Attorney General's office and academia into the bench."
+    },
+    {
+      "name": "knesset_governing_coalitions",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacts Basic Laws and ordinary statutes with a simple majority and holds the formal power to amend either. Responds to judicial invalidation by re-enacting amended versions, attaching notwithstanding clauses, proposing override mechanisms, or amending Basic Laws directly (as with the 2023 change to the reasonableness ground). Loses finished legislation to invalidation and spends coalition time on constitutional fights; the unused option to override is itself valuable electorally, so it is guarded even when never exercised."
+    },
+    {
+      "name": "rights_dependent_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Arab-Palestinian citizens, asylum seekers, women in religious-status matters, and conscription objectors rely on judicial review for protections the political process does not reliably supply. Protection arrives case by case and can be undone by the next legislative round; interim periods leave people in limbo, as with the conscription arrangements struck in 2012 and 2017 and repeatedly extended in between. Citizenship and family ties bind them to the jurisdiction; exit is not a realistic option."
+    },
+    {
+      "name": "civil_society_rights_organizations",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Public-interest organizations supply the petitions that keep review busy: they identify targets, litigate for years, absorb the costs, and lose often enough to fundraise around. Their staffing, funding, and public standing depend on an open front of contestable statutes; a closed boundary would shrink their role as surely as a captured one would."
+    },
+    {
+      "name": "constitutional_law_professionals",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Academics, litigators, and former clerks supply the doctrine, briefs, and personnel the boundary consumes. Contestation sustains demand: every proposed override, every novel doctrine, every comparative analogy generates publications, consultations, and fee income. Exit is realistic — chairs abroad, private practice, advisory work in other jurisdictions."
+    },
+    {
+      "name": "attorney_general_office",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Issues binding legal opinions to the government, decides whether to defend challenged statutes, and negotiates compliance timetables with the Court. The unsettled boundary enlarges the office: every dispute routes through its gatekeeping. It serves at political appointment yet answers professionally to the bench — a dual position that makes it both broker and occasional refuser."
+    },
+    {
+      "name": "israeli_electorate",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Receives both sides of the bargain: judicial protection of dissenting positions and legislative responsiveness to majorities. Pays in volatility — mass protest mobilization, reservist-refusal episodes, politicization of judicial appointments — and in the sense that basic rights feel negotiable. National membership is constitutive; leaving means emigration, which most experience as loss of self rather than relocation."
+    },
+    {
+      "name": "international_treaty_bodies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "UN treaty bodies and peer reviewers issue concluding observations urging alignment of domestic law with ratified obligations; foreign apex-court judgments are cited by petitioners and occasionally by the Court itself. They hold no domestic enforcement standing; their leverage is reputational and enters chiefly through judicial citation. They would press for firmer judicial protection if they had a seat at the table."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track the arrangement against peers — Westminster sovereignty, American judicial supremacy, Canada's notwithstanding-clause dialogue — and advise committees on design options. They collect citations and consulting engagements but bear none of the arrangement's costs; their assessments travel into both camps' arguments."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Divides constitutional labor between an elected legislature and an unelected court so that basic-law disputes are processed through iterated negotiation — invalidation, response, accommodation — instead of being settled once by whichever branch moves first. It also keeps a functioning constitutional order alive in a polity with no formal constitution, and gives international obligations a domestic port of entry.",
+    "transfer_function": "Moves final-decision rights over contested statutes back and forth between court and coalition depending on domain and political moment; moves litigation costs and waiting-period burdens onto petitioners and the populations whose status hangs on each round; moves reputational and electoral costs onto whichever branch overreaches last.",
+    "absent_voices": "Palestinian citizens of Israel and residents of the occupied territories are governed under the same Basic Law framework but hold little negotiating presence — their parties are rarely in governing coalitions, and the territorial population lacks the franchise altogether. International treaty bodies comment from outside without standing. Both would object that the balance is struck among the institutions while those subject to it were never seated.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal forces immediate resolution of the underlying contest: either the Court claims general supremacy — freezing coalition legislation pending review — or the Knesset claims override — collapsing rights protection to majority preference. Every branch's operating procedure presupposes the negotiated middle; treaty partners' legality assessments, the professional complex built on the boundary, and the protest infrastructure organized around defending it would all reorganize within months.",
+    "founding_problem": "A polity founded on parliamentary majority rule with no formal constitution needed a way to bound that majority without a written constitution to bound it with. The 1950 Harari compromise deferred constitution-making chapter by chapter; the 1992 Basic Laws and the 1995 United Mizrahi Bank decision converted the deferral into a working review arrangement whose limits no text fixes.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the Israel Democracy Institute's constitutional studies, decades of Knesset Constitution, Law and Justice Committee proceedings under competing governments, comparative scholarship treating the arrangement as an unfinished design, and the fact that proponents of both rival readings concede the bounding problem is real while disputing only its solution. UN treaty-body observations independently attest that the underlying problem — securing rights against shifting majorities — remains open."
+  },
+  "gain_flow": "constitutional_law_professionals",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "negotiated_dual_authority_equilibrium",
+    "drift_state": {
+      "moment": "post_2023_overhaul_crisis",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "parliamentary_sovereignty_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mutual_bounded_authority_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "international_norms_bound_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

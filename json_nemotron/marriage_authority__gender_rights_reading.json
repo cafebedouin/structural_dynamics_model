@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "marriage_authority__gender_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_marriage_authority__gender_rights_reading",
+    "measurement_id_prefix": "marriage_authority__gender_rights_reading",
+    "story_uid": "e9a1357c-9f72-41fc-9f85-a1606b9450a1",
+    "created_at": "2026-06-11T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Judicial Reform of Personal Law on Gender Equality Grounds",
+    "topic_domain": "legal_pluralism/constitutional_law/comparative_family_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "women_rights_advocates",
+      "constitutional_court",
+      "progressive_legal_scholars"
+    ],
+    "victims": [
+      "women_within_patriarchal_personal_law",
+      "traditional_community_authorities",
+      "personal_law_boards"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the gender_rights_reading a distinct constraint from the kernel's other readings, or a measurement perspective on the same constraint?",
+      "resolution_mechanism": "ε-invariance test: if the standing arrangement's extractiveness differs structurally when assessed from the gender_rights_reading's frame versus the communal_autonomy_reading's frame, they are different constraints. The gender_rights_reading targets specific practices (triple talaq, maintenance, property) with women as victims of those practices, while communal_autonomy_reading targets state encroachment with community authorities as victims — different beneficiary/victim structures, different ε referents.",
+      "impact": "If they are the same constraint, the kernel decomposition violates ε-invariance. If different, each reading instantiates its own constraint story with independent classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's readings are structurally distinct constraints or perspectival variants"
+    },
+    {
+      "id": "beneficiary_victim_ambiguity_women",
+      "question": "Are women_within_patriarchal_personal_law beneficiaries of the judicial reform (as the reading claims) or victims of the reform's disruption of their community's protective structures?",
+      "resolution_mechanism": "Longitudinal study of women's material outcomes post-reform: maintenance awards, property access, community support networks, remarriage prospects. Compare jurisdictions with and without such judicial interventions.",
+      "impact": "If women are net beneficiaries, the constraint is a tangled_rope (coordination + asymmetric extraction from community authorities). If women are net victims of reform disruption, the constraint is a snare (extraction from women via both patriarchal practices AND reform's collateral damage).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the intended beneficiaries of gender-equality reform are also its victims"
+    },
+    {
+      "id": "enforcement_capacity_gap",
+      "question": "Does the judicial expansion of constitutional guarantees have actual enforcement capacity at the local level, or does it create a performative rights layer while patriarchal practices continue unchanged?",
+      "resolution_mechanism": "Track implementation metrics: court orders compliance rates, police registration of cases, community-level dispute resolution outcomes, legal aid accessibility for affected women.",
+      "impact": "If enforcement is performative (high theater_ratio, low actual behavior change), the constraint is a piton or scaffold. If enforcement is effective but contested, it remains a snare/tangled_rope with active suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial reform translates to on-the-ground change or remains symbolic"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers, community enforcement, economic dependency) or internalized (women believing reform threatens their security, identity fusion with community norms)?",
+      "resolution_mechanism": "Post-reform suppression trajectory: if suppression persists after legal barriers are removed, reclassify as partially internalized. Qualitative interviews with women who accessed reform vs. those who did not.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after legal exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in interpersonal/communal constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 1985,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the gender_rights_reading of the marriage_authority kernel: the position that personal law systems (particularly Muslim personal law in India, but structurally generalizable) must be reformed through judicial expansion of constitutional equality guarantees to address intra-community gender inequality. The reading targets specific practices — triple talaq (instant divorce), maintenance denial, unequal property rights — rather than seeking wholesale replacement of personal law systems. It cross-cuts the communal/secular divide: secularists support it as a step toward Uniform Civil Code, communal autonomists oppose it as state encroachment, federalist millet proponents see it as undermining the pluralist compact, and judicial harmonization proponents view it as part of their case-by-case approach. The constraint is a snare from the structural seat of women_within_patriarchal_personal_law: they are extracted from by patriarchal practices AND by the reform's disruption of community protection structures, while the coordination story (gender equality) is real but the extraction is asymmetric and actively enforced through court orders that community authorities resist.",
+    "key_agents": [
+      "women_rights_advocates: Primary beneficiary (institutional/mobile) — drives reform litigation, collects symbolic and material gains from legal victories",
+      "women_within_patriarchal_personal_law: Primary victim (powerless/identity_locked) — bears both patriarchal extraction and reform's collateral disruption to community support",
+      "constitutional_court: Agenda setter (institutional/generational) — authors the expanding equality jurisprudence, administers the constraint",
+      "traditional_community_authorities: Victim (organized/constrained) — loses interpretive monopoly over family law, bears enforcement costs of resistance",
+      "personal_law_boards: Victim (organized/constrained) — institutional face of communal autonomy, forced into defensive litigation",
+      "progressive_legal_scholars: Beneficiary (organized/biographical) — gains professional recognition and policy influence from reform jurisprudence",
+      "secularist_legislators: Observer (institutional/generational) — watches reform advance UCC agenda without legislative action",
+      "federalist_millet_proponents: Excluded (organized/biographical) — sees reform as majoritarian capture of pluralist compact, not in conversation"
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because the constraint operates through asymmetric transfer: community authorities lose interpretive control and enforcement power (extraction from them), while women_within_patriarchal_personal_law experience both the original patriarchal extraction AND the reform's disruption of community-based maintenance/property/support systems. Suppression is high (0.72) because the constraint's persistence depends on active judicial enforcement against community resistance — court orders, contempt proceedings, police registration of cases against community leaders. Theater ratio is moderate (0.38): the gender equality justification is genuine but a growing share of judicial energy goes to managing community backlash rather than delivering material outcomes to women. Accessibility collapse is moderate (0.52): alternatives exist (legislative UCC, community internal reform, private arbitration) but are structurally blocked by the same communal/secular polarization. Resistance is high (0.68): community authorities mobilize religious freedom arguments, political parties instrumentalize the issue, and implementation faces active non-compliance.",
+    "perspectival_gap": "From the constitutional_court seat (agenda_setter, institutional, analytical exit), the constraint appears as genuine coordination: expanding constitutional guarantees to cover intimate life, solving the collective action problem of gender inequality within communities. From the women_within_patriarchal_personal_law seat (victim, powerless, identity_locked exit), the same structure operates as a snare: they are the object of reform rather than its subject, their community support networks are disrupted by court orders they did not seek, and their identity-locked exit means they cannot leave the community without losing their entire social world. From the traditional_community_authorities seat (victim, organized, constrained exit), the constraint is extraction of their jurisdictional authority enforced by a state they view as hostile. The engine computes this divergence from the structural data — the claimed snare type reflects the analyst seat's assessment.",
+    "directionality_logic": "Women_rights_advocates and constitutional_court are structural beneficiaries: they collect professional standing, jurisprudential authority, and policy influence from the reform (d near 0.0-0.2). Women_within_patriarchal_personal_law are structural targets: they bear the double extraction (patriarchal practices + reform disruption) with identity_locked exit (d near 0.8-0.9). Traditional_community_authorities and personal_law_boards are secondary targets: they lose interpretive monopoly and face enforcement costs, but have organized exit options through political mobilization (d near 0.6-0.7). Progressive_legal_scholars are incidental beneficiaries (d near 0.3). Secularist_legislators are observers with analytical exit (d = 0.5). Federalist_millet_proponents are excluded — their structural position is not captured by the constraint's operation but they would object if present.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling by exposing the asymmetric extraction: the gender equality coordination function is real (women DO gain legal rights), but it operates through a structure that extracts from the very women it claims to benefit (disruption of community protection) and from community authorities (loss of jurisdiction) without their consent. The mandatrophy trap would be calling this a 'rope' (pure coordination) because women gain formal rights, or a 'tangled_rope' because community authorities also lose power. The snare classification captures that the coordination story is cover for a structure whose persistence depends on coercion (judicial enforcement against community resistance) and whose victims include the nominal beneficiaries. The founding problem (gender inequality in personal law) is live but the arrangement's extraction profile has intensified beyond the founding justification.",
+    "kernel_context": "This constraint is the gender_rights_reading of the marriage_authority kernel. Sibling readings: communal_autonomy_reading (community religious tradition as authority), federalist_millet_reading (pluralism as anti-tyranny mechanism), judicial_harmonization_reading (case-by-case constitutional floor), secularist_reading (legislative UCC as solution). This reading cross-cuts the communal/secular divide by targeting specific practices via constitutional equality jurisprudence rather than system replacement."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_authority__communal_autonomy_reading",
+      "marriage_authority__federalist_millet_reading",
+      "marriage_authority__judicial_harmonization_reading",
+      "marriage_authority__secularist_reading"
+    ],
+    "dual_formulation_note": "Kernel decomposition: marriage_authority kernel has 5 readings. This reading (gender_rights) targets specific practices via judicial constitutional expansion; communal_autonomy defends community interpretive monopoly; federalist_millet defends pluralism as structural anti-majoritarianism; judicial_harmonization pursues case-by-case constitutional floor; secularist pursues legislative UCC. The gender_rights and judicial_harmonization readings share the judicial instrument but differ in scope (targeted practices vs. systemic floor) and beneficiary structure (women_rights_advocates vs. constitutional_court as primary beneficiary)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "women_rights_advocates",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "NGOs, lawyers, and activists who litigate personal law reform cases. They gain professional recognition, funding, and policy influence from successful judgments. Their exit is mobile — they can shift to other rights campaigns if this constraint dissolves. They do not personally bear the community disruption costs of the reforms they win."
+    },
+    {
+      "name": "women_within_patriarchal_personal_law",
+      "role": "payer",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Women subject to patriarchal personal law practices (triple talaq, unequal maintenance, denied property). They bear the original patriarchal extraction AND the collateral disruption when judicial reform destabilizes community-based support systems (maintenance arbitration, property settlement within community, remarriage networks). Their exit is identity_locked: leaving the community means losing kinship, economic security, and social identity. They are often not the ones bringing cases — cases are brought by advocates or courts suo motu."
+    },
+    {
+      "name": "constitutional_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Supreme Court and High Courts expanding constitutional equality guarantees (Articles 14, 15, 21) into personal law domain. They author the constraint's operation through judgments, control the pace and scope of reform, and gain institutional legitimacy as guardians of constitutional morality. Their exit is arbitrage — they can pivot to other constitutional domains. They administer the enforcement machinery (contempt, monitoring committees)."
+    },
+    {
+      "name": "traditional_community_authorities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Religious leaders, qazis, community elders who historically interpreted and enforced personal law. They lose interpretive monopoly, face contempt proceedings for non-compliance, and bear political costs of resisting court orders. Their exit is constrained: they can adapt interpretations (some do) but cannot exit the community authority role without losing their position. They mobilize religious freedom arguments and political allies."
+    },
+    {
+      "name": "personal_law_boards",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Institutional bodies (e.g., All India Muslim Personal Law Board) that represent communal autonomy in legal/political forums. They bear litigation costs, face public delegitimization, and lose jurisdictional authority. Their exit is constrained: they exist to defend personal law; dissolving would concede the reform agenda. They negotiate compliance frameworks to retain residual authority."
+    },
+    {
+      "name": "progressive_legal_scholars",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Academics and jurists who provide the doctrinal architecture for judicial reform. They gain citations, policy appointments, and intellectual authority from the expanding jurisprudence. Their exit is mobile — their expertise transfers to other constitutional domains. They are not directly subject to the constraint's enforcement."
+    },
+    {
+      "name": "secularist_legislators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Political actors who support Uniform Civil Code but benefit from judicial reform advancing their agenda without legislative action. They observe the constraint's operation, occasionally intervene with legislation (e.g., Muslim Women Protection of Rights on Marriage Act 2019), but do not administer or directly bear its costs."
+    },
+    {
+      "name": "federalist_millet_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Scholars and minority-rights advocates who view legal pluralism as a consociational safeguard against majoritarianism. They argue judicial reform captures the pluralist compact for majoritarian moral projects. They are structurally excluded from the reform conversation — their framework (pluralism as anti-tyranny) is treated as obstructionist by both gender_rights and secularist readings."
+    }
+  ],
+  "gain_flow": "constitutional_court",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Addresses the collective action problem of gender inequality within communities where women cannot individually negotiate equal rights because community norms, economic dependency, and identity fusion prevent exit. Judicial constitutional expansion provides an external lever to shift the equilibrium.",
+    "transfer_function": "Moves interpretive authority over family law from community authorities (qazis, personal law boards) to constitutional courts; moves material resources (maintenance, property) from husbands/families to women via court orders; moves political legitimacy from communal autonomy to constitutional morality.",
+    "absent_voices": "Women who do not want judicial intervention — those who prefer community-based resolution, fear community ostracism from court cases, or view reform as threatening their negotiated position within the patriarchal bargain. Also excluded: federalist_millet_proponents who see the reform as majoritarian capture of the pluralist compact. These voices are not in the courtroom; the constraint's operation assumes they do not exist or are false consciousness.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the gender_rights_reading constraint vanished overnight: community authorities would regain interpretive monopoly over triple talaq, maintenance, and property; women_within_patriarchal_personal_law would lose constitutional-law remedies but retain community-based (unequal) systems; women_rights_advocates would shift to legislative UCC campaigns; constitutional_court would lose a major jurisprudential domain; secularist_legislators would lose judicial advance on their agenda. The personal law field would reorganize around communal_autonomy or federalist_millet frames.",
+    "founding_problem": "Gender inequality in personal law systems: women denied equal divorce rights, maintenance, inheritance, and property within community-governed family law. Communities internally blocked reform; legislatures avoided it for electoral reasons; constitutional guarantees existed but were not applied to personal law.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Women's rights organizations (outside the beneficiary set of any single reading) document ongoing inequality: triple talaq persistence despite criminalization, maintenance awards below subsistence, daughters denied agricultural land inheritance. National Family Health Survey data shows Muslim women's property ownership and decision-making autonomy lag behind other groups. Law Commission reports (2018, 2022) confirm the problem persists. No community authority attests the problem is solved."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "marriage_authority__communal_autonomy_reading",
+      "marriage_authority__federalist_millet_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "classical_personal_law_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_constitutional_morality_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "communal_autonomy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "federalist_millet_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "judicial_harmonization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secularist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_equality_overrides_personal_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "gender_justice_as_non_derogable_fundamental_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "judicial_reform_as_legitimate_substitute_for_legislative_inaction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

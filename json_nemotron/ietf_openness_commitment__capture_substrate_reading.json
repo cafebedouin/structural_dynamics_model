@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__capture_substrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "69ce11b0-7cb8-47f5-8c1e-1a960a49311a"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Openness Commitment — Capture Substrate Reading",
+    "topic_domain": "technology_governance/internet_standards/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platform_operators",
+      "patent_holding_entities"
+    ],
+    "victims": [
+      "small_implementers",
+      "end_users",
+      "independent_standards_contributors"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Does the IETF openness commitment function as a coordination substrate that large operators capture, or as a commons stewardship constraint that preserves interoperability?",
+      "resolution_mechanism": "Comparative analysis of standardization outcomes where large operators pushed proprietary extensions vs. cases where the process rejected such extensions; trace resource flows to beneficiaries.",
+      "impact": "If capture_substrate_reading is correct, the constraint is a tangled_rope with identifiable beneficiaries (large operators) and victims (small implementers/users). If commons_stewardship_reading holds, the constraint is closer to rope with diffuse beneficiaries and minimal extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Commitment kernel framing ambiguity: capture substrate vs. commons stewardship"
+    },
+    {
+      "id": "resource_advantage_to_gatekeeping_mechanism",
+      "question": "Through what specific mechanisms does resource advantage (engineering headcount, patent portfolios, implementation capacity) translate into encoded gatekeeping in the standards process?",
+      "resolution_mechanism": "Process-tracing of specific standardization efforts (e.g., QUIC, WebRTC, TLS 1.3, DOH) where large operators' proposals became standards despite objections; measure participation asymmetry and outcome correlation.",
+      "impact": "If resource advantage directly determines standardization outcomes, the extraction mechanism is structural and persistent. If outcomes correlate with technical merit independent of resources, the capture reading overstates extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of resource advantage conversion to gatekeeping power"
+    },
+    {
+      "id": "suppression_vs_legitimate_process",
+      "question": "Is the measured suppression (0.52) structural exclusion of alternatives, or the legitimate friction of a consensus process that necessarily filters proposals?",
+      "resolution_mechanism": "Compare rejection rates and revision cycles for proposals from large operators vs. small implementers; analyze whether rejected alternatives had viable technical paths that were foreclosed by process rather than merit.",
+      "impact": "If suppression is structural exclusion, the constraint extracts by foreclosing alternatives. If suppression is legitimate filtering, the extraction component is lower and the coordination function dominates.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural exclusion vs. legitimate consensus friction ambiguity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The IETF's openness commitment — 'rough consensus and running code' — presents as a coordination substrate for interoperable internet standards. In this reading, the process functions as a tangled rope: it genuinely coordinates interoperability (the rope function) but the coordination substrate has been captured as a gatekeeping mechanism where resource-rich platform operators convert engineering capacity and patent portfolios into standardized proprietary extensions. Large operators (Google, Microsoft, Cloudflare, Apple) benefit by having their implementations become de facto mandatory through standardization, while small implementers and users bear the costs of licensing, complexity, and lock-in. The constraint requires active enforcement (patent licensing commitments, working group chair decisions, appeals process) and extracts asymmetrically.",
+    "key_agents": [
+      "large_platform_operators: Primary beneficiaries (institutional/arbitrage) — contribute engineering resources, hold essential patents, drive standardization of their implementations",
+      "small_implementers: Primary victims (moderate/constrained) — must implement standards they had little power to shape, face patent licensing uncertainty, lack resources to influence process",
+      "end_users: Victims (organized/constrained) — bear downstream costs of reduced competition, proprietary lock-in, and degraded interoperability when extensions fragment the commons",
+      "independent_standards_contributors: Victims (moderate/trapped) — contribute technical work but see outcomes steered by resource-advantaged actors; exit requires abandoning professional identity",
+      "patent_holding_entities: Beneficiaries (powerful/arbitrage) — monetize essential patents declared during standardization; capture value from the coordination function",
+      "standards_process_observers: Observers (analytical/analytical) — academic researchers, civil society, regulators who analyze capture dynamics but lack standing in the process"
+    ],
+    "logic_rationale": "Extractiveness (0.48) reflects moderate but growing extraction: the coordination function is real and valuable (interoperability), but the margin between coordination cost and extracted value has widened as platform operators standardize their proprietary stacks. Suppression (0.52) is moderate — alternatives are not formally banned but are structurally disadvantaged by participation asymmetry, patent thickets, and implementation complexity. Theater ratio (0.41) is significant: the 'rough consensus' process increasingly performs openness while outcomes are pre-shaped by resource advantage. Accessibility collapse (0.38) is moderate — alternatives exist but require disproportionate effort. Resistance (0.55) is notable: small implementers, civil society, and some regulators actively contest capture, but the process lacks effective countermeasures.",
+    "directionality_logic": "Large platform operators are structural beneficiaries (d ~ 0.15): they collect rents from standardized proprietary extensions, control implementation agendas, and have arbitrage-grade exit (can fork or build parallel infrastructure). Patent-holding entities are secondary beneficiaries (d ~ 0.20). Small implementers are primary targets (d ~ 0.85): they pay licensing costs, bear implementation burden, and have constrained exit (must implement to be compatible). End users are diffuse targets (d ~ 0.75): they bear downstream costs but lack direct standing. Independent contributors are identity-locked targets (d ~ 0.80): professional identity fused to standards work makes exit unthinkable. Observers are analytical (d = 0.5).",
+    "perspectival_gap": "From the large operator seat, the constraint is genuine coordination (rope-like): they invest heavily in the process and receive interoperability benefits. From the small implementer seat, the same constraint is extraction (snare-like): they must adopt standards shaped by others' interests. From the independent contributor seat, the constraint is a piton — the process performs openness while the substantive function has atrophied into resource-driven gatekeeping. The engine computes this seat divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (interoperable internet infrastructure) remains live but the arrangement has drifted: the openness commitment now primarily serves to legitimate capture rather than prevent it. The coordination function is real but subordinate to the extraction function. This is not pure extraction (snare) because the coordination substrate would collapse without the process — but it is not pure coordination (rope) because the benefits are asymmetrically captured. Tangled rope is the structurally honest classification.",
+    "kernel_context": "This constraint is the capture_substrate_reading of kernel ietf_openness_commitment. Sibling readings: commons_stewardship_reading (open standards as public infrastructure preserving interoperability for all) and legitimacy_erosion_reading (rough consensus mechanism itself as contested and vulnerable to organized capture). This reading asserts the process is a captured coordination substrate; the commons reading asserts it is a functioning commons; the legitimacy reading asserts the mechanism itself is failing. All three coexist as live positions in the standards community."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "web_platform_standardization",
+      "patent_policy_governance",
+      "interoperability_mandates"
+    ],
+    "dual_formulation_note": "Part of the ietf_openness_commitment constraint family with commons_stewardship_reading and legitimacy_erosion_reading. This reading (capture_substrate) has moderate extractiveness (0.48) and tangible beneficiaries (large operators). The commons_stewardship reading would author lower extractiveness (~0.15) and diffuse beneficiaries. The legitimacy_erosion reading would author higher suppression (~0.70) and process-focused victims. All three share the same kernel but instantiate different constraints with different ε values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.82
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "large_platform_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Contribute disproportionate engineering resources to standards development, hold essential patent portfolios, and drive standardization of their proprietary implementations. They collect rents when their implementations become mandatory through standardization, control the implementation agenda, and can fork or build parallel infrastructure if the process resists. Their participation shapes outcomes; the process legitimates their gatekeeping."
+    },
+    {
+      "name": "small_implementers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must implement standards they had little power to shape, face patent licensing uncertainty and FRAND ambiguity, and lack resources to sustain effective participation in working groups. Non-compliance means incompatibility with the dominant ecosystem. Their exit is constrained by market necessity — they must implement to survive, but implementation locks them into the standardized proprietary extensions."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear downstream costs of reduced competition, proprietary lock-in, and degraded interoperability when standardized extensions fragment the commons. They have no direct standing in the standards process and cannot opt out of the infrastructure their applications and devices depend on. Their exit is constrained by the ubiquity of standardized protocols."
+    },
+    {
+      "name": "independent_standards_contributors",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Contribute technical expertise and editorial labor to standards development, gaining professional reputation and network access (beneficiary aspect). But they see outcomes steered by resource-advantaged actors, their objections overridden by consensus determinations that correlate with contributor affiliation, and their professional identity fused to the standards process — leaving it means abandoning a career-defining commitment."
+    },
+    {
+      "name": "patent_holding_entities",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Monetize essential patents declared during standardization through FRAND licensing. They capture value from the coordination function by holding patents that become essential to the standard. Their exit is arbitrage-grade — they can license, litigate, or sell portfolios independent of the standards process."
+    },
+    {
+      "name": "standards_process_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic researchers, civil society organizations, and regulators who analyze capture dynamics, document participation asymmetries, and advocate for process reforms. They lack standing in the IETF process (no voting rights, no implementation capacity) and cannot directly influence outcomes. Their role is analytical: they observe, measure, and publish."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates interoperable internet protocol implementations across diverse vendors and platforms, enabling global communication infrastructure through shared technical specifications.",
+    "transfer_function": "Moves implementation burden, patent licensing costs, and ecosystem lock-in from large platform operators (who shape standards to match their implementations) to small implementers and end users (who must adopt the standardized proprietary extensions). Also moves standardization legitimacy and de facto mandate to proprietary approaches that would otherwise face market resistance.",
+    "absent_voices": "Users in jurisdictions with limited internet infrastructure who bear disproportionate costs from proprietary extensions (bandwidth, compute, licensing). Future implementers not yet in the market. Civil society organizations excluded from working groups by resource and travel barriers. These voices would object to capture but are structurally absent from the consensus determination.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the IETF openness commitment vanished overnight, large operators would immediately formalize their proprietary protocols as de facto standards through market power, small implementers would lose even the nominal FRAND protections and participation rights they currently hold, and the coordination substrate would fragment into competing walled gardens. The world would rearrange into a less interoperable, more extractive equilibrium.",
+    "founding_problem": "Early internet standardization needed a lightweight, open process to coordinate interoperable protocols across academic, government, and early commercial networks without centralized control — the 'rough consensus and running code' ethos solved this by privileging working implementations over formal voting.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IETF leadership attests the founding problem is live (interoperability remains the core mission). Independent researchers (e.g., RFC 8280 authors, academic studies of standards capture) and civil society organizations (EFF, Article 19) attest the founding problem has been substantially captured — the process now serves to legitimate resource-driven gatekeeping. Competition authorities (EU DMA, US FTC scrutiny) corroborate the shifted-function reading through market investigations."
+  },
+  "gain_flow": "large_platform_operators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "web_platform_standardization",
+      "patent_policy_governance"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legitimacy_erosion_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "standards_process_captured_by_resource_advantage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "openness_commitment_legitimates_gatekeeping",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "open_consensus_coordination",
+    "drift_state": {
+      "moment": "platform_dominance_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__market_access_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_gdpr_article_3_scope__market_access_reading",
+    "measurement_id_prefix": "gdpr_article_3_scope__market_access_reading",
+    "story_uid": "251f8cea-d50c-4979-88f8-c4ade7d74eed",
+    "created_at": "2026-06-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.15,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "GDPR Article 3 Scope as Conditional Market Access (Market Access Reading)",
+    "topic_domain": "technology_governance/international_law/privacy_regulation",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "eu_regulatory_influence",
+      "eu_data_subjects",
+      "compliant_global_companies"
+    ],
+    "victims": [
+      "non_compliant_external_controllers"
+    ],
+    "vindicated_propositions": [
+      "brussels_effect_standard_diffusion",
+      "market_power_as_regulatory_leverage",
+      "adequacy_as_strategic_asset"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "market_access_vs_jurisdiction_boundary",
+      "question": "Where does the market access reading's standard diffusion mechanism end and the effects jurisdiction reading's territorial claim begin?",
+      "resolution_mechanism": "Case law analysis of CJEU rulings on Article 3(2) targeting/monitoring test vs. market access conditionality; legislative history of GDPR recitals 23-25 vs. Article 45 adequacy decisions",
+      "impact": "If the boundary is porous, the market access reading may be a strategic framing of the same jurisdictional reach; if distinct, they are genuinely different constraints with different extraction profiles",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural boundary between market access conditionality and effects-based jurisdiction"
+    },
+    {
+      "id": "extraction_from_non_compliant_controllers",
+      "question": "Does the cost of GDPR compliance for non-EU controllers constitute extraction or the price of market access?",
+      "resolution_mechanism": "Comparative cost analysis: compliance costs for EU market access vs. revenue from EU market; exit option viability (market withdrawal vs. compliance)",
+      "impact": "If costs exceed proportional market value for significant controller classes, extraction is higher than the market access framing suggests; if costs are proportional, the rope classification holds",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compliance costs function as market entry price or extractive transfer"
+    },
+    {
+      "id": "reading_commitment_kernel_gdpr_article_3",
+      "question": "This constraint is the market_access_reading of kernel gdpr_article_3_scope. How does this reading's structural profile differ from the effects_jurisdiction_reading and territorial_sovereignty_reading?",
+      "resolution_mechanism": "Comparative constraint story generation: instantiate all three readings as separate constraint stories with their own ε, beneficiaries, victims, and stakeholder surfaces; the engine computes per-seat classifications for each reading independently",
+      "impact": "If readings produce divergent classifications (e.g., market_access_reading = rope, effects_jurisdiction_reading = tangled_rope, territorial_sovereignty_reading = snare), the kernel decomposition is validated; if they converge, the kernel label may be obscuring a single constraint",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-reading decomposition for GDPR Article 3 scope: market access vs. effects jurisdiction vs. territorial sovereignty"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 2018,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the market access reading of GDPR Article 3's extraterritorial scope. Under this reading, GDPR applies to non-EU controllers not because the EU asserts jurisdiction over their territory, but because access to the EU digital market is conditioned on compliance — a Brussels Effect mechanism where the EU's market power diffuses its regulatory standards globally. Compliance is a market entry strategy, not submission to extraterritorial jurisdiction. The constraint's extraction is low and declining (0.35→0.28) as compliance becomes standardized; suppression is minimal and falling (0.25→0.15) because enforcement follows market incentives rather than coercive territorial claims. The claimed type is rope: a coordination mechanism solving the problem of cross-border data flow standards with minimal coercive overhead, where participants (global companies seeking EU market access) are net beneficiaries of the standard.",
+    "key_agents": [
+      "eu_regulatory_influence: Primary beneficiary (institutional/arbitrage) — gains global regulatory influence via standard diffusion",
+      "eu_data_subjects: Beneficiary (organized/constrained) — gains privacy protections that travel with their data",
+      "compliant_global_companies: Beneficiary (powerful/constrained) — gains EU market access and competitive advantage through adequacy",
+      "non_compliant_external_controllers: Victim (moderate/trapped) — bears compliance costs or loses EU market access",
+      "non_eu_regulators: Observer (institutional/analytical) — watches Brussels Effect diffusion; some adopt similar standards"
+    ],
+    "logic_rationale": "Extractiveness (0.28) reflects that compliance costs are real but proportional to the value of EU market access — they are the price of admission, not a transfer extracted by coercion. The decline from 0.35 (2018) to 0.28 (2024) shows standardization reducing marginal compliance costs. Suppression (0.15) is low because the constraint operates through market logic: non-compliant controllers can exit the EU market rather than submit. Theater ratio (0.22) captures that some enforcement activity performs 'privacy theater' (performative DPO appointments, boilerplate policies) but the core mechanism is functional standard-setting. Accessibility collapse (0.35) is moderate: alternatives exist (local EU representatives, adequacy decisions, standard contractual clauses) but are structured by the same standard. Resistance (0.25) is low and focused on compliance cost proportionality, not the standard's legitimacy.",
+    "directionality_logic": "The EU regulatory influence seat (institutional/arbitrage) is the structural beneficiary: it gains global norm-setting power without enforcement costs scaling with scope. EU data subjects (organized/constrained) benefit from traveling protections but have limited exit from the data ecosystem. Compliant global companies (powerful/constrained) sit near symmetric: they pay compliance costs but capture the EU market and adequacy premium. Non-compliant external controllers (moderate/trapped) are the targets: they face the full compliance cost with no offsetting benefit, and their exit (market withdrawal) is costly. Non-EU regulators (institutional/analytical) observe from analytical distance — some adopt GDPR-like standards (diffusion beneficiaries), others resist (sovereignty defenders). The market access reading's key structural claim: directionality derives from market power asymmetry, not jurisdictional assertion.",
+    "mandatrophy_analysis": "The market access reading prevents misclassifying Brussels Effect standard diffusion as jurisdictional overreach. If GDPR Article 3 were read as effects jurisdiction (the sibling reading), the same compliance costs would appear as extraterritorial extraction — a tangled_rope or snare classification. The market access reading reframes the constraint as voluntary market participation conditioned on a standard, making it a rope. This matters because the mandatrophy risk is opposite: the effects jurisdiction reading risks labeling legitimate standard-setting as imperial overreach; the market access reading risks obscuring where market power makes 'voluntary' compliance effectively mandatory for controllers who cannot exit the EU market. The rope classification holds only while exit remains viable for significant controller classes.",
+    "kernel_context": "This constraint is the market_access_reading of kernel gdpr_article_3_scope. The kernel is the contested interpretation of GDPR Article 3's extraterritorial scope. Sibling readings: effects_jurisdiction_reading (jurisdiction follows effects on EU residents via targeting/monitoring test) and territorial_sovereignty_reading (jurisdiction bounded by territorial sovereignty; extraterritorial application exceeds legitimate authority). This reading treats extraterritoriality as conditional market access — the Brussels Effect — where compliance is a market strategy and the EU's beneficiary is regulatory influence via standard diffusion, not jurisdictional reach."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "gdpr_adequacy_decisions",
+      "global_data_transfer_mechanisms",
+      "eu_digital_market_regulation"
+    ],
+    "dual_formulation_note": "This constraint (market_access_reading) and its siblings (effects_jurisdiction_reading, territorial_sovereignty_reading) form a constraint family decomposing the GDPR Article 3 scope kernel. Each reading instantiates a different constraint with distinct ε, beneficiaries, and classification. The market access reading has the lowest extraction (rope); effects jurisdiction reading likely shows higher extraction (tangled_rope) due to enforcement tension; territorial sovereignty reading likely shows highest extraction (snare) from the sovereignty-defender seat. The family is linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "eu_regulatory_influence",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The EU's regulatory influence expands globally as companies adopt GDPR standards to access the EU market. This influence is exercised through adequacy decisions, standard contractual clauses, and the gravitational pull of the EU market — not through direct enforcement against non-EU entities. The EU can shape global privacy norms without bearing the enforcement costs of territorial jurisdiction."
+    },
+    {
+      "name": "eu_data_subjects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "EU residents gain privacy rights that follow their data globally when controllers target the EU market. Their protections travel with the data. However, they cannot easily exit the data ecosystem — digital participation requires data sharing — and their remedies depend on EU enforcement capacity against non-EU controllers."
+    },
+    {
+      "name": "compliant_global_companies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Large global companies (tech platforms, multinationals) invest in GDPR compliance as a market entry strategy. They gain access to the EU market, adequacy status as a competitive asset, and a unified global standard that reduces regulatory fragmentation costs. They pay substantial compliance costs but capture disproportionate market value. Their exit option (leaving the EU market) is theoretically available but commercially prohibitive."
+    },
+    {
+      "name": "non_compliant_external_controllers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Smaller non-EU companies that process EU resident data without targeting the EU market, or that target it without full compliance. They face the same compliance costs as large companies but lack the scale to amortize them. Their exit options are limited: withdraw from EU market (losing revenue), comply at disproportionate cost, or operate non-compliantly (enforcement risk). They are the primary extraction targets under this reading."
+    },
+    {
+      "name": "non_eu_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Regulators in other jurisdictions observe the Brussels Effect. Some adopt GDPR-like standards (Brazil's LGPD, California's CCPA/CPRA, China's PIPL) — becoming diffusion beneficiaries. Others resist as sovereignty incursions. Their analytical seat tracks whether the market access mechanism produces genuine privacy gains or regulatory capture."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the cross-border data flow coordination problem: a single, high-standard privacy framework that travels with data, enabling global digital commerce without regulatory fragmentation. Companies comply once for global operations; data subjects get consistent protections; regulators get a reference standard.",
+    "transfer_function": "Moves compliance costs from global companies (especially non-EU controllers targeting the EU market) to the EU regulatory ecosystem in the form of standardized data practices. The EU gains global regulatory influence; compliant companies gain market access and adequacy premiums; non-compliant controllers bear costs without offsetting benefits.",
+    "absent_voices": "Small non-EU businesses that process EU data incidentally (e.g., a US blog with EU readers) — they face GDPR compliance costs without targeting the EU market. They are structurally excluded from the 'market access' framing because they didn't choose market entry; the targeting test is supposed to exclude them but in practice captures them. Also absent: data subjects in non-adequacy jurisdictions whose data flows through GDPR-compliant pipes but who lack enforcement standing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the market access condition vanished overnight, global companies would face regulatory fragmentation — each jurisdiction setting its own privacy standards. Compliance costs would rise from multiple conflicting standards. The EU would lose its primary lever for global privacy norm diffusion. Data subjects outside the EU would lose the traveling protections that GDPR compliance currently provides.",
+    "founding_problem": "Pre-GDPR: fragmented national privacy laws in the EU (Data Protection Directive 95/46/EC implemented differently across member states) and no global standard for cross-border data flows. Companies faced conflicting requirements; data subjects had inconsistent protections; the EU lacked a mechanism to project its privacy model globally.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The EU Commission attests the fragmentation problem is substantially solved internally but the global projection problem remains live (adequacy decisions as ongoing work). Global companies attest the internal fragmentation is solved but argue the global projection has become a compliance burden disproportionate to the coordination benefit. Civil society groups (EDRi, Access Now) attest the founding problem is live globally — most of the world still lacks GDPR-level protections — but contest whether the market access mechanism delivers them. No single external corroborator agrees with the EU's self-assessment."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "gdpr_article_3_scope"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "effects_jurisdiction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "territorial_sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_access_conditionality_not_jurisdictional_claim",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "brussels_effect_standard_diffusion_as_legitimate_coordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "market_access_conditionality_framework",
+    "drift_state": {
+      "moment": "post_schrems_ii_adequacy_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "border_normative_status__freedom_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "3666ec1d-6a84-4966-9e16-729a70fce155"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.86,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Global Border-Control Regime as Impermissible Restriction of Movement (Freedom-Primary Reading)",
+    "topic_domain": "political_philosophy/international_law/migration_studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "destination_state_citizens",
+      "border_enforcement_industry",
+      "destination_state_governments"
+    ],
+    "victims": [
+      "excluded_would_be_migrants",
+      "refugees_and_asylum_seekers",
+      "transnational_families_separated_by_borders"
+    ],
+    "vindicated_propositions": [
+      "movement_as_fundamental_right",
+      "equal_moral_status_of_persons_regardless_of_birthplace"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.86
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the border_normative_status kernel; would instantiating a sibling reading change the victim structure and classification of the same standing arrangement?",
+      "resolution_mechanism": "Compare compiled victim sets across the three sibling stories: sovereignty_primary removes excluded migrants from the victim set entirely (exclusion is legitimate self-determination); qualified_sovereignty retains only disproportionately-excluded migrants; freedom_primary retains all excluded movers absent extraordinary justification.",
+      "impact": "The same walls compute as legitimate self-governance, as regulable policy, or as rights violation depending on the reading seated. Cross-reading comparison is the measurement the corpus exists to take; within this reading, epsilon stays invariant over the fixed referent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed classification of a shared kernel referent; sibling swaps flip victim sets."
+    },
+    {
+      "id": "extraordinary_justification_boundary",
+      "question": "Where does the extraordinary-justification bar sit — which exclusions, if any, survive this reading's own test (pandemic quarantine, individual fugitives from justice, verifiable carrying-capacity limits)?",
+      "resolution_mechanism": "Case-by-case adjudication applying the reading's test to candidate justifications, plus scholarly mapping of narrow versus broad exception classes.",
+      "impact": "A narrow bar preserves the assessment of the standing regime as coercion with a thin coordination residue; a bar admitting broad origin-based exceptions collapses this reading toward qualified_sovereignty and shrinks the victim set accordingly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Location of the exception bar internal to the freedom-primary reading."
+    },
+    {
+      "id": "operative_world_distributional_shift",
+      "question": "Under this reading made operative, displaced domestic workers in sheltered sectors of destination states enter the victim set — do adjustment costs modify the accounting of who bears the arrangement's burdens?",
+      "resolution_mechanism": "Wage and employment studies of migration shocks (natural-experiment literatures on sudden labor-supply increases) estimating displacement incidence and adjustment speed.",
+      "impact": "If displacement is concentrated and slow-adjusting, the operative reading-world acquires a new payer seat and the freedom-versus-adjustment tradeoff enters classification; if adjustment is fast and diffuse, the victim structure remains dominated by excluded movers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural delta consequence: domestic displacement victims under the operative reading."
+    },
+    {
+      "id": "enforcement_theater_share",
+      "question": "What share of border-enforcement activity is performative sovereignty (barriers exceeding deterrence value, spectacle deportations, procedural processing that launders refusal as administration) versus functional prevention?",
+      "resolution_mechanism": "Deterrence-effectiveness studies set against enforcement expenditure; audits of procedural volume against protection and admission outcomes.",
+      "impact": "A higher performative share indicates the regime's coordination story is increasingly cover even on its own terms; a lower share confirms dense functional coercion sustaining the arrangement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional versus theatrical composition of enforcement activity."
+    },
+    {
+      "id": "externalization_liability_location",
+      "question": "When enforcement is externalized to transit states (destination-funded processing zones, pullback arrangements, offshore detention), where does responsibility for the resulting coercion sit?",
+      "resolution_mechanism": "Litigation outcomes on pushback and non-refoulement, treaty text, and funding-conditionality records tracing operational control.",
+      "impact": "Locating liability with funding destination states widens the target set to include proxy-run coercion; locating it with executing transit states fragments accountability and complicates the mapping from victims to the seats that set the agenda.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Attribution of coercive force under externalized enforcement architectures."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the freedom_primary reading of the border_normative_status kernel. The standing arrangement under assessment is the global border-control regime: standardized passports, visa hierarchies, carrier sanctions, physical barriers, interception and pushback operations, detention and deportation machinery, and destination-funded externalization of enforcement to transit states. Assessed by this reading's own lights, that arrangement is a mass rights violation: freedom of movement is a fundamental human right, borders impermissibly restrict it, and the extraordinary justification that could license exclusion is absent for the origin-based, wealth-based mass allocation the regime actually performs. Constraint-family note: the colloquial question 'are borders legitimate?' decomposes into three structurally distinct stories over ONE shared referent with reading-indexed epsilon (OQ-26) — sovereignty_primary authors low epsilon over the same regime (it sees legitimate collective self-determination), qualified_sovereignty authors intermediate epsilon (it sees regulable policy), and this story authors high epsilon. Expected structural delta if this reading becomes operative: excluded migrants exit the victim set (no legitimate exclusion persists to place them there), displaced domestic workers in sheltered sectors enter it, and border enforcement converts from administration into rights violation requiring justification. Claim and metrics are independent authored facts: the snare claim is what this reading believes structurally true of the standing arrangement; the metrics are what it believes descriptively true; sibling seats will compute differently and that divergence is the datum.",
+    "key_agents": [
+      "- destination_state_governments: Agenda setter (institutional/arbitrage) — writes visa rules, runs enforcement, externalizes coercion",
+      "- destination_state_citizens: Primary beneficiary (organized/constrained) — receives the access monopoly's wage and fiscal effects, funds enforcement, votes its severity",
+      "- border_enforcement_industry: Secondary beneficiary (institutional/arbitrage) — collects budgets that scale with enforcement mandates",
+      "- excluded_would_be_migrants: Primary target (powerless/trapped) — bears denied movement, foregone life chances, route risk",
+      "- refugees_and_asylum_seekers: Primary target (powerless/trapped) — bears pushback, externalized processing, refoulement risk",
+      "- transnational_families_separated_by_borders: Secondary target (moderate/constrained) — bears separation costs under sponsorship thresholds",
+      "- origin_state_governments: Dual-positioned (institutional/constrained) — remittance and pressure-release gains against brain-drain and readmission-complicity costs",
+      "- migrant_rights_advocates: Excluded voice (organized/constrained) — litigates and documents from outside the rooms where rules are written",
+      "- international_human_rights_bodies: Analytical observer (institutional/analytical) — articulates standards without admission-decision power"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.85) because the reading measures the regime's yield in a fundamental liberty plus the attached life chances: confinement to the territory of one's citizenship is, on this seat, a continuous taking, and the welfare magnitude at stake dwarfs any coordination service the regime renders. Suppression is authored raw and unscaled (0.86) — only extractiveness is scaled by the engine — reflecting the machinery the regime requires: visa denial, carrier sanctions, pushbacks, detention, deportation, and externalized pullbacks; the arrangement cannot persist by acquiescence because its largest affected class never consented and cannot vote. Theater ratio (0.38) reflects a mixed body: interception and processing are functionally coercive, while barrier construction beyond demonstrated deterrence value, spectacle deportation flights, and proceduralism that launders refusal as queue management are increasingly performative. Accessibility collapse (0.68): alternatives do not vanish but narrow to asylum channels for the qualifying few, wealth-gated visas, lotteries, and the criminalized irregular route — understanding the regime does not reveal a workable lawful path for most movers. Resistance (0.62): migrant-rights movements, strategic litigation, rescue operations, sanctuary networks, and irregular crossing itself constitute persistent, costly resistance that the regime must continuously defeat. The measurement series run on one shared grid (points 0,5,10,15,20,25,30) with every tracked metric authored at every point; trajectories rise monotonically rather than cyclically — an enforcement-intensification ratchet (securitization after 2001-era shocks, externalization after 2015-era arrivals) layered on accumulating extraction, which should trip the T17 accumulation hypothesis for investigation.",
+    "perspectival_gap": "The payer seats and the beneficiary/agenda-setter seats should compute opposite types from identical structural facts. From the excluded migrant's position the regime is experienced as a cage: total, coercive, unconsented. From the destination citizen's position it is experienced as the boundary of the demos: self-government, wage protection, welfare solvency. From the ministry's position it is a dial of statecraft adjustable by decree and purchasable abroad. The engine derives these per-seat classifications from the authored power/exit data; the divergence between seats is the measurement, not an inconsistency to be reconciled.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation. Trapped victims (excluded_would_be_migrants, refugees_and_asylum_seekers) sit near the full-target end: the regime takes movement and life chances and offers no lawful exit from the taking. Constrained victims (transnational families) sit just inside them. destination_state_citizens derive low-but-nonzero d: they collect the access monopoly's benefits but pay enforcement through taxation and bear sectoral competition, and their constrained exit keeps them enrolled rather than arbitraging. border_enforcement_industry, with arbitrage-grade exit across jurisdictions, sits nearest the beneficiary pole. destination_state_governments combine agenda-setting with direct collection. origin_state_governments carry a dual declaration (beneficiary with secondary payer): remittances and pressure-release offset brain drain and readmission complicity, placing them near symmetric. Observers are analytical and carry no stake. Global spatial scope amplifies effective extraction modestly for targets, since verification of exclusion's necessity at planetary scale is hardest exactly where the regime operates most absolutely.",
+    "mandatrophy_analysis": "The snare claim from this seat blocks two mislabels. Rope would book the regime's costs as coordination overhead and launder origin-based allocation as a service rendered — precisely the cover story this reading exists to strip. Piton would require inertia and decayed function, whereas this arrangement is actively intensified: enforcement budgets, barrier kilometers, and externalization treaties grow over the interval, the opposite of theatrical maintenance of a dead mandate. Mandatrophy status: the founding problem (membership management for bounded political communities) is contested rather than dead, so mandatrophy_resolved is deliberately left undeclared — the arrangement persists not because its mandate quietly expired but because its beneficiaries actively renew it. The classification therefore prevents the symmetrical error as well: reading the regime as pure timeless necessity (mountain-flavored) would erase the identifiable victims whose exclusion is the regime's product.",
+    "kernel_context": "Kernel: border_normative_status — the contested question of the normative standing of territorial borders. This file instantiates the freedom_primary reading: movement as a fundamental human right, borders as impermissible restriction absent extraordinary justification. Siblings: sovereignty_primary (territorial exclusion as foundational instrument of collective self-determination) and qualified_sovereignty (border control as legitimate but proportionality-bound). All three stories assess the same standing referent — the global border-control regime — with reading-indexed epsilon: high here, intermediate under qualified_sovereignty, low under sovereignty_primary. The disagreement is located in the default ordering: who carries the justification burden, the mover or the excluder. This reading grounds itself in the postwar human-rights lineage extended beyond its positive-law stopping point (the right to leave without a matching right to enter), which is why its drift state registers repudiation rather than mere erosion."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_normative_status__sovereignty_primary",
+      "border_normative_status__qualified_sovereignty"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the legitimacy of borders' covers three structurally distinct claims and is decomposed into three stories sharing one referent. sovereignty_primary is the historically upstream reading — it fed the positive-law settlement (right to leave without right to enter) and is cited as settled background by the other two. qualified_sovereignty mediates: it accepts the sovereignty premise but subjects exercise to proportionality review. freedom_primary (this story) is downstream-contesting: it rejects the sovereignty premise's foundational status and re-derives the burden. Epsilon differs across the family because the readings differ, not because the referent varies; each story holds one stable epsilon over the fixed arrangement. All three files link one another via affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "destination_state_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set visa categories, admission quotas, and asylum-procedure rules; operate border agencies and negotiate externalization agreements with transit states. Gain electorally from visible control and diplomatically from cooperation deals. Can redirect enforcement outward or adjust categories unilaterally; their principal exposure is backlash from restrictionist or humanitarian constituencies at the next election."
+    },
+    {
+      "name": "destination_state_citizens",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold membership in states whose labor markets, welfare systems, and electorates are bounded by admission control. Receive the wage and fiscal effects of restricted labor supply and vote on the regime's severity. Fund enforcement through taxation, and some compete with admitted migrants in specific sectors. Emigration would mean surrendering membership advantages, so even dissenters remain enrolled participants."
+    },
+    {
+      "name": "border_enforcement_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Border agencies, detention operators, surveillance and biometric vendors, and contracting firms whose budgets scale with enforcement mandates. Revenue follows appropriations for barriers, patrols, processing, and detention capacity; portfolios diversify across jurisdictions so demand shocks in one country are absorbed elsewhere."
+    },
+    {
+      "name": "excluded_would_be_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Seek to enter destination states for work, study, or family and are denied visas or intercepted en route. Bear foregone earnings measured in multiples of home wages, family separation, smuggling debts, and physical risk on irregular routes. Lawful channels are narrow, income-gated, or oversubscribed; turning back abandons the attempt, continuing means criminalized crossing."
+    },
+    {
+      "name": "refugees_and_asylum_seekers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Flee persecution, war, or state collapse and meet pushbacks at borders, externally processed claims in transit states, and multi-year waits in camps or detention. Protection turns on documentation and destination-state discretion; the alternative to waiting is the irregular route, with refoulement risk attached."
+    },
+    {
+      "name": "transnational_families_separated_by_borders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Households split by visa denials, income-sponsorship thresholds, and processing backlogs. Maintain relationships across distance at recurring cost; the member abroad absorbs care deficits while the excluded member absorbs foregone income. Regularization depends on the same admission rules that separate them."
+    },
+    {
+      "name": "origin_state_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive remittance inflows exceeding aid budgets in many cases and benefit from emigration as a safety valve for unemployment and dissent. Simultaneously lose trained professionals, sign readmission and border-control agreements under aid conditionality, and administer returnee reception. Bargaining position is weak against destination states that control visa access."
+    },
+    {
+      "name": "migrant_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "NGOs, lawyers, faith groups, and scholars who litigate pushbacks, document deaths at borders, and campaign for expanded admission. Hold legal and moral arguments but sit outside the bilateral negotiations and interior ministries where admission rules are written; influence arrives late, through courts and crises."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "UN treaty bodies, regional courts, and special rapporteurs that articulate movement and non-refoulement standards and review state compliance. Findings carry interpretive authority but no direct power over admission decisions; leverage runs through reputational cost and domestic incorporation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Centralizes decisions about who may cross territorial boundaries: identity verification, security screening, and allocation of scarce admission slots are administered once, by states, rather than negotiated per movement. This reading grants that individualized screening for genuine threats coordinates something real; it denies that allocation by origin and wealth performs that function.",
+    "transfer_function": "Moves territorial access — and the life chances attached to it — from would-be entrants to incumbent members of wealthy states; moves enforcement budgets from taxpayers to enforcement institutions; moves asylum-processing burdens onto transit states through externalization deals.",
+    "absent_voices": "The excluded themselves: would-be migrants have no vote in the destination polities that decide their access; transit-state populations absorb externalized enforcement without having consented to it; future cohorts inherit a birthplace lottery their predecessors' elections cemented. They object from outside every constituency in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the border-control arrangement vanished overnight, labor markets, welfare-state financing, remittance economies, the enforcement industry, and externalization diplomacy would all reorganize within years; tens of millions would relocate toward opportunity, compressing wage gaps and forcing visible adjustment in destination states.",
+    "founding_problem": "Managing membership for territorially bounded political communities: after WWI, standardized passports and visa controls solved security screening, labor allocation, and democratic-boundary problems for states becoming bounded welfare democracies.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Interwar diplomatic historians and IOM/ILO analysts, writing outside the beneficiary set, attest the original coordination problem was real. Human rights treaty bodies and sending-state governments attest that the arrangement as now operated exceeds any surviving version of that problem. No source outside the benefiting parties attests that origin-based mass exclusion remains proportionate to the founding problem — the strongest contemporary defenses come from the arrangement's beneficiaries themselves."
+  },
+  "gain_flow": "destination_state_citizens",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "free_movement_presumption_baseline",
+    "drift_state": {
+      "moment": "contemporary_externalization_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "qualified_sovereignty",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "movement_fundamental_right_presumption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "exclusion_extraordinary_justification_burden",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

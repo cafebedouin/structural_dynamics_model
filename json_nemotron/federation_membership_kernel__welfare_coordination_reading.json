@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_kernel__welfare_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_federation_membership_kernel__welfare_coordination_reading",
+    "measurement_id_prefix": "fwcr",
+    "story_uid": "6b583914-eea2-4c71-9bf5-947e4442582a"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement via Welfare Coordination (Anti-Social-Dumping Regime)",
+    "topic_domain": "political_economy/federalism/migration_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "receiving_state_employers",
+      "posted_worker_employers",
+      "eu_institutions_coordination_mandate"
+    ],
+    "victims": [
+      "posted_workers",
+      "receiving_state_native_workers",
+      "permanent_migrant_workers",
+      "sending_state_fiscal_authorities"
+    ],
+    "vindicated_propositions": [
+      "coordination_over_harmonization_principle",
+      "anti_social_dumping_enforcement",
+      "member_state_welfare_autonomy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine operational regime (welfare coordination with anti-dumping enforcement) or a transitional framing that masks deeper extraction dynamics?",
+      "resolution_mechanism": "Longitudinal analysis of posting directive enforcement outcomes vs. social dumping incidence across 2014-2024; comparison with integration_reading's equal-treatment jurisprudence and member_sovereignty_reading's exclusionary practices.",
+      "impact": "If transitional framing, the constraint is a scaffold toward either supranational harmonization (integration_reading) or renationalized exclusion (member_sovereignty_reading). If genuine regime, the tangled_rope classification stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the welfare coordination reading instantiates a stable constraint or a contested framing within the federation_membership_kernel."
+    },
+    {
+      "id": "posted_worker_victim_status_ambiguity",
+      "question": "Are posted workers structurally victims of the 2-year social levy exemption and cabotage undercutting, or voluntary participants in a coordination arrangement that lowers their immediate costs?",
+      "resolution_mechanism": "Empirical study of posted worker exit options: return migration rates, transition to permanent contracts, wage trajectory comparison with native and permanent migrant workers.",
+      "impact": "If victims, extraction is higher and directionality for posted_workers approaches 1.0; if voluntary coordinators, their directionality is lower and the constraint's coordination function is stronger.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural position of posted workers within the anti-social-dumping regime."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers to alternative coordination, enforcement of posting rules) or internalized (member states accepting coordination as the only legitimate framing)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: observe member state behavior when coordination rules are relaxed (e.g., during COVID emergency measures) — if suppression persists via internalized norms, reclassify as partially internalized.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests; the constraint carries its own legitimacy enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the welfare coordination regime."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Where does the genuine coordination function (portable rights, anti-dumping enforcement) end and asymmetric extraction (employer arbitrage, sending-state fiscal loss) begin?",
+      "resolution_mechanism": "Counterfactual modeling: simulate a regime with full social security harmonization vs. current coordination; measure welfare changes for each stakeholder seat.",
+      "impact": "Determines whether the constraint is primarily a rope with extraction leakage, or a tangled_rope where extraction is structural to the coordination mechanism.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Boundary between coordination and extraction in the welfare coordination architecture."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The EU's free movement regime operates through coordination of national welfare systems (Regulation 883/2004, Posting of Workers Directive) rather than supranational harmonization. The coordination reading claims this preserves member state welfare design autonomy while preventing social dumping through enforcement mechanisms (Enforcement Directive 2014/67/EU). However, the 2-year social security exemption for posted workers and cabotage rules in transport create a structural arbitrage: employers in receiving states access lower-cost labor without bearing full social costs; sending states lose workers and their fiscal contributions without compensation; native and permanent migrant workers face wage and displacement pressure. The regime requires active enforcement (labour inspectorates, A1 portable document system, joint investigations) and has no sunset clause. The claimed_type is tangled_rope because the coordination function (portable rights, anti-dumping) is genuine but asymmetrically extractive.",
+    "key_agents": [
+      "receiving_state_employers: Primary beneficiary (institutional/arbitrage) — access lower-cost posted labor",
+      "posted_worker_employers: Primary beneficiary (organized/arbitrage) — exploit 2-year exemption and cabotage rules",
+      "eu_institutions_coordination_mandate: Agenda setter (institutional/analytical) — administers coordination framework",
+      "posted_workers: Primary victim (powerless/trapped) — bear social dumping costs, limited exit",
+      "receiving_state_native_workers: Victim (organized/constrained) — wage undercutting, displacement",
+      "permanent_migrant_workers: Victim (moderate/constrained) — dual pressure from posted workers and native competition",
+      "sending_state_fiscal_authorities: Victim (institutional/constrained) — lose workers and contributions without compensation"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the structural arbitrage: employers capture the delta between national social contribution rates; sending states lose fiscal base; posted workers accept lower effective compensation. Suppression (0.42) is moderate — the constraint operates through legal coordination rules, not overt coercion, but exit is constrained by EU law primacy and labor market integration. Theater ratio (0.31) captures the gap between anti-dumping rhetoric and enforcement capacity (inspectorates cover <15% of postings). Accessibility collapse (0.48) and resistance (0.55) reflect that alternatives (full harmonization, renationalization) are politically contested but not foreclosed — member states periodically push for revision. Measurements show rising extraction (0.45→0.68) and theater (0.18→0.31) over 2000-2025 as posting volumes grew and enforcement lagged.",
+    "directionality_logic": "Receiving state employers and posted worker employers are structural beneficiaries (d ≈ 0.15-0.25): they collect the coordination surplus via labor cost arbitrage. EU institutions are agenda setters (d ≈ 0.3): they administer the framework but do not directly extract. Posted workers are full targets (d ≈ 0.9): identity-locked by migration status, trapped by return costs and home-state conditions. Native and permanent migrant workers are high targets (d ≈ 0.7-0.8): organized but constrained exit (labor market attachment). Sending state fiscal authorities are institutional targets (d ≈ 0.6): they bear fiscal losses but have voice in Council negotiations.",
+    "perspectival_gap": "From the EU institution seat, this is a rope: genuine coordination solving the portable rights problem with manageable enforcement. From posted worker and sending state seats, it is a snare: extraction disguised as coordination. From receiving state employer seats, it is a beneficial rope. The engine computes this divergence from the structural data — the authored claim (tangled_rope) reflects the analytical seat seeing both functions simultaneously.",
+    "mandatrophy_analysis": "The founding problem (coordinating welfare access for mobile workers without harmonizing systems) remains live — but the anti-dumping enforcement mandate has accumulated extraction as posting volumes shifted from genuine mobility to structural arbitrage. The mandate has not been resolved; it has been captured by employer arbitrage. The constraint persists because no coalition of victims has sufficient power to force harmonization (which sending states resist) or renationalization (which receiving states resist).",
+    "kernel_context": "This constraint is the welfare_coordination_reading of the federation_membership_kernel. Sibling readings: integration_reading (supranational equal-treatment expansion) and member_sovereignty_reading (national welfare protection/exclusion). This reading instantiates the coordination-with-enforcement framing that currently governs EU law (Regulation 883/2004, Posting Directive, Enforcement Directive). The structural delta from the kernel: posted workers enter victim set via cost-competition posting; receiving state labor markets face dual pressure; sending states lose workers without fiscal compensation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_kernel__integration_reading",
+      "federation_membership_kernel__member_sovereignty_reading",
+      "eu_posting_directive_enforcement",
+      "eu_social_security_coordination_regulation"
+    ],
+    "dual_formulation_note": "The federation_membership_kernel decomposes into three readings with distinct ε values and victim structures. This reading (welfare_coordination) has ε=0.68 with posted workers and sending states as victims. integration_reading has lower ε (coordination benefit dominates) but forecloses national welfare autonomy. member_sovereignty_reading has higher ε (exclusionary extraction) but protects welfare solidarity. All three share the kernel's commitment to free movement but disagree on its welfare-state boundary."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "eu_institutions_coordination_mandate",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Administers the welfare coordination framework (Regulation 883/2004, Posting Directive, Enforcement Directive) through the Commission, ECJ, and Administrative Commission. Collects legitimacy and institutional mandate from managing the coordination regime. Does not directly extract fiscal resources but derives authority from the regime's operation. Exit is analytical — the institution cannot leave its own mandate."
+    },
+    {
+      "name": "receiving_state_employers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Employ posted workers under the 2-year social security exemption (A1 certificate) and cabotage rules, capturing the difference between home-state and host-state social contribution rates. Benefit from labor cost arbitrage without bearing full social costs. Can switch between posted and local labor; exit is arbitrage-grade — they choose the regime that minimizes cost."
+    },
+    {
+      "name": "posted_worker_employers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Post workers to higher-wage member states while paying home-state social contributions (often lower). Exploit the 2-year exemption and cabotage wage undercutting in transport/construction. Their business model depends on the coordination regime's arbitrage window; exit means losing the cost advantage."
+    },
+    {
+      "name": "posted_workers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Work in receiving states under posted status: pay home-state social contributions but lack full access to host-state benefits (unemployment, family, housing). Subject to wage undercutting and precarious contracts. Exit is identity-locked — return migration means loss of earnings, career disruption, and often worse home-state conditions; transition to permanent migrant status is legally and linguistically constrained."
+    },
+    {
+      "name": "receiving_state_native_workers",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face wage pressure and displacement from posted worker competition in sectors with high posting incidence (construction, transport, care). Organized through unions but constrained exit — labor market attachment, sector-specific skills, and national welfare ties limit mobility. Bear the cost of social dumping through depressed wages and weakened bargaining."
+    },
+    {
+      "name": "permanent_migrant_workers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face dual pressure: competition from posted workers (who accept lower effective compensation) and from native workers (who defend established positions). Have made irreversible migration investments (language, integration, family) — exit is constrained by sunk costs. Pay full host-state social contributions while competing with posted workers who do not."
+    },
+    {
+      "name": "sending_state_fiscal_authorities",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose prime-age workers and their lifetime fiscal contributions to receiving states without compensation. Home-state social systems retain theoretical responsibility for posted workers (2-year rule) but receive no revenue from host-state economic activity. Constrained exit — EU law prevents restricting outbound mobility; fiscal reform requires coordination they cannot unilaterally impose."
+    },
+    {
+      "name": "trade_unions_cross_border",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Attempt to organize posted workers and enforce equal treatment, but structurally excluded from the coordination regime's design (which is negotiated by governments and employer associations). Their enforcement tools are limited to national labor inspectorates and the European Labour Authority (weak mandate). Would object to the arbitrage structure but lack agenda-setting power."
+    },
+    {
+      "name": "eu_court_of_justice",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Adjudicates disputes between coordination and integration readings (e.g., Viking, Laval, Ruffert cases). Its jurisprudence oscillates between deferring to coordination (welfare autonomy) and enforcing integration (equal treatment). Neither collects nor pays; provides the analytical seat that interprets the kernel."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the portable welfare rights problem for mobile workers without requiring member states to harmonize their welfare systems: coordination of 27 distinct social security systems via Regulation 883/2004, anti-dumping enforcement via Posting Directive and Enforcement Directive.",
+    "transfer_function": "Moves social contribution revenue from sending states (lost fiscal base) and effective compensation from posted workers (lower benefits, wage undercutting) to receiving state employers and posted worker employers (labor cost arbitrage). EU institutions collect institutional mandate/legitimacy.",
+    "absent_voices": "Posted workers themselves (structurally unable to organize across borders), sending state citizens who lose public services from fiscal erosion, third-country nationals excluded from free movement entirely. Trade unions are present but excluded from agenda-setting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the coordination regime vanished, posted workers would either gain full host-state rights (integration_reading outcome) or face exclusion (member_sovereignty_reading outcome). Employers would lose arbitrage; sending states would retain workers but lose remittances. The 27 welfare systems would need new coordination or face fragmentation.",
+    "founding_problem": "Post-1957 free movement created mobile workers who fell between national welfare systems — no portable rights, double contributions, gaps in coverage. The coordination regime was built to solve this without forcing welfare harmonization (which member states rejected).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The European Commission and Administrative Commission attest the coordination problem remains live (new mobility patterns, digital platforms). European Trade Union Confederation and European Parliament studies attest the regime has shifted function: posting volumes now reflect structural arbitrage (2.3M posted workers 2022, up from 1.2M 2010) not genuine mobility. OECD and academic analyses corroborate the functional shift."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "federation_membership_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "integration_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "member_sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coordination_over_harmonization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "anti_social_dumping_enforcement_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_maastricht_coordination_settlement",
+    "drift_state": {
+      "moment": "post_enlargement_posting_surge",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "header": {
+    "constraint_id": "honor_violence_legitimacy__composite_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_honor_violence_legitimacy__composite_reading",
+    "measurement_id_prefix": "honor_violence_legitimacy__composite_reading",
+    "story_uid": "d0575c6a-b8b0-4fb9-be02-95b539d7c624",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.62,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.34,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Honor Violence Legitimacy (Composite: External Costs + Conceptual Contraction)",
+    "topic_domain": "historical_sociology/legal_anthropology/commitment_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_legal_monopoly",
+      "emerging_professional_classes",
+      "bourgeois_moral_reformers"
+    ],
+    "victims": [
+      "aristocratic_officer_class",
+      "traditional_gentry_dueling_participants",
+      "honor_culture_adherents",
+      "women_in_honor_enforcement_roles"
+    ],
+    "vindicated_propositions": [
+      "state_monopoly_on_legitimate_violence",
+      "civilian_supremacy_over_military_honor",
+      "legal_formalism_as_civilizing_force"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is the composite reading a single constraint with two mechanisms, or a constraint family of two linked constraints (drop + contraction) that should be modeled separately?",
+      "resolution_mechanism": "Test whether the drop and contraction mechanisms have distinct victim sets, distinct enforcement logics, and distinct temporal profiles. If they share the same enforcement infrastructure and victim set, composite is appropriate; if distinct, decompose per ε-invariance.",
+      "impact": "If decomposable, two constraints with different ε values and classifications; if composite, one constraint with compound extraction profile. The engine's network coupling analysis will detect either structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the composite reading instantiates one constraint or a constraint family"
+    },
+    {
+      "id": "extraction_attribution_ambiguity",
+      "question": "How much of the measured extraction is attributable to the drop mechanism (external costs) versus the contraction mechanism (conceptual redefinition)?",
+      "resolution_mechanism": "Comparative historical analysis of jurisdictions where only one mechanism operated (e.g., early abolition of dueling via legal penalty vs. cultural shift without legal change). Disaggregate ε into ε_drop and ε_contraction.",
+      "impact": "If drop mechanism dominates, the constraint is primarily state enforcement extracting from honor culture; if contraction dominates, it's primarily conceptual displacement. Changes the primary beneficiary and victim sets.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution of extraction between external cost imposition and conceptual redefinition"
+    },
+    {
+      "id": "contingency_of_contraction",
+      "question": "Was the conceptual redefinition of honor (contraction) a necessary consequence of modernization, or a contingent outcome of specific reform movements?",
+      "resolution_mechanism": "Cross-national comparison of honor concept trajectories: did societies with similar modernization paths but different reform movements exhibit different contraction patterns?",
+      "impact": "If necessary, contraction reads as Mountain-like inevitability (low ε for that component); if contingent, it reads as engineered displacement (high ε). Affects the composite's overall classification and mandatrophy status.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether honor's conceptual contraction was structurally necessary or politically engineered"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1780,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1820,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1840,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1860,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1880,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1780,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1820,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1840,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1860,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1880,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1780,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1820,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1840,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1860,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1880,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 1780,
+    "end": 1900
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the decline of dueling and honor violence legitimacy in Western societies (c. 1780–1900) as a composite reading of the contested kernel 'honor_violence_legitimacy'. The composite reading asserts that two mechanisms operated simultaneously: (1) a 'drop' mechanism — external costs imposed by state legal monopoly (criminalization, professional consequences, social ostracization) making honor violence practically costly; and (2) a 'contraction' mechanism — conceptual redefinition of honor itself to exclude violence, driven by bourgeois moral reform, professionalization of military/legal elites, and the rise of legal formalism. These mechanisms had different victim sets: the drop mechanism primarily extracted from aristocratic officers and traditional gentry who continued dueling; the contraction mechanism extracted from honor culture adherents more broadly (including women who enforced honor norms domestically) by redefining what counted as honorable. The contraction edge made the drop mechanism insufficient alone — even where legal penalties were weak, the conceptual shift delegitimized the practice from within. This reading is ONE instantiation of the kernel; sibling readings (drop_reading, contraction_reading) isolate each mechanism as the primary driver.",
+    "key_agents": [
+      "state_legal_monopoly: Primary agenda_setter (institutional/generational/arbitrage/global) — imposes criminal penalties, controls professional licensing, defines legitimate violence",
+      "emerging_professional_classes: Primary beneficiary (organized/biographical/arbitrage/national) — lawyers, bureaucrats, officers who gained status from honor's redefinition as professional competence",
+      "bourgeois_moral_reformers: Secondary beneficiary (organized/generational/mobile/continental) — campaigned for honor's redefinition as civic virtue, gained cultural authority",
+      "aristocratic_officer_class: Primary victim (powerful/biographical/constrained/national) — lost duel-based honor system that structured military advancement and social standing",
+      "traditional_gentry_dueling_participants: Primary victim (moderate/biographical/trapped/regional) — faced criminalization without alternative status pathways",
+      "honor_culture_adherents: Secondary victim (organized/generational/identity_locked/continental) — internalized the redefinition; honor became incompatible with violence by cultural osmosis",
+      "women_in_honor_enforcement_roles: Secondary victim (powerless/generational/identity_locked/local) — lost domestic authority as honor enforcers when honor was redefined to exclude violence",
+      "competition_authorities: Observer (institutional/generational/analytical/national) — not directly present historically; analytical seat for modern classification"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint transferred status, authority, and material rewards from honor-culture participants to state and professional elites — but not total (hence not snare) because the coordination function (state monopoly on violence, professional standardization) was genuine and benefited society broadly. Suppression (0.62) is moderate: legal penalties were real but uneven; the deeper suppression was conceptual — the contraction mechanism made honor violence unthinkable, not just illegal. Theater ratio (0.41) is significant: by 1900, honor codes persisted as ceremonial forms (military academies, student fraternities) while the violence they once regulated was gone — the constraint's coordination function atrophied, leaving performative maintenance. Accessibility collapse (0.58) and resistance (0.34) reflect a constraint that met organized resistance early (aristocratic officers) but saw resistance collapse as the contraction mechanism took hold — alternatives didn't just disappear; they were conceptually erased.",
+    "perspectival_gap": "The state/professional beneficiary seats experience this as rope/scaffold (genuine coordination, transitional justification). The aristocratic officer and gentry victim seats experience it as snare (targeted extraction, identity destruction). The honor culture adherent seat experiences it as mountain-like inevitability (conceptual redefinition feels like natural law). The women's seat experiences it as piton (loss of domestic authority without replacement, theatrical maintenance of 'honor' discourse). The engine computes this divergence from the structural data — the composite reading's claim of tangled_rope captures the hybrid reality but no single seat sees it that way.",
+    "directionality_logic": "State legal monopoly and professional classes are structural beneficiaries (d ~ 0.15): they gained monopoly control, professional gatekeeping, and status from the constraint's operation. Bourgeois reformers are moderate beneficiaries (d ~ 0.3): cultural authority gained, but less material extraction. Aristocratic officers and gentry are primary targets (d ~ 0.85): they bore criminal penalties, career destruction, and status loss with constrained exit (emigration or submission). Honor culture adherents are identity-locked targets (d ~ 0.9): the contraction mechanism fused their identity with the redefined honor concept, making exit from the constraint psychologically impossible. Women in enforcement roles are trapped (d ~ 0.95): no exit from the domestic sphere where honor was enforced, no voice in its redefinition.",
+    "mandatrophy_analysis": "The founding problem (establishing state monopoly on violence and professional standardization) is live — modern states still require these. But the constraint's specific form (criminalizing dueling, redefining honor) is dead as a founding solution: dueling is gone, honor is redefined. The arrangement persists as mandate without function — the legal prohibitions remain, the conceptual redefinition is complete, but the extraction machinery (professional gatekeeping, status allocation) continues. This is mandatrophy: the mandate (state monopoly, professional standards) has outlived the specific constraint form. The composite reading captures this by showing both mechanisms — drop (legal) and contraction (conceptual) — where contraction is the mandatrophic edge: it solved the coordination problem by eliminating the very concept that needed coordinating.",
+    "kernel_context": "This constraint is the composite_reading of kernel 'honor_violence_legitimacy'. It instantiates the reading that BOTH external cost imposition (drop_reading) AND conceptual redefinition (contraction_reading) operated simultaneously as co-constitutive mechanisms. The drop_reading isolates the state-enforcement mechanism; the contraction_reading isolates the cultural-redefinition mechanism. This composite reading asserts neither alone suffices — the contraction edge made the drop mechanism's work easier, and the drop mechanism gave the contraction mechanism enforcement teeth. They are structurally coupled but analytically distinct."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_violence_legitimacy__drop_reading",
+      "honor_violence_legitimacy__contraction_reading",
+      "state_monopoly_violence_consolidation",
+      "professional_licensing_regimes",
+      "bourgeois_moral_reform_movements"
+    ],
+    "dual_formulation_note": "Kernel 'honor_violence_legitimacy' decomposes into three constraint stories: (1) drop_reading — external costs only; (2) contraction_reading — conceptual redefinition only; (3) composite_reading (this story) — both mechanisms simultaneously. The composite has higher ε (0.78) than either sibling because it captures the synergistic extraction: drop mechanism's legal penalties + contraction mechanism's conceptual erasure. The drop and contraction readings have distinct victim sets and temporal profiles; this composite reading models their interaction. Per ε-invariance, these are separate constraints with separate ε values, linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.28
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.82
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.93
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_legal_monopoly",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Imposes criminal penalties on dueling, controls military/legal professional licensing, defines legitimate violence through state courts and police. Gains monopoly on violence adjudication and extraction via legal fees, state legitimacy, and bureaucratic control. Exit is arbitrary — the state IS the constraint's enforcer."
+    },
+    {
+      "name": "emerging_professional_classes",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Lawyers, bureaucrats, medical officers, engineers gain status and gatekeeping authority as honor is redefined from 'personal violence readiness' to 'professional competence and civic reliability'. They collect rents from professional licensing and state employment. Exit is high — they can move across professions or nations — but they benefit from the constraint's maintenance."
+    },
+    {
+      "name": "bourgeois_moral_reformers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Middle-class reformers (temperance, anti-dueling societies, legal reformers) campaign to redefine honor as civic virtue, self-control, and legal compliance. Gain cultural authority, political influence, and alignment with state power. Exit is mobile — they could retreat to private life — but they are ideologically invested in the redefinition."
+    },
+    {
+      "name": "aristocratic_officer_class",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Aristocratic military officers for whom dueling was a career requirement and status maintenance mechanism. Face criminal prosecution, cashiering, social ostracization if they duel; loss of honor-status if they don't. Constrained exit: can emigrate (some did to Americas), submit to new professional standards, or resist and be destroyed. No arbitrage — their capital (lineage, honor capital) is non-transferable."
+    },
+    {
+      "name": "traditional_gentry_dueling_participants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Rural/semi-rural gentry for whom dueling was local dispute resolution and status signaling. Lack professional alternatives, political connections, or cultural capital to navigate new system. Trapped: legal penalties reach them, but they have no pathway into the new professional/bourgeois order. Their honor culture is their only social currency, and it is being demonetized."
+    },
+    {
+      "name": "honor_culture_adherents",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Broader populations (including urban artisans, student corps, regional elites) who internalized honor-violence norms. The contraction mechanism redefines honor so that violence becomes dishonorable — they experience this as moral awakening, not coercion. Identity-locked: their self-concept is constituted through the honor framework; they cannot 'exit' the redefinition because it rewrites their identity from within. They pay by losing the coherence of their moral world."
+    },
+    {
+      "name": "women_in_honor_enforcement_roles",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Women (mothers, sisters, wives) who enforced honor norms domestically — policing male relatives' reputation, managing shame/honor dynamics, arranging marriages to restore honor. When honor is redefined to exclude violence, their domestic authority evaporates: no new role replaces 'honor enforcer'. Identity-locked in the domestic sphere; trapped in gender role that the constraint hollows out without replacing. They bear diffuse costs (loss of authority, increased vulnerability) with zero extraction capture."
+    },
+    {
+      "name": "historical_analyst",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analytical seat observing the composite mechanism from outside the historical moment. Sees both drop and contraction mechanisms, their coupling, and their distinct victim sets. No material stake; exit is analytical (can change frameworks). Provides the classification that the historical actors could not."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes state monopoly on legitimate violence and professional standardization by replacing personal honor violence with legal adjudication and meritocratic gatekeeping — a genuine coordination problem (ending private vengeance cycles, creating predictable professional hierarchies).",
+    "transfer_function": "Moves status, authority, material rewards, and moral legitimacy from aristocratic/gentry honor culture (dueling participants, honor enforcers) to state legal monopoly and emerging professional classes (lawyers, bureaucrats, officers, reformers). The drop mechanism transfers via legal penalties; the contraction mechanism transfers via conceptual redefinition of what counts as honorable.",
+    "absent_voices": "Colonial subjects and non-Western honor cultures subjected to the same conceptual redefinition via imperial imposition — they would object to the universalization of the 'honor without violence' model but were structurally excluded from the metropolitan reform conversation. Also: women in honor enforcement roles (partially represented in stakeholders) — their specific loss of domestic authority was rarely articulated in reform debates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the composite constraint vanished overnight (both legal penalties and conceptual redefinition reversed), dueling and honor violence would not simply return — the material conditions (professional armies, state courts, bourgeois morality) are gone. But the world would rearrange: new forms of status violence, reputation markets, and extra-legal dispute resolution would emerge to fill the coordination vacuum. The constraint's beneficiaries (state, professions) would lose their monopoly; its victims (honor culture adherents) would not regain their lost world.",
+    "founding_problem": "Early modern states faced endemic private violence (dueling, feuding, vendetta) that undermined state monopoly on violence, professional military effectiveness, and commercial reliability. The honor system provided a decentralized coordination mechanism for violence limitation, but it was aristocratic, unpredictable, and incompatible with bureaucratic statehood.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (private violence undermining state monopoly) is dead — modern states have effective monopoly on violence, professional militaries don't duel, commercial disputes use courts. Corroboration from outside beneficiary set: military historians (van Creveld, Keegan) document the professionalization of officer corps as solving the dueling problem; legal historians (Foucault, Elias) document the civilizing process as endogenous to state formation, not a reformer project. No living participant in the honor culture attests the problem is live — the culture is gone."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "honor_violence_legitimacy__drop_reading",
+      "honor_violence_legitimacy__contraction_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "drop_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_violence_decline_overdetermined",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "contraction_mechanism_necessary_for_drop_efficacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "aristocratic_honor_violence_order",
+    "drift_state": {
+      "moment": "bourgeois_legal_order_consolidated",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_kernel__study_as_exercise_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "1d210768-4d38-4a81-9663-14d1734e3a72"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.12,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Study-as-Exercise Reading of the Sacrificial Obligation",
+    "topic_domain": "religious law / halakhic authority / commitment-system dynamics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "rabbinic_authority",
+      "torah_scholars",
+      "lay_observing_community"
+    ],
+    "vindicated_propositions": [
+      "study_sacrifice_equivalence_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.065,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.055,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.1,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates one reading (study_as_exercise) of the sacrifice_obligation_kernel; which reading actually governs a given community's practice, and how does the classification change under each sibling?",
+      "resolution_mechanism": "Survey liturgy, school curricula, and responsa across communities to determine which reading each operates under, then classify each community's arrangement as its own constraint.",
+      "impact": "Under messianic_suspension the arrangement carries a readiness-maintenance function with a different beneficiary structure; under performance_only a persistent unfulfilled obligation appears; under symbolic_archive the halakhic claim drops entirely. Effective extraction and victim sets differ per reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the sacrificial-obligation kernel governs actual practice."
+    },
+    {
+      "id": "residual_unfulfilled_obligation",
+      "question": "Does the tradition treat the sacrificial obligation as fully discharged by study, or does a residual performance-obligation persist beneath the study practice (petitionary liturgy for restoration suggests the latter)?",
+      "resolution_mechanism": "Analysis of whether authorities describe the obligation as fulfilled, accommodated, or merely maintained — e.g., treatment of the additional-service petitions and of vows concerning offerings.",
+      "impact": "If a residual obligation persists, the arrangement partly manages an unmet duty rather than exhausting it, and the near-zero extraction assessment would need revision upward.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether study exhausts the obligation or overlays a persistent remainder."
+    },
+    {
+      "id": "interpretive_monopoly_rent",
+      "question": "Is the rabbinic prerogative to define what counts as fulfillment a legitimate coordination authority, or does it yield definitional rent?",
+      "resolution_mechanism": "Compare communities with more distributed interpretive authority; test whether fulfillment-adjudication produces material or status returns above the cost of maintaining the interpretive function.",
+      "impact": "Demonstrable rents would push the arrangement toward a hybrid coordination/extraction profile despite the absence of a coerced victim set.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the interpretive monopoly generates rents."
+    },
+    {
+      "id": "sibling_relation_hybrid_coherence",
+      "question": "Hybrid time-indexed positions (study fulfills now, performance resumes at restoration) are coherent and widely held; does their coherence confirm that no sibling reading is logically eliminated, or does some pairing admit no single framework?",
+      "resolution_mechanism": "Test each sibling pairing for a coherent combined position; a pairing with no coherent hybrid would convert the relation between those readings to logical exclusion.",
+      "impact": "Relations authored here as coexistence would shift to mutual logical exclusion for any pairing lacking a coherent hybrid.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether hybrid positions keep all sibling readings mutually compatible."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_kernel__performance_only_reading",
+      "sacrifice_obligation_kernel__messianic_suspension_reading",
+      "sacrifice_obligation_kernel__symbolic_archive_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'the sacrificial obligation.' The single label conflates four structurally distinct claims about one kernel: performance_only (obligation requires physical performance; study preparatory), messianic_suspension (obligation divinely suspended, not transformed, until restoration), study_as_exercise (this file: obligation genuinely occupied through study), and symbolic_archive (cultural-historical preservation making no halakhic claim). Each reading has its own epsilon, beneficiary/victim structure, and classification; this reading authors near-zero extraction over the standing study-based arrangement as assessed by its own lights. The upstream talmudic equivalence doctrine feeds this reading and is cited by the siblings in their contests over it."
+  },
+  "stakeholders": [
+    {
+      "name": "rabbinic_authority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintains the interpretive framework that determines what counts as fulfilling the sacrificial commandments: setting curricula, adjudicating questions of observance, and teaching that engagement with the laws of offerings discharges the obligation under present conditions. Communal deference, institutional support, and the prerogative of defining fulfillment flow toward its academies and courts. Its standing is inseparable from the framework it administers; stepping outside it would dissolve the very authority it exercises."
+    },
+    {
+      "name": "torah_scholars",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Devote their working lives to mastering the portions of the tradition that treat offerings. Through this study they fulfill the commandment as they understand it, earn communal standing and often livelihood in teaching roles, and reproduce the interpretive tradition for the next generation. Leaving the practice would forfeit both their vocation and the fulfillment their study secures."
+    },
+    {
+      "name": "lay_observing_community",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Recites the passages concerning offerings in the daily liturgy, supports the academies materially, and relies on rabbinic adjudication for what its observance requires. Members receive continuity with the commandment and a recognized path of observance without the Temple; the support they provide sustains the institutions that define that path. Individual exit from the community is possible but carries real social and familial cost."
+    },
+    {
+      "name": "temple_restoration_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold that the commandment's full exercise awaits physical restoration and prepare accordingly — cataloguing vessels, training candidates for priestly service, drafting liturgies for renewed offerings. They regard the primacy of study as diverting communal energy and resources away from preparation, and press their case at the margins of the academies that set the curriculum. Their proposals rarely reach the bodies that decide what observance requires."
+    },
+    {
+      "name": "halakhic_analyst_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Studies the tradition from outside its adjudicating structure — tracing how the identification of study with offering entered the literature, how it is taught, and how alternative accounts of the obligation fare in the textual record. Neither collects from the arrangement nor bears its costs; observes and reports."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a common, authoritative answer to how a Temple-dependent commandment remains exercisable when its site, altar, and priestly service do not exist: the obligation is occupied through a shared intellectual practice that keeps the law intelligible, transmissible, and connected to communal life.",
+    "transfer_function": "Moves interpretive deference, communal attention, and material support from the lay observing community toward the academies and courts that teach the laws of offerings and adjudicate fulfillment; participants receive in return a recognized path of observance and continuity with the commandment.",
+    "absent_voices": "Performance-only and messianic-suspension advocates would object that study displaces practical readiness for restored service; voices outside the rabbinic framework (Karaite successors, secular critics) would contest the premise that authorized interpretation can transform a biblical obligation's exercise-form. They sit at the margins of the academies, in separate movements, or outside the tradition entirely — present enough to register as resistance, absent from the agenda-setting seats.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the study-as-exercise arrangement vanished overnight, the community would face an unoccupied commandment: it would reorganize around another reading (restoration preparation, messianic waiting) or drop the obligation from lived practice. The daily liturgy's offering passages, academy curricula, and rabbinic adjudication of observance would all rearrange; the institutions funded to teach these laws would lose their function.",
+    "founding_problem": "The destruction of the Second Temple left a biblically legislated sacrificial system without its site, altar, or functioning priesthood; the tradition needed an account of how the obligation stands when its prescribed performance is impossible.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the current beneficiary set: the talmudic discussions that articulate the problem predate the modern rabbinate they authorize; medieval Karaite polemics — hostile witnesses — engage the same problem of an unperformable sacrificial law; and academic historiography of post-destruction Judaism independently documents the transformation. No corroborating source attests that the problem is dead."
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the sacrifice_obligation_kernel: that study of the laws of offerings constitutes genuine exercise of the mitzvah, so the obligation is fully occupied through intellectual engagement under present conditions. The standing arrangement under contest — the referent for epsilon — is the study-based occupation of the obligation as this reading itself assesses it: a legitimate transformation, not a suspension and not a mask over an unmet duty. KEY AGENTS (by structural relationship): rabbinic_authority: agenda-setting interpreter (institutional/identity_locked) — administers the framework defining fulfillment and collects deference and support; torah_scholars: practicing beneficiaries (moderate/identity_locked) — fulfill the commandment through vocation; lay_observing_community: participating beneficiaries with material-support costs (organized/constrained); temple_restoration_advocates: excluded dissenting voice (organized/constrained) — would redirect communal energy toward restored performance; halakhic_analyst_observer: analytical seat. The claim and the metrics are independent authored facts: the reading is CLAIMED as rope and the metrics are authored as what the arrangement descriptively looks like from this reading's own lights — near-zero extraction, low suppression, low theater. Sibling readings are separate constraints (linked via network.affects_constraints), not folded into this one; per the epsilon-invariance principle each carries its own epsilon and victim structure.",
+    "logic_rationale": "Extractiveness is authored near-zero (0.05) because, by this reading's own lights, the studier receives exactly what the arrangement promises — fulfillment — and no transfer of burden occurs; the small residual reflects the community's dependence on rabbinic adjudication of what counts. Suppression is low (0.12): no enforcement machinery compels adherence to this reading, sibling readings remain intellectually and socially available, and the modest value registers the social friction of holding minority views inside the tradition. Theater is low (0.10): the study is the function itself, not a performance standing in for one; the slight rise across the interval tracks the receding practical applicability of the material as generations passed. Accessibility_collapse is low (0.20): understanding this reading does not eliminate the alternatives — the sibling readings stay live, which is precisely what the coexistence relations record. Resistance is moderate-low (0.30): restoration advocacy, Karaite-descended objection, and secular detachment press against the arrangement without threatening it. Both temporal series run on one shared grid (t=0,10,20,30,40,50) with every tracked metric authored at every point; a suppression_requirement series is deliberately omitted because the enforcement picture is static — no machinery was built up or allowed to decay — so the scalar captures it.",
+    "perspectival_gap": "The seats compute differently from the same structure. From the rabbinic seat the arrangement is stewardship: an inherited framework faithfully administered, with deference that is earned interpretive authority. From the scholar's seat it is fulfillment and vocation fused — exit would cost both. From the community's seat it is continuity purchased with material support and reliance on adjudication it does not control. From the restoration advocate's seat the same arrangement is displacement: energy and resources flowing to study that their project believes belongs to preparation. The engine derives these divergences from the structural data (power, exit, role); this commentary does not adjudicate them.",
+    "directionality_logic": "Beneficiaries are declared and drive the derivation: rabbinic_authority (agenda-setter and collector, institutional power, identity-locked exit) sits nearest the beneficiary end; torah_scholars likewise; lay_observing_community sits near-symmetric — genuine participatory benefit offset by the material-support flow recorded in its secondary payer role. No victims are declared because this reading authorizes the transformation: nobody bears the obligation as a burden under it. The excluded restoration advocates fall outside the beneficiary/victim sets; their opposition registers in the resistance metric rather than in directionality, which encodes cost-bearing, not dissent. No directionality overrides are used: the derivation from declarations and exit options matches the structural relationships, and adding overrides would second-guess data the chain already reads correctly. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled downstream.",
+    "mandatrophy_analysis": "The classification guards against mislabeling in both directions. Against extraction-mislabeling: the interpretive monopoly could be read as definitional rent, but the transfers feeding it are voluntary expressions of the practice itself, the founding problem (an unperformable commanded system) is corroborated as live by hostile and external witnesses, and the extractiveness series declines rather than accumulates across the interval — no rent-layering signature. Against coordination-overclaiming: the omegas hold open the two ways this could degrade — a residual unfulfilled obligation persisting beneath the study practice, or demonstrable rents from the fulfillment-adjudication monopoly — either of which would move the arrangement toward a hybrid profile. The arrangement is not a piton: its function is live, its theater ratio is low, and its administrator could not cheaply discard it because discarding it would dissolve the administrator's own authority — which is why fixing_cost is prohibitive while the gains concentrate in a named seat rather than diffusing.",
+    "kernel_context": "Kernel: sacrifice_obligation_kernel — the persisting halakhic commitment that the Torah's sacrificial commandments remain normatively present after the destruction of the Temple. This file instantiates the study_as_exercise_reading: the obligation is genuinely occupied through intellectual engagement with its laws. Sibling readings, each a separate constraint with its own epsilon and victim structure: performance_only_reading (physical performance required; study preparatory only), messianic_suspension_reading (obligation divinely suspended, not transformed, until restoration; study maintains readiness), symbolic_archive_reading (cultural-historical archive making no halakhic claim). Relations from this reading to all three are authored as coexistence, justified by the coherence of hybrid time-indexed positions (study fulfills now, performance resumes at restoration) that no sibling's adoption eliminates; the hybrid-coherence omega documents what would convert any pairing to logical exclusion."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "sinaitic_obligation_in_force",
+    "drift_state": {
+      "moment": "contemporary_diaspora_practice",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "performance_only_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "messianic_suspension_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "symbolic_archive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_constitutes_genuine_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "authorized_transformation_of_exercise_form",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "rabbinic_authority",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "historical_treaty_substrate__extinguishment_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_historical_treaty_substrate__extinguishment_reading",
+    "measurement_id_prefix": "hts_ext",
+    "story_uid": "87c1b4f4-2866-4c99-93bf-31d967c9e6c7",
+    "created_at": "2026-08-04T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.78,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Historical Treaties as Completed Extinguishment Transactions",
+    "topic_domain": "legal_anthropology/indigenous_law/comparative_constitutional_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "settler_state_crown",
+      "colonial_land_speculators",
+      "resource_extraction_corporations"
+    ],
+    "victims": [
+      "indigenous_nations_signatories",
+      "descendant_indigenous_communities"
+    ],
+    "vindicated_propositions": [
+      "state_sovereignty_derivation_from_cession",
+      "treaty_as_bilateral_contract",
+      "property_law_applicability_to_sovereignty_transfer"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "extinguishment_kernel_reading_identity",
+      "question": "Is this constraint a kernel reading of 'historical_treaty_substrate' with the 'extinguishment_reading' frame?",
+      "resolution_mechanism": "Kernel membership is structural, not asserted; the engine infers it from reading_relations and axiom atoms across sibling files. This omega documents the committer frame for this story.",
+      "impact": "If confirmed, the constraint is one of three siblings; the engine's cross-reading contradiction detection applies. If not, it stands alone.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms this story instantiates the extinguishment_reading of the historical_treaty_substrate kernel; sibling readings are stewardship_reading and nation_to_nation_reading."
+    },
+    {
+      "id": "consent_veracity_ambiguity",
+      "question": "Were the historical treaty negotiations conducted with free, prior, and informed consent by Indigenous signatories, or were they coerced through threat, deception, or structural duress?",
+      "resolution_mechanism": "Historical documentary analysis of negotiation records, linguistic translation adequacy, and power asymmetry at signing; Indigenous oral histories of the events.",
+      "impact": "If consent was structurally absent, the 'completed transaction' framing collapses and the constraint reclassifies toward snare with higher extraction; if consent was genuine, the extinguishment reading gains coordination legitimacy (though not mountain status).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the foundational transaction premise (voluntary cession for consideration) holds historically."
+    },
+    {
+      "id": "sovereignty_ontology_dispute",
+      "question": "Does the concept 'territorial sovereignty' carry the same meaning in Indigenous legal orders and European-derived state law such that a cession transaction is coherent across both frameworks?",
+      "resolution_mechanism": "Comparative legal anthropology: identify whether the Indigenous parties' understanding of what was transferred matches the state's understanding of what was received. If ontologies are incommensurate, no bilateral cession occurred.",
+      "impact": "If ontologies are incommensurate, the constraint's claimed coordination function (bilateral contract) is structurally false; extraction becomes the only operating function, pushing classification toward snare with maximal suppression.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Cross-framework semantic coherence of the sovereignty concept at the heart of the extinguishment claim."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the 'extinguishment reading' of historical treaties between Indigenous nations and settler states (primarily British/Crown and post-confederation Canada, USA, New Zealand, Australia). Under this reading, treaties are completed property transactions: Indigenous parties voluntarily ceded territorial sovereignty to the Crown in exchange for defined reserve lands, annuity payments, and specific harvesting rights. The settler state becomes the sole legitimate authority over the ceded territory; Indigenous jurisdiction is extinguished except for narrowly defined treaty rights. This reading has been the operative legal framework for Crown sovereignty assertion and resource allocation for 150-200 years. The constraint is claimed as a snare — high extraction from Indigenous nations (loss of territorial jurisdiction, resources, governance) with active enforcement (Indian Act, residential schools, resource licensing on ceded lands) and theatrical performance of treaty obligations (annuities frozen at 19th-century values, consultation duties narrowly interpreted). The kernel contest: sibling readings (stewardship_reading, nation_to_nation_reading) deny extinguishment occurred or deny its legitimacy.",
+    "key_agents": [
+      "settler_state_crown: Primary agenda_setter and beneficiary (institutional/arbitrage) — asserts sovereignty, controls enforcement, collects resource rents",
+      "colonial_land_speculators: Secondary beneficiary (organized/arbitrage) — acquire ceded lands at below-market prices via state grant",
+      "resource_extraction_corporations: Tertiary beneficiary (powerful/arbitrage) — gain secure tenure for extraction on ceded territory",
+      "indigenous_nations_signatories: Primary victim (powerless/trapped) — ceded territory under duress, lost jurisdiction, confined to reserves",
+      "descendant_indigenous_communities: Ongoing victim (organized/identity_locked) — bear continuing extraction, limited exit from treaty framework",
+      "international_human_rights_bodies: Observer (institutional/analytical) — monitor compliance with UNDRIP, CERD; no enforcement power"
+    ],
+    "logic_rationale": "Base extractiveness (0.82) reflects near-total transfer of territorial resource value to settler state and its licensees, with annuity payments frozen at nominal 19th-century levels (e.g., $4-5/year per person). Suppression (0.78) reflects active enforcement: Indian Act governance replacement, pass systems, residential schools, criminalization of Indigenous legal orders, resource licensing without consent. Theater ratio (0.45) reflects performance of treaty obligations (annuity payments, consultation rituals) while substantive jurisdiction and revenue sharing are denied. Accessibility collapse (0.85) reflects legal foreclosure of alternatives: courts treat extinguishment as settled law; Indigenous legal orders cannot operate on ceded territory. Resistance (0.62) reflects ongoing litigation, land defense, political mobilization, and international advocacy — significant but unable to shift the constraint's core operation. Metrics measured at T=200 (present); time grid spans ~1800-present.",
+    "perspectival_gap": "From the settler state seat (agenda_setter, institutional, arbitrage exit), the constraint appears as legitimate coordination: a bilateral contract that settled title and enabled orderly settlement. From Indigenous nation seats (victims, powerless/organized, trapped/identity_locked), the same structure operates as enforced extraction: territory and jurisdiction taken, promises minimized, alternatives suppressed. The engine computes this divergence from the structural data — the authored claim (snare) reflects the victim-seat reading.",
+    "directionality_logic": "Settler state (Crown) is structural beneficiary: collects resource rents, controls legislative agenda, holds arbitrage-grade exit (can unilaterally modify treaty implementation via legislation). Colonial speculators and resource corporations are secondary beneficiaries with arbitrage exit (capital mobility). Indigenous signatories and descendants are victims: powerless to organized power, trapped to identity-locked exit (territorial jurisdiction cannot be regained within the framework; identity fused to specific lands makes exit from the constraint existentially costly). International bodies are observers with analytical exit. Directionality derivation: beneficiaries get low d (~0.1-0.2), victims get high d (~0.8-0.9), observers get d~0.5.",
+    "mandatrophy_analysis": "The founding problem (peaceful coexistence and resource sharing between sovereigns) is dead on the extinguishment reading's own terms — the arrangement was built to extinguish Indigenous sovereignty, not sustain coexistence. The mandate persists because it extracts resource value for beneficiaries; no party with power to change it benefits from doing so. This is snare persistence, not mandatrophy: the function (extraction) is live, not atrophied. Piton classification would be wrong — there is a concentrated beneficiary (settler state) capturing extraction.",
+    "kernel_context": "This constraint instantiates the 'extinguishment_reading' of the 'historical_treaty_substrate' kernel. Sibling readings: 'stewardship_reading' (treaties as relational pacts for shared stewardship, no sovereignty cession) and 'nation_to_nation_reading' (treaties as international agreements between sovereign equals requiring ongoing consent). This reading forecloses the stewardship_reading (cession of sovereignty vs. no cession are logically incompatible in a single framework) and coexists with the nation_to_nation_reading (both are live positions in contemporary courts and politics, held by different parties). The extinguishment reading's structural delta: Indigenous nations exit victim set for territorial jurisdiction (they ceded it); enter beneficiary set for narrow treaty rights (reserves, annuities); settler state becomes sole legitimate authority over ceded territory."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "indian_act_governance",
+      "resource_licensing_regime",
+      "comprehensive_claims_policy"
+    ],
+    "dual_formulation_note": "Part of the historical_treaty_substrate kernel family with stewardship_reading and nation_to_nation_reading. This reading claims extinguishment occurred; stewardship_reading denies cession; nation_to_nation_reading treats cession as invalid without ongoing consent. The ε values differ sharply: extinguishment_reading ε=0.82 (high extraction), stewardship_reading ε≈0.15 (coordination with minimal extraction), nation_to_nation_reading ε≈0.35 (contested coordination). Linked via network.affects_constraints in all three files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "settler_state_crown",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Asserts sovereignty over ceded territory through legislative and judicial authority. Controls the treaty implementation framework, resource licensing, and the definition of treaty rights. Collects virtually all resource rents from ceded lands. Can unilaterally amend implementation (e.g., via legislation) but faces political and international reputational costs. Exit from the constraint would mean recognizing Indigenous jurisdiction — existentially costly to state legitimacy."
+    },
+    {
+      "name": "colonial_land_speculators",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Acquired ceded lands through Crown grants at nominal prices. Their property titles derive from the extinguishment reading's validity. Capital mobility gives them arbitrage exit — they can sell and reinvest elsewhere — but their historical gains are locked in. They lobby to maintain the legal framework that secures their titles."
+    },
+    {
+      "name": "resource_extraction_corporations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Hold licenses for mining, forestry, hydroelectric development on ceded territory. The extinguishment reading gives them secure tenure and predictable regulation. They benefit from the state's exclusive licensing authority. Capital mobility provides arbitrage exit, but sunk infrastructure investment creates de facto lock-in. They fund legal challenges to Indigenous title claims."
+    },
+    {
+      "name": "indigenous_nations_signatories",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Original treaty signatories who negotiated under conditions of epidemic depopulation, military pressure, and deliberate mistranslation. Ceded vast territories for reserves ~0.1-1% of original territory, fixed annuities, and verbal promises of continued hunting/fishing. Lost governing jurisdiction over ceded lands. No exit: reserves are legally defined, small, and economically non-viable; return to traditional governance is legally foreclosed."
+    },
+    {
+      "name": "descendant_indigenous_communities",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bear ongoing extraction: resource revenue flows out, environmental degradation stays in, governance authority denied. Receive annuity payments (frozen at $4-5/year) and limited reserve lands — narrow benefits that the extinguishment reading treats as the full treaty bargain. Identity is fused to specific territories; exit from the constraint means abandoning the land that constitutes their nationhood. Some communities leverage court victories for incremental gains (consultation, revenue sharing) but the extinguishment framework remains intact."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "UN treaty bodies (CERD, HRC), UNDRIP monitoring mechanisms, IACHR. Issue concluding observations and rulings finding extinguishment-based frameworks violate Indigenous rights. No enforcement power; states treat findings as non-binding. Their analytical exit is total — they observe and report but cannot alter the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provided a legal mechanism for Crown to assert sovereignty over territory without continuous warfare; established a framework for allocating land to settlers and resources to corporations with state-backed title certainty.",
+    "transfer_function": "Moves territorial jurisdiction, resource rights, and governing authority from Indigenous nations to the settler state and its licensees. Moves fixed annuity payments and small reserve lands from state to Indigenous communities — a fraction of 1% of the resource value extracted.",
+    "absent_voices": "Indigenous nations who refused to sign treaties (e.g., many West Coast nations, Lubicon Cree) — they never consented to extinguishment but are subject to the same sovereignty assertion. Pre-contact Indigenous legal orders — their jurisdiction is rendered invisible by the extinguishment framework. Future generations of Indigenous peoples — bound by treaties they had no part in negotiating.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the extinguishment reading vanished overnight, Crown title to 90%+ of Canadian landmass would lose its primary legal foundation. Resource licenses would face immediate Indigenous jurisdiction challenges. The state would need to negotiate new coexistence frameworks (likely resembling the stewardship or nation_to_nation readings). The entire property law edifice in ceded territories would reorganize.",
+    "founding_problem": "Crown needed to acquire Indigenous territory for settlement and resource extraction without endless warfare; Indigenous nations needed to survive existential threats (epidemics, starvation, military pressure) and secure some protected land and resources.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Royal Commission on Aboriginal Peoples (1996) — independent federal commission — found treaties were not 'real estate deals' but nation-to-nation agreements; the extinguishment interpretation is a Crown imposition. Truth and Reconciliation Commission (2015) — independent — documented how the founding problem (coexistence) was replaced by elimination policy. Supreme Court of Canada (Delgamuukw 1997, Tsilhqot'in 2014) — judicial branch outside executive beneficiaries — rejected extinguishment as a legal fact, affirming Indigenous title persists. Indigenous oral histories across treaty territories consistently deny sovereignty cession."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "doctrine_of_discovery",
+      "terra_nullius_legal_fiction"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "stewardship_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "nation_to_nation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "treaty_cession_extinguishes_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "crown_sovereignty_derives_from_treaty_cession",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "treaty_as_bilateral_contract",
+    "drift_state": {
+      "moment": "contemporary_undrip_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

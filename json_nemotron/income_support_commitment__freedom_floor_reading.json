@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "5b2bc08c-4791-4bd1-b411-e5b77aabb221"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Universal Unconditional Income Support as Freedom Floor",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "unpaid_caregivers",
+      "precarious_workers",
+      "abuse_survivors",
+      "artists_entrepreneurs"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "autonomy_as_precondition_for_agency",
+      "dignity_as_non_instrumental_good",
+      "exit_capacity_disciplines_labor_market_power"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "unpaid_caregivers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Provide full-time care for dependents without formal compensation. The income floor enables them to sustain this labor without dependence on a partner or familial coercion, and to re-enter paid work on their own terms when care demands shift."
+    },
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Cycle through gig, seasonal, and zero-hours contracts with no unemployment insurance. The floor converts intermittent wages into a livable baseline, giving them credible refusal power against exploitative schedules and unsafe conditions."
+    },
+    {
+      "name": "abuse_survivors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Depend financially on an abusive partner or household. Universality means no means-test interview with the abuser present, no stigma of 'welfare', and an exit fund that exists before the decision to leave — the floor is the material condition of escape."
+    },
+    {
+      "name": "artists_entrepreneurs",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Pursue creative or speculative ventures with high failure risk and delayed returns. The floor absorbs the cost of experimentation without forcing premature commercialization or dependence on gatekeeping patrons."
+    },
+    {
+      "name": "taxpayers_high_income",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Bear the marginal tax incidence of funding the floor. Their exit option is capital mobility and tax planning, but the universality of the benefit reduces the political salience of targeted resistance — no 'deserving/undeserving' fracture to exploit."
+    },
+    {
+      "name": "employers_low_wage_sectors",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face upward wage pressure because workers no longer accept poverty wages to survive. They lobby for conditionality and work requirements to restore the discipline of desperation; their structural interest is in a disciplined reserve army of labor."
+    },
+    {
+      "name": "welfare_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer the universal payment with minimal gatekeeping — no eligibility verification, no sanction regimes, no caseworker discretion. Their institutional role shifts from moral policing to operational throughput, reducing bureaucratic theater."
+    },
+    {
+      "name": "fiscal_conservatives",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Object to the fiscal cost and moral hazard narrative. They would means-test, condition, and sanction if present; their exclusion from the design is what makes the floor a floor rather than a ladder with missing rungs."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track labor market attachment, health outcomes, care labor valuation, and entrepreneurial activity under the floor. Their read is contested: some see validated coordination, others see latent dependency."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of funding a social floor that no individual can afford to provide alone but everyone benefits from existing in: a society where no one's survival depends on submitting to another's power. The tax base coordinates the resource pool; the universal payment coordinates the distribution without exclusion errors.",
+    "transfer_function": "Moves resources from the progressive tax base (concentrated on high income/wealth) to every resident as an unconditional monthly payment. No transfer is conditioned on labor status, household composition, or moral assessment — the transfer *is* the coordination, not a leak from it.",
+    "absent_voices": "Future generations who inherit the fiscal architecture; non-citizen residents in jurisdictions where the floor is citizen-only (a common compromise that reintroduces exclusion at the border); employers who would prefer a sub-floor wage floor enforced by desperation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the universal floor vanished overnight, caregivers would lose the only income recognizing their labor; precarious workers would lose refusal power; abuse survivors would lose the pre-positioned exit fund; artists and entrepreneurs would lose the risk-absorption buffer. Employers would regain unilateral wage-setting power in low-wage sectors. The social contract would revert to conditional, stigmatized, administratively complex transfers.",
+    "founding_problem": "The post-war welfare compromise tied income support to labor market attachment and family form, leaving caregivers, precarious workers, and abuse survivors dependent on relational or bureaucratic gatekeepers. The founding problem was: how to secure material existence without conditioning it on subordination?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The 1970s negative income tax experiments (US/Canada) documented labor supply effects far smaller than predicted; the Alaska Permanent Fund (universal, unconditional, 40+ years) shows no dependency atrophy; Finnish basic income trial (2017-2018) found improved well-being and no employment reduction. Corroboration comes from empirical evaluation literature outside the advocacy coalition."
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the freedom_floor_reading of the income_support_commitment kernel. The kernel is the persistent societal commitment to provide income support; the contest is over *what kind* of support and *what it is for*. This reading holds that the support must be universal, unconditional, and sufficient to function as a freedom floor — a material baseline that makes exit from coercive relationships (employer, partner, patron) structurally possible. The sibling readings (dependency_trap_reading, targeting_efficiency_reading) are different constraints with different beneficiary/victim structures and different ε, generated from the same kernel commitment. This story authors only this reading's structural data.",
+    "logic_rationale": "Extractiveness is low (0.08) because the constraint operates as a pure coordination mechanism: a progressive tax base funds a universal payment with no means-test overhead, no sanction regime, and no moral gatekeeping. The suppression metric (0.12) reflects only the tax enforcement required — no behavioral compliance is demanded of recipients. Theater ratio (0.15) captures the residual administrative performance of 'verifying universality' (identity checks, residency). Accessibility collapse is low (0.25) because alternatives (targeted welfare, charity, familial dependence) remain legally and practically available — the floor does not forbid them, it makes them optional. Resistance (0.35) comes from organized employer interests and fiscal conservatives who benefit from the discipline of desperation.",
+    "directionality_logic": "Beneficiaries (caregivers, precarious workers, abuse survivors, artists/entrepreneurs) are structural beneficiaries — they receive the transfer without conditions and gain exit capacity. Their directionality d is near the beneficiary end (low d, low effective χ). Payers (high-income taxpayers, low-wage employers) bear the cost but with very different exit options: taxpayers have arbitrage-grade exit (capital mobility), employers have constrained exit (cannot relocate low-wage labor markets easily). The engine derives d from these structural positions. No victims are declared — universality eliminates the means-test stigma that makes targeted welfare extractive toward its recipients.",
+    "mandatrophy_analysis": "The mandatrophy question is live: the founding problem (securing existence without subordination) persists because labor market precarity has increased, care labor remains unpaid, and intimate partner violence remains endemic. The constraint is not a degraded version of a past solution — it is the solution that was never fully tried. The dependency_trap_reading claims the floor *would* create a new mandatrophy (state dependence replacing market dependence); this reading holds that exit capacity *prevents* dependence by making all dependence voluntary.",
+    "kernel_context": "This constraint is the freedom_floor_reading of the income_support_commitment kernel. Sibling readings: dependency_trap_reading (income support as work disincentive that atrophies skills), targeting_efficiency_reading (support should be concentrated on demonstrated need). This reading claims the kernel's legitimacy derives from securing autonomy as a precondition for all other agency; the siblings claim legitimacy from preventing moral hazard or fiscal efficiency respectively."
+  },
+  "omegas": [
+    {
+      "id": "freedom_floor_vs_dependency_trap",
+      "question": "Does a universal unconditional floor empirically produce net autonomy gains (exit capacity, risk-taking, care recognition) or net dependency (labor withdrawal, skill atrophy, state reliance)?",
+      "resolution_mechanism": "Longitudinal panel data from universal pilot programs (Finland, Kenya, US negative income tax follow-ups) tracking labor supply, entrepreneurship, care hours, health, and subjective autonomy over 10+ years, compared to matched conditional-transfer populations.",
+      "impact": "If autonomy gains dominate, the rope classification holds and the floor is a genuine coordination solution. If dependency effects dominate, the constraint reclassifies toward tangled_rope (coordination + extraction from future taxpayers) or snare (if the floor becomes a trap). This is the core empirical contest between this reading and the dependency_trap_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The central empirical disagreement between freedom_floor_reading and dependency_trap_reading."
+    },
+    {
+      "id": "universality_fiscal_sustainability",
+      "question": "Can a universal floor at a dignity-sufficient level be funded by a progressive tax base without either (a) crowding out other public goods or (b) requiring regressive consumption taxes that erode the floor's own value?",
+      "resolution_mechanism": "Dynamic fiscal modeling incorporating behavioral responses (labor supply, tax avoidance, capital flight) under alternative tax mixes (wealth, carbon, financial transaction, VAT). Compare to status quo welfare + tax expenditure costs.",
+      "impact": "If unsustainable without regressive financing, the constraint acquires extractive structure (burden shifts to low-income consumers) and ε rises. If sustainably progressive, the rope classification is stable. This omega links to the targeting_efficiency_reading's claim that universality is fiscally irresponsible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the coordination problem (funding level + tax base) has a stable solution at dignity-sufficient universality."
+    },
+    {
+      "id": "employer_power_countervailing",
+      "question": "Does the exit capacity provided by the floor structurally constrain employer wage-setting power in low-wage sectors, or do employers adapt through automation, offshoring, or labor market segmentation that preserves monopsony power?",
+      "resolution_mechanism": "Sectoral wage and employment dynamics after floor implementation: compare low-wage sectors with high automation potential vs. high care/content dependence; track vacancy durations, wage growth, and working condition improvements.",
+      "impact": "If employer power is constrained, the floor's coordination function extends to labor market discipline (vindicated_proposition: exit_capacity_disciplines_labor_market_power). If employers adapt without conceding, the floor becomes a subsidy to low-wage employers (extraction from taxpayers to employers) — tangled_rope or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the floor's labor market exit effect materializes as employer discipline or employer subsidy."
+    },
+    {
+      "id": "committer_framing_delta",
+      "question": "This constraint is one reading of the income_support_commitment kernel. How does the freedom_floor_reading's beneficiary structure (caregivers, precarious workers, abuse survivors, artists/entrepreneurs; no victims) differ structurally from the sibling readings, and where is the disagreement located?",
+      "resolution_mechanism": "Compare the three readings' base_properties: dependency_trap_reading declares victims (future taxpayers, workers who withdraw) and higher ε; targeting_efficiency_reading declares beneficiaries (administrators, fiscal conservatives) and victims (universal recipients who 'don't need it'). The disagreement is located in: (1) who the constraint recognizes as legitimate claimants, (2) whether universality is a feature or bug, (3) whether exit capacity is autonomy or moral hazard.",
+      "impact": "The three readings instantiate different constraints with different ε, different beneficiary/victim sets, different claimed types. They are not the same constraint measured differently — they are different constraints generated from the same kernel commitment. This omega documents the committer-frame decomposition required by DP-001.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural delta between this reading and its siblings in the kernel contest."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__dependency_trap_reading",
+      "income_support_commitment__targeting_efficiency_reading",
+      "labor_market_regulation",
+      "care_infrastructure_provision",
+      "housing_affordability_floor"
+    ],
+    "dual_formulation_note": "The income_support_commitment kernel decomposes into three constraint stories (this file plus two siblings). Each has its own ε, beneficiaries/victims, and claimed_type. This reading claims rope (coordination); dependency_trap_reading claims tangled_rope (coordination + extraction from future taxpayers); targeting_efficiency_reading claims rope (coordination) but with different beneficiaries (administrators, fiscal disciplinarians) and victims (excluded universal recipients). All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "autonomy_precondition_for_agency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "universality_eliminates_stigma",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "postwar_conditional_welfare_settlement",
+    "drift_state": {
+      "moment": "precarity_crisis_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

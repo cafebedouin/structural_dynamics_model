@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "climate_response_imperative__degrowth_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "degrowth_reading",
+    "story_uid": "34f57496-2ab9-45ba-8f80-639f661b9ac1"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Degrowth Requirement on Global North Economies (Climate Response Imperative, Degrowth Reading)",
+    "topic_domain": "climate policy/political economy/intergenerational justice",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "future_generations",
+      "global_south_populations",
+      "precarious_northern_households"
+    ],
+    "victims": [
+      "affluent_northern_households",
+      "precarious_northern_households",
+      "carbon_intensive_industries"
+    ],
+    "vindicated_propositions": [
+      "decoupling_insufficiency_thesis",
+      "sufficiency_principle",
+      "common_but_differentiated_responsibility_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 2018,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.2,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading (degrowth_reading) of the climate_response_imperative kernel: what would the sibling readings change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Corpus-level comparison of the three reading files over the shared standing arrangement; no within-story resolution exists by design (one reading, one constraint, one epsilon).",
+      "impact": "The mitigation_priority_reading moves present-day Northern consumption off the victim ledger, shifts victims toward carbon-intensive industries and beneficiaries toward technology sectors, and restores CDR reliance (raising its own deferred-cost extraction). The adaptation_priority_reading shifts victims to climate-exposed populations and beneficiaries to resilience infrastructure, demoting mitigation to the aspirational. The disagreement is located in two structural elements: the sufficiency premise (whether growth-compatible pathways can deliver the response at all) and the burden-allocation rule (who pays, on what principle).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed structure of the climate response kernel: sibling deltas and the location of the contest."
+    },
+    {
+      "id": "cdr_scalability_contest",
+      "question": "Can carbon dioxide removal scale to the gigatonne-per-year levels the dominant net-zero scenarios assume, relaxing or dissolving the degrowth requirement?",
+      "resolution_mechanism": "Monitored deployment and cost curves against scenario requirement levels (UNEP emissions gap reporting, CDR market data, IPCC assessment cycles).",
+      "impact": "If CDR scales, the reading's foundational axiom (growth_compatible_mitigation_insufficient, empirically contingent) weakens, the victim set shrinks, and this reading converges toward the mitigation-priority sibling; if it does not, the requirement hardens and the resistance it meets must break politically rather than technologically.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "CDR scalability as the primary empirical hinge of the degrowth axiom."
+    },
+    {
+      "id": "absolute_decoupling_sufficiency",
+      "question": "Can Global North economies absolutely decouple GDP from emissions and material throughput fast enough to meet temperature targets without deliberate demand reduction?",
+      "resolution_mechanism": "Consumption-based emissions and material footprint accounting against required decarbonization and dematerialization rates.",
+      "impact": "If decoupling suffices, the reduced-consumption and working-time demands are unnecessary and the constraint's victim set is spurious; if not, the coordination function of the requirement is confirmed and the extraction component is the price of physics rather than of ideology.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decoupling sufficiency as the second empirical escape hatch from the requirement."
+    },
+    {
+      "id": "present_generation_burden_legitimacy",
+      "question": "Are the costs imposed on present-day Global North populations legitimate responsibility-weighted burden-sharing (this reading's claim) or extraction without consent (the payer seats' claim)?",
+      "resolution_mechanism": "Democratic legitimacy mechanisms: citizen assemblies, referenda, negotiated transition compacts that would convert imposed burden into consented burden.",
+      "impact": "If legitimated, the constraint's asymmetric cost-bearing reads as justified coordination and enforcement costs fall; if refused, the requirement either fails politically or persists only through coercion, drifting the arrangement toward pure extraction.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Consent status of the present-generation burden: the central seat-divergence question."
+    },
+    {
+      "id": "advocacy_identity_independence",
+      "question": "Does the degrowth policy community update on disconfirming evidence (CDR cost declines, decoupling outperformance) or defend the frame identity-protectively?",
+      "resolution_mechanism": "Track the community's published response to disconfirming evidence across successive assessment cycles; compare internal critiques against external replication.",
+      "impact": "If identity-protective, the reading's sufficiency and burden assessments drift optimistic and the agenda-setter seat hardens toward captured advocacy; if truth-tracking, the reading's claims retain evidential standing independent of the community's fused identity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Identity-fusion risk in the agenda-setting advocacy community."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "affluent_northern_households",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Top income and wealth deciles across North America, Europe, and East Asia. Their consumption patterns and asset portfolios carry the largest per-capita footprints in the world economy. Under the transformation they face consumption ceilings, wealth levies, and the stranding of carbon-intensive holdings. From where they stand, exit means relocating residence or assets to permissive jurisdictions, purchasing exemptions where enforcement is porous, and funding political opposition to the requirement."
+    },
+    {
+      "name": "precarious_northern_households",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Working- and middle-class households whose employment, pensions, and public services are tied to economic growth. They bear working-time restructuring, consumption adjustments, and transition risk, and they receive domestic redistribution, energy-cost protection, and expanded public provision in return. They cannot leave their national economies, and their main lever is the electoral veto they hold over any government proposing the requirement."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People not yet born who will inherit whatever climate and institutional legacy the present creates. They receive the mitigation and adaptation benefit stream at no cost to themselves and cannot consent, object, negotiate, or exit. Every design choice in the requirement — how fast consumption falls, how much is redistributed, whether carbon removal is relied upon — lands on them without their voice."
+    },
+    {
+      "name": "global_south_populations",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The majority of humanity, concentrated in regions bearing the largest climate damages under current trajectories. Under the requirement they receive adaptation finance, technology transfer, and a larger share of atmospheric space, and they are spared damages the transformation avoids. Their leverage over Northern domestic policy is limited; migration pressure under climate stress is the constrained exit available to their worst-affected members."
+    },
+    {
+      "name": "degrowth_policy_community",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Post-growth economists, sufficiency researchers, transition designers, and movement organizers who author the transformation blueprints: working-time schemes, rationing architectures, redistribution mechanisms, citizen-assembly designs. They set the intellectual agenda of the requirement but hold no state power. Their careers, citation networks, and worldview are fused with the project; abandoning it would mean re-founding their professional and ideological lives."
+    },
+    {
+      "name": "carbon_intensive_industries",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fossil fuel producers, airlines, automotive manufacturers, and cement and steel incumbents whose business models the transformation winds down on a schedule they do not set. They face stranded assets and managed contraction. Their responses are capital relocation, regulatory capture, demand-side lobbying, and rebranding; their participation in designing the requirement is deliberately excluded by its premise."
+    },
+    {
+      "name": "climate_science_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "IPCC assessment authors and Earth-system scientists who quantify emission budgets, decoupling rates, and carbon-removal scalability. Their findings underwrite the necessity claim the requirement rests on, but they hold no enforcement power and take no side in the distributive design. Their assessments are the reference against which the requirement's premises are checked."
+    },
+    {
+      "name": "climate_vulnerable_nation_governments",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Governments of small island states and Sahelian and deltaic nations on the front line of climate damage. They hold formal seats in climate negotiations and would press for faster, larger redistribution and harder Northern timelines, but they hold no agenda power over Northern domestic economic policy. Their consent is rhetorically invoked in the requirement's design literature while their voice is structurally absent from the forums where Northern transformation would actually be decided."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Reduces aggregate material throughput and consumption in the region with the highest per-capita emissions, where demand reduction substitutes for unproven carbon removal, and pools redistributed resources to finance adaptation and domestic transition cohesion — solving the mitigation collective-action problem through sufficiency rather than speculative supply-side technology.",
+    "transfer_function": "Moves consumption capacity, working time, and wealth from present-day Global North households (weighted toward affluent deciles and carbon-intensive asset holders) toward Global South adaptation finance, domestic public provision, and atmospheric stabilization; the benefit stream accrues to future generations and the Global South, who bear none of the transfer's cost.",
+    "absent_voices": "Future generations are structurally absent — they cannot object or consent. Climate-vulnerable nation governments hold formal seats but no agenda power over Northern domestic policy. Growth-dependent workers and carbon-intensive industries would object but are excluded by the framework's premise, which plans their wind-down without their participation. Present-day Northern electorates retain veto power, which the constraint's institutional design (insulated planning bodies, citizen assemblies) deliberately routes around.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the degrowth requirement vanished, Northern climate policy reverts to growth-compatible mitigation: consumption and emissions trajectories continue, CDR reliance expands to cover the gap, adaptation finance stays at current inadequate levels, and the deferred damages land on the Global South and future generations — the arrangement each party's position depends on would be replaced by the mitigation-priority status quo.",
+    "founding_problem": "The mitigation gap recognized after IPCC SR15 (2018): Paris temperature targets cannot be met by growth-compatible pathways, because observed absolute decoupling is too slow and the dominant scenarios close the gap only by assuming carbon dioxide removal at scales never demonstrated — leaving demand reduction in the North as the only physically available lever.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "IPCC AR6 WGIII scenario documentation attests the CDR reliance and the decoupling shortfall from outside the degrowth beneficiary set, as do UNEP emissions gap reports and energy-system analysts. The corroboration is partial and stated as such: the same assessment literature produces the CDR-reliant scenarios this reading rejects, and technology-optimist analysts outside the beneficiary set dispute the insufficiency premise. No corroboration is fully disinterested, but the gap itself is attested by parties who do not benefit from the degrowth program."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mitigation_priority_reading",
+      "adaptation_priority_reading"
+    ],
+    "dual_formulation_note": "The climate_response_imperative kernel decomposes into three reading-constraints over one shared standing arrangement: this degrowth reading; the mitigation_priority_reading (technology-led, growth-compatible; victims among carbon-intensive industries, beneficiaries among technology sectors; CDR reliance raises its deferred-cost extraction); and the adaptation_priority_reading (resilience-first; victims among climate-exposed populations, beneficiaries among resilience infrastructure). The readings differ in victim/benefit sets and in authored epsilon, not in the arrangement they assess; family links are declared so legitimacy shifts propagate across the set. The mitigation-priority reading currently dominates institutional configuration, which is why this reading registers structural pressure on both siblings rather than merely coexisting with them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.05
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "mitigation_priority_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "adaptation_priority_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "growth_compatible_mitigation_insufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "burden_allocation_tracks_historical_responsibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_growth_sufficiency_within_planetary_boundaries",
+    "drift_state": {
+      "moment": "post_sr15_scenario_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "commentary": {
+    "narrative_context": "This file instantiates the degrowth_reading of the climate_response_imperative kernel as a single epsilon-invariant constraint: the requirement that climate response run through structural transformation of Global North economies — reduced consumption, redistribution, post-growth institutions — enabling both mitigation and adaptation. Per the kernel-reading rules, the sibling readings (mitigation_priority_reading, adaptation_priority_reading) are other constraints in other files; the contest is not adjudicated here and epsilon is not hedged across readings. The standing arrangement under contest, assessed by this reading's own lights, is the growth-compatible climate response regime (green-growth mitigation, market mechanisms, CDR-reliant net-zero targets) that the reading holds physically insufficient; the epsilon authored here is for the transformation requirement's own operation on those it governs — the real, concentrated, near-term costs it imposes on present-day Northern populations — not for the post-growth steady state the reading endorses. The claim and the metrics are independent authored facts: the constraint is claimed as tangled_rope because it genuinely coordinates (demand reduction is the only physically available substitute for unproven carbon removal; redistribution is the operative adaptation-finance mechanism) while asymmetrically extracting (present-day Northern populations bear costs whose benefit stream accrues to future generations and the Global South, who bear none), under enforcement that must run against revealed Northern preference.\n\nKEY AGENTS (by structural relationship):\n- affluent_northern_households: primary target (powerful/arbitrage) — bears consumption ceilings, wealth levies, and asset stranding; partially evades via capital flight and exemption purchasing\n- precarious_northern_households: dual-positioned target and beneficiary (organized/trapped) — bears working-time and consumption adjustments, receives domestic redistribution; holds the electoral veto\n- future_generations: principal beneficiary (powerless/trapped) — receives the benefit stream at zero cost; structurally unable to consent or object\n- global_south_populations: beneficiary (moderate/trapped) — receives adaptation finance and atmospheric space; spared damages the transformation avoids\n- degrowth_policy_community: agenda-setter (moderate/identity_locked) — authors the transformation blueprints; professional identity fused with the project\n- carbon_intensive_industries: institutional payer (institutional/arbitrage) — faces managed wind-down; responds with capture, relocation, rebranding\n- climate_science_community: analytical observer (institutional/analytical) — assesses pathway sufficiency; underwrites the necessity claim without enforcement power\n- climate_vulnerable_nation_governments: excluded voice (moderate/constrained) — formal seats, no agenda power over Northern domestic transformation",
+    "logic_rationale": "Extractiveness 0.65: the requirement's costs are concentrated, near-term, and borne by a defined population (consumption ceilings, working-time restructuring, wealth levies, stranded assets), while the benefit stream is diffuse, deferred, and partly extra-generational — the classic asymmetry — tempered, by this reading's own lights, by burden allocation that tracks historical responsibility and capacity, and by the fact that much of the reduced consumption is surplus rather than necessity. Suppression 0.70 is structural, not internalized: Northern opposition to the requirement is overt and organized (high resistance), not a cognitive pattern that would persist after barrier removal; no voluntary path to the transformation has been observed in any Northern jurisdiction, so enforcement machinery (rationing, caps, working-time regulation, redistribution mandates) must operate against revealed preference. Theater 0.20: the advocacy is largely operational — policy blueprints, citizen-assembly designs, pilot programs — with a declining performative share as proposals concretize (see series). Accessibility_collapse 0.55: within the frame, once the no-CDR and slow-decoupling premises are accepted, alternatives collapse strongly; the frame's entry itself remains contested, leaving real exits (technological optimism) open to those who reject the premises. Resistance 0.80: electoral backlash dynamics, industry opposition, and growth-dependent institutions (pensions, employment, fiscal models) all contest the constraint. The temporal series run on one shared grid (2018–2026, five points) so every tracked metric is authored at every examined time point; suppression_requirement is deliberately not series-tracked because the constraint is not yet enforced — its enforcement picture is static and carried by the scalar.",
+    "perspectival_gap": "Seat divergence is the point of this story. From the degrowth_policy_community seat the arrangement computes as necessary, physically honest coordination — the only response that does not mortgage the future to unproven technology. From the affluent_northern_households seat the same structure operates as expropriation of lifestyle and wealth without consent. From the precarious_northern_households seat it is genuinely mixed: working-time reduction and public provision against income and pension risk. From future_generations the difference is a livable versus unlivable world — but that seat cannot speak, which is precisely why its interests must be carried by declaration rather than voice. The engine computes per-seat classifications from the structural data; the authored claim does not adjudicate among these seats.",
+    "directionality_logic": "Beneficiary declarations: future_generations and global_south_populations receive the benefit stream at zero cost-bearing (d near the beneficiary end); precarious_northern_households are dual-positioned — they pay working-time and consumption adjustments and receive domestic redistribution — landing mid-low. Victim declarations: affluent_northern_households bear the largest per-capita burden but hold arbitrage-grade exit (capital flight, exemption purchasing, jurisdictional arbitrage), which damps their effective extraction; carbon_intensive_industries bear stranded-asset costs with the same arbitrage damping. The degrowth_policy_community, as agenda-setter, is subsidized by the constraint — it is their project — giving low d with identity-locked exit; the lock is professional-ideological (careers, citation networks, and a sufficiency worldview fused with the project), and if the frame broke — CDR scaling, decoupling outperformance — the seat would need to re-found itself, which is the advocacy_identity_independence omega's question. One directionality override is authored: for the powerless class (occupied here only by future_generations), d is pinned to 0.05 because the structural derivation weights trapped exit toward the target end, but future generations' trapped-ness is about inheriting outcomes, not bearing constraint costs — their declared zero cost-bearing and total benefit receipt place them at the beneficiary end.",
+    "mandatrophy_analysis": "The tangled_rope classification blocks two mislabels. As pure extraction it would erase the genuine coordination function: absent carbon removal at scale, demand reduction in the North is the only physically available mitigation lever, and redistribution is the operative adaptation-finance mechanism — the constraint solves a real collective-action problem. As pure coordination it would erase the real victim set: costs fall on a defined present-day population, enforcement runs against revealed preference, and the benefit stream accrues largely to parties who bear no commensurate cost and cannot reciprocate. Mandatrophy runs in the non-standard direction here: the founding problem (the mitigation gap) is live and widening, so the mandate has not outlived its function — the corruption risk is not atrophied persistence but premature mandate declaration by growth interests, and the mismatch consumer should find status=live consistent with verdict=world_rearranges. The receipt surface carries the piton cell signature honestly (diffuse gains, prohibitive fix): the transformation's costs cannot be offloaded or deferred without dissolving the constraint's function — that is the reading's core claim, the elimination of the CDR escape hatch — and no named seat captures the gains, which split across Southern adaptation finance, domestic redistribution, and the atmospheric public good. That cell flags cost-asymmetry; it does not make the constraint a piton, which would require an atrophied function and theatrical maintenance, and the theater series runs the other way.",
+    "kernel_context": "This constraint is the degrowth_reading of the climate_response_imperative kernel — the shared commitment that climate response is required, whose content is contested across readings. The mitigation_priority_reading instantiates a technology-led, growth-compatible response with adaptation as residual; the adaptation_priority_reading instantiates a resilience-first response with mitigation as aspirational. This reading holds that both mitigation and adaptation are enabled by structural transformation of Global North economies. This reading forecloses the mitigation-priority sibling within any single framework (green growth versus post-growth are mutually exclusive macroeconomic commitments) and structurally influences the adaptation-priority sibling (its redistributive architecture is the resource base resilience-building requires) without resolving that dispute. The sibling files instantiate different victim/benefit sets and different epsilon over the same standing arrangement; this file does not adjudicate among them. The distributed kernel has no adjudicating authority — the IPCC fixes physical facts, not the normative reading — which is why authority_grounding is distributed and the drift_state is authored from this reading's own reference frame: measured against the post-growth sufficiency order this reading takes as the kernel's legitimate state, contemporary practice (record consumption, CDR-reliant governance) has severely departed, and the operative growth-oriented governance does not acknowledge the frame the gap is measured from."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

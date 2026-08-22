@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "supermajority_threshold__minoritarian_veto_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "254cb75a-15a9-4ca9-aef6-5369a9ad286d"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Supermajority Threshold as Minoritarian Veto Lock-In",
+    "topic_domain": "constitutional_theory/political_economy/institutional_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "entrenched_elites",
+      "status_quo_beneficiaries"
+    ],
+    "victims": [
+      "contemporary_majorities_blocked_from_reform"
+    ],
+    "vindicated_propositions": [
+      "minority_veto_doctrine",
+      "constitutional_immutability_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_frame",
+      "question": "Is this constraint one reading of the supermajority_threshold kernel, and how does the minoritarian_veto_reading structurally differ from its siblings?",
+      "resolution_mechanism": "Compare the beneficiary/victim structure, extractiveness profile, and claimed type across all three declared readings (minoritarian_veto_reading, consensus_safeguard_reading, adaptive_gradient_reading). The divergence in ε values and structural relationships is the evidence.",
+      "impact": "If the kernel frame is rejected, this story reverts to a flat constraint without committer structure; if confirmed, the three readings form a constraint family linked by network.affects_constraints with distinct ε values.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commiter-frame kernel membership and reading differentiation"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (procedural barriers, legal entrenchment) or internalized (democratic actors self-censor because they believe the threshold is legitimate)?",
+      "resolution_mechanism": "Post-threshold-removal observation: if reform movements accelerate immediately after a threshold is lowered or bypassed, the suppression was partly internalized; if reform remains blocked by other mechanisms, the suppression was primarily structural.",
+      "impact": "If internalized, the constraint's effective suppression persists beyond its formal structure — the target carries the veto belief with them. This raises χ for the trapped majority seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in supermajority veto contexts"
+    },
+    {
+      "id": "historical_privilege_conversion",
+      "question": "To what extent do current veto-holding minorities trace their blocking power to historical privilege (e.g., slave-state representation, property qualifications, racial exclusions) rather than contemporary democratic legitimacy?",
+      "resolution_mechanism": "Genealogical analysis of the specific supermajority rule's adoption and its subsequent application — tracing the continuity between original design intent and present blocking coalitions.",
+      "impact": "High continuity with historical privilege strengthens the snare classification; a clean break (new threshold adopted by broad consensus for new reasons) would support the consensus_safeguard_reading instead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether current veto power derives from historical privilege or contemporary consensus"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.82
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "A supermajority threshold (e.g., 2/3 or 3/4 for constitutional amendments) is presented as a safeguard for deep consensus. Under the minoritarian_veto_reading, the same threshold operates as a permanent veto for organized minorities who benefit from the status quo. The constraint extracts from contemporary majorities who cannot enact necessary reforms (climate policy, voting rights, economic redistribution) because the threshold converts historical overrepresentation (e.g., equal state suffrage in the US Senate, malapportioned upper chambers) into a durable blocking coalition. The claim/metric gap is deliberate: the constraint is CLAIMED as a consensus safeguard (rope/tangled_rope framing) while the authored metrics describe a snare with identifiable beneficiaries (entrenched elites, status quo beneficiaries) and victims (contemporary majorities blocked from reform). The engine measures that divergence; do not reconcile the claim to the metrics.",
+    "logic_rationale": "Extraction is high (0.78 at interval end) because the threshold allows a minority to block policies that would redistribute resources or power away from incumbent beneficiaries — the veto is the extraction mechanism. Suppression is high (0.82) because the constraint's persistence depends on the formal difficulty of amendment plus the internalized belief that supermajority requirements are normatively legitimate; resistance is substantial (0.72) because majoritarian reform movements repeatedly fail at the threshold. Theater ratio rises (0.45) because the 'consensus safeguard' framing increasingly masks the veto function as the gap between popular majorities and blocking minorities widens. The measurement series shows monotonic extractiveness growth over 25 time units as demographic and ideological sorting makes the blocking minority more cohesive and the blocked majority more numerous.",
+    "directionality_logic": "Entrenched elites and status quo beneficiaries are structural beneficiaries (d near 0.0) — they collect the veto rents without bearing the cost of blocked reform. Contemporary majorities blocked from reform are structural targets (d near 1.0) — they bear the full cost of policy stasis with no exit from the constitutional framework (identity_locked exit). The analytical observer seat sees the full structure. The threshold's spatial scope is national/continental, amplifying effective extraction for the trapped majority.",
+    "perspectival_gap": "From the beneficiary seat (entrenched elites), the threshold appears as a legitimate safeguard against transient majoritarian excess — the coordination story is believed. From the victim seat (contemporary majorities), the same structure operates as an anti-democratic lock-in with no legitimate justification. The engine computes this divergence from the structural data; the authored claim (snare) reflects the victim-seat reading.",
+    "mandatrophy_analysis": "The founding problem (preventing hasty constitutional change) is contested — the threshold was often adopted under conditions that entrenched specific historical privileges (slave-state representation, property qualifications). The arrangement persists long after those conditions changed, converting a contingent safeguard into a permanent veto. The mandate has atrophied; the constraint now serves extraction, not coordination.",
+    "kernel_context": "This constraint is the minoritarian_veto_reading of the supermajority_threshold kernel. Sibling readings: consensus_safeguard_reading (threshold ensures deep persistent consensus), adaptive_gradient_reading (threshold is a functional tool requiring evidence-based calibration). This reading instantiates a snare with high ε; the consensus_safeguard_reading would instantiate a rope/tangled_rope with low ε; the adaptive_gradient_reading would instantiate a scaffold with calibration-dependent ε. The structural delta is the beneficiary/victim assignment: this reading identifies entrenched elites as beneficiaries and contemporary majorities as victims."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "supermajority_threshold__consensus_safeguard_reading",
+      "supermajority_threshold__adaptive_gradient_reading",
+      "constitutional_amendment_procedure",
+      "representative_legislative_authority"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the supermajority_threshold kernel. The minoritarian_veto_reading (this file) treats the threshold as a snare with identifiable beneficiaries and victims. The consensus_safeguard_reading treats it as a genuine coordination mechanism (rope/tangled_rope). The adaptive_gradient_reading treats it as a calibratable scaffold. They differ in ε (0.78 vs ~0.25 vs ~0.45), beneficiary structure, and claimed type. All three are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "entrenched_elites",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Hold disproportionate influence in the blocking minority coalition (e.g., small-state senators, malapportioned legislative chambers, judicial appointments). They benefit from policy stasis that protects their economic interests and political power. They can exit to other jurisdictions or leverage their position globally; the threshold secures their veto without requiring ongoing effort."
+    },
+    {
+      "name": "status_quo_beneficiaries",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organized interest groups (industry associations, incumbent firms, religious institutions) that mobilize to defend the threshold because it blocks reforms threatening their rents. They collect the benefits of blocked reform directly; they bear some cost of mobilization but net-benefit from the veto. Exit means abandoning their privileged position in the current system."
+    },
+    {
+      "name": "contemporary_majorities_blocked_from_reform",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Broad popular majorities supporting reforms (climate action, voting rights restoration, wealth taxation, healthcare expansion) that consistently fail at the supermajority threshold. They bear the full cost of policy stasis — preventable deaths, economic inequality, democratic erosion — with no exit from the constitutional framework because their identity as citizens is fused to the polity. The threshold makes their democratic agency conditional on minority consent."
+    },
+    {
+      "name": "constitutional_reform_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Activists, scholars, and legislators who propose lowering the threshold or bypassing it (e.g., via statute, court packing, or constitutional convention). They are structurally excluded because the threshold itself blocks the meta-reform that would change the threshold. Their exclusion is the constraint's self-entrenchment mechanism."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study supermajority rules across democracies and track outcomes: frequency of amendment, policy responsiveness, democratic legitimacy. They see the full structure — how the same threshold produces different classifications in different institutional contexts — but lack power to change any single case."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The threshold nominally coordinates by requiring broad agreement for fundamental law changes, preventing a bare majority from entrenching its preferences against a substantial minority.",
+    "transfer_function": "Moves policy-making authority from contemporary numerical majorities to organized minorities who can sustain a blocking coalition, transferring the power to enact or block reform from the many to the few.",
+    "absent_voices": "Future generations who inherit the locked-in status quo; citizens in jurisdictions where the threshold does not exist and reforms pass; the poor and marginalized whose needs are most often blocked by veto coalitions representing entrenched wealth and power. They are absent because the threshold operates at the meta-constitutional level — they cannot vote on the rule that silences their vote.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the supermajority threshold vanished overnight, a wave of reforms blocked for decades (voting rights restoration, climate legislation, campaign finance reform, wealth taxation) would pass through simple-majority channels within months. The policy landscape would reorganize toward the preferences of numerical majorities. Entrenched elites would lose their permanent veto and have to contest each reform on the merits.",
+    "founding_problem": "Preventing transient majoritarian passion from making irreversible constitutional changes; protecting minority rights against majority tyranny; ensuring stability of the fundamental law.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The consensus_safeguard_reading attests the founding problem is live (citing ongoing risks of democratic backsliding). The minoritarian_veto_reading (this reading) and adaptive_gradient_reading attest it is substantially dead — historical analysis shows the threshold was often adopted to entrench slave-state power, property qualifications, or racial hierarchies, not as a neutral consensus tool. Independent constitutional historians (Ackerman, Levinson, Ginsburg) corroborate the genealogy of privilege-entrenchment from outside the beneficiary set."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "supermajority_threshold__consensus_safeguard_reading",
+      "supermajority_threshold__adaptive_gradient_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "consensus_safeguard_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "adaptive_gradient_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "supermajority_threshold_entrenches_historical_privilege",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "blocking_minority_veto_is_anti_democratic_lock_in",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "founding_consensus_safeguard",
+    "drift_state": {
+      "moment": "contemporary_democratic_erosion_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

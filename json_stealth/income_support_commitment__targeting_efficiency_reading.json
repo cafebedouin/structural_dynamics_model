@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "targeting_efficiency_reading",
+    "story_uid": "99772ca9-1ac6-41a9-8e51-386272841b4a"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.63,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Universal Grant Consolidation Swap (Targeting-Efficiency Reading)",
+    "topic_domain": "political economy/social policy/welfare state theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "middle_income_households",
+      "high_income_households",
+      "previously_excluded_childless_adults"
+    ],
+    "victims": [
+      "deep_poverty_single_parents",
+      "disabled_benefit_recipients",
+      "high_cost_metro_renters"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.75,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.46,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.5,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.61,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.63,
+      "basis": "projected"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "deep_poverty_single_parents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Raises children in a high-cost borough on a stacked package of targeted benefits — SNAP, a housing voucher, a childcare subsidy, the EITC, and TANF cash — worth roughly $31,100 a year, each piece sized to a specific need and each with its own eligibility test. The swap replaces the entire stack with a flat $12,000 grant. She cannot reapply to programs that have been repealed, cannot substitute her own earnings for subsidized childcare at her wage level, and has no individual recourse; her remaining option is collective political action she has little time, money, or standing to mount."
+    },
+    {
+      "name": "disabled_benefit_recipients",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive supports calibrated to costs that scale with impairment — personal care, medical transport, specialized diets, accessible housing — through programs that assess need individually. A flat grant ignores all of it. Their needs are non-negotiable and cannot be deferred, downsized, or relocated; the organizations that represent them testified against consolidation and were outvoted."
+    },
+    {
+      "name": "high_cost_metro_renters",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold housing vouchers sized to local rents in cities where a modest apartment consumes most of a flat grant. They can technically move to cheaper regions, but relocation means leaving jobs, schools, and care networks, so exit is costly and partial rather than real."
+    },
+    {
+      "name": "middle_income_households",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive the full grant while paying little of it back through the clawback schedule and having had little or no targeted-benefit footprint to lose. They are the modal net gainers, numerous enough to be the swap's decisive electoral constituency, and they experience the arrangement as a straightforward dividend."
+    },
+    {
+      "name": "high_income_households",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive the same grant, surrender part of it through surtaxes, and come out ahead or neutral after tax planning. They gain additionally from a simplified benefit landscape and face no barrier to restructuring income around the clawback thresholds."
+    },
+    {
+      "name": "previously_excluded_childless_adults",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Were ineligible for most of the consolidated programs — the EITC largely requires dependent children, TANF serves families, many rental programs prioritize them — and now receive the flat grant unconditionally. For them the swap is a genuine first-time transfer, which is why the universalist frame is not empty even though the aggregate incidence runs against the poorest."
+    },
+    {
+      "name": "fiscal_authority_coalition",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enacted the consolidation and administers its financing: one payment stream replaces dozens of programs, eligibility offices close, caseworker headcount falls, and the administrative savings help balance the budget. The coalition controls the clawback schedule and can adjust it, but reversing course means rebuilding abolished machinery and confronting its own majority constituency."
+    },
+    {
+      "name": "anti_poverty_advocacy_coalitions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Document the net-loss incidence household by household, publish the arithmetic, litigate procedural challenges, and lobby for restoring targeted channels or layered supplements. They were outside the budget negotiation that produced the swap and remain outside the coalition that sustains it; their influence runs through public opinion and elections they do not control."
+    },
+    {
+      "name": "distributional_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Compute and publish the incidence tables the debate turns on — who gains, who loses, by how much, under which financing assumptions. They hold no stake in the outcome and their analyses circulate to every seat."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a real delivery problem: a single uniform payment reaches every household with no eligibility determination, no take-up gap, no benefit cliff, and a fraction of the administrative overhead of the consolidated programs — coverage becomes automatic and stigma-free by construction.",
+    "transfer_function": "Moves purchasing power through a flat per-household grant financed chiefly by terminating need-calibrated programs. Net incidence runs from deep-poverty households whose prior packages exceeded the grant (about -$19,100 for the exemplar household) toward middle- and upper-income households that receive the grant without comparable losses, with a minority of previously excluded poor households gaining for the first time.",
+    "absent_voices": "The deep-poverty households whose net position deteriorates are absent from the fiscal negotiation that decided the swap; their interests enter only as refracted through universalist advocacy that counts them as included. Disability representatives and tenant organizations objected in testimony and were outvoted; no seat in the budget coalition represents a net-loser household.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the swap vanished overnight, large benefit streams would need re-routing: net-loser households would reclaim targeted packages worth tens of thousands, net-winner majorities would lose a grant they have incorporated into household budgets, closed eligibility offices and their staffs would have to be rebuilt, and the fiscal arithmetic the coalition balanced on would reopen — the welfare state would visibly reorganize around restored need-testing.",
+    "founding_problem": "Fragmented means-testing: a patchwork of programs with overlapping eligibility tests, benefit cliffs that penalize work and marriage, chronic take-up failure among eligible households, and administrative burden that excludes precisely the people the programs exist to serve.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the net-winner coalition: administrative-burden scholarship and government accountability studies document take-up failure and cliff effects in the pre-swap patchwork, and anti-poverty researchers attest the problem persists — while disputing that consolidating financing is the remedy. No attesting source belongs to the seats that capture the swap's gains."
+  },
+  "gain_flow": "middle_income_households",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "A consolidated universal grant replaces the stack of need-calibrated programs — SNAP, housing vouchers, childcare subsidies, the EITC, TANF — with a single flat payment to every household, financed substantially by terminating the targeted channels. The arrangement is presented as universal solidarity: everyone receives the same grant, stigma disappears, cliffs vanish. Its net incidence runs the other way. A Queens parent whose household received roughly $31,100 in combined targeted benefits receives a $12,000 grant — a net loss of $19,100 — while middle- and upper-income households collect the same grant with nothing comparable to lose. The poor are the arrangement's nominal beneficiaries and its actual victims: the universalist frame performs inclusion while the financing consolidates a regressive transfer. KEY AGENTS (by structural relationship): deep_poverty_single_parents — primary bearer of the net loss (powerless/trapped); disabled_benefit_recipients — primary bearer, calibrated support irreplaceable (moderate/trapped); high_cost_metro_renters — secondary bearer (moderate/constrained); middle_income_households — principal collecting seat (organized/mobile); high_income_households — collecting seat with restructuring latitude (powerful/arbitrage); previously_excluded_childless_adults — incidental gainers the universalist frame truthfully describes (moderate/mobile); fiscal_authority_coalition — administers the swap and pockets administrative savings (institutional/arbitrage); anti_poverty_advocacy_coalitions — objecting challengers outside the deciding coalition (organized/constrained); distributional_economists — analytical observers publishing the incidence tables (analytical/analytical).",
+    "logic_rationale": "Extraction is high (0.78 at interval end) because the financing converts need-calibrated transfers into a flat grant whose incidence is regressive against the deepest poverty; it stops short of saturation because a minority of previously excluded poor households genuinely gain. Suppression (0.63) is structural, not internalized: the targeted channels are statutorily closed, so exit is a legislative act rather than an individual choice — and suppression is authored as a raw structural property, unscaled; only extractiveness is scaled by directionality and scope downstream. Theater (0.50) reflects a universalist frame performing inclusion while incidence tables show exclusion — a growing share of the arrangement's communicative activity defends the frame rather than delivers the function. Accessibility collapse is moderate (0.42): the old channels are legally dead for individuals, but legislative restoration, state supplements, and charitable stopgaps persist as partial alternatives. Resistance (0.60) is sustained advocacy, litigation, and electoral challenge; the dispersed powerless victims have coalition potential only through the advocacy seats that aggregate them, and that aggregation is real but resource-starved. The three measurement series share one six-point grid. Suppression_requirement is tracked deliberately because the enforcement picture genuinely changes over the interval — application channels close, offices shutter, restoration bills fail — rather than staying static. Trajectories are monotonic with no oscillation, so no intermittent-reinforcement reading applies. Points at T=24 and T=30 are marked projected: they assume the enactment trajectory holds.",
+    "perspectival_gap": "From the fiscal coalition's seat the swap is a coordination achievement it built and balances budgets on; from the trapped payer seats the same statute operates as confiscation of calibrated support; from the previously excluded seat it is a first dividend. Nothing in the authored metrics adjudicates between these readings — the engine computes divergent per-seat classifications from power, exit options, and declared position, and the divergence is the finding.",
+    "directionality_logic": "Trapped, powerless payers sit nearest the full-target end of the directionality range, and the derivation amplifies their effective extraction accordingly. Mobile and arbitrage beneficiaries sit nearest the beneficiary end, damping theirs. The fiscal coalition's institutional power and restructuring latitude place it near the beneficiary end even though it appears in no victim list — and its secondary collection of administrative savings reinforces that placement. Previously excluded poor households derive partial-beneficiary directionality: the one seat where the universalist frame's promise is locally true. The excluded advocates receive the canonical fallback; their alignment with the victims is commentary-grade, not a structural declaration, and drives no classification.",
+    "mandatrophy_analysis": "The classification guards both directions. Against mislabeling as rope: the universal-delivery coordination story is genuine but is doing cover work — the same statute that simplifies delivery consolidates a regressive transfer, and the snare verdict keeps the efficiency framing from laundering the incidence. Against overcorrection: the founding problem (fragmented means-testing, cliffs, take-up failure) is live and externally corroborated, so this is not a zombie mandate; it is a live-mandate arrangement whose chosen remedy inverts its own distributive purpose. No mandatrophy resolution is declared: the mandate has not outlived its function — the function has been captured by its financing. The piton signature does not fit: extraction is concentrated, not diffuse, and a clear seat captures the gains.",
+    "kernel_context": "Kernel: income_support_commitment — the persisting commitment that the polity provides income support. This file instantiates the targeting_efficiency_reading: legitimate support concentrates on demonstrated need. Sibling readings instantiate different constraints from the same kernel: freedom_floor_reading (unconditional support as autonomy infrastructure) and dependency_trap_reading (unconditional support as a work disincentive). Within this reading's exclusivity axiom — support is NOT universally distributed — the freedom_floor premise of unconditional distribution cannot be held in the same framework, hence the foreclosure edge; the dependency_trap premise is an empirical ally and the two coexist comfortably in one politics. Under the freedom_floor reading the same swap would be assessed as an autonomy-enabling floor with different epsilon and plausibly a different type; that assessment lives in its own file. One reading, one constraint, one epsilon."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is the targeting_efficiency_reading of the income_support_commitment kernel; what structural differences would instantiating a sibling reading produce?",
+      "resolution_mechanism": "Generate the sibling stories (freedom_floor_reading, dependency_trap_reading) over the same swap arrangement and compare computed types, epsilon, and per-seat classifications.",
+      "impact": "Classification is reading-indexed: the same swap assessed by the freedom_floor reading would carry lower epsilon and plausibly a rope or scaffold type; treating any single reading's verdict as the kernel's verdict misclassifies the family.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of a three-reading kernel."
+    },
+    {
+      "id": "incidence_measurement_dispute",
+      "question": "Do net losses actually concentrate on deep-poverty households, or do dynamic responses — labor supply, price and rent adjustment, informal support substitution — offset the static incidence?",
+      "resolution_mechanism": "Longitudinal panel data on post-consolidation household income and consumption, disaggregated by pre-swap benefit depth.",
+      "impact": "If dynamic offsets hold for the poorest, effective extraction falls and the snare reading weakens toward tangled_rope; if static losses persist, the snare classification is confirmed and deepened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Static versus dynamic incidence of the consolidated-financing swap."
+    },
+    {
+      "id": "enactment_trajectory_uncertainty",
+      "question": "Will the consolidation reach full enactment on the projected schedule, or stall at partial pilots and hold-harmless phases?",
+      "resolution_mechanism": "Legislative tracking of restoration bills, appropriation levels for legacy-channel wind-down, and take-up data during transition phases.",
+      "impact": "If enactment stalls, the measurements after T=18 overstate realized extraction and the arrangement operates as a contested proposal rather than a settled snare; the projected-basis tail of the measurement series should be discounted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the projected segment of the interval materializes."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Is the universal-delivery efficiency gain — one payment, no eligibility machinery, no cliffs — separable from the regressive financing that consolidates the targeted channels?",
+      "resolution_mechanism": "Revenue-neutral redesign pilots: a flat grant paired with progressive clawback schedules that preserve net incidence for deep-poverty households.",
+      "impact": "If separable, the extraction is a financing choice riding on genuine coordination value and the snare verdict attaches to the financing rather than the delivery; if inseparable, part of the measured extraction is the price of the coordination itself.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether delivery efficiency and regressive incidence can be unbundled."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'income support policy' decomposes into three reading-stories of the income_support_commitment kernel, linked here. Need-indexed distribution, unconditional floors, and work-incentive design are structurally distinct claims with different epsilon values, beneficiary structures, and failure modes; forcing them into one story would make epsilon observer-dependent. This story (targeting_efficiency_reading) links to both siblings; the coupling runs through shared financing — whichever reading governs determines whether the targeted channels survive."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "need_calibrated_targeting_framework",
+    "drift_state": {
+      "moment": "contemporary_universalist_challenge",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "support_must_track_demonstrated_need",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "consolidated_financing_shifts_net_incidence_upward",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__civic_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "de9c303b-7ad2-4066-b86a-5bd93a401226"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Civic-Right Reading: Individual Right Conditioned on Militia Participation",
+    "topic_domain": "constitutional_law/political_theory/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "militia_eligible_citizens",
+      "state_militia_authorities",
+      "constitutional_originalists_civic_reading"
+    ],
+    "victims": [
+      "non_militia_participating_individuals",
+      "gun_control_advocacy_groups"
+    ],
+    "vindicated_propositions": [
+      "civic_republican_virtue_doctrine",
+      "well_regulated_militia_premise",
+      "collective_security_through_universal_service"
+    ]
+  },
+  "interval": {
+    "start": 1791,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1791,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1934,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1791,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1934,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1791,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1934,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the civic-right reading of the Second Amendment: the individual right to keep and bear arms is structurally conditioned on participation in, or eligibility for, the organized militia. The right is not a freestanding entitlement to private firearms ownership for self-defense or recreation, but a civic entitlement tied to the republican obligation of collective defense. The arrangement coordinates universal militia service (the coordination function) with the distribution of arms and training (the transfer function), but extracts compliance from those who would exercise the right without fulfilling the service condition. Regulatory authority (state and federal) holds moderate power to define militia eligibility, training standards, and armament rules. The constraint is actively enforced through licensing, militia statutes, and judicial review; its persistence depends on maintaining the service-conditioned gate.",
+    "key_agents": [
+      "militia_eligible_citizens: Primary beneficiary (moderate power, constrained exit) — holds the right contingent on service",
+      "state_militia_authorities: Agenda setter (institutional power, arbitrage exit) — defines militia structure, eligibility, and armament",
+      "non_militia_participating_individuals: Primary victim (moderate power, constrained exit) — seeks arms access without service condition",
+      "gun_control_advocacy_groups: Secondary victim (organized power, mobile exit) — seeks broader regulation than the civic reading permits",
+      "constitutional_originalists_civic_reading: Beneficiary observer (analytical power, analytical exit) — advances this reading in legal discourse",
+      "federal_judiciary: Observer (institutional power, analytical exit) — adjudicates the reading's scope"
+    ],
+    "logic_rationale": "Base extractiveness (0.45) reflects the moderate cost the constraint imposes on non-participants who must either join militia structures or forgo the right; it is not zero because the gating mechanism excludes a class of would-be holders, but it is not high because the condition is a civic duty, not a rent extraction. Suppression (0.3) is moderate: alternatives (private ownership unconditioned) are suppressed by law and precedent, but the civic reading itself permits substantial regulated access. Theater ratio (0.25) is low-moderate: the militia-conditioned framework has genuine historical and doctrinal coherence; performative invocations exist but do not dominate. Accessibility collapse (0.4) is partial: the individual-right and collective-right readings remain live alternatives in public and judicial discourse. Resistance (0.55) is significant: Heller (2008) and Bruen (2022) rejected the civic reading as the sole framework, and political mobilization against service-conditioned rights is strong.",
+    "directionality_logic": "Militia-eligible citizens are structural beneficiaries (d ~ 0.2): they receive the right in exchange for a civic obligation they would owe regardless. State militia authorities are agenda setters with arbitrage exit (d ~ 0.1): they administer the constraint and can shift its parameters. Non-militia-participating individuals are payers (d ~ 0.7): they bear the cost of exclusion from the right unless they accept the condition. Gun-control advocates are payers (d ~ 0.6): the civic reading blocks stricter regulation they prefer. Originalist civic-reading scholars are analytical observers (d ~ 0.5). Federal judiciary is analytical (d ~ 0.5). The service gate creates the asymmetry: the same structure that coordinates collective defense extracts from those who refuse the coordination.",
+    "mandatrophy_analysis": "The founding problem (universal militia defense) is contested: the civic reading's proponents argue the problem persists (asymmetric threats, civic virtue decay); critics argue it is dead (professional military, police, nuclear deterrence). The constraint persists because the reading serves as a doctrinal bridge: it preserves an individual right while permitting regulation the individual-right reading forbids and the collective-right reading exceeds. Mandatrophy is unresolved — the arrangement is neither fully live nor fully dead, and its persistence is contested, not inertial.",
+    "kernel_context": "This constraint is the civic_right_reading of kernel second_amendment_scope. Sibling readings: individual_right_reading (unconditioned individual right), collective_right_reading (state militia authority only). This reading's structural delta: militia-eligible individuals in beneficiary set; regulatory authority moderate; moderate epsilon with service-based gating. The three readings form a constraint family linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_scope__individual_right_reading",
+      "second_amendment_scope__collective_right_reading"
+    ],
+    "dual_formulation_note": "Kernel second_amendment_scope decomposes into three constraint stories: civic_right_reading (this file, Tangled Rope), individual_right_reading (Rope/Snare depending on seat), collective_right_reading (Mountain/Scaffold). The civic reading coordinates identity and collective defense; the individual reading extracts regulatory latitude; the collective reading coordinates state authority. Epsilon differs structurally: civic reading gates right on service (moderate extraction), individual reading removes gate (high extraction from regulatory authority), collective reading vests right in state (low extraction from individuals, high from state autonomy)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "militia_eligible_citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold the Second Amendment right conditional on militia participation or eligibility. They receive access to arms and training through the organized militia structure. Exit requires either accepting the service condition or forgoing the constitutional right; emigration or conscientious objection are the only full exits."
+    },
+    {
+      "name": "state_militia_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Define militia eligibility, organization, training standards, and armament rules under state and federal law. They administer the constraint and collect compliance as the price of the right. They can modify the constraint through legislation and regulation; their exit is shifting to a different constitutional reading or federal preemption."
+    },
+    {
+      "name": "non_militia_participating_individuals",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seek firearms access for self-defense, recreation, or collection without militia service. The civic reading denies them the right unless they accept the condition. Their options: join a militia (costly), litigate for a different reading (uncertain), or accept exclusion. Exit is constrained by the legal gate."
+    },
+    {
+      "name": "gun_control_advocacy_groups",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for broader firearms regulation than the civic reading permits (e.g., universal background checks, assault weapon bans). The civic reading's individual right component blocks some regulations they seek, making them payers. But the reading's service condition and regulatory authority also enable regulations the individual-right reading would forbid, making them incidental beneficiaries. They can shift strategy, jurisdiction, or public messaging — mobile exit."
+    },
+    {
+      "name": "constitutional_originalists_civic_reading",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Advance the civic-right reading in legal scholarship, judicial nominations, and public discourse. They neither collect nor pay from the constraint's operation; they contest its interpretation. Their exit is intellectual: adopting a different reading."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate Second Amendment challenges and define the right's scope. Their rulings determine which reading governs. They are structurally positioned to enforce or reject the civic reading's service condition. Exit is analytical: they interpret, they do not bear the right's costs or benefits directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates universal civic obligation (militia service) with the distribution of arms and training, ensuring the polity's collective defense capacity is maintained through citizen participation rather than solely professional forces.",
+    "transfer_function": "Moves the entitlement to keep and bear arms from the state (which holds the monopoly on legitimate force) to militia-eligible individuals, conditioned on their acceptance of the service obligation. The state retains regulatory authority over the militia's organization and standards.",
+    "absent_voices": "Non-citizen residents, conscientious objectors, and populations historically excluded from militia service (e.g., enslaved persons, women before 20th century) would object to a right conditioned on a civic obligation from which they were excluded. They are structurally excluded from the beneficiary set and from the agenda-setting authority.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the civic reading vanished overnight, the legal gate conditioning the right on militia service would disappear. The individual-right reading would likely become the sole operative framework (as post-Heller doctrine trends), expanding the right's scope and constraining regulation. State militia authorities would lose their constitutional anchor for defining the right. The regulatory landscape, political coalitions, and judicial doctrine would reorganize substantially.",
+    "founding_problem": "The Founding generation faced the problem of securing a free state's defense without a standing army, which they viewed as a threat to liberty. The solution was a universal militia of armed citizens, making the right to arms a civic corollary of the duty to serve.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents (civic republican scholars, some state attorneys general) attest the problem persists: asymmetric threats, civic disengagement, and the need for resilient civil defense make the militia ideal relevant. Critics (Heller/Bruen majority, originalist individual-right scholars, professional military historians) attest the problem is dead: the National Guard, professional military, and police have superseded the universal militia; the civic obligation no longer exists in practice. No consensus corroboration exists outside the benefiting parties."
+  },
+  "omegas": [
+    {
+      "id": "civic_reading_kernel_commitment",
+      "question": "Is the civic-right reading a genuine structural reading of the Second Amendment kernel, or a strategic compromise that collapses under pressure from individual-right and collective-right framings?",
+      "resolution_mechanism": "Track judicial adoption: if a stable coalition of courts adopts the civic reading as the governing framework for a generation, it is a genuine reading; if it remains only a dissenting or academic position, it is a strategic compromise.",
+      "impact": "If genuine, the constraint is a stable Tangled Rope coordinating identity and defense; if compromise, it is a collapsing Scaffold whose sunset is the individual-right reading's dominance.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the civic reading is a live structural commitment or a transitional position."
+    },
+    {
+      "id": "militia_service_modern_equivalence",
+      "question": "What modern institutions or practices satisfy the 'militia participation' condition — National Guard, selective service, community emergency response, or none?",
+      "resolution_mechanism": "Legislative and judicial definition of 'militia' in contemporary statutes and rulings; empirical study of which institutions citizens and courts treat as fulfilling the civic obligation.",
+      "impact": "If the condition maps to an existing universal or near-universal institution (e.g., selective service), extraction drops toward zero (the gate is open to all). If the condition maps to a defunct or voluntary institution, extraction rises (the gate excludes most).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the service condition is a meaningful gate in the modern era."
+    },
+    {
+      "id": "service_gate_extraction_mechanism",
+      "question": "Does the service condition function as a genuine coordination mechanism (solving collective defense) or as an extraction mechanism (rationing a valued right to a compliant class)?",
+      "resolution_mechanism": "Compare regulatory outcomes under the civic reading vs. individual-right reading: if the civic reading enables regulations that reduce harm without banning ownership, coordination dominates; if it primarily excludes non-compliant individuals while permitting the same harms, extraction dominates.",
+      "impact": "If coordination, the constraint is a legitimate Tangled Rope; if extraction, it trends toward Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the service gate coordinates or extracts."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "individual_right_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "collective_right_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "right_conditioned_on_civic_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "militia_as_constitutional_institution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_militia_republicanism",
+    "drift_state": {
+      "moment": "post_heller_bruen_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btc_p2p_cash",
+    "story_uid": "7ece8075-0c37-4f9e-a781-ffb1a5961e23"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin P2P Cash Reading — Low-Fee Transactional Access",
+    "topic_domain": "economic/technological/social",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "bitcoin_miners",
+      "bitcoin_core_developers",
+      "institutional_custodians"
+    ],
+    "victims": [
+      "global_unbanked_users",
+      "microtransaction_merchants",
+      "remittance_senders_low_value"
+    ],
+    "vindicated_propositions": [
+      "censorship_resistance_requires_low_fees",
+      "block_space_is_a_public_good_not_a_scarcity_rent"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "bitcoin_miners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the hashing infrastructure that secures the chain and selects which transactions enter blocks. Earn block subsidies and transaction fees. Can signal support for or against protocol changes (soft forks, block size adjustments). Their revenue depends on fee markets remaining viable; low-fee, high-throughput designs reduce per-block fee income unless volume scales superlinearly. Exit is arbitrage-grade: they can mine other SHA-256 chains or sell hardware."
+    },
+    {
+      "name": "bitcoin_core_developers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintain the reference implementation (Bitcoin Core) and control the merge process for consensus changes. Their professional identity and institutional authority are bound to the 'conservative protocol stewardship' framing. They benefit from status, grant funding, and influence. Exit is identity-locked: leaving the project means abandoning the epistemic community and career capital built around Bitcoin's specific technical culture."
+    },
+    {
+      "name": "institutional_custodians",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Provide regulated on-ramps, custody, and settlement layers (exchanges, ETFs, prime brokers). They benefit from Bitcoin's 'digital gold' narrative and high settlement fees that price out retail users — it reinforces their intermediation role. They can pivot to other assets or chains; exit is mobile."
+    },
+    {
+      "name": "global_unbanked_users",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Need censorship-resistant, low-cost payments for daily commerce and survival remittances. When median fees exceed daily wages, they are functionally excluded from on-chain access. They cannot 'wait for lower fees' — their time horizon is immediate. No realistic alternative: stablecoins require KYC/rails they lack; other chains lack liquidity or censorship resistance. Trapped by fee market dynamics they did not create and cannot influence."
+    },
+    {
+      "name": "microtransaction_merchants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run businesses that depend on sub-dollar payments (content micropayments, API metering, IoT data markets). On-chain fees make their unit economics impossible. They can migrate to Layer 2 (Lightning, Liquid) but face adoption friction, liquidity management complexity, and UX barriers. Exit is constrained: technically possible but economically costly and uncertain."
+    },
+    {
+      "name": "remittance_senders_low_value",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Send $20–$100 cross-border to family. On-chain fees of $5–$50 consume 10–50% of principal. They are trapped: traditional corridors (Western Union) are similarly extractive but more accessible; stablecoin rails require exchange access they may not have. The fee market prices them out of the very censorship resistance the whitepaper promised."
+    },
+    {
+      "name": "lightning_network_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate Lightning routing nodes, watchtowers, and wallet infrastructure. They benefit from high on-chain fees driving demand for L2. Their business model depends on the constraint (high base-layer fees) persisting. Exit is mobile: they can deploy on other L2s or chains."
+    },
+    {
+      "name": "academic_researchers_crypto",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study fee market dynamics, censorship resistance, and protocol governance from outside the system. They analyze but do not collect fees nor pay them. Their exit is analytical — they can shift research focus without material cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decentralized, censorship-resistant ledger for final settlement of electronic transactions without trusted intermediaries, using proof-of-work consensus and a shared UTXO set.",
+    "transfer_function": "Moves value from transactors (who pay fees) to miners (who collect fees + subsidy) in exchange for block space. As block subsidy declines, the transfer increasingly relies on fee markets — moving value from low-value, high-urgency users to miners and L2 operators who capture the scarcity rent.",
+    "absent_voices": "The global unbanked, micro-merchants in emerging economies, and low-value remittance senders are structurally absent from Bitcoin governance (no hash power, no Core commit access, no institutional lobbying). They would object to fee markets that price them out of the censorship resistance they were promised. Their absence is not accidental — the governance structure (hash-power signaling, Core merge control) has no mechanism for their inclusion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the low-fee transactional-access constraint vanished (i.e., if Bitcoin permanently settled into a high-fee, store-of-value-only equilibrium), the unbanked and micro-transactors would lose their only censorship-resistant base layer. They would be forced onto custodial rails (exchanges, stablecoins) or less-censorship-resistant chains. The world rearranges: the promise of 'peer-to-peer electronic cash for the world' is broken, and the arrangement that replaces it is structurally different — intermediated, permissioned, or less robust.",
+    "founding_problem": "The 2008 whitepaper identified the founding problem: 'A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution.' The problem was trusted-third-party dependence — censorship, reversal risk, and cost overhead — not merely 'digital scarcity.'",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The whitepaper text itself (Satoshi Nakamoto, 2008) corroborates the transactional-access framing — the abstract opens with 'electronic cash' and 'direct' payments. Early community archives (BitcoinTalk 2009–2011) show 'low fees' and 'micropayments' as live design goals. The digital_gold_reading proponents (e.g., Blockstream, Bitcoin Core majority post-2017) argue the founding problem was 'uncensorable digital scarcity' and that fees are a feature, not a bug. No neutral third-party adjudication exists; the dispute is structural."
+  },
+  "interval": {
+    "start": 2009,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the p2p_cash_reading of the bitcoin_whitepaper kernel: the claim that Bitcoin's primary function is censorship-resistant, low-fee electronic cash for direct peer-to-peer transactions. The reading asserts that block space should scale to keep fees low, that fee markets excluding low-value users are a betrayal of the whitepaper's promise, and that the victim set includes the global unbanked, micro-merchants, and low-value remittance senders who are priced out of on-chain access. The sibling readings — digital_gold_reading (store of value primacy) and protocol_ossification_reading (stability over change) — instantiate different constraints with different ε, different victim sets, and different type classifications. This story authors ONLY the p2p_cash_reading constraint.",
+    "logic_rationale": "Extractiveness (0.38) reflects the structural reality: the fee market transfers value from transactors to miners, and as subsidy declines, this transfer becomes the dominant miner revenue. The victims (unbanked, micro-merchants, remittance senders) pay disproportionately high effective fees relative to income — extraction is real but not total because Layer 2 and custodial off-ramps provide partial relief. Suppression (0.42) is moderate: the constraint does not actively prevent alternatives (Lightning, other chains, stablecoins exist), but the *promise* of base-layer censorship resistance is suppressed by fee dynamics — users who need censorship resistance *on the base layer* find it economically inaccessible. Theater (0.28) captures the gap between 'Bitcoin is electronic cash' rhetoric and 'Bitcoin is digital gold' reality — Core developers and institutions perform the cash narrative while building for the gold equilibrium. Accessibility collapse (0.55) is mid-range: alternatives exist but are imperfect (Lightning UX, custodial trust, altchain liquidity). Resistance (0.61) is high: the block size wars, UASF, and ongoing policy debates show active contestation.",
+    "directionality_logic": "Miners and Core developers are structural beneficiaries (d low): miners collect fee revenue; developers gain status and funding from stewardship of the 'conservative' protocol. Institutional custodians benefit from high-fee equilibrium reinforcing their intermediation (d low). The unbanked and low-value remittance senders are full targets (d near 1.0): trapped, immediate horizon, no exit, priced out of the very property (censorship resistance) the constraint claims to provide. Micro-merchants are constrained payers (d ~0.7): they have technical exit (L2) but high switching cost. Lightning operators are beneficiaries of the high-fee regime (d low) but also agenda_setters for L2 adoption.",
+    "perspectival_gap": "From the miner/Core developer seat, the constraint is a Rope: coordination on a stable, scarce block space solves the tragedy-of-the-commons for chain security. From the unbanked seat, it is a Snare: the coordination story ('secure block space') is cover for extraction that prices them out of censorship resistance. From the micro-merchant seat, it is a Tangled Rope: Lightning provides real coordination (instant, cheap payments) but the base-layer fee pressure that drives L2 adoption is extractive. The engine computes this per-seat divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (trusted-third-party-free electronic cash) is contested: digital_gold proponents argue it was solved by the existence of uncensorable digital scarcity; p2p_cash proponents argue it remains unsolved because the cash function is economically inaccessible to the populations that need it most. Mandatrophy is NOT resolved — the arrangement persists but the original mandate (cash for the world) is either dead (gold view) or live but betrayed (cash view). The classification as tangled_rope captures this: genuine coordination (censorship-resistant settlement) coexists with asymmetric extraction (fee rents on the excluded).",
+    "kernel_context": "This constraint is the p2p_cash_reading of the bitcoin_whitepaper kernel. Sibling readings: digital_gold_reading (store of value primacy; victim set = savers debased by inflation; beneficiary set = miners, custodians, hodlers), protocol_ossification_reading (stability as primary virtue; victim set = innovators, experimenters; beneficiary set = incumbent stakeholders). The three readings share the same kernel (the whitepaper + genesis block + consensus rules) but instantiate different constraints with different ε, different structural relationships, and different type trajectories."
+  },
+  "omegas": [
+    {
+      "id": "fee_market_necessity",
+      "question": "Is a competitive fee market structurally necessary for Bitcoin's censorship resistance, or is it a contingent artifact of the 1MB block limit (and its successors) that could be removed without compromising security?",
+      "resolution_mechanism": "Empirical observation of chains with larger blocks (BCH, BSV) and their censorship resistance track records; game-theoretic analysis of miner incentives under low-fee, high-volume regimes; measurement of whether fee pressure actually correlates with hash rate security.",
+      "impact": "If fee markets are necessary, the extraction is structural (coordination cost) and the constraint leans toward rope/tangled_rope. If contingent, the extraction is imposed (snare/tangled_rope with higher χ) and block size expansion is a legitimate coordination improvement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fee extraction is inherent to censorship resistance or a policy choice."
+    },
+    {
+      "id": "lightning_sufficiency",
+      "question": "Does the Lightning Network (and related L2s) genuinely solve the low-fee transactional access problem for the victim populations, or does it recreate custodial trust and exclusion at a different layer?",
+      "resolution_mechanism": "Longitudinal adoption data for non-custodial Lightning among unbanked/low-income users; UX friction metrics; liquidity management burden measurement; censorship resistance tests of L2 routing under adversarial conditions.",
+      "impact": "If L2 suffices, the base-layer fee market is a coordination mechanism pushing users to better tech (tangled_rope coordination function real). If L2 fails the victim populations, the base-layer constraint remains extractive with no viable exit (snare-leaning).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether Layer 2 actually provides the exit the constraint promises."
+    },
+    {
+      "id": "reading_foreclosure_structure",
+      "question": "Does the p2p_cash_reading logically foreclose the digital_gold_reading within a single commitment framework, or do they coexist as competing but compatible framings?",
+      "resolution_mechanism": "Analyze whether a single protocol governance process can simultaneously optimize for low-fee transactional throughput AND maximum store-of-value credibility (fixed supply, minimal changes, maximal decentralization). If the optimizations conflict irreducibly, foreclosure obtains; if they can be sequenced or layered, coexistence obtains.",
+      "impact": "If forecloses: the kernel cannot stably support both readings — one must win governance. If coexists_with: the kernel sustains a permanent contest with institutionalized factions. If influences: one reading's dominance creates structural pressure on the other (e.g., digital_gold dominance raises fees, pressuring p2p_cash users to L2).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and its siblings in the kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading",
+      "lightning_network_routing_constraint",
+      "bitcoin_miner_revenue_model"
+    ],
+    "dual_formulation_note": "This constraint is one member of the bitcoin_whitepaper constraint family. The p2p_cash_reading, digital_gold_reading, and protocol_ossification_reading are three distinct constraints with different ε, different beneficiary/victim structures, and different type trajectories, linked by shared kernel identity. The p2p_cash_reading has ε=0.38 (moderate extraction), victims = low-value transactors, claimed_type = tangled_rope. The digital_gold_reading has ε≈0.15 (low extraction, beneficiaries = savers/institutions), claimed_type = rope. The protocol_ossification_reading has ε≈0.25 (moderate extraction via suppressed innovation), victims = developers/experimenters, claimed_type = tangled_rope."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "whitepaper_electronic_cash",
+    "drift_state": {
+      "moment": "post_blocksize_wars",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "low_fees_are_necessary_for_censorship_resistance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "block_size_expansion_is_legitimate_coordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "the_unbanked_are_the_primary_beneficiary_of_the_whitepaper_vision",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

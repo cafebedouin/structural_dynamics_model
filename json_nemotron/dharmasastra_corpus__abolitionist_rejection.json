@@ -1,0 +1,320 @@
+{
+  "header": {
+    "constraint_id": "dharmasastra_corpus__abolitionist_rejection",
+    "version": "1.0",
+    "generated_date": "2026-08-17",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_dharmasastra_corpus__abolitionist_rejection",
+    "story_uid": "abd5741c-b1f4-44ae-81fb-fb4847b85f1c"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.92,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "Abolitionist Rejection of Dharmasastra Corpus",
+    "topic_domain": "religious_law/textual_interpretation/normative_authority",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "oppressed_caste_groups",
+      "women_under_patriarchal_structure",
+      "tribal_and_marginalized_communities",
+      "anti_caste_activists"
+    ],
+    "victims": [
+      "dominant_caste_beneficiaries",
+      "orthodox_brahminical_authority",
+      "institutional_hinduism_as_extractive_structure"
+    ],
+    "vindicated_propositions": [
+      "caste_annihilation_as_liberation",
+      "textual_authority_as_ideological_weapon",
+      "brahminical_hegemony_through_scriptural_monopoly"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the abolitionist rejection of Dharmasastra a reading OF the kernel or a refusal of the kernel itself?",
+      "resolution_mechanism": "Trace whether the abolitionist position engages the kernel's internal logic to produce its rejection (reading) or treats the kernel as entirely external/illegitimate (refusal). Ambedkar's engagement with the texts vs. Periyar's dismissal of textual engagement.",
+      "impact": "If refusal rather than reading, the constraint story structure changes: no shared kernel_id, no reading_relations, different beneficiary/victim derivation. This affects how network edges to sibling readings are computed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether abolitionist rejection instantiates a kernel reading or constitutes kernel refusal"
+    },
+    {
+      "id": "victim_beneficiary_inversion",
+      "question": "Are the dominant caste groups structural victims of the abolitionist constraint, or are they losing extractive privilege?",
+      "resolution_mechanism": "Analyze whether the abolitionist arrangement extracts from dominant castes in a way that constitutes victimhood, or merely removes their capacity to extract from others. Compare to post-abolition dynamics in other caste/racial hierarchies.",
+      "impact": "If dominant castes are genuine victims (extraction from them), the constraint may compute as tangled_rope rather than snare. If they are losing privilege, snare classification holds. Affects base_properties.victims array semantics.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether privilege loss constitutes victimhood in constraint classification"
+    },
+    {
+      "id": "textual_authority_absence",
+      "question": "Does 'zero textual authority' mean no constraint exists, or a constraint of negation?",
+      "resolution_mechanism": "Examine whether the abolitionist position generates its own normative requirements (e.g., constitutional equality, anti-discrimination law) that function as replacement constraints. If yes, the 'rejection' is a constraint substitution, not absence.",
+      "impact": "If replacement constraints exist, this story models the transition constraint (scaffold) not the end state. The current extraction metrics describe the Dharmasastra arrangement being rejected, not the abolitionist arrangement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether abolitionist rejection is constraint absence or constraint substitution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.95
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.89
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.93
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.92
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 150
+  },
+  "commentary": {
+    "narrative_context": "The abolitionist rejection reading treats the Dharmasastra corpus not as a living tradition to be interpreted but as an extractive ideological apparatus that produces and maintains caste hierarchy. From this reading, the texts have zero legitimate authority; their prescriptions for varna/jati ordering, gender subordination, and ritual purity are understood as the sedimented interests of dominant castes (especially Brahmins) naturalized as divine law. The constraint being described is the standing arrangement of Dharmasastra authority as it operates on the ground — the abolitionist reads this arrangement as a snare of maximal extraction and suppression. The beneficiary shift is to the formerly oppressed: Dalits, Adivasis, women under patriarchal structures, and marginalized communities gain liberation from the textual framework. The dominant caste beneficiaries and orthodox authorities are identified as the extractive structure's operators and beneficiaries, now positioned as 'victims' only in the sense of losing their extractive position.",
+    "key_agents": [
+      "oppressed_caste_groups: Primary beneficiaries (powerless/identity_locked) — liberated from hierarchical textual authority",
+      "women_under_patriarchal_structure: Primary beneficiaries (powerless/identity_locked) — freed from Manusmriti gender codes",
+      "tribal_and_marginalized_communities: Primary beneficiaries (powerless/trapped) — released from ritual exclusion",
+      "anti_caste_activists: Agenda-setters (organized/biographical) — drive the rejection framework",
+      "dominant_caste_beneficiaries: Former extractors now constrained (powerful/arbitrage) — lose caste privilege",
+      "orthodox_brahminical_authority: Former agenda-setters (institutional/generational) — lose textual monopoly",
+      "institutional_hinduism_as_extractive_structure: Former enforcer (institutional/generational) — loses ideological infrastructure",
+      "constitutional_state: Observer/emerging agenda-setter (institutional/civilizational) — provides replacement framework"
+    ],
+    "logic_rationale": "Extraction is near-maximal (0.88) because the Dharmasastra arrangement extracts labor, dignity, mobility, and life-chances from oppressed groups across every domain — occupational, marital, educational, spatial, ritual. Suppression is higher (0.92) because the arrangement deploys religious sanction, social ostracism, economic boycott, and state enforcement to maintain hierarchy; alternatives (conversion, migration, rebellion) are systematically crushed. Theater ratio is low (0.25) because the extraction is structurally real, not performative — the hierarchy produces material benefit for dominant castes. Accessibility collapse is moderate (0.35) because the abolitionist reading demonstrates that alternatives exist and are thinkable (constitutional equality, Buddhist conversion, Marxist analysis, Ambedkarite praxis) — the constraint does not collapse all alternatives, it suppresses them. Resistance is high (0.78) because anti-caste movements have continuously contested the arrangement for centuries. The claimed type is snare: pure extraction with coordination as cover (the 'dharma' coordination story).",
+    "perspectival_gap": "The orthodox literalist seat experiences this constraint as mountain (eternal divine law); the reformist contextual seat experiences it as tangled_rope (genuine ethical core corrupted by historical accretions); the abolitionist seat (this reading) experiences it as snare. The engine computes this divergence from the structural data: same constraint, three radically different directionalities based on who benefits, who pays, and what exit options exist. The abolitionist reading's directionality is derived from declaring oppressed groups as beneficiaries and dominant caste structures as the extractive apparatus.",
+    "directionality_logic": "Oppressed castes, women, tribal communities: beneficiaries (d ≈ 0.1–0.2) — the constraint's dismantling subsidizes them. Anti-caste activists: agenda-setters with mobile exit (d ≈ 0.3) — they drive the rejection but bear repression costs. Dominant caste beneficiaries: former extractors now facing privilege loss (d ≈ 0.7–0.8 from abolitionist frame) — they experience the abolitionist constraint as extractive against their interests. Orthodox authority: former agenda-setters now constrained (d ≈ 0.9) — their interpretive monopoly is the target. Constitutional state: analytical observer becoming agenda-setter (d ≈ 0.4) — provides replacement framework but has its own institutional interests. The abolitionist reading's ε (0.88) assesses the STANDING ARRANGEMENT (Dharmasastra authority) by the abolitionist's lights — not the abolitionist arrangement.",
+    "mandatrophy_analysis": "The Dharmasastra arrangement's founding problem (social order through ritual hierarchy) is dead — the social conditions that produced it are gone, and the arrangement persists purely as extraction. The abolitionist reading names this mandatrophy explicitly: the constraint has no live coordination function, only extractive persistence. The reformist reading disputes this (claims live ethical core), creating the mandatrophy contest. The engine should detect this via founding_problem_status=dead + disappearance_verdict=world_rearranges mismatch.",
+    "kernel_context": "This constraint is the abolitionist_rejection reading of the dharmasastra_corpus kernel. Sibling readings: orthodox_literalist (Dharmasastra as eternal revealed truth requiring literal observance) and reformist_contextual (Dharmasastra as historical text with separable ethical core). This reading forecloses the orthodox_literalist reading (zero textual authority vs. eternal authority are logically incompatible in a single framework) and coexists with the reformist_contextual reading (both are live positions in contemporary discourse, though the abolitionist reads the reformist as providing cover for the orthodox). The structural delta from siblings: zero textual authority (vs. full/partial), victim set defined by caste hierarchy itself (vs. no victims/victims of misinterpretation), beneficiary shift to formerly oppressed groups (vs. dominant castes/all Hindus), extractive structure recognized and rejected rather than reinterpreted."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dharmasastra_corpus__orthodox_literalist",
+      "dharmasastra_corpus__reformist_contextual",
+      "constitutional_equality_framework",
+      "anti_caste_legislation",
+      "buddhist_conversion_movement",
+      "ambedkarite_praxis"
+    ],
+    "dual_formulation_note": "Constraint family: dharmasastra_corpus kernel with three readings. This abolitionist rejection reading declares the kernel's authority structure as extractive snare. The orthodox_literalist reading declares it as mountain. The reformist_contextual reading declares it as tangled_rope. The ε values differ radically because they assess different structural referents: abolitionist reads the standing arrangement's operation on oppressed groups; orthodox reads the textual self-presentation; reformist reads the text's ethical propositions abstracted from operation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "oppressed_caste_groups",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Dalits and lower castes bear the full extractive weight of the Dharmasastra arrangement: occupational fixation, spatial segregation, educational denial, ritual humiliation, violence with impunity. Their caste identity is fused to their subordination — exit from the hierarchy requires exit from the identity itself (conversion, political consciousness, migration). The abolitionist constraint's dismantling would subsidize them entirely."
+    },
+    {
+      "name": "women_under_patriarchal_structure",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Women across castes are governed by Manusmriti-derived codes: guardianship, marriage as gift (kanyadan), widowhood restrictions, property exclusion, ritual impurity. Gender and caste oppression are co-constitutive in the textual framework. Exit is identity-locked because patriarchal self-concept is internalized through the same texts. Abolition of textual authority is a direct subsidy."
+    },
+    {
+      "name": "tribal_and_marginalized_communities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Adivasis and forest-dwelling communities are positioned outside the varna system entirely — as 'mleccha' or 'antyaja' — facing land dispossession, cultural erasure, and state violence justified through civilizational hierarchies the texts authorize. Their exit options are structurally blocked (geographic isolation, state power, cultural genocide). The abolitionist constraint benefits them by dismantling the ideological infrastructure of their exclusion."
+    },
+    {
+      "name": "anti_caste_activists",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Ambedkarite organizations, Dalit Panthers, contemporary anti-caste collectives, feminist Dalit formations — they articulate the abolitionist framework, mobilize resistance, build alternative institutions. They face state repression, social boycott, assassination. Their exit is mobile (they can operate transnationally, in academia, in diaspora) but their role binds them to the struggle. They are both agenda-setters and beneficiaries of the constraint's dismantling."
+    },
+    {
+      "name": "dominant_caste_beneficiaries",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Dominant castes (Brahmins, Kshatriyas, Vaishyas, dominant Shudra castes) extract material and symbolic capital from the hierarchy: land ownership, educational access, ritual prestige, political representation, marriage markets, labor exploitation. The abolitionist constraint extracts from them by removing these privileges. They have arbitrage-grade exit: they can migrate, convert capital, deploy global networks, reposition in secular meritocracy. Their 'victimhood' is privilege loss, not extraction in the constraint sense."
+    },
+    {
+      "name": "orthodox_brahminical_authority",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Priestly lineages, mathas, Vedic schools, ritual specialists — their authority, livelihood, and social power derive directly from textual monopoly. The abolitionist constraint targets their interpretive authority specifically. Exit is constrained: they can pivot to cultural heritage management, academic Sanskrit, or Hindutva politics, but their core authority claim (textual monopoly) is what the abolitionist reading rejects. They are the primary 'payer' in the abolitionist frame."
+    },
+    {
+      "name": "institutional_hinduism_as_extractive_structure",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Temple administrations, endowment boards, religious trusts, caste associations, Hindutva organizations — these institutions materialize the textual hierarchy into property, political power, and social control. The abolitionist constraint dismantles their ideological infrastructure. They have constrained exit: they can rebrand as cultural organizations, capture state patronage, or pivot to majoritarian politics, but their extractive logic is the target."
+    },
+    {
+      "name": "constitutional_state",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The Indian Constitution (Articles 14, 15, 17, 21, 25) provides the replacement framework: equality, non-discrimination, abolition of untouchability, religious freedom. The state is analytically positioned to observe the constraint's operation but increasingly acts as agenda-setter for the abolitionist transition through law, policy, and affirmative action. Its exit is analytical — it cannot exit the territory but can choose enforcement intensity."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "The Dharmasastra arrangement coordinates a complete social order: occupational specialization, marriage rules, ritual purity, political hierarchy, and cosmic legitimacy through a single textual-authority framework. It solves the coordination problem of large-scale social organization without markets or bureaucracy.",
+    "transfer_function": "The arrangement transfers labor, surplus, dignity, mobility, and life-chances from oppressed castes (especially Dalits), women, and tribal communities to dominant castes (especially Brahmins) and their institutional forms. The transfer is enforced through religious sanction, social ostracism, and state power.",
+    "absent_voices": "The voices of the dead — centuries of Dalit, Adivasi, and women's resistance erased from the textual record. The voices of those who converted to Buddhism, Islam, Christianity, Sikhism to escape the hierarchy — their exit is read as betrayal rather than testimony. The voices of contemporary manual scavengers, Devadasis, temple slaves — they are in the room but silenced by the very structure that extracts from them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Dharmasastra arrangement vanished overnight, the entire social architecture of caste hierarchy would collapse: occupational hereditary would end, marriage markets would open, temple entry would be universal, ritual purity/pollution would lose enforcement, land relations would transform, political representation would shift. The world would rearrange fundamentally — this is not a natural law but a constructed order maintained by active enforcement.",
+    "founding_problem": "The Dharmasastra arrangement was built to solve the problem of organizing a stratified agrarian society with ritual legitimacy: how to coordinate labor, surplus extraction, and political authority across diverse groups without a centralized bureaucracy, using ritual hierarchy as the coordination mechanism.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Ambedkar (Annihilation of Caste, 1936): the founding problem (varna as division of labor) became division of laborers — the arrangement outlived its function. Kosambi (Myth and Reality, 1962): the texts are ideological superstructure for feudal surplus extraction. Contemporary historians (Sharma, Jha, Chakravarti): the varna system never existed as described; it was always a Brahminical ideal imposed on fluid social realities. No corroboration from outside the beneficiary set supports the founding problem as live — the orthodox attestation is self-interested."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "brahminical_textual_supremacy",
+    "drift_state": {
+      "moment": "constitutional_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "orthodox_literalist",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "reformist_contextual",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "caste_hierarchy_as_extractive_ideology",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "textual_authority_as_brahminical_monopoly",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "liberation_requires_textual_annihilation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

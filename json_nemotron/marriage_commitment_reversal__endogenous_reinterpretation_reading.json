@@ -1,0 +1,332 @@
+{
+  "header": {
+    "constraint_id": "marriage_commitment_reversal__endogenous_reinterpretation_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_marriage_commitment_reversal__endogenous_reinterpretation_reading",
+    "measurement_id_prefix": "marriage_reversal_endo",
+    "story_uid": "ed2fd5f3-eda9-4e5b-bf9a-24413e9e931d",
+    "created_at": "2026-08-03T14:22:17Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.32,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.54,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Plural Marriage Suspension by Prophetic Revelation (1890 Manifesto)",
+    "topic_domain": "religious_institutional/political_theology",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "church_presidency",
+      "prophet_woodruff",
+      "institutional_legitimacy"
+    ],
+    "victims": [
+      "theological_consistency",
+      "faithful_practitioners",
+      "dissenting_apostles"
+    ],
+    "vindicated_propositions": [
+      "continuing_revelation_doctrine",
+      "prophetic_authority_doctrine",
+      "institutional_survival_imperative"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'marriage_commitment_reversal', or does it represent the kernel itself?",
+      "resolution_mechanism": "Compare structural outputs across the three declared readings (endogenous_reinterpretation, exogenous_override, practice_doctrine_gap). If ε values and victim/beneficiary sets diverge significantly, the kernel has genuinely instantiated multiple constraints.",
+      "impact": "If the kernel has genuinely instantiated multiple constraints, each reading must be authored as a separate JSON file with its own ε and classification, linked via network.affects_constraints. This file instantiates only the endogenous_reinterpretation_reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system frame: this constraint is one reading of the marriage_commitment_reversal kernel; the kernel is the stabilized commitment to plural marriage as eternal principle (Section 132). The endogenous reading reinterprets God's will via Woodruff's vision rather than conceding to federal coercion."
+    },
+    {
+      "id": "revelation_authenticity",
+      "question": "Was Woodruff's September 23, 1890 vision a genuine divine revelation, a strategic reinterpretation, or a constructed narrative?",
+      "resolution_mechanism": "No empirical resolution possible; contested across all three readings. The exogenous reading treats it as cover; the practice_doctrine_gap reading treats it as ambiguous; this reading treats it as authentic. Omega records the irreducible ambiguity.",
+      "impact": "If genuine: constraint is a mountain (divine will cannot be extractive). If strategic: constraint is a snare (revelation as extraction cover). If ambiguous: tangled_rope (coordination + extraction hybrid). Current authoring: tangled_rope with moderate extractiveness.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Theological authenticity of the revelatory claim — the core factual dispute across the kernel's readings"
+    },
+    {
+      "id": "doctrine_practice_gap",
+      "question": "Does the Manifesto suspend practice while preserving doctrine (Section 132), or does it revoke the doctrine itself?",
+      "resolution_mechanism": "Examine post-1890 doctrinal discourse: is Section 132 still taught as binding principle, or has it been formally rescinded? The practice_doctrine_gap reading asserts suspension-only; this reading claims doctrinal reinterpretation.",
+      "impact": "If doctrine preserved: constraint is a scaffold (temporary suspension with doctrinal continuity). If doctrine reinterpreted: tangled_rope (coordination + extraction). If doctrine revoked: rope (pure coordination under new revelation). Current authoring: tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint preserves, reinterprets, or revokes the founding doctrinal commitment"
+    },
+    {
+      "id": "coercion_vs_revelation_causality",
+      "question": "Was the 1890 reversal causally driven by federal suppression (Edmunds-Tucker, disincorporation threat) or by genuine revelatory experience?",
+      "resolution_mechanism": "Historical analysis of temporal sequence: federal pressure peaks 1887-1890; Woodruff's vision September 23, 1890; Manifesto issued October 6, 1890. The exogenous reading asserts coercion caused the reversal and revelation was post-hoc; this reading asserts revelation caused the reversal and coincidence with federal pressure is providential.",
+      "impact": "If coercion-driven: extractiveness higher, suppression higher, constraint tends toward snare. If revelation-driven: extractiveness lower, suppression lower, constraint tends toward rope or mountain. Current authoring: moderate extraction (0.58) reflects ambiguity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of the reversal — the central historical-theological dispute"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1890,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1895,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1904,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1910,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1890,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1895,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1904,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1910,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1895,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1904,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1910,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 1890,
+    "end": 1910
+  },
+  "commentary": {
+    "narrative_context": "The 1890 Manifesto (Official Declaration 1) issued by Wilford Woodruff, President of the Church of Jesus Christ of Latter-day Saints, publicly suspended the practice of plural marriage following his reported vision of September 23, 1890. The constraint is the institutional arrangement that interprets this suspension as a divinely authorized reinterpretation of God's will — not a concession to federal coercion. The kernel is the marriage commitment reversal itself; this reading instantiates the constraint where prophetic revelation legitimates the reversal, preserving institutional authority while creating a victim class of theological consistency (why did God's eternal principle change?) and faithful practitioners who bore the costs of compliance. The exogenous_override_reading and practice_doctrine_gap are sibling constraints from the same kernel, not alternative framings within this story.",
+    "key_agents": [
+      "church_presidency: Primary agenda_setter (prophet/president defines revelation) — maintains interpretive authority",
+      "prophet_woodruff: Primary beneficiary (revelation recipient) — legitimacy preserved via divine authorization",
+      "faithful_practitioners: Primary payer (bore social/legal costs of plural marriage, then costs of abandonment) — identity-locked exit",
+      "theological_consistency: Abstract victim (eternal principle apparently reversed) — no exit",
+      "dissenting_apostles: Secondary payer (some resisted, faced discipline) — constrained exit",
+      "federal_authorities: External coercer (not a stakeholder in this reading's structure; their pressure is the exogenous reading's causal claim)",
+      "scholarly_observers: Analytical seat — sees full structural ambiguity across readings"
+    ],
+    "logic_rationale": "Moderate extractiveness (0.58 at interval end) reflects the hybrid structure: genuine coordination function (institutional survival, federal conflict resolution, statehood pathway) combined with asymmetric extraction (leadership legitimacy preserved at cost of theological coherence and practitioner welfare). Suppression starts high (0.65) during active federal prosecution and post-Manifesto enforcement against dissenters, then decays as the new regime normalizes (0.32 by 1910). Theater ratio rises from 0.25 to 0.41 as the revelation narrative increasingly performs legitimacy maintenance while the coordination function (survival) is achieved. Accessibility collapse is moderate (0.48) — alternatives existed (exile, resistance, schism) but were structurally costly. Resistance is significant (0.54) — post-Manifesto plural marriages continued, fundamentalist schisms emerged, internal dissent persisted.",
+    "directionality_logic": "The church presidency and prophet are structural beneficiaries (d near 0.0-0.2): they collect institutional survival and interpretive authority. Faithful practitioners are targets (d near 0.7-0.8): they bore the costs of both the original practice and its abandonment, with identity-locked exit (religious identity fused to obedience). Theological consistency is an abstract victim with no exit (d = 1.0). Dissenting apostles are constrained targets (d ~0.6): some exit via discipline or schism, but institutional identity binds most. Federal authorities are not stakeholders in THIS reading — their coercion is the exogenous reading's causal variable.",
+    "perspectival_gap": "From the presidency/prophet seat: the constraint is a rope (divine coordination solving an existential threat). From the faithful practitioner seat: the constraint is a snare (identity-locked extraction — they paid the costs of a practice leadership then reversed via revelation they cannot verify). From the theological consistency seat: the constraint is a mountain that turned into a piton (eternal principle became performative). The engine computes these per-seat divergences from the structural data; this commentary only documents the analytical expectation.",
+    "mandatrophy_analysis": "The founding problem (federal extermination threat to the institution) was live in 1890. By 1910 the threat had substantially receded (statehood achieved 1896, Reed Smoot hearings 1904-1907 resolved political status), yet the revelation-based suspension persists as permanent doctrine. The constraint has not sunset — it became the new steady state. This is mandatrophy: the coordination function (survival) was achieved, but the extraction structure (prophetic authority to reinterpret eternal principles) was retained and generalized. The revelation narrative obscures the doctrine-practice gap, preventing the mandate from being recognized as resolved.",
+    "kernel_context": "This constraint is the endogenous_reinterpretation_reading of the marriage_commitment_reversal kernel (kernel_id: marriage_commitment_reversal). Sibling readings: exogenous_override_reading (reversal caused by federal coercion, revelation as cover, Section 132 preserved as principle), practice_doctrine_gap (structural ambiguity: practice suspended, doctrine preserved, no causal claim). This reading asserts: Woodruff's vision was genuine revelation reinterpreting God's will under changed circumstances; the constraint is the institutional arrangement that treats this revelation as authoritative and binding."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_commitment_reversal__exogenous_override_reading",
+      "marriage_commitment_reversal__practice_doctrine_gap",
+      "post_manifesto_polygamy_enforcement",
+      "reed_smoots_seat_contest"
+    ],
+    "dual_formulation_note": "The marriage_commitment_reversal kernel decomposes into three constraint stories: (1) this endogenous_reinterpretation_reading — revelation as authentic cause, moderate extraction, tangled_rope; (2) exogenous_override_reading — coercion as cause, higher extraction, snare; (3) practice_doctrine_gap — structural ambiguity, scaffold-like suspension. They share the same referent (the 1890 Manifesto and its doctrinal aftermath) but instantiate different ε, different victim/beneficiary structures, and different classifications. The endogenous reading influences the exogenous reading (revelation narrative constrains the coercion narrative's plausibility) and coexists with the practice_doctrine_gap (both can be held by different parties simultaneously)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "church_presidency",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The prophet-president receives revelation, defines its meaning, and enforces compliance. Collects institutional survival, statehood, and continued interpretive authority. Can reframe any doctrinal tension via continuing revelation. Exit is arbitrage-grade: the institution itself is the constraint's author."
+    },
+    {
+      "name": "prophet_woodruff",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Received the September 23 vision; his prophetic legitimacy depends on the vision's authenticity. If the vision was strategic rather than divine, his authority collapses. Identity-locked: the prophetic office fuses personal identity with institutional authority — exit means renunciation of vocation and self."
+    },
+    {
+      "name": "faithful_practitioners",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Entered plural marriage at prophetic direction, bore legal persecution, social ostracism, and economic ruin. Then bore the cost of abandonment: dissolving families, surrendering theological identity, submitting to a reversal they could not verify. Identity-locked exit: religious self-concept constituted through obedience to prophetic authority; leaving means losing the framework that gave suffering meaning."
+    },
+    {
+      "name": "theological_consistency",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The doctrinal principle that plural marriage is an eternal, unchangeable requirement for exaltation (Section 132). The reversal via revelation creates a logical contradiction: God's eternal will apparently changed. No exit — the principle either holds or it does not; the constraint's operation makes the contradiction structural."
+    },
+    {
+      "name": "dissenting_apostles",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Several apostles (e.g., Matthias Cowley, John W. Taylor) continued performing post-Manifesto plural marriages, resisted the suspension, and were eventually disciplined (removed from quorum, excommunicated). Constrained exit: they could resist within the institution (costly) or leave via schism (founding fundamentalist groups), but both paths carry extreme identity and community costs."
+    },
+    {
+      "name": "scholarly_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Historians, theologians, and scholars of religion who analyze the Manifesto's causation, the revelation claim's authenticity, and the structural dynamics across all three readings. They do not bear the constraint's costs or collect its benefits; their exit is analytical (they can change frameworks without personal cost)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves an existential institutional crisis: federal disincorporation, asset seizure, and leadership imprisonment threatened the church's corporate existence. The revelation narrative coordinates a unified, authoritative suspension that the federal government could accept as genuine, enabling statehood and institutional survival.",
+    "transfer_function": "Moves the costs of plural marriage (legal persecution, social stigma, economic burden) from the institution onto the faithful practitioners who must abandon the practice, while moving institutional survival, political legitimacy, and prophetic authority to the presidency. The revelation narrative transfers the causal burden from 'we surrendered to coercion' to 'God changed His mind.'",
+    "absent_voices": "The women in plural marriages — their consent, experience, and fate in the abandonment are largely absent from the official narrative. Post-Manifesto children of plural marriages (born into a practice now suspended). Federal officials who saw the Manifesto as tactical rather than genuine. Fundamentalist schismatics who rejected the reversal entirely. These voices would object to the revelation framing but were structurally excluded from the authoritative interpretation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the revelation-based suspension vanished overnight, the church would face immediate existential crisis: either resume plural marriage (triggering federal destruction) or admit the revelation was not divine (collapsing prophetic authority). The institutional order, doctrinal framework, and identity of millions would reorganize fundamentally.",
+    "founding_problem": "Federal extermination threat: the Edmunds-Tucker Act (1887) disincorporated the church, seized its assets, and threatened imprisonment of its entire leadership. The institution faced corporate death unless plural marriage — the flashpoint of federal hostility — was credibly suspended.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Federal court records, congressional testimony, and the 1896 Utah statehood enabling act corroborate that the existential threat was real and was resolved by the Manifesto. The church's own 1890-1910 leadership discourse attests the threat was the occasion for the revelation. However, the founding problem is dead (federal threat resolved) while the constraint (revelation-based suspension) persists and has been generalized as a permanent doctrinal feature — the mandate has outlived its function."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "marriage_commitment_reversal__exogenous_override_reading",
+      "marriage_commitment_reversal__practice_doctrine_gap"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "exogenous_override_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "practice_doctrine_gap",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "continuing_revelation_modifies_eternal_principles",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "prophetic_authority_is_epistemically_privileged",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "section_132_eternal_plural_marriage",
+    "drift_state": {
+      "moment": "post_manifesto_institutionalization",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

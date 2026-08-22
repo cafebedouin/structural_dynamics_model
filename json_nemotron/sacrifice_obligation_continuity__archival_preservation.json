@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_continuity__archival_preservation",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sacrifice_obligation_continuity__archival_preservation",
+    "story_uid": "1205b08a-474a-4b38-9c12-e0f845f1aa3f"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Sacrifice Obligation as Archival Preservation (No Binding Force)",
+    "topic_domain": "religious/ritual/textual_tradition",
+    "emerges_naturally": true,
+    "beneficiaries": [],
+    "victims": [],
+    "requires_active_enforcement": false,
+    "has_sunset_clause": false
+  },
+  "interval": {
+    "start": 70,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "archival_vs_normative_boundary",
+      "question": "Does the study of sacrifice law in the archival preservation reading genuinely carry zero normative force, or does cultural memory inevitably re-normativize the text over time?",
+      "resolution_mechanism": "Longitudinal study of how communities that adopt this reading transmit the material across generations: do descendant communities treat the studied texts as purely historical, or do ritual longing and messianic expectation re-emerge?",
+      "impact": "If cultural memory reliably re-normativizes, the zero-extractiveness claim is unstable — the constraint would drift toward study_as_performance or messianic_suspension over generational time, making the mountain classification provisional.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether archival study of sacrifice law can remain normatively inert across transmission"
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Is the sacrifice_obligation_continuity kernel best framed as a single textual-historical problem (the fate of korbanot after 70 CE) or as a cluster of distinct successor commitments (study, messianic readiness, physical performance, symbolic substitution)?",
+      "resolution_mechanism": "Comparative analysis of how each sibling reading's community defines the kernel's boundaries: do they recognize a shared referent, or do they talk past each other?",
+      "impact": "If the kernel fractures into non-communicating referents, the decomposition into four constraint stories is not a reading split but a topic split — each story would be independent, and network.affects_constraints links would be misplaced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel is a unified contested commitment or a family resemblance cluster"
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Does the archival_preservation reading instantiate a commitment-system structure at all, or is it a post-commitment analytical stance that merely describes the kernel's historical fate?",
+      "resolution_mechanism": "Test whether the reading's proponents treat the kernel as a legitimating authority they answer to (even negatively), or as a historical object they analyze from outside. The presence of interpretive disputes about *how* to study would signal CS dynamics; their absence would confirm post-commitment stance.",
+      "impact": "If no CS structure, the cs_structure block should be omitted; if CS structure exists despite zero normative claim, the authority_grounding would be 'extraction' (institutional benefit from declaring the kernel settled) or 'practice' (academic community maintaining interpretive standards).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether archival preservation is a commitment-system reading or a post-commitment analytical frame"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.01
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.0
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.0
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the archival_preservation reading of the sacrifice_obligation_continuity kernel: after the destruction of the Second Temple (70 CE), the biblical obligation to offer sacrifices (korbanot) ceased to be binding. The textual corpus — Leviticus, Numbers, the Talmudic order Kodashim — is preserved and studied as cultural memory, literary heritage, and historical record, but carries no normative force. No one is obligated to perform sacrifices; no one is penalized for not studying the laws; the constraint has exited constraint space entirely. The reading is held by academic scholars of rabbinics, secular Jewish studies, and some liberal religious movements that treat the sacrificial system as historically completed.",
+    "key_agents": [
+      "academic_scholars_rabbinics: Observer (analytical/institutional) — studies the texts as historical-philological objects",
+      "secular_jewish_studies_practitioners: Observer (organized) — engages the material as cultural heritage",
+      "liberal_religious_movements: Observer (organized) — treats sacrificial law as historically superseded",
+      "traditional_halakhic_authorities: Excluded (institutional) — rejects this reading; holds competing readings (messianic_suspension, study_as_performance, performance_only)",
+      "messianic_activists: Excluded (organized) — actively prepares for restoration; views archival reading as denial"
+    ],
+    "logic_rationale": "Extractiveness is zero because the reading makes no normative claim on anyone — no transfer of resources, time, or status is demanded. Suppression is zero because no alternatives are blocked; one may study, ignore, or reject the material freely. Theater ratio is zero because there is no performative maintenance of a defunct function — the study *is* the function (cultural preservation). Accessibility collapse is near-total (0.95) because once the historical fact of Temple destruction and the rabbinic consensus on suspension are accepted, the alternatives (binding obligation, physical performance) are cognitively unavailable — this is the mountain signature. Resistance is near-zero (0.05) because the reading faces no organized opposition from within its own community; opposition comes from competing readings (external contestation), not internal resistance. The temporal measurements show the historical trajectory: high extraction/suppression/theater during the Temple era and early rabbinic transition, decaying to zero as the archival reading stabilizes.",
+    "directionality_logic": "All named agents occupy the analytical/observer seat (d ≈ 0.5, symmetric). No agent is a beneficiary in the extraction sense — no one collects rents from the archival reading. No agent is a victim — no one bears costs. The traditional halakhic authorities and messianic activists are excluded from this reading's framework; they are not stakeholders *within* this constraint but operators of sibling constraints. This is why the reading is a mountain: it describes a structural fact (the obligation has lapsed) that is independent of anyone's enforcement or acceptance.",
+    "perspectival_gap": "The seat divergence is minimal because this reading has no payer/beneficiary structure. The perspectival gap that *does* exist is between this reading (mountain, ε=0) and its siblings (tangled_rope/snare/scaffold with ε>0). The engine will compute the archival_preservation constraint as mountain from every seat; the sibling constraints will compute differently. The divergence is inter-constraint, not intra-constraint.",
+    "mandatrophy_analysis": "The founding problem (maintaining divine service after Temple destruction) is dead — the Temple is not being rebuilt in this reading's framework, and the sacrificial system is historically completed. The arrangement (archival study) does not persist to solve a live problem; it persists because cultural memory is self-sustaining. Mandatrophy is resolved: the mandate (binding sacrifice law) has outlived its function, and the successor practice (study) has shed the mandate entirely. No capture, no zombie institution.",
+    "kernel_context": "This constraint is the archival_preservation reading of the sacrifice_obligation_continuity kernel. Sibling readings: study_as_performance (study IS fulfillment, obligation persists), messianic_suspension (obligation suspended pending messianic restoration), performance_only (physical performance required, study is preparation). The kernel is the rabbinic commitment to continuity of korbanot after 70 CE; each reading resolves the tension between textual command and historical impossibility differently. This reading resolves it by declaring the obligation lapsed and the text archival."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_continuity__study_as_performance",
+      "sacrifice_obligation_continuity__messianic_suspension",
+      "sacrifice_obligation_continuity__performance_only"
+    ],
+    "dual_formulation_note": "The sacrifice_obligation_continuity kernel decomposes into four constraint stories linked by structural influence. Archival_preservation is the upstream 'settled fact' reading that the other readings must contend with: study_as_performance and messianic_suspension explicitly reject its core premise (obligation lapsed); performance_only treats it as the error to be corrected. The ε values differ radically: archival_preservation ε=0 (mountain); study_as_performance ε≈0.3 (tangled_rope — coordination + extraction via study-as-obligation); messianic_suspension ε≈0.15 (scaffold — transitional with messianic sunset); performance_only ε≈0.6 (snare — high extraction via physical performance demand)."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "none",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_performance",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "messianic_suspension",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "performance_only",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "korbanot_obligation_lapsed_with_temple",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "textual_study_is_cultural_not_ritual",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "rabbinic_transition_post_70ce",
+    "drift_state": {
+      "moment": "contemporary_academic_consensus",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

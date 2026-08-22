@@ -1,0 +1,320 @@
+{
+  "header": {
+    "constraint_id": "first_amendment_speech_protection__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "6968d8bd-c84b-4884-a60a-5c3519062608"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Amendment Absolutist Speech Protection",
+    "topic_domain": "constitutional_law/political_philosophy/speech_regulation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "speakers_and_publishers",
+      "majority_public_opinion_holder"
+    ],
+    "victims": [
+      "targeted_minority_groups",
+      "vulnerable_populations"
+    ],
+    "vindicated_propositions": [
+      "categorical_textualism",
+      "viewpoint_neutrality_principle",
+      "chilling_effect_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1791,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1791,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1919,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1969,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1791,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1919,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1969,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1791,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1919,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1969,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the absolutist reading of the First Amendment's Speech Clause: the text 'Congress shall make no law... abridging the freedom of speech' is read categorically, protecting all speech except narrow historical exclusions (incitement, true threats, obscenity, defamation, fraud). The reading maximizes the protected speech set by treating content-based restrictions as presumptively invalid. The structural consequence is that harms flowing from protected speech — hate speech, systemic harassment, coordinated disinformation targeting minorities — are externalized as the cost of liberty. The constraint requires active judicial enforcement to maintain the categorical boundary against legislative encroachment. The engine will compute per-seat classifications from the declared beneficiaries (speakers, majority opinion holders) and victims (targeted minorities, vulnerable populations), producing seat divergence: the agenda-setter (judiciary) and beneficiaries experience coordination; the victims experience extraction.",
+    "logic_rationale": "Base extractiveness is low (0.18) because the constraint primarily coordinates by blocking government suppression rather than extracting resources. However, it is non-zero because the categorical rule externalizes harm costs onto victims who cannot exit the speech environment. Suppression is low (0.12) because the constraint's function is anti-suppression — it suppresses government's ability to suppress speech. Theater ratio is minimal (0.08) because the coordination function (protecting speech from state control) is genuine and actively litigated. Accessibility collapse is high (0.72) because once the categorical rule is accepted, alternatives (balancing tests, harm-based exceptions) are structurally excluded from legitimate constitutional argument. Resistance is moderate (0.25) because the reading faces persistent challenge from competing readings and from affected groups seeking narrower protection.",
+    "directionality_logic": "Speakers and majority opinion holders are beneficiaries (d near 0.0): the constraint subsidizes their expressive freedom by blocking state interference. Targeted minorities and vulnerable populations are victims (d near 1.0): they bear the externalized costs of protected hate speech, harassment, and disinformation without consent or exit option — identity_locked by demographic membership. The judiciary (agenda_setter) sits near symmetric (d ~0.5): it bears enforcement costs but gains institutional legitimacy from maintaining the categorical boundary. The state (excluded/powerful) is constrained from regulating speech but is not a direct victim — its regulatory power is the object of the constraint.",
+    "perspectival_gap": "The engine will compute different effective types per seat: for speakers/beneficiaries, a Rope (coordination against state suppression); for targeted minorities/victims, a Snare (extraction of dignity/safety with no exit); for the judiciary/agenda_setter, a Tangled Rope (genuine coordination function + asymmetric extraction via externalized harm). The claimed_type 'tangled_rope' reflects the aggregate structural reality — the constraint cannot be purely coordinative because it has identifiable victims bearing uncompensated costs.",
+    "mandatrophy_analysis": "The founding problem (preventing government censorship of political dissent) remains live but has shifted: the original threat was sedition acts; the modern threat includes platform governance and algorithmic amplification. The constraint has not atrophied — its coordination function is actively invoked — but the victim set has expanded as speech harms have scaled with technology. Mandatrophy is not resolved; the arrangement continues to serve its founding purpose while generating new extraction patterns.",
+    "kernel_context": "This constraint is the absolutist_reading of kernel first_amendment_speech_protection. Sibling readings: categorical_balancing_reading (protected/unprotected categories via case-by-case balancing), harm_limited_reading (protection yields when speech causes demonstrable unconsented-to harm). This reading forecloses harm_limited_reading within a single framework because categorical textualism and harm-based exception are logically incompatible premises — a framework cannot simultaneously hold that 'no law means no law' AND that 'protection yields to demonstrated harm.' It coexists_with categorical_balancing_reading because both readings remain live positions held by different judicial coalitions; neither rules out the other in public constitutional discourse."
+  },
+  "omegas": [
+    {
+      "id": "committer_frame_disagreement_location",
+      "question": "Where exactly does the structural disagreement between absolutist_reading and harm_limited_reading locate — in the beneficiary/victim assignment, the coordination function definition, or the scope of 'narrow historical exclusions'?",
+      "resolution_mechanism": "Comparative case-law analysis: map each reading's beneficiary/victim sets and exception lists across the same factual scenarios (e.g., targeted harassment, algorithmic amplification, hate speech). The divergence point will show which structural element carries the disagreement.",
+      "impact": "If the disagreement is in beneficiary/victim assignment, the readings share a coordination function but differ on who bears its cost — a distributive dispute. If in coordination function, they are different constraints entirely (per ε-invariance). If in exception scope, the readings differ on the boundary of the categorical rule — a boundary dispute within shared structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural locus of disagreement between absolutist and harm-limited readings of the First Amendment kernel"
+    },
+    {
+      "id": "harm_externalization_measurement",
+      "question": "Can the externalized harm costs borne by targeted minorities under absolutist protection be quantified in a way that is commensurable with the coordination benefit (preventing state censorship)?",
+      "resolution_mechanism": "Empirical research on measurable harms from protected hate speech and disinformation (health outcomes, civic participation, economic opportunity) vs. counterfactual harms from state censorship regimes. Requires cross-jurisdictional comparison (e.g., US vs. European hate speech regimes).",
+      "impact": "If harms are quantifiable and substantial, the extraction component of this constraint is larger than the base_properties.extractiveness score suggests — the engine's effective extraction for victim seats will be higher. If harms are speculative or offset by countervailing benefits of free speech, the current ε is defensible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Commensurability of externalized harm costs vs. coordination benefits in absolutist speech protection"
+    },
+    {
+      "id": "narrow_exclusions_boundary",
+      "question": "Are the 'narrow historical exclusions' (incitement, true threats, obscenity, defamation, fraud) structurally stable, or does the absolutist reading's logic tend to expand or contract them over time?",
+      "resolution_mechanism": "Longitudinal analysis of Supreme Court doctrine: track whether the exception categories have narrowed (expanding protection) or widened (contracting protection) under absolutist-adjacent majorities. Compare with sibling readings' exception trajectories.",
+      "impact": "If exceptions are contracting, the constraint's extractiveness on victims increases over time (more harmful speech protected). If exceptions are stable, the current ε trajectory is accurate. If exceptions are expanding, the constraint is drifting toward a more balanced reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of the exception boundary in absolutist First Amendment doctrine"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "first_amendment_speech_protection__categorical_balancing_reading",
+      "first_amendment_speech_protection__harm_limited_reading"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the single colloquial label 'First Amendment speech protection' into three structurally distinct constraints with different ε values, beneficiary/victim structures, and claimed types. The absolutist_reading (this story) has ε=0.18 and claimed_type=tangled_rope. The categorical_balancing_reading would have higher ε (more state regulatory power retained) and different victim sets. The harm_limited_reading would have lower ε for speakers but higher extractiveness on state power. All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the categorical rule through judicial review: strikes down content-based speech restrictions, defines and polices the narrow historical exclusions, bears the institutional cost of maintaining legitimacy while enforcing an unpopular rule (protecting hated speech). Does not collect rents from the constraint but gains structural authority from being its authoritative interpreter."
+    },
+    {
+      "name": "speakers_and_publishers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Includes political speakers, media organizations, artists, protesters, and commercial speakers. Gains the ability to speak without prior restraint or content-based penalty. Can exit the constraint's coverage by choosing not to speak, but the constraint's value is precisely the option to speak freely. Major platforms and publishers have arbitrage-grade exit (can relocate, litigate, influence doctrine); individual speakers have constrained exit."
+    },
+    {
+      "name": "majority_public_opinion_holder",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from a public sphere where majority views circulate without state suppression. Also bears diffuse costs when protected speech degrades public discourse (disinformation, polarization). Exit is constrained — cannot opt out of the information environment — but the net position is beneficial because the alternative (state-controlled discourse) is worse for majority opinion holders."
+    },
+    {
+      "name": "targeted_minority_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Racial, religious, gender, and sexual minorities who are disproportionately targeted by protected hate speech, harassment campaigns, and coordinated disinformation. Bear the externalized costs of absolutist protection: psychological harm, civic exclusion, economic discrimination, physical violence incited by protected speech. Exit is identity_locked — demographic membership is not choosable; the speech environment is inescapable. No alternative institutional forum exists where the constraint does not apply."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Includes children, institutionalized persons, undocumented immigrants, and others with limited civic voice. Bear costs from protected speech that exploits vulnerability (fraud targeting elderly, radicalization of youth, exploitation of institutionalized populations). Exit is trapped — structural barriers (legal status, institutional control, developmental capacity) prevent meaningful exit from the speech environment."
+    },
+    {
+      "name": "state_legislature",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would regulate speech to address harms (hate speech laws, disinformation regulation, campaign finance) but is structurally blocked by the constraint. Its regulatory power is the object of the constraint's coordination function. Can attempt constitutional amendment (prohibitively difficult) or appoint judges who favor sibling readings (constrained exit). Not a victim — its power is constrained by design, not extracted from."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the constraint's operation across seats, trace its doctrinal evolution, and evaluate its structural consequences. Do not collect from or pay into the constraint. Provide the external corroboration for the founding problem status."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of preventing government censorship: no single speaker can credibly commit to resisting state suppression, but a categorical constitutional rule enforced by an independent judiciary creates a stable equilibrium where the state refrains from content-based regulation.",
+    "transfer_function": "Moves the cost of speech harms (hate speech, harassment, disinformation) from the state (which would internalize them via regulation) onto targeted minorities and vulnerable populations, who bear them without consent or compensation. In exchange, speakers gain immunity from state suppression.",
+    "absent_voices": "Targeted minorities and vulnerable populations were structurally excluded from the constitutional convention and ratification debates. Their descendants remain excluded from the interpretive community that maintains the absolutist reading — the judiciary, organized bar, and constitutional academy have historically been demographically unrepresentative. They would object to the externalization of harm costs if present in the interpretive conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the absolutist constraint vanished overnight, legislatures would enact hate speech regulations, platform accountability laws, and disinformation statutes within months. The speech environment would reorganize around harm-based exceptions. Targeted minorities would gain legal recourse; speakers would face new compliance costs; the judiciary would lose its categorical adjudicatory role. The world rearranges because the constraint actively structures the legislative-judicial-speech market equilibrium.",
+    "founding_problem": "The founding problem was preventing the new federal government from enacting sedition laws and suppressing political dissent — the Alien and Sedition Acts of 1798 were the proximate threat. The categorical 'no law' rule was built to make censorship constitutionally impossible, not merely politically difficult.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem (preventing state censorship of dissent) is attested as live by civil liberties organizations (ACLU, FIRE), press freedom advocates (RSF, CPJ), and dissident movements globally — all outside the primary beneficiary set of majority speakers. However, the *scope* of the live problem is contested: original threat was state suppression of political speech; modern threats include private platform governance and algorithmic amplification, which the absolutist reading does not reach."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "first_amendment_speech_protection__categorical_balancing_reading",
+      "first_amendment_speech_protection__harm_limited_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "categorical_balancing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "textual_categoricalism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "viewpoint_neutrality_as_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "founding_era_categorical_prohibition",
+    "drift_state": {
+      "moment": "contemporary_algorithmic_amplification_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

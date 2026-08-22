@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-27",
+    "status": "ACTIVE",
+    "story_uid": "02d94e61-b64b-447d-bccf-ccdbfdc2cb7f"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.41,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Whitepaper Purpose — Store of Value Reading (Decentralization and Full-Node Verifiability as Binding Constraints)",
+    "topic_domain": "technology_governance/distributed_systems/monetary_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_holders",
+      "full_node_operators"
+    ],
+    "victims": [
+      "low_fee_onchain_users"
+    ],
+    "vindicated_propositions": [
+      "decentralization_as_primary_security_model",
+      "verifiable_scarcity_through_full_node_accessibility"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold bitcoin as a savings vehicle; benefit from the scarcity guarantee that limited on-chain capacity and full-node verifiability protect. Can exit to other assets but view bitcoin's monetary properties as unique. Their influence is exercised through market demand and cultural signaling rather than protocol governance."
+    },
+    {
+      "name": "full_node_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run validating nodes to independently verify the chain state; the 1MB block size cap keeps hardware and bandwidth requirements within reach of motivated individuals. They set the de facto consensus rules by choosing which software to run. Exiting means abandoning the verification capability that gives them sovereignty over the rules they follow."
+    },
+    {
+      "name": "low_fee_onchain_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Need affordable on-chain transactions for everyday payments, remittances, or low-value transfers. Priced out by fee markets that emerge when demand exceeds the 1MB capacity. Cannot effectively exit to Lightning without capital, technical knowledge, and counterparty liquidity. Their needs are structurally excluded from the base layer by the capacity constraint."
+    },
+    {
+      "name": "lightning_network_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build and operate Lightning routing nodes and services; they benefit from the demand for off-chain scaling created by on-chain capacity scarcity. They develop the protocol and software but depend on the base layer's security model. Can pivot to other L2 designs or chains but have sunk investment in the Lightning ecosystem."
+    },
+    {
+      "name": "miners",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Secure the chain with proof-of-work; collect block subsidies and transaction fees. Benefit from fee pressure created by capacity scarcity but face revenue uncertainty when subsidies halve. Can redirect hashpower to other SHA-256 chains, giving them arbitrage-grade exit. Their incentives align with holders on scarcity but diverge on fee vs. subsidy composition."
+    },
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintain the reference implementation (Bitcoin Core); propose and review consensus changes. Their authority is informal — code changes only activate if node operators adopt them. They are analytically positioned: they see the full structure but do not directly collect rents or bear user costs. Their legitimacy rests on technical competence and historical continuity."
+    },
+    {
+      "name": "electronic_cash_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that the whitepaper's 'peer-to-peer electronic cash' title binds the system to everyday transactional use with low fees. They were structurally marginalized in the 2015–2017 block size debate; many migrated to Bitcoin Cash or other forks. Those remaining continue to advocate but have no pathway to change the consensus rules without a hard fork."
+    },
+    {
+      "name": "regulators_and_aml_compliance",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor on-chain activity for illicit finance; the fee market and transparent ledger create both surveillance opportunities and friction for small users. They do not set protocol rules but their enforcement actions shape which use cases are viable on-chain. Their interest is in traceability, not in the decentralization/verifiability trade-off per se."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a global, trust-minimized monetary system where any participant can independently verify the total supply and transaction history without trusting third parties. The binding constraint is keeping full-node operation accessible to individuals, which caps on-chain throughput.",
+    "transfer_function": "Moves transaction fee revenue from low-fee users (who are priced out or pay high fees) to miners (who collect scarcity rents) and indirectly to Lightning operators (who capture the displaced demand). Long-term holders gain purchasing power protection from the credible scarcity commitment; node operators gain sovereignty at the cost of hardware vigilance.",
+    "absent_voices": "Users in high-inflation economies who need cheap, censorship-resistant payments but lack the technical and capital prerequisites for Lightning. Merchants who would accept bitcoin for daily commerce if fees were predictable and low. These voices are absent because the system's architecture makes their use case economically nonviable on the base layer, and they lack organized representation in protocol governance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 1MB cap and the 'decentralization first' priority vanished overnight, block size would likely increase through miner/operator consensus, on-chain fees would drop, and everyday transactional use would become viable again — but the trust-minimized verification property would degrade as node operation centralizes. The monetary premium attached to credible scarcity would reprice. Lightning's value proposition would collapse. The world rearranges around a different security/tradeoff frontier.",
+    "founding_problem": "How to create a digital money that no single entity can debase, censor, or shut down — solving the double-spending problem without a trusted central party, while keeping the verification of that solution accessible to anyone who chooses to run a node.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The whitepaper text and early mailing list archives corroborate the double-spending/decentralization problem as the founding problem. Long-term holders and Core developers attest it remains live (central banks still debase, states still censor). Electronic cash advocates and Lightning critics attest the problem has shifted: the system now serves a different user base (savers, not spenders) and the verification accessibility guarantee is eroding as the UTXO set grows and hardware requirements creep up. No single external authority adjudicates; the contest is structural."
+  },
+  "interval": {
+    "start": 2009,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story captures the 'store of value' reading of Bitcoin's purpose: the whitepaper's system is fundamentally a decentralized, verifiable scarcity machine. On-chain capacity (1MB blocks, ~7 TPS) is deliberately constrained to keep full-node verification within reach of individuals running modest hardware. The coordination function is trust-minimized verification of a fixed supply schedule; the extraction function prices low-value users off the base layer, creating a fee market that transfers value to miners and routes demand to Layer 2 (Lightning). The constraint is a tangled rope: it genuinely coordinates a global monetary system without trusted intermediaries (the coordination function is real and valued by holders and node operators) AND it asymmetrically extracts from users who need cheap on-chain transactions (the victims). The claim/metric gap is intentional: proponents claim rope (pure coordination for sound money); the metrics reveal substantial extraction from a structurally excluded class.",
+    "logic_rationale": "Extractiveness (0.68) reflects the fee market's transfer from priced-out users to miners and the opportunity cost borne by those who cannot use the base layer. Suppression (0.52) is moderate: the constraint does not actively prevent alternatives (Lightning, other chains, fiat), but the network effect and brand dominance of 'Bitcoin' make exit costly for users who specifically need Bitcoin's liquidity and recognition. Theater ratio (0.18) is low but rising: the 'decentralization' rhetoric increasingly covers rent extraction by entrenched interests (miners, holders, Lightning businesses) as the fee market matures. Accessibility collapse (0.72) is high but not total: alternatives exist but are functionally distinct (Lightning has different trust assumptions; other chains have different security models). Resistance (0.41) is moderate: the block size wars (2015–2017) produced a hard fork (BCH) and ongoing debate, but the Core roadmap prevailed.",
+    "directionality_logic": "Long-term holders and full-node operators are beneficiaries (d ~ 0.15–0.25): they gain scarcity credibility and verification sovereignty. Low-fee on-chain users are victims (d ~ 0.9): they bear the full cost of the capacity constraint with no offsetting benefit on the base layer. Miners are near-symmetric (d ~ 0.5): they collect scarcity rents but face competitive pressure and halving risk. Lightning operators are beneficiaries (d ~ 0.2): they capture displaced demand. Protocol developers are analytical observers (d ~ 0.5): they maintain the code but do not directly extract. Electronic cash advocates are excluded (d ~ 0.8): their preferred reading was defeated in the consensus process. Regulators are analytical observers.",
+    "perspectival_gap": "From the holder/node-operator seat, this is a mountain-like coordination achievement: a system that credibly cannot be inflated or censored, verified by anyone. From the low-fee user seat, it is a snare: a payment system that prices them out while calling itself 'cash.' The engine will compute this divergence from the structural data. The store-of-value reading's claim of tangled_rope acknowledges both: genuine coordination at the cost of asymmetric exclusion.",
+    "mandatrophy_analysis": "The founding problem (trust-minimized digital scarcity) remains live — fiat debasement and financial censorship persist. But the arrangement has drifted: the 'electronic cash' use case was subordinated, and the beneficiary set shifted from 'users' broadly to 'holders and verifiers' narrowly. Mandatrophy is contested: the constraint still solves its founding problem, but the user coalition it serves has narrowed. The theater ratio rise suggests performative maintenance of the 'peer-to-peer cash' branding while the actual function serves a different constituency.",
+    "kernel_context": "This constraint is the store_of_value_reading of the contested kernel bitcoin_whitepaper_purpose. Sibling readings: electronic_cash_reading (the 'cash' telos binds; low fees for everyday use required), nakamoto_oracle_opacity (Satoshi's disappearance left the text as contested substrate). This reading instantiates the constraint where decentralization and full-node verifiability are binding and on-chain capacity is subordinated. The other readings are separate constraint stories with their own ε and stakeholder structures."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_legitimacy",
+      "question": "Which reading of the bitcoin_whitepaper_purpose kernel is the legitimate one, or is the kernel itself irreducibly ambiguous?",
+      "resolution_mechanism": "No formal resolution mechanism exists; the kernel has no living authoritative interpreter. Legitimacy is determined by which reading commands the consensus of node operators (the de facto constitution). Historical analysis of Satoshi's writings and early communications may inform but not decide.",
+      "impact": "If the electronic_cash_reading is legitimate, this constraint is a snare (extraction under false pretenses). If the store_of_value_reading is legitimate, the extraction is the necessary price of the coordination function (tangled rope). If the kernel is irreducibly ambiguous, both readings are coexisting constraint instantiations with different ε and victim sets.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Irreducible ambiguity in the founding text's telos — no authoritative resolution possible after Nakamoto's departure"
+    },
+    {
+      "id": "lightning_viability_as_coordination_substitute",
+      "question": "Does Lightning Network genuinely substitute for on-chain capacity as a coordination mechanism for everyday payments, or is it a distinct system with different trust assumptions that fails to serve the same users?",
+      "resolution_mechanism": "Empirical measurement of Lightning adoption, success rates, capital efficiency, and user demographics over time. Comparison of on-chain vs. Lightning outcomes for low-value, high-frequency payment use cases in high-inflation economies.",
+      "impact": "If Lightning succeeds as a coordination substitute, the extraction from low_fee_onchain_users is mitigated (they have a viable exit) and the constraint leans toward rope. If Lightning fails to serve the same users, the extraction is unmitigated and the constraint leans toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the off-chain scaling layer functionally replaces the excluded on-chain use case"
+    },
+    {
+      "id": "node_operator_centralization_trajectory",
+      "question": "Is the full-node accessibility constraint actually holding, or is node operation quietly centralizing despite the 1MB cap (UTXO set growth, bandwidth, hardware creep, custodial capture)?",
+      "resolution_mechanism": "Longitudinal measurement of node count, geographic distribution, hardware profiles, and custodial vs. self-custodied bitcoin ratios. Correlation with block size and transaction volume.",
+      "impact": "If node operation is centralizing despite the cap, the coordination function (decentralized verification) is degrading — the constraint becomes a piton (theatrical maintenance of a lost function) or a snare (extraction persists after coordination fails). If accessibility holds, the tangled rope classification is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the primary coordination guarantee (accessible full-node verification) is empirically sustained"
+    },
+    {
+      "id": "suppression_mechanism_fee_market",
+      "question": "Is the suppression of low-fee users structural (protocol-enforced capacity cap) or economic (fee market pricing), and does the distinction matter for classification?",
+      "resolution_mechanism": "Counterfactual analysis: if the cap were raised but demand kept fees high anyway, would low-value users return? Or is the cap the binding constraint? Protocol economics modeling and natural experiments from alternative chains with larger blocks.",
+      "impact": "If suppression is primarily economic (demand-driven fees), the constraint's active enforcement is lower than measured — the fee market, not the cap, does the excluding. If the cap is binding, suppression is structural and the 0.52 score is accurate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural vs. economic suppression mechanism for priced-out users"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__electronic_cash_reading",
+      "lightning_network_scaling_constraint",
+      "bitcoin_block_size_cap_constraint"
+    ],
+    "dual_formulation_note": "Part of the bitcoin_whitepaper_purpose constraint family. This reading (store_of_value) and electronic_cash_reading share the kernel but instantiate different constraints with different ε, beneficiaries, and victims. They are linked via network.affects_constraints. The store-of-value reading's capacity constraint creates the demand that the Lightning reading serves; the electronic cash reading's failure to activate on-chain scaling created the structural conditions for Lightning's emergence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "electronic_cash_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decentralization_and_verifiability_are_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "on_chain_capacity_subordinated_to_verification_accessibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "satoshi_whitepaper_and_early_communications",
+    "drift_state": {
+      "moment": "post_blocksize_war_consensus",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bitcoin_whitepaper_purpose"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "border_normative_status__qualified_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "7741a01f-7703-4e5e-9251-1f2ba9f8dd32"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.55,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Qualified Sovereignty Standard for Border Control",
+    "topic_domain": "political philosophy/international law/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "receiving_states",
+      "recognized_refugees",
+      "transit_state_partners"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "displaced_citizens"
+    ]
+  },
+  "interval": {
+    "start": 1951,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1951,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1951,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1951,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is ONE reading (qualified_sovereignty) of the border_normative_status kernel. What structurally changes if a sibling reading prevails — sovereignty_primary (foundational authority to exclude) or freedom_primary (movement as a fundamental right that borders impermissibly restrict)?",
+      "resolution_mechanism": "Comparative classification of the sibling stories: sovereignty_primary removes the adjudication burden from states and shrinks the protected class toward citizens only, raising epsilon for excluded migrants; freedom_primary flips receiving_states from beneficiaries to targets and expands the victim set to nearly all excluded movers.",
+      "impact": "The victim set, the directionality of receiving_states, and the per-seat classifications all rotate with the prevailing reading; this story's epsilon is valid only for the qualified-sovereignty referent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega recording that this file instantiates one reading of a contested kernel and naming the sibling deltas."
+    },
+    {
+      "id": "margin_of_appreciation_variance",
+      "question": "Is the proportionality standard's bite stable, or does state deference expand systematically during declared crises (2015 arrivals, pandemic closures, 2022 displacement events), making effective extraction crisis-indexed?",
+      "resolution_mechanism": "Panel-level analysis of court outcomes across crisis and non-crisis periods: compare strike-down rates and deference language in removal and detention judgments before, during, and after declared emergencies.",
+      "impact": "If deference is systematically crisis-indexed, the standing epsilon understates extraction during exactly the periods of largest flows, and the theater_ratio should be read as cyclical rather than stationary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality review tightens or loosens under crisis conditions."
+    },
+    {
+      "id": "externalization_responsibility_traceability",
+      "question": "Does legal responsibility follow enforcement across externalization arrangements (offshore processing, third-country interception deals), or does the chain of custody break at the border of the partner state?",
+      "resolution_mechanism": "Track litigation outcomes on extraterritorial jurisdiction (sea pushback cases versus inland partner-state arrangements) and measure whether remedy rates diverge between internal and externalized enforcement.",
+      "impact": "If responsibility does not trace, the authored theater_ratio understates the gap between formal compliance and actual practice, and effective extraction concentrates on people in transit zones where review is weakest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether accountability follows outsourced border enforcement."
+    },
+    {
+      "id": "displaced_persons_coverage_boundary",
+      "question": "Do people displaced by climate disaster or economic collapse count within this reading's victim set, or does the proportionality framework's protection extend only to the persecution-based categories inherited from the 1951 settlement?",
+      "resolution_mechanism": "Doctrinal analysis of whether necessity-based claims survive proportionality review in any forum, plus legislative developments creating complementary protection categories.",
+      "impact": "If coverage stays persecution-bound, the displaced_citizens victim group is larger than the framework acknowledges and the measured extraction understates the population bearing costs; if coverage expands, part of the current victim load converts into beneficiary status.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary of the protected class under the qualified reading."
+    },
+    {
+      "id": "adjudication_burden_character",
+      "question": "Is the compliance and litigation burden this standard places on states a legitimate price of rights-answerable exclusion, or friction the system tolerates and states recoup elsewhere (deterrence design, procedural delay)?",
+      "resolution_mechanism": "Value-theoretic analysis combined with behavioral evidence: whether states treat adverse judgments as binding corrections or as pricing inputs absorbed into deterrence strategy.",
+      "impact": "If the burden is recouped through deterrence design, receiving_states sit closer to the target end than their beneficiary declaration suggests, and the seat divergence between states and migrants narrows.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "How the state-side cost of the standard should be characterized."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Since the post-WWII settlement, the operative international position on borders is neither absolute exclusion nor open movement: states retain border control authority, but each exercise of it must be justified as pursuing a legitimate aim, necessary, proportionate, and consistent with human rights obligations, with individual review available against removals and detention. This file instantiates the QUALIFIED SOVEREIGNTY reading of the border_normative_status kernel; the sovereignty_primary and freedom_primary readings are separate constraints in separate files and are not averaged into this one. The epsilon referent is the standing qualified-sovereignty arrangement itself, assessed by this reading's own lights: a regime that genuinely delivers reviewable protection to some, while a substantial population is excluded, detained, or pushed into externalized enforcement zones where review is weakest. The claim/metric independence rule applies: the claimed type is stated from the authoring seat, the metrics describe observed operation, and the engine computes per-seat classifications from the structural data.",
+    "key_agents": [
+      "- receiving_states: Agenda-setter and net beneficiary (institutional/constrained) — retain lawful control over admission, fund enforcement, bear the adjudication burden the standard imposes",
+      "- human_rights_courts: Agenda-setter (institutional/analytical) — administer the proportionality standard through individual complaints; their jurisprudence defines what counts as lawful exclusion",
+      "- excluded_migrants: Primary target (powerless/trapped) — refused entry, detained, or removed after process; bear the arrangement's costs directly",
+      "- displaced_citizens: Primary target (powerless/trapped) — displaced people outside the protected categories or defeated by deferential review; remain in protracted exile",
+      "- recognized_refugees: Beneficiary (moderate/constrained) — claims succeeded; carry the arrangement's demonstrated benefits",
+      "- transit_state_partners: Beneficiary (organized/constrained) — paid and equipped to intercept and host; absorb humanitarian costs of enforcement they did not design",
+      "- unhcr_and_rights_ngos: Observer (organized/analytical) — monitor, litigate, and publish the mortality and displacement data that anchor the record",
+      "- non_signatory_destination_states: Excluded voice (powerful/mobile) — wealthy destinations outside the treaty framework facing no review of their exclusion practices"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48): the arrangement delivers real, reviewable protection to recognized refugees, but a large population bears exclusion, prolonged detention, and externalized enforcement whose harms surface as route deaths and camp limbo — harm the framework's own success metrics do not count. Suppression (0.55) reflects actively maintained enforcement machinery: detention estates, carrier sanctions, patrol forces, and interception partnerships; the standard channels coercion as much as restraining it. Theater ratio (0.35) captures the growing share of performative compliance — formal conformity maintained while enforcement is outsourced to partners beyond easy review. Accessibility collapse is low (0.35): the two sibling readings remain live political alternatives; nothing about this arrangement forecloses them, and periodic crises revive both. Resistance (0.60) is real and bidirectional: states resist through margin-of-appreciation expansion, pushbacks, and non-compliance windows; advocates resist from the other side, pressing the standard as insufficient. The temporal series run on one shared eight-point grid (every tracked metric authored at every point). The suppression_requirement series is authored deliberately: the story's enforcement history is one of capacity build-up (joint patrol forces from the 1980s, dedicated border agencies from 2004, crisis surge and the 2024 pact), not a static picture. Extractiveness peaks around the 2015 crisis and partially corrects as courts constrain externalized practices.",
+    "perspectival_gap": "The seats should classify differently. From the excluded migrant's position — powerless, trapped, already en route — the arrangement operates as managed exclusion with procedural decoration: process occurs, and removal frequently follows. From the receiving state's position, the same structure is a burdened entitlement: control retained, but each exercise now costs litigation, detention upkeep, and diplomatic exposure. From the court's position it is a functioning review system doing exactly what it was built to do. From the transit partner's position it is paid enforcement of someone else's standard, with the humanitarian residue left behind. One structure, four different lived types; the engine computes this divergence from power, exit, and directional position rather than from any authored verdict.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for receiving_states, recognized_refugees, and transit_state_partners: the arrangement subsidizes their positions (lawful control, granted protection, enforcement revenue respectively). Victim declarations drive high directionality for excluded_migrants and displaced_citizens, and their trapped exit pushes them toward the full-target end — they cannot re-route, return safely, or opt out. Receiving_states are genuinely dual-positioned: the adjudication burden is a real cost to them, tempering their directionality above a pure beneficiary's, which is recorded through the secondary payer role rather than a numeric override. Courts and monitoring organizations occupy analytical seats: they administer and observe without collecting the arrangement's gains or bearing its extraction.",
+    "mandatrophy_analysis": "The founding problem — making exclusion answerable after the refoulement catastrophes of the 1930s–40s — is live, not dead: displacement populations are at historical highs and the proportionality machinery is invoked daily. No mandatrophy resolution is declared, and the mismatch flag (dead status plus world_rearranges) does not fire. The classification discipline cuts both ways here: calling this a snare would erase the genuine coordination achievement — a shared, adjudicable standard that replaced unilateral discretion with reviewable justification and actually protects a class of people who would otherwise have none. Calling it a rope would erase the asymmetry — the legitimacy the arrangement produces for states rests partly on costs borne by people with no seat in its design. The tangled-rope reading holds both facts without letting either cancel the other.",
+    "kernel_context": "Kernel: border_normative_status — the persisting commitment that territorial borders have a normative status requiring adjudication. This file instantiates the qualified_sovereignty reading: exclusion authority is real but conditional on justification, necessity, proportionality, and human-rights consistency. Sibling readings: sovereignty_primary (exclusion as a foundational instrument of collective self-determination, needing no further warrant) and freedom_primary (movement as a fundamental right that borders impermissibly restrict absent extraordinary justification). The disagreement is located in the DEFAULT: whether exclusion is presumptively lawful pending objection, presumptively unlawful pending justification, or conditionally lawful under a proportionality test — and correspondingly, on whom the burden of justification falls."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_normative_status__sovereignty_primary",
+      "border_normative_status__freedom_primary"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'legitimate border control' decomposes into three structurally distinct readings of the border_normative_status kernel, each with its own epsilon, victim set, and classification. This file (qualified_sovereignty) is the operative legal standard; it sits downstream of the postwar settlement's empirical premise (unreviewed exclusion produced catastrophic refoulement) and exerts structural influence on both siblings: sovereignty_primary defenders must now argue in the language of proportionality compliance, and freedom_primary advocates litigate their claims through this reading's adjudication machinery. The sibling files document the reciprocal edges."
+  },
+  "stakeholders": [
+    {
+      "name": "receiving_states",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Set immigration rules, operate border enforcement, and decide who may enter, stay, or be removed. Bound by treaty obligations they have ratified and subject to individual complaints when people challenge removals or detention. They fund detention estates, patrol forces, and externalized enforcement partnerships, and they bear the litigation and compliance costs the review system generates. Renegotiating or withdrawing from the instruments carries significant diplomatic and reputational cost, so they adjust practice at the margins instead."
+    },
+    {
+      "name": "human_rights_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Review individual complaints against removals, detention conditions, and border practices, deciding whether state action was justified, necessary, and proportionate. Their judgments bind member states and progressively define what counts as lawful exclusion. Caseload grows with every enforcement intensification; they shape the standard through doctrine but set no migration policy directly."
+    },
+    {
+      "name": "excluded_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "People refused entry, denied protection after process, detained pending decision, or removed. Many crossed multiple countries and cannot safely return home; onward routes close as enforcement tightens, leaving them in transit zones, camps, or irregular status. Their participation in shaping the rules is limited to individual cases filed on their behalf, usually after the decisive decisions have been made."
+    },
+    {
+      "name": "displaced_citizens",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "People forced from their home countries by war, persecution, state collapse, climate disaster, or economic ruin who fall outside the categories that confer protection, or whose claims fail under deferential review. They remain citizens of states unable or unwilling to protect them and spend years or decades in protracted exile with no route that the reviewed systems recognize."
+    },
+    {
+      "name": "recognized_refugees",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "People whose claims succeeded and who received residence, documentation, and a path to permanence. They hold enforceable protections against removal and become the visible proof offered when the system's continued operation is defended. Their position depends on the review machinery staying open to future claimants."
+    },
+    {
+      "name": "transit_state_partners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Countries along migration corridors paid and equipped to intercept, host, or turn back people heading toward destination states. Enforcement funding is a significant budget line; declining it risks losing aid and diplomatic standing, while hosting large displaced populations strains local services. They enforce a standard they did not write and absorb its humanitarian residue."
+    },
+    {
+      "name": "unhcr_and_rights_ngos",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Agencies and organizations that monitor compliance, publish mortality and displacement statistics, litigate test cases, and advocate for broader protection categories. They hold no enforcement power, depend on state funding and access agreements, and supply much of the evidentiary record on which review depends."
+    },
+    {
+      "name": "non_signatory_destination_states",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Wealthy destination states outside the treaty framework that accept no review of their exclusion practices; labor migration there runs through sponsorship systems with no asylum channel. They bear none of the adjudication burden and none of the review, while the pressure the reviewed systems place on people seeking somewhere safe to go makes their unreviewed labor markets a downstream destination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, adjudicable standard that lets states, migrants, and courts predict which exclusions are lawful without first resolving the underlying philosophical dispute about borders: exclusion proceeds under published criteria, and objections are heard case-by-case rather than settled by force.",
+    "transfer_function": "Moves adjudication and compliance costs onto receiving states; moves exclusion risk onto migrants whose claims fail and onto displaced people outside the protected categories; moves enforcement funding to transit-state partners; and confers legitimacy on state border practices that survive review.",
+    "absent_voices": "The people excluded and removed rarely participate in framing the proportionality standard — their experience enters as case facts, not as doctrine-shaping voices, and those removed before judgment are absent from the record entirely. Wealthy destination states outside the treaty framework never accepted the standard yet absorb its downstream pressure; their practices set a competitive floor the reviewed systems feel.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the qualified-sovereignty standard vanished overnight, exclusion would revert to unchecked state discretion: individual review of removals would collapse, externalization partnerships would lose their legal cover and their litigation exposure simultaneously, recognized refugees would hold protections no machinery defended, and the entire body of jurisprudence defining lawful exclusion would lose its object. Border governance would reorganize around raw bilateral bargaining within months.",
+    "founding_problem": "After the refoulement catastrophes of the 1930s and 1940s — the Évian conference, the St. Louis, wartime border closures — the founding problem was how to preserve state order and territorial self-determination while making exclusion answerable to human rights, so that flight from persecution could no longer be met with bare sovereign refusal.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: UNHCR displacement statistics place forcibly displaced populations at historical highs; IOM's missing-migrants record documents continuing route deaths; ICRC field reporting and academic migration-law scholarship independently attest that the problem the standard was built for persists. No party to the arrangement disputes that displacement pressure is ongoing; the dispute is over whether the standard answers it adequately."
+  },
+  "gain_flow": "receiving_states",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "postwar_rights_answerable_exclusion_settlement",
+    "drift_state": {
+      "moment": "contemporary_externalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "freedom_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "exclusion_authority_conditionally_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "non_refoulement_binds_border_exercise",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

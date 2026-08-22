@@ -1,0 +1,325 @@
+{
+  "header": {
+    "constraint_id": "correct_latin_kernel__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clk_hr",
+    "story_uid": "7f1a8483-823b-484a-bdc0-8ed701dc17dc"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Reading of Correct Latin: Morphology Continuous, Syntax/Lexicon Reconstructed",
+    "topic_domain": "intellectual/historical/philological",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "philologists_reconstructing_syntax",
+      "editors_establishing_critical_texts",
+      "scholars_claiming_continuity_through_morphology"
+    ],
+    "victims": [
+      "medieval_manuscript_forms_discarded_as_corrupt",
+      "vernacular_developments_treated_as_deviations",
+      "scholars_reading_medieval_latin_on_its_own_terms"
+    ],
+    "vindicated_propositions": [
+      "morphological_continuity_thesis",
+      "textual_recovery_as_legitimate_reconstruction_method"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested 'correct_latin_kernel' rather than a standalone constraint on Latin correctness?",
+      "resolution_mechanism": "Compare structural predictions of this reading against continuity_reading and discontinuity_reading; if they produce divergent ε values, beneficiary/victim structures, or seat classifications for the same empirical domain, the kernel decomposition is validated.",
+      "impact": "If validated, this story must link to sibling readings via network.affects_constraints and cs_structure.reading_relations; if not, the constraint_id should be renamed to reflect a standalone claim.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the hybrid_reading is properly a kernel reading of correct_latin_kernel"
+    },
+    {
+      "id": "morphology_syntax_boundary",
+      "question": "Where exactly does the boundary fall between 'continuous morphology' and 'reconstructed syntax/lexicon' — is it a clean structural divide or a gradient of reconstruction intensity?",
+      "resolution_mechanism": "Analyze specific cases: (1) case system erosion → prepositional syntax (morphology or syntax?), (2) verbal system reduction → periphrastic forms (continuous innovation or textual recovery?), (3) lexical replacement rates across semantic fields. Measure whether practitioners agree on the classification of borderline phenomena.",
+      "impact": "A clean divide supports the hybrid reading's structural coherence; a gradient suggests the reading imposes a false dichotomy on a continuous reconstruction spectrum, potentially inflating extraction claims against medieval forms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary precision between continuous and reconstructed domains in the hybrid reading"
+    },
+    {
+      "id": "reconstruction_legitimacy_criteria",
+      "question": "What makes a reconstruction 'layered reoccupation' rather than 'symbolic imposition' or 'internal correction' — are there criteria internal to the hybrid reading, or does the distinction collapse under scrutiny?",
+      "resolution_mechanism": "Trace the historical debate: when did philologists begin distinguishing 'legitimate recovery' from 'over-restoration'? Examine critical editions' apparatus criticus for explicit markers of reconstruction confidence. Compare with discontinuity_reading's 'symbolic reoccupation' and continuity_reading's 'internal correction' — do they use the same textual evidence differently?",
+      "impact": "If criteria are internal and coherent, the hybrid reading has a defensible coordination function; if criteria are borrowed from sibling readings or post-hoc, the coordination story may be cover for extraction against medieval manuscript authority.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether layered reoccupation has independent legitimacy criteria or borrows from sibling readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 1800,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "The hybrid reading of 'correct Latin' holds that core morphology (inflectional systems, case endings, verbal paradigms) shows genuine continuity from Classical through Medieval Latin, while syntax (word order, clause structure, prepositional governance) and lexicon (vocabulary replacement, semantic shift, neologism) required active textual recovery from Classical models during the Carolingian and Renaissance reforms. Reconstruction was therefore 'layered': morphological continuity provided a scaffold, but syntactic and lexical norms were reimposed from texts. This reading instantiates one position in the contested kernel 'correct_latin_kernel' alongside continuity_reading (all evolution is natural) and discontinuity_reading (Classical and Medieval are distinct systems; reconstruction is symbolic reoccupation). The constraint operates in philological practice: critical editions normalize orthography and morphology silently but flag syntactic 'corrections'; dictionaries mark medieval forms as 'corrupt' or 'late' while treating Classical forms as standard; pedagogical grammars teach reconstructed syntax as 'correct Latin'.",
+    "key_agents": [
+      "philologists_reconstructing_syntax: Primary agenda_setter (institutional/biographical) — defines reconstruction norms, controls critical apparatus",
+      "editors_establishing_critical_texts: Primary beneficiary (organized/biographical) — gains editorial authority from reconstruction mandate",
+      "scholars_claiming_continuity_through_morphology: Secondary beneficiary (organized/biographical) — uses morphological continuity to legitimize syntactic reconstruction",
+      "medieval_manuscript_forms_discarded_as_corrupt: Primary victim (powerless/civilizational) — manuscript authority overridden by textual recovery",
+      "vernacular_developments_treated_as_deviations: Secondary victim (powerless/civilizational) — Romance emergence framed as degeneration from Latin norm",
+      "scholars_reading_medieval_latin_on_its_own_terms: Excluded observer (moderate/biographical) — medieval Latin specialists marginalized by correctness constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.42) reflects the hybrid reading's partial extraction: it legitimizes morphological continuity (coordination function) while extracting authority from medieval syntactic/lexical forms (extraction function). Suppression (0.35) is moderate — the constraint operates through editorial norms and pedagogical canon formation rather than direct coercion, but manuscript variants are systematically normalized away in critical editions. Theater ratio (0.28) captures the performative dimension: the 'layered' narrative presents as scholarly nuance but the boundary between continuous and reconstructed domains is often drawn to protect the reconstruction project's authority. Accessibility collapse (0.45) and resistance (0.55) are middling: alternatives exist (medieval Latin studies, vernacular philology) but are institutionally marginalized. The claimed_type 'tangled_rope' reflects the genuine coordination function (morphological continuity as shared scaffold) combined with asymmetric extraction (syntax/lexicon reconstruction as authority over medieval forms).",
+    "perspectival_gap": "From the philologist/editor seat (agenda_setter/beneficiary), the constraint appears as genuine coordination: morphological continuity provides a real anchor, and textual recovery solves the genuine problem of establishing authoritative texts. From the medieval manuscript/vernacular seat (victim), the same structure appears as extraction: their forms are labeled 'corrupt' not because they fail communication but because they deviate from a reconstructed norm. The scholar reading medieval Latin on its own terms (excluded) sees a constraint that claims to describe continuity but actually enforces a Classical ideal. The engine computes this divergence from the structural data — the hybrid reading's 'layered' premise creates the asymmetry.",
+    "directionality_logic": "Philologists and editors are structural beneficiaries: they control the reconstruction apparatus, gain editorial authority, and define the 'correct' norm — directionality near beneficiary end (d ~ 0.2). Medieval manuscript forms and vernacular developments are structural targets: their authority is overridden by the reconstruction norm, with no exit from the 'corrupt' label — directionality near target end (d ~ 0.8). Scholars claiming continuity through morphology occupy a dual position: they benefit from the morphological anchor but pay when their syntactic analyses deviate from reconstructed norms — directionality near symmetric (d ~ 0.5). Scholars reading medieval Latin on its own terms are excluded: their exit is identity_locked (professional identity constituted through the very constraint they contest) — directionality modulated toward target despite moderate power.",
+    "mandatrophy_analysis": "The founding problem (establishing authoritative Latin texts for education, liturgy, and administration) was live in 800-1500 but substantially resolved by 1800 as national vernaculars displaced Latin's administrative function. The constraint persists through institutional inertia (philological disciplines, critical edition practices, pedagogical canons) rather than solving its original problem. The 'layered' narrative prevents mislabeling: pure extraction would ignore the genuine morphological coordination; pure coordination would ignore the systematic discarding of medieval syntactic/lexical authority. The hybrid reading's mandatrophy is resolved in the sense that its original administrative/educational mandate is dead, but the constraint persists as a disciplinary boundary marker — a piton-like residue with tangled_rope extraction profile.",
+    "kernel_context": "This constraint instantiates the hybrid_reading of the contested kernel 'correct_latin_kernel'. The kernel is the stabilized commitment: 'there exists a correct form of Latin against which historical variants can be judged'. Three readings instantiate different constraints from this kernel: (1) continuity_reading — Medieval Latin IS Classical Latin after natural evolution; correctness is internal consistency. (2) discontinuity_reading — Classical and Medieval Latin are distinct systems; 'correct Latin' requires symbolic reoccupation from texts. (3) hybrid_reading (this constraint) — Core morphology continuous, syntax/lexicon required textual recovery; reconstruction was layered reoccupation. The structural delta: hybrid_reading claims a genuine coordination anchor (morphology) that the other readings either universalize (continuity) or reject (discontinuity), while admitting extraction in syntax/lexicon that continuity_reading denies and discontinuity_reading universalizes."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "correct_latin_kernel__continuity_reading",
+      "correct_latin_kernel__discontinuity_reading"
+    ],
+    "dual_formulation_note": "This constraint decomposes the 'correct Latin' concept into three structurally distinct readings sharing the kernel 'correct_latin_kernel'. The continuity_reading claims near-zero extraction (mountain-like); the discontinuity_reading claims high extraction but frames it as necessary reoccupation (snare-like); the hybrid_reading claims mixed coordination/extraction (tangled_rope). The ε values differ substantially because the referent (what counts as 'correctness') is operationalized differently in each reading. They are linked via affects_constraints and cs_structure.reading_relations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "philologists_reconstructing_syntax",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Define the norms of 'correct' Latin syntax and lexicon through critical editions, grammars, and pedagogical materials. Control the apparatus criticus that marks medieval forms as 'corrupt' or 'restored'. Gain professional authority, editorial control, and disciplinary coherence from the reconstruction mandate. Can move between subfields (Classical, Medieval, Romance) — exit is arbitrage-grade because their expertise transfers across the constraint's boundary."
+    },
+    {
+      "name": "editors_establishing_critical_texts",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Produce critical editions that normalize morphology silently but flag syntactic/lexical 'corrections' in apparatus. Their editorial authority derives from the hybrid reading's mandate: they are the legitimate reconstructors. Exit is constrained — leaving the reconstruction framework means abandoning the critical edition paradigm that structures their field, but they could shift to diplomatic editions or manuscript-focused work."
+    },
+    {
+      "name": "scholars_claiming_continuity_through_morphology",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use morphological continuity as evidence that Latin 'remained Latin' — this legitimizes their work on medieval texts within Classical frameworks. But they pay when their syntactic analyses of medieval texts deviate from reconstructed norms; their work is marginalized if it treats medieval syntax as coherent rather than 'degenerate'. Exit is constrained: they can pivot to Romance linguistics or medieval Latin studies, but the hybrid reading's authority shapes funding, publication, and hiring across all Latin-adjacent fields."
+    },
+    {
+      "name": "medieval_manuscript_forms_discarded_as_corrupt",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The actual manuscript witnesses — their spellings, word orders, vocabulary choices, syntactic constructions — are systematically normalized in critical editions, marked as 'corrupt' in grammars, and excluded from 'correct Latin' corpora. They have no voice; their authority is overridden by the reconstruction norm. Exit is trapped: the manuscripts cannot speak, and the scholars who might defend them are disciplined by the same constraint."
+    },
+    {
+      "name": "vernacular_developments_treated_as_deviations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Early Romance forms emerging in medieval Latin texts (prepositional case replacement, analytic verb forms, lexical innovations) are framed as 'degeneration' or 'corruption' of Latin rather than as the birth of new languages. The hybrid reading's syntax/lexicon reconstruction treats these as errors to be corrected. Exit is trapped: the vernaculars cannot retroactively change how their Latin-stage forms were classified, and Romance linguistics emerged partly in reaction to this framing."
+    },
+    {
+      "name": "scholars_reading_medieval_latin_on_its_own_terms",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Medieval Latin specialists who treat medieval syntax, vocabulary, and orthography as coherent systems rather than deviations from a Classical norm. They are structurally excluded from 'mainstream' Classical philology, critical edition series, and Latin pedagogical canon. Their exit is identity_locked: their professional identity is constituted through reading medieval Latin as a legitimate system; leaving the field means abandoning the intellectual project that defines them, but staying means permanent marginalization by the hybrid reading's authority."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared scaffold for Latin textual work: morphological continuity allows philologists across periods to communicate, edit, and teach using a stable inflectional framework. The 'layered' premise coordinates effort by distinguishing what can be taken as given (morphology) from what requires active reconstruction (syntax/lexicon).",
+    "transfer_function": "Moves editorial authority and definitional power over Latin syntax and lexicon from medieval manuscript witnesses (and the vernacular developments they instantiate) to modern philologists and editors who reconstruct Classical norms. The transfer is legitimized by the morphological anchor: 'we keep what is continuous, we restore what is not'.",
+    "absent_voices": "Medieval scribes and authors (cannot speak); early Romance speakers (their Latin-stage productions classified as errors); contemporary scholars in non-European Latin traditions (Neo-Latin, missionary Latin, scientific Latin) whose textual practices don't fit the Classical/medieval binary — all would object to the 'corrupt' label but are not in the conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid reading vanished, critical editions would shift to diplomatic or multi-layered presentation; medieval Latin syntax would be studied as a coherent system; Romance emergence would be narrated as innovation rather than degeneration; the philological discipline would lose its central organizing distinction between 'continuous' and 'reconstructed' domains.",
+    "founding_problem": "The Carolingian and Renaissance reforms needed to restore a uniform Latin for administration, liturgy, and education across fragmented territories. Manuscripts showed massive variation in spelling, grammar, and vocabulary. The founding problem was: how to produce a single authoritative Latin from divergent witnesses?",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians of education (not philologists) attest that Latin's administrative/liturgical uniformity mandate ended by 1700 as vernaculars took over. The hybrid reading's persistence in 19th-21st century critical editions and pedagogical grammars serves disciplinary coherence, not the founding administrative problem. No non-beneficiary source attests the founding problem as live; the beneficiaries themselves (philologists) now frame the mandate as 'textual scholarship' rather than 'administrative uniformity'."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "correct_latin_kernel__continuity_reading",
+      "correct_latin_kernel__discontinuity_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "discontinuity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "morphology_provides_legitimate_scaffold_for_reconstruction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "syntax_lexicon_require_textual_recovery_from_classical_models",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "carolingian_renaissance_reform_mandate",
+    "drift_state": {
+      "moment": "contemporary_philological_practice",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__crown_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "remonstrance_crown",
+    "story_uid": "800f805d-3f99-4239-9d89-8ed2e534f9e6"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.65,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Parlementary Remonstrance as Illegitimate Minoritarian Veto",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parlementary_officers",
+      "venal_office_holders",
+      "provincial_estates_allied"
+    ],
+    "victims": [
+      "crown_fiscal_authority",
+      "royal_administration",
+      "taxpaying_subjects_without_representation"
+    ]
+  },
+  "interval": {
+    "start": 1648,
+    "end": 1789
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the crown_reading of remonstrance_authority a distinct constraint from the magistrate_reading, or are they observer perspectives on one constraint?",
+      "resolution_mechanism": "Apply ε-invariance test: if the crown reading's extraction (0.78) and the magistrate reading's extraction differ structurally — different beneficiary/victim sets, different enforcement logic — they are distinct constraints linked by network.affects_constraints.",
+      "impact": "Confirms this story instantiates one reading of a contested kernel; sibling reading is a separate constraint file.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to ε-invariance across kernel readings"
+    },
+    {
+      "id": "naturalness_of_remonstrance_claim",
+      "question": "Does the parlementary claim that remonstrance protects 'ancient liberties' reflect a genuine historical continuity, or is it a constructed privilege serving officer interests?",
+      "resolution_mechanism": "Comparative institutional analysis: trace the expansion of remonstrance from exceptional political crises (1648-1652) to routine fiscal obstruction (1661-1789); assess whether the 'ancient liberties' cited correspond to verifiable pre-1648 practice or were retroactively invented.",
+      "impact": "If constructed, the constraint is a snare using historical framing as cover; if genuine continuity with mutated function, it is a tangled_rope with degraded coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Natural-law vs constructed privilege ambiguity in parlementary self-justification"
+    },
+    {
+      "id": "crown_victimhood_authenticity",
+      "question": "Is the Crown's fiscal paralysis under remonstrance genuine extraction from a sovereign authority, or is the Crown a powerful actor strategically portraying itself as victim to centralize power?",
+      "resolution_mechanism": "Counterfactual fiscal modeling: compare actual revenue shortfalls during remonstrance standoffs (1652, 1673, 1718, 1763, 1787-88) against the Crown's alternative revenue capacity (domains, loans, extraordinary taxes). If shortfalls were survivable, Crown victimhood is strategic framing.",
+      "impact": "If Crown victimhood is strategic, the snare classification still holds (extraction from taxpaying subjects persists) but the beneficiary/victim map shifts: Crown becomes agenda_setter using remonstrance as pretext for absolutism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Crown fiscal victimhood is structural or performative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1661,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1715,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1763,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1787,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1661,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1715,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1763,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1787,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1661,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1715,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1763,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1787,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the Ancien Régime, the Parlement of Paris (and provincial parlements) claimed a 'right of remonstrance' — the power to refuse registration of royal edicts, forcing the King to either withdraw the measure or impose it via a lit de justice. The crown_reading frames this as an illegitimate minoritarian veto: venal office-holders (who purchased their positions) used remonstrance to block fiscal reforms that threatened their tax exemptions and office values, while claiming to defend 'ancient liberties.' The constraint persisted because the Crown lacked the administrative capacity to bypass parlementary registration without political crisis, and because the parlements successfully framed their particularist interests as constitutional principle. Extraction falls on the royal fisc (blocked reforms) and on unrepresented taxpayers (who bore the burden of unreformed taxation). The magistrate_reading inverts this: remonstrance is the fundamental constitutional mechanism preserving liberty against arbitrary innovation. These are not the same constraint viewed differently — they have different ε, different beneficiary/victim structures, different enforcement logics. They are linked as a constraint family.",
+    "logic_rationale": "Extraction is high (0.78 by 1789) because remonstrance systematically blocked fiscal rationalization, forcing the Crown into expensive loans and regressive taxation that fell on those without parlementary protection. Suppression is substantial (0.65) because the Crown's only counter-move was the lit de justice — a performative, costly, and politically dangerous override that parlements treated as tyranny, enabling them to mobilize public opinion. Theater ratio rises from 0.15 to 0.42: early remonstrances (Fronde era) addressed genuine governance crises; later remonstrances became ritualized obstruction of any reform threatening officer privileges. Resistance is high (0.72) because the Crown repeatedly attempted to suppress or circumvent remonstrance (Maupeou reform 1771, various lit de justice sessions), but the parlementary corps survived through institutional solidarity and public opinion management.",
+    "directionality_logic": "Parlementary officers are beneficiaries (d ≈ 0.15): they collect rents from venal offices, control registration, and frame their interest as constitutional duty. The Crown is a victim (d ≈ 0.85) when thwarted: its fiscal authority is extracted from, but it retains the nuclear option (lit de justice) — a constrained victim with high power but high exit cost. Taxpaying subjects without representation are full victims (d ≈ 0.95): they bear the fiscal consequences of blocked reform with zero voice in the remonstrance process. Provincial estates allied with parlements are secondary beneficiaries (d ≈ 0.3): they gain leverage over royal taxation but remain subordinate to parlementary leadership.",
+    "perspectival_gap": "The magistrate_reading computes a different type from the same structural facts because its declared beneficiaries (the 'nation' represented by magistrates) and victims (subjects of arbitrary power) invert the crown_reading's map. The engine will compute per-seat classifications from each story's declared beneficiary/victim arrays — the crown_reading produces snare for the taxpaying subject seat; the magistrate_reading will produce rope or mountain for the same seat. This divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (protecting subjects from arbitrary royal innovation during minorities and regencies) was live in 1648 but dead by 1715 — the Crown had stabilized, fiscal needs were chronic, and remonstrance had become a tool of officer corporatism. The arrangement persisted 74 years past its founding problem's death because the officer corps controlled the registration gate and the Crown lacked a substitute administrative pathway. This is mandatrophy resolved as snare: a coordination mechanism (checking arbitrary power) that became pure extraction (blocking necessary reform for private benefit).",
+    "kernel_context": "This constraint is the crown_reading of the contested kernel remonstrance_authority. The sibling reading is magistrate_reading (remonstrance as fundamental constitutional mechanism preserving ancient liberties). The crown_reading declares high extraction on royal fiscal authority, Crown in victim set, magistrate legitimacy suppressed as obstruction. The magistrate_reading will declare low extraction, magistrates as constitutional guardians, Crown as potential tyrant. These are distinct constraints linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "remonstrance_authority__magistrate_reading",
+      "royal_fiscal_authority",
+      "venal_office_system",
+      "lit_de_justice_mechanism"
+    ],
+    "dual_formulation_note": "Constraint family decomposition: remonstrance_authority kernel splits into crown_reading (high ε, Crown victim, snare) and magistrate_reading (low ε, magistrates as guardians, likely rope/tangled_rope). The crown_reading's ε (0.78) and the magistrate_reading's ε will differ structurally — different beneficiary/victim sets, different enforcement logic. Not observable-dependent measurement of one constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "parlementary_officers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Venal office-holders who purchased their positions; remonstrance protects the value of their offices and their tax exemptions. They control the registration gate and frame their corporatist interest as constitutional duty. Exit means selling office (capital loss) or resigning (status loss); constrained by sunk investment and professional identity."
+    },
+    {
+      "name": "venal_office_holders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The broader corps of office-holders (not just parlementaires) whose office values depend on the fiscal status quo. They mobilize in solidarity with parlementary remonstrances because royal fiscal reform threatens the entire venal system. Their agenda-setting role is collective: they define what counts as 'attack on property' to include any tax on office value."
+    },
+    {
+      "name": "provincial_estates_allied",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Provincial estates (Pays d'états) that negotiated tax privileges with the Crown; they ally with parlements to block uniform taxation that would erode their negotiated advantages. They benefit from remonstrance as a veto on royal fiscal unity but are subordinate to parlementary leadership in the obstruction coalition."
+    },
+    {
+      "name": "crown_fiscal_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The royal treasury and its ministers; remonstrance blocks edicts needed for revenue, forcing reliance on expensive loans (rentes) and regressive taxes. The Crown has the lit de justice override but using it incurs political crisis and legitimacy costs. Exit from the constraint means either surrendering fiscal autonomy (unthinkable for a sovereign) or destroying the parlementary institution (Maupeou 1771 — temporarily successful but politically catastrophic)."
+    },
+    {
+      "name": "royal_administration",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Intendants and financial officers who execute royal policy; their reform initiatives are routinely blocked by remonstrance, undermining administrative competence and creating perverse incentives (e.g., farming taxes to private financiers at high cost). They are victims of the constraint's obstruction but also its enforcers when lit de justice is used — a dual position captured by secondary_role in other stories, here rendered as institutional victimhood."
+    },
+    {
+      "name": "taxpaying_subjects_without_representation",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The Third Estate — peasants, urban workers, bourgeois not in venal offices — who bear the fiscal burden of blocked reforms (taille, gabelle, vingtièmes) but have no voice in remonstrance. They cannot exit the fiscal system; emigration is legally restricted and economically impossible. They are the silent payers of the extraction that remonstrance enables."
+    },
+    {
+      "name": "philosophes_and_public_opinion",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enlightenment writers (Voltaire, Montesquieu, Turgot, Necker) who analyzed remonstrance as either constitutional safeguard or aristocratic obstruction. They shaped the interpretive frame but held no formal power in the registration process. Their exit is analytical: they observe from outside the constraint's operational mechanics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Originally: checking arbitrary royal innovation during regencies and minorities by requiring parlementary registration of edicts — a procedural brake on executive overreach. By 1661, this had mutated into a routine veto on fiscal policy.",
+    "transfer_function": "Moves fiscal authority from the Crown (which needs revenue for state functions) to the parlementary corps (which extracts registration compliance as rent) and to venal office-holders (who preserve tax exemptions). The transfer is not monetary but institutional: the Crown pays in political capital and borrowing costs; officers collect in protected privilege.",
+    "absent_voices": "The taxpaying Third Estate — peasants, workers, unrepresented bourgeois — who would object to the fiscal paralysis if they had a seat. They are structurally excluded: the remonstrance process has no popular representation, and the parlements actively claimed to speak for 'the nation' while blocking reforms that would have benefited the actual nation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If remonstrance vanished overnight (as it briefly did under Maupeou 1771-1774), the Crown could register fiscal edicts without parlementary consent, enabling tax reform and reducing borrowing costs. The venal office system would lose its primary political protection. The state's fiscal-military capacity would increase. The world rearranged — which is why the Crown eventually destroyed the constraint (1789) and why the parlements fought to restore it (1774).",
+    "founding_problem": "During the Fronde (1648-1652), the minority of Louis XIV created a vacuum where royal authority could be exercised arbitrarily by regents and ministers. The Parlement of Paris claimed the right to remonstrate as a check on this arbitrariness, protecting subjects from unauthorized taxation and jurisdictional innovation.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (checking arbitrary power during a minority) is attested as dead by the Crown's own ministers (Colbert, Richelieu's legacy) and by the parlements' own practice: after 1661, Louis XIV ruled personally and remonstrance continued against his deliberate policies, not regency arbitrariness. No corroborating source outside the parlementary corps claims the founding problem remained live after 1715. The magistrate_reading's corroboration (that arbitrary innovation remains a permanent threat) is the sibling's self-assertion, not external corroboration."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "magistrate_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "remonstrance_as_venal_privilege_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "sovereign_fiscal_autonomy_as_constitutional_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "fronde_era_remonstrance_as_emergency_brake",
+    "drift_state": {
+      "moment": "pre_revolutionary_parlementary_obstruction",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

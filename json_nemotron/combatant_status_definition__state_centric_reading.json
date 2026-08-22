@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__state_centric_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_combatant_status_definition__state_centric_reading",
+    "measurement_id_prefix": "combatant_status_state_centric",
+    "story_uid": "98b15002-50fe-491e-9b2b-4fe866e0be4b"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.91,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.73,
+    "claimed_type": "snare",
+    "human_readable": "Combatant Status Definition — State-Centric Reading",
+    "topic_domain": "international_humanitarian_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_militaries",
+      "state_prosecutorial_authorities"
+    ],
+    "victims": [
+      "non_state_fighters",
+      "detained_insurgents",
+      "national_liberation_combatants"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_frame",
+      "question": "Is the combatant status definition a single natural legal category, or does it instantiate multiple structurally distinct constraints depending on which reading governs?",
+      "resolution_mechanism": "Decompose the kernel into separate constraint stories per reading; verify ε differs materially across readings (state-centric reading: high ε for non-state fighters; functional reading: low ε for all detainees). If ε differs, the kernel is a family of constraints, not one constraint with measurement variance.",
+      "impact": "If the kernel decomposes, the state-centric reading is one constraint in a family with national_liberation_reading and functional_protection_reading, linked by network.affects_constraints. This story is that family member.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the combatant status kernel is a single constraint or a constraint family with per-reading ε"
+    },
+    {
+      "id": "suppression_mechanism_in_i_hl",
+      "question": "Is the suppression of non-state fighters' POW claims structural (treaty text, state practice, prosecutorial power) or internalized (non-state actors accepting criminalization as legitimate)?",
+      "resolution_mechanism": "Post-conflict legal trajectory: if non-state fighters continue to claim POW status and resist domestic prosecution after conflict ends, suppression has structural and internalized components. Track whether resistance persists after the extractive mechanism (state prosecutorial power) is removed.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the criminalization with them after conflict. This affects resistance measurements and mandatrophy analysis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the combatant status definition"
+    },
+    {
+      "id": "article_4_vs_ap1_art1_4_tension",
+      "question": "Does the state-centric reading's reliance on Article 4 GC III structurally foreclose AP I Article 1(4) national liberation movements, or do the two readings coexist in state practice?",
+      "resolution_mechanism": "Examine state practice and jurisprudence: do states that reject AP I Article 1(4) also treat national liberation fighters as criminals under domestic law (forecloses), or do they extend some protections without conceding combatant status (coexists_with/influences)?",
+      "impact": "Determines the reading_relations between state_centric_reading and national_liberation_reading in cs_structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether state-centric reading forecloses national liberation reading or they coexist"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1949,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1949,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1949,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.91
+    }
+  ],
+  "interval": {
+    "start": 1949,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the state-centric reading of the combatant status kernel: combatant status and POW protections under Geneva Convention III Article 4 require formal membership in state armed forces meeting four criteria (command structure, fixed distinctive sign, open carrying of arms, compliance with laws of war). Non-state actors — insurgents, national liberation movements, organized armed groups — are categorically excluded from POW status and may be prosecuted under domestic criminal law for mere participation in hostilities. The reading is the operative framework for most states not party to Additional Protocol I, and for all states regarding non-international armed conflicts. The high extractiveness (0.82) reflects the transfer of legal immunity from non-state fighters to state authorities; the high suppression (0.91) reflects the active prosecutorial machinery that maintains the exclusion. Theater is low (0.12) — the Article 4 criteria are applied straightforwardly, not performatively.",
+    "key_agents": [
+      "state_militaries: Primary beneficiary (institutional/arbitrage) — receive full Geneva protections, immunity from prosecution for lawful acts of war",
+      "state_prosecutorial_authorities: Primary beneficiary (institutional/arbitrage) — retain jurisdiction to prosecute non-state fighters under domestic law",
+      "non_state_fighters: Primary victim (powerless/trapped) — denied POW immunity, subject to criminal prosecution for participation in hostilities",
+      "detained_insurgents: Primary victim (powerless/trapped) — denied GC III protections, held without combatant privilege",
+      "national_liberation_combatants: Primary victim (organized/trapped) — fighting colonial/occupation regimes but excluded from combatant status under this reading",
+      "international_courts: Observer (institutional/analytical) — adjudicate status disputes but lack enforcement power over state practice",
+      "icrc: Observer (institutional/analytical) — monitors compliance, advocates for functional protections"
+    ],
+    "logic_rationale": "The constraint operates as a snare: it presents itself as a neutral legal classification (Article 4 criteria) but structurally extracts legal immunity from non-state actors and transfers prosecutorial power to states. The coordination function (clear status categories for detention and targeting) is real but thin — the same clarity could be achieved by a functional definition. The extraction is the criminalization of non-state participation in hostilities, which serves state monopoly on violence. Suppression is high because the exclusion is maintained by active prosecutorial practice, not passive neglect. The low theater ratio reflects that Article 4 is applied as-written; there is little performative gap between the rule's text and its operation. Resistance is significant (0.73) from non-state actors, ICRC advocacy, and AP I parties, but has not shifted the core exclusion.",
+    "perspectival_gap": "From the state military seat (beneficiary, institutional power, arbitrage exit), the constraint is a rope — it provides clear coordination of who qualifies for protections and who may be targeted. From the non-state fighter seat (victim, powerless, trapped), the same constraint is a snare — it denies protections available to functionally identical actors and enables prosecution. The engine computes this divergence from the structural data: beneficiaries have d near 0 (full beneficiary), victims have d near 1 (full target). The national liberation combatant seat (organized but trapped by the Article 1(4) exclusion) experiences the constraint as a snare with slightly higher resistance capacity but no effective exit.",
+    "directionality_logic": "Beneficiaries: state_militaries and state_prosecutorial_authorities — both institutional actors with arbitrage-grade exit (they write and enforce the rules). They collect the constraint's gains: legal immunity for state forces, prosecutorial jurisdiction over non-state actors. Victims: non_state_fighters, detained_insurgents, national_liberation_combatants — all powerless or organized but trapped (no exit from the legal classification; identity as 'fighter' is locked to the conflict). The prosecutorial authority is the agenda_setter (administers the domestic law enforcement). The ICRC and international courts are observers (analytical exit). No directionality overrides needed — the beneficiary/victim structure plus exit options derives correct d values.",
+    "mandatrophy_analysis": "The founding problem (1949): distinguishing lawful combatants from francs-tireurs and civilians in interstate war to protect civilians and provide clear detention categories. That problem is contested — interstate war is rarer, non-international conflicts dominate, and the Article 4 criteria map poorly to modern asymmetric conflicts. The constraint persists not because the founding problem is live, but because it secures state monopoly on legitimate violence and prosecutorial convenience. This is a resolved mandatrophy: the arrangement has outlived its coordination function but persists by extracting from those it classifies as outside the law.",
+    "kernel_context": "This constraint is the state_centric_reading of the combatant_status_definition kernel. Sibling readings: national_liberation_reading (extends combatant status to organized non-state groups fighting colonial/occupation/racist regimes under AP I Art 1(4)), functional_protection_reading (all detained persons receive Common Article 3 minimum protections regardless of status). This reading (state_centric) instantiates high ε for non-state fighters (no POW immunity, subject to domestic prosecution) and low ε for state militaries (full Geneva protections). The kernel is a constraint family — each reading is a separate constraint story with its own ε, linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__national_liberation_reading",
+      "combatant_status_definition__functional_protection_reading",
+      "pow_protections_scope",
+      "domestic_prosecution_of_combatants"
+    ],
+    "dual_formulation_note": "The combatant_status_definition kernel decomposes into three constraint stories: state_centric_reading (this file), national_liberation_reading, functional_protection_reading. They share the same referent (GC III Article 4 + AP I Art 1(4) + CA3) but author different ε values and different beneficiary/victim structures because they instantiate structurally distinct claims about who qualifies for combatant status. The state-centric reading is upstream — it is the default framework that the other two readings react against or qualify."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.92
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_militaries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Receive full GC III POW protections: immunity from prosecution for lawful acts of war, humane detention standards, repatriation rights. Their status is automatic by virtue of state membership and Article 4 compliance. They face no risk of criminal prosecution for participation in hostilities. Exit from the constraint is irrelevant — they are its primary beneficiaries and authors."
+    },
+    {
+      "name": "state_prosecutorial_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administer and enforce the combatant status definition through domestic criminal law. Retain jurisdiction to prosecute non-state fighters for mere participation in hostilities (treason, terrorism, sedition statutes). They set the prosecutorial agenda, control the courts, and determine whether captured fighters face criminal trial. The constraint's persistence depends on their active enforcement."
+    },
+    {
+      "name": "non_state_fighters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Fighters in non-state armed groups (insurgents, rebels, militia) who participate in hostilities but lack state military status. Denied POW immunity under this reading — subject to prosecution under domestic criminal law for acts that would be lawful if committed by state soldiers. No exit from the classification: their identity as 'fighter' is constituted by the conflict itself, and they cannot renounce it to avoid prosecution. Bear the full extractive weight of the constraint."
+    },
+    {
+      "name": "detained_insurgents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-state fighters captured during hostilities. Held without GC III protections: no guaranteed humane treatment standards, no prohibition on adverse distinction, no right to repatriation. Subject to domestic criminal prosecution, often in military or special courts with reduced due process. Their detention status is entirely at the captor state's discretion. No exit — they are physically detained and legally classified by the constraint."
+    },
+    {
+      "name": "national_liberation_combatants",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Organized armed groups fighting colonial domination, alien occupation, or racist regimes (AP I Art 1(4) wars of national liberation). Under this reading, they are denied combatant status despite meeting functional criteria (command structure, distinctive sign, open arms, law of war compliance). They are structurally excluded from the POW framework that AP I would extend to them. Their political identity as liberation fighters is locked to the conflict — they cannot exit the classification without abandoning their cause. They bear high extraction (criminalization) with slightly more organizational resistance capacity than isolated insurgents."
+    },
+    {
+      "name": "international_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "ICJ, ICC, and regional human rights courts adjudicate combatant status disputes and review detention legality. They interpret GC III, AP I, and customary IHL but lack direct enforcement power over state prosecutorial practice. Their judgments create interpretive pressure but do not override domestic criminal jurisdiction. They see the full structural picture but cannot change the constraint's operation."
+    },
+    {
+      "name": "icrc",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International Committee of the Red Cross monitors detention conditions, visits prisoners, and advocates for functional protections (Common Article 3 minimums) regardless of status. It operates in the gap between the state-centric reading's formal exclusions and the functional reality of detention. It has analytical exit but no power to alter the legal classification. Its presence is the primary resistance vector against the constraint's full suppression."
+    }
+  ],
+  "gain_flow": "state_prosecutorial_authorities",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a clear, bright-line legal classification distinguishing lawful combatants (state militaries meeting Article 4 criteria) from unlawful participants in hostilities, enabling targeting rules, detention regimes, and prosecutorial clarity in interstate armed conflict.",
+    "transfer_function": "Transfers legal immunity from non-state fighters to state authorities: non-state fighters lose POW protections and become prosecutable under domestic law; state militaries retain full immunity; state prosecutorial authorities gain jurisdiction over a category of persons (enemy fighters) who would otherwise be immune.",
+    "absent_voices": "Non-state fighters and national liberation combatants are structurally excluded from the treaty-making and interpretive processes that define combatant status. They would object to their criminalization but have no seat at the diplomatic table. Civilian populations in non-international conflicts are also absent — they bear the humanitarian consequences when the constraint incentivizes states to deny protections to all non-state actors.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the state-centric combatant status definition vanished overnight, non-state fighters would immediately claim POW protections or at least functional equivalents; states would lose automatic prosecutorial jurisdiction over enemy fighters; detention regimes would have to default to Common Article 3 or human rights law minimums; the legal architecture of 'unlawful combatant' would collapse. The international legal order around detention and targeting would reorganize around functional criteria rather than formal state membership.",
+    "founding_problem": "1949 diplomatic conference: distinguishing lawful combatants from francs-tireurs and civilians in interstate war to protect civilian populations from the consequences of irregular warfare and to provide clear categories for detention and targeting.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State militaries and prosecutorial authorities attest the problem remains live — irregular warfare persists and clear categories are needed. ICRC, international courts, and AP I parties attest the founding problem is substantially transformed — modern conflicts are predominantly non-international, the state/non-state binary maps poorly, and the Article 4 criteria exclude functionally identical fighters from protections. No disinterested third party corroborates the founding problem as originally framed without qualification."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "national_liberation_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "functional_protection_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "combatant_status_requires_state_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "article_4_criteria_are_exhaustive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "id_1949_geneva_convention_iii_article_4",
+    "drift_state": {
+      "moment": "post_ap_i_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

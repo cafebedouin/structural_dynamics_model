@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "commerce_clause_scope__intermediate_channels",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ef4b9448-2b82-47b2-805f-ebe0781cfb6e"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Commerce Clause Scope — Intermediate Channels Reading (Tripartite Framework with Limiting Principles)",
+    "topic_domain": "constitutional/legal/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "federal_government",
+      "state_governments",
+      "national_market_participants"
+    ],
+    "victims": [
+      "intrastate_economic_actors",
+      "local_noncommercial_conduct_subjects"
+    ],
+    "vindicated_propositions": [
+      "enumerated_powers_doctrine",
+      "dual_sovereignty_federalism"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.34,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "one_reading_of_commerce_kernel",
+      "question": "This constraint instantiates only the intermediate_channels reading of the commerce_clause_scope kernel ('Congress shall have power to regulate commerce among the several states'). How would the sibling readings — narrow_originalist and broad_effects_test — change the structural data if instantiated as their own stories?",
+      "resolution_mechanism": "Generate the sibling stories and compare victim sets, epsilon, and per-seat classifications: narrow_originalist shrinks federal reach to trade crossing state lines (epsilon collapses toward zero for the federal seat; states become near-full beneficiaries); broad_effects_test deletes the categorical limits (aggregation reaches all conduct with cumulative impact; the victim set expands to all local conduct and federal extractiveness rises).",
+      "impact": "The classification computed here is valid only for this reading. A corpus that averaged across readings would manufacture a constraint with no stable epsilon; the kernel must decompose into three linked stories.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: kernel membership, reading identity, and sibling structural deltas."
+    },
+    {
+      "id": "economic_noneconomic_line_stability",
+      "question": "Is the economic/non-economic distinction stable enough to bear the weight of the limiting principles (including the ban on regulation via attenuated causal chains), or is it inherently manipulable — classifying gun possession near a school as non-economic, homegrown cannabis as economic, depending on the outcome sought?",
+      "resolution_mechanism": "Track classification outcomes across novel regulatory domains (cybercrime, health-insurance mandates, environmental discharge) and test whether the economic label tracks the character of the conduct or the policy preference of the majority; if the latter, the line is performative.",
+      "impact": "If the line is unstable, the limiting principles are theater rather than limits, the reading collapses toward broad_effects_test in operation, and the effective victim set expands to all local conduct. This omega carries the manifest's 'conceptual coherence' harm in actor terms: litigants bear the cost of unpredictable classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the doctrinal line doing the limiting work is real or outcome-driven."
+    },
+    {
+      "id": "aggregation_outer_boundary",
+      "question": "Does aggregation of cumulative effects have an outer boundary, or does the Wickard-to-Raich trajectory (home-consumed wheat, then homegrown medicine) extend until every intrastate activity counts toward a national total?",
+      "resolution_mechanism": "Identify a class of intrastate economic conduct the Court refuses to aggregate, or establish across successive cases that no such class survives.",
+      "impact": "With no outer boundary, the third category swallows the limiting principles from inside: the reading's distinguishing axiom (aggregation for economic activity only, bounded) fails and the operative constraint becomes the broad_effects_test sibling.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cumulative-effect reasoning is bounded or totalizing."
+    },
+    {
+      "id": "jurisdictional_element_substance",
+      "question": "Do the jurisdictional elements required after the school-zone and violence-against-women decisions impose genuine proof burdens, or do they function as boilerplate recitals ('in or affecting interstate commerce') that prosecutors plead and courts never test?",
+      "resolution_mechanism": "Sample post-1995 federal statutes and indictments; measure how often the jurisdictional element is contested, what quantum of evidence satisfies it, and whether any charge fails for want of a genuine nexus.",
+      "impact": "If elements are boilerplate, the nominal limit is satisfied by drafting convention rather than adjudication — the theater component of the measured ratio understates nothing and the Lopez-style protection of local conduct is nominal only.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the jurisdictional-element requirement is substantive or ceremonial."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The intermediate_channels reading holds that federal commerce power extends to three things — the channels of interstate commerce, instrumentalities and persons/things in interstate commerce, and activities substantially affecting interstate commerce — while insisting the third category is fenced by categorical limiting principles: non-economic local conduct is beyond reach absent a jurisdictional element, aggregation counts only economic activity, and Congress may not regulate through attenuated causal chains. The arrangement coordinates genuinely (a continental economy needs national commercial governance, and the categories tell Congress which problems are national) and extracts asymmetrically through the same structure (comprehensive federal schemes reach purely local producers via cumulative-effect accounting, and regulatory jurisdiction migrates from states to Washington). The claim/metric gap is deliberate: the reading CLAIMS a bounded, principled allocation while the authored metrics describe a framework whose limits are increasingly maintained by recital rather than adjudication — the engine measures that divergence; do not reconcile the claim to the metrics. Temporal note: the interval runs from the school-zone decision (t0) to the present (t30), tracing the limiting principles from fresh enforcement through aggregation-revival to settled rhetorical status.",
+    "key_agents": [
+      "- federal_government: Agenda-setter and principal collector (institutional/constrained) — enacts and defends comprehensive schemes; gains jurisdiction with each surviving nexus recital",
+      "- supreme_court: Enforcement organ (institutional/constrained) — draws and polices the categorical lines; owns the boundary, cannot decline it",
+      "- state_governments: Dual-positioned (organized/constrained) — beneficiaries of the reserved spheres (family law, criminal law, education), payers of preemption in the economic sphere",
+      "- intrastate_economic_actors: Primary target (moderate/trapped) — local producers reached by cumulative-effect accounting; market withdrawal does not remove them from the tally",
+      "- local_noncommercial_conduct_subjects: Target at the margin (powerless/trapped) — non-commercial conduct exposed where a jurisdictional allegation is pleaded around the categorical exclusion",
+      "- national_market_participants: Beneficiary with leverage (powerful/arbitrage) — uniform federal rules lower national operating costs; forum-shop between the two levels",
+      "- local_criminal_justice_systems: Excluded voice (organized/trapped) — caseload reallocated to federal dockets without a seat in the doctrinal conversation",
+      "- legal_academy: Analytical observer (moderate/analytical) — maps where the categories absorb conduct and keeps the doctrinal ledger"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.55 (medium, per the manifest's expected delta): the economic sphere is extensively federalized and cumulative-effect accounting reaches deliberately local producers, but the categorical exclusions do carve out real protected zones. Suppression is 0.45 — structural, unscaled: states and individuals subject to federal supremacy have no exit from it, but alternatives (state administration, compacts, cooperative federalism) persist and the framework leaves genuine regulatory space. Accessibility collapse is low-moderate (0.40) because the alternatives do not vanish on understanding the framework; resistance is moderate-high (0.60) reflecting continuous litigation by states, defendants, and challengers. Theater ratio 0.38: the limits occasionally strike statutes (real work) but increasingly survive as recitals. The temporal series share one grid ({0,6,12,18,24,30}) so every metric is authored at every examined point. The series tell one story: extractiveness rises to a peak when aggregation revives (t12) then plateaus; theater climbs as jurisdictional elements turn into drafting conventions; and suppression_requirement FALLS steadily (0.62 to 0.34) — active judicial enforcement of the limits decays as compliance normalizes, while structural suppression stays flat. That divergence is the point: a framework whose limits are enforced less and less but whose power persists unchanged is drifting toward maintenance-by-inertia of the limiting apparatus specifically, even as the underlying power remains fully functional.",
+    "perspectival_gap": "The seats should compute differently. From the federal seat the framework is a managed allocation it both exercises and submits to (it loses in court often enough to feel checked). From the intrastate producer's seat the same framework is an accounting method that converts local modesty into federal reach — exit-proof because withdrawal is itself the counted effect. From the states' seat it is double-edged: a wall protecting family and criminal law, and a door through which economic regulation departs. From the excluded local justice systems' seat the boundary is drawn entirely over their heads, announced through charging decisions. The engine computes these per-seat types from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Declarations map to directionality as follows. federal_government: agenda-setter and named beneficiary — jurisdictional gains accrue demonstrably to this seat (d near the beneficiary end). state_governments: declared beneficiary, but the derivation from beneficiary-plus-constrained-exit would push d too low; they carry preemption of their own economic rules and administer federal programs they did not design, so an override sets d to 0.35 (net beneficiary, materially burdened). national_market_participants: declared beneficiary with arbitrage-grade exit, which would drive d toward 0.0; but they bear the compliance costs of the schemes they benefit from and lobby both directions, so an override sets d to 0.2. intrastate_economic_actors and local_noncommercial_conduct_subjects: declared victims with trapped exit — d sits near the full-target end; the second group's victimhood is partial (the categorical exclusion shields most of their conduct) but where caught they bear the full weight, and the derivation handles this through the victim declaration rather than an override. supreme_court and legal_academy collect no rents and bear no transfer; they take the analytical/administrative seats the fallback supplies.",
+    "mandatrophy_analysis": "The founding problem — national commercial governance after the Articles' fragmentation — is live, so this is not a resolved mandate kept alive by habit. The tangled classification prevents mislabeling in both directions: calling this a pure coordination device erases the cumulative-effect victims and the jurisdictional migration the measurements record; calling it pure extraction erases the real coordination (uniform commercial rules, the states' genuinely protected spheres) and the fact that the limits sometimes strike statutes. The drift the temporal series traces is subtler than mandatrophy: the POWER remains functional while the LIMITS decay toward performance — a partial, asymmetric atrophy inside a live framework. If the limiting principles finish collapsing into recital, the honest successor story is the broad_effects_test sibling, not a piton: the framework will not be dead, only unchecked.",
+    "kernel_context": "Kernel: commerce_clause_scope — the single constitutional commitment 'Congress shall have power ... to regulate commerce ... among the several states.' This file instantiates the intermediate_channels reading: the tripartite framework (channels / instrumentalities / substantially-affecting activities) with categorical limiting principles, the line running from the early steamboat-era articulation through the school-zone and violence-against-women decisions to the homegrown-cannabis qualification. Siblings: narrow_originalist (commerce means trade crossing state lines; regulate means make regular, not restrict) and broad_effects_test (any activity with cumulative national economic impact is reachable; prohibition and comprehensive control included). Relation choices: this reading FORECLOSES narrow_originalist because the two assign incompatible meanings to the same word in the same text — this reading sustains comprehensive prohibitions reaching intrastate conduct, which the facilitate-only premise rules out; no single framework can hold both. It COEXISTS with broad_effects_test: both accept substantial-effects jurisdiction and a broad 'regulate'; they divide on whether categorical limits bind, a division held simultaneously by different justices and eras with no logical elimination of either side. Sibling instantiation would move the structural data sharply: narrow_originalist nearly empties the victim set and makes states near-full beneficiaries; broad_effects_test deletes the limits, expands victims to all local conduct, and raises federal extractiveness."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "commerce_clause_scope__narrow_originalist",
+      "commerce_clause_scope__broad_effects_test"
+    ],
+    "dual_formulation_note": "Constraint family decomposition per the epsilon-invariance principle: the colloquial label 'the commerce clause scope' covers three structurally distinct claims with different epsilon values, victim sets, and empirical status. The intermediate_channels reading (this file) is the middle position — bounded effects jurisdiction with categorical limits. The narrow_originalist sibling (upstream in textual warrant, downstream in doctrinal influence since the founding era) and the broad_effects_test sibling (downstream in reach, ascendant in operational practice since the aggregation revival) are separate stories. Each member links the others via affects_constraints; averaging across the family would fabricate a constraint with no stable epsilon."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.2
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacts statutes under the commerce power — comprehensive schemes governing agriculture, drugs, workplace conditions, public-accommodation access, environmental discharge — and defends their reach in court. Gains prosecutorial and regulatory jurisdiction each time a statute's nexus language survives review. Cannot relinquish the power unilaterally; when an adverse ruling closes one route, it reauthorizes through taxing and spending, as with the individual-mandate litigation."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decides which federal statutes exceed the commerce power: it has struck down a school-zone gun statute and a civil remedy for gender-motivated violence, and upheld comprehensive drug regulation reaching cannabis grown for personal home use. Owns the line-drawing; cannot decline the cases, cannot delegate the boundary, and revisits it whenever Congress drafts around the last ruling."
+    },
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Retain primary authority over family law, criminal law, education, and land use so long as the categorical limits hold, and litigate to defend that reservation. Simultaneously watch economic and environmental regulation migrate to Washington, ending up administering federal programs they did not design and seeing their own economic rules preempted. Secession and nullification are off the table; their tools are suits, interstate compacts, and bargaining inside cooperative-federalism arrangements."
+    },
+    {
+      "name": "intrastate_economic_actors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Farmers growing for home consumption, small producers selling to local customers, patients growing medicine for personal use — their conduct is local and modest in scale, but once classified as economic it counts toward cumulative national totals and places them inside federal regulatory schemes. Leaving the market does not remove them from the tally; the accounting method itself reaches the withdrawal."
+    },
+    {
+      "name": "local_noncommercial_conduct_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals whose conduct — possessing a firearm near a school, acts of interpersonal violence, home possession offenses — is not commerce, yet draws federal charge when a statutory allegation ties the incident to some object or person that once crossed a state line. Their protection is the categorical exclusion of non-economic conduct; their exposure is how easily a jurisdictional allegation can be pleaded around it."
+    },
+    {
+      "name": "national_market_participants",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Firms operating across state lines get one set of federal commercial rules instead of fifty, cutting the cost of national operations. They bear the compliance burdens of those same federal schemes, and they move between the levels as advantage shifts — pressing for preemption where state rules bind tighter, invoking state authority where federal rules bind tighter."
+    },
+    {
+      "name": "local_criminal_justice_systems",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "State prosecutors, courts, and defenders lose cases to federal dockets when federal prosecutors take gun, drug, and violence charges carrying heavier sentences. They hold no seat in the doctrinal conversation that reallocates their caseload; they learn the new boundary from charging decisions handed down in their own courthouses' shadow."
+    },
+    {
+      "name": "legal_academy",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Scholars and commentators map the doctrine's movements, document where the limiting principles bite and where they dissolve into recital, and supply the vocabulary both sides carry into litigation. They decide nothing, but they keep the ledger of what the categories have absorbed."
+    }
+  ],
+  "gain_flow": "federal_government",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Allocates regulatory authority between the national government and the states for a continental economy: the three categories tell Congress which problems are national in character, and the limiting principles reserve family law, criminal law, education, and land use to state institutions. Solves the collective-action failure of state-by-state commercial governance — conflicting tariffs, inconsistent rules, barriers against neighboring states.",
+    "transfer_function": "Moves regulatory jurisdiction — and with it enforcement power, criminal-liability exposure, and compliance burdens — from state institutions to federal institutions for economic conduct, while formally reserving non-economic local conduct to the states. Litigation costs of contesting the boundary fall on the parties whose conduct is classified.",
+    "absent_voices": "Local criminal justice systems would object that their caseload and sentencing authority are reallocated without representation; state legislatures whose economic regulations are preempted participate only through amicus briefs and invited testimony; defendants learn the boundary's new position from indictments rather than from any process in which they had a voice before it moved.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the framework vanished overnight, the constitutional validity of thousands of federal statutes — agricultural schemes, drug control, labor standards, environmental regulation — becomes uncertain at once; national market governance fragments into case-by-case relitigation; states would reclaim some spheres unevenly while Congress reroutes through taxing and spending; decades of settled enforcement expectations unwind.",
+    "founding_problem": "Under the Articles of Confederation, the national legislature could not govern commerce among the states: each state erected tariffs and navigation rules against its neighbors, the economy fragmented, and the 1787 Convention was called substantially to repair this. The commerce power — and the recurring question of where it stops — is the standing solution to that founding failure, redrawn each time the economy integrates a new domain.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: the ratification-era record (Federalist No. 42 attributing the Articles' failures to the want of a commercial power; contemporaneous documentation of state tariff wars in the 1780s congressional journals) and modern economic histories of the Confederation period written without stake in current doctrine. State governments — beneficiaries of the limiting principles — independently attest the founding problem was real, since they were the barrier-erectors the power was built to disarm."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "channels_instrumentalities_effects_with_categorical_limits",
+    "drift_state": {
+      "moment": "contemporary_post_aggregation_revival",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_originalist",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "broad_effects_test",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "categorical_limits_check_federal_power",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "economic_activity_is_aggregable_noneconomic_is_not",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

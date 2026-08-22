@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__parliamentary_constraint_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "story_uid": "0ca74079-2f5e-4691-8176-e9676443740d"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "President as Coordinated Executive Requiring Legislative Authorization (Fifth Republic Parliamentary Reading)",
+    "topic_domain": "constitutional_law/political_systems/comparative_government",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "legislative_majority",
+      "parliamentary_majority_party",
+      "prime_minister"
+    ],
+    "victims": [
+      "president"
+    ],
+    "vindicated_propositions": [
+      "parliamentary_supremacy_doctrine",
+      "responsible_government_principle",
+      "legislative_authorization_requirement"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_parliamentary_constraint",
+      "question": "Does this constraint instantiate a genuine parliamentary coordination mechanism, or is it a cover for legislative dominance over the executive?",
+      "resolution_mechanism": "Compare executive legislative success rates under unified vs. divided government; track whether presidential initiatives fail structurally or only when opposed by the Assembly majority.",
+      "impact": "If the constraint operates as genuine coordination, executive failure correlates with lack of Assembly support across all configurations. If it operates as legislative dominance, executive failure spikes only when the Assembly majority opposes the president's party.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the parliamentary constraint reading describes coordination or extraction"
+    },
+    {
+      "id": "presidential_victim_status_ambiguity",
+      "question": "When the Assembly withholds confidence or blocks legislation, does the president experience genuine extractive victimhood or merely the normal friction of democratic coordination?",
+      "resolution_mechanism": "Measure whether presidential policy capacity is structurally degraded (unable to pursue any agenda without majority consent) versus situationally blocked (specific proposals rejected on merits). Track whether the president retains independent domains of action (foreign policy, defense, appointments) that remain functional.",
+      "impact": "If victimhood is structural, the constraint reclassifies toward snare for the presidential seat. If victimhood is situational democratic friction, the constraint remains rope/coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether presidential constraint constitutes extraction or democratic coordination"
+    },
+    {
+      "id": "sibling_reading_cohabitation_delta",
+      "question": "How does the parliamentary constraint reading structurally relate to the cohabitation equilibrium reading — do they occupy different operational modes of the same kernel, or does one foreclose the other?",
+      "resolution_mechanism": "Analyze whether cohabitation periods (president and Assembly majority from opposing parties) instantiate a distinct equilibrium that the parliamentary reading cannot capture, or whether cohabitation is merely the parliamentary constraint operating under partisan opposition.",
+      "impact": "If cohabitation is a distinct equilibrium, the two readings coexist_with as live alternatives. If cohabitation is the parliamentary constraint under opposition, the parliamentary reading influences the cohabitation reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between parliamentary constraint and cohabitation equilibrium readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1958,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1962,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1958,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1962,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1958,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1962,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 1958,
+    "end": 2022
+  },
+  "commentary": {
+    "narrative_context": "The Fifth Republic Constitution (1958) establishes a dual-executive system where the President requires legislative authorization for domestic policy implementation. Under the parliamentary constraint reading, the President functions as a coordinated executive whose policy agenda depends on Assembly confidence and majority support. The Prime Minister, responsible to the Assembly, directs government action. The President's role is to arbitrate and ensure continuity, not to drive policy independently. This reading treats the constitutional arrangement as a genuine coordination mechanism solving the problem of executive accountability to the legislature — the classic parliamentary 'responsible government' principle adapted to a semi-presidential framework.",
+    "key_agents": [
+      "President: Primary target (institutional/constrained) — bears constraint when Assembly withholds support",
+      "Legislative Majority: Primary beneficiary (organized/constrained) — controls policy agenda through confidence mechanism",
+      "Prime Minister: Secondary beneficiary/agenda_setter (institutional/constrained) — directs government action with Assembly backing",
+      "Opposition Parties: Excluded (moderate/trapped) — would object but lack procedural leverage",
+      "Constitutional Council: Observer (analytical/analytical) — adjudicates constitutional disputes"
+    ],
+    "logic_rationale": "Base extractiveness is low (0.15) because the constraint primarily coordinates executive-legislative relations rather than extracting resources. The President's policy capacity is constrained, but this is the coordination function — not extraction for private benefit. Suppression is low-moderate (0.25): the constraint operates through constitutional procedures (confidence votes, legislative process) rather than coercion. Theater ratio is low (0.12): the coordination function is genuine and actively used. Accessibility collapse is moderate (0.45): alternative executive arrangements (cohabitation, presidential dominance) exist but are constitutionally structured. Resistance is moderate (0.35): presidents periodically test the boundaries (e.g., dissolution threats, Article 16 emergency powers) but the parliamentary constraint holds.",
+    "perspectival_gap": "From the legislative majority's seat, this is pure coordination (rope) — the mechanism that makes government accountable and effective. From the President's seat (especially under opposition Assembly), the same constraint registers as extraction — the President's democratic mandate is subordinated to Assembly confidence. The engine computes this divergence from structural data: the President has constrained exit (cannot dissolve Assembly at will, cannot govern without majority) while the legislative majority has mobile exit (can replace government, cannot easily replace President). The beneficiary/victim declarations map directly: legislative majority benefits (controls agenda), President bears costs (policy dependence).",
+    "directionality_logic": "The legislative majority and Prime Minister are declared beneficiaries — they collect policy control and executive implementation capacity. The President is declared victim when Assembly withholds confidence or blocks legislation — the President's policy agenda is extractively constrained by the Assembly majority. This is not symmetric: the President cannot govern domestically without majority consent, but the majority can govern (via Prime Minister) without presidential initiative. Exit options differentiate: President is constrained (fixed term, limited dissolution power, no alternative policy channel); legislative majority is constrained but with agenda control; Prime Minister is constrained (serves at Assembly pleasure). Directionality derivation: President d ≈ 0.7 (target), legislative majority d ≈ 0.2 (beneficiary), Prime Minister d ≈ 0.3 (beneficiary-leaning).",
+    "mandatrophy_analysis": "The founding problem (1958) was executive instability under the Fourth Republic — governments fell too frequently for coherent policy. The parliamentary constraint solved this by making the executive responsible to a stable Assembly majority while giving the President dissolution power and emergency authority. That founding problem (instability) is substantially resolved — Fifth Republic governments are stable. Yet the constraint persists with low extractiveness, suggesting it has not undergone mandatrophy into piton or snare. The coordination function remains live: the Assembly majority still requires a mechanism to direct government action. The constraint is not theatrical (low theater_ratio) and does not extract for private benefit. It remains a functioning rope.",
+    "kernel_context": "This constraint is the parliamentary_constraint_reading of the fifth_republic_constitution kernel. Sibling readings: hyper_presidential_reading (President as direct sovereign embodying national will, minimally constrained by legislature), cohabitation_equilibrium_reading (dual executive requiring negotiated authority allocation between president and prime minister when they come from opposing parties). This reading instantiates the constraint where the President's domestic policy role is coordination-dependent on Assembly confidence — the 'parliamentary' mode of the Fifth Republic's semi-presidential system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_republic_constitution__cohabitation_equilibrium_reading",
+      "fifth_republic_constitution__hyper_presidential_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the fifth_republic_constitution kernel. The parliamentary_constraint_reading (this file) treats the President as a coordinated executive requiring legislative authorization — low extraction, strong democratic constraint. The hyper_presidential_reading treats the President as a direct sovereign with minimal legislative constraint — higher presidential extractiveness, weaker democratic constraint. The cohabitation_equilibrium_reading treats the dual executive as requiring negotiated authority allocation during divided government — a distinct equilibrium with its own extraction/coordination profile. The ε values differ structurally: this reading authors ε≈0.15 (coordination-dominant); hyper_presidential authors ε≈0.45+ (extraction-dominant for presidential seat); cohabitation authors ε≈0.25-0.35 (negotiated allocation with mutual constraint)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "president",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds the presidency with a direct democratic mandate but requires Assembly confidence for domestic policy implementation. Cannot govern without legislative majority support. Has limited dissolution power (once per year, cannot dissolve during first year or under Article 16). Retains independent domains in foreign policy, defense, and certain appointments. When Assembly majority opposes, the President's domestic agenda is blocked — the constraint extracts policy capacity from this seat."
+    },
+    {
+      "name": "legislative_majority",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Controls the Assembly majority and through it the confidence mechanism. Directs government policy via the Prime Minister. Can withdraw confidence and force government resignation. Benefits from the constraint by controlling the domestic policy agenda. Exit is constrained — majority status depends on electoral cycles and party discipline."
+    },
+    {
+      "name": "prime_minister",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Directs government action and is responsible to the Assembly. Implements the legislative majority's policy agenda. Serves at the pleasure of the Assembly majority — can be replaced by a censure motion. Benefits from the constraint by holding executive implementation authority backed by legislative confidence. Exit is constrained by Assembly confidence."
+    },
+    {
+      "name": "opposition_parties",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold Assembly seats but lack majority. Can propose censure motions (rarely successful), amend legislation, and use parliamentary procedure. Structurally excluded from controlling the government agenda. Would object to the presidential constraint if it protects an opposing President, but lack procedural leverage to change the constraint itself."
+    },
+    {
+      "name": "constitutional_council",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates constitutional disputes including dissolution timing, Article 16 emergency powers, and legislative-executive boundary conflicts. Does not collect from or pay into the constraint. Provides the analytical seat that sees the full structure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves executive instability by making the government responsible to a stable Assembly majority while preserving a directly elected President with arbitration and continuity functions. The Prime Minister directs government action with Assembly confidence; the President ensures state continuity and guards the constitutional order.",
+    "transfer_function": "Moves policy implementation authority from the President (who holds the democratic mandate but lacks legislative confidence) to the Prime Minister and legislative majority (who hold confidence but lack direct democratic mandate for the executive). The President's policy capacity is transferred to the Assembly-backed government.",
+    "absent_voices": "Voters who elected the President on a policy platform but find that platform blocked by an Assembly majority from a different party — especially during cohabitation periods. They are not represented in the institutional mechanics of confidence and censure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the parliamentary constraint vanished overnight, the President would govern domestically without Assembly confidence — reverting toward Fourth Republic instability or toward hyper-presidential dominance. The Assembly majority would lose its primary lever over government policy. The dual-executive balance would collapse into either presidential dominance or parliamentary instability.",
+    "founding_problem": "The Fourth Republic (1946-1958) suffered chronic executive instability: 24 governments in 12 years, inability to pursue coherent policy, parliamentary fragmentation preventing stable majorities. The Fifth Republic was designed to stabilize executive authority while preserving parliamentary accountability.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Political scientists (Duverger, Huber, Siaroff) corroborate that the founding problem (executive instability) was substantially resolved by the Fifth Republic's design. The parliamentary constraint's coordination function remains live — Assembly majorities still require a mechanism to direct government action. No serious scholar argues the constraint has become purely extractive; the debate is over its modal operation (parliamentary vs. presidential vs. cohabitation), not its foundational legitimacy."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "fifth_republic_constitution"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hyper_presidential_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "cohabitation_equilibrium_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "president_requires_assembly_confidence_for_domestic_policy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "prime_minister_directs_government_action",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "responsible_government_principle_adapted_to_semi_presidentialism",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "gaullist_parliamentary_arbitration",
+    "drift_state": {
+      "moment": "contemporary_fifth_republic_practice",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "jcpoa_treaty_bindingness__transactional_provisional_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_jcpoa_treaty_bindingness__transactional_provisional_reading",
+    "story_uid": "310604fe-c154-4deb-a5ef-fcbfcb0ddc7f"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.35,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "JCPOA as Provisional Transactional Framework (Transactional Provisional Reading)",
+    "topic_domain": "international_law/nuclear_nonproliferation/treaty_compliance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "us_domestic_skeptics_coalition",
+      "israeli_security_establishment",
+      "iranian_hardline_faction"
+    ],
+    "victims": [
+      "iranian_civilian_economy",
+      "european_business_interests",
+      "multilateral_arms_control_architecture"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the transactional provisional reading a structurally distinct constraint from the binding multilateral and graduated compliance readings, or a rhetorical position on the same constraint?",
+      "resolution_mechanism": "Compare ε values and stakeholder structures across the three readings. If ε differs significantly (>0.15) or beneficiary/victim sets are disjoint, they are distinct constraints per ε-invariance.",
+      "impact": "If distinct, each reading gets its own constraint story with own classification. If same constraint, the three readings are observer positions on one constraint with one ε.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether kernel readings instantiate separate constraints or observer perspectives"
+    },
+    {
+      "id": "bad_faith_determination_mechanism",
+      "question": "What constitutes the unilateral determination of bad faith that voids the framework — is there a procedural standard, or is it purely political?",
+      "resolution_mechanism": "Analyze state practice: US 2018 withdrawal used IAEA-verified compliance as bad faith; compare with other treaty withdrawals citing material breach.",
+      "impact": "If purely political, the constraint is a snare (extraction cover). If procedural, it retains scaffold character with genuine sunset logic.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Nature of the bad faith trigger — procedural vs. political"
+    },
+    {
+      "id": "scaffold_transition_function",
+      "question": "What is the provisional framework transitioning TO — a permanent treaty, a new deal, or managed conflict?",
+      "resolution_mechanism": "Track post-JCPOA diplomatic proposals and Iranian nuclear trajectory. The transition target defines whether the scaffold's sunset clause is genuine or theatrical.",
+      "impact": "If no credible transition target exists, the scaffold classification collapses to piton (inertial maintenance) or snare (extraction cover).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the provisional framework has a genuine transition target"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the transactional provisional reading of the JCPOA: the agreement is a conditional, time-limited exchange of sanctions relief for nuclear constraints, voidable at will by any party that unilaterally determines the other has acted in bad faith. Under this reading, the JCPOA imposes minimal constraint on sovereign withdrawal — the US 2018 withdrawal and snapback of sanctions is the paradigmatic operation of this reading. The beneficiaries are domestic political coalitions in the US and Israel that opposed the deal, and Iranian hardliners who gain from the deal's collapse. The victims are the Iranian civilian economy (sanctions reimposition), European businesses that invested in reliance on the deal, and the multilateral arms control architecture (eroded credibility of negotiated non-proliferation agreements). The scaffold classification reflects the provisional, transitional intent: the JCPOA was explicitly a 10-15 year confidence-building arrangement meant to transition to a normal NPT relationship. The sunset clauses (provisions expiring at years 10, 13, 15) are structural, not rhetorical.",
+    "logic_rationale": "Base extractiveness is low (0.22 at interval end) because the transactional reading extracts little from compliant parties — the exchange is voluntary and reciprocal. However, extractiveness spiked to 0.48 at T=12 (US withdrawal/snapback) when sanctions reimposed extracted heavily from Iranian civilians and European firms. Theater ratio is high (0.45) because the provisional framework's compliance theater (IAEA monitoring, JCPOA Joint Commission meetings) increasingly performed the deal's vitality after US withdrawal while the substantive exchange had collapsed. Suppression is moderate (0.35) — the constraint does not coerce participation (Iran remained in the deal for a year post-US withdrawal) but the snapback mechanism suppresses exit alternatives for third parties. Accessibility collapse (0.4) reflects that alternatives (renegotiation, snapback, military action) remain conceptually available but politically costly. Resistance (0.55) is significant: Iran resisted snapback via graduated non-compliance; EU resisted via INSTEX and blocking statute.",
+    "directionality_logic": "The US (agenda_setter) sits at d≈0.15 — beneficiary of sovereign withdrawal right, but bears reputational cost. Iran (payer) sits at d≈0.85 — bears sanctions extraction, constrained exit (NPT withdrawal would escalate). EU (beneficiary/payer dual) sits near d≈0.5 — gains non-proliferation benefit, loses commercial investment. Israeli security establishment (beneficiary) at d≈0.1 — gains strategic freedom from constraint. Iranian hardliners (beneficiary) at d≈0.2 — gain domestic political capital from deal collapse. Iranian civilians (victim) at d≈0.9 — bear sanctions with no exit. European businesses (victim) at d≈0.7 — trapped by secondary sanctions. Multilateral architecture (victim) at d≈0.6 — eroded but not destroyed.",
+    "perspectival_gap": "The agenda_setter (US under this reading) experiences the constraint as a rope — a voluntary coordination mechanism it can exit at will. The payer (Iran) experiences it as a snare — extraction (sanctions) imposed despite compliance, with exit blocked by NPT consequences. The EU experiences it as a tangled rope — genuine coordination (non-proliferation) coupled with asymmetric extraction (secondary sanctions). The engine will compute these divergences from the structural data.",
+    "mandatrophy_analysis": "The scaffold's founding problem (confidence-building toward normal NPT status) is contested — the US reading says the problem persists (Iran's regional behavior, sunset provisions); Iran says the problem was solved until US withdrawal. The transition target (normal NPT relationship) was never reached. The constraint persists in degraded form (theater_ratio 0.45) — the JCPOA Joint Commission still meets, IAEA monitoring continues, but the core exchange is suspended. This is mandatrophy: the provisional framework outlived its transition function but was not formally dissolved.",
+    "kernel_context": "This constraint is the transactional_provisional_reading of kernel jcpoa_treaty_bindingness. Sibling readings: binding_multilateral_reading (JCPOA as binding treaty requiring consensus for modification), graduated_compliance_reading (JCPOA as scaled reciprocal commitment with proportional enforcement). This reading's structural delta: low constraint on unilateral withdrawal; sanctions reimposition follows national determination; Iranian violations justify immediate exit; beneficiaries are individual state sovereignty and domestic political coalitions opposing the deal."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "jcpoa_treaty_bindingness__binding_multilateral_reading",
+      "jcpoa_treaty_bindingness__graduated_compliance_reading",
+      "npt_article_vi_compliance",
+      "unsc_resolution_2231"
+    ],
+    "dual_formulation_note": "JCPOA treaty bindingness kernel decomposes into three constraint stories with distinct ε values and stakeholder structures. This reading (transactional_provisional) has ε=0.22 (low extractiveness when operating as intended, spiking at withdrawal). Binding multilateral reading would have lower ε (treaty as law). Graduated compliance reading would have moderate ε with reciprocal scaling. All three share the same referent (the JCPOA text and practice) but instantiate different constraints per ε-invariance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.5
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "united_states_executive",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Negotiated the JCPOA, implemented sanctions relief, and unilaterally withdrew in 2018 citing Iranian bad faith (ballistic missiles, regional proxies, sunset provisions). Reimposed comprehensive sanctions including secondary sanctions on third parties. Holds the sovereign right to determine compliance and exit. Bears reputational cost with allies but no material exit barrier."
+    },
+    {
+      "name": "iranian_government",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Accepted nuclear constraints (centrifuge limits, enrichment caps, IAEA monitoring) in exchange for sanctions relief. Remained in compliance for one year after US withdrawal (verified by IAEA), then began graduated non-compliance. Cannot exit the NPT without triggering Security Council referral and potential military action. Bears sanctions extraction whether compliant or not."
+    },
+    {
+      "name": "eu_e3_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Strong supporters of the JCPOA as non-proliferation achievement. Invested diplomatic capital and created INSTEX (special purpose vehicle) to maintain trade with Iran. Blocked US secondary sanctions via EU blocking statute but could not compel European firms to use INSTEX. Gains non-proliferation benefit; loses commercial credibility and investment when US snapback destroys the economic exchange."
+    },
+    {
+      "name": "iranian_civilian_economy",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bears the full force of reimposed sanctions: currency collapse, inflation, medicine shortages, unemployment. No political voice in compliance determinations. No exit — cannot leave Iran, cannot access global financial system. The constraint's extraction lands here regardless of Iranian government compliance."
+    },
+    {
+      "name": "european_business_interests",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Signed contracts and invested in Iran post-JCPOA (Total, Airbus, Siemens, Peugeot, etc.). Forced to exit by US secondary sanctions threat (loss of US market access). INSTEX was too limited (humanitarian only, small volume) to sustain commercial operations. Gains nothing from the constraint; loses sunk investment and market access."
+    },
+    {
+      "name": "multilateral_arms_control_architecture",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The JCPOA was a landmark of negotiated non-proliferation. Its unilateral voiding by a permanent Security Council member erodes the credibility of all future arms control agreements — why negotiate if compliance doesn't prevent sanctions? The constraint extracts credibility from the architecture to pay for sovereign withdrawal freedom."
+    },
+    {
+      "name": "israeli_security_establishment",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Opposed the JCPOA from negotiation through implementation. Lobbied US for withdrawal. Gains strategic freedom from constraint on military options against Iranian nuclear program. No cost from the constraint — does not participate in the exchange, only benefits from its collapse."
+    },
+    {
+      "name": "iranian_hardline_faction",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Opposed the JCPOA domestically (insufficient sovereignty, excessive inspections). Gains political capital from US withdrawal validating their critique. Uses deal collapse to argue for nuclear breakout and resistance economy. No material cost from constraint — only political benefit from its failure."
+    },
+    {
+      "name": "iaea_inspectorate",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Verifies Iranian compliance continuously (quarterly reports). Provides the factual baseline that all readings reference but interpret differently. No stake in the exchange; bears no extraction. The constraint's theater_ratio reflects the gap between IAEA-verified compliance and political determinations of bad faith."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates reciprocal sanctions relief for verified nuclear constraints, creating a confidence-building period (10-15 years) intended to transition Iran to normal NPT status without breakout capacity.",
+    "transfer_function": "Moves sanctions relief (oil revenue, financial access, commercial contracts) from P5+1 to Iran, in exchange for nuclear constraints (enrichment limits, centrifuge caps, monitoring) from Iran to P5+1. The transactional reading treats this as a conditional exchange voidable on bad faith determination.",
+    "absent_voices": "Iranian civil society (reformists, women's movement, labor) who supported the deal for economic opening but had no seat at the table. Global South states who rely on multilateral non-proliferation norms but were not parties. Future generations who inherit a weakened arms control architecture.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the transactional provisional framework vanished overnight, Iran would likely accelerate nuclear program (breakout), US/Israel would face military decision, EU would lose last diplomatic channel, NPT review cycles would fracture. The world rearranges because the constraint currently structures the entire Iran nuclear crisis management.",
+    "founding_problem": "The 2002-2013 Iran nuclear crisis: Iran's undisclosed enrichment program (Natanz, Fordow) created breakout risk; UNSC sanctions failed to stop advancement; military strike was contemplated. JCPOA built to trade time and verification for sanctions relief — a provisional bridge to normal NPT status.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IAEA Director General reports (2016-2025) corroborate Iran had no breakout during JCPOA compliance period. US intelligence community (2023) assesses Iran not currently pursuing weaponization. European governments corroborate the non-proliferation benefit was real. US/Israel political leadership asserts the problem persists (sunsets, missiles, proxies). No consensus outside benefiting parties."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "scaffold",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "binding_multilateral_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "graduated_compliance_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereign_right_to_judge_compliance_unilaterally",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "treaties_as_conditional_exchanges_voidable_on_bad_faith",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "provisional_reciprocal_exchange_2015_2025",
+    "drift_state": {
+      "moment": "post_us_withdrawal_2018_2025",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

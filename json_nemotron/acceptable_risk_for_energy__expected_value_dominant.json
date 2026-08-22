@@ -1,0 +1,364 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_for_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "ceea6f8f-b269-40f1-9e92-1b05c802381a"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Expected-Value Risk Acceptability for Energy Systems",
+    "topic_domain": "energy_policy/risk_assessment/public_safety_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_operators",
+      "grid_planners",
+      "climate_policy_analysts",
+      "radiological_protection_professionals"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "probabilistic_risk_assessment_framework",
+      "expected_value_decision_rule",
+      "linear_no_threshold_debate_position",
+      "intergenerational_discounting_applicability"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the expected-value reading a genuine coordination mechanism for energy governance, or a frame that benefits nuclear incumbents by backgrounding tail risks that would dominate under the catastrophic-tail reading?",
+      "resolution_mechanism": "Compare regulatory outcomes in jurisdictions that adopted expected-value PRA (US NRC post-1975 Reactor Safety Study lineage) versus those that adopted precautionary/tail-dominant frameworks (Germany post-Chernobyl, Austria, post-Fukushima Japan). Track whether nuclear deployment correlates with the reading, controlling for other factors.",
+      "impact": "If the reading systematically produces nuclear-favorable outcomes where tail-dominant readings do not, the beneficiary structure is real and the constraint leans toward tangled_rope. If outcomes converge, the reading is a genuine coordination mechanism (rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the expected-value reading functions as coordination or extraction relative to sibling readings"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the low measured suppression of tail-risk framing structural (institutional openness to alternative readings) or internalized (the PRA community has incorporated tail-risk considerations into its own methodology, making explicit suppression unnecessary)?",
+      "resolution_mechanism": "Trace the history of PRA methodology: did Level 2/3 PRA, uncertainty analysis, and severe accident management guidelines emerge from internal methodological evolution or external pressure? If internal, suppression is partially internalized — the constraint carries its own containment.",
+      "impact": "If suppression is internalized, the constraint's effective suppression is higher than the structural measure suggests — the target (tail-risk framing) carries the suppression with it through methodological absorption.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural vs. internalized suppression of competing risk framings within the PRA community"
+    },
+    {
+      "id": "waste_disposal_solvability",
+      "question": "Does the reading's treatment of waste disposal as a 'solvable engineering challenge' reflect genuine technical consensus, or does it depend on deferring the intergenerational burden to future institutional arrangements that may not materialize?",
+      "resolution_mechanism": "Track repository licensing outcomes (WIPP, Onkalo, Yucca Mountain cancellation, Cigeo) against the 'solvable engineering challenge' claim. Measure whether institutional continuity assumptions hold over the required timescales.",
+      "impact": "If waste disposal solvability depends on institutional continuity that cannot be guaranteed, the reading's beneficiary structure extends to future generations as implicit victims — shifting the constraint toward tangled_rope or snare depending on enforceability.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether waste disposal solvability is a technical fact or an institutional bet"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the expected_value_dominant reading of the acceptable_risk_for_energy kernel. The reading holds that energy system acceptability is determined by annualized expected costs (probability × consequence integrals) and climate benefits. Rare events are weighted by their probability-consequence product, not by their raw consequence magnitude. Under this reading, nuclear power exits the victim set when its expected-value profile is favorable versus fossil alternatives; tail-risk framings face low active suppression (the PRA community absorbs them methodologically); and waste disposal is treated as a solvable engineering challenge with manageable institutional continuity requirements. The constraint operates as a coordination mechanism: it provides a shared calculus that lets regulators, operators, and analysts converge on licensing decisions without negotiating every tail scenario ad hoc. The claimed type is rope — genuine coordination with minimal coercive overhead — but the metrics show modest extractiveness that has oscillated over the interval, particularly rising during periods of nuclear expansion advocacy (1970s, 2000s renaissance) where the framework was deployed to override local opposition.",
+    "key_agents": [
+      "nuclear_operators: Primary beneficiary (institutional/arbitrage) — the reading legitimizes their risk profile and licensing pathway",
+      "grid_planners: Beneficiary (organized/mobile) — the calculus enables portfolio optimization across energy sources",
+      "climate_policy_analysts: Beneficiary (analytical/arbitrage) — expected-value framing integrates climate externalities into the same metric",
+      "radiological_protection_professionals: Beneficiary (organized/mobile) — professional authority rests on the PRA framework",
+      "downwind_communities: Payer (powerless/trapped to constrained) — bear residual risk when expected-value calculus underweights low-probability high-consequence events affecting them specifically",
+      "future_generations: Payer (powerless/trapped) — inherit waste stewardship burden under institutional continuity assumptions",
+      "tail_risk_advocates: Excluded (moderate/constrained) — catastrophic_tail_dominant reading proponents systematically excluded from PRA standard-setting bodies",
+      "comparative_risk_pragmatists: Observer (powerful/mobile) — hold the comparative_risk_dominant reading; engage selectively",
+      "regulatory_analysts: Observer (institutional/analytical) — apply the framework; see its structural limits"
+    ],
+    "logic_rationale": "Extractiveness (0.32 at interval end) reflects that the framework does transfer some tail risk to downwind communities and future generations without their consent — but the transfer is diffuse and the framework also provides genuine coordination value (standardized licensing, interoperable safety cases, climate integration). Suppression (0.22) is low because tail-risk framings are not banned; they are methodologically absorbed (Level 2/3 PRA, uncertainty distributions) or marginalized through professional gatekeeping rather than explicit prohibition. Theater ratio (0.18) rose during nuclear renaissance periods when the framework was performatively deployed to legitimize expansion, then fell as the community incorporated lessons. Accessibility collapse (0.45) is moderate: alternative risk framings exist and are technically expressible within the framework (just not dominant). Resistance (0.55) is substantial: the catastrophic_tail_dominant reading maintains active opposition, especially post-Chernobyl and post-Fukushima.",
+    "directionality_logic": "Nuclear operators, grid planners, and climate analysts are structural beneficiaries — the constraint subsidizes their decision-making and legitimizes their preferred technology. Radiological protection professionals benefit professionally. Downwind communities and future generations are payers — they bear the residual tail risk and waste burden, but their exit options differ: downwind communities are trapped/constrained (geographic immobility, property ties); future generations are trapped (no exit from temporal position). Tail-risk advocates are excluded from standard-setting but not from public discourse. Comparative-risk pragmatists hold a sibling reading and engage from a mobile position. Regulatory analysts sit at the analytical seat.",
+    "perspectival_gap": "From the beneficiary seats (operators, planners, analysts), the constraint appears as rope: a working coordination mechanism that solves the genuine problem of comparing disparate energy risks. From the payer seats (downwind communities, future generations), the same structure operates as extraction — their specific vulnerabilities are smoothed into probability distributions that underweight the events that would devastate them. The engine computes this divergence from the structural data. The claimed rope type reflects the authoring seat's judgment that the coordination function is primary and the extraction is secondary/diffuse; the engine may compute tangled_rope for the payer seats.",
+    "mandatrophy_analysis": "The founding problem — comparing disparate energy risks on a common metric to enable rational portfolio decisions — remains live (status: contested). The constraint has not become a piton: it is actively maintained because the coordination problem persists (new reactor designs, small modular reactors, fusion licensing all need the framework). Theater spikes correlate with advocacy cycles, not functional decay.",
+    "kernel_context": "This constraint is the expected_value_dominant reading of the acceptable_risk_for_energy kernel. Sibling readings: catastrophic_tail_dominant (low-probability high-consequence events dominate; irreversibility and intergenerational burden outweigh expected-value optimization), comparative_risk_dominant (nuclear risk acceptable only relative to competing energy risks; no absolute threshold). This reading's structural delta: nuclear exits victim set when expected value favorable vs alternatives; low suppression of tail-risk framing; waste disposal becomes solvable engineering challenge."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "nuclear_licensing_framework",
+      "waste_disposal_regulation",
+      "climate_mitigation_portfolio_optimization",
+      "radiological_protection_standards"
+    ],
+    "dual_formulation_note": "Part of the acceptable_risk_for_energy constraint family. This reading (expected_value_dominant) coordinates energy portfolio decisions by providing a common metric. The catastrophic_tail_dominant reading constrains the same domain by elevating irreversibility and intergenerational burden. The comparative_risk_dominant reading coordinates by relative comparison only. All three share the kernel 'acceptable risk for energy' but instantiate different constraints with different beneficiary/victim structures and ε values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.4
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "nuclear_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate nuclear plants under licensing frameworks built on PRA/expected-value methodology. The framework legitimizes their risk profile, enables standardized safety cases, and provides predictable regulatory pathways. They can deploy capital across jurisdictions that share the framework. Their profits and asset values depend on the framework's continued dominance."
+    },
+    {
+      "name": "grid_planners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Use expected-value risk calculus to optimize generation portfolios across nuclear, fossil, and renewable sources. The common metric enables integrated resource planning and climate compliance modeling. They can switch analytical frameworks if a better one emerges, but the installed base of PRA-based tools creates switching costs."
+    },
+    {
+      "name": "climate_policy_analysts",
+      "role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Rely on expected-value framing to integrate climate externalities (social cost of carbon) into the same risk metric used for radiological risk. This enables direct comparison of nuclear vs. fossil vs. renewable risk-benefit profiles. Their analytical authority is tied to the framework's acceptance in integrated assessment models."
+    },
+    {
+      "name": "radiological_protection_professionals",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Professional community (ICRP, national bodies) whose standards and authority rest on the PRA/expected-value framework. They maintain the methodology (ICRP publications, IAEA safety standards) and license practitioners. They can migrate to alternative frameworks but would lose the institutional capital built over decades."
+    },
+    {
+      "name": "downwind_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities near nuclear facilities bear the site-specific tail risk (low-probability, high-consequence releases) that the expected-value calculus smooths into population-level averages. Their geographic immobility, property ties, and lack of political leverage make exit nearly impossible. They receive no direct compensation for the risk differential between their local exposure and the population average."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Inherit the waste stewardship burden under the reading's assumption that institutional continuity will maintain repository safety over geological timescales. They have no voice in the present framework's adoption, no exit from their temporal position, and no recourse if institutional continuity fails. The 'solvable engineering challenge' framing makes their burden invisible in present-day calculus."
+    },
+    {
+      "name": "tail_risk_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Proponents of the catastrophic_tail_dominant reading (environmental NGOs, some independent scientists, affected community networks). They are systematically excluded from PRA standard-setting bodies (ICRP, IAEA committees, national regulatory advisory groups) where the expected-value framework's parameters are defined. They can publish, litigate, and mobilize public opinion but cannot shape the technical baseline."
+    },
+    {
+      "name": "comparative_risk_pragmatists",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hold the comparative_risk_dominant reading: nuclear risk is acceptable only relative to coal emissions and climate catastrophe. They engage with the expected-value framework instrumentally — using it when it supports their comparative argument, challenging it when it doesn't. They have institutional access (energy ministries, climate agencies) and can switch analytical frames freely."
+    },
+    {
+      "name": "regulatory_analysts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Apply the PRA/expected-value framework in licensing decisions (NRC, ONR, CNSC, etc.). They see the framework's structural limits — where it works for routine operations and where it strains against tail events. They can propose methodological improvements but operate within the framework's paradigm; paradigm shifts come from political/external pressure, not internal analysis."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a common probabilistic metric (expected annual cost/risk) that enables regulators, operators, and planners to compare disparate energy technologies (nuclear, fossil, hydro, renewables) on a single scale, facilitating licensing, portfolio optimization, and climate policy integration without ad hoc negotiation of every risk dimension.",
+    "transfer_function": "Moves tail-risk exposure from the nuclear operator's balance sheet to downwind communities (geographically concentrated low-probability high-consequence risk) and to future generations (waste stewardship burden under institutional continuity assumptions), while moving climate-risk reduction benefits to the broader population via nuclear's displacement of fossil generation.",
+    "absent_voices": "Downwind communities and future generations are structurally absent from the standard-setting bodies that define the PRA framework's parameters (ICRP, IAEA, national regulatory advisory committees). Tail-risk advocates (catastrophic_tail_dominant reading proponents) are excluded from the technical baseline-setting process, though not from public discourse. Their objection would be that the probability-consequence product systematically underweights events that are ruinous for the specific people who experience them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expected-value framework vanished overnight, nuclear licensing would lose its common metric — regulators would revert to deterministic design-basis approaches or ad hoc case-by-case judgments, portfolio optimization would lose its risk integration capability, and the climate-nuclear risk comparison would lose its shared calculus. The nuclear industry would face higher regulatory uncertainty; climate policy would lose a key integration tool; downwind communities might gain stronger site-specific protections but lose the (diffuse) benefit of standardized safety goals.",
+    "founding_problem": "Post-WWII nuclear expansion required a rational method to compare reactor risks against each other and against non-nuclear risks, to allocate limited regulatory and engineering resources, and to justify public acceptance. The 1975 Reactor Safety Study (WASH-1400) established the PRA/expected-value framework as that method.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The nuclear industry and IAEA attest the problem remains live: new reactor designs (SMRs, Gen IV, fusion) need the framework for licensing. Tail-risk advocates and some independent scholars (e.g., Perrow on normal accidents, Shrader-Frechette on probabilistic risk assessment ethics) attest the founding problem was mis-specified — the framework was built to enable deployment, not to protect the most vulnerable from ruin. The 1979 NRC critique of WASH-1400 (Lewis report) and post-Chernobyl/Fukushima reassessments corroborate the contested status from outside the beneficiary set."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "acceptable_risk_for_energy"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "comparative_risk_dominant",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_value_sufficiency_for_acceptability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "tail_risk_methodologically_absorbable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_continuity_for_waste_stewardship",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "wash1400_pra_framework",
+    "drift_state": {
+      "moment": "post_fukushima_reassessment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

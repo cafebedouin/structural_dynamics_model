@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__universal_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "9629e7c2-33df-47f9-bb65-a49e03418462"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.3,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Magna Carta Clause 39 — Universal Due Process Reading",
+    "topic_domain": "constitutional/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "persons_facing_state_detention",
+      "criminal_defendants",
+      "legal_profession",
+      "judiciary"
+    ],
+    "victims": [
+      "crown_executive_authority",
+      "crime_victims"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 810
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 260,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 520,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 640,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 740,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 810,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 260,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 520,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 640,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 740,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 810,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 260,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 520,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 640,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 740,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 810,
+      "value": 0.3
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Within the magna_carta_1215 kernel, does 'liber homo' in Clause 39 denote all persons (this reading) or the contracting landholding barons (baronial_privilege_reading)?",
+      "resolution_mechanism": "Philological analysis of 1215 usage, the reception history of the 1225 and 1297 confirmations, and the earliest judicial glosses; whichever extension is adopted determines this constraint's beneficiary and victim sets wholesale.",
+      "impact": "If the baronial reading is adopted, this constraint's universal beneficiary set collapses to a medieval elite, the universal due process emission never existed as authored, and the story reclassifies around a dead contractual term rather than a living guarantee.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the liber homo extension governs the shared kernel."
+    },
+    {
+      "id": "transhistorical_emission_vs_reception",
+      "question": "Does the universal due process constraint actually emanate from the 1215 clause itself, or from later doctrine (Coke's glosses, the Petition of Right, bills of rights, human-rights instruments) that merely cites the charter as ancestor?",
+      "resolution_mechanism": "Doctrinal genealogy tracing each operative element of modern due process to its first authoritative statement; elements first appearing after 1215 are receptions, not emissions.",
+      "impact": "If reception dominates, this story's epsilon-referent shifts from the charter clause to the interpretive tradition — making the universal reading partially parasitic on the living_document_reading's machinery and weakening its claim to transhistorical binding force.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint is an emission of the 1215 text or a product of its reception."
+    },
+    {
+      "id": "coverage_extraction_coupling",
+      "question": "As the guarantee's coverage universalized, did per-capita cost fall (protection diluting professional rents) or rise (professionalization concentrating fee income and procedural burden)?",
+      "resolution_mechanism": "Historical comparison of procedural cost burden and legal-market concentration across the interval's endpoints.",
+      "impact": "Rising per-capita cost under universal coverage would push the computed classification toward tangled_rope despite the protective core; falling cost supports the rope claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How universalization interacted with the guarantee's cost structure."
+    },
+    {
+      "id": "emergency_derogation_status",
+      "question": "Are emergency mechanisms (habeas suspension, internment, treaty derogation clauses) the guarantee's designed relief valve or its erosion channel?",
+      "resolution_mechanism": "Comparative analysis of emergency episodes: whether process protections restored fully after each crisis or ratcheted downward.",
+      "impact": "If an erosion channel, effective suppression exceeds the measured scalar at crisis frequency, and persistence depends on inter-crisis intervals rather than structural stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency powers are safety valve or decay path."
+    },
+    {
+      "id": "formal_vs_substantive_universality",
+      "question": "Is the guarantee universal in substance, or universal in form while access scales with wealth?",
+      "resolution_mechanism": "Outcome and resource-disparity studies across defendant wealth strata within jurisdictions operating the guarantee.",
+      "impact": "Substantive stratification would raise the burden on low-resource defendants above the aggregate measure and complicate the universal beneficiary declaration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether universality holds in substance or only in form."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "crown_executive_authority",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Holds the power the clause restrains: imprisons, prosecutes, pardons, and commands the machinery that adjudicates. Administers the courts that enforce the guarantee against its own conduct — appointing judges, funding the system, litigating as a party. Repeatedly seeks exception routes in emergencies (suspension, internment, derogation) and is turned back by the judiciary it appointed. It cannot leave its own legal order without dissolving the legitimacy that constitutes it."
+    },
+    {
+      "name": "persons_facing_state_detention",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Anyone the state moves to imprison, remove, commit, or punish. The guarantee is theirs without purchase or election — they cannot decline it and cannot leave the jurisdiction's reach while subject to its power. For them the clause is the difference between a hearing and a cell; they rely on it most at the moments they have least capacity to invoke it."
+    },
+    {
+      "name": "criminal_defendants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Formal holders of the guarantee in its busiest venue. The protection's quality tracks resources: well-funded defendants convert procedure into advantage and delay; indigent ones receive compressed versions through overworked counsel. They bear the guarantee's time and expense alongside its shelter."
+    },
+    {
+      "name": "judiciary",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administers and enforces the guarantee: issues writs, quashes unlawful detention, strikes executive excess. Gains jurisdiction, independence, and public standing from the role; the guarantee is the core of judicial identity and the source of the courts' leverage over the other branches. Judges are appointed by the power they restrain and removed by processes they oversee."
+    },
+    {
+      "name": "legal_profession",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Practices inside the guarantee: argues motions, challenges detentions, builds the doctrinal detail that keeps the clause operative. Fee income scales with procedural complexity, and the profession's market existence presupposes the adjudicative machinery the guarantee requires. Its advocacy is the guarantee's daily maintenance crew."
+    },
+    {
+      "name": "crime_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the guarantee's costs from outside its design conversation: investigation, trial, appeal, and collateral attack stretch years past the injury, and some cases collapse on procedural defect. They hold no seat in setting the procedure whose delays they absorb, and their preference for swift certain punishment is structurally outvoted by the architecture of judgment."
+    },
+    {
+      "name": "legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes the statutes that implement, amend, or erode the guarantee: habeas reform, detention statutes, emergency powers acts, derogation instruments. Historically the site of both expansion (Petition of Right, Habeas Corpus Acts) and suspension. Its products are subject to judicial review, bounding how far it can reshape the guarantee's reach."
+    },
+    {
+      "name": "constitutional_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the clause's transmission: what 'liber homo' denoted in 1215, how Coke universalized it, which invocations were ceremonial and which operative. Hold no stake in the guarantee's operation beyond scholarly reputation; their findings feed both the universal reading and its challengers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts the problem of restraining state violence from a standing power contest into a rule-governed procedure: every person subject to detention or punishment can invoke a known adjudicative path, and officials internalize that deprivations require judgment first. It also coordinates elite self-protection — today's rulers are tomorrow's detained — giving even the powerful a stake in the shield.",
+    "transfer_function": "Moves discretionary power from executives to adjudicative bodies; moves fees, salaries, and time from litigants and taxpayers to courts and the legal profession; moves liberty-risk from persons onto procedure, with delay and formality as the price paid for insulation from arbitrary will.",
+    "absent_voices": "Those who bear the guarantee's costs without shaping it: crime victims who would trade process speed for certainty of punishment; executives facing emergencies who would suspend judgment for dispatch; and, historically, the colonized and enslaved, excluded from 'free men' while the charter was cited as proof of civilized restraint. Their objection — that process is itself the punishment, or that the shield was never meant for them — sits outside the courtroom that administers the promise.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Detention practice would drift toward executive convenience within a generation: the historical record of habeas suspensions, wartime internments, and emergency decrees shows what fills the vacuum whenever enforcement slackens. Courts, plea bargaining, and the professional bar would lose their organizing spine, and the expectation that power answers to judgment — load-bearing for liberal order — would need rebuilding from scratch.",
+    "founding_problem": "King John's arbitrary disseisin, imprisonment without judgment, and destruction of persons and lands at unaccountable will — a grievance first articulated by barons protecting their estates, which this reading generalizes into a universal shield: no free person shall be imprisoned, dispossessed, outlawed, exiled, or destroyed except by lawful judgment of peers and the law of the land.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the UN Working Group on Arbitrary Detention and Amnesty International document tens of thousands of arbitrary-detention cases annually, attesting that the problem the guarantee answers remains live; domestic records show executives repeatedly attempting process-bypass (habeas suspensions, internment orders, emergency decrees) and courts blocking them — the guarantee's continuing work is visible in the attempts it defeats. Legal-profession attestations are discounted as self-interested."
+  },
+  "gain_flow": "legal_profession",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "baronial_privilege_reading",
+      "living_document_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Magna Carta' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints sharing one kernel: baronial_privilege_reading (contract among landholding elites; negligible modern operation), living_document_reading (adaptive constitutional substrate; extraction located in interpretive authority), and this universal_rights_reading (universal due process emission; protective core with a professional-rent overlay). Their epsilon values diverge widely because their beneficiary and victim sets diverge: the baronial reading protects a dead elite, the living-document reading subsidizes interpretive institutions, and this reading shields all persons while taking discretion from executives. This file links both siblings; the baronial reading is the upstream-historical term, and the living-document reading supplies the interpretive machinery this reading's universality rides on."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "charter_as_transhistorical_lawful_judgment_guarantee",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "baronial_privilege_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "living_document_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "universal_entitlement_to_lawful_judgment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "clause39_transhistorical_binding_force",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Under the universal rights reading, Clause 39 of the 1215 charter is not a feudal contract term but a transhistorical emission: 'free men' denotes all persons, and the clause binds every exercise of state power over individuals in every era — no imprisonment, dispossession, outlawry, exile, or destruction except by lawful judgment. The standing arrangement this story measures is that universal due process guarantee as it has actually operated across eight centuries: judicial review of detention, habeas corpus, fair-trial requirements, and the professional apparatus that maintains them. KEY AGENTS (by structural relationship):\n- crown_executive_authority: Primary target (institutional/identity_locked) — bears the guarantee's taking of discretionary power while administering the courts that enforce it\n- persons_facing_state_detention: Primary beneficiary (powerless/trapped) — the universalized protected class\n- criminal_defendants: Beneficiary with residual costs (moderate/trapped) — shelter scaled by resources\n- judiciary: Enforcing beneficiary (institutional/identity_locked) — administers the guarantee it embodies\n- legal_profession: Secondary beneficiary (organized/constrained) — collects fees through maintenance of the machinery\n- crime_victims: Cost-bearing bystander (powerless/trapped) — absorbs delay from outside the design conversation\n- legislature: Amendment pathway (institutional/constrained) — expands or erodes the guarantee by statute\n- constitutional_historians: Analytical observer — traces the reading's transmission",
+    "logic_rationale": "Extraction is moderate (0.32): the guarantee's dominant flow is protective, but real costs accumulate — procedural delay, litigation expense, and fee income that scales with complexity and concentrates in the profession. Suppression (0.30) reflects enforcement that is real but not participant-coercive: courts actively block executive evasion, yet citizens are not held in the arrangement against their will, and the alternatives closed off are chiefly the executive's arbitrary shortcuts. Theater (0.28) is meaningful but minority: ceremonial invocations of the charter, symbolic citations by officials eroding process, and pro-forma hearings coexist with a blocking function that visibly operates. Accessibility collapse (0.48) is partial — within liberal-legal frameworks the arbitrary-detention alternative is largely closed, but emergency derogations, military commissions, and administrative-detention regimes keep alternatives alive at the margins. Resistance (0.58) is sustained and structural: eight centuries of executive attempts to route around judgment, from clause-61 collapse through habeas suspensions to modern derogation instruments. The claimed type is rope — my authored belief that this is a genuine coordination mechanism whose participants are net beneficiaries — while the declared victims and active enforcement give the engine grounds to compute tangled_rope; that divergence, if it computes, is the datum, not an error. The measurement series run on one shared eight-point grid so every tracked metric is authored at every examined time point. Suppression is authored as a raw structural property; only extractiveness is scaled by the engine's directionality and scope arithmetic.",
+    "perspectival_gap": "The seats compute differently by construction. From the crown's position the guarantee is expropriation of prerogative — a constraint it must administer against itself, endured because its legitimacy is constituted by the legal order it bounds; its exit is identity-locked, since a sovereign that leaves its own legality dissolves the authority it would retreat into. From the detainee's position the same structure is a shield that arrives without purchase. The judiciary's seat fuses vocation and interest: enforcing lawful judgment is both its duty and the source of its standing, an identity lock that makes the guarantee self-maintaining so long as courts retain independence. Crime victims experience the arrangement as cost without voice — the architecture of judgment outvotes their preference for swiftness. Same-power divergence appears between criminal_defendants (moderate) and persons_facing_state_detention (powerless): nominally equal beneficiaries whose realized protection differs with resources, which is the formal-versus-substantive universality question carried in the omegas.",
+    "directionality_logic": "The beneficiary declarations place persons_facing_state_detention and criminal_defendants near the subsidy end (d low), with defendants slightly less subsidized because they bear procedural time and expense directly. The judiciary and legal_profession derive low d as declared beneficiaries — the guarantee subsidizes jurisdiction, standing, and fee income. The victim declarations place crown_executive_authority near the full-target end (d high): the guarantee's entire operation consists of taking discretion from it, and its identity-locked exit removes the damping that mobility would provide. Crime_victims derive high d from their victim declaration, though their true position is mid-range — they also gain from convictions legitimated by process. No directionality_overrides are authored: the override mechanism keys on power atoms, and crime_victims share the powerless atom with persons_facing_state_detention, so any correction aimed at the victims' mid-range position would corrupt the detainee seat's correctly low d. The residual imprecision is accepted and documented here rather than patched with a blunt instrument.",
+    "mandatrophy_analysis": "The founding problem is indexed to this reading: generalized arbitrary state power, which remains live — corroborated externally by documented detention abuses worldwide and by the executive bypass attempts courts defeat domestically. The charter's original enforcement machinery (the clause-61 committee of twenty-five barons) is long dead, but it was replaced rather than mourned: judicial enforcement succeeded baronial enforcement, so the mandate transformed instead of atrophying, and mandatrophy_resolved is authored false. The classification discipline guards against both symmetrical errors: reading the guarantee as pure coordination misses the professional rent layer and the wealth-stratified access (tangled-rope pressure the engine can register from the declared victims); reading it as extraction misses that the protected class includes the guarantee's own critics, that its costs fall chiefly on the powerful, and that its disappearance would be filled by exactly the arbitrary practices it forbids. The rising theater_ratio series tracks the growing share of ceremonial invocation — Whig mythology, political citation amid erosion — which is the observable symptom if the guarantee ever begins sliding from maintained function toward maintained performance."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

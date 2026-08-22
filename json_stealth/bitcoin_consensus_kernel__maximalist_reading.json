@@ -1,0 +1,394 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__maximalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bck_maximalist",
+    "story_uid": "956fc4d6-f325-41aa-bdea-dca9f92501cc"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.56,
+    "theater_ratio": 0.34,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Whitepaper-as-Immutable-Covenant Constraint (Maximalist Reading)",
+    "topic_domain": "cryptoeconomics/monetary systems/distributed consensus",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "long_term_holders",
+      "early_adopter_accumulators",
+      "institutional_asset_managers",
+      "mining_pool_operators"
+    ],
+    "victims": [
+      "core_protocol_developers",
+      "layer2_scalability_builders",
+      "on_chain_transactors"
+    ],
+    "vindicated_propositions": [
+      "nakamoto_conservatism",
+      "digital_scarcity_premium_thesis"
+    ]
+  },
+  "interval": {
+    "start": 2009,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.56
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading of the bitcoin_consensus_kernel; how would classification shift under the sibling readings (utility_reading, pragmatic_synthesis)?",
+      "resolution_mechanism": "Generate the sibling stories and compare computed types: utility_reading treats the whitepaper as a minimum viable mechanism enabling iteration (likely dissolving the victim classes into participants in legitimate improvement); pragmatic_synthesis confines immutability to the base layer and relocates extraction to whatever blocks upper-layer innovation.",
+      "impact": "Under utility_reading the same arrangement likely computes as rope or scaffold (iteration is the designed mode, so 'blocked change' is not extraction); under pragmatic_synthesis it stays tangled_rope but with a narrower victim set. The high-extraction profile is specific to the maximalist instantiation, not the kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Indexical dependence of classification on kernel reading selection."
+    },
+    {
+      "id": "covenant_status_of_whitepaper",
+      "question": "Is the whitepaper a binding founding covenant whose violation is illegitimate, or an engineering memorandum whose specifics were always provisional?",
+      "resolution_mechanism": "None fully available: the text is ambiguous between constitutional and design-document registers, and the dispute is constitutive of the community rather than resolvable by closer reading. Observe whether an externally imposed shock (regulatory mandate, security-budget crisis) ever forces an explicit interpretive ruling.",
+      "impact": "If memorandum, the constraint loses its legitimacy ground and its persistence becomes pure interest-group enforcement — the classification drifts from tangled_rope toward snare. If covenant, part of the measured extraction is the price of the credible commitment itself.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Textual-status ambiguity of the founding document: covenant versus design memo."
+    },
+    {
+      "id": "soft_fork_tolerance_boundary",
+      "question": "Does the covenant bind all consensus rules equally, or only the monetary policy (supply cap, issuance schedule)? Taproot activated in 2021 while drivechains and covenants were rejected.",
+      "resolution_mechanism": "Observe the outcome distribution of future soft-fork proposals: classify each as monetary-touching or not, and track activation success against maximalist endorsement.",
+      "impact": "If only monetary policy is sacrosanct, the constraint's extraction targets innovation broadly and the victim set widens; if all rules are frozen in principle with pragmatic exceptions, the enforcement is selective and the theater component is larger than measured.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary of the immutability commitment: monetary policy only versus all consensus rules."
+    },
+    {
+      "id": "internalized_vs_enforced_conformity",
+      "question": "Is conformist pressure within the maximalist community structural (economic-majority veto, forum moderation, funding denial) or internalized (identity fusion of holders and developers with the covenant)?",
+      "resolution_mechanism": "Post-exit trajectory study of departed developers and builders: those who left for other ecosystems (e.g., after the 2017 split) and reported persistent self-censorship habits or continued deference to the covenant frame carry internalized suppression; those who immediately advocated change elsewhere carried only structural suppression.",
+      "impact": "If substantially internalized, effective suppression exceeds the structural measure — targets carry the constraint with them after exit, and the identity_locked exit coding of the developer seat is confirmed rather than merely declared.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized mechanism of maximalist conformity."
+    },
+    {
+      "id": "security_budget_longevity",
+      "question": "Can the fee market under a permanently capped block space sustain miner security budgets as block subsidies decline, or will the covenant eventually face a forced reinterpretation?",
+      "resolution_mechanism": "Track fee-to-subsidy ratio trajectories and hashprice economics across successive halvings; model equilibrium fee levels required at subsidy exhaustion.",
+      "impact": "If budgets are unsustainable, the covenant contains a deferred self-revision trigger and the constraint carries a hidden sunset dynamic; if sustainable, the immutability commitment is durable and the extraction profile is stable rather than transitional.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the covenant is economically durable or contains a forced-revision trigger."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the maximalist reading of the bitcoin consensus kernel: the whitepaper and its embedded issuance schedule constitute a binding founding covenant, and any protocol change that alters monetary policy violates it. Operatively, the constraint is the social and technical enforcement arrangement that makes the covenant stick — economic-majority veto over forks, full-node validation refusal, hashrate signaling, and a narrative apparatus that frames change advocacy as infidelity. It solves a real coordination problem (expectation convergence on fixed monetary rules without a governance committee) while asymmetrically extracting from those who would change or build upon the base layer: scalability developers, would-be innovators, and high-volume transactors bear opportunity costs and fee-market pressure, while the resulting scarcity premium concentrates in holders. Per the epsilon-referent rule, epsilon is authored for the standing arrangement under contest — the immutability-enforcement regime itself — not for any alternative arrangement the reading might endorse. The sibling readings (utility_reading, pragmatic_synthesis) are separate constraints in separate files; this file does not average over them.",
+    "key_agents": [
+      "long_term_holders: Primary beneficiary (organized/identity_locked) — collect the scarcity premium the covenant guarantees; exit means abandoning the thesis and realizing taxable gains",
+      "early_adopter_accumulators: Concentrated beneficiary (powerful/arbitrage) — largest historical gains; can diversify out at will, which decouples their advocacy from their exposure",
+      "institutional_asset_managers: Secondary beneficiary (institutional/arbitrage) — market immutability as a product feature ('digital gold') post-ETF era",
+      "mining_pool_operators: Agenda-setter with secondary beneficiary position (institutional/constrained) — enforce via hashrate signaling, earn block rewards and fees under deliberately constrained block space, but bear stranded-capacity risk",
+      "full_node_operators: Agenda-setter (organized/identity_locked) — the validation veto; running a node is frequently an ideological practice fused with the covenant",
+      "core_protocol_developers: Primary payer (moderate/identity_locked) — propose and maintain consensus code; change advocates meet social enforcement, funding denial, and reputational cost",
+      "layer2_scalability_builders: Payer (moderate/constrained) — must route around base-layer rigidity and contend with delegitimization of even second-layer innovation",
+      "on_chain_transactors: Payer (powerless/constrained) — bear fee-market pressure from artificially scarce block space; individually without leverage",
+      "altcoin_ecosystem_participants: Excluded (moderate/mobile) — locked out of the legitimacy conversation by construction, pre-labeled as unfaithful",
+      "cryptoeconomic_analysts: Analytical observer (analytical/analytical) — see the full structure from outside the covenant frame"
+    ],
+    "logic_rationale": "Extractiveness is high (0.72) because the covenant's benefits (scarcity premium, monetary credibility) accrue pro-rata to holders while its costs (foregone throughput, blocked innovation, fee pressure) fall on non-holding participants and builders — a structurally asymmetric ledger that widened as institutional adoption converted immutability into a marketed product feature. Suppression (0.56, down from its 2017 peak of 0.66) reflects the enforcement machinery: the 2015-2017 block-size war featured forum moderation, funding denial, and DDoS campaigns against change advocates; after opponents forked away, overt enforcement relaxed but persists at elevated levels (inscription-filtering disputes, drivechain rejection). Suppression is authored as a raw structural property — the engine scales only extractiveness by directionality and scope. Theater ratio (0.34) captures the growing share of activity that is ritual boundary maintenance (purity tests, anniversary liturgy, 'not your keys' recitation) relative to functional consensus work; it rose steadily as the community institutionalized. Accessibility collapse is moderate (0.45): forks and rival chains exist and are usable, but within the covenant frame alternatives are narratively collapsed into 'scams,' so perceived option space shrinks faster than actual option space. Resistance is substantial (0.6): the constraint has repeatedly been actively contested (the 2017 fork war, ordinals controversy, recurring covenant/drivechain proposals) and has survived each contest, which is itself evidence of enforcement dependence. All three tracked metric series run on one shared time grid (2009-2026, eight points) so no metric row borrows another's end-state values.",
+    "perspectival_gap": "The seats compute divergently by construction. From the agenda-setter seats (node operators, miners), the arrangement is the successful defense of a sacred commitment — the thing that makes the asset what it is; their identity fusion makes the covenant constitutive rather than constraining. From the beneficiary seats, it is a guarantee they paid for by holding through volatility. From the payer seats, the same structure operates as enforced stagnation: developers watch proposals die socially rather than technically, builders absorb the cost of routing around rigidity, and transactors pay clearing prices set by deliberate scarcity. The excluded seat never enters the computation at all — its exclusion is the enforcement object. The engine derives these divergent classifications from the structural data; the authored claim does not adjudicate between them.",
+    "directionality_logic": "Beneficiary declarations place holders near the subsidized end: long-term holders (identity-locked, generational horizon) sit nearest d=0 since the covenant is their balance sheet; early adopters are pulled slightly toward symmetric by arbitrage-grade exit — they capture gains but can leave, so their effective exposure to the constraint's continuation is partial. Institutional managers similarly benefit while remaining mobile. Mining pool operators are dual-positioned: agenda-setter enforcement plus beneficiary revenue, offset by stranded-capacity costs — a mid-range d the derivation approximates from their secondary beneficiary role. Victims carry high d: developers and builders are identity-locked or constrained (trapped by reputation and sunk ecosystem investment), amplifying their effective extraction; transactors are powerless and constrained. Scope is global throughout, which modestly amplifies effective extraction for target seats since verification of enforcement uniformity is hard at planetary scale.",
+    "mandatrophy_analysis": "The tangled_rope claim guards against two opposite mislabels. Reading the arrangement as pure snare would erase its genuine coordination function: a fixed issuance schedule really does solve the expectation-convergence problem for millions of strangers running identical validation software with no committee, and the 2017 episode demonstrated the machinery resolves chain-identity crises (however brutally). Reading it as pure rope would erase the asymmetry: the coordination story is also the cover under which holder interests veto ecosystem evolution, and the enforcement apparatus exists because voluntary consent alone would not hold the freeze. Mandatrophy is not yet resolved — the founding problem (trustless consensus without discretionary monetary management) remains live, so this is not a piton candidate; the mismatch consumer should find status=live paired with verdict=world_rearranges, no zombie flag. The forward risk runs the other direction: if the security-budget omega resolves unsustainably, the covenant acquires a forced-revision trigger and the arrangement begins transitioning toward scaffold-like renegotiation.",
+    "kernel_context": "Kernel: bitcoin_consensus_kernel — the whitepaper and genesis issuance schedule as the community's constitutive commitment. This file instantiates the maximalist_reading: the text as immutable monetary covenant, any change as violation. Sibling readings, authored separately: utility_reading (whitepaper as minimum viable consensus mechanism enabling iterative improvement) and pragmatic_synthesis (base-layer monetary rules immutable; upper layers free to innovate without kernel violation). The readings disagree on the normative status of protocol change itself: for this reading, change is categorically covenant violation; for utility_reading it is the designed mode; for pragmatic_synthesis it is legitimate above a frozen base. Because the siblings are different constraints with different epsilon values and victim sets, this story authors only the maximalist structure and routes the contest to omegas."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "utility_reading",
+      "pragmatic_synthesis"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Bitcoin's monetary policy' decomposes into three kernel readings with distinct epsilon values and victim sets. This member (maximalist_reading) carries the highest extraction profile because it freezes the entire base layer and casts change itself as violation. utility_reading sits upstream in legitimacy terms (its framing cites the whitepaper's own 'Peer-to-Peer Electronic Cash System' title and iterative design register), and its existence pressures this reading by supplying covenant-faithful counter-interpretation; pragmatic_synthesis mediates, accepting base immutability while draining the victim class. All three stories link one another via affects_constraints; classification comparisons are only valid across files, never averaged within one."
+  },
+  "stakeholders": [
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold the asset across cycles as a savings technology. The covenant guarantees the supply schedule their purchasing-power thesis depends on; every blocked change that preserves scarcity flows to them as premium. Selling means abandoning the thesis, realizing taxes, and exiting a community whose identity they share — exit is nominally open and practically fused."
+    },
+    {
+      "name": "early_adopter_accumulators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Accumulated at negligible cost in 2010-2013 and hold concentrated stakes. They captured the largest historical gains from enforced scarcity and retain outsized influence over the economic majority that vetoes forks. Unlike later holders they can diversify out at will, so their advocacy for immutability is decoupled from their personal exposure."
+    },
+    {
+      "name": "institutional_asset_managers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Issue spot vehicles and treasury products whose pitch rests on the fixed-supply guarantee. They market immutability as a feature, amplify the covenant narrative to clients, and can redeploy capital to other assets without cost to themselves if the frame breaks."
+    },
+    {
+      "name": "mining_pool_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate hashrate that signals for or against rule changes and earn block rewards plus fees under deliberately constrained block space. ASIC capital is sunk into this specific rule set, so they enforce the covenant that protects their equipment's usefulness, while carrying the risk that capped blocks strand capacity they built for growth."
+    },
+    {
+      "name": "full_node_operators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Run validating software that refuses any chain violating the rules they compiled. Individually cost-bearing and collectively decisive: no rule change survives their refusal to follow it. For many, node operation is an ideological practice — verification as membership — making their enforcement posture constitutive rather than chosen per-issue."
+    },
+    {
+      "name": "core_protocol_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintain consensus code and propose improvements. Proposals touching monetary parameters die socially before they die technically: review culture, funding access, and forum standing all route through covenant fidelity. Their reputations and career histories are fused with the project, so advocating change risks the professional identity the constraint surrounds; some have exited to rival chains and been written out of the lineage."
+    },
+    {
+      "name": "layer2_scalability_builders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build routing networks, sidechains, and settlement layers on top of a base layer they cannot modify. Every design must fit through the narrow aperture the covenant leaves; even second-layer innovations (drivechains, new covenant opcodes) meet delegitimization campaigns. Their capital and user bases are invested in this ecosystem, so exit means writing off franchise value."
+    },
+    {
+      "name": "on_chain_transactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Need block space for payments, settlements, and data. Deliberately scarce capacity means auction-priced fees that spike under demand; they have no vote, no fork leverage, and no organizational voice. Alternatives exist on other chains but carry liquidity and counterparty costs that bind smaller users hardest."
+    },
+    {
+      "name": "altcoin_ecosystem_participants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build and use rival monetary experiments, including forks of this very system. The covenant frame defines them as unfaithful by construction, so they are outside the legitimacy conversation regardless of technical merit; their exclusion is what the boundary-maintenance machinery produces and defends."
+    },
+    {
+      "name": "cryptoeconomic_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study incentive structures, security budgets, and governance dynamics from outside the covenant frame. They can name the asymmetry between coordination function and holder-capture without bearing either side's exposure, and their analyses feed regulatory and academic audiences rather than the enforcement process itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converges the expectations of millions of anonymous participants on a single fixed monetary rule set: no committee decides issuance, no proposal can quietly alter the supply schedule, and every validator independently enforces the same frozen rules. Secondarily it maintains the boundary of 'what counts as Bitcoin' against proposed modifications.",
+    "transfer_function": "Moves scarcity premium and preserved optionality to holders of the existing coin, funded by opportunity costs imposed on would-be changers, scalability builders, and high-volume transactors; under capped block space it additionally routes fee revenue to miners at clearing prices set by enforced scarcity.",
+    "absent_voices": "Users priced out by fee spikes, builders whose designs require base-layer flexibility, and low-margin remittance corridors are present only as rhetorical figures ('banking the unbanked') inside maximalist discourse — invoked to justify the system, never seated to contest it. Their objections would target the equation of monetary purity with network health.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the covenant and its enforcement vanished overnight, monetary expectations would lose their anchor: holders would reprice governance risk, competing rule-change proposals would flood forward simultaneously, and the network would likely fragment through repeated contentious forks until a new Schelling-point rule set emerged — or failed to. Custody products, miner revenue models, and developer norms are all arranged around the freeze and would reorganize.",
+    "founding_problem": "Nakamoto's problem: enabling peer-to-peer electronic cash without a trusted third party, solving double-spending with proof-of-work and removing discretionary monetary management via a fixed issuance schedule. The maximalist reading elevates the second element — the fixed schedule — into the supreme, inviolable commitment.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The underlying trustless-consensus problem and its proof-of-work solution are corroborated outside the beneficiary set by the distributed-systems literature (Byzantine agreement, Sybil resistance) and by the cypherpunk archival record of pre-Bitcoin digital-cash attempts. However, no party outside the holder community corroborates the stronger maximalist gloss — that immutability of monetary policy is the founding commitment's supreme term — and the whitepaper's own title and body foreground electronic cash over monetary finality; that elevation is attested almost exclusively from within the benefiting seats, which is itself signal."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "whitepaper_immutable_monetary_covenant",
+    "drift_state": {
+      "moment": "contemporary_etf_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "utility_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_synthesis",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "monetary_policy_immutability_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "whitepaper_constitutive_fidelity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "long_term_holders",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

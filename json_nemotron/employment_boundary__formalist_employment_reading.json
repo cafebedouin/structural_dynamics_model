@@ -1,0 +1,386 @@
+{
+  "header": {
+    "constraint_id": "employment_boundary__formalist_employment_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_employment_boundary__formalist_employment_reading",
+    "measurement_id_prefix": "emp_boundary_formalist",
+    "story_uid": "d4cd3e88-ecf8-493f-8209-81b83a9af651"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Formalist Employment Boundary (Contract + Supervision)",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "platform_companies",
+      "venture_capital_backers",
+      "insurance_premium_avoiders"
+    ],
+    "victims": [
+      "platform_workers",
+      "state_social_insurance_systems",
+      "traditional_employers"
+    ],
+    "vindicated_propositions": [
+      "contractual_freedom_doctrine",
+      "entrepreneurial_opportunity_narrative",
+      "regulatory_neutrality_principle"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint one reading of the contested employment_boundary kernel, and if so, which reading?",
+      "resolution_mechanism": "This omega records the committer frame: this constraint instantiates the formalist_employment_reading of the employment_boundary kernel. Sibling readings are substantive_employment_reading and hybrid_security_reading. The structural disagreement is located in the definition of employment (formal contract + supervision vs. economic dependence + algorithmic control vs. third category) and the resulting victim/beneficiary assignments for platform workers.",
+      "impact": "If this reading is the only one institutionalized, platform workers are excluded from employment protections, platforms avoid beneficiary obligations, and extraction externalizes to workers and state systems. If a sibling reading gains institutional force, the constraint's classification and ε would change structurally.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Records that this is one reading of a contested kernel, not a standalone constraint."
+    },
+    {
+      "id": "algorithmic_control_vs_supervision_boundary",
+      "question": "Does algorithmic management constitute 'direct supervision' such that platform workers would fall inside the formalist employment definition?",
+      "resolution_mechanism": "Case law evolution on whether algorithmic dispatch, rating, and deactivation systems meet the legal test for direct supervision. Legislative clarification of 'supervision' in platform contexts.",
+      "impact": "If algorithmic control = supervision, the formalist reading's own criteria would capture platform workers as employees, collapsing the victim exclusion and shifting ε toward the hybrid/substantive readings. If not, the formalist boundary holds as authored.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the formalist definition's own terms (supervision) expand to include algorithmic management."
+    },
+    {
+      "id": "flexibility_choice_vs_structural_coercion",
+      "question": "Do platform workers genuinely choose flexibility, or is 'flexibility' a structural coercion where the alternative is unemployment?",
+      "resolution_mechanism": "Longitudinal labor market data on platform worker entry/exit patterns, reservation wages, and alternative employment availability. Survey evidence on worker preference formation under precarity.",
+      "impact": "If choice is genuine, the formalist reading's exclusion of platform workers from victim set has normative plausibility. If coercive, the exclusion is a structural fiction masking extraction — the snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 'chose flexibility' narrative reflects preference or constrained choice."
+    },
+    {
+      "id": "state_insurance_externalization_magnitude",
+      "question": "What is the quantitative magnitude of cost externalization from platforms to state social insurance systems (unemployment, workers' comp, health) under the formalist reading?",
+      "resolution_mechanism": "Fiscal incidence studies comparing platform worker coverage gaps to traditional employee costs. Actuarial modeling of unfunded liabilities transferred to public systems.",
+      "impact": "High externalization magnitude increases ε for the state_social_insurance_systems victim seat and strengthens the snare classification. Low magnitude would suggest the extraction is primarily worker-borne, shifting the beneficiary/victim balance.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Scale of fiscal transfer from platforms to public systems via the employment boundary."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the formalist_employment_reading of the contested employment_boundary kernel. Under this reading, employment is defined strictly by formal contract and direct human supervision; platform workers engaged via digital intermediaries are classified as independent contractors, placing them outside the employment relationship and its protective framework. The reading is not a neutral description — it is a structural arrangement that excludes platform workers from the victim set of employment precarity (framed as chosen flexibility), excludes platforms from the beneficiary obligations of employment (social insurance, wage floors, collective bargaining), and externalizes costs to workers and state systems. The high ε (0.78 at interval end) reflects this extraction. The constraint is actively enforced through classification litigation, legislative lobbying, and platform Terms of Service that mandate contractor status. Theater ratio is low-moderate (0.28) because the coordination function (matching supply/demand) is real but increasingly overshadowed by the extraction function. Resistance is moderate (0.58) from worker organizing, misclassification lawsuits, and legislative pushes (e.g., ABC tests, EU Platform Work Directive).",
+    "key_agents": [
+      "platform_companies: Primary beneficiary (institutional/arbitrage) — sets classification rules, captures value, avoids employment costs",
+      "platform_workers: Primary victim (powerless/trapped) — bears precarity, lacks protections, exit options structurally constrained",
+      "state_social_insurance_systems: Secondary victim (institutional/constrained) — absorbs unfunded liabilities for injury, unemployment, health",
+      "traditional_employers: Secondary victim (organized/constrained) — competes against platforms that externalize employment costs",
+      "venture_capital_backers: Beneficiary (powerful/arbitrage) — funds platform models predicated on labor cost arbitrage",
+      "insurance_premium_avoiders: Beneficiary (organized/mobile) — platforms and adjacent firms that avoid workers' comp/unemployment premiums",
+      "labor_regulators: Agenda setter (institutional/analytical) — enforces or contests the boundary through classification tests",
+      "appellate_courts: Observer (analytical/analytical) — adjudicates boundary cases, shaping the constraint's operational meaning"
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because platforms capture the economic surplus of labor while externalizing its social costs (insurance, stability, training) to workers and the state. The formalist definition is the mechanism: by defining employment narrowly (contract + supervision), it renders the platform's algorithmic control and economic dependence legally invisible. Suppression is high (0.72) because the constraint's persistence depends on active enforcement — lobbying against ABC tests, litigation to preserve contractor classification, Terms of Service that workers must accept to access the platform. Theater ratio (0.28) reflects that the matching/coordination function is genuine but the arrangement's stability now depends more on the extraction it enables than the coordination it provides. Accessibility collapse (0.65) is significant: once a worker enters platform work, alternative employment paths narrow (skill atrophy, resume gaps, algorithmic reputation lock-in). Resistance (0.58) is real but fragmented — individual lawsuits, localized organizing, legislative fights that platforms resource heavily.",
+    "directionality_logic": "Platform companies are the structural agenda setters and primary beneficiaries: they write the classification rules, control the algorithmic infrastructure, and capture the extraction (d ≈ 0.1). Venture capital backers and insurance premium avoiders are secondary beneficiaries with high exit options (d ≈ 0.15–0.2). Platform workers are the primary targets: economically dependent, algorithmically controlled, with trapped exit options (d ≈ 0.9). State social insurance systems are institutional targets: they absorb externalized costs but cannot exit the liability (d ≈ 0.8). Traditional employers are constrained targets: they bear competitive disadvantage but have some political voice (d ≈ 0.6). Labor regulators and courts are analytical/institutional observers with analytical exit (d ≈ 0.5). The formalist reading's claim that workers 'choose flexibility' is the ideological cover that dampens perceived extraction for the beneficiary seats.",
+    "mandatrophy_analysis": "The founding problem — reducing transaction costs for sporadic labor — is contested (see six_questions). The formalist reading persists not because it solves that problem better than alternatives, but because it enables a specific extraction structure: platforms capture coordination value + labor surplus while socializing risk. The constraint is a snare, not a tangled rope, because the coordination story (flexibility, entrepreneurship) is cover for asymmetric extraction; the constraint would collapse if workers had genuine exit or if platforms bore the true cost of labor. No party benefits enough to maintain it voluntarily — platforms would prefer the status quo but would adapt if forced; workers would exit if they could. The arrangement persists through active suppression of alternatives (legislative capture, litigation, narrative control).",
+    "kernel_context": "This constraint is the formalist_employment_reading of the employment_boundary kernel. Sibling readings: substantive_employment_reading (employment = economic dependence + algorithmic control; platform workers are employees) and hybrid_security_reading (platform workers need a third category with tailored protections). This reading forecloses the substantive reading within any single legal framework — a jurisdiction cannot simultaneously hold that employment requires formal contract+supervision AND that algorithmic control constitutes employment. It coexists with the hybrid reading as a live policy alternative (some jurisdictions adopt third categories). It influences the hybrid reading by setting the default classification that the hybrid must displace."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_control",
+      "social_insurance_funding_gap",
+      "traditional_employment_erosion",
+      "worker_classification_litigation"
+    ],
+    "dual_formulation_note": "This constraint (formalist_employment_reading) and substantive_employment_reading are dual formulations of the employment_boundary kernel: same referent (platform work), opposite boundary criteria (formal vs. substantive), mutually exclusive victim/beneficiary assignments. The hybrid_security_reading is a third formulation attempting to resolve the binary. All three form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "platform_companies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and operate the platform infrastructure that mediates labor. Write the Terms of Service that classify workers as independent contractors. Control algorithmic dispatch, rating, pricing, and deactivation — the de facto supervision system. Lobby legislatures and litigate to preserve the contractor classification. Capture the spread between transaction value and worker pay while avoiding employment taxes, benefits, and liability."
+    },
+    {
+      "name": "platform_workers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Perform the core labor of the platform (rides, deliveries, tasks) under algorithmic control. Formally independent but economically dependent on a single platform for income. Bear all costs of equipment, insurance, downtime, and injury. Cannot negotiate rates or terms; deactivation ends income instantly. 'Flexibility' means choosing when to work within the platform's demand curve, not choosing whether to work. Exit means unemployment or another platform with identical terms."
+    },
+    {
+      "name": "state_social_insurance_systems",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer unemployment insurance, workers' compensation, disability, and health systems funded by employer premiums. When platforms classify workers as contractors, premiums go unpaid but claims arise — injuries on the job, income loss from deactivation, health crises without employer coverage. The system absorbs these costs as unfunded liabilities or denies claims, shifting burden to general taxation or leaving workers uncovered. Cannot opt out of the liability; political pressure to reform classification is the only structural lever."
+    },
+    {
+      "name": "traditional_employers",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Employ workers under formal contracts, paying wages, benefits, payroll taxes, and compliance costs. Compete for labor and customers against platforms that externalize these same costs via contractor classification. Face competitive pressure to reduce own employment standards or adopt platform-like models. Organized in industry associations that lobby for 'level playing field' classification reform, but individual firms also benefit from platform services (delivery, gig labor)."
+    },
+    {
+      "name": "venture_capital_backers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund platform companies at valuations predicated on labor cost arbitrage — the gap between what platforms would pay under employment law and what they pay under contractor classification. Returns depend on the classification holding. Deploy capital to lobbying, litigation, and PR defending the formalist boundary. Exit via IPO or acquisition before classification risk materializes; portfolio diversification across jurisdictions hedges regulatory risk."
+    },
+    {
+      "name": "insurance_premium_avoiders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Firms (not only platforms) that structure labor arrangements to avoid workers' compensation, unemployment insurance, and health benefit obligations by using contractor classifications. Benefit from the formalist reading's precedent and the infrastructure of platform labor markets. Mobile across sectors — if one contractor model is challenged, shift to another. Low direct exposure to platform-specific risk."
+    },
+    {
+      "name": "labor_regulators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce labor standards, adjudicate misclassification claims, and implement classification tests (ABC test, economic reality test, EU Directive criteria). Subject to political pressure from platforms (lobbying, litigation) and workers (organizing, complaints). Resource-constrained relative to platform legal teams. Can shift the constraint's operation by changing enforcement priorities or adopting new tests, but face capture risk and legislative override."
+    },
+    {
+      "name": "appellate_courts",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate boundary cases: does this platform's algorithmic control constitute 'supervision'? Does economic dependence override contract form? Precedent sets the operational meaning of the formalist definition. Not a party to the extraction but shapes the constraint's enforcement surface. Decisions can expand or contract the victim set without legislative action."
+    }
+  ],
+  "gain_flow": "platform_companies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Matches sporadic labor supply with real-time demand via digital infrastructure: reduces search costs, enables instant payment, provides reputation systems, coordinates logistics at scale. Solves a genuine coordination problem for on-demand services.",
+    "transfer_function": "Moves employment costs (social insurance, wage floors, benefits, liability, training) from platforms to workers and state systems. Moves economic surplus from worker labor to platform revenue and investor returns. The formalist boundary is the valve: it defines the employment relationship out of existence for platform work, making the transfer legally permissible.",
+    "absent_voices": "Platform workers themselves — especially those deactivated without recourse, injured on the job without coverage, or organizing across borders — are structurally excluded from the classification decision. Their voices appear only in litigation or protests, not in the rulemaking that defines their status. Migrant workers on platforms face additional exclusion (language, immigration status, platform dependency).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the formalist boundary vanished overnight, platforms would face immediate reclassification exposure: employment taxes, benefits mandates, collective bargaining rights, algorithmic accountability requirements. Worker income would rise (wage floors, overtime, benefits); platform margins would compress; investor returns would fall. Some platforms would shift to employed-fleet models; others would exit markets. The state would see reduced unfunded liabilities. Traditional employers would gain competitive parity. The labor market would reorganize around the true cost of labor.",
+    "founding_problem": "Early digital platforms (c. 2009–2015) emerged to match underutilized assets (cars, spare time, skills) with demand — a genuine coordination problem where traditional employment was too rigid for sporadic, low-intensity work. The formalist classification allowed rapid scaling without employment law compliance.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Platform companies and venture capital attest the founding problem is live: flexibility demand persists, traditional employment remains rigid, and the coordination function is still needed. Worker organizations, labor economists, the ILO, the EU Commission, and multiple national inquiries attest the problem has shifted: platforms now mediate primary-income work under algorithmic control, and the formalist classification functions as cost externalization, not coordination enablement. The corroboration split maps to the beneficiary/victim divide."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "platform_algorithmic_control",
+      "employment_law_framework"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "substantive_employment_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_security_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "employment_requires_formal_contract_and_direct_supervision",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "platform_work_is_voluntary_flexible_entrepreneurship",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "classical_employment_contract_law",
+    "drift_state": {
+      "moment": "platform_economy_maturity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_unconditional_income_support__dependency_trap_reading",
+    "measurement_id_prefix": "uis_dtr",
+    "story_uid": "ca93049e-2e82-40ec-a271-511a47dcb41e",
+    "created_at": "2026-08-03T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.76,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.59,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support as Incentive-Distorting Subsidy (Dependency Trap Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "middle_upper_class_recipients",
+      "ubi_advocacy_coalition"
+    ],
+    "victims": [
+      "working_poor",
+      "taxpayers"
+    ],
+    "vindicated_propositions": [
+      "work_incentive_preservation_doctrine",
+      "targeted_efficiency_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "middle_upper_class_recipients",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional transfers despite having sufficient market income; the transfer functions as a tax-free supplement rather than subsistence support. Their participation costs are near zero and they face no stigma or conditionality. Exit is trivial — they can ignore the payment without material consequence."
+    },
+    {
+      "name": "ubi_advocacy_coalition",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain political capital and organizational momentum from universality framing; the policy's broad constituency legitimizes their broader reform agenda. They do not directly administer the program but shape its legislative design and public narrative. Exit means shifting to alternative reform vehicles (e.g., negative income tax, expanded EITC) — organizationally costly but feasible."
+    },
+    {
+      "name": "working_poor",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lose targeted programs (housing vouchers, SNAP, Medicaid expansions, childcare subsidies) whose combined value exceeds the UBI amount. The unconditional payment does not replace conditionally-tailored support for high-fixed-cost needs (rent, medical, childcare). No realistic exit — they cannot individually opt out of program replacement, and labor market alternatives are constrained by the very incentive distortion the policy creates."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear net fiscal cost of ~$1.4T/year after offsetting eliminated programs. The transfer is universal, so a large share flows to non-needy households, increasing deadweight loss relative to targeted transfers. Exit is constrained — they can emigrate or reduce taxable labor, but both carry high personal cost; political exit (voting against) is diluted by the program's broad constituency."
+    },
+    {
+      "name": "targeted_program_administrators",
+      "role": "excluded",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Career civil servants and nonprofit operators of means-tested programs whose institutional rationale and funding streams are eliminated by UBI replacement. Their professional identity is fused to the casework model; they cannot easily pivot to universal administration. They would object to replacement but are not consulted in the universality framing."
+    },
+    {
+      "name": "labor_market_economists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze employment effects, fiscal incidence, and substitution patterns. The AEI meta-analysis and similar studies inform the structural assessment but do not determine policy. They have no stake in the arrangement's persistence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None — the arrangement does not solve a coordination problem. It replaces a coordination mechanism (targeted need-matching) with a non-coordinating universal transfer.",
+    "transfer_function": "Moves ~$1.4T/year net from taxpayers and working poor (via eliminated targeted programs) to middle/upper class recipients and the political capital of the advocacy coalition. The working poor pay via loss of in-kind and means-tested benefits worth more per household than the UBI amount.",
+    "absent_voices": "Targeted program administrators, caseworkers, and current beneficiaries of means-tested programs who would lose more than they gain — they are structurally excluded from the universality coalition that designs the reform. Also excluded: future cohorts who inherit the fiscal structure without having consented to the program replacement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the UBI and its enabling legislation vanished overnight, targeted programs would need to be rebuilt or re-funded; the working poor would immediately face benefit cliffs; the advocacy coalition would lose its primary legislative vehicle; fiscal space would reopen for means-tested expansion. The welfare state architecture would reorganize around the pre-UBI targeted baseline.",
+    "founding_problem": "The perceived complexity, stigma, and administrative burden of means-tested welfare; the political difficulty of sustaining targeted programs against middle-class resistance; the desire for a simpler, universal floor that avoids 'welfare traps' at the margin.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The advocacy coalition attests the founding problem is live (stigma, cliffs, administrative cost persist). Critics from outside the benefiting parties — including former welfare administrators, labor economists studying employment effects, and targeted-program beneficiaries — attest the problem is either solvable within targeted frameworks (e.g., unified eligibility systems, benefit smoothing) or that UBI creates larger distortions than it solves. No neutral arbiter has validated the founding problem as requiring universality as the only solution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.76
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the dependency-trap reading of unconditional income support: a universal basic income framed as simplification and dignity, but structurally operating as an incentive-distorting subsidy that rewards idleness at the margin, crowds out higher-value targeted aid for the working poor, and redistributes fiscal resources upward to households that do not need income support. The AEI meta-analysis of large pilots (Finland, SEED, Ontario) showing -3.2% employment effects grounds the high extractiveness. The constraint is a snare: extraction is real (working poor lose more than they gain; taxpayers fund transfers to non-needy), suppression is active (program replacement requires legislative force, administrative dismantling, and political coalition maintenance), and the coordination story (simplicity, stigma reduction) is cover for the transfer. This is ONE READING of the contested kernel 'unconditional_income_support'; sibling readings are 'freedom_floor_reading' and 'universality_paradox_reading'.",
+    "logic_rationale": "Extractiveness is high (0.82) because the net transfer flows from poor to non-poor via program replacement — the working poor lose targeted benefits worth more per household than the UBI amount, while middle/upper class households receive a pure windfall. The $1.4T net fiscal cost after offsets represents deadweight loss relative to a targeted baseline. Suppression (0.76) reflects the active enforcement needed to dismantle means-tested programs and sustain universality against fiscal pressure — the constraint cannot persist without legislative force. Theater ratio (0.41) captures the gap between the 'simplification/dignity' framing and the actual operation: a growing share of political energy defends the universal transfer to non-needy recipients rather than improving outcomes for the poor. Accessibility collapse (0.68) is moderate-high: once UBI replaces targeted programs, the alternative (means-tested system) is politically and administratively difficult to reconstruct. Resistance (0.59) is significant but fragmented — the working poor lack organized voice; taxpayers are diffuse; the advocacy coalition holds narrative initiative.",
+    "directionality_logic": "Middle/upper class recipients are full beneficiaries (d ~0.1): they collect a transfer with no conditionality, no stigma, and no material need. UBI advocacy coalition is a beneficiary via political capital (d ~0.15): universality framing expands their constituency and legitimizes broader reform. Working poor are full targets (d ~0.95): they lose higher-value targeted benefits, face incentive distortion, and have trapped exit. Taxpayers are strong targets (d ~0.85): they bear the deadweight cost with constrained exit. Targeted program administrators are excluded (not in the constraint's beneficiary/victim derivation) but identity-locked — their professional existence is fused to the means-tested model. Labor market economists are analytical observers (d ~0.5).",
+    "perspectival_gap": "The working poor seat and the middle/upper class recipient seat should compute radically different types: from the working poor's position, the constraint is a snare that extracts via program replacement; from the middle/upper class recipient's position, it is a rope-like coordination benefit (universal floor, no stigma) with negligible personal cost. The advocacy coalition seat reads it as a scaffold (transitional to broader reform) but the metrics show extraction accumulating. The engine computes this divergence from the structural data — the authored claim (snare) reflects the working-poor/target perspective as structurally dominant.",
+    "mandatrophy_analysis": "The founding problem (welfare complexity, stigma, cliffs) is real but the mandated solution (universality) has outlived its coordination function — the constraint now primarily redistributes upward. The mandatrophy is resolved: the arrangement persists not because it solves the founding problem better than alternatives, but because the universality coalition captures the political gains. The working poor's worsening position is the extraction signature; the advocacy coalition's political capital is the beneficiary signature.",
+    "kernel_context": "This constraint is the 'dependency_trap_reading' of the kernel 'unconditional_income_support'. Sibling readings: 'freedom_floor_reading' (UBI as autonomy-enabling floor, removes labor coercion, eliminates stigma) and 'universality_paradox_reading' (UBI as politically ambiguous Trojan horse with cross-ideological appeal masking incompatible implementations). This reading's structural delta: beneficiaries = middle/upper class + advocacy coalition; victims = working poor + taxpayers; epsilon = high (0.82); type = snare."
+  },
+  "omegas": [
+    {
+      "id": "employment_effect_magnitude",
+      "question": "Is the -3.2% employment effect from the AEI meta-analysis structurally robust across implementation designs (phasing, clawback rates, interaction with existing tax-benefit systems), or does it reflect specific pilot features that a permanent national UBI would not replicate?",
+      "resolution_mechanism": "Replication with varied phase-out structures in permanent policy environments; natural experiments from existing universal child allowances (Canada, Poland) and negative income tax trials (US 1970s) with modern causal methods.",
+      "impact": "If the employment effect shrinks toward zero under permanent, well-designed phasing, the extractiveness drops and the constraint may reclassify toward tangled_rope (coordination with side effects). If it holds, snare classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the labor supply response is an invariant feature of unconditionality or a design-dependent parameter."
+    },
+    {
+      "id": "targeted_replacement_necessity",
+      "question": "Does UBI structurally REQUIRE the elimination of targeted programs, or is the program-replacement coupling a political choice by the advocacy coalition to fund universality?",
+      "resolution_mechanism": "Comparative analysis of UBI proposals: some (e.g., Yang 2020) explicitly stack UBI atop existing benefits; others (e.g., Murray 2006) replace the entire welfare state. Track which variants gain legislative traction.",
+      "impact": "If replacement is politically necessary (fiscal constraint), the snare structure is locked in. If stacking is viable, the constraint decomposes: a rope-like universal floor PLUS a snare-like replacement decision. This would trigger ε-invariance decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the extraction vector (program replacement) is intrinsic to UBI or a separable political choice."
+    },
+    {
+      "id": "committer_frame_ambiguity",
+      "question": "This reading is one of three declared readings of the kernel 'unconditional_income_support'. Does the dependency_trap_reading's core premise (UBI as incentive-distorting subsidy that crowds out targeted aid) logically foreclose the freedom_floor_reading's core premise (UBI as autonomy-enabling floor that removes labor coercion), or do they coexist as competing frameworks held by different parties?",
+      "resolution_mechanism": "Analyze whether a single legislative framework could simultaneously instantiate both readings — e.g., a UBI with a high phase-out rate that preserves work incentives while providing a floor. If yes, they coexist; if the incentive structure of one logically negates the other's autonomy claim, they foreclose.",
+      "impact": "If forecloses, the kernel has mutually exclusive readings — the engine should flag structural impossibility of joint instantiation. If coexists_with, both readings are live positions in the same policy space. If influences, this reading's fiscal pressure constrains the freedom_floor_reading's viability.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and the freedom_floor_reading sibling."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "universality_paradox_reading"
+    ],
+    "dual_formulation_note": "This is the dependency_trap_reading of the unconditional_income_support kernel. It shares the kernel with freedom_floor_reading and universality_paradox_reading. The epsilon values differ substantially: this reading authors high extraction (0.82) from program replacement; freedom_floor_reading would author low extraction (coordination benefit); universality_paradox_reading would author moderate extraction with high ambiguity. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "universality_creates_upward_redistribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "targeted_programs_dominate_universal_transfers_for_poverty_reduction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_uibi_welfare_architecture",
+    "drift_state": {
+      "moment": "post_pilot_meta_analysis_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "unconditional_income_support"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

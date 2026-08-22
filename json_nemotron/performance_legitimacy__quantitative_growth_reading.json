@@ -1,0 +1,355 @@
+{
+  "header": {
+    "constraint_id": "performance_legitimacy__quantitative_growth_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "story_uid": "d53e58c4-79c5-4c1f-8fc6-a93830eb8fba"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GDP Growth Rate as Legitimacy Anchor",
+    "topic_domain": "political_economy/development_planning/state_capitalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrial_export_complex",
+      "local_government_officials"
+    ],
+    "victims": [
+      "household_sector",
+      "migrant_workers",
+      "small_private_enterprises",
+      "environmental_absorptive_capacity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the quantitative growth reading a distinct constraint from the qualitative development reading, or the same constraint measured differently?",
+      "resolution_mechanism": "Test ε-invariance: if evaluating the same policy arrangement (e.g., credit allocation to steel vs. semiconductors) under 'growth rate' vs. 'high-quality development' observables yields materially different ε, they are different constraints. The kernel decomposition already treats them as separate stories.",
+      "impact": "If ε varies by observable, the kernel splits into multiple constraint stories linked by network.affects_constraints. If ε is invariant, the kernel is a single constraint with perspectival disagreement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the performance_legitimacy kernel decomposes into multiple ε-invariant constraints or one constraint with contested readings"
+    },
+    {
+      "id": "growth_employment_coupling",
+      "question": "Does GDP growth at current margins still produce meaningful employment gains, or has the coupling decoupled?",
+      "resolution_mechanism": "Empirical elasticity estimates: employment growth per 1% GDP growth over rolling 5-year windows. If elasticity has fallen toward zero, the 'job creation' justification is structurally hollow.",
+      "impact": "If decoupled, the constraint's coordination function (job creation) is fictive; extraction becomes the primary operation, shifting classification toward snare. If coupled, the coordination function remains real, supporting tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the stated coordination function (job creation via growth) still operates at current margins"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (censorship, hukou, credit control) or internalized (career incentives, professional identity fused to growth targets)?",
+      "resolution_mechanism": "Post-exit trajectory study: do officials who leave the system still enforce growth logic in new roles? If suppression persists after structural barriers are removed, internalized component is significant.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — targets carry the constraint with them. This affects χ for identity_locked agents and the classification boundary between tangled_rope and snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for local officials and industrial managers"
+    },
+    {
+      "id": "environmental_absorptive_capacity_as_victim",
+      "question": "Should environmental absorptive capacity be treated as a victim stakeholder when it lacks agency and voice?",
+      "resolution_mechanism": "Analytical consistency check: the constraint's operation extracts from ecological systems without consent or compensation. If the framework admits non-agent victims, it belongs in victims[]. If not, it is a vindicated proposition (the constraint vindicates 'growth outweighs ecology').",
+      "impact": "Classification may shift if a non-agent victim changes the structural extraction profile. The schema excludes non-agents from directionality derivation, so the formal χ computation is unaffected; the signal is analytical.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether non-agent ecological systems belong in victims[] or vindicated_propositions[]"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the quantitative growth reading of the performance_legitimacy kernel: the state's legitimacy rests on maintaining GDP growth rates that demonstrate continued economic expansion and job creation. The reading emerged from the 1990s reform consensus, was stress-tested in the 2008 stimulus, and now operates as the primary constraint on credit allocation, land use, and official promotion. The arrangement coordinates massive resource mobilization (infrastructure, manufacturing capacity, export platforms) but extracts heavily from household consumption share, migrant labor protections, small private firms' credit access, and environmental sinks. The beneficiary structure is clear: the industrial-export complex (SOEs in steel, cement, machinery, electronics assembly) and local government officials whose career advancement is tied to hitting growth targets. The constraint requires active enforcement — credit guidance, land quotas, hukou restrictions, and information control — to sustain the investment share of GDP above 40% and suppress rebalancing toward consumption. The ε-invariance principle applies: this reading produces a different ε than the qualitative_development_reading because the referent (the standing investment-driven arrangement) is assessed by different lights — growth rate vs. structural quality.",
+    "logic_rationale": "Base extractiveness (0.72) reflects the sustained gap between investment share of GDP (~43%) and household consumption share (~38%), a structural transfer from households to the industrial-export complex mediated by suppressed interest rates, undervalued currency, and directed credit. Suppression (0.68) captures the active enforcement apparatus: credit allocation discipline, land use control, migration restrictions, and narrative control that prevent exit from the growth model. Theater ratio (0.45) has risen as 'high-quality development' rhetoric overlays the unchanged investment-driven core — the coordination function (mobilization) is real but the stated justification (job creation per unit of growth) is weakening (employment elasticity declining). Accessibility collapse (0.62) is moderate: alternative development models exist (consumption-led, green, high-tech) but are structurally blocked by the constraint's enforcement. Resistance (0.58) is significant but fragmented: local debt crises, labor unrest, private sector credit starvation, and environmental pushback all contest the arrangement without coalescing into a regime-level alternative.",
+    "directionality_logic": "Industrial-export complex and local officials are structural beneficiaries (d ≈ 0.15-0.25): they collect rents from directed credit, land discounts, and promotion systems tied to growth. Household sector, migrant workers, and small private enterprises are structural targets (d ≈ 0.75-0.85): they bear the costs of suppressed consumption, excluded social protections, and credit rationing. Environmental absorptive capacity is a non-agent victim — extraction without voice. The analytical observer (this reading's seat) sees the full structure (d = 0.5). Directionality derivation from beneficiary/victim + exit options: local officials have identity_locked exit (career fused to growth targets), migrant workers are trapped (hukou), private firms are constrained (credit access), SOEs have arbitrage (state backing).",
+    "perspectival_gap": "From the local official's seat, the constraint is a rope — it coordinates resources they control and delivers the promotion metric they need. From the migrant worker's seat, it is a snare — they are coordinated into export zones but extracted from via hukou exclusion and wage suppression. From the industrial SOE seat, it is a scaffold — they know the model is transitional but extract maximum rent before transition. The engine computes this divergence from power/exit/role data; the claim (tangled_rope) reflects the aggregate structural reality: genuine coordination function (massive infrastructure/industrial capacity) + asymmetric extraction (household sector subsidizes the complex) + active enforcement required.",
+    "mandatrophy_analysis": "The founding problem (post-1989 legitimacy through delivery of growth and jobs) was live in the 1990s and 2000s. By the 2010s, the growth-employment coupling had weakened (elasticity falling), the investment model generated overcapacity and debt, and the 'high-quality development' pivot acknowledged the founding problem's shift. Yet the constraint persists because the beneficiary coalition (industrial complex + local officials) captures the enforcement apparatus. This is classic mandatrophy: the arrangement's mandate (growth = legitimacy) has outlived its function (growth no longer reliably delivers broad-based employment gains), but the constraint remains because the beneficiaries are the agenda_setters. The six_questions.founding_problem_status = 'contested' captures this: the party-state claims the problem is live; independent economists and the qualitative_development_reading claim it is dead.",
+    "kernel_context": "This constraint is the quantitative_growth_reading of the performance_legitimacy kernel. The kernel is the claim that state legitimacy derives from performance delivery. This reading instantiates legitimacy as *quantitative GDP growth rate maintenance*. Sibling readings: qualitative_development_reading (legitimacy = structural transformation toward innovation/sustainability/efficiency), techno_nationalist_reading (legitimacy = technological self-sufficiency and strategic industry leadership), livelihood_security_reading (legitimacy = tangible daily life improvements — employment, healthcare, education, elderly care). This reading forecloses livelihood_security_reading within a single framework (growth rate vs. direct experience are different metrics that can diverge — the 2015-2024 period shows growth without proportional livelihood improvement). It coexists_with qualitative_development_reading and techno_nationalist_reading — all three are live positions in current discourse, held by different factions. It influences qualitative_development_reading by absorbing credit and land resources that the structural transformation would require."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "performance_legitimacy__qualitative_development_reading",
+      "performance_legitimacy__techno_nationalist_reading",
+      "performance_legitimacy__livelihood_security_reading",
+      "local_government_debt_overhang",
+      "soe_credit_allocation_priority",
+      "hukou_migration_restriction",
+      "interest_rate_liberalization_delay"
+    ],
+    "dual_formulation_note": "The performance_legitimacy kernel decomposes into four constraint stories because each reading evaluates the standing arrangement (investment-driven, export-dependent growth model) by a different observable and produces a different ε. This reading (quantitative_growth) yields ε ≈ 0.72; qualitative_development yields lower ε on the same arrangement (it sees the arrangement as failing its own metric); techno_nationalist yields variable ε depending on strategic sector; livelihood_security yields highest ε (the arrangement extracts most from daily life). All four stories link to each other via affects_constraints. The upstream story (this one) influences downstream stories because the growth-rate constraint's resource absorption (credit, land, official attention) structurally limits what the other readings can achieve."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "industrial_export_complex",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large state-owned enterprises in steel, cement, machinery, chemicals, and electronics assembly. They receive directed credit at below-market rates, preferential land allocation, export tax rebates, and implicit guarantees. Their profits and investment scale are sustained by the growth-target system. They can arbitrage globally — shifting production, accessing foreign markets, and lobbying for policy continuity — but their domestic privilege depends on the constraint."
+    },
+    {
+      "name": "local_government_officials",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Prefectural and provincial officials whose promotion tournaments are explicitly keyed to GDP growth, fiscal revenue, and investment attraction. They administer the constraint: they allocate land, direct credit via local state-owned financing vehicles, suppress labor unrest, and enforce environmental selectivity. Their professional identity is fused to the growth metric — leaving the system means losing the only metric that validates their career. They benefit from the rents of land finance and patronage networks but are also trapped by the tournament."
+    },
+    {
+      "name": "household_sector",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Urban and rural households bearing the transfer: suppressed interest rates on savings (financial repression), high housing costs driven by land finance, limited social safety net (healthcare, pensions, unemployment) because fiscal resources flow to investment. They can exit marginally — reduce consumption, move to lower-tier cities, invest in property — but cannot escape the macroeconomic structure. Organized resistance appears as savings strikes, property protests, and demographic withdrawal (low fertility)."
+    },
+    {
+      "name": "migrant_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Rural-to-urban migrants in export manufacturing and construction. They are coordinated into the growth model as low-cost labor but extracted from via hukou exclusion from urban public services, wage suppression, precarious contracts, and workplace injury without recourse. Their exit options are structurally blocked: returning to rural areas offers no viable livelihood; staying in cities offers no path to full citizenship. They are the most extracted-from group per capita."
+    },
+    {
+      "name": "small_private_enterprises",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Private firms in services, light manufacturing, and tech. They face credit rationing (banks prioritize SOEs and LGFVs), higher borrowing costs, regulatory discretion, and land access barriers. They are coordinated by the market access the growth model creates but extracted from via the financial and regulatory subsidy to the industrial complex. Some exit by moving offshore, shifting to asset-light models, or capturing niche policy windows — but the structural bias remains."
+    },
+    {
+      "name": "environmental_absorptive_capacity",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Air, water, and soil systems that absorb the pollution and waste intensity of the investment-export model. The constraint's operation treats environmental capacity as a free input — extraction without compensation or consent. No voice, no exit. Listed as a victim stakeholder (agent: false) to mark the structural extraction; the engine excludes non-agents from directionality derivation."
+    },
+    {
+      "name": "central_policy_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The top leadership (Politburo Standing Committee, State Council) that sets the national growth target, authorizes the enforcement apparatus, and manages the tension between this reading and sibling readings. They could change the constraint (and have signaled 'high-quality development' pivot) but face the mandatrophy trap: the beneficiary coalition they depend on for implementation is the same coalition that resists rebalancing. Their seat is analytical in the sense that they see the full structure, but they are also the ultimate agenda_setter."
+    },
+    {
+      "name": "independent_economists",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Academic and policy economists (domestic and international) who analyze the constraint's operation, measure the growth-employment elasticity decay, document the overcapacity and debt dynamics, and propose rebalancing. They have analytical exit (can publish abroad, shift research focus) but their domestic influence is constrained by information control. They provide the corroboration for the founding_problem_status = contested."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Mobilizes savings, land, labor, and credit at massive scale to build industrial capacity, infrastructure, and export platforms in a compressed timeframe — solving the late-developer's coordination problem of simultaneous heavy industrialization and urbanization without market-price signals.",
+    "transfer_function": "Moves real resources (capital, land, labor, environmental capacity) from household sector, migrant workers, small private firms, and ecological systems to the industrial-export complex and local government financing vehicles, via suppressed interest rates, undervalued land conversion, hukou-excluded labor, and directed credit.",
+    "absent_voices": "Rural elderly left behind by migration (no healthcare/pension portability), children in pollution hotspots (no voice in zoning), future generations bearing ecological debt, private entrepreneurs in sectors the model starves. They are structurally excluded — the constraint's enforcement apparatus (hukou, credit guidance, information control) is designed to keep them out of the agenda.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the growth-target constraint vanished overnight, credit would reallocate toward consumption and services, land markets would liberalize, hukou would face immediate reform pressure, the industrial-export complex would face hard budget constraints, and local official promotion criteria would lose their primary metric. The political economy would reorganize around a different legitimacy anchor — likely contested between qualitative_development, techno_nationalist, and livelihood_security readings.",
+    "founding_problem": "Post-1989 legitimacy crisis: the party-state needed a performance-based mandate to replace revolutionary legitimacy. Rapid GDP growth delivering visible job creation and rising living standards was the available, measurable, and internationally legible metric. The investment-export model was the known technology to deliver it.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The party-state (central leadership, state media) attests the problem is live — growth remains the foundation of stability. Independent economists (World Bank 'China 2030', LSE Growth Commission, domestic scholars like Yu Yongding, Huang Yiping) attest the problem is dead — growth-employment elasticity has collapsed, the model generates debt and overcapacity, and legitimacy now requires delivery on pollution, inequality, and elderly care. The qualitative_development_reading and livelihood_security_reading provide alternative framings from outside the beneficiary coalition."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "livelihood_security_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "qualitative_development_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "techno_nationalist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gdp_growth_rate_is_primary_legitimacy_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "investment_driven_model_is_necessary_for_growth",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "export_dependency_is_acceptable_cost",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_1989_performance_legitimacy_consensus",
+    "drift_state": {
+      "moment": "post_2015_new_normal_pivot",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "performance_legitimacy__qualitative_development_reading",
+      "performance_legitimacy__techno_nationalist_reading",
+      "performance_legitimacy__livelihood_security_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

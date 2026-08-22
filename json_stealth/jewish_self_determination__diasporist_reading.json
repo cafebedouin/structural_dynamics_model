@@ -1,0 +1,346 @@
+{
+  "header": {
+    "constraint_id": "jewish_self_determination__diasporist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jsd_diasp",
+    "story_uid": "2ad6e79e-a55c-4a50-bfb3-78c4410ae306"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.15,
+    "theater_ratio": 0.65,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.55,
+    "claimed_type": "piton",
+    "human_readable": "Diasporist Reading of Jewish Self-Determination: Survival Through Dispersion and Minority Rights",
+    "topic_domain": "political_philosophy/nationalism_studies/postcolonial_theory",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "diaspora_jewish_communities"
+    ],
+    "victims": [
+      "nonzionist_diaspora_jews",
+      "association_endangered_jews"
+    ]
+  },
+  "interval": {
+    "start": 1897,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1897,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1925,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1897,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1925,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1897,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1925,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.15
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "This constraint is one reading of the contested kernel jewish_self_determination — the diasporist reading. Which structural features of its classification are artifacts of this reading rather than of the underlying commitment, and how would they move under the four sibling readings?",
+      "resolution_mechanism": "Generate the sibling readings (liberal_nationalist, indigenous_return, settler_colonial, religious_covenant) as separate constraint stories and diff their beneficiary/victim sets, epsilon, and computed types against this one; convergence on structure despite divergent evaluation indicates kernel-level facts, divergence indicates reading-indexed facts.",
+      "impact": "Under the liberal-nationalist reading the payer seats become beneficiaries and epsilon falls; under the settler-colonial reading epsilon rises sharply and the victim set expands beyond Jews; under the indigenous-return reading the doctrine's central warning inverts into a warrant. The piton verdict is reading-indexed: it describes this doctrine's position under Zionist hegemony, not the kernel itself.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame uncertainty: classification is indexed to one reading of a five-way contested kernel."
+    },
+    {
+      "id": "internalized_vs_structural_hold",
+      "question": "Is the doctrine's remaining hold on its adherents structural (communal gatekeeping, funding dependency, institutional career paths) or internalized (identity constituted through the pluralist self-understanding)?",
+      "resolution_mechanism": "Post-exit trajectory study of Jews who leave diasporist milieus for Zionist-identified or unaffiliated lives: if pluralist commitments persist after gatekeeping pressure ends, the hold is substantially internalized.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — adherents carry the framework with them after exit — and revival prospects rise, since identity-fused carriers can reactivate the doctrine if hegemony loosens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism ambiguity: structural gatekeeping versus internalized identity."
+    },
+    {
+      "id": "counterfactual_alternative_viability",
+      "question": "Was the atrophied alternative — functioning diasporist autonomy institutions — ever viable against twentieth-century conditions, or is the doctrine's promise a counterfactual no achievable arrangement could have honored?",
+      "resolution_mechanism": "Comparative historical analysis of Jewish communities under strong autonomist institutions (interwar Eastern Europe, contemporary insular enclaves) versus assimilationist or Zionist-identified communities under matched shock exposure.",
+      "impact": "If the alternative was never viable, the extraction component attributable to suppressing a live alternative collapses and the classification trends toward pure inertia; if viable, the hegemonic capture of 'Jewish interest' imposed real costs and the moderate epsilon understates the harm.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of the suppressed alternative the doctrine represents."
+    },
+    {
+      "id": "endangerment_attribution",
+      "question": "How much of the association-driven endangerment borne by diaspora Jews is caused by the sovereignty arrangement itself, versus baseline antisemitism that any visible Jewish collective existence would attract?",
+      "resolution_mechanism": "Time-series comparison of anti-Jewish incident rates against Israeli military operations, controlling for baseline trend and disaggregating incidents targeting visibly non-Zionist-identifying Jews.",
+      "impact": "If most endangerment is baseline, the doctrine's central empirical wager (dispersal minimizes exposure) loses its evidentiary edge and epsilon falls; if operation-correlated, the doctrine's victim diagnosis is vindicated and its atrophy registers as a real protection failure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of diaspora endangerment between sovereignty and baseline hostility."
+    },
+    {
+      "id": "flourishing_tradeoff_weighting",
+      "question": "The doctrine trades measurable physical security for identity depth and cultural richness — how should 'flourishing' weight these incommensurables?",
+      "resolution_mechanism": "No dataset resolves this; it turns on whether collective life is valued primarily as survival or as meaning, a weighting each party supplies from its own values.",
+      "impact": "A survival-weighted evaluation drives epsilon upward (the doctrine underdelivers its security promise); a meaning-weighted evaluation drives it downward (the doctrine delivers what it actually promises).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Preference-dependence of the flourishing standard the doctrine is judged by."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel jewish_self_determination: the diasporist claim that Jewish collective survival and flourishing are best secured through diaspora pluralism and minority rights rather than territorial sovereignty, and that Zionism is a dangerous deviation binding Jewish fate to a militarized state. The constraint modeled is this doctrine as a standing arrangement in Jewish collective life — once a near-hegemonic organizing framework with mass parties, schools, and a treaty-regime strategy, now an atrophied inheritance carried by weakened institutions, academic programs, and cultural remnants. Its epsilon referent is the standing arrangement under contest — the Zionist-hegemonic organization of Jewish collective fate — priced as this reading sees it; the reading's endorsed alternative is NOT the referent. The claim/metric gap is deliberate: the doctrine is CLAIMED as piton (an atrophied alternative persisting by inertia) while the metrics are authored independently as descriptively true of its actual operation; the engine computes per-seat classifications from the structural data.\n\nKEY AGENTS (by structural relationship):\n- diaspora_jewish_communities: residual beneficiary ([organized]/[identity_locked]) — legitimation of distinct identity, plus exposure costs\n- nonzionist_diaspora_jews: primary payer ([moderate]/[constrained]) — coerced toward Zionist identification\n- association_endangered_jews: primary payer ([powerless]/[trapped]) — bear backlash timed to a state's actions they did not choose\n- diaspora_institutional_leadership: agenda_setter ([institutional]/[arbitrage]) — administers the atrophied inheritance without capturing it\n- zionist_hegemonic_institutions: excluded rival holder ([institutional]/[arbitrage]) — holds definitional authority this doctrine lost\n- host_state_pluralist_regimes: conditional guarantor ([institutional]/[analytical]) — the legal substrate the doctrine never controlled\n- postcolonial_jewish_studies_scholars: analytical observer ([moderate]/[analytical]) — sees the full structure",
+    "key_agents": [
+      "diaspora_jewish_communities: residual beneficiary (organized/identity_locked) — sustains distinct identity through communal institutions; receives legitimation from the pluralist framework; absorbs association backlash; exit means losing the identity infrastructure itself",
+      "nonzionist_diaspora_jews: primary payer (moderate/constrained) — decline Zionist identification; face funding exclusion and social sanction; the doctrine speaks their language but cannot shield them; exit means leaving communal life or self-censoring",
+      "association_endangered_jews: primary payer (powerless/trapped) — visible Jews bearing harassment and violence timed to Israeli military operations; exposure is a fact of birth and visibility; no individual decision exits it",
+      "diaspora_institutional_leadership: agenda_setter (institutional/arbitrage) — federation executives, seminary heads, Hillel directors administering the inheritance; allocate between local-autonomy programming and Israel-facing engagement under donor pressure; maintain the doctrine symbolically",
+      "zionist_hegemonic_institutions: excluded rival holder (institutional/arbitrage) — Israeli state agencies and Zionist umbrellas holding working definitional authority over 'Jewish interest'; absent from the doctrine's remaining deliberative spaces",
+      "host_state_pluralist_regimes: conditional guarantor (institutional/analytical) — governments and supranational bodies whose minority-rights law is the doctrine's load-bearing wall; extend or withdraw protection by domestic politics",
+      "postcolonial_jewish_studies_scholars: analytical observer (moderate/analytical) — academics articulating and archiving the doctrine; command little institutional resource"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.60) because the doctrine's contemporary costs are diffuse rather than captured: a narrowed political imagination, unshielded exposure for the association-endangered, legitimacy and attention consumed by a tradition whose practical levers are gone. No seat collects these costs — which is why gain_flow is affirmatively 'diffuse'. Suppression is low (0.15) as raw structure: the doctrine's enforcement capacity has decayed to near zero (see the falling suppression_requirement series — enforcement decay is the dynamic this story tracks, so the temporal series is authored deliberately rather than left to the scalar); what hold remains is largely internalized or carried by soft communal gatekeeping (omega: internalized_vs_structural_hold). Theater ratio is high (0.65): heritage months, anniversary lectures, and seminar discourse dominate over functional coordination — actual autonomous institutions (Bundist schools, Yiddishist press networks, treaty-advocacy machinery) are gone. Accessibility collapse is low (0.30): the doctrine does not close alternatives; it is what got collapsed upon — Zionism and hybrid positions remain fully accessible, which is precisely the atrophy signature. Resistance is moderate-high (0.55): the Zionist mainstream actively attacks the doctrine as naive or disloyal, and security-minded Jews reject it as abandoning the vulnerable. Boltzmann: identity_coordination (floor 0.08) — the doctrine coordinates boundary maintenance and membership meaning; excess extraction above the floor is real but modest and uncaptured, consistent with the claimed type rather than a capture story. Suppression is authored as raw structure and is not scaled; extractiveness is scaled by directionality and scope in the engine's computation. All three metric series run on one shared six-point grid (1897/1925/1948/1967/1991/2025) so no row substitutes an end-state scalar for an earlier value.",
+    "perspectival_gap": "From the diaspora-community seat the framework is a subsidy: legitimation, legal-defense vocabulary, identity depth — a low-extraction arrangement worth defending. From the nonzionist seat the same framework is a broken shield: it speaks their language but cannot protect them from communal conscription into Zionist identification. From the association-endangered seat it is a vindicated prophecy without an enforcement arm — the danger it predicted arrived, and it could do nothing. From the leadership seat it is a stewardship burden: an asset administered but neither monetizable nor safely discardable. Same-level lateral divergence is sharp: Zionist-identifying and nonzionist Jews hold comparable communal power yet experience opposite directionalities, differentiated entirely by ideological position and the exit options each position opens. The engine computes these divergent per-seat classifications from the structural data; the divergence between the subsidized beneficiary seat and the extracted payer seats is the perspectival gap this story exists to register.",
+    "directionality_logic": "The beneficiary declaration places diaspora_jewish_communities at the subsidized end, but their simultaneous exposure to association backlash and their identity-locked exit justify a directionality override to d≈0.35 — a lone beneficiary declaration would derive near-full-beneficiary and miss that the same population bears much of the harm. The two victim declarations drive nonzionist_diaspora_jews (constrained exit) and association_endangered_jews (trapped, powerless) toward the target end, the latter hardest since no decision of theirs modifies exposure; coalition potential exists (cross-community security networks, joint hate-crime advocacy) but addresses symptoms, not the structural exposure. Institutional leadership sits near-symmetric: arbitrage exit and non-capture of gains offset the administrative position — they steward the arrangement without collecting it. Zionist hegemonic institutions, though powerful, stand outside this framework's operation: they pay it nothing and it shields them not at all; their relationship is adversarial rather than extractive, which is itself signal — the doctrine no longer reaches the actors who determine Jewish fate. Global scope amplifies effective extraction modestly for the trapped seat and complicates verification for all.",
+    "mandatrophy_analysis": "Classifying this as a snare would require a capturer; none exists — the doctrine's costs dissipate across millions of identity-holders and no seat collects them. Classifying it as a rope would credit a coordination function that has largely ceased: the minority-rights regimes it relied on were destroyed by the same catastrophe that produced the sovereign alternative, and its remaining institutions coordinate memory, not protection. The piton classification names the actual condition: an inherited framework whose founding problem is contested, whose enforcement capacity has decayed to near zero, whose maintenance is increasingly theatrical, and which persists because burial — conceding that the Holocaust refuted its premise, rupturing communal identity, dismantling programs that anchor careers and belonging — costs more than any single bearer will pay. The agenda-setters could revive or retire it; the cost of either exceeds what they bear from leaving it alone. The classification prevents the twin mislabels: it blocks the extraction-story (no victimizer profits) and the coordination-story (the function no longer runs), locating the arrangement where the evidence puts it — mostly performance, kept alive by inertia and identity.",
+    "kernel_context": "Kernel: jewish_self_determination — the contested commitment that the Jewish people possess collective self-determination and that its proper form is a live question. This file instantiates the diasporist reading: survival and flourishing secured through diaspora pluralism and minority rights; territorial sovereignty rejected as a dangerous deviation. Sibling readings, each a separate constraint story with its own epsilon and victim set: liberal_nationalist_reading (nationhood with an equal claim to statehood), indigenous_return_reading (indigeneity grounding return as decolonization), settler_colonial_reading (Zionism as dispossession), religious_covenant_reading (covenantal obligation independent of secular frameworks). The disagreement is located in the premise connecting Jewish peoplehood to territorial sovereignty: this reading severs it; the liberal-nationalist and indigenous-return readings affirm it; the religious-covenant reading grounds it transcendentally; the settler-colonial reading condemns its exercise. Epsilon here is reading-indexed over a fixed referent: it prices the standing Zionist-hegemonic arrangement as this reading sees it, never the arrangement this reading would build."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "jewish_self_determination__liberal_nationalist_reading",
+      "jewish_self_determination__indigenous_return_reading",
+      "jewish_self_determination__settler_colonial_reading",
+      "jewish_self_determination__religious_covenant_reading"
+    ],
+    "dual_formulation_note": "'Jewish self-determination' is a colloquial label covering at least five structurally distinct constraints with different epsilons, beneficiary/victim sets, and failure modes; per the epsilon-invariance principle they are authored as separate linked stories rather than one story with a measurement parameter. This member occupies the lowest-institutional-resource position: the doctrine whose carrier institutions were destroyed and whose definitional territory was captured by the hegemonic sibling. The liberal-nationalist reading is upstream of it (its nationhood premise is shared by several siblings and is frequently cited as settled ground); the settler-colonial reading is its nearest ally in conclusion though opposed in ground (prudential-for-Jews versus justice-for-Palestinians). Edges run to all four siblings; contamination propagates along the shared nationhood premise."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "diaspora_jewish_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Live as religious, linguistic, and cultural minorities across dozens of host states, sustaining day schools, synagogues, presses, and mutual-aid networks that keep a distinct collective identity going without a state of their own. The pluralist-minority-rights framework gives their way of life its legitimating story and its legal defense. The same communities absorb the backlash when Israeli military actions dominate headlines, and their institutions increasingly look to Jerusalem for definitional authority, which thins the local identity the framework protects. Leaving the community would mean losing the identity infrastructure itself, so exit is rarely taken."
+    },
+    {
+      "name": "nonzionist_diaspora_jews",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Jews who decline Zionist identification — religious universalists, Bundist descendants, secular cosmopolitans, some Orthodox anti-Zionists. Inside communal institutions they face funding exclusions, invitation bans, and social sanction pressing them to declare for Israel or accept marginality. Their doctrinal home is the pluralist tradition, but its weakened organizations cannot shield them; exit means withdrawing from Jewish communal life altogether or self-censoring within it."
+    },
+    {
+      "name": "association_endangered_jews",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Visible Jews in host societies — synagogue congregants, kippah wearers, Hebrew-school children — who bear harassment and violence timed to Israeli military operations they did not choose and cannot influence. Their exposure is a fact of birth and visibility; no decision of theirs exits it. Community security budgets rise with each crisis, consuming resources from the cultural programming the pluralist framework promises."
+    },
+    {
+      "name": "diaspora_institutional_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Federation executives, rabbinical seminary heads, Hillel directors, and museum boards who administer the communal institutions carrying the pluralist inheritance. They allocate budgets between local cultural-autonomy programming and Israel-facing engagement, under donor constituencies that overwhelmingly prioritize the latter. They could rebuild the local-autonomy side; the fundraising cost and donor-revolt risk exceed what they would gain, so the inheritance is maintained symbolically — heritage months, anniversary lectures — while strategic weight migrates elsewhere. Their arbitrage is framing: they can present either orientation as pluralism as donor priorities shift."
+    },
+    {
+      "name": "zionist_hegemonic_institutions",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Israeli state agencies, major Zionist federations, and national umbrella organizations that hold working definitional authority over 'Jewish interest' in public life. They are not part of the pluralist tradition's remaining deliberative spaces — the Yiddishist circles, anti-Zionist minyanim, and diaspora-studies seminars where its carriers talk — and their admission would convert those spaces into auxiliaries of the sovereignty framework. Their exclusion preserves the tradition's residual autonomy while confirming its practical irrelevance."
+    },
+    {
+      "name": "host_state_pluralist_regimes",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "National governments and supranational bodies whose minority-rights law, hate-crime statutes, and multiculturalism policies form the legal substrate the pluralist framework stands on. They extend or withdraw protection according to domestic politics and geopolitical alignment, owing the framework nothing; their tolerance is the load-bearing wall the doctrine never controlled."
+    },
+    {
+      "name": "postcolonial_jewish_studies_scholars",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and public intellectuals who articulate, archive, and defend the pluralist position — diaspora-studies programs, YIVO-affiliated historians, postcolonial theorists of Jewishness. They see the whole structure: the doctrine's history, its marginalization, its residual carriers. Their output sustains the framework's intellectual life but commands little institutional resource."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of sustaining a coherent collective identity across dozens of host societies without territorial concentration: shared cultural institutions, language networks, mutual aid, and a common legal strategy of minority-rights claims let dispersed communities act as one people without triggering the dual-loyalty dynamics that sovereignty invites.",
+    "transfer_function": "Moves definitional authority over Jewish collective interest from state-centered institutions to dispersed communal and cultural bodies; moves the burden of Jewish security from a sovereign military onto host-state legal tolerance and inter-communal solidarity; in its contemporary atrophied form, moves attention and legitimacy toward a tradition whose practical levers are gone.",
+    "absent_voices": "Jews for whom the doctrine's protection failed or was unavailable: Soviet refuseniks who exited through sovereignty-enabled routes, Ethiopian Jews airlifted by the state the doctrine disavows, Israelis who live the arrangement the doctrine condemns, and Palestinian minorities in host states whose parallel struggles the doctrine's universalism sometimes eclipses. They sit outside the doctrine's remaining deliberative circles, which are concentrated in secure Western diasporas where the cost of being wrong is lowest.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "The parties dispute the answer. From the carrier seats, the world rearranges: diaspora communities lose their legitimating story and legal-defense vocabulary, nonzionist Jews lose their only doctrinal home, and the academic and cultural programs sustaining the tradition dissolve. From the hegemonic seats, nothing rearranges: the sovereign arrangement and the communal mainstream continue unaffected — an asymmetry the doctrine itself laments, since its absence registers only in the corners where it still lives.",
+    "founding_problem": "How can a stateless minority scattered among often-hostile host societies survive collectively without provoking the expulsions and disloyalty accusations that followed every attempt at territorial concentration or visible national assertion — answered, in this tradition, by cultural autonomy, minority-rights treaties, and the doctrine of hereness (doykayt): building Jewish life where Jews live.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The genealogy is corroborated from outside the doctrine's own carriers: historians in the YIVO tradition and academic diaspora-studies programs — institutionally independent of both Zionist federations and the doctrine's activist remnants — document its origin in the interwar minority-rights experiment and the Bund's destruction. On status, corroboration splits by seat: Israeli state institutions and mainstream federations attest the founding problem (statelessness) was solved by sovereignty and is closed; the doctrine's carriers and sympathetic historians attest the problem (diaspora vulnerability) remains live and mis-solved. No source outside the benefiting parties attests that minority-rights frameworks alone remain sufficient — that claim rests on the doctrine's own carriers, which is itself signal."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "diaspora_autonomist_pluralism",
+    "drift_state": {
+      "moment": "post_1948_sovereignty_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "liberal_nationalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "indigenous_return_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "settler_colonial_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "religious_covenant_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "diaspora_pluralism_secures_survival",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "territorial_sovereignty_endangers_fate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "minority_rights_regimes_as_guarantor",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,375 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_avoidance_retention__hybrid_near_miss_learning",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_catastrophe_avoidance_retention__hybrid_near_miss_learning",
+    "measurement_id_prefix": "cat_avoid_hybrid",
+    "story_uid": "64797c16-eca0-4724-84fe-8987ec8c1bc5"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Distributed Near-Miss Learning for Catastrophe Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "operating_personnel",
+      "safety_management",
+      "regulatory_oversight_bodies",
+      "public_stakeholders"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "high_reliability_organization_theory",
+      "distributed_cognition_in_safety",
+      "learning_from_failure_without_failure"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operating_personnel",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Front-line operators (pilots, surgeons, control room staff, offshore crews) who directly experience near-misses and participate in drills. They benefit from competence that keeps them alive and effective, but pay in time, cognitive load, and emotional weight of incident review. Exit is constrained by professional licensing, career investment, and the non-portability of domain-specific tacit knowledge."
+    },
+    {
+      "name": "safety_management",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Safety departments, chief safety officers, training organizations that design and mandate reporting systems, drill programs, and cross-organizational sharing protocols. They set the agenda for what counts as a reportable near-miss, how drills are structured, and which foreign incidents are studied. They benefit institutionally from fewer catastrophes and professional recognition. Exit is mobile — safety management skills transfer across high-reliability domains."
+    },
+    {
+      "name": "regulatory_oversight_bodies",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Aviation authorities (FAA, EASA), nuclear regulators (NRC), medical boards, maritime administrations. They benefit from the legitimacy that effective safety oversight provides, and from the political cover of a working learning system. Their exit is analytical — they observe and evaluate but do not operate within the constraint."
+    },
+    {
+      "name": "public_stakeholders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The traveling public, patients, communities near hazardous facilities — ultimate beneficiaries of avoided catastrophes. They are trapped in the system: they cannot exit air travel, medical care, or industrial society, and they have no direct voice in safety learning design. Their safety depends entirely on the constraint's effectiveness."
+    },
+    {
+      "name": "cross_organizational_learning_networks",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Bodies like the Commercial Aviation Safety Team (CAST), the Nuclear Power Plant Operating Experience program, the WHO Surgical Safety Checklist consortium, the International Maritime Organization's casualty analysis. They curate and distribute foreign incident data, standardize reporting taxonomies, and sponsor high-realism drill scenarios. Their power is coordination, not coercion; they persist only while members find value."
+    },
+    {
+      "name": "simulation_and_training_vendors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies providing high-fidelity simulators, VR/AR training platforms, drill scenario design, and synthetic environment generation. They benefit commercially from the mandate for high-realism drills. Their exit is arbitrage-grade — they can pivot to adjacent markets (gaming, entertainment, non-safety training) if the safety training market contracts."
+    },
+    {
+      "name": "analytical_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Researchers in organizational sociology, safety science, resilience engineering, cognitive systems engineering (e.g., Woods, Hollnagel, Dekker, Perrow, Reason traditions). They study the constraint from outside, providing the epistemic checks that prevent the learning system from becoming self-referential."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains collective competence for catastrophe avoidance without requiring actual catastrophes, by stitching together three partial information streams: (1) internal near-miss reports that reveal local failure modes, (2) foreign incident data that imports lessons from others' catastrophes, and (3) high-realism drills that exercise response to scenarios never yet experienced. No single stream is sufficient; the constraint is the infrastructure that integrates them into a continuous learning loop.",
+    "transfer_function": "Moves cognitive effort and organizational resources from routine operations into the learning infrastructure: reporting time, investigation capacity, drill participation, cross-organizational data sharing agreements, simulator procurement. The return is reduced catastrophe probability — a diffuse, non-monetized benefit that accrues to all stakeholders asymmetrically (public stakeholders gain most per unit of investment; vendors gain direct revenue).",
+    "absent_voices": "Workers in domains without mature near-miss reporting cultures (much of healthcare outside surgery/anesthesia, many developing-nation industrial sectors, informal economy operations) — they would object to the resource demands of the learning infrastructure if they had voice, but they are excluded by the very absence of the constraint in their domains. Also absent: the victims of catastrophes that *did* occur because the learning system was not yet mature — they cannot speak to what the constraint prevents.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the distributed near-miss learning infrastructure vanished overnight, industries would revert to either (a) waiting for catastrophes to drive change (the catastrophe_as_necessary_selector reading) or (b) relying on simulation fidelity claims without external validation (the simulation_as_proxy_catastrophe reading). Both paths have empirically higher catastrophe rates. The world would rearrange toward more frequent catastrophic failures, especially in domains where the learning infrastructure is the only thing preventing competence decay (e.g., nuclear power after Three Mile Island, aviation after the 1990s safety plateau).",
+    "founding_problem": "The post-WWII expansion of high-hazard technologies (commercial aviation, nuclear power, complex surgery, deepwater offshore) created systems where catastrophes were unacceptable but competence could not be maintained by apprenticeship alone. The founding problem was: how to maintain and improve safety competence in complex, tightly-coupled systems without learning from actual disasters?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by multiple independent sources outside the direct beneficiaries: the 1979 Three Mile Island accident investigation (Kemeny Commission) explicitly identified the absence of cross-plant learning as a root cause; the 1999 Institute of Medicine 'To Err Is Human' report documented medicine's lack of aviation-style learning infrastructure; the 2010 Deepwater Horizon investigation (National Commission) found that near-miss normalization had displaced learning. These are corroborations from investigative bodies with no stake in the learning infrastructure's continuation."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the distributed learning infrastructure that high-reliability industries (especially aviation, nuclear power, and increasingly healthcare) have built to maintain catastrophe-avoidance competence without requiring actual catastrophes. The core claim is that three partial information streams — near-misses, foreign incidents, and high-realism drills — are jointly sufficient but individually necessary. The constraint is claimed as a rope: genuine coordination with minimal extraction, where all participants are net beneficiaries. The metrics reflect low extractiveness (0.18) and suppression (0.12), moderate theater (0.22, rising with bureaucratization of reporting), low accessibility collapse (0.35 — alternatives like pure simulation or pure catastrophe-waiting exist but are empirically inferior), and low resistance (0.25 — resistance comes from reporting burden, not from the constraint's legitimacy). This is one reading of the contested kernel 'catastrophe_avoidance_retention'; the sibling readings claim either that only real catastrophes provide sufficient selection pressure (catastrophe_as_necessary_selector) or that high-fidelity simulation alone suffices (simulation_as_proxy_catastrophe).",
+    "logic_rationale": "Extractiveness is low because the constraint's primary operation is information sharing and collective sense-making, not resource transfer. The 'costs' are cognitive and temporal (reporting, drill participation), not material extraction. Suppression is low because participation is largely voluntary at the operational level (mandated at organizational level) and exit, while constrained, is not blocked. Theater ratio is moderate and rose through the 1990s-2000s as reporting systems became bureaucratized (checkbox compliance, 'near-miss' inflation), but has stabilized as resilience engineering critiques (Dekker, Hollnagel) pushed back toward learning-oriented reporting. Accessibility collapse is low because the constraint does not foreclose alternative safety philosophies — they remain live and are tested in domains without the infrastructure. Resistance is low because the constraint's effectiveness is empirically visible in aviation's safety record; the main resistance is operational burden, not ideological opposition.",
+    "directionality_logic": "Operating personnel are dual-positioned: primary beneficiaries (competence keeps them alive) but also payers (time, cognitive load, emotional weight). Their exit is constrained by professional identity and licensing. Safety management and learning networks are agenda_setters who benefit institutionally; their exit is mobile (skills transfer). Regulatory bodies and public stakeholders are beneficiaries with analytical or trapped exit. Simulation vendors are beneficiaries with arbitrage exit — they capture commercial gains but are not structurally dependent. No stakeholder is a victim; the constraint has no extraction target. Directionality is symmetric-to-beneficial across all seats.",
+    "perspectival_gap": "From the operating personnel seat, the constraint feels like a rope with moderate theater (reporting burden) and real coordination value (survival). From the safety management seat, it is a genuine coordination mechanism they administer. From the public stakeholder seat, it is an invisible mountain — they experience only the absence of catastrophe. From the simulation vendor seat, it is a revenue opportunity. The engine should compute rope for all seats; the divergence is in perceived theater and extraction, not in type.",
+    "mandatrophy_analysis": "The founding problem (maintaining competence without catastrophes) remains live — catastrophes are still unacceptable, and competence still decays without active learning. The constraint has not suffered mandatrophy; its justification is the ongoing problem it was built to solve. The moderate theater ratio reflects bureaucratization, not function loss. The constraint would be a scaffold only if a sunset were declared (e.g., 'until AI-based predictive safety replaces human learning'), but no such sunset exists.",
+    "kernel_context": "This constraint is the 'hybrid_near_miss_learning' reading of the contested kernel 'catastrophe_avoidance_retention'. The kernel is the persistent commitment: 'competence for catastrophe avoidance must be maintained.' Three readings instantiate different constraints from this kernel: (1) catastrophe_as_necessary_selector — only actual catastrophes provide sufficient selection pressure; (2) simulation_as_proxy_catastrophe — high-fidelity simulation is functionally equivalent to real catastrophes for competence maintenance; (3) hybrid_near_miss_learning (this reading) — neither alone suffices; competence requires distributed learning from near-misses, foreign incidents, and high-realism drills. The readings differ structurally in their victim/beneficiary sets, their extractiveness, and their coordination mechanisms. This reading declares beneficiaries across all stakeholder seats and no victims; the catastrophe_as_necessary_selector reading would declare catastrophe victims as the structural cost; the simulation_as_proxy_catastrophe reading would declare simulation vendors as concentrated beneficiaries."
+  },
+  "omegas": [
+    {
+      "id": "near_miss_reporting_completeness",
+      "question": "What fraction of operationally significant near-misses are actually reported and enter the learning stream, vs. normalized or suppressed?",
+      "resolution_mechanism": "Comparative studies of confidential reporting systems (e.g., NASA ASRS) vs. mandatory reporting vs. operational data mining (FOQA, black box analysis) across domains.",
+      "impact": "If reporting completeness is low and declining, the constraint's coordination function degrades toward theater; the effective extractiveness of the reporting burden rises while the learning return falls.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the near-miss stream is structurally sound or eroding"
+    },
+    {
+      "id": "foreign_incident_transfer_fidelity",
+      "question": "How faithfully do lessons from foreign incidents transfer across organizational, cultural, and regulatory boundaries?",
+      "resolution_mechanism": "Longitudinal tracking of specific foreign-incident-derived interventions (e.g., CRM from aviation to healthcare, nuclear safety culture from US to Japan post-Fukushima) and their measured effectiveness in the receiving domain.",
+      "impact": "If transfer fidelity is low, the 'foreign incident' stream is largely theater; the constraint reduces to near-miss + drill, changing its coordination topology.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Cross-boundary lesson transfer effectiveness"
+    },
+    {
+      "id": "drill_realism_vs_psychological_safety",
+      "question": "Does increasing drill realism (to approach 'catastrophe-equivalent' stress) degrade the psychological safety needed for honest near-miss reporting?",
+      "resolution_mechanism": "Studies comparing high-stress drill programs with reporting rates and quality metrics in the same organizations over time; experimental work on stress inoculation vs. threat rigidity.",
+      "impact": "If a trade-off exists, the constraint's three streams are in tension; the coordination function requires balancing them, not maximizing each. This would raise the constraint's inherent coordination cost (Boltzmann floor).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Tension between drill fidelity and reporting culture"
+    },
+    {
+      "id": "kernel_reading_foreclosure_boundary",
+      "question": "Does this reading's core premise (distributed learning suffices) logically foreclose the catastrophe_as_necessary_selector reading, or do they coexist as live positions?",
+      "resolution_mechanism": "Analyze whether any single organization or domain can simultaneously maintain both: a learning infrastructure that treats near-misses as sufficient AND a belief that only real catastrophes validate competence. If mutual exclusion is structural, the relation is forecloses; if different domains adopt different readings, coexists_with.",
+      "impact": "If forecloses, the kernel has a structural fault line; if coexists_with, the kernel supports pluralism. Affects cs_structure.reading_relations assignment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between this reading and the catastrophe_as_necessary_selector sibling"
+    },
+    {
+      "id": "medicine_learning_infrastructure_gap",
+      "question": "Is medicine's apparent failure to build aviation-grade near-miss learning infrastructure a structural feature of medical practice (irreducible complexity, liability regime, professional culture) or a contingent lag?",
+      "resolution_mechanism": "Comparative institutional analysis of reporting systems, malpractice liability, professional autonomy, and error disclosure norms across healthcare systems and against aviation's historical trajectory.",
+      "impact": "If structural, the constraint's coordination function has domain-limited applicability — it is not a universal rope. If contingent, medicine is a lagging adopter and the constraint's universality claim holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination mechanism generalizes beyond aviation/nuclear"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "catastrophe_avoidance_retention__catastrophe_as_necessary_selector",
+      "catastrophe_avoidance_retention__simulation_as_proxy_catastrophe",
+      "high_reliability_organization_theory",
+      "resilience_engineering_practice",
+      "safety_culture_measurement"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the kernel 'catastrophe_avoidance_retention'. The sibling readings are 'catastrophe_as_necessary_selector' (only real catastrophes maintain competence) and 'simulation_as_proxy_catastrophe' (high-fidelity simulation suffices). This reading claims the three-stream hybrid is necessary and sufficient. The decomposition follows the BGS pattern: each reading has distinct ε, distinct stakeholder structures, and distinct empirical status. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.0
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary_selector",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "near_miss_learning_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "foreign_incident_transferability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "drill_realism_calibration",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_tmi_aviation_learning_infrastructure",
+    "drift_state": {
+      "moment": "contemporary_resilience_engineering_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

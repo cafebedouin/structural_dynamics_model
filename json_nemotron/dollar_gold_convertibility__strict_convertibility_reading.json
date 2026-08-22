@@ -1,0 +1,584 @@
+{
+  "header": {
+    "constraint_id": "dollar_gold_convertibility__strict_convertibility_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_dollar_gold_convertibility__strict_convertibility_reading",
+    "measurement_id_prefix": "dgc_strict",
+    "story_uid": "a0c5a954-2a4a-4f50-8d7d-4a71389cd0bb",
+    "created_at": "2026-08-03T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Article IV Convertibility as Binding Legal Obligation Constraining U.S. Monetary Policy",
+    "topic_domain": "international_political_economy/monetary_history/international_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "creditor_nation_central_banks",
+      "gold_bloc_governments",
+      "international_monetary_fund_surveillance"
+    ],
+    "victims": [
+      "us_treasury_federal_reserve",
+      "us_domestic_labor_markets",
+      "us_fiscal_authority"
+    ],
+    "vindicated_propositions": [
+      "bretton_woods_legal_order",
+      "gold_standard_automatic_adjustment",
+      "creditor_rights_supremacy",
+      "rule_based_monetary_system"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the dollar_gold_convertibility kernel, and does the strict_convertibility_reading structurally differ from policy_flexible_reading and triffin_structural_reading?",
+      "resolution_mechanism": "Trace the constraint family: each reading must instantiate a distinct constraint with its own ε, beneficiaries, victims, and classification. The strict reading places the U.S. in the victim set with high extractiveness from domestic policy space; the flexible reading subordinates convertibility to domestic stability; the Triffin reading treats convertibility as a structural flaw. Confirm by cross-referencing sibling constraint_ids in network.affects_constraints.",
+      "impact": "If the readings are not structurally distinct, the ε-invariance principle is violated — one kernel label would cover multiple constraints. This omega documents the committer-frame structure that must not leak into standard fields.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment kernel decomposition: strict vs. flexible vs. Triffin readings as distinct constraints"
+    },
+    {
+      "id": "legal_obligation_vs_policy_space",
+      "question": "Does Article IV convertibility operate as a binding legal obligation that extracts from U.S. domestic policy space, or is the legal form a coordination cover for a system that already privileged creditor nations?",
+      "resolution_mechanism": "Compare the legal text of IMF Articles of Agreement (Article IV, Sections 1–4) against the operational record of U.S. monetary policy 1945–1971: frequency of policy deviations justified by domestic objectives, instances of IMF enforcement or waiver, and whether the gold window closure (1971) was treated as legal breach or systemic necessity.",
+      "impact": "If binding legal obligation: high extractiveness, U.S. as victim, Tangled Rope classification holds. If legal form is cover: the constraint is a Snare from the U.S. seat, and the coordination function is retrospective justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the legal obligation is the operative constraint or a legitimating frame"
+    },
+    {
+      "id": "triffin_dilemma_as_omega",
+      "question": "Is the Triffin dilemma (the issuer must run deficits to supply reserves, undermining convertibility) an exogenous structural fact or an endogenous consequence of the strict reading's enforcement?",
+      "resolution_mechanism": "Model the reserve accumulation dynamics under strict convertibility: if creditor nations' reserve demand forces U.S. deficits, the Triffin pressure is structural. If U.S. policy choices (e.g., Vietnam War spending, Great Society) independently drove deficits, the dilemma is partly endogenous. Examine the 1958–1971 gold outflow trajectory against fiscal/monetary policy shifts.",
+      "impact": "If exogenous: the strict reading's coordination function is inherently self-undermining — a Scaffold with a structural sunset. If endogenous: the extraction is policy-contingent, and the strict reading could have been sustained with different U.S. choices — making the Tangled Rope classification more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Triffin dilemma as exogenous structural limit vs. endogenous policy consequence"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (IMF conditionality, gold pool coordination, market discipline) or internalized (U.S. policymakers adopting creditor-nation preferences as their own)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: after 1971, did U.S. monetary policy immediately pursue domestic objectives without external constraint, or did the 'gold standard mentality' persist in Volcker-era policy? If suppression persists after the extractive mechanism is removed, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit. This would elevate the computed extraction for the U.S. seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the U.S. policy seat"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1955,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1958,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1971,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1955,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1958,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1971,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1955,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1958,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1971,
+      "value": 0.85
+    }
+  ],
+  "interval": {
+    "start": 1945,
+    "end": 1971
+  },
+  "coercion_grid": {
+    "t0": 1945,
+    "tn": 1971,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.4
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1971,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1971,
+        "value": 0.78
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.3
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1971,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.25
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1971,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1971,
+        "value": 0.88
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1971,
+        "value": 0.82
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.22
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1971,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.18
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1971,
+        "value": 0.6
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1971,
+        "value": 0.85
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.4
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1971,
+        "value": 0.8
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1971,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1971,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1971,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.3
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1971,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.25
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1971,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.2
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1971,
+        "value": 0.52
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The strict convertibility reading treats Article IV of the IMF Articles of Agreement as a binding legal obligation requiring the United States to maintain gold convertibility at $35/ounce, constraining Federal Reserve monetary policy and Treasury fiscal operations to defend the parity. Creditor nations (France, Germany, Italy, Belgium, Netherlands, Switzerland) hold enforceable claims on U.S. gold reserves and use IMF surveillance to discipline U.S. policy. The U.S. enters the victim set as the constrained issuer: its domestic policy space is extracted to maintain the international monetary order. The coordination function — a rule-based system preventing competitive devaluation and providing stable reserves — is real but asymmetrically costly. The constraint's enforcement machinery (gold pool, IMF conditionality, swap networks, market intervention) intensifies over 1945–1971 as U.S. gold coverage declines. The legal form is not merely declaratory: the 1968 two-tier gold market and 1971 closure were treated as systemic ruptures, not routine policy adjustments.",
+    "key_agents": [
+      "us_treasury_federal_reserve: Primary victim (institutional/powerful/trapped) — bears extraction of policy autonomy, gold reserves, and fiscal space",
+      "creditor_nation_central_banks: Primary beneficiary (institutional/powerful/arbitrage) — hold enforceable gold claims, gain reserve stability and export competitiveness",
+      "gold_bloc_governments: Secondary beneficiary (institutional/organized/constrained) — coordinate to enforce convertibility, benefit from fixed exchange rates",
+      "international_monetary_fund_surveillance: Agenda setter (institutional/organized/analytical) — administers the legal framework, authorizes parity changes, conditions access",
+      "us_domestic_labor_markets: Secondary victim (class/powerless/trapped) — bear unemployment and wage suppression when monetary policy tightens to defend gold",
+      "us_fiscal_authority: Secondary victim (institutional/powerful/constrained) — fiscal space constrained by balance-of-payments discipline",
+      "academic_monetary_economists: Observer (analytical/analytical/analytical) — debate the constraint's classification, later produce Triffin reading"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint extracts U.S. domestic policy autonomy — the Fed cannot pursue full employment independently when gold outflows demand contraction. The Triffin dynamic makes this extraction structural: supplying global reserves requires U.S. deficits, which undermine the very convertibility the constraint demands. Suppression (0.85) is very high: the gold pool (1961–1968), swap lines, IMF Article IV consultations, and market discipline create a multi-layered enforcement apparatus. Theater ratio (0.22) is low-moderate: the coordination function (stable reserves, prevented competitive devaluation) is genuine but erodes over time as the system's own success creates the Triffin contradiction. The measurement series on a shared grid (1945, 1950, 1955, 1958, 1960, 1965, 1968, 1971) show extractiveness rising from 0.35 to 0.78, suppression from 0.45 to 0.85, and theater ratio from 0.10 to 0.22 — a coordination system becoming progressively more extractive.",
+    "directionality_logic": "The U.S. Treasury/Fed is the structural victim (d near 1.0): constrained issuer, trapped by the gold standard's mechanics, bears the adjustment burden. Creditor nation central banks are structural beneficiaries (d near 0.0): hold enforceable gold claims, gain stable reserves for their export sectors, and can arbitrage via the gold pool. The IMF surveillance function sits at d ≈ 0.5 (symmetric): it administers the system but its legitimacy depends on even-handed enforcement — which the historical record shows was creditor-biased. U.S. domestic labor markets are identity-locked victims (d ≈ 0.9): no exit from the monetary regime, bear costs through unemployment. U.S. fiscal authority is constrained (d ≈ 0.7): some policy space but balance-of-payments discipline binds.",
+    "perspectival_gap": "From the creditor-nation seat (France 1965), the constraint is a Rope: genuine coordination preventing U.S. inflationary finance from devaluing their reserves. From the U.S. seat (Treasury 1968), it is a Snare: extraction of policy autonomy for a coordination function that increasingly benefits others. From the IMF staff seat, it is a Tangled Rope: coordination with asymmetric extraction requiring active enforcement. The engine computes this divergence from the structural data — the strict reading's legal formalism makes the asymmetry structurally visible.",
+    "mandatrophy_analysis": "The Bretton Woods system was founded to solve the interwar coordination failure (competitive devaluation, trade collapse, gold standard rigidity). By 1960, the founding problem (interwar chaos) was dead — but the arrangement persisted and intensified extraction. The mandatrophy is unresolved: the system's legal form (Article IV) became a vehicle for creditor-nation rent extraction from the issuer. The strict reading captures this by naming the U.S. as victim and creditor nations as beneficiaries. The policy_flexible_reading is the mandatrophy-resolution attempt (subordinate convertibility to domestic stability); the Triffin reading is the structural diagnosis of why the strict reading was unsustainable.",
+    "kernel_context": "This constraint is the strict_convertibility_reading of the dollar_gold_convertibility kernel. Sibling readings: policy_flexible_reading (convertibility as conditional obligation subordinate to domestic economic stability) and triffin_structural_reading (convertibility as inherently unsustainable design flaw requiring systemic revision). The strict reading instantiates a Tangled Rope with U.S. in victim set and creditor nations as beneficiaries; the flexible reading would show lower U.S. extractiveness and higher coordination; the Triffin reading would show the constraint as a structural flaw (Piton or Scaffold with structural sunset). All three are distinct constraints with different ε values, linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dollar_gold_convertibility__policy_flexible_reading",
+      "dollar_gold_convertibility__triffin_structural_reading",
+      "bretton_woods_adjustment_mechanism",
+      "gold_pool_coordination",
+      "imf_conditionality_evolution",
+      "triffin_dilemma_diagnosis"
+    ],
+    "dual_formulation_note": "The dollar_gold_convertibility kernel decomposes into three structurally distinct constraints: (1) strict_convertibility_reading — Article IV as binding legal obligation extracting from U.S. policy space (Tangled Rope, ε=0.78); (2) policy_flexible_reading — convertibility as conditional, subordinate to domestic stability (Rope or Scaffold, lower ε); (3) triffin_structural_reading — convertibility as self-undermining design flaw (Piton or Scaffold with structural sunset). The ε values differ because the referent (the standing arrangement under contest) is assessed by each reading's own lights: the strict reading sees binding law; the flexible reading sees managed flexibility; the Triffin reading sees structural contradiction. This decomposition follows the BGS pattern: spectral universality (Mountain) vs. eigenvector thermalization (Tangled Rope) — same label, different constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "us_treasury_federal_reserve",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The U.S. monetary authority bears the primary adjustment burden: must contract money supply, raise interest rates, and limit fiscal deficits to stem gold outflows. The gold window is the only exit mechanism, and closing it (1971) ended the constraint but triggered systemic rupture. No alternative reserve currency existed; the Triffin dilemma made the position structurally inescapable while the system operated."
+    },
+    {
+      "name": "creditor_nation_central_banks",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "European central banks (especially France, Germany, Italy) accumulated dollar reserves convertible to gold at $35/oz. They could arbitrage by converting dollars to gold (France did aggressively 1965–1968), gaining a risk-free asset while the U.S. bore the adjustment. Their exit option was the gold conversion right itself — a structural arbitrage the constraint granted them."
+    },
+    {
+      "name": "gold_bloc_governments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "The European gold bloc coordinated through the Bank for International Settlements and the gold pool to enforce convertibility discipline on the U.S. They benefited from stable exchange rates for their export-led recovery but were constrained by their own dependence on the dollar system — they could not easily exit without devaluing their own reserves."
+    },
+    {
+      "name": "international_monetary_fund_surveillance",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The IMF administers Article IV: approves/disapproves parity changes, conducts Article IV consultations, conditions access to Fund resources on policy adjustment. It is the institutional enforcer of the strict reading. Its analytical seat sees the full structure but its operational role is to maintain the legal framework — making it both agenda-setter and observer."
+    },
+    {
+      "name": "us_domestic_labor_markets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "When the Fed tightens to defend gold (1957, 1959, 1966, 1969), unemployment rises and wage growth slows. Workers have no exit from the monetary regime — they cannot convert wages to gold, cannot move to a different currency zone. The extraction from their employment prospects is diffuse but real, and they have no voice in the Article IV governance."
+    },
+    {
+      "name": "us_fiscal_authority",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Congress and the Executive face balance-of-payments constraints on fiscal expansion (Vietnam War + Great Society spending drove 1960s deficits that accelerated gold loss). They have some policy space (tax surcharges, expenditure cuts) but the external constraint narrows domestic choices. Exit would mean abandoning the dollar's reserve role — a geopolitical cost they would not pay voluntarily."
+    },
+    {
+      "name": "academic_monetary_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Economists (Triffin, Mundell, Johnson, Kindleberger) analyzed the constraint from outside the operational seats. Triffin's 1960 testimony to Congress produced the structural reading that the system was inherently flawed. Their analytical seat has full exit and no stake in the extraction — they classify, they do not bear."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a rule-based international monetary system preventing competitive devaluation, supplying stable reserve assets (dollars convertible to gold), and enabling predictable trade and capital flows — the Bretton Woods solution to the interwar chaos.",
+    "transfer_function": "Moves policy autonomy and gold reserves from the U.S. (issuer) to creditor nations (reserve holders): the U.S. supplies global liquidity by running deficits, creditor nations accumulate convertible claims, and the adjustment burden falls asymmetrically on the issuer via gold outflows and contractionary policy.",
+    "absent_voices": "Developing nations (Global South) were excluded from the Article IV governance structure — they held few gold reserves, had no voice in IMF quota allocation, and bore the contractionary spillover when the U.S. tightened. The G-77 would later demand SDR allocation and reform, but in 1945–1971 they were structurally absent. Also absent: U.S. Congress (ceded monetary authority to Fed/Treaty), U.S. labor (no representation in international monetary governance).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article IV convertibility vanished overnight (as it effectively did in August 1971), the world monetary system rearranged completely: floating exchange rates, end of gold convertibility, shift to dollar-standard without anchor, eventual petrodollar recycling, and a decade of inflation and volatility before the Volcker disinflation. The constraint's disappearance was the Nixon Shock — a systemic rupture, not a marginal adjustment.",
+    "founding_problem": "The interwar period (1919–1939) demonstrated that uncoordinated national monetary policies produced competitive devaluation, trade collapse, gold standard rigidity, and contributed to the Great Depression and political extremism. The founders at Bretton Woods (1944) sought a rule-based system with adjustable pegs, IMF surveillance, and gold convertibility to prevent recurrence.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (interwar monetary chaos) is dead — no serious analyst argues the 1970s floating-rate system recreated 1930s chaos. The corroboration comes from outside the beneficiary set: Triffin (1960), Kindleberger (1973), Eichengreen (1992), and the IMF's own historical assessments all attest the original problem was solved but the strict convertibility obligation persisted as extraction. The U.S. Treasury (beneficiary of the flexible reading) and creditor nations (beneficiaries of strict reading) both had incentives to maintain the system past its founding justification."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bretton_woods_foundational_order"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "policy_flexible_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "triffin_structural_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "article_iv_creates_binding_legal_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "us_as_constrained_issuer_bears_adjustment_burden",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "bretton_woods_legal_order_1945",
+    "drift_state": {
+      "moment": "nixon_shock_1971",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

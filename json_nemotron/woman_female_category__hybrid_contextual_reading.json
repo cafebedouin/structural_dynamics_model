@@ -1,0 +1,377 @@
+{
+  "header": {
+    "constraint_id": "woman_female_category__hybrid_contextual_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-25",
+    "status": "ACTIVE",
+    "story_uid": "b5005671-8803-4c92-b4ed-537f59dde2f4"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Contextual Category Membership for Woman/Female (Hybrid Reading)",
+    "topic_domain": "political_philosophy/bioethics/gender_studies/law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "healthcare_institutions",
+      "sports_governing_bodies",
+      "legal_administrative_state",
+      "employer_compliance_departments"
+    ],
+    "victims": [
+      "trans_women_in_sports_medical_contexts",
+      "trans_men_in_sports_medical_contexts",
+      "cisgender_women_in_social_legal_contexts",
+      "gender_nonconforming_people_in_all_contexts",
+      "intersex_people_in_all_contexts"
+    ],
+    "vindicated_propositions": [
+      "contextual_sensitivity_principle",
+      "domain_specific_policy_design",
+      "institutional_conflict_minimization"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'woman_female_category', or does it instantiate a structurally distinct constraint?",
+      "resolution_mechanism": "Compare ε values and victim/beneficiary structures across the three declared readings (sex_biology_reading, gender_identity_reading, hybrid_contextual_reading). If ε and structural roles differ materially, they are distinct constraints per DP-001 ε-invariance.",
+      "impact": "If distinct constraints, each gets its own JSON file linked via network.affects_constraints. If same constraint under different observables, DP-001 is violated — the label conflates structurally distinct claims.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the hybrid contextual reading is a distinct constraint from the biology and identity readings per ε-invariance"
+    },
+    {
+      "id": "sibling_reading_foreclosure_structure",
+      "question": "Does the hybrid contextual reading logically foreclose the sex biology reading, the gender identity reading, or neither — and in what structural sense?",
+      "resolution_mechanism": "Assess whether a single institutional framework could simultaneously hold: (a) biological sex determines category membership in medical/sports/safety contexts, AND (b) gender identity determines it in social/legal contexts, alongside a framework that holds (c) biological sex determines it in ALL contexts, or (d) gender identity determines it in ALL contexts. Test logical compatibility, not political coexistence.",
+      "impact": "If hybrid contextual reading coexists_with both siblings, the kernel is a genuine pluralist dispute. If it forecloses one or both, the kernel has an internal logical hierarchy. This determines cs_structure.reading_relations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between hybrid contextual reading and sibling readings — foreclosure vs coexistence"
+    },
+    {
+      "id": "institutional_beneficiary_extraction_boundary",
+      "question": "Do the declared institutional beneficiaries (healthcare institutions, sports bodies, legal state, employers) actually capture the extraction, or do they merely administer a compromise that extracts from both constituency groups?",
+      "resolution_mechanism": "Trace resource flows: do these institutions gain budget, authority, or legitimacy from maintaining the hybrid regime, or do they bear net costs of administering dual standards? Compare to the piton pattern: administrator could change it but cost to fix exceeds what it bears.",
+      "impact": "If institutions capture extraction → gain_flow names a seat (snare-flavored). If they administer at net cost → gain_flow = 'diffuse' (piton candidate). This determines receipt surface.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional actors are net beneficiaries or net administrators of the hybrid regime"
+    },
+    {
+      "id": "context_boundary_stability",
+      "question": "Are the context boundaries (medical/sports/safety vs social/legal) structurally stable, or do they bleed into each other creating a de facto single-context regime?",
+      "resolution_mechanism": "Track litigation and policy disputes over boundary cases: prison housing, shelter access, school facilities, medical transition for minors, data collection categories. If boundaries are litigated to collapse, the hybrid reading de facto becomes one of the monist readings.",
+      "impact": "If boundaries collapse toward biology-only → hybrid reading converges on sex_biology_reading. If toward identity-only → converges on gender_identity_reading. If boundaries hold → hybrid reading is structurally stable as a distinct constraint.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the context boundaries that define this reading's structure are stable or eroding"
+    },
+    {
+      "id": "trans_women_victim_heterogeneity",
+      "question": "Do trans women experience the same extraction across medical, sports, and safety contexts, or do different sub-groups (post-transition, non-medical-transition, youth) face qualitatively different victimization?",
+      "resolution_mechanism": "Disaggregate victim set by transition status, age, and context. A monolithic 'trans_women_in_sports_medical_contexts' victim group may mask distinct constraint operations (e.g., testosterone suppression requirements vs. blanket exclusion vs. documentation barriers).",
+      "impact": "If victim experience is heterogeneous, this single constraint story may need decomposition per ε-invariance (different ε for different victim sub-groups). If homogeneous, single story is adequate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the trans women victim group is structurally homogeneous or requires decomposition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 2010,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the hybrid contextual reading of the 'woman/female' category kernel: biological sex governs category membership in medical, sports, and safety contexts (where material bodily differences are held to be relevant), while gender identity governs in social and legal recognition contexts (where self-identification and dignity are held to be paramount). The reading is instantiated in policy frameworks like the UK Equality Act's 'sex-based exceptions' alongside Gender Recognition Certificate provisions, US Title IX regulatory oscillations, and IOC/World Athletics eligibility standards contrasted with legal gender recognition laws. The constraint is actively enforced through institutional gatekeeping: sports federations police testosterone thresholds and eligibility criteria; healthcare systems apply sex-based protocols; legal systems issue and recognize gender markers; employers administer single-sex spaces and equality monitoring. Extraction is moderate (ε=0.42) and rising: both constituency groups bear costs in contexts where their preferred reading is subordinated — trans people face exclusion and medical gatekeeping in sports/medical contexts; cisgender women face competitive displacement and space erosion in social/legal contexts. Institutional actors benefit from conflict-minimization: they avoid taking a definitive position on the kernel dispute by outsourcing the contradiction to context boundaries. This is a genuine tangled rope: it solves a real coordination problem (how to administer woman/female category across domains with conflicting stakes) but does so through asymmetric extraction that requires active enforcement to hold.",
+    "logic_rationale": "Extractiveness (0.42) is moderate because the constraint distributes costs across both constituency groups rather than concentrating on one — but it is rising as context boundaries become enforcement frontiers. Suppression (0.38) is significant but not maximal: the constraint operates through institutional gatekeeping (eligibility rules, documentation requirements, access controls) rather than direct physical coercion, but non-compliance carries real penalties (exclusion from competition, denial of care, legal non-recognition). Theater ratio (0.28) reflects that the contextual distinction performs genuine coordination work (domains really do have different stakes) but a growing share of enforcement activity serves to maintain the boundary itself rather than solve domain-specific problems. Accessibility collapse (0.45) is moderate: alternatives (self-ID everywhere, biology everywhere, third categories) exist and are advocated but are institutionally marginalized. Resistance (0.52) is high: all three readings have organized advocacy networks, litigation strategies, and political mobilization. The measurement series shows extraction and suppression rising over 2010-2024 as the kernel dispute intensifies and institutional actors harden context boundaries rather than resolve them.",
+    "directionality_logic": "Institutional actors (healthcare, sports bodies, legal state, employers) are structural beneficiaries: they gain conflict-minimization, administrative coherence, and avoidance of definitive kernel adjudication — their directionality d is low (near beneficiary end). Trans women in sports/medical contexts are primary targets: they bear exclusion, medicalization, and eligibility policing — d is high (near target end). Trans men in same contexts face parallel but distinct extraction (invisibility, forced misclassification). Cisgender women in social/legal contexts are secondary targets: they experience competitive displacement and space erosion where self-ID operates — d is moderately high. Gender nonconforming and intersex people are targets across ALL contexts: the binary contextual split renders them illegible in both domains — d is highest. The engine will compute per-seat χ from these structural positions; the claimed type (tangled_rope) reflects the authoring seat's assessment that genuine coordination and asymmetric extraction coexist.",
+    "perspectival_gap": "From the institutional beneficiary seat, the hybrid reading appears as pragmatic compromise solving real domain-differentiated problems — a rope-like coordination. From trans women in sports/medical contexts, it appears as biology-essentialist exclusion — a snare. From cisgender women in social/legal contexts, it appears as identity-ideological erosion — a snare. From gender nonconforming people, it appears as binary enforcement — a snare. The engine computes these divergences from the structural data; the authoring seat declares the constraint is structurally a tangled rope because the coordination function (domain-differentiated administration) is real AND the extraction is asymmetric across constituencies.",
+    "mandatrophy_analysis": "The founding problem (administering woman/female category across domains with materially different stakes) remains live — the domains have not converged and the stakes remain divergent. But the hybrid solution has accumulated extraction: what began as pragmatic domain-sensitivity has become a mechanism for institutions to avoid accountability while extracting compliance costs from both sides. The mandatrophy is not resolved; the arrangement persists because no institutional actor bears the cost of fixing it (would require definitive kernel adjudication), and both constituency groups are too divided to force resolution. The theater ratio rise signals Goodhart drift: the context boundary itself becomes the managed metric, not the domain outcomes.",
+    "kernel_context": "This constraint is the hybrid_contextual_reading of the woman_female_category kernel. Sibling readings: sex_biology_reading (category membership = chromosomal sex/gamete production in ALL contexts) and gender_identity_reading (category membership = self-identified gender in ALL contexts). The three readings instantiate three distinct constraints with different ε, different victim sets, different enforcement structures — linked by network.affects_constraints per ε-invariance (DP-001)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "woman_female_category__sex_biology_reading",
+      "woman_female_category__gender_identity_reading"
+    ],
+    "dual_formulation_note": "This constraint family (woman_female_category kernel) decomposes the colloquial label 'woman/female category' into three structurally distinct constraints per ε-invariance: (1) sex_biology_reading — ε≈0.15 (low extraction, high naturalness claim), Mountain candidate; (2) gender_identity_reading — ε≈0.35 (moderate extraction, institutional capture of self-ID), Tangled Rope; (3) hybrid_contextual_reading — ε=0.42 (moderate-high extraction, dual victim sets, active enforcement), Tangled Rope. The hybrid reading's ε is highest because it operates active enforcement across TWO context regimes, extracting from both constituency groups. The biology reading influences the hybrid reading (medical/sports contexts import biology-reading logic); the identity reading influences the hybrid reading (social/legal contexts import identity-reading logic). The hybrid reading influences both siblings by legitimizing context boundaries as a structural solution, reducing pressure for monist resolution."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "healthcare_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administer sex-based clinical protocols, research categories, and insurance billing codes. Benefit from stable biological categories for medical safety and research validity. Bear costs of maintaining dual recording systems (sex assigned at birth + gender identity) and navigating context boundaries in transitional care. Collect institutional legitimacy from appearing to balance competing claims."
+    },
+    {
+      "name": "sports_governing_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Set eligibility criteria for female competition categories based on testosterone thresholds and puberty-based rules. Benefit from appearing to protect female sport while avoiding blanket exclusion lawsuits. Bear costs of scientific uncertainty, legal challenges from both sides, and athlete harm from invasive testing. Their exit is constrained by Olympic charter obligations and national government funding."
+    },
+    {
+      "name": "legal_administrative_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operates dual-track recognition: sex-based exceptions in equality law (prisons, refuges, sports) alongside gender recognition certificates for legal gender change. Benefits from conflict-minimization: avoids definitive ruling on what 'woman' means by outsourcing to context. Bears costs of administrative complexity, contradictory court rulings, and legislative gridlock. Can shift context boundaries through regulation and guidance."
+    },
+    {
+      "name": "employer_compliance_departments",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Implement workplace policies for single-sex facilities, equality monitoring, and anti-discrimination compliance. Benefit from clear (if contradictory) regulatory frameworks that reduce litigation risk. Bear costs of policy complexity, employee conflict, and reputational exposure. Can exit by adopting maximalist policies (all self-ID or all biology) but face legal risk either way."
+    },
+    {
+      "name": "trans_women_in_sports_medical_contexts",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Face eligibility bans, testosterone suppression requirements, and invasive verification in sports; face gatekeeping, pathologization, and denial of gender-affirming care in medical contexts. Their identity is fused with the category 'woman' — exit from the constraint means surrendering their self-understanding or abandoning sport/healthcare. Extraction takes the form of exclusion from participation and medical autonomy."
+    },
+    {
+      "name": "trans_men_in_sports_medical_contexts",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Face forced competition in female categories despite male physiology (if pre-transition) or exclusion from male categories (if post-transition); face erasure in reproductive healthcare, pregnancy care, and sex-based screening. Their identity is fused with the category 'man' — the hybrid reading renders them illegible in both context regimes. Extraction takes the form of institutional invisibility and misclassification."
+    },
+    {
+      "name": "cisgender_women_in_social_legal_contexts",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience competitive displacement in sports where self-ID operates without biological criteria; face erosion of single-sex spaces (prisons, refuges, changing rooms) where gender identity governs access; lose sex-based data collection and equality monitoring. Their exit is constrained: they cannot leave the legal/social system, and advocacy for sex-based rights faces institutional capture. Extraction takes the form of lost protections and category dilution."
+    },
+    {
+      "name": "gender_nonconforming_people_in_all_contexts",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are rendered illegible by both context regimes: biology-reading contexts force them into sex-assigned categories; identity-reading contexts force them into binary gender categories. Neither context recognizes non-binary or genderqueer existence. They bear administrative erasure, denial of appropriate healthcare, and exclusion from single-sex spaces that don't match their assigned sex. No exit exists within the binary contextual framework."
+    },
+    {
+      "name": "intersex_people_in_all_contexts",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Biological sex characteristics don't fit binary categories, so both context regimes misclassify them. Sports bodies impose testosterone regulations targeting intersex women; medical systems perform non-consensual infant surgeries to enforce binary sex; legal systems require binary sex markers. They bear bodily autonomy violations, athletic exclusion, and legal non-recognition across all contexts. The hybrid reading offers no accommodation for intersex existence."
+    },
+    {
+      "name": "trans_advocacy_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain partial victories in social/legal recognition contexts (self-ID laws, gender recognition reform) while conceding sports/medical exclusions. Benefit from institutional access and funding in identity-governed domains. Bear costs of internal division over hybrid compromise vs. monist demands. Their position is mobile: they can pivot toward full self-ID advocacy or accept contextual compromise."
+    },
+    {
+      "name": "gender_critical_feminist_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain partial victories in sports/medical contexts (sex-based eligibility, single-sex exemptions) while conceding social/legal recognition. Benefit from platform access and alliances with conservative institutions. Bear costs of political isolation from mainstream feminism and LGBTQ+ coalitions. Their position is mobile: they can pivot toward full biology-based advocacy or accept contextual compromise."
+    },
+    {
+      "name": "bioethics_and_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the hybrid reading's coherence, its track record in courts and policy, and its effects on the constituencies it governs. They do not bear extraction nor collect rents; they produce the interpretive frameworks that institutional agenda-setters draw on. Their exit is analytical: they can change their reading without material cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Administers the woman/female category across institutional domains with materially different stakes: biological sex matters for fair competition, medical safety, and bodily vulnerability; gender identity matters for dignity, self-determination, and non-discrimination. The hybrid reading coordinates by assigning each domain its 'appropriate' criterion rather than forcing a single criterion everywhere.",
+    "transfer_function": "Moves compliance costs and category access between constituency groups depending on context: in sports/medical/safety contexts, trans people transfer access and autonomy to cisgender women and institutional gatekeepers; in social/legal contexts, cisgender women transfer category integrity and single-sex protections to trans people and institutional administrators. Institutions transfer conflict-resolution burden to context boundaries.",
+    "absent_voices": "Intersex people are structurally excluded from both context regimes — the binary contextual split has no category for them. Detransitioners and desisters are absent from policy design despite bearing unique costs from both context regimes. Global South feminist and trans movements are excluded from the Anglo-American institutional frameworks that dominate this constraint's design. Children and adolescents (subject to puberty blockers, sports bans, social transition policies) have no organized voice in the constraint's administration.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid contextual reading vanished overnight, institutions would be forced to choose between monist regimes: either biology-only (sex_biology_reading) or identity-only (gender_identity_reading). Sports federations would lose their compromise eligibility rules; healthcare systems would lose dual recording; legal systems would lose sex-based exceptions alongside gender recognition. The world would rearrange around a definitive kernel adjudication — which is exactly what institutional beneficiaries have structured the hybrid reading to avoid.",
+    "founding_problem": "Late 20th/early 21st century institutional systems faced escalating conflict between sex-based feminism (demanding biological criteria for woman/female category) and trans rights movements (demanding self-identification criteria). Courts, legislatures, and regulatory bodies needed a way to administer the category across domains without taking a definitive position on the metaphysical question 'what is a woman?'. The hybrid reading emerged as a pragmatic compromise: contextual sensitivity as conflict-minimization.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The hybrid reading's founding problem is attested by policy historians (e.g., UK Gender Recognition Act 2004 parliamentary debates, US Title IX regulatory history, IOC Stockholm consensus 2003) from outside the beneficiary set. However, trans advocates corroborate that the problem was manufactured by institutional refusal to recognize self-ID; gender-critical feminists corroborate that the problem was manufactured by institutional capture of sex-based rights. No neutral corroborator exists — the founding problem itself is a site of kernel contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sex_biology_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gender_identity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "domain_differentiated_category_criteria",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "institutional_conflict_minimization_legitimizes_compromise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pragmatic_domain_sensitivity",
+    "drift_state": {
+      "moment": "contemporary_kernel_polarization",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "woman_female_category__sex_biology_reading",
+      "woman_female_category__gender_identity_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "54756aa0-c697-4226-88d0-cb55c3f29454"
+  },
+  "base_properties": {
+    "extractiveness": 0.64,
+    "suppression": 0.74,
+    "theater_ratio": 0.33,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value-Dominant Acceptable-Risk Standard for Energy Pathways",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_power_industry",
+      "low_carbon_generation_sector",
+      "grid_electricity_consumers",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "fossil_air_pollution_exposed_populations",
+      "coal_mining_communities",
+      "climate_impact_bearing_populations"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.74
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_weighting_dispute",
+      "question": "This constraint is one reading of the acceptable_risk_energy kernel: acceptability as minimized aggregate expected harm. Sibling readings (catastrophic_tail_dominant, option_value_preserving) weight the same outcome distributions differently — what changes structurally if a sibling reading governs instead?",
+      "resolution_mechanism": "Not resolvable by data alone: the dispute is located in the weighting function over outcome distributions (probability-weighted aggregate vs. tail-avoidance priority vs. flexibility preservation), not in the mortality measurements themselves. Resolution would require an explicit meta-criterion for choosing between decision criteria, which no party currently accepts.",
+      "impact": "Under catastrophic_tail_dominant, nuclear-accident victims enter the victim set at full dread-weighted magnitude and suppression targets the nuclear pathway rather than the fossil pathway; under option_value_preserving, foreclosed flexibility becomes the primary harm. Classification of the governing arrangement could shift from tangled_rope toward snare if suppression concentrates on a low-mortality pathway under dread politics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which weighting criterion governs acceptable risk determines victim composition and suppression target."
+    },
+    {
+      "id": "mortality_boundary_ambiguity",
+      "question": "Mortality-per-TWh figures depend on inclusion boundaries: are downstream climate deaths counted, is the linear-no-threshold or threshold dose-response model used for radiation, are mining and construction deaths attributed to the pathway, how are conflict-driven emissions attributed?",
+      "resolution_mechanism": "Standardized attribution protocol audited by a body outside both fossil and nuclear interests (IHME-style boundary declaration with sensitivity bands published alongside point estimates).",
+      "impact": "Narrow boundaries lower measured fossil mortality, weakening the warrant for the standard's high suppression of the fossil pathway and lowering measured extraction; broad boundaries raise both. Because different boundaries yield different epsilon for the same colloquial label, unresolved boundary ambiguity threatens the epsilon-invariance of this story and argues for eventual decomposition into boundary-explicit sibling stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the metric's apparent precision conceals contestable inclusion boundaries that move epsilon."
+    },
+    {
+      "id": "statistical_life_fungibility",
+      "question": "Does the standard's treatment of statistical lives as fungible across exposure contexts (voluntary occupational risk vs. involuntary ambient exposure vs. imposed long-term climate risk) survive scrutiny, or does it mask a value imposition on those exposed without consent?",
+      "resolution_mechanism": "Distributional-weighting research (survey and experimental economics on WTP/WTA asymmetries across exposure types) plus legal doctrine on non-consensual risk imposition.",
+      "impact": "If fungibility fails, the coordination function partially covers a value imposition: the extraction component rises and the arrangement drifts toward the snare boundary. If fungibility holds as a workable approximation, the arrangement drifts toward the rope boundary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the neutrality premise buried in the commensurating metric is a workable approximation or a covered imposition."
+    },
+    {
+      "id": "enforcement_defeat_attribution",
+      "question": "Is the measured extraction a property of the standard itself, or of the political environment that repeatedly defeats it (post-accident dread surges that shut low-mortality capacity and raise near-term combustion, as after Fukushima in 2011)?",
+      "resolution_mechanism": "Comparative jurisdiction study: jurisdictions where expected-value framing held across accident shocks (France's historical nuclear commitment) versus jurisdictions where it collapsed (Germany, Japan post-2011), holding mortality data constant.",
+      "impact": "If extraction tracks the political environment rather than the standard's intrinsic operation, the standard's intrinsic epsilon is lower than measured and the binding limitation is the strength of sibling-framing politics — an omega-routed committer effect rather than a property of this reading's structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of the extraction level between the standard's structure and its hostile reception environment."
+    },
+    {
+      "id": "transition_compensation_adequacy",
+      "question": "Are the concentrated losses borne by fossil-dependent workers and regions compensable in principle (making the charge a correctable feature), or structurally uncompensable given regional skill specificity, housing lock-in, and single-industry community identity?",
+      "resolution_mechanism": "Longitudinal evaluation of compensated-transition programs (German coal-exit payments, EU Just Transition Fund disbursements) against baseline counterfactuals for regional income, employment, and health trajectories.",
+      "impact": "Demonstrably adequate compensation would remove the concentrated-uncompensated-loss component and drift the arrangement toward pure coordination; demonstrated failure entrenches the extraction component and hardens the tangled_rope classification toward the snare boundary over the next measurement interval.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the concentrated costs landing on fossil-dependent communities are a fixable distributional defect or a structural feature."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the expected_value_dominant reading of the acceptable_risk_energy kernel: the claim that an energy pathway's risk is acceptable when aggregate expected harm, commensurated as mortality per terawatt-hour, is minimized across all available pathways. The standing arrangement under contest is the actual operation of this standard in contemporary energy governance — regulatory impact analysis, comparative risk assessment, carbon-pricing justification, and investment screening — not the idealized decision procedure its proponents describe. Assessed by the reading's own lights (its own arithmetic taken seriously), the standard's actual operation delivers real harm reduction where it binds — coal retirements justified by body counts, financing exclusion of the highest-mortality fuels — while chronically failing its own test: the largest energy mortality toll (combustion air pollution, mining) continues at scale because the standard's suppression of the fossil pathway is politically defeasible, and its gains accrue disproportionately to positioned actors (low-carbon capital, the nuclear industry, the analytic-administrative class whose offices depend on the framework) while its concentrated costs land uncompensated on trapped fossil-dependent communities. FAMILY DECOMPOSITION NOTE (epsilon-invariance): the colloquial label 'acceptable energy risk' covers three structurally distinct criteria that share one referent — the operative acceptable-risk regime — and author different epsilon values from it. This file authors the expected_value_dominant reading alone, with a single stable epsilon (0.64): fossil-pathway deaths enter the victim set at full weight, nuclear accidents are probability-discounted to near-invisibility, and suppression concentrates on the fossil pathway. The catastrophic_tail_dominant sibling would weight nuclear-accident victims at full dread magnitude and target suppression at the nuclear pathway; the option_value_preserving sibling would count foreclosed pathway flexibility as the primary harm. Separate files, linked via network.affects_constraints.",
+    "key_agents": [
+      "- fossil_fuel_incumbents: Primary payer (institutional/arbitrage) — bears licence denial, stranded assets, and financing exclusion where the standard binds, but hedges by shifting capital and reshaping metric boundaries jurisdiction by jurisdiction",
+      "- coal_mining_communities: Dual-positioned payer/victim (organized/trapped) — supply the highest-mortality pathway's workforce, bear its occupational and environmental death toll, and absorb the standard's concentrated transition costs without adequate compensation",
+      "- fossil_air_pollution_exposed_populations: Primary victim (moderate/constrained) — breathe the combustion toll the standard's arithmetic ranks largest; exposure is ambient and unavoidable at individual level",
+      "- climate_impact_bearing_populations: Secondary victim (powerless/trapped) — bear the probability-weighted damages the standard folds into its totals, represented only as a discount-rate parameter chosen by others",
+      "- nuclear_power_industry: Primary beneficiary (institutional/constrained) — operates the lowest-mortality dispatchable source in the standard's tables; gains wherever the arithmetic governs, exposed to accident shocks everywhere",
+      "- low_carbon_generation_sector: Secondary beneficiary (institutional/mobile) — receives displaced demand, subsidy streams, and carbon-market revenues as fossil pathways are priced out; capital arbitrages between jurisdictions",
+      "- grid_electricity_consumers: Dual-positioned beneficiary/payer (organized/constrained) — receive lower-mortality power and carry compliance costs in tariffs; a volatile electoral constituency for the standard's survival",
+      "- energy_regulators_and_assessment_bodies: Agenda setter (institutional/identity_locked) — administer the mortality tables, valuation parameters, and licensing analyses; their professional office is constituted by the framework they enforce",
+      "- public_health_authorities: Dual-positioned beneficiary/agenda_setter (institutional/identity_locked) — produce and certify the comparative statistics the standard consumes; their mandate and data infrastructure expand with the framework's reach",
+      "- catastrophic_risk_advocates: Excluded voice (organized/mobile) — hold tail-prioritizing commitments, largely absent from the technical venues where acceptability is formally adjudicated",
+      "- analytical_observer: Analytical seat (analytical/analytical) — sees the full structure: the genuine comparison problem solved, the concentrated costs imposed, the value premises buried in the neutral-seeming metric"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.64: substantial but bounded. The standard's operation transfers real value — market share, subsidy streams, decision authority — toward positioned beneficiaries while imposing concentrated, largely uncompensated costs on trapped fossil-dependent communities, and its own arithmetic indicts its actual operation (by its lights, millions of avoidable combustion deaths persist because its suppression of the fossil pathway is politically defeasible). It is not higher because the standard also demonstrably retires the deadliest pathway where it binds, and its victims retain partial recourse. Suppression is authored at 0.74 as a raw structural property (unscaled by power or scope): the standard holds down the fossil pathway through carbon pricing, mortality-based licensing denial, divestment pressure, and finance exclusion — the reading's declared structural signature. Theater ratio 0.33: the analytic machinery is substantially functional (real comparative epidemiology, real actuarial practice) but a growing share is commissioned advocacy and post-accident rhetorical deployment rather than prospective decision-making. Accessibility collapse 0.42: rival decision frameworks remain legally and politically live (precautionary doctrine, tail-focused litigation, portfolio mandates); the standard raises their cost of entry in technical venues without collapsing them. Resistance 0.58: sustained — fossil-dependent regional politics, industry-funded counter-analysis, post-accident public reversals, and energy-price backlash. MEASUREMENTS: one shared time grid (t=0..35 mapping five-year steps 1990-2025) with all three tracked metrics authored at every point. base_extractiveness rises as the standard's footprint grows and its unachieved arithmetic accumulates by its own lights, with a plateau across the Fukushima-paralysis window (t=20-25). theater_ratio rises with the commissioned-analysis industry, easing slightly as open mortality datasets tightened quality. suppression_requirement is tracked because enforcement-capacity change IS this story's traced dynamic: the standard's enforcement machinery visibly built out (emissions trading from 2005, divestment from 2012, finance exclusion, border adjustment mechanisms), spiking defensively after 2011 and easing marginally as renewable cost-competitiveness began carrying suppression without regulatory push.",
+    "perspectival_gap": "The seats compute differently and the engine should see that divergence. From the agenda_setter seats (regulators, public-health authorities), the arrangement is the framework they are professionally constituted by — identity-locked beneficiaries of their own administration, experiencing the standard as neutral method. From the trapped payer seats (coal communities, ambient-exposed populations), the same structure operates as concentrated uncompensated charge: their exit options are regional roots and ambient airsheds, so their effective position sits near the full-target end. The fossil incumbents' seat diverges sharply from other payers: nominally charged, their arbitrage-grade exit (capital mobility, offset purchases, jurisdictional metric-shopping) damps their effective extraction well below what their payer role alone would predict — the standard extracts least from those best able to reshape it. Consumers sit near symmetric: genuine product benefit, diffuse cost pass-through. The excluded advocates experience the arrangement as a closed venue rather than a charge — their grievance is procedural absence, which the engine reads through the excluded role rather than through directionality.",
+    "directionality_logic": "Beneficiary declarations (nuclear industry, low-carbon sector, consumers, public-health authorities) derive low directionality — the standard subsidizes them through market reallocation and mandate expansion. Victim declarations (combustion-exposed populations, coal communities, climate-damage bearers) derive high directionality, amplified by trapped and constrained exit options: ambient exposure and regional lock-in sit near the full-target end. The dual-positioned seats split: coal communities are simultaneously victims of the tolerated pathway's mortality and payers of the transition it forces — their net directionality is high, and their trapped exit prevents the damping arbitrage affords incumbents. Regulators and public-health authorities are pinned to the beneficiary side by identity-lock: their professional offices are constituted by the framework, so their structural relationship to the standard is custodial-beneficial regardless of nominal analytic neutrality. Incumbents' arbitrage exit pulls their derived directionality down from the payer baseline — the derivation chain captures this from exit_options without needing an override.",
+    "mandatrophy_analysis": "The founding problem — no common basis for comparing heterogeneous energy risks (radiological dread, combustion mortality, dam failure, climate accumulation) — remains live: every new pathway (SMRs, fusion, storage fires, hydrogen) reintroduces it. Mandatrophy is therefore NOT resolved, and no sunset clause is declared. The tangled_rope classification is what prevents mislabeling in both directions: a pure-coordination reading would erase the concentrated uncompensated losses, the gameability of the metric's boundaries, and the enforcement dependence (the standard must be re-defended after every visible accident, and loses those defenses often enough that its suppression of the fossil pathway is chronically incomplete by its own arithmetic); a pure-extraction reading would erase the genuine achievement — commensuration solved a real collective-action problem, and where the standard binds, the deadliest pathway in the mix actually retires. The classification keeps both truths load-bearing and marks the drift vectors: closure of the compensation gap drifts toward rope; deepening metric capture by positioned interests drifts toward snare.",
+    "kernel_context": "Kernel: acceptable_risk_energy — what makes an energy risk 'acceptable'. This file instantiates the expected_value_dominant reading: acceptability as minimized aggregate expected harm via mortality-per-TWh commensuration. Sibling readings, each a separate constraint file: catastrophic_tail_dominant (tail-avoidance overrides aggregate arithmetic; nuclear-accident victims at full weight; suppression targets the nuclear pathway) and option_value_preserving (maintain multiple pathways under deep uncertainty; foreclosed flexibility is the harm). All three readings share one referent — the operative acceptable-risk regime for energy pathways — and author different epsilon and victim compositions from it; this file authors only the expected_value_dominant structure and routes the contest itself to omega variables."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "Constraint family: the kernel 'acceptable risk in energy policy' decomposes into three criterion-constraints (expected_value_dominant, catastrophic_tail_dominant, option_value_preserving) sharing one referent — the operative acceptable-risk regime — with different epsilon values, victim compositions, and suppression targets. This reading is upstream empirically: its mortality-per-TWh substrate is the common evidentiary ground the sibling readings contest, and its tables shape what tail- and option-oriented critics must argue against. Downstream edges run from this story to both siblings; the siblings' files should carry reciprocal edges and their own dual-formulation notes."
+  },
+  "stakeholders": [
+    {
+      "name": "fossil_fuel_incumbents",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the coal, oil, and gas generation and supply chains that the mortality-based standard singles out for phase-out. They absorb stranded-asset write-downs, licence refusals, and financing exclusions where the standard binds, but hedge extensively: capital shifts into gas, offsets, and rebranded transition portfolios, and lobbying reshapes the metric's inclusion boundaries jurisdiction by jurisdiction. Leaving the field entirely is unnecessary; reshaping the rules they operate under is routine."
+    },
+    {
+      "name": "coal_mining_communities",
+      "role": "payer",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Supply the workforce behind the highest-mortality pathway: occupational death rates underground, black-lung disease, and regional health burdens from combustion. The same standard that counts their health toll also closes their mines; transition programs arrive late, cover fractions of losses, and rarely match region-specific skills. Housing wealth, family networks, and single-industry local economies anchor them in place."
+    },
+    {
+      "name": "fossil_air_pollution_exposed_populations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Live downwind of combustion: fine particulates from coal and oil burning drive cardiovascular and respiratory mortality at scales the standard's arithmetic ranks as the largest energy-related death toll. Exposure is ambient — individuals cannot opt out of a regional airshed — and abatement arrives only as fast as pathway substitution, which the standard accelerates where it binds and fails to accelerate where politics overrides it."
+    },
+    {
+      "name": "climate_impact_bearing_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the probability-weighted damages — heat mortality, flood, crop stress, displacement — that the standard folds into its expected-harm totals. Their losses arrive on delay and diffuse across geographies; they hold no seat in licensing or tariff proceedings, entering the calculus only as a discount-rate choice made by others."
+    },
+    {
+      "name": "nuclear_power_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operates the lowest-mortality dispatchable generation source in the standard's tables and gains legitimacy, licence renewals, and finance wherever the arithmetic governs. Its assets are site-bound and its fortunes swing with each accident abroad: a single meltdown anywhere resets public tolerance everywhere, and the industry has no exit from that coupling."
+    },
+    {
+      "name": "low_carbon_generation_sector",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Wind, solar, hydro, and storage developers receive the displaced demand: capacity auctions, subsidy streams, and carbon-market revenues route toward them as fossil pathways are priced out. Capital is mobile across jurisdictions and subsidy regimes, letting them arbitrage the differences in how aggressively each country applies the standard."
+    },
+    {
+      "name": "grid_electricity_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive power with a shrinking mortality footprint and, where markets function, stable prices; they also carry compliance costs passed through in tariffs and taxes funding the transition. Their recourse is electoral and intermittent — they reward cheap power and punish visible price shocks, which makes them a volatile constituency for the standard's continuation."
+    },
+    {
+      "name": "energy_regulators_and_assessment_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administer the machinery: mortality tables, value-of-statistical-life parameters, licensing analyses, integrated assessment models. Their professional standing and procedural authority are built on the commensuration framework; abandoning it would dissolve the epistemic office they occupy, so they defend its parameters even where they privately acknowledge boundary disputes."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Produce and certify the comparative mortality statistics the standard consumes — burden-of-disease work, national health assessments. The standard extends their mandate from treating illness to ranking entire energy systems; their data infrastructure and budget lines grow with the framework's reach, and their methodological conventions quietly set its inclusion boundaries."
+    },
+    {
+      "name": "catastrophic_risk_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold that low-probability, high-consequence events — reactor meltdowns, waste-isolation failures, proliferation — deserve overriding weight regardless of expected-value arithmetic. They litigate, campaign, and legislate at the margins but are largely absent from the technical venues where acceptability is formally adjudicated, entering the record mainly as intervenors after decisions are drafted."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Holds no stake in any pathway; observes the full structure — the genuine comparison problem the standard solves, the concentrated costs its operation imposes, the value premises buried in its neutral-seeming metric, and the rival criteria waiting at the margins."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single commensurating metric — deaths per terawatt-hour, aggregated into expected-harm totals — that lets heterogeneous pathway risks (radiological, combustive, climatic, structural) be compared on one scale and steers investment and regulatory tolerance toward the least-harmful sources. Without it, pathway comparison collapses into incomparable dread narratives and incumbent advantage.",
+    "transfer_function": "Moves investment, regulatory tolerance, and moral attention from high-mortality pathways (coal, oil) toward low-mortality ones (nuclear, hydro, renewables); moves concentrated transition costs onto fossil-dependent workers and regions; moves decision authority toward holders of analytic expertise who operate the metric.",
+    "absent_voices": "Catastrophic-tail advocates and option-value pluralists are largely absent from the technical venues — regulatory impact analysis, integrated assessment modeling, licensing boards — where acceptability is formally adjudicated; they appear as post-hoc intervenors. Fossil-dependent community members rarely sit on the assessment panels that price their regions' transition. Future generations appear only as a discount-rate parameter chosen by present parties.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the standard vanished overnight, pathway decisions would reorganize around whichever rival criterion captured the vacuum: tail-dominant framing would deepen nuclear retrenchment and fossil-phaseout skepticism alike; option-value framing would impose portfolio mandates and block pathway consolidation. Licensing doctrine, carbon-pricing justification, divestment screens, and the comparative-risk literature's policy uptake all presuppose the commensurating framework — investment signals across the entire energy sector would re-sort.",
+    "founding_problem": "Post-war expansion of civilian energy produced heterogeneous, mutually incomparable risks — radiological dread, combustion mortality, dam failure, later climate accumulation — with no shared basis for declaring any of them tolerable. Early reactor-siting conflicts and air-quality crises demanded a common metric that could rank a meltdown against a mine disaster against a smog season.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the public-health literature (comparative risk assessments in the Lancet and WHO burden-of-disease work, authored independently of nuclear and fossil commercial interests), insurance and reinsurance actuarial practice (which prices pathway risk without adopting the standard's normative conclusions), and environmental-economics scholarship critical of both this standard and its rivals all attest that the cross-pathway comparison problem is real and unsolved by any alternative framework. Industry attestations from both nuclear and fossil sides are self-interested and not relied upon."
+  },
+  "gain_flow": "low_carbon_generation_sector",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "aggregate_expected_harm_minimization_framework",
+    "drift_state": {
+      "moment": "post_fukushima_political_environment",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_harm_minimization_governs_acceptability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "statistical_lives_interpersonally_fungible",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

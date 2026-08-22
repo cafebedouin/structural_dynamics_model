@@ -1,0 +1,374 @@
+{
+  "header": {
+    "constraint_id": "westphalian_sovereignty__graduated_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a7f7818e-4504-4d9b-8b00-401872f58e2e"
+  },
+  "base_properties": {
+    "extractiveness": 0.64,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Graduated Sovereignty Spectrum (Capacity-Legitimacy Classification Regime)",
+    "topic_domain": "international law/political philosophy/global governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "intervening_great_powers",
+      "international_financial_institutions",
+      "international_administrative_apparatus"
+    ],
+    "victims": [
+      "weak_postcolonial_states",
+      "populations_of_classified_states"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "classification_interest_alignment",
+      "question": "Do classification outcomes track measured state capacity, or do they track the strategic and economic interests of the classifying powers?",
+      "resolution_mechanism": "Systematic audit of classification decisions (fragility listings, IFI rating tiers, mandate eligibility) against objective capacity indicators, controlling for intervener alignment, resource endowments, and geopolitical alignment of the classified state.",
+      "impact": "If classifications track intervener interest, the spectrum operates as discretionary extraction machinery and epsilon is understated; if they track capacity, a larger share of measured burden is the price of the coordination the frame performs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the grading apparatus measures capacity or serves classifier interest."
+    },
+    {
+      "id": "counterfactual_autonomy_baseline",
+      "question": "Relative to the absolute-sovereignty counterfactual, does externally administered guardianship leave low-classified states and their populations better or worse off?",
+      "resolution_mechanism": "Paired comparison of comparable states experiencing similar capacity crises under different normative frames (graded administration versus non-intervention), tracking welfare, autonomy, and institutional recovery over a decade.",
+      "impact": "If the guardianship outcome dominates, part of the measured burden is coordination cost the sibling readings cannot organize and the type shifts toward a hybrid; if the counterfactual dominates, the full epsilon stands as net extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Net welfare of graded administration versus the non-intervention counterfactual."
+    },
+    {
+      "id": "kernel_reading_location",
+      "question": "This constraint is one reading of the westphalian_sovereignty kernel; how would the sibling readings (absolute_sovereignty, conditional_sovereignty) restructure the victim set and the classification if instantiated instead?",
+      "resolution_mechanism": "Comparative instantiation: the absolute reading yields a constraint whose targets are would-be interveners and whose victims are intervention-target populations; the conditional reading yields violation-triggered targets; this reading yields continuously reassessed low-capacity states. The disagreement is located in the scope-condition of sovereignty: fixed by law, triggered by violation, or continuously graded by assessment.",
+      "impact": "Adopting a sibling reading dissolves this constraint's victim set and replaces it with a different one; cross-reading epsilon comparisons are invalid because the referent arrangements differ.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: reading-of-kernel location and sibling deltas."
+    },
+    {
+      "id": "index_performativity",
+      "question": "Do governance and fragility indices measure state capacity, or do they manufacture the category they rank by channeling finance, legitimacy, and reform pressure toward the measured dimensions?",
+      "resolution_mechanism": "Natural experiments where index methodology changed discontinuously: if classified trajectories track methodology changes rather than underlying governance, the indices are performative rather than observational.",
+      "impact": "High performativity raises the theater ratio and supports reading the assessment layer as maintenance ritual for the hierarchy rather than measurement serving coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the measurement apparatus observes capacity or produces the ranked reality."
+    },
+    {
+      "id": "compliance_internalization",
+      "question": "Is low-classified-state compliance with externally set policy structural (finance, trade, and security dependence) or internalized (elite socialization into donor framings that persists after dependence eases)?",
+      "resolution_mechanism": "Post-dependence trajectory: track policy behavior of states whose financing constraints relaxed (commodity windfalls, alternative creditors); if donor-congruent policy persists after the structural lever is removed, part of the suppression is internalized.",
+      "impact": "If internalized, effective suppression exceeds the structural measure and outlives the material dependency that produced it, hardening the regime against reform even as leverage declines.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural versus internalized mechanism of classified-state compliance."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "intervening_great_powers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the criteria by which states are placed on the capacity-legitimacy spectrum, control the Security Council votes that authorize mandates, and decide which findings become operational. They apply the standard to others while their own conduct and that of their allies sits outside the graded categories. They collect the discretionary power the spectrum creates: the ability to intervene, impose conditions, or grant deference, case by case, without a fixed rule binding them."
+    },
+    {
+      "name": "international_financial_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Co-produce the ratings and country assessments that place states on the spectrum, and convert classification into leverage: lending, debt treatment, and market access are priced against the assigned tier. They collect policy influence and client dependence from the arrangement while bearing none of the domestic costs of the policies they certify. Their own governance is weighted toward the capacity-holding members who set the benchmarks."
+    },
+    {
+      "name": "international_administrative_apparatus",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The class of international civil servants, special representatives, monitoring missions, consultants, and implementing contractors whose employment exists because states are classified as needing external administration. Staff move between missions and agencies; careers are built on the pipeline of classified territories and reform programs. Their livelihoods depend on the classification continuing to generate mandates."
+    },
+    {
+      "name": "weak_postcolonial_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Governments whose domestic authority is permanently provisional: subject to periodic reassessment, conditionality, and possible mandate or sanction, with no forum where the classification can be appealed on equal terms. Recognition, trade, credit, and security cooperation all run through the system doing the grading, so leaving it is not an option. Policy autonomy is traded continuously for market access and budget support, and past colonial administration means the graded categories land on a population already shaped by earlier external rule."
+    },
+    {
+      "name": "populations_of_classified_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People living under low-tier classification experience both the underlying state incapacity and the externally administered remedies: austerity conditions attached to finance, externally designed governance reforms, peacekeeping forces with mixed records, and transitional authorities that persist for decades. They bear the costs of the arrangement in either direction and rarely sit in the rooms where their polity's tier is decided."
+    },
+    {
+      "name": "regional_hegemons",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Regional powers licensed to enforce the spectrum in their neighborhoods, leading intervention coalitions and stabilization missions with external blessing and financing. The license is valuable: it legitimizes their regional primacy. At the same time they remain graded subjects globally, their own governance assessed by the same apparatus, and their regional interventions require great-power acquiescence they cannot compel. They enforce a hierarchy they do not control."
+    },
+    {
+      "name": "unrepresented_small_states",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "States without Security Council representation, index-methodology input, or creditor-seat voice inherit categories drafted entirely elsewhere. They would contest the weighting of capacity indicators, the treatment of historical legacies, and the selectivity of enforcement if they had a seat at the drafting table; they learn their tier when it is published."
+    },
+    {
+      "name": "international_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Document the doctrinal movement from formal sovereign equality toward graded membership, track the gap between the stated capacity rationale and the observed distribution of interventions, and preserve the record of dissenting traditions. They publish assessments that the agenda-setting seats may cite or ignore, and they bear no operational stake in the arrangement's continuation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared decision procedure for engaging polities that cannot secure territory, deliver services, or honor commitments: it tells lenders, donors, peacekeeping planners, and intervention coalitions which governments to treat as ordinary counterparts, which to assist, and which to administer, and it pools the costs of stabilization and humanitarian response that no single actor would carry alone.",
+    "transfer_function": "Moves domestic decision-making authority over fiscal, security, and regulatory affairs from governments of low-tier states to external bodies (Security Council mandates, lender conditionality, donor coordination structures, transitional administrations); moves classification authority to the capacity-holding powers; and moves resources nominally toward capacity-building while binding recipients to externally designed policy.",
+    "absent_voices": "Populations of classified states are absent from mandate-design and tier-review rooms; small states without Council seats or methodology input inherit categories they never drafted; successor societies of formerly colonized territories were never consulted on the criteria that now grade them. Dissenting traditions holding sovereignty unconditional persist outside the rooms where the standards are written, and their absence from those rooms is itself maintained by the arrangement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the graded frame vanished overnight, lender conditionality would lose its legitimating vocabulary, intervention mandates would revert to ad hoc political justification with no principled tier to cite, the assessment-and-rating industry would lose its operative purpose, and low-tier governments would recover formal bargaining parity in finance and security fora. Regional intervention arrangements would need renegotiation from scratch. The world rearranges because a large institutional superstructure is organized around the spectrum.",
+    "founding_problem": "After the Cold War the state system confronted collapsed polities, mass-atrocity failures, and cross-border spillovers that formal sovereign equality seemed unable to process: legal equals included entities that could not govern, and the system lacked a principled, repeatable basis for treating them differently from functioning states.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Humanitarian agencies and peacekeeping historians corroborate the original coordination gap (Somalia 1992, Rwanda 1994) from outside the benefiting parties. On the other side, decolonization scholars and Global South governments attest that the remedy rebuilt the trusteeship structure it replaced, and post-mission audits of long-running administrations document outcomes decoupled from the stated protective aims. Corroboration exists on both sides; no attestation is free of seat interest, and the sharpest external evidence against the frame's current operation comes from outcome audits rather than from any party's self-description."
+  },
+  "gain_flow": "intervening_great_powers",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "westphalian_sovereignty__absolute_sovereignty",
+      "westphalian_sovereignty__conditional_sovereignty"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the westphalian_sovereignty kernel per the epsilon-invariance principle: the colloquial label 'sovereignty' covers three structurally distinct claims with different victim sets and different epsilon values. This file instantiates the graduated reading (continuous capacity-legitimacy grading; victims are low-classified states). The absolute reading (unconditional domestic authority; targets are would-be interveners) and the conditional reading (violation-triggered intervention; targets are violating states) are separate stories. The upstream sibling (absolute) supplies the legal-equality baseline this reading modifies; the conditional sibling borrows this reading's capacity vocabulary while retaining fixed triggers. Each member links the others through affects_constraints; epsilon comparisons across the family are invalid because the referent arrangements differ."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "capacity_graded_membership_order",
+    "drift_state": {
+      "moment": "post_libya_selectivity_critique",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "absolute_sovereignty",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "conditional_sovereignty",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereignty_is_performance_contingent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "legal_equality_without_capacity_is_fictional",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates the graduated_sovereignty reading of the westphalian_sovereignty kernel as a standalone, epsilon-invariant constraint: the operative norm that state sovereignty is not a uniform legal status but a graded position on a capacity-legitimacy spectrum, continuously assessed by external measurement apparatus (governance indices, fragility rankings, lender rating systems, Council suitability findings) and made consequential through conditionality, mandate design, and intervention authorization. Under this reading the standing arrangement is a membership hierarchy administered by capacity-holding powers: a state's domestic authority is provisional, revocable by reclassification, and priced against externally set benchmarks. The epsilon referent is this standing graded-membership arrangement as it operates, assessed by this reading's own lights, not the absolute-equality order the first sibling defends nor the violation-triggered order of the second; those are separate constraint files joined through network.affects_constraints. Stated assumptions: interval 0-35 maps approximately to 1990-2025, the period in which the graded frame moved from academic proposal to operational regime (failed-states discourse, the 2005 adoption of responsibility-language, fragility-agenda mainstreaming); sibling constraint_ids are assumed to follow the kernel-prefixed pattern used here; the single 'powerful'-atom override binds to regional_hegemons, the story's only seat at that power level.",
+    "key_agents": [
+      "intervening_great_powers: agenda-setting seat (institutional/arbitrage) — writes the classification criteria, authorizes mandates, applies the standard selectively while sitting outside the graded categories",
+      "international_financial_institutions: dual seat (institutional/arbitrage) — co-produces the ratings that classify and collects leverage and client dependence from the classification",
+      "weak_postcolonial_states: primary target (powerless/trapped) — bears reclassification risk and the permanent probation of domestic authority",
+      "populations_of_classified_states: deep target (powerless/trapped) — bears both the underlying incapacity and the externally administered remedies",
+      "regional_hegemons: intermediate seat (powerful/constrained) — licensed to enforce the spectrum regionally while graded by it globally",
+      "unrepresented_small_states: excluded seat (powerless/trapped) — inherits categories drafted without them",
+      "international_administrative_apparatus: beneficiary seat (institutional/mobile) — staffs and services the classification-and-administration pipeline",
+      "international_law_scholars: analytical observer (analytical/analytical) — documents the doctrinal shift and the gap between rationale and application"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.64 because the arrangement's distinctive product is discretionary classification power held by seats that are not accountable to the classified: the rate at which authority transfers outward is set by the transferee, revisable at will, and decoupled from any fixed trigger. Suppression is authored at 0.58 as a raw structural property, unscaled by power or scope per specification (the engine owns any contextual scaling): exit from the international system is unavailable to any state, the unconditional-sovereignty alternative is actively delegitimized as outdated, and resistance meets finance and trade isolation. Theater is 0.48: a large assessment industry (indices, review cycles, partnership compacts, capacity-scorecards) produces classifications and meetings more often than it produces capacity, though peacekeeping and humanitarian logistics remain genuinely functional. Accessibility_collapse is 0.48 — alternative framings remain live in doctrine and scholarship but are practically closed to weak states, who cannot opt out of recognition, credit, or security structures. Resistance is 0.55: non-aligned caucusing, refusal of tribunal jurisdiction, alternative creditor arrangements, and explicit sovereignty-reassertion rhetoric by rival blocs. The claimed type (snare) is authored from structure — the coordination story functions as legitimation for classification discretion, persistence depends on coercive enforcement, exits are suppressed, and victims are identifiable — while the metrics are authored independently as descriptive estimates; the engine computes per-seat types from the structural data and any divergence from the claim is the datum. The temporal series run on one shared eight-point grid (T0-T35, roughly 1990-2025) so every tracked metric is authored at every examined time point; epsilon rises steeply through the regime-building years, plateaus after the post-2011 selectivity backlash caps further ratcheting, and theater grows monotonically with the index industry.",
+    "perspectival_gap": "The agenda-setting seats and the target seats should compute very different types from identical structural data. From the great-power and lender seats the arrangement is an order they built and service: peacekeeping that ends wars, finance that stabilizes budgets, a vocabulary that lets them act where inaction was the prior default. From the trapped target seats the same structure is permanent probation without appeal: authority held at the pleasure of an assessor, terms set by the creditor, categories inherited rather than negotiated. Regional hegemons straddle the divide, computing a hybrid position — enforcers locally, graded subjects globally. The engine computes this divergence from power, exit, and directional data; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Beneficiary declarations map to low directionality: intervening_great_powers, international_financial_institutions, and international_administrative_apparatus all sit near the subsidized end, amplified toward full beneficiary by their arbitrage-grade exit (the rules bind others; they retain discretionary exemption). Victim declarations map to high directionality: weak_postcolonial_states and populations_of_classified_states sit near the full-target end, pushed further by trapped exit — no state can leave the system that grades it, and the global scope of the classification apparatus makes verification of fairness harder, which the engine reflects in effective extraction. The single override corrects the derivation for the story's only 'powerful'-atom seat, regional_hegemons: role=beneficiary alone would derive a strongly subsidized directionality, but their actual position is mixed — they collect the regional enforcement license while submitting to global grading they cannot veto — so d is overridden to 0.35. Unrepresented_small_states derive high directionality as excluded payers-in-waiting; international_law_scholars derive the analytical neutral position.",
+    "mandatrophy_analysis": "The founding problem — processing polities that cannot govern — retains live instances, so the genealogy status is contested rather than dead: famine, collapse, and atrocity did not end in 1990. But the instruments built as emergency measures hardened into steady-state administration: transitional mandates conceived as bridges (Kosovo, Bosnia, Timor-Leste) ran for decades, and the emergency vocabulary normalized into a permanent hierarchy. Mandatrophy analysis prevents two opposite mislabels. Reading the whole apparatus as pure extraction erases the genuine coordination core — pooled peacekeeping and humanitarian logistics — that a good-faith version of the frame would still perform. Reading it as pure coordination erases the classification discretion that is precisely this reading's marginal contribution over its siblings: the conditional reading already licenses triggered intervention without a permanent spectrum, so what the graded frame adds beyond it is continuous reassessment power, and that increment is where the extraction concentrates. The mismatch consumer reads founding_problem_status (contested) against disappearance_verdict (world_rearranges): the flag raised is dispute about function, not zombie capture — the machinery would be missed if abolished, which is exactly why its extraction is durable.",
+    "kernel_context": "Kernel: westphalian_sovereignty — the persisting commitment that states hold supreme authority within their territory. This file instantiates the graduated_sovereignty reading: sovereignty as a spectrum set by state capacity and governance legitimacy. Sibling readings, each a separate constraint with its own epsilon and victim set: absolute_sovereignty (unconditional domestic authority, categorical non-interference) and conditional_sovereignty (sovereignty as responsibility, violation-triggered intervention). The disagreement is located in sovereignty's scope-condition: fixed by law, triggered by violation, or continuously graded by assessment. Per the committer-frame rules, the sibling contest is routed to omega variables (kernel_reading_location, counterfactual_autonomy_baseline) and to reading_relations/axioms in cs_structure; this constraint's own operation is described without hedging across readings."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

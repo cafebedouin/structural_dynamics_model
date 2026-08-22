@@ -1,0 +1,371 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__slippery_slope_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "bfb27ee3-5f75-43cb-af5d-8afb5b55edd8"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.61,
+    "theater_ratio": 0.56,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Assisted-Dying Eligibility Expansion Dynamic (Slippery-Slope Reading)",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "competent_terminal_patients",
+      "assisted_dying_providers",
+      "public_health_insurers",
+      "burdened_family_caregivers"
+    ],
+    "victims": [
+      "incompetent_eligible_patients",
+      "non_terminal_chronic_sufferers",
+      "vulnerable_disabled_persons"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.61
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "competent_terminal_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adults with terminal diagnoses and intact decision-making capacity who request the service the framework provides. They receive a legally supervised path to controlling the timing and manner of death that would otherwise exist only as covert practice or unassisted suicide. They may decline at any point up to administration; what they cannot do is extend the timeline their disease sets."
+    },
+    {
+      "name": "assisted_dying_providers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Physicians and nurse practitioners who assess eligibility, administer the procedure, and document compliance. They gatekeep access case by case, collect professional fees, and in several jurisdictions have formed dedicated provision practices. They can withdraw from provision under conscience protections, though withdrawal shifts caseloads onto colleagues and lengthens waits."
+    },
+    {
+      "name": "public_health_insurers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Single-payer and public insurance bodies that finance the procedure and the care paths around it. Independent fiscal analyses in several jurisdictions project net savings when eligible patients choose earlier death over extended hospital or long-term care, and ministry submissions weigh these figures during eligibility debates. They do not administer the clinical program; they fund its context and book its downstream relief."
+    },
+    {
+      "name": "burdened_family_caregivers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Relatives carrying years of physical and financial caregiving for chronically ill family members. Some advocate for wider eligibility partly from exhausted compassion; the framework shortens caregiving duration when an eligible member chooses death. They hold no formal role in the program's administration and bear no assessment duties."
+    },
+    {
+      "name": "incompetent_eligible_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People rendered eligible without contemporaneous consent — through advance directives written before dementia onset, substituted judgment by proxies, or (in two jurisdictions) childhood conditions assessed jointly by physicians and parents. They cannot affirm or refuse the determination at the moment it is executed; their protection rests entirely on criteria written by others years earlier, and no act of their own can revoke what their prior signature or another's judgment sets in motion."
+    },
+    {
+      "name": "non_terminal_chronic_sufferers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Patients with disabling chronic psychiatric or physical conditions whose suffering is enduring but whose deaths are not reasonably foreseeable. Track-two style criteria admit some of them, and a visible minority litigate and campaign for admission; the class as a whole carries the consequence that treatable chronic misery acquires a state-sanctioned exit competing with treatment investment. Any member may decline personally; none can decline the reclassification of their condition."
+    },
+    {
+      "name": "vulnerable_disabled_persons",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Disabled, impoverished, and socially isolated people whose documented reasons for requesting death include lack of housing, support services, and income — factors the eligibility assessment treats as background rather than disqualifying. Published cases include applicants who stated they chose death because acceptable living conditions were unavailable. Their practical alternative set is narrowed by the same support shortfalls that push them toward the request."
+    },
+    {
+      "name": "founding_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The legislatures that wrote the original bounded statutes limiting eligibility to competent adults with terminal, irremediable conditions, with waiting periods and independent review. They retain formal amendment power but operate under constitutional rulings and sustained advocacy that make re-narrowing politically and legally costly; several have instead widened criteria, and none has durably restored its founding perimeter."
+    },
+    {
+      "name": "courts_and_review_commissions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Constitutional courts and statutory review bodies that interpret the eligibility criteria, hear challenges brought by excluded applicant classes, and decide whether to refer irregular cases for sanction. Their interpretations have moved the effective boundary from terminal to non-terminal suffering and toward advance-directive access; referral rates for irregular cases run near zero in the longest-standing jurisdictions."
+    },
+    {
+      "name": "disability_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations of disabled people who oppose eligibility expansion and were thinly represented in the founding legislative consultations. They testify, litigate, and document individual cases; they hold no seat in eligibility design or on several review bodies, which they identify as the reason criteria discount support deprivation instead of treating it as disqualifying."
+    },
+    {
+      "name": "palliative_care_clinicians",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hospice and palliative specialists who were promised concurrent funding investments alongside legalization in several jurisdictions. The promised investments arrived late or partially; they argue the framework's availability substitutes for adequate symptom-control infrastructure and that they were consulted late in the drafting rounds that fixed the criteria."
+    },
+    {
+      "name": "national_bioethics_commissions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Standing advisory bodies that produce periodic evaluations of practice volumes, consent modalities, and criteria application. They inform legislatures and review bodies but decide nothing; their reports are the main public record of how far practice has moved from the founding terms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Channels requests for hastened death through medical assessment, documentation, waiting periods, and review instead of leaving them to covert physician action or unassisted suicide — solving, once and centrally, the oversight problem that a flat prohibition never solved.",
+    "transfer_function": "Moves decision authority over the timing and manner of death from a universal legal prohibition to certified eligible patients and their assessing providers; moves procedure volume and avoided downstream care expenditure through the public health system; and, as criteria widen, moves legal protection away from classes never consulted — the incompetent, the non-terminal, and the support-deprived.",
+    "absent_voices": "Incompetent future patients cannot appear in any consultation. Disability-rights organizations and palliative-care clinicians were thinly represented in the founding design rounds (Quebec's select committee, early Benelux drafting) and hold no seats on several review bodies; they would contest criteria that treat support deprivation as background context rather than disqualifying.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight disappearance dissolves dedicated provider practices, voids advance-directive instruments, stands down the review apparatus, and returns requests to covert channels and unassisted suicide; legislatures would face immediate pressure to reconstruct either prohibition or regulation, and the surrounding medical-legal economy — training, protocols, review staffing — would reorganize around whichever they chose.",
+    "founding_problem": "Clandestine physician-assisted dying and desperate unassisted suicides among terminally ill patients, occurring outside all oversight, with physicians exposed to prosecution and patients to unmanaged deaths. The founding settlement exchanged a bright-line prohibition for a tightly bounded, medically supervised exception: competent adults, terminal and irremediable conditions, waiting periods, independent review.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Pre-legalization epidemiology (the van der Maas-era Dutch surveys of clandestine practice) and Oregon health-authority participation reports corroborate the founding problem from outside the benefiting parties. On status: successive Dutch five-yearly evaluations and Canadian parliamentary reviews attest that the operative perimeter now exceeds the founding scope — again attestation from outside the beneficiary set — while provider associations and autonomy advocates dispute that anything is amiss, describing the movement as evolution rather than departure."
+  },
+  "gain_flow": "public_health_insurers",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__autonomy_reading",
+      "end_of_life_authority__sanctity_reading"
+    ],
+    "dual_formulation_note": "Kernel-family decomposition: the colloquial label 'the euthanasia debate' conflates three structurally distinct claims that share one contested kernel (end_of_life_authority). This file instantiates the slippery_slope_mechanism reading — an empirical claim about framework dynamics — and therefore carries its own epsilon, victim set, and type. The autonomy_reading authors the same arrangement as stable coordination with a competent-requester beneficiary set; the sanctity_reading authors it as categorically impermissible regardless of consent. Per the epsilon-invariance principle these are separate stories linked here and via cs_structure.reading_relations, not one story with a measurement parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "bounded_terminal_exception_settlement",
+    "drift_state": {
+      "moment": "contemporary_post_expansion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "eligibility_boundaries_lack_principled_containment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "safeguards_decay_under_expansion_pressure",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates the slippery_slope_mechanism reading of the end_of_life_authority kernel; what structurally changes under the sibling readings?",
+      "resolution_mechanism": "Compare the compiled sibling stories: autonomy_reading authors the same arrangement with a stable competent-requester beneficiary set and low epsilon; sanctity_reading authors it with a universal victim set and maximal suppression. The disagreement is located in whether eligibility boundaries are stable or ratchet-prone, and in who counts as harmed.",
+      "impact": "Under autonomy_reading the victim set empties (no death without contemporaneous consent) and the computed type moves toward rope; under sanctity_reading victims universalize and the computed type moves toward snare. This reading's tangled_rope verdict survives only while the expansion record holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a three-reading kernel; sibling readings instantiate different constraints from the same commitment."
+    },
+    {
+      "id": "containment_intrinsic_or_contingent",
+      "question": "Is boundary expansion intrinsic to autonomy-grounded eligibility rationales, or contingent on particular institutional designs (judicial supremacy, thin review, evaluation-driven practice norms)?",
+      "resolution_mechanism": "Comparative jurisdiction analysis: strict-statute US states that have held terminal-only lines for decades versus constitutionalized rights (Canada) and evaluation-driven regimes (Benelux); test whether design variables predict containment.",
+      "impact": "If intrinsic, the tangled_rope verdict drifts toward snare as a structural regularity; if contingent, entrenched criteria and supermajority amendment rules could stabilize a rope-type settlement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the expansion dynamic is a law of the rationale or an artifact of design."
+    },
+    {
+      "id": "incompetent_consent_materiality",
+      "question": "How many deaths under the framework occur without contemporaneous consent (advance directives, substituted judgment, pediatric protocols), and is that class growing?",
+      "resolution_mechanism": "Audit review-commission case files stratified by consent modality across jurisdictions and years.",
+      "impact": "If the incompetent class is marginal and static, its victim declaration overstates epsilon; if growing, epsilon understates the trajectory and the snare-drift hypothesis strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Materiality of the non-consenting eligible class to the extraction measure."
+    },
+    {
+      "id": "fiscal_gravity_causality",
+      "question": "Does cost pressure causally drive eligibility expansion, or do fiscal savings merely accompany it?",
+      "resolution_mechanism": "Legislative trace analysis of amendment debates (parliamentary committee records on track-two creation, Dutch evaluation cycles) coding fiscal arguments against autonomy-consistency arguments.",
+      "impact": "Determines whether public_health_insurers is a driver seat shaping the constraint's direction or an incidental collector; recalibrates the gain_flow reading and the expansion forecast.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal weight of fiscal gravity in the eligibility-ratchet mechanism."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Autonomy-based assisted-dying frameworks were founded as tightly bounded exceptions: competent adults, terminal and irremediable conditions, waiting periods, independent review. Across the leading jurisdictions the operative perimeter has since moved — to non-terminal chronic suffering (track-two criteria), to patients without contemporaneous consent (advance directives, substituted judgment, pediatric protocols in two jurisdictions), and toward mental illness as an eligible ground. This story instantiates the slippery_slope_mechanism reading of the end_of_life_authority kernel: the claim that the expansion is not accidental but structural — that once autonomy-plus-unbearable-suffering grounds access, no principled criterion holds the line at the founding boundary, and the interpretive layer (courts, review commissions, evaluation cycles) absorbs the drift without ever formally repudiating the founding terms.\n\nKEY AGENTS (by structural relationship):\n- competent_terminal_patients: intended beneficiary (powerless/constrained) — receives the supervised path the framework was built to provide\n- assisted_dying_providers: administering gatekeeper (organized/mobile) — assesses, performs, documents; dual-positioned collector\n- courts_and_review_commissions: expansion authority (institutional/constrained) — interprets criteria outward, refers almost nothing\n- founding_legislatures: containment author (institutional/constrained) — wrote bounds it has not been able to restore\n- incompetent_eligible_patients: primary target (powerless/trapped) — bound by determinations they cannot affirm or refuse\n- non_terminal_chronic_sufferers: target with dual position (moderate/constrained) — some seek admission; the class carries the reclassification\n- vulnerable_disabled_persons: target (powerless/trapped) — support deprivation pushes requests the criteria accept\n- public_health_insurers: fiscal collector (institutional/constrained) — books avoided downstream care costs\n- burdened_family_caregivers: incidental beneficiary (moderate/mobile)\n- disability_rights_advocates, palliative_care_clinicians: excluded voices (organized/mobile) — thin representation in founding design\n- national_bioethics_commissions: analytical observer (institutional/analytical) — documents the drift, decides nothing",
+    "logic_rationale": "Extractiveness is authored at 0.68: high but not snare-grade, because the core service continues to be delivered as promised to the competent-terminal class while criteria drift transfers unconsented exposure and reclassification costs onto classes that never agreed to them. Suppression is authored at 0.61 as a raw structural property — constitutional entrenchment and the interpretive ratchet foreclose durable re-narrowing, and holding the expanded perimeter requires reporting regimes, review staffing, and conscience-rule management — and it is deliberately NOT scaled here; only extractiveness is scaled by the engine. Theater_ratio at 0.56 reflects a safeguard subsystem whose legitimating function increasingly outruns its binding function: near-zero referral rates for irregular cases in the longest-standing jurisdictions, and review approval patterns that track applications rather than screen them. Accessibility_collapse at 0.58: once the autonomy-plus-suffering rationale is accepted, principled containment alternatives collapse substantially — the rationale generalizes — but political containment persists in some jurisdictions, so collapse is incomplete. Resistance at 0.60: sustained organized opposition (disability advocacy, palliative sectors, religious institutions) that raises enforcement costs without reversing the drift. The three temporal series run on one shared seven-point grid (t=0..30) so every metric is authored at every examined time point; trajectories are monotonic ratchets, not cycles — the mechanism is cumulative reinterpretation, not intermittent reinforcement. The claim (tangled_rope) and the metrics are authored independently: the engine computes per-seat types from the structural data, and any divergence between this claim and computed verdicts is the measurement the corpus exists to take.",
+    "perspectival_gap": "The seats compute differently by construction. Competent_terminal_patients experience the framework as a delivered promise — from their seat the arrangement looks like pure coordination. Incompetent_eligible_patients experience binding without consent — from their seat the same structure operates as unappealable imposition. Founding_legislatures watch their authored settlement dissolve through interpretation they did not authorize; courts_and_review_commissions experience the same movement as principled fulfillment of the rationale. Public_health_insurers see fiscal relief; vulnerable_disabled_persons see the exit that support deprivation made rational. The engine derives these divergent classifications from the declared positions and exits; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Beneficiaries cluster at the low-d end: competent_terminal_patients are subsidized by the framework's existence (full service, no imposed cost); public_health_insurers collect fiscal relief passively; burdened_family_caregivers benefit incidentally. Victims cluster at the high-d end, amplified by trapped exits: incompetent_eligible_patients sit nearest the full-target position — no contemporaneous consent and no act available to revoke the determination — with vulnerable_disabled_persons close behind (trapped by the same support shortfalls that generate their requests) and non_terminal_chronic_sufferers somewhat lower because a minority of the class actively seeks admission. Assisted_dying_providers are dual-positioned: they administer and collect, bearing professional risk and moral load, placing them nearer the symmetric range than a pure collector. The excluded seats carry no directionality weight but document the consensus-provenance gap: the unanimity behind each widening was produced in rooms the disability and palliative seats never occupied.",
+    "mandatrophy_analysis": "The tangled_rope claim guards against two symmetrical mislabels. Reading the arrangement as pure rope (the autonomy advocates' framing) erases the asymmetric, unconsented costs the expansion imposes; reading it as pure snare (the abolitionist framing) denies the real, continuing delivery to the founding class — the coordination story is not cover. On mandatrophy: the founding mandate (a bounded terminal exception) has been overtaken by practice, but the founding problem retains a live residue — clandestine practice and unsupported terminal distress persist at the margins — and the parties genuinely dispute obsolescence, so mandatrophy_resolved is left undeclared and founding_problem_status is authored as contested. The R5 mismatch consumer should find status=contested crossed with verdict=world_rearranges: no zombie flag, correctly, because the function has not atrophied — it has migrated. The piton risk is real but localized: theater_ratio 0.56 approaches performative majority for the safeguard subsystem specifically, while the clinical core remains functional. If criteria widen until assessment becomes formality — theater_ratio above roughly 0.7 with the clinical core hollowed — expect a transition signal toward piton or snare, and the fiscal-capture finding (gain_flow naming a seat, fixing_cost prohibitive) is the channel through which that transition would run. Coalition note: the victim classes are individually powerless but not inherently coalition-incapable — disability-rights organization demonstrates collective capacity — yet the framework's design channels that capacity into exclusion from agenda-setting rather than veto power, which is why resistance registers at 0.60 without registering in the criteria."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

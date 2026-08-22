@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "us_constitution_text__originalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "orig_reading_meas",
+    "story_uid": "da170005-0473-48e1-afcc-7e4d04c8a202"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.78,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fixed-Ratification-Meaning Constraint on Constitutional Adjudication (Originalist Reading)",
+    "topic_domain": "legal/constitutional/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "conservative_legal_movement",
+      "elected_branches_shielded_by_deference"
+    ],
+    "victims": [
+      "unenumerated_rights_claimants",
+      "adaptive_interpretation_proponents"
+    ],
+    "vindicated_propositions": [
+      "popular_sovereignty_fixity_doctrine",
+      "counter_majoritarian_difficulty_thesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 55
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 55,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 55,
+      "value": 0.78
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Is the operative constraint on American constitutional adjudication this reading (meaning fixed at ratification), the living reading (meaning evolves with application), or the positivist reading (validity from enactment procedure alone)?",
+      "resolution_mechanism": "Doctrinal analysis of which method controlling majorities actually apply across issue areas, plus professional-consensus indicators: casebook framing, faculty hiring patterns, state court adoption rates.",
+      "impact": "Each sibling reading instantiates a different constraint with a different victim set: under the living reading the targets are entrenchment-seeking actors rather than rights claimants; under the positivist reading historical pedigree becomes irrelevant and this story's extraction profile collapses toward zero.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the constitutional-text kernel actually binds adjudication."
+    },
+    {
+      "id": "original_meaning_determinacy",
+      "question": "Is founding-era public meaning determinate enough to constrain judges, or does pervasive historical ambiguity leave room for motivated selection behind a facade of evidence?",
+      "resolution_mechanism": "Corpus-linguistic and founding-era database projects measuring convergence of period usage; inter-rater reliability studies on independent originalist analyses of the same clauses.",
+      "impact": "If meaning is largely indeterminate, the method functions as discretion wearing historical costume — extraction and theater rise and the classification trends toward pure extraction; if determinate, the coordination function is stronger than the metrics assume.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determinacy of the historical evidence the method treats as binding."
+    },
+    {
+      "id": "judicial_history_quality",
+      "question": "Is the history deployed in controlling opinions sound by professional-historical standards, or adversarial cherry-picking assembled for litigation?",
+      "resolution_mechanism": "Systematic peer review of the historical claims in landmark opinions by credentialed historians uninvolved in the underlying litigation.",
+      "impact": "Widespread unsound history raises theater_ratio sharply (rigor performed rather than practiced) and increases effective extraction on litigants subjected to unreliable tests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quality of the historical record courts actually rely on."
+    },
+    {
+      "id": "method_vs_factional_capture",
+      "question": "Does the current regime represent the method applied in good faith, or factional capture operating through the method's vocabulary?",
+      "resolution_mechanism": "Blinded panels scoring the relative historical strength of each side in decided cases, then testing whether outcomes correlate with appointing-coalition preference after controlling for scored historical merit.",
+      "impact": "If capture dominates, gains concentrate further in the movement seat and the arrangement trends toward pure extraction maintained by appointment control; if the method binds, the coordination component is real and durable.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Good-faith method versus cover-story capture."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the measured suppression of adaptive interpretation structural (appointment gates, reversal risk, journal and clerkship gatekeeping) or internalized (judges and scholars treating adaptive argument as presumptively illegitimate)?",
+      "resolution_mechanism": "Post-relaxation trajectory: if adaptive argument revives immediately wherever enforcement loosens (state courts, concurrences, doctrinal footnotes), suppression was structural; if advocates continue self-censoring after gates open, it is internalized.",
+      "impact": "Internalized suppression outlasts enforcement machinery — removing the appointment gate alone would not restore adaptive interpretation, extending the persistence of extraction beyond the visible enforcement apparatus.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Since roughly 1970, an interpretive regime has consolidated in American federal courts under which constitutional provisions carry the meaning their words conveyed to the ratification-era public, and judges must recover that meaning from historical evidence rather than update it; post-ratification practice counts only insofar as it evidences original understanding. The regime presents itself as democratic fidelity — judges apply law the people enacted, not the judges' own values. This story models that regime AS the constraint, from the analytical seat: it has a genuine coordination core (binding judicial discretion to an external standard) and an asymmetric extraction structure (claims lacking founding-era pedigree systematically lose; a movement built around the method collects appointments, funding, and doctrinal wins). Per the committer frame, this file instantiates ONE reading of the us_constitution_text kernel — the originalist reading; the living-constitutionalist and positivist readings are separate constraints with their own epsilon, beneficiaries, and victims, linked through network.affects_constraints. The claim/metric split is deliberate: claimed_type records tangled_rope as the structure I believe true; the metrics record the operation I believe descriptively accurate. KEY AGENTS (by structural relationship):\n- supreme_court_originalist_majority: Agenda-setter (institutional/arbitrage) — applies and calibrates the method\n- conservative_legal_movement: Primary beneficiary (organized/identity_locked) — collects appointments, funding, doctrinal wins; runs the personnel pipeline\n- elected_branches_shielded_by_deference: Secondary beneficiary (powerful/mobile) — legislation survives review more often\n- unenumerated_rights_claimants: Primary target (powerless/trapped) — claims without founding-era pedigree fail\n- adaptive_interpretation_proponents: Target (moderate/constrained) — professionally marginalized\n- lower_court_judges: Payer (powerful/constrained) — bears compliance costs and reversal risk\n- future_generations_facing_novel_circumstances: Excluded voice (powerless/trapped) — absent from the evidentiary record that binds them\n- legal_historians: Analytical observer (moderate/analytical) — supplies and audits the evidence",
+    "key_agents": [
+      "supreme_court_originalist_majority: agenda-setter seat, institutional power, arbitrage exit — controls the method's application",
+      "conservative_legal_movement: primary beneficiary, organized power, identity_locked exit — collects the regime's gains and staffs its referees",
+      "elected_branches_shielded_by_deference: secondary beneficiary, powerful, mobile — enjoys restrained judicial review",
+      "unenumerated_rights_claimants: primary target, powerless, trapped — loses claims the historical record cannot support",
+      "adaptive_interpretation_proponents: target, moderate, constrained — pushed outside the appointment and publication mainstream",
+      "lower_court_judges: payer, powerful, constrained — must comply without having chosen the method",
+      "future_generations_facing_novel_circumstances: excluded, powerless, trapped — no seat in the inquiry that fixes their rights",
+      "legal_historians: observer, moderate, analytical — audit the evidentiary base without deciding anything"
+    ],
+    "logic_rationale": "Extractiveness 0.65: the transfer is substantial — whole classes of claims fail wholesale wherever the founding-era record is silent, and the method's winner-take-most structure converts historical silence into permanent defeat — tempered by the fact that the standard binds all judges, including ones the dominant coalition dislikes. Suppression 0.78 is a raw structural property, unscaled by power or scope: enforcement runs through appointment screening, confirmation politics, the reversal hierarchy, and journal/clerkship gatekeeping. Theater 0.40: genuine historical scholarship occurs, but a growing share of courtroom 'history' is litigation-assembled advocacy dressed as archive. Accessibility_collapse 0.45: alternatives persist (state constitutional law, academic living-tradition scholarship, occasional concurrences), so the field has not closed. Resistance 0.60: sustained academic opposition, recurring dissents, and state court divergence. Measurements run on ONE shared grid — time points index years since 1970 across the interval 1970-2025 — with every tracked metric authored at every point. The suppression_requirement series is authored deliberately: enforcement capacity is the dynamic this story traces, as the method moved from fringe persuasion to controlling doctrine to hardened confirmation gatekeeping; extraction and theater ratchet upward along the same arc as the appointment pipeline matured and the stakes of doctrinal control rose.",
+    "perspectival_gap": "The agenda-setter seat and the payer seats compute differently by construction. From inside the Court and the movement, the constraint is discipline: it prevents usurpation, and every judge — friendly or hostile — faces the same historical standard. From the claimant seat, the identical structure is a locked door: the same fixity that restrains judges also forecloses claims the eighteenth and nineteenth centuries could not have imagined. Same-level lateral divergence appears between lower-court judges and tenured law professors, who hold comparable professional standing yet sit opposite: judges must comply under reversal exposure, professors may dissent behind tenure — differentiated by reversal exposure, not by global power. Movement members experience the regime as vocation; claimants experience it as verdict; historians experience it as a citation practice they can audit but not affect.",
+    "directionality_logic": "Declared beneficiaries derive low directionality: the conservative legal movement collects the regime's gains and is additionally identity-locked (the network's careers, funding, and self-conception are constituted by the method), pushing it firmly toward the beneficiary pole; the elected branches benefit incidentally through restrained review while retaining formal amendment as a remote exit. Declared victims derive high directionality: unenumerated rights claimants are powerless with no exit but litigation itself, and adaptive-interpretation proponents face constrained exit through gatekept institutions. The Court sits near-symmetric-to-beneficiary: it pays nothing, controls the mechanism, and holds arbitrage-grade exit (it defines the method it applies). Legal historians are analytical. No directionality overrides are needed — the beneficiary/victim declarations plus exit atoms already place every seat correctly.",
+    "mandatrophy_analysis": "The founding problem — the counter-majoritarian worry that animated the movement's construction — is contested, not dead, so no dead-problem zombie flag fires; the mismatch consumer reads status=contested x verdict=world_rearranges and finds no forced capture signal. The tangled_rope classification guards against both mislabels: calling this a snare ignores the real discretion-binding coordination function that even opponents concede (the standard constrains ALL judges, including ones the dominant coalition dislikes, and supplies the predictability litigants plan around); calling it a rope ignores the systematic loser class and the movement's capture of the referee-selection pipeline. Both facts are structural, and the hybrid category preserves both. If the founding problem were later shown dead — judicial supremacy over meaning dissolved by other legitimacy mechanisms — while the world still rearranges around the method, the mismatch flag would fire and piton-or-zombie analysis would follow.",
+    "kernel_context": "Kernel: us_constitution_text — the ratified U.S. Constitution as a single persisting commitment that rival interpretive theories read differently. This file instantiates the originalist_reading: meaning fixed at ratification, recovered from original public understanding. Siblings: living_constitutionalist_reading (meaning evolves with application) and positivist_reading (validity derives from enactment procedures, indifferent to historical meaning). Relations authored as coexists_with toward both: the three readings are held simultaneously by different factions of one ongoing dispute, and no single party's framework logically eliminates another — a positivist can designate originalist method as the rule of recognition, and an originalist rejects living adaptation without rendering it impossible for others to hold. Reference frame: fixed_ratification_public_meaning. Drift: contemporary practice accommodates non-originalist precedent under stare decisis and deploys selective historicism — substantial practice drift that the authority structure reframes as refinement rather than departure, hence acknowledged=false."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "living_constitutionalist_reading",
+      "positivist_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'constitutional interpretation' decomposes into three reading-stories of the us_constitution_text kernel because the label conflates structurally distinct claims with different epsilon, victim sets, and failure modes. This (originalist) story links to both siblings; resource flow among them runs through the shared appointment pipeline — whichever reading controls nominations reshapes the others' operating environment without foreclosing them."
+  },
+  "stakeholders": [
+    {
+      "name": "supreme_court_originalist_majority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Decides which historical sources count, how much weight precedent carries against original meaning, and when history-and-tradition tests govern. Controls the method's application case by case and can narrow or widen it. Members reached the bench through a selection process that screened for commitment to the method; abandoning it would repudiate the credentials that produced their seats."
+    },
+    {
+      "name": "conservative_legal_movement",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "A network of lawyers, academics, judges-in-waiting, and donor-funded organizations built since the 1980s around textualist and originalist method. It staffs the appointment pipeline, trains clerks, funds centers and journals, and supplies the historical briefs courts cite. Its members' careers, funding, and status are bound to the method's continued dominance; abandoning it would dissolve the professional identity the network confers."
+    },
+    {
+      "name": "elected_branches_shielded_by_deference",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Federal and state legislators enact policy knowing that courts applying the method strike down fewer modern regulatory and rights-expanding measures than courts weighing contemporary consequences would. They bear little direct cost and retain formal amendment as a theoretical remedy, though that path is almost never taken."
+    },
+    {
+      "name": "unenumerated_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Litigants whose claims rest on liberty, equality, or dignity interests without clear founding-era analogues — new family forms, digital privacy, medical autonomy. Their cases turn on whether judges find a historical tradition protecting them; where none existed in 1791 or 1868, they lose regardless of the strength of their contemporary interest. Litigation is their only avenue, and there is no exit from the governing method except losing."
+    },
+    {
+      "name": "adaptive_interpretation_proponents",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Scholars, advocates, and some state judges who argue that meaning develops with application. They publish, litigate, and dissent against the method and are increasingly outside the appointment pipeline and the elite-journal mainstream; their professional advancement now runs through institutions whose gatekeeping the method controls. Switching camps is possible but means surrendering a body of work."
+    },
+    {
+      "name": "lower_court_judges",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "District and circuit judges must apply the method as handed down, commissioning historical analysis in ordinary cases without the research staff or time the task presumes, and risk reversal when their historical synthesis differs from the Supreme Court's. They did not choose the method and cannot decline it."
+    },
+    {
+      "name": "future_generations_facing_novel_circumstances",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "People who will confront technologies, social arrangements, and threats the ratifying public never imagined. The evidentiary record the method consults contains nothing about them, and no mechanism aggregates their interests into the historical inquiry that decides their rights."
+    },
+    {
+      "name": "legal_historians",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Professional historians whose archival work supplies the evidence courts invoke and who increasingly publish critiques of how that evidence is selected and characterized in opinions. They hold no vote in doctrine and bear neither the wins nor the losses; their stake is the accuracy of the record."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Fixes a single external interpretive target — the text's ratification-era public meaning — so that litigants, legislatures, and citizens can predict what the Constitution permits without consulting the moral views of whoever sits on the bench; binds all judges, including unfavored ones, to the same standard.",
+    "transfer_function": "Moves interpretive authority from sitting judges' contemporary moral judgment to historical evidence and its professional custodians; in outcome terms, moves wins in constitutional litigation away from claims requiring evolved or novel normative premises and toward claims anchored in founding-era practice; in career terms, moves judicial seats, clerkships, and scholarly prestige toward practitioners fluent in the method.",
+    "absent_voices": "Future generations confronting circumstances absent from the founding-era record have no seat in the inquiry that fixes their rights; the enslaved, women, and the unpropertied — excluded from the ratification-era 'public' whose understanding binds everyone — remain structurally absent from the evidentiary base the method privileges. Both groups would object that the constraint generalizes obligations from a conversation they were never admitted to.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fixed-meaning requirement vanished overnight, doctrine would shift within a few terms: precedents resting on history-and-tradition tests would be open to reargument under consequence-sensitive reasoning, the movement's appointment advantage would degrade into a mere stylistic preference, and rights litigation would reorganize around contemporary-harm showings instead of historical-pedigree hunts.",
+    "founding_problem": "The perceived excesses of mid-twentieth-century adjudication — courts invalidating democratically enacted policy on grounds not traceable to enacted text — posed the counter-majoritarian question: by what warrant do unelected judges override legislation? The modern movement was built to answer: only by enforcing law the people actually enacted, as they understood it.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: political-science and legal-history accounts of the movement's post-1970s institutional construction (e.g., Steven Teles's history of the conservative legal movement, confirmation-hearing records) attest that the founding problem was the Warren Court's perceived legitimacy deficit, and mainstream journals still debate whether judicial supremacy over meaning remains a live threat. The movement itself attests the problem is live; prominent critics inside the academy attest it was solved by other mechanisms and the method now persists as a factional instrument — the dispute is externally documented, not merely self-asserted."
+  },
+  "gain_flow": "conservative_legal_movement",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "fixed_ratification_public_meaning",
+    "drift_state": {
+      "moment": "contemporary_stare_decisis_accommodation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "living_constitutionalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "positivist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_meaning_fixed_at_ratification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judges_may_not_impose_unenacted_values",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

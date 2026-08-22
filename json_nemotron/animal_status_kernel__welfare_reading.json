@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "animal_status_kernel__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "animal_welfare_reading",
+    "story_uid": "62f54d71-1c59-4381-bc1e-0b52ea57eba8"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Welfare-Regulated Animal Use (Animal Status Kernel — Welfare Reading)",
+    "topic_domain": "moral_philosophy/animal_ethics/legal_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "animal_agriculture_industry",
+      "biomedical_research_institutions",
+      "companion_animal_breeders",
+      "welfare_regulation_agencies"
+    ],
+    "victims": [
+      "farmed_animals",
+      "laboratory_animals",
+      "commercial_breeding_animals"
+    ],
+    "vindicated_propositions": [
+      "sentience_grounds_moral_considerability",
+      "suffering_minimization_as_regulatory_standard",
+      "property_status_compatible_with_welfare_obligations"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "welfare_reform_extraction_lock_in",
+      "question": "Do welfare reforms structurally reduce extraction from animals or legitimize and stabilize the underlying property regime, increasing net extraction over time?",
+      "resolution_mechanism": "Longitudinal analysis of welfare regulation stringency vs. animal use volume and industry profitability; counterfactual assessment of abolitionist trajectory without welfare reforms.",
+      "impact": "If reforms legitimize the property regime, the constraint is a scaffold for extraction rather than a genuine reduction; classification shifts toward snare from abolitionist seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare regulation functions as extraction-reduction or extraction-legitimation"
+    },
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "Where exactly do the welfare, property, and abolitionist readings disagree structurally — on the victim set, the extraction boundary, the coordination function, or the kernel's authority grounding?",
+      "resolution_mechanism": "Structural mapping of each reading's beneficiary/victim declarations, claimed coordination function, and cs_structure authority_grounding; identify the minimal structural element whose change converts one reading to another.",
+      "impact": "Locates the irreducible disagreement for cross-reading contamination analysis; determines whether readings are genuinely distinct constraints or framing variants.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural locus of disagreement among kernel readings"
+    },
+    {
+      "id": "sentience_threshold_victim_inclusion",
+      "question": "Which animals' suffering-capacity crosses the threshold for victim-set inclusion under this reading, and how is the threshold operationalized in regulation?",
+      "resolution_mechanism": "Survey of welfare legislation scope (vertebrates, cephalopods, decapod crustaceans); phylogenetic and cognitive criteria used by regulatory bodies; industry compliance patterns at taxonomic boundaries.",
+      "impact": "Determines the victim set's extension and the constraint's effective scope; a narrow threshold makes the constraint a partial snare for excluded taxa.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Taxonomic and operational boundary of victim-set inclusion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1822,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1966,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1822,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1966,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1822,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1966,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1822,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the welfare_reading of the animal_status_kernel — the position that animals are sentient beings whose suffering is morally relevant, making their use acceptable only when regulated to minimize pain, while retaining their property status subject to welfare obligations. It is one of three contested readings of the same kernel (animal_status_kernel), alongside the property_reading (animals as mere property, moral considerability derives from ownership) and the abolitionist_reading (animals as moral persons with the right not to be property). This reading emerged historically from the 1822 Martin's Act (first animal welfare law) through the 1966 US Animal Welfare Act and EU welfare directives, progressively expanding the victim set from working animals to farmed and laboratory animals while maintaining the property framework. The constraint functions as a tangled_rope: it coordinates a genuine social problem (public demand for animal protection, industry need for stable regulation, scientific need for standardized animal care) while extracting from animals through permitted use that welfare standards mitigate but do not eliminate. The 'new welfarism' critique from abolitionists argues welfare reforms make the public comfortable with continued use ('happy meat'), structurally legitimizing the property regime.",
+    "key_agents": [
+      "animal_agriculture_industry: Primary beneficiary (institutional/arbitrage) — gains stable regulatory framework, social license, and continued use rights",
+      "biomedical_research_institutions: Secondary beneficiary (institutional/arbitrage) — gains standardized animal care protocols and legal certainty",
+      "welfare_regulation_agencies: Agenda-setter/beneficiary (institutional/analytical) — administers enforcement, derives institutional purpose from the regime",
+      "farmed_animals: Primary victim (powerless/trapped) — bears confined lives and slaughter; welfare standards mitigate but do not eliminate suffering",
+      "laboratory_animals: Primary victim (powerless/trapped) — bears experimental procedures; welfare standards regulate but require use",
+      "commercial_breeding_animals: Secondary victim (powerless/trapped) — bears reproductive exploitation and hereditary defects",
+      "animal_advocacy_organizations: Contested beneficiary/payer (organized/constrained) — some gain regulatory footholds; abolitionist wing excluded",
+      "philosophical_abolitionists: Excluded observer (analytical/analytical) — argue the constraint legitimizes the injustice it purports to mitigate"
+    ],
+    "logic_rationale": "Extractiveness (0.42) is moderate: welfare regulations impose compliance costs on industry (housing, enrichment, veterinary care, slaughter methods) and constrain some extreme practices, but the property regime permits continued mass use and killing. Suppression (0.38) is moderate: animals are physically confined with no exit; human advocates face legal and economic barriers to abolition; but welfare regulations themselves create some protective floor. Theater ratio (0.28) is low-moderate: welfare enforcement has genuine function (inspections, standards, penalties) but a growing share of activity performs 'humane' branding while core use continues. Accessibility collapse (0.45) is moderate: alternatives exist (plant-based diets, non-animal methods, sanctuary models) but are structurally marginalized by the property regime. Resistance (0.52) is moderate: industry resists stricter standards; abolitionists resist the property framework; welfare advocates push for incremental expansion. The claimed type is tangled_rope because the constraint both coordinates (genuine multi-stakeholder problem: public morality, industry stability, scientific standardization) and extracts (animals bear net costs of use that welfare does not eliminate, industry captures net benefit of continued property rights).",
+    "perspectival_gap": "From the industry seat, the constraint is a rope: it solves coordination (public trust, trade standards, scientific reproducibility) with manageable costs. From the farmed animal seat, it is a snare: the property regime extracts their lives and welfare standards only modulate the extraction. From the abolitionist seat, it is a scaffold that failed its sunset: the founding problem (cruelty) persists and the property framework is the obstacle, not the solution. From the regulator seat, it is a tangled_rope: genuine coordination function with asymmetric extraction built in. The engine computes these seat divergences from the structural data.",
+    "directionality_logic": "Beneficiaries: animal_agriculture_industry, biomedical_research_institutions, companion_animal_breeders, welfare_regulation_agencies — all gain from the regulated property regime (stable use rights, social license, institutional mandate). Victims: farmed_animals, laboratory_animals, commercial_breeding_animals — sentient beings whose suffering is morally recognized but whose use continues; they bear the net costs (confinement, slaughter, experimentation) that welfare mitigates but does not eliminate. Animal_advocacy_organizations are dual-positioned: welfare-oriented groups gain regulatory access (beneficiary) but abolitionist wings are structurally excluded (payer/excluded). Philosophical_abolitionists are excluded observers — they would object to the property framework itself but are not in the regulatory conversation. Directionality derives from this structure: victims are powerless/trapped (d near 1.0), beneficiaries are institutional/arbitrage (d near 0.0), dual-positioned advocates are organized/constrained (d near 0.5).",
+    "mandatrophy_analysis": "The founding problem (preventing cruelty to working animals) was live in 1822. By 2024, the problem has transformed: cruelty is regulated but mass use has expanded enormously. The welfare framework that solved the 19th-century problem now stabilizes a 21st-century system of industrial use. This is not pure mandatrophy (the coordination function remains live for public morality and trade) but a case where the constraint's extraction component has grown alongside its coordination function — a tangled_rope where the rope has lengthened but the snare has tightened. The 'new welfarism' critique identifies this: welfare reforms legitimize the property regime, making the constraint a net extraction mechanism from the abolitionist seat. The mandatrophy is partial and contested — hence founding_problem_status = contested.",
+    "kernel_context": "This constraint is the welfare_reading of the animal_status_kernel (kernel_id: animal_status_kernel). Sibling readings: property_reading (animals as property, moral considerability from ownership rights) and abolitionist_reading (animals as moral persons, property status categorically impermissible). All three readings share the kernel's commitment to animal status as a foundational legal/moral question but instantiate different constraints with different victim sets, extraction profiles, and authority groundings. This reading's structural delta: animals partially included in victim-set via suffering-capacity; welfare regulations constrain but do not eliminate use; extractiveness moderate because suffering-minimization imposes costs on industry but permits continued use; generates 'new welfarism' critique from abolitionists (welfare reforms make public comfortable with 'happy meat')."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status_kernel__property_reading",
+      "animal_status_kernel__abolitionist_reading",
+      "animal_welfare_enforcement_regime",
+      "animal_agriculture_subsidies",
+      "biomedical_research_funding"
+    ],
+    "dual_formulation_note": "This constraint is one member of the animal_status_kernel constraint family (3 readings). The property_reading declares animals as property with no intrinsic moral status (extraction-high, coordination-low). The abolitionist_reading declares animals as moral persons with right not to be property (extraction-zero for animals, coordination-high for abolitionist project). This welfare_reading sits between: animals as sentient property with welfare claims (moderate extraction, genuine coordination). The three readings share a kernel but have divergent ε values and structural relationships — they are distinct constraints linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "animal_agriculture_industry",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gains stable regulatory framework, social license, and continued property rights over billions of animals annually. Welfare compliance costs are predictable and passed through to consumers; the regime prevents more disruptive abolitionist outcomes. Exit options include geographic arbitrage (moving production to lower-standard jurisdictions) and vertical integration to control welfare branding."
+    },
+    {
+      "name": "biomedical_research_institutions",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gains standardized animal care protocols (Guide for the Care and Use of Laboratory Animals, EU Directive 2010/63) that provide legal certainty, scientific reproducibility, and public legitimacy. Welfare compliance is a condition of funding and publication. Exit options include outsourcing to lower-standard jurisdictions and developing non-animal methods (which remain marginal)."
+    },
+    {
+      "name": "welfare_regulation_agencies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers and enforces welfare standards (USDA APHIS, EU competent authorities, etc.). Derives institutional purpose, budget, and authority from the regulatory regime. Sets the agenda for standard-setting, inspection regimes, and enforcement priorities. Captured to some degree by regulated industries but also pressured by advocacy."
+    },
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears the core extraction: confined lives in industrial systems (battery cages, gestation crates, feedlots), routine mutilations without analgesia (castration, tail docking, debeaking), transport stress, and slaughter. Welfare standards mitigate some extremes (space allowances, stunning requirements) but do not challenge the property regime that makes them commodities. No exit — they are the resource."
+    },
+    {
+      "name": "laboratory_animals",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears experimental procedures (toxicity testing, disease modeling, basic research) that cause pain, distress, and death. Welfare standards require analgesia, humane endpoints, and refinement — but the 3Rs framework (Replace, Reduce, Refine) treats replacement as aspirational, not mandatory. No exit — they are the experimental apparatus."
+    },
+    {
+      "name": "commercial_breeding_animals",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears reproductive exploitation (forced breeding, separation from offspring) and hereditary defects from selection for production traits (broiler chickens, fast-growing pigs, high-yield dairy cows). Welfare standards address some husbandry issues but not the genetic burden. No exit — their bodies are the product."
+    },
+    {
+      "name": "animal_advocacy_organizations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Welfare-oriented groups (Humane Society, RSPCA, Compassion in World Farming) gain regulatory footholds, inspection access, and legislative victories — they are beneficiaries of the regime's openness to incremental reform. Abolitionist wings and organizations (Animal Equality, Direct Action Everywhere) are structurally excluded from the regulatory conversation — they pay opportunity costs (resources spent on welfare campaigns that legitimize use) without representation. Exit from the welfare framework means losing institutional access."
+    },
+    {
+      "name": "philosophical_abolitionists",
+      "role": "excluded",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Argue that property status itself is the injustice; welfare reforms legitimize 'happy meat' and stabilize the system. They would object to the victim set's limitation (only suffering-capacity, not rights), the coordination function's legitimacy (coordinating exploitation), and the authority grounding (property law). They are not in the regulatory room — their exit is intellectual, not institutional."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a multi-stakeholder coordination problem: public demands protection from cruelty; industry needs stable, predictable regulation for trade and investment; science needs standardized animal care for reproducibility; regulators need enforceable standards. The welfare framework provides a single, legally codified system that all parties can reference — replacing ad hoc cruelty prohibitions with positive standards of care.",
+    "transfer_function": "Moves compliance costs (housing upgrades, enrichment, veterinary care, inspection fees, record-keeping) from animals to industry; moves social license and continued use rights from public/regulators to industry; moves institutional authority and budget from legislature to welfare agencies. The net transfer is animals bearing confinement/slaughter/experimentation; industry bearing regulated costs; public gaining assurance; regulators gaining mandate.",
+    "absent_voices": "The animals themselves — they cannot speak, vote, litigate, or organize. Abolitionist advocates and organizations who reject the property framework — they are excluded from regulatory advisory bodies and standard-setting processes. Future generations of animals who will be born into the system — they have no representation. Wild animals affected by agricultural expansion — outside the welfare regime's scope.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the welfare-regulated property regime vanished overnight, the animal agriculture and biomedical research industries would face immediate legal chaos — no standards for housing, transport, slaughter, or experimentation. Public outrage would force emergency regulation. The property regime would likely persist (animals remain property) but without welfare constraints, reverting to a property_reading-like state with higher extraction. Alternatively, abolitionist pressure could force a transition to non-use systems. Either way, the world rearranges: billions of animal lives, trillion-dollar industries, and global trade patterns would shift.",
+    "founding_problem": "Preventing cruelty to working animals (horses, cattle) in early 19th century urban industrial societies — the visible suffering of beasts of burden in streets and slaughterhouses that offended public morality and disrupted social order.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical record confirms the 1822 Martin's Act targeted 'cruel and improper treatment of cattle' — corroborated by parliamentary debates and contemporary press. Industry and welfare agencies attest the problem is live (ongoing cruelty cases, new production systems create new welfare challenges). Abolitionists and independent ethicists attest the founding problem is dead (cruelty is now regulated) but the arrangement persists as a legitimized property regime — the 'new welfarism' critique from Francione, Regan, and contemporary abolitionist organizations corroborates the shifted-function reading from outside the beneficiary set."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "animal_status_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "property_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentience_grounds_moral_considerability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "property_status_compatible_with_welfare_obligations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "anti_cruelty_property_law",
+    "drift_state": {
+      "moment": "industrial_animal_use_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

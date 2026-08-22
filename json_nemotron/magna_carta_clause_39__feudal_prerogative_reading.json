@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_clause_39__feudal_prerogative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_magna_carta_clause_39__feudal_prerogative_reading",
+    "measurement_id_prefix": "magna_carta_clause_39__feudal_prerogative_reading",
+    "story_uid": "1ab18ac8-e2a2-4fff-b408-fc9682cde7d7"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Magna Carta Clause 39 — Feudal Prerogative Reading",
+    "topic_domain": "constitutional_law/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "crown",
+      "tenants_in_chief",
+      "lesser_nobility"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "feudal_contractualism",
+      "noble_privilege_against_royal_arbitrariness",
+      "customary_law_as_binding_on_king"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_feudal_prerogative",
+      "question": "Does Clause 39 instantiate a narrow feudal privilege constraint (this reading) or a universal due process guarantee (liberal_due_process_reading) or a specific historical limitation on documented royal abuses (originalist_limitation_reading)?",
+      "resolution_mechanism": "Interpretive history: if subsequent legal practice and constitutional doctrine treat Clause 39 as the seed of universal due process, the feudal prerogative reading is a historical artifact; if it remains confined to noble-versus-crown disputes, this reading captures its operational reality.",
+      "impact": "If the liberal reading is structurally instantiated, this constraint's low extractiveness and narrow victim set misrepresent the constraint that actually operated — the true constraint would have broader scope, higher extraction against state power, and a universal victim set. The engine classifies the reading actually instantiated.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which reading of the contested kernel Clause 39 is the structurally operative one — feudal prerogative, liberal due process, or originalist limitation."
+    },
+    {
+      "id": "extraction_displacement_by_later_doctrine",
+      "question": "Did the feudal prerogative reading's low extractiveness persist, or was it displaced by later doctrinal expansion that increased the constraint's effective extraction against state authority?",
+      "resolution_mechanism": "Longitudinal doctrinal analysis: trace whether Clause 39's operational scope expanded from noble privileges to universal rights, and whether that expansion increased the constraint's extraction from the crown/state (i.e., the constraint began extracting compliance from a wider range of state actions).",
+      "impact": "If extractiveness increased over time, the feudal reading is a t0 snapshot of a constraint that drifted — the story's base properties capture only the initial state, not the constraint's full trajectory. Temporal measurements would be needed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the feudal prerogative reading's low extractiveness is stable or a phase in a constraint that accumulated extraction through doctrinal expansion."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1215,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1225,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1297,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1215,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1225,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1297,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1215,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1225,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1297,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 1215,
+    "end": 1297
+  },
+  "commentary": {
+    "narrative_context": "Clause 39 of Magna Carta (1215) states: 'No free man shall be seized or imprisoned, or stripped of his rights or possessions, or outlawed or exiled, or deprived of his standing in any other way, nor will we proceed with force against him, or send others to do so, except by the lawful judgment of his equals or by the law of the land.' This reading — the feudal prerogative reading — treats Clause 39 as a narrow procedural guarantee operating entirely within the feudal hierarchy. It protects tenants-in-chief and lesser nobility from arbitrary royal action by requiring judgment by peers (i.e., other nobles) or established customary law. The crown is constrained but not substantively limited; the constraint coordinates noble-crown relations by codifying existing customary protections, extracting minimal compliance from royal authority. The victim set is effectively empty — no class is harmed by this constraint; the crown's arbitrary power is checked, but its structural authority remains intact. The liberal_due_process_reading and originalist_limitation_reading are distinct constraints (other files) with different ε, different stakeholders, different classifications.",
+    "key_agents": [
+      "crown: agenda_setter (institutional/generational/arbitrage/universal) — the king whose arbitrary power is procedurally checked but whose structural authority is preserved",
+      "tenants_in_chief: beneficiary (powerful/biographical/constrained/national) — great barons who gain codified protection against royal seizure without peer judgment",
+      "lesser_nobility: beneficiary (organized/biographical/constrained/national) — knights and minor landholders who gain the same procedural shield",
+      "free_men_excluded: excluded (powerless/biographical/trapped/national) — the majority of 'free men' in 1215 England who lacked the standing to invoke peer judgment; structurally excluded from the constraint's operation",
+      "royal_officials: payer (moderate/biographical/constrained/national) — sheriffs and judges whose discretionary enforcement is now procedurally bounded",
+      "legal_historians: observer (analytical/civilizational/analytical/universal) — analytical seat observing the constraint's historical operation and doctrinal fate"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12 at interval end) because the constraint primarily codifies existing customary limits on royal power rather than imposing new substantive limits; the crown's extraction from the nobility (arbitrary seizure, dispossession) is modestly reduced. Suppression is low (0.18) because the constraint does not suppress alternatives — it operates within the feudal order, and the crown retains substantial discretionary power outside the narrow procedural channel. Theater ratio is moderate (0.25) because the constraint's high symbolic profile (the 'great charter') exceeds its narrow operational scope in 1215–1297. Accessibility collapse is very low (0.15) because the feudal order's alternatives (royal favor, private warfare, papal appeal) remain fully available. Resistance is moderate (0.35) because the crown actively resisted and sought papal annulment, but the constraint persisted through reissues and confirmations.",
+    "directionality_logic": "The crown is the agenda-setter (sets the feudal order, administers justice) but also the primary target of the procedural check — directionality derivation places it near symmetric (d ≈ 0.5) because the constraint both preserves the crown's structural authority and extracts compliance on a narrow procedural point. Tenants-in-chief and lesser nobility are beneficiaries — they gain codified procedural protection without bearing costs; their exit options are constrained (feudal bonds, land tenure) but the constraint improves their position. Free men excluded from peer judgment are structurally excluded — they would be victims of the constraint's narrow scope if the liberal reading's universal claim were instantiated, but under this reading they are simply outside the constraint's operation. Royal officials are payers — their enforcement discretion is bounded, a modest cost.",
+    "mandatrophy_analysis": "The feudal prerogative reading does not resolve mandatrophy — the constraint's founding problem (arbitrary royal seizure of noble lands) was live in 1215 and remained live through the 13th century. The constraint was not a solution to a dead problem; it was a coordination mechanism for a live noble-crown conflict. The mandatrophy question applies to later doctrinal expansions (liberal reading) that may have outlived their founding context.",
+    "kernel_context": "This constraint is the feudal_prerogative_reading of the contested kernel magna_carta_clause_39. Sibling readings: liberal_due_process_reading (universal individual rights against arbitrary state power) and originalist_limitation_reading (limits only specific royal abuses documented in 1215 context). This reading treats Clause 39 as a narrow feudal coordination device; the siblings treat it as a universal rights guarantee or a specific historical remedy. The three readings instantiate three structurally distinct constraints with different ε, different stakeholder sets, and different classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_clause_39__liberal_due_process_reading",
+      "magna_carta_clause_39__originalist_limitation_reading"
+    ],
+    "dual_formulation_note": "Constraint family: three readings of the Magna Carta Clause 39 kernel. This reading (feudal_prerogative) is the historically earliest operational instantiation — low extractiveness, narrow scope, coordination function within feudal hierarchy. The liberal_due_process_reading is the downstream doctrinal expansion — higher extractiveness against state power, universal scope, rights-guarantee function. The originalist_limitation_reading is the restrictive historical interpretation — minimal extractiveness, narrowest scope, remedial function. All three share the same kernel_id; each is a separate constraint story linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "crown",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "The king whose arbitrary power over noble persons and property is procedurally checked by Clause 39. The constraint requires lawful judgment by peers or law of the land before seizure or imprisonment of free men — but 'free men' in operational practice means the nobility. The crown retains structural authority over the realm, taxation, war-making, and justice administration; the constraint coordinates noble-crown relations rather than limiting royal sovereignty. Exit is arbitrage-grade: the crown can seek papal annulment (as John did in 1215), reissue with modifications, or ignore the constraint when power permits."
+    },
+    {
+      "name": "tenants_in_chief",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The great barons who hold land directly from the crown. They gain a codified procedural right: the king cannot seize their persons or lands without judgment by their peers (other barons) or established law. This converts customary expectation into enforceable claim. Their exit is constrained by feudal obligation — they cannot leave the realm without forfeiting their tenure — but the constraint improves their bargaining position vis-à-vis the crown."
+    },
+    {
+      "name": "lesser_nobility",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Knights and minor landholders who hold from tenants-in-chief or the crown. They gain the same procedural protection as the great barons — judgment by peers (local knights) or law of the land. Their exit is similarly constrained by land tenure and feudal service, but the constraint gives them a procedural shield against both royal and baronial arbitrariness."
+    },
+    {
+      "name": "free_men_excluded",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The majority of legally 'free men' in 1215 England — merchants, artisans, yeomen, villeins with some freedoms — who lack the social standing to invoke 'judgment by peers' in the feudal sense. The constraint's text says 'no free man' but its operational peer-judgment mechanism only functions for those with peers in the feudal hierarchy. They are structurally excluded from the constraint's protection; their disputes remain in manorial or royal courts without the procedural guarantee. They would object to this exclusion if the liberal reading's universal claim were instantiated."
+    },
+    {
+      "name": "royal_officials",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sheriffs, coroners, escheators, and royal judges whose discretionary enforcement of royal will is now procedurally bounded. They must observe the peer-judgment or law-of-the-land requirement before seizing noble persons or property. This is a modest cost — a procedural hurdle, not a substantive limitation. Their exit is constrained by royal appointment and patronage."
+    },
+    {
+      "name": "legal_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analytical observers who trace Clause 39's textual history, reissues (1216, 1217, 1225, 1297), and doctrinal evolution from feudal privilege to universal due process. They see the full structure: the feudal reading's narrow operation, the liberal reading's expansive appropriation, and the originalist reading's restrictive recovery. They neither collect from nor pay into the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates noble-crown relations by codifying customary procedural protections against arbitrary royal seizure of noble persons and property. Solves the collective-action problem among barons: individually they could not constrain the king; collectively, a written charter with peer-judgment enforcement creates a focal point for coordinated resistance to royal overreach.",
+    "transfer_function": "Moves a narrow procedural compliance burden from the nobility (who previously bore the risk of arbitrary seizure) to the crown (which must now observe judgment-by-peers or law-of-the-land before acting against nobles). The transfer is minimal — a procedural hurdle, not a substantive transfer of wealth or power.",
+    "absent_voices": "The mass of 'free men' excluded from peer-judgment protection — merchants, yeomen, urban citizens, and those on the margins of feudal status. They are absent because the feudal hierarchy does not recognize them as having peers in the relevant sense. Also absent: the church (which secured its own separate guarantees in Clause 1) and the villein majority (unfree, outside 'free man' entirely). The liberal_due_process_reading would make these voices central; this reading structures them out.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Clause 39's feudal procedural guarantee vanished in 1215–1297, the crown's arbitrary power over noble persons and property would be unchecked by even the minimal procedural hurdle. Barons would revert to private warfare and papal appeal as primary checks; the coordination focal point for noble resistance would collapse. The feudal order would rearrange toward either royal absolutism or baronial fragmentation — the constraint's disappearance changes the strategic landscape.",
+    "founding_problem": "Arbitrary royal seizure of noble lands and persons without legal process — King John's use of disseisin, outlawry, and hostage-taking to coerce barons and extract revenue. The barons needed a collective focal point to constrain this pattern without destroying the feudal order itself.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Contemporary chronicles (Roger of Wendover, Matthew Paris) and the charter's own preamble attest to the founding problem from the baronial side. Royal records (Pipe Rolls, Close Rolls) corroborate the pattern of arbitrary disseisin and amercement from the crown's side. The problem is attested from both sides of the conflict — not only by the beneficiaries. The problem remained live through the 13th century (Henry III's reign saw repeated confirmations demanded by barons)."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "magna_carta_clause_39__liberal_due_process_reading",
+      "magna_carta_clause_39__originalist_limitation_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "liberal_due_process_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "originalist_limitation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "clause_39_protects_feudal_peers_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "law_of_the_land_means_customary_feudal_law",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "feudal_constitutional_order_1215",
+    "drift_state": {
+      "moment": "confirmatio_cartarum_1297",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

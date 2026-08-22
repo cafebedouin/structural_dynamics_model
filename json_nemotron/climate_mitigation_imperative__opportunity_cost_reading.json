@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__opportunity_cost_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_climate_mitigation_imperative__opportunity_cost_reading",
+    "measurement_id_prefix": "climate_mitigation_opp_cost",
+    "story_uid": "12694169-3d70-45d1-9e86-1fb93755d5c2",
+    "created_at": "2026-08-03T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Opportunity Cost Constraint on Nuclear Deployment in Climate Mitigation",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "renewable_energy_developers",
+      "grid_storage_firms",
+      "distributed_energy_communities",
+      "climate_finance_allocators_favouring_speed"
+    ],
+    "victims": [
+      "nuclear_industry",
+      "nuclear_labour_unions",
+      "baseload_reliability_advocates",
+      "jurisdictions_committed_to_nuclear_new_build"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "renewable_energy_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive accelerated capital allocation and policy support when mitigation frameworks prioritize deployment speed per dollar. Their technologies (solar, wind, batteries) have shorter lead times and lower capital intensity than nuclear, so they capture the investment flow diverted from nuclear new-build. They can pivot across jurisdictions and project scales relatively freely."
+    },
+    {
+      "name": "grid_storage_firms",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Provide the firming capacity that makes high-renewable grids viable, directly benefiting from the 'speed per dollar' metric that disadvantages nuclear. They shape grid-integration standards and market rules that reinforce the speed metric. Their exit is mobile — they deploy where policy and capital align."
+    },
+    {
+      "name": "distributed_energy_communities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Gain access to capital and regulatory space for community-owned solar, wind, and storage when mitigation funding follows the fastest-deployment rule. Their exit is constrained by local grid interconnection rules and municipal governance, but they are net beneficiaries of the constraint's capital allocation logic."
+    },
+    {
+      "name": "climate_finance_allocators_favouring_speed",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control multilateral development banks, green bond frameworks, and national climate finance facilities that explicitly rank projects by carbon abated per dollar per year. They set the metric that makes nuclear structurally uncompetitive. Their exit is arbitrage-grade — they can reallocate across technologies and geographies at will."
+    },
+    {
+      "name": "nuclear_industry",
+      "role": "payer",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Lose access to climate finance and policy support when the 'fastest deployment per dollar' metric is applied. Their projects have 10-15 year lead times and high upfront capital, so they score poorly on the metric even though lifetime carbon is low. They bear the cost of stranded development pipelines and workforce attrition. Exit is constrained by regulatory licensing, supply chain lock-in, and the sunk cost of specialized workforce."
+    },
+    {
+      "name": "nuclear_labour_unions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Represent workers whose specialized skills (nuclear construction, operation, regulation) are not transferable to renewable deployment at scale. When nuclear pipelines shrink, these workers face career dislocation, not simple retraining. Their identity is fused to the nuclear enterprise — professional culture, safety culture, community. Exit is identity-locked: leaving means abandoning a professional self-concept."
+    },
+    {
+      "name": "baseload_reliability_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Argue that grid reliability requires firm dispatchable capacity that renewables+storage cannot yet deliver at system scale in all climates. They bear the risk of reliability failures if the speed metric drives premature nuclear退出. Their exit is constrained — they can advocate for technology-neutral metrics but face institutional momentum toward the speed metric."
+    },
+    {
+      "name": "jurisdictions_committed_to_nuclear_new_build",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Countries (e.g., France, China, UAE, Poland) with active nuclear new-build programs tied to national decarbonization strategies. They face higher financing costs and diplomatic pressure when climate finance frameworks adopt the speed metric. Exit is trapped — reversing nuclear commitments implies stranded assets, energy security gaps, and geopolitical realignment."
+    },
+    {
+      "name": "integrated_resource_planners",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Model whole-system costs over multi-decadal horizons. They see the speed metric as myopic: it optimizes for early deployment but may increase total system cost if firm capacity gaps require expensive overbuild or fossil fallback. They do not collect or pay; they analyze."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates global climate finance toward the mitigation pathway that delivers the most carbon abatement per dollar per year, using a single comparable metric to align disparate capital pools (development banks, green bonds, national budgets) around a common ranking.",
+    "transfer_function": "Moves capital and policy support from nuclear new-build (high capital intensity, long lead time) to renewable generation and storage (low capital intensity, short lead time). The transfer is enacted through finance eligibility criteria, grid interconnection queues, and permitting rules that operationalize the carbon-per-dollar-per-year metric.",
+    "absent_voices": "Future generations who bear climate damages if the speed metric proves myopic (e.g., if firm capacity gaps extend fossil use). Also absent: nuclear-adjacent communities in the Global South that might have pursued nuclear for development + decarbonization but are excluded from climate finance by the metric. They are not in the room where the metric is designed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the speed-per-dollar constraint vanished overnight, climate finance would revert to technology-neutral or portfolio-based allocation. Nuclear new-build pipelines would regain access to green bonds and development bank funding. Grid planning would shift from 'maximum renewables + storage' to 'reliability-constrained least cost'. The global mitigation portfolio would reorganize around a different optimization target.",
+    "founding_problem": "Post-Paris (2015) mitigation finance was fragmented and uncomparable: every fund used its own criteria, leading to capital misallocation and slow aggregate deployment. The 'carbon per dollar per year' metric was proposed as a universal comparator to accelerate the rate of decarbonization.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents (IEA, GCF, major green bond verifiers) attest the metric accelerated renewable deployment and created a common language for climate finance. Critics (NEA, IAEA, several national energy ministries) attest the metric systematically discriminates against capital-intensive firm capacity, creating a structural blind spot for grid reliability. Independent systems analysts (MIT Energy Initiative, NREL) confirm the metric's myopia for long-horizon system optimization but note it served a real coordination need in 2015-2020."
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2035
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2035,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2035,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2027,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2035,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 'opportunity cost reading' of the climate mitigation imperative holds that mitigation must be optimized for carbon abated per dollar per year — a speed metric that structurally disadvantages nuclear energy due to its high capital intensity and long deployment timeline. This reading gained dominance in climate finance after Paris (2015) as a coordination device to align fragmented capital pools. Over 2015-2035, the metric hardened from a heuristic into an eligibility criterion in green taxonomies, development bank lending, and grid interconnection rules. The constraint extracts from nuclear actors (industry, labour, committed jurisdictions) to benefit renewable and storage deployment. It is a tangled rope: it solves a genuine coordination problem (comparable metric for climate finance) while asymmetrically extracting from a specific technology class. Active enforcement is required — the metric is maintained by active exclusion of nuclear from green finance frameworks, not by market preference alone.",
+    "logic_rationale": "Extractiveness (0.72 at interval end) is high because the constraint diverts a large and growing share of global climate finance away from nuclear toward renewables/storage based on a metric that nuclear structurally cannot satisfy. Suppression (0.68) is substantial because the constraint's persistence depends on active policy choices: nuclear exclusion from EU taxonomy (until 2022 partial reversal), World Bank lending bans, green bond framework eligibility rules. Theater ratio (0.42) is moderate — the speed metric genuinely accelerated early renewable deployment (real coordination), but an increasing share of enforcement activity now serves to defend the metric against portfolio-optimization critiques rather than to accelerate deployment per se. Accessibility collapse (0.58) reflects that alternative metrics (system LCOE, reliability-adjusted cost) exist but are marginalized in finance governance. Resistance (0.55) is significant from nuclear states, IAEA/NEA, and labour unions, but has not reversed the metric's dominance in finance.",
+    "directionality_logic": "Climate finance allocators (agenda_setter, institutional, arbitrage exit) are structural beneficiaries — they control the metric and capture the coordination rents of being the standard-setters. Renewable developers and storage firms (organized/powerful, mobile exit) are beneficiaries — they receive the capital flow. Distributed energy communities (moderate, constrained exit) benefit but with less agency. Nuclear industry (institutional, constrained exit) and nuclear labour (organized, identity_locked exit) are victims — they bear the capital diversion and career dislocation. Jurisdictions committed to nuclear (institutional, trapped exit) are victims — they face stranded assets and financing penalties. Baseload advocates (moderate, constrained exit) bear reliability risk. Integrated resource planners (analytical) observe the structural asymmetry.",
+    "perspectival_gap": "From the finance allocator seat, the constraint is pure coordination: a necessary metric to align capital. From the nuclear labour seat, it is extraction enforced by a metric that ignores their identity-locked exit. From the jurisdiction seat, it is a sovereignty constraint imposed by external finance governance. The engine computes these divergent seat types from the structural data; the claimed_type (tangled_rope) reflects the author's assessment that both coordination and extraction are real and irreducible.",
+    "mandatrophy_analysis": "The founding problem (fragmented, slow climate finance) was real in 2015. The metric solved it. By 2035, the problem has mutated: deployment speed is no longer the binding constraint (renewables are now the cheapest marginal addition in most markets); the binding constraint is system integration and firm capacity. The constraint persists because the metric has become the basis for institutional authority (finance allocators' legitimacy) and capital allocation infrastructure (green bond frameworks, taxonomy rules). Mandatrophy is unresolved — the constraint's mandate has outlived its function but the arrangement persists.",
+    "kernel_context": "This constraint is the 'opportunity_cost_reading' of the contested kernel 'climate_mitigation_imperative'. The kernel is the claim that climate mitigation requires a specific structural logic for technology selection. Sibling readings: 'portfolio_optimization_reading' (mitigation requires all low-carbon sources; nuclear necessary for baseload) and 'systems_transition_reading' (mitigation requires decentralization/democratic control; nuclear perpetuates extractive centralization). This reading instantiates the constraint as carbon-per-dollar-per-year optimization with nuclear in the victim set. The sibling readings instantiate different constraints with different victim/beneficiary structures and different ε values."
+  },
+  "omegas": [
+    {
+      "id": "speed_metric_myopia",
+      "question": "Does the carbon-per-dollar-per-year metric systematically undervalue firm capacity and long-duration storage, creating a structural blind spot that increases total system cost over multi-decadal horizons?",
+      "resolution_mechanism": "Counterfactual system modeling: compare least-cost portfolios under speed-metric constraint vs. technology-neutral reliability-constrained optimization across multiple climate scenarios and grid topologies.",
+      "impact": "If the metric increases total system cost by >15% in high-renewable-penetration scenarios, the constraint's coordination function is net-harmful at the system level — it would reclassify toward snare. If the gap is <5%, the coordination benefit outweighs the myopia.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the speed metric's myopia for firm capacity creates net system harm."
+    },
+    {
+      "id": "nuclear_victim_status_ambiguity",
+      "question": "Is nuclear's victim status under this constraint structural (the metric inherently penalizes capital intensity) or contingent (nuclear's cost and timeline are solvable with modular designs, regulatory reform, and supply chain learning)?",
+      "resolution_mechanism": "Track SMR/advanced nuclear deployment timelines and costs in jurisdictions that maintain technology-neutral finance (e.g., UAE, China, US DOE loan programs). If SMRs achieve <5 year deployment and <$5000/kW, the victim status is contingent.",
+      "impact": "If contingent, the constraint is a transitional tangled_rope that resolves as nuclear adapts. If structural, nuclear remains a permanent victim class under this metric — the constraint is a stable tangled_rope or snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether nuclear's disadvantage under the speed metric is inherent or solvable."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "At what point does the enforcement of the speed metric (exclusion of nuclear from green finance, taxonomy, procurement) exceed the coordination benefit it provides?",
+      "resolution_mechanism": "Measure the marginal coordination benefit (additional renewable deployment enabled by the metric) vs. marginal extraction cost (nuclear capacity foregone, reliability risk increased) annually. The crossover point is where the constraint shifts from net-coordination to net-extraction.",
+      "impact": "Identifies the temporal boundary for mandatrophy resolution. If crossover occurred pre-2025, the constraint has been a snare for a decade. If post-2030, it remains a tangled_rope with unresolved mandatrophy.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The temporal boundary where coordination becomes extraction."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Does the 'climate mitigation imperative' kernel admit a single authoritative reading, or is the contest between opportunity_cost, portfolio_optimization, and systems_transition readings structurally irreducible?",
+      "resolution_mechanism": "Analyze whether any reading forecloses another within a single governance framework (e.g., can a jurisdiction simultaneously optimize for speed-per-dollar AND require portfolio diversity for reliability?). Map the logical compatibility of the three readings' core axioms.",
+      "impact": "If readings are logically compatible (coexist_with), the kernel is a genuine multi-reading commitment system. If one forecloses another, the kernel is a site of structural conflict where only one reading can be institutionalized.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's readings are structurally compatible or mutually exclusive."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_imperative__portfolio_optimization_reading",
+      "climate_mitigation_imperative__systems_transition_reading",
+      "green_taxonomy_nuclear_exclusion",
+      "development_bank_energy_lending_rules",
+      "grid_interconnection_queue_priority_rules"
+    ],
+    "dual_formulation_note": "This constraint (opportunity_cost_reading) and its siblings (portfolio_optimization_reading, systems_transition_reading) form a constraint family decomposing the 'climate_mitigation_imperative' kernel. Each reading has a distinct ε: opportunity_cost (0.72, high extraction from nuclear), portfolio_optimization (lower ε, nuclear as beneficiary), systems_transition (moderate ε, nuclear and centralized renewables as victims). The ε-invariance principle requires separate stories because the metric (carbon-per-dollar-per-year vs. system-reliability-cost vs. decentralization-index) changes the extraction profile fundamentally."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "portfolio_optimization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "systems_transition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployment_speed_maximization_as_primary_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "capital_intensity_penalty_in_mitigation_ranking",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_paris_finance_fragmentation",
+    "drift_state": {
+      "moment": "post_2030_integration_crisis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

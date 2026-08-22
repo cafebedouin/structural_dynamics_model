@@ -1,0 +1,436 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__hyper_presidential_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fifth_republic_constitution__hyper_presidential_reading",
+    "measurement_id_prefix": "fifth_republic_hyper_pres",
+    "story_uid": "756cba54-f821-46ec-a726-84aef40221e9",
+    "created_at": "2026-08-04T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fifth Republic Constitution — Hyper-Presidential Reading",
+    "topic_domain": "constitutional_law/political_systems/comparative_government",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "presidency_institution",
+      "incumbent_president"
+    ],
+    "victims": [
+      "national_assembly",
+      "senate",
+      "opposition_parties",
+      "citizen_electorate"
+    ],
+    "vindicated_propositions": [
+      "direct_universal_suffrage_legitimacy",
+      "national_unity_personified",
+      "decisive_executive_action"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the hyper-presidential reading a genuine interpretation of the 1958 Constitution, or a constructed constraint benefiting the presidency as institution?",
+      "resolution_mechanism": "Comparative analysis of constitutional text (Articles 5, 8, 16, 49.3), historical practice since 1958, and Conseil Constitutionnel jurisprudence on presidential vs. parliamentary powers. Cross-kernel validation with sibling readings' structural profiles.",
+      "impact": "If constructed, the constraint is a false summit mountain or extractive tangled rope with identifiable beneficiaries (presidency). If genuine interpretation, extraction may be lower and coordination function stronger.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's beneficiary structure reveals constructedness or genuine constitutional design"
+    },
+    {
+      "id": "article_49_3_extraction_measurement",
+      "question": "How much of the measured extractiveness comes specifically from Article 49.3 (government responsibility) invocations versus the constitutional structure as a whole?",
+      "resolution_mechanism": "Historical counting of 49.3 uses by government, survival rates of governments after invocation, and policy outcomes enacted without vote vs. with vote. Compare pre-2008 (unlimited 49.3) and post-2008 (limited to one per session except budget) regimes.",
+      "impact": "If 49.3 accounts for most extraction, the constraint is modular — reform of 49.3 could substantially reduce χ without constitutional replacement. If extraction is structural, reform requires deeper change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of extraction to specific constitutional mechanisms vs. systemic design"
+    },
+    {
+      "id": "cohabitation_as_discipline_mechanism",
+      "question": "Does the cohabitation equilibrium reading function as a genuine constraint on hyper-presidential extraction, or is cohabitation itself a product of the same constitutional structure?",
+      "resolution_mechanism": "Analysis of the three cohabitation periods (1986-88, 1993-95, 1997-2002): policy outcomes, presidential vs. prime ministerial initiative, and whether cohabitation reduced or merely redistributed extraction. Test against the 2000/2002 electoral calendar reforms (quinquennat) that made cohabitation structurally unlikely.",
+      "impact": "If cohabitation was a genuine discipline mechanism, its elimination via quinquennat increased systemic extraction. If cohabitation was theater, extraction was stable across periods.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether alternating executive arrangements genuinely constrain extraction or merely perform constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1958,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1962,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1974,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1958,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1962,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1974,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1958,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1962,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1974,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1981,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 1958,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the hyper-presidential reading of the French Fifth Republic Constitution (1958). In this reading, the President is the direct sovereign embodying national will through direct universal suffrage, with the legislature (National Assembly and Senate) minimally constraining executive action. Key mechanisms: Article 5 (President as arbiter ensuring regular functioning), Article 8 (President appoints PM but can dismiss only on PM's resignation), Article 16 (exceptional crisis powers), and critically Article 49.3 (government engages responsibility on a text — adoption without vote unless motion of censure passes). The reading treats these as a coherent system where presidential dominance is the constitutional norm, not an exception. Legislative constraint is weak: censure motions rarely succeed (only 1962 under Pompidou), 49.3 enables legislative bypass, and the President's dissolution power (Article 12) disciplines the Assembly. The beneficiary is the presidency as institution and the incumbent president; victims are the legislature, opposition, and ultimately the citizen electorate whose representative channel is structurally weakened. This is ONE READING of the contested kernel 'fifth_republic_constitution' — the sibling readings are parliamentary_constraint_reading and cohabitation_equilibrium_reading.",
+    "key_agents": [
+      "presidency_institution: Primary beneficiary (institutional/analytical) — structural recipient of concentrated executive authority",
+      "incumbent_president: Primary beneficiary (institutional/arbitrage) — personal office-holder exercising concentrated powers",
+      "national_assembly: Primary victim (organized/constrained) — legislative body subject to dissolution, 49.3 bypass, and presidential agenda-setting",
+      "senate: Secondary victim (organized/constrained) — upper house with limited powers vs. Assembly and President",
+      "opposition_parties: Victim (organized/constrained) — structurally excluded from executive power, censure motions rarely viable",
+      "citizen_electorate: Victim (powerless/mobile) — direct suffrage legitimizes presidential dominance but weakens parliamentary accountability",
+      "conseil_constitutionnel: Observer (institutional/analytical) — judicial reviewer with limited ex ante review capacity",
+      "prime_minister: Dual role payer/beneficiary (organized/constrained) — executes presidential policy but bears political responsibility"
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because the constitutional architecture concentrates policy initiative, appointment power, crisis authority, and legislative bypass (49.3) in the presidency. The coordination function exists (decisive executive action, national unity symbol) but is asymmetrically extractive — the legislature pays through structural disempowerment. Suppression (0.68) is substantial but not total: the Assembly retains formal censure power, the Constitutional Council reviews some laws, and cohabitation periods (pre-quinquennat) demonstrated real constraint. Theater ratio (0.42) is moderate: the parliamentary ritual (questions to government, committee work, debates) continues but increasingly performs rather than constrains. Accessibility collapse (0.55) reflects that alternatives (parliamentary systems, cohabitation equilibrium) are known but structurally inaccessible under current electoral calendar. Resistance (0.45) is moderate: opposition uses procedural tools, media, street mobilization, but institutional levers are weak.",
+    "perspectival_gap": "The presidency seat experiences this as genuine coordination (decisive action, democratic legitimacy from direct suffrage). The legislature seats experience it as enforced extraction (agenda control removed, 49.3 bypass, dissolution threat). The citizen seat is split: direct election of president feels empowering (beneficiary framing) but the resulting legislative weakness reduces accountability (victim framing). The engine computes these divergent per-seat types from the structural data.",
+    "directionality_logic": "Presidency and incumbent president are structural beneficiaries (d near 0.0-0.2): they collect concentrated authority, agenda control, and symbolic capital. National Assembly, Senate, opposition parties are structural victims (d near 0.7-0.9): they bear the cost of disempowerment, constrained exit (cannot leave the constitutional framework), and institutional marginalization. Citizen electorate is near symmetric (d ~0.5): gains direct executive choice but loses parliamentary accountability. Prime Minister is dual-positioned: bears political responsibility (payer) but accesses executive machinery (beneficiary). Conseil Constitutionnel is analytical observer (d=0.5). Exit options differentiate: presidency has arbitrage (can leverage position); legislature is constrained (institutional role fixed); citizens are mobile (can vote, emigrate) but identity-locked to the republic.",
+    "mandatrophy_analysis": "The founding problem (1958) was regime instability under the Fourth Republic — parliamentary fragmentation, short-lived governments, colonial crisis. The hyper-presidential reading claims this problem remains live (strong executive prevents paralysis). The parliamentary reading claims the problem is dead (stable parliamentary democracies exist) and the arrangement persists as presidential rent extraction. The cohabitation reading claims the problem is contested (cohabitation proved constraint possible). Mandatrophy is unresolved: the 2000/2002 quinquennat reforms (aligning presidential/legislative terms) eliminated the main structural check (cohabitation) without replacing it, suggesting the constraint's current form serves the presidency more than the founding problem.",
+    "kernel_context": "This constraint is the hyper_presidential_reading of the contested kernel 'fifth_republic_constitution'. Sibling readings: parliamentary_constraint_reading (president as coordinated executive requiring legislative authorization) and cohabitation_equilibrium_reading (dual executive requiring negotiated authority allocation). This reading's structural delta: legislature enters victim set when president invokes Article 49.3 or Article 16; executive extractiveness high; democratic constraint weak; beneficiary is presidency as institution and incumbent president. The three readings occupy different constitutional actors' commitments simultaneously — they coexist as live positions in French constitutional discourse and political practice."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_republic_constitution__parliamentary_constraint_reading",
+      "fifth_republic_constitution__cohabitation_equilibrium_reading",
+      "french_electoral_system_quinquennat",
+      "conseil_constitutionnel_jurisdiction"
+    ],
+    "dual_formulation_note": "The Fifth Republic Constitution kernel decomposes into three structurally distinct readings with different ε values and beneficiary/victim structures. This hyper-presidential reading has high extraction (0.72) and identifiable beneficiaries (presidency). The parliamentary reading would show lower extraction and stronger coordination. The cohabitation reading would show cyclical extraction correlated with electoral alignment. All three are linked via network.affects_constraints to enable contamination analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "presidency_institution",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The presidency as a permanent institution holds the concentrated constitutional powers (Articles 5, 8, 12, 16, 49.3 via PM). It benefits from agenda control, appointment authority, dissolution power, and symbolic embodiment of the nation. Its exit is arbitrage-grade: the institution persists across office-holders and could theoretically be reformed, but it controls the reform agenda."
+    },
+    {
+      "name": "incumbent_president",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The sitting president personally exercises the institution's powers. Direct universal suffrage (since 1962) provides personal democratic legitimacy that outweighs the PM's parliamentary legitimacy. Can set policy agenda, appoint/dismiss PM, dissolve Assembly, invoke Article 16, and drive 49.3 usage. Exit is arbitrage: term-limited but with immense platform; post-presidency influence is substantial."
+    },
+    {
+      "name": "national_assembly",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The lower house retains formal legislative power and censure authority (Article 49.2), but in practice: government controls agenda (Article 48), 49.3 allows adoption without vote, dissolution threat (Article 12) disciplines dissent, and quinquennat aligns elections making cohabitation unlikely. Deputies' institutional role is fixed — they cannot exit the constitutional framework without regime change."
+    },
+    {
+      "name": "senate",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Upper house with limited powers: no censure power, no dissolution target, legislative shuttle but Assembly has final word. Indirect election (grands électeurs) insulates from direct presidential pressure but also from democratic accountability. Institutionally entrenched — reform requires constitutional revision the presidency controls."
+    },
+    {
+      "name": "opposition_parties",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Structurally excluded from executive power (no coalition necessity under hyper-presidential reading). Censure motions are the only parliamentary weapon but require absolute majority — nearly impossible when president's party controls Assembly. Their exit is constrained: they operate within the system hoping for electoral alternation, but the system favors presidential majority."
+    },
+    {
+      "name": "citizen_electorate",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Directly elects the president (beneficiary: clear choice, accountability to one figure). But this same election weakens parliament (legislative elections become 'confirmatory' referendums on president). The citizen bears the cost of reduced parliamentary accountability, weakened local representation, and policy responsiveness channeled through presidential persona. Exit is mobile (vote, abstain, emigrate) but identity-locked to republican citizenship."
+    },
+    {
+      "name": "prime_minister",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Appointed by and responsible to the president (not parliament, except via 49.3 censure). Executes presidential policy agenda, bears political responsibility for unpopular reforms, can be dismissed only by tendering resignation. Gains executive machinery access (beneficiary) but is structurally subordinate (payer). Exit is constrained: resignation is the only exit, which ends political career at that level."
+    },
+    {
+      "name": "conseil_constitutionnel",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Constitutional council with ex ante review (Article 61) of organic laws, parliamentary rules, and treaties. Can be seized by President, PM, presidents of both houses, 60 deputies, 60 senators. No ex post review of laws in force (until 2008 QPC, which is limited). Its constraint on presidential power is real but narrow — it reviews procedure and competence, not political substance."
+    }
+  ],
+  "gain_flow": "presidency_institution",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides decisive executive authority in a system historically prone to parliamentary paralysis (Fourth Republic). Concentrates legitimacy in a directly elected figure who can act swiftly, especially in crisis (Article 16), and ensures government stability by making the executive responsible to the president rather than a fractious parliament.",
+    "transfer_function": "Moves policy initiative, appointment power, legislative agenda control, and symbolic national embodiment from the legislature to the presidency. The legislature transfers its capacity to constrain the executive (via 49.3 bypass, dissolution threat, aligned electoral calendar) and receives in return a subordinate role of ratification and limited oversight.",
+    "absent_voices": "The parliamentary_constraint_reading's natural constituency — those who believe the Prime Minister should be the true executive responsible to parliament — are structurally excluded from power under this reading. The cohabitation_equilibrium_reading's constituency — those who see divided executive as a feature not a bug — were marginalized by the quinquennat reforms. Both absent voices would object to the concentration of extraction in the presidency but have no institutional lever to force their reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hyper-presidential constraint vanished overnight, the Fifth Republic would immediately confront its founding problem: how to ensure stable, decisive government without parliamentary fragmentation. The presidency would lose its structural dominance; the Prime Minister and parliament would become the effective executive; cohabitation would become the norm; the constitutional order would reorganize toward a parliamentary or semi-presidential equilibrium. The 1958 settlement would be undone.",
+    "founding_problem": "The Fourth Republic (1946-1958) suffered chronic government instability — 24 governments in 12 years — due to parliamentary fragmentation, lack of disciplined parties, and the Algerian crisis which the parliamentary system could not resolve. The 1958 Constitution was designed to create a strong executive capable of decisive action and regime stability.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The presidency and its supporters (Gaullist tradition, presidential majority parties) attest the founding problem remains live — strong executive prevents paralysis. The parliamentary reading's proponents (Socialist Party pre-1981, some constitutional scholars) and the cohabitation reading's proponents (Chirac/Jospin era observers) attest the problem is dead — stable parliamentary democracies exist (Germany, UK, post-1958 France during cohabitation) and the arrangement persists as presidential rent extraction. The 2000/2002 quinquennat reforms, supported across the political spectrum, implicitly acknowledged the founding problem was solvable without hyper-presidentialism, but the reforms strengthened rather than constrained the presidency."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "french_fourth_republic_instability"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "parliamentary_constraint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "cohabitation_equilibrium_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "president_as_direct_sovereign",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "direct_universal_suffrage_supremacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "parliamentary_legitimacy_subordinate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "gaullist_constitutional_settlement",
+    "drift_state": {
+      "moment": "post_quinquennat_reforms",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

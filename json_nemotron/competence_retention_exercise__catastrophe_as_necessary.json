@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__catastrophe_as_necessary",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "2a47a3f3-c3f0-4522-ac1b-8a6b2b86945d"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Catastrophe as Necessary Teacher",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulator_capture",
+      "executive_leadership_insulation"
+    ],
+    "victims": [
+      "frontline_operators",
+      "affected_public",
+      "near_miss_reporters"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint a genuine discovery about organizational cognition, or a constructed justification for tolerating preventable harm?",
+      "resolution_mechanism": "Track whether organizations that embrace this reading show higher actual catastrophe rates than those investing in simulation fidelity and near-miss learning systems, controlling for industry risk profile.",
+      "impact": "If constructed, the constraint is a snare extracting safety budget from frontline operators while insulating leadership; if genuine, it identifies a hard boundary of organizational learning that demands different governance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the catastrophe-as-necessary claim describes a structural limit or a self-serving narrative"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of alternatives (near-miss learning, simulation investment) structural via regulatory capture and budget allocation, or internalized via professional identity that equates 'real safety' with 'having survived catastrophe'?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if safety professionals who leave high-reliability organizations continue to dismiss simulation and near-miss data in new roles, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making industry-wide reform harder.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in high-reliability safety culture"
+    },
+    {
+      "id": "competence_decay_observability",
+      "question": "Can competence decay during incident-free periods be measured independently of the catastrophes it supposedly predicts?",
+      "resolution_mechanism": "Develop leading indicators of competence decay (drill performance variance, procedure deviation rates, expertise retention metrics) and test their predictive validity against actual catastrophe occurrence.",
+      "impact": "If measurable, the constraint's claim that decay is 'invisible' becomes falsifiable; if not measurable, the claim functions as an unfalsifiable justification for inaction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the claimed invisible competence decay is empirically tractable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.85
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'catastrophe as necessary' reading of the competence_retention_exercise kernel. The claim is that organizations only maintain genuine high-reliability competence through the visceral stakes and organizational learning produced by actual catastrophic events; simulation and near-miss analysis are rehearsal but not the real thing. The constraint extracts safety investment from frontline operators and the affected public while insulating executive leadership and captured regulators who benefit from the narrative that catastrophes are inevitable system resets rather than preventable failures. The measurement series shows extraction and suppression rising over five decades as simulation fidelity improved but was systematically dismissed, near-miss reporting systems were undermined, and safety budgets were redirected toward post-catastrophe response rather than prevention.",
+    "logic_rationale": "Base extractiveness is high (0.78) because the constraint diverts resources from prevention (simulation, near-miss systems, frontline training) toward post-catastrophe response and inquiry, while the human and economic costs of the 'necessary' catastrophes are borne by operators and the public. Suppression is very high (0.85) because alternatives are actively suppressed: near-miss reporters face retaliation, simulation investment is defunded as 'not real training,' and regulatory capture ensures the catastrophe narrative dominates policy. Theater ratio (0.42) reflects genuine safety rituals (drills, audits) that persist but increasingly serve as performance rather than functional competence maintenance. Accessibility collapse (0.68) is moderate-high because the 'catastrophe is necessary' framing makes alternatives cognitively inaccessible — organizations that haven't had a catastrophe believe they're safe; those that have believe they've learned. Resistance (0.55) is moderate: frontline operators and near-miss reporters resist but lack structural power; the public reacts after catastrophes but not systematically.",
+    "directionality_logic": "Safety regulators and executive leadership are structural beneficiaries: regulators gain expanded authority and budget after each catastrophe; leadership insulates itself from accountability by framing catastrophes as inevitable system resets rather than management failures (d near beneficiary end). Frontline operators are primary targets: they bear the physical and psychological costs of catastrophes, face retaliation for near-miss reporting, and are blamed for 'human error' when the system fails (d near target end). The affected public pays in lives, health, and trust but has no organized voice in the safety system. Near-miss reporters are doubly victimized: they provide the data that could prevent catastrophes but are suppressed because their success undermines the 'catastrophe is necessary' narrative.",
+    "perspectival_gap": "From the regulator/executive seat, the constraint appears as hard-won wisdom: 'we only learn from blood.' From the operator/public seat, it appears as a protection racket: 'we sacrifice you to maintain our narrative.' The engine computes this divergence from the structural data — the claimed type (snare) reflects the authoring seat's assessment that the extraction is structural and the coordination story is cover.",
+    "mandatrophy_analysis": "The founding problem (maintaining competence in high-hazard industries) is real, but this reading has outlived its function. Early high-reliability theory (1970s-1980s) correctly identified simulation limits, but the field has since developed high-fidelity simulation, near-miss learning systems, and resilience engineering that this reading actively suppresses. The mandate has atrophied into a justification for tolerating preventable harm.",
+    "kernel_context": "This constraint is the 'catastrophe_as_necessary' reading of the contested kernel 'competence_retention_exercise'. Sibling readings: 'simulation_as_sufficient' (high-fidelity simulation constitutes genuine exercise of catastrophe-avoidance competence) and 'near_miss_as_bridge' (near-miss incidents provide sufficient real-world feedback to validate simulation without requiring full catastrophes). This reading forecloses simulation_as_sufficient (direct contradiction on whether simulation can be genuine exercise) and influences near_miss_as_bridge (near-miss data is dismissed as insufficiently 'visceral,' creating structural pressure against near-miss learning systems)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__near_miss_as_bridge",
+      "competence_retention_exercise__simulation_as_sufficient"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the competence_retention_exercise kernel into three readings with distinct ε values and victim/beneficiary structures. The catastrophe_as_necessary reading has the highest extraction (0.78) and suppression (0.85); the near_miss_as_bridge reading has moderate extraction (~0.45) as a tangled rope; the simulation_as_sufficient reading has low extraction (~0.25) as a rope. The readings are linked by the kernel but are structurally distinct constraints per the ε-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "safety_regulator_capture",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Regulatory bodies that gain expanded authority, budget, and political capital after each catastrophe. They control the investigation process, define the lessons learned, and certify the 'system resets' that follow. Their capture is maintained by the catastrophe narrative: without catastrophes, their expanded mandate contracts. They move between industry and regulation, arbitraging the revolving door."
+    },
+    {
+      "name": "executive_leadership_insulation",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Senior executives who set safety budgets, approve simulation fidelity, and design organizational incentives. They insulate themselves from accountability by adopting the catastrophe-as-necessary narrative: when disasters occur, they commission inquiries that validate the narrative and protect their positions. They arbitrage across organizations — a CEO who 'managed through' a catastrophe is often hired elsewhere as a crisis leader."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Operators, controllers, maintainers, and first responders who bear the physical and psychological costs of catastrophes. Their professional identity is fused with the high-hazard mission — leaving means abandoning their community and self-concept. They are blamed for 'human error' when systems fail, and their near-miss reports are used against them. Simulation training is their only safe practice, but it is dismissed as insufficient, denying them the repetition needed for genuine competence."
+    },
+    {
+      "name": "affected_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities, passengers, patients, and downstream populations who suffer the direct consequences of catastrophes. They have no voice in the safety system, no exit from the hazard (they live near the plant, fly on the aircraft, depend on the infrastructure), and no organized representation in the post-catastrophe inquiries that shape the 'lessons learned.'"
+    },
+    {
+      "name": "near_miss_reporters",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Operators and analysts who report near-misses and minor failures — the data that could prevent catastrophes without the catastrophe. They are structurally excluded because their success undermines the 'catastrophe is necessary' narrative: if near-miss learning works, catastrophes are not necessary teachers. They face retaliation, their reporting systems are defunded, and their data is dismissed as 'not visceral enough.'"
+    },
+    {
+      "name": "resilience_engineering_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers who study how organizations actually maintain safety. They document that high-fidelity simulation, near-miss learning, and resilience practices reduce catastrophe rates — but their findings are marginalized by the dominant catastrophe narrative. They see the full structure: the extraction, the suppression, and the alternatives that work but are not adopted."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains organizational competence in high-hazard industries by ensuring that safety systems are tested under real stakes. The claim is that only actual catastrophes generate the visceral learning that prevents competence decay during long incident-free periods.",
+    "transfer_function": "Moves safety investment from prevention (simulation fidelity, near-miss systems, frontline training, resilience engineering) to post-catastrophe response (inquiries, litigation, regulatory expansion, public relations). Moves the costs of catastrophes (lives, health, trust, economic damage) from leadership and regulators to frontline operators and the public. Moves organizational legitimacy from 'we prevent harm' to 'we learn from harm.'",
+    "absent_voices": "Frontline operators who have left the industry due to identity-locked exit barriers; affected public communities who are never consulted on risk acceptance; simulation and resilience engineering experts whose methods are dismissed; near-miss reporters who were silenced. They are absent because the constraint's suppression mechanism (retaliation, defunding, narrative dominance) keeps them out of the rooms where safety policy is made.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the catastrophe-as-necessary constraint vanished overnight, organizations would shift investment to high-fidelity simulation and near-miss learning systems (which already exist and work), catastrophe rates would fall, frontline operators would get genuine practice without dying, and the public would be safer. The safety regulator and executive leadership would lose their catastrophe-driven authority and insulation — the world would rearrange around prevention rather than response.",
+    "founding_problem": "In the 1970s-1980s, high-hazard industries (nuclear, aviation, chemical) discovered that organizations become complacent during long incident-free periods. Simulation technology was primitive, near-miss reporting was informal, and several major accidents (Three Mile Island, Bhopal, Challenger) revealed that procedural compliance without visceral stakes produced brittle competence. The founding problem was genuine: how to maintain readiness when nothing bad happens for decades.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem is attested as dead by resilience engineering researchers (Hollnagel, Woods, Dekker), NASA's Aviation Safety Reporting System data, nuclear industry INPO/ERNEA peer review data, and the commercial aviation safety record (2010-2020 zero-fatality years in developed nations) — all from outside the benefiting parties (regulators and executives who gain from the catastrophe narrative). The benefiting parties attest the problem is still live, citing 'new failure modes' and 'complexity growth,' but offer no independent corroboration."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "competence_retention_exercise__near_miss_as_bridge",
+      "competence_retention_exercise__simulation_as_sufficient"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_sufficient",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "near_miss_as_bridge",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "visceral_stakes_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_inadequacy_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "early_hro_theory_catastrophe_learning",
+    "drift_state": {
+      "moment": "contemporary_resilience_engineering_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

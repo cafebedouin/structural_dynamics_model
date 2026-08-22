@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_text__nnws_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c9eb2fd5-f966-4604-bda5-7a9985a761a9"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.45,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Reciprocity Bargain as Read by Non-Nuclear Weapon States (Article VI Binding)",
+    "topic_domain": "international_law/arms_control/treaty_interpretation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_weapon_states"
+    ],
+    "victims": [
+      "non_nuclear_weapon_states_parties"
+    ],
+    "vindicated_propositions": [
+      "pacta_sunt_servanda_reciprocity",
+      "icj_1996_article_vi_affirmation"
+    ]
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1978,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1978,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1978,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.45
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of kernel npt_treaty_text (reading: nnws_reading). Would instantiating the nws_reading instead — non-proliferation as binding on NNWS, disarmament as aspirational without enforcement — change the structural classification, and where exactly does the disagreement bite?",
+      "resolution_mechanism": "Compile and classify the sibling stories (npt_treaty_text__nws_reading, npt_treaty_text__withdrawal_threshold_reading) and compare per-seat classifications and epsilon over the identical standing arrangement.",
+      "impact": "If the nws_reading computes as low-extraction coordination, the extraction signal in this story localizes entirely to the reciprocity dispute — who bears binding obligations — rather than to the regime's coordination function; the shared text then classifies differently by reading, confirming the decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is one reading of the NPT kernel; sibling readings instantiate different constraints over the same text."
+    },
+    {
+      "id": "article_vi_content_indeterminacy",
+      "question": "What concrete conduct does Article VI's good-faith obligation require, such that weapons-state behavior could be measured as compliance or breach?",
+      "resolution_mechanism": "Development of ICJ jurisprudence, Marshall Islands-line litigation outcomes, or negotiated benchmarks (fissile-material cutoff, test-ban entry into force, arsenal ceilings) that operationalize the standard.",
+      "impact": "If measurable benchmarks exist and are unmet, the weapons states sit in material breach and effective extraction from the restrained majority rises sharply; if the obligation is genuinely indeterminate, part of the measured imbalance is the price of legal indeterminacy rather than deliberate default.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the disarmament obligation has determinate content against which delivery can be judged."
+    },
+    {
+      "id": "tpnw_stigma_effectiveness",
+      "question": "Does the parallel prohibition treaty's stigmatization actually alter weapons-state posture — budget lines, doctrine, extended-deterrence bargains — or does it harden resistance while imposing costs on the advocating majority?",
+      "resolution_mechanism": "Track weapons-state defense-planning changes, alliance burden-sharing renegotiations, and review-conference voting blocs across successive cycles.",
+      "impact": "If stigmatization works, this reading's pressure instruments acquire enforcement-like force and the arrangement migrates toward enforceable reciprocity; if it backfires, resistance climbs and the review process drifts toward purely ceremonial maintenance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regime-external pressure converts into behavioral change among the weapons states."
+    },
+    {
+      "id": "customary_law_crystallization",
+      "question": "Is the Article VI obligation crystallizing into customary international law binding even non-parties, as litigation arguments and General Assembly resolution patterns suggest?",
+      "resolution_mechanism": "State-practice and opinio-juris surveys; domestic court treatment of the obligation; International Law Commission identification-of-customary-law workstream outputs.",
+      "impact": "Crystallization would open a new enforcement channel (raising suppression while narrowing the delivery asymmetry); failure leaves this reading dependent on review-conference pressure alone, sustaining the current weak-enforcement profile.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether political pressure on the disarmament obligation is hardening into justiciable law."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates ONE reading of the Nuclear Non-Proliferation Treaty text — the nnws_reading — as a clean, epsilon-invariant constraint. The standing arrangement under contest is the treaty regime as it actually operates: the non-weapons-state majority delivers verified, inspected, funded restraint, while the five recognized weapons states owe good-faith disarmament negotiations under Article VI with no timeline, no verification, and no enforcement body able to compel them. Under this reading, Article VI is binding law and non-weapons-state restraint is conditional consideration exchanged for weapons-state performance; because the counter-performance remains undelivered while the restraint side is actively enforced, the arrangement couples a genuine coordination function (proliferation prevention, crisis stability, peaceful commerce under a common verification baseline) with asymmetric delivery, held together by enforcement machinery that runs against only one side. Per the epsilon-invariance principle, the colloquial label 'the NPT bargain' decomposes into at least three structurally distinct claims; this file authors one of them, with its own epsilon, beneficiaries, and classification, linked to its siblings through the network block. The claimed type and the authored metrics are independent facts: the claim records what this reading takes the structure to be; the metrics record what the arrangement's operation looks like from the documentary record.",
+    "key_agents": [
+      "nuclear_weapon_states: Primary beneficiary and co-agenda-setter (institutional/arbitrage) — collects verified restraint and status legitimacy, faces no symmetric verification, shapes the review agenda through the P5 process",
+      "non_nuclear_weapon_states_parties: Primary target bloc (organized/constrained) — delivers verified restraint and funding, holds an unenforced reciprocity claim, exits only through costly withdrawal",
+      "allied_nnws_under_extended_deterrence: Intermediate seat (powerful/constrained) — pays restraint, collects umbrella security, resists enforcement of the reciprocity claim hardest",
+      "iaea_safeguards_secretariat: Verification administrator (institutional/constrained) — enforces the restrained side only, reports violations to a council that enforces selectively",
+      "tpnw_states_coalition: Excluded challenger bloc (organized/mobile) — built a parallel instrument after concluding review politics cannot deliver, remains outside consensus decisions",
+      "non_party_threshold_states: Excluded outsiders (powerful/mobile) — armed outside the treaty, cited by both camps, seated in no review decision",
+      "icj_international_lawyers: Analytical observer (analytical/analytical) — affirms the obligation's legal reality while its content stays open"
+    ],
+    "logic_rationale": "Extractiveness 0.62: the net transfer under this reading runs one way in delivery — verified restraint, inspection access, programmatic transparency, and assessed funding flow from the majority while the owed counter-performance stays undelivered — but the regime also returns real goods (cascade prevention, commerce, safety standards) and its coercive reach is limited, tempering the score below predatory levels. Suppression 0.45: enforcement exists and hardened materially (the 93+2 program, the Additional Protocol) but applies to the restrained side only and ultimately depends on Security Council unanimity, which the weapons states' veto caps. Theater ratio 0.52: review-cycle consensus documents have grown increasingly ceremonial — final documents that recite disarmament language while binding nothing — while the safeguards apparatus remains functionally real, splitting the ratio near even. Accessibility collapse 0.50: alternatives remain partly usable (the parallel prohibition treaty, lawful withdrawal, latent hedging), so understanding the arrangement does not foreclose exit the way a natural limit would. Resistance 0.65: sustained, organized, cross-regional resistance — unusual for a treaty regime — expressed through the humanitarian initiative, the parallel instrument, and repeated review-conference blockades. Trajectory notes: the 1995 step-change reflects indefinite extension removing the twenty-five-year renewal leverage the majority originally held; the 2000 dip reflects the thirteen practical steps reform pulse; the 2017 rise tracks the parallel treaty's adoption exposing the delivery gap. The suppression series is tracked deliberately because enforcement capacity genuinely changed over the interval (hardening through 2000, then plateauing as Additional Protocol adoption stalls and budgets strain) — this is an enforcement-capacity story, not a static picture. Fixing cost is prohibitive: amendment runs through the very agenda-setters whose obligations would tighten, so no fixer captures enough benefit to outweigh the cost they personally bear.",
+    "perspectival_gap": "The payer seat and the beneficiary seat compute differently from identical text. From the weapons-state seat the arrangement is stewardship they voluntarily report on; from the majority seat it is a contract whose other signatory stopped performing while keeping the collection machinery running. The allied non-weapons states occupy a genuinely intermediate position with an identity-lock dynamic: decades of extended-deterrence dependence have fused non-acquisition with their security self-concept, so exit is unthinkable short of alliance rupture, and they resist enforcement of the reciprocity claim harder than anyone — if the umbrella's credibility broke, their seat would migrate toward the target pole and organized resistance would spike. The verification administrator bears administrative cost without capturing gains; the excluded challengers experience the consensus rule itself as the operative barrier. Same-power divergence: the weapons states and the verification agency both hold institutional power over the same text, yet one collects from it and the other administers it — differentiated by role and exit, not by standing.",
+    "directionality_logic": "Declared beneficiaries drive the derivation: nuclear_weapon_states sit near the beneficiary end (they collect restraint and legitimacy; their arbitrage-grade exit — they shape interpretation and face no symmetric verification — pushes them further toward subsidy). Declared victims drive the opposite pole: non_nuclear_weapon_states_parties sit near the full-target end (they deliver the transfer; constrained exit — costly withdrawal, sanctions exposure since the North Korean precedent — traps them there). The allied non-weapons states are intentionally left out of both arrays: their position is genuinely mixed (they pay restraint but collect umbrella security), and forcing them into either array would falsify the structure. The challenger coalition and the threshold states sit outside the transfer path entirely — one contests it from a parallel venue, the other never entered it. The vindicated propositions (reciprocity doctrine, the court's affirmation) are listed separately and collect no rents.",
+    "mandatrophy_analysis": "The founding problem had two halves: halt the spread, and negotiate the existing arsenals away. The first half remains live and substantially achieved among parties; the second half is atrophying — the delivery gap widens while review-cycle language grows more ceremonial. The tangled-rope classification guards against both mislabels: against pure extraction (the coordination function is genuine — no party-state cascade since 1970, commerce and safety cooperation flow) and against pure coordination (the delivery asymmetry is documented and growing, not a rounding error). The rising theater series alongside a plateauing suppression series is the drift signature to watch: if review maintenance becomes fully performative while nobody profits enough to repair it and the majority's cost of exit stays prohibitive, the arrangement drifts toward inertial maintenance of a bargain whose second half nobody enforces. The genealogy consumer reads founding_problem_status=contested against disappearance_verdict=world_rearranges as a zombie-risk flag — the founding problem's disarmament half may be dead while the arrangement persists — without asserting that outcome.",
+    "kernel_context": "Kernel: npt_treaty_text (a fixed canonical treaty text). This file instantiates the nnws_reading: Article VI as a binding obligation, non-weapons-state restraint as conditional consideration purchasing weapons-state compliance. Sibling readings, authored as separate constraints: npt_treaty_text__nws_reading (non-proliferation as binding on the majority, disarmament as aspirational without enforcement) and npt_treaty_text__withdrawal_threshold_reading (the Article X exit-threshold contest between regime stability and sovereignty preservation). The readings disagree on who bears binding obligations and what exit should cost; each is classified independently over the same standing arrangement, and the currently dominant nws_reading operates upstream of this one's environment because it controls the enforcement levers."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_text__nws_reading",
+      "npt_treaty_text__withdrawal_threshold_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the NPT bargain' covers at least three structurally distinct claims: (1) this file's nnws_reading — Article VI binding, restraint as conditional consideration; (2) npt_treaty_text__nws_reading — non-proliferation binding on the majority, disarmament aspirational; (3) npt_treaty_text__withdrawal_threshold_reading — the Article X exit-threshold contest. Each carries its own epsilon, beneficiary/victim structure, and classification over the same standing arrangement; the nws_reading currently controls the enforcement levers and thus sits upstream of this reading's operating environment. Family links declared via affects_constraints per the epsilon-invariance decomposition rule."
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_weapon_states",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Five states recognized by the treaty as possessing nuclear weapons at entry into force. They retain and modernize arsenals, run the P5 process that shapes each review cycle's agenda, and submit voluntary reporting on disarmament steps that no body can verify or compel. Their security planning presupposes the arrangement's continuation: it legitimizes their status, dampens proliferation among allies and rivals, and costs them nothing beyond what they themselves agree to describe as interim."
+    },
+    {
+      "name": "non_nuclear_weapon_states_parties",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The treaty's majority bloc. They accept comprehensive safeguards, facility access, and export restrictions on their own programs, and fund the verification system through assessed contributions. In exchange they hold a legal commitment from the weapons states to pursue disarmament negotiations, plus peaceful-use cooperation. Their collective leverage runs through review conferences and consensus politics; individual exit runs through lawful withdrawal, which since the North Korean case carries reputational cost and sanctions exposure."
+    },
+    {
+      "name": "allied_nnws_under_extended_deterrence",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Wealthy non-weapons states — NATO members, Japan, South Korea, Australia — that forgo acquisition while relying on United States nuclear guarantees. They defend the regime publicly but resist binding timelines or proximity to the parallel prohibition treaty, because enforceable disarmament pressure threatens the umbrella their defense planning rests on. Their restraint is real and inspected; their enthusiasm for the reciprocity claim is calibrated to alliance maintenance."
+    },
+    {
+      "name": "iaea_safeguards_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Administers the verification system: negotiates safeguards agreements, conducts inspections, and reports non-compliance to its Board and the Security Council. Member states set its mandate and budget; its inspection rights reach deep into non-weapons-state programs while extending to the five recognized weapons states only as far as those states volunteer. When it reports violations, consequences follow only if the Security Council concurs."
+    },
+    {
+      "name": "tpnw_states_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "A bloc of mostly non-weapons states, joined by humanitarian organizations and survivor movements, that negotiated a parallel prohibition treaty after concluding the review process would never deliver disarmament. They attend review conferences as observers and organize voting pressure, but stand outside the consensus decisions that govern the original treaty, and the weapons states boycott their instrument outright."
+    },
+    {
+      "name": "non_party_threshold_states",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "States that acquired arsenals outside the treaty — India, Pakistan, Israel — and never accepted its obligations. They engage the regime's export-control and safety apparatus selectively while rejecting the membership bargain; their existence is cited by both camps in the reciprocity dispute, and they hold a seat in no review-conference decision."
+    },
+    {
+      "name": "icj_international_lawyers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The International Court of Justice, treaty-law scholars, and commission rapporteurs who adjudicate and theorize what the treaty's obligations mean. The Court's 1996 opinion affirmed that good-faith negotiation toward disarmament is a legal duty while leaving its concrete content open; subsequent scholarship and litigation supply the doctrinal pressure that review politics alone cannot generate."
+    }
+  ],
+  "gain_flow": "nuclear_weapon_states",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Halts proliferation cascades among parties by universalizing verified restraint; provides a standing multilateral forum for disarmament diplomacy; underwrites peaceful nuclear commerce and safety standards through a common verification baseline.",
+    "transfer_function": "Moves verified restraint — foregone weapons options, intrusive inspection access, programmatic transparency, assessed funding — from the non-weapons-state majority into a common security pool; moves status legitimacy and strategic stability to the weapons states. The promised counter-transfer, disarmament performance, remains undelivered, so the net flow under this reading runs one way.",
+    "absent_voices": "Non-party threshold states would object that the bargain entrenches a permanent caste line drawn without them; they sit outside every review decision. Hibakusha and downwind communities were absent from the state-centric room for five decades until the humanitarian initiative carried their testimony in; they object that indefinite possession normalizes harms done to them. Both objections now enter only through pressure channels the consensus rule can disregard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Export-control arrangements, alliance deterrence planning, the verification agency's mandate, and regional proliferation decisions across East Asia and the Middle East all presuppose the treaty's architecture. Overnight removal would trigger hedging cascades in industrialized states, immediate alliance renegotiation, and collapse of the common verification baseline — the security order would rearrange around whatever replaced it.",
+    "founding_problem": "The early-1960s projection that dozens of states would acquire nuclear weapons within a decade. The treaty was built to freeze the spread at the existing five while binding those five to negotiate their arsenals away, so that restraint would be a temporary condition rather than a permanent caste.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: the ICJ's 1996 advisory opinion affirms the disarmament obligation as live law; successive General Assembly resolutions and the parallel treaty's negotiating record attest that the weapons-state side remains undelivered; hibakusha testimony and humanitarian-initiative documentation supply non-state attestation. The weapons states themselves attest the opposite — that the danger persists and they comply in good faith — which is precisely why the status is contested rather than dead."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "reciprocal_bargain_1968",
+    "drift_state": {
+      "moment": "contemporary_tpnw_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "nws_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "withdrawal_threshold_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "article_vi_binding_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "restraint_as_conditional_consideration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

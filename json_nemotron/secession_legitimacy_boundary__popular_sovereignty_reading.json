@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "secession_legitimacy_boundary__popular_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_secession_legitimacy_boundary__popular_sovereignty_reading",
+    "story_uid": "52fe13d6-ffa4-4949-8265-7860ab3864c4"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Popular Sovereignty Secession Legitimacy (Provincial Majority Self-Determination)",
+    "topic_domain": "political_economy/federalism/resource_politics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "provincial_majority_population",
+      "provincial_government"
+    ],
+    "victims": [
+      "federal_constituency",
+      "indigenous_treaty_holders",
+      "provincial_minority_population"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the secession_legitimacy_boundary kernel, and what would change under sibling readings?",
+      "resolution_mechanism": "Compare structural outputs across the four declared readings: popular_sovereignty_reading (this), constitutional_impossibility_reading, grievance_threshold_reading, treaty_primacy_reading. Each emits different beneficiary/victim sets and extraction profiles.",
+      "impact": "If readings produce divergent χ profiles, the kernel is a structural fault line — not one constraint with measurement variance but four constraints linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system kernel decomposition: one kernel, four readings, four constraints"
+    },
+    {
+      "id": "extraction_perception_ambiguity",
+      "question": "Does 'extraction claims valid if majority perceives them' make extraction endogenous to majority perception, or is there an independent structural test?",
+      "resolution_mechanism": "Track cases where a provincial majority perceives extraction but objective indicators (fiscal flows, regulatory burden) show net subsidy. If perception alone triggers legitimacy, the constraint's extraction metric becomes self-fulfilling.",
+      "impact": "Endogenous extraction perception inflates ε for this reading relative to grievance_threshold_reading which requires structural injustice evidence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether extraction is defined by majority perception or structural reality"
+    },
+    {
+      "id": "indigenous_treaty_precedence_uncertainty",
+      "question": "How does this reading resolve conflicts with pre-existing treaty rights when a provincial majority votes to secede?",
+      "resolution_mechanism": "Observe actual secession referenda in jurisdictions with treaty nations (e.g., Quebec 1995, potential future cases). Does the popular sovereignty reading yield to treaty primacy or override it?",
+      "impact": "If popular sovereignty overrides treaty rights, indigenous_treaty_holders are structural victims; if treaty primacy binds, the reading's beneficiary set shrinks.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Conflict between provincial majority sovereignty and indigenous treaty precedence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the popular_sovereignty_reading of the secession_legitimacy_boundary kernel: a provincial democratic majority holds ultimate sovereignty, and a referendum result is self-legitimating — no external constitutional or federal permission required. The reading claims coordination function (orderly self-determination) but operates with asymmetric extraction: the provincial majority and its government benefit from unilateral exit authority, while the federal constituency, indigenous treaty holders, and provincial minorities bear costs without consent. Active enforcement is required (legal frameworks for referenda, international recognition campaigns, resource capture upon exit). The sibling readings — constitutional_impossibility_reading (federal constitutional veto), grievance_threshold_reading (injustice-triggered legitimacy), treaty_primacy_reading (indigenous consent requirement) — produce different beneficiary/victim structures and extraction profiles, confirming ε-invariance decomposition.",
+    "logic_rationale": "Base extractiveness (0.68) reflects that the reading transfers exit authority from federal/constitutional structures to a provincial majority, extracting sovereignty from the federal constituency and treaty holders. Suppression (0.55) is moderate — the constraint suppresses federal constitutional veto and treaty consent requirements but does not physically coerce; its force is legal-political. Theater ratio (0.25) captures performative democratic ritual (referendum campaigns, clarity acts) that masks the extraction of unilateral authority. Accessibility collapse (0.45) is partial — alternative frameworks (negotiated exit, grievance-based, treaty-based) remain conceptually available but are politically marginalized by the reading's dominance in provincial discourse. Resistance (0.72) is high — federal governments, courts, and indigenous nations actively contest the reading's legitimacy.",
+    "directionality_logic": "Provincial majority population and provincial government are structural beneficiaries (d near 0.0-0.2): they gain unilateral exit authority and resource control. Federal constituency is a structural target (d near 0.8-0.9): loses territorial integrity and constitutional authority without reciprocity. Indigenous treaty holders are targets with identity_locked exit (d near 0.9): their consent is structurally bypassed. Provincial minorities are constrained payers (d near 0.6-0.7): bound by majority decision with limited exit. Analytical observers (international law, constitutional scholars) sit near symmetric (d ≈ 0.5).",
+    "perspectival_gap": "From the provincial majority seat, the constraint is genuine coordination (rope-like): a mechanism for collective self-determination. From the federal constituency and indigenous treaty holder seats, it is extraction (snare-like): unilateral withdrawal from shared obligations. The engine computes this divergence from the declared beneficiaries/victims and exit options. The claimed_type (tangled_rope) captures the structural hybrid: real coordination function (orderly exit process) + asymmetric extraction (majority gains at minority/federal expense).",
+    "mandatrophy_analysis": "The reading was founded on decolonization-era self-determination principles (post-1945) but has been repurposed for resource-rich provinces seeking fiscal autonomy. The founding problem (colonial liberation) is dead; the current operation extracts federal transfers and resource revenues. Mandatrophy is unresolved — the constraint persists because the provincial majority benefits and the federal center lacks enforcement will to impose constitutional_impossibility_reading.",
+    "kernel_context": "This constraint is the popular_sovereignty_reading of the secession_legitimacy_boundary kernel. Sibling readings: constitutional_impossibility_reading (federal constitutional veto), grievance_threshold_reading (structural injustice threshold), treaty_primacy_reading (indigenous consent requirement). This reading asserts provincial majority sovereignty as self-legitimating; the others locate legitimacy in federal law, injustice evidence, or treaty precedence respectively."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "secession_legitimacy_boundary__constitutional_impossibility_reading",
+      "secession_legitimacy_boundary__grievance_threshold_reading",
+      "secession_legitimacy_boundary__treaty_primacy_reading",
+      "federal_transfer_system",
+      "indigenous_treaty_implementation",
+      "provincial_resource_royalties"
+    ],
+    "dual_formulation_note": "This constraint family (four readings of secession_legitimacy_boundary) demonstrates ε-invariance decomposition: each reading has a distinct extraction profile because each defines the constraint's referent differently. Popular sovereignty reading: ε=0.68 (majority extracts unilateral authority). Constitutional impossibility reading: ε≈0.15 (federal veto as coordination). Grievance threshold reading: ε variable (depends on injustice evidence). Treaty primacy reading: ε=0.40 (negotiated consent as coordination). They are linked via network.affects_constraints — the constitutional_impossibility_reading structurally constrains this reading's operation; the treaty_primacy_reading structurally limits its beneficiary set."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "provincial_majority_population",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Constitutes the democratic majority whose referendum vote legitimates secession. Gains unilateral exit authority and control over provincial resources/revenues. Exit is arbitrage-grade: they hold the trigger and can credibly threaten exit to extract concessions even without seceding."
+    },
+    {
+      "name": "provincial_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Administers the referendum process, sets the question, controls the timeline, and would administer the post-secession state. Collects political capital and resource control from the constraint's operation. Can pivot to federal politics if secession fails."
+    },
+    {
+      "name": "federal_constituency",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears the costs of territorial disintegration: loss of territory, population, resources, fiscal transfers paid, and constitutional continuity. Cannot exit the constraint — the federal state is the object of secession. Resistance is high but structurally constrained by democratic legitimacy norms."
+    },
+    {
+      "name": "indigenous_treaty_holders",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Hold pre-existing treaty rights with the Crown (federal) that are bypassed by provincial majority referendum. Their consent is not required under this reading. Exit is identity-locked: treaty relationship is constitutive of their nationhood; they cannot 'exit' without dissolving their legal-political identity. Structurally excluded from the referendum's legitimating logic."
+    },
+    {
+      "name": "provincial_minority_population",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bound by the majority's referendum decision. May oppose secession but lack veto power. Exit options are constrained: can migrate to other provinces but lose community, property, and cultural ties. Bear costs of economic disruption and potential loss of federal protections."
+    },
+    {
+      "name": "international_law_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Assess the reading against international self-determination law, uti possidetis principles, and precedent. Neither collect nor pay; provide the analytical frame for legitimacy recognition. Their analyses influence but do not determine the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, democratic mechanism for a provincial population to exercise self-determination and exit a federation, avoiding protracted conflict or unilateral declaration without popular mandate.",
+    "transfer_function": "Transfers sovereign authority over territory, resources, and population from the federal state to a new provincial state, triggered by a majority referendum vote. Moves fiscal flows (federal transfers cease, provincial resource revenues retained) and legal jurisdiction from federal to provincial/emerging state.",
+    "absent_voices": "Indigenous treaty nations whose consent is structurally bypassed; federal citizens outside the province who lose territory without a vote; provincial minorities who lose federal protections; future generations bound by an irreversible decision made by a simple majority at one moment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the popular sovereignty reading vanished, the default would shift to constitutional_impossibility_reading (federal veto) or negotiated exit — the world rearranges because provincial secession would require federal consent, changing the power balance fundamentally. The constraint's existence is what makes unilateral exit thinkable.",
+    "founding_problem": "Post-colonial self-determination: how can a distinct people within a federal state exercise their right to choose their political status without being blocked by the very state they seek to leave?",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (colonial liberation) is attested as dead by international law scholars (UN decolonization committee records), federal constitutional historians, and indigenous legal scholars — none of whom are beneficiaries of this reading. The operator (provincial nationalist parties) contests this, claiming the problem persists as 'ongoing colonial structure.' Corroboration from outside beneficiaries confirms status=dead."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "secession_legitimacy_boundary"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_impossibility_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "grievance_threshold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "treaty_primacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "provincial_majority_sovereignty_self_legitimating",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "referendum_result_requires_no_external_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_colonial_self_determination_framework",
+    "drift_state": {
+      "moment": "resource_nationalism_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
