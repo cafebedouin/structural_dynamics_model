@@ -95,7 +95,10 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
-- **Queued, in order:** (1) stealth residue 36 → `+rescue1` (launched 00:40, free); then OQ-58
+- **DONE 01:50: `testsets_stealth` COMPLETE 1005/1005** (rescue1 36/36 under prompt `e03e2210`), OQ-58 quarantine 15 edges,
+  `classify_corpus` GREEN n=1005 at `033b095`; registered in LIVE_LEGS + census (7 legs GREEN). First read: h1 band-3 34%,
+  red 4.1% — not the kimi signature; stealth-vs-nemotron same-seed ε agreement 9%.
+- **Queued, in order:** (1) ~~stealth residue~~ done; next: OQ-58
   sweep + `classify_corpus('testsets_stealth','pipeline_output.stealth.json','stealth/ox-alpha')`
   + commit. (2) nemotron residue 153 → same command as the run (`--leg-name nemotron --model
   nvidia/nemotron-3-ultra-550b-a55b:free --reasoning-effort off --workers 5 --run-tag rescue1`)
