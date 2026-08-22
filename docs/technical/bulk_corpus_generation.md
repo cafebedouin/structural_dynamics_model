@@ -269,6 +269,20 @@ cents on Flash) — compare the pass rate on the failing-seed list before/after,
 until the residue is genuine drift the model will not fix. Never run (2) while another leg's
 driver is mid-run (prompt re-read per attempt).
 
+**Backfill = a different comparability, and a before/after diff (operator, 2026-08-22).** Rescue
+passes change a leg's composition only on the seeds that model failed to author validly, so the
+read is: *are a model's hard seeds structurally different stories, or just mis-authored ones?*
+Protocol: (1) BASELINE is in hand — `audits/2026-07-20_five_leg_twin_comparison/` (five legs at
+`9c226e8`) and the 2026-08-21 `outputs/pipeline_output.<leg>.json` set (flash/flash2/flash_think
+at `f0ef08a`, flash3/flash_think2 at `bbce40f`, engine-coherent); (2) after backfill, reclassify
+EVERY leg at ONE commit (`classify_corpus`, serial) and run
+`audits/2026-08-21_flash_regime_vs_redraw/paired_agreement.py <legs…>` plus the five-leg
+harness; (3) diff per leg, stratified by `story_provenance` source (`…+rescue*` vs first pass) —
+the rescued stratum vs the rest is the finding, the whole-leg marginal shift is the caveat.
+Prompt-interpretation signal, already available without backfill: which models author
+role=`victim` (prose-following: Flash, Nemotron) vs `payer` (enum-following: Claude, Kimi) —
+one instruction, a clean cross-model split; extend to other enum sites as they surface.
+
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
