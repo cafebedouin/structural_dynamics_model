@@ -95,6 +95,16 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **15:00 — floors and backfills LANDED; 12 live legs, census GREEN.** Pure thinking-off floors (same
+  commit, ε pinned): Flash seat-vector churn 22% / Sonnet 38% / Haiku 65% (h1 85/72/53%) — the
+  classification floor is model-specific and not derivable from ε (table on OQ-347). sonnet3 1003,
+  haiku3 993, stealth2 1005 all certified and registered. Stakeholder backfill: haiku 455/458, flash
+  195/210 + a pass 3 of 15 in flight (OQ-345 diff: `h1_stakeholder` null 100% → 4% on haiku; untouched
+  control 97–100%, the 3% = corpus-relative verdict components). **Defect found and fixed (c0e7c89f):**
+  backfill completion was counted from the ladder, which already listed every target — the flash pass
+  logged 210/210 having written 168; both drivers now count from the artifact's provenance tag.
+  Running: stealth3 (~430/1005, free), kimi2 batch 2/3 (Moonshot, $48 left; batch 3 when it exits),
+  nemotron cap probe (hourly). Before-arms for the OQ-345 diff: `outputs/pipeline_output.{haiku,flash}.prebackfill.json`.
 - **12:45 — Anthropic auto-load landed ($50.01); residues resumed (sonnet3 45, haiku3 172, chained) and the
   OQ-345 stakeholder BACKFILL launched: haiku 458 ids (`--leg-name haiku --backfill-ids
   prolog/kernels/rebuild_2026-06-13/haiku_stakeholder_backfill_ids.json --run-tag stakeholder_backfill`,
