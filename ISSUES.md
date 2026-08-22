@@ -17946,6 +17946,10 @@ claimed_type 85% / ε 46% (12% ≥0.10), purity_band 2% (purity depends on the s
 surface the June stories lacked). Untouched control n=505: 100% on every field except verdict 97% —
 regenerating part of a leg moves ~3% of untouched verdicts through corpus-relative components
 (ensemble fits / alert context); the control is "≈100%" and that residue names the channel.
+**flash diff (final, `backfill_diff_flash_2026-08-22.txt`, 206/210 backfilled over three passes):**
+  BACKFILLED stratum: n=206 | agreement h1_band=67% verdict=71% signature=84% purity_band=4% claimed_type=82% ε=60% | |Δε| median=0.00 ≥0.10=13% | h1_stakeholder null: before=100% after=3%
+  UNTOUCHED stratum (control): n=754 | agreement h1_band=100% verdict=98% signature=100% purity_band=100% claimed_type=100% ε=100% | |Δε| median=0.00 ≥0.10=0% | h1_stakeholder null: before=4% after=4%
+
 **The BEFORE arm for the §9 diff is preserved:** `outputs/pipeline_output.haiku.prebackfill.json`
 (HEAD 7597aa7, 960 stories) and `outputs/pipeline_output.flash.prebackfill.json` (f0ef08a, 960) —
 both engine-coherent with HEAD (no engine file changed in between; `outputs/` is gitignored, so if
