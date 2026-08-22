@@ -4,191 +4,262 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "3c8d32fa-3423-443c-97f5-f9d8ce874a91"
+    "story_uid": "dcd8384b-422d-4602-8f04-2bb7e9606fd4"
   },
   "base_properties": {
     "extractiveness": 0.7,
     "suppression": 0.8,
     "theater_ratio": 0.6,
-    "accessibility_collapse": 0.7,
+    "accessibility_collapse": 0.4,
     "resistance": 0.3,
     "claimed_type": "snare",
-    "human_readable": "Pragmatic Incoherence of Simultaneous Veneration (Pre-Meiji)",
+    "human_readable": "Simultaneous Veneration (Pragmatic Incoherence Reading)",
     "topic_domain": "religious_studies/japanese_history",
     "requires_active_enforcement": false,
     "beneficiaries": [
-      "religious_institutions",
-      "local_elites"
+      "local_religious_institutions",
+      "ruling_elites"
     ],
     "victims": [
-      "practitioners",
-      "theological_coherence"
+      "common_practitioners",
+      "intellectual_theologians"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint accurately identified as the 'pragmatic_incoherence_reading' of the 'simultaneous_veneration' kernel?",
-      "resolution_mechanism": "Analysis of primary historical and theological texts, focusing on explicit statements of belief and practice by pre-Meiji practitioners and scholars.",
-      "impact": "If this reading is incorrect, the classification of the pre-Meiji religious landscape would shift significantly, potentially towards a 'rope' or 'tangled_rope' if coherence or functional partitioning is established.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Confirms the specific interpretation of the simultaneous veneration kernel."
+      "name": "local_religious_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefited from the lack of clear doctrinal boundaries, allowing them to serve diverse spiritual needs and collect offerings from both Shinto and Buddhist adherents without needing to resolve contradictions. Their authority was diffuse but stable."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "To what extent was the suppression of theological contradiction structural (lack of institutional enforcement) versus internalized (cognitive patterns of holding contradictory beliefs)?",
-      "resolution_mechanism": "Examination of individual practitioner diaries and local religious records for evidence of internal conflict or explicit attempts to reconcile beliefs, versus external pressures or lack thereof.",
-      "impact": "If suppression was primarily internalized, the effective suppression for practitioners was higher than the structural measure suggests, as they carried the incoherence within their own belief systems. If purely structural, the incoherence was merely latent.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for theological incoherence."
+      "name": "ruling_elites",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefited from the social stability and lack of religious conflict that the ambiguous, non-enforced simultaneous veneration provided. It allowed for a flexible system of legitimation without requiring costly doctrinal enforcement or choosing sides."
+    },
+    {
+      "name": "common_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Paid the cost of cognitive dissonance, holding contradictory beliefs simultaneously without a coherent framework. Their spiritual practice was sustained by local custom and ritual, but lacked intellectual integrity or a clear path to resolution, making them vulnerable to later doctrinal impositions."
+    },
+    {
+      "name": "intellectual_theologians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Struggled to reconcile the inherent contradictions within simultaneous veneration, often developing complex but ultimately unstable syncretic theories. Their intellectual efforts were constrained by the prevailing pragmatic ambiguity, and their attempts at resolution were largely ignored or suppressed by the ruling elites who preferred stability over coherence."
+    },
+    {
+      "name": "meiji_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Later imposed the Shinbutsu-bunri (separation of Kami and Buddhas) policy, which this reading sees as revealing the latent incoherence rather than creating a new one. The Meiji state acted to rationalize religious practice for nationalistic purposes, ending the pragmatic ambiguity."
     }
   ],
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 75,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 100,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 75,
-      "value": 0.75
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 100,
-      "value": 0.8
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 75,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.6
-    }
-  ],
+  "six_questions": {
+    "coordination_function": "Allowed for a broad, inclusive religious landscape where diverse spiritual needs could be met without forcing doctrinal uniformity or conflict, facilitating social cohesion through shared ritual practice.",
+    "transfer_function": "Transferred spiritual authority and material offerings from common practitioners to local religious institutions and ruling elites, in exchange for diffuse spiritual comfort and social stability, while obscuring underlying contradictions.",
+    "absent_voices": "Strict doctrinal purists from either Shinto or Buddhist traditions, who would have argued for clear distinctions and exclusive veneration, were marginalized by the prevailing pragmatic ambiguity. Their arguments were not actively suppressed but simply lacked institutional support.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the pragmatic incoherence had vanished overnight (e.g., through a sudden, widespread demand for doctrinal clarity), the entire religious landscape of pre-Meiji Japan would have reorganized. Local institutions would have been forced to choose affiliations, ruling elites would have lost a flexible tool for legitimation, and practitioners would have faced a crisis of belief, leading to widespread religious conflict or reform.",
+    "founding_problem": "The need to integrate indigenous Kami worship with imported Buddhism, and to maintain social and political stability without costly religious conflict or rigid doctrinal enforcement.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical records and scholarly analysis from outside the directly benefiting religious institutions confirm that the problem of integrating diverse religious practices was a persistent challenge. The Meiji state's later actions to separate Shinto and Buddhism further corroborate that the 'solution' of pragmatic incoherence was ultimately unsustainable and led to a latent, rather than resolved, problem."
+  },
   "interval": {
     "start": 1600,
     "end": 1868
   },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1700,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1700,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1700,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.6
+    }
+  ],
   "commentary": {
-    "narrative_context": "This constraint describes the pre-Meiji state of simultaneous veneration in Japan, interpreted through the 'pragmatic incoherence' reading. It posits that the syncretic practices of Shinto and Buddhism were not underpinned by a coherent theological or ontological framework, but rather by a pragmatic tolerance of contradiction, sustained by a lack of institutional pressure to resolve these inconsistencies. The Meiji-era shinbutsu-bunri (separation of kami and buddhas) is seen not as an arbitrary rupture, but as a revelation of this latent incoherence, which then became actively suppressed. The constraint is claimed as a Snare because it extracted a cost in theological clarity and intellectual honesty from practitioners, while benefiting institutions that profited from the ambiguity.",
-    "logic_rationale": "The extractiveness (0.7) stems from the cognitive burden and theological confusion imposed on practitioners, who were implicitly required to hold contradictory beliefs without resolution. Suppression (0.8) was high due to the absence of any institutional mechanism or intellectual tradition that actively challenged or sought to resolve these contradictions, effectively trapping practitioners in an incoherent system. The theater ratio (0.6) reflects the performative aspect of simultaneous veneration, where rituals and practices continued without a deep, shared understanding of their underlying meaning, serving more to maintain social order and institutional power than genuine spiritual coherence. Accessibility collapse (0.7) was high because alternative coherent theological frameworks were not readily available or actively suppressed, and resistance (0.3) was low due to the diffuse nature of the incoherence and the lack of a clear 'agenda-setter' to resist.",
-    "perspectival_gap": "From the perspective of religious institutions and local elites, the system was a functional 'rope' or 'tangled_rope' that maintained social harmony and their own authority. From the perspective of practitioners seeking theological coherence, it was a 'snare' that extracted intellectual honesty and clarity. The engine's classification will highlight this divergence.",
-    "directionality_logic": "Religious institutions and local elites were beneficiaries (d near 0.0) as the ambiguity allowed them to consolidate power and resources without needing to resolve complex theological disputes. Practitioners were victims (d near 1.0) as they bore the cognitive cost of incoherence. Theological coherence itself is a victim, as its absence was the primary extraction. The lack of active enforcement pressure meant the 'snare' was sustained by inertia and the absence of alternatives, rather than overt coercion.",
-    "kernel_context": "This constraint is the 'pragmatic_incoherence_reading' of the 'simultaneous_veneration' kernel. It argues that the pre-Meiji syncretic practices of Shinto and Buddhism were never truly coherent, but rather a pragmatic arrangement that tolerated contradiction. Sibling readings include the 'ontological_fusion_reading' (kami and buddhas are metaphysically identical) and the 'domain_partition_reading' (kami and buddhas govern separate, non-overlapping domains)."
+    "narrative_context": "This constraint describes the state of simultaneous veneration in pre-Meiji Japan from the perspective that it was never a coherent system, but rather a pragmatic incoherence sustained by a lack of enforcement pressure. Practitioners held contradictory beliefs without resolution, leading to a high degree of latent extraction (cognitive dissonance, intellectual stagnation) that was only revealed when the Meiji government imposed the Shinbutsu-bunri (separation of Kami and Buddhas) policy. This reading views the separation not as an arbitrary rupture, but as the surfacing of an underlying, unaddressed structural contradiction. The constraint is claimed as a 'snare' because the coordination story (social stability) was cover for the extraction of cognitive coherence from practitioners and intellectual integrity from theologians, with no genuine resolution offered.",
+    "logic_rationale": "Extractiveness is high (0.7) because the system extracted cognitive coherence and intellectual integrity from practitioners and theologians, forcing them to hold contradictory beliefs without resolution. Suppression is also high (0.8) because the lack of enforcement pressure meant there was no institutional mechanism to resolve these contradictions, effectively suppressing any attempts at doctrinal clarity. The theater ratio is moderate (0.6) as much of the 'coordination' was performative ritual that masked underlying incoherence. Accessibility collapse is moderate (0.4) as alternatives (e.g., choosing one tradition over another, developing truly syncretic philosophies) were conceptually available but practically difficult due to social inertia and institutional beneficiaries. Resistance is low (0.3) because the diffuse nature of the incoherence made organized resistance difficult until the Meiji state provided an external catalyst.",
+    "directionality_logic": "Local religious institutions and ruling elites were beneficiaries, as the ambiguity allowed them to maintain power and social stability without costly doctrinal disputes. Common practitioners and intellectual theologians were victims, bearing the costs of cognitive dissonance and intellectual frustration. The Meiji state, while acting as an agenda-setter to resolve the situation, is seen in this reading as revealing the latent extraction rather than initiating it.",
+    "perspectival_gap": "From the perspective of the beneficiaries (local institutions, ruling elites), simultaneous veneration was a successful 'rope' that ensured social harmony and flexible spiritual practice. From the perspective of the victims (practitioners, theologians), it was a 'snare' that extracted coherence and intellectual honesty. The engine's classification will highlight this divergence based on the declared roles and metrics.",
+    "kernel_context": "This constraint is the 'pragmatic incoherence' reading of the 'simultaneous_veneration' kernel. It posits that the pre-Meiji religious landscape, often described as syncretic, was in fact a state of unresolved contradiction. Sibling readings include the 'ontological_fusion_reading' (Kami and Buddhas are metaphysically identical) and the 'domain_partition_reading' (Kami and Buddhas govern separate, non-overlapping domains)."
   },
+  "omegas": [
+    {
+      "id": "latent_vs_active_extraction",
+      "question": "To what extent was the extraction (cognitive dissonance, intellectual incoherence) actively imposed by the system, versus being a latent consequence of unresolved historical development?",
+      "resolution_mechanism": "Analysis of primary sources for evidence of active suppression of attempts at doctrinal clarity versus passive institutional inertia.",
+      "impact": "If actively imposed, the 'snare' classification is strengthened. If primarily latent, the 'theater_ratio' might be higher, indicating a 'piton' where the system persisted more by inertia than active benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing active imposition from passive consequence in extraction."
+    },
+    {
+      "id": "meiji_rupture_or_revelation",
+      "question": "Was the Meiji Shinbutsu-bunri an external rupture imposed on a functional system, or did it merely reveal the underlying incoherence that this reading posits?",
+      "resolution_mechanism": "Comparative historical analysis of similar religious separations in other contexts, and detailed examination of pre-Meiji intellectual discourse for signs of internal pressure for resolution.",
+      "impact": "If a rupture, this reading's 'snare' classification might be too strong, and the 'ontological_fusion_reading' or 'domain_partition_reading' might gain credence. If a revelation, this reading is strongly supported.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The nature of the Meiji separation: rupture or revelation of latent incoherence."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "simultaneous_veneration__ontological_fusion_reading",
-      "simultaneous_veneration__domain_partition_reading",
-      "meiji_shinbutsu_bunri_edict"
+      "meiji_state_shinto_supremacy"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'simultaneous_veneration' kernel, focusing on the pre-Meiji pragmatic incoherence. It contrasts with readings that posit ontological fusion or domain partitioning, which represent alternative interpretations of the same historical phenomenon."
+    "dual_formulation_note": "This constraint is one of three readings of the 'simultaneous_veneration' kernel. This 'pragmatic_incoherence_reading' emphasizes the unresolved contradictions and latent extraction, which the Meiji state's 'shinto_supremacy' constraint later revealed and exploited."
   },
   "cs_structure": {
     "kernel_codification": "implicit",
-    "authority_grounding": "practice",
-    "interpretation_layer_present": true,
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "simultaneous_veneration__ontological_fusion_reading",
-        "relation": "coexists_with"
+        "sibling_id": "ontological_fusion_reading",
+        "relation": "forecloses"
       },
       {
-        "sibling_id": "simultaneous_veneration__domain_partition_reading",
-        "relation": "coexists_with"
+        "sibling_id": "domain_partition_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "theological_contradiction_is_tolerated",
+        "atom": "doctrinal_coherence_is_necessary",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "lack_of_enforcement_sustains_incoherence",
-        "role": "secondary",
+        "atom": "unresolved_contradiction_is_extractive",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "pragmatic_syncretic_tolerance",
+    "reference_frame": "coherent_religious_system",
     "drift_state": {
-      "moment": "meiji_shinbutsu_bunri",
-      "direction": "repudiation_pressure",
+      "moment": "pre_meiji_era",
+      "direction": "codification_collapse",
       "magnitude": "severe",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

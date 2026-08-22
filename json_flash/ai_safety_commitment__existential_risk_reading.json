@@ -4,174 +4,266 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "caf5a1dd-facb-4b1e-987e-067be72fb434"
+    "story_uid": "297ff50f-9e6e-41c4-a856-12202a91710f"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.4,
-    "theater_ratio": 0.2,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.3,
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
     "claimed_type": "tangled_rope",
-    "human_readable": "AI Safety: Existential Risk Prevention",
-    "topic_domain": "ai_safety/technology_governance/risk_assessment",
+    "human_readable": "AI Safety: Existential Risk Prevention (Long-Term Alignment)",
+    "topic_domain": "AI Safety / Technology Governance / Risk Assessment",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "humanity_conditional_on_alignment",
-      "ai_safety_researchers_existential_risk"
+      "humanity_conditional_on_alignment"
     ],
     "victims": [
-      "ai_development_speed",
-      "near_term_ai_harms_mitigation"
+      "present_day_ai_developers",
+      "near_term_ai_safety_advocates"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "humanity_conditional_on_alignment",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The ultimate beneficiary, but only if superintelligent AI is successfully aligned to human values, preventing extinction. This group has no agency in the present but is the object of protection."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These researchers define the problem, propose solutions (e.g., RLHF, interpretability, AI governance for pause/slowdown), and advocate for resources and policy changes. Their careers and funding depend on the salience of existential risk."
+    },
+    {
+      "name": "present_day_ai_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of implementing speculative safety measures, slowing down development, or facing regulatory hurdles based on future, unproven risks. Their focus is on current product development and deployment."
+    },
+    {
+      "name": "near_term_ai_safety_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for addressing immediate, documented harms from AI (bias, discrimination, labor displacement). They find resources and attention diverted to long-term, speculative risks, effectively paying a cost in neglected present-day issues."
+    },
+    {
+      "name": "policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tasked with regulating AI, they are influenced by existential risk narratives, leading to policies that prioritize long-term alignment over immediate concerns, often at the expense of other stakeholders."
+    },
+    {
+      "name": "future_generations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The primary 'victims' of existential risk, yet they have no voice in current debates or policy-making. Their interests are represented by others, often with differing interpretations of what constitutes their best interest."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates global efforts and resources towards a shared goal of preventing catastrophic outcomes from advanced AI, fostering collaboration among researchers, policymakers, and industry on alignment techniques and governance frameworks.",
+    "transfer_function": "Transfers attention, funding, and regulatory focus from immediate AI harms and applications to long-term, speculative risks, primarily from present-day AI developers and near-term advocates to existential risk researchers and future humanity.",
+    "absent_voices": "Future generations are absent, their interests represented by current advocates. Near-term AI safety advocates often feel their concerns are sidelined in favor of existential risk, effectively excluded from the primary policy discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commitment to preventing existential AI risk vanished, the focus of AI research and governance would immediately shift to near-term applications and harms. Funding for alignment research would dry up, and regulatory efforts would reorient towards current societal impacts, fundamentally altering the trajectory of AI development and its societal integration.",
+    "founding_problem": "The potential for future superintelligent AI systems to become misaligned with human values, leading to unintended and catastrophic consequences, including human extinction.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Leading AI researchers, philosophers, and futurists, often from outside the immediate AI development community, corroborate the existence and severity of this potential problem, citing theoretical arguments and extrapolations from current AI capabilities. However, the urgency and probability are contested by many within the broader AI ethics and development communities."
+  },
   "interval": {
-    "start": 2015,
-    "end": 2030
+    "start": 0,
+    "end": 20
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.4
+      "time_point": 0,
+      "value": 0.7
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.62
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
+      "metric": "suppression_requirement",
+      "time_point": 10,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.25
+      "time_point": 15,
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.32
+      "time_point": 20,
+      "value": 0.7
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2025,
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
       "value": 0.38
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2030,
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
       "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'existential risk' reading of AI safety, which prioritizes preventing extinction-level outcomes from misaligned superintelligent systems. It is a contested framing within the broader AI safety discourse. The constraint is claimed as a Tangled Rope because it genuinely coordinates a global research agenda (beneficiaries: humanity, existential risk researchers) but also extracts resources and attention from other pressing AI concerns (victims: near-term harms mitigation, AI development speed) through active advocacy and policy influence.",
-    "logic_rationale": "The extractiveness (0.65) is high because it diverts substantial resources towards highly speculative, long-term problems, often at the expense of addressing immediate, empirically verifiable harms. Suppression (0.40) is moderate, reflecting the active advocacy and institutional pressure to prioritize this framing, which can sideline alternative perspectives. Theater ratio (0.20) is low, as the research and policy efforts are genuinely aimed at the stated goal, even if the problem itself is speculative. The increasing trend in extractiveness and suppression reflects the growing influence and institutionalization of this particular AI safety framing over time.",
-    "directionality_logic": "AI safety researchers focused on existential risk are primary beneficiaries (d near 0.0) as their agenda receives significant funding and influence. Humanity is a conditional beneficiary. AI development speed and near-term harms mitigation are victims (d near 1.0) as they bear the costs of slowdowns, regulatory burdens, and diverted attention. Policymakers are agenda-setters, mediating these pressures.",
-    "perspectival_gap": "From the perspective of existential risk researchers, this is a crucial, high-stakes coordination problem. From the perspective of those focused on near-term harms, it is an extractive diversion of resources from real, present suffering. The engine's classification will highlight this divergence.",
-    "kernel_context": "This constraint is the 'existential_risk_reading' of the 'ai_safety_commitment' kernel. It prioritizes preventing catastrophic future outcomes from advanced AI. Sibling readings include 'near_term_harms_reading' (focus on present-day harms) and 'dual_priority_reading' (addressing both simultaneously)."
+    "narrative_context": "This constraint defines AI safety primarily as the prevention of extinction-level outcomes from misaligned superintelligent systems. It prioritizes long-term, speculative risks over immediate, documented harms. This reading shapes research agendas, funding allocations, and policy discussions, often at the expense of addressing present-day issues like bias or labor displacement. It is one reading of the broader 'AI safety commitment' kernel.",
+    "logic_rationale": "The extractiveness is high (0.85) because resources, attention, and policy focus are significantly diverted from present-day concerns to speculative future risks, imposing costs on those dealing with current AI impacts. Suppression (0.7) is also high, as alternative framings of AI safety (e.g., focusing on near-term harms) are often marginalized or dismissed as less urgent. The theater ratio (0.4) reflects that while genuine research is conducted, some efforts might be performative, maintaining the salience of the long-term risk to secure funding and influence. The claimed type is 'tangled_rope' because it genuinely coordinates efforts towards a perceived collective good (preventing extinction) but does so with significant asymmetric extraction from those focused on near-term issues.",
+    "directionality_logic": "Humanity (conditional on alignment) is the ultimate beneficiary, but this is a future, non-agentic entity. Existential risk researchers and policymakers act as agenda-setters and beneficiaries of the focus and resources. Present-day AI developers and near-term AI safety advocates are the primary payers, bearing the costs of diverted resources and delayed action on their concerns. Future generations are excluded, their interests interpreted by current actors.",
+    "perspectival_gap": "Existential risk researchers perceive this as a crucial 'rope' for humanity's survival, coordinating essential efforts. However, near-term AI safety advocates and present-day developers experience it as a 'snare' or 'tangled_rope' that extracts resources and attention from pressing, tangible problems, driven by a speculative future. The engine's computation of per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'existential_risk_reading' of the 'ai_safety_commitment' kernel. It prioritizes preventing catastrophic future outcomes from advanced AI. Sibling readings include 'near_term_harms_reading' (focus on present-day harms) and 'dual_priority_reading' (addressing both long-term and near-term issues concurrently)."
   },
   "omegas": [
     {
-      "id": "speculative_vs_empirical_risk",
-      "question": "Is the existential risk from misaligned superintelligence an empirically grounded threat or a speculative philosophical concern?",
-      "resolution_mechanism": "Development of robust, falsifiable predictive models for AI capabilities and alignment failure modes, or the emergence of empirical evidence for pre-catastrophic misalignment indicators.",
-      "impact": "If empirically grounded, the high extractiveness and suppression are more justifiable as necessary costs for survival. If purely speculative, the constraint's extractive nature becomes harder to defend, potentially reclassifying it closer to a Snare.",
+      "id": "probability_of_existential_risk",
+      "question": "What is the actual probability of extinction-level outcomes from misaligned superintelligent AI, and how does it compare to other global catastrophic risks?",
+      "resolution_mechanism": "Development of robust, empirically grounded methodologies for forecasting and quantifying AI-related existential risks, and comparative risk assessments against other global threats.",
+      "impact": "If the probability is significantly lower than currently asserted, the justification for high extractiveness and suppression would weaken, potentially reclassifying the constraint towards a 'snare' or 'piton'. If higher, it would strengthen the 'tangled_rope' or even 'rope' classification.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "The empirical status of existential AI risk."
+      "description": "Uncertainty regarding the empirical likelihood of AI-induced existential risk."
     },
     {
       "id": "resource_allocation_efficiency",
-      "question": "Are resources allocated to existential risk mitigation more effective than those allocated to near-term harms mitigation for overall human well-being?",
-      "resolution_mechanism": "Comparative impact assessments of interventions across different AI safety framings, considering both direct and indirect effects on human welfare.",
-      "impact": "If near-term interventions prove more effective per unit of resource, the current allocation driven by the existential risk reading would be seen as inefficient and potentially more extractive. If existential risk interventions are demonstrably more impactful, the current resource transfer is justified.",
+      "question": "Is the current allocation of resources (funding, talent, policy attention) to existential AI risk prevention optimal for overall human well-being and safety, considering both long-term and near-term risks?",
+      "resolution_mechanism": "Comprehensive, independent cost-benefit analyses comparing the societal impact of investments in existential risk prevention versus near-term AI safety and other pressing global challenges.",
+      "impact": "If resource allocation is found to be inefficient or disproportionate, it would highlight the extractive nature of the constraint, potentially shifting its classification towards a 'snare' by revealing a misallocation of collective effort.",
       "confidence": "medium",
       "type_class": "preference",
-      "description": "Efficiency of resource allocation between different AI safety priorities."
+      "description": "Whether the prioritization of existential risk over near-term harms reflects an optimal societal preference."
     },
     {
-      "id": "framing_under_determination",
-      "question": "Is the 'existential_risk_reading' the most appropriate framing for AI safety, or does it obscure other critical issues?",
-      "resolution_mechanism": "A shift in the dominant discourse within the AI ethics and policy community towards a more integrated or near-term focused approach, or a formal re-evaluation of AI safety priorities by major institutional bodies.",
-      "impact": "If an alternative framing (e.g., 'near_term_harms_reading') gains dominance, the current constraint would be seen as a misdirection, potentially leading to a reclassification towards a Snare due to its extractive nature and the suppression of alternative concerns. If this framing remains dominant, its current classification holds.",
+      "id": "separability_of_harms",
+      "question": "Are long-term existential risks and near-term AI harms truly separable, or do efforts to mitigate one inherently influence the other?",
+      "resolution_mechanism": "Empirical studies and theoretical frameworks demonstrating causal links or trade-offs between different types of AI safety interventions. For example, does slowing down AI development for alignment also reduce near-term harms, or does it create new risks?",
+      "impact": "If the harms are found to be highly interdependent, the 'existential_risk_reading' might be seen as less complete or even counterproductive without considering near-term impacts, potentially pushing it towards a 'tangled_rope' or 'snare' if the interdependence reveals hidden costs.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The conceptual appropriateness of the existential risk framing for AI safety."
+      "description": "Ambiguity regarding the independence of long-term and near-term AI safety concerns."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_commitment__near_term_harms_reading",
+      "ai_safety_commitment__dual_priority_reading",
+      "ai_governance_regulatory_frameworks"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'AI safety commitment' kernel, focusing on existential risk. It influences and coexists with other readings that prioritize near-term harms or a dual approach."
+  },
   "cs_structure": {
     "kernel_codification": "distributed",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_safety_commitment__near_term_harms_reading",
-        "relation": "coexists_with"
+        "sibling_id": "near_term_harms_reading",
+        "relation": "influences"
       },
       {
-        "sibling_id": "ai_safety_commitment__dual_priority_reading",
-        "relation": "influences"
+        "sibling_id": "dual_priority_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "existential_risk_is_paramount",
+        "atom": "superintelligence_is_imminent_and_dangerous",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "existential_risk_is_the_pivotal_challenge",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
-      },
-      {
-        "atom": "superintelligence_is_imminent",
-        "role": "secondary",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "long_term_catastrophic_risk_prevention",
+    "reference_frame": "pre_agi_existential_threat_awareness",
     "drift_state": {
-      "moment": "contemporary",
-      "direction": "stable",
-      "magnitude": "minor",
-      "acknowledged": true
+      "moment": "contemporary_ai_acceleration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

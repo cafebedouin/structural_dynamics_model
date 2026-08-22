@@ -4,35 +4,101 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "62e61379-9f04-42e2-94de-c94813d182e0"
+    "story_uid": "dcf500fe-9391-4f49-b240-2fcacbf22608"
   },
   "base_properties": {
     "extractiveness": 0.4,
     "suppression": 0.3,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.4,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.5,
     "claimed_type": "rope",
-    "human_readable": "Nuclear Risk Acceptability: Comparative Risk Dominant Reading",
+    "human_readable": "Comparative Risk Dominant Nuclear Acceptability",
     "topic_domain": "risk_assessment/energy_policy/public_safety_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "nuclear_energy_proponents",
-      "climate_vulnerable_populations"
+      "climate_action_advocates"
     ],
     "victims": [
-      "local_communities_near_nuclear_sites",
+      "climate_vulnerable_populations",
       "future_generations"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "nuclear_energy_proponents",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocates for nuclear power as a necessary tool for decarbonization, framing its risks as acceptable when compared to the catastrophic impacts of climate change and fossil fuels. They actively shape policy and public discourse."
+    },
+    {
+      "name": "climate_action_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from the comparative risk framing as it supports rapid decarbonization efforts, even if it means accepting certain nuclear risks. Their primary goal is climate mitigation, and nuclear power is seen as a viable, if imperfect, solution."
+    },
+    {
+      "name": "climate_vulnerable_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the immediate and long-term consequences of climate change, making the comparative risk argument compelling for them. However, they also bear the residual risks of nuclear energy (e.g., waste, accidents) without direct agency in the decision-making process."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Will inherit both the consequences of climate change and the long-lived radioactive waste from nuclear power. Their interests are represented by proxy, and the comparative risk framework prioritizes present-day climate action over absolute minimization of future nuclear risks."
+    },
+    {
+      "name": "fossil_fuel_industry",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Would argue against the premise that their risks are inherently worse than nuclear, or that nuclear is a necessary alternative. Their business model is directly challenged by this comparative risk framework, which elevates nuclear as a 'lesser evil'."
+    },
+    {
+      "name": "nuclear_safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Are tasked with ensuring the safety of nuclear operations. While they operate within the comparative risk framework, their mandate is to minimize nuclear risks within that context, not to question the framework itself. They enforce safety standards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates energy policy decisions by providing a framework to evaluate nuclear power's risks and benefits against those of other energy sources, particularly fossil fuels, to achieve climate goals.",
+    "transfer_function": "Transfers the burden of certain long-term, low-probability nuclear risks to future generations and climate-vulnerable populations, in exchange for immediate climate benefits and energy security for current populations.",
+    "absent_voices": "Future generations and populations most directly impacted by nuclear waste or accidents (who may not be climate-vulnerable) are absent from the direct decision-making. They would likely advocate for a more absolute risk threshold for nuclear power, independent of other energy sources.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this comparative risk framework vanished, the justification for expanding or maintaining nuclear power would collapse, leading to a re-evaluation of energy portfolios. Climate action would face a significant hurdle without nuclear as a 'lesser evil' option, and the energy transition would slow or shift dramatically.",
+    "founding_problem": "The dual challenge of energy demand and climate change, coupled with the perceived high absolute risk of nuclear power, created a need for a framework to justify nuclear's role in a decarbonized future.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International energy agencies, climate scientists, and many national governments corroborate that the dual problem of energy security and climate change is live. Independent risk analysts also attest to the need for comparative risk assessment in complex systems, though they may dispute the specific weighting."
+  },
   "interval": {
-    "start": 1980,
+    "start": 1970,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
+      "time_point": 1970,
       "value": 0.3
     },
     {
@@ -42,17 +108,7 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.38
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2020,
       "value": 0.4
     },
     {
@@ -62,27 +118,17 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.25
+      "time_point": 1970,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1990,
-      "value": 0.28
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.3
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2020,
       "value": 0.3
     },
     {
@@ -92,7 +138,7 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
+      "time_point": 1970,
       "value": 0.05
     },
     {
@@ -102,17 +148,7 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2020,
       "value": 0.1
     },
     {
@@ -122,39 +158,30 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'comparative risk dominant' reading of acceptable risk for energy, where nuclear power's risks are deemed acceptable primarily in comparison to the risks posed by fossil fuels and climate change. It does not posit an absolute threshold for nuclear safety but rather a relative one. The victim set includes climate-vulnerable populations (who benefit from nuclear's climate impact reduction) and future generations (who bear the waste burden), reflecting the complex trade-offs inherent in this framework. Temporal urgency regarding climate change often overrides intergenerational waste concerns.",
-    "logic_rationale": "The extractiveness (0.4) is moderate, reflecting the transfer of long-term waste burdens and localized risks. Suppression (0.3) is low, as the framework is largely accepted by policymakers and many environmental groups, though it faces resistance from anti-nuclear activists. Theater ratio (0.1) is low, as the comparative risk assessment is a genuine, if contested, analytical approach. The claimed type is 'rope' because it genuinely coordinates a complex policy problem, even with some inherent extraction.",
-    "perspectival_gap": "Nuclear energy proponents and climate-vulnerable populations perceive this as a necessary and beneficial coordination mechanism, enabling climate action. Local communities near nuclear sites and future generations (represented by proxy) experience it as an extractive mechanism that externalizes risks. This divergence is central to the constraint's operation.",
-    "directionality_logic": "Nuclear energy proponents and climate-vulnerable populations are beneficiaries, as the framework supports their goals. Local communities and future generations are victims, bearing the costs. Fossil fuel industries are excluded, as their risks are the 'comparison' point. Regulators are observers, applying the framework.",
-    "mandatrophy_analysis": "The constraint's mandate (addressing climate change through comparative risk assessment) is still live. The classification as 'rope' prevents mislabeling it as pure extraction, acknowledging its genuine coordination function in a complex policy space, while still identifying its extractive elements."
+    "narrative_context": "This constraint describes the framework where the acceptability of nuclear energy's risks is judged not by an absolute safety threshold, but by its comparison to the risks posed by other energy sources, particularly fossil fuels and their contribution to climate change. This reading prioritizes the urgency of climate action, accepting certain nuclear risks as a 'lesser evil' to avoid greater environmental catastrophe. The victim set explicitly includes climate-vulnerable populations and future generations, who bear both climate and nuclear risks.",
+    "logic_rationale": "The extractiveness (0.4) reflects the burden of long-term nuclear waste and accident potential, which is accepted as a cost within this framework. Suppression (0.3) is moderate, as there is active debate, but the comparative risk framing itself suppresses arguments for absolute nuclear safety. Theater ratio is low (0.1) as the risk assessment is largely functional, though it may downplay certain tail risks. The claimed type is 'rope' because it genuinely coordinates a complex policy problem, but the metrics indicate a degree of extraction from those who bear the residual risks.",
+    "directionality_logic": "Nuclear energy proponents and climate action advocates are beneficiaries, as this framework justifies their policy goals. Climate-vulnerable populations and future generations are payers, as they bear the costs of both climate change and the accepted nuclear risks. Nuclear safety regulators act as agenda-setters, enforcing safety within this comparative framework.",
+    "perspectival_gap": "From the perspective of nuclear energy proponents, this is a necessary and rational coordination mechanism for climate action. From the perspective of future generations or those advocating for absolute nuclear safety, it may appear as a 'tangled rope' or 'snare' that externalizes significant risks for present-day benefits.",
+    "kernel_context": "This constraint is the 'comparative_risk_dominant' reading of the 'acceptable_risk_for_energy' kernel. It contrasts with the 'catastrophic_tail_dominant' reading, which would prioritize low-probability, high-consequence events, and the 'expected_value_dominant' reading, which would focus on annual expected costs and benefits."
   },
   "omegas": [
     {
-      "id": "comparative_vs_absolute_risk",
-      "question": "Is nuclear risk truly acceptable only in a comparative sense, or should there be an absolute threshold for safety and waste management, regardless of alternatives?",
-      "resolution_mechanism": "A global consensus on absolute safety standards for nuclear power, or a shift in public and political discourse that prioritizes absolute safety over comparative climate benefits.",
-      "impact": "If an absolute threshold becomes dominant, the constraint would reclassify, likely increasing extractiveness and suppression as nuclear projects would face higher hurdles or be deemed unacceptable, shifting towards a 'snare' for proponents or a 'mountain' for safety advocates.",
+      "id": "absolute_vs_comparative_risk",
+      "question": "Is nuclear risk fundamentally an absolute concern (requiring an independent safety threshold) or a comparative one (acceptable relative to other energy risks)?",
+      "resolution_mechanism": "A societal consensus shift on the ethical weighting of different types of risk, or a scientific breakthrough that fundamentally alters the nature of nuclear waste or accident probability.",
+      "impact": "If an absolute threshold becomes dominant, the justification for current nuclear expansion would collapse, reclassifying this constraint as a 'snare' for those bearing the risks. If comparative risk is universally accepted, it would solidify as a 'mountain' of policy.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Ambiguity between relative and absolute risk acceptability for nuclear energy."
+      "description": "The fundamental framing of nuclear risk assessment."
     },
     {
       "id": "intergenerational_equity_weighting",
-      "question": "How should the risks to future generations from nuclear waste be weighted against the immediate and near-term benefits of climate change mitigation?",
-      "resolution_mechanism": "Development of robust, intergenerationally equitable discount rates or ethical frameworks that explicitly value future generations' well-being in risk assessments.",
-      "impact": "A higher weighting for future generations' risks would increase the perceived extractiveness of this constraint, potentially shifting it towards a 'tangled_rope' or 'snare' for current beneficiaries, as the costs borne by future generations would be more explicitly accounted for.",
+      "question": "How should the risks borne by future generations (e.g., nuclear waste, long-term climate impacts) be weighted against immediate climate benefits for current generations?",
+      "resolution_mechanism": "Development of robust intergenerational equity frameworks in policy and ethics, with mechanisms for future generations to have agency in current decisions.",
+      "impact": "A higher weighting for future generations' risks would increase the perceived extractiveness of this constraint, potentially shifting it towards a 'tangled_rope' or 'snare' if the current balance is deemed unjust.",
       "confidence": "medium",
       "type_class": "preference",
       "description": "Ethical weighting of intergenerational risks and benefits."
-    },
-    {
-      "id": "kernel_reading_comparative_risk_dominant",
-      "question": "Is this constraint a genuine 'comparative risk dominant' reading of acceptable energy risk, or is it a 'catastrophic tail dominant' reading in disguise, with the tail risks of climate change being the dominant factor?",
-      "resolution_mechanism": "Analysis of policy decisions: if decisions consistently prioritize avoiding climate catastrophe even at the expense of increasing other, smaller risks, it leans towards catastrophic tail dominance. If decisions are more balanced across a range of risks, it supports comparative risk dominance.",
-      "impact": "If reclassified as 'catastrophic tail dominant', the constraint's extractiveness might be higher for those bearing the tail risks, and its justification would shift from broad comparison to specific catastrophic avoidance.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'acceptable_risk_for_energy' kernel, specifically the 'comparative_risk_dominant' reading. Sibling readings include 'catastrophic_tail_dominant' and 'expected_value_dominant'. This reading emphasizes the contingency of nuclear acceptability on fossil fuel alternatives, includes climate-vulnerable populations in the victim set, and prioritizes temporal urgency over intergenerational waste concerns."
     }
   ],
   "boltzmann": {
@@ -162,8 +189,6 @@
   },
   "network": {
     "affects_constraints": [
-      "acceptable_risk_for_energy__catastrophic_tail_dominant",
-      "acceptable_risk_for_energy__expected_value_dominant",
       "climate_change_mitigation_targets",
       "fossil_fuel_subsidies"
     ]
@@ -174,29 +199,29 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+        "sibling_id": "catastrophic_tail_dominant",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "acceptable_risk_for_energy__expected_value_dominant",
+        "sibling_id": "expected_value_dominant",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "risk_is_relative_to_alternatives",
+        "atom": "climate_catastrophe_is_dominant_risk",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "temporal_urgency_of_climate_mitigation_dominates",
+        "atom": "no_absolute_nuclear_risk_threshold",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "rational_comparative_risk_assessment",
+    "reference_frame": "climate_urgency_comparative_advantage",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -205,14 +230,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,172 +4,233 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7f5857c8-91e1-48fb-8165-ed8e89dbd900"
+    "story_uid": "29f18fc1-964b-4ec1-a57d-f478d25d98ae"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.4,
-    "theater_ratio": 0.25,
-    "accessibility_collapse": 0.3,
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
     "resistance": 0.5,
-    "claimed_type": "tangled_rope",
+    "claimed_type": "rope",
     "human_readable": "AI Safety: Dual Priority Approach (Existential Risk & Near-Term Harms)",
-    "topic_domain": "ai_safety/technology_governance/risk_assessment",
-    "requires_active_enforcement": true,
+    "topic_domain": "ai_safety/technology_governance",
+    "requires_active_enforcement": false,
     "beneficiaries": [
       "ai_safety_researchers",
       "policy_makers",
-      "public_trust_advocates"
+      "general_public"
     ],
     "victims": [
-      "resource_constrained_researchers",
-      "implementation_teams",
-      "affected_populations"
+      "resource_allocators",
+      "specialized_researchers"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "resource_allocation_coherence",
-      "question": "Can resources truly be allocated to both existential risk and near-term harms without one implicitly competing with or de-prioritizing the other, especially under scarcity?",
-      "resolution_mechanism": "Empirical observation of funding flows, research agendas, and policy implementation over time; analysis of trade-offs made in practice.",
-      "impact": "If resources consistently favor one priority, the 'dual priority' claim becomes performative, and the constraint shifts towards a Snare for the neglected priority's stakeholders. If balanced allocation is achieved, it reinforces the Rope aspect.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Assesses the practical feasibility of non-competing dual priorities in AI safety."
+      "name": "ai_safety_researchers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocates for a comprehensive approach to AI safety, seeking to balance resources and attention between long-term existential risks and immediate societal harms. They aim to build a coherent framework but face internal and external pressure regarding resource allocation."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "This constraint is the 'dual_priority_reading' of the 'ai_safety_commitment' kernel. What would change if an alternative reading (e.g., 'existential_risk_reading' or 'near_term_harms_reading') were adopted?",
-      "resolution_mechanism": "Analysis of policy shifts, funding reallocations, and changes in research focus if a different reading gains dominance.",
-      "impact": "Adopting the 'existential_risk_reading' would narrow the victim set to 'humanity' and focus resources on long-term, speculative risks, potentially making the constraint a Snare for those facing immediate harms. Adopting the 'near_term_harms_reading' would broaden the victim set to 'affected_populations' and focus on present-day issues, potentially making the constraint a Snare for those concerned with future catastrophic risks. This 'dual_priority_reading' attempts to balance, but faces internal coherence challenges.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Documents the specific reading of the AI safety commitment kernel and its implications."
+      "name": "policy_makers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from a framework that attempts to address all facets of AI risk, providing a more politically palatable and comprehensive narrative for regulation. They are responsible for allocating public funds and legislative attention based on these priorities."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Potentially benefits from a holistic approach that seeks to protect against both catastrophic future scenarios and present-day injustices. Their interests are represented by advocates and policymakers, but they have little direct agency."
+    },
+    {
+      "name": "resource_allocators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of attempting to fund and manage research and interventions across two distinct problem spaces (existential risk and near-term harms) with often competing methodologies and timelines. They face the challenge of justifying resource distribution under scarcity."
+    },
+    {
+      "name": "specialized_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers focused exclusively on either existential risk or near-term harms may find their specialized work deprioritized or diluted by the dual-priority framework, leading to funding challenges or pressure to broaden their focus. They bear the cost of a less focused agenda."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the diverse AI safety community by proposing a unified framework that acknowledges and integrates both long-term existential risks and immediate societal harms, aiming to prevent fragmentation and ensure comprehensive risk mitigation.",
+    "transfer_function": "Transfers attention, funding, and legitimacy to a broader set of AI safety concerns, from those exclusively focused on existential risk or near-term harms, towards a more integrated approach. This can lead to a redistribution of resources.",
+    "absent_voices": "Critics who argue that the two problem spaces are fundamentally incommensurable or that one should take absolute priority over the other are often marginalized in discussions promoting a 'dual priority' approach. They would argue for a clearer, more focused agenda.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dual-priority commitment vanished, the AI safety discourse would likely revert to a more fragmented state, with distinct communities focusing solely on either existential risk or near-term harms, potentially leading to less coordinated and less comprehensive risk mitigation efforts.",
+    "founding_problem": "The AI safety field was becoming polarized between those focused on long-term, speculative risks and those focused on immediate, demonstrable harms, leading to a lack of unified strategy and inefficient resource allocation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Leading AI ethics organizations and intergovernmental bodies attest to the ongoing challenge of balancing these priorities, citing continued debates within the research community and difficulties in policy implementation. Independent academic analyses also highlight the persistent tension."
+  },
+  "interval": {
+    "start": 2020,
+    "end": 2030
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 2020,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.55
+      "time_point": 2023,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.6
+      "time_point": 2026,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.48
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 2020,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.4
+      "time_point": 2030,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 2020,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 2030,
       "value": 0.22
-    },
-    {
-      "time_point": 10,
-      "value": 0.25,
-      "metric": "theater_ratio"
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 10
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'dual priority' reading of the AI safety commitment, asserting that both existential risks (x-risk) and near-term harms (NTH) must be addressed as non-competing priorities. It aims to coordinate a broad range of stakeholders by acknowledging both concerns. However, in practice, resource allocation and strategic focus often create implicit competition, leading to a Tangled Rope dynamic where some stakeholders (e.g., those focused on NTH) may feel their priorities are extracted from or suppressed by the broader x-risk narrative, even as the overall framework provides coordination.",
-    "key_agents": [
-      "ai_safety_researchers: Agenda setter/Beneficiary (institutional/arbitrage) — shapes the discourse, benefits from broad funding.",
-      "policy_makers: Agenda setter/Beneficiary (institutional/constrained) — implements regulations, gains legitimacy from addressing both concerns.",
-      "resource_constrained_researchers: Payer (moderate/constrained) — faces pressure to align with dual priorities, potentially diluting focus.",
-      "implementation_teams: Payer (organized/constrained) — bears the cost of integrating diverse safety requirements, often under conflicting directives.",
-      "affected_populations: Victim (powerless/trapped) — directly impacted by near-term harms, but their concerns may be diluted by x-risk focus.",
-      "public_trust_advocates: Beneficiary (organized/mobile) — benefits from a comprehensive safety narrative, but may find practical implementation challenging.",
-      "x_risk_maximalists: Excluded (powerful/constrained) — would argue for singular focus on existential risk, but are rhetorically sidelined by the dual-priority framing.",
-      "near_term_harms_activists: Excluded (organized/constrained) — would argue for singular focus on present-day harms, also sidelined by the dual-priority framing."
-    ],
-    "logic_rationale": "The constraint is a Tangled Rope because it genuinely attempts to coordinate diverse concerns within the AI safety community (beneficiaries: AI safety researchers, policy makers, public trust advocates) but simultaneously creates asymmetric extraction. Resource-constrained researchers and implementation teams bear the cost of balancing potentially conflicting demands, and affected populations may find their immediate needs diluted by the long-term, speculative nature of x-risk. Active enforcement is required to maintain the 'non-competing' narrative and ensure resources are nominally distributed across both areas, preventing a full collapse into either a pure x-risk or pure NTH focus. The extractiveness (0.6) reflects the implicit trade-offs and dilution of focus, while suppression (0.4) indicates the pressure to conform to the dual-priority framing, even if it doesn't fully align with individual research or advocacy goals. Theater ratio (0.25) suggests some performative balancing acts, but a core coordination function remains.",
-    "perspectival_gap": "From the perspective of AI safety researchers and policy makers, this is a necessary and beneficial coordination mechanism, allowing for a holistic approach to AI safety. From the perspective of resource-constrained researchers, implementation teams, and especially affected populations, the 'dual priority' can feel like a dilution of focus, where immediate, tangible harms receive less attention or resources than existential, speculative risks, leading to a sense of extraction or suppression.",
-    "directionality_logic": "AI safety researchers and policy makers are beneficiaries (d=0.0-0.2) as they gain legitimacy and broader funding by encompassing both concerns. Resource-constrained researchers and implementation teams are payers (d=0.6-0.8) as they must navigate the complexities and potential conflicts of balancing these priorities. Affected populations are victims (d=0.9-1.0) as their immediate needs may be deprioritized or diluted. Public trust advocates are beneficiaries (d=0.1-0.3) as the dual-priority narrative fosters broader public acceptance. X-risk maximalists and near-term harms activists are excluded (d=0.9-1.0) as their singular focus is suppressed by the dual-priority framing.",
-    "mandatrophy_analysis": "The 'dual priority' framing is intended to prevent the AI safety mandate from atrophying into either a purely speculative or purely reactive endeavor. By explicitly linking both, it attempts to maintain a broad and relevant mandate. However, if the practical implementation consistently fails to balance resources, the 'non-competing' aspect could become a mandatrophy, where the stated goal (dual priority) is no longer met by the actual operation (implicit competition), leading to a performative constraint that extracts from the neglected priority's stakeholders."
+    "narrative_context": "This constraint represents the 'dual priority' reading of AI safety, which asserts that both existential risks (x-risk) and near-term harms (NTH) must be addressed as non-competing priorities. This reading attempts to unify the AI safety discourse but faces practical challenges in resource allocation and theoretical coherence. The constraint is claimed as a Rope, reflecting its genuine coordination function in attempting to bridge disparate communities, but its metrics show moderate extractiveness and suppression due to the inherent difficulties and trade-offs in implementing such a broad agenda.",
+    "logic_rationale": "The extractiveness (0.45) arises from the dilution of focus and resources for specialized researchers, who might achieve greater impact by concentrating on one area. Suppression (0.30) is present as the dual-priority narrative can marginalize voices advocating for exclusive focus on one type of risk. Theater ratio (0.20) is moderate, as some efforts to 'balance' priorities may be performative rather than genuinely integrated. Accessibility collapse is moderate (0.40) because while the dual-priority framework offers a broad tent, it can make it harder for highly specialized approaches to gain traction. Resistance (0.50) is present from those who believe the two problem spaces are incommensurable or that one should take absolute priority.",
+    "directionality_logic": "AI safety researchers and policymakers are beneficiaries as this framework provides a more comprehensive and politically viable approach. The general public is a diffuse beneficiary. Resource allocators and specialized researchers are payers, as they bear the costs of managing and adapting to a broader, less focused agenda. The directionality for specialized researchers is higher (more target-like) due to the potential for diluted funding and pressure to conform to a broader research agenda.",
+    "perspectival_gap": "From the perspective of the 'dual priority' advocates, this is a necessary coordination mechanism (Rope) to prevent fragmentation. However, from the perspective of specialized researchers, it can feel like a Tangled Rope or even a Snare, as it extracts resources and attention from their focused work without necessarily providing commensurate benefits to their specific goals.",
+    "kernel_context": "This constraint is the 'dual_priority_reading' of the 'ai_safety_commitment' kernel. Sibling readings include 'existential_risk_reading' (focus on x-risk) and 'near_term_harms_reading' (focus on NTH). This reading attempts to synthesize the concerns of both, but faces challenges in practical implementation and theoretical coherence."
   },
+  "omegas": [
+    {
+      "id": "resource_allocation_coherence",
+      "question": "Can resources be effectively and coherently allocated across both existential risk and near-term harms without diluting impact or creating internal competition?",
+      "resolution_mechanism": "Empirical studies of funding distribution and research outcomes in organizations adopting a dual-priority approach, comparing them to specialized organizations.",
+      "impact": "If incoherent, the constraint's extractiveness and theater_ratio would be higher, potentially reclassifying it as a Tangled Rope or Snare due to inefficient resource capture. If coherent, it strengthens the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the dual-priority approach is practically implementable without significant efficiency losses."
+    },
+    {
+      "id": "incommensurability_of_risks",
+      "question": "Are existential risks and near-term harms fundamentally incommensurable, making a 'dual priority' framework conceptually unstable?",
+      "resolution_mechanism": "Philosophical and ethical analysis of risk types, and the development of a robust, widely accepted theoretical framework for comparing and integrating them.",
+      "impact": "If incommensurable, the constraint's suppression and resistance would be higher, as the framework would struggle to gain full buy-in, potentially leading to a reclassification towards Snare due to the forced integration of disparate concerns.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the two types of risks can be meaningfully integrated into a single framework."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "ai_safety_commitment__existential_risk_reading",
       "ai_safety_commitment__near_term_harms_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'AI safety commitment' kernel, which also includes 'existential_risk_reading' and 'near_term_harms_reading'. This reading attempts to integrate both, facing challenges in resource allocation and practical coherence."
+    "dual_formulation_note": "This constraint is one reading of the 'AI Safety Commitment' kernel, aiming to integrate both existential risk and near-term harms. It influences and coexists with more specialized readings."
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
-    "authority_grounding": "expertise",
-    "interpretation_layer_present": true,
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
     "reading_relations": [
       {
-        "sibling_id": "ai_safety_commitment__existential_risk_reading",
+        "sibling_id": "existential_risk_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "ai_safety_commitment__near_term_harms_reading",
+        "sibling_id": "near_term_harms_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "holistic_risk_management_is_optimal",
+        "atom": "comprehensive_risk_mitigation_is_optimal",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "resource_allocation_can_be_non_competing",
-        "role": "secondary",
+        "atom": "xrisk_and_nth_are_interconnected",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "integrated_risk_governance",
+    "reference_frame": "unified_ai_safety_paradigm",
     "drift_state": {
-      "moment": "contemporary",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
+      "moment": "contemporary_ai_development_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

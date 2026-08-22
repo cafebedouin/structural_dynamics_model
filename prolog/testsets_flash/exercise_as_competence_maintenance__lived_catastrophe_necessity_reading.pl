@@ -39,9 +39,9 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,22 +72,23 @@
  *   domain: safety_engineering/organizational_learning/crisis_preparedness
  *
  * SUMMARY:
- *   This constraint embodies the belief that true operational competence,
- *   especially in high-stakes environments, can only be forged and maintained
- *   through actual, lived catastrophe. Simulation is seen as a necessary but
- *   ultimately insufficient rehearsal, not the 'thing itself.' Without
- *   real-stakes activation, competence is assumed to atrophy covertly,
- *   leading to a victim set that includes all those exposed to operators
- *   whose skills have not been tested under genuine catastrophic conditions.
- *   This reading often leads to a reluctance to invest in high-fidelity
- *   simulation or to acknowledge its efficacy, as it is deemed 'not real.'
+ *   This constraint represents the 'lived catastrophe necessity' reading of
+ *   competence maintenance, asserting that only actual, high-stakes events
+ *   truly exercise and maintain critical operational competence. Simulation
+ *   is viewed as mere rehearsal, insufficient to prevent covert competence
+ *   decay. This perspective often leads to underinvestment in high-fidelity
+ *   simulation and a fatalistic acceptance of 'learning from failure,'
+ *   placing frontline operators and the public at risk. The victim set
+ *   includes all those exposed to operators whose competence has not been
+ *   tested under real stakes, as the constraint implies a necessary,
+ *   unmitigated risk.
  *
  * KEY AGENTS:
- *   - operators_claiming_competence: Primary beneficiary (institutional/constrained) — benefits from lower training costs and the 'untestable' nature of their competence.
- *   - institutions_avoiding_simulation_costs: Primary beneficiary (institutional/arbitrage) — benefits from reduced investment in expensive, high-fidelity simulation infrastructure.
- *   - public_exposed_to_untested_competence: Primary victim (powerless/trapped) — bears the risk of operators whose competence has not been fully 'exercised' by real events.
- *   - safety_regulators: Agenda setter/Observer (institutional/analytical) — tasked with ensuring safety but constrained by the difficulty of proving 'unexercised' competence decay.
- *   - simulation_engineers: Excluded (organized/constrained) — their proposed solutions are deemed insufficient by this reading.
+ *   - proponents_of_lived_catastrophe_necessity: Primary beneficiary (institutional/arbitrage) — benefits from reduced investment in simulation and the validation of their worldview.
+ *   - frontline_operators: Primary target (powerless/trapped) — bears the risk of untested competence and the consequences of real-stakes failure.
+ *   - exposed_public: Primary target (powerless/trapped) — bears the ultimate cost of system failures due to unexercised competence.
+ *   - organizations_avoiding_costly_simulations: Secondary beneficiary (institutional/mobile) — benefits from lower training costs and reduced perceived need for extensive simulation.
+ *   - safety_regulators: Analytical observer (institutional/analytical) — investigates and attempts to mitigate the risks inherent in this approach.
  */
 
 /* ==========================================================================
@@ -94,18 +96,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0.6).
+domain_priors:base_extractiveness(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0.85).
 domain_priors:suppression_score(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0.7).
-domain_priors:theater_ratio(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0.4).
+domain_priors:theater_ratio(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0.6).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, extractiveness, 0.6).
+narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, extractiveness, 0.85).
 narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 0.6).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, resistance, 0.3).
+narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, accessibility_collapse, 0.8).
+narrative_ontology:constraint_metric(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, resistance, 0.2).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, snare).
@@ -115,28 +117,28 @@ narrative_ontology:topic_domain(exercise_as_competence_maintenance__lived_catast
 domain_priors:requires_active_enforcement(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, '0f101643-9608-4b77-8589-30e4b14bf080').
-narrative_ontology:cs_kernel_codification('0f101643-9608-4b77-8589-30e4b14bf080', implicit).
-narrative_ontology:cs_authority_grounding('0f101643-9608-4b77-8589-30e4b14bf080', practice).
-narrative_ontology:cs_interpretation_layer_present('0f101643-9608-4b77-8589-30e4b14bf080').
-narrative_ontology:cs_reading_relation('0f101643-9608-4b77-8589-30e4b14bf080', exercise_as_competence_maintenance__simulation_sufficiency_reading, forecloses).
-narrative_ontology:cs_reading_relation('0f101643-9608-4b77-8589-30e4b14bf080', exercise_as_competence_maintenance__hybrid_decay_reading, coexists_with).
-narrative_ontology:cs_axiom('0f101643-9608-4b77-8589-30e4b14bf080', foundational, real_stakes_are_irreducible).
-narrative_ontology:cs_axiom_status(real_stakes_are_irreducible, holdable).
-narrative_ontology:cs_axiom_grounding('0f101643-9608-4b77-8589-30e4b14bf080', real_stakes_are_irreducible, deontological).
-narrative_ontology:cs_axiom('0f101643-9608-4b77-8589-30e4b14bf080', foundational, competence_decays_covertly_without_activation).
-narrative_ontology:cs_axiom_status(competence_decays_covertly_without_activation, holdable).
-narrative_ontology:cs_axiom_grounding('0f101643-9608-4b77-8589-30e4b14bf080', competence_decays_covertly_without_activation, empirically_contingent).
-narrative_ontology:cs_reference_frame('0f101643-9608-4b77-8589-30e4b14bf080', catastrophe_as_ultimate_test).
-narrative_ontology:cs_drift_state('0f101643-9608-4b77-8589-30e4b14bf080', contemporary_safety_science_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('0f101643-9608-4b77-8589-30e4b14bf080', '').
+narrative_ontology:cs_story_uid(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, '85e82c21-cb2f-4f47-9287-957ab33ef34b').
+narrative_ontology:cs_kernel_codification('85e82c21-cb2f-4f47-9287-957ab33ef34b', implicit).
+narrative_ontology:cs_authority_grounding('85e82c21-cb2f-4f47-9287-957ab33ef34b', practice).
+narrative_ontology:cs_interpretation_layer_present('85e82c21-cb2f-4f47-9287-957ab33ef34b').
+narrative_ontology:cs_reading_relation('85e82c21-cb2f-4f47-9287-957ab33ef34b', exercise_as_competence_maintenance__simulation_sufficiency_reading, forecloses).
+narrative_ontology:cs_reading_relation('85e82c21-cb2f-4f47-9287-957ab33ef34b', exercise_as_competence_maintenance__hybrid_decay_reading, forecloses).
+narrative_ontology:cs_axiom('85e82c21-cb2f-4f47-9287-957ab33ef34b', foundational, real_stakes_are_irreplaceable).
+narrative_ontology:cs_axiom_status(real_stakes_are_irreplaceable, holdable).
+narrative_ontology:cs_axiom_grounding('85e82c21-cb2f-4f47-9287-957ab33ef34b', real_stakes_are_irreplaceable, deontological).
+narrative_ontology:cs_axiom('85e82c21-cb2f-4f47-9287-957ab33ef34b', foundational, covert_decay_is_inevitable).
+narrative_ontology:cs_axiom_status(covert_decay_is_inevitable, holdable).
+narrative_ontology:cs_axiom_grounding('85e82c21-cb2f-4f47-9287-957ab33ef34b', covert_decay_is_inevitable, empirically_contingent).
+narrative_ontology:cs_reference_frame('85e82c21-cb2f-4f47-9287-957ab33ef34b', catastrophe_as_ultimate_teacher).
+narrative_ontology:cs_drift_state('85e82c21-cb2f-4f47-9287-957ab33ef34b', contemporary_simulation_advances, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('85e82c21-cb2f-4f47-9287-957ab33ef34b', '').
 narrative_ontology:cs_kernel_id(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, exercise_as_competence_maintenance).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, operators_claiming_competence).
-narrative_ontology:constraint_beneficiary(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, institutions_avoiding_simulation_costs).
-narrative_ontology:constraint_victim(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, public_exposed_to_untested_competence).
-narrative_ontology:constraint_victim(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, junior_operators_lacking_real_stakes_experience).
+narrative_ontology:constraint_beneficiary(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, proponents_of_lived_catastrophe_necessity).
+narrative_ontology:constraint_beneficiary(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, organizations_avoiding_costly_simulations).
+narrative_ontology:constraint_victim(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, frontline_operators).
+narrative_ontology:constraint_victim(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, exposed_public).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -145,15 +147,35 @@ narrative_ontology:constraint_victim(exercise_as_competence_maintenance__lived_c
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Academics, theorists, and some organizational leaders who believe that true competence in high-stakes environments can only be forged and maintained through actual, lived catastrophic experience. They benefit from the validation of their worldview and the reduced pressure to invest in costly, high-fidelity simulations.
+narrative_ontology:constraint_stakeholder(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, proponents_of_lived_catastrophe_necessity, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Individuals directly responsible for operating complex systems (e.g., pilots, nuclear plant operators, emergency responders). They are exposed to the direct consequences of competence atrophy and real-stakes failures, often without adequate preparation if simulation is deemed insufficient. Their careers and lives are on the line.
+narrative_ontology:constraint_stakeholder(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, frontline_operators, payer,
+    powerless, biographical, trapped, local).
+
+% The general population affected by the failure of complex systems (e.g., airline passengers, residents near industrial facilities). They bear the ultimate, diffuse costs of catastrophic events that occur due to unexercised competence, having no direct control or exit options.
+narrative_ontology:constraint_stakeholder(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, exposed_public, payer,
+    powerless, generational, trapped, regional).
+
+% Companies or agencies that adopt this reading to justify lower investment in expensive, high-fidelity simulation programs. They benefit from reduced operational costs and a philosophical justification for 'learning from failure' rather than preventing it through extensive, simulated practice.
+narrative_ontology:constraint_stakeholder(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, organizations_avoiding_costly_simulations, beneficiary,
+    institutional, biographical, mobile, national).
+
+% Government bodies tasked with ensuring public safety in high-risk industries. They observe the outcomes of this approach, collect data on incidents, and may attempt to mandate more robust training or simulation, but often face resistance from organizations adhering to the 'necessity' reading.
+narrative_ontology:constraint_stakeholder(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, safety_regulators, observer,
+    institutional, generational, analytical, national).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Aims to coordinate the understanding of how operational competence is truly maintained in high-stakes environments, ensuring that operators are genuinely prepared for rare, critical events.
-% TRANSFER_FUNCTION: Transfers the burden of 'proving' competence from proactive investment in high-fidelity simulation and training to the reactive experience of actual catastrophe. It transfers risk from institutions to the public.
-% ABSENT_VOICES: Simulation engineers and proponents of advanced training methodologies are often marginalized, as their solutions are deemed 'not real' enough. The public, who bears the ultimate risk, is also an absent voice, as they are not typically involved in defining competence standards.
-% DISAPPEARANCE_RATIONALE: If this reading vanished, the discourse around competence maintenance would shift dramatically. There would be increased pressure to invest in and validate high-fidelity simulations, and a greater focus on proactive risk mitigation rather than relying on 'baptism by fire.' Resource allocation for training and preparedness would fundamentally reorganize.
-% FOUNDING_PROBLEM: The problem of ensuring genuine operational competence for rare, high-consequence events, where traditional training methods might not fully prepare individuals for the psychological and cognitive demands of real crisis.
-% FOUNDING_PROBLEM_CORROBORATION: The founding problem is attested by historical accounts of catastrophic failures where operators were deemed 'unprepared' despite extensive training. However, the 'necessity of lived catastrophe' as the *only* solution is contested by safety science researchers and simulation experts, who provide evidence for the efficacy of advanced simulation. The corroboration for the *problem* is strong, but for *this reading's solution* is weak outside of the benefiting parties.
+% COORDINATION_FUNCTION: Coordinates the understanding of competence maintenance by asserting a 'natural' limit to simulation, thereby implicitly coordinating resource allocation away from extensive simulation and towards a reliance on real-world experience.
+% TRANSFER_FUNCTION: Transfers the cost of competence validation from proactive investment in simulation (borne by organizations) to reactive learning from failure (borne by frontline operators and the public).
+% ABSENT_VOICES: Advocates for advanced simulation technologies and proactive risk mitigation strategies are often marginalized or dismissed by proponents of this reading, as their solutions are deemed fundamentally inadequate. Victims of past catastrophes, if they could speak, would object to the reliance on 'lived experience' as a learning mechanism.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, organizations would be forced to re-evaluate their competence maintenance strategies, likely leading to increased investment in high-fidelity simulation, more robust training programs, and a shift towards proactive risk management. The perceived inevitability of 'learning from failure' would be replaced by a drive for prevention, fundamentally altering safety cultures and resource allocation.
+% FOUNDING_PROBLEM: The problem of ensuring operational competence in complex, high-stakes environments where real-world experience is difficult to obtain safely or frequently.
+% FOUNDING_PROBLEM_CORROBORATION: Proponents of this reading attest that the problem is live, citing the inherent limitations of simulation. Critics (e.g., simulation experts, some safety engineers) contest the 'necessity' aspect, arguing that the problem can be addressed more effectively and safely through other means, but acknowledge the underlying challenge of competence maintenance.
 narrative_ontology:disappearance_verdict(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, world_rearranges).
 narrative_ontology:founding_problem_status(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, live).
 
@@ -161,11 +183,12 @@ narrative_ontology:founding_problem_status(exercise_as_competence_maintenance__l
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,16 +208,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.6) stems from the implicit cost borne by the public due to the acceptance of unexercised competence, and the foregone benefits of more effective training. Suppression (0.7) is high because this reading actively suppresses alternative views on competence maintenance (e.g., simulation sufficiency) by framing them as 'unreal' or 'insufficient.' The theater ratio (0.4) reflects that while some training occurs, a significant portion of 'competence maintenance' is performative, relying on past events or theoretical knowledge rather than active, real-stakes exercise. Accessibility collapse (0.6) is moderate, as alternatives (high-fidelity simulation) exist but are dismissed or underfunded. Resistance (0.3) is low because the 'untestable' nature of competence decay makes it hard to challenge directly until a catastrophe occurs.
+ *   The extractiveness is high (0.85) because this reading justifies a system where the costs of competence maintenance (i.e., actual failures) are externalized onto operators and the public, while beneficiaries avoid the costs of robust simulation. Suppression (0.7) is high because this worldview often suppresses alternative approaches to competence maintenance (e.g., advanced simulation, proactive risk identification) by framing them as inherently inadequate. The theater ratio (0.6) is significant as 'safety theater' (e.g., low-fidelity drills, paper exercises) is performed, but the core belief in 'real stakes' means these are not expected to fully maintain competence. Accessibility collapse is high (0.8) as the belief system itself collapses alternatives to real-stakes experience. Resistance is low (0.2) because the fatalistic nature of this reading often disempowers those who would advocate for more proactive measures.
  *
  * PERSPECTIVAL GAP:
- *   Operators and institutions adhering to this reading perceive it as a 'mountain' of human nature or an 'unavoidable truth' about crisis performance, justifying lower investment in simulation. The public, however, experiences it as a 'snare' where their safety is compromised by an untested system. Safety regulators are caught between these perspectives, struggling to enforce a standard for competence that this reading claims can only be proven by disaster.
+ *   Proponents of this reading perceive it as a realistic, even unavoidable, truth about human performance under stress, thus a 'mountain' or 'rope' that coordinates understanding of risk. Frontline operators and the public, however, experience it as a 'snare' that extracts safety and well-being by deferring competence validation to actual catastrophic events. The engine's computation of a Snare from the metrics, despite a claimed Rope, highlights this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Operators claiming competence and institutions avoiding simulation costs are beneficiaries (d near 0.0-0.2) as they benefit from lower training overhead and the deferral of accountability. The public exposed to untested competence and junior operators lacking real-stakes experience are victims (d near 0.8-1.0) as they bear the direct and indirect costs of this approach. Safety regulators are agenda-setters (d near 0.5) as they administer the system but are also constrained by its underlying assumptions. Simulation engineers are excluded (d near 1.0) as their solutions are actively suppressed.
+ *   Proponents and organizations avoiding costs are beneficiaries (low d) as they gain from reduced investment in proactive safety measures. Frontline operators and the exposed public are victims (high d) as they bear the direct and indirect costs of competence atrophy and real-stakes failures. Safety regulators are observers (d=0.5) as they analyze the system without directly benefiting or being victimized by this specific constraint, though their interventions can alter it.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint prevents mislabeling a genuine coordination problem (how to maintain competence) as pure extraction. However, by asserting the necessity of lived catastrophe, it risks becoming a snare that extracts safety from the public by rationalizing insufficient preparedness. The classification as a snare, despite the 'competence maintenance' framing, highlights the asymmetric cost-bearing and the suppression of alternatives. If the 'founding problem' of competence decay is still live, but the 'solution' (waiting for catastrophe) is demonstrably harmful, it points to a mandatrophy where the original mandate has been corrupted into an extractive mechanism.
+ *   This classification prevents mislabeling a potentially extractive system as a 'natural law' of competence. By identifying beneficiaries and victims, it highlights that the 'necessity' of lived catastrophe is not universally experienced as such, and that its persistence may serve specific interests rather than being an irreducible truth. The high theater ratio suggests that some activities are performed for appearance, while the core, risky assumption remains unaddressed.
  */
 
 /* ==========================================================================
@@ -202,56 +225,63 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine reflection of competence dynamics, or a rationalization for avoiding costly, high-fidelity simulation?',
-    'Empirical studies on operator performance in real crises vs. high-fidelity simulations, controlling for training hours and scenario complexity.',
-    'If a rationalization, the constraint is more extractive (snare) than its current classification suggests, as it actively suppresses effective training alternatives. If genuine, it''s a mountain or tangled rope reflecting an irreducible aspect of human performance.',
+    simulation_efficacy_ambiguity,
+    'Is high-fidelity simulation truly insufficient to maintain competence, or does this reading underestimate its potential?',
+    'Empirical studies comparing competence decay rates in organizations relying solely on simulation versus those with real-stakes experience, controlling for other variables.',
+    'If simulation is found sufficient, the constraint''s extractiveness (from operators and the public) would be reclassified as lower, and its ''snare'' nature would be more evident as the justification for inaction collapses.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''lived_catastrophe_necessity_reading'' of the ''exercise_as_competence_maintenance'' kernel. It asserts that only real-stakes catastrophe exercises true competence, implying that simulation is insufficient. Sibling readings (''simulation_sufficiency_reading'', ''hybrid_decay_reading'') offer alternative views on competence maintenance.').
+narrative_ontology:omega_variable(simulation_efficacy_ambiguity, empirical, 'Uncertainty regarding the true efficacy of simulation for competence maintenance.').
 
 omega_variable(
-    covert_competence_decay_measurement,
-    'How can the covert decay of competence, posited by this reading, be empirically measured without a real catastrophe?',
-    'Development of advanced psychometric and neurocognitive assessments that can detect subtle degradation in decision-making under simulated stress, or analysis of near-miss incidents for early warning signs.',
-    'If measurable, the ''covert decay'' becomes an empirically contingent claim, potentially shifting the constraint''s grounding type. If unmeasurable, it remains a deontological or conventional axiom, making the constraint less susceptible to empirical challenge.',
+    covert_decay_measurement_challenge,
+    'How can covert competence decay be reliably measured without real-stakes activation, and what is its actual rate?',
+    'Development of new, non-invasive diagnostic tools for competence assessment that do not require real-stakes events, or longitudinal studies of performance in low-stakes but complex environments.',
+    'If decay is slower or more detectable than assumed, the urgency and justification for ''real stakes'' would diminish, potentially reclassifying the constraint as less extractive.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(covert_competence_decay_measurement, empirical, 'This reading posits competence atrophies covertly without real-stakes activation. The unobservability of this decay is a key feature, making it difficult to challenge without a catastrophe.').
+narrative_ontology:omega_variable(covert_decay_measurement_challenge, empirical, 'Challenge in measuring competence decay without actual catastrophe.').
+
+omega_variable(
+    kernel_reading_distinction,
+    'This constraint is a ''lived_catastrophe_necessity_reading'' of the ''exercise_as_competence_maintenance'' kernel. What specific structural elements would change under the ''simulation_sufficiency_reading'' or ''hybrid_decay_reading''?',
+    'Comparative analysis of policy documents, training protocols, and incident review processes under each reading.',
+    'The ''simulation_sufficiency_reading'' would reduce perceived risk and justify less investment in real-world testing, while the ''hybrid_decay_reading'' would differentiate training requirements, potentially reducing the ''snare'' aspect for some competence components.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_distinction, conceptual, 'Clarifying the structural implications of alternative readings of the competence kernel.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0, 20).
+narrative_ontology:interval(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, 0, 15).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(exer_tr_t0, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(exer_tr_t5, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 5, 0.25).
-narrative_ontology:measurement(exer_tr_t10, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 10, 0.3).
-narrative_ontology:measurement(exer_tr_t15, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 15, 0.35).
-narrative_ontology:measurement(exer_tr_t20, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 20, 0.4).
+narrative_ontology:measurement(exer_tr_t0, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 0, 0.4).
+narrative_ontology:measurement(exer_tr_t5, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(exer_tr_t10, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 10, 0.55).
+narrative_ontology:measurement(exer_tr_t15, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, theater_ratio, 15, 0.6).
 
 % Extraction over time
-narrative_ontology:measurement(exer_be_t0, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(exer_be_t5, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(exer_be_t10, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 10, 0.5).
-narrative_ontology:measurement(exer_be_t15, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 15, 0.55).
-narrative_ontology:measurement(exer_be_t20, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 20, 0.6).
+narrative_ontology:measurement(exer_be_t0, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 0, 0.7).
+narrative_ontology:measurement(exer_be_t5, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 5, 0.75).
+narrative_ontology:measurement(exer_be_t10, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 10, 0.8).
+narrative_ontology:measurement(exer_be_t15, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, base_extractiveness, 15, 0.85).
 
 % Suppression requirement over time
 narrative_ontology:measurement(exer_su_t0, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 0, 0.5).
-narrative_ontology:measurement(exer_su_t5, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 5, 0.55).
-narrative_ontology:measurement(exer_su_t10, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 10, 0.6).
-narrative_ontology:measurement(exer_su_t15, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 15, 0.65).
-narrative_ontology:measurement(exer_su_t20, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement(exer_su_t5, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 5, 0.58).
+narrative_ontology:measurement(exer_su_t10, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 10, 0.65).
+narrative_ontology:measurement(exer_su_t15, exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, suppression_requirement, 15, 0.7).
 
 
 /* ==========================================================================
@@ -259,11 +289,9 @@ narrative_ontology:measurement(exer_su_t20, exercise_as_competence_maintenance__
    ========================================================================== */
 
 narrative_ontology:coordination_type(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, identity_coordination).
-narrative_ontology:affects_constraint(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, exercise_as_competence_maintenance__simulation_sufficiency_reading).
-narrative_ontology:affects_constraint(exercise_as_competence_maintenance__lived_catastrophe_necessity_reading, exercise_as_competence_maintenance__hybrid_decay_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'exercise_as_competence_maintenance' kernel. It asserts that only actual catastrophe exercises the competence kernel, and simulation is insufficient. Sibling readings ('simulation_sufficiency_reading', 'hybrid_decay_reading') offer alternative views on how competence is maintained.
+% This constraint is one reading of the 'exercise_as_competence_maintenance' kernel. It asserts that only real catastrophe maintains competence, influencing how resources are allocated to training and risk mitigation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

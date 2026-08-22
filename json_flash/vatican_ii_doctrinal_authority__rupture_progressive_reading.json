@@ -4,12 +4,12 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "161a9953-3aca-44b2-9a47-ea7a1a8cf35c"
+    "story_uid": "a91d0b70-7b4e-4e16-ae69-17608c1238aa"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.45,
-    "theater_ratio": 0.2,
+    "extractiveness": 0.7,
+    "suppression": 0.6,
+    "theater_ratio": 0.4,
     "accessibility_collapse": 0.4,
     "resistance": 0.7,
     "claimed_type": "tangled_rope",
@@ -19,7 +19,7 @@
     "beneficiaries": [
       "progressive_theologians",
       "reform_minded_clergy",
-      "laity_seeking_greater_autonomy"
+      "laity_seeking_modernization"
     ],
     "victims": [
       "traditionalist_clergy",
@@ -27,171 +27,258 @@
       "pre_conciliar_institutions"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint an accurate representation of the 'rupture-progressive' reading of Vatican II, or does it conflate with other interpretations?",
-      "resolution_mechanism": "Comparative analysis with primary texts from proponents of this reading (e.g., writings of progressive theologians, official statements from reform-oriented episcopal conferences) to ensure fidelity to their stated positions.",
-      "impact": "If conflated, the classification may misrepresent the true structural dynamics of this specific reading, potentially overstating or understating its extractiveness or coordination function. A more precise definition would refine the classification.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ensures the constraint accurately reflects the rupture-progressive reading of Vatican II."
+      "name": "progressive_theologians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from the 'spirit of the Council' interpretation, which provides theological justification for ongoing reforms and allows for development beyond strict textual limits. Their careers and influence are often tied to this progressive hermeneutic."
     },
     {
-      "id": "spirit_of_council_ambiguity",
-      "question": "To what extent does the 'spirit of the Council' genuinely authorize ongoing reform beyond textual limits, versus serving as a rhetorical cover for desired changes?",
-      "resolution_mechanism": "Historical analysis of post-conciliar reforms: track which reforms explicitly cite textual ambiguities versus those that invoke the 'spirit' to justify novel interpretations. Examine resistance to such reforms and the arguments used by both sides.",
-      "impact": "If primarily rhetorical, the constraint's extractiveness from traditional structures is higher and its coordination function (as a legitimate basis for reform) is lower, pushing it closer to a Snare. If genuinely authorizing, it functions more as a Scaffold for ongoing development.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Assesses the legitimacy and function of the 'spirit of the Council' as a basis for reform."
+      "name": "reform_minded_clergy",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Utilize the progressive reading to implement changes in liturgy, pastoral practice, and ecumenical relations. They find their authority and mandate strengthened by this interpretation, often facing resistance from traditionalist elements."
     },
     {
-      "id": "doctrinal_change_naturalness",
-      "question": "Is the shift in doctrinal understanding (e.g., religious freedom) a natural evolution of Catholic teaching, or a fundamental reversal of prior, irreformable doctrine?",
-      "resolution_mechanism": "Theological and historical scholarship examining the continuity of doctrine, specifically focusing on the arguments for and against the possibility of reversal on previously defined teachings. This is a long-standing internal debate within Catholic theology.",
-      "impact": "If a natural evolution, the constraint's 'rupture' aspect is diminished, reducing its perceived extractiveness from traditionalists. If a fundamental reversal, the extractiveness is higher, and the constraint operates more as a Snare for those committed to pre-conciliar teaching.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Examines the theological nature of doctrinal changes introduced by Vatican II."
+      "name": "laity_seeking_modernization",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Experience the Church as more open, inclusive, and relevant to modern life under this interpretation. They are often the recipients of pastoral innovations and find their concerns addressed, but their influence is often mediated through clergy."
+    },
+    {
+      "name": "traditionalist_clergy",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of perceived doctrinal and liturgical changes, feeling that their understanding of tradition is undermined. They are often marginalized or disciplined for resisting reforms, with their identity deeply tied to pre-conciliar forms."
+    },
+    {
+      "name": "conservative_laity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Experience alienation and confusion due to changes they perceive as ruptures with established faith. They often seek out traditionalist communities or leave the Church, feeling that their spiritual needs are not met by the progressive interpretation."
+    },
+    {
+      "name": "pre_conciliar_institutions",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Institutions (e.g., religious orders, seminaries) founded on pre-conciliar norms and practices face pressure to adapt or risk suppression. Their very existence is challenged by the progressive reading's emphasis on rupture and ongoing reform."
+    },
+    {
+      "name": "roman_curia",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The central administrative body of the Catholic Church, which often navigates between different hermeneutics. While officially promoting 'continuity in reform,' elements within it actively enforce or permit the progressive reading's implementation, shaping policy and appointments."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for the Catholic Church to engage with modernity, fostering ecumenical dialogue, religious freedom, and liturgical adaptation, thereby coordinating the Church's mission in a changing world.",
+    "transfer_function": "Transfers interpretive authority from strict adherence to pre-conciliar texts and practices towards a dynamic, evolving understanding of tradition, empowering those who advocate for ongoing reform and modernization.",
+    "absent_voices": "Those who believe the Council itself was illegitimate or invalid are entirely excluded from the interpretive debate, their positions deemed outside the bounds of Catholic discourse. They would argue for a return to pre-conciliar doctrine and practice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the progressive reading of Vatican II vanished, the Church would face an immediate crisis of identity and mission. Many reforms would be called into question, leading to widespread dissent among clergy and laity who have embraced modernization, and a significant reorganization of theological and pastoral priorities.",
+    "founding_problem": "The Catholic Church faced increasing irrelevance and alienation from modern society, with rigid structures and doctrines perceived as out of touch with contemporary intellectual, social, and political developments.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Progressive theologians and many bishops attest that the problem of engaging modernity remains live, requiring ongoing adaptation. Traditionalist critics, however, argue that the Council exacerbated the problem by introducing confusion and weakening doctrinal clarity; independent sociological studies of religious adherence offer mixed corroboration, showing both increased engagement in some areas and decline in others."
+  },
+  "interval": {
+    "start": 1965,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1965,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1975,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1985,
       "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.62
+      "time_point": 1995,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.58
+      "time_point": 2005,
+      "value": 0.69
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.65
+      "time_point": 2015,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1965,
       "value": 0.4
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.45
+      "time_point": 1975,
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.42
+      "time_point": 1985,
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
+      "time_point": 1995,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
       "value": 0.38
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.45
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 2015,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.2
+      "time_point": 2024,
+      "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 50
-  },
   "commentary": {
-    "narrative_context": "This constraint models the 'rupture-progressive' reading of Vatican II, which asserts the Council initiated a necessary break from pre-conciliar rigidity and that the 'spirit of the Council' authorizes ongoing reform beyond the strict textual limits of its documents. This reading emphasizes doctrinal development, particularly on issues like religious freedom (seen as a reversal of earlier condemnations), and views post-conciliar implementation as the authentic realization of conciliar intent. It is a contested interpretation within the Catholic Church, leading to significant internal conflict.",
+    "narrative_context": "This constraint represents the 'rupture-progressive' reading of Vatican II, which views the Council as a necessary break with pre-conciliar rigidity and interprets the 'spirit of the Council' as authorizing ongoing reform beyond the strict textual limits of the documents. This reading emphasizes the Council's innovations (e.g., religious freedom, ecumenism) as reversals of prior teaching, and treats post-conciliar implementation as the authentic realization of conciliar intent. It is one reading of the broader 'vatican_ii_doctrinal_authority' kernel, alongside 'continuity_reading' and 'rupture_traditionalist_reading'.",
     "key_agents": [
-      "progressive_theologians: Primary beneficiary (institutional/arbitrage) — gain authority for reform agendas.",
-      "reform_minded_clergy: Primary beneficiary (organized/mobile) — implement changes and gain legitimacy.",
-      "laity_seeking_greater_autonomy: Secondary beneficiary (moderate/constrained) — experience greater participation and agency.",
-      "traditionalist_clergy: Primary victim (organized/identity_locked) — see their understanding of tradition undermined.",
-      "conservative_laity: Primary victim (moderate/identity_locked) — feel alienated by changes and loss of familiar practices.",
-      "pre_conciliar_institutions: Victim (institutional/trapped) — their structures and doctrines are challenged or dismantled.",
-      "magisterium: Agenda setter (institutional/constrained) — officially interprets and enforces the Council, but is itself divided by these readings."
+      "progressive_theologians: Primary beneficiary (organized/mobile) — provides theological justification for ongoing reforms.",
+      "reform_minded_clergy: Primary beneficiary (powerful/constrained) — implements changes in practice and liturgy.",
+      "traditionalist_clergy: Primary payer (organized/identity_locked) — marginalized for resisting reforms.",
+      "roman_curia: Agenda setter (institutional/constrained) — navigates and enforces interpretations, shaping policy."
     ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates a vision for ongoing reform and adaptation within the Church (beneficiaries), but this coordination comes with significant extraction from those committed to pre-conciliar rigidity (victims). The 'spirit of the Council' provides a coordination function by offering a framework for development, but its ambiguity also enables extraction by allowing interpretations that marginalize traditionalist views. Active enforcement is required to implement reforms and suppress traditionalist dissent. Extractiveness is high (0.65) due to the perceived reversal of doctrine and the marginalization of traditional practices. Suppression (0.45) is moderate, as traditionalist resistance is significant but often met with institutional pressure. Theater ratio (0.20) is low, as the reforms are genuinely implemented, not merely performative.",
-    "perspectival_gap": "Progressive theologians and reform-minded clergy experience this reading as a liberating Rope, enabling necessary adaptation and growth. Traditionalist clergy and conservative laity experience it as a Snare, undermining their faith and practices. The Magisterium, as the agenda-setter, attempts to navigate these tensions, often appearing as a Tangled Rope from its own seat, trying to coordinate while managing internal dissent.",
-    "directionality_logic": "Progressive theologians and reform-minded clergy are beneficiaries (d near 0.0) as this reading legitimizes their theological and pastoral agendas. Traditionalist clergy and conservative laity are victims (d near 1.0) as their positions are actively challenged and marginalized. The Magisterium, while the ultimate authority, is internally divided and must actively enforce this reading against significant internal resistance, making its directionality more symmetric (d near 0.5) as it bears the costs of internal conflict while also benefiting from a perceived renewal.",
-    "mandatrophy_analysis": "This reading prevents mislabeling by acknowledging both the coordination function (providing a framework for adaptation) and the asymmetric extraction (from traditionalists). If it were purely a Rope, it would ignore the victims; if purely a Snare, it would ignore the genuine desire for reform and adaptation. The 'spirit of the Council' is a key mechanism for this dual function, allowing for flexibility but also for interpretations that marginalize dissenting views. The ongoing contestation over its meaning prevents it from becoming a Piton, as its function is still very much live and actively debated/enforced."
+    "logic_rationale": "The extractiveness (0.7) is high because this reading imposes significant costs on those who adhere to pre-conciliar forms, demanding adaptation or marginalization. Suppression (0.6) is present through institutional pressure and disciplinary actions against traditionalist dissent. Theater ratio (0.4) reflects that while genuine reform efforts exist, a portion of the 'spirit of the Council' rhetoric serves to legitimize ongoing power shifts rather than purely functional development. Accessibility collapse (0.4) is moderate, as alternatives (e.g., traditionalist groups) exist but are constrained. Resistance (0.7) is high, indicating active opposition from those who feel extracted from.",
+    "perspectival_gap": "From the perspective of progressive theologians and reform-minded clergy, this reading is a necessary Rope or Scaffold, enabling the Church to fulfill its mission in the modern world. For traditionalist clergy and conservative laity, it operates as a Snare or Tangled Rope, extracting their adherence to tradition and imposing unwanted changes. The Roman Curia, as agenda-setter, often attempts to frame it as a Rope (continuity in reform) while selectively enforcing the progressive elements.",
+    "directionality_logic": "Progressive theologians and reform-minded clergy are beneficiaries, as this reading empowers their agenda and provides a framework for their work. Traditionalist clergy and conservative laity are payers, bearing the costs of doctrinal and liturgical shifts. The Roman Curia, while officially promoting a nuanced view, often acts as an agenda-setter that facilitates the progressive interpretation, thus benefiting from the resulting institutional dynamism.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the 'spirit of the Council' as pure coordination. While it genuinely coordinates a response to modernity, the high extractiveness and suppression indicate that it also functions to reallocate power and legitimate specific theological agendas, making it a Tangled Rope rather than a pure Rope. The ongoing contestation over its meaning prevents it from becoming a Piton, as its function is still actively debated and enforced."
   },
-  "boltzmann": {
-    "coordination_type": "identity_coordination"
+  "omegas": [
+    {
+      "id": "spirit_vs_letter_ambiguity",
+      "question": "To what extent does the 'spirit of the Council' genuinely reflect the Council Fathers' intent, versus being a post-conciliar construct used to justify further reforms?",
+      "resolution_mechanism": "Historical-theological analysis of conciliar debates, periti (expert) writings, and early post-conciliar interpretations, seeking convergence or divergence from later progressive readings.",
+      "impact": "If largely a post-conciliar construct, the extractiveness of this reading increases, as its claims to authority are weakened. If it genuinely reflects intent, the coordination function is strengthened.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between the explicit text of Vatican II and its 'spirit'."
+    },
+    {
+      "id": "doctrinal_reversal_or_development",
+      "question": "Are specific conciliar teachings (e.g., religious freedom) genuine doctrinal reversals of prior magisterial teaching, or can they be reconciled as organic developments?",
+      "resolution_mechanism": "Systematic theological comparison of conciliar documents with pre-conciliar magisterial texts (e.g., Syllabus of Errors), seeking logical contradiction or hermeneutical continuity.",
+      "impact": "If genuine reversals, this reading's claim of 'rupture' is strengthened, justifying its high extractiveness from traditionalists. If organic developments, the 'continuity_reading' gains ground, reducing the perceived extractiveness of this reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether conciliar teachings represent rupture or development."
+    },
+    {
+      "id": "institutional_enforcement_legitimacy",
+      "question": "Is the Roman Curia's enforcement of the progressive reading perceived as legitimate by all parties, or is it seen as an exercise of raw power?",
+      "resolution_mechanism": "Sociological studies of clerical and lay attitudes towards curial authority, analysis of disciplinary actions, and patterns of episcopal appointments.",
+      "impact": "If widely seen as illegitimate power, the suppression metric for this reading increases, and its classification shifts closer to a Snare. If legitimate, its coordination function is more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimacy of institutional enforcement of the progressive reading."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
-  "network": {
-    "affects_constraints": [
-      "vatican_ii_doctrinal_authority__continuity_reading",
-      "vatican_ii_doctrinal_authority__rupture_traditionalist_reading",
-      "vatican_ii_doctrinal_authority__composite_overdetermination_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of four distinct readings of the 'Vatican II Doctrinal Authority' kernel. Each reading represents a different structural constraint with its own epsilon, beneficiaries, and victims, reflecting the internal hermeneutical conflict within the Catholic Church. This 'rupture-progressive' reading directly influences and is influenced by the 'continuity' and 'rupture-traditionalist' readings, as they are in active theological and institutional contestation."
-  },
-  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "vatican_ii_doctrinal_authority__continuity_reading",
+        "sibling_id": "continuity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "vatican_ii_doctrinal_authority__rupture_traditionalist_reading",
-        "relation": "coexists_with"
+        "sibling_id": "rupture_traditionalist_reading",
+        "relation": "forecloses"
       },
       {
         "sibling_id": "vatican_ii_doctrinal_authority__composite_overdetermination_reading",
@@ -200,35 +287,24 @@
     ],
     "axioms": [
       {
-        "atom": "doctrinal_development_is_dynamic",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
-      },
-      {
-        "atom": "spirit_of_council_guides_interpretation",
+        "atom": "spirit_of_council_authorizes_development",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
+      },
+      {
+        "atom": "doctrinal_rupture_with_pre_conciliar_rigidity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "post_conciliar_renewal",
+    "reference_frame": "post_conciliar_aggiornamento",
     "drift_state": {
-      "moment": "contemporary_hermeneutical_debate",
-      "direction": "revival_pressure",
-      "magnitude": "substantial",
+      "moment": "contemporary_pontificate",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

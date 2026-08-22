@@ -4,81 +4,119 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "8475c1a5-bea0-46c2-a183-ac41d6345180"
+    "story_uid": "19c94c3f-db91-4d46-96e6-58b03cf5c4e9"
   },
   "base_properties": {
-    "extractiveness": 0.1,
-    "suppression": 0.05,
+    "extractiveness": 0.05,
+    "suppression": 0.02,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.9,
-    "resistance": 0.02,
+    "resistance": 0.01,
     "claimed_type": "mountain",
     "human_readable": "Sacrifice Obligation: Messianic Suspension Reading",
-    "topic_domain": "religious_law/halakhic_authority/commitment_system_dynamics",
+    "topic_domain": "religious_law/halakhic_authority",
     "emerges_naturally": true,
     "beneficiaries": [
       "future_generations_of_israel",
-      "halakhic_scholars"
+      "kohanim_priestly_lineage"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "future_generations_of_israel",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Benefits from the preservation of operational knowledge for the eventual restoration of the Temple service, ensuring continuity of religious practice. Their identity is deeply tied to this continuity."
+    },
+    {
+      "name": "kohanim_priestly_lineage",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintains their unique role and readiness for the Temple service through the study of sacrifice laws, even in its suspended state. Their identity and communal standing are defined by this inherited obligation."
+    },
+    {
+      "name": "contemporary_jewish_community",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bears the diffuse cost of maintaining the intellectual and spiritual infrastructure for study, without direct performance of sacrifices. The 'cost' is primarily intellectual effort and communal resource allocation for learning."
+    },
+    {
+      "name": "halakhic_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Interpret and transmit the divine command regarding the suspension and future restoration of sacrifices. They set the agenda for study and maintain the legal framework for this understanding. Their authority is grounded in lineage and textual interpretation."
+    },
+    {
+      "name": "divine_command",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The ultimate source of the constraint, posited as a fixed and unchangeable decree that dictates the suspension and future restoration of the sacrifice obligation. It is the referent for the 'natural' emergence of the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the collective understanding and practice of the Jewish people regarding the Temple service during its absence, ensuring continuity and readiness for its eventual restoration.",
+    "transfer_function": "Transfers the obligation from immediate physical performance to intellectual engagement and readiness, preserving the spiritual and legal framework across generations.",
+    "absent_voices": "Those who might argue for immediate, symbolic, or substitutive performance of sacrifices are implicitly excluded by the divine decree of suspension. Their voices are present in historical debates but not currently operative within this halakhic framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this understanding of suspended obligation vanished, it would fundamentally alter Jewish religious practice, identity, and the role of study. The entire halakhic system for the Temple service would need reinterpretation, leading to profound communal and theological reorganization.",
+    "founding_problem": "The destruction of the Second Temple rendered physical performance of sacrifices impossible, creating a crisis of religious obligation and continuity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is universally acknowledged as live within the Jewish tradition, attested by centuries of rabbinic literature, communal prayer, and historical memory. This corroboration comes from the entire tradition, not just benefiting parties."
+  },
   "interval": {
-    "start": 0,
-    "end": 2000
+    "start": 70,
+    "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 70,
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
       "time_point": 500,
-      "value": 0.1
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1000,
-      "value": 0.1
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1500,
-      "value": 0.1
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.1
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
       "value": 0.05
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 500,
-      "value": 0.05
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1000,
-      "value": 0.05
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1500,
-      "value": 0.05
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 70,
       "value": 0.1
     },
     {
@@ -100,33 +138,68 @@
       "metric": "theater_ratio",
       "time_point": 2000,
       "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.02
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents a specific reading within Jewish Halakhic (religious law) discourse concerning the obligation of Temple sacrifices after the destruction of the Second Temple. This 'messianic suspension' reading posits that the divine obligation for sacrifices is not abrogated or transformed into other practices (like prayer or study as a substitute), but rather divinely suspended until the messianic era and the rebuilding of the Temple. The current obligation is to maintain the knowledge and operational readiness for that future time through study, rather than to perform the sacrifices themselves. This reading is a Mountain because it asserts a divine decree as an unchangeable fact, with minimal extraction as the obligation is in abeyance, not violated.",
-    "logic_rationale": "Extractiveness is low (0.1) because the obligation is suspended, not actively extracting from non-performance; the 'cost' is the maintenance of study, which is framed as a positive act of readiness. Suppression is low (0.05) as there's no active coercion against performing sacrifices (it's impossible) or against studying them. Theater ratio is low (0.1) because the study is genuinely aimed at maintaining operational readiness, not merely symbolic performance. Accessibility collapse is high (0.9) because the physical performance of sacrifices is genuinely impossible without the Temple. Resistance is low (0.02) as this reading is widely accepted within Orthodox Judaism.",
-    "directionality_logic": "Halakhic scholars are the agenda-setters, interpreting and transmitting the divine law. Future generations of Israel are the beneficiaries, inheriting the preserved knowledge and the expectation of restoration without current burden. The contemporary Jewish community bears the diffuse cost of supporting this scholarly tradition. The divine command is an analytical observer, the ultimate source of the constraint.",
-    "perspectival_gap": "From the perspective of this reading, the constraint is a divine truth, a Mountain. From other readings (e.g., 'study as exercise' or 'performance only'), the nature of the obligation and its current fulfillment would be experienced differently, leading to different classifications. This story focuses solely on the 'messianic suspension' perspective.",
-    "kernel_context": "This constraint is the 'messianic_suspension_reading' of the 'sacrifice_obligation_kernel'. This reading asserts that the obligation for Temple sacrifices is divinely suspended until the messianic era, with study serving to maintain operational readiness. Sibling readings include 'study_as_exercise_reading' (study fulfills the mitzvah), 'performance_only_reading' (only physical performance counts), and 'symbolic_archive_reading' (sacrifice law is purely historical/cultural)."
+    "narrative_context": "This constraint represents the 'messianic suspension' reading of the sacrifice obligation kernel within Jewish religious law. Following the destruction of the Temple, the obligation to offer sacrifices is understood as divinely suspended, not abrogated or transformed into a different mitzvah. The study of sacrifice laws (Kodashim) is seen as maintaining operational readiness for the messianic era, when the Temple will be rebuilt and sacrifices restored. This reading emphasizes the temporary abeyance of the physical act while preserving the knowledge and intent. It is claimed as a Mountain due to its grounding in divine decree and its persistence across millennia, with minimal extraction as the obligation is not actively enforced in its suspended state.",
+    "logic_rationale": "Extractiveness is very low (0.05) because the obligation is suspended, not actively extracting from practitioners. The 'cost' is primarily the intellectual effort of study, which is seen as a spiritual benefit rather than a burden. Suppression is minimal (0.02) as adherence is voluntary and driven by religious commitment, not coercion. Theater ratio is low (0.1) because the study is genuinely aimed at preserving knowledge for future performance, not merely a performative substitute. Accessibility collapse is high (0.9) because, within this framework, there are no legitimate alternatives to the divinely ordained suspension and future restoration. Resistance is negligible (0.01) as this reading is widely accepted within Orthodox Judaism.",
+    "directionality_logic": "Future generations and the Kohanim priestly lineage are beneficiaries, as the constraint ensures the continuity of their religious heritage and future roles. The contemporary Jewish community is a diffuse payer, bearing the 'cost' of study and communal maintenance. Halakhic authorities are agenda-setters, interpreting and transmitting the divine command. The divine command itself is an analytical observer, the ultimate source of the constraint's naturalness.",
+    "perspectival_gap": "From the perspective of the contemporary Jewish community, the constraint is a foundational aspect of their religious life, ensuring continuity. From an external, secular perspective, it might appear as an elaborate system for maintaining an 'obsolete' practice, but within the internal logic, it is a divinely mandated suspension. The engine's classification as a Mountain from all seats reflects this internal coherence and low extraction.",
+    "kernel_context": "This constraint is the 'messianic suspension' reading of the 'sacrifice_obligation_kernel'. It posits that the divine command has suspended the physical obligation until messianic restoration, with study serving to maintain operational readiness. Sibling readings include 'study_as_exercise_reading' (study fulfills the mitzvah), 'performance_only_reading' (only physical performance counts), and 'symbolic_archive_reading' (sacrifice law is a historical archive)."
   },
   "omegas": [
     {
-      "id": "divine_suspension_vs_human_interpretation",
-      "question": "Is the suspension of sacrifice obligation a direct divine decree, or an interpretive construct by human scholars to navigate an impossible situation?",
-      "resolution_mechanism": "Theological consensus across diverse halakhic traditions, or a future messianic event that explicitly clarifies the divine will.",
-      "impact": "If purely a human construct, the 'emerges_naturally' claim would be weakened, potentially reclassifying it from Mountain to a more constructed type (e.g., Rope or Tangled Rope, depending on beneficiary structure).",
-      "confidence": "high",
+      "id": "divine_suspension_naturalness",
+      "question": "Is the 'divine suspension' a genuine natural law (Mountain) or a halakhic interpretation (constructed constraint) that benefits identifiable agents (False Summit)?",
+      "resolution_mechanism": "Theological consensus shifts, or a new authoritative interpretation emerges that redefines the nature of the suspension.",
+      "impact": "If reclassified as a constructed constraint, its Mountain status would be challenged, potentially shifting to a Rope or Tangled Rope if beneficiaries are seen as actively maintaining the interpretation for their own gain.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Ambiguity between divine decree and human interpretation of the suspension."
+      "description": "Ambiguity between divine decree and interpretive construction."
     },
     {
-      "id": "study_as_readiness_vs_substitution",
-      "question": "To what extent does the 'study maintains operational readiness' function genuinely prepare for future performance, versus serving as a psychological or communal substitute for the actual mitzvah?",
-      "resolution_mechanism": "Empirical analysis of the content and methodology of study: does it focus on practical, performative details, or more abstract, theoretical aspects? Comparison with pre-Temple destruction study methods.",
-      "impact": "If study is primarily a substitution, the 'low extractiveness' claim might be challenged, as it would imply a 'cost' of not performing the actual mitzvah, potentially shifting the classification towards a more extractive type if the substitution is enforced.",
+      "id": "study_as_readiness_vs_substitute",
+      "question": "Is the study of sacrifice laws truly for 'operational readiness' or does it function as a de facto substitute for the actual mitzvah, masking a deeper transformation of the obligation?",
+      "resolution_mechanism": "Analysis of rabbinic responsa and communal practice over time: if the emphasis shifts from future performance to the intrinsic value of study, it suggests a functional substitution.",
+      "impact": "If study is a de facto substitute, the constraint's 'suspension' claim is weakened, and its extractiveness might be re-evaluated if the 'cost' of study is seen as fulfilling an obligation that could otherwise be fulfilled differently.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The true function of study: readiness or substitution."
+      "description": "Whether study maintains readiness or acts as a functional substitute."
     }
   ],
   "boltzmann": {
@@ -137,8 +210,7 @@
       "sacrifice_obligation_kernel__study_as_exercise_reading",
       "sacrifice_obligation_kernel__performance_only_reading",
       "sacrifice_obligation_kernel__symbolic_archive_reading"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'sacrifice_obligation_kernel', which is contested across several halakhic and theological interpretations. This reading emphasizes divine suspension and operational readiness through study."
+    ]
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -146,21 +218,21 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "sacrifice_obligation_kernel__study_as_exercise_reading",
+        "sibling_id": "study_as_exercise_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "sacrifice_obligation_kernel__performance_only_reading",
+        "sibling_id": "performance_only_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "sacrifice_obligation_kernel__symbolic_archive_reading",
+        "sibling_id": "symbolic_archive_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "divine_suspension_of_mitzvah",
+        "atom": "divine_suspension_of_physical_mitzvah",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
@@ -172,23 +244,24 @@
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "post_temple_destruction_halakha",
+    "reference_frame": "divinely_suspended_obligation",
     "drift_state": {
-      "moment": "contemporary_era",
+      "moment": "contemporary",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

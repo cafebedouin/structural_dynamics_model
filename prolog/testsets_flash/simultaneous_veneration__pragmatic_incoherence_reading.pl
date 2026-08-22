@@ -42,11 +42,13 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,22 +68,23 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: simultaneous_veneration__pragmatic_incoherence_reading
- *   human_readable: Pragmatic Incoherence of Simultaneous Veneration (Pre-Meiji)
+ *   human_readable: Simultaneous Veneration (Pragmatic Incoherence Reading)
  *   domain: religious_studies/japanese_history
  *
  * SUMMARY:
- *   This constraint describes the pre-Meiji state of simultaneous veneration
- *   in Japan, interpreted through the 'pragmatic incoherence' reading. It
- *   posits that the syncretic practices of Shinto and Buddhism were not
- *   underpinned by a coherent theological or ontological framework, but
- *   rather by a pragmatic tolerance of contradiction, sustained by a lack of
- *   institutional pressure to resolve these inconsistencies. The Meiji-era
- *   shinbutsu-bunri (separation of kami and buddhas) is seen not as an
- *   arbitrary rupture, but as a revelation of this latent incoherence, which
- *   then became actively suppressed. The constraint is claimed as a Snare
- *   because it extracted a cost in theological clarity and intellectual
- *   honesty from practitioners, while benefiting institutions that profited
- *   from the ambiguity.
+ *   This constraint describes the state of simultaneous veneration in
+ *   pre-Meiji Japan from the perspective that it was never a coherent system,
+ *   but rather a pragmatic incoherence sustained by a lack of enforcement
+ *   pressure. Practitioners held contradictory beliefs without resolution,
+ *   leading to a high degree of latent extraction (cognitive dissonance,
+ *   intellectual stagnation) that was only revealed when the Meiji government
+ *   imposed the Shinbutsu-bunri (separation of Kami and Buddhas) policy. This
+ *   reading views the separation not as an arbitrary rupture, but as the
+ *   surfacing of an underlying, unaddressed structural contradiction. The
+ *   constraint is claimed as a 'snare' because the coordination story (social
+ *   stability) was cover for the extraction of cognitive coherence from
+ *   practitioners and intellectual integrity from theologians, with no
+ *   genuine resolution offered.
  *
  */
 
@@ -99,47 +103,86 @@ narrative_ontology:constraint_metric(simultaneous_veneration__pragmatic_incohere
 narrative_ontology:constraint_metric(simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 0.6).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(simultaneous_veneration__pragmatic_incoherence_reading, accessibility_collapse, 0.7).
+narrative_ontology:constraint_metric(simultaneous_veneration__pragmatic_incoherence_reading, accessibility_collapse, 0.4).
 narrative_ontology:constraint_metric(simultaneous_veneration__pragmatic_incoherence_reading, resistance, 0.3).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(simultaneous_veneration__pragmatic_incoherence_reading, snare).
-narrative_ontology:human_readable(simultaneous_veneration__pragmatic_incoherence_reading, "Pragmatic Incoherence of Simultaneous Veneration (Pre-Meiji)").
+narrative_ontology:human_readable(simultaneous_veneration__pragmatic_incoherence_reading, "Simultaneous Veneration (Pragmatic Incoherence Reading)").
 narrative_ontology:topic_domain(simultaneous_veneration__pragmatic_incoherence_reading, "religious_studies/japanese_history").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(simultaneous_veneration__pragmatic_incoherence_reading, '3c8d32fa-3423-443c-97f5-f9d8ce874a91').
-narrative_ontology:cs_kernel_codification('3c8d32fa-3423-443c-97f5-f9d8ce874a91', implicit).
-narrative_ontology:cs_authority_grounding('3c8d32fa-3423-443c-97f5-f9d8ce874a91', practice).
-narrative_ontology:cs_interpretation_layer_present('3c8d32fa-3423-443c-97f5-f9d8ce874a91').
-narrative_ontology:cs_reading_relation('3c8d32fa-3423-443c-97f5-f9d8ce874a91', simultaneous_veneration__ontological_fusion_reading, coexists_with).
-narrative_ontology:cs_reading_relation('3c8d32fa-3423-443c-97f5-f9d8ce874a91', simultaneous_veneration__domain_partition_reading, coexists_with).
-narrative_ontology:cs_axiom('3c8d32fa-3423-443c-97f5-f9d8ce874a91', foundational, theological_contradiction_is_tolerated).
-narrative_ontology:cs_axiom_status(theological_contradiction_is_tolerated, holdable).
-narrative_ontology:cs_axiom_grounding('3c8d32fa-3423-443c-97f5-f9d8ce874a91', theological_contradiction_is_tolerated, conventional).
-narrative_ontology:cs_axiom('3c8d32fa-3423-443c-97f5-f9d8ce874a91', secondary, lack_of_enforcement_sustains_incoherence).
-narrative_ontology:cs_axiom_status(lack_of_enforcement_sustains_incoherence, holdable).
-narrative_ontology:cs_axiom_grounding('3c8d32fa-3423-443c-97f5-f9d8ce874a91', lack_of_enforcement_sustains_incoherence, empirically_contingent).
-narrative_ontology:cs_reference_frame('3c8d32fa-3423-443c-97f5-f9d8ce874a91', pragmatic_syncretic_tolerance).
-narrative_ontology:cs_drift_state('3c8d32fa-3423-443c-97f5-f9d8ce874a91', meiji_shinbutsu_bunri, gap(repudiation_pressure, severe, true)).
-narrative_ontology:cs_created_at('3c8d32fa-3423-443c-97f5-f9d8ce874a91', '').
+narrative_ontology:cs_story_uid(simultaneous_veneration__pragmatic_incoherence_reading, 'dcd8384b-422d-4602-8f04-2bb7e9606fd4').
+narrative_ontology:cs_kernel_codification('dcd8384b-422d-4602-8f04-2bb7e9606fd4', implicit).
+narrative_ontology:cs_authority_grounding('dcd8384b-422d-4602-8f04-2bb7e9606fd4', distributed).
+narrative_ontology:cs_reading_relation('dcd8384b-422d-4602-8f04-2bb7e9606fd4', simultaneous_veneration__ontological_fusion_reading, forecloses).
+narrative_ontology:cs_reading_relation('dcd8384b-422d-4602-8f04-2bb7e9606fd4', simultaneous_veneration__domain_partition_reading, forecloses).
+narrative_ontology:cs_axiom('dcd8384b-422d-4602-8f04-2bb7e9606fd4', foundational, doctrinal_coherence_is_necessary).
+narrative_ontology:cs_axiom_status(doctrinal_coherence_is_necessary, holdable).
+narrative_ontology:cs_axiom_grounding('dcd8384b-422d-4602-8f04-2bb7e9606fd4', doctrinal_coherence_is_necessary, deontological).
+narrative_ontology:cs_axiom('dcd8384b-422d-4602-8f04-2bb7e9606fd4', foundational, unresolved_contradiction_is_extractive).
+narrative_ontology:cs_axiom_status(unresolved_contradiction_is_extractive, holdable).
+narrative_ontology:cs_axiom_grounding('dcd8384b-422d-4602-8f04-2bb7e9606fd4', unresolved_contradiction_is_extractive, instrumental).
+narrative_ontology:cs_reference_frame('dcd8384b-422d-4602-8f04-2bb7e9606fd4', coherent_religious_system).
+narrative_ontology:cs_drift_state('dcd8384b-422d-4602-8f04-2bb7e9606fd4', pre_meiji_era, gap(codification_collapse, severe, false)).
+narrative_ontology:cs_created_at('dcd8384b-422d-4602-8f04-2bb7e9606fd4', '').
 narrative_ontology:cs_kernel_id(simultaneous_veneration__pragmatic_incoherence_reading, simultaneous_veneration).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(simultaneous_veneration__pragmatic_incoherence_reading, religious_institutions).
-narrative_ontology:constraint_beneficiary(simultaneous_veneration__pragmatic_incoherence_reading, local_elites).
-narrative_ontology:constraint_victim(simultaneous_veneration__pragmatic_incoherence_reading, practitioners).
-narrative_ontology:constraint_victim(simultaneous_veneration__pragmatic_incoherence_reading, theological_coherence).
+narrative_ontology:constraint_beneficiary(simultaneous_veneration__pragmatic_incoherence_reading, local_religious_institutions).
+narrative_ontology:constraint_beneficiary(simultaneous_veneration__pragmatic_incoherence_reading, ruling_elites).
+narrative_ontology:constraint_victim(simultaneous_veneration__pragmatic_incoherence_reading, common_practitioners).
+narrative_ontology:constraint_victim(simultaneous_veneration__pragmatic_incoherence_reading, intellectual_theologians).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefited from the lack of clear doctrinal boundaries, allowing them to serve diverse spiritual needs and collect offerings from both Shinto and Buddhist adherents without needing to resolve contradictions. Their authority was diffuse but stable.
+narrative_ontology:constraint_stakeholder(simultaneous_veneration__pragmatic_incoherence_reading, local_religious_institutions, beneficiary,
+    organized, generational, constrained, local).
+
+% Benefited from the social stability and lack of religious conflict that the ambiguous, non-enforced simultaneous veneration provided. It allowed for a flexible system of legitimation without requiring costly doctrinal enforcement or choosing sides.
+narrative_ontology:constraint_stakeholder(simultaneous_veneration__pragmatic_incoherence_reading, ruling_elites, beneficiary,
+    institutional, generational, mobile, national).
+
+% Paid the cost of cognitive dissonance, holding contradictory beliefs simultaneously without a coherent framework. Their spiritual practice was sustained by local custom and ritual, but lacked intellectual integrity or a clear path to resolution, making them vulnerable to later doctrinal impositions.
+narrative_ontology:constraint_stakeholder(simultaneous_veneration__pragmatic_incoherence_reading, common_practitioners, payer,
+    powerless, biographical, identity_locked, local).
+
+% Struggled to reconcile the inherent contradictions within simultaneous veneration, often developing complex but ultimately unstable syncretic theories. Their intellectual efforts were constrained by the prevailing pragmatic ambiguity, and their attempts at resolution were largely ignored or suppressed by the ruling elites who preferred stability over coherence.
+narrative_ontology:constraint_stakeholder(simultaneous_veneration__pragmatic_incoherence_reading, intellectual_theologians, payer,
+    moderate, biographical, constrained, national).
+
+% Later imposed the Shinbutsu-bunri (separation of Kami and Buddhas) policy, which this reading sees as revealing the latent incoherence rather than creating a new one. The Meiji state acted to rationalize religious practice for nationalistic purposes, ending the pragmatic ambiguity.
+narrative_ontology:constraint_stakeholder(simultaneous_veneration__pragmatic_incoherence_reading, meiji_state, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Allowed for a broad, inclusive religious landscape where diverse spiritual needs could be met without forcing doctrinal uniformity or conflict, facilitating social cohesion through shared ritual practice.
+% TRANSFER_FUNCTION: Transferred spiritual authority and material offerings from common practitioners to local religious institutions and ruling elites, in exchange for diffuse spiritual comfort and social stability, while obscuring underlying contradictions.
+% ABSENT_VOICES: Strict doctrinal purists from either Shinto or Buddhist traditions, who would have argued for clear distinctions and exclusive veneration, were marginalized by the prevailing pragmatic ambiguity. Their arguments were not actively suppressed but simply lacked institutional support.
+% DISAPPEARANCE_RATIONALE: If the pragmatic incoherence had vanished overnight (e.g., through a sudden, widespread demand for doctrinal clarity), the entire religious landscape of pre-Meiji Japan would have reorganized. Local institutions would have been forced to choose affiliations, ruling elites would have lost a flexible tool for legitimation, and practitioners would have faced a crisis of belief, leading to widespread religious conflict or reform.
+% FOUNDING_PROBLEM: The need to integrate indigenous Kami worship with imported Buddhism, and to maintain social and political stability without costly religious conflict or rigid doctrinal enforcement.
+% FOUNDING_PROBLEM_CORROBORATION: Historical records and scholarly analysis from outside the directly benefiting religious institutions confirm that the problem of integrating diverse religious practices was a persistent challenge. The Meiji state's later actions to separate Shinto and Buddhism further corroborate that the 'solution' of pragmatic incoherence was ultimately unsustainable and led to a latent, rather than resolved, problem.
+narrative_ontology:disappearance_verdict(simultaneous_veneration__pragmatic_incoherence_reading, world_rearranges).
+narrative_ontology:founding_problem_status(simultaneous_veneration__pragmatic_incoherence_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(simultaneous_veneration__pragmatic_incoherence_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(simultaneous_veneration__pragmatic_incoherence_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(simultaneous_veneration__pragmatic_incoherence_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(simultaneous_veneration__pragmatic_incoherence_reading, 0.7, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,13 +202,13 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.7) stems from the cognitive burden and theological confusion imposed on practitioners, who were implicitly required to hold contradictory beliefs without resolution. Suppression (0.8) was high due to the absence of any institutional mechanism or intellectual tradition that actively challenged or sought to resolve these contradictions, effectively trapping practitioners in an incoherent system. The theater ratio (0.6) reflects the performative aspect of simultaneous veneration, where rituals and practices continued without a deep, shared understanding of their underlying meaning, serving more to maintain social order and institutional power than genuine spiritual coherence. Accessibility collapse (0.7) was high because alternative coherent theological frameworks were not readily available or actively suppressed, and resistance (0.3) was low due to the diffuse nature of the incoherence and the lack of a clear 'agenda-setter' to resist.
+ *   Extractiveness is high (0.7) because the system extracted cognitive coherence and intellectual integrity from practitioners and theologians, forcing them to hold contradictory beliefs without resolution. Suppression is also high (0.8) because the lack of enforcement pressure meant there was no institutional mechanism to resolve these contradictions, effectively suppressing any attempts at doctrinal clarity. The theater ratio is moderate (0.6) as much of the 'coordination' was performative ritual that masked underlying incoherence. Accessibility collapse is moderate (0.4) as alternatives (e.g., choosing one tradition over another, developing truly syncretic philosophies) were conceptually available but practically difficult due to social inertia and institutional beneficiaries. Resistance is low (0.3) because the diffuse nature of the incoherence made organized resistance difficult until the Meiji state provided an external catalyst.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of religious institutions and local elites, the system was a functional 'rope' or 'tangled_rope' that maintained social harmony and their own authority. From the perspective of practitioners seeking theological coherence, it was a 'snare' that extracted intellectual honesty and clarity. The engine's classification will highlight this divergence.
+ *   From the perspective of the beneficiaries (local institutions, ruling elites), simultaneous veneration was a successful 'rope' that ensured social harmony and flexible spiritual practice. From the perspective of the victims (practitioners, theologians), it was a 'snare' that extracted coherence and intellectual honesty. The engine's classification will highlight this divergence based on the declared roles and metrics.
  *
  * DIRECTIONALITY LOGIC:
- *   Religious institutions and local elites were beneficiaries (d near 0.0) as the ambiguity allowed them to consolidate power and resources without needing to resolve complex theological disputes. Practitioners were victims (d near 1.0) as they bore the cognitive cost of incoherence. Theological coherence itself is a victim, as its absence was the primary extraction. The lack of active enforcement pressure meant the 'snare' was sustained by inertia and the absence of alternatives, rather than overt coercion.
+ *   Local religious institutions and ruling elites were beneficiaries, as the ambiguity allowed them to maintain power and social stability without costly doctrinal disputes. Common practitioners and intellectual theologians were victims, bearing the costs of cognitive dissonance and intellectual frustration. The Meiji state, while acting as an agenda-setter to resolve the situation, is seen in this reading as revealing the latent extraction rather than initiating it.
  *
  */
 
@@ -174,24 +217,24 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint accurately identified as the ''pragmatic_incoherence_reading'' of the ''simultaneous_veneration'' kernel?',
-    'Analysis of primary historical and theological texts, focusing on explicit statements of belief and practice by pre-Meiji practitioners and scholars.',
-    'If this reading is incorrect, the classification of the pre-Meiji religious landscape would shift significantly, potentially towards a ''rope'' or ''tangled_rope'' if coherence or functional partitioning is established.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Confirms the specific interpretation of the simultaneous veneration kernel.').
-
-omega_variable(
-    suppression_mechanism_ambiguity,
-    'To what extent was the suppression of theological contradiction structural (lack of institutional enforcement) versus internalized (cognitive patterns of holding contradictory beliefs)?',
-    'Examination of individual practitioner diaries and local religious records for evidence of internal conflict or explicit attempts to reconcile beliefs, versus external pressures or lack thereof.',
-    'If suppression was primarily internalized, the effective suppression for practitioners was higher than the structural measure suggests, as they carried the incoherence within their own belief systems. If purely structural, the incoherence was merely latent.',
+    latent_vs_active_extraction,
+    'To what extent was the extraction (cognitive dissonance, intellectual incoherence) actively imposed by the system, versus being a latent consequence of unresolved historical development?',
+    'Analysis of primary sources for evidence of active suppression of attempts at doctrinal clarity versus passive institutional inertia.',
+    'If actively imposed, the ''snare'' classification is strengthened. If primarily latent, the ''theater_ratio'' might be higher, indicating a ''piton'' where the system persisted more by inertia than active benefit.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for theological incoherence.').
+narrative_ontology:omega_variable(latent_vs_active_extraction, empirical, 'Distinguishing active imposition from passive consequence in extraction.').
+
+omega_variable(
+    meiji_rupture_or_revelation,
+    'Was the Meiji Shinbutsu-bunri an external rupture imposed on a functional system, or did it merely reveal the underlying incoherence that this reading posits?',
+    'Comparative historical analysis of similar religious separations in other contexts, and detailed examination of pre-Meiji intellectual discourse for signs of internal pressure for resolution.',
+    'If a rupture, this reading''s ''snare'' classification might be too strong, and the ''ontological_fusion_reading'' or ''domain_partition_reading'' might gain credence. If a revelation, this reading is strongly supported.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(meiji_rupture_or_revelation, conceptual, 'The nature of the Meiji separation: rupture or revelation of latent incoherence.').
 
 
 /* ==========================================================================
@@ -205,25 +248,28 @@ narrative_ontology:interval(simultaneous_veneration__pragmatic_incoherence_readi
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(simu_tr_t0, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 0, 0.4).
-narrative_ontology:measurement(simu_tr_t25, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 25, 0.45).
-narrative_ontology:measurement(simu_tr_t50, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 50, 0.5).
-narrative_ontology:measurement(simu_tr_t75, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 75, 0.55).
-narrative_ontology:measurement(simu_tr_t100, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 100, 0.6).
+narrative_ontology:measurement(simu_tr_t1600, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 1600, 0.5).
+narrative_ontology:measurement(simu_tr_t1650, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 1650, 0.53).
+narrative_ontology:measurement(simu_tr_t1700, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 1700, 0.55).
+narrative_ontology:measurement(simu_tr_t1750, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 1750, 0.57).
+narrative_ontology:measurement(simu_tr_t1800, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 1800, 0.59).
+narrative_ontology:measurement(simu_tr_t1868, simultaneous_veneration__pragmatic_incoherence_reading, theater_ratio, 1868, 0.6).
 
 % Extraction over time
-narrative_ontology:measurement(simu_be_t0, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(simu_be_t25, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 25, 0.55).
-narrative_ontology:measurement(simu_be_t50, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 50, 0.6).
-narrative_ontology:measurement(simu_be_t75, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 75, 0.65).
-narrative_ontology:measurement(simu_be_t100, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 100, 0.7).
+narrative_ontology:measurement(simu_be_t1600, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 1600, 0.6).
+narrative_ontology:measurement(simu_be_t1650, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 1650, 0.63).
+narrative_ontology:measurement(simu_be_t1700, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 1700, 0.65).
+narrative_ontology:measurement(simu_be_t1750, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 1750, 0.67).
+narrative_ontology:measurement(simu_be_t1800, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 1800, 0.68).
+narrative_ontology:measurement(simu_be_t1868, simultaneous_veneration__pragmatic_incoherence_reading, base_extractiveness, 1868, 0.7).
 
 % Suppression requirement over time
-narrative_ontology:measurement(simu_su_t0, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(simu_su_t25, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 25, 0.65).
-narrative_ontology:measurement(simu_su_t50, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 50, 0.7).
-narrative_ontology:measurement(simu_su_t75, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 75, 0.75).
-narrative_ontology:measurement(simu_su_t100, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 100, 0.8).
+narrative_ontology:measurement(simu_su_t1600, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 1600, 0.7).
+narrative_ontology:measurement(simu_su_t1650, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 1650, 0.73).
+narrative_ontology:measurement(simu_su_t1700, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 1700, 0.75).
+narrative_ontology:measurement(simu_su_t1750, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 1750, 0.77).
+narrative_ontology:measurement(simu_su_t1800, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 1800, 0.79).
+narrative_ontology:measurement(simu_su_t1868, simultaneous_veneration__pragmatic_incoherence_reading, suppression_requirement, 1868, 0.8).
 
 
 /* ==========================================================================
@@ -231,12 +277,10 @@ narrative_ontology:measurement(simu_su_t100, simultaneous_veneration__pragmatic_
    ========================================================================== */
 
 narrative_ontology:coordination_type(simultaneous_veneration__pragmatic_incoherence_reading, identity_coordination).
-narrative_ontology:affects_constraint(simultaneous_veneration__pragmatic_incoherence_reading, simultaneous_veneration__ontological_fusion_reading).
-narrative_ontology:affects_constraint(simultaneous_veneration__pragmatic_incoherence_reading, simultaneous_veneration__domain_partition_reading).
-narrative_ontology:affects_constraint(simultaneous_veneration__pragmatic_incoherence_reading, meiji_shinbutsu_bunri_edict).
+narrative_ontology:affects_constraint(simultaneous_veneration__pragmatic_incoherence_reading, meiji_state_shinto_supremacy).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'simultaneous_veneration' kernel, focusing on the pre-Meiji pragmatic incoherence. It contrasts with readings that posit ontological fusion or domain partitioning, which represent alternative interpretations of the same historical phenomenon.
+% This constraint is one of three readings of the 'simultaneous_veneration' kernel. This 'pragmatic_incoherence_reading' emphasizes the unresolved contradictions and latent extraction, which the Meiji state's 'shinto_supremacy' constraint later revealed and exploited.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
