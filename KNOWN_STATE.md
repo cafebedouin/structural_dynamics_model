@@ -95,6 +95,15 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **12:45 — Anthropic auto-load landed ($50.01); residues resumed (sonnet3 45, haiku3 172, chained) and the
+  OQ-345 stakeholder BACKFILL launched: haiku 458 ids (`--leg-name haiku --backfill-ids
+  prolog/kernels/rebuild_2026-06-13/haiku_stakeholder_backfill_ids.json --run-tag stakeholder_backfill`,
+  batch 019aWGkn…, ~$8) and flash 210 ids (Gemini driver, same flags, batch q0f6igal…, ~$5). Both
+  drivers now have `--backfill-ids` (ids excluded from the uniqueness registry, overwrite in place, ladder
+  ignored) + `--run-tag`. The originals stay in git history (pre-gate stratum); read the two legs
+  stratified by `story_provenance` source. stealth2 COMPLETE 1005 + certified (10 legs, census GREEN);
+  stealth3 running (189/1005 at 12:18); kimi2 batch 1 finalizing 335/335 — launch batches 2 and 3 with the
+  same command when each driver exits.
 - **10:05 — sonnet3 (960/1005) and haiku3 (833/1005) first passes landed, then BOTH drivers died on
   attempt 2: Anthropic `credit balance is too low` (the $89.56 went to sonnet2/haiku2/sonnet3/haiku3
   batches + reservations; auto-load not yet visible). RESUME once funded — same commands, ladder-driven:
