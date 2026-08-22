@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "8feaa5b9a362b7c1958c6182433703677fbb951c",
+    "store_version": "995d78bc553214f5054ee5f7975936c06933fdf6",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-21T18:11:40"
+    "generated_at": "2026-08-22T08:54:05"
   },
-  "issues_sha": "82ecf678348c28556a3d3272ab644f4336ea61d30802b4e6a740b8fa39893128",
-  "n_entries": 341,
+  "issues_sha": "bb22c337f4fcb2c05b06cccde58d054884a19c46f06a3226fe365c1dffc13f33",
+  "n_entries": 348,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 129,
+    "open": 136,
     "partial": 5
   },
   "active": [
@@ -1917,6 +1917,112 @@
         "OQ-306",
         "OQ-326",
         "OQ-340"
+      ]
+    },
+    {
+      "id": "OQ-342",
+      "status": "open",
+      "priority": 1,
+      "summary": "Leg program 2026-08: within-model floors, stakeholder backfill, new-family pairs — the umbrella (operator-ruled sequence)",
+      "deps": [
+        "gates OQ-343",
+        "gates OQ-344",
+        "gates OQ-345",
+        "gates OQ-346",
+        "gates OQ-347",
+        "gates OQ-348"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-343",
+        "OQ-344",
+        "OQ-345",
+        "OQ-346",
+        "OQ-347",
+        "OQ-348"
+      ]
+    },
+    {
+      "id": "OQ-343",
+      "status": "open",
+      "priority": 1,
+      "summary": "Thinking-on makes authored ε unstable at band-crossing magnitude: is it model-general, and how much of it reaches `dr_type`?",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342"
+      ]
+    },
+    {
+      "id": "OQ-344",
+      "status": "open",
+      "priority": 2,
+      "summary": "The `victim`/`payer` split is a prompt-interpretation probe: which models follow prose vs enum, on how many instructions?",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342"
+      ]
+    },
+    {
+      "id": "OQ-345",
+      "status": "open",
+      "priority": 1,
+      "summary": "Backfill: regenerate the June haiku (465) / flash (212) stakeholder-less stories and every leg's missing seeds under the new prompt, provenance-tagged",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342"
+      ]
+    },
+    {
+      "id": "OQ-346",
+      "status": "open",
+      "priority": 3,
+      "summary": "New-family pairs: OpenAI (current + an older model) and DeepSeek — decided after the floors, and possibly after the stealth reveal",
+      "deps": [
+        "blocked_on OQ-347"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-345",
+        "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-347",
+      "status": "open",
+      "priority": 1,
+      "summary": "Within-model floors for every leg (kimi2, sonnet2, haiku2, stealth3, nemotron_think), then reclassify-all and the situation-fixed core",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-58",
+        "OQ-342",
+        "OQ-343",
+        "OQ-346",
+        "OQ-348"
+      ]
+    },
+    {
+      "id": "OQ-348",
+      "status": "open",
+      "priority": 2,
+      "summary": "The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?",
+      "deps": [
+        "splits_from OQ-343"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-343"
       ]
     }
   ],

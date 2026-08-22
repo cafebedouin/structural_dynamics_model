@@ -17826,7 +17826,183 @@ buildability/dissolution-event authored field is minted (typed deferred-Ω_E at 
 
 ---
 
-*Last updated: 2026-08-21. Add new items with sequential OQ-NN labels. Mark
+## OQ-342 — Leg program 2026-08: within-model floors, stakeholder backfill, new-family pairs — the umbrella (operator-ruled sequence)
+
+**Ω-type:** Ω_C (a program of spends and regime changes the operator sequenced; the children are the measurements).
+
+**Status:** open — minted 2026-08-22 from the 2026-08-21/22 chat; operator ruled the order.
+**Priority:** 1
+**Deps:** gates OQ-343, gates OQ-344, gates OQ-345, gates OQ-346, gates OQ-347, gates OQ-348
+**Files:** `docs/technical/bulk_corpus_generation.md` §7c/§9, KNOWN_STATE 2026-08-22 HANDOFF, `agent/run_no_scope_stealth.py`, `agent/run_no_scope_gemini.py`, `agent/run_no_scope_kimi.py`, `agent/run_no_scope_sonnet.py`, `audits/2026-08-21_flash_regime_vs_redraw/`.
+
+**What this is.** Eleven legs now share the 1005-seed pool (haiku, flash, sonnet, kimi, flash2, flash3,
+flash_think, flash_think2, stealth, nemotron[852], stealth2[in flight]) and three more are
+generating (kimi2, sonnet2, haiku2). The operator's ruling (2026-08-22): *fixing generation and
+evaluation is the task; comparability serves it and is tracked by `prompt_commit`/`schema_commit`,
+not frozen.* Sequence: (1) floors — kimi2, sonnet2, haiku2, stealth3, nemotron thinking-on
+(OQ-347); (2) backfill the June haiku/flash stakeholder-less stories and the missing seeds of every
+leg under the new prompt, tagged `+rescue1` / `+stakeholder_backfill` (OQ-345); (3) reclassify ALL
+legs at one commit and run the §9 before/after diff; (4) only then decide the new-family pairs —
+OpenAI current + an older OpenAI model, DeepSeek — and possibly wait for the stealth model's reveal
+(OQ-346). Measurements that ride the program: thinking-on ε instability (OQ-343), the
+`victim`/`payer` prompt-interpretation split (OQ-344), engine-compresses-idiom (OQ-348).
+
+**Resolution:** every child closed or disposed, and the diff of step (3) written up with a
+`Fired:` bit. **What it changes:** whether the five-leg fingerprints (2026-07-20) are read with
+error bars, and which of the September new-family spends are worth making.
+
+---
+
+## OQ-343 — Thinking-on makes authored ε unstable at band-crossing magnitude: is it model-general, and how much of it reaches `dr_type`?
+
+**Ω-type:** Ω_E (measurable on legs that exist or are free to make).
+
+**Status:** open — minted 2026-08-22; the Flash instance is witnessed, generality is not.
+**Priority:** 1
+**Deps:** splits_from OQ-342
+**Files:** `audits/2026-08-21_flash_regime_vs_redraw/WRITEUP.md` (+ addendum), `epsilon_distance.py`, `paired_agreement.py`, `outputs/pipeline_output.flash{2,3,_think,_think2}.json`.
+
+**Witnessed.** gemini-2.5-flash, 1005 seeds, one commit: a thinking-off redraw pins ε (median
+|Δε| 0.00, p90 0.05, 6% ≥0.10); thinking-on (budget 8192) moves it ≥0.10 on **22%** of seeds and
+≥0.20 on 10%; off-vs-on 34% / 15%. The engine's ε bands are ~0.15 apart (`tangled_rope` 0.30,
+`rope` ceiling 0.45, `snare` floor 0.46), so these are threshold-crossing moves on the one authored
+quantity every classification multiplies through (χ = ε·f(d)·σ). The red-verdict rate doubles
+(6.5–6.8% → 13.4–14.3%) in both thinking-on draws.
+
+**Open.** (a) Is it general? The stealth (reasoning mandatory) and kimi legs are thinking-on with
+no off arm; nemotron thinking-on vs its thinking-off leg (free) and a kimi-off leg (k2.6 accepts
+`thinking:{type:disabled}`, INVESTIGATIONS 2026-08-21; ~$25–35) are the two cheap generality
+tests. (b) How much reaches `dr_type` / `verdict_join`? Count per-seed type flips between the
+two thinking-on draws vs the two thinking-off draws, and whether flips concentrate near band
+edges. (c) Does a non-max budget (1024 / 24576) scale it — dose-response on Flash (~$15–20 each).
+**Resolution:** (a)+(b) witnessed on ≥2 models; (c) optional. **What it changes:** whether
+thinking-on legs may be pooled with thinking-off legs in any ε-keyed statistic (currently: no,
+per the per-Author-stratum rule), and whether the rebuild generates thinking-off by default.
+
+---
+
+## OQ-344 — The `victim`/`payer` split is a prompt-interpretation probe: which models follow prose vs enum, on how many instructions?
+
+**Ω-type:** Ω_E.
+
+**Status:** open — minted 2026-08-22 from the story_repair correction (KNOWN_STATE 2026-08-22).
+**Priority:** 2
+**Deps:** splits_from OQ-342
+**Files:** `python/story_repair.py` (STAKEHOLDER_ROLE_REMAP + stats), `prompts/constraint_story_generation_prompt_json.md` (e03e2210), `outputs/no_scope_runs_<leg>/responses/`, `outputs/no_scope_runs_<leg>/failures.json`.
+
+**Witnessed.** Under prompt 685ed7cf, role=`victim` was the ONLY out-of-enum stakeholder role
+(301 uses / 291 nemotron draws); Flash and Nemotron write it, Claude and Kimi write `payer`; the
+prompt said "victim" 10× and named the enum once. Prompt e03e2210 names `payer` at four sites;
+stealth's 36 hardest seeds then passed 36/36. The repair now counts remaps in `stats`
+(`stakeholder_role_remapped`), so every future run reports the rate per model for free.
+
+**Open.** (a) Per-model remap rate under e03e2210 (does naming the enum once at the site fix
+prose-followers, or only reduce them?) — read off the rescue passes. (b) The other residual
+drift classes are the next enum/type sites: negative `time_horizon` (-500: years authored as a
+signed offset), `organizational` as `spatial_scope`, `agent: True` where a string is typed — each
+is a candidate remap-or-prompt-fix with the same A/B. (c) Is "prose-following" a model trait that
+predicts other drift (lineage-stable)? **Resolution:** a per-model table of remap + residual-drift
+rates under e03e2210 across ≥6 legs. **What it changes:** the prompt's enum sites, and whether
+the rebuild pins enums in-line everywhere.
+
+---
+
+## OQ-345 — Backfill: regenerate the June haiku (465) / flash (212) stakeholder-less stories and every leg's missing seeds under the new prompt, provenance-tagged
+
+**Ω-type:** Ω_E (operator ruled the backfill 2026-08-22; this is execution + the diff).
+
+**Status:** open — minted 2026-08-22.
+**Priority:** 1
+**Deps:** splits_from OQ-342
+**Files:** `agent/run_no_scope_sonnet.py`, `agent/run_no_scope_gemini.py`, `agent/run_no_scope_stealth.py`, `prolog/testsets_haiku/`, `prolog/testsets_flash/`, `docs/technical/bulk_corpus_generation.md` §9.
+
+**Why.** `testsets_haiku` (465/960) and `testsets_flash` (212/960) predate the 2026-06-19
+`stakeholders` gate and carry no stakeholder surface on those stories, so any `h1_stakeholder`
+read on them is on half a leg. Every other leg is short its failing seeds (sonnet 4, haiku 17,
+flash 34, flash2 61, flash3 47, flash_think 17, flash_think2 13, nemotron 153).
+
+**Needs, before the first backfill.** A **backfill mode** in the Anthropic and Gemini drivers:
+take an explicit seed-id list, EXCLUDE those ids from the uniqueness registry (else
+`unique_constraint_id` appends `__<uuid8>` and the story stops pairing by filename), overwrite
+in place, and stamp `--run-tag stakeholder_backfill`. The OpenRouter driver has `--run-tag`; none
+has the registry exclusion yet. Keep the originals in git history (they are the pre-gate
+stratum); never flatten the two strata in a read — stratify by `story_provenance` source.
+**Cost:** ~$15 haiku + ~$5 flash for the stakeholder backfill; cents for the missing-seed rescues
+on Flash; $0 on stealth/nemotron. **Resolution:** every leg at its pool size with a provenance
+ledger per stratum, and the §9 before/after diff run. **What it changes:** the stakeholder-frame
+statistics on the two June legs, and the matched-seed intersection (currently 957 four-way).
+
+---
+
+## OQ-346 — New-family pairs: OpenAI (current + an older model) and DeepSeek — decided after the floors, and possibly after the stealth reveal
+
+**Ω-type:** Ω_P (a spend the operator sequences; the evidence it waits on is OQ-347/OQ-345).
+
+**Status:** open — minted 2026-08-22; not ripe until OQ-347 lands.
+**Priority:** 3
+**Deps:** blocked_on OQ-347
+**Files:** `agent/run_no_scope_stealth.py` (any OpenRouter model via `--leg-name --model`), OpenRouter price list fetched 2026-08-21 (scratch; re-fetch).
+
+**The question.** A new lineage at k=1 is a fingerprint without error bars; the unit of
+purchase is a PAIR. Candidates and list-price pair costs (2026-08-21 fetch, ~35k in / 5–15k out
+per story): `openai/gpt-5.4` ~$330, `gpt-5.4-mini` ~$100, an older OpenAI model (`gpt-4.1`
+~$220–380, `gpt-4.1-mini` ~$45–75) for a within-vendor *generation* contrast, `deepseek-v4-pro`
+~$145 — a non-Western lineage distinct from Kimi. The stealth model (`stealth/ox-alpha`) is
+very likely a Chinese lab's pre-release; if the reveal says which, the DeepSeek choice may
+change. **Resolution:** an operator spend-go on a named pair set after OQ-347's floors show what
+a cross-model delta must exceed. **What it changes:** the September corpus composition.
+
+---
+
+## OQ-347 — Within-model floors for every leg (kimi2, sonnet2, haiku2, stealth3, nemotron_think), then reclassify-all and the situation-fixed core
+
+**Ω-type:** Ω_E.
+
+**Status:** open — minted 2026-08-22; kimi2 (batch 1/3), sonnet2, haiku2 launched the same day.
+**Priority:** 1
+**Deps:** splits_from OQ-342
+**Files:** `agent/run_no_scope_kimi.py` (`--leg-suffix`), `agent/run_no_scope_sonnet.py` (`--leg-name/--leg-suffix`), `agent/run_no_scope_stealth.py`, `python/audits/five_leg_twin_comparison.py` (`LEGS` dict hardcoded — extend to N), `audits/2026-08-21_flash_regime_vs_redraw/paired_agreement.py`.
+
+**Why.** Every pre-2026-08-21 cross-leg claim was k=1 per model. The Flash floors (h1 85% / 64%
+thinking-off / -on) make kimi's 63% band-3 readable as a signature; kimi's, sonnet's and haiku's
+own floors are unmeasured. Stealth2 (in flight) is at prompt e03e2210, so stealth vs stealth2 is
+redraw + prompt change; stealth3 at the same commit is the pure thinking-on floor for that model
+(free, before its window closes). Nemotron thinking-on vs its thinking-off leg is the second
+regime pair (free; free-tier cap 1000 req/day).
+
+**Steps.** (1) land and certify each floor leg (`classify_corpus` GREEN, OQ-58 sweep, register:
+`CORPUS_DIRS`, `LIVE_LEGS`, `STAMPED_FILE_COUNTS`, census re-pin); (2) reclassify EVERY leg at
+one engine commit; (3) `paired_agreement.py` + `epsilon_distance.py` over all pairs; (4) build the
+**situation-fixed core**: seeds where every same-model pair agrees on h1_band/verdict/signature —
+the seat-theorem partition made concrete, and the seed set OQ-343/OQ-348 should be read on.
+**Resolution:** a floor table (per model × regime) and the core's size. **What it changes:** the
+five-leg writeup's claims get error bars; OQ-346's spend decision.
+
+---
+
+## OQ-348 — The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?
+
+**Ω-type:** Ω_E.
+
+**Status:** open — minted 2026-08-22 from the first stealth/nemotron read.
+**Priority:** 2
+**Deps:** splits_from OQ-343
+**Files:** `audits/2026-08-21_flash_regime_vs_redraw/paired_agreement.py`, `outputs/pipeline_output.{stealth,nemotron}.json`.
+
+**The observation.** Same-seed, cross-model: authored ε exact-agreement 9%, |Δε| ≥0.10 on 43% of
+seeds; yet h1_band agrees 37%, verdict 55%, signature 61%, claimed_type 75%. Two readings: the
+engine routes authoring idiom to structure (classification-as-routing doing its job), or the
+output bands are coarse enough that agreement is cheap (h1 has 7 values, verdict 3). **Test.**
+Compare against a null: agreement expected from each leg's marginals alone (permutation over
+seeds) — if observed h1/verdict agreement exceeds the permutation null while ε does not, the
+engine is adding seed-keyed structure; if neither exceeds it, the bands are coarse. Run on the
+within-model floors too (where the null is the same test with a known-positive answer).
+**Resolution:** the permutation read on ≥3 model pairs. **What it changes:** the §11 "map vs
+regions" framing — whether the meta-tools' outputs are where cross-model consistency lives.
+
+---
+
+*Last updated: 2026-08-22. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

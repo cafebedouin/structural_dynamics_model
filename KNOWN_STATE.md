@@ -95,6 +95,17 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **09:30 — the program is in ISSUES as OQ-342 (umbrella) → OQ-343 (thinking-on ε instability: 22% of
+  seeds move ≥0.10, band-crossing), OQ-344 (`victim`/`payer` prompt-interpretation probe), OQ-345
+  (backfill: June haiku/flash stakeholder-less + every leg's missing seeds; needs a registry-excluding
+  backfill mode in the Anthropic/Gemini drivers first), OQ-346 (new-family pairs, blocked on the floors),
+  OQ-347 (floors + reclassify-all + situation-fixed core), OQ-348 (engine compresses idiom?). `[NEXT]`
+  surfaces them.** Launched 09:15: **kimi2** batch 1/3 (335, Moonshot balance $62.12 at launch; run
+  `--batch --n 335 --leg-suffix 2` twice more when each completes), **sonnet2** and **haiku2**
+  (Anthropic batch, 1005 each; `run_no_scope_sonnet --leg-name haiku --leg-suffix 2 --model
+  claude-haiku-4-5-20251001`). Nemotron free-tier cap: `free-models-per-day-high-balance`, 1000/day,
+  remaining 0 at 09:00 — its residue (153) and `_think` sibling wait for the reset. stealth3
+  (`--leg-suffix 3`) launches when stealth2 exits — the same-commit thinking-on floor.
 - **DONE 01:50: `testsets_stealth` COMPLETE 1005/1005** (rescue1 36/36 under prompt `e03e2210`), OQ-58 quarantine 15 edges,
   `classify_corpus` GREEN n=1005 at `033b095`; registered in LIVE_LEGS + census (7 legs GREEN). First read: h1 band-3 34%,
   red 4.1% — not the kimi signature; stealth-vs-nemotron same-seed ε agreement 9%.
