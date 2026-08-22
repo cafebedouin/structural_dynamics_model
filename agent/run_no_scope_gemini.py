@@ -283,7 +283,16 @@ def run(args):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     processed = load_processed_log(FLASH_LADDER)
-    pending = [s for s in seeds if s["constraint_id"] not in processed]
+    backfill_ids = None
+    if getattr(args, "backfill_ids", None):
+        # BACKFILL MODE (OQ-345): regenerate an explicit id list IN PLACE inside an existing leg —
+        # ids excluded from the uniqueness registry (else __<uuid8> gets appended and the story
+        # stops pairing by filename), ladder ignored for them. Pair with --run-tag.
+        backfill_ids = set(json.loads(Path(args.backfill_ids).read_text(encoding="utf-8")))
+        pending = [s for s in seeds if s["constraint_id"] in backfill_ids]
+        print(f"  backfill: {len(pending)} of {len(backfill_ids)} ids found in the seed pool")
+    else:
+        pending = [s for s in seeds if s["constraint_id"] not in processed]
     n = args.n if (args.n and args.n > 0) else len(pending)
     batch_seeds = pending[:n]
     if not batch_seeds:
@@ -292,7 +301,7 @@ def run(args):
 
     # Registry = FLASH dir + flash ladder ONLY — never the Haiku testsets/, so cids stay
     # == seed cids and the two sets pair by filename.
-    registry = {p.stem for p in FLASH_TESTSETS.glob("*.pl")} | set(processed)
+    registry = ({p.stem for p in FLASH_TESTSETS.glob("*.pl")} | set(processed)) - (backfill_ids or set())
     final_seeds = []
     for s in batch_seeds:
         s["constraint_id"] = unique_constraint_id(s["constraint_id"], registry)
@@ -315,7 +324,7 @@ def run(args):
                 _ShimClient(wrapped), "gemini-batch", FLASH_JSON, FLASH_TESTSETS, FLASH_LADDER,
                 gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
                 overwrite=True, id_map=id_map, token_acc=token_acc,
-                provenance_source=PROVENANCE_SOURCE,
+                provenance_source=(f"{PROVENANCE_SOURCE}+{args.run_tag}" if getattr(args, "run_tag", "") else PROVENANCE_SOURCE),
                 sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=0.1,thinking_budget={THINKING_BUDGET}")
             done = load_processed_log(FLASH_LADDER)
             remaining = [s for s in remaining if s["constraint_id"] not in done]
@@ -354,6 +363,9 @@ def main():
                     help="write to sibling leg testsets_flash<S>/ (redraw / regime-contrast leg)")
     ap.add_argument("--thinking-budget", type=int, default=0,
                     help="Gemini thinking budget (0 = disabled, the original leg's regime)")
+    ap.add_argument("--run-tag", default="", help="mark this pass: provenance_source no_scope_rebuild_<leg>+<tag>")
+    ap.add_argument("--backfill-ids", default=None,
+                    help="JSON list of constraint_ids to REGENERATE IN PLACE inside the leg (OQ-345); pair with --run-tag")
     args = ap.parse_args()
     global THINKING_BUDGET
     THINKING_BUDGET = args.thinking_budget
