@@ -95,6 +95,17 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **10:00 — floors landed and pushed (e5b3f247): sonnet2 1003 (~$39.6), haiku2 996 (~$16), both certified and
+  registered (9 live legs, census GREEN).** Sonnet floor read (coherent, OQ-347): h1 69% / verdict 71% /
+  ε exact 54%, seat-vector churn 43% — redraw + prompt change (July leg at `becd0f87`); a pure floor =
+  sonnet2 vs sonnet3 (~$40, operator's call). OQ-349 minted: thinking raises ε most on mountains/ropes
+  (framing signature; regression-to-mean ruled out) — three arms, the free one is the reasoning-text
+  census on the nemotron thinking-on leg. **Still running:** stealth2 (attempt 1 ending ~10:10; then
+  stealth3 `--leg-suffix 3` for the same-commit floor), kimi2 batch 1/3 (87/335 at 09:50; ~$43 total
+  across three `--batch --n 335 --leg-suffix 2` passes, balance $62), haiku reclassify at HEAD (for the
+  haiku floor read), nemotron cap probe (`outputs/no_scope_runs_nemotron/auto_resume.sh`, hourly;
+  launches the residue `+rescue1` itself on the first 200). Anthropic credit $89.56 + auto-load covers
+  the haiku/flash stakeholder backfill (OQ-345) once the drivers have a registry-excluding backfill mode.
 - **09:30 — the program is in ISSUES as OQ-342 (umbrella) → OQ-343 (thinking-on ε instability: 22% of
   seeds move ≥0.10, band-crossing), OQ-344 (`victim`/`payer` prompt-interpretation probe), OQ-345
   (backfill: June haiku/flash stakeholder-less + every leg's missing seeds; needs a registry-excluding
