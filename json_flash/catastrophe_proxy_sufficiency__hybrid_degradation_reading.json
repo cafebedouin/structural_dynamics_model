@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "fb07287a-c801-4dbc-ace6-0e62ca055dfe"
+    "story_uid": "52a98949-5b02-4b1f-9098-de0ab0e3fd47"
   },
   "base_properties": {
     "extractiveness": 0.65,
@@ -18,117 +18,240 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "certification_industry",
-      "safety_consultants"
+      "safety_regulators"
     ],
     "victims": [
-      "long_term_safety_margins",
-      "frontline_operators"
+      "operational_personnel",
+      "long_term_safety_margins"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint accurately representing the 'hybrid_degradation_reading' of the 'catastrophe_proxy_sufficiency' kernel?",
-      "resolution_mechanism": "Comparison with other generated readings of the same kernel and expert review of the structural deltas.",
-      "impact": "Misidentification would lead to incorrect classification and analysis of the underlying commitment system dynamics.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ensures correct instantiation of the kernel reading."
+      "name": "certification_industry",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develops and sells simulation-based training and certification programs. Benefits from the ongoing need for training and the perceived sufficiency of simulations to maintain competence, generating continuous revenue. Actively promotes simulation as a complete solution."
     },
     {
-      "id": "tacit_knowledge_measurement",
-      "question": "How can the degradation of tacit knowledge and stress-response capacity be reliably measured over generational timescales in high-reliability organizations?",
-      "resolution_mechanism": "Development of longitudinal ethnographic studies, advanced cognitive task analysis, and physiological stress markers during high-fidelity simulations, correlated with real-world incident data.",
-      "impact": "Without reliable measurement, the 'degradation' aspect of this reading remains an unquantified risk, potentially leading to underestimation of long-term systemic vulnerability.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Quantification of tacit knowledge and stress-response degradation."
+      "name": "safety_regulators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mandate and oversee simulation-based training as a primary method for maintaining operational competence. Benefit from the appearance of robust safety protocols and reduced immediate risk, without having to expose personnel to actual high-stakes events. Their legitimacy is tied to the perceived effectiveness of these proxies."
     },
     {
-      "id": "generational_timescale_definition",
-      "question": "What constitutes a 'generational timescale' in the context of organizational learning and safety competence, and how does it vary across different high-reliability domains?",
-      "resolution_mechanism": "Comparative historical analysis of organizational memory, personnel turnover rates, and major incident cycles across multiple high-reliability sectors (e.g., nuclear, aviation, medicine).",
-      "impact": "An imprecise definition could lead to misjudging the rate and onset of degradation, affecting policy decisions on training cycles and simulation investment.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Defines the temporal scope of degradation."
+      "name": "operational_personnel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Undergo extensive simulation training, maintaining procedural competence. However, they gradually lose tacit knowledge and stress-response capacity that only real-world, high-consequence events can provide. Their professional identity is tied to their certified competence, making it difficult to challenge the training methods."
+    },
+    {
+      "name": "long_term_safety_margins",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The overall resilience and robustness of high-reliability systems over extended periods. These margins degrade subtly as critical, non-procedural skills atrophy, increasing the risk of catastrophic failure in novel or extreme circumstances. This degradation is not immediately apparent and accumulates over generations."
+    },
+    {
+      "name": "organizational_leadership",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Relies on simulation-based training to demonstrate compliance and competence, reducing liability and public scrutiny. Benefits from the cost-effectiveness and controlled environment of simulations compared to real-world exercises or accepting the risk of actual incidents. May be unaware of the long-term degradation."
+    },
+    {
+      "name": "independent_safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the long-term effects of simulation-only training on organizational resilience and human factors. They identify the degradation of tacit knowledge and stress response, often publishing findings that challenge the prevailing assumptions of simulation sufficiency."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the training and certification of personnel in high-reliability organizations, ensuring a baseline of procedural competence across a large workforce without exposing them to actual danger.",
+    "transfer_function": "Transfers training revenue and perceived safety assurance to the certification industry and regulators, while transferring the hidden cost of degraded tacit knowledge and stress-response capacity to operational personnel and long-term safety margins.",
+    "absent_voices": "Future generations of operational personnel and the public, who will bear the consequences of accumulated, unaddressed degradation in safety margins, are absent from the current discourse. Their interests are not represented in the design or evaluation of training regimes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint (the reliance on simulation as a sufficient proxy) vanished, high-reliability organizations would be forced to fundamentally rethink their training, certification, and risk management strategies. This would likely involve more real-world exposure, higher costs, and a re-evaluation of acceptable risk, leading to a significant reorganization of safety protocols and industry practices.",
+    "founding_problem": "The high cost and extreme danger of training for catastrophic events in real-world scenarios, coupled with the need to maintain a large, procedurally competent workforce.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The certification industry and regulators attest that the problem of dangerous and costly real-world training is still live. Independent safety researchers corroborate the danger and cost, but contest the sufficiency of the current simulation-only solution, arguing that it creates new, hidden problems."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.5
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.58
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.55
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.62
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
       "value": 0.7
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.32
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
       "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'hybrid degradation' reading of the catastrophe proxy sufficiency kernel. It posits that while simulation-based training effectively maintains explicit procedural competence in high-reliability organizations, it fails to cultivate or sustain the tacit knowledge and acute stress-response capabilities that only real catastrophic events can forge. Over generational timescales (e.g., 20+ years without a major incident), this leads to a subtle but critical degradation of overall safety margins, even as formal metrics of competence remain high. The constraint is a Tangled Rope because it provides a genuine coordination function (procedural training) but simultaneously extracts from long-term safety by masking a deeper decay.",
+    "narrative_context": "This constraint describes the long-term degradation of critical, non-procedural skills in high-reliability organizations that rely heavily on simulation as a proxy for catastrophic events. While simulations effectively maintain procedural competence, they fail to cultivate tacit knowledge and stress-response capacity that only real, high-stakes events can provide. Over generational timescales, this leads to a subtle but significant erosion of safety margins, creating a 'tangled rope' where the coordination function (training) is intertwined with a hidden, asymmetric extraction (degraded long-term safety). This is one reading of the 'catastrophe_proxy_sufficiency' kernel.",
     "key_agents": [
-      "certification_industry: Agenda setter (institutional/arbitrage) — benefits from ongoing training revenue, sets standards.",
-      "safety_consultants: Beneficiary (organized/mobile) — profit from designing and implementing simulation programs.",
-      "high_reliability_organizations: Payer (institutional/constrained) — invest heavily in simulation, bear the long-term risk of degraded tacit knowledge.",
-      "frontline_operators: Payer (moderate/identity_locked) — maintain procedural competence but lose deeper resilience; their professional identity is tied to the organization's safety culture.",
-      "regulators: Observer (institutional/analytical) — oversee safety, rely on certification metrics, may miss subtle degradation.",
-      "future_generations: Victim (powerless/trapped) — inherit a system with hidden vulnerabilities."
+      "certification_industry: Agenda setter (institutional/arbitrage) — benefits from ongoing training revenue.",
+      "safety_regulators: Beneficiary (institutional/constrained) — benefit from perceived safety without real risk.",
+      "operational_personnel: Payer (moderate/identity_locked) — maintain procedural skills but lose tacit knowledge.",
+      "long_term_safety_margins: Payer (powerless/trapped) — bear the hidden cost of degraded resilience.",
+      "organizational_leadership: Beneficiary (powerful/mobile) — benefits from compliance and reduced liability.",
+      "independent_safety_researchers: Observer (analytical/analytical) — identify the degradation."
     ],
-    "logic_rationale": "The extractiveness (0.65) is high because organizations pay for a solution (simulation) that only partially addresses the problem, leaving a critical gap in resilience. Suppression (0.7) is also high because the success of simulations in maintaining procedural competence suppresses the perceived need for more radical interventions or acknowledgment of the tacit knowledge gap. The theater ratio (0.4) reflects that a significant portion of simulation activity, while appearing to enhance safety, is performative in its ability to address the full spectrum of catastrophic competence. The temporal measurements show a steady increase in extractiveness, suppression, and theater, indicating a growing reliance on a partially effective solution over time, with increasing costs and diminishing returns on true resilience.",
-    "perspectival_gap": "The certification industry and safety consultants perceive this as a successful coordination mechanism, generating revenue while maintaining visible safety standards. High-reliability organizations, while benefiting from procedural competence, bear the hidden cost of degrading tacit knowledge and stress response, which only becomes apparent during a real crisis. Frontline operators experience the immediate benefits of training but are unknowingly exposed to long-term systemic risk. Regulators, relying on formal metrics, may not detect the subtle degradation until it's too late.",
-    "directionality_logic": "The certification industry and safety consultants are clear beneficiaries (d=0.0-0.2) as they profit from the ongoing need for simulation and training. High-reliability organizations are payers (d=0.6-0.8) as they invest heavily but receive an incomplete solution, bearing the long-term risk. Frontline operators are also payers (d=0.7-0.9) as they are the ultimate bearers of risk when the system fails due to degraded tacit knowledge. Future generations are victims (d=1.0) as they inherit a system with hidden vulnerabilities. Regulators are observers (d=0.5) as they are meant to be neutral but may be influenced by the perceived success of simulations.",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely coordinates procedural competence (a live problem) but simultaneously extracts by creating a false sense of security regarding deeper resilience. The mandate to maintain safety is live, but the method (simulation as a proxy for catastrophe) has atrophied in its ability to address the full scope of the problem. The classification prevents mislabeling it as a pure Rope (ignoring the hidden degradation) or a Snare (ignoring the genuine procedural benefits). The ongoing revenue for the certification industry and consultants ensures its persistence, even as its long-term effectiveness for true resilience degrades."
+    "logic_rationale": "The extractiveness (0.65) is high because the system extracts the 'cost' of real-world experience from long-term safety, a cost that is diffuse and borne by future generations. Suppression (0.7) is high because the institutional inertia and professional identity lock-in make it difficult for operational personnel to challenge the sufficiency of simulations, and regulators are incentivized to maintain the status quo. Theater ratio (0.4) is moderate, reflecting that while simulations provide real training, a significant portion of their function is performative assurance, masking the underlying degradation. The metrics show a gradual increase in extractiveness, suppression, and theater over time, indicating a slow drift towards a more extractive and performative state.",
+    "perspectival_gap": "The certification industry and safety regulators perceive this as a successful 'rope' that efficiently coordinates training and risk management. Operational personnel experience it as a 'tangled rope' – they are coordinated into competence but bear the hidden cost of skill degradation. Independent researchers, from an 'analytical' seat, would classify it as a 'snare' for long-term safety, as the coordination story masks a fundamental extraction.",
+    "directionality_logic": "The certification industry and safety regulators are clear beneficiaries, as they profit or gain legitimacy from the current system. Operational personnel are payers, as they bear the cost of skill degradation, and their identity is locked into the system. Long-term safety margins are the ultimate victims, as they are passively eroded. Organizational leadership benefits from the appearance of safety and compliance. Rival perspectives (e.g., advocates for more real-world training) are largely excluded.",
+    "mandatrophy_analysis": "This constraint is a strong candidate for mandatrophy. The original mandate was to ensure competence safely. While procedural competence is maintained, the deeper mandate of ensuring overall system resilience and stress-response capacity is atrophying. The classification as a Tangled Rope prevents mislabeling it as a pure Rope (which would ignore the hidden extraction) or a pure Snare (which would ignore the genuine coordination function of simulations). The long-term degradation of tacit knowledge and stress-response capacity is the core mandatrophy, masked by the continued success in procedural training.",
+    "kernel_context": "This constraint, 'catastrophe_proxy_sufficiency__hybrid_degradation_reading', is one reading of the 'catastrophe_proxy_sufficiency' kernel. This reading posits that simulations maintain procedural competence but lead to a degradation of tacit knowledge and stress-response capacity over generational timescales. It stands in contrast to the 'catastrophe_necessity_reading' (which claims only real catastrophes suffice), the 'simulation_as_proxy_catastrophe_reading' (which claims simulations are fully sufficient), and the 'simulation_fidelity_threshold' (which makes sufficiency technology-dependent)."
   },
+  "omegas": [
+    {
+      "id": "tacit_knowledge_measurement",
+      "question": "How can the degradation of tacit knowledge and stress-response capacity be reliably measured and quantified over generational timescales?",
+      "resolution_mechanism": "Development of new psychometric and organizational resilience metrics, longitudinal studies of high-reliability organizations, and post-incident analysis that specifically targets non-procedural failures.",
+      "impact": "If measurable, the hidden extraction from long-term safety margins becomes explicit, potentially reclassifying the constraint closer to a Snare or triggering regulatory intervention. If unmeasurable, the degradation remains an unaddressed risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The challenge of quantifying the subtle, long-term degradation of non-procedural skills."
+    },
+    {
+      "id": "simulation_fidelity_threshold_interaction",
+      "question": "At what fidelity threshold (if any) could simulations effectively replicate the stress and uncertainty of real catastrophes to prevent degradation?",
+      "resolution_mechanism": "Advances in virtual reality, AI-driven adaptive scenarios, and biofeedback integration in simulations, followed by empirical validation against real-world performance in high-stress environments.",
+      "impact": "If such a threshold is achievable, the constraint could transition towards a Rope, as the coordination function becomes genuinely sufficient. If not, the hybrid degradation remains an inherent limitation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The potential for technological advancements to overcome the limitations of current simulations."
+    },
+    {
+      "id": "intergenerational_responsibility",
+      "question": "To what extent are current generations responsible for the long-term degradation of safety margins that will primarily affect future generations?",
+      "resolution_mechanism": "Ethical and policy debates, potentially leading to new regulatory frameworks that incorporate intergenerational equity in safety planning and risk assessment.",
+      "impact": "If intergenerational responsibility is affirmed, it could lead to mandates for more robust, albeit costlier, training methods, shifting the burden from future safety margins to current operational budgets. If denied, the current system's hidden costs remain externalized.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The ethical dimension of externalizing long-term safety costs to future generations."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
-    "affects_constraints": [
-      "simulation_fidelity_threshold",
-      "catastrophe_necessity_reading"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'catastrophe_proxy_sufficiency' kernel, focusing on the hybrid degradation of competence over generational timescales. It is linked to other readings that emphasize different aspects of simulation's sufficiency or insufficiency."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of four readings of the 'catastrophe_proxy_sufficiency' kernel, focusing on the hybrid degradation of competence over time. It is linked to other readings that offer alternative interpretations of simulation sufficiency."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -136,11 +259,11 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "simulation_as_proxy_catastrophe_reading",
+        "sibling_id": "catastrophe_necessity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_necessity_reading",
+        "sibling_id": "simulation_as_proxy_catastrophe_reading",
         "relation": "coexists_with"
       },
       {
@@ -150,35 +273,24 @@
     ],
     "axioms": [
       {
-        "atom": "simulation_maintains_explicit_competence",
+        "atom": "tacit_knowledge_degrades_without_real_stress",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "tacit_knowledge_degrades_without_real_catastrophe",
-        "role": "foundational",
+        "atom": "procedural_competence_maintained_by_simulation",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "continuous_competence_maintenance",
+    "reference_frame": "simulation_as_partial_proxy",
     "drift_state": {
-      "moment": "generational_absence_of_catastrophe",
+      "moment": "contemporary_long_term_operations",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

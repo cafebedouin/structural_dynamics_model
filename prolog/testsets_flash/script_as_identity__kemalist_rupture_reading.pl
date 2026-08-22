@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,15 +73,14 @@
  *   domain: comparative_linguistics/political_authority/state_building
  *
  * SUMMARY:
- *   This constraint describes the Kemalist reading of the Turkish script
- *   reform, where the adoption of Latin script was seen as a necessary and
- *   beneficial rupture with the Ottoman-Islamic past, enabling secular
- *   modernization. This reading emphasizes the 'zero transition cost' for the
- *   new state and the 'feature, not bug' aspect of textual rupture, with the
- *   state monopolizing the literacy apparatus to enforce the change. It is a
- *   tangled rope because it provided a coordination function for the new
- *   state's identity while extracting heavily from those tied to the old
- *   script.
+ *   This constraint represents the Kemalist reading of the script reform in
+ *   Turkey (1928), where the adoption of the Latin alphabet was a deliberate
+ *   act of state-building, intended to sever cultural ties with the
+ *   Ottoman-Islamic past and accelerate secular modernization. The reading
+ *   asserts that the transition cost was zero or negligible, as the old
+ *   script was seen as an impediment, and the state actively monopolized the
+ *   new literacy apparatus. This is one reading of the 'script_as_identity'
+ *   kernel.
  *
  */
 
@@ -87,59 +90,103 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(script_as_identity__kemalist_rupture_reading, 0.65).
-domain_priors:suppression_score(script_as_identity__kemalist_rupture_reading, 0.78).
-domain_priors:theater_ratio(script_as_identity__kemalist_rupture_reading, 0.2).
+domain_priors:suppression_score(script_as_identity__kemalist_rupture_reading, 0.9).
+domain_priors:theater_ratio(script_as_identity__kemalist_rupture_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, extractiveness, 0.65).
-narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, suppression_requirement, 0.78).
-narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, theater_ratio, 0.2).
+narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, suppression_requirement, 0.9).
+narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, accessibility_collapse, 0.8).
 narrative_ontology:constraint_metric(script_as_identity__kemalist_rupture_reading, resistance, 0.7).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(script_as_identity__kemalist_rupture_reading, tangled_rope).
+narrative_ontology:constraint_claim(script_as_identity__kemalist_rupture_reading, snare).
 narrative_ontology:human_readable(script_as_identity__kemalist_rupture_reading, "Kemalist Rupture: Latin Script as Secular Modernization").
 narrative_ontology:topic_domain(script_as_identity__kemalist_rupture_reading, "comparative_linguistics/political_authority/state_building").
 
 domain_priors:requires_active_enforcement(script_as_identity__kemalist_rupture_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(script_as_identity__kemalist_rupture_reading, '6efa1cd4-befe-4b05-9f84-fee91559f6f8').
-narrative_ontology:cs_kernel_codification('6efa1cd4-befe-4b05-9f84-fee91559f6f8', formalized).
-narrative_ontology:cs_authority_grounding('6efa1cd4-befe-4b05-9f84-fee91559f6f8', extraction).
-narrative_ontology:cs_interpretation_layer_present('6efa1cd4-befe-4b05-9f84-fee91559f6f8').
-narrative_ontology:cs_reading_relation('6efa1cd4-befe-4b05-9f84-fee91559f6f8', script_as_identity__ottoman_continuity_reading, forecloses).
-narrative_ontology:cs_reading_relation('6efa1cd4-befe-4b05-9f84-fee91559f6f8', script_as_identity__phonetic_instrumentalism_reading, influences).
-narrative_ontology:cs_axiom('6efa1cd4-befe-4b05-9f84-fee91559f6f8', foundational, textual_rupture_enables_modernity).
-narrative_ontology:cs_axiom_status(textual_rupture_enables_modernity, holdable).
-narrative_ontology:cs_axiom_grounding('6efa1cd4-befe-4b05-9f84-fee91559f6f8', textual_rupture_enables_modernity, instrumental).
-narrative_ontology:cs_axiom('6efa1cd4-befe-4b05-9f84-fee91559f6f8', secondary, state_monopoly_on_literacy_is_necessary).
-narrative_ontology:cs_axiom_status(state_monopoly_on_literacy_is_necessary, holdable).
-narrative_ontology:cs_axiom_grounding('6efa1cd4-befe-4b05-9f84-fee91559f6f8', state_monopoly_on_literacy_is_necessary, conventional).
-narrative_ontology:cs_reference_frame('6efa1cd4-befe-4b05-9f84-fee91559f6f8', secular_westernizing_republic).
-narrative_ontology:cs_drift_state('6efa1cd4-befe-4b05-9f84-fee91559f6f8', contemporary_cultural_revival, gap(repudiation_pressure, substantial, false)).
-narrative_ontology:cs_created_at('6efa1cd4-befe-4b05-9f84-fee91559f6f8', '').
+narrative_ontology:cs_story_uid(script_as_identity__kemalist_rupture_reading, '86f46cb3-c9be-4352-b9fc-4b2155e1394f').
+narrative_ontology:cs_kernel_codification('86f46cb3-c9be-4352-b9fc-4b2155e1394f', formalized).
+narrative_ontology:cs_authority_grounding('86f46cb3-c9be-4352-b9fc-4b2155e1394f', lineage).
+narrative_ontology:cs_interpretation_layer_present('86f46cb3-c9be-4352-b9fc-4b2155e1394f').
+narrative_ontology:cs_reading_relation('86f46cb3-c9be-4352-b9fc-4b2155e1394f', script_as_identity__ottoman_continuity_reading, forecloses).
+narrative_ontology:cs_reading_relation('86f46cb3-c9be-4352-b9fc-4b2155e1394f', script_as_identity__phonetic_instrumentalism_reading, influences).
+narrative_ontology:cs_axiom('86f46cb3-c9be-4352-b9fc-4b2155e1394f', foundational, latin_script_enables_secular_modernization).
+narrative_ontology:cs_axiom_status(latin_script_enables_secular_modernization, holdable).
+narrative_ontology:cs_axiom_grounding('86f46cb3-c9be-4352-b9fc-4b2155e1394f', latin_script_enables_secular_modernization, instrumental).
+narrative_ontology:cs_axiom('86f46cb3-c9be-4352-b9fc-4b2155e1394f', foundational, ottoman_islamic_past_is_impediment).
+narrative_ontology:cs_axiom_status(ottoman_islamic_past_is_impediment, holdable).
+narrative_ontology:cs_axiom_grounding('86f46cb3-c9be-4352-b9fc-4b2155e1394f', ottoman_islamic_past_is_impediment, conventional).
+narrative_ontology:cs_reference_frame('86f46cb3-c9be-4352-b9fc-4b2155e1394f', secular_modern_turkish_state).
+narrative_ontology:cs_drift_state('86f46cb3-c9be-4352-b9fc-4b2155e1394f', contemporary_islamic_revival, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('86f46cb3-c9be-4352-b9fc-4b2155e1394f', '').
 narrative_ontology:cs_kernel_id(script_as_identity__kemalist_rupture_reading, script_as_identity).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(script_as_identity__kemalist_rupture_reading, turkish_republic_state).
+narrative_ontology:constraint_beneficiary(script_as_identity__kemalist_rupture_reading, turkish_state).
 narrative_ontology:constraint_beneficiary(script_as_identity__kemalist_rupture_reading, secular_elites).
 narrative_ontology:constraint_victim(script_as_identity__kemalist_rupture_reading, ottoman_educated_class).
-narrative_ontology:constraint_victim(script_as_identity__kemalist_rupture_reading, religious_institutions).
-narrative_ontology:constraint_victim(script_as_identity__kemalist_rupture_reading, rural_populations).
+narrative_ontology:constraint_victim(script_as_identity__kemalist_rupture_reading, religious_scholars).
+narrative_ontology:constraint_victim(script_as_identity__kemalist_rupture_reading, rural_population).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The primary enforcer and beneficiary of the script reform. It actively legislated the change, established new literacy institutions, and suppressed dissent, viewing the Latin script as essential for nation-building and severing ties with the Ottoman past. It monopolized the new literacy apparatus.
+narrative_ontology:constraint_stakeholder(script_as_identity__kemalist_rupture_reading, turkish_state, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Intellectuals and bureaucrats who championed the reform, seeing it as a path to Westernization and a break from perceived Ottoman backwardness. They gained cultural capital and influence within the new state structure, benefiting from the rapid obsolescence of the old script.
+narrative_ontology:constraint_stakeholder(script_as_identity__kemalist_rupture_reading, secular_elites, beneficiary,
+    powerful, biographical, mobile, national).
+
+% Scholars, writers, and administrators whose entire professional and intellectual lives were built around the Arabic script. The reform rendered their skills obsolete overnight, severing their connection to historical texts and cultural heritage. They faced a choice between re-literacy in Latin script or professional marginalization.
+narrative_ontology:constraint_stakeholder(script_as_identity__kemalist_rupture_reading, ottoman_educated_class, payer,
+    powerless, biographical, identity_locked, national).
+
+% Custodians of Islamic knowledge, for whom the Arabic script was sacred and essential for accessing religious texts. The reform was a direct assault on their authority and the continuity of religious education, forcing them into a position of cultural and intellectual isolation.
+narrative_ontology:constraint_stakeholder(script_as_identity__kemalist_rupture_reading, religious_scholars, payer,
+    powerless, generational, identity_locked, national).
+
+% Many were illiterate in both scripts, but the reform meant that any existing informal literacy in Arabic script (e.g., for religious texts) was invalidated, and the new state-controlled literacy programs were often slow to reach them, creating a period of increased informational isolation.
+narrative_ontology:constraint_stakeholder(script_as_identity__kemalist_rupture_reading, rural_population, payer,
+    powerless, immediate, trapped, local).
+
+% Academics and foreign governments who observed the reform, analyzing its impact on Turkish society, culture, and international relations. They could offer commentary but had no direct power to influence the policy.
+narrative_ontology:constraint_stakeholder(script_as_identity__kemalist_rupture_reading, international_observers, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Aims to coordinate national identity and literacy around a new, secular, and modern Turkish state, distinct from the multi-ethnic, multi-religious Ottoman Empire.
+% TRANSFER_FUNCTION: Transfers cultural and political authority from the Ottoman-Islamic past and its associated elites to the new Kemalist state and its secular intelligentsia, by making the old script obsolete and monopolizing the new literacy.
+% ABSENT_VOICES: The vast majority of the Ottoman-educated populace and religious scholars, whose cultural and professional identities were tied to the Arabic script, were effectively silenced or marginalized during the rapid implementation of the reform. Their objections were dismissed as resistance to modernization.
+% DISAPPEARANCE_RATIONALE: If the Kemalist script reform and its enforcement vanished, the entire edifice of modern Turkish national identity, its educational system, and its secular political project would be fundamentally destabilized. A significant portion of the population would immediately seek to re-engage with Arabic script texts and cultural heritage, leading to a profound reorientation of national discourse and historical memory.
+% FOUNDING_PROBLEM: The Kemalist state perceived the Arabic script as a symbol of Ottoman backwardness, religious conservatism, and an impediment to rapid Westernization and the creation of a distinct Turkish national identity.
+% FOUNDING_PROBLEM_CORROBORATION: The Turkish state and its secular institutions continue to assert the necessity of the Latin script for national unity and modernization. However, a significant segment of the population, including religious and conservative groups, contests this, viewing the reform as a violent rupture with their heritage. Historical analyses from international scholars (outside the benefiting parties) corroborate the state's initial motivations but also document the profound social costs and cultural disjunctions.
+narrative_ontology:disappearance_verdict(script_as_identity__kemalist_rupture_reading, world_rearranges).
+narrative_ontology:founding_problem_status(script_as_identity__kemalist_rupture_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(script_as_identity__kemalist_rupture_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(script_as_identity__kemalist_rupture_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(script_as_identity__kemalist_rupture_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(script_as_identity__kemalist_rupture_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,16 +206,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.65) due to the severe loss of cultural capital and access for the Ottoman-educated and religious classes. Suppression is also high (0.78) because the state actively enforced the change, outlawing the old script and controlling all new publications and education. Theater ratio is low (0.20) as the state genuinely pursued its modernization goals, though the 'efficiency' argument for Latin script was partly a cover for the political rupture. The metrics reflect the coercive, top-down nature of the reform.
+ *   The extractiveness is high (0.65) because the reform imposed immense costs on the existing literate population, rendering their cultural capital worthless. Suppression is very high (0.90) due to the state's coercive enforcement, including legal prohibitions on the old script and the rapid, top-down imposition of the new one. Theater ratio is low (0.10) as the state's actions were genuinely aimed at achieving the stated political and cultural rupture, not merely performing it. Accessibility collapse is high (0.80) because the state effectively eliminated alternatives to the new script. Resistance is high (0.70) due to the profound cultural and religious opposition, though this resistance was largely suppressed by state power.
  *
  * PERSPECTIVAL GAP:
- *   The Turkish Republic state and secular elites experienced this as a necessary and beneficial coordination mechanism for national identity and modernization. The Ottoman-educated class and religious institutions experienced it as a highly extractive and suppressive snare, severing their connection to their past and undermining their social standing. The engine's per-seat classification will reflect this divergence.
+ *   From the perspective of the Turkish state and secular elites, the script reform was a necessary and beneficial act of modernization (a 'rope' or 'scaffold'). From the perspective of the Ottoman-educated class and religious scholars, it was a profoundly extractive and suppressive act that destroyed their cultural heritage (a 'snare'). The engine's classification will reflect this divergence based on the structural data.
  *
  * DIRECTIONALITY LOGIC:
- *   The Turkish Republic state and secular elites are clear beneficiaries (d near 0.0) as the reform consolidated their power and vision. The Ottoman-educated class, religious institutions, and rural populations are victims (d near 1.0) due to the profound loss of literacy, cultural capital, and historical continuity. The state's identity was locked into this rupture, making exit unthinkable for its agenda-setters.
+ *   The Turkish state and secular elites are clear beneficiaries, gaining political and cultural authority. The Ottoman-educated class, religious scholars, and the rural population are victims, bearing the costs of cultural rupture, professional obsolescence, and informational isolation. The state's institutional power and the lack of exit options for the populace drive the high directionality towards the target end for victims.
  *
- * MANDATROPHY ANALYSIS:
- *   The constraint's mandate was to create a modern, secular Turkish identity. While the 'modernization' aspect is arguably live, the 'rupture' aspect has become a source of ongoing cultural and political tension. The high extractiveness and suppression, coupled with the contested founding problem status, prevent it from being mislabeled as a pure rope or mountain. It remains a tangled rope because the coordination function (national identity) is still asserted, but the extraction (from those tied to the Ottoman past) is undeniable and actively maintained.
  */
 
 /* ==========================================================================
@@ -176,34 +221,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    script_efficiency_vs_political_rupture,
-    'Was the Latin script adopted primarily for phonetic efficiency in Turkish, or as a political tool to sever ties with the Ottoman-Islamic past?',
-    'Linguistic analysis comparing phonetic transparency of Arabic vs. Latin script for Turkish, alongside historical analysis of state archives and public discourse from the period, weighing stated linguistic goals against political rhetoric and outcomes.',
-    'If primarily phonetic, the extractiveness might be re-evaluated as a necessary cost of a genuine coordination improvement. If primarily political, the extractiveness is a direct consequence of a coercive identity-building project, reinforcing its tangled_rope classification.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(script_efficiency_vs_political_rupture, empirical, 'Ambiguity between linguistic and political motivations for script reform.').
-
-omega_variable(
-    long_term_cultural_cost,
-    'What is the long-term cultural cost of the script reform in terms of historical memory, access to heritage, and intergenerational understanding?',
-    'Sociological studies of intergenerational literacy, cultural transmission, and historical knowledge among Turkish populations, comparing access to Ottoman-era texts and historical narratives across generations.',
-    'A high long-term cultural cost would amplify the effective extractiveness, particularly for future generations, even if the immediate political goals were achieved. This would reinforce the ''victim'' status of those cut off from their past.',
+    transition_cost_ambiguity,
+    'Was the transition cost truly negligible, or did the state''s narrative of ''zero cost'' mask profound social and cultural disruption?',
+    'Longitudinal studies of literacy rates, cultural production, and social mobility across generations, comparing official statistics with independent historical accounts and oral histories.',
+    'If costs were high, the extractiveness of the constraint is even higher than measured, and the ''rupture'' narrative is a justification for state-imposed cultural loss. If costs were genuinely low, the state''s claim of efficient modernization is strengthened.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(long_term_cultural_cost, empirical, 'Uncertainty about the full cultural impact of the script rupture over time.').
+narrative_ontology:omega_variable(transition_cost_ambiguity, empirical, 'Ambiguity regarding the actual social and cultural costs of the script reform.').
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a valid reading of the ''script as identity'' kernel, or is it an independent constraint?',
-    'Analysis of the core premises: if the ''secular modernization by rupture'' premise is central and distinct from other script-related claims, it is a valid reading. If it can be fully understood without reference to competing interpretations, it might be an independent constraint.',
-    'If an independent constraint, it would not participate in the kernel''s network of readings. If a valid reading, its classification contributes to the overall understanding of the ''script as identity'' kernel''s contested nature.',
-    confidence_without_resolution(high)
+    secular_modernization_necessity,
+    'Was the Latin script truly a necessary condition for secular modernization, or could modernization have occurred with the Arabic script?',
+    'Comparative historical analysis with other nations that modernized without script changes, or counterfactual historical modeling of alternative Turkish development paths.',
+    'If not necessary, the constraint''s justification as a ''scaffold'' for modernization collapses, revealing it as a more purely extractive ''snare'' driven by ideological goals. If necessary, the state''s rationale gains stronger support.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''kemalist_rupture_reading'' of the ''script_as_identity'' kernel. Sibling readings include ''ottoman_continuity_reading'' (Arabic script as constitutive of Turkish-Islamic identity) and ''phonetic_instrumentalism_reading'' (script as neutral technology, Latin for phonetic transparency). This reading''s core premise is that textual rupture is a feature, not a bug, for secular modernization.').
+narrative_ontology:omega_variable(secular_modernization_necessity, conceptual, 'Whether script change was a prerequisite for modernization or an ideological choice.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (legal prohibitions, state control of education) or internalized (cognitive patterns that persist after barrier removal)?',
+    'Post-reform cultural and educational trends: if a significant portion of the population continued to resist or covertly use the old script, it suggests structural suppression. If the new script was rapidly and widely adopted without significant lingering desire for the old, it suggests effective internalization.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making the rupture more complete. If purely structural, removal of state enforcement would lead to a more rapid resurgence of the old script.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in the script reform.').
 
 
 /* ==========================================================================
@@ -217,22 +262,22 @@ narrative_ontology:interval(script_as_identity__kemalist_rupture_reading, 1928, 
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(scri_tr_t1928, script_as_identity__kemalist_rupture_reading, theater_ratio, 1928, 0.1).
-narrative_ontology:measurement(scri_tr_t1935, script_as_identity__kemalist_rupture_reading, theater_ratio, 1935, 0.15).
-narrative_ontology:measurement(scri_tr_t1942, script_as_identity__kemalist_rupture_reading, theater_ratio, 1942, 0.2).
-narrative_ontology:measurement(scri_tr_t1950, script_as_identity__kemalist_rupture_reading, theater_ratio, 1950, 0.2).
+narrative_ontology:measurement(scri_tr_t1928, script_as_identity__kemalist_rupture_reading, theater_ratio, 1928, 0.15).
+narrative_ontology:measurement(scri_tr_t1935, script_as_identity__kemalist_rupture_reading, theater_ratio, 1935, 0.12).
+narrative_ontology:measurement(scri_tr_t1942, script_as_identity__kemalist_rupture_reading, theater_ratio, 1942, 0.1).
+narrative_ontology:measurement(scri_tr_t1950, script_as_identity__kemalist_rupture_reading, theater_ratio, 1950, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(scri_be_t1928, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1928, 0.6).
-narrative_ontology:measurement(scri_be_t1935, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1935, 0.65).
-narrative_ontology:measurement(scri_be_t1942, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1942, 0.63).
+narrative_ontology:measurement(scri_be_t1928, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1928, 0.5).
+narrative_ontology:measurement(scri_be_t1935, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1935, 0.6).
+narrative_ontology:measurement(scri_be_t1942, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1942, 0.65).
 narrative_ontology:measurement(scri_be_t1950, script_as_identity__kemalist_rupture_reading, base_extractiveness, 1950, 0.65).
 
 % Suppression requirement over time
 narrative_ontology:measurement(scri_su_t1928, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1928, 0.75).
-narrative_ontology:measurement(scri_su_t1935, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1935, 0.8).
-narrative_ontology:measurement(scri_su_t1942, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1942, 0.78).
-narrative_ontology:measurement(scri_su_t1950, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1950, 0.78).
+narrative_ontology:measurement(scri_su_t1935, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1935, 0.85).
+narrative_ontology:measurement(scri_su_t1942, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1942, 0.9).
+narrative_ontology:measurement(scri_su_t1950, script_as_identity__kemalist_rupture_reading, suppression_requirement, 1950, 0.9).
 
 
 /* ==========================================================================
@@ -242,6 +287,9 @@ narrative_ontology:measurement(scri_su_t1950, script_as_identity__kemalist_ruptu
 narrative_ontology:coordination_type(script_as_identity__kemalist_rupture_reading, identity_coordination).
 narrative_ontology:affects_constraint(script_as_identity__kemalist_rupture_reading, ottoman_continuity_reading).
 narrative_ontology:affects_constraint(script_as_identity__kemalist_rupture_reading, phonetic_instrumentalism_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is the 'kemalist_rupture_reading' of the 'script_as_identity' kernel. Its high extractiveness and suppression are a direct consequence of its foundational axiom of severing the Ottoman-Islamic past, which distinguishes it from sibling readings that emphasize continuity or phonetic utility.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

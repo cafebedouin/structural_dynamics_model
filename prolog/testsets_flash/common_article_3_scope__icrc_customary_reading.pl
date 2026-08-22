@@ -43,6 +43,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,21 +74,16 @@
  *   domain: international_humanitarian_law
  *
  * SUMMARY:
- *   This constraint represents the International Committee of the Red Cross's
- *   (ICRC) reading of the scope of Common Article 3 (CA3) of the Geneva
- *   Conventions, which holds that CA3's application is determined by evolving
- *   state practice and opinio juris, as tracked through customary
- *   international law. This reading allows for a dynamic interpretation of
- *   CA3, enabling its application to new forms of armed violence without
- *   requiring formal treaty amendments. It acts as a procedural constraint on
- *   interpretation, guiding how the scope of IHL is understood and expanded.
+ *   This constraint represents the ICRC's reading of Common Article 3 (CA3)
+ *   of the Geneva Conventions, which holds that the scope of CA3 is
+ *   determined by evolving state practice and opinio juris, as tracked
+ *   through customary international law. This reading allows for a dynamic
+ *   and expanding application of minimum humanitarian standards in
+ *   non-international armed conflicts, adapting to new forms of organized
+ *   violence without requiring formal treaty amendments. It functions as a
+ *   coordination mechanism for states to gradually align their practices with
+ *   evolving humanitarian norms.
  *
- * KEY AGENTS:
- *   - international_committee_of_the_red_cross: Agenda setter (institutional/analytical) — actively researches, publishes, and advocates for this reading.
- *   - states_seeking_legitimacy: Beneficiary (institutional/constrained) — benefit from a flexible, widely accepted framework for IHL application, especially when their actions might otherwise be ambiguous.
- *   - states_resisting_expansion: Payer (institutional/constrained) — bear the cost of potentially broader IHL obligations than they formally consented to, leading to resistance.
- *   - international_courts_and_tribunals: Observer (institutional/analytical) — interpret and apply IHL, often referencing customary law, thus influencing the practical scope of CA3.
- *   - non_state_armed_groups: Payer (powerless/trapped) — are increasingly subject to CA3 obligations under this reading, despite not being parties to the Geneva Conventions.
  */
 
 /* ==========================================================================
@@ -102,8 +101,8 @@ narrative_ontology:constraint_metric(common_article_3_scope__icrc_customary_read
 narrative_ontology:constraint_metric(common_article_3_scope__icrc_customary_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(common_article_3_scope__icrc_customary_reading, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(common_article_3_scope__icrc_customary_reading, resistance, 0.15).
+narrative_ontology:constraint_metric(common_article_3_scope__icrc_customary_reading, accessibility_collapse, 0.4).
+narrative_ontology:constraint_metric(common_article_3_scope__icrc_customary_reading, resistance, 0.3).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(common_article_3_scope__icrc_customary_reading, rope).
@@ -111,38 +110,82 @@ narrative_ontology:human_readable(common_article_3_scope__icrc_customary_reading
 narrative_ontology:topic_domain(common_article_3_scope__icrc_customary_reading, "international_humanitarian_law").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(common_article_3_scope__icrc_customary_reading, 'd64ffd7e-de57-4838-b212-1534015f59f4').
-narrative_ontology:cs_kernel_codification('d64ffd7e-de57-4838-b212-1534015f59f4', formalized).
-narrative_ontology:cs_authority_grounding('d64ffd7e-de57-4838-b212-1534015f59f4', expertise).
-narrative_ontology:cs_interpretation_layer_present('d64ffd7e-de57-4838-b212-1534015f59f4').
-narrative_ontology:cs_reading_relation('d64ffd7e-de57-4838-b212-1534015f59f4', common_article_3_scope__state_centric_reading, coexists_with).
-narrative_ontology:cs_reading_relation('d64ffd7e-de57-4838-b212-1534015f59f4', common_article_3_scope__expansive_human_rights_reading, influences).
-narrative_ontology:cs_axiom('d64ffd7e-de57-4838-b212-1534015f59f4', foundational, ihl_evolves_through_custom).
-narrative_ontology:cs_axiom_status(ihl_evolves_through_custom, holdable).
-narrative_ontology:cs_axiom_grounding('d64ffd7e-de57-4838-b212-1534015f59f4', ihl_evolves_through_custom, conventional).
-narrative_ontology:cs_axiom('d64ffd7e-de57-4838-b212-1534015f59f4', secondary, icrc_as_custodian_of_custom).
-narrative_ontology:cs_axiom_status(icrc_as_custodian_of_custom, holdable).
-narrative_ontology:cs_axiom_grounding('d64ffd7e-de57-4838-b212-1534015f59f4', icrc_as_custodian_of_custom, conventional).
-narrative_ontology:cs_reference_frame('d64ffd7e-de57-4838-b212-1534015f59f4', dynamic_ihl_interpretation).
-narrative_ontology:cs_drift_state('d64ffd7e-de57-4838-b212-1534015f59f4', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('d64ffd7e-de57-4838-b212-1534015f59f4', '').
+narrative_ontology:cs_story_uid(common_article_3_scope__icrc_customary_reading, 'b3ea3c8d-9076-4507-b13b-d34664a2f5a9').
+narrative_ontology:cs_kernel_codification('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', formalized).
+narrative_ontology:cs_authority_grounding('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', lineage).
+narrative_ontology:cs_interpretation_layer_present('b3ea3c8d-9076-4507-b13b-d34664a2f5a9').
+narrative_ontology:cs_reading_relation('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', common_article_3_scope__state_centric_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', common_article_3_scope__expansive_human_rights_reading, coexists_with).
+narrative_ontology:cs_axiom('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', foundational, customary_law_as_dynamic_source).
+narrative_ontology:cs_axiom_status(customary_law_as_dynamic_source, holdable).
+narrative_ontology:cs_axiom_grounding('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', customary_law_as_dynamic_source, conventional).
+narrative_ontology:cs_axiom('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', secondary, opinio_juris_as_legal_conviction).
+narrative_ontology:cs_axiom_status(opinio_juris_as_legal_conviction, holdable).
+narrative_ontology:cs_axiom_grounding('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', opinio_juris_as_legal_conviction, conventional).
+narrative_ontology:cs_reference_frame('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', evolving_customary_standards).
+narrative_ontology:cs_drift_state('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('b3ea3c8d-9076-4507-b13b-d34664a2f5a9', '').
 narrative_ontology:cs_kernel_id(common_article_3_scope__icrc_customary_reading, common_article_3_scope).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(common_article_3_scope__icrc_customary_reading, international_committee_of_the_red_cross).
+narrative_ontology:constraint_beneficiary(common_article_3_scope__icrc_customary_reading, icrc).
+narrative_ontology:constraint_beneficiary(common_article_3_scope__icrc_customary_reading, humanitarian_organizations).
 narrative_ontology:constraint_beneficiary(common_article_3_scope__icrc_customary_reading, states_seeking_legitimacy).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(common_article_3_scope__icrc_customary_reading, states_resisting_expansion).
 narrative_ontology:constraint_vindicates(common_article_3_scope__icrc_customary_reading, customary_international_law_doctrine).
 narrative_ontology:constraint_vindicates(common_article_3_scope__icrc_customary_reading, evolving_standards_of_humanity).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The International Committee of the Red Cross (ICRC) actively researches, documents, and promotes the customary international law interpretation of Common Article 3, influencing states and international bodies. They benefit from the expansion of IHL's protective scope.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__icrc_customary_reading, icrc, agenda_setter,
+    institutional, generational, analytical, global).
+
+% These organizations rely on the broadest possible application of IHL to protect civilians and provide aid in armed conflicts. The customary law reading provides a flexible mechanism for expanding protection, even if slower than other readings.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__icrc_customary_reading, humanitarian_organizations, beneficiary,
+    organized, biographical, constrained, global).
+
+% States that wish to be seen as compliant with international law, or to influence its development, benefit from a framework that allows for the gradual evolution of norms through practice and opinio juris, rather than rigid treaty interpretation. They can selectively adopt practices to shape custom.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__icrc_customary_reading, states_seeking_legitimacy, beneficiary,
+    powerful, generational, mobile, global).
+
+% Some states resist the expansion of CA3's scope, preferring a more restrictive, state-centric interpretation to preserve sovereignty and operational flexibility. They bear the cost of having to justify their practices against an evolving customary standard.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__icrc_customary_reading, states_resisting_expansion, payer,
+    institutional, generational, constrained, global).
+
+% These bodies interpret and apply international law, including customary IHL. They observe state practice and opinio juris to determine the scope of CA3, influencing its practical application through their judgments.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__icrc_customary_reading, international_courts_and_tribunals, observer,
+    institutional, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a flexible, non-treaty mechanism for states to coordinate on the minimum humanitarian standards applicable in non-international armed conflicts, allowing for the gradual evolution and expansion of these standards through shared practice and legal conviction.
+% TRANSFER_FUNCTION: Transfers interpretive authority and normative pressure from rigid treaty text to the evolving consensus of state practice and opinio juris, influencing how states conduct military operations and treat non-state armed groups.
+% ABSENT_VOICES: Non-state armed groups, while often subject to CA3, are not formal participants in the creation of customary international law and thus have no direct voice in shaping its scope, despite being primary targets of its application.
+% DISAPPEARANCE_RATIONALE: If the customary international law reading of CA3's scope vanished, the legal framework for non-international armed conflicts would become significantly more rigid and less adaptable. States would lose a key mechanism for evolving humanitarian norms, leading to greater legal uncertainty and potentially reduced protection for victims, as the only remaining interpretations would be either strictly state-centric or purely aspirational human rights-based.
+% FOUNDING_PROBLEM: The original Geneva Conventions did not adequately address non-international armed conflicts, leaving a gap in humanitarian protection. Common Article 3 was a minimal attempt to fill this, but its scope required further development.
+% FOUNDING_PROBLEM_CORROBORATION: The ICRC, numerous humanitarian organizations, and many states attest that the problem of ensuring adequate humanitarian protection in diverse and evolving non-international armed conflicts remains live. Scholarly legal analysis from independent experts also corroborates the ongoing need for a dynamic interpretive framework for CA3.
+narrative_ontology:disappearance_verdict(common_article_3_scope__icrc_customary_reading, world_rearranges).
+narrative_ontology:founding_problem_status(common_article_3_scope__icrc_customary_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(common_article_3_scope__icrc_customary_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(common_article_3_scope__icrc_customary_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(common_article_3_scope__icrc_customary_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(common_article_3_scope__icrc_customary_reading, 0.3, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,16 +200,14 @@ narrative_ontology:story_seed(common_article_3_scope__icrc_customary_reading, 'n
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.3) is relatively low because this reading primarily provides a framework for interpretation rather than direct, heavy-handed extraction. However, it does impose obligations on states and non-state actors that they might not have explicitly consented to, hence the non-zero value. Suppression (0.2) is also low, as compliance is largely driven by legitimacy and reputation rather than direct coercion, though states resisting expansion face diplomatic pressure. Theater ratio (0.1) is minimal, as the ICRC's work in this area is genuinely functional. Accessibility collapse (0.7) is high because once a norm is recognized as customary, it becomes binding on all states, leaving little room for opting out. Resistance (0.15) is present from states that prefer a more restrictive interpretation, but it's generally contained within diplomatic and legal discourse.
+ *   The extractiveness is low (0.3) because this reading primarily facilitates coordination and expansion of protective norms, rather than imposing heavy costs or extracting rents. Suppression is low (0.2) as adherence relies on states' voluntary adoption of practice and opinio juris, rather than coercive enforcement. Theater ratio is low (0.1) because the ICRC's work in documenting customary law is genuinely functional, though some states may engage in performative compliance. The metrics reflect a constraint that is largely beneficial for humanitarian protection, even if its expansion is slower than some would prefer.
  *
  * PERSPECTIVAL GAP:
- *   The ICRC and states seeking legitimacy view this reading as a vital, flexible mechanism for humanitarian protection. States resisting expansion, however, perceive it as an overreach that expands their obligations without explicit consent. Non-state armed groups, often the targets of CA3, experience it as an externally imposed legal framework.
+ *   From the perspective of humanitarian organizations, this reading is a vital, if sometimes slow, mechanism for expanding protection. From the perspective of states resisting expansion, it can be seen as an encroachment on sovereignty. The engine's classification will reflect the overall coordination function with some friction for resistant states.
  *
  * DIRECTIONALITY LOGIC:
- *   The ICRC is a primary beneficiary and agenda-setter, as this reading enhances its role and influence in IHL. States seeking legitimacy also benefit from a clear, evolving framework. States resisting expansion and non-state armed groups are payers, as they bear the costs of expanded obligations. International courts and tribunals are observers, interpreting the law without direct benefit or cost from its operation.
+ *   The ICRC and humanitarian organizations are clear beneficiaries, as this reading expands the protective scope of IHL. States seeking legitimacy also benefit by having a flexible framework for demonstrating compliance. States resisting expansion are payers, as they face pressure to conform to evolving customary norms. International courts and tribunals act as observers, interpreting and applying these norms.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading prevents mandatrophy by providing a mechanism for CA3's scope to evolve with changing conflict dynamics, ensuring the constraint remains relevant. Without this flexibility, CA3's mandate could atrophy as new forms of armed violence emerge that do not fit traditional definitions, leading to a gap in protection. The dynamic nature of customary law prevents the constraint from becoming a 'piton' of outdated treaty language.
  */
 
 /* ==========================================================================
@@ -174,60 +215,66 @@ narrative_ontology:story_seed(common_article_3_scope__icrc_customary_reading, 'n
    ========================================================================== */
 
 omega_variable(
-    customary_law_vs_treaty_law,
-    'Is the ICRC''s customary law reading of CA3''s scope a genuine reflection of state practice and opinio juris, or an attempt to expand treaty obligations through interpretation?',
-    'Systematic review of state declarations, military manuals, and judicial decisions over time, focusing on explicit acceptance or rejection of the ICRC''s methodology.',
-    'If genuinely customary, it provides a flexible mechanism for IHL adaptation. If an overreach, it risks undermining state consent to IHL and could lead to pushback against the ICRC''s authority.',
+    customary_law_vs_treaty_rigidity,
+    'Is the flexibility of customary international law in determining CA3''s scope a strength (adaptability) or a weakness (lack of clarity/enforceability)?',
+    'Empirical study of state compliance and judicial application in diverse conflict scenarios: if flexibility leads to consistent, effective protection, it''s a strength; if it leads to arbitrary application or non-compliance, it''s a weakness.',
+    'If a strength, the ''rope'' classification is reinforced. If a weakness, the constraint might lean towards ''tangled_rope'' due to the ambiguity creating opportunities for selective application and extraction by powerful states.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(customary_law_vs_treaty_law, empirical, 'Ambiguity in the source and authority of customary international law.').
+narrative_ontology:omega_variable(customary_law_vs_treaty_rigidity, conceptual, 'Ambiguity of customary law''s role in IHL scope.').
 
 omega_variable(
-    icrc_reading_vs_state_centric_reading,
-    'Does the ICRC''s customary reading of CA3''s scope genuinely coexist with the ''state-centric'' reading, or does it implicitly foreclose it by expanding the definition of armed conflict?',
-    'Analysis of state responses to ICRC reports and specific instances where states explicitly reject the customary reading''s application to situations they deem internal law enforcement.',
-    'If it forecloses the state-centric reading, it implies a broader application of IHL than many states accept, potentially increasing resistance to IHL compliance. If it coexists, it offers a complementary, more expansive interpretation.',
+    state_practice_vs_humanitarian_imperative,
+    'To what extent does ''state practice'' genuinely reflect a humanitarian imperative, versus states'' self-interest in limiting obligations?',
+    'Detailed analysis of state declarations and actions in specific conflicts, cross-referenced with their geopolitical interests and human rights records. Divergence would indicate self-interest overriding humanitarian concerns.',
+    'If state practice is primarily driven by self-interest, the extractiveness of this reading would be higher, as it would allow powerful states to shape norms to their advantage, potentially shifting it towards a ''tangled_rope'' or ''snare'' for vulnerable populations.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(icrc_reading_vs_state_centric_reading, conceptual, 'Relationship between ICRC customary reading and state-centric reading of CA3 scope.').
+narrative_ontology:omega_variable(state_practice_vs_humanitarian_imperative, empirical, 'Motivation behind state practice in customary law formation.').
 
 omega_variable(
-    icrc_reading_vs_expansive_human_rights_reading,
-    'Does the ICRC''s customary reading of CA3''s scope sufficiently incorporate human rights principles, or is it too conservative compared to the ''expansive human rights'' reading?',
-    'Comparative legal analysis of the protections offered by each reading in specific conflict scenarios, particularly those involving non-state actors and internal disturbances.',
-    'If too conservative, it may leave gaps in protection for individuals in situations of violence. If it sufficiently incorporates human rights, it provides a pragmatic, widely accepted framework for protection.',
-    confidence_without_resolution(medium)
+    kernel_reading_identification,
+    'This constraint is the ''icrc_customary_reading'' of the ''common_article_3_scope'' kernel. What would change if a sibling reading were adopted?',
+    'Analysis of judicial decisions or state declarations explicitly adopting a different reading.',
+    'If the ''state_centric_reading'' were adopted, the scope of CA3 would narrow, reducing protection. If the ''expansive_human_rights_reading'' were adopted, the scope would broaden more rapidly, potentially increasing state resistance. This reading provides a middle ground.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(icrc_reading_vs_expansive_human_rights_reading, preference, 'Adequacy of human rights integration in ICRC customary reading of CA3 scope.').
+narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Identifies this as one reading of a contested kernel and outlines the impact of adopting sibling readings.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(common_article_3_scope__icrc_customary_reading, 0, 20).
+narrative_ontology:interval(common_article_3_scope__icrc_customary_reading, 1949, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(comm_tr_t0, common_article_3_scope__icrc_customary_reading, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(comm_tr_t10, common_article_3_scope__icrc_customary_reading, theater_ratio, 10, 0.09).
-narrative_ontology:measurement(comm_tr_t20, common_article_3_scope__icrc_customary_reading, theater_ratio, 20, 0.1).
+narrative_ontology:measurement(comm_tr_t1949, common_article_3_scope__icrc_customary_reading, theater_ratio, 1949, 0.05).
+narrative_ontology:measurement(comm_tr_t1970, common_article_3_scope__icrc_customary_reading, theater_ratio, 1970, 0.08).
+narrative_ontology:measurement(comm_tr_t1990, common_article_3_scope__icrc_customary_reading, theater_ratio, 1990, 0.1).
+narrative_ontology:measurement(comm_tr_t2010, common_article_3_scope__icrc_customary_reading, theater_ratio, 2010, 0.1).
+narrative_ontology:measurement(comm_tr_t2024, common_article_3_scope__icrc_customary_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(comm_be_t0, common_article_3_scope__icrc_customary_reading, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(comm_be_t10, common_article_3_scope__icrc_customary_reading, base_extractiveness, 10, 0.28).
-narrative_ontology:measurement(comm_be_t20, common_article_3_scope__icrc_customary_reading, base_extractiveness, 20, 0.3).
+narrative_ontology:measurement(comm_be_t1949, common_article_3_scope__icrc_customary_reading, base_extractiveness, 1949, 0.2).
+narrative_ontology:measurement(comm_be_t1970, common_article_3_scope__icrc_customary_reading, base_extractiveness, 1970, 0.25).
+narrative_ontology:measurement(comm_be_t1990, common_article_3_scope__icrc_customary_reading, base_extractiveness, 1990, 0.28).
+narrative_ontology:measurement(comm_be_t2010, common_article_3_scope__icrc_customary_reading, base_extractiveness, 2010, 0.29).
+narrative_ontology:measurement(comm_be_t2024, common_article_3_scope__icrc_customary_reading, base_extractiveness, 2024, 0.3).
 
 % Suppression requirement over time
-narrative_ontology:measurement(comm_su_t0, common_article_3_scope__icrc_customary_reading, suppression_requirement, 0, 0.15).
-narrative_ontology:measurement(comm_su_t10, common_article_3_scope__icrc_customary_reading, suppression_requirement, 10, 0.18).
-narrative_ontology:measurement(comm_su_t20, common_article_3_scope__icrc_customary_reading, suppression_requirement, 20, 0.2).
+narrative_ontology:measurement(comm_su_t1949, common_article_3_scope__icrc_customary_reading, suppression_requirement, 1949, 0.15).
+narrative_ontology:measurement(comm_su_t1970, common_article_3_scope__icrc_customary_reading, suppression_requirement, 1970, 0.18).
+narrative_ontology:measurement(comm_su_t1990, common_article_3_scope__icrc_customary_reading, suppression_requirement, 1990, 0.2).
+narrative_ontology:measurement(comm_su_t2010, common_article_3_scope__icrc_customary_reading, suppression_requirement, 2010, 0.2).
+narrative_ontology:measurement(comm_su_t2024, common_article_3_scope__icrc_customary_reading, suppression_requirement, 2024, 0.2).
 
 
 /* ==========================================================================
@@ -237,10 +284,6 @@ narrative_ontology:measurement(comm_su_t20, common_article_3_scope__icrc_customa
 narrative_ontology:coordination_type(common_article_3_scope__icrc_customary_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(common_article_3_scope__icrc_customary_reading, common_article_3_scope__state_centric_reading).
 narrative_ontology:affects_constraint(common_article_3_scope__icrc_customary_reading, common_article_3_scope__expansive_human_rights_reading).
-narrative_ontology:affects_constraint(common_article_3_scope__icrc_customary_reading, ihl_applicability_to_non_state_actors).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the Common Article 3 scope kernel, focusing on customary international law. It is linked to other readings that emphasize state consent or human rights principles.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

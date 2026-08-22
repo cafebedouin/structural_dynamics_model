@@ -4,28 +4,85 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "2f247056-4db6-49c0-bbbe-348a0bb18552"
+    "story_uid": "afce554b-9486-429c-86c1-6acdb437d4eb"
   },
   "base_properties": {
-    "extractiveness": 0.2,
+    "extractiveness": 0.25,
     "suppression": 0.4,
-    "theater_ratio": 0.7,
+    "theater_ratio": 0.65,
     "accessibility_collapse": 0.3,
     "resistance": 0.1,
     "claimed_type": "piton",
-    "human_readable": "Total War Winnability (Strategic Culture Drift Reading)",
-    "topic_domain": "international_relations/strategic_studies",
+    "human_readable": "Post-1945 Total War Winnability (Strategic Culture Drift Reading)",
+    "topic_domain": "international_relations_theory/strategic_studies/commitment_system_analysis",
     "requires_active_enforcement": false,
     "emerges_naturally": false,
     "has_sunset_clause": false,
     "beneficiaries": [
-      "limited_war_theorists",
-      "defense_intellectuals"
+      "defense_intellectuals_limited_war",
+      "national_security_establishments"
     ],
     "victims": [
-      "strategic_flexibility",
-      "military_planners"
+      "strategic_planners",
+      "military_doctrine_developers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "defense_intellectuals_limited_war",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "These academics and policy analysts benefit from the intellectual dominance of limited war frameworks, which their careers are built upon. The idea of total war winnability challenges their established paradigms, making its discursive absence beneficial to their professional standing."
+    },
+    {
+      "name": "national_security_establishments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These institutions administer strategic planning and doctrine. While they benefit from the stability of limited war discourse, they also bear the diffuse cost of atrophied capacity for full-spectrum conflict planning. They maintain the discursive constraint through funding and publication choices."
+    },
+    {
+      "name": "strategic_planners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Military and civilian planners who must prepare for all contingencies. They are victims of the constraint because the ideational shift limits the scope of acceptable strategic thought, potentially leaving them unprepared for scenarios outside the limited war paradigm. Their 'exit' is to challenge the dominant discourse, which carries career risk."
+    },
+    {
+      "name": "military_doctrine_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Those responsible for developing military doctrine find their conceptual toolkit constrained by the prevailing strategic culture. They pay in reduced strategic flexibility and the intellectual cost of working within an incomplete framework. Their professional identity is tied to the accepted strategic culture."
+    },
+    {
+      "name": "historical_revisionists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academics and historians who analyze the evolution of strategic thought and challenge dominant narratives. They observe the constraint's operation and its effects on strategic culture, often highlighting the historical contingency of current assumptions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates strategic discourse around a shared understanding of acceptable conflict intensity and objectives, facilitating inter-state communication and crisis management within a limited war paradigm.",
+    "transfer_function": "Transfers intellectual and institutional resources away from total war planning and towards limited war scenarios, from those who might consider full-spectrum conflict to those invested in its discursive absence.",
+    "absent_voices": "Advocates for a more comprehensive, 'worst-case' strategic planning, including the possibility of total war winnability, are marginalized or dismissed as anachronistic. Their absence reinforces the prevailing limited war discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the ideational constraint on total war winnability vanished, strategic planning would immediately broaden, defense budgets might reallocate, and the intellectual landscape of strategic studies would undergo a significant reorientation, impacting doctrine, training, and international relations.",
+    "founding_problem": "The post-WWII era sought to prevent a recurrence of devastating global conflict, leading to a strategic culture that emphasized limited objectives and the unthinkability of total war.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National security establishments and defense intellectuals attest that preventing global conflict remains a live problem. Historical revisionists corroborate the shift in strategic culture but contest whether the problem of total war winnability was ever truly 'solved' or merely suppressed from discourse."
   },
   "interval": {
     "start": 1945,
@@ -50,37 +107,12 @@
     {
       "metric": "base_extractiveness",
       "time_point": 2005,
-      "value": 0.2
+      "value": 0.23
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.2
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1945,
-      "value": 0.2
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1965,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1985,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.4
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
@@ -105,87 +137,99 @@
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.7
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the ideational shift in strategic culture post-1945, where the concept of 'total war winnability' dropped from elite discourse, not due to structural impossibility or normative illegitimacy, but due to a change in how strategic communities conceptualized and discussed warfare. It is a reading of the 'total_war_winnability_post1945' kernel, focusing on the role of strategic culture. The constraint is classified as a Piton because the capacity for total war remains, but the discourse around its viability has atrophied, maintained by institutional inertia and the self-interest of those invested in limited war frameworks.",
-    "key_agents": [
-      "defense_intellectuals: Beneficiary (organized/identity_locked) — invested in limited war frameworks.",
-      "limited_war_theorists: Agenda Setter (institutional/identity_locked) — shape strategic discourse.",
-      "strategic_flexibility: Victim (powerless/trapped) — lost capacity for comprehensive planning.",
-      "military_planners: Payer (institutional/constrained) — constrained by prevailing strategic culture.",
-      "political_leaders: Payer (powerful/constrained) — inherit a limited strategic outlook."
-    ],
-    "logic_rationale": "Extractiveness is low (0.2) because the constraint doesn't directly extract material resources, but rather limits intellectual and strategic options. Suppression is moderate (0.4) as alternative strategic views are marginalized rather than actively censored. Theater ratio is high (0.7) because the 'unwinnability' narrative is largely performative, masking the underlying capacity for total war and the institutional inertia that maintains the limited war focus. Accessibility collapse is low (0.3) because the physical capacity for total war remains, but the ideational pathways to it are obscured. Resistance is low (0.1) as the ideational shift is deeply embedded in institutional culture.",
-    "perspectival_gap": "Defense intellectuals and limited war theorists perceive this as a beneficial coordination mechanism that prevents catastrophic thinking. Military planners and political leaders, while operating within this framework, may experience it as a constraint on their strategic options, leading to a divergence in perceived constraint type.",
-    "directionality_logic": "Defense intellectuals and limited war theorists are beneficiaries (d near 0.0) as their careers and intellectual frameworks are validated and reinforced. Strategic flexibility and military planners are victims/payers (d near 1.0) as their options are curtailed and resources diverted. Political leaders are also payers, constrained by the inherited strategic culture.",
-    "mandatrophy_analysis": "The constraint's mandate (preventing global catastrophe) is still live, but the mechanism (ideational shift away from total war winnability) has atrophied into a Piton. The original problem of preventing nuclear war is still relevant, but the constraint's current form primarily serves to maintain the intellectual dominance of limited war frameworks, rather than actively preventing total war. This prevents mislabeling it as a Snare, as the extraction is diffuse and primarily intellectual, not material, and the constraint persists more by inertia than active, concentrated benefit.",
-    "kernel_context": "This constraint is the 'strategic_culture_drift' reading of the 'total_war_winnability_post1945' kernel. This reading posits that total war remains physically possible but has dropped from elite discourse due to an ideational shift in strategic culture. Sibling readings include 'structural_contraction_reading' (nuclear weapons made total war impossible) and 'normative_reading_drop' (total war became normatively illegitimate)."
+    "narrative_context": "This constraint describes the ideational shift in strategic culture post-1945, where the concept of 'total war winnability' dropped from elite discourse, not due to structural impossibility or normative illegitimacy, but due to a change in how strategic elites thought about conflict. It is a reading of the 'total_war_winnability_post1945' kernel, focusing on the internal, ideational dynamics within strategic communities. The constraint is claimed as a Piton because its primary function (preventing total war) has atrophied, but the discursive absence persists due to institutional inertia and the self-interest of those invested in limited war frameworks. The metrics reflect a low but accumulating extractiveness (from strategic flexibility) and a rising theater ratio, as the 'unthinkability' of total war becomes more performative than genuinely believed.",
+    "logic_rationale": "The extractiveness is low (0.25) because it's primarily an ideational constraint, extracting 'strategic flexibility' rather than material resources. Suppression (0.4) is moderate, reflecting the soft power of academic and institutional consensus rather than overt coercion. The high and rising theater ratio (0.65) is key to its Piton classification: the performance of 'total war is unwinnable' has become more significant than its actual strategic utility, as the capacity for such conflict remains. The ideational shift means that while total war is still physically possible, the intellectual tools and frameworks for conceptualizing its 'winnability' have atrophied, creating a gap between capability and discourse.",
+    "directionality_logic": "Defense intellectuals invested in limited war frameworks are beneficiaries, as their intellectual capital is preserved. National security establishments, while benefiting from discursive stability, also bear the diffuse cost of reduced strategic flexibility, making them both agenda-setters and diffuse payers. Strategic planners and military doctrine developers are payers, as their professional scope is constrained. The constraint's ideational nature means 'identity_locked' is a common exit option for those whose careers and self-concept are tied to the dominant strategic culture.",
+    "perspectival_gap": "From the perspective of defense intellectuals, the constraint is a beneficial coordination mechanism that maintains intellectual order. From the perspective of strategic planners, it's a subtle but real limitation on their professional capacity. The engine's per-seat classification will capture this divergence.",
+    "kernel_context": "This constraint is the 'strategic_culture_drift' reading of the 'total_war_winnability_post1945' kernel. It posits that total war winnability dropped from elite discourse due to an ideational shift in strategic culture. Sibling readings include 'structural_contraction_reading' (nuclear weapons made total war impossible) and 'normative_reading_drop' (total war became normatively illegitimate)."
   },
   "omegas": [
     {
-      "id": "ideational_vs_structural_causation",
-      "question": "To what extent is the decline in total war discourse due to ideational shifts in strategic culture versus underlying structural changes (e.g., nuclear deterrence, economic interdependence)?",
-      "resolution_mechanism": "Comparative historical analysis of strategic cultures in different geopolitical contexts, controlling for structural factors. Counterfactual analysis exploring how discourse might have evolved under different ideational trajectories.",
-      "impact": "If structural factors are dominant, this constraint's extractiveness and theater_ratio might be lower, as the ideational shift would be a symptom rather than a primary cause. If ideational factors are dominant, the Piton classification is strengthened.",
+      "id": "ideational_vs_material_causation",
+      "question": "To what extent is the absence of total war winnability discourse due to genuine ideational shifts versus underlying material or structural changes (e.g., nuclear deterrence)?",
+      "resolution_mechanism": "Comparative historical analysis of strategic cultures in different nuclear/non-nuclear contexts, or counterfactual analysis of how discourse might have evolved without specific material conditions.",
+      "impact": "If material factors are dominant, this constraint's extractiveness and suppression might be lower, as the ideational constraint is merely a reflection. If ideational factors are primary, the Piton classification is strengthened.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing ideational from structural drivers of strategic culture."
+      "description": "Distinguishing ideational from material drivers of strategic culture."
     },
     {
-      "id": "piton_vs_snare_ambiguity",
-      "question": "Is the benefit to defense intellectuals from maintaining limited war frameworks concentrated enough to reclassify this as a Snare, or is it truly diffuse enough for a Piton?",
-      "resolution_mechanism": "Detailed analysis of funding flows, career paths, and institutional power structures within strategic studies. Quantify the direct material and reputational gains from adherence to the 'limited war' paradigm.",
-      "impact": "If benefits are highly concentrated and actively defended, the constraint would shift towards a Snare, indicating more direct extraction. If benefits remain primarily inertial and diffuse, the Piton classification holds.",
+      "id": "mandatrophy_of_strategic_flexibility",
+      "question": "Has the 'mandate' to consider total war winnability truly atrophied, or is it merely latent, capable of rapid revival under different geopolitical conditions?",
+      "resolution_mechanism": "Observation of strategic discourse and planning in response to major geopolitical shocks or shifts in power balances. A rapid re-emergence would suggest latency, not atrophy.",
+      "impact": "If latent, the Piton classification might be too strong, suggesting a more resilient, albeit suppressed, capacity. If truly atrophied, the Piton classification is accurate, highlighting a genuine loss of strategic capacity.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assessing the concentration of benefits to distinguish Piton from Snare."
+      "description": "Assessing the true state of strategic capacity for total war."
     },
     {
-      "id": "strategic_culture_framing_ambiguity",
-      "question": "Is 'strategic culture' a sufficiently coherent and independent causal factor, or is it merely a reflection of deeper structural or normative forces?",
-      "resolution_mechanism": "Conceptual analysis and empirical case studies demonstrating the independent causal power of strategic culture in shaping state behavior, distinct from material capabilities or international norms.",
-      "impact": "If strategic culture is not an independent causal factor, this reading might collapse into the 'structural_contraction_reading' or 'normative_reading_drop' siblings, requiring re-evaluation of the constraint's primary mechanism.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Conceptual coherence and causal independence of strategic culture as a driver."
+      "id": "discursive_suppression_mechanism",
+      "question": "Is the suppression of total war winnability discourse primarily structural (institutional funding, publication biases) or internalized (self-censorship by strategic thinkers)?",
+      "resolution_mechanism": "Qualitative interviews with strategic planners and defense intellectuals, combined with analysis of funding patterns and publication gatekeeping.",
+      "impact": "If internalized, the effective suppression is higher than the structural measure suggests, as the constraint operates even without overt enforcement. If structural, external interventions (e.g., funding for alternative research) would be more effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for strategic discourse."
     }
   ],
-  "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.08
-  },
-  "network": {
-    "affects_constraints": [
-      "total_war_winnability_post1945__structural_contraction_reading",
-      "total_war_winnability_post1945__normative_reading_drop"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'total_war_winnability_post1945' kernel. This reading focuses on ideational shifts in strategic culture, while siblings address structural and normative factors. All three are linked as a constraint family."
-  },
   "cs_structure": {
     "kernel_codification": "implicit",
     "authority_grounding": "practice",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "total_war_winnability_post1945__structural_contraction_reading",
+        "sibling_id": "normative_reading_drop",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "total_war_winnability_post1945__normative_reading_drop",
+        "sibling_id": "structural_contraction_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "strategic_culture_shapes_feasibility",
+        "atom": "strategic_culture_shapes_possibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ideational_shifts_are_contingent",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "post_nuclear_strategic_rationality",
+    "reference_frame": "post_wwii_strategic_consensus",
     "drift_state": {
       "moment": "contemporary_geopolitical_flux",
       "direction": "practice_drift",
@@ -194,14 +238,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

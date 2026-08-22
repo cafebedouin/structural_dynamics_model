@@ -4,137 +4,209 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "f4d7df2f-f447-4c2e-87bd-f5de5c364c31"
+    "story_uid": "1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3"
   },
   "base_properties": {
     "extractiveness": 0.2,
-    "suppression": 0.3,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.4,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.15,
     "claimed_type": "rope",
     "human_readable": "Bhagavad Gita: Universalist Devotional Reading",
-    "topic_domain": "religious_studies/textual_hermeneutics/ethical_philosophy",
+    "topic_domain": "religious_studies/ethical_philosophy",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
       "universal_devotee_class",
-      "marginalized_communities"
+      "marginalized_castes"
     ],
-    "victims": []
+    "victims": [],
+    "vindicated_propositions": [
+      "bhakti_marga_supremacy",
+      "egalitarian_spiritual_access"
+    ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_ambiguity",
-      "question": "Is this constraint a genuine universalist teaching, or an interpretation that selectively emphasizes certain verses to undermine traditional social structures?",
-      "resolution_mechanism": "Comparative textual analysis across a wider range of Hindu scriptures and historical reception studies of the Gita's interpretation by different schools of thought.",
-      "impact": "If a selective interpretation, its 'universalist' claims might be seen as a strategic re-reading rather than an inherent property of the text, potentially reclassifying it as a 'tangled_rope' for those whose traditional authority it undermines.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between inherent textual meaning and interpretive construction."
+      "name": "universal_devotee_class",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Finds spiritual liberation and purpose through direct devotion, unmediated by traditional caste hierarchies. This reading empowers them by validating their spiritual path and dissolving traditional barriers to salvation."
     },
     {
-      "id": "caste_system_legitimacy",
-      "question": "To what extent does this reading genuinely dissolve caste as a spiritual barrier, versus merely reinterpreting its function without challenging its social reality?",
-      "resolution_mechanism": "Sociological studies of devotional movements inspired by this reading, examining actual changes in social mobility and inter-caste relations among adherents.",
-      "impact": "If caste barriers persist despite the spiritual claims, the 'universalist' aspect might be more theoretical than practical, reducing its effective coordination function and increasing its latent extractiveness for marginalized groups.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Effectiveness of spiritual universalism in challenging social hierarchy."
+      "name": "marginalized_castes",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Are explicitly granted access to spiritual paths previously denied or restricted by caste. This reading offers a powerful counter-narrative to their traditional social and religious subjugation, providing dignity and hope."
     },
     {
-      "id": "violence_interpretation_neutrality",
-      "question": "Does this reading genuinely render violence neither mandated nor central, or does it merely de-emphasize it to fit modern ethical sensibilities?",
-      "resolution_mechanism": "Analysis of the historical and contemporary ethical implications drawn by adherents of this reading, particularly in contexts of conflict or social justice movements.",
-      "impact": "If the de-emphasis is a modern imposition, the reading's claim to ethical neutrality regarding violence might be seen as a form of 'theater_ratio' masking a more complex textual reality, potentially affecting its 'claimed_type' towards a 'tangled_rope' if it implicitly enables inaction in the face of injustice.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Neutrality of the reading regarding violence."
+      "name": "traditional_brahminical_priesthood",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experiences a loss of exclusive spiritual authority and gatekeeping power. Their traditional role as sole interpreters and mediators of dharma is challenged, leading to a reduction in their social and religious influence."
+    },
+    {
+      "name": "orthodox_scholars",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Find their literal and caste-affirming interpretations of the Gita undermined. Their academic and religious careers may be built on defending traditional readings, making this universalist interpretation a direct challenge to their intellectual and social capital."
+    },
+    {
+      "name": "gandhian_pacifists",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "While not directly benefiting or paying, they observe this reading as a partial ally in de-emphasizing violence, though they might still find its devotional focus less aligned with their primary ethical concerns than their own allegorical reading."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates a diverse spiritual community around a shared devotional path, transcending social divisions and providing a common framework for ethical conduct rooted in divine surrender.",
+    "transfer_function": "Transfers spiritual authority and access from traditional caste-based gatekeepers to individual devotees, regardless of their social standing. It also transfers a sense of agency and dignity to marginalized groups.",
+    "absent_voices": "Those who benefit from strict caste hierarchy and exclusive spiritual access are structurally excluded from this reading's interpretive community; they would argue for the divine sanction of social stratification and the necessity of ritual mediation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished, the spiritual landscape for millions would revert to more restrictive, caste-bound interpretations, leading to a loss of agency and spiritual access for marginalized groups, and a re-consolidation of traditional priestly authority.",
+    "founding_problem": "The problem of spiritual exclusion and social stratification based on birth, where access to divine grace and liberation was denied to vast segments of society.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Numerous devotional movements and social reform efforts throughout history, as well as contemporary academic scholarship on subaltern religious practices, corroborate the ongoing problem of spiritual exclusion and the historical role of this reading in challenging it. This corroboration comes from outside the immediate beneficiary groups, from historical records and sociological analyses."
+  },
+  "interval": {
+    "start": 100,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.25
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.22
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 100,
       "value": 0.2
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.2
+      "time_point": 500,
+      "value": 0.18
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.32
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
+      "metric": "base_extractiveness",
+      "time_point": 1000,
       "value": 0.15
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.12
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.17
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 20,
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.1
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents a 'universalist devotional' reading of the Bhagavad Gita's Kurukshetra discourse. It emphasizes that devotion (bhakti) is a path to spiritual liberation accessible to all, irrespective of caste, and redefines dharma as surrender to divine will rather than adherence to prescribed social roles. This reading de-emphasizes the literal interpretation of violence in the text, viewing it as either allegorical or secondary to the core message of devotion. It structurally undermines traditional Brahminical gatekeeping authority and promotes egalitarian access to spiritual practice.",
+    "narrative_context": "This constraint represents the 'universalist devotional' reading of the Bhagavad Gita's Kurukshetra discourse. In this reading, the text teaches that devotion (bhakti) is the supreme path to spiritual liberation, accessible to all individuals regardless of their caste or social standing. Dharma is reinterpreted as surrender to divine will rather than strict adherence to prescribed social roles. This reading fundamentally challenges traditional Brahminical gatekeeping and caste-based spiritual exclusion, promoting an egalitarian spiritual access. The constraint's claimed type is 'rope' because it genuinely coordinates a broad spiritual community and offers net benefits to its participants, particularly the historically marginalized, with minimal inherent extraction.",
     "key_agents": [
-      "universal_devotee_class: Primary beneficiary (powerless/mobile) — gains spiritual access and agency",
-      "marginalized_communities: Primary beneficiary (powerless/constrained) — gains spiritual inclusion and challenges social barriers",
-      "traditional_brahmins: Payer (institutional/constrained) — loses gatekeeping authority and social status",
-      "orthodox_scholars: Payer (organized/constrained) — resists reinterpretation that challenges literal readings",
-      "gita_text: Agenda setter (institutional/civilizational) — the kernel from which readings are derived",
-      "analytical_theologians: Observer (analytical/analytical) — studies the hermeneutical shifts and their social impact"
+      "universal_devotee_class: Primary beneficiary (organized/mobile)",
+      "marginalized_castes: Primary beneficiary (powerless/identity_locked)",
+      "traditional_brahminical_priesthood: Primary payer (institutional/constrained)",
+      "orthodox_scholars: Secondary payer (powerful/constrained)",
+      "gandhian_pacifists: Analytical observer (organized/analytical)"
     ],
-    "logic_rationale": "The extractiveness is low (0.2) because this reading primarily offers spiritual liberation and inclusion, rather than imposing significant costs. Suppression is moderate (0.3) as it challenges existing social hierarchies, but its 'enforcement' is primarily through persuasion and spiritual movement, not coercion. Theater ratio is low (0.1) as its core function of providing an accessible spiritual path is genuine. Accessibility collapse is moderate (0.7) because while it opens a path, it still requires commitment and understanding of complex spiritual concepts. Resistance is moderate (0.4) due to opposition from traditional authorities whose power it diminishes.",
-    "perspectival_gap": "From the perspective of the universal devotee class and marginalized communities, this reading is a liberating 'rope' that offers spiritual access and agency. For traditional Brahmins and orthodox scholars, it is a 'snare' or 'tangled_rope' that undermines their established authority and social order, extracting their traditional power and influence. The engine's per-seat classification will reflect this divergence based on the declared roles and exit options.",
-    "directionality_logic": "The universal devotee class and marginalized communities are clear beneficiaries (d near 0.0) as they gain spiritual access and challenge social barriers. Traditional Brahmins and orthodox scholars are targets (d near 1.0) as their gatekeeping authority and social status are undermined. The Gita text itself, as the kernel, is the agenda setter, but its 'directionality' is mediated by interpretation.",
-    "mandatrophy_analysis": "This reading prevents mislabeling a genuine coordination function (universal spiritual access) as pure extraction. While it extracts from traditional authorities, its primary function is to coordinate spiritual practice on an egalitarian basis. The 'mandate' is to provide a path to devotion, which remains live. The 'mandatrophy' would occur if the universalist claims became purely performative while actual social barriers persisted, turning it into a 'piton' or 'snare' for those it claims to liberate.",
-    "kernel_context": "This constraint is the 'universalist devotional reading' of the Bhagavad Gita's Kurukshetra discourse. It stands in contrast to the 'orthodox literal reading' which emphasizes caste-based duty and righteous violence, and the 'Gandhian allegorical reading' which interprets the battlefield as an internal struggle, spiritualizing violence."
+    "logic_rationale": "The extractiveness is low (0.2) because this reading primarily functions to open access and empower, rather than to extract from its adherents. Any 'cost' is largely the relinquishing of ego or attachment, which is framed as beneficial. Suppression is also low (0.1) as the reading's persistence relies on its appeal and transformative power, not coercion. Theater ratio is minimal (0.05) because its core message is direct and functional in fostering devotion. Accessibility collapse is high (0.8) because once understood, the path of universal devotion is presented as universally available and superior, making alternatives (like strict ritualism or caste-based paths) less appealing. Resistance is moderate (0.15) from those whose traditional authority is challenged.",
+    "perspectival_gap": "The traditional Brahminical priesthood and orthodox scholars experience this reading as highly extractive, as it directly undermines their social status, interpretive authority, and economic base. For the universal devotee class and marginalized castes, it is profoundly beneficial, offering liberation and dignity. The engine's per-seat classification will reflect this divergence, with payers experiencing a 'snare' or 'tangled_rope' due to the loss of their traditional rents, while beneficiaries experience a 'rope' or even a 'mountain' of spiritual truth.",
+    "directionality_logic": "The universal devotee class and marginalized castes are clear beneficiaries (d near 0.0) as the reading grants them spiritual access and agency. The traditional Brahminical priesthood and orthodox scholars are payers (d near 1.0) because this reading directly challenges and diminishes their established authority and social capital. The reading subsidizes the former by dissolving barriers, and extracts from the latter by eroding their exclusive claims.",
+    "mandatrophy_analysis": "This reading actively resolves a form of mandatrophy present in older, more restrictive interpretations of the Gita. It re-establishes a 'live' founding problem (spiritual exclusion) and offers a solution that is still relevant, preventing the constraint from becoming a 'piton' of outdated ritualism. The classification as 'rope' prevents mislabeling it as pure extraction, acknowledging its genuine coordination and benefit-generating function for a broad base of adherents, while still recognizing the 'extraction' it performs on traditional gatekeepers by dissolving their power."
   },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine, distinct reading of the Bhagavad Gita kernel, or merely a reformist interpretation within a broader orthodox framework?",
+      "resolution_mechanism": "Analysis of historical reception and independent theological development: if it generated distinct schools of thought and practice, it's a distinct reading.",
+      "impact": "If a distinct reading, its classification stands. If merely an interpretation, its structural independence is weaker, potentially making it a 'tangled_rope' within the larger orthodox 'snare'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading constitutes a structurally independent constraint."
+    },
+    {
+      "id": "violence_interpretation_ambiguity",
+      "question": "Does this universalist devotional reading fully neutralize the 'righteous violence' aspect of the Kurukshetra discourse, or does it merely de-emphasize it, leaving an ambiguity that could be re-activated?",
+      "resolution_mechanism": "Textual analysis of how proponents of this reading address the violence, and historical instances of its re-interpretation in contexts of conflict.",
+      "impact": "If fully neutralized, the reading's 'rope' classification is robust. If merely de-emphasized, a latent 'snare' potential remains, increasing its effective extractiveness in certain contexts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the text's stance on violence within this reading."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of traditional authority structural (loss of social legitimacy) or internalized (traditionalists adopting devotional practices)?",
+      "resolution_mechanism": "Sociological studies tracking the actual decline in traditional priestly roles versus the adoption of devotional practices by former gatekeepers.",
+      "impact": "If structural, the constraint's impact on traditional authority is external and measurable. If internalized, the 'suppression' is a transformation, and the overall extractiveness from the traditional seat might be lower than perceived.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for traditional authority."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
@@ -143,7 +215,7 @@
       "gita_kurukshetra_discourse__orthodox_literal_reading",
       "gita_kurukshetra_discourse__gandhian_allegorical_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three distinct readings of the Bhagavad Gita's Kurukshetra discourse kernel. Each reading has a different structural impact and classification, linked here as a constraint family."
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'gita_kurukshetra_discourse' kernel. Each reading instantiates a different constraint with its own ε and classification. This reading emphasizes universal devotion and egalitarian access, contrasting with the orthodox literal reading (caste-based duty, righteous violence) and the Gandhian allegorical reading (internal struggle, non-violence)."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -151,45 +223,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "gita_kurukshetra_discourse__orthodox_literal_reading",
-        "relation": "coexists_with"
+        "sibling_id": "orthodox_literal_reading",
+        "relation": "influences"
       },
       {
-        "sibling_id": "gita_kurukshetra_discourse__gandhian_allegorical_reading",
+        "sibling_id": "gandhian_allegorical_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "devotion_transcends_caste",
+        "atom": "bhakti_marga_supreme",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "dharma_is_divine_surrender",
+        "atom": "caste_no_spiritual_barrier",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "theological"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "egalitarian_bhakti_tradition",
+    "reference_frame": "egalitarian_devotional_path",
     "drift_state": {
-      "moment": "contemporary_global_hinduism",
+      "moment": "contemporary",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

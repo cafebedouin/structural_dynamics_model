@@ -4,149 +4,227 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "bf99c25e-afee-485e-8491-cfdfe4b19ed1"
+    "story_uid": "6016ab47-7149-40a4-a8f5-5a7ee08a6875"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.2,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.15,
-    "claimed_type": "rope",
-    "human_readable": "Dignity Grounded in Autonomy, Rationality, and Rights",
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dignity Grounded in Autonomy, Rationality, and Rights (Autonomy-Rights Reading)",
     "topic_domain": "theological_ethics/technology_governance/philosophical_anthropology",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
     "beneficiaries": [
       "human_rights_advocates",
       "ethical_ai_developers"
     ],
     "victims": [
-      "individuals_harmed_by_unaccountable_ai",
-      "coercively_enhanced_persons"
+      "individuals_harmed_by_ai",
+      "unaccountable_ai_systems"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine reflection of dignity as grounded in autonomy and rights, or is it merely a convenient framing for specific policy outcomes?",
-      "resolution_mechanism": "Analysis of policy outcomes: if policies consistently prioritize human flourishing and self-determination over economic or technological imperatives, it supports the genuine reading.",
-      "impact": "If merely a framing, the constraint's true nature might be more extractive (e.g., a Snare for those whose 'autonomy' is redefined to suit technological agendas).",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between genuine grounding and instrumental framing of dignity."
+      "name": "human_rights_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Actively promote and defend the understanding of dignity as inherent to human autonomy and rights. They advocate for policies that protect individuals from technologies that undermine these principles, such as opaque AI or coercive systems. They benefit from the adoption of this framework in policy and public discourse."
     },
     {
-      "id": "imago_dei_compatibility",
-      "question": "To what extent can this autonomy-rights reading of dignity coexist or find common ground with a theological 'imago dei' reading?",
-      "resolution_mechanism": "Interdisciplinary dialogue and policy synthesis: identifying areas where both framings lead to similar ethical prescriptions (e.g., protection against exploitation).",
-      "impact": "If compatible, it strengthens the universality of dignity claims; if irreconcilable, it highlights a fundamental schism in ethical foundations, potentially weakening broad consensus on AI governance.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Compatibility with the 'imago dei' reading of dignity."
+      "name": "ethical_ai_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop AI systems with built-in transparency, accountability, and privacy protections, aligning with the autonomy-rights understanding of dignity. They benefit from a clear ethical framework that guides their work and differentiates them from less ethical competitors, though they may face higher development costs."
     },
     {
-      "id": "posthumanist_boundary_dispute",
-      "question": "Where does this autonomy-rights reading draw the line on 'human' autonomy and rationality in the face of posthumanist claims for enhancement and superintelligence?",
-      "resolution_mechanism": "Development of specific ethical guidelines and legal frameworks for human-AI interaction and enhancement, defining limits based on preserving core human capacities and rights.",
-      "impact": "Failure to define boundaries risks either becoming a Snare for those who wish to enhance beyond 'human' limits, or collapsing into a Piton as its core tenets are eroded by technological change.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Defining the 'human' boundary against posthumanist claims."
+      "name": "individuals_harmed_by_ai",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are victims of AI systems that violate their autonomy, privacy, or rights through opaque decision-making, surveillance, or coercive interfaces. They bear the direct costs of dignity violations and often lack effective recourse or exit options from these systems."
+    },
+    {
+      "name": "unaccountable_ai_systems",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Represent the operational logic and design of AI systems that lack transparency, accountability, or respect for human rights. They are 'payers' in the sense that this constraint seeks to impose costs (e.g., regulatory fines, redesign mandates) on their continued operation in their current form. Their 'identity lock' is their embedded design and profit motive."
+    },
+    {
+      "name": "ai_governance_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are tasked with creating and enforcing regulations that align AI development and deployment with human rights and autonomy. They interpret and apply this dignity framework to policy, balancing innovation with protection. Their effectiveness is constrained by political will and industry lobbying."
+    },
+    {
+      "name": "posthumanist_philosophers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue that human dignity is not a fixed concept tied to current biological or cognitive limits, and that enhancement or superintelligence should be embraced. Their perspective is often marginalized in mainstream ethical AI debates, which tend to center on human-centric rights frameworks."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a shared ethical framework for the development and governance of advanced technologies, particularly AI, ensuring that innovation proceeds in a manner consistent with fundamental human values and rights.",
+    "transfer_function": "Transfers ethical obligations and design requirements onto technology developers and deployers, aiming to protect the autonomy and rights of individuals from potential harms, while transferring legitimacy and public trust to systems that comply.",
+    "absent_voices": "Those who advocate for a posthumanist vision of dignity, where human limits are not sacrosanct and enhancement is a primary goal, are largely excluded from the policy-making conversations that this framework seeks to shape. Their arguments for embracing radical technological transformation are often dismissed as speculative or dangerous.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this understanding of dignity vanished, the ethical guardrails around AI development would significantly weaken. The focus on transparency, accountability, and rights protection would erode, leading to a rapid proliferation of opaque, potentially coercive, and autonomy-violating AI systems. The legal and ethical landscape for technology would fundamentally reorganize.",
+    "founding_problem": "The rapid advancement of technology, particularly AI, posed significant risks to human autonomy, privacy, and fundamental rights, necessitating a robust ethical framework to guide its development and prevent dehumanization.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Human rights organizations, international bodies, and numerous independent ethicists and legal scholars corroborate that the problem of ensuring technology respects human dignity remains critically live. Reports on algorithmic bias, surveillance capitalism, and AI-driven manipulation provide ongoing evidence from outside the direct beneficiaries of this framework."
+  },
+  "interval": {
+    "start": 2000,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 2000,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
       "value": 0.25
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.28
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "metric": "suppression_requirement",
+      "time_point": 2008,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 2016,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
       "value": 0.15
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "metric": "theater_ratio",
+      "time_point": 2016,
       "value": 0.18
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 20,
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.09
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint defines human dignity as intrinsically linked to autonomy, rationality, and fundamental rights. It serves as a foundational ethical principle for the governance of emerging technologies, particularly AI, emphasizing transparency, accountability, and the protection of individual liberties. It implies a cautious approach to human enhancement, ensuring it respects and extends, rather than diminishes, these core human attributes. This is one reading of the 'dignity_kernel', contrasting with theological and posthumanist interpretations.",
-    "key_agents": [
-      "human_rights_advocates: Beneficiary (institutional/arbitrage) — actively promote and defend this grounding of dignity.",
-      "ethical_ai_developers: Beneficiary (organized/mobile) — align their work with these principles, gaining legitimacy and user trust.",
-      "individuals_harmed_by_unaccountable_ai: Victim (powerless/trapped) — suffer when AI systems violate autonomy or rights due to lack of transparency or coercive design.",
-      "coercively_enhanced_persons: Victim (powerless/trapped) — individuals subjected to enhancements that undermine their self-determination.",
-      "ai_developers_prioritizing_profit: Payer (powerful/mobile) — bear the cost of compliance with ethical guidelines, potentially reducing profit margins.",
-      "theologians_imago_dei: Excluded (institutional/analytical) — hold an alternative grounding for dignity, often finding this reading insufficient or misdirected.",
-      "posthumanist_philosophers: Excluded (analytical/mobile) — challenge the anthropocentric limits implied by this reading, advocating for radical enhancement."
-    ],
-    "logic_rationale": "The constraint's extractiveness (0.3) is moderate, reflecting the costs of compliance for technology developers and the potential for 'rights-washing' where superficial adherence masks deeper issues. Suppression (0.2) is low, as this reading is actively championed by many and faces resistance primarily from competing philosophical frameworks, not direct coercion. Theater ratio (0.1) is low, indicating that the principles are genuinely applied, though imperfectly. Accessibility collapse (0.7) is high because once this framework is adopted, alternative ethical approaches to dignity are largely foreclosed within the policy domain. Resistance (0.15) is moderate, coming from those who find its scope too narrow or too broad.",
-    "perspectival_gap": "Human rights advocates and ethical AI developers experience this as a beneficial framework, providing a clear moral compass and a basis for legitimate action. Those harmed by unaccountable AI or coercive enhancement experience it as a necessary but often insufficient protection, where the 'dignity' claim is not always effectively enforced. AI developers prioritizing profit may see it as an extractive burden, limiting innovation and market freedom.",
-    "directionality_logic": "Human rights advocates and ethical AI developers are beneficiaries (d=0.0-0.2) as the constraint aligns with their goals and provides a framework for their work. Individuals harmed by AI and coercively enhanced persons are victims (d=0.8-1.0) as the constraint's failure to protect them directly impacts their autonomy and rights. AI developers prioritizing profit are payers (d=0.6-0.8) as they bear the costs of compliance. Theologians and posthumanist philosophers are excluded (d=0.5-0.7) as their alternative framings are not central to this constraint's operation, though they may influence its broader reception.",
-    "mandatrophy_analysis": "This constraint is not currently experiencing mandatrophy. Its mandate to protect human autonomy and rights in the face of technological change is live and actively contested. The classification as a Rope reflects its genuine coordination function in providing a shared ethical language, while acknowledging the moderate extraction and enforcement required to uphold its principles against competing interests. It prevents mislabeling as a Mountain by recognizing its constructed nature and active defense, and as a Snare by highlighting its genuine protective function for beneficiaries.",
-    "kernel_context": "This constraint is the 'autonomy_rights_reading' of the 'dignity_kernel'. It posits dignity as inherent in human autonomy, rationality, and rights, forming a basis for ethical technology governance. It stands in contrast to the 'imago_dei_reading', which grounds dignity in divine image, and the 'posthumanist_reading', which challenges fixed human limits and embraces radical enhancement."
+    "narrative_context": "This constraint defines human dignity as intrinsically linked to autonomy, rationality, and fundamental rights, serving as a foundational ethical principle for technology governance, particularly in the context of artificial intelligence. It posits that technologies must respect and uphold these human attributes, rather than diminish them. The constraint is actively enforced through advocacy, policy proposals, and legal challenges aimed at ensuring AI systems are transparent, accountable, and protect user privacy and agency. The claimed type is 'tangled_rope' because it genuinely coordinates ethical development while extracting compliance costs from developers and imposing limits on certain technological trajectories.",
+    "logic_rationale": "The extractiveness (0.6) reflects the costs imposed on developers to build ethical AI, and the limitations placed on unchecked technological expansion. Suppression (0.4) is moderate, as it requires active enforcement against powerful technological interests but does not fully suppress innovation, only redirects it. Theater ratio (0.2) is low, indicating that the stated purpose of protecting dignity is largely genuine, though some 'ethics washing' may occur. Accessibility collapse (0.3) is low because alternative (less ethical) development paths are still available, though increasingly constrained. Resistance (0.5) is moderate, coming from both industry (resisting regulation) and some philosophical camps (posthumanism).",
+    "directionality_logic": "Human rights advocates and ethical AI developers are beneficiaries, as the framework provides legitimacy and a moral compass for their work. Individuals harmed by AI are payers, bearing the costs of dignity violations. Unaccountable AI systems are also payers, as the constraint seeks to impose costs on their current operational models. AI governance bodies are agenda-setters, actively shaping and enforcing the constraint. Posthumanist philosophers are excluded, as their alternative vision of dignity is not central to this framework's policy-oriented application.",
+    "perspectival_gap": "From the perspective of human rights advocates, this framework is a necessary 'rope' for ethical technological progress. From the perspective of developers of unaccountable AI systems, it is a 'snare' that imposes burdensome regulations and limits their profit potential. The engine's classification will reflect this divergence based on the structural positions of the stakeholders.",
+    "kernel_context": "This constraint is the 'autonomy_rights_reading' of the 'dignity_kernel'. It contrasts with the 'imago_dei_reading', which grounds dignity in divine image, and the 'posthumanist_reading', which views human limits as fluid and embraces radical enhancement."
   },
+  "omegas": [
+    {
+      "id": "scope_of_autonomy_in_ai",
+      "question": "How broadly should 'autonomy' be interpreted in the context of AI systems, particularly concerning nudges, recommendations, and personalized experiences?",
+      "resolution_mechanism": "Empirical studies on user perception of agency and control in AI interactions, combined with philosophical analysis of 'meaningful human control' in complex systems.",
+      "impact": "A narrow interpretation would reduce the scope of AI systems deemed to violate dignity, potentially lowering extractiveness. A broad interpretation would expand the victim set and increase regulatory pressure, raising extractiveness.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in defining the boundary of autonomous decision-making in human-AI interaction."
+    },
+    {
+      "id": "enforcement_effectiveness_vs_industry_lobbying",
+      "question": "To what extent can AI governance bodies effectively enforce this dignity framework against powerful technological interests, given industry lobbying and regulatory capture risks?",
+      "resolution_mechanism": "Longitudinal analysis of regulatory outcomes, enforcement actions, and industry compliance rates in jurisdictions adopting this framework.",
+      "impact": "If enforcement is weak, the constraint's effective extractiveness on unaccountable AI systems will be lower than intended, and its protective function for individuals will be diminished, potentially shifting its classification towards a 'piton' or 'snare' for individuals.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the actual power of governance bodies to enforce ethical AI principles."
+    },
+    {
+      "id": "dignity_kernel_reading_difference",
+      "question": "Is this 'autonomy_rights_reading' of dignity fundamentally compatible with the 'imago_dei_reading' or the 'posthumanist_reading' within a single coherent ethical framework for technology governance?",
+      "resolution_mechanism": "Philosophical and theological analysis of foundational premises, and practical attempts to integrate these frameworks into policy. The persistence of irreconcilable policy recommendations would indicate fundamental incompatibility.",
+      "impact": "If fundamentally incompatible, attempts to synthesize these readings into a single policy framework will lead to internal contradictions and ineffective governance. If compatible, a more comprehensive and robust ethical framework could emerge.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'dignity_kernel'. Sibling readings ('imago_dei_reading', 'posthumanist_reading') offer alternative groundings for dignity. This omega documents the irreducible conceptual uncertainty of their inter-compatibility."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [
-      "ai_accountability_frameworks",
-      "data_privacy_regulations",
-      "human_enhancement_ethics"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'dignity_kernel', each representing a distinct structural claim about the grounding of human dignity. This reading focuses on autonomy and rights, while 'dignity_kernel__imago_dei_reading' focuses on divine image, and 'dignity_kernel__posthumanist_reading' on transcending human limits. All three are linked as a constraint family."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'dignity_kernel'. Other readings, such as 'dignity_kernel__imago_dei_reading' and 'dignity_kernel__posthumanist_reading', represent alternative structural claims about the grounding of dignity and its implications for technology governance."
   },
-  "directionality_overrides": [],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "dignity_kernel__imago_dei_reading",
+        "sibling_id": "imago_dei_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "dignity_kernel__posthumanist_reading",
-        "relation": "influences"
+        "sibling_id": "posthumanist_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
@@ -157,7 +235,7 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "rationality_confers_moral_status",
+        "atom": "rationality_grounds_moral_status",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
@@ -167,19 +245,8 @@
     "drift_state": {
       "moment": "contemporary_ai_era",
       "direction": "practice_drift",
-      "magnitude": "minor",
+      "magnitude": "substantial",
       "acknowledged": true
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

@@ -4,166 +4,258 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "408ad838-354a-4ab5-8801-d7e4289317c3"
+    "story_uid": "3b1c510c-61ed-4202-abb3-3cc113fb494d"
   },
   "base_properties": {
-    "extractiveness": 0.4,
-    "suppression": 0.5,
+    "extractiveness": 0.45,
+    "suppression": 0.55,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.6,
+    "accessibility_collapse": 0.4,
     "resistance": 0.3,
     "claimed_type": "tangled_rope",
-    "human_readable": "Hybrid Legitimation of New Norms (Imperial Era)",
+    "human_readable": "Hybrid Legitimation of New Norms (Imperial Example)",
     "topic_domain": "historical_sociology/state_formation/cultural_authority",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "imperial_court",
       "state_bureaucracy",
-      "social_elites"
+      "elite_adopters"
     ],
     "victims": [
-      "local_traditions",
-      "peasantry"
+      "local_tradition_holders",
+      "common_populace"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "legitimacy_source_ambiguity",
-      "question": "Is the primary source of legitimacy for these new norms symbolic authority transfer, institutional incentives, or a combination, and in what proportion?",
-      "resolution_mechanism": "Detailed historical analysis of adoption patterns, elite vs. mass compliance rates, and the specific mechanisms of incentive distribution versus charismatic appeal.",
-      "impact": "If primarily symbolic, the constraint is more 'rope-like' (voluntary coordination); if primarily institutional, more 'snare-like' (coercive extraction). This reading asserts a hybrid, which affects the balance of coordination vs. extraction.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the dominant mechanism of norm legitimation."
+      "name": "imperial_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Initiates and champions new norms, leveraging imperial charisma and symbolic power to set an example for the populace. Benefits from increased social cohesion and centralized authority."
     },
     {
-      "id": "hybrid_vs_pure_imposition_framing",
-      "question": "Is this constraint best understood as a hybrid legitimation process, or is it fundamentally an endogenous climb or exogenous override with secondary elements of the other?",
-      "resolution_mechanism": "Comparative historical analysis across different imperial contexts and norm types, seeking cases that more cleanly fit the 'pure' models to highlight the distinctiveness of the hybrid.",
-      "impact": "If reclassified as a pure endogenous climb, the constraint would be closer to a Rope; if a pure exogenous override, closer to a Snare. The hybrid reading maintains a Tangled Rope classification.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is a 'hybrid_legitimation_reading' of the 'imposition_mechanism_kernel'. Sibling readings include 'endogenous_climb_reading' (bottom-up adoption) and 'exogenous_override_reading' (state coercion). This reading differs by asserting a combined mechanism of symbolic authority and institutional incentives, rather than a single dominant force. A shift to a pure reading would alter the balance of coordination and extraction."
+      "name": "state_bureaucracy",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Implements institutional incentives and moderate enforcement to encourage adoption of new norms. Benefits from a more standardized and governable populace, enhancing administrative efficiency."
+    },
+    {
+      "name": "elite_adopters",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Adopts new norms early, often gaining social status, political favor, or economic advantages through alignment with imperial directives. Their adoption provides a model for the broader populace."
+    },
+    {
+      "name": "local_tradition_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Experience pressure to abandon or modify long-standing local customs and traditions in favor of the new imperial norms. They bear the cultural cost of assimilation, with limited options for resistance due to institutional incentives."
+    },
+    {
+      "name": "common_populace",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Gradually adopts new norms, influenced by elite example and institutional incentives. They face social pressure and minor penalties for non-compliance, but direct coercion is less prevalent than for the 'exogenous override' reading."
+    },
+    {
+      "name": "historical_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Examines historical records to reconstruct the mechanisms of norm imposition and legitimation, seeking to understand the interplay of symbolic authority, institutional power, and social adoption."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Establishes a unified set of social and cultural norms across a diverse empire, facilitating governance, communication, and a shared imperial identity.",
+    "transfer_function": "Transfers cultural capital and social legitimacy from traditional local practices to new imperial norms, with associated benefits (status, access) flowing to adopters and costs (cultural erosion, social friction) borne by resisters.",
+    "absent_voices": "Scholars and practitioners of suppressed local traditions, whose perspectives on the value and resilience of pre-existing norms are marginalized or actively silenced by the imperial project.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid legitimation mechanism vanished, the imperial project would likely fragment, with local traditions reasserting themselves and the new norms losing their coherence and enforcement. The social and political landscape would revert to a more decentralized, culturally diverse state.",
+    "founding_problem": "The problem of governing a vast, culturally diverse empire with disparate local customs, leading to administrative inefficiencies and potential challenges to central authority.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical accounts from imperial chroniclers and administrative records attest to the ongoing challenge of cultural integration. Modern historical analyses, while critical of the methods, corroborate the existence of this foundational problem for imperial states."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 25,
       "value": 0.4
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.4
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.45
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
       "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.18
+      "time_point": 50,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 75,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
       "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the process by which new norms, often originating from an imperial center, achieved legitimacy and widespread adoption in a historical context. It posits a 'hybrid' mechanism, where the emperor's symbolic endorsement (authority transfer) combined with tangible institutional incentives (e.g., access to resources, social status) to drive adoption. This contrasts with purely bottom-up (endogenous climb) or purely top-down (exogenous override) models of norm imposition. The constraint is a 'hybrid_legitimation_reading' of the 'imposition_mechanism_kernel'.",
-    "key_agents": [
-      "imperial_court: Agenda-setter (institutional/arbitrage) — initiates and symbolically endorses new norms.",
-      "state_bureaucracy: Agenda-setter/Beneficiary (institutional/constrained) — implements incentives and enforcement, benefits from expanded authority.",
-      "social_elites: Beneficiary/Payer (powerful/constrained) — adopt norms for status/privilege, bear some initial adoption costs.",
-      "local_traditions: Victim (powerless/identity_locked) — displaced or suppressed by new norms.",
-      "peasantry: Payer (powerless/trapped) — adopts norms due to incentives or elite pressure, bears costs of compliance.",
-      "historical_sociologists: Observer (analytical/analytical) — analyze the mechanisms of norm imposition and legitimation."
-    ],
-    "logic_rationale": "The extractiveness (0.4) is moderate, reflecting the blend of voluntary adoption (due to symbolic appeal and incentives) and coercive pressure. Suppression (0.5) is also moderate, as alternatives (local traditions) are not entirely crushed but are actively disincentivized. Theater ratio (0.2) is low, indicating that the mechanisms of legitimation and enforcement are largely functional, not merely performative. The claimed type is Tangled Rope because it genuinely coordinates (aligning diverse populations with new imperial norms) but does so with asymmetric extraction (benefiting the imperial center and elites while displacing local practices and imposing costs on the populace).",
-    "perspectival_gap": "The imperial court and state bureaucracy would perceive this as a successful coordination mechanism, bringing order and unity. Social elites would see it as a pathway to status and privilege. Local traditions and the peasantry, however, would experience it as a form of cultural imposition and extraction, requiring them to abandon established practices for new, externally-derived ones. The stratified adoption (elites first, masses later) highlights this divergence.",
-    "directionality_logic": "The imperial court and state bureaucracy are clear beneficiaries (d near 0.0) as the norms extend their authority and control. Social elites are also beneficiaries (d near 0.2-0.3) due to the incentives and status gains, though they bear some adoption costs. Local traditions and the peasantry are victims (d near 0.7-0.9) as their existing norms are devalued or suppressed, and they face direct costs of compliance or loss of autonomy. The 'emperor's example' provides a symbolic benefit that dampens pure coercion for some, but the institutional incentives ensure compliance where charisma alone might fail.",
-    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (ignoring the coercive and extractive elements) or a pure Snare (ignoring the genuine coordination function and symbolic appeal). The hybrid nature means the mandate is not fully atrophied, but its justification shifts over time from initial 'unification' to ongoing 'maintenance of order' which can mask accumulating extraction. The moderate enforcement costs and stratified adoption are key indicators of this hybridity."
+    "narrative_context": "This constraint describes a 'hybrid legitimation' mechanism for new norms within a historical imperial context. It posits that new norms gain acceptance not purely through grassroots adoption (endogenous climb) nor solely through state coercion (exogenous override), but through a combination of symbolic authority transfer (e.g., the emperor's example) and institutional incentives. This leads to stratified adoption, with elites leading the way, and moderate enforcement costs. The constraint is claimed as a Tangled Rope because it genuinely coordinates (unifying norms) but also extracts (cultural assimilation, administrative control) through active, though not overwhelming, enforcement.",
+    "logic_rationale": "Extractiveness is moderate (0.45) as the new norms impose costs of cultural change but also offer benefits of integration and order. Suppression is also moderate (0.55), reflecting institutional incentives and social pressure rather than overt, widespread violence. The theater ratio is low (0.20) because the symbolic and institutional mechanisms are genuinely functional in achieving adoption, not merely performative. The initial rise in extractiveness and suppression reflects the active phase of norm imposition, with a slight decline as norms become more embedded.",
+    "directionality_logic": "The Imperial Court and State Bureaucracy are clear beneficiaries and agenda-setters, gaining centralized authority and administrative efficiency. Elite Adopters also benefit from aligning with the new norms, gaining status and favor. Local Tradition Holders and the Common Populace are payers, bearing the costs of cultural change and adaptation. Their exit options are constrained by social pressure and institutional incentives, but not entirely trapped, distinguishing this from a pure Snare.",
+    "perspectival_gap": "From the perspective of the Imperial Court, this is a successful Rope, coordinating a diverse populace. From the perspective of Local Tradition Holders, it is a Snare, eroding their cultural autonomy. The engine's computation of per-seat classification will reflect these divergences based on the declared power, exit options, and beneficiary/victim status."
   },
+  "omegas": [
+    {
+      "id": "symbolic_vs_material_leverage",
+      "question": "What was the precise balance between symbolic authority (imperial charisma, elite example) and material incentives/disincentives (institutional rewards, minor penalties) in driving norm adoption?",
+      "resolution_mechanism": "Detailed historical case studies comparing regions with varying degrees of imperial presence and local elite integration, analyzing adoption rates and resistance levels.",
+      "impact": "If symbolic authority was dominant, the constraint leans closer to a Rope (voluntary coordination); if material incentives were more coercive, it leans closer to a Snare (extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the relative weight of symbolic vs. material drivers of norm adoption."
+    },
+    {
+      "id": "hybrid_vs_sibling_distinction",
+      "question": "Is this 'hybrid legitimation' mechanism truly distinct from a sequential combination of 'endogenous climb' and 'exogenous override', or is it merely a descriptive label for a complex process that could be decomposed into those simpler mechanisms?",
+      "resolution_mechanism": "Comparative analysis with historical instances clearly fitting the 'endogenous climb' or 'exogenous override' models, looking for unique structural features of the 'hybrid' case that cannot be reduced to a sequence of the others.",
+      "impact": "If reducible, this reading might be superseded by a more granular, time-indexed analysis using the sibling constraints. If irreducible, it stands as a distinct mechanism of norm imposition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conceptual distinction between hybrid legitimation and a sequence of simpler imposition mechanisms."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one of three readings of the 'imposition_mechanism_kernel', exploring different mechanisms of norm legitimation. The 'endogenous_climb_reading' focuses on bottom-up adoption, and the 'exogenous_override_reading' on state coercion. This 'hybrid_legitimation_reading' integrates symbolic authority transfer and institutional incentives."
+    "affects_constraints": [
+      "imposition_mechanism_kernel__endogenous_climb_reading",
+      "imposition_mechanism_kernel__exogenous_override_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'imposition_mechanism_kernel', focusing on a hybrid legitimation process. It is linked to sibling readings that emphasize endogenous climb or exogenous override, as these represent alternative interpretations of how new norms achieve legitimacy."
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "implicit",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "imposition_mechanism_kernel__endogenous_climb_reading",
+        "sibling_id": "endogenous_climb_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "imposition_mechanism_kernel__exogenous_override_reading",
+        "sibling_id": "exogenous_override_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "legitimacy_is_hybrid_derived",
+        "atom": "legitimacy_from_symbolic_transfer_and_incentives",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "imperial_charisma_is_normative_force",
+        "atom": "stratified_adoption_is_normative",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "imperial_normative_synthesis",
+    "reference_frame": "imperial_cultural_unification",
     "drift_state": {
-      "moment": "post_imperial_collapse",
-      "direction": "authority_erosion",
-      "magnitude": "severe",
+      "moment": "contemporary_historical_analysis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,63 +4,90 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "dd4b42c3-47df-4b32-a7f0-4ad53353684f"
+    "story_uid": "268cfe94-e8e0-4ee6-9ca3-31ac644b5944"
   },
   "base_properties": {
     "extractiveness": 0.3,
-    "suppression": 0.4,
+    "suppression": 0.2,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.2,
+    "accessibility_collapse": 0.4,
     "resistance": 0.3,
     "claimed_type": "rope",
-    "human_readable": "Naskh Principle: Contextual Harmonization Reading",
+    "human_readable": "Contextual Harmonization of Quranic Verses",
     "topic_domain": "islamic_jurisprudence/quranic_hermeneutics/legal_theory",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
       "theologians",
-      "legal_scholars",
-      "muslim_community"
+      "modernist_jurists",
+      "muslim_laity"
     ],
     "victims": [
       "legal_predictability",
-      "jurist_authority"
-    ],
-    "vindicated_propositions": [
-      "quranic_inerrancy",
-      "divine_wisdom_in_revelation"
+      "traditionalist_jurists"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "contextual_vs_chronological_primacy",
-      "question": "Is the contextual harmonization reading of the Naskh principle genuinely reflective of Quranic hermeneutics, or is it a post-hoc rationalization to avoid the theological implications of classical abrogation?",
-      "resolution_mechanism": "Historical analysis of early Islamic legal thought, linguistic analysis of Quranic Arabic usage, and comparative theological studies of divine speech in other traditions.",
-      "impact": "If a post-hoc rationalization, the constraint's claimed 'rope' nature for theological coherence would be revealed as a 'tangled_rope' that extracts from legal predictability to preserve a specific theological stance. If genuine, it reinforces the 'rope' classification.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between genuine hermeneutic principle and theological rationalization."
+      "name": "theologians",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from a hermeneutic that preserves the divine origin and eternal relevance of all Quranic verses, allowing for a more nuanced and coherent theological understanding without discarding any part of the text. This approach supports the idea of the Quran as a unified, timeless guide."
     },
     {
-      "id": "legal_predictability_cost",
-      "question": "To what extent does the contextual harmonization reading, by maintaining the legal potential of all verses, genuinely impede legal predictability and the ability of jurists to issue definitive rulings?",
-      "resolution_mechanism": "Empirical study of legal fatwas and judicial decisions in jurisdictions where this reading is dominant, measuring the frequency of conflicting interpretations and the stability of legal precedent.",
-      "impact": "If the impediment to predictability is severe, the 'victim' status of legal predictability is amplified, pushing the constraint towards a 'tangled_rope' for jurists. If minimal, the 'rope' classification holds, emphasizing its coordination function.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Measuring the actual cost to legal predictability from contextual harmonization."
+      "name": "modernist_jurists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Find this approach highly adaptable to contemporary challenges, allowing for flexible legal reasoning that considers the spirit and context of revelation rather than rigid, chronologically determined rulings. It enables them to address new ethical and social issues within an Islamic framework."
     },
     {
-      "id": "naskh_principle_kernel_reading",
-      "question": "This constraint is the 'contextual_harmonization' reading of the 'naskh_principle' kernel. What would change if the 'classical_abrogation' or 'progressive_restriction' sibling readings were adopted?",
-      "resolution_mechanism": "Conceptual analysis of the logical implications of each reading for legal methodology and theological coherence.",
-      "impact": "Adopting 'classical_abrogation' would simplify legal rulings by invalidating earlier verses, but introduce theological challenges regarding divine consistency. Adopting 'progressive_restriction' would emphasize divine pedagogy and gradualism, but still imply a hierarchy of verses different from pure contextual application. This reading (contextual_harmonization) maintains the validity of all verses, requiring more complex interpretive effort but preserving theological coherence.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of adopting sibling readings of the Naskh principle kernel."
+      "name": "muslim_laity",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from a more accessible and less contradictory understanding of the Quran, which can appear more consistent and relevant to their daily lives. It reduces the perceived tension between different verses and fosters a sense of the Quran's enduring guidance."
+    },
+    {
+      "name": "legal_predictability",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Suffers from the increased complexity of legal rulings, as every verse's application becomes highly dependent on specific contexts and conditions. This can lead to uncertainty in legal interpretation and application, making it harder to derive clear, universally applicable laws."
+    },
+    {
+      "name": "traditionalist_jurists",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of diminished authority in definitively closing legal questions. Their established methodologies, often relying on chronological abrogation, are challenged, requiring them to engage in more extensive and potentially less conclusive contextual analysis. This can be seen as undermining their scholarly tradition."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the interpretation of the Quran by providing a framework to reconcile seemingly contradictory verses, ensuring the entire text remains a source of guidance by emphasizing contextual understanding.",
+    "transfer_function": "Transfers interpretive flexibility and theological coherence to jurists and theologians, at the cost of some legal certainty and the simplification offered by abrogation, which is borne by the legal system and traditionalist scholars.",
+    "absent_voices": "Strict literalists or those seeking absolute legal clarity might object, arguing that this approach introduces too much ambiguity and subjectivity into divine law. They are often marginalized in interpretive debates that prioritize theological coherence over strict legal codification.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this principle vanished, the field of Quranic hermeneutics would revert to more rigid methods like classical abrogation, leading to the effective invalidation of many verses and a significant shift in how Islamic law is derived and applied. Theological coherence would be challenged, and legal debates would intensify around which verses are 'active' and which are 'abrogated'.",
+    "founding_problem": "The existence of Quranic verses that appear to contradict each other, leading to interpretive dilemmas and challenges to the Quran's internal consistency and divine origin.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Theologians and modernist jurists universally attest to the ongoing challenge of apparent contradictions and the need for a coherent interpretive framework. Even traditionalist scholars acknowledge the interpretive problem, though they propose different solutions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
@@ -69,84 +96,106 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 25,
       "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 50,
       "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 75,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.38
+      "time_point": 25,
+      "value": 0.18
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.4
+      "time_point": 50,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.4
+      "time_point": 75,
+      "value": 0.19
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.1
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'contextual harmonization' reading of the Naskh (abrogation) principle in Islamic jurisprudence. It posits that all Quranic verses retain their validity within their specific revelatory and situational contexts, and apparent contradictions are resolved by specifying the context of application rather than by declaring later verses to supersede earlier ones chronologically. This approach emphasizes the holistic coherence of the Quran and the adaptability of Islamic law.",
-    "key_agents": [
-      "theologians: Primary beneficiary (institutional/analytical) — benefits from preserving theological coherence and avoiding perceived divine inconsistency.",
-      "legal_scholars: Primary beneficiary (institutional/analytical) — benefits from a richer interpretive framework, but also a victim of increased complexity and reduced definitive authority.",
-      "muslim_community: Beneficiary (organized) — benefits from a more adaptable and coherent legal tradition, but may experience reduced legal predictability.",
-      "legal_predictability: Primary victim (non-agent) — suffers from the increased complexity of interpretation, making definitive rulings harder.",
-      "jurist_authority: Primary victim (institutional) — their ability to issue universally binding and unambiguous rulings is challenged by the perpetual validity of all verses."
-    ],
-    "logic_rationale": "The constraint is classified as a 'rope' because its primary function is to coordinate theological and legal interpretation towards a coherent understanding of the Quran, benefiting the Muslim community and scholars by preserving the integrity of the divine text. Extraction (0.3) is moderate, reflecting the increased intellectual labor and interpretive complexity required, which can be seen as a 'cost' rather than pure extraction. Suppression (0.4) is also moderate, as this reading is maintained through scholarly consensus and intellectual argument rather than overt coercion; alternative readings are debated, not suppressed. Theater ratio is low (0.1) as the interpretive work is genuine and functional. Accessibility collapse is low (0.2) because alternative hermeneutic approaches (like classical abrogation) remain intellectually accessible and debated.",
-    "perspectival_gap": "Theologians and legal scholars, while benefiting from the interpretive richness, also bear the cost of increased complexity and reduced definitive authority. For the Muslim community, the benefit of theological coherence might be offset by a perceived lack of clear legal guidance in some areas. The engine's per-seat classification will likely show a more 'tangled' experience for jurists who prioritize definitive rulings, while theologians may experience it as a pure 'rope' for preserving divine wisdom.",
-    "directionality_logic": "Theologians and legal scholars are beneficiaries as this reading supports their intellectual enterprise and preserves the Quran's theological coherence (low d). The Muslim community benefits from this coherence and adaptability. Legal predictability and jurist authority are victims because the approach inherently introduces more interpretive nuance and less definitive closure (high d). The constraint does not actively enforce its interpretation through coercive means, but rather through scholarly discourse and intellectual persuasion.",
-    "mandatrophy_analysis": "This reading prevents the 'mandatrophy' of earlier Quranic verses by ensuring their continued relevance and legal potential, thus avoiding the problem of 'dead' verses. It resolves the tension between divine consistency and legal evolution by emphasizing contextual application over chronological supersession. The constraint's persistence is tied to the ongoing need for a coherent and adaptable Islamic legal framework, rather than an outdated mandate."
+    "narrative_context": "This constraint represents the 'contextual harmonization' reading of the Naskh (abrogation) principle in Islamic jurisprudence. It asserts that all Quranic verses retain validity within their specific revelatory and situational contexts, and apparent contradictions are resolved by understanding these contexts rather than by chronologically superseding earlier verses with later ones. This approach prioritizes the holistic coherence of the Quran and its adaptability to diverse circumstances, benefiting theologians and modernist jurists by offering interpretive flexibility, but potentially reducing legal predictability for traditionalist jurists.",
+    "logic_rationale": "The extractiveness is low (0.3) because this principle primarily offers a method of interpretation rather than imposing direct costs. The 'victims' (legal predictability, traditionalist jurists) bear costs in terms of increased complexity and reduced definitive authority, but these are diffuse and conceptual rather than direct material extraction. Suppression is low (0.2) as this is an interpretive methodology, not a coercive enforcement mechanism; its persistence relies on intellectual persuasion and theological appeal rather than active suppression of alternatives. Theater ratio is low (0.1) as the principle is genuinely applied for its stated purpose of harmonization.",
+    "directionality_logic": "Theologians and modernist jurists are clear beneficiaries, gaining interpretive tools that enhance the Quran's perceived coherence and adaptability. Legal predictability is a conceptual 'payer' as its clarity is reduced. Traditionalist jurists are also 'payers' as their established methods are challenged. The constraint subsidizes theological coherence and adaptability while extracting from legal simplicity and traditional interpretive authority.",
+    "perspectival_gap": "From the perspective of theologians and modernist jurists, this is a beneficial interpretive 'rope' that solves a genuine problem of textual coherence. From the perspective of traditionalist jurists, it introduces ambiguity and undermines established legal methodologies, making it feel more like a 'tangled rope' or even a 'snare' on their authority. The engine's per-seat classification will capture this divergence.",
+    "kernel_context": "This constraint is the 'contextual_harmonization' reading of the 'naskh_principle' kernel. It stands in contrast to 'classical_abrogation' (later verses supersede earlier ones) and 'progressive_restriction' (revelation progressively restricted permissions). This reading emphasizes the enduring validity of all verses through contextual understanding."
   },
+  "omegas": [
+    {
+      "id": "interpretive_subjectivity_risk",
+      "question": "Does the emphasis on contextual specification introduce excessive interpretive subjectivity, leading to inconsistent legal rulings?",
+      "resolution_mechanism": "Empirical study of legal fatwas and judicial decisions over time, comparing consistency across different jurists applying this principle versus those applying classical abrogation.",
+      "impact": "If subjectivity is high and leads to significant inconsistency, the effective 'extraction' from legal predictability would be higher, potentially shifting the classification towards a 'tangled_rope' for the legal system. If consistency is maintained, the 'rope' classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the practical impact of contextual harmonization on legal consistency."
+    },
+    {
+      "id": "jurist_authority_erosion",
+      "question": "To what extent does this reading genuinely erode the authority of traditionalist jurists, or does it merely require them to adapt their methodologies?",
+      "resolution_mechanism": "Sociological study of juristic communities, examining shifts in influence, publication trends, and institutional recognition for scholars adhering to different Naskh readings.",
+      "impact": "If the erosion of traditionalist authority is severe and leads to their marginalization, the 'extraction' from this group would be higher, potentially pushing their seat classification towards a 'snare'. If adaptation is common and authority is retained, the current 'payer' role is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Examines the real-world impact on juristic authority."
+    },
+    {
+      "id": "naskh_framing_ambiguity",
+      "question": "Is this constraint a genuine interpretive principle, or a rhetorical framing to avoid difficult textual contradictions?",
+      "resolution_mechanism": "Conceptual analysis of the historical development of Naskh theories, tracing the motivations and arguments for each reading, and assessing their internal logical coherence and consistency with broader Islamic epistemology.",
+      "impact": "If primarily rhetorical, the 'theater_ratio' would be higher, and the 'extractiveness' from legal predictability would be re-evaluated as a more direct cost of maintaining a theological narrative, potentially shifting the overall classification towards a 'tangled_rope' or 'snare'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishes genuine interpretive principle from rhetorical framing."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'naskh_principle' kernel. Sibling readings include 'classical_abrogation' and 'progressive_restriction', which offer different hermeneutic approaches to apparent contradictions in the Quran."
+    "affects_constraints": [
+      "islamic_legal_codification",
+      "quranic_exegesis_methodology"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -154,23 +203,23 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "naskh_principle__classical_abrogation",
+        "sibling_id": "classical_abrogation",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "naskh_principle__progressive_restriction",
+        "sibling_id": "progressive_restriction",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "all_quranic_verses_retain_validity",
+        "atom": "all_quranic_verses_eternally_valid",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "contextual_specification_resolves_apparent_contradictions",
+        "atom": "contextual_specificity_resolves_apparent_contradictions",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
@@ -178,21 +227,10 @@
     ],
     "reference_frame": "holistic_quranic_coherence",
     "drift_state": {
-      "moment": "contemporary_islamic_jurisprudence",
+      "moment": "contemporary_islamic_scholarship",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

@@ -4,162 +4,260 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "0e685564-d641-4203-85d1-f88ca15cf4ca"
+    "story_uid": "43556e4e-e428-4b25-ac56-b6493543834d"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.7,
-    "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.75,
+    "extractiveness": 0.65,
+    "suppression": 0.78,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
     "claimed_type": "tangled_rope",
-    "human_readable": "Restrictive Originalist Interpretation of Equality Clause Scope",
+    "human_readable": "Restrictive Originalist Reading of Equality Clause Scope",
     "topic_domain": "constitutional_law/political_philosophy/civil_rights_history",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "propertied_white_males_historical",
-      "originalist_legal_scholars",
-      "conservative_political_factions"
+      "contemporary_originalist_jurists"
     ],
     "victims": [
-      "women",
-      "racial_minorities",
-      "non_propertied_males",
-      "lgbtq_individuals"
+      "women_historical",
+      "racial_minorities_historical",
+      "non_propertied_males_historical",
+      "contemporary_civil_rights_advocates"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identity",
-      "question": "Is this constraint a genuine reflection of the original intent, or a selective interpretation that serves contemporary political agendas?",
-      "resolution_mechanism": "Comprehensive historical analysis of primary sources from the founding era, including debates, private correspondence, and contemporary legal commentaries, cross-referenced with the political and economic interests of the framers.",
-      "impact": "If a selective interpretation, the constraint's claimed 'mountain' status (as natural law or original intent) would be reclassified as a 'snare' or 'tangled_rope', revealing its constructed and extractive nature. If a genuine reflection, its historical accuracy would be affirmed, though its moral implications would remain open to critique.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing genuine original intent from selective historical interpretation."
+      "name": "propertied_white_males_historical",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The original beneficiaries of the equality clause, whose political and economic status was secured by its narrow application. They defined the terms of the social contract."
     },
     {
-      "id": "scope_of_equality_kernel",
-      "question": "This constraint is the 'restrictive_originalist' reading of the 'equality_clause_scope' kernel. What would change if the 'expansive_universalist' reading were adopted?",
-      "resolution_mechanism": "Judicial precedent shift or constitutional amendment explicitly adopting a universalist interpretation, followed by legislative and executive action to enforce it.",
-      "impact": "The beneficiary set would expand to include all humans, and the victim set would dissolve. The constraint would likely reclassify from 'tangled_rope' to 'rope' or even 'mountain' (if seen as a self-evident truth), with significantly lower extractiveness and suppression.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of adopting the 'expansive_universalist' reading on constraint classification."
+      "name": "contemporary_originalist_jurists",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Judges and legal scholars who interpret the equality clause strictly according to its perceived 18th-century meaning, limiting its application to the original framers' intent. Their careers and legitimacy are tied to this interpretive method."
     },
     {
-      "id": "legitimacy_threshold_for_expansion",
-      "question": "This constraint is the 'restrictive_originalist' reading of the 'equality_clause_scope' kernel. What would change if the 'progressive_textualist' reading were adopted?",
-      "resolution_mechanism": "A sustained period of democratic legislative action and constitutional amendments expanding rights, coupled with judicial deference to these processes rather than reinterpretation of original intent.",
-      "impact": "The beneficiary set would expand through formal processes, but the constraint would retain its 'tangled_rope' or 'rope' classification, as the mechanism for expansion (amendment) would still be a constructed coordination. Extractiveness would decrease for newly included groups, but the high legitimacy threshold for expansion would remain.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of adopting the 'progressive_textualist' reading on constraint classification."
+      "name": "women_historical",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Excluded from the original scope of equality, denied political and often economic rights. Their struggle for inclusion required constitutional amendments and social movements."
+    },
+    {
+      "name": "racial_minorities_historical",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Systematically denied equality under the law, often enslaved or subjected to discriminatory codes. Their fight for civil rights was a direct challenge to this restrictive interpretation."
+    },
+    {
+      "name": "non_propertied_males_historical",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Initially excluded from full political participation due to property requirements, they eventually gained rights through political struggle, but outside the original 'equality' framework."
+    },
+    {
+      "name": "contemporary_civil_rights_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who continuously challenge restrictive interpretations of equality, arguing for universal application. They bear the cost of litigation and political organizing against this constraint."
+    },
+    {
+      "name": "expansive_universalist_jurists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Judges and legal scholars who argue for a broad, universal application of equality principles, often clashing with originalist interpretations. Their arguments are often dismissed as 'judicial activism' by originalists."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, historically grounded framework for interpreting constitutional equality, ensuring judicial consistency with the original intent of the framers.",
+    "transfer_function": "Transfers political and social power, and the legitimacy of its exercise, to those groups and interpretations that align with the 18th-century understanding of the social contract, away from those seeking broader application.",
+    "absent_voices": "The voices of women, racial minorities, and non-propertied individuals from the 18th century were absent from the original framing and are systematically excluded from this reading's interpretive authority. Their contemporary advocates are present but often marginalized in the interpretive discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this restrictive originalist reading vanished, the legal landscape for civil rights would fundamentally shift. Courts would likely adopt more expansive interpretations of equality, leading to new legal challenges and potentially overturning precedents based on originalist reasoning. The political power of originalist legal movements would diminish significantly.",
+    "founding_problem": "To establish a stable, limited government based on a written constitution, ensuring that the scope of rights and political participation was clearly defined and not subject to arbitrary expansion.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Originalist legal scholars and conservative political movements attest that the problem of judicial overreach and interpretive instability is still live. Historians and legal academics outside the originalist movement corroborate the historical context of limited framers' intent, but dispute its contemporary normative force."
+  },
+  "interval": {
+    "start": 1787,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.8
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.7
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 100,
+      "time_point": 1787,
       "value": 0.6
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.9
+      "metric": "base_extractiveness",
+      "time_point": 1865,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 50,
+      "time_point": 1787,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
       "value": 0.8
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 100,
-      "value": 0.7
+      "time_point": 2000,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1787,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.15
+      "time_point": 1865,
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.2
+      "time_point": 1920,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
     }
   ],
-  "interval": {
-    "start": 1787,
-    "end": 1887
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'restrictive_originalist' reading of the equality clause scope, prevalent in 18th-century American constitutional thought. It posits that the concept of equality, as enshrined in founding documents, primarily applied to propertied white males as political actors within a specific social contract framework. Rights and franchises for other groups (women, racial minorities, non-propertied males) were not considered inherent or constitutionally guaranteed under this interpretation, requiring separate legislative or amendment processes for their recognition. This reading is a 'tangled_rope' because it provided a coordination function for the political class of the time while actively extracting from and suppressing the rights of excluded groups.",
-    "key_agents": [
-      "propertied_white_males_historical: Primary beneficiary (institutional/arbitrage) — defined the scope of equality to their benefit.",
-      "originalist_legal_scholars: Agenda setter (institutional/analytical) — interpret and perpetuate this restrictive view.",
-      "women: Primary victim (powerless/trapped) — denied political and often civil equality.",
-      "racial_minorities: Primary victim (powerless/trapped) — subjected to systemic inequality and denial of rights.",
-      "non_propertied_males: Victim (powerless/constrained) — excluded from full political participation based on economic status.",
-      "lgbtq_individuals: Excluded (powerless/trapped) — their existence and rights were entirely outside the original framework's consideration.",
-      "conservative_political_factions: Beneficiary (organized/mobile) — leverage this interpretation to resist contemporary rights expansions.",
-      "civil_rights_advocates: Payer (organized/constrained) — bear the cost of challenging this interpretation through activism and litigation."
-    ],
-    "logic_rationale": "The extractiveness (0.6) is substantial because it systematically denied fundamental rights and political agency to large segments of the population, channeling power and resources to the defined 'equals'. Suppression (0.7) was high, enforced through legal statutes, social norms, and violence, preventing excluded groups from asserting their claims. The theater ratio (0.2) is relatively low, as the constraint was genuinely functional in maintaining the social and political order of the time, with less performative pretense than later, more eroded constraints. The accessibility collapse (0.4) is moderate, as alternatives (e.g., abolitionist movements, women's suffrage movements) did exist but were severely constrained. Resistance (0.75) was high, reflecting the ongoing struggle against these exclusions.",
-    "perspectival_gap": "From the perspective of 'propertied_white_males_historical' and 'originalist_legal_scholars', this constraint might be viewed as a 'rope' or even a 'mountain' – a natural or self-evident ordering of society. However, from the perspective of 'women', 'racial_minorities', and 'non_propertied_males', it was clearly a 'snare' or 'tangled_rope', actively extracting their rights and suppressing their agency. The engine's computation will reflect this divergence based on the declared roles and exit options.",
-    "directionality_logic": "The 'propertied_white_males_historical' and 'originalist_legal_scholars' are clear beneficiaries, as the constraint directly served their interests and worldview. 'Women', 'racial_minorities', and 'non_propertied_males' are victims, bearing the direct costs of exclusion. 'Conservative_political_factions' are also beneficiaries, as they gain political leverage from this interpretation. 'Civil_rights_advocates' are payers, expending significant resources to challenge it. 'LGBTQ_individuals' are excluded, as their rights were not even conceived within this framework, making them targets of its implicit suppression.",
-    "mandatrophy_analysis": "This constraint's mandate (to define political equality for a specific subset of the population) has largely atrophied in modern legal and social discourse, yet the 'restrictive_originalist' interpretation persists. The classification as 'tangled_rope' prevents mislabeling it as a 'mountain' (natural law) by highlighting its active enforcement and identifiable victims, even as its original coordination function for a narrow elite has become increasingly contested. The persistence of this interpretation, despite its outdated mandate, points to its continued utility for certain beneficiaries in contemporary political struggles."
+    "narrative_context": "This constraint represents the restrictive originalist reading of the equality clause's scope, limiting its application to propertied white males as political actors within an 18th-century social contract framework. This reading asserts that any expansion of equality to other groups (women, racial minorities, non-propertied individuals) requires explicit constitutional amendment, rather than judicial reinterpretation. The constraint is claimed as a 'rope' by its proponents, framing it as a faithful adherence to foundational principles, but its operation is highly extractive and suppressive for those excluded from its narrow scope, making it compute as a 'tangled_rope' or 'snare' from their seats.",
+    "logic_rationale": "Extractiveness is high (0.65) because this reading systematically denies rights and political power to large segments of the population, channeling benefits to a narrow group. Suppression is also high (0.78) as it actively resists and invalidates attempts to expand equality through judicial means, requiring significant social and political struggle (amendments, civil rights movements) to overcome. The theater ratio (0.40) reflects the performative aspect of 'original intent' arguments, which often serve to rationalize existing power structures rather than neutrally interpret historical texts. The historical measurements show fluctuations in extractiveness and suppression, often peaking during periods of intense civil rights struggle, as the constraint's enforcement machinery worked to maintain its narrow scope.",
+    "directionality_logic": "Historical propertied white males and contemporary originalist jurists are beneficiaries/agenda-setters, as the constraint secures their power and interpretive authority. Women, racial minorities, and non-propertied males (both historically and their contemporary advocates) are payers, bearing the costs of exclusion and having to fight for their rights outside this framework. Expansive universalist jurists are excluded, as their interpretive approach is fundamentally at odds with this reading.",
+    "perspectival_gap": "From the perspective of originalist jurists, this constraint is a legitimate 'rope' that ensures constitutional fidelity and stability. From the perspective of civil rights advocates and historically excluded groups, it operates as a 'snare' or 'tangled_rope,' actively extracting rights and suppressing their claims. The engine's computation of per-seat classification will reflect this divergence based on the declared structural relationships and metrics.",
+    "kernel_context": "This constraint is the 'restrictive_originalist' reading of the 'equality_clause_scope' kernel. It stands in contrast to the 'expansive_universalist' reading (equality as a universal truth) and the 'progressive_textualist' reading (equality expands via amendment, not reinterpretation)."
   },
+  "omegas": [
+    {
+      "id": "framers_intent_ambiguity",
+      "question": "Is the 'original intent' of the framers regarding equality truly as narrow as this reading asserts, or is there ambiguity that allows for broader interpretation?",
+      "resolution_mechanism": "Further historical and textual analysis of founding documents, including debates and contemporary philosophical understandings of 'equality' beyond the immediate political context.",
+      "impact": "If ambiguity is found, it weakens the 'naturalness' claim of this reading, potentially reclassifying it closer to a 'snare' by revealing the interpretive choice as a mechanism of extraction rather than a discovery of fixed meaning.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the historical 'original intent' regarding equality."
+    },
+    {
+      "id": "legitimacy_of_judicial_expansion",
+      "question": "Is judicial reinterpretation to expand equality an illegitimate act of 'judicial activism' (as this reading claims), or a necessary function of a living constitution?",
+      "resolution_mechanism": "A shift in societal consensus regarding the role of the judiciary in constitutional evolution, or a definitive ruling by a super-majority court that explicitly rejects or affirms the legitimacy of such expansion.",
+      "impact": "If judicial expansion is deemed legitimate, the 'suppression' metric of this reading would be seen as an illegitimate barrier, further pushing its classification towards 'snare' or 'tangled_rope' from the perspective of those seeking expansion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The conceptual legitimacy of judicial expansion of equality."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "voting_rights_expansion",
-      "civil_rights_legislation",
-      "equal_protection_doctrine"
+      "civil_rights_legislation_legitimacy",
+      "voting_rights_enforcement"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'equality_clause_scope' kernel. Its restrictive interpretation directly influences the perceived legitimacy and difficulty of expanding voting rights and civil rights protections."
+    "dual_formulation_note": "This constraint is one reading of the 'equality_clause_scope' kernel. Its narrow interpretation influences the legitimacy and enforcement of civil rights legislation and voting rights."
   },
-  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "equality_clause_scope__expansive_universalist",
-        "relation": "forecloses"
+        "sibling_id": "expansive_universalist",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "equality_clause_scope__progressive_textualist",
-        "relation": "influences"
+        "sibling_id": "progressive_textualist",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "original_intent_supremacy",
+        "atom": "original_intent_fixed_meaning",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "equality_as_political_franchise_not_universal_right",
+        "atom": "equality_limited_to_political_actors",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
@@ -168,20 +266,21 @@
     "reference_frame": "id_18th_century_social_contract",
     "drift_state": {
       "moment": "contemporary_civil_rights_era",
-      "direction": "practice_drift",
-      "magnitude": "severe",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

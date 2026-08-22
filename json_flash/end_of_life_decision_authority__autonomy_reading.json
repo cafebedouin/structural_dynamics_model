@@ -4,199 +4,238 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "875083bb-072f-4de7-87ef-b5ff526ce4d8"
+    "story_uid": "a004eb5c-73d1-40fb-a347-65195faf0919"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.2,
-    "theater_ratio": 0.05,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.15,
+    "extractiveness": 0.25,
+    "suppression": 0.35,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
     "claimed_type": "rope",
-    "human_readable": "End-of-Life Decision Authority (Autonomy Reading)",
+    "human_readable": "Competent Individuals' Sovereign Authority Over Own Death (Autonomy Reading)",
     "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "competent_patients",
+      "competent_individuals",
       "healthcare_professionals_facilitating"
     ],
     "victims": [
-      "suffering_prolonged_patients"
+      "suffering_prolonged_against_will"
     ]
   },
-  "interval": {
-    "start": 1970,
-    "end": 2024
-  },
+  "omegas": [
+    {
+      "id": "kernel_identity_autonomy_reading",
+      "question": "Is this constraint a genuine expression of individual autonomy, or is it a specific reading of a broader kernel that could be interpreted differently?",
+      "resolution_mechanism": "Analysis of legal and ethical frameworks that explicitly prioritize individual self-determination in end-of-life decisions over other values.",
+      "impact": "If it is merely one reading, its classification is contingent on the acceptance of the autonomy principle as primary. If it were superseded by a sanctity_reading, for example, the victim set would shift, and the constraint would appear extractive from the perspective of those seeking to end their lives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'autonomy_reading' of the 'end_of_life_decision_authority' kernel."
+    },
+    {
+      "id": "slippery_slope_risk",
+      "question": "Does the implementation of this autonomy-based constraint lead to a 'slippery slope' where vulnerable individuals are coerced into ending their lives, as argued by the vulnerability_protection_reading?",
+      "resolution_mechanism": "Longitudinal empirical studies in jurisdictions where such policies are implemented, tracking rates of voluntary vs. potentially coerced decisions, and the demographic profiles of those utilizing end-of-life options.",
+      "impact": "If a 'slippery slope' is empirically demonstrated, the effective extractiveness and suppression for vulnerable individuals would increase, potentially reclassifying the constraint as a Tangled Rope or Snare for that specific group. This would shift the constraint closer to the vulnerability_protection_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the 'slippery slope' argument against the autonomy reading."
+    },
+    {
+      "id": "sanctity_of_life_conflict",
+      "question": "How does this autonomy-based constraint reconcile with the 'sanctity_reading' which posits an intrinsic value of human life independent of individual will?",
+      "resolution_mechanism": "Philosophical and theological debate, and legal frameworks that attempt to balance or prioritize these competing values. This is a fundamental value conflict.",
+      "impact": "If the sanctity_reading were to gain dominance, this autonomy_reading would be foreclosed, and the act of ending one's life would be reclassified as a violation, shifting the victim set to those who facilitate it, and the constraint itself would likely become a Snare from the perspective of those seeking autonomy.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Conflict with the sanctity of life principle."
+    }
+  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1970,
-      "value": 0.1
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1985,
-      "value": 0.15
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2000,
+      "time_point": 0,
       "value": 0.2
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.25
+      "time_point": 5,
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1970,
-      "value": 0.1
+      "time_point": 5,
+      "value": 0.32
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1985,
-      "value": 0.15
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.18
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.2
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1970,
-      "value": 0.01
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1985,
-      "value": 0.02
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.03
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.04
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.05
+      "time_point": 10,
+      "value": 0.35
     }
   ],
-  "commentary": {
-    "narrative_context": "This constraint represents the 'autonomy reading' of end-of-life decision authority, asserting that competent individuals have sovereign control over their own death. It is a 'rope' because it facilitates coordination between patients, families, and healthcare providers around patient wishes, with relatively low extraction. However, it carries a low but increasing extractiveness from those whose suffering is prolonged by denial of access, and a low suppression from those who would oppose it on other grounds. This reading is one of several competing interpretations of the broader 'end_of_life_decision_authority' kernel.",
-    "logic_rationale": "The extractiveness (0.3) is low because the primary function is to empower individuals, but it is non-zero due to the costs borne by families and the 'victims' who are denied access despite their autonomous wishes. Suppression (0.2) is low as the constraint is generally accepted in many jurisdictions, but active enforcement is required to overcome resistance from those who hold alternative moral frameworks. Theater ratio (0.05) is very low, indicating that the constraint's stated purpose (autonomy) aligns closely with its actual operation. Accessibility collapse (0.6) is moderate, as alternatives (e.g., palliative care, natural death) still exist, but the specific alternative of autonomous control over death is collapsed if the constraint is not present. Resistance (0.15) is low but persistent, primarily from religious and vulnerability-focused groups.",
-    "perspectival_gap": "Competent patients experience this as a liberating rope, while families may experience it as a difficult coordination. Healthcare professionals navigate a complex ethical landscape, acting as facilitators. Patients denied access experience it as a snare. The engine's per-seat classification will reflect these divergences.",
-    "directionality_logic": "Competent patients are clear beneficiaries (d=0.0-0.1). Healthcare professionals facilitating these decisions are also beneficiaries, as it clarifies their ethical obligations (d=0.1-0.2). Families are payers, bearing emotional costs (d=0.6-0.7). Suffering-prolonged patients denied access are victims (d=0.9-1.0). Religious institutions are excluded, their views suppressed by the legal framework (d=0.8-0.9). Vulnerable populations advocates are observers (d=0.5).",
-    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as the underlying problem of patient autonomy in end-of-life care remains live. The challenge is not obsolescence but the ongoing contestation of its ethical and social implications, particularly regarding the 'slippery slope' argument. The classification as a rope reflects its genuine coordination function, preventing mislabeling as pure extraction, while acknowledging the costs and suppressed alternatives.",
-    "kernel_context": "This constraint, 'end_of_life_decision_authority__autonomy_reading', is one interpretation of the broader 'end_of_life_decision_authority' kernel. It emphasizes individual self-determination. Sibling readings include 'sanctity_reading' (prioritizing the intrinsic value of life) and 'vulnerability_protection_reading' (emphasizing safeguards against coercion)."
+  "interval": {
+    "start": 0,
+    "end": 10
   },
-  "omegas": [
-    {
-      "id": "slippery_slope_risk",
-      "question": "Does the expansion of end-of-life autonomy lead to a 'slippery slope' where vulnerable individuals are subtly coerced or pressured into choosing death?",
-      "resolution_mechanism": "Longitudinal epidemiological studies tracking rates of assisted dying across different demographic groups, coupled with qualitative research on patient decision-making processes in jurisdictions with liberalized laws.",
-      "impact": "If a 'slippery slope' is empirically demonstrated, the constraint's effective extractiveness and suppression would be significantly higher for vulnerable populations, potentially reclassifying it as a tangled_rope or snare for those groups. If not, the autonomy reading is strengthened.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The risk that expanded autonomy leads to coercion for vulnerable groups."
-    },
-    {
-      "id": "moral_status_of_autonomy",
-      "question": "Is individual autonomy an absolute moral principle in end-of-life decisions, or is it one value among others (e.g., sanctity of life, community welfare) that must be balanced?",
-      "resolution_mechanism": "Philosophical and theological debate, and societal consensus-building through democratic processes and evolving ethical norms. No purely empirical resolution.",
-      "impact": "If autonomy is not absolute, the constraint's justification as a pure rope is weakened, and its interaction with other values (as embodied in sibling readings) becomes more central to its classification. This would shift the conceptual framing of the constraint.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "The foundational moral weight of individual autonomy in end-of-life contexts."
-    },
-    {
-      "id": "denial_of_access_extraction",
-      "question": "What is the true extent of suffering prolonged by denial of access to end-of-life options, and how does this 'extraction' weigh against the benefits of autonomy for those who can access it?",
-      "resolution_mechanism": "Systematic collection of data on patient requests for end-of-life options, reasons for denial, and subsequent patient outcomes (e.g., prolonged suffering, clandestine actions).",
-      "impact": "If the 'extraction' from denied access is found to be substantial and widespread, the overall extractiveness of the constraint (as implemented) would be higher, pushing it closer to a tangled_rope or even snare for the 'suffering_prolonged_patients' seat.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Quantifying the harm from denial of autonomous end-of-life choices."
-    }
-  ],
+  "commentary": {
+    "narrative_context": "This constraint asserts that competent individuals hold ultimate authority over decisions regarding their own death, including the right to seek assistance in dying. It frames the denial of such agency as a form of extraction, prolonging suffering against an individual's will. This is the 'autonomy_reading' of the 'end_of_life_decision_authority' kernel, which is contested by 'sanctity_reading' and 'vulnerability_protection_reading'. The structural delta for this reading is that individuals whose suffering is prolonged against their will enter the victim set, and healthcare professionals become facilitators rather than solely preservers of life.",
+    "key_agents": [
+      "competent_individuals: Primary beneficiary/agenda_setter (powerful/mobile)",
+      "suffering_prolonged_against_will: Primary victim (powerless/trapped)",
+      "healthcare_professionals_facilitating: Beneficiary/agenda_setter (institutional/constrained)",
+      "healthcare_professionals_objecting: Payer (institutional/constrained)",
+      "legal_frameworks: Agenda-setter (institutional/civilizational)",
+      "advocacy_groups_for_autonomy: Beneficiary (organized/mobile)",
+      "advocacy_groups_for_sanctity: Payer (organized/constrained)"
+    ],
+    "logic_rationale": "The extractiveness (0.25) is moderate, reflecting the burden placed on individuals denied agency over their death, but not a direct financial transfer. Suppression (0.35) is also moderate, as legal and ethical barriers actively prevent individuals from exercising this authority. Theater ratio is low (0.1) as the debate is largely substantive. The claimed type is 'rope' because, from the perspective of this reading, it coordinates individual will with medical practice to alleviate suffering, with beneficiaries being those who gain agency and facilitators. However, the existence of victims and active enforcement suggests a potential for reclassification to 'tangled_rope' or 'snare' from other perspectives.",
+    "perspectival_gap": "From the perspective of competent individuals seeking to end their suffering, the constraint is a 'rope' that enables agency. From the perspective of those who uphold the sanctity of life, it might be seen as a 'snare' that devalues human existence. For healthcare professionals, it shifts their role from solely preserving life to also facilitating its end, creating a tension that can be extractive for those who object on moral grounds.",
+    "directionality_logic": "Competent individuals are beneficiaries (d=0.0) as they gain agency. Healthcare professionals who facilitate are also beneficiaries (d=0.0) as they align with patient autonomy. Individuals whose suffering is prolonged against their will are victims (d=1.0). Healthcare professionals who object to facilitating are payers (d=1.0) as they bear the moral cost of participating or the professional cost of refusing. Legal frameworks are agenda-setters (d=0.5) as they define the boundaries. Advocacy groups for autonomy are beneficiaries (d=0.0) as their goals are met, while advocacy groups for sanctity are payers (d=1.0) as their values are challenged.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as the underlying problem of suffering and the desire for autonomy in death are perennial. The contest is over the *framing* of the problem and its solution, not the problem's disappearance. The classification as 'rope' from the autonomy reading prevents mislabeling genuine coordination of individual will and medical practice as pure extraction, while acknowledging the costs borne by those who oppose it.",
+    "kernel_context": "This constraint is the 'autonomy_reading' of the 'end_of_life_decision_authority' kernel. This reading emphasizes individual self-determination. Sibling readings include the 'sanctity_reading' (human life has intrinsic value) and the 'vulnerability_protection_reading' (need for institutional safeguards against coercion)."
+  },
   "boltzmann": {
-    "coordination_type": "attachment_coordination"
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "end_of_life_decision_authority__sanctity_reading",
       "end_of_life_decision_authority__vulnerability_protection_reading"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'end_of_life_decision_authority' kernel. Its ε value differs significantly from the 'sanctity_reading' (lower extraction) and 'vulnerability_protection_reading' (different suppression mechanisms), necessitating separate constraint stories."
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "competent_individuals",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Individuals who, being of sound mind and facing unbearable suffering, seek to exercise control over the timing and manner of their death. They benefit from the recognition of their autonomy."
+    },
+    {
+      "name": "suffering_prolonged_against_will",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals who are competent but are denied access to end-of-life options, leading to prolonged suffering against their expressed wishes. They bear the direct cost of the constraint's absence or denial."
+    },
+    {
+      "name": "healthcare_professionals_facilitating",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Medical practitioners who, in accordance with legal and ethical guidelines, assist competent individuals in exercising their end-of-life choices. They benefit from aligning their practice with patient autonomy."
+    },
+    {
+      "name": "healthcare_professionals_objecting",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Medical practitioners who, due to moral or religious convictions, object to participating in end-of-life assistance. They bear the cost of professional tension, potential legal challenges, or moral distress."
+    },
+    {
+      "name": "legal_frameworks",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The body of laws and regulations that define the scope and limits of end-of-life decision-making. They set the rules for all other stakeholders."
+    },
+    {
+      "name": "advocacy_groups_for_autonomy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations that champion individual rights and self-determination in end-of-life decisions. They benefit from the expansion of autonomy-based policies."
+    },
+    {
+      "name": "advocacy_groups_for_sanctity",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations that advocate for the intrinsic value of human life and oppose policies that permit assisted dying. They bear the cost of policies that contradict their core values."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the individual's autonomous will regarding their death with the medical and legal systems, ensuring that end-of-life decisions are respected and facilitated within a structured framework.",
+    "transfer_function": "Transfers the ultimate authority over end-of-life decisions from external moral or institutional bodies to the competent individual, and transfers the responsibility for facilitating these decisions to the medical system.",
+    "absent_voices": "The voices of future vulnerable populations, whose potential for coercion is a central concern of the 'vulnerability_protection_reading', are absent from the direct articulation of this autonomy-focused constraint. Their concerns are externalized as a 'slippery slope' risk rather than integrated into the core design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the legal and ethical landscape around end-of-life care would be fundamentally altered. Individuals would lose recognized agency, medical professionals would revert to a purely life-preserving role, and the intense suffering of those wishing to die would be prolonged without recourse. The entire system would need to reorganize around a different foundational principle.",
+    "founding_problem": "The problem of individuals experiencing prolonged, unbearable suffering with no legal or medical means to end their lives, leading to a loss of dignity and autonomy in their final moments.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Patient advocacy groups, medical ethicists, and legal scholars (outside of groups directly benefiting from the constraint's existence) consistently attest to the ongoing nature of this problem, citing cases of individuals seeking end-of-life options and the ethical dilemmas faced by healthcare providers. Public opinion polls also frequently show support for individual autonomy in these decisions."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "end_of_life_decision_authority__sanctity_reading",
+        "sibling_id": "sanctity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "end_of_life_decision_authority__vulnerability_protection_reading",
+        "sibling_id": "vulnerability_protection_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "individual_self_determination_absolute",
+        "atom": "individual_autonomy_is_paramount",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "relief_of_suffering_paramount",
+        "atom": "relief_of_suffering_is_a_moral_imperative",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "patient_rights_movement_era",
+    "reference_frame": "individual_self_determination_framework",
     "drift_state": {
-      "moment": "contemporary_policy_debates",
-      "direction": "revival_pressure",
-      "magnitude": "substantial",
+      "moment": "contemporary_bioethics_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

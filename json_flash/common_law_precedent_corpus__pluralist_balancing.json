@@ -4,96 +4,133 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7c9acfd2-d537-4c61-9023-844343a41077"
+    "story_uid": "146dd649-7f9d-4852-aad3-bacde25092c0"
   },
   "base_properties": {
-    "extractiveness": 0.6,
+    "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.5,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
     "claimed_type": "tangled_rope",
-    "human_readable": "Common Law Precedent (Pluralist Balancing Reading)",
+    "human_readable": "Common Law Precedent: Pluralist Balancing Reading",
     "topic_domain": "legal/jurisprudence",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "appellate_judges",
-      "legal_scholars"
+      "appellate_judiciary",
+      "legal_profession"
     ],
     "victims": [
       "litigants",
-      "lower_court_judges"
+      "lower_courts"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "appellate_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sets the effective weight of precedent by deciding which cases warrant re-evaluation and how to balance stability with adaptation. Benefits from the flexibility to shape law while maintaining an appearance of continuity."
+    },
+    {
+      "name": "lower_courts",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Must apply precedent but face uncertainty due to the pluralist balancing approach, leading to higher reversal rates or the need for extensive justification for their decisions. Their professional identity is tied to upholding the legal system."
+    },
+    {
+      "name": "litigants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the direct costs of legal uncertainty and unpredictable outcomes, especially when precedent weight shifts or is balanced differently across domains. They are bound by the court's decisions with limited recourse."
+    },
+    {
+      "name": "legal_profession",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from the complexity and interpretive demands of a pluralist balancing approach, which increases the need for specialized legal expertise and argument. This can lead to higher fees and sustained demand for their services."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze and critique the application of precedent, identifying inconsistencies and proposing frameworks for balancing stability and adaptation. Their work influences future judicial reasoning but does not directly set precedent."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for judicial decision-making that allows for legal stability while accommodating societal changes and specific contextual demands, preventing rigid adherence to outdated rules.",
+    "transfer_function": "Transfers interpretive authority and flexibility to higher courts and legal experts, while imposing costs of uncertainty and complexity on lower courts and litigants.",
+    "absent_voices": "Citizens and communities directly impacted by legal decisions, who often lack the means or standing to influence the balancing act of precedent. They would advocate for greater predictability and accessibility in legal outcomes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the pluralist balancing approach to precedent vanished, the legal system would either become excessively rigid (if strict stare decisis prevailed) or entirely chaotic (if precedent had no weight), fundamentally altering judicial function and legal predictability.",
+    "founding_problem": "The need to reconcile the common law's demand for consistency with the evolving nature of society and the unique circumstances of individual cases, avoiding both stagnation and arbitrary decision-making.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars and historical analyses attest to the enduring tension between stability and adaptation in common law systems. Judicial opinions frequently acknowledge this balancing act, even if the specific outcomes are contested."
   },
   "interval": {
     "start": 1950,
     "end": 2024
   },
-  "omegas": [
-    {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine instantiation of pluralist balancing, or is it a rhetorical cover for a de facto strict stare decisis or evolutionary framework?",
-      "resolution_mechanism": "Empirical analysis of judicial opinions over time, coding for explicit balancing tests versus strict application or overt reinterpretation. Compare stated methodology with actual outcomes.",
-      "impact": "If it's a cover for strict stare decisis, the effective extractiveness for litigants is higher due to less flexibility. If it's a cover for an evolutionary framework, the extractiveness for lower courts is lower due to more interpretive leeway.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the actual application of pluralist balancing versus other readings of precedent."
-    },
-    {
-      "id": "domain_specificity_ambiguity",
-      "question": "How consistently is the 'domain and context' variability applied, and is it predictable for litigants?",
-      "resolution_mechanism": "Quantitative legal studies analyzing variance in precedent application across different legal domains and judicial panels, measuring predictability for legal practitioners.",
-      "impact": "If application is inconsistent and unpredictable, the constraint's effective suppression and extractiveness for litigants are higher due to increased uncertainty and litigation costs.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Uncertainty regarding the actual variability of precedent weight across domains."
-    }
-  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 1950,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1970,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1990,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.58
+      "value": 0.66
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1950,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1970,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1990,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
+      "time_point": 1950,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
       "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
@@ -103,22 +140,22 @@
     {
       "metric": "theater_ratio",
       "time_point": 1950,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1970,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
+      "time_point": 1970,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
+      "time_point": 1990,
       "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
@@ -127,29 +164,50 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the common law system's treatment of precedent through the lens of 'pluralist balancing,' where the weight of prior judicial decisions varies significantly based on the specific legal domain, factual context, and policy considerations. It aims to balance legal stability with the need for adaptation, but this flexibility introduces complexity and unpredictability for some actors. This is one reading of the 'common_law_precedent_corpus' kernel, distinct from 'strict_stare_decisis' and 'evolutionary_framework' readings.",
-    "key_agents": [
-      "appellate_judges: Agenda setter (institutional/arbitrage) — interpret and apply precedent with discretion.",
-      "legal_scholars: Beneficiary (analytical/analytical) — benefit from the interpretive complexity and debate.",
-      "litigants: Payer (powerless/constrained) — bear the costs of unpredictable outcomes and higher legal fees.",
-      "lower_court_judges: Payer (organized/constrained) — must navigate complex and sometimes conflicting precedents with limited interpretive authority.",
-      "legal_practitioners: Payer (moderate/constrained) — advise clients under conditions of interpretive uncertainty."
-    ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates the legal system by providing a framework for judicial decision-making (beneficiaries: appellate judges, legal scholars) but also involves significant asymmetric extraction (victims: litigants, lower court judges) due to the unpredictability and high costs associated with navigating its flexible application. Active enforcement is required to maintain the hierarchy of courts and the authority of appellate decisions. Extractiveness is moderate (0.6) due to the costs of litigation and uncertainty. Suppression is high (0.7) because litigants have limited options to avoid the system, and lower courts are bound by higher court interpretations. Theater ratio is low (0.2) as the balancing act is a genuine, albeit complex, judicial function, not mere performance.",
-    "perspectival_gap": "Appellate judges experience this as a flexible tool for justice, allowing adaptation to new circumstances, while litigants and lower court judges experience it as a source of uncertainty and increased burden. Appellate judges benefit from the intellectual challenge and interpretive authority, while litigants pay for the complexity. Legal scholars benefit from the rich interpretive material it provides.",
-    "directionality_logic": "Appellate judges are beneficiaries (d=0.1) as they wield significant interpretive power and discretion. Legal scholars are also beneficiaries (d=0.2) as the complexity fuels their research and commentary. Litigants are targets (d=0.9) due to the high costs and unpredictable outcomes. Lower court judges (d=0.8) are targets because they must apply complex and sometimes ambiguous precedent without the same interpretive freedom. Legal practitioners (d=0.7) are also targets as they must advise clients under conditions of interpretive uncertainty.",
-    "mandatrophy_analysis": "The pluralist balancing reading prevents mislabeling the system as a pure Snare by acknowledging the genuine coordination function of providing a framework for legal stability and adaptation. However, it also prevents mislabeling it as a pure Rope by highlighting the significant extraction and suppression inherent in its unpredictable application and the costs borne by those subject to it. The 'contested' status of the founding problem reflects the ongoing debate about whether the system's flexibility serves justice or merely judicial discretion.",
-    "kernel_context": "This constraint is the 'pluralist_balancing' reading of the 'common_law_precedent_corpus' kernel. This reading emphasizes that precedent's weight is not absolute but varies by legal domain and context, requiring judges to balance stability with adaptation on a case-by-case basis. Sibling readings include 'strict_stare_decisis' (precedent binds rigidly) and 'evolutionary_framework' (precedent adapts to contemporary norms)."
+    "narrative_context": "This constraint describes the 'pluralist balancing' reading of common law precedent, where the weight of prior judicial decisions is not absolute but varies by legal domain and context, requiring judges to balance stability with adaptation on a case-by-case basis. This approach is claimed as a 'rope' (a flexible coordination mechanism) but operates with significant extraction and suppression, particularly for litigants and lower courts facing unpredictable outcomes and high interpretive costs. The claimed type reflects the ideal, while the metrics reflect the operational reality.",
+    "logic_rationale": "The extractiveness (0.65) stems from the unpredictable nature of balancing, which creates high costs for those seeking legal certainty. Suppression (0.70) is high because the system actively enforces the interpretive authority of higher courts, limiting the autonomy of lower courts and litigants to challenge precedent. The theater ratio (0.20) is moderate; while there's genuine legal reasoning, some judicial rhetoric about 'balancing' can mask discretionary choices. Accessibility collapse (0.60) is moderate, as alternatives (e.g., legislative action) exist but are often slow or costly. Resistance (0.45) is present from litigants and some legal scholars, but not enough to fundamentally alter the system.",
+    "directionality_logic": "The appellate judiciary benefits from the flexibility and interpretive power this reading affords, allowing them to shape law. The legal profession also benefits from the increased demand for specialized expertise. Lower courts and litigants bear the costs of uncertainty and complexity, making them targets of extraction. The 'identity_locked' exit for lower courts reflects their professional obligation to apply precedent, even when its weight is ambiguous.",
+    "perspectival_gap": "From the perspective of the appellate judiciary, this approach is a necessary and sophisticated mechanism for legal evolution. From the perspective of litigants and lower courts, it can feel like an arbitrary and costly system where the rules are constantly in flux, making legal outcomes less predictable and more expensive. The engine's per-seat classification should reflect this divergence.",
+    "kernel_context": "This constraint is the 'pluralist_balancing' reading of the 'common_law_precedent_corpus' kernel. It stands in contrast to the 'strict_stare_decisis' reading, which emphasizes absolute adherence to precedent, and the 'evolutionary_framework' reading, which prioritizes contemporary normative evolution over historical binding."
   },
+  "omegas": [
+    {
+      "id": "interpretive_discretion_vs_arbitrariness",
+      "question": "Is the 'balancing' inherent in this reading a legitimate exercise of judicial discretion or a cover for arbitrary decision-making?",
+      "resolution_mechanism": "Empirical analysis of judicial outcomes across similar cases and domains: high variance without clear, articulated principles would suggest arbitrariness.",
+      "impact": "If arbitrary, the extractiveness and suppression would be reclassified higher, indicating a 'snare' for litigants. If legitimate, the 'tangled_rope' classification would be reinforced, with extraction seen as a cost of necessary flexibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing legitimate judicial discretion from arbitrary application of precedent."
+    },
+    {
+      "id": "domain_specificity_justification",
+      "question": "Are the differences in precedent weight across legal domains genuinely justified by structural differences in those domains, or are they a historical artifact?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions with different approaches to precedent, examining whether domain-specific variations are consistently observed and justified.",
+      "impact": "If unjustified, the complexity and associated costs for litigants would be seen as unnecessary extraction, pushing the classification closer to a 'snare'. If justified, it supports the 'tangled_rope' as a necessary adaptation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether domain-specific variations in precedent weight are structurally justified."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (e.g., lack of legal aid, high litigation costs) or internalized (e.g., lower courts' deference to higher courts due to professional identity)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if lower courts continue to defer even after structural barriers are reduced, reclassify as partially internalized. If litigants gain more agency with reduced costs, it's structural.",
+      "impact": "If internalized, the constraint's effective suppression on lower courts is higher than the structural measure suggests, as they carry the suppression with them. If structural, remedies focus on external barriers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for lower courts and litigants."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "common_law_precedent_corpus__strict_stare_decisis",
-      "common_law_precedent_corpus__evolutionary_framework"
+      "strict_stare_decisis",
+      "evolutionary_framework"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'common_law_precedent_corpus' kernel. Each reading represents a distinct structural claim about how precedent operates, with different extractiveness and stakeholder dynamics. They are linked as a constraint family."
+    "dual_formulation_note": "This constraint is one of three readings of the 'common_law_precedent_corpus' kernel. This 'pluralist_balancing' reading emphasizes context-dependent weight, contrasting with 'strict_stare_decisis' (absolute binding) and 'evolutionary_framework' (normative adaptation)."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -157,45 +215,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "common_law_precedent_corpus__strict_stare_decisis",
+        "sibling_id": "strict_stare_decisis",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "common_law_precedent_corpus__evolutionary_framework",
+        "sibling_id": "evolutionary_framework",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "precedent_weight_context_dependent",
+        "atom": "contextual_precedent_weight",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "stability_adaptation_balance_required",
+        "atom": "balancing_stability_adaptation",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "post_realist_jurisprudence",
+    "reference_frame": "flexible_common_law_tradition",
     "drift_state": {
-      "moment": "contemporary_judicial_practice",
+      "moment": "contemporary",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

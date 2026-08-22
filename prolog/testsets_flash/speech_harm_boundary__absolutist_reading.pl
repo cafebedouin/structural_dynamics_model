@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,24 +69,28 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: speech_harm_boundary__absolutist_reading
- *   human_readable: Absolutist Reading of Speech Harm Boundary
+ *   human_readable: Absolutist Speech Protection (High Harm Threshold)
  *   domain: constitutional_law/political_philosophy/communication_ethics
  *
  * SUMMARY:
- *   This constraint represents an 'absolutist' reading of free speech, where
- *   protection for expression is near-absolute and the threshold for
- *   overriding it due to harm is extremely high. This reading prioritizes
- *   speaker autonomy and robust public discourse, even at the cost of
- *   significant harm to individuals or groups. It is one reading of the
- *   broader 'speech_harm_boundary' kernel, which is contested by
- *   'harm_balancing_reading' and 'dignity_reading' siblings.
+ *   This constraint represents an absolutist reading of speech protection,
+ *   where the threshold for overriding speech rights due to harm is extremely
+ *   high. It prioritizes speaker autonomy and a broad 'marketplace of ideas'
+ *   over the protection of individuals or groups from the harms of speech.
+ *   The constraint is claimed as a 'rope' by its proponents (a coordination
+ *   mechanism for open discourse), but its high extractiveness from targets
+ *   of harmful speech and active enforcement of a narrow unprotected category
+ *   leads to a 'snare' classification from the perspective of those bearing
+ *   the costs. The metrics reflect the actual operation, not the claimed
+ *   ideal.
  *
  * KEY AGENTS:
- *   - speakers_with_controversial_views: Primary beneficiary (powerful/mobile) — benefits from broad protection
- *   - targets_of_harmful_speech: Primary victim (powerless/trapped) — bears the cost of high harm threshold
- *   - vulnerable_groups: Secondary victim (powerless/identity_locked) — disproportionately affected by harmful speech
- *   - judicial_authorities: Agenda setter (institutional/analytical) — interprets and enforces the harm boundary
- *   - public_discourse: Beneficiary (diffuse/civilizational) — benefits from robust, unconstrained speech
+ *   - speakers_of_controversial_speech: Primary beneficiary (mobile exit) — benefits from broad protection.
+ *   - targets_of_harmful_speech: Primary payer (trapped exit) — bears the costs of unprotected harm.
+ *   - free_speech_advocates: Secondary beneficiary (analytical exit) — defends the broad interpretation.
+ *   - vulnerable_groups: Secondary payer (identity_locked exit) — disproportionately affected by harm.
+ *   - courts_and_judiciary: Agenda setter (constrained exit) — interprets and enforces the high harm threshold.
+ *   - legislators: Agenda setter (constrained exit) — limited in ability to regulate harmful speech.
  */
 
 /* ==========================================================================
@@ -100,49 +108,93 @@ narrative_ontology:constraint_metric(speech_harm_boundary__absolutist_reading, s
 narrative_ontology:constraint_metric(speech_harm_boundary__absolutist_reading, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(speech_harm_boundary__absolutist_reading, accessibility_collapse, 0.9).
+narrative_ontology:constraint_metric(speech_harm_boundary__absolutist_reading, accessibility_collapse, 0.2).
 narrative_ontology:constraint_metric(speech_harm_boundary__absolutist_reading, resistance, 0.7).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(speech_harm_boundary__absolutist_reading, tangled_rope).
-narrative_ontology:human_readable(speech_harm_boundary__absolutist_reading, "Absolutist Reading of Speech Harm Boundary").
+narrative_ontology:constraint_claim(speech_harm_boundary__absolutist_reading, snare).
+narrative_ontology:human_readable(speech_harm_boundary__absolutist_reading, "Absolutist Speech Protection (High Harm Threshold)").
 narrative_ontology:topic_domain(speech_harm_boundary__absolutist_reading, "constitutional_law/political_philosophy/communication_ethics").
 
 domain_priors:requires_active_enforcement(speech_harm_boundary__absolutist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(speech_harm_boundary__absolutist_reading, 'a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79').
-narrative_ontology:cs_kernel_codification('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', fixed_text).
-narrative_ontology:cs_authority_grounding('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', lineage).
-narrative_ontology:cs_interpretation_layer_present('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79').
-narrative_ontology:cs_reading_relation('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', speech_harm_boundary__harm_balancing_reading, coexists_with).
-narrative_ontology:cs_reading_relation('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', speech_harm_boundary__dignity_reading, coexists_with).
-narrative_ontology:cs_axiom('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', foundational, speech_autonomy_maximization).
-narrative_ontology:cs_axiom_status(speech_autonomy_maximization, holdable).
-narrative_ontology:cs_axiom_grounding('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', speech_autonomy_maximization, deontological).
-narrative_ontology:cs_axiom('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', foundational, harm_as_secondary_consideration).
-narrative_ontology:cs_axiom_status(harm_as_secondary_consideration, holdable).
-narrative_ontology:cs_axiom_grounding('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', harm_as_secondary_consideration, conventional).
-narrative_ontology:cs_reference_frame('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', marketplace_of_ideas_ideal).
-narrative_ontology:cs_drift_state('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', contemporary_digital_era, gap(stable, minor, false)).
-narrative_ontology:cs_created_at('a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79', '').
+narrative_ontology:cs_story_uid(speech_harm_boundary__absolutist_reading, 'd07cd727-19e8-4a52-8c28-919a04a4c841').
+narrative_ontology:cs_kernel_codification('d07cd727-19e8-4a52-8c28-919a04a4c841', fixed_text).
+narrative_ontology:cs_authority_grounding('d07cd727-19e8-4a52-8c28-919a04a4c841', lineage).
+narrative_ontology:cs_interpretation_layer_present('d07cd727-19e8-4a52-8c28-919a04a4c841').
+narrative_ontology:cs_reading_relation('d07cd727-19e8-4a52-8c28-919a04a4c841', speech_harm_boundary__harm_balancing_reading, coexists_with).
+narrative_ontology:cs_reading_relation('d07cd727-19e8-4a52-8c28-919a04a4c841', speech_harm_boundary__dignity_reading, coexists_with).
+narrative_ontology:cs_axiom('d07cd727-19e8-4a52-8c28-919a04a4c841', foundational, marketplace_of_ideas_maximization).
+narrative_ontology:cs_axiom_status(marketplace_of_ideas_maximization, holdable).
+narrative_ontology:cs_axiom_grounding('d07cd727-19e8-4a52-8c28-919a04a4c841', marketplace_of_ideas_maximization, deontological).
+narrative_ontology:cs_axiom('d07cd727-19e8-4a52-8c28-919a04a4c841', foundational, state_neutrality_on_content).
+narrative_ontology:cs_axiom_status(state_neutrality_on_content, holdable).
+narrative_ontology:cs_axiom_grounding('d07cd727-19e8-4a52-8c28-919a04a4c841', state_neutrality_on_content, conventional).
+narrative_ontology:cs_reference_frame('d07cd727-19e8-4a52-8c28-919a04a4c841', unfettered_expression_paradigm).
+narrative_ontology:cs_drift_state('d07cd727-19e8-4a52-8c28-919a04a4c841', contemporary_digital_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('d07cd727-19e8-4a52-8c28-919a04a4c841', '').
 narrative_ontology:cs_kernel_id(speech_harm_boundary__absolutist_reading, speech_harm_boundary).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(speech_harm_boundary__absolutist_reading, speakers_with_controversial_views).
-narrative_ontology:constraint_beneficiary(speech_harm_boundary__absolutist_reading, public_discourse).
+narrative_ontology:constraint_beneficiary(speech_harm_boundary__absolutist_reading, speakers_of_controversial_speech).
+narrative_ontology:constraint_beneficiary(speech_harm_boundary__absolutist_reading, free_speech_advocates).
 narrative_ontology:constraint_victim(speech_harm_boundary__absolutist_reading, targets_of_harmful_speech).
 narrative_ontology:constraint_victim(speech_harm_boundary__absolutist_reading, vulnerable_groups).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These individuals benefit from a broad scope of protected speech, allowing them to express views that may be offensive or harmful to others without legal repercussions, unless it falls into a very narrow, unprotected category. Their autonomy is maximized.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__absolutist_reading, speakers_of_controversial_speech, beneficiary,
+    moderate, immediate, mobile, global).
+
+% These individuals bear the direct costs of speech that causes emotional distress, reputational damage, or incites hostility, without adequate legal recourse due to the high threshold for intervention. They are often left to absorb the harm.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__absolutist_reading, targets_of_harmful_speech, payer,
+    powerless, immediate, trapped, local).
+
+% These groups actively defend the broad interpretation of speech protection, viewing any restriction as a slippery slope to censorship. They benefit from the legal precedent that prioritizes speaker autonomy over potential harm.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__absolutist_reading, free_speech_advocates, beneficiary,
+    organized, generational, analytical, national).
+
+% These groups are disproportionately affected by hate speech, incitement to discrimination, and other forms of harmful expression, experiencing systemic marginalization and psychological distress with limited legal protection. Their identity makes exit from the target position impossible.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__absolutist_reading, vulnerable_groups, payer,
+    powerless, generational, identity_locked, national).
+
+% These institutions interpret and enforce the boundaries of protected speech. Under this reading, they are constrained to apply a very high harm threshold, often leading to outcomes that prioritize speaker rights over victim protection, even when significant harm is evident.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__absolutist_reading, courts_and_judiciary, agenda_setter,
+    institutional, generational, constrained, national).
+
+% These bodies are responsible for crafting laws that balance speech rights with public safety and order. Under this absolutist reading, their ability to regulate harmful speech is severely limited by judicial precedent, making it difficult to address emerging forms of harm.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__absolutist_reading, legislators, agenda_setter,
+    institutional, generational, constrained, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a clear, albeit high, threshold for what constitutes unprotected speech, providing predictability for speakers and minimizing state intervention in expression.
+% TRANSFER_FUNCTION: Transfers the burden of harm from speakers of controversial or offensive speech to the targets and vulnerable groups, who must absorb the negative impacts without legal redress.
+% ABSENT_VOICES: Victims of speech-related harm, particularly those from marginalized communities, are often unheard in the legal discourse that shapes this absolutist interpretation. Their experiences of harm are systematically de-prioritized or dismissed as the 'cost of free speech'.
+% DISAPPEARANCE_RATIONALE: If this absolutist reading vanished, the legal landscape around speech would immediately shift. Courts would likely adopt more nuanced balancing tests, leading to increased regulation of harmful speech, more legal recourse for victims, and a re-evaluation of the scope of speaker autonomy. The balance of power between speakers and targets would fundamentally alter.
+% FOUNDING_PROBLEM: The constraint was established to prevent government censorship and protect a robust marketplace of ideas, ensuring that unpopular or dissenting views could be expressed without fear of suppression.
+% FOUNDING_PROBLEM_CORROBORATION: Free speech advocates and some legal scholars attest that the threat of government overreach remains live, necessitating strong protections. However, targets of harmful speech and human rights organizations argue that the problem has shifted, and the current framework now enables harm rather than preventing it, making the 'live' status contested.
+narrative_ontology:disappearance_verdict(speech_harm_boundary__absolutist_reading, world_rearranges).
+narrative_ontology:founding_problem_status(speech_harm_boundary__absolutist_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(speech_harm_boundary__absolutist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(speech_harm_boundary__absolutist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(speech_harm_boundary__absolutist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(speech_harm_boundary__absolutist_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -162,16 +214,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is high (0.85) because the constraint imposes significant costs (unmitigated harm) on targets for the benefit of speakers. Suppression is low (0.1) because the constraint's core function is to *prevent* suppression of speech, not to enforce it, except for the very narrow categories of unprotected speech. Theater ratio is low (0.05) as the constraint is actively and genuinely enforced according to its stated principles. Accessibility collapse is high (0.9) because, once the absolutist principle is accepted, alternatives for restricting speech are almost entirely foreclosed. Resistance is high (0.7) from those who bear the harms, leading to ongoing legal and social challenges.
+ *   The high extractiveness (0.85) reflects the significant and often unmitigated harm borne by targets of speech that falls below the extremely high intervention threshold. Suppression is low (0.1) because the constraint's purpose is to minimize suppression of speech, not to enforce it. Theater ratio is low (0.05) as the system genuinely operates to protect speech, even if the consequences are extractive for others. Accessibility collapse is low (0.2) because alternatives to harmful speech (e.g., counter-speech, private action) are theoretically available, but often ineffective against systemic harm. Resistance is high (0.7) due to ongoing advocacy and legal challenges from groups seeking greater protection from speech-related harm.
  *
  * PERSPECTIVAL GAP:
- *   Speakers with controversial views experience this as a Rope or even a Mountain, as their speech is largely unconstrained. Targets of harmful speech, however, experience it as a Snare or Tangled Rope, as they bear significant costs with little recourse. Judicial authorities, acting as agenda setters, navigate this tension by upholding the high harm threshold, which benefits the abstract ideal of 'public discourse' but extracts from specific victims.
+ *   From the perspective of speakers and free speech advocates, this constraint is a 'rope' that coordinates open discourse and protects fundamental liberties. From the perspective of targets and vulnerable groups, it operates as a 'snare' that extracts their safety and dignity, leaving them exposed to harm under the guise of freedom. The courts, as agenda-setters, are caught between these competing interpretations, often forced by precedent to uphold the absolutist reading.
  *
  * DIRECTIONALITY LOGIC:
- *   Speakers with controversial views are full beneficiaries (d=0.0) as the constraint subsidizes their expression by externalizing harm costs. Targets of harmful speech are full targets (d=1.0) as they bear the direct and unmitigated costs. Vulnerable groups are also targets, often identity-locked, amplifying their effective extraction. Judicial authorities are agenda setters, balancing the abstract benefit of free speech with the concrete costs, but their enforcement of the high harm threshold structurally benefits speakers.
+ *   Speakers of controversial speech and free speech advocates are clear beneficiaries, as the constraint maximizes their autonomy and influence (low directionality). Targets of harmful speech and vulnerable groups are clear victims, bearing the costs of the constraint's operation (high directionality, especially for identity_locked vulnerable groups). Courts and legislators, while powerful, are constrained by the absolutist interpretation, making their directionality more symmetric, as they must uphold a system that benefits some while harming others.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is not subject to mandatrophy in the traditional sense, as its 'mandate' (protecting speech) is still considered live. However, the *balance* of its mandate is contested: whether its original intent was to protect speech so absolutely that it imposes such high costs on targets, or if the high extractiveness is an unintended consequence of an absolutist interpretation. The 'founding_problem_status' being 'contested' reflects this ongoing debate.
+ *   This reading prevents mislabeling broad speech protection as pure extraction by acknowledging its genuine coordination function for speakers. However, it risks mislabeling the extraction from targets as a necessary cost of coordination, rather than an asymmetric burden. The high extractiveness and resistance metrics, coupled with the 'contested' status of the founding problem, suggest a potential for mandatrophy where the original coordination function (preventing censorship) has been overshadowed by the enablement of harm.
  */
 
 /* ==========================================================================
@@ -179,81 +231,81 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine absolutist reading of speech protection, or is it a rhetorical cover for other interests?',
-    'Analysis of judicial decisions and legislative actions: if the unprotected categories expand or the harm threshold lowers in practice, it indicates a shift away from absolutism.',
-    'If genuinely absolutist, it prioritizes speaker autonomy at high cost to targets. If rhetorical, it''s a snare for targets and a rope for powerful speakers.',
+    absolutism_vs_harm_threshold,
+    'Is the high harm threshold a necessary component of robust free speech, or an arbitrary line that enables harm?',
+    'Comparative legal analysis of jurisdictions with different harm thresholds and their impact on both speech vitality and victim protection. Empirical studies on the actual chilling effect of lower thresholds vs. the actual harm prevented.',
+    'If the threshold is found to be arbitrary, it would weaken the justification for the absolutist reading, potentially shifting classification towards a ''tangled_rope'' or ''snare'' for targets. If necessary, it would reinforce the ''rope'' aspect for speakers.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''absolutist_reading'' of the ''speech_harm_boundary'' kernel.').
+narrative_ontology:omega_variable(absolutism_vs_harm_threshold, conceptual, 'Whether the high harm threshold is structurally justified or merely a policy choice.').
 
 omega_variable(
-    harm_threshold_objectivity,
-    'Is the ''extremely high'' harm override threshold an objective standard, or is its application subject to interpretive bias favoring certain types of speech or speakers?',
-    'Empirical study of how the threshold is applied across different contexts and against different speakers/targets; analysis of judicial reasoning for consistency.',
-    'If biased, the effective extraction from vulnerable groups is higher than the stated threshold implies, making the constraint more Snare-like for them.',
+    identity_locked_victim_agency,
+    'To what extent does the ''identity_locked'' status of vulnerable groups genuinely prevent exit, versus being a rhetorical framing to highlight their disproportionate burden?',
+    'Sociological studies on the lived experience of vulnerable groups, examining their actual capacity to ''exit'' or mitigate the effects of harmful speech, and the psychological costs of such ''exit'' attempts. Legal analysis of available protective measures and their efficacy.',
+    'If ''identity_locked'' is found to be primarily rhetorical, it would reduce the effective extraction from these groups (lower d), potentially shifting their seat classification. If it reflects a genuine structural inability to exit, it reinforces the ''snare'' classification for them.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(harm_threshold_objectivity, empirical, 'Ambiguity in the application of the harm override threshold.').
+narrative_ontology:omega_variable(identity_locked_victim_agency, empirical, 'The true nature of ''identity_locked'' exit for vulnerable groups.').
 
 omega_variable(
-    sibling_reading_impact_dignity,
-    'How would adopting the ''dignity_reading'' (speech protection subordinate to human dignity) structurally alter this constraint?',
-    'Hypothetical legal analysis: if dignity were paramount, personhood-denying speech would be unprotected, significantly lowering the harm override threshold and expanding victim categories.',
-    'The ''dignity_reading'' would transform this constraint from a Tangled Rope (high speaker autonomy, high harm cost) into a more balanced Rope or even a Mountain for dignity itself, by re-prioritizing the victim''s experience.',
-    confidence_without_resolution(high)
+    founding_problem_obsolescence,
+    'Has the original problem of government censorship been sufficiently mitigated such that the absolutist reading now primarily serves to protect harmful speech rather than dissenting speech?',
+    'Historical analysis of censorship trends, comparative studies of speech regulation in different eras, and analysis of contemporary threats to free expression. Examination of the types of speech currently protected by the high threshold.',
+    'If the original problem is largely obsolete, it would strengthen the argument for mandatrophy, reclassifying the constraint towards a ''piton'' or ''snare'' for targets, as its primary function would have shifted from coordination to extraction.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_impact_dignity, conceptual, 'Impact of the ''dignity_reading'' sibling on this constraint.').
-
-omega_variable(
-    sibling_reading_impact_harm_balancing,
-    'How would adopting the ''harm_balancing_reading'' (speech protection yields to demonstrated harm) structurally alter this constraint?',
-    'Comparative legal analysis: jurisdictions employing harm balancing typically have lower thresholds for intervention and a broader range of unprotected speech, based on proportionality.',
-    'The ''harm_balancing_reading'' would reduce the extractiveness from targets by allowing more frequent overrides, shifting the constraint closer to a Rope or Scaffold, depending on the specific balancing test.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(sibling_reading_impact_harm_balancing, conceptual, 'Impact of the ''harm_balancing_reading'' sibling on this constraint.').
+narrative_ontology:omega_variable(founding_problem_obsolescence, empirical, 'Whether the founding problem of censorship is still the primary driver of the absolutist reading.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(speech_harm_boundary__absolutist_reading, 0, 20).
+narrative_ontology:interval(speech_harm_boundary__absolutist_reading, 1969, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
+% Theater ratio over time
+narrative_ontology:measurement(spee_tr_t1969, speech_harm_boundary__absolutist_reading, theater_ratio, 1969, 0.05).
+narrative_ontology:measurement(spee_tr_t1980, speech_harm_boundary__absolutist_reading, theater_ratio, 1980, 0.05).
+narrative_ontology:measurement(spee_tr_t1990, speech_harm_boundary__absolutist_reading, theater_ratio, 1990, 0.05).
+narrative_ontology:measurement(spee_tr_t2000, speech_harm_boundary__absolutist_reading, theater_ratio, 2000, 0.05).
+narrative_ontology:measurement(spee_tr_t2010, speech_harm_boundary__absolutist_reading, theater_ratio, 2010, 0.05).
+narrative_ontology:measurement(spee_tr_t2024, speech_harm_boundary__absolutist_reading, theater_ratio, 2024, 0.05).
+
 % Extraction over time
-narrative_ontology:measurement(spee_be_t0, speech_harm_boundary__absolutist_reading, base_extractiveness, 0, 0.75).
-narrative_ontology:measurement(spee_be_t5, speech_harm_boundary__absolutist_reading, base_extractiveness, 5, 0.78).
-narrative_ontology:measurement(spee_be_t10, speech_harm_boundary__absolutist_reading, base_extractiveness, 10, 0.81).
-narrative_ontology:measurement(spee_be_t15, speech_harm_boundary__absolutist_reading, base_extractiveness, 15, 0.83).
-narrative_ontology:measurement(spee_be_t20, speech_harm_boundary__absolutist_reading, base_extractiveness, 20, 0.85).
+narrative_ontology:measurement(spee_be_t1969, speech_harm_boundary__absolutist_reading, base_extractiveness, 1969, 0.7).
+narrative_ontology:measurement(spee_be_t1980, speech_harm_boundary__absolutist_reading, base_extractiveness, 1980, 0.75).
+narrative_ontology:measurement(spee_be_t1990, speech_harm_boundary__absolutist_reading, base_extractiveness, 1990, 0.8).
+narrative_ontology:measurement(spee_be_t2000, speech_harm_boundary__absolutist_reading, base_extractiveness, 2000, 0.82).
+narrative_ontology:measurement(spee_be_t2010, speech_harm_boundary__absolutist_reading, base_extractiveness, 2010, 0.84).
+narrative_ontology:measurement(spee_be_t2024, speech_harm_boundary__absolutist_reading, base_extractiveness, 2024, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(spee_su_t0, speech_harm_boundary__absolutist_reading, suppression_requirement, 0, 0.15).
-narrative_ontology:measurement(spee_su_t5, speech_harm_boundary__absolutist_reading, suppression_requirement, 5, 0.12).
-narrative_ontology:measurement(spee_su_t10, speech_harm_boundary__absolutist_reading, suppression_requirement, 10, 0.11).
-narrative_ontology:measurement(spee_su_t15, speech_harm_boundary__absolutist_reading, suppression_requirement, 15, 0.1).
-narrative_ontology:measurement(spee_su_t20, speech_harm_boundary__absolutist_reading, suppression_requirement, 20, 0.1).
+narrative_ontology:measurement(spee_su_t1969, speech_harm_boundary__absolutist_reading, suppression_requirement, 1969, 0.1).
+narrative_ontology:measurement(spee_su_t1980, speech_harm_boundary__absolutist_reading, suppression_requirement, 1980, 0.1).
+narrative_ontology:measurement(spee_su_t1990, speech_harm_boundary__absolutist_reading, suppression_requirement, 1990, 0.1).
+narrative_ontology:measurement(spee_su_t2000, speech_harm_boundary__absolutist_reading, suppression_requirement, 2000, 0.1).
+narrative_ontology:measurement(spee_su_t2010, speech_harm_boundary__absolutist_reading, suppression_requirement, 2010, 0.1).
+narrative_ontology:measurement(spee_su_t2024, speech_harm_boundary__absolutist_reading, suppression_requirement, 2024, 0.1).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(speech_harm_boundary__absolutist_reading, enforcement_mechanism).
+narrative_ontology:coordination_type(speech_harm_boundary__absolutist_reading, information_standard).
 narrative_ontology:affects_constraint(speech_harm_boundary__absolutist_reading, speech_harm_boundary__harm_balancing_reading).
 narrative_ontology:affects_constraint(speech_harm_boundary__absolutist_reading, speech_harm_boundary__dignity_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three distinct readings of the 'speech_harm_boundary' kernel. Each reading has a different structural extractiveness and beneficiary/victim profile, necessitating separate constraint stories. This 'absolutist_reading' prioritizes speaker autonomy, while 'harm_balancing_reading' and 'dignity_reading' offer alternative frameworks for balancing speech with harm or dignity.
+% This constraint is one reading of the 'speech_harm_boundary' kernel. Its absolutist interpretation directly influences the operational space and legitimacy of alternative readings that seek to balance speech with harm or dignity.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,27 +69,27 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: copyright_constitutional_mandate__judicial_ambiguity_reading
- *   human_readable: Judicial Deference to Copyright Term Length (Judicial Ambiguity Reading)
+ *   human_readable: Judicial Deference to Copyright Term Length (Ambiguity Reading)
  *   domain: intellectual_property_law/constitutional_law/political_economy
  *
  * SUMMARY:
- *   This constraint describes the judicial interpretation of the Copyright
- *   Clause ('To promote the Progress of Science and useful Arts, by securing
- *   for limited Times to Authors and Inventors the exclusive Right to their
- *   respective Writings and Discoveries') as granting Congress broad
- *   discretion over copyright term length. Courts, particularly the Supreme
- *   Court, have consistently applied a rational basis review, deferring to
- *   Congress's judgment on what constitutes 'limited Times' and 'to promote
- *   the Progress'. This reading treats the constitutional language as
- *   ambiguous, allowing legislative action to define the practical scope of
- *   copyright, even if it leads to successive extensions.
+ *   This constraint describes the judicial interpretation that copyright term
+ *   length is primarily a matter of legislative discretion, with courts
+ *   applying a highly deferential rational basis review. This reading,
+ *   instantiated as 'judicial_ambiguity_reading' of the
+ *   'copyright_constitutional_mandate' kernel, allows Congress significant
+ *   latitude in extending copyright terms, effectively enabling a gradual
+ *   shift from a public-good-oriented 'scaffold' to a more extractive
+ *   'corporate enclosure' without direct constitutional challenge. The other
+ *   readings, 'public_scaffold_reading' and 'corporate_enclosure_reading',
+ *   represent alternative interpretations of the same constitutional kernel.
  *
  * KEY AGENTS:
- *   - congressional_authority: Primary beneficiary (institutional/arbitrage) — exercises broad discretion.
- *   - judiciary: Secondary beneficiary (institutional/analytical) — maintains institutional role by deferring.
- *   - copyright_holders: Indirect beneficiaries (organized/mobile) — benefit from extended terms enabled by deference.
- *   - public_domain_advocates: Payer (organized/constrained) — bear the cost of reduced public domain access.
- *   - constitutional_scholars: Observer (analytical/analytical) — analyze the legal and historical implications of deference.
+ *   - congressional_authority: Primary beneficiary (institutional/arbitrage) — benefits from broad discretion
+ *   - copyright_holders: Beneficiary (organized/mobile) — benefits from extended terms
+ *   - public_domain_advocates: Payer (organized/constrained) — bears costs of reduced public domain
+ *   - future_creators: Payer (moderate/constrained) — bears costs of limited access to prior works
+ *   - federal_judiciary: Agenda-setter (institutional/analytical) — administers the deferential review standard
  */
 
 /* ==========================================================================
@@ -108,43 +112,84 @@ narrative_ontology:constraint_metric(copyright_constitutional_mandate__judicial_
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(copyright_constitutional_mandate__judicial_ambiguity_reading, rope).
-narrative_ontology:human_readable(copyright_constitutional_mandate__judicial_ambiguity_reading, "Judicial Deference to Copyright Term Length (Judicial Ambiguity Reading)").
+narrative_ontology:human_readable(copyright_constitutional_mandate__judicial_ambiguity_reading, "Judicial Deference to Copyright Term Length (Ambiguity Reading)").
 narrative_ontology:topic_domain(copyright_constitutional_mandate__judicial_ambiguity_reading, "intellectual_property_law/constitutional_law/political_economy").
 
 domain_priors:requires_active_enforcement(copyright_constitutional_mandate__judicial_ambiguity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(copyright_constitutional_mandate__judicial_ambiguity_reading, '0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8').
-narrative_ontology:cs_kernel_codification('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', fixed_text).
-narrative_ontology:cs_authority_grounding('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', lineage).
-narrative_ontology:cs_interpretation_layer_present('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8').
-narrative_ontology:cs_reading_relation('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', copyright_constitutional_mandate__public_scaffold_reading, influences).
-narrative_ontology:cs_reading_relation('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', copyright_constitutional_mandate__corporate_enclosure_reading, influences).
-narrative_ontology:cs_axiom('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', foundational, limited_times_is_legislative_discretion).
-narrative_ontology:cs_axiom_status(limited_times_is_legislative_discretion, holdable).
-narrative_ontology:cs_axiom_grounding('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', limited_times_is_legislative_discretion, conventional).
-narrative_ontology:cs_axiom('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', foundational, rational_basis_review_applies_to_copyright).
-narrative_ontology:cs_axiom_status(rational_basis_review_applies_to_copyright, holdable).
-narrative_ontology:cs_axiom_grounding('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', rational_basis_review_applies_to_copyright, conventional).
-narrative_ontology:cs_reference_frame('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', judicial_deference_to_congress).
-narrative_ontology:cs_drift_state('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', contemporary_legal_discourse, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('0fcb1b27-12d6-4ba1-ae8c-834a6da9fcf8', '').
+narrative_ontology:cs_story_uid(copyright_constitutional_mandate__judicial_ambiguity_reading, '65e9d4c7-e305-49cf-a71a-de51c2467a43').
+narrative_ontology:cs_kernel_codification('65e9d4c7-e305-49cf-a71a-de51c2467a43', fixed_text).
+narrative_ontology:cs_authority_grounding('65e9d4c7-e305-49cf-a71a-de51c2467a43', lineage).
+narrative_ontology:cs_interpretation_layer_present('65e9d4c7-e305-49cf-a71a-de51c2467a43').
+narrative_ontology:cs_reading_relation('65e9d4c7-e305-49cf-a71a-de51c2467a43', copyright_constitutional_mandate__public_scaffold_reading, influences).
+narrative_ontology:cs_reading_relation('65e9d4c7-e305-49cf-a71a-de51c2467a43', copyright_constitutional_mandate__corporate_enclosure_reading, coexists_with).
+narrative_ontology:cs_axiom('65e9d4c7-e305-49cf-a71a-de51c2467a43', foundational, legislative_discretion_primary).
+narrative_ontology:cs_axiom_status(legislative_discretion_primary, holdable).
+narrative_ontology:cs_axiom_grounding('65e9d4c7-e305-49cf-a71a-de51c2467a43', legislative_discretion_primary, conventional).
+narrative_ontology:cs_axiom('65e9d4c7-e305-49cf-a71a-de51c2467a43', foundational, rational_basis_review_sufficient).
+narrative_ontology:cs_axiom_status(rational_basis_review_sufficient, holdable).
+narrative_ontology:cs_axiom_grounding('65e9d4c7-e305-49cf-a71a-de51c2467a43', rational_basis_review_sufficient, conventional).
+narrative_ontology:cs_reference_frame('65e9d4c7-e305-49cf-a71a-de51c2467a43', judicial_deference_framework).
+narrative_ontology:cs_drift_state('65e9d4c7-e305-49cf-a71a-de51c2467a43', contemporary_legal_landscape, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('65e9d4c7-e305-49cf-a71a-de51c2467a43', '').
 narrative_ontology:cs_kernel_id(copyright_constitutional_mandate__judicial_ambiguity_reading, copyright_constitutional_mandate).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(copyright_constitutional_mandate__judicial_ambiguity_reading, congressional_authority).
-narrative_ontology:constraint_beneficiary(copyright_constitutional_mandate__judicial_ambiguity_reading, judiciary).
-narrative_ontology:constraint_victim(copyright_constitutional_mandate__judicial_ambiguity_reading, constitutional_fixity_as_constraint).
+narrative_ontology:constraint_beneficiary(copyright_constitutional_mandate__judicial_ambiguity_reading, copyright_holders).
+narrative_ontology:constraint_victim(copyright_constitutional_mandate__judicial_ambiguity_reading, public_domain_advocates).
+narrative_ontology:constraint_victim(copyright_constitutional_mandate__judicial_ambiguity_reading, future_creators).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The legislative branch, which benefits from broad discretion in setting copyright terms without significant judicial interference. This allows them to respond to lobbying efforts and extend terms.
+narrative_ontology:constraint_stakeholder(copyright_constitutional_mandate__judicial_ambiguity_reading, congressional_authority, beneficiary,
+    institutional, generational, arbitrage, national).
+
+% Entities (e.g., corporations, estates) that own copyrights and benefit directly from extended terms, which prolong their exclusive rights and revenue streams. They actively lobby Congress for extensions.
+narrative_ontology:constraint_stakeholder(copyright_constitutional_mandate__judicial_ambiguity_reading, copyright_holders, beneficiary,
+    organized, biographical, mobile, global).
+
+% Organizations and individuals who argue for a robust public domain and oppose copyright term extensions. They bear the cost of reduced access to creative works and diminished public commons.
+narrative_ontology:constraint_stakeholder(copyright_constitutional_mandate__judicial_ambiguity_reading, public_domain_advocates, payer,
+    organized, generational, constrained, national).
+
+% Artists, writers, and innovators who rely on access to existing works to create new ones. Extended copyright terms limit their source material and increase licensing costs, bearing the cost of enclosure.
+narrative_ontology:constraint_stakeholder(copyright_constitutional_mandate__judicial_ambiguity_reading, future_creators, payer,
+    moderate, generational, constrained, global).
+
+% The courts, particularly the Supreme Court, which apply rational basis review to copyright legislation, thereby deferring to Congress's judgment on term length. They administer the constraint by upholding legislative acts.
+narrative_ontology:constraint_stakeholder(copyright_constitutional_mandate__judicial_ambiguity_reading, federal_judiciary, agenda_setter,
+    institutional, civilizational, analytical, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the legislative and judicial branches by establishing a clear, albeit deferential, standard for judicial review of copyright term legislation, ensuring legal predictability for copyright holders and creators.
+% TRANSFER_FUNCTION: Transfers the power to define the scope of copyright from a potentially strict constitutional interpretation to broad legislative discretion, indirectly transferring economic value from the public domain to copyright holders.
+% ABSENT_VOICES: Scholars advocating for a more robust 'limited times' interpretation based on original intent or economic efficiency are largely absent from the judicial decision-making process, as the current framework prioritizes legislative deference.
+% DISAPPEARANCE_RATIONALE: If judicial deference vanished, courts would likely adopt a stricter standard of review, potentially invalidating past and future copyright term extensions. This would fundamentally alter the balance of power between Congress and the judiciary on IP matters, and significantly impact the economic models of copyright-dependent industries.
+% FOUNDING_PROBLEM: The U.S. Constitution's 'limited times' clause for copyright and patent grants required a mechanism to reconcile legislative power with constitutional limits, ensuring a balance between creator incentives and public access.
+% FOUNDING_PROBLEM_CORROBORATION: The federal judiciary and congressional authority assert the problem is live, requiring ongoing legislative flexibility. Public domain advocates and legal scholars, from outside the benefiting parties, argue that the problem of balancing incentives and access has been distorted, with the 'limited times' clause effectively rendered meaningless by legislative extensions and judicial deference.
+narrative_ontology:disappearance_verdict(copyright_constitutional_mandate__judicial_ambiguity_reading, world_rearranges).
+narrative_ontology:founding_problem_status(copyright_constitutional_mandate__judicial_ambiguity_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(copyright_constitutional_mandate__judicial_ambiguity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(copyright_constitutional_mandate__judicial_ambiguity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(copyright_constitutional_mandate__judicial_ambiguity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(copyright_constitutional_mandate__judicial_ambiguity_reading, 0.35, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,16 +204,16 @@ narrative_ontology:story_seed(copyright_constitutional_mandate__judicial_ambigui
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Rope because it provides a framework for legislative action (coordination) while allowing for some extraction (extended terms benefit copyright holders). Extractiveness is moderate (0.35) because while terms are extended, the 'limited times' clause still theoretically exists as a boundary. Suppression is moderate (0.6) as judicial deference actively suppresses challenges to term extensions, making it difficult for opponents to prevail. Theater ratio is low (0.1) as the judicial review process is genuinely functional in upholding the legislative framework, even if the outcome consistently favors extension. The increasing extractiveness and suppression over time reflect the historical trend of copyright term extensions and the judiciary's consistent deference.
+ *   The extractiveness (0.35) is low-to-moderate because the constraint itself is the judicial deference, not the copyright term. The deference enables extraction by Congress but does not directly perform it. Suppression (0.6) is moderate because while there are legal avenues to challenge term extensions, the high bar of rational basis review effectively suppresses most challenges. Theater ratio is low (0.1) as the judicial review process is genuinely applied, even if deferentially. The values reflect the current period of judicial interpretation, which has largely upheld legislative extensions.
  *
  * PERSPECTIVAL GAP:
- *   Congressional authority and the judiciary experience this as a functional, legitimate exercise of power and a stable interpretive framework, respectively. Public domain advocates, however, experience it as a mechanism that enables the gradual enclosure of the public domain, with their arguments consistently suppressed by judicial deference. The engine's per-seat classification should reflect this divergence.
+ *   From the perspective of congressional authority and copyright holders, this constraint is a legitimate 'rope' that provides necessary flexibility for IP policy. From the perspective of public domain advocates and future creators, it functions more like a 'tangled rope' or even a 'snare' by enabling continuous enclosure of the public domain, with the judiciary acting as a permissive gatekeeper rather than a constitutional check.
  *
  * DIRECTIONALITY LOGIC:
- *   Congressional authority is a primary beneficiary (d=0.0) as it gains maximal flexibility. The judiciary is also a beneficiary (d=0.1) as deference simplifies its role and avoids constitutional crises. Copyright holders are indirect beneficiaries (d=0.2) as they profit from the extended terms. Constitutional fixity as a constraint is a victim (d=1.0) as its power to limit legislative action is eroded. Public domain advocates are payers (d=0.8) as they bear the cost of reduced access and their arguments are consistently rejected.
+ *   Congressional authority is a beneficiary (d=0.0) as the constraint grants it broad power. Copyright holders are also beneficiaries (d=0.1) as they benefit from the legislative discretion to extend terms. Public domain advocates and future creators are payers (d=0.9) as they bear the costs of extended monopolies. The federal judiciary, as the agenda-setter, maintains the framework of deference (d=0.5), balancing its institutional role with the outcomes of its review.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint prevents mislabeling legislative discretion as pure extraction by acknowledging the genuine coordination function of providing a stable legal framework for copyright. However, the increasing extractiveness over time suggests a drift towards a Tangled Rope, where the coordination function increasingly serves as cover for rent-seeking, enabled by judicial deference. The 'founding_problem_status' being 'contested' further highlights this tension.
+ *   This constraint, framed as a 'rope' (coordination of legislative and judicial branches), prevents mislabeling the judicial deference itself as pure extraction. However, the analysis highlights how this 'rope' enables the potential for mandatrophy in the broader copyright system, as the original public-good mandate of copyright can be eroded by legislative extensions, facilitated by judicial deference. The 'judicial_ambiguity_reading' is crucial for understanding how a seemingly benign constraint can facilitate extractive drift in a larger system.
  */
 
 /* ==========================================================================
@@ -176,63 +221,45 @@ narrative_ontology:story_seed(copyright_constitutional_mandate__judicial_ambigui
    ========================================================================== */
 
 omega_variable(
-    legislative_discretion_scope,
-    'What are the actual limits of ''legislative discretion'' in copyright term length, beyond which judicial deference would cease?',
-    'A Supreme Court ruling explicitly defining the outer bounds of ''limited times'' or striking down a term extension as unconstitutional.',
-    'If limits are found to be narrow, the constraint shifts towards a Mountain for Congress; if broad, it reinforces the current Rope classification, enabling further extensions.',
+    constitutional_fixity_ambiguity,
+    'Is the ''limited times'' clause a substantive constraint on legislative power, or merely a procedural directive for Congress to act?',
+    'A Supreme Court ruling explicitly defining the outer bounds of ''limited times'' or adopting a stricter standard of review for copyright term extensions.',
+    'If a substantive constraint, the current reading''s low extractiveness would be reclassified upward as it enables legislative overreach; if procedural, the current classification holds.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(legislative_discretion_scope, conceptual, 'Ambiguity of ''limited times'' in the Copyright Clause and the scope of judicial deference.').
+narrative_ontology:omega_variable(constitutional_fixity_ambiguity, conceptual, 'Ambiguity of ''limited times'' clause in US Constitution.').
 
 omega_variable(
-    natural_law_vs_construct,
-    'Is the ''rational basis'' for copyright term extensions a genuine legislative finding, or a post-hoc justification for rent-seeking by copyright holders?',
-    'Empirical studies on the incentive effects of term extensions, or judicial review that applies a higher standard of scrutiny to legislative findings.',
-    'If found to be post-hoc justification, the constraint''s extractiveness is higher than currently measured, and its classification shifts towards Tangled Rope or Snare.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(natural_law_vs_construct, empirical, 'Whether legislative discretion is genuinely about public good or disguised private benefit.').
-
-omega_variable(
-    kernel_reading_difference,
-    'This constraint is the ''judicial_ambiguity_reading'' of the ''copyright_constitutional_mandate'' kernel. How would the classification change under the ''public_scaffold_reading'' or ''corporate_enclosure_reading''?',
-    'Adoption of a different interpretive framework by the judiciary or legislative branch.',
-    'The ''public_scaffold_reading'' would likely classify as a Scaffold, emphasizing the temporary nature and public benefit. The ''corporate_enclosure_reading'' would likely classify as a Snare, emphasizing maximal extraction and property rights.',
+    reading_of_kernel,
+    'This constraint is the ''judicial_ambiguity_reading'' of the ''copyright_constitutional_mandate'' kernel. How would the classification change under sibling readings?',
+    'Adoption of ''public_scaffold_reading'' would lower extractiveness and suppression, shifting to a more pure Rope or Scaffold. Adoption of ''corporate_enclosure_reading'' would increase extractiveness and suppression, shifting towards a Snare.',
+    'The current reading enables a ''scaffold-to-enclosure'' transition without constitutional invalidation, acting as a permissive mechanism for legislative drift.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_difference, conceptual, 'Impact of alternative kernel readings on constraint classification.').
+narrative_ontology:omega_variable(reading_of_kernel, conceptual, 'Impact of alternative readings on constraint classification.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(copyright_constitutional_mandate__judicial_ambiguity_reading, 0, 30).
+narrative_ontology:interval(copyright_constitutional_mandate__judicial_ambiguity_reading, 1976, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(copy_tr_t0, copyright_constitutional_mandate__judicial_ambiguity_reading, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(copy_tr_t10, copyright_constitutional_mandate__judicial_ambiguity_reading, theater_ratio, 10, 0.07).
-narrative_ontology:measurement(copy_tr_t20, copyright_constitutional_mandate__judicial_ambiguity_reading, theater_ratio, 20, 0.09).
-narrative_ontology:measurement(copy_tr_t30, copyright_constitutional_mandate__judicial_ambiguity_reading, theater_ratio, 30, 0.1).
-
 % Extraction over time
-narrative_ontology:measurement(copy_be_t0, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 0, 0.2).
-narrative_ontology:measurement(copy_be_t10, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 10, 0.25).
-narrative_ontology:measurement(copy_be_t20, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 20, 0.3).
-narrative_ontology:measurement(copy_be_t30, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 30, 0.35).
+narrative_ontology:measurement(copy_be_t0, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(copy_be_t10, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 10, 0.3).
+narrative_ontology:measurement(copy_be_t20, copyright_constitutional_mandate__judicial_ambiguity_reading, base_extractiveness, 20, 0.35).
 
 % Suppression requirement over time
-narrative_ontology:measurement(copy_su_t0, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 0, 0.4).
-narrative_ontology:measurement(copy_su_t10, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 10, 0.48).
-narrative_ontology:measurement(copy_su_t20, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 20, 0.55).
-narrative_ontology:measurement(copy_su_t30, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 30, 0.6).
+narrative_ontology:measurement(copy_su_t0, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 0, 0.5).
+narrative_ontology:measurement(copy_su_t10, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 10, 0.55).
+narrative_ontology:measurement(copy_su_t20, copyright_constitutional_mandate__judicial_ambiguity_reading, suppression_requirement, 20, 0.6).
 
 
 /* ==========================================================================
@@ -242,10 +269,9 @@ narrative_ontology:measurement(copy_su_t30, copyright_constitutional_mandate__ju
 narrative_ontology:coordination_type(copyright_constitutional_mandate__judicial_ambiguity_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(copyright_constitutional_mandate__judicial_ambiguity_reading, copyright_constitutional_mandate__public_scaffold_reading).
 narrative_ontology:affects_constraint(copyright_constitutional_mandate__judicial_ambiguity_reading, copyright_constitutional_mandate__corporate_enclosure_reading).
-narrative_ontology:affects_constraint(copyright_constitutional_mandate__judicial_ambiguity_reading, copyright_term_extension_acts).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'copyright_constitutional_mandate' kernel, focusing on judicial deference. The other readings emphasize public benefit or corporate property rights.
+% This constraint is one of three readings of the 'copyright_constitutional_mandate' kernel. This 'judicial_ambiguity_reading' focuses on the role of judicial deference, which enables the 'corporate_enclosure_reading' and contrasts with the 'public_scaffold_reading'.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -39,7 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -53,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,15 +75,23 @@
  *
  * SUMMARY:
  *   This constraint describes the 'judicial supremacy' reading of
- *   constitutional interpretive authority, where courts hold the final say on
- *   constitutional meaning, including the power to nullify legislative acts.
- *   It is one of several competing readings of how constitutional authority
- *   is distributed. This reading positions the judiciary as the ultimate
- *   guardian of fundamental rights, often at the expense of legislative will.
- *   The structural delta is that the judiciary enters the beneficiary set for
- *   interpretive authority, the legislature is subordinated, and coercion is
- *   legitimated via rights-compliance rather than democratic will.
+ *   constitutional interpretive authority, where courts hold final say over
+ *   the meaning of the constitution and can nullify legislative acts. This
+ *   reading is often justified as a necessary safeguard for fundamental
+ *   rights and constitutional order. The metrics reflect a system where
+ *   judicial power has steadily increased, leading to higher extraction from
+ *   the legislative branch and the electorate, and requiring active
+ *   enforcement to maintain this hierarchical relationship. The claimed type
+ *   is 'tangled_rope' because it provides a coordination function (finality
+ *   in constitutional disputes) but also involves significant asymmetric
+ *   extraction.
  *
+ * KEY AGENTS:
+ *   - judiciary: Primary beneficiary and agenda-setter (institutional/identity_locked)
+ *   - legislature: Primary target (institutional/constrained)
+ *   - electorate: Secondary target (organized/constrained)
+ *   - rights_advocacy_groups: Secondary beneficiary (organized/mobile)
+ *   - executive_branch: Observer/enforcer (institutional/constrained)
  */
 
 /* ==========================================================================
@@ -94,8 +109,8 @@ narrative_ontology:constraint_metric(constitutional_interpretive_authority__judi
 narrative_ontology:constraint_metric(constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(constitutional_interpretive_authority__judicial_supremacy_reading, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(constitutional_interpretive_authority__judicial_supremacy_reading, resistance, 0.55).
+narrative_ontology:constraint_metric(constitutional_interpretive_authority__judicial_supremacy_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(constitutional_interpretive_authority__judicial_supremacy_reading, resistance, 0.45).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(constitutional_interpretive_authority__judicial_supremacy_reading, tangled_rope).
@@ -105,39 +120,80 @@ narrative_ontology:topic_domain(constitutional_interpretive_authority__judicial_
 domain_priors:requires_active_enforcement(constitutional_interpretive_authority__judicial_supremacy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(constitutional_interpretive_authority__judicial_supremacy_reading, 'b2867636-899d-4f4a-aaf8-375e30bd5954').
-narrative_ontology:cs_kernel_codification('b2867636-899d-4f4a-aaf8-375e30bd5954', fixed_text).
-narrative_ontology:cs_authority_grounding('b2867636-899d-4f4a-aaf8-375e30bd5954', lineage).
-narrative_ontology:cs_interpretation_layer_present('b2867636-899d-4f4a-aaf8-375e30bd5954').
-narrative_ontology:cs_reading_relation('b2867636-899d-4f4a-aaf8-375e30bd5954', constitutional_interpretive_authority__parliamentary_supremacy_reading, forecloses).
-narrative_ontology:cs_reading_relation('b2867636-899d-4f4a-aaf8-375e30bd5954', constitutional_interpretive_authority__coordinate_construction_reading, coexists_with).
-narrative_ontology:cs_axiom('b2867636-899d-4f4a-aaf8-375e30bd5954', foundational, judicial_review_is_final).
-narrative_ontology:cs_axiom_status(judicial_review_is_final, holdable).
-narrative_ontology:cs_axiom_grounding('b2867636-899d-4f4a-aaf8-375e30bd5954', judicial_review_is_final, conventional).
-narrative_ontology:cs_axiom('b2867636-899d-4f4a-aaf8-375e30bd5954', foundational, judiciary_is_rights_guardian).
-narrative_ontology:cs_axiom_status(judiciary_is_rights_guardian, holdable).
-narrative_ontology:cs_axiom_grounding('b2867636-899d-4f4a-aaf8-375e30bd5954', judiciary_is_rights_guardian, deontological).
-narrative_ontology:cs_reference_frame('b2867636-899d-4f4a-aaf8-375e30bd5954', marbury_v_madison_precedent).
-narrative_ontology:cs_drift_state('b2867636-899d-4f4a-aaf8-375e30bd5954', contemporary_judicial_activism_debate, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('b2867636-899d-4f4a-aaf8-375e30bd5954', '').
+narrative_ontology:cs_story_uid(constitutional_interpretive_authority__judicial_supremacy_reading, 'f637e142-7264-4982-b1a1-f85bbfa13023').
+narrative_ontology:cs_kernel_codification('f637e142-7264-4982-b1a1-f85bbfa13023', fixed_text).
+narrative_ontology:cs_authority_grounding('f637e142-7264-4982-b1a1-f85bbfa13023', lineage).
+narrative_ontology:cs_interpretation_layer_present('f637e142-7264-4982-b1a1-f85bbfa13023').
+narrative_ontology:cs_reading_relation('f637e142-7264-4982-b1a1-f85bbfa13023', constitutional_interpretive_authority__parliamentary_supremacy_reading, forecloses).
+narrative_ontology:cs_reading_relation('f637e142-7264-4982-b1a1-f85bbfa13023', constitutional_interpretive_authority__coordinate_construction_reading, coexists_with).
+narrative_ontology:cs_axiom('f637e142-7264-4982-b1a1-f85bbfa13023', foundational, judicial_review_is_inherent_constitutional_power).
+narrative_ontology:cs_axiom_status(judicial_review_is_inherent_constitutional_power, holdable).
+narrative_ontology:cs_axiom_grounding('f637e142-7264-4982-b1a1-f85bbfa13023', judicial_review_is_inherent_constitutional_power, conventional).
+narrative_ontology:cs_axiom('f637e142-7264-4982-b1a1-f85bbfa13023', foundational, judiciary_is_final_arbiter_of_constitutional_meaning).
+narrative_ontology:cs_axiom_status(judiciary_is_final_arbiter_of_constitutional_meaning, holdable).
+narrative_ontology:cs_axiom_grounding('f637e142-7264-4982-b1a1-f85bbfa13023', judiciary_is_final_arbiter_of_constitutional_meaning, deontological).
+narrative_ontology:cs_reference_frame('f637e142-7264-4982-b1a1-f85bbfa13023', marbury_v_madison_precedent).
+narrative_ontology:cs_drift_state('f637e142-7264-4982-b1a1-f85bbfa13023', contemporary_judicial_activism_debate, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('f637e142-7264-4982-b1a1-f85bbfa13023', '').
 narrative_ontology:cs_kernel_id(constitutional_interpretive_authority__judicial_supremacy_reading, constitutional_interpretive_authority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(constitutional_interpretive_authority__judicial_supremacy_reading, judiciary).
 narrative_ontology:constraint_beneficiary(constitutional_interpretive_authority__judicial_supremacy_reading, rights_advocacy_groups).
 narrative_ontology:constraint_victim(constitutional_interpretive_authority__judicial_supremacy_reading, legislature).
-narrative_ontology:constraint_victim(constitutional_interpretive_authority__judicial_supremacy_reading, executive_branch).
-narrative_ontology:constraint_victim(constitutional_interpretive_authority__judicial_supremacy_reading, popular_will).
+narrative_ontology:constraint_victim(constitutional_interpretive_authority__judicial_supremacy_reading, electorate).
+narrative_ontology:constraint_vindicates(constitutional_interpretive_authority__judicial_supremacy_reading, constitutional_supremacy_doctrine).
+narrative_ontology:constraint_vindicates(constitutional_interpretive_authority__judicial_supremacy_reading, judicial_review_doctrine).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Claims and exercises final authority in interpreting the constitution, including the power to nullify legislative acts. Benefits from enhanced institutional prestige and control over legal outcomes. Its identity is fused with this guardianship role.
+narrative_ontology:constraint_stakeholder(constitutional_interpretive_authority__judicial_supremacy_reading, judiciary, agenda_setter,
+    institutional, generational, identity_locked, national).
+
+% Has its legislative acts subjected to judicial review and potential nullification. Bears the cost of having its democratic will overridden by unelected judges. Its options are to amend the constitution, pass new legislation, or accept judicial rulings.
+narrative_ontology:constraint_stakeholder(constitutional_interpretive_authority__judicial_supremacy_reading, legislature, payer,
+    institutional, biographical, constrained, national).
+
+% Experiences the democratic process as potentially subordinate to judicial pronouncements. Benefits from rights protection but pays through reduced direct control over policy via elected representatives. Exit options are limited to electoral change or constitutional amendment.
+narrative_ontology:constraint_stakeholder(constitutional_interpretive_authority__judicial_supremacy_reading, electorate, payer,
+    organized, biographical, constrained, national).
+
+% Benefit from a powerful judiciary that can enforce constitutional rights against legislative majorities. They use judicial channels to advance their agendas, often bypassing the legislative process. Their influence is amplified by judicial supremacy.
+narrative_ontology:constraint_stakeholder(constitutional_interpretive_authority__judicial_supremacy_reading, rights_advocacy_groups, beneficiary,
+    organized, generational, mobile, national).
+
+% Must enforce judicial rulings, even when they conflict with its policy preferences or legislative agenda. Operates within the framework set by judicial interpretations, but can influence judicial appointments and public discourse.
+narrative_ontology:constraint_stakeholder(constitutional_interpretive_authority__judicial_supremacy_reading, executive_branch, observer,
+    institutional, biographical, constrained, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a final, authoritative arbiter for constitutional disputes, ensuring a consistent interpretation of fundamental law and protecting individual rights from majoritarian overreach.
+% TRANSFER_FUNCTION: Transfers ultimate interpretive authority over the constitution from the democratically elected legislature to the unelected judiciary, along with the power to nullify legislative acts.
+% ABSENT_VOICES: Proponents of parliamentary supremacy or popular sovereignty, who would argue that the legislature, as the most representative branch, should have the final say on constitutional meaning. Their voices are often marginalized in systems where judicial review is entrenched.
+% DISAPPEARANCE_RATIONALE: If judicial supremacy vanished, the balance of power would fundamentally shift. The legislature would gain unchecked power to interpret the constitution, potentially leading to rapid policy changes and a re-evaluation of fundamental rights. The legal system would lose its ultimate arbiter, leading to increased inter-branch conflict over constitutional meaning.
+% FOUNDING_PROBLEM: To prevent legislative tyranny and protect fundamental rights by establishing an independent body with the authority to ensure all laws conform to the supreme law of the constitution.
+% FOUNDING_PROBLEM_CORROBORATION: Legal scholars, civil liberties organizations, and a significant portion of the public attest that the problem of potential legislative overreach and rights violations remains live, justifying judicial review. Critics from political science and some legal traditions contest the necessity of judicial supremacy for this purpose, arguing for alternative mechanisms of constitutional enforcement.
+narrative_ontology:disappearance_verdict(constitutional_interpretive_authority__judicial_supremacy_reading, world_rearranges).
+narrative_ontology:founding_problem_status(constitutional_interpretive_authority__judicial_supremacy_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(constitutional_interpretive_authority__judicial_supremacy_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(constitutional_interpretive_authority__judicial_supremacy_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(constitutional_interpretive_authority__judicial_supremacy_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(constitutional_interpretive_authority__judicial_supremacy_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,14 +213,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.65) because the judiciary's interpretive power can significantly alter policy outcomes and impose costs on other branches and the popular will. Suppression (0.70) is also high, as the finality of judicial decisions actively suppresses alternative interpretations and legislative attempts to circumvent rulings. The theater ratio is low (0.20) because the judiciary's interpretive function is genuinely active, though its 'neutral arbiter' performance may mask some policy-making. The historical measurements show a gradual increase in both extractiveness and suppression as judicial review became more entrenched and expansive over time.
+ *   Extractiveness is high because the judiciary, an unelected body, effectively controls a significant portion of policy-making by setting constitutional boundaries, often against the expressed will of the legislature. Suppression is also high as the legislature's ability to enact its agenda is constrained by the threat of judicial review, and there are few direct mechanisms for the electorate to override judicial decisions. The theater ratio is low, indicating that the judicial function is genuinely active, though its scope has expanded. The increasing extractiveness and suppression over time reflect the historical trend of judicial power expansion in many constitutional democracies.
  *
  * PERSPECTIVAL GAP:
- *   From the judiciary's perspective, this is a necessary 'rope' for constitutional order and rights protection. From the legislature's and executive's perspective, it can feel like a 'snare' that extracts democratic authority. The engine's computation will likely show a tangled_rope or snare from the political branches' seats, while the judiciary's seat might compute as a rope or even a mountain (if its naturalness claim is accepted).
+ *   From the judiciary's perspective, this is a necessary 'rope' for constitutional order and rights protection. From the legislature's and electorate's perspective, it can feel like a 'snare' or 'tangled_rope' where their democratic mandate is curtailed. The engine's per-seat classification will capture this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   The judiciary is the primary beneficiary and agenda-setter, gaining institutional power and influence (low d). Rights advocacy groups also benefit by having a powerful institutional ally (low d). The legislature and executive branch are payers, as their authority is constrained and their actions subject to nullification (high d). The 'popular_will' is a victim, as its direct expression through elected representatives can be overridden (high d).
+ *   The judiciary is a clear beneficiary (d=0.0-0.1) as it gains institutional power and prestige. Rights advocacy groups also benefit (d=0.1-0.2) as they have a powerful avenue to advance their goals. The legislature and electorate are targets (d=0.7-0.9) as their power is curtailed. The executive branch is more symmetric (d=0.5) as it must enforce judicial decisions but also has its own constitutional role.
  *
+ * MANDATROPHY ANALYSIS:
+ *   The constraint's mandate (protecting rights, ensuring constitutional order) is still live, but its operational form (judicial supremacy) is contested. The high extractiveness and suppression suggest that while a coordination function exists, it is intertwined with significant power asymmetry. This prevents mislabeling it as a pure rope, which would ignore the costs borne by the legislature and electorate.
  */
 
 /* ==========================================================================
@@ -173,67 +231,64 @@ test(extraction_signature) :-
 
 omega_variable(
     judicial_legitimacy_source,
-    'Is judicial supremacy grounded in an inherent, non-majoritarian constitutional design, or is it a historically contingent assertion of power that could be legitimately challenged?',
-    'Comparative constitutional analysis of systems with different interpretive authority distributions, and historical analysis of the origins and evolution of judicial review in specific jurisdictions.',
-    'If inherent, the constraint''s extractiveness is a necessary cost of constitutionalism. If contingent, it is a constructed constraint whose legitimacy is open to political contestation and potential re-negotiation.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(judicial_legitimacy_source, conceptual, 'Source of judicial supremacy''s legitimacy: inherent constitutional design vs. historical contingency.').
-
-omega_variable(
-    rights_protection_efficacy,
-    'Does judicial supremacy genuinely lead to better protection of fundamental rights compared to systems with more politically accountable interpretive authority?',
-    'Empirical studies comparing rights outcomes (e.g., civil liberties, social rights) in jurisdictions with judicial supremacy versus those with parliamentary supremacy or coordinate construction.',
-    'If rights protection is demonstrably superior, it strengthens the coordination function claim. If not, it weakens the justification for the extraction of legislative authority.',
+    'Is the judiciary''s claim to final interpretive authority grounded in a genuine constitutional mandate, or is it a self-asserted power that has become entrenched through practice?',
+    'Historical analysis of constitutional founding documents and early judicial practice, compared with contemporary legal theory and public acceptance.',
+    'If self-asserted, the constraint''s legitimacy is weaker, potentially reclassifying it closer to a snare from the perspective of the legislature and electorate. If mandated, its coordination function is stronger.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(rights_protection_efficacy, empirical, 'Empirical efficacy of judicial supremacy in protecting rights.').
+narrative_ontology:omega_variable(judicial_legitimacy_source, conceptual, 'The source of judicial interpretive authority.').
 
 omega_variable(
-    popular_will_subordination_threshold,
-    'At what point does judicial nullification of legislative acts transition from legitimate rights protection to an illegitimate subordination of the popular will?',
-    'Normative and political theory analysis, combined with public opinion research on judicial legitimacy and the perceived democratic deficit. This is a preference-driven boundary.',
-    'The classification of ''popular_will'' as a victim depends on this threshold. If the threshold is low, more judicial actions are seen as extractive; if high, more are seen as legitimate coordination.',
+    rights_protection_efficacy,
+    'Does judicial supremacy genuinely lead to better protection of fundamental rights compared to alternative models of constitutional interpretation?',
+    'Comparative empirical studies of rights outcomes in systems with and without judicial supremacy, controlling for other political and social factors.',
+    'If rights protection is not demonstrably superior, the primary justification for the extraction from the legislature and electorate is weakened, pushing the classification closer to a snare. If superior, it reinforces the coordination aspect.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(popular_will_subordination_threshold, preference, 'Defining the boundary between legitimate judicial review and illegitimate judicial overreach.').
+narrative_ontology:omega_variable(rights_protection_efficacy, empirical, 'Empirical efficacy of judicial supremacy in rights protection.').
+
+omega_variable(
+    democratic_deficit_tolerance,
+    'To what extent is a ''democratic deficit'' (unelected judges overriding elected representatives) an acceptable cost for constitutional stability and rights protection?',
+    'This is a normative question, resolvable only through societal value judgments and political philosophy, not empirical data.',
+    'Societies with a higher tolerance for democratic deficit would view the constraint as more of a rope; those with lower tolerance would view it as more of a snare.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(democratic_deficit_tolerance, preference, 'Societal tolerance for judicial override of democratic will.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(constitutional_interpretive_authority__judicial_supremacy_reading, 1789, 2024).
+narrative_ontology:interval(constitutional_interpretive_authority__judicial_supremacy_reading, 1950, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(cons_tr_t1789, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1789, 0.1).
-narrative_ontology:measurement(cons_tr_t1865, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1865, 0.15).
-narrative_ontology:measurement(cons_tr_t1930, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1930, 0.18).
-narrative_ontology:measurement(cons_tr_t1970, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1970, 0.2).
-narrative_ontology:measurement(cons_tr_t2000, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 2000, 0.2).
+narrative_ontology:measurement(cons_tr_t1950, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1950, 0.1).
+narrative_ontology:measurement(cons_tr_t1970, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1970, 0.15).
+narrative_ontology:measurement(cons_tr_t1990, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 1990, 0.18).
+narrative_ontology:measurement(cons_tr_t2010, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 2010, 0.2).
 narrative_ontology:measurement(cons_tr_t2024, constitutional_interpretive_authority__judicial_supremacy_reading, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(cons_be_t1789, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1789, 0.3).
-narrative_ontology:measurement(cons_be_t1865, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1865, 0.45).
-narrative_ontology:measurement(cons_be_t1930, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1930, 0.55).
-narrative_ontology:measurement(cons_be_t1970, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1970, 0.6).
-narrative_ontology:measurement(cons_be_t2000, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 2000, 0.63).
+narrative_ontology:measurement(cons_be_t1950, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1950, 0.5).
+narrative_ontology:measurement(cons_be_t1970, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1970, 0.55).
+narrative_ontology:measurement(cons_be_t1990, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 1990, 0.6).
+narrative_ontology:measurement(cons_be_t2010, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 2010, 0.63).
 narrative_ontology:measurement(cons_be_t2024, constitutional_interpretive_authority__judicial_supremacy_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(cons_su_t1789, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1789, 0.4).
-narrative_ontology:measurement(cons_su_t1865, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1865, 0.5).
-narrative_ontology:measurement(cons_su_t1930, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1930, 0.6).
-narrative_ontology:measurement(cons_su_t1970, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1970, 0.65).
-narrative_ontology:measurement(cons_su_t2000, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 2000, 0.68).
+narrative_ontology:measurement(cons_su_t1950, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1950, 0.55).
+narrative_ontology:measurement(cons_su_t1970, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1970, 0.6).
+narrative_ontology:measurement(cons_su_t1990, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 1990, 0.65).
+narrative_ontology:measurement(cons_su_t2010, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 2010, 0.68).
 narrative_ontology:measurement(cons_su_t2024, constitutional_interpretive_authority__judicial_supremacy_reading, suppression_requirement, 2024, 0.7).
 
 
@@ -241,6 +296,11 @@ narrative_ontology:measurement(cons_su_t2024, constitutional_interpretive_author
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+narrative_ontology:coordination_type(constitutional_interpretive_authority__judicial_supremacy_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(constitutional_interpretive_authority__judicial_supremacy_reading, constitutional_interpretive_authority__parliamentary_supremacy_reading).
+narrative_ontology:affects_constraint(constitutional_interpretive_authority__judicial_supremacy_reading, constitutional_interpretive_authority__coordinate_construction_reading).
+narrative_ontology:affects_constraint(constitutional_interpretive_authority__judicial_supremacy_reading, legislative_process_rules).
+narrative_ontology:affects_constraint(constitutional_interpretive_authority__judicial_supremacy_reading, civil_liberties_enforcement).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -39,8 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,18 +70,20 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: naskh_principle__classical_abrogation
- *   human_readable: Classical Abrogation (Naskh) Principle in Quranic Jurisprudence
- *   domain: islamic_jurisprudence/quranic_hermeneutics/legal_theory
+ *   human_readable: Classical Abrogation (Naskh) Principle in Quranic Hermeneutics
+ *   domain: islamic_jurisprudence/theology/legal_theory
  *
  * SUMMARY:
- *   The principle of Naskh (abrogation) in classical Islamic jurisprudence
- *   posits that later revealed Quranic verses can supersede earlier ones on
- *   the same legal or theological topic, based on their chronological order.
- *   This reading, 'classical_abrogation', establishes a clear hierarchy of
- *   legal rulings, providing certainty for jurists but at the cost of
- *   interpretive flexibility and potential theological tension when verses
- *   appear contradictory. It is a foundational hermeneutical tool for many
- *   classical schools of thought.
+ *   This constraint describes the classical principle of Naskh (abrogation)
+ *   in Quranic hermeneutics, where later revealed verses are understood to
+ *   supersede and nullify the legal force of earlier verses on the same
+ *   topic. This reading provides legal certainty and a clear interpretive
+ *   hierarchy, benefiting classical jurists and madhhab scholars. However, it
+ *   comes at the cost of interpretive flexibility and can create theological
+ *   tensions for those who seek to harmonize all verses. The constraint is
+ *   claimed as a Rope by its proponents (a necessary coordination mechanism
+ *   for legal coherence) but operates with significant extraction and
+ *   suppression, making it a Tangled Rope from an analytical perspective.
  *
  */
 
@@ -84,61 +92,105 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(naskh_principle__classical_abrogation, 0.6).
-domain_priors:suppression_score(naskh_principle__classical_abrogation, 0.7).
-domain_priors:theater_ratio(naskh_principle__classical_abrogation, 0.2).
+domain_priors:base_extractiveness(naskh_principle__classical_abrogation, 0.65).
+domain_priors:suppression_score(naskh_principle__classical_abrogation, 0.75).
+domain_priors:theater_ratio(naskh_principle__classical_abrogation, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, extractiveness, 0.6).
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, theater_ratio, 0.2).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, extractiveness, 0.65).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, accessibility_collapse, 0.8).
 narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, resistance, 0.4).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(naskh_principle__classical_abrogation, tangled_rope).
-narrative_ontology:human_readable(naskh_principle__classical_abrogation, "Classical Abrogation (Naskh) Principle in Quranic Jurisprudence").
-narrative_ontology:topic_domain(naskh_principle__classical_abrogation, "islamic_jurisprudence/quranic_hermeneutics/legal_theory").
+narrative_ontology:human_readable(naskh_principle__classical_abrogation, "Classical Abrogation (Naskh) Principle in Quranic Hermeneutics").
+narrative_ontology:topic_domain(naskh_principle__classical_abrogation, "islamic_jurisprudence/theology/legal_theory").
 
 domain_priors:requires_active_enforcement(naskh_principle__classical_abrogation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(naskh_principle__classical_abrogation, '4cc62c23-110a-480c-8bae-075bb6b63d6e').
-narrative_ontology:cs_kernel_codification('4cc62c23-110a-480c-8bae-075bb6b63d6e', fixed_text).
-narrative_ontology:cs_authority_grounding('4cc62c23-110a-480c-8bae-075bb6b63d6e', lineage).
-narrative_ontology:cs_interpretation_layer_present('4cc62c23-110a-480c-8bae-075bb6b63d6e').
-narrative_ontology:cs_reading_relation('4cc62c23-110a-480c-8bae-075bb6b63d6e', naskh_principle__contextual_harmonization, forecloses).
-narrative_ontology:cs_reading_relation('4cc62c23-110a-480c-8bae-075bb6b63d6e', naskh_principle__progressive_restriction, forecloses).
-narrative_ontology:cs_axiom('4cc62c23-110a-480c-8bae-075bb6b63d6e', foundational, chronological_supersession_is_divine_will).
-narrative_ontology:cs_axiom_status(chronological_supersession_is_divine_will, holdable).
-narrative_ontology:cs_axiom_grounding('4cc62c23-110a-480c-8bae-075bb6b63d6e', chronological_supersession_is_divine_will, theological).
-narrative_ontology:cs_axiom('4cc62c23-110a-480c-8bae-075bb6b63d6e', foundational, abrogated_verses_lose_legal_force).
-narrative_ontology:cs_axiom_status(abrogated_verses_lose_legal_force, holdable).
-narrative_ontology:cs_axiom_grounding('4cc62c23-110a-480c-8bae-075bb6b63d6e', abrogated_verses_lose_legal_force, conventional).
-narrative_ontology:cs_reference_frame('4cc62c23-110a-480c-8bae-075bb6b63d6e', early_islamic_legal_methodology).
-narrative_ontology:cs_drift_state('4cc62c23-110a-480c-8bae-075bb6b63d6e', contemporary_hermeneutical_debates, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('4cc62c23-110a-480c-8bae-075bb6b63d6e', '').
+narrative_ontology:cs_story_uid(naskh_principle__classical_abrogation, '98c110b7-3f4f-4b56-a577-8377292efbbf').
+narrative_ontology:cs_kernel_codification('98c110b7-3f4f-4b56-a577-8377292efbbf', formalized).
+narrative_ontology:cs_authority_grounding('98c110b7-3f4f-4b56-a577-8377292efbbf', lineage).
+narrative_ontology:cs_interpretation_layer_present('98c110b7-3f4f-4b56-a577-8377292efbbf').
+narrative_ontology:cs_reading_relation('98c110b7-3f4f-4b56-a577-8377292efbbf', naskh_principle__contextual_harmonization, coexists_with).
+narrative_ontology:cs_reading_relation('98c110b7-3f4f-4b56-a577-8377292efbbf', naskh_principle__progressive_restriction, coexists_with).
+narrative_ontology:cs_axiom('98c110b7-3f4f-4b56-a577-8377292efbbf', foundational, chronological_supersession_is_divine_intent).
+narrative_ontology:cs_axiom_status(chronological_supersession_is_divine_intent, holdable).
+narrative_ontology:cs_axiom_grounding('98c110b7-3f4f-4b56-a577-8377292efbbf', chronological_supersession_is_divine_intent, theological).
+narrative_ontology:cs_axiom('98c110b7-3f4f-4b56-a577-8377292efbbf', foundational, legal_clarity_requires_definitive_resolution_of_contradictions).
+narrative_ontology:cs_axiom_status(legal_clarity_requires_definitive_resolution_of_contradictions, holdable).
+narrative_ontology:cs_axiom_grounding('98c110b7-3f4f-4b56-a577-8377292efbbf', legal_clarity_requires_definitive_resolution_of_contradictions, conventional).
+narrative_ontology:cs_reference_frame('98c110b7-3f4f-4b56-a577-8377292efbbf', classical_islamic_legal_theory).
+narrative_ontology:cs_drift_state('98c110b7-3f4f-4b56-a577-8377292efbbf', contemporary_islamic_discourse, gap(repudiation_pressure, substantial, true)).
+narrative_ontology:cs_created_at('98c110b7-3f4f-4b56-a577-8377292efbbf', '').
 narrative_ontology:cs_kernel_id(naskh_principle__classical_abrogation, naskh_principle).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, classical_jurists).
-narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, legal_scholars).
-narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, state_legal_systems).
-narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, interpretive_flexibility).
-narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, theological_coherence_advocates).
-narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, lay_muslims).
+narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, madhhab_scholars).
+narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, lay_muslims_seeking_legal_clarity).
+narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, modernist_reformers).
+narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, contextual_interpreters).
+narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, lay_muslims_seeking_theological_coherence).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These scholars established and codified the principle of abrogation, using it to resolve apparent contradictions in the Quran and derive clear legal rulings. Their authority is partly constituted by their mastery of this complex interpretive method. They benefit from the legal certainty and interpretive hierarchy it provides.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, classical_jurists, agenda_setter,
+    institutional, generational, identity_locked, global).
+
+% Scholars within established schools of Islamic law (madhhabs) rely on the classical abrogation principle to maintain consistency and coherence within their legal traditions. It provides a clear methodology for legal derivation and minimizes internal contradictions, reinforcing their institutional authority.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, madhhab_scholars, beneficiary,
+    organized, generational, constrained, global).
+
+% Many ordinary Muslims benefit from the clear, unambiguous legal rulings derived through the abrogation principle, which simplifies adherence to Islamic law. They rely on scholarly consensus and established interpretations for guidance.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, lay_muslims_seeking_legal_clarity, beneficiary,
+    moderate, biographical, constrained, global).
+
+% These scholars challenge the classical abrogation principle, arguing it undermines the Quran's eternal relevance and leads to selective readings. They bear the cost of being marginalized or labeled as heterodox within mainstream Islamic discourse for rejecting a foundational hermeneutical tool.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, modernist_reformers, payer,
+    organized, generational, constrained, global).
+
+% Scholars who emphasize the historical and situational context of revelation find the abrogation principle overly rigid, as it strips earlier verses of their legal force. They struggle to reconcile their contextual approach with the established hierarchy of abrogated and abrogating verses, often facing resistance from traditional institutions.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, contextual_interpreters, payer,
+    moderate, biographical, constrained, global).
+
+% Some Muslims find the idea of God abrogating His own words problematic from a theological perspective, as it can imply divine changeability or imperfection. They struggle with the theological implications of abrogation, but are often bound by community norms and traditional interpretations.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, lay_muslims_seeking_theological_coherence, payer,
+    powerless, biographical, identity_locked, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a systematic methodology for resolving apparent contradictions within the Quran, ensuring legal consistency and clarity across diverse verses and historical contexts.
+% TRANSFER_FUNCTION: Transfers interpretive authority and legal precedence from earlier Quranic verses to later ones on the same topic, effectively nullifying the legal force of the abrogated verses while preserving the authority of the abrogating ones. This transfers interpretive power to those who master the chronological and contextual details of revelation.
+% ABSENT_VOICES: Early Islamic sects and individual scholars who rejected the principle of abrogation entirely, or proposed alternative methods of harmonization, were largely marginalized or their views suppressed in the formation of classical Islamic legal theory. Their arguments for the eternal validity of all verses are absent from the dominant discourse.
+% DISAPPEARANCE_RATIONALE: If the classical abrogation principle vanished overnight, the entire edifice of Islamic jurisprudence would be thrown into disarray. Legal rulings on numerous topics (e.g., alcohol consumption, inheritance, warfare) would become ambiguous, leading to widespread interpretive chaos and a fundamental re-evaluation of the Quran's internal consistency. The authority of classical jurists and madhhabs would be severely undermined.
+% FOUNDING_PROBLEM: The early Muslim community and subsequent jurists faced the challenge of reconciling seemingly contradictory verses in the Quran, particularly those revealed at different stages of the Prophet Muhammad's mission, to derive a coherent and consistent body of Islamic law.
+% FOUNDING_PROBLEM_CORROBORATION: Classical and traditional scholars universally attest to the founding problem's live status, arguing that without abrogation, legal chaos would ensue. Modernist and contextual interpreters, while challenging the solution, generally acknowledge the existence of apparent contradictions that require hermeneutical resolution, thus corroborating the problem itself, if not the classical solution.
+narrative_ontology:disappearance_verdict(naskh_principle__classical_abrogation, world_rearranges).
+narrative_ontology:founding_problem_status(naskh_principle__classical_abrogation, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(naskh_principle__classical_abrogation, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(naskh_principle__classical_abrogation, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(naskh_principle__classical_abrogation, 'none', 1).
+narrative_ontology:epsilon_provenance(naskh_principle__classical_abrogation, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -158,16 +210,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.6) stems from the power granted to jurists to declare certain verses 'abrogated' and thus legally inert, which can be seen as an interpretive 'tax' on the full textual corpus. Suppression (0.7) is high because this principle is actively enforced within traditional legal education and fatwa issuance, often suppressing alternative hermeneutical approaches. The theater ratio (0.2) is relatively low, as the principle is genuinely applied, though its justification may involve some performative defense against charges of textual contradiction. The historical measurements reflect the principle's establishment and subsequent periods of contestation and re-affirmation.
+ *   The extractiveness (0.65) stems from the interpretive power concentrated in the hands of those who determine the chronological order and scope of abrogation, effectively nullifying certain verses for legal application. Suppression (0.75) is high because alternative hermeneutical approaches (like contextual harmonization) are actively marginalized or rejected within traditional institutions. The theater ratio is low (0.1) as the principle is genuinely applied and forms a core part of legal reasoning, not merely a performance. Accessibility collapse is high (0.8) because once the principle is accepted, alternative interpretations of 'abrogated' verses become largely inaccessible for legal derivation. Resistance (0.4) is moderate, coming primarily from modernist and reformist movements rather than widespread popular rejection.
  *
  * PERSPECTIVAL GAP:
- *   Classical jurists and legal scholars experience this as a necessary coordination mechanism for legal certainty, simplifying the application of divine law. However, advocates for interpretive flexibility and lay Muslims seeking direct engagement with the Quran may experience it as an extractive and suppressive constraint, limiting their ability to derive meaning or reconcile apparent contradictions without external mediation.
+ *   From the perspective of classical jurists, the abrogation principle is a necessary and divinely sanctioned tool for maintaining the integrity and applicability of Islamic law (a Rope). From the perspective of modernist reformers, it is an extractive mechanism that stifles interpretive innovation and undermines the Quran's holistic message (a Snare). The engine's classification as Tangled Rope reflects the hybrid nature: a genuine coordination function (legal clarity) coupled with asymmetric extraction and active suppression of alternatives.
  *
  * DIRECTIONALITY LOGIC:
- *   Classical jurists and legal scholars are beneficiaries (d=0.0-0.2) as the principle provides them with a clear methodology and authority in legal derivation. State legal systems also benefit (d=0.1-0.3) from the legal certainty it provides. Interpretive flexibility and theological coherence advocates are victims (d=0.7-0.9) as their preferred modes of engagement are suppressed. Lay Muslims are also victims (d=0.6-0.8) as their direct access to the full Quranic text's legal implications is mediated and potentially restricted.
+ *   Classical jurists and madhhab scholars are clear beneficiaries and agenda-setters, as the principle solidifies their interpretive authority and provides a framework for their legal systems. Lay Muslims seeking legal clarity also benefit from the unambiguous rulings. Modernist reformers and contextual interpreters are payers, as their alternative approaches are suppressed, and they bear the cost of challenging established norms. Lay Muslims seeking theological coherence are also payers, as they grapple with the theological implications of abrogation.
  *
- * MANDATROPHY ANALYSIS:
- *   The constraint's mandate is to resolve apparent contradictions in the Quran and provide legal clarity. While the problem of textual complexity remains 'live', the 'classical_abrogation' reading's status is 'contested' by alternative hermeneutics. The classification as a Tangled Rope reflects that it genuinely solves a coordination problem (legal certainty) but does so with significant, asymmetric extraction (loss of interpretive flexibility) and requires active enforcement to maintain its dominance against competing readings. If the founding problem were 'dead' (i.e., no textual contradictions were perceived), and the constraint persisted, it would lean towards a Piton or Snare.
  */
 
 /* ==========================================================================
@@ -175,59 +225,69 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    naskh_principle_kernel_reading,
-    'Is this constraint a genuine divine principle or a human interpretive construct to manage textual complexity?',
-    'Theological consensus across diverse schools of thought, or a re-evaluation of early Islamic sources for explicit divine mandate for chronological abrogation.',
-    'If a human construct, its authority shifts from divine law to a conventional legal methodology, potentially reducing its suppressive force and extractiveness for those seeking alternative interpretations. This reading (classical_abrogation) would be reclassified as a conventional legal tool rather than a theological truth.',
+    divine_will_vs_human_interpretation,
+    'Is the principle of abrogation a direct reflection of divine will and wisdom, or primarily a human interpretive construct developed to manage textual complexity?',
+    'Theological consensus shift over centuries, or a new, universally accepted hermeneutical framework that renders abrogation unnecessary for legal coherence.',
+    'If primarily a human construct, its ''naturalness'' claim weakens, increasing its perceived extractiveness and suppression. If divine, its legitimacy is reinforced, and its coordination function is emphasized.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(naskh_principle_kernel_reading, conceptual, 'This constraint is the ''classical_abrogation'' reading of the ''naskh_principle'' kernel. Sibling readings (''contextual_harmonization'', ''progressive_restriction'') would challenge its theological grounding and legal finality.').
+narrative_ontology:omega_variable(divine_will_vs_human_interpretation, conceptual, 'Ambiguity regarding the divine vs. human origin of the abrogation principle.').
 
 omega_variable(
-    interpretive_flexibility_cost,
-    'What is the true cost of reduced interpretive flexibility for theological coherence and modern legal application?',
-    'Empirical study of legal disputes and theological debates in contexts where classical abrogation is strictly applied versus contexts where alternative hermeneutics are dominant.',
-    'If the cost is high (e.g., leading to legal rigidity or perceived theological contradictions), it would increase the measured extractiveness and suppression of this reading, potentially pushing it closer to a Snare for those seeking more nuanced interpretations.',
+    scope_of_abrogation_ambiguity,
+    'What is the precise scope of abrogation: does it apply only to legal rulings, or can it extend to theological tenets and ethical principles?',
+    'Further scholarly consensus or authoritative pronouncements clarifying the boundaries of abrogation''s application.',
+    'A broader scope increases the principle''s power to nullify verses, potentially increasing extraction and suppression of alternative interpretations. A narrower scope limits its impact, reducing perceived extraction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(interpretive_flexibility_cost, empirical, 'The classical abrogation principle sacrifices interpretive flexibility for legal certainty, potentially creating theological tensions.').
+narrative_ontology:omega_variable(scope_of_abrogation_ambiguity, conceptual, 'Uncertainty about the extent of abrogation''s application within the Quran.').
+
+omega_variable(
+    theological_coherence_cost,
+    'Is the legal clarity provided by abrogation worth the potential theological cost of implying divine changeability or imperfection?',
+    'A shift in the dominant theological paradigm within Islam that re-prioritizes divine immutability over legal consistency derived through abrogation.',
+    'If the theological cost is deemed too high, resistance to the principle would increase, and its legitimacy would be challenged, potentially leading to a reclassification towards Snare. If the legal clarity is paramount, its Rope-like qualities are emphasized.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(theological_coherence_cost, preference, 'Trade-off between legal clarity and theological coherence.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(naskh_principle__classical_abrogation, 0, 500).
+narrative_ontology:interval(naskh_principle__classical_abrogation, 0, 1400).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(nask_tr_t0, naskh_principle__classical_abrogation, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(nask_tr_t100, naskh_principle__classical_abrogation, theater_ratio, 100, 0.15).
-narrative_ontology:measurement(nask_tr_t200, naskh_principle__classical_abrogation, theater_ratio, 200, 0.2).
-narrative_ontology:measurement(nask_tr_t300, naskh_principle__classical_abrogation, theater_ratio, 300, 0.2).
-narrative_ontology:measurement(nask_tr_t400, naskh_principle__classical_abrogation, theater_ratio, 400, 0.18).
-narrative_ontology:measurement(nask_tr_t500, naskh_principle__classical_abrogation, theater_ratio, 500, 0.15).
+narrative_ontology:measurement(nask_tr_t0, naskh_principle__classical_abrogation, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(nask_tr_t200, naskh_principle__classical_abrogation, theater_ratio, 200, 0.08).
+narrative_ontology:measurement(nask_tr_t400, naskh_principle__classical_abrogation, theater_ratio, 400, 0.1).
+narrative_ontology:measurement(nask_tr_t800, naskh_principle__classical_abrogation, theater_ratio, 800, 0.1).
+narrative_ontology:measurement(nask_tr_t1200, naskh_principle__classical_abrogation, theater_ratio, 1200, 0.1).
+narrative_ontology:measurement(nask_tr_t1400, naskh_principle__classical_abrogation, theater_ratio, 1400, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(nask_be_t0, naskh_principle__classical_abrogation, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(nask_be_t100, naskh_principle__classical_abrogation, base_extractiveness, 100, 0.55).
-narrative_ontology:measurement(nask_be_t200, naskh_principle__classical_abrogation, base_extractiveness, 200, 0.6).
-narrative_ontology:measurement(nask_be_t300, naskh_principle__classical_abrogation, base_extractiveness, 300, 0.6).
-narrative_ontology:measurement(nask_be_t400, naskh_principle__classical_abrogation, base_extractiveness, 400, 0.58).
-narrative_ontology:measurement(nask_be_t500, naskh_principle__classical_abrogation, base_extractiveness, 500, 0.55).
+narrative_ontology:measurement(nask_be_t0, naskh_principle__classical_abrogation, base_extractiveness, 0, 0.4).
+narrative_ontology:measurement(nask_be_t200, naskh_principle__classical_abrogation, base_extractiveness, 200, 0.55).
+narrative_ontology:measurement(nask_be_t400, naskh_principle__classical_abrogation, base_extractiveness, 400, 0.65).
+narrative_ontology:measurement(nask_be_t800, naskh_principle__classical_abrogation, base_extractiveness, 800, 0.68).
+narrative_ontology:measurement(nask_be_t1200, naskh_principle__classical_abrogation, base_extractiveness, 1200, 0.65).
+narrative_ontology:measurement(nask_be_t1400, naskh_principle__classical_abrogation, base_extractiveness, 1400, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(nask_su_t0, naskh_principle__classical_abrogation, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(nask_su_t100, naskh_principle__classical_abrogation, suppression_requirement, 100, 0.65).
-narrative_ontology:measurement(nask_su_t200, naskh_principle__classical_abrogation, suppression_requirement, 200, 0.7).
-narrative_ontology:measurement(nask_su_t300, naskh_principle__classical_abrogation, suppression_requirement, 300, 0.7).
-narrative_ontology:measurement(nask_su_t400, naskh_principle__classical_abrogation, suppression_requirement, 400, 0.68).
-narrative_ontology:measurement(nask_su_t500, naskh_principle__classical_abrogation, suppression_requirement, 500, 0.65).
+narrative_ontology:measurement(nask_su_t0, naskh_principle__classical_abrogation, suppression_requirement, 0, 0.5).
+narrative_ontology:measurement(nask_su_t200, naskh_principle__classical_abrogation, suppression_requirement, 200, 0.65).
+narrative_ontology:measurement(nask_su_t400, naskh_principle__classical_abrogation, suppression_requirement, 400, 0.75).
+narrative_ontology:measurement(nask_su_t800, naskh_principle__classical_abrogation, suppression_requirement, 800, 0.78).
+narrative_ontology:measurement(nask_su_t1200, naskh_principle__classical_abrogation, suppression_requirement, 1200, 0.75).
+narrative_ontology:measurement(nask_su_t1400, naskh_principle__classical_abrogation, suppression_requirement, 1400, 0.75).
 
 
 /* ==========================================================================
@@ -235,9 +295,12 @@ narrative_ontology:measurement(nask_su_t500, naskh_principle__classical_abrogati
    ========================================================================== */
 
 narrative_ontology:coordination_type(naskh_principle__classical_abrogation, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(naskh_principle__classical_abrogation, 0.1).
+narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, islamic_legal_rulings).
+narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, quranic_exegesis_methodology).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'naskh_principle' kernel. Other readings include 'contextual_harmonization' and 'progressive_restriction', which offer alternative methods for reconciling Quranic verses.
+% This constraint is one reading of the 'naskh_principle' kernel. Its ε value reflects the specific structural consequences of applying classical abrogation, distinct from other readings that emphasize harmonization or progressive restriction.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "0cd3ac80-84a0-4a24-9c84-b51df70e0c25"
+    "story_uid": "31cea546-07c7-40a5-b7a4-c184bc7d4940"
   },
   "base_properties": {
     "extractiveness": 0.78,
@@ -13,7 +13,7 @@
     "accessibility_collapse": 0.6,
     "resistance": 0.7,
     "claimed_type": "tangled_rope",
-    "human_readable": "Public Health Primary Intervention Mandate",
+    "human_readable": "Public Health Primary Intervention (Population Morbidity/Mortality Reduction)",
     "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -23,53 +23,39 @@
     ],
     "victims": [
       "unvaccinated_individuals",
-      "religious_objectors",
-      "anti_vaccine_advocates"
-    ],
-    "vindicated_propositions": [
-      "herd_immunity_principle",
-      "public_good_over_private_interest"
+      "individuals_with_religious_exemptions"
     ]
   },
   "omegas": [
     {
       "id": "kernel_reading_identification",
       "question": "Is this constraint a genuine reflection of public health necessity, or an overreach of state power?",
-      "resolution_mechanism": "Empirical data on disease transmission rates and severity, combined with legal precedent on state police powers in public health emergencies.",
-      "impact": "If public health necessity is overwhelmingly demonstrated, the constraint is a legitimate Tangled Rope. If overreach, it leans towards Snare.",
+      "resolution_mechanism": "Comparative analysis with other readings of the 'legitimate_health_intervention' kernel, specifically 'bodily_autonomy_primary' and 'proportionality_reading', to identify the specific points of structural divergence and their normative implications.",
+      "impact": "If the 'bodily_autonomy_primary' reading were adopted, the victim set would shrink, and extractiveness would decrease significantly. If 'proportionality_reading' were adopted, the constraint's application would be highly conditional on disease severity and intervention invasiveness.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "This constraint is the 'public_health_primary' reading of the 'legitimate_health_intervention' kernel. Sibling readings ('bodily_autonomy_primary', 'proportionality_reading') would shift the victim/beneficiary balance and the perceived legitimacy of enforcement."
+      "type_class": "conceptual",
+      "description": "This constraint is one reading ('public_health_primary') of the 'legitimate_health_intervention' kernel. It prioritizes population-level health outcomes over individual autonomy, viewing refusal as an externality."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (e.g., legal mandates) or internalized (e.g., social pressure, fear of exclusion)?",
-      "resolution_mechanism": "Post-exit suppression trajectory: if refusal persists after legal mandates are removed, reclassify as partially internalized. Surveys on reasons for compliance/non-compliance.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as individuals carry the suppression with them. If purely structural, removal of mandates would lead to immediate behavioral shifts.",
+      "id": "externality_quantification",
+      "question": "How precisely can the externality imposed by individual refusal be quantified in terms of population-level morbidity and mortality?",
+      "resolution_mechanism": "Epidemiological modeling and public health data analysis to establish a direct causal link and magnitude of harm from individual non-compliance.",
+      "impact": "If the externality is small or difficult to quantify, the justification for high suppression and extractiveness weakens, potentially shifting the constraint towards a 'snare' or 'piton' if the coordination function is deemed insufficient.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for vaccine mandates and access restrictions."
-    },
-    {
-      "id": "proportionality_threshold_ambiguity",
-      "question": "At what threshold of population-level morbidity/mortality does individual refusal constitute an unacceptable externality, justifying high suppression?",
-      "resolution_mechanism": "Consensus among epidemiologists and public health ethicists on risk assessment, and judicial review of public health orders.",
-      "impact": "A higher threshold would reduce the legitimacy of high suppression, pushing the constraint towards Snare. A lower threshold would reinforce its Tangled Rope classification.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "The 'proportionality_reading' sibling would contest this threshold, arguing for a more nuanced balance."
+      "description": "The degree to which individual refusal of public health measures directly translates to measurable population harm."
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.68
+      "value": 0.7
     },
     {
       "metric": "base_extractiveness",
@@ -104,12 +90,12 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.12
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
@@ -127,50 +113,93 @@
     "end": 15
   },
   "commentary": {
-    "narrative_context": "This constraint represents the 'public_health_primary' reading of legitimate health interventions, where the state's authority to mandate measures (like vaccination or isolation) derives from their measurable impact on population-level morbidity and mortality. Individual refusal is framed as an externality imposed on the collective, justifying coercive enforcement. This reading prioritizes collective well-being over individual autonomy when a clear public health threat exists.",
+    "narrative_context": "This constraint represents the 'public_health_primary' reading of the 'legitimate_health_intervention' kernel. It asserts that the legitimacy of public health interventions derives from their measurable reduction in population-level morbidity and mortality. Individual refusal of such interventions is framed as the imposition of an externality on the collective. This reading justifies strong enforcement mechanisms, such as mandatory vaccination, employment termination for non-compliance, and restrictions on access to public spaces, to protect the vulnerable and maintain public health infrastructure. The high extractiveness and suppression reflect the costs imposed on individuals who refuse to comply and the active enforcement required to maintain the population-level benefit.",
     "key_agents": [
-      "public_health_authorities: Agenda setter (institutional/analytical) — sets policy, enforces mandates.",
-      "immunocompromised_individuals: Beneficiary (powerless) — protected by reduced disease transmission.",
-      "general_population: Beneficiary (organized) — benefits from reduced disease burden, but also subject to mandates.",
-      "unvaccinated_individuals: Payer/Victim (powerless/constrained) — bears costs of mandates (e.g., job loss, access restrictions).",
-      "religious_objectors: Payer/Victim (powerless/constrained) — faces direct conflict between belief and mandate.",
-      "anti_vaccine_advocates: Payer/Victim (moderate/constrained) — actively resists, but faces significant suppression.",
-      "constitutional_courts: Observer (institutional/analytical) — adjudicates challenges to mandates, balancing rights."
+      "public_health_authorities: Agenda setter (institutional/global) — enforces compliance, sets policy.",
+      "immunocompromised_individuals: Primary beneficiary (powerless/biographical) — protected by population immunity.",
+      "general_population: Beneficiary (organized/generational) — benefits from reduced disease burden.",
+      "unvaccinated_individuals: Primary payer/victim (powerless/immediate) — bears costs of non-compliance (employment loss, access restrictions).",
+      "individuals_with_religious_exemptions: Payer/victim (powerless/biographical) — bears costs due to refusal based on belief.",
+      "constitutional_lawyers: Observer (analytical/generational) — challenge the legality and ethical basis of interventions."
     ],
-    "logic_rationale": "The high extractiveness (0.78) and suppression (0.85) reflect the coercive nature of public health mandates, which impose significant costs on non-compliant individuals (e.g., loss of employment, restricted access to public spaces). The 'tangled_rope' classification is chosen because there is a genuine coordination function (reducing disease burden for the collective, especially vulnerable populations) alongside asymmetric extraction from those who refuse to comply. The low theater ratio (0.1) indicates that the enforcement is largely functional, directly aimed at achieving public health outcomes, rather than performative. Accessibility collapse is moderate (0.6) as alternatives to compliance (e.g., avoiding public spaces, remote work) exist but are severely constrained. Resistance is high (0.7) due to strong individual and ideological opposition.",
-    "perspectival_gap": "Public health authorities and immunocompromised individuals experience this as a necessary, life-saving coordination mechanism. Unvaccinated individuals and religious objectors experience it as a highly extractive and suppressive imposition on their bodily autonomy and beliefs. The engine's per-seat classification will reflect this divergence, with beneficiaries seeing a Rope-like function and victims experiencing a Snare-like extraction.",
-    "directionality_logic": "Public health authorities are clear beneficiaries (d=0.0-0.1) as their mandate is fulfilled and their power is exercised. Immunocompromised individuals and the general population are also beneficiaries (d=0.0-0.2) as they are protected from disease. Unvaccinated individuals, religious objectors, and anti-vaccine advocates are clear targets (d=0.8-1.0) as they bear the direct costs of compliance or non-compliance. Constitutional courts are analytical observers (d=0.5).",
-    "mandatrophy_analysis": "This constraint is not experiencing mandatrophy; its mandate (reducing morbidity/mortality) is actively pursued and its enforcement is functional. The challenge is not obsolescence but the ethical and legal contestation of its scope and methods. The classification as Tangled Rope prevents mislabeling it as a pure Snare by acknowledging its genuine coordination function, while still highlighting its extractive and suppressive aspects.",
-    "kernel_context": "This constraint is the 'public_health_primary' reading of the 'legitimate_health_intervention' kernel. This reading asserts that the legitimacy of public health interventions derives from their measurable reduction in population-level morbidity and mortality, framing individual refusal as an externality. Sibling readings include 'bodily_autonomy_primary' (prioritizing individual consent) and 'proportionality_reading' (balancing collective good and individual rights based on threat level)."
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates public health outcomes (benefiting the immunocompromised and general population) but achieves this through significant, asymmetric extraction from non-compliant individuals. The high extractiveness (0.78) reflects the severe consequences for those who refuse, such as job loss or exclusion from public life. Suppression (0.85) is high due to the active and often coercive enforcement by public health authorities. The theater ratio is low (0.1) as the interventions are largely functional in achieving their stated public health goals, with minimal performative elements. Accessibility collapse is moderate (0.6) as alternatives to compliance (e.g., avoiding public spaces, remote work) exist but are severely constrained. Resistance is high (0.7) due to strong individual rights advocacy and legal challenges.",
+    "perspectival_gap": "Public health authorities perceive this as a necessary coordination mechanism to protect the collective, with individual costs being a justified price for societal well-being. Unvaccinated individuals, however, experience it as pure extraction and suppression, a violation of bodily autonomy. The engine's per-seat classification would reflect this divergence, with authorities seeing a Rope and non-compliant individuals experiencing a Snare.",
+    "directionality_logic": "Public health authorities are full beneficiaries (d=0.0) as they achieve their mandate and maintain societal order. Immunocompromised individuals and the general population are also beneficiaries (d=0.1-0.2) as they are directly protected. Unvaccinated individuals and those with religious exemptions are full targets (d=1.0) as they bear the full cost of non-compliance without direct benefit from the specific intervention they refuse. Constitutional lawyers are analytical observers (d=0.5).",
+    "mandatrophy_analysis": "This constraint is not mandatrophic; its mandate (reducing morbidity/mortality) is actively pursued and demonstrably live, especially during public health crises. The classification as Tangled Rope prevents mislabeling it as pure extraction by acknowledging its genuine coordination function, while also highlighting the asymmetric costs imposed.",
+    "kernel_context": "This constraint is the 'public_health_primary' reading of the 'legitimate_health_intervention' kernel. This reading prioritizes population-level health outcomes, viewing individual refusal as an externality. Sibling readings include 'bodily_autonomy_primary' (prioritizing individual consent) and 'proportionality_reading' (balancing individual and collective interests based on threat level)."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'legitimate_health_intervention' kernel. Other readings (e.g., 'bodily_autonomy_primary', 'proportionality_reading') are distinct constraints with different structural properties and classifications."
+    "dual_formulation_note": "This constraint is one of three readings of the 'legitimate_health_intervention' kernel, each representing a distinct structural claim about the balance between individual rights and public health."
   },
-  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Responsible for setting and enforcing public health policies, including mandatory interventions. They justify policies based on epidemiological data and population health outcomes. Their mandate is to reduce morbidity and mortality, and they benefit from compliance."
+    },
+    {
+      "name": "immunocompromised_individuals",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Highly vulnerable to infectious diseases, they rely on population-level immunity (herd immunity) for protection. They are direct beneficiaries of widespread compliance with public health interventions, as it reduces their risk of exposure and severe illness."
+    },
+    {
+      "name": "general_population",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from reduced overall disease burden, stable healthcare systems, and economic continuity. While some individuals may bear indirect costs, the collective benefit from disease control is substantial."
+    },
+    {
+      "name": "unvaccinated_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals who refuse public health interventions (e.g., vaccination) for personal, philosophical, or medical reasons. They bear the direct costs of non-compliance, such as employment termination, restrictions on travel, or exclusion from public spaces. They are framed as imposing an externality on the collective."
+    },
+    {
+      "name": "individuals_with_religious_exemptions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals whose religious beliefs preclude participation in certain public health interventions. They face similar costs and restrictions as other unvaccinated individuals, often leading to legal challenges based on religious freedom."
+    },
+    {
+      "name": "constitutional_lawyers",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legal professionals who analyze and challenge public health mandates on constitutional grounds, such as bodily autonomy, religious freedom, or due process. They represent individuals and groups affected by the interventions and seek to balance individual rights with state power."
+    }
+  ],
   "six_questions": {
-    "coordination_function": "To reduce population-level morbidity and mortality from infectious diseases, ensuring collective immunity and protecting vulnerable individuals who cannot be vaccinated.",
-    "transfer_function": "Transfers the burden of disease risk from the collective (especially vulnerable groups) to individuals who refuse public health interventions, through mandates and restrictions.",
-    "absent_voices": "Individuals with rare medical contraindications to vaccines, or those whose specific religious beliefs are not widely understood, may feel their voices are absent in the broad policy debates, leading to their marginalization in policy formulation.",
+    "coordination_function": "To achieve population-level immunity and reduce the spread of infectious diseases, thereby protecting vulnerable individuals and preventing healthcare system overload.",
+    "transfer_function": "Transfers the burden of disease risk from the collective (especially the vulnerable) to individuals who refuse to comply with public health interventions, through social and economic penalties.",
+    "absent_voices": "Individuals and advocacy groups who prioritize absolute bodily autonomy or specific religious freedoms would object to the coercive nature of these interventions. They are often marginalized in public health discourse, which prioritizes collective good.",
     "disappearance_verdict": "world_rearranges",
-    "disappearance_rationale": "If this constraint vanished overnight, public health authorities would lose their primary tool for managing epidemics. Vaccination rates would likely drop, leading to increased disease outbreaks, overwhelmed healthcare systems, and a significant rise in preventable deaths and long-term disabilities. Society would have to reorganize around a higher baseline of disease risk.",
-    "founding_problem": "The historical problem of widespread infectious diseases causing mass casualties and societal disruption, necessitating collective action to protect public health.",
+    "disappearance_rationale": "If this constraint vanished, population-level morbidity and mortality would likely increase significantly, especially during outbreaks. Healthcare systems would be overwhelmed, and vulnerable populations would face severe risks. The social contract around collective health would fundamentally shift, leading to a reorganization of public health governance and individual responsibilities.",
+    "founding_problem": "The problem of managing infectious disease outbreaks and protecting vulnerable populations from widespread illness and death, particularly when individual actions can impact collective health.",
     "founding_problem_status": "live",
-    "founding_problem_corroboration": "Epidemiologists, public health organizations (e.g., WHO, CDC), and medical professionals universally corroborate that the founding problem of infectious disease threats remains live. Historical data on pandemics and ongoing endemic diseases provide strong evidence from outside the direct beneficiaries of enforcement."
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
+    "founding_problem_corroboration": "Public health organizations (e.g., WHO, CDC) and medical professionals universally corroborate that managing infectious diseases and protecting vulnerable populations remains a live and critical problem. Epidemiological data and historical precedents of disease outbreaks support this assessment from outside the immediate benefiting parties."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -179,7 +208,7 @@
     "reading_relations": [
       {
         "sibling_id": "bodily_autonomy_primary",
-        "relation": "forecloses"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "proportionality_reading",
@@ -188,24 +217,36 @@
     ],
     "axioms": [
       {
-        "atom": "collective_health_supremacy",
+        "atom": "population_health_supremacy",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "individual_externality_imposition",
-        "role": "foundational",
+        "atom": "individual_refusal_as_externality",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "epidemiological_consensus_public_good",
+    "reference_frame": "collective_health_imperative",
     "drift_state": {
-      "moment": "contemporary_pandemic_era",
-      "direction": "revival_pressure",
+      "moment": "contemporary_rights_discourse",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

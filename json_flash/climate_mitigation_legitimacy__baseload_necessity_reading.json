@@ -4,127 +4,229 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "6f75f350-c3fa-451c-9112-3a72571289d6"
+    "story_uid": "bfa87e19-ae37-4735-a3d3-accad1834cfa"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.4,
+    "extractiveness": 0.65,
+    "suppression": 0.7,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.3,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
     "claimed_type": "tangled_rope",
-    "human_readable": "Baseload Necessity for Decarbonization",
+    "human_readable": "Baseload Power Necessity for Decarbonization",
     "topic_domain": "energy_policy/climate_mitigation/technology_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "nuclear_power_industry",
+      "nuclear_industry",
       "fossil_fuel_industry_with_ccs",
       "grid_operators"
     ],
     "victims": [
       "renewable_energy_advocates",
-      "taxpayers_subsidizing_baseload"
+      "environmental_activists",
+      "taxpayers"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "baseload_necessity_empirical_validity",
-      "question": "Is the claim that renewables cannot provide dispatchable baseload power at scale empirically sound, considering advancements in storage and grid management?",
-      "resolution_mechanism": "Long-term empirical data from grids with high renewable penetration and advanced storage solutions; independent engineering and economic modeling.",
-      "impact": "If proven false, the constraint shifts from a 'natural' necessity to a policy choice, increasing its extractiveness and suppression metrics, potentially reclassifying it as a Snare. If proven true, it reinforces the Mountain-like aspects of the constraint.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Empirical validity of baseload necessity claim."
+      "name": "nuclear_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefits from the framing that nuclear power is indispensable for reliable decarbonization, securing investment and policy support for long-lived, capital-intensive projects. Their continued operation and expansion are justified by this necessity."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine 'baseload necessity' or a framing used by incumbent industries to secure market share in decarbonization efforts?",
-      "resolution_mechanism": "Analysis of lobbying efforts, policy outcomes, and financial flows to baseload vs. renewable sectors; expert consensus on grid stability requirements.",
-      "impact": "If it's a framing, the constraint's true extractiveness is higher, and its claimed coordination function is a cover for rent-seeking. This would shift its classification towards Snare.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'baseload_necessity_reading' of the 'climate_mitigation_legitimacy' kernel. Sibling readings like 'renewable_primacy_reading' (renewables + storage suffice) and 'degrowth_sufficiency_reading' (demand reduction makes large-scale generation unnecessary) would lead to different beneficiary/victim sets and policy prescriptions. The 'portfolio_pragmatism_reading' (technology-neutral portfolio) would broaden the beneficiary set to include both nuclear and renewables without prioritizing baseload."
+      "name": "fossil_fuel_industry_with_ccs",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefits by extending the lifespan of fossil fuel assets through carbon capture and storage (CCS) technologies, which are presented as a dispatchable baseload solution. This framing delays a full transition to renewables."
+    },
+    {
+      "name": "grid_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are responsible for grid stability and reliability. They advocate for dispatchable baseload power, often favoring existing or proven technologies, due to the perceived challenges of integrating high levels of intermittent renewables without significant storage or backup."
+    },
+    {
+      "name": "renewable_energy_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of policy and investment diverted from renewable energy and storage solutions. Their proposed pathways are often dismissed as insufficient or unreliable, leading to slower deployment and reduced market share for renewables."
+    },
+    {
+      "name": "environmental_activists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Oppose nuclear power due to waste and safety concerns, and CCS as a false solution that prolongs fossil fuel use. They bear the cost of policy decisions that prioritize these technologies over a rapid, full transition to renewables."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Subsidize the construction and maintenance of large-scale baseload power plants (nuclear, CCS-equipped fossil fuels) through government funding, loan guarantees, and other incentives, often without direct input on technology choices."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Provide scientific assessments of climate change and decarbonization pathways. Their role is to analyze the technical feasibility and implications of various energy mixes, often finding themselves in a position of explaining complex trade-offs to policymakers."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates national and global energy policy around a perceived requirement for stable, dispatchable power sources to ensure grid reliability during decarbonization, preventing blackouts and economic disruption.",
+    "transfer_function": "Transfers public and private investment towards capital-intensive, long-lived baseload power infrastructure (nuclear, fossil fuels with CCS) and away from potentially faster-deploying, but intermittent, renewable energy sources.",
+    "absent_voices": "Advocates for decentralized energy systems, microgrids, and demand-side management are often marginalized in discussions dominated by large-scale generation. They would argue for a more flexible, distributed approach to grid stability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in baseload necessity vanished, energy policy would rapidly shift towards accelerated renewable deployment and storage solutions. Investment in nuclear and CCS would halt, and grid planning would be fundamentally reoriented, leading to a significant rearrangement of energy markets and infrastructure.",
+    "founding_problem": "The challenge of maintaining grid stability and energy security while transitioning away from fossil fuels, given the intermittency of many renewable sources.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Grid operators and energy security agencies consistently attest to the live nature of the problem, citing technical challenges and geopolitical risks. While renewable advocates propose solutions, the perceived risk of instability remains a widely corroborated concern among those responsible for grid management."
+  },
+  "interval": {
+    "start": 2000,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 2000,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2008,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2016,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.3
+      "time_point": 2016,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.4
+      "time_point": 2024,
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2016,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint asserts that reliable decarbonization fundamentally requires dispatchable baseload power, which intermittent renewables cannot provide at scale. This framing positions technologies like nuclear power and fossil fuels with carbon capture and storage (CCS) as indispensable, while renewable-only pathways are deemed insufficient. It influences energy policy, investment, and regulatory frameworks, often leading to subsidies or preferential treatment for baseload technologies.",
+    "narrative_context": "This constraint represents the 'baseload necessity' reading of climate mitigation legitimacy, arguing that reliable decarbonization requires dispatchable baseload power that renewables alone cannot provide at scale. This framing prioritizes nuclear power and fossil fuels with carbon capture and storage (CCS) as essential components of the energy transition, often at the expense of accelerated renewable energy deployment. The constraint is claimed as a Tangled Rope because it presents a genuine coordination problem (grid stability) but also enables significant extraction by industries that benefit from this specific technological pathway.",
     "key_agents": [
-      "nuclear_power_industry: Primary beneficiary (institutional/arbitrage) — benefits from policy support and investment.",
-      "fossil_fuel_industry_with_ccs: Secondary beneficiary (institutional/constrained) — benefits from continued relevance through CCS.",
-      "grid_operators: Beneficiary (institutional/constrained) — benefits from perceived grid stability and reduced complexity.",
-      "renewable_energy_advocates: Primary victim (organized/constrained) — faces policy barriers and reduced investment for renewable-only pathways.",
-      "taxpayers_subsidizing_baseload: Victim (powerless/constrained) — bears the cost of subsidies for baseload technologies.",
-      "climate_scientists: Observer (analytical/analytical) — provides data on climate change and energy systems, but does not directly benefit or pay."
+      "nuclear_industry: Primary beneficiary (institutional/constrained)",
+      "fossil_fuel_industry_with_ccs: Secondary beneficiary (institutional/constrained)",
+      "grid_operators: Agenda setter (institutional/constrained)",
+      "renewable_energy_advocates: Primary payer (organized/constrained)",
+      "environmental_activists: Secondary payer (organized/identity_locked)",
+      "taxpayers: Diffuse payer (powerless/trapped)",
+      "climate_scientists: Analytical observer (analytical/analytical)"
     ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it presents a genuine coordination problem (reliable grid stability during decarbonization) but couples it with asymmetric extraction. The extraction comes from prioritizing capital-intensive, long-lived baseload assets, often requiring public subsidies, over potentially cheaper but intermittent alternatives. Suppression (0.4) is moderate, reflecting policy and regulatory hurdles for renewable-only solutions. Extractiveness (0.6) is substantial due to the high capital concentration and long-term commitments to specific technologies. Theater ratio (0.2) is low, as the concern for grid stability is real, but the 'necessity' argument often serves to maintain incumbent industry positions.",
-    "perspectival_gap": "From the perspective of baseload industry and grid operators, this constraint is a necessary technical truth for grid stability, ensuring reliable power during the energy transition. From the perspective of renewable advocates and taxpayers, it is a policy choice that entrenches incumbent technologies, extracts rents through subsidies, and slows down a full transition to renewables. The engine's classification will highlight this divergence.",
-    "directionality_logic": "The nuclear and fossil fuel (with CCS) industries are clear beneficiaries (d near 0.0) as the constraint channels investment and policy support towards them. Grid operators also benefit from the perceived stability. Renewable energy advocates and taxpayers are victims (d near 1.0) as their preferred solutions face structural disadvantages and they bear the costs of baseload subsidies. The 'necessity' argument acts as a powerful lever to direct resources.",
-    "mandatrophy_analysis": "The constraint's mandate is to ensure reliable decarbonization. However, if renewable technologies with storage prove capable of providing grid stability at scale, the 'baseload necessity' mandate could become a form of mandatrophy, where the constraint persists due to institutional inertia and the beneficiaries' interest, rather than genuine technical need. The current classification as Tangled Rope reflects this potential for function-creep and rent-seeking within a legitimate coordination problem."
+    "logic_rationale": "The extractiveness (0.65) is driven by the high capital costs and long lead times of baseload projects, which often require public subsidies and create long-term lock-in. Suppression (0.70) is high due to the active political and regulatory efforts to promote these technologies and to downplay the potential of renewable-plus-storage solutions. The theater ratio (0.20) is relatively low, as the concern for grid stability is genuine, but there's a performative aspect in consistently framing renewables as inherently insufficient without acknowledging rapid technological advancements. The metrics show a trend of increasing extractiveness and suppression as the debate intensifies and more capital is committed to baseload solutions.",
+    "perspectival_gap": "From the perspective of the nuclear and fossil fuel industries, this constraint is a necessary Rope, ensuring energy security and a stable transition. For renewable advocates and environmental activists, it operates as a Snare, diverting resources and legitimizing technologies they view as problematic or unnecessary. Grid operators see it as a pragmatic necessity for their mandate. The engine's per-seat classification will reflect these divergences.",
+    "directionality_logic": "The nuclear and fossil fuel industries are clear beneficiaries, as the constraint directs investment and policy support towards their technologies. Grid operators, while having a genuine coordination function, also benefit from maintaining a familiar, dispatchable energy mix. Renewable advocates, environmental activists, and taxpayers are payers, bearing the costs of delayed renewable deployment, environmental risks, and subsidies for baseload projects. The 'identity_locked' exit for environmental activists reflects their deep ideological commitment against nuclear and fossil fuels, making exit from the debate unthinkable.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (as claimed by some beneficiaries) by highlighting the significant extraction and suppression involved. It also avoids mislabeling it as a pure Snare by acknowledging the genuine, albeit contested, coordination problem of grid stability. The 'contested' status of the founding problem further underscores the ongoing debate about whether the original problem (grid instability from renewables) is still as severe as claimed, or if the constraint has drifted towards rent-seeking.",
+    "kernel_context": "This constraint is the 'baseload necessity' reading of the 'climate_mitigation_legitimacy' kernel. It posits that reliable decarbonization requires dispatchable baseload power. Sibling readings include 'renewable_primacy_reading' (renewables + storage are sufficient), 'portfolio_pragmatism_reading' (technology-neutral portfolio), and 'degrowth_sufficiency_reading' (demand reduction is key)."
   },
+  "omegas": [
+    {
+      "id": "baseload_necessity_empirical_validity",
+      "question": "Is the claim that renewables cannot provide dispatchable baseload power at scale empirically valid, considering advancements in storage and grid management?",
+      "resolution_mechanism": "Long-term empirical data from grids with high renewable penetration and advanced storage, coupled with independent modeling of future grid architectures.",
+      "impact": "If proven invalid, the constraint's extractiveness and suppression would be reclassified as pure rent-seeking, shifting it towards a Snare. If validated, the coordination function would be strengthened, potentially moving it closer to a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical validity of the core claim regarding renewable energy limitations."
+    },
+    {
+      "id": "cost_benefit_analysis_of_alternatives",
+      "question": "What is the true societal cost-benefit of baseload-centric decarbonization pathways (nuclear, CCS) versus renewable-plus-storage pathways, accounting for externalities and long-term risks?",
+      "resolution_mechanism": "Comprehensive, independent lifecycle assessment and economic modeling comparing all pathways, including social and environmental externalities (e.g., nuclear waste, CCS leakage risks).",
+      "impact": "If baseload pathways are found to be significantly more costly or risky, the justification for their promotion would erode, increasing the perceived extractiveness. If found superior, the constraint's legitimacy would increase.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Societal cost-benefit comparison of different decarbonization technology mixes."
+    },
+    {
+      "id": "framing_of_grid_reliability_risk",
+      "question": "To what extent is the emphasis on 'baseload necessity' a genuine technical requirement versus a rhetorical framing that benefits incumbent industries?",
+      "resolution_mechanism": "Analysis of policy advocacy by different industry groups, media framing, and expert consensus shifts over time, particularly in response to new technological developments.",
+      "impact": "If primarily rhetorical, the theater_ratio would increase significantly, and the constraint would lean more towards a Piton or Snare. If primarily technical, the coordination function would be more robust.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Distinguishing technical necessity from rhetorical framing in energy policy."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "energy_market_design_rules",
-      "carbon_pricing_mechanisms",
-      "renewable_energy_subsidies"
+      "climate_mitigation_legitimacy__renewable_primacy_reading",
+      "climate_mitigation_legitimacy__portfolio_pragmatism_reading",
+      "climate_mitigation_legitimacy__degrowth_sufficiency_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'climate_mitigation_legitimacy' kernel. Other readings (renewable_primacy_reading, portfolio_pragmatism_reading, degrowth_sufficiency_reading) offer alternative structural claims about the path to decarbonization."
+    "dual_formulation_note": "This constraint is one reading of the 'climate_mitigation_legitimacy' kernel, focusing on the necessity of dispatchable baseload power. It is linked to sibling readings that propose alternative decarbonization pathways."
   },
   "cs_structure": {
-    "kernel_codification": "implicit",
+    "kernel_codification": "distributed",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
@@ -134,11 +236,11 @@
       },
       {
         "sibling_id": "portfolio_pragmatism_reading",
-        "relation": "influences"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "degrowth_sufficiency_reading",
-        "relation": "forecloses"
+        "relation": "influences"
       }
     ],
     "axioms": [
@@ -149,29 +251,30 @@
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "renewables_cannot_provide_baseload_at_scale",
+        "atom": "renewables_alone_cannot_meet_scale_and_reliability",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "traditional_grid_architecture",
+    "reference_frame": "traditional_grid_stability_paradigm",
     "drift_state": {
-      "moment": "contemporary_energy_transition",
+      "moment": "contemporary_renewable_advances_era",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -39,8 +39,10 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -56,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,29 +69,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: balfour_mandate_instruments__jewish_national_home_primacy
- *   human_readable: Balfour Mandate Instruments: Jewish National Home Primacy Reading
+ *   human_readable: Balfour Mandate: Jewish National Home Primacy Reading
  *   domain: international_law/colonial_administration/state_formation
  *
  * SUMMARY:
- *   This constraint represents the 'Jewish National Home Primacy' reading of
- *   the Balfour Mandate instruments, which interpreted the 'national home'
- *   clause as requiring active demographic and territorial transformation to
- *   establish Jewish sovereignty in Palestine. This reading directed the
- *   British Mandatory power to facilitate Jewish immigration, land
- *   acquisition, and the development of Jewish quasi-governmental
- *   institutions, while systematically downgrading Palestinian Arab political
- *   representation and land rights. The constraint is structurally a Tangled
- *   Rope, as it purports to coordinate the establishment of a national home
- *   while simultaneously extracting land and political agency from the
- *   indigenous population through active enforcement.
+ *   This constraint story analyzes the Balfour Mandate instruments through
+ *   the 'Jewish National Home Primacy' reading, which interpreted the Mandate
+ *   as directing demographic and territorial transformation to establish
+ *   Jewish sovereignty. This reading prioritized land access, immigration
+ *   facilitation, and Jewish institutional supremacy, effectively treating
+ *   the 'national home' as a proto-state. The Mandate, under this
+ *   interpretation, functioned as a highly extractive and suppressive
+ *   mechanism for the Palestinian Arab population, while providing
+ *   significant benefits and coordination for Zionist institutions and Jewish
+ *   migrants.
  *
- * KEY AGENTS:
- *   - british_mandatory_power: Agenda setter (institutional/civilizational) — enforces the Mandate's terms, adjudicates land and immigration policies.
- *   - zionist_institutions: Beneficiary (organized/generational) — gains quasi-governmental status, facilitates immigration and land acquisition.
- *   - jewish_migrants: Beneficiary (powerless/biographical) — benefits from facilitated immigration and settlement.
- *   - palestinian_arab_landholders: Payer (powerless/biographical) — loses land through facilitated sales and expropriation.
- *   - palestinian_arab_political_leadership: Payer (moderate/biographical) — structurally excluded from effective political power, resists Mandate policies.
- *   - palestinian_arab_population: Victim (powerless/generational) — experiences demographic transformation, loss of self-determination.
  */
 
 /* ==========================================================================
@@ -98,12 +93,12 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(balfour_mandate_instruments__jewish_national_home_primacy, 0.85).
 domain_priors:suppression_score(balfour_mandate_instruments__jewish_national_home_primacy, 0.9).
-domain_priors:theater_ratio(balfour_mandate_instruments__jewish_national_home_primacy, 0.1).
+domain_priors:theater_ratio(balfour_mandate_instruments__jewish_national_home_primacy, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(balfour_mandate_instruments__jewish_national_home_primacy, extractiveness, 0.85).
 narrative_ontology:constraint_metric(balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 0.9).
-narrative_ontology:constraint_metric(balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(balfour_mandate_instruments__jewish_national_home_primacy, accessibility_collapse, 0.75).
@@ -111,27 +106,27 @@ narrative_ontology:constraint_metric(balfour_mandate_instruments__jewish_nationa
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(balfour_mandate_instruments__jewish_national_home_primacy, tangled_rope).
-narrative_ontology:human_readable(balfour_mandate_instruments__jewish_national_home_primacy, "Balfour Mandate Instruments: Jewish National Home Primacy Reading").
+narrative_ontology:human_readable(balfour_mandate_instruments__jewish_national_home_primacy, "Balfour Mandate: Jewish National Home Primacy Reading").
 narrative_ontology:topic_domain(balfour_mandate_instruments__jewish_national_home_primacy, "international_law/colonial_administration/state_formation").
 
 domain_priors:requires_active_enforcement(balfour_mandate_instruments__jewish_national_home_primacy).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(balfour_mandate_instruments__jewish_national_home_primacy, '3ab6fdee-3a10-4f61-a9b6-bf9415371d75').
-narrative_ontology:cs_kernel_codification('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', fixed_text).
-narrative_ontology:cs_authority_grounding('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', lineage).
-narrative_ontology:cs_interpretation_layer_present('3ab6fdee-3a10-4f61-a9b6-bf9415371d75').
-narrative_ontology:cs_reading_relation('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', balfour_mandate_instruments__dual_obligation_indigenous_rights, forecloses).
-narrative_ontology:cs_reading_relation('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', balfour_mandate_instruments__mandatory_interpretive_discretion, influences).
-narrative_ontology:cs_axiom('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', foundational, jewish_national_home_as_proto_state).
+narrative_ontology:cs_story_uid(balfour_mandate_instruments__jewish_national_home_primacy, 'e937561a-5e79-4e14-b5cb-84fe1dfeb332').
+narrative_ontology:cs_kernel_codification('e937561a-5e79-4e14-b5cb-84fe1dfeb332', formalized).
+narrative_ontology:cs_authority_grounding('e937561a-5e79-4e14-b5cb-84fe1dfeb332', lineage).
+narrative_ontology:cs_interpretation_layer_present('e937561a-5e79-4e14-b5cb-84fe1dfeb332').
+narrative_ontology:cs_reading_relation('e937561a-5e79-4e14-b5cb-84fe1dfeb332', balfour_mandate_instruments__dual_obligation_indigenous_rights, forecloses).
+narrative_ontology:cs_reading_relation('e937561a-5e79-4e14-b5cb-84fe1dfeb332', balfour_mandate_instruments__mandatory_interpretive_discretion, influences).
+narrative_ontology:cs_axiom('e937561a-5e79-4e14-b5cb-84fe1dfeb332', foundational, jewish_national_home_as_proto_state).
 narrative_ontology:cs_axiom_status(jewish_national_home_as_proto_state, holdable).
-narrative_ontology:cs_axiom_grounding('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', jewish_national_home_as_proto_state, conventional).
-narrative_ontology:cs_axiom('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', foundational, demographic_transformation_as_mandate_goal).
+narrative_ontology:cs_axiom_grounding('e937561a-5e79-4e14-b5cb-84fe1dfeb332', jewish_national_home_as_proto_state, conventional).
+narrative_ontology:cs_axiom('e937561a-5e79-4e14-b5cb-84fe1dfeb332', foundational, demographic_transformation_as_mandate_goal).
 narrative_ontology:cs_axiom_status(demographic_transformation_as_mandate_goal, holdable).
-narrative_ontology:cs_axiom_grounding('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', demographic_transformation_as_mandate_goal, instrumental).
-narrative_ontology:cs_reference_frame('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', balfour_declaration_intent).
-narrative_ontology:cs_drift_state('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', post_unscop_report, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('3ab6fdee-3a10-4f61-a9b6-bf9415371d75', '').
+narrative_ontology:cs_axiom_grounding('e937561a-5e79-4e14-b5cb-84fe1dfeb332', demographic_transformation_as_mandate_goal, instrumental).
+narrative_ontology:cs_reference_frame('e937561a-5e79-4e14-b5cb-84fe1dfeb332', balfour_declaration_as_foundational_charter).
+narrative_ontology:cs_drift_state('e937561a-5e79-4e14-b5cb-84fe1dfeb332', contemporary_international_law_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('e937561a-5e79-4e14-b5cb-84fe1dfeb332', '').
 narrative_ontology:cs_kernel_id(balfour_mandate_instruments__jewish_national_home_primacy, balfour_mandate_instruments).
 
 % --- Structural relationships ---
@@ -148,15 +143,39 @@ narrative_ontology:constraint_victim(balfour_mandate_instruments__jewish_nationa
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Acted as a quasi-governmental body (Jewish Agency) under the Mandate, facilitating land acquisition, immigration, and institutional development for the Jewish population. Benefited directly from the Mandate's interpretation prioritizing the 'national home'.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__jewish_national_home_primacy, zionist_institutions, agenda_setter,
+    institutional, generational, mobile, regional).
+
+% Benefited from facilitated immigration, land access, and the development of a supportive institutional infrastructure, all directed towards establishing a Jewish majority and eventual state.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__jewish_national_home_primacy, jewish_migrants, beneficiary,
+    moderate, biographical, constrained, regional).
+
+% Experienced systematic pressure and legal mechanisms facilitating land transfer to Jewish entities, often leading to displacement and loss of ancestral lands. Their traditional land tenure was undermined by the Mandate's interpretation.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__jewish_national_home_primacy, palestinian_arab_landholders, payer,
+    powerless, generational, trapped, local).
+
+% Their political aspirations for self-determination were systematically subordinated to the 'national home' project. Their institutions were denied equivalent status to Zionist ones, and their resistance was often suppressed by the Mandatory power.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__jewish_national_home_primacy, palestinian_arab_political_leadership, payer,
+    organized, biographical, constrained, regional).
+
+% As a whole, faced demographic transformation, loss of political control, and the erosion of their national identity and rights under an interpretation of the Mandate that prioritized Jewish state-building over their existing presence and claims.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__jewish_national_home_primacy, palestinian_arab_population, payer,
+    powerless, generational, identity_locked, regional).
+
+% Administered the Mandate, actively enforcing policies that facilitated Jewish immigration and land acquisition, and suppressing Arab resistance. While claiming neutrality, its actions consistently favored the 'national home' interpretation.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__jewish_national_home_primacy, british_mandatory_power, agenda_setter,
+    institutional, generational, mobile, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: To establish a 'national home for the Jewish people' in Palestine, as articulated in the Balfour Declaration and enshrined in the Mandate, by facilitating Jewish immigration and settlement.
-% TRANSFER_FUNCTION: Transfers land, political agency, and demographic control from the Palestinian Arab population to Zionist institutions and Jewish migrants, under the administrative authority of the British Mandatory power.
-% ABSENT_VOICES: Palestinian Arab representatives were largely excluded from the drafting of the Mandate and consistently denied effective political participation during its implementation. Their voices, advocating for self-determination and protection of existing rights, were systematically suppressed.
-% DISAPPEARANCE_RATIONALE: If this reading of the Mandate (and its enforcement) had disappeared overnight, the demographic and territorial transformation of Palestine would not have occurred in the same manner. Jewish immigration and land acquisition would have faced different legal and political constraints, and the trajectory towards a Jewish state would have been fundamentally altered, leading to a vastly different political landscape.
-% FOUNDING_PROBLEM: The problem this reading was built to solve was the establishment of a 'national home for the Jewish people' in Palestine, addressing the Zionist movement's political aspirations and the historical persecution of Jews.
-% FOUNDING_PROBLEM_CORROBORATION: Zionist institutions and their supporters attest that the founding problem (the need for a Jewish national home) remains live. Palestinian Arab leadership and international legal scholars, however, contest the legitimacy of the 'founding problem' as framed by this reading, arguing it was predicated on colonial assumptions and disregarded indigenous rights. Corroboration for the 'live' status comes primarily from within the benefiting parties; external corroboration is contested by those who view the 'national home' as a colonial imposition.
+% COORDINATION_FUNCTION: To establish a framework for the administration of Palestine that would facilitate the creation of a 'Jewish national home' while maintaining civil and religious rights for non-Jewish communities.
+% TRANSFER_FUNCTION: Transferred land, political authority, and demographic advantage from the existing Palestinian Arab population to Zionist institutions and Jewish migrants, under the guise of international administration.
+% ABSENT_VOICES: The vast majority of the Palestinian Arab population, whose consent was never sought for the Mandate's terms or its interpretation, and whose political representation was systematically marginalized. Their perspective on self-determination was actively suppressed.
+% DISAPPEARANCE_RATIONALE: If this interpretation of the Mandate had vanished, the demographic and territorial transformation would not have occurred, the state of Israel would not have been established in its historical form, and the subsequent conflict would have taken a fundamentally different trajectory. The entire political and social structure of the region would be unrecognizable.
+% FOUNDING_PROBLEM: The problem of establishing a 'Jewish national home' in Palestine, as articulated in the Balfour Declaration, and managing the competing claims and populations in the territory after the collapse of the Ottoman Empire.
+% FOUNDING_PROBLEM_CORROBORATION: Zionist institutions and their supporters continue to assert the founding problem is live, citing ongoing security needs and the historical imperative of a Jewish state. Palestinian voices and international legal scholars, from outside the benefiting parties, corroborate the historical existence of the problem but contest its current status as a justification for ongoing extraction.
 narrative_ontology:disappearance_verdict(balfour_mandate_instruments__jewish_national_home_primacy, world_rearranges).
 narrative_ontology:founding_problem_status(balfour_mandate_instruments__jewish_national_home_primacy, live).
 
@@ -164,11 +183,12 @@ narrative_ontology:founding_problem_status(balfour_mandate_instruments__jewish_n
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(balfour_mandate_instruments__jewish_national_home_primacy, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(balfour_mandate_instruments__jewish_national_home_primacy, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(balfour_mandate_instruments__jewish_national_home_primacy, 'none', 1).
+narrative_ontology:epsilon_provenance(balfour_mandate_instruments__jewish_national_home_primacy, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -188,16 +208,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (0.85) reflects the systematic transfer of land and political power from the Palestinian Arab population to Zionist institutions and Jewish migrants. Suppression (0.9) is high due to the active enforcement by the British Mandatory power to overcome Arab resistance to these policies, including restrictions on political organization and land sales. The theater ratio is low (0.1) because the Mandate's stated coordination function (establishing a national home) was actively pursued, but its implementation was heavily skewed towards one group, making the 'coordination' aspect a cover for asymmetric extraction. The accessibility collapse (0.75) indicates that alternatives for Palestinian Arabs (e.g., self-determination, independent land tenure) were significantly curtailed by the Mandate's legal and administrative framework. Resistance (0.8) was high, reflecting continuous Palestinian Arab opposition to the Mandate's policies.
+ *   The high extractiveness (0.85) reflects the systematic transfer of land and political power. Suppression (0.90) was severe, enforced by the British Mandatory power against Arab resistance, and by the structural downgrading of Arab political representation. The theater ratio (0.20) is relatively low, as the Mandate's stated purpose of facilitating the 'national home' was actively pursued, with less performative cover for other functions. The claimed type is 'tangled_rope' because it presented a coordination function (establishing a national home) but operated with severe asymmetric extraction and required active enforcement to hold.
  *
  * PERSPECTIVAL GAP:
- *   The British Mandatory power and Zionist institutions would experience this as a complex but necessary coordination effort to fulfill an international obligation. Palestinian Arab landholders and political leadership, however, would experience it as a highly extractive and suppressive imposition, designed to dispossess them and deny their political rights. The engine's per-seat classification would reflect this divergence, with beneficiaries seeing a Rope-like function and victims experiencing a Snare.
+ *   From the perspective of Zionist institutions, the Mandate was a legitimate international instrument for national self-determination, a 'rope' coordinating the establishment of a homeland. From the perspective of the Palestinian Arab population, it was a 'snare' or 'tangled rope' that dispossessed them and suppressed their rights under colonial administration. The engine's classification will reflect this divergence based on the structural data.
  *
  * DIRECTIONALITY LOGIC:
- *   The British Mandatory Power, as the agenda setter, benefits from maintaining its imperial authority and fulfilling its international obligations (d near 0.2). Zionist institutions and Jewish migrants are clear beneficiaries, gaining land, political influence, and a national home (d near 0.0-0.1). Palestinian Arab landholders, political leadership, and the general population are the primary targets, bearing the costs of land loss, political marginalization, and demographic transformation (d near 0.9-1.0).
+ *   Zionist institutions and Jewish migrants were clear beneficiaries, receiving facilitated immigration and institutional support. Palestinian Arab landholders and political leadership were primary victims, experiencing land loss, political marginalization, and suppression of self-determination. The British Mandatory Power acted as an agenda-setter, enforcing the Mandate's terms in a way that consistently favored the 'national home' primacy reading.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading of the Mandate is a Tangled Rope because it genuinely attempts to coordinate the establishment of a 'national home' (a complex, multi-party endeavor) but does so through asymmetric extraction and active suppression of the indigenous population. It prevents mislabeling as a pure Snare by acknowledging the stated coordination goal, but prevents mislabeling as a Rope by highlighting the coercive and extractive mechanisms used to achieve that goal for one party at the expense of another. The Mandate's mandate was to establish a national home, but this reading transformed it into an instrument of demographic and territorial transformation, making the original coordination function a cover for extraction.
  */
 
 /* ==========================================================================
@@ -205,53 +223,56 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_ambiguity,
-    'Is this constraint a genuine interpretation of the Mandate''s intent, or a politically motivated reading that prioritizes one group''s claims?',
-    'Historical analysis of diplomatic correspondence and contemporary international legal interpretations of self-determination and colonial mandates.',
-    'If a politically motivated reading, the constraint''s legitimacy is undermined, reclassifying it closer to a Snare. If a genuine interpretation, its Tangled Rope classification holds, reflecting a flawed but intended coordination.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_ambiguity, conceptual, 'This constraint is one reading (''jewish_national_home_primacy'') of the ''balfour_mandate_instruments'' kernel. Sibling readings (''dual_obligation_indigenous_rights'', ''mandatory_interpretive_discretion'') would shift the beneficiary/victim structure and the overall classification.').
-
-omega_variable(
-    land_transfer_legitimacy,
-    'Were land transfers from Arab to Jewish owners genuinely voluntary and fair, or were they systematically facilitated by coercive mechanisms inherent in the Mandate''s implementation?',
-    'Detailed archival research into land transaction records, pricing, and the socio-economic conditions of Arab sellers under Mandate administration.',
-    'Evidence of systemic coercion would increase the ''suppression'' and ''extractiveness'' metrics, pushing the classification closer to a Snare by highlighting the non-consensual nature of the ''coordination''.',
+    mandate_original_intent,
+    'Was the original intent of the Balfour Declaration and Mandate instruments to establish a Jewish proto-state, or a ''national home'' within a broader framework of indigenous rights?',
+    'Historical analysis of diplomatic correspondence, legal interpretations by international bodies contemporaneous with the Mandate''s drafting, and the records of the League of Nations Permanent Mandates Commission.',
+    'If the original intent was primarily proto-state formation, this reading''s high extractiveness is consistent with the Mandate''s core purpose. If the intent was more balanced, the high extractiveness indicates a deviation from the original coordination function, strengthening the ''snare'' aspect.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(land_transfer_legitimacy, empirical, 'Ambiguity regarding the voluntariness of land sales under the Mandate.').
+narrative_ontology:omega_variable(mandate_original_intent, conceptual, 'Ambiguity regarding the Mandate''s foundational purpose.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Was the measured suppression primarily structural (legal/administrative barriers) or internalized (cognitive patterns of resignation/despair among the Palestinian Arab population)?',
+    'Post-Mandate analysis of Palestinian political mobilization and resistance movements: if resistance persisted and intensified, structural suppression was dominant; if it waned despite continued grievances, internalized suppression played a larger role.',
+    'If internalized, the constraint''s effective suppression was higher than the structural measure suggests, as the target population carried the suppression with them. If purely structural, removing the Mandate''s enforcement would have immediately altered the power dynamics.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(balfour_mandate_instruments__jewish_national_home_primacy, 1922, 1947).
+narrative_ontology:interval(balfour_mandate_instruments__jewish_national_home_primacy, 1922, 1948).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(balf_tr_t0, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(balf_tr_t5, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(balf_tr_t10, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 10, 0.1).
-narrative_ontology:measurement(balf_tr_t15, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 15, 0.1).
+narrative_ontology:measurement(balf_tr_t1922, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 1922, 0.25).
+narrative_ontology:measurement(balf_tr_t1928, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 1928, 0.22).
+narrative_ontology:measurement(balf_tr_t1934, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 1934, 0.2).
+narrative_ontology:measurement(balf_tr_t1940, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 1940, 0.18).
+narrative_ontology:measurement(balf_tr_t1948, balfour_mandate_instruments__jewish_national_home_primacy, theater_ratio, 1948, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(balf_be_t0, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(balf_be_t5, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(balf_be_t10, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 10, 0.8).
-narrative_ontology:measurement(balf_be_t15, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 15, 0.85).
+narrative_ontology:measurement(balf_be_t1922, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 1922, 0.75).
+narrative_ontology:measurement(balf_be_t1928, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 1928, 0.78).
+narrative_ontology:measurement(balf_be_t1934, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 1934, 0.82).
+narrative_ontology:measurement(balf_be_t1940, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 1940, 0.85).
+narrative_ontology:measurement(balf_be_t1948, balfour_mandate_instruments__jewish_national_home_primacy, base_extractiveness, 1948, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(balf_su_t0, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 0, 0.75).
-narrative_ontology:measurement(balf_su_t5, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 5, 0.8).
-narrative_ontology:measurement(balf_su_t10, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 10, 0.85).
-narrative_ontology:measurement(balf_su_t15, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 15, 0.9).
+narrative_ontology:measurement(balf_su_t1922, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 1922, 0.75).
+narrative_ontology:measurement(balf_su_t1928, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 1928, 0.8).
+narrative_ontology:measurement(balf_su_t1934, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 1934, 0.85).
+narrative_ontology:measurement(balf_su_t1940, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 1940, 0.9).
+narrative_ontology:measurement(balf_su_t1948, balfour_mandate_instruments__jewish_national_home_primacy, suppression_requirement, 1948, 0.9).
 
 
 /* ==========================================================================
@@ -259,9 +280,11 @@ narrative_ontology:measurement(balf_su_t15, balfour_mandate_instruments__jewish_
    ========================================================================== */
 
 narrative_ontology:coordination_type(balfour_mandate_instruments__jewish_national_home_primacy, enforcement_mechanism).
+narrative_ontology:affects_constraint(balfour_mandate_instruments__jewish_national_home_primacy, balfour_mandate_instruments__dual_obligation_indigenous_rights).
+narrative_ontology:affects_constraint(balfour_mandate_instruments__jewish_national_home_primacy, balfour_mandate_instruments__mandatory_interpretive_discretion).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'balfour_mandate_instruments' kernel. This reading emphasizes the primacy of establishing a Jewish national home, leading to high extraction and suppression for the Palestinian Arab population. Other readings would yield different classifications and stakeholder dynamics.
+% This constraint is one reading of the 'balfour_mandate_instruments' kernel. This specific reading, 'jewish_national_home_primacy', interprets the Mandate as a directive for Jewish state-building, leading to high extraction and suppression. Sibling readings offer alternative interpretations with different structural outcomes.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

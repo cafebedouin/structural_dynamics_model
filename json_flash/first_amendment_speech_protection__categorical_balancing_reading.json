@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7c18743b-a811-4dee-9d57-96f95561e204"
+    "story_uid": "593986ad-39e6-463e-88a4-12cee5f61d7c"
   },
   "base_properties": {
     "extractiveness": 0.65,
@@ -18,13 +18,89 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "institutional_judiciary",
-      "legal_profession"
+      "dominant_social_groups"
     ],
     "victims": [
-      "minority_speakers",
       "legal_predictability",
-      "speakers_of_unpopular_speech"
+      "minority_speakers",
+      "marginalized_groups"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The primary interpreter and enforcer of First Amendment speech categories. Benefits from maintaining interpretive control and the flexibility of case-by-case balancing, which allows adaptation to new forms of speech and harm. Their professional identity is fused with this interpretive role."
+    },
+    {
+      "name": "dominant_social_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the judiciary's balancing acts, which often align with prevailing social norms, protecting their speech while allowing for the suppression of speech deemed harmful or offensive by the majority. Their influence shapes the categories."
+    },
+    {
+      "name": "legal_predictability",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffers from the case-by-case nature of categorical balancing. The lack of clear, ex-ante rules makes it difficult for individuals and organizations to know what speech is protected, leading to self-censorship or costly litigation. It is an abstract good, not an agent."
+    },
+    {
+      "name": "minority_speakers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Often find their speech falling into 'unprotected' categories or facing greater scrutiny under balancing tests, especially when their views challenge dominant norms. They bear the cost of suppression and the chilling effect of unpredictable enforcement."
+    },
+    {
+      "name": "marginalized_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Experience the harms of speech deemed 'protected' by the balancing test, such as hate speech or incitement that falls short of 'true threats.' They are often the targets of such speech and bear the social and psychological costs, with limited recourse due to the constraint's operation."
+    },
+    {
+      "name": "absolutist_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue for a more expansive, less categorical protection of speech based on the literal text of the First Amendment. Their arguments are often marginalized in judicial discourse, as the categorical balancing approach is deeply entrenched."
+    },
+    {
+      "name": "harm_reduction_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seek to prioritize the prevention of demonstrable harm over speech protection, advocating for a broader scope of unprotected speech. Their proposals often conflict with the judiciary's established balancing categories and are resisted by those who benefit from the current framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for adjudicating conflicts between speech and other societal values (e.g., public safety, privacy, reputation) by establishing categories of protected and unprotected expression, aiming for a stable legal environment for communication.",
+    "transfer_function": "Transfers interpretive authority and flexibility to the institutional judiciary, allowing them to define and refine speech categories. It transfers the burden of unpredictability and potential suppression to speakers, particularly those outside dominant norms, and transfers the costs of harmful speech to marginalized groups.",
+    "absent_voices": "Absolutist advocates, who would argue for minimal state intervention in speech, and harm-reduction advocates, who would prioritize demonstrable harm over speech protection, are both structurally excluded from the core judicial balancing act. Their perspectives are considered at the margins, but the framework itself resists their fundamental challenges.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical balancing framework vanished, the legal landscape for speech would become chaotic. Courts would lack a coherent method for resolving speech disputes, leading to inconsistent rulings, increased litigation, and a breakdown in public understanding of speech rights. A new framework would quickly emerge to fill the void.",
+    "founding_problem": "The problem of how to reconcile the constitutional guarantee of free speech with the need to protect individuals and society from certain harms (e.g., incitement to violence, defamation, obscenity).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars across the ideological spectrum, civil liberties organizations, and public safety advocates all attest that the tension between free speech and harm remains a live and complex problem, requiring ongoing adjudication. The specific categories and their application are contested, but the underlying problem is not."
   },
   "interval": {
     "start": 1940,
@@ -39,17 +115,17 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1960,
-      "value": 0.5
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1980,
-      "value": 0.58
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.62
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
@@ -64,17 +140,17 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1960,
-      "value": 0.55
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1980,
-      "value": 0.62
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.67
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
@@ -108,51 +184,42 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'categorical balancing' reading of First Amendment speech protection, where the judiciary defines categories of protected and unprotected speech through a case-by-case balancing of speech value against potential harm. This approach, exemplified by cases like Chaplinsky v. New Hampshire (1942) and its progeny, grants significant interpretive power to the courts. It is one of several competing readings of the First Amendment's scope.",
-    "logic_rationale": "The extractiveness (0.65) is high because the judicial process of defining categories and balancing interests imposes significant costs on speakers, particularly those whose speech is unpopular or from marginalized groups. Suppression (0.70) is also high, as the evolving and often unpredictable nature of these categories leads to self-censorship and active enforcement against speech deemed 'low-value.' The theater ratio (0.40) reflects that while the stated goal is to protect valuable speech, a substantial portion of the judicial activity is dedicated to maintaining interpretive control and managing the political fallout of controversial speech decisions, rather than purely facilitating expression.",
-    "perspectival_gap": "The institutional judiciary and legal profession experience this constraint as a necessary and legitimate mechanism for managing complex societal interests, reinforcing their authority and expertise. For minority speakers and those expressing unpopular views, it is experienced as an unpredictable and often suppressive force that limits their ability to engage in public discourse, with high costs for challenging restrictions.",
-    "directionality_logic": "The institutional judiciary and legal profession are clear beneficiaries, gaining authority, complexity, and revenue from the system. Minority speakers and those of unpopular speech are victims, bearing the costs of suppression and unpredictability. Legal predictability itself is a victim, as the case-by-case approach inherently undermines clear rules. Public discourse is a mixed beneficiary, theoretically purified but practically narrowed by judicial gatekeeping.",
-    "mandatrophy_analysis": "The constraint's mandate (balancing speech and harm) is still live, but its operation has accumulated substantial extraction and suppression. The 'tangled_rope' classification reflects that while there's a genuine coordination function (defining speech boundaries), it's intertwined with asymmetric extraction of interpretive authority and legal fees, sustained by active enforcement and the suppression of alternative readings. The rising extractiveness and suppression over time suggest a drift towards a more extractive, less coordinative function.",
-    "kernel_context": "This constraint is the 'categorical_balancing_reading' of the 'first_amendment_speech_protection' kernel. It stands in contrast to the 'absolutist_reading' (which emphasizes 'no law' means no law) and the 'harm_limited_reading' (which focuses on demonstrable unconsented-to harm as the sole limit to speech protection). This reading prioritizes judicial discretion in defining speech categories."
+    "narrative_context": "This constraint represents the 'categorical balancing' reading of the First Amendment, where judicial precedent establishes categories of speech (e.g., obscenity, incitement, true threats) that receive less or no protection, determined by balancing the speech's value against its potential harm. This approach grants significant interpretive power to the judiciary, leading to a dynamic and often unpredictable landscape for free speech. The constraint is claimed as a Rope by its proponents (the judiciary), but its metrics reflect a Tangled Rope due to its substantial extraction from legal predictability and marginalized speakers, coupled with active enforcement.",
+    "logic_rationale": "Extractiveness is high (0.65) because the balancing test often results in the suppression of speech that challenges dominant norms, effectively extracting the right to speak from certain groups. Suppression is also high (0.70) due to the active judicial enforcement of these categories and the chilling effect of unpredictable rulings. Theater ratio is moderate (0.40) as the 'balancing' often serves to legitimize outcomes that align with institutional preferences rather than a neutral assessment of speech value. The metrics show a trend of increasing extractiveness and suppression over time, reflecting the expansion of judicial categories and the intensification of enforcement.",
+    "directionality_logic": "The institutional judiciary is a clear beneficiary and agenda-setter, as this reading grants them significant power to define and enforce speech boundaries. Dominant social groups also benefit, as the balancing often aligns with their interests. Legal predictability, minority speakers, and marginalized groups are victims/payers, bearing the costs of uncertainty, suppression, and unmitigated harm. The 'identity_locked' exit for the judiciary reflects their professional commitment to this interpretive framework.",
+    "perspectival_gap": "From the judiciary's perspective, this is a necessary and legitimate coordination mechanism for a complex society. From the perspective of minority speakers and marginalized groups, it operates as an extractive mechanism that selectively suppresses their voices and fails to protect them from harm. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'categorical_balancing_reading' of the 'first_amendment_speech_protection' kernel. Sibling readings include the 'absolutist_reading' (minimal state intervention) and the 'harm_limited_reading' (speech yields to demonstrable harm). This reading distinguishes itself by emphasizing judicial categorization and balancing as the primary mechanism for defining protected speech."
   },
   "omegas": [
     {
       "id": "judicial_discretion_vs_predictability",
-      "question": "To what extent does judicial discretion in defining speech categories genuinely serve societal interests versus merely reinforcing judicial power and legal complexity?",
-      "resolution_mechanism": "Comparative analysis of speech outcomes in jurisdictions with more absolutist or harm-limited approaches; empirical study of chilling effects on different speaker groups under the categorical balancing regime.",
-      "impact": "If discretion primarily serves power, the constraint's extractiveness is higher than measured, and its coordination function is more theatrical. If it genuinely serves societal interests, the coordination function is stronger.",
+      "question": "Is the flexibility afforded by categorical balancing a necessary feature for adapting to evolving societal norms and new forms of speech, or does it primarily serve to maintain judicial interpretive control at the expense of legal predictability?",
+      "resolution_mechanism": "Comparative analysis of speech regimes: examine systems with more rigid, text-based protections versus those with extensive judicial balancing. Evaluate their adaptability, consistency, and impact on diverse speakers.",
+      "impact": "If flexibility is primarily about control, the constraint's extractiveness and suppression are higher than currently measured, as the 'coordination' function is largely a cover for power maintenance. If truly necessary for adaptation, the current metrics are more accurate.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Ambiguity in the purpose and effect of judicial discretion in speech categories."
+      "description": "Ambiguity regarding the true function of judicial discretion in speech categorization."
     },
     {
-      "id": "unprotected_speech_categories_stability",
-      "question": "Are the categories of 'unprotected' speech (e.g., obscenity, incitement, true threats) stable and consistently applied, or do they shift with political and social pressures?",
-      "resolution_mechanism": "Longitudinal legal analysis of case law evolution across different eras and political climates; content analysis of judicial opinions for shifts in definitional criteria.",
-      "impact": "If categories are unstable, legal predictability is lower, and the effective suppression on speakers is higher due to increased uncertainty. This would push the constraint closer to a 'snare' for speakers.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Stability and consistency of 'unprotected' speech categories."
-    },
-    {
-      "id": "minority_speech_impact_disparity",
-      "question": "Does the categorical balancing approach disproportionately impact the speech of minority groups or those with less social power, even when their speech does not fall into traditionally 'unprotected' categories?",
-      "resolution_mechanism": "Empirical studies on the application of speech restrictions across different demographic and social groups; analysis of legal aid access and litigation success rates for marginalized speakers.",
-      "impact": "If there is a disproportionate impact, the effective extractiveness and suppression for these groups are significantly higher than the aggregate measures suggest, indicating a more severe 'snare' for them.",
+      "id": "harm_definition_objectivity",
+      "question": "Are the 'harms' used in the balancing test objectively defined and consistently applied, or are they subjectively interpreted in ways that disproportionately affect marginalized groups or align with dominant social preferences?",
+      "resolution_mechanism": "Empirical study of judicial outcomes: analyze cases where speech is deemed unprotected due to 'harm' to identify patterns of application, demographic impact, and consistency across different judicial panels and time periods.",
+      "impact": "If harms are subjectively applied, the constraint's suppression and extractiveness are higher for minority speakers, and the 'coordination' function is further undermined by its discriminatory impact. This would push the classification closer to a Snare for those seats.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Disparate impact of categorical balancing on minority speech."
+      "description": "Whether harm definitions are objective or biased in application."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
     "affects_constraints": [
       "first_amendment_speech_protection__absolutist_reading",
       "first_amendment_speech_protection__harm_limited_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'first_amendment_speech_protection' kernel. Its structural properties and metrics are distinct from the 'absolutist_reading' and 'harm_limited_reading' siblings, which are modeled as separate constraints due to differing ε values and stakeholder impacts."
+    "dual_formulation_note": "This constraint is one reading of the First Amendment speech protection kernel. Its categorical balancing approach directly influences the operational space and perceived legitimacy of both absolutist and harm-limited readings."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -160,29 +227,29 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "first_amendment_speech_protection__absolutist_reading",
-        "relation": "forecloses"
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "first_amendment_speech_protection__harm_limited_reading",
+        "sibling_id": "harm_limited_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "speech_value_is_context_dependent",
+        "atom": "speech_value_harm_balancing_is_judicial_function",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "judicial_balancing_is_necessary",
+        "atom": "some_speech_categories_lack_first_amendment_protection",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "chaplinsky_balancing_framework",
+    "reference_frame": "judicial_categorical_balancing_tradition",
     "drift_state": {
       "moment": "contemporary_digital_era",
       "direction": "practice_drift",
@@ -191,14 +258,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

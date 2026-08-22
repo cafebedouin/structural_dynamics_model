@@ -4,24 +4,97 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "8f890314-bee8-4ce7-92db-b23b91cde283"
+    "story_uid": "49964c08-20d9-4bbe-9794-fa0ba8801340"
   },
   "base_properties": {
     "extractiveness": 0.95,
     "suppression": 0.98,
     "theater_ratio": 0.05,
-    "accessibility_collapse": 0.99,
-    "resistance": 0.01,
-    "claimed_type": "mountain",
-    "human_readable": "Abolitionist Reading: Animals as Moral Persons, Not Property",
+    "accessibility_collapse": 0.1,
+    "resistance": 0.85,
+    "claimed_type": "snare",
+    "human_readable": "Abolitionist Reading: Animals as Non-Property Persons",
     "topic_domain": "moral_philosophy/animal_ethics/legal_theory",
-    "emerges_naturally": true,
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "animal_rights_advocates"
+      "animal_agriculture_industry",
+      "biomedical_research_institutions",
+      "pet_industry",
+      "hunting_fishing_industries"
     ],
     "victims": [
       "animals_as_property"
+    ],
+    "vindicated_propositions": [
+      "animal_rights_theory",
+      "personhood_ethics"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "abolitionist_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Advocates for the complete legal and moral abolition of animal property status, viewing any use as a violation of fundamental rights. They seek to dismantle existing systems of animal exploitation and are often in tension with welfare reform efforts."
+    },
+    {
+      "name": "animals_as_property",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Are legally defined as property, subject to human ownership, use, and disposal. Their interests are not recognized as rights, and their lives are systematically exploited across various industries, regardless of welfare conditions."
+    },
+    {
+      "name": "animal_agriculture_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefits immensely from the property status of animals, which allows for their commodification and large-scale exploitation for food production. Any challenge to property status is a direct threat to their business model."
+    },
+    {
+      "name": "biomedical_research_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Relies on the property status of animals for their use in experiments and testing. The abolitionist reading directly challenges the ethical and legal basis of their research practices."
+    },
+    {
+      "name": "legal_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enforce the property status of animals through legislation, court rulings, and regulatory frameworks. They are the primary institutional mechanism for maintaining the current arrangement, despite growing ethical challenges."
+    },
+    {
+      "name": "welfare_reform_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Seek to improve the conditions of animals within their property status, focusing on reducing suffering. From an abolitionist perspective, their efforts are seen as perpetuating the fundamental injustice of property status, rather than challenging it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The current legal and moral framework coordinates human access to and use of animals as resources, facilitating industries that rely on animal exploitation.",
+    "transfer_function": "Transfers the lives, bodies, and labor of animals from their inherent moral status to human ownership and economic value, enabling industries to profit from their use.",
+    "absent_voices": "Animals themselves are structurally absent from any legal or moral discourse that determines their status. Their interests are represented by advocates, but they cannot speak for themselves. Future generations, who might inherit a world without animal exploitation, are also absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the property status of animals vanished overnight, the global animal agriculture, biomedical research, and pet industries would collapse or be forced to fundamentally restructure. Legal systems would need to redefine personhood and rights, leading to a profound reorganization of human-animal relations and economic activity.",
+    "founding_problem": "The historical problem was the need for human societies to control and utilize animals for food, labor, and other resources, leading to their classification as property.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The animal agriculture and research industries attest that the 'problem' of resource scarcity and scientific advancement is still live, requiring animal use. Abolitionist advocates, however, argue that the 'problem' is not a genuine necessity but a constructed justification for exploitation, and that the true problem is the moral status of animals. Independent ethical philosophers and some legal scholars corroborate the abolitionist framing of the problem."
   },
   "interval": {
     "start": 1970,
@@ -31,57 +104,57 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1970,
-      "value": 0.99
+      "value": 0.9
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1980,
-      "value": 0.98
+      "value": 0.92
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1990,
-      "value": 0.97
+      "value": 0.93
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.94
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.94
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.94
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 2000,
       "value": 0.96
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.95
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.95
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1970,
-      "value": 0.99
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.99
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.98
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.98
-    },
-    {
       "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.98
+      "value": 0.97
     },
     {
       "metric": "suppression_requirement",
@@ -91,22 +164,22 @@
     {
       "metric": "theater_ratio",
       "time_point": 1970,
-      "value": 0.01
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
       "time_point": 1980,
-      "value": 0.02
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
       "time_point": 1990,
-      "value": 0.03
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.04
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
@@ -120,45 +193,66 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the abolitionist reading of animal status, asserting that animals are moral persons with a fundamental right not to be property, and that all use is categorically impermissible. It is a reading of the 'animal_status_kernel' which is contested by 'property_reading' and 'welfare_reading'. This reading frames the current legal and moral status of animals as a profound injustice, making the 'animals_as_property' the primary victims. The high extractiveness and suppression reflect the systemic nature of animal exploitation under the property paradigm, which this reading seeks to dismantle.",
-    "logic_rationale": "The extractiveness is near maximal (0.95) because the very existence of animals as property is considered an act of extraction, violating their fundamental right to not be owned. Suppression is also near maximal (0.98) as the legal and economic systems actively enforce animal property status, leaving animals with virtually no exit options. Theater ratio is minimal (0.05) because this reading is a direct, uncompromising moral claim, with little performative aspect; its proponents are genuinely seeking fundamental change, not mere symbolic gestures. Accessibility collapse is high (0.99) because within this moral framework, there are no legitimate alternatives to recognizing animal personhood; any other status is a collapse of moral reasoning. Resistance is low (0.01) because the animals themselves cannot resist, and the advocates for this position are a minority against entrenched systems.",
-    "directionality_logic": "Animal rights advocates are beneficiaries as their moral framework is validated (d=0.0). Animals as property are the ultimate targets/victims (d=1.0). Industrial animal agriculture and legal systems are payers/agenda-setters, as they bear the cost of this moral challenge and would be forced to change (d=0.8-0.9). Welfare reform advocates are 'excluded' as their incremental approach is seen as counterproductive to the core abolitionist goal.",
-    "perspectival_gap": "From the perspective of the abolitionist reading, the current system is a Snare for animals, extracting their very being. From the perspective of industrial animal agriculture, this reading is a Mountain of an unchangeable moral law that threatens their existence. The engine's classification will highlight this divergence.",
-    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its mandate is a foundational moral principle that is considered timeless. The 'founding problem' (systemic animal exploitation) is 'live', indicating no atrophy of the original moral imperative. The classification prevents mislabeling by emphasizing the categorical nature of the moral claim, distinguishing it from welfare-based approaches that might appear as 'tangled ropes' or 'snares' but operate within the property paradigm.",
-    "kernel_context": "This constraint is the 'abolitionist_reading' of the 'animal_status_kernel'. This kernel concerns the fundamental moral and legal status of animals. Sibling readings include the 'property_reading' (animals are property, economic value is primary) and the 'welfare_reading' (animals are sentient, use is acceptable if suffering is minimized). This abolitionist reading asserts a categorical right not to be property, directly challenging the premises of the other readings."
+    "narrative_context": "This constraint represents the abolitionist reading of animal status: animals are moral persons with a fundamental right not to be property. The property status itself is the injustice, making all use categorically impermissible regardless of welfare conditions. This reading views the current legal and social arrangement as a snare, extracting maximum value from animals by denying their personhood. The high extractiveness and suppression reflect the systemic nature of animal exploitation under property law. The claimed type is 'snare' because the coordination story (human benefit from animal use) is seen as a cover for pure extraction, maintained by coercion and suppression of alternatives (animal personhood).",
+    "logic_rationale": "Extractiveness is extremely high (0.95) because the constraint permits the total instrumentalization of animals, denying their inherent value and reducing them to commodities. Suppression is also extremely high (0.98) due to the pervasive legal and social structures that enforce animal property status, making exit (i.e., non-property status) virtually impossible for animals. Theater ratio is low (0.05) because, from this reading, there is little performative 'welfare' activity that genuinely mitigates the fundamental injustice of property status; any such activity is seen as merely cosmetic or delaying true abolition. Accessibility collapse is low (0.1) because the abolitionist perspective sees a clear alternative (animal personhood) that is actively suppressed, not naturally collapsed. Resistance is high (0.85) due to ongoing and growing animal rights activism.",
+    "directionality_logic": "Animals (as property) are the full targets (d=1.0) of this constraint, bearing all costs. Industries that profit from animal use (animal agriculture, biomedical research, pet industry, hunting/fishing) are the primary beneficiaries (d=0.0-0.1). Legal systems are agenda-setters, enforcing the property status. Welfare reform advocates are excluded from the abolitionist's core agenda, as their efforts are seen as perpetuating the problem.",
+    "perspectival_gap": "The abolitionist reading fundamentally diverges from both the property and welfare readings. From the perspective of industries benefiting from animal property, the arrangement is a necessary coordination mechanism for resource provision. From the welfare perspective, it's a system needing reform. The abolitionist reading sees it as a pure snare, where the 'coordination' is a cover for systemic extraction.",
+    "mandatrophy_analysis": "From the abolitionist perspective, the mandate for animal property status has not atrophied; rather, it was never legitimate. The constraint persists not because its original function is still needed, but because powerful beneficiaries actively maintain it for extraction. The classification as a snare prevents mislabeling this as a legitimate coordination mechanism or a degraded piton, emphasizing the active, coercive nature of the extraction.",
+    "kernel_context": "This constraint is the abolitionist reading of the 'animal_status_kernel'. This reading asserts animals are moral persons with rights against property status. It stands in contrast to the 'property_reading' (animals as mere property, economic value dominant) and the 'welfare_reading' (animals as sentient property, use acceptable with welfare constraints). The core disagreement is over the fundamental moral and legal status of animals."
   },
   "omegas": [
     {
-      "id": "natural_law_vs_constructed_morality",
-      "question": "Is the claim that animals are moral persons with a right not to be property a discovery of natural moral law (Mountain), or a constructed ethical framework (Snare/Tangled Rope for existing systems)?",
-      "resolution_mechanism": "Philosophical consensus on meta-ethics, or widespread societal adoption of the framework leading to legal reform.",
-      "impact": "If a natural moral law, its persistence is independent of human enforcement. If a constructed framework, its persistence depends on active advocacy and enforcement, making it a 'Snare' for existing systems and a 'Rope' for its adherents.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity between inherent moral truth and human-constructed ethical system."
-    },
-    {
       "id": "welfare_reform_impact",
-      "question": "Does incremental welfare reform (as advocated by the 'welfare_reading') ultimately advance or delay the abolitionist goal of ending animal property status?",
-      "resolution_mechanism": "Empirical study of social movements and legal history: do welfare improvements lead to greater public acceptance of animal rights, or do they merely 'greenwash' exploitation and reduce pressure for fundamental change?",
-      "impact": "If welfare reforms delay abolition, the 'welfare_reading' is structurally antagonistic to this 'abolitionist_reading'. If they advance it, the 'welfare_reading' could be seen as a 'scaffold' towards abolition, despite its current limitations.",
+      "question": "Does welfare reform (as advocated by the welfare_reading) advance or delay the abolition of animal property status?",
+      "resolution_mechanism": "Longitudinal study of social movements and legal changes in jurisdictions with strong welfare laws vs. those without. Analysis of whether welfare reforms lead to increased public awareness and eventual abolitionist sentiment, or if they pacify public concern and entrench animal use.",
+      "impact": "If welfare reforms delay abolition, the welfare_reading is structurally complicit in maintaining the snare. If they advance it, the strategic tension between abolitionist and welfare advocates is misaligned, and the welfare_reading could be seen as an incremental scaffold.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Strategic tension between incremental reform and categorical abolition."
+      "description": "Strategic impact of welfare reforms on abolitionist goals."
+    },
+    {
+      "id": "personhood_definition_ambiguity",
+      "question": "What are the necessary and sufficient criteria for moral personhood, and do animals meet them?",
+      "resolution_mechanism": "Ongoing philosophical debate, scientific advancements in animal cognition and sentience, and legal precedent setting. No single empirical test is likely to be definitive.",
+      "impact": "If animals are definitively recognized as moral persons, the abolitionist reading gains stronger legal and ethical grounding, potentially shifting the constraint towards a mountain (natural law of personhood) or a rope (coordination around personhood). If not, the property status remains more defensible.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the definition and application of moral personhood to animals."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of animal personhood structural (legal barriers, economic dependency) or internalized (cultural norms, speciesism)?",
+      "resolution_mechanism": "Post-legal-change societal shifts: if property status is legally removed in some jurisdictions, observe whether cultural practices and individual attitudes towards animal use persist or rapidly change. If suppression persists after legal barriers are removed, it indicates a strong internalized component.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as the cultural inertia would continue to bind even after legal changes. This would make the path to abolition more complex, requiring deep cultural shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for animal property status."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status_kernel__property_reading",
+      "animal_status_kernel__welfare_reading",
+      "factory_farming_regulations",
+      "biomedical_research_ethics"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'animal_status_kernel'. It is linked to the 'property_reading' and 'welfare_reading' as part of a constraint family, representing different interpretations of animal moral and legal status."
+  },
   "cs_structure": {
-    "kernel_codification": "implicit",
-    "authority_grounding": "expertise",
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "animal_status_kernel__property_reading",
+        "sibling_id": "property_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "animal_status_kernel__welfare_reading",
-        "relation": "coexists_with"
+        "sibling_id": "welfare_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
@@ -180,18 +274,19 @@
       "moment": "contemporary",
       "direction": "practice_drift",
       "magnitude": "severe",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

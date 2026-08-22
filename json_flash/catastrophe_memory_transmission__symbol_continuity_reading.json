@@ -4,134 +4,238 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "18c1191a-b1d9-4a68-a1ec-a28d93412a3b"
+    "story_uid": "e199c943-fe69-437f-b5c4-13e237e061d9"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.7,
-    "theater_ratio": 0.2,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
     "accessibility_collapse": 0.6,
     "resistance": 0.3,
     "claimed_type": "tangled_rope",
-    "human_readable": "Catastrophe Memory Transmission: Symbol Continuity Reading",
+    "human_readable": "Catastrophe Memory Transmission (Symbolic Continuity Reading)",
     "topic_domain": "religious_studies/collective_memory/ritual_studies",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "communal_identity",
-      "ritual_specialists"
+      "communal_identity_continuity"
     ],
     "victims": [
       "adaptive_capacity",
-      "community_members"
+      "individual_autonomy"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "symbol_vs_operational_necessity",
-      "question": "Is the strict transmission of symbolic form genuinely necessary for communal identity, or does it suppress adaptive capacity beyond what is required for identity maintenance?",
-      "resolution_mechanism": "Comparative study of communities with similar catastrophe histories but different ritual adaptation rates: if communities with higher adaptation maintain identity, the strict symbolic fidelity is not strictly necessary.",
-      "impact": "If not strictly necessary, the constraint's extractiveness (sacrifice of adaptive capacity) is higher than justified by the coordination function, pushing it closer to a Snare. If necessary, it reinforces the Tangled Rope classification.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity between symbolic necessity and adaptive cost."
+      "name": "communal_identity_continuity",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "The abstract concept of the community's enduring identity, which is preserved and reinforced through the faithful transmission of symbolic ritual forms. It 'benefits' by maintaining its coherence and distinctiveness across generations, even at the cost of individual or adaptive flexibility."
     },
     {
-      "id": "kernel_reading_difference",
-      "question": "This constraint is the 'symbol_continuity_reading' of the 'catastrophe_memory_transmission' kernel. How would the classification change under the 'operational_competence_reading' or 'hybrid_embedded_reading'?",
-      "resolution_mechanism": "Adopting the 'operational_competence_reading' would shift focus to the functional transmission of survival skills, likely lowering perceived extractiveness if the ritual is effective. The 'hybrid_embedded_reading' would acknowledge both, potentially leading to a more balanced Tangled Rope or even Rope if the embedded competence is high.",
-      "impact": "The 'operational_competence_reading' would likely reduce the perceived 'victim' status of adaptive capacity, potentially lowering extractiveness and suppression, pushing the constraint towards a Rope. The 'hybrid_embedded_reading' would acknowledge both, potentially leading to a more balanced Tangled Rope or even Rope if the embedded competence is high.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of alternative kernel readings on constraint classification."
+      "name": "ritual_elders_and_keepers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "The custodians of the ritual forms, responsible for ensuring their accurate transmission. They enforce fidelity to tradition, believing that the integrity of the community's identity depends on it. Their authority is derived from their role in preserving this continuity."
+    },
+    {
+      "name": "community_members",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Participate in the rituals, deriving a sense of belonging and shared identity. They pay the cost of strict adherence to symbolic forms, which can limit individual expression and adaptive responses to new challenges. Their identity is deeply intertwined with the ritual practice."
+    },
+    {
+      "name": "adaptive_capacity",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The community's ability to innovate, change, and respond effectively to novel environmental or social pressures. It is 'victimized' by the rigid adherence to symbolic forms, which prioritizes continuity over functional adaptation, potentially leading to maladaptive outcomes in the long run."
+    },
+    {
+      "name": "individual_autonomy",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "The capacity of individual members to interpret, modify, or depart from prescribed ritual forms. It is 'victimized' by the strong social pressure and institutional enforcement of symbolic fidelity, which prioritizes collective identity over personal expression or critical re-evaluation."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective memory and mourning practices, ensuring a shared understanding of past catastrophes and a unified emotional response, thereby reinforcing communal bonds and identity.",
+    "transfer_function": "Transfers symbolic forms, narratives, and emotional resonance across generations, from ritual elders to community members, in exchange for adherence to prescribed practices and a sacrifice of adaptive flexibility.",
+    "absent_voices": "Future generations who might face new catastrophes requiring different adaptive strategies, or dissenting voices within the community who prioritize pragmatic survival over symbolic fidelity. Their concerns are suppressed by the emphasis on tradition and the authority of ritual keepers.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint of symbolic continuity vanished, the community's shared identity and collective memory would fragment. Rituals would lose their coherence, leading to diverse, uncoordinated mourning practices and a potential dissolution of the communal good, forcing a reorganization around new, possibly less cohesive, forms of belonging.",
+    "founding_problem": "The existential threat of communal dissolution following a catastrophic event, where the loss of shared meaning and identity was as devastating as the physical losses.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Community historians and anthropologists, from outside the immediate ritual-keeping lineage, corroborate that the founding problem of identity preservation in the face of existential threat remains a live concern for the community, even if the specific nature of the threats has evolved."
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2020
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 1950,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1965,
       "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1980,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.55
+      "time_point": 1950,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1965,
       "value": 0.7
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.15
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.75
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.18
+      "time_point": 1950,
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.2
+      "time_point": 1965,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the 'symbol continuity' reading of how communities transmit memory of catastrophe through ritual. Here, the primary function of ritual is to preserve communal identity and mourning practices by ensuring the faithful transmission of symbolic forms. This fidelity is seen as the mechanism for the community's survival, even if it comes at the cost of adaptive capacity. The constraint is a Tangled Rope because it coordinates identity and meaning but extracts adaptive flexibility.",
-    "key_agents": [
-      "communal_identity: Primary beneficiary (institutional/generational) — sustained by ritual fidelity.",
-      "ritual_specialists: Agenda setter/beneficiary (organized/biographical) — responsible for maintaining ritual fidelity, derive status from it.",
-      "community_members: Payer/beneficiary (moderate/biographical) — participate in ritual, gain identity, but bear the cost of reduced adaptive capacity.",
-      "adaptive_capacity: Victim (abstract/generational) — sacrificed to maintain symbolic form.",
-      "external_observers: Observer (analytical/civilizational) — analyze the trade-offs between fidelity and adaptation."
-    ],
-    "logic_rationale": "Extractiveness (0.65) is high because the strict adherence to symbolic form often demands sacrificing practical adaptation to new threats or environments. Suppression (0.7) is also high, as deviation from prescribed ritual is often met with social pressure or exclusion to maintain fidelity. Theater ratio (0.2) is low, as the ritual is genuinely performed for its symbolic function, not merely for show. The rising extractiveness and suppression over time reflect an increasing rigidity in ritual transmission, potentially in response to external pressures or internal consolidation of authority.",
-    "perspectival_gap": "Ritual specialists and communal identity (beneficiaries) experience this as a necessary coordination mechanism for survival, ensuring the group's distinctiveness and continuity. Community members and adaptive capacity (victims) experience it as a burden, where the demands of symbolic fidelity limit their ability to respond effectively to changing circumstances. The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "Communal identity and ritual specialists are beneficiaries (low d) as they are sustained and empowered by the constraint. Adaptive capacity and community members are targets (high d) as they bear the costs of rigidity and suppressed innovation. The constraint subsidizes identity and ritual authority by extracting from the community's flexibility.",
-    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure Rope (ignoring the cost to adaptive capacity) or a pure Snare (ignoring the genuine coordination of identity). It highlights the inherent trade-off: the mandate to preserve identity through symbolic form is live, but its method (strict fidelity) creates an extractive dynamic by limiting other forms of communal 'survival'. The constraint's persistence is tied to the perceived necessity of symbolic continuity for identity, even as the costs accumulate.",
-    "kernel_context": "This constraint is the 'symbol_continuity_reading' of the 'catastrophe_memory_transmission' kernel. This reading emphasizes the intrinsic value of preserving symbolic forms for communal identity and mourning practices. Sibling readings include the 'operational_competence_reading' (ritual transmits practical survival skills) and the 'hybrid_embedded_reading' (survival competence is embedded within symbolic form)."
+    "narrative_context": "This constraint describes the role of ritual in preserving communal identity and mourning practices, specifically through the faithful transmission of symbolic forms following a catastrophe. The core idea is that the continuity of the symbol itself is the primary mechanism for the community's survival, making high ritual fidelity paramount. This reading prioritizes the intrinsic good of identity over adaptive flexibility, leading to a 'tangled rope' classification where identity maintenance is coordinated, but adaptive capacity is extracted.",
+    "logic_rationale": "The extractiveness (0.65) arises from the cost of sacrificing adaptive capacity and individual autonomy for the sake of symbolic fidelity. Suppression (0.75) is high due to the strong social pressure and institutional enforcement by ritual elders to maintain traditional forms, discouraging deviation. The theater ratio (0.4) reflects that while the rituals genuinely reinforce identity, a significant portion of the effort goes into maintaining the 'performance' of tradition even when its direct functional utility for new challenges is low. The slight dip in extractiveness and suppression towards the end of the interval reflects minor external pressures for adaptation, but the core constraint remains strong.",
+    "directionality_logic": "Communal identity continuity is the primary beneficiary, as its existence is directly tied to the constraint. Ritual elders are agenda-setters, benefiting from their authority derived from preserving tradition. Community members are both beneficiaries (sense of belonging) and payers (sacrifice of autonomy). Adaptive capacity and individual autonomy are victims, as their flexibility is curtailed by the rigid adherence to symbolic forms. All agents are identity-locked to varying degrees, as their self-concept is intertwined with the community and its rituals.",
+    "perspectival_gap": "From the perspective of ritual elders and communal identity, the constraint is a necessary 'rope' for survival, ensuring the very existence of the community. From the perspective of adaptive capacity and individual autonomy, it operates as a 'snare,' trapping the community in potentially outdated practices and limiting individual expression. The engine's computation of per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'symbol_continuity_reading' of the 'catastrophe_memory_transmission' kernel. It emphasizes the intrinsic value of symbolic form for identity. Sibling readings include 'operational_competence_reading' (ritual transmits survival skills) and 'hybrid_embedded_reading' (survival competence is inseparable from symbolic form)."
   },
+  "omegas": [
+    {
+      "id": "symbolic_vs_operational_value",
+      "question": "To what extent is the preservation of symbolic form genuinely distinct from the transmission of operational competence for survival?",
+      "resolution_mechanism": "Comparative ethnographic studies of communities facing similar catastrophes, where some prioritize symbolic fidelity and others operational adaptation, observing long-term survival and well-being outcomes.",
+      "impact": "If symbolic form is found to be largely separable from operational competence, the extraction from adaptive capacity is more clearly a cost of identity maintenance. If they are deeply intertwined, the extraction might be re-evaluated as a necessary cost of a more complex coordination function.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing the intrinsic value of symbolic continuity from its instrumental value for survival."
+    },
+    {
+      "id": "identity_lock_vs_structural_suppression",
+      "question": "Is the 'identity_locked' exit option for community members primarily due to internalized identity fusion, or is it reinforced by structural suppression mechanisms?",
+      "resolution_mechanism": "Longitudinal studies tracking community members who attempt to deviate from ritual practices, observing the social, economic, and psychological consequences, and distinguishing internal conflict from external sanctions.",
+      "impact": "If primarily internalized, the effective suppression is higher than structural measures suggest. If structural, interventions targeting external enforcement mechanisms would be more effective in increasing exit options.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for identity-locked agents."
+    },
+    {
+      "id": "mandatrophy_of_symbolic_form",
+      "question": "Has the specific symbolic form outlived its original function in preserving identity, or does it continue to serve a live purpose in contemporary contexts?",
+      "resolution_mechanism": "Community-led re-evaluation processes, where members collectively assess the relevance and efficacy of specific ritual elements in addressing current identity challenges, potentially leading to adaptation or reinterpretation.",
+      "impact": "If the form is found to be mandatrohpic, the constraint shifts closer to a 'piton' or 'snare' as its coordination function atrophies, and the extraction becomes less justifiable. If it's still live, the 'tangled rope' classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the symbolic form's mandate has outlived its function."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
-    "affects_constraints": [
-      "catastrophe_memory_transmission__operational_competence_reading",
-      "catastrophe_memory_transmission__hybrid_embedded_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'catastrophe_memory_transmission' kernel, focusing on symbolic continuity. The other readings emphasize operational competence or a hybrid of both."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'catastrophe_memory_transmission' kernel, focusing on symbolic continuity. Other readings include 'operational_competence_reading' and 'hybrid_embedded_reading'."
   },
   "cs_structure": {
-    "kernel_codification": "implicit",
+    "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "catastrophe_memory_transmission__operational_competence_reading",
+        "sibling_id": "operational_competence_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_transmission__hybrid_embedded_reading",
+        "sibling_id": "hybrid_embedded_reading",
         "relation": "coexists_with"
       }
     ],
@@ -149,23 +253,24 @@
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "unbroken_symbolic_transmission",
+    "reference_frame": "unbroken_symbolic_lineage",
     "drift_state": {
-      "moment": "contemporary_era_of_rapid_change",
+      "moment": "contemporary_globalized_era",
       "direction": "practice_drift",
       "magnitude": "minor",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

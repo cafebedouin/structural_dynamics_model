@@ -4,27 +4,92 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7377070a-4eb0-4449-ab19-30078bae671c"
+    "story_uid": "f14c0883-390b-4414-9684-410c52502d16"
   },
   "base_properties": {
     "extractiveness": 0.35,
-    "suppression": 0.25,
-    "theater_ratio": 0.15,
-    "accessibility_collapse": 0.4,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
     "resistance": 0.3,
-    "claimed_type": "rope",
+    "claimed_type": "tangled_rope",
     "human_readable": "Constitutional Hybrid Reading of Sovereign Legitimacy",
-    "topic_domain": "Political Philosophy / Constitutional Theory / Legitimacy Studies",
+    "topic_domain": "political_philosophy/constitutional_theory/legitimacy_studies",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "hereditary_monarch",
-      "elected_officials",
-      "constitutional_lawyers"
+      "elected_officials"
     ],
     "victims": [
       "absolutist_monarchists",
       "pure_republicans"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "hereditary_monarch",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Retains ceremonial and symbolic authority, often with associated income and status, without direct political power. Their legitimacy is inherited, but their function is defined and limited by constitutional law. Exit means abdication and loss of status."
+    },
+    {
+      "name": "elected_officials",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Exercise delegated political authority, enacting policy and governing. Their legitimacy derives from popular consent, but their authority is constrained by the constitutional framework that also defines the monarch's role. Exit is through electoral defeat or term limits."
+    },
+    {
+      "name": "constitutional_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets and enforces the constitutional law that mediates the boundary between inherited and delegated authority. Their decisions define the practical limits of both the monarch's and elected officials' powers. Exit is through retirement or impeachment."
+    },
+    {
+      "name": "the_citizenry",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Provides the ultimate source of delegated authority and bears the costs of maintaining both the inherited and elected institutions. They benefit from the stability of the hybrid system but pay for its complexity and potential for boundary disputes. Exit is through emigration or revolution."
+    },
+    {
+      "name": "absolutist_monarchists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Seek a return to pure monarchical rule where authority is solely inherited and unlimited. They are constrained by the constitutional framework that limits the monarch's power and legitimizes elected officials. Their 'cost' is the suppression of their preferred political order."
+    },
+    {
+      "name": "pure_republicans",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Advocate for a purely republican system where all authority is popularly delegated and inherited roles are abolished. They are constrained by the constitutional framework that preserves the monarch's symbolic role. Their 'cost' is the perpetuation of an institution they view as illegitimate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the peaceful coexistence and functional separation of inherited symbolic authority and delegated political power within a single state, preventing conflicts over ultimate legitimacy.",
+    "transfer_function": "Transfers symbolic legitimacy and historical continuity from the monarch to the state, while transferring policy-making power and accountability from the people to elected officials. It also transfers the costs of maintaining both institutions to the citizenry.",
+    "absent_voices": "Radical separatists or those advocating for entirely different forms of governance (e.g., anarchists, theocrats) are largely excluded from the constitutional discourse, as their proposals fundamentally challenge the dual-sourced legitimacy itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constitutional hybrid vanished, the state would face an immediate legitimacy crisis. The roles of monarch and elected officials would become contested, likely leading to a power vacuum, civil unrest, or a rapid, potentially violent, transition to a purely monarchical or republican system.",
+    "founding_problem": "To resolve historical conflicts between monarchical claims of divine right and popular demands for self-governance, establishing a stable political order that incorporated elements of both traditions.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and political scientists widely corroborate the historical problem of reconciling inherited and delegated authority. Contemporary constitutional scholars and public discourse continue to debate the optimal balance and interpretation of this hybrid, indicating the problem remains live, albeit in a refined form."
   },
   "interval": {
     "start": 1700,
@@ -59,27 +124,27 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1700,
-      "value": 0.4
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1800,
-      "value": 0.35
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1900,
-      "value": 0.3
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.28
+      "value": 0.48
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.25
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
@@ -89,66 +154,77 @@
     {
       "metric": "theater_ratio",
       "time_point": 1800,
-      "value": 0.12
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 1900,
-      "value": 0.14
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.15
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.15
+      "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the 'constitutional hybrid' reading of sovereign legitimacy, where authority is dual-sourced: ceremonial/symbolic authority is inherited (e.g., a monarch), and political authority is delegated (e.g., an elected parliament). Constitutional law mediates the boundary between these two sources. This reading aims to provide stability by integrating historical tradition with modern democratic principles, but it introduces ambiguities and constrains those who seek a 'purer' form of either monarchical or republican rule. The constraint is claimed as a Rope due to its genuine coordination function in managing this dual legitimacy, but it carries a low-to-moderate extractiveness due to the costs of maintaining both systems and the ambiguity inherent in the compromise.",
-    "logic_rationale": "The extractiveness is low-to-moderate (0.35) because the compromise reduces the potential for high extraction from either pure absolutism or unchecked majoritarianism, but it still incurs costs for maintaining two distinct institutions and managing their interface. Suppression is low (0.25) as the system generally enjoys broad consent, and dissenters (absolutists, pure republicans) are not actively suppressed but rather marginalized by the prevailing constitutional consensus. Theater ratio is low (0.15) as both the symbolic and political functions are genuinely active, though the symbolic role can sometimes appear performative. The historical measurements show a gradual decrease in extractiveness and suppression as the system matured and gained acceptance, with the symbolic role becoming more stable.",
-    "directionality_logic": "The hereditary monarch and elected officials are beneficiaries, as they both derive legitimacy and power (symbolic or political) from this arrangement. Constitutional lawyers also benefit from the complexity of mediating the boundary. Citizens are payers, bearing the costs of maintaining the dual system and navigating its ambiguities. Absolutist monarchists and pure republicans are victims, as their preferred, 'pure' systems are foreclosed by this hybrid, and their ideological commitments are constrained.",
-    "perspectival_gap": "From the perspective of the beneficiaries (monarch, elected officials, constitutional lawyers), this system is a stable, legitimate, and effective compromise. From the perspective of the victims (absolutist monarchists, pure republicans), it is an illegitimate, internally contradictory, and unsatisfying arrangement that prevents the realization of a 'true' form of sovereignty. The engine's per-seat classification should reflect this divergence, with beneficiaries experiencing it as a Rope and victims as a Snare or Tangled Rope due to the constraint on their ideological exit.",
-    "kernel_context": "This constraint, 'constitutional_hybrid_reading', is one interpretation of the 'sovereign_legitimacy' kernel. It posits a dual source of authority, balancing inherited ceremonial power with delegated political power. This stands in contrast to the 'monarchical_reading' (authority from inherited right) and the 'republican_reading' (authority from popular consent), both of which advocate for a singular, pure source of sovereignty."
+    "narrative_context": "This constraint describes the 'constitutional hybrid' reading of sovereign legitimacy, where authority is dual-sourced: inherited ceremonial/symbolic authority (e.g., a monarch) and delegated political authority (e.g., elected parliament). Constitutional law mediates the boundary between these two sources. This reading is a compromise, aiming for stability by incorporating elements of both monarchical and republican traditions. It is presented as a Tangled Rope because it genuinely coordinates a complex political arrangement but also extracts costs from those who prefer a 'purer' form of either monarchical or republican rule, and requires active enforcement (constitutional interpretation) to maintain its boundaries.",
+    "key_agents": [
+      "hereditary_monarch: Primary beneficiary (institutional/identity_locked) — retains status and income.",
+      "elected_officials: Primary beneficiary (powerful/mobile) — wield delegated political power.",
+      "constitutional_judiciary: Agenda setter (institutional/constrained) — interprets and enforces the boundary.",
+      "the_citizenry: Payer (organized/constrained) — bears costs of maintaining dual institutions.",
+      "absolutist_monarchists: Payer (powerless/identity_locked) — constrained by limits on monarchical power.",
+      "pure_republicans: Payer (powerless/identity_locked) — constrained by perpetuation of inherited roles."
+    ],
+    "logic_rationale": "The extractiveness (0.35) is moderate: while it reduces the potential for absolute extraction by either pure form, it imposes costs of complexity and compromise. Suppression (0.45) is also moderate, as it actively suppresses radical alternatives from both monarchist and republican extremes. Theater ratio (0.20) is low, as both the symbolic and political functions are genuinely active, though the symbolic role can sometimes appear performative. The historical measurements show a slight decrease in extractiveness and suppression over time, reflecting the gradual institutionalization and acceptance of the hybrid model, and a slight increase in theater as the symbolic role becomes more pronounced relative to direct political power.",
+    "perspectival_gap": "From the perspective of the hereditary monarch and elected officials, this is a beneficial arrangement that grants them legitimate roles. From the perspective of absolutist monarchists and pure republicans, it is an extractive compromise that denies their preferred, 'pure' form of sovereignty. The constitutional judiciary, as the agenda-setter, experiences it as a complex but necessary coordination mechanism.",
+    "directionality_logic": "The hereditary monarch and elected officials are beneficiaries, as the constraint grants them their respective spheres of legitimate authority. The citizenry is a payer, bearing the costs of maintaining this dual system. Absolutist monarchists and pure republicans are also payers, as the constraint actively suppresses their preferred political orders. The constitutional judiciary is the agenda-setter, actively maintaining the constraint's boundaries.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the hybrid system as a pure Rope (ignoring the costs to those seeking purer forms) or a pure Snare (ignoring its genuine coordination function in resolving historical conflicts). The 'live' status of the founding problem, corroborated by ongoing scholarly debate, indicates that while the specific form of the problem has evolved, the underlying tension between inherited and delegated authority persists, preventing mandatrophy."
   },
   "omegas": [
     {
-      "id": "hybrid_legitimacy_ambiguity",
-      "question": "Is the dual-sourced legitimacy of the constitutional hybrid a strength (resilience through compromise) or a weakness (inherent instability due to unresolved tension)?",
-      "resolution_mechanism": "Comparative historical analysis of hybrid vs. pure systems during periods of crisis: if hybrids demonstrate greater resilience, it's a strength; if they fracture along the dual-source line, it's a weakness.",
-      "impact": "If a strength, the constraint's coordination function is higher and extractiveness lower than measured; if a weakness, the inherent instability implies higher long-term costs and potential for collapse, increasing effective extractiveness.",
+      "id": "boundary_dispute_resolution",
+      "question": "How effectively does constitutional law mediate boundary disputes between inherited and delegated authority, and what are the costs of its failures?",
+      "resolution_mechanism": "Analysis of historical constitutional crises, judicial review outcomes, and public trust in the judiciary during periods of tension between the monarch and elected government.",
+      "impact": "If mediation is consistently ineffective or costly, the constraint's effective extractiveness and suppression would be higher, potentially reclassifying it closer to a Snare due to the instability and resource drain of unresolved conflicts.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the dual legitimacy is a source of strength or weakness."
+      "description": "Effectiveness of constitutional mediation in hybrid legitimacy systems."
     },
     {
-      "id": "boundary_mediation_effectiveness",
-      "question": "How effectively does constitutional law mediate the boundary between inherited and delegated authority, and what are the costs of its interpretive flexibility?",
-      "resolution_mechanism": "Analysis of constitutional crises and judicial review outcomes: frequent, severe boundary disputes indicate low effectiveness; stable, accepted precedents indicate high effectiveness. Costs are measured by the resources expended on legal interpretation and political contention.",
-      "impact": "If mediation is highly effective, the constraint operates more like a Rope; if it's consistently contested and costly, it leans towards a Tangled Rope due to the ongoing extraction of resources for boundary maintenance.",
+      "id": "symbolic_authority_utility",
+      "question": "What is the actual utility or coordination benefit derived from maintaining inherited ceremonial/symbolic authority, beyond historical continuity?",
+      "resolution_mechanism": "Sociological studies on national identity, public opinion surveys on the role of the monarchy, and comparative analysis with purely republican states regarding social cohesion or political stability.",
+      "impact": "If the utility is negligible or negative, the 'beneficiary' status of the monarch becomes more extractive, and the constraint's theater_ratio would increase, pushing it towards a Piton or a more extractive Tangled Rope.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Effectiveness and cost of constitutional boundary mediation."
+      "description": "The functional value of inherited symbolic authority in a modern state."
     },
     {
-      "id": "reading_framing_underdetermination",
-      "question": "Is the 'constitutional_hybrid_reading' the most defensible framing of sovereign legitimacy in this context, or would a 'monarchical_reading' or 'republican_reading' offer a more coherent account?",
-      "resolution_mechanism": "A conceptual analysis of the historical and normative commitments of the political system. If the system's actual operation consistently aligns more closely with the core tenets of a sibling reading, then the hybrid framing is less defensible.",
-      "impact": "If a sibling reading is more coherent, the classification of this constraint would shift to reflect that underlying structure (e.g., if it's truly a 'monarchical_reading' in disguise, it might be a Snare for republicans).",
+      "id": "reading_framing_ambiguity",
+      "question": "Is this constraint a genuine constitutional hybrid, or is it a monarchical system with republican window-dressing (or vice-versa)?",
+      "resolution_mechanism": "Comparative constitutional analysis across states with similar structures, focusing on the actual distribution of power during crises and the historical trajectory of constitutional amendments. The 'constitutional_hybrid_reading' is the reading being instantiated here; the question is whether it is the most accurate framing.",
+      "impact": "If it is primarily a monarchical system with republican elements, the 'monarchical_reading' would be more accurate, implying higher extractiveness from the populace. If it is primarily republican with symbolic monarchy, the 'republican_reading' would be more accurate, implying higher extractiveness from monarchical traditionalists. This would shift the primary beneficiaries and victims.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Alternative framings of sovereign legitimacy."
+      "description": "Ambiguity in the primary framing of the hybrid legitimacy system."
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'sovereign_legitimacy' kernel. Other readings include 'monarchical_reading' and 'republican_reading', each representing a distinct structural claim about the source of legitimate authority."
+    "affects_constraints": [
+      "sovereign_legitimacy__monarchical_reading",
+      "sovereign_legitimacy__republican_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'sovereign_legitimacy' kernel. This 'constitutional_hybrid_reading' mediates between the 'monarchical_reading' and 'republican_reading', incorporating elements of both while constraining their pure forms."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -156,11 +232,11 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "sovereign_legitimacy__monarchical_reading",
+        "sibling_id": "monarchical_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "sovereign_legitimacy__republican_reading",
+        "sibling_id": "republican_reading",
         "relation": "coexists_with"
       }
     ],
@@ -172,29 +248,30 @@
         "grounding_type": "conventional"
       },
       {
-        "atom": "constitutional_mediation_supremacy",
+        "atom": "constitutional_supremacy_over_tradition_and_will",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "post_glorious_revolution_settlement",
+    "reference_frame": "constitutional_balance_of_powers",
     "drift_state": {
-      "moment": "contemporary_era",
+      "moment": "contemporary",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

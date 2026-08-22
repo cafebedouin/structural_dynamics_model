@@ -4,14 +4,14 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "4145aec6-5133-485a-a602-3a4285a173af"
+    "story_uid": "617d8837-5bf4-46e3-8afb-2224166155e2"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.45,
-    "theater_ratio": 0.55,
-    "accessibility_collapse": 0.3,
-    "resistance": 0.7,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "CBDR Principle: Voluntary Contributions & Tech Transfer Reading",
     "topic_domain": "international_climate_governance/treaty_law/development_economics",
@@ -22,8 +22,74 @@
     ],
     "victims": [
       "developing_nations",
-      "vulnerable_communities"
+      "climate_vulnerable_communities"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "developed_nations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from the flexibility of setting their own climate targets without legally binding emissions reduction obligations. Their primary obligation is framed as technology transfer, which often aligns with their economic interests. They avoid significant financial liabilities for historical emissions and adaptation costs."
+    },
+    {
+      "name": "developing_nations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the disproportionate burden of climate change impacts and adaptation costs without guaranteed financial compensation. They receive technology transfer, but often on terms that do not fully address their needs or build local capacity. They are expected to make voluntary contributions despite limited resources."
+    },
+    {
+      "name": "multinational_corporations",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from a regulatory environment that prioritizes voluntary national commitments, allowing them to influence national policies and avoid stringent international regulations. They can profit from technology transfer initiatives, often selling proprietary solutions rather than facilitating open access."
+    },
+    {
+      "name": "climate_vulnerable_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Suffer the direct consequences of climate change (sea-level rise, extreme weather, resource scarcity) with minimal access to compensatory finance or effective adaptation support. Their voices are often marginalized in international negotiations, and their needs are not adequately met by voluntary commitments."
+    },
+    {
+      "name": "international_climate_negotiators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Administer the framework of nationally determined contributions and facilitate technology transfer discussions. They are tasked with balancing the demands of different nation groups, often prioritizing consensus and voluntary action over legally binding obligations to maintain participation."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide scientific assessments of climate change impacts and mitigation pathways. They observe the gap between voluntary commitments and the requirements for limiting global warming, often highlighting the inadequacy of current pledges."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates international climate action by providing a framework for all nations to contribute to global emissions reductions and adaptation efforts, while acknowledging differentiated responsibilities.",
+    "transfer_function": "Transfers the primary burden of emissions reductions and adaptation costs to developing nations and climate-vulnerable communities, while transferring flexibility and economic opportunities (e.g., through technology sales) to developed nations and multinational corporations.",
+    "absent_voices": "Future generations and non-human species, who bear the long-term consequences of insufficient climate action, are structurally absent from the negotiation table. Their interests are represented by advocates, but they lack direct agency.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of CBDR vanished, the international climate regime would face immediate collapse or radical restructuring. Developed nations would lose their justification for voluntary targets, potentially facing demands for legally binding obligations and reparations. Developing nations would lose the (albeit limited) framework for technology transfer and would likely seek new mechanisms for climate justice and compensation.",
+    "founding_problem": "The original problem was how to achieve global climate action while recognizing the historical and developmental differences between nations, avoiding a 'one-size-fits-all' approach that developing nations found inequitable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Developed nations and some international climate bodies attest that the problem of equitable burden-sharing is still live, justifying the voluntary approach. Developing nations and climate justice advocates argue that the original problem has been reinterpreted to serve the interests of powerful states, and the current framework exacerbates inequities, supported by independent analyses of climate finance flows and emissions trajectories."
   },
   "interval": {
     "start": 1992,
@@ -33,12 +99,12 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1992,
-      "value": 0.4
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.5
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
@@ -58,27 +124,27 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1992,
-      "value": 0.3
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.35
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2008,
-      "value": 0.4
+      "value": 0.64
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2016,
-      "value": 0.43
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.45
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
@@ -88,77 +154,70 @@
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.3
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 2008,
-      "value": 0.4
+      "value": 0.33
     },
     {
       "metric": "theater_ratio",
       "time_point": 2016,
-      "value": 0.5
+      "value": 0.37
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.55
+      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'voluntary commitment and technology transfer' reading of the Common But Differentiated Responsibilities (CBDR) principle in international climate governance. Under this reading, developed nations are primarily obligated to facilitate technology transfer, while emissions reductions are framed as nationally determined and voluntary. This interpretation allows developed nations to avoid legally binding emissions targets and extensive financial compensation for climate impacts, shifting the burden of adaptation and residual damage onto developing nations. The constraint is claimed as a Tangled Rope because it purports to coordinate global climate action while simultaneously enabling asymmetric extraction.",
-    "key_agents": [
-      "developed_nations: Agenda setter (institutional/arbitrage) — benefits from flexible commitments.",
-      "developing_nations: Payer (organized/constrained) — bears adaptation costs without sufficient compensation.",
-      "multinational_corporations: Beneficiary (powerful/arbitrage) — operates with fewer regulatory burdens.",
-      "vulnerable_communities: Victim (powerless/trapped) — directly impacted by climate change, lacks resources.",
-      "international_climate_negotiators: Agenda setter (institutional/constrained) — attempts to balance demands within the voluntary framework.",
-      "climate_scientists: Observer (analytical/analytical) — provides scientific basis, lacks direct enforcement power."
-    ],
-    "logic_rationale": "The extractiveness (0.65) is high because the voluntary nature of commitments allows developed nations to externalize significant climate costs onto developing nations. Suppression (0.45) is moderate, reflecting the diplomatic pressure and economic leverage exerted by developed nations to maintain this reading, but not outright coercion. Theater ratio (0.55) is high, as the emphasis on 'voluntary contributions' and 'technology transfer' often serves as a performative cover for insufficient action and continued extraction, with the actual transfer often occurring on commercial terms rather than as a compensatory mechanism. Resistance (0.7) is high, reflecting the strong and persistent objections from developing nations and civil society groups.",
-    "perspectival_gap": "Developed nations and multinational corporations perceive this reading as a pragmatic and equitable approach to global climate action, emphasizing shared responsibility and capacity-building. Developing nations and vulnerable communities, however, experience it as a mechanism that perpetuates historical injustices, extracts resources (through continued emissions and uncompensated damages), and suppresses their demands for climate justice. The engine's per-seat classification should reflect this divergence, with beneficiaries seeing a Rope-like function and victims experiencing a Snare-like extraction.",
-    "directionality_logic": "Developed nations and multinational corporations are clear beneficiaries (d near 0.0) as they retain flexibility and avoid significant costs. Developing nations and vulnerable communities are targets (d near 1.0) as they bear the costs of climate change and receive inadequate support. International climate negotiators sit closer to symmetric (d near 0.5) as they mediate within the existing framework, while climate scientists are analytical observers (d near 0.5).",
-    "mandatrophy_analysis": "This reading of CBDR risks mandatrophy by allowing the 'differentiation' aspect to become a permanent justification for inaction rather than a temporary measure to facilitate equitable transition. The initial mandate to ensure equitable burden-sharing is undermined by the voluntary nature of commitments, leading to a situation where the 'coordination' function (global participation) serves as cover for continued extraction (unequal burden-sharing). The high theater ratio and contested founding problem status indicate a drift towards a performative rather than functional constraint."
+    "narrative_context": "This constraint represents the 'voluntary contributions and technology transfer' reading of the Common But Differentiated Responsibilities (CBDR) principle in international climate governance. Under this reading, developed nations are primarily obligated to facilitate technology transfer, while all nations make nationally determined, non-binding contributions to emissions reductions. This interpretation allows developed nations to avoid legally enforceable emissions targets and significant financial liabilities for historical emissions, shifting the burden of climate action and adaptation costs onto developing nations. The constraint is claimed as a 'tangled_rope' because it provides a framework for global coordination (all nations participate) but embeds significant asymmetric extraction.",
+    "logic_rationale": "The extractiveness (0.65) is high because the voluntary nature of commitments allows developed nations to externalize costs, while developing nations face increasing climate impacts without adequate compensation. Suppression (0.70) is also high, as the framework actively suppresses demands for binding targets and historical responsibility through diplomatic pressure and the framing of 'national sovereignty' over emissions. The theater ratio (0.40) reflects the performative aspect of 'voluntary' pledges that often fall short of scientific recommendations, while the underlying structure of differentiated responsibilities is maintained rhetorically. The metrics show a trend of increasing extractiveness and suppression over time, indicating a drift towards a more extractive arrangement.",
+    "directionality_logic": "Developed nations and multinational corporations are clear beneficiaries, as they retain flexibility and profit from technology transfer. Developing nations and climate-vulnerable communities are the primary payers, bearing the costs of climate change and constrained in their development pathways. International climate negotiators act as agenda-setters, managing the process within the established voluntary framework. Climate scientists serve as observers, documenting the gap between policy and climate reality.",
+    "perspectival_gap": "From the perspective of developed nations, this reading of CBDR is a pragmatic 'rope' that enables global participation by respecting national sovereignty. From the perspective of developing nations, it operates as a 'snare' or 'tangled_rope,' extracting resources and flexibility while offering insufficient support. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'voluntary_commitment_reading' of the 'cbdr_principle' kernel. It emphasizes nationally determined contributions and technology transfer as the primary obligation for developed nations. A sibling reading, 'historical_responsibility_reading,' would emphasize binding emissions reductions from developed nations proportional to cumulative historical emissions and loss/damage financing."
   },
   "omegas": [
     {
-      "id": "cbdr_framing_ambiguity",
-      "question": "Is this reading of CBDR a genuine attempt at global coordination, or a strategic framing by developed nations to avoid accountability?",
-      "resolution_mechanism": "Analysis of actual emissions trajectories and financial flows relative to scientific targets and historical responsibility. If emissions continue to rise and finance falls short, it supports the strategic framing hypothesis.",
-      "impact": "If a strategic framing, the constraint's effective extractiveness is higher, and its classification shifts closer to a Snare. If genuine, it remains a Tangled Rope with a higher coordination component.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between coordination and strategic extraction in CBDR interpretation."
-    },
-    {
-      "id": "technology_transfer_efficacy",
-      "question": "Is the technology transfer obligation under this reading genuinely effective in building capacity in developing nations, or is it primarily a commercial transaction that benefits developed nation corporations?",
-      "resolution_mechanism": "Empirical studies tracking the terms, accessibility, and impact of transferred technologies, assessing whether they lead to genuine capacity building or increased dependency.",
-      "impact": "If primarily commercial, the 'beneficiary' role of developing nations in technology transfer is diminished, increasing their overall victimhood and the constraint's extractiveness. If genuinely effective, it supports the coordination function.",
+      "id": "true_cost_of_tech_transfer",
+      "question": "Is the 'technology transfer' obligation genuinely meeting the needs of developing nations and building local capacity, or is it primarily a market for developed nation corporations?",
+      "resolution_mechanism": "Independent audits of technology transfer projects, tracking of intellectual property rights, and assessment of local capacity building outcomes versus market-driven sales.",
+      "impact": "If primarily market-driven, the 'beneficiary' aspect for developing nations is further diminished, increasing the constraint's effective extractiveness and pushing it closer to a pure snare. If genuinely capacity-building, the coordination function is stronger.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Effectiveness and equity of technology transfer mechanisms."
+      "description": "Assesses the true nature and impact of technology transfer under this reading."
     },
     {
-      "id": "kernel_reading_divergence",
-      "question": "Given the 'historical_responsibility_reading' of CBDR, what specific structural elements of the international climate regime would change if that reading gained dominance over this 'voluntary_commitment_reading'?",
-      "resolution_mechanism": "Comparative legal and policy analysis of proposed climate frameworks under each reading, focusing on binding targets, financial mechanisms, and loss and damage provisions.",
-      "impact": "The 'historical_responsibility_reading' would likely shift developed nations into a victim role for binding emissions and financial obligations, while reducing the victimhood of developing nations by providing greater compensation and support. This highlights the zero-sum nature of the kernel contest.",
-      "confidence": "high",
+      "id": "legitimacy_of_voluntary_vs_binding",
+      "question": "Is the emphasis on 'voluntary' contributions a legitimate mechanism for global coordination, or a strategic maneuver to avoid accountability for historical emissions?",
+      "resolution_mechanism": "Analysis of negotiation transcripts, diplomatic communications, and the historical evolution of climate treaty language, alongside a comparison of emissions trajectories under voluntary vs. binding regimes.",
+      "impact": "If primarily a strategic maneuver, the 'coordination' aspect of the tangled rope is weakened, and the constraint leans more towards a snare. If genuinely necessary for broad participation, the coordination function is affirmed.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Structural implications of alternative CBDR kernel readings."
+      "description": "Examines the underlying rationale for the voluntary nature of commitments."
+    },
+    {
+      "id": "mandate_drift_from_original_cbdr",
+      "question": "Has the 'voluntary commitment' reading of CBDR drifted significantly from the original intent of the principle as articulated in the UNFCCC?",
+      "resolution_mechanism": "Comparative textual analysis of the UNFCCC Preamble and Article 3 with subsequent COP decisions and national communications, alongside expert legal interpretations of treaty evolution.",
+      "impact": "If significant drift is confirmed, the constraint's 'mandatrophy_resolved' status would be challenged, indicating a shift from its original problem-solving mandate to a more extractive function.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assesses the historical fidelity of this reading to the original CBDR principle."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
     "affects_constraints": [
       "paris_agreement_ndc_framework",
-      "green_climate_fund_mechanisms"
+      "loss_and_damage_fund_negotiations"
     ],
-    "dual_formulation_note": "This constraint is one reading of the broader 'cbdr_principle' kernel. The 'historical_responsibility_reading' is a sibling constraint with a different beneficiary/victim structure and extractiveness profile."
+    "dual_formulation_note": "This constraint is one reading of the 'cbdr_principle' kernel. Its sibling, 'historical_responsibility_reading', emphasizes binding emissions reductions and loss/damage financing, leading to a different classification."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -166,25 +225,25 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "cbdr_principle__historical_responsibility_reading",
+        "sibling_id": "historical_responsibility_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "national_sovereignty_over_emissions_targets",
+        "atom": "national_sovereignty_over_emissions",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "technology_transfer_as_primary_developed_nation_obligation",
+        "atom": "technology_transfer_as_primary_obligation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "rio_declaration_framework",
+    "reference_frame": "voluntary_national_action_framework",
     "drift_state": {
       "moment": "contemporary_climate_crisis",
       "direction": "practice_drift",
@@ -193,14 +252,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

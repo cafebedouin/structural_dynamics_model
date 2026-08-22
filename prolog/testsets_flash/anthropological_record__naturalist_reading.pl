@@ -39,8 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,19 +70,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: anthropological_record__naturalist_reading
- *   human_readable: Naturalist Reading of Human Origins (Scientific Method)
+ *   human_readable: Naturalist Reading of Anthropological Record
  *   domain: epistemology/philosophy_of_science/anthropology
  *
  * SUMMARY:
- *   This constraint represents the 'naturalist reading' of the
- *   anthropological record, asserting that human origins (evolution,
- *   migration) are knowable exclusively through the scientific method, which
- *   by definition excludes supernatural or non-materialist explanations. It
- *   functions as a gatekeeper for academic legitimacy and resource allocation
- *   within scientific disciplines, while simultaneously coordinating research
- *   efforts around a shared methodological framework. The constraint is
- *   actively enforced through credentialing, peer review, and funding
- *   mechanisms, which suppress alternative interpretive frameworks.
+ *   This constraint describes the 'naturalist reading' of the anthropological
+ *   record, which asserts that human origins (evolution, migration) are
+ *   knowable exclusively through scientific method and materialist
+ *   explanations. It functions as a gatekeeping mechanism, granting epistemic
+ *   authority to credentialed scientists while suppressing alternative
+ *   interpretations from religious or indigenous epistemologies. The
+ *   constraint is claimed as a 'rope' by its beneficiaries (academic
+ *   anthropologists and scientific institutions) who view it as a necessary
+ *   coordination mechanism for scientific progress. However, the authored
+ *   metrics reflect a 'tangled_rope' or 'snare' due to high extractiveness
+ *   and suppression of non-credentialed voices.
  *
  */
 
@@ -87,58 +95,107 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(anthropological_record__naturalist_reading, 0.68).
 domain_priors:suppression_score(anthropological_record__naturalist_reading, 0.75).
-domain_priors:theater_ratio(anthropological_record__naturalist_reading, 0.15).
+domain_priors:theater_ratio(anthropological_record__naturalist_reading, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, extractiveness, 0.68).
 narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, resistance, 0.4).
+narrative_ontology:constraint_metric(anthropological_record__naturalist_reading, resistance, 0.45).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(anthropological_record__naturalist_reading, tangled_rope).
-narrative_ontology:human_readable(anthropological_record__naturalist_reading, "Naturalist Reading of Human Origins (Scientific Method)").
+narrative_ontology:human_readable(anthropological_record__naturalist_reading, "Naturalist Reading of Anthropological Record").
 narrative_ontology:topic_domain(anthropological_record__naturalist_reading, "epistemology/philosophy_of_science/anthropology").
 
 domain_priors:requires_active_enforcement(anthropological_record__naturalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(anthropological_record__naturalist_reading, 'fa1d4e4a-ebb1-4346-bb5d-d8605a35825b').
-narrative_ontology:cs_kernel_codification('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', formalized).
-narrative_ontology:cs_authority_grounding('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', expertise).
-narrative_ontology:cs_interpretation_layer_present('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b').
-narrative_ontology:cs_reading_relation('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', anthropological_record__creationist_reading, forecloses).
-narrative_ontology:cs_reading_relation('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', anthropological_record__indigenous_epistemology_reading, influences).
-narrative_ontology:cs_axiom('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', foundational, materialist_causation_only).
+narrative_ontology:cs_story_uid(anthropological_record__naturalist_reading, '1f80ae1b-ab9d-4416-9789-cb61958542aa').
+narrative_ontology:cs_kernel_codification('1f80ae1b-ab9d-4416-9789-cb61958542aa', formalized).
+narrative_ontology:cs_authority_grounding('1f80ae1b-ab9d-4416-9789-cb61958542aa', expertise).
+narrative_ontology:cs_interpretation_layer_present('1f80ae1b-ab9d-4416-9789-cb61958542aa').
+narrative_ontology:cs_reading_relation('1f80ae1b-ab9d-4416-9789-cb61958542aa', anthropological_record__creationist_reading, forecloses).
+narrative_ontology:cs_reading_relation('1f80ae1b-ab9d-4416-9789-cb61958542aa', anthropological_record__indigenous_epistemology_reading, influences).
+narrative_ontology:cs_axiom('1f80ae1b-ab9d-4416-9789-cb61958542aa', foundational, materialist_causation_only).
 narrative_ontology:cs_axiom_status(materialist_causation_only, holdable).
-narrative_ontology:cs_axiom_grounding('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', materialist_causation_only, empirically_contingent).
-narrative_ontology:cs_axiom('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', foundational, scientific_method_sole_epistemic_authority).
-narrative_ontology:cs_axiom_status(scientific_method_sole_epistemic_authority, holdable).
-narrative_ontology:cs_axiom_grounding('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', scientific_method_sole_epistemic_authority, conventional).
-narrative_ontology:cs_reference_frame('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', enlightenment_scientific_rationalism).
-narrative_ontology:cs_drift_state('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', contemporary_postcolonial_critique, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('fa1d4e4a-ebb1-4346-bb5d-d8605a35825b', '').
+narrative_ontology:cs_axiom_grounding('1f80ae1b-ab9d-4416-9789-cb61958542aa', materialist_causation_only, empirically_contingent).
+narrative_ontology:cs_axiom('1f80ae1b-ab9d-4416-9789-cb61958542aa', foundational, scientific_method_exclusive_truth_path).
+narrative_ontology:cs_axiom_status(scientific_method_exclusive_truth_path, holdable).
+narrative_ontology:cs_axiom_grounding('1f80ae1b-ab9d-4416-9789-cb61958542aa', scientific_method_exclusive_truth_path, conventional).
+narrative_ontology:cs_reference_frame('1f80ae1b-ab9d-4416-9789-cb61958542aa', enlightenment_scientific_rationalism).
+narrative_ontology:cs_drift_state('1f80ae1b-ab9d-4416-9789-cb61958542aa', contemporary_postcolonial_critique, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('1f80ae1b-ab9d-4416-9789-cb61958542aa', '').
 narrative_ontology:cs_kernel_id(anthropological_record__naturalist_reading, anthropological_record).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(anthropological_record__naturalist_reading, credentialed_scientists).
-narrative_ontology:constraint_beneficiary(anthropological_record__naturalist_reading, academic_institutions).
+narrative_ontology:constraint_beneficiary(anthropological_record__naturalist_reading, academic_anthropologists).
+narrative_ontology:constraint_beneficiary(anthropological_record__naturalist_reading, scientific_institutions).
 narrative_ontology:constraint_victim(anthropological_record__naturalist_reading, non_credentialed_interpreters).
-narrative_ontology:constraint_victim(anthropological_record__naturalist_reading, indigenous_knowledge_holders).
+narrative_ontology:constraint_victim(anthropological_record__naturalist_reading, indigenous_communities).
 narrative_ontology:constraint_victim(anthropological_record__naturalist_reading, religious_communities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(anthropological_record__naturalist_reading, general_public).
+narrative_ontology:constraint_vindicates(anthropological_record__naturalist_reading, scientific_method_supremacy).
+narrative_ontology:constraint_vindicates(anthropological_record__naturalist_reading, materialist_ontology).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Define the legitimate methods and interpretations of human origins, publish findings, and control academic discourse. Their careers and institutional funding depend on the naturalist framework. They benefit from the exclusion of non-scientific interpretations.
+narrative_ontology:constraint_stakeholder(anthropological_record__naturalist_reading, academic_anthropologists, agenda_setter,
+    institutional, generational, identity_locked, global).
+
+% Fund and house academic research, grant credentials, and disseminate scientific consensus. They benefit from the authority and prestige derived from being the sole arbiters of 'truth' regarding human origins, reinforcing their institutional power.
+narrative_ontology:constraint_stakeholder(anthropological_record__naturalist_reading, scientific_institutions, beneficiary,
+    institutional, generational, constrained, global).
+
+% Attempt to interpret human origins outside of academic scientific frameworks, often drawing on local knowledge or alternative methodologies. They face systematic exclusion from academic platforms, funding, and public legitimacy, effectively paying a cost in suppressed voice and recognition.
+narrative_ontology:constraint_stakeholder(anthropological_record__naturalist_reading, non_credentialed_interpreters, payer,
+    powerless, biographical, trapped, local).
+
+% Hold origin narratives rooted in oral traditions and deep connection to place, often clashing with scientific materialist accounts. They bear the cost of having their epistemologies dismissed as 'myth' or 'unscientific,' leading to cultural erosion and loss of control over their heritage.
+narrative_ontology:constraint_stakeholder(anthropological_record__naturalist_reading, indigenous_communities, payer,
+    organized, civilizational, identity_locked, local).
+
+% Adhere to origin stories based on sacred texts or divine revelation, which are often incompatible with purely materialist evolutionary accounts. They experience the naturalist reading as a challenge to their worldview and a suppression of their interpretive authority in public discourse.
+narrative_ontology:constraint_stakeholder(anthropological_record__naturalist_reading, religious_communities, payer,
+    organized, civilizational, identity_locked, global).
+
+% Receives a coherent, evidence-based narrative of human origins that is consistent with broader scientific understanding. They benefit from the clarity and predictive power of this framework, but may also be deprived of alternative, culturally rich interpretations.
+narrative_ontology:constraint_stakeholder(anthropological_record__naturalist_reading, general_public, beneficiary,
+    moderate, biographical, mobile, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a shared, empirically verifiable framework for understanding human origins, enabling cumulative research and consistent educational curricula within scientific disciplines.
+% TRANSFER_FUNCTION: Transfers epistemic authority and cultural legitimacy regarding human origins from diverse interpretive communities to credentialed scientific institutions, along with associated funding and prestige.
+% ABSENT_VOICES: Interpretive communities whose epistemologies are systematically excluded (e.g., spiritual leaders, traditional knowledge keepers, non-academic historians) would challenge the naturalist reading's claim to exclusive truth and demand recognition for their own ways of knowing.
+% DISAPPEARANCE_RATIONALE: If the naturalist reading's authority vanished, the consensus on human origins would fragment. Scientific institutions would lose their exclusive claim to truth in this domain, leading to a proliferation of competing narratives and a significant rearrangement of educational and research priorities.
+% FOUNDING_PROBLEM: To provide a coherent, evidence-based, and universally applicable explanation for human origins, moving beyond speculative or religiously dictated accounts.
+% FOUNDING_PROBLEM_CORROBORATION: Academic scientists and scientific institutions universally attest that the problem of understanding human origins remains live and requires ongoing scientific inquiry. External corroboration comes from the general public's reliance on scientific consensus for factual understanding, though some religious and indigenous communities contest the exclusivity of this approach.
+narrative_ontology:disappearance_verdict(anthropological_record__naturalist_reading, world_rearranges).
+narrative_ontology:founding_problem_status(anthropological_record__naturalist_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(anthropological_record__naturalist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(anthropological_record__naturalist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(anthropological_record__naturalist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(anthropological_record__naturalist_reading, 0.68, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -158,16 +215,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.68) stems from the high cost of entry for non-credentialed individuals and the exclusion of alternative knowledge systems from academic discourse and funding. Suppression (0.75) is high due to the active enforcement of methodological boundaries and the delegitimization of non-scientific narratives. Theater ratio (0.15) is low, as the scientific method's core functions are genuinely performed, though the boundary maintenance can be performative. Accessibility collapse (0.6) is moderate, as alternative narratives exist but are institutionally marginalized. Resistance (0.4) is present from excluded groups but often lacks institutional leverage.
+ *   The extractiveness (0.68) stems from the concentration of epistemic authority and resources within academic institutions, effectively extracting legitimacy from alternative knowledge systems. Suppression (0.75) is high due to active exclusion of non-scientific methodologies and interpretations from mainstream discourse, funding, and educational platforms. The theater ratio (0.20) is relatively low, as the scientific method genuinely produces knowledge, but a portion of the effort is performative in defending the exclusivity of the naturalist frame against challenges. Accessibility collapse (0.60) is moderate, as alternative interpretations exist but are systematically devalued. Resistance (0.45) is present from marginalized communities but often lacks the institutional power to significantly alter the constraint.
  *
  * PERSPECTIVAL GAP:
- *   Credentialed scientists and academic institutions experience this as a necessary Rope for rigorous inquiry, coordinating a shared epistemic framework. Non-credentialed interpreters, indigenous knowledge holders, and religious communities experience it as a Snare, actively excluding their perspectives and extracting epistemic authority and resources. The engine's per-seat classification will reflect this divergence.
+ *   From the perspective of academic anthropologists, this constraint is a 'rope' that coordinates scientific inquiry and produces reliable knowledge. From the perspective of indigenous communities or religious communities, it operates as a 'snare' that extracts their epistemic authority and suppresses their voices. The engine's classification will likely reflect this divergence, computing a more extractive type for the payer seats.
  *
  * DIRECTIONALITY LOGIC:
- *   Credentialed scientists and academic institutions are primary beneficiaries (d=0.0-0.2) as they control the production and validation of knowledge within this framework, securing funding and prestige. Non-credentialed interpreters, indigenous knowledge holders, and religious communities are victims (d=0.8-1.0) as their knowledge systems are marginalized or actively suppressed, and they bear the cost of exclusion from mainstream discourse and resources. The constraint subsidizes the scientific establishment by granting it exclusive epistemic authority over human origins.
+ *   Academic anthropologists and scientific institutions are clear beneficiaries and agenda-setters, as they define and enforce the naturalist reading, gaining prestige and resources. Non-credentialed interpreters, indigenous communities, and religious communities are payers, bearing the cost of epistemic marginalization and suppression of their own origin narratives. The general public is a diffuse beneficiary of a coherent scientific narrative, but also indirectly pays by losing access to diverse interpretive frameworks.
  *
- * MANDATROPHY ANALYSIS:
- *   The constraint's mandate is to provide a coherent, evidence-based account of human origins. While this core function remains live, the 'mandatrophy' arises from the expansion of its scope to actively suppress alternative, non-scientific accounts, rather than merely offering a competing one. This prevents mislabeling it as a pure Rope, as the coordination function is intertwined with significant, asymmetric extraction and suppression of alternatives.
  */
 
 /* ==========================================================================
@@ -175,53 +230,66 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    naturalism_vs_other_readings,
-    'Is the exclusion of non-materialist explanations a necessary epistemic boundary for scientific progress, or a disciplinary gatekeeping mechanism that extracts from alternative knowledge systems?',
-    'Analysis of scientific breakthroughs achieved by integrating non-materialist perspectives (if any), or by demonstrating equivalent explanatory power from alternative frameworks without materialist assumptions.',
-    'If necessary, the constraint is a Rope for scientific inquiry; if gatekeeping, it is a Snare for excluded knowledge systems. This constraint is one reading of the ''anthropological_record'' kernel, specifically the ''naturalist_reading''. Sibling readings (''creationist_reading'', ''indigenous_epistemology_reading'') would change the victim set and the claimed epistemic authority.',
-    confidence_without_resolution(medium)
+    epistemic_authority_legitimacy,
+    'Is the exclusive epistemic authority granted to scientific method for human origins inherently legitimate, or is it a historically contingent social construct?',
+    'Philosophical analysis of the foundations of knowledge, cross-cultural studies of epistemology, and historical sociology of science.',
+    'If historically contingent, the constraint''s suppression of alternative epistemologies would be reclassified as a more severe form of extraction, rather than a necessary boundary for scientific rigor.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(naturalism_vs_other_readings, conceptual, 'Ambiguity between epistemic necessity and disciplinary extraction in the naturalist reading of human origins.').
+narrative_ontology:omega_variable(epistemic_authority_legitimacy, conceptual, 'The nature of scientific epistemic authority in the domain of human origins.').
 
 omega_variable(
-    suppression_of_alternative_epistemologies,
-    'To what extent is the suppression of non-scientific origin narratives a structural consequence of the scientific method''s success, versus an active, institutionalized effort to delegitimize alternative epistemologies?',
-    'Comparative study of funding allocations, publication biases, and academic hiring practices across institutions that explicitly promote or suppress non-naturalist origin narratives.',
-    'If primarily structural, the suppression is an unavoidable byproduct of a successful knowledge system. If actively institutionalized, it indicates a higher degree of extractiveness and a more explicit Snare-like function.',
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression of non-credentialed interpretations structural (institutional barriers) or internalized (self-censorship, belief in scientific superiority)?',
+    'Post-exit suppression trajectory: if non-credentialed interpreters continue to self-censor or defer to scientific authority even after institutional barriers are removed, reclassify as partially internalized.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests, as the targets carry the suppression with them.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_of_alternative_epistemologies, empirical, 'Distinguishing between structural and active suppression of alternative origin narratives.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for alternative interpretations.').
+
+omega_variable(
+    materialism_vs_supernatural_exclusion,
+    'Is the exclusion of supernatural causation from the anthropological record a methodological necessity for scientific inquiry, or an ontological commitment that forecloses certain truths a priori?',
+    'Philosophical debate on the limits of scientific explanation and the definition of ''natural'' vs. ''supernatural''.',
+    'If an ontological commitment, the constraint''s claim to neutrality is undermined, and its suppression of creationist readings becomes a foundational exclusion rather than a methodological one.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(materialism_vs_supernatural_exclusion, conceptual, 'The nature of materialism in scientific inquiry regarding human origins.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(anthropological_record__naturalist_reading, 0, 30).
+narrative_ontology:interval(anthropological_record__naturalist_reading, 1900, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(anth_tr_t0, anthropological_record__naturalist_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(anth_tr_t10, anthropological_record__naturalist_reading, theater_ratio, 10, 0.18).
-narrative_ontology:measurement(anth_tr_t20, anthropological_record__naturalist_reading, theater_ratio, 20, 0.16).
-narrative_ontology:measurement(anth_tr_t30, anthropological_record__naturalist_reading, theater_ratio, 30, 0.15).
+narrative_ontology:measurement(anth_tr_t1900, anthropological_record__naturalist_reading, theater_ratio, 1900, 0.1).
+narrative_ontology:measurement(anth_tr_t1930, anthropological_record__naturalist_reading, theater_ratio, 1930, 0.12).
+narrative_ontology:measurement(anth_tr_t1960, anthropological_record__naturalist_reading, theater_ratio, 1960, 0.15).
+narrative_ontology:measurement(anth_tr_t1990, anthropological_record__naturalist_reading, theater_ratio, 1990, 0.18).
+narrative_ontology:measurement(anth_tr_t2024, anthropological_record__naturalist_reading, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(anth_be_t0, anthropological_record__naturalist_reading, base_extractiveness, 0, 0.55).
-narrative_ontology:measurement(anth_be_t10, anthropological_record__naturalist_reading, base_extractiveness, 10, 0.6).
-narrative_ontology:measurement(anth_be_t20, anthropological_record__naturalist_reading, base_extractiveness, 20, 0.65).
-narrative_ontology:measurement(anth_be_t30, anthropological_record__naturalist_reading, base_extractiveness, 30, 0.68).
+narrative_ontology:measurement(anth_be_t1900, anthropological_record__naturalist_reading, base_extractiveness, 1900, 0.4).
+narrative_ontology:measurement(anth_be_t1930, anthropological_record__naturalist_reading, base_extractiveness, 1930, 0.5).
+narrative_ontology:measurement(anth_be_t1960, anthropological_record__naturalist_reading, base_extractiveness, 1960, 0.6).
+narrative_ontology:measurement(anth_be_t1990, anthropological_record__naturalist_reading, base_extractiveness, 1990, 0.65).
+narrative_ontology:measurement(anth_be_t2024, anthropological_record__naturalist_reading, base_extractiveness, 2024, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(anth_su_t0, anthropological_record__naturalist_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(anth_su_t10, anthropological_record__naturalist_reading, suppression_requirement, 10, 0.65).
-narrative_ontology:measurement(anth_su_t20, anthropological_record__naturalist_reading, suppression_requirement, 20, 0.7).
-narrative_ontology:measurement(anth_su_t30, anthropological_record__naturalist_reading, suppression_requirement, 30, 0.75).
+narrative_ontology:measurement(anth_su_t1900, anthropological_record__naturalist_reading, suppression_requirement, 1900, 0.5).
+narrative_ontology:measurement(anth_su_t1930, anthropological_record__naturalist_reading, suppression_requirement, 1930, 0.6).
+narrative_ontology:measurement(anth_su_t1960, anthropological_record__naturalist_reading, suppression_requirement, 1960, 0.7).
+narrative_ontology:measurement(anth_su_t1990, anthropological_record__naturalist_reading, suppression_requirement, 1990, 0.73).
+narrative_ontology:measurement(anth_su_t2024, anthropological_record__naturalist_reading, suppression_requirement, 2024, 0.75).
 
 
 /* ==========================================================================
@@ -229,9 +297,11 @@ narrative_ontology:measurement(anth_su_t30, anthropological_record__naturalist_r
    ========================================================================== */
 
 narrative_ontology:coordination_type(anthropological_record__naturalist_reading, information_standard).
+narrative_ontology:affects_constraint(anthropological_record__naturalist_reading, creationist_reading).
+narrative_ontology:affects_constraint(anthropological_record__naturalist_reading, indigenous_epistemology_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is the 'naturalist_reading' of the 'anthropological_record' kernel. It is one of three distinct readings, each with its own structural properties and classification.
+% This constraint is one of three readings of the 'anthropological_record' kernel. Its ε value differs significantly from the creationist and indigenous epistemology readings due to its specific claims about knowability and authority.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

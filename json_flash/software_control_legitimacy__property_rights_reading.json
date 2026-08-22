@@ -4,126 +4,227 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "f68be570-a177-452b-8222-0e89bc85f37d"
+    "story_uid": "c557a290-c43c-4a3d-901a-0625271900ff"
   },
   "base_properties": {
-    "extractiveness": 0.45,
-    "suppression": 0.6,
+    "extractiveness": 0.55,
+    "suppression": 0.65,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.4,
-    "resistance": 0.3,
+    "resistance": 0.5,
     "claimed_type": "tangled_rope",
-    "human_readable": "Software Control as Property Right",
-    "topic_domain": "software_engineering/political_economy_of_technology/intellectual_property",
+    "human_readable": "Software as Property Right (Property Rights Reading)",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "software_vendors",
-      "investors"
+      "software_investors"
     ],
     "victims": [
-      "users",
-      "independent_developers",
-      "foss_advocates"
+      "users_seeking_modification",
+      "open_source_advocates",
+      "competitors_seeking_interoperability"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine property right, or a constructed mechanism for rent extraction?",
-      "resolution_mechanism": "Analysis of economic returns relative to investment and risk; comparison with other intellectual property regimes.",
-      "impact": "If primarily rent extraction, the classification shifts towards Snare; if a genuine property right, it remains Tangled Rope with a stronger coordination justification.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'property_rights_reading' of the 'software_control_legitimacy' kernel."
+      "name": "software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop and distribute proprietary software, relying on intellectual property laws to protect their investments. They actively enforce licensing agreements and digital rights management (DRM) to control use, modification, and distribution, ensuring commercial sustainability."
     },
     {
-      "id": "freedom_imperative_conflict",
-      "question": "How would the 'freedom_imperative_reading' alter the structural properties of this constraint?",
-      "resolution_mechanism": "If the 'freedom_imperative_reading' were adopted, it would fundamentally challenge the legitimacy of proprietary software, likely leading to a reclassification of this constraint as a Snare due to its denial of user control.",
-      "impact": "A shift to the 'freedom_imperative_reading' would increase perceived extractiveness and suppression from the user's perspective, potentially reclassifying this constraint as a Snare.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Conflict with the 'freedom_imperative_reading' of the software_control_legitimacy kernel."
+      "name": "software_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide capital to software companies, expecting returns protected by the legal framework of software as property. Their investment decisions are directly influenced by the strength of intellectual property enforcement."
     },
     {
-      "id": "commons_reading_implications",
-      "question": "What would be the structural implications if the 'commons_reading' of software control were adopted?",
-      "resolution_mechanism": "The 'commons_reading' would likely lead to a re-evaluation of default licensing, favoring more permissive models and potentially reducing the scope and enforcement of proprietary restrictions, shifting this constraint towards a Rope or Scaffold.",
-      "impact": "Adoption of the 'commons_reading' would reduce extractiveness and suppression, potentially reclassifying this constraint as a Rope or Scaffold, emphasizing collective management over individual property rights.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Implications of the 'commons_reading' of the software_control_legitimacy kernel."
+      "name": "users_seeking_modification",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Desire to modify, adapt, or understand the software they use, but are legally and technically restricted by proprietary licenses and DRM. They bear the cost of limited control and dependence on vendors for updates and fixes."
+    },
+    {
+      "name": "open_source_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Promote software freedom and the commons, viewing proprietary restrictions as ethically problematic. They are structurally disadvantaged by the property rights framework, as their model of shared development is directly opposed to exclusive control."
+    },
+    {
+      "name": "competitors_seeking_interoperability",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seek to create compatible or interoperable software, but face legal barriers and technical hurdles due to proprietary control. They bear the cost of reverse engineering or licensing fees, which limits competition and innovation."
+    },
+    {
+      "name": "legal_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Provide the legal framework (copyright, patent, trade secret law) that defines software as property and enables its enforcement. They adjudicate disputes and evolve the interpretation of these rights."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates investment and innovation in software development by granting creators exclusive rights, thereby incentivizing the creation of complex and valuable software that might not otherwise be produced.",
+    "transfer_function": "Transfers economic value from users and potential competitors to software creators and investors, in exchange for access to proprietary software products.",
+    "absent_voices": "Users who believe they have a fundamental right to control their computing devices, and developers who advocate for a software commons, are often marginalized in policy discussions dominated by intellectual property holders. Their arguments for freedom and shared resources are systematically excluded from the property rights framing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the concept of software as a property right vanished overnight, the commercial software industry as we know it would collapse. Investment models would shift dramatically, open-source development would likely accelerate, and the entire digital economy would reorganize around new models of creation and distribution.",
+    "founding_problem": "Software development requires significant investment, but software is easily copied and distributed. Without legal protection, creators and investors feared they would have no way to recoup costs or profit, leading to underinvestment in software innovation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Software vendors and investors consistently attest that the problem of protecting investment in easily replicable digital goods remains live. Independent economic analyses, while sometimes critical of the extent of protection, generally corroborate the need for some form of intellectual property to incentivize complex software development."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1980,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1990,
       "value": 0.45
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
+      "metric": "base_extractiveness",
+      "time_point": 2000,
       "value": 0.5
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1980,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
       "value": 0.6
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1980,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2010,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint models the view that software control is a legitimate property right, granting creators authority to restrict use, modification, and distribution. This perspective emphasizes protecting investment and enabling commercial sustainability. It is one reading of the broader 'software_control_legitimacy' kernel, which is contested by alternative views emphasizing user freedom, pragmatic openness, or a commons approach. This reading positions software vendors and investors as beneficiaries, while users, independent developers, and FOSS advocates bear the costs of restricted access and modification.",
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it provides a genuine coordination function (enabling commercial software development and investment) but also involves asymmetric extraction. Software vendors benefit from protected revenue streams, while users and developers face restrictions on use and modification. The extractiveness (0.45) reflects the cost of licensing and restricted freedoms. Suppression (0.6) is moderate, as legal frameworks and technical measures actively enforce these rights, limiting alternatives like unauthorized copying or modification. Theater ratio is low (0.1) as the enforcement is genuinely functional in protecting commercial interests.",
-    "perspectival_gap": "Software vendors and investors (agenda_setters/beneficiaries) experience this as a necessary framework for innovation and commercial viability. Users and independent developers (payers/victims) experience it as a restriction on their ability to use, modify, and share software, leading to higher costs and reduced flexibility. FOSS advocates view it as fundamentally unjust, denying the collaborative nature of software development.",
-    "directionality_logic": "Software vendors and investors are clear beneficiaries (low d) as the constraint directly protects their commercial models. Users and independent developers are targets (high d) as they bear the costs of licensing and restrictions. FOSS advocates are also targets, as their core principles are directly opposed by this property-rights framework. The constraint subsidizes commercial development by extracting from users' and developers' freedoms.",
-    "mandatrophy_analysis": "The constraint's mandate (protecting investment, enabling commercial sustainability) is still live, but its status is contested. Critics argue that the problem of 'unfettered copying' has been over-solved, and the current regime primarily serves rent extraction rather than genuine innovation protection. The classification as Tangled Rope acknowledges both the coordination function and the extractive asymmetry, preventing mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination).",
-    "kernel_context": "This constraint is the 'property_rights_reading' of the 'software_control_legitimacy' kernel. Sibling readings include the 'freedom_imperative_reading' (software as fundamental user freedom), the 'pragmatic_openness_reading' (open source as a superior development methodology), and the 'commons_reading' (software as shared digital infrastructure)."
+    "narrative_context": "This constraint models the 'software as property right' reading of software control legitimacy. It asserts that creators have legitimate authority to restrict use, modification, and distribution to protect investment and enable commercial sustainability. This reading is foundational to the proprietary software industry and is actively enforced through legal and technical means. The constraint is presented as a tangled rope, acknowledging a genuine coordination function (incentivizing software creation) alongside significant extraction from users and competitors.",
+    "key_agents": [
+      "software_vendors: Primary agenda-setter and beneficiary (institutional/mobile)",
+      "software_investors: Primary beneficiary (powerful/arbitrage)",
+      "users_seeking_modification: Primary payer (powerless/constrained)",
+      "open_source_advocates: Organized payer (organized/identity_locked)",
+      "competitors_seeking_interoperability: Payer (moderate/constrained)",
+      "legal_systems: Institutional agenda-setter (institutional/analytical)"
+    ],
+    "logic_rationale": "The extractiveness (0.55) reflects the cost borne by users and competitors for access and restricted use, which is substantial but not absolute. Suppression (0.65) is high due to active legal enforcement (copyright, patent, DRM) and the lack of viable alternatives for many essential software functions. The theater ratio is low (0.1) because the enforcement mechanisms are genuinely functional in protecting proprietary interests, not merely performative. The claimed type is 'tangled_rope' because it genuinely solves a coordination problem (incentivizing creation) but does so with significant asymmetric extraction.",
+    "perspectival_gap": "Software vendors and investors perceive this as a legitimate and necessary framework for innovation (a rope or even a mountain of economic reality). Users and open-source advocates, however, experience it as an extractive snare that limits their freedom and access. The engine's per-seat classification will reflect this divergence based on their declared power, exit options, and roles.",
+    "directionality_logic": "Software vendors and investors are clear beneficiaries, as the constraint directly protects their business model and returns on investment. Users, open-source advocates, and competitors are payers, bearing the costs of restricted access, lack of control, and suppressed alternatives. Legal systems act as agenda-setters, providing the framework and enforcement mechanisms.",
+    "mandatrophy_analysis": "The constraint's mandate (incentivizing software creation) is still live, but its implementation through strong property rights is contested. The high extractiveness and suppression suggest that while the founding problem persists, the solution has evolved into a mechanism that disproportionately benefits the agenda-setters, potentially beyond what is necessary for coordination. This prevents mislabeling it as a pure snare by acknowledging the initial coordination function, but flags the potential for rent-seeking."
   },
+  "omegas": [
+    {
+      "id": "property_rights_vs_freedom_imperative",
+      "question": "Is software control primarily a property right, or is user freedom over computing a more fundamental imperative?",
+      "resolution_mechanism": "Philosophical and ethical debate, potentially leading to shifts in legal frameworks if a consensus for user freedom gains sufficient political traction.",
+      "impact": "If user freedom is prioritized, the constraint's legitimacy would be undermined, leading to reclassification towards a snare or piton from the user's perspective, and a push for open-source or public-domain software models.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Fundamental conceptual conflict over the nature of software and digital rights."
+    },
+    {
+      "id": "property_rights_vs_commons_governance",
+      "question": "Is software best governed by exclusive property rights, or as a digital commons requiring collective management?",
+      "resolution_mechanism": "Empirical comparison of innovation rates and societal benefits under different governance models (proprietary vs. open source vs. hybrid commons models), alongside policy choices regarding public funding and licensing.",
+      "impact": "If a commons model proves more beneficial, the property rights framework would be seen as an inefficient or extractive mechanism, leading to policy shifts and reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Debate over optimal governance model for software."
+    },
+    {
+      "id": "investment_incentive_necessity",
+      "question": "To what extent are strong property rights truly necessary to incentivize software investment, versus other models like public funding, patronage, or service-based revenue?",
+      "resolution_mechanism": "Economic studies comparing investment and innovation in sectors with varying IP protections, and analysis of successful open-source business models.",
+      "impact": "If strong IP is found to be less critical than claimed, the 'coordination function' justification for extraction would weaken, pushing the constraint closer to a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical necessity of strong IP for software investment."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "software_control_legitimacy__freedom_imperative_reading",
-      "software_control_legitimacy__pragmatic_openness_reading",
-      "software_control_legitimacy__commons_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of four readings of the 'software_control_legitimacy' kernel, each representing a distinct structural claim about software control. They are linked to capture their interdependencies and contestation."
+      "digital_rights_management_enforcement",
+      "software_patent_litigation"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -131,24 +232,24 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "software_control_legitimacy__freedom_imperative_reading",
+        "sibling_id": "freedom_imperative_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "software_control_legitimacy__pragmatic_openness_reading",
+        "sibling_id": "pragmatic_openness_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "software_control_legitimacy__commons_reading",
-        "relation": "influences"
+        "sibling_id": "commons_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "software_is_intellectual_property",
+        "atom": "intellectual_property_is_natural_right",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       },
       {
         "atom": "exclusive_rights_incentivize_innovation",
@@ -157,23 +258,24 @@
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "classical_intellectual_property_regime",
+    "reference_frame": "classical_intellectual_property_framework",
     "drift_state": {
-      "moment": "contemporary_digital_commons_discourse",
-      "direction": "authority_erosion",
+      "moment": "contemporary_digital_era",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

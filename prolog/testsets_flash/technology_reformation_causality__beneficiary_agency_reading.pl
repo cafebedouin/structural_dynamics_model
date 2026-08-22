@@ -41,6 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -53,6 +56,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -63,23 +67,22 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: technology_reformation_causality__beneficiary_agency_reading
- *   human_readable: Reformation-Era Printing Press as Strategic Tool for Authority Bypass
+ *   human_readable: Reformation-Era Printing Press as Authority Bypass Tool (Beneficiary Agency Reading)
  *   domain: history_of_technology/religious_history/media_studies
  *
  * SUMMARY:
- *   This constraint models the strategic deployment of printing technology by
- *   Protestant reformers and commercial printers during the early Reformation
- *   (c. 1517-1537). It posits that printing was a tool, not an autonomous
- *   cause, used by a coalition to bypass and undermine the Catholic Church's
- *   authority over information dissemination. The relationship between
- *   reformers and printers is characterized by mutual benefit and extraction,
- *   while the Church experiences suppression and loss of control.
+ *   This constraint story analyzes the role of the printing press in the
+ *   Reformation from the 'beneficiary agency' perspective. It argues that the
+ *   printing press was not a deterministic force, but a tool strategically
+ *   deployed by Protestant reformers and commercial printers to bypass the
+ *   established authority of the Catholic Church. The constraint is the
+ *   emergent, actively enforced arrangement of information dissemination that
+ *   extracted control from the Church while coordinating the efforts of
+ *   reformers and printers. The claimed type is 'tangled_rope' because it
+ *   served a genuine coordination function for the reformers and printers,
+ *   but simultaneously extracted authority and resources from the Church and
+ *   marginalized traditional scribal guilds.
  *
- * KEY AGENTS:
- *   - protestant_reformers: Agenda setter (institutional/generational) — strategically deployed printing to disseminate new doctrines.
- *   - printers_publishers: Beneficiary/Payer (organized/biographical) — profited from printing reformist texts, but also invested in the technology and faced risks.
- *   - catholic_church_hierarchy: Victim (institutional/generational) — lost control over information flow, faced challenges to authority.
- *   - traditional_scribal_guilds: Victim (organized/biographical) — saw their craft and economic model disrupted by printing.
  */
 
 /* ==========================================================================
@@ -98,47 +101,87 @@ narrative_ontology:constraint_metric(technology_reformation_causality__beneficia
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(technology_reformation_causality__beneficiary_agency_reading, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(technology_reformation_causality__beneficiary_agency_reading, resistance, 0.8).
+narrative_ontology:constraint_metric(technology_reformation_causality__beneficiary_agency_reading, resistance, 0.75).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(technology_reformation_causality__beneficiary_agency_reading, tangled_rope).
-narrative_ontology:human_readable(technology_reformation_causality__beneficiary_agency_reading, "Reformation-Era Printing Press as Strategic Tool for Authority Bypass").
+narrative_ontology:human_readable(technology_reformation_causality__beneficiary_agency_reading, "Reformation-Era Printing Press as Authority Bypass Tool (Beneficiary Agency Reading)").
 narrative_ontology:topic_domain(technology_reformation_causality__beneficiary_agency_reading, "history_of_technology/religious_history/media_studies").
 
 domain_priors:requires_active_enforcement(technology_reformation_causality__beneficiary_agency_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(technology_reformation_causality__beneficiary_agency_reading, '7a59bafc-2575-4545-a9ea-a5d7976a6ac2').
-narrative_ontology:cs_kernel_codification('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', implicit).
-narrative_ontology:cs_authority_grounding('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', practice).
-narrative_ontology:cs_reading_relation('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', technology_reformation_causality__technological_determinism_reading, forecloses).
-narrative_ontology:cs_reading_relation('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', technology_reformation_causality__co_constitution_reading, coexists_with).
-narrative_ontology:cs_axiom('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', foundational, technology_is_a_tool).
+narrative_ontology:cs_story_uid(technology_reformation_causality__beneficiary_agency_reading, 'e0aa17f7-31e4-4dac-b23f-679b4f2af0ce').
+narrative_ontology:cs_kernel_codification('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', implicit).
+narrative_ontology:cs_authority_grounding('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', distributed).
+narrative_ontology:cs_reading_relation('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', technology_reformation_causality__technological_determinism_reading, forecloses).
+narrative_ontology:cs_reading_relation('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', technology_reformation_causality__co_constitution_reading, coexists_with).
+narrative_ontology:cs_axiom('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', foundational, technology_is_a_tool).
 narrative_ontology:cs_axiom_status(technology_is_a_tool, holdable).
-narrative_ontology:cs_axiom_grounding('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', technology_is_a_tool, empirically_contingent).
-narrative_ontology:cs_axiom('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', foundational, human_agency_drives_adoption).
-narrative_ontology:cs_axiom_status(human_agency_drives_adoption, holdable).
-narrative_ontology:cs_axiom_grounding('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', human_agency_drives_adoption, empirically_contingent).
-narrative_ontology:cs_reference_frame('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', actor_driven_technological_adoption).
-narrative_ontology:cs_drift_state('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', contemporary_historical_scholarship, gap(revival_pressure, substantial, true)).
-narrative_ontology:cs_created_at('7a59bafc-2575-4545-a9ea-a5d7976a6ac2', '').
+narrative_ontology:cs_axiom_grounding('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', technology_is_a_tool, conventional).
+narrative_ontology:cs_axiom('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', foundational, human_agency_drives_change).
+narrative_ontology:cs_axiom_status(human_agency_drives_change, holdable).
+narrative_ontology:cs_axiom_grounding('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', human_agency_drives_change, deontological).
+narrative_ontology:cs_reference_frame('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', agent_driven_technological_adoption).
+narrative_ontology:cs_drift_state('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', contemporary_historical_discourse, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('e0aa17f7-31e4-4dac-b23f-679b4f2af0ce', '').
 narrative_ontology:cs_kernel_id(technology_reformation_causality__beneficiary_agency_reading, technology_reformation_causality).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(technology_reformation_causality__beneficiary_agency_reading, protestant_reformers).
-narrative_ontology:constraint_beneficiary(technology_reformation_causality__beneficiary_agency_reading, printers_publishers).
+narrative_ontology:constraint_beneficiary(technology_reformation_causality__beneficiary_agency_reading, printers_and_publishers).
 narrative_ontology:constraint_victim(technology_reformation_causality__beneficiary_agency_reading, catholic_church_hierarchy).
 narrative_ontology:constraint_victim(technology_reformation_causality__beneficiary_agency_reading, traditional_scribal_guilds).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Actively used the printing press to disseminate their theological arguments, vernacular Bibles, and critiques of the Catholic Church, bypassing traditional channels of authority and control. They benefited from the speed and reach of the press, but were constrained by censorship and the need for printer cooperation.
+narrative_ontology:constraint_stakeholder(technology_reformation_causality__beneficiary_agency_reading, protestant_reformers, beneficiary,
+    organized, generational, constrained, regional).
+
+% Saw significant economic opportunity in printing Reformation texts, which were in high demand. They formed strategic alliances with reformers, providing the means of production in exchange for profit and protection. Their mobility allowed them to evade some local censorship.
+narrative_ontology:constraint_stakeholder(technology_reformation_causality__beneficiary_agency_reading, printers_and_publishers, beneficiary,
+    moderate, biographical, mobile, local).
+
+% Suffered a loss of control over information dissemination and theological interpretation. Their traditional authority was challenged by the rapid spread of dissenting ideas. They attempted to suppress printing through censorship and excommunication, but with limited success against the decentralized network.
+narrative_ontology:constraint_stakeholder(technology_reformation_causality__beneficiary_agency_reading, catholic_church_hierarchy, payer,
+    institutional, civilizational, constrained, global).
+
+% Experienced a collapse in demand for their services as printed books became cheaper and more widely available. Their craft, once central to knowledge production, was rapidly marginalized, leading to economic ruin for many.
+narrative_ontology:constraint_stakeholder(technology_reformation_causality__beneficiary_agency_reading, traditional_scribal_guilds, payer,
+    powerless, immediate, trapped, local).
+
+% While the press enabled vernacular texts, a large portion of the population remained illiterate and could not directly access the printed material. They were influenced by public readings and sermons, but not direct consumers of the printed word, and thus excluded from direct participation in the print-driven discourse.
+narrative_ontology:constraint_stakeholder(technology_reformation_causality__beneficiary_agency_reading, illiterate_populace, excluded,
+    powerless, biographical, trapped, local).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Enabled a decentralized, rapid, and wide-scale dissemination of reformist ideas and texts, coordinating the efforts of reformers and printers to bypass the centralized control of the Catholic Church.
+% TRANSFER_FUNCTION: Transferred control over information flow and theological interpretation from the Catholic Church hierarchy to a coalition of Protestant reformers and commercial printers, generating profit for printers and ideological reach for reformers.
+% ABSENT_VOICES: The illiterate populace, whose access to information remained mediated despite the printing revolution, and those who lacked the resources or political will to engage with the new medium, were effectively excluded from shaping the discourse.
+% DISAPPEARANCE_RATIONALE: If the strategic deployment of the printing press by reformers had not occurred, the Reformation would have unfolded very differently, likely remaining a localized academic dispute rather than a mass movement. The power dynamics of 16th-century Europe would have been fundamentally altered.
+% FOUNDING_PROBLEM: The Catholic Church held a near-monopoly on information dissemination and theological interpretation, making it difficult for dissenting voices to reach a wide audience or challenge established doctrines effectively.
+% FOUNDING_PROBLEM_CORROBORATION: Historians of the Reformation and media studies scholars widely corroborate that the problem of centralized information control was effectively broken by the strategic use of the printing press, even if new forms of control later emerged. The original problem of a single, unchallengeable information gatekeeper is no longer live.
+narrative_ontology:disappearance_verdict(technology_reformation_causality__beneficiary_agency_reading, world_rearranges).
+narrative_ontology:founding_problem_status(technology_reformation_causality__beneficiary_agency_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(technology_reformation_causality__beneficiary_agency_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(technology_reformation_causality__beneficiary_agency_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(technology_reformation_causality__beneficiary_agency_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(technology_reformation_causality__beneficiary_agency_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -158,16 +201,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it involves a genuine coordination function (mass dissemination of ideas) coupled with asymmetric extraction. Reformers and printers coordinated to produce and distribute texts, benefiting from increased reach and profit. Simultaneously, this structure actively extracted authority and revenue from the Catholic Church and disrupted traditional scribal economies. Active enforcement was required by the Church to suppress printing, and by reformers/printers to evade censorship. The rising extractiveness and suppression over the interval reflect the escalating conflict and the increasing effectiveness of the printing coalition in challenging the established order.
+ *   The extractiveness (0.65) reflects the significant loss of control and revenue for the Catholic Church and scribal guilds. Suppression (0.7) is high because the Church actively, though ultimately unsuccessfully, tried to suppress the spread of printed reformist texts through censorship and other means. The 'tangled_rope' classification is appropriate as there was a clear coordination function (dissemination of new ideas) coupled with asymmetric extraction (from the Church). The low theater ratio (0.1) indicates that the activities of reformers and printers were highly functional, not performative.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the Protestant reformers and printers, the printing press was a powerful tool for liberation and progress, enabling the spread of truth. From the perspective of the Catholic Church, it was a dangerous instrument of heresy and rebellion, actively undermining a divinely ordained order. The engine's classification will reflect this divergence, showing a beneficial 'rope' or 'scaffold' for the coalition, and a 'snare' for the Church.
+ *   From the perspective of the reformers and printers, the printing press was a powerful tool for liberation and progress, enabling a new form of coordination. From the perspective of the Catholic Church, it was a destructive force undermining centuries of established order. This story explicitly adopts the beneficiary agency reading, focusing on the strategic deployment and its extractive consequences for the established powers.
  *
  * DIRECTIONALITY LOGIC:
- *   Protestant reformers and printers are beneficiaries (d near 0.0) as they gain influence, followers, and profit by leveraging the press. The Catholic Church hierarchy and traditional scribal guilds are victims (d near 1.0) as they suffer loss of authority, control, and economic viability. The constraint's operation directly subsidizes the former by extracting from the latter.
+ *   Protestant reformers and printers were clear beneficiaries, gaining reach and profit respectively. The Catholic Church hierarchy and traditional scribal guilds were the primary victims, losing authority, members, and livelihoods. The constraint's operation directly subsidized the reformers' movement and the printers' businesses by enabling a new, more efficient, and less controllable information channel.
  *
- * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling the strategic use of technology as a purely 'natural' or 'inevitable' development (a Mountain). By identifying beneficiaries and victims, and the active enforcement required, it highlights the constructed and extractive nature of the power shift, rather than attributing it solely to technological determinism. The 'tangled_rope' aspect captures the dual function of coordination and extraction inherent in the reformer-printer coalition's actions.
  */
 
 /* ==========================================================================
@@ -175,50 +216,49 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint accurately framed as the ''beneficiary agency'' reading of the technology-Reformation causality kernel?',
-    'Comparative historical analysis of primary sources focusing on actor intentionality and strategic deployment of printing technology, contrasting with evidence for technological inevitability or co-evolutionary dynamics.',
-    'If this reading is confirmed, it strengthens the argument for human agency in technological adoption and the contingent nature of historical outcomes. If a sibling reading (e.g., technological determinism) is found more accurate, the constraint''s classification would shift to reflect technology as a more autonomous force, potentially reducing the ''tangled_rope'' aspect and increasing ''mountain'' or ''rope'' elements for the technology itself.',
+    causality_vs_tool,
+    'Was the printing press a primary cause of the Reformation, or merely a tool strategically utilized by agents?',
+    'Comparative historical analysis of other regions/periods with similar technological shifts but different social outcomes, or counterfactual history exploring the Reformation without the press.',
+    'If the press was a primary cause, the constraint''s ''emerges_naturally'' aspect would be higher, shifting it towards a mountain or rope. If it was purely a tool, the agency of reformers and printers remains central, reinforcing the ''tangled_rope'' classification.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Ambiguity in framing the role of technology in historical change.').
+narrative_ontology:omega_variable(causality_vs_tool, conceptual, 'Ambiguity regarding the printing press''s causal role in the Reformation.').
 
 omega_variable(
-    extraction_from_authority_bypass,
-    'To what extent did the ''extraction'' from the Catholic Church hierarchy directly translate into ''gain'' for reformers and printers, beyond merely enabling their goals?',
-    'Quantitative analysis of wealth transfer, power shifts, and market share gains by reformers and printers directly attributable to the weakening of Church authority, rather than independent growth.',
-    'If the gains were primarily a direct result of the Church''s loss, the ''tangled_rope'' classification is robust. If gains were largely independent, the constraint might lean more towards a ''scaffold'' (for technology) or ''rope'' (for coordination among reformers/printers) with less direct extraction from the Church.',
+    long_term_power_shift,
+    'Did the shift in information control truly empower the populace, or did it merely transfer power to new elites (e.g., secular rulers, new religious authorities)?',
+    'Longitudinal studies of literacy rates, access to education, and political participation across different social strata in post-Reformation Europe.',
+    'If power merely shifted to new elites, the ''extractiveness'' of the constraint might be re-evaluated as higher, with new beneficiaries emerging. If genuine popular empowerment occurred, the coordination function would be emphasized.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(extraction_from_authority_bypass, empirical, 'Measuring the directness and magnitude of extraction from the old authority structure.').
+narrative_ontology:omega_variable(long_term_power_shift, empirical, 'Whether the printing press led to genuine popular empowerment or merely a transfer of elite power.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(technology_reformation_causality__beneficiary_agency_reading, 1517, 1537).
+narrative_ontology:interval(technology_reformation_causality__beneficiary_agency_reading, 1517, 1560).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(tech_tr_t0, technology_reformation_causality__beneficiary_agency_reading, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(tech_tr_t10, technology_reformation_causality__beneficiary_agency_reading, theater_ratio, 10, 0.12).
-narrative_ontology:measurement(tech_tr_t20, technology_reformation_causality__beneficiary_agency_reading, theater_ratio, 20, 0.1).
-
 % Extraction over time
-narrative_ontology:measurement(tech_be_t0, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(tech_be_t10, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(tech_be_t20, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 20, 0.65).
+narrative_ontology:measurement(tech_be_t1517, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 1517, 0.4).
+narrative_ontology:measurement(tech_be_t1525, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 1525, 0.55).
+narrative_ontology:measurement(tech_be_t1535, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 1535, 0.62).
+narrative_ontology:measurement(tech_be_t1545, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 1545, 0.65).
+narrative_ontology:measurement(tech_be_t1560, technology_reformation_causality__beneficiary_agency_reading, base_extractiveness, 1560, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tech_su_t0, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 0, 0.5).
-narrative_ontology:measurement(tech_su_t10, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 10, 0.6).
-narrative_ontology:measurement(tech_su_t20, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement(tech_su_t1517, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 1517, 0.5).
+narrative_ontology:measurement(tech_su_t1525, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 1525, 0.6).
+narrative_ontology:measurement(tech_su_t1535, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 1535, 0.68).
+narrative_ontology:measurement(tech_su_t1545, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 1545, 0.7).
+narrative_ontology:measurement(tech_su_t1560, technology_reformation_causality__beneficiary_agency_reading, suppression_requirement, 1560, 0.7).
 
 
 /* ==========================================================================
@@ -228,7 +268,7 @@ narrative_ontology:measurement(tech_su_t20, technology_reformation_causality__be
 narrative_ontology:coordination_type(technology_reformation_causality__beneficiary_agency_reading, information_standard).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'technology_reformation_causality' kernel, focusing on the strategic agency of reformers and printers. Sibling readings include 'technological_determinism_reading' and 'co_constitution_reading', which offer alternative causal accounts of the Reformation's relationship with printing technology.
+% This constraint is one reading of the 'technology_reformation_causality' kernel. Other readings include 'technological_determinism_reading' and 'co_constitution_reading'.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

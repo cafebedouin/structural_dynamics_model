@@ -4,27 +4,93 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "297bc268-3a20-4674-8409-eff5b5df372c"
+    "story_uid": "bbde93f4-d817-4d5a-8c63-e190c7b47e0b"
   },
   "base_properties": {
     "extractiveness": 0.85,
     "suppression": 0.7,
-    "theater_ratio": 0.2,
+    "theater_ratio": 0.4,
     "accessibility_collapse": 0.6,
-    "resistance": 0.4,
+    "resistance": 0.5,
     "claimed_type": "snare",
     "human_readable": "AI Alignment: Catastrophic Safety Control Reading",
     "topic_domain": "ai_governance/technology_ethics/risk_assessment",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "ai_safety_researchers",
-      "long_term_risk_foundations"
+      "longtermist_foundations"
     ],
     "victims": [
       "present_day_ai_harm_mitigation_efforts",
-      "ai_ethics_researchers",
-      "marginalized_communities"
+      "global_south_ai_development"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_safety_researchers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Focus on preventing existential risks from advanced AI, often prioritizing speculative future harms over present-day issues. They define the problem space and direct significant funding towards their research agenda, framing it as the paramount concern for humanity's future."
+    },
+    {
+      "name": "longtermist_foundations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide substantial funding and institutional support to AI safety research, aligning with the focus on long-term, catastrophic risks. They benefit from the narrative that their chosen problem is the most critical, justifying their resource allocation and influence."
+    },
+    {
+      "name": "present_day_ai_harm_mitigation_efforts",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for addressing current harms like bias, discrimination, and privacy violations in AI. They find resources and attention diverted away from their work due to the prioritization of speculative future risks, bearing the cost of a narrowed focus in AI ethics."
+    },
+    {
+      "name": "global_south_ai_development",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Seeks to leverage AI for development and address local challenges, but faces constraints from a global AI governance agenda dominated by catastrophic risk. Their needs for accessible, equitable AI development are sidelined, and they bear the cost of a risk framework that doesn't prioritize their context."
+    },
+    {
+      "name": "humanity_future_generations",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The ultimate 'victim' or 'beneficiary' in the safety control narrative, depending on the outcome. This reading frames the constraint as protecting their existence, even if they cannot directly participate or consent to the prioritization."
+    },
+    {
+      "name": "ai_ethics_researchers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Focus on social and ethical implications of AI, often clashing with the safety control narrative's prioritization. They are often excluded from high-level policy discussions and funding streams dominated by the catastrophic risk framing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a global research and policy agenda around the singular goal of preventing catastrophic loss of control over advanced AI systems, aiming to align AI with human values.",
+    "transfer_function": "Transfers significant financial and intellectual resources from broader AI ethics and present-day harm mitigation efforts towards speculative, long-term AI safety research and governance initiatives.",
+    "absent_voices": "AI ethics researchers focused on present-day harms, and communities in the Global South seeking equitable AI development, are often marginalized. They would argue for a more balanced approach that addresses immediate, tangible harms alongside speculative future risks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this commitment vanished, the AI research and governance landscape would immediately reorient. Funding would shift towards a broader range of AI ethics and development issues, and the focus on existential risk would diminish, leading to a reorganization of priorities and resource allocation.",
+    "founding_problem": "The perceived existential threat of superintelligent AI systems developing beyond human control, leading to catastrophic or unrecoverable outcomes for humanity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Prominent AI researchers and public intellectuals outside the immediate safety community attest to the theoretical possibility of such risks, though the probability and imminence are highly debated. The UN and various national governments have also acknowledged the need for AI safety, albeit with varying degrees of emphasis on catastrophic control vs. broader ethical concerns."
   },
   "interval": {
     "start": 0,
@@ -84,129 +150,119 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.23
+      "value": 0.33
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.22
+      "value": 0.36
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.21
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.2
+      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'safety control' reading of AI alignment, which prioritizes preventing catastrophic loss of control over advanced AI systems. It frames AI alignment primarily as an existential risk problem, directing significant resources and attention towards speculative future harms. This reading is often presented as the most urgent and fundamental aspect of AI alignment, leading to the deprioritization and underfunding of other concerns, such as present-day AI harms and social justice issues. The constraint operates as a Snare, extracting resources and attention from immediate problems to focus on a distant, hypothetical threat, sustained by the institutional power of its beneficiaries.",
-    "key_agents": [
-      "ai_safety_researchers: Agenda-setter (institutional/identity_locked) — defines the problem and directs resources.",
-      "long_term_risk_foundations: Beneficiary (institutional/arbitrage) — funds and benefits from this framing.",
-      "present_day_ai_harm_mitigation_efforts: Payer (moderate/constrained) — sees resources diverted.",
-      "ai_ethics_researchers: Payer (organized/constrained) — marginalized in discourse and funding.",
-      "marginalized_communities: Victim (powerless/trapped) — directly suffer from deprioritized present-day harms.",
-      "general_public: Excluded (powerless/constrained) — largely unaware of the internal contestation."
-    ],
-    "logic_rationale": "The extractiveness (0.85) is high because this reading effectively reallocates substantial resources and attention away from other critical AI issues. Suppression (0.7) is also high, as alternative framings and research agendas are actively marginalized or dismissed as less urgent. The theater ratio (0.2) is relatively low, indicating that the core activity (research into control problems) is genuinely pursued, but the framing itself serves an extractive function. Accessibility collapse (0.6) is moderate, as alternative approaches are not entirely impossible but are significantly harder to pursue within the dominant discourse. Resistance (0.4) is present from ethics researchers and harm mitigation efforts, but not strong enough to fundamentally alter the constraint.",
-    "perspectival_gap": "From the perspective of AI safety researchers and long-term risk foundations, this constraint is a necessary Rope or even a Mountain, coordinating humanity's efforts to survive. From the perspective of AI ethics researchers and marginalized communities, it is a Snare, diverting resources from urgent, tangible problems to speculative ones, thereby perpetuating existing inequalities and harms. The engine's classification as Snare reflects the latter, more extractive reality.",
-    "directionality_logic": "AI safety researchers and long-term risk foundations are clear beneficiaries, as their agenda and funding are prioritized (low d). Present-day AI harm mitigation efforts, AI ethics researchers, and marginalized communities are victims/payers, bearing the cost of deprioritization and resource diversion (high d). The general public is largely excluded from the debate, passively accepting the dominant narrative.",
-    "mandatrophy_analysis": "This constraint is a Snare, not a Rope, because its primary function has shifted from genuine coordination around a universally accepted problem to an extractive mechanism that benefits specific research agendas and institutions by framing a speculative future problem as paramount. The 'mandate' of existential safety is used to justify the extraction of resources from other, more immediate, and empirically verifiable problems. The classification prevents mislabeling this as coordination by highlighting the identifiable victims and the active suppression of alternative framings.",
-    "kernel_context": "This constraint is the 'safety_control_reading' of the 'ai_alignment_commitment' kernel. This reading defines AI alignment as preventing catastrophic loss of control over advanced AI systems. Sibling readings include the 'ethics_justice_reading' (preventing social bias and present-day harm) and the 'integrated_reading' (simultaneous attention to control and justice problems)."
+    "narrative_context": "This constraint represents the 'safety control' reading of AI alignment, which defines alignment primarily as preventing catastrophic loss of control over advanced AI systems. This reading prioritizes speculative future harms, often at the expense of addressing present-day ethical issues. It frames humanity as a collective victim of potential future AI misbehavior, justifying significant resource allocation to a specific research agenda. The constraint operates as a snare, as it extracts resources and attention from alternative AI governance approaches by suppressing their perceived urgency and legitimacy.",
+    "logic_rationale": "The high extractiveness (0.85) reflects the diversion of substantial resources (funding, talent, policy attention) towards a narrow, speculative problem space, often at the expense of more immediate and tangible AI harms. Suppression (0.70) is evident in the marginalization of alternative ethical frameworks and the framing of catastrophic risk as the 'only' problem that matters. The theater ratio (0.40) indicates that while some safety work is genuinely functional, a significant portion serves to maintain the narrative of existential threat, thereby justifying the continued flow of resources and influence to the proponents of this reading. Accessibility collapse (0.60) is moderate, as alternative approaches are not entirely eliminated but are significantly constrained in their ability to gain traction or resources. Resistance (0.50) is present from those advocating for broader AI ethics, but it is often outmatched by the institutional power of the safety control proponents.",
+    "directionality_logic": "AI safety researchers and longtermist foundations are clear beneficiaries, as the constraint directs resources and influence to their agenda. Present-day AI harm mitigation efforts and global South AI development are payers, as their priorities are sidelined and resources diverted. Humanity (including future generations) is framed as the ultimate beneficiary of this safety work, though this is a non-agent beneficiary. AI ethics researchers are excluded, as their perspectives are often not integrated into the dominant discourse.",
+    "perspectival_gap": "From the perspective of AI safety researchers, this constraint is a necessary rope or even a mountain, representing an unavoidable imperative to protect humanity. From the perspective of present-day harm mitigation efforts, it functions as a snare, diverting critical resources from urgent, tangible problems. The engine's classification as a snare reflects the structural asymmetry and extraction inherent in this prioritization."
   },
   "omegas": [
     {
-      "id": "speculative_vs_empirical_harm",
-      "question": "Is the prioritization of speculative future harms over empirically verifiable present-day harms justified by the magnitude and probability of the former?",
-      "resolution_mechanism": "Development of robust, independently verifiable methodologies for quantifying and comparing existential risks with present-day systemic harms, or a shift in societal values regarding intergenerational equity and risk tolerance.",
-      "impact": "If speculative harms are found to be systematically over-prioritized, the constraint's extractiveness and suppression would be re-evaluated as higher, potentially shifting its classification further towards a Snare or even a Piton if the 'threat' becomes purely theatrical. If justified, the constraint might lean more towards a Tangled Rope.",
-      "confidence": "medium",
+      "id": "probability_of_catastrophe",
+      "question": "What is the actual probability and timeline of catastrophic loss of control over advanced AI systems, as opposed to the perceived or asserted probability?",
+      "resolution_mechanism": "Development of robust, independently verifiable methodologies for forecasting AI capabilities and failure modes, coupled with empirical observation of AI system behavior over time.",
+      "impact": "If the probability is significantly lower than asserted, the justification for high extractiveness and suppression would weaken, potentially reclassifying the constraint towards a piton or even a rope if the coordination function is genuinely low-cost. If higher, it would reinforce the snare classification.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "The epistemic status of prioritizing speculative future harms."
+      "description": "Uncertainty regarding the actual likelihood of AI-induced existential catastrophe."
     },
     {
       "id": "resource_allocation_efficiency",
-      "question": "Are the resources allocated to catastrophic safety control research genuinely efficient in mitigating the claimed risks, or are they primarily serving to sustain the research ecosystem and its beneficiaries?",
-      "resolution_mechanism": "Independent audits of research outcomes, cost-benefit analyses comparing different risk mitigation strategies, and evaluation of the 'return on investment' for long-term AI safety funding.",
-      "impact": "If resources are found to be inefficiently used or primarily self-serving, the theater_ratio would increase, and the extractiveness would be seen as more direct rent-seeking, reinforcing the Snare classification. If highly efficient, it might suggest a more legitimate (though still extractive) coordination function.",
+      "question": "Is the current allocation of resources to catastrophic AI safety research the most effective way to mitigate overall AI risk, including present-day harms?",
+      "resolution_mechanism": "Comprehensive, independent cost-benefit analysis comparing the impact of investments in catastrophic safety vs. present-day harm mitigation (e.g., bias detection, privacy-preserving AI, equitable access).",
+      "impact": "If current allocation is inefficient, it would strengthen the argument for extraction and potentially shift the constraint towards a piton (if the original mandate is still valid but poorly executed) or a snare (if the inefficiency serves to maintain a specific group's influence).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Efficiency of resource allocation in AI safety research."
+      "description": "Efficiency of resource allocation in addressing AI risks."
     },
     {
-      "id": "framing_under_determination",
-      "question": "Is the 'safety_control_reading' the only defensible framing of AI alignment, or is it a choice that serves specific interests?",
-      "resolution_mechanism": "A shift in the dominant discourse to explicitly acknowledge the contestation of the 'alignment' definition, and the inclusion of diverse voices (e.g., from the Global South, humanities, social sciences) in defining AI risk and alignment goals.",
-      "impact": "If this framing is acknowledged as a choice, it would expose the underlying power dynamics and make the constraint's extractive nature more transparent, potentially leading to a re-evaluation of its legitimacy and a shift towards a more balanced resource allocation. If it remains unacknowledged, the Snare classification persists, but the mechanism of its persistence (ideological capture) becomes clearer.",
+      "id": "framing_underdetermination",
+      "question": "Is the 'safety control' framing of AI alignment the only defensible framing, or does it represent a choice that marginalizes equally valid alternative framings?",
+      "resolution_mechanism": "Analysis of the historical and sociological development of AI ethics discourse, identifying power dynamics and rhetorical strategies that led to the dominance of the safety control narrative. This would involve examining how alternative framings (like 'ethics and justice') were suppressed or reframed.",
+      "impact": "If the framing is shown to be a contingent choice rather than a necessary truth, it would highlight the constructed nature of the constraint and strengthen its classification as a snare, emphasizing the role of narrative in justifying extraction and suppression. It would also validate the 'ethics_justice_reading' and 'integrated_reading' as equally legitimate alternatives.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "The choice of framing for AI alignment and its implications for resource allocation."
+      "description": "The choice of framing for AI alignment and its impact on resource allocation and policy."
     }
   ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "ai_ethics_guidelines_development",
-      "ai_regulatory_frameworks"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'ai_alignment_commitment' kernel. This 'safety_control_reading' prioritizes existential risk, while the 'ethics_justice_reading' focuses on present-day harms, and the 'integrated_reading' attempts to combine both. Each reading constitutes a distinct constraint with different beneficiaries, victims, and classifications."
+      "ai_governance_funding_priorities",
+      "ai_ethics_research_agendas"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "extraction",
+    "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_alignment_commitment__ethics_justice_reading",
-        "relation": "influences"
+        "sibling_id": "ethics_justice_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "ai_alignment_commitment__integrated_reading",
-        "relation": "influences"
+        "sibling_id": "integrated_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "existential_risk_is_paramount",
+        "atom": "catastrophic_loss_of_control_is_existential_risk",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "control_problem_is_solvable",
+        "atom": "future_generations_have_moral_priority",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "humanity_survival_imperative",
+    "reference_frame": "ai_existential_risk_paradigm",
     "drift_state": {
-      "moment": "contemporary_ai_development_era",
-      "direction": "practice_drift",
+      "moment": "contemporary_ai_ethics_discourse",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

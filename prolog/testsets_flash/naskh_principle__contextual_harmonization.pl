@@ -39,9 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,25 +70,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: naskh_principle__contextual_harmonization
- *   human_readable: Naskh Principle: Contextual Harmonization Reading
+ *   human_readable: Contextual Harmonization of Quranic Verses
  *   domain: islamic_jurisprudence/quranic_hermeneutics/legal_theory
  *
  * SUMMARY:
  *   This constraint represents the 'contextual harmonization' reading of the
- *   Naskh (abrogation) principle in Islamic jurisprudence. It posits that all
- *   Quranic verses retain their validity within their specific revelatory and
+ *   Naskh (abrogation) principle in Islamic jurisprudence. It asserts that
+ *   all Quranic verses retain validity within their specific revelatory and
  *   situational contexts, and apparent contradictions are resolved by
- *   specifying the context of application rather than by declaring later
- *   verses to supersede earlier ones chronologically. This approach
- *   emphasizes the holistic coherence of the Quran and the adaptability of
- *   Islamic law.
+ *   understanding these contexts rather than by chronologically superseding
+ *   earlier verses with later ones. This approach prioritizes the holistic
+ *   coherence of the Quran and its adaptability to diverse circumstances,
+ *   benefiting theologians and modernist jurists by offering interpretive
+ *   flexibility, but potentially reducing legal predictability for
+ *   traditionalist jurists.
  *
- * KEY AGENTS:
- *   - theologians: Primary beneficiary (institutional/analytical) — benefits from preserving theological coherence and avoiding perceived divine inconsistency.
- *   - legal_scholars: Primary beneficiary (institutional/analytical) — benefits from a richer interpretive framework, but also a victim of increased complexity and reduced definitive authority.
- *   - muslim_community: Beneficiary (organized) — benefits from a more adaptable and coherent legal tradition, but may experience reduced legal predictability.
- *   - legal_predictability: Primary victim (non-agent) — suffers from the increased complexity of interpretation, making definitive rulings harder.
- *   - jurist_authority: Primary victim (institutional) — their ability to issue universally binding and unambiguous rulings is challenged by the perpetual validity of all verses.
  */
 
 /* ==========================================================================
@@ -92,59 +93,98 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(naskh_principle__contextual_harmonization, 0.3).
-domain_priors:suppression_score(naskh_principle__contextual_harmonization, 0.4).
+domain_priors:suppression_score(naskh_principle__contextual_harmonization, 0.2).
 domain_priors:theater_ratio(naskh_principle__contextual_harmonization, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, extractiveness, 0.3).
-narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, suppression_requirement, 0.4).
+narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, suppression_requirement, 0.2).
 narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, accessibility_collapse, 0.2).
+narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, accessibility_collapse, 0.4).
 narrative_ontology:constraint_metric(naskh_principle__contextual_harmonization, resistance, 0.3).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(naskh_principle__contextual_harmonization, rope).
-narrative_ontology:human_readable(naskh_principle__contextual_harmonization, "Naskh Principle: Contextual Harmonization Reading").
+narrative_ontology:human_readable(naskh_principle__contextual_harmonization, "Contextual Harmonization of Quranic Verses").
 narrative_ontology:topic_domain(naskh_principle__contextual_harmonization, "islamic_jurisprudence/quranic_hermeneutics/legal_theory").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(naskh_principle__contextual_harmonization, 'dd4b42c3-47df-4b32-a7f0-4ad53353684f').
-narrative_ontology:cs_kernel_codification('dd4b42c3-47df-4b32-a7f0-4ad53353684f', fixed_text).
-narrative_ontology:cs_authority_grounding('dd4b42c3-47df-4b32-a7f0-4ad53353684f', lineage).
-narrative_ontology:cs_interpretation_layer_present('dd4b42c3-47df-4b32-a7f0-4ad53353684f').
-narrative_ontology:cs_reading_relation('dd4b42c3-47df-4b32-a7f0-4ad53353684f', naskh_principle__classical_abrogation, coexists_with).
-narrative_ontology:cs_reading_relation('dd4b42c3-47df-4b32-a7f0-4ad53353684f', naskh_principle__progressive_restriction, coexists_with).
-narrative_ontology:cs_axiom('dd4b42c3-47df-4b32-a7f0-4ad53353684f', foundational, all_quranic_verses_retain_validity).
-narrative_ontology:cs_axiom_status(all_quranic_verses_retain_validity, holdable).
-narrative_ontology:cs_axiom_grounding('dd4b42c3-47df-4b32-a7f0-4ad53353684f', all_quranic_verses_retain_validity, deontological).
-narrative_ontology:cs_axiom('dd4b42c3-47df-4b32-a7f0-4ad53353684f', foundational, contextual_specification_resolves_apparent_contradictions).
-narrative_ontology:cs_axiom_status(contextual_specification_resolves_apparent_contradictions, holdable).
-narrative_ontology:cs_axiom_grounding('dd4b42c3-47df-4b32-a7f0-4ad53353684f', contextual_specification_resolves_apparent_contradictions, conventional).
-narrative_ontology:cs_reference_frame('dd4b42c3-47df-4b32-a7f0-4ad53353684f', holistic_quranic_coherence).
-narrative_ontology:cs_drift_state('dd4b42c3-47df-4b32-a7f0-4ad53353684f', contemporary_islamic_jurisprudence, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('dd4b42c3-47df-4b32-a7f0-4ad53353684f', '').
+narrative_ontology:cs_story_uid(naskh_principle__contextual_harmonization, '268cfe94-e8e0-4ee6-9ca3-31ac644b5944').
+narrative_ontology:cs_kernel_codification('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', fixed_text).
+narrative_ontology:cs_authority_grounding('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', lineage).
+narrative_ontology:cs_interpretation_layer_present('268cfe94-e8e0-4ee6-9ca3-31ac644b5944').
+narrative_ontology:cs_reading_relation('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', naskh_principle__classical_abrogation, coexists_with).
+narrative_ontology:cs_reading_relation('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', naskh_principle__progressive_restriction, coexists_with).
+narrative_ontology:cs_axiom('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', foundational, all_quranic_verses_eternally_valid).
+narrative_ontology:cs_axiom_status(all_quranic_verses_eternally_valid, holdable).
+narrative_ontology:cs_axiom_grounding('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', all_quranic_verses_eternally_valid, deontological).
+narrative_ontology:cs_axiom('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', foundational, contextual_specificity_resolves_apparent_contradictions).
+narrative_ontology:cs_axiom_status(contextual_specificity_resolves_apparent_contradictions, holdable).
+narrative_ontology:cs_axiom_grounding('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', contextual_specificity_resolves_apparent_contradictions, conventional).
+narrative_ontology:cs_reference_frame('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', holistic_quranic_coherence).
+narrative_ontology:cs_drift_state('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', contemporary_islamic_scholarship, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('268cfe94-e8e0-4ee6-9ca3-31ac644b5944', '').
 narrative_ontology:cs_kernel_id(naskh_principle__contextual_harmonization, naskh_principle).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(naskh_principle__contextual_harmonization, theologians).
-narrative_ontology:constraint_beneficiary(naskh_principle__contextual_harmonization, legal_scholars).
-narrative_ontology:constraint_beneficiary(naskh_principle__contextual_harmonization, muslim_community).
+narrative_ontology:constraint_beneficiary(naskh_principle__contextual_harmonization, modernist_jurists).
+narrative_ontology:constraint_beneficiary(naskh_principle__contextual_harmonization, muslim_laity).
 narrative_ontology:constraint_victim(naskh_principle__contextual_harmonization, legal_predictability).
-narrative_ontology:constraint_victim(naskh_principle__contextual_harmonization, jurist_authority).
-narrative_ontology:constraint_vindicates(naskh_principle__contextual_harmonization, quranic_inerrancy).
-narrative_ontology:constraint_vindicates(naskh_principle__contextual_harmonization, divine_wisdom_in_revelation).
+narrative_ontology:constraint_victim(naskh_principle__contextual_harmonization, traditionalist_jurists).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from a hermeneutic that preserves the divine origin and eternal relevance of all Quranic verses, allowing for a more nuanced and coherent theological understanding without discarding any part of the text. This approach supports the idea of the Quran as a unified, timeless guide.
+narrative_ontology:constraint_stakeholder(naskh_principle__contextual_harmonization, theologians, beneficiary,
+    institutional, generational, mobile, global).
+
+% Find this approach highly adaptable to contemporary challenges, allowing for flexible legal reasoning that considers the spirit and context of revelation rather than rigid, chronologically determined rulings. It enables them to address new ethical and social issues within an Islamic framework.
+narrative_ontology:constraint_stakeholder(naskh_principle__contextual_harmonization, modernist_jurists, beneficiary,
+    organized, biographical, mobile, global).
+
+% Benefit from a more accessible and less contradictory understanding of the Quran, which can appear more consistent and relevant to their daily lives. It reduces the perceived tension between different verses and fosters a sense of the Quran's enduring guidance.
+narrative_ontology:constraint_stakeholder(naskh_principle__contextual_harmonization, muslim_laity, beneficiary,
+    moderate, biographical, constrained, global).
+
+% Suffers from the increased complexity of legal rulings, as every verse's application becomes highly dependent on specific contexts and conditions. This can lead to uncertainty in legal interpretation and application, making it harder to derive clear, universally applicable laws.
+narrative_ontology:constraint_stakeholder(naskh_principle__contextual_harmonization, legal_predictability, payer,
+    powerless, immediate, trapped, universal).
+narrative_ontology:stakeholder_non_agent(naskh_principle__contextual_harmonization, legal_predictability).
+
+% Bear the cost of diminished authority in definitively closing legal questions. Their established methodologies, often relying on chronological abrogation, are challenged, requiring them to engage in more extensive and potentially less conclusive contextual analysis. This can be seen as undermining their scholarly tradition.
+narrative_ontology:constraint_stakeholder(naskh_principle__contextual_harmonization, traditionalist_jurists, payer,
+    institutional, generational, constrained, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the interpretation of the Quran by providing a framework to reconcile seemingly contradictory verses, ensuring the entire text remains a source of guidance by emphasizing contextual understanding.
+% TRANSFER_FUNCTION: Transfers interpretive flexibility and theological coherence to jurists and theologians, at the cost of some legal certainty and the simplification offered by abrogation, which is borne by the legal system and traditionalist scholars.
+% ABSENT_VOICES: Strict literalists or those seeking absolute legal clarity might object, arguing that this approach introduces too much ambiguity and subjectivity into divine law. They are often marginalized in interpretive debates that prioritize theological coherence over strict legal codification.
+% DISAPPEARANCE_RATIONALE: If this principle vanished, the field of Quranic hermeneutics would revert to more rigid methods like classical abrogation, leading to the effective invalidation of many verses and a significant shift in how Islamic law is derived and applied. Theological coherence would be challenged, and legal debates would intensify around which verses are 'active' and which are 'abrogated'.
+% FOUNDING_PROBLEM: The existence of Quranic verses that appear to contradict each other, leading to interpretive dilemmas and challenges to the Quran's internal consistency and divine origin.
+% FOUNDING_PROBLEM_CORROBORATION: Theologians and modernist jurists universally attest to the ongoing challenge of apparent contradictions and the need for a coherent interpretive framework. Even traditionalist scholars acknowledge the interpretive problem, though they propose different solutions.
+narrative_ontology:disappearance_verdict(naskh_principle__contextual_harmonization, world_rearranges).
+narrative_ontology:founding_problem_status(naskh_principle__contextual_harmonization, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(naskh_principle__contextual_harmonization, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(naskh_principle__contextual_harmonization, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(naskh_principle__contextual_harmonization, 'none', 1).
+narrative_ontology:epsilon_provenance(naskh_principle__contextual_harmonization, 0.3, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,16 +199,14 @@ narrative_ontology:story_seed(naskh_principle__contextual_harmonization, 'none',
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a 'rope' because its primary function is to coordinate theological and legal interpretation towards a coherent understanding of the Quran, benefiting the Muslim community and scholars by preserving the integrity of the divine text. Extraction (0.3) is moderate, reflecting the increased intellectual labor and interpretive complexity required, which can be seen as a 'cost' rather than pure extraction. Suppression (0.4) is also moderate, as this reading is maintained through scholarly consensus and intellectual argument rather than overt coercion; alternative readings are debated, not suppressed. Theater ratio is low (0.1) as the interpretive work is genuine and functional. Accessibility collapse is low (0.2) because alternative hermeneutic approaches (like classical abrogation) remain intellectually accessible and debated.
+ *   The extractiveness is low (0.3) because this principle primarily offers a method of interpretation rather than imposing direct costs. The 'victims' (legal predictability, traditionalist jurists) bear costs in terms of increased complexity and reduced definitive authority, but these are diffuse and conceptual rather than direct material extraction. Suppression is low (0.2) as this is an interpretive methodology, not a coercive enforcement mechanism; its persistence relies on intellectual persuasion and theological appeal rather than active suppression of alternatives. Theater ratio is low (0.1) as the principle is genuinely applied for its stated purpose of harmonization.
  *
  * PERSPECTIVAL GAP:
- *   Theologians and legal scholars, while benefiting from the interpretive richness, also bear the cost of increased complexity and reduced definitive authority. For the Muslim community, the benefit of theological coherence might be offset by a perceived lack of clear legal guidance in some areas. The engine's per-seat classification will likely show a more 'tangled' experience for jurists who prioritize definitive rulings, while theologians may experience it as a pure 'rope' for preserving divine wisdom.
+ *   From the perspective of theologians and modernist jurists, this is a beneficial interpretive 'rope' that solves a genuine problem of textual coherence. From the perspective of traditionalist jurists, it introduces ambiguity and undermines established legal methodologies, making it feel more like a 'tangled rope' or even a 'snare' on their authority. The engine's per-seat classification will capture this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Theologians and legal scholars are beneficiaries as this reading supports their intellectual enterprise and preserves the Quran's theological coherence (low d). The Muslim community benefits from this coherence and adaptability. Legal predictability and jurist authority are victims because the approach inherently introduces more interpretive nuance and less definitive closure (high d). The constraint does not actively enforce its interpretation through coercive means, but rather through scholarly discourse and intellectual persuasion.
+ *   Theologians and modernist jurists are clear beneficiaries, gaining interpretive tools that enhance the Quran's perceived coherence and adaptability. Legal predictability is a conceptual 'payer' as its clarity is reduced. Traditionalist jurists are also 'payers' as their established methods are challenged. The constraint subsidizes theological coherence and adaptability while extracting from legal simplicity and traditional interpretive authority.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading prevents the 'mandatrophy' of earlier Quranic verses by ensuring their continued relevance and legal potential, thus avoiding the problem of 'dead' verses. It resolves the tension between divine consistency and legal evolution by emphasizing contextual application over chronological supersession. The constraint's persistence is tied to the ongoing need for a coherent and adaptable Islamic legal framework, rather than an outdated mandate.
  */
 
 /* ==========================================================================
@@ -176,73 +214,68 @@ narrative_ontology:story_seed(naskh_principle__contextual_harmonization, 'none',
    ========================================================================== */
 
 omega_variable(
-    contextual_vs_chronological_primacy,
-    'Is the contextual harmonization reading of the Naskh principle genuinely reflective of Quranic hermeneutics, or is it a post-hoc rationalization to avoid the theological implications of classical abrogation?',
-    'Historical analysis of early Islamic legal thought, linguistic analysis of Quranic Arabic usage, and comparative theological studies of divine speech in other traditions.',
-    'If a post-hoc rationalization, the constraint''s claimed ''rope'' nature for theological coherence would be revealed as a ''tangled_rope'' that extracts from legal predictability to preserve a specific theological stance. If genuine, it reinforces the ''rope'' classification.',
+    interpretive_subjectivity_risk,
+    'Does the emphasis on contextual specification introduce excessive interpretive subjectivity, leading to inconsistent legal rulings?',
+    'Empirical study of legal fatwas and judicial decisions over time, comparing consistency across different jurists applying this principle versus those applying classical abrogation.',
+    'If subjectivity is high and leads to significant inconsistency, the effective ''extraction'' from legal predictability would be higher, potentially shifting the classification towards a ''tangled_rope'' for the legal system. If consistency is maintained, the ''rope'' classification holds.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(contextual_vs_chronological_primacy, conceptual, 'Ambiguity between genuine hermeneutic principle and theological rationalization.').
+narrative_ontology:omega_variable(interpretive_subjectivity_risk, empirical, 'Assesses the practical impact of contextual harmonization on legal consistency.').
 
 omega_variable(
-    legal_predictability_cost,
-    'To what extent does the contextual harmonization reading, by maintaining the legal potential of all verses, genuinely impede legal predictability and the ability of jurists to issue definitive rulings?',
-    'Empirical study of legal fatwas and judicial decisions in jurisdictions where this reading is dominant, measuring the frequency of conflicting interpretations and the stability of legal precedent.',
-    'If the impediment to predictability is severe, the ''victim'' status of legal predictability is amplified, pushing the constraint towards a ''tangled_rope'' for jurists. If minimal, the ''rope'' classification holds, emphasizing its coordination function.',
+    jurist_authority_erosion,
+    'To what extent does this reading genuinely erode the authority of traditionalist jurists, or does it merely require them to adapt their methodologies?',
+    'Sociological study of juristic communities, examining shifts in influence, publication trends, and institutional recognition for scholars adhering to different Naskh readings.',
+    'If the erosion of traditionalist authority is severe and leads to their marginalization, the ''extraction'' from this group would be higher, potentially pushing their seat classification towards a ''snare''. If adaptation is common and authority is retained, the current ''payer'' role is accurate.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(legal_predictability_cost, empirical, 'Measuring the actual cost to legal predictability from contextual harmonization.').
+narrative_ontology:omega_variable(jurist_authority_erosion, empirical, 'Examines the real-world impact on juristic authority.').
 
 omega_variable(
-    naskh_principle_kernel_reading,
-    'This constraint is the ''contextual_harmonization'' reading of the ''naskh_principle'' kernel. What would change if the ''classical_abrogation'' or ''progressive_restriction'' sibling readings were adopted?',
-    'Conceptual analysis of the logical implications of each reading for legal methodology and theological coherence.',
-    'Adopting ''classical_abrogation'' would simplify legal rulings by invalidating earlier verses, but introduce theological challenges regarding divine consistency. Adopting ''progressive_restriction'' would emphasize divine pedagogy and gradualism, but still imply a hierarchy of verses different from pure contextual application. This reading (contextual_harmonization) maintains the validity of all verses, requiring more complex interpretive effort but preserving theological coherence.',
+    naskh_framing_ambiguity,
+    'Is this constraint a genuine interpretive principle, or a rhetorical framing to avoid difficult textual contradictions?',
+    'Conceptual analysis of the historical development of Naskh theories, tracing the motivations and arguments for each reading, and assessing their internal logical coherence and consistency with broader Islamic epistemology.',
+    'If primarily rhetorical, the ''theater_ratio'' would be higher, and the ''extractiveness'' from legal predictability would be re-evaluated as a more direct cost of maintaining a theological narrative, potentially shifting the overall classification towards a ''tangled_rope'' or ''snare''.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(naskh_principle_kernel_reading, conceptual, 'Impact of adopting sibling readings of the Naskh principle kernel.').
+narrative_ontology:omega_variable(naskh_framing_ambiguity, conceptual, 'Distinguishes genuine interpretive principle from rhetorical framing.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(naskh_principle__contextual_harmonization, 0, 30).
+narrative_ontology:interval(naskh_principle__contextual_harmonization, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(nask_tr_t0, naskh_principle__contextual_harmonization, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(nask_tr_t10, naskh_principle__contextual_harmonization, theater_ratio, 10, 0.1).
-narrative_ontology:measurement(nask_tr_t20, naskh_principle__contextual_harmonization, theater_ratio, 20, 0.1).
-narrative_ontology:measurement(nask_tr_t30, naskh_principle__contextual_harmonization, theater_ratio, 30, 0.1).
-
 % Extraction over time
 narrative_ontology:measurement(nask_be_t0, naskh_principle__contextual_harmonization, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(nask_be_t10, naskh_principle__contextual_harmonization, base_extractiveness, 10, 0.28).
-narrative_ontology:measurement(nask_be_t20, naskh_principle__contextual_harmonization, base_extractiveness, 20, 0.3).
-narrative_ontology:measurement(nask_be_t30, naskh_principle__contextual_harmonization, base_extractiveness, 30, 0.3).
+narrative_ontology:measurement(nask_be_t25, naskh_principle__contextual_harmonization, base_extractiveness, 25, 0.28).
+narrative_ontology:measurement(nask_be_t50, naskh_principle__contextual_harmonization, base_extractiveness, 50, 0.3).
+narrative_ontology:measurement(nask_be_t75, naskh_principle__contextual_harmonization, base_extractiveness, 75, 0.29).
+narrative_ontology:measurement(nask_be_t100, naskh_principle__contextual_harmonization, base_extractiveness, 100, 0.3).
 
 % Suppression requirement over time
-narrative_ontology:measurement(nask_su_t0, naskh_principle__contextual_harmonization, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(nask_su_t10, naskh_principle__contextual_harmonization, suppression_requirement, 10, 0.38).
-narrative_ontology:measurement(nask_su_t20, naskh_principle__contextual_harmonization, suppression_requirement, 20, 0.4).
-narrative_ontology:measurement(nask_su_t30, naskh_principle__contextual_harmonization, suppression_requirement, 30, 0.4).
+narrative_ontology:measurement(nask_su_t0, naskh_principle__contextual_harmonization, suppression_requirement, 0, 0.15).
+narrative_ontology:measurement(nask_su_t25, naskh_principle__contextual_harmonization, suppression_requirement, 25, 0.18).
+narrative_ontology:measurement(nask_su_t50, naskh_principle__contextual_harmonization, suppression_requirement, 50, 0.2).
+narrative_ontology:measurement(nask_su_t75, naskh_principle__contextual_harmonization, suppression_requirement, 75, 0.19).
+narrative_ontology:measurement(nask_su_t100, naskh_principle__contextual_harmonization, suppression_requirement, 100, 0.2).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(naskh_principle__contextual_harmonization, information_standard).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'naskh_principle' kernel. Sibling readings include 'classical_abrogation' and 'progressive_restriction', which offer different hermeneutic approaches to apparent contradictions in the Quran.
+narrative_ontology:coordination_type(naskh_principle__contextual_harmonization, identity_coordination).
+narrative_ontology:affects_constraint(naskh_principle__contextual_harmonization, islamic_legal_codification).
+narrative_ontology:affects_constraint(naskh_principle__contextual_harmonization, quranic_exegesis_methodology).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

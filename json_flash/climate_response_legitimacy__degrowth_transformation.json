@@ -4,113 +4,112 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "460b40f2-de4b-45ab-aaa2-e37b2fb8a54d"
+    "story_uid": "cef7258b-bcc0-42ef-9630-3828de3770b0"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
+    "extractiveness": 0.85,
+    "suppression": 0.9,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.85,
-    "claimed_type": "tangled_rope",
+    "accessibility_collapse": 0.7,
+    "resistance": 0.95,
+    "claimed_type": "snare",
     "human_readable": "Degrowth Transformation for Climate Legitimacy",
     "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "future_generations",
-      "global_south_nations",
-      "ecosystems"
+      "global_south_nations"
     ],
     "victims": [
-      "wealthy_nations_current_generation",
+      "current_developed_economy_citizens",
       "fossil_fuel_industries",
-      "growth_dependent_corporations"
+      "growth_dependent_political_parties"
     ]
   },
   "omegas": [
     {
-      "id": "degrowth_feasibility_ambiguity",
-      "question": "Is a degrowth transformation politically and economically feasible within democratic frameworks, or does it require authoritarian enforcement?",
-      "resolution_mechanism": "Empirical observation of successful implementation in a democratic context, or detailed modeling demonstrating a viable transition pathway without coercive state power.",
-      "impact": "If feasible, the constraint is a high-friction Rope; if it requires authoritarianism, it becomes a Snare for the current generation, with higher suppression and extractiveness.",
+      "id": "degrowth_political_feasibility",
+      "question": "Is the structural economic transformation required by degrowth politically feasible in wealthy nations without authoritarian coercion?",
+      "resolution_mechanism": "Empirical observation of successful, large-scale democratic implementation of degrowth policies (e.g., universal basic services, working time reduction, democratic firm ownership) in a developed economy.",
+      "impact": "If feasible, the constraint moves closer to a 'rope' for current generations, as the benefits of a stable climate are achieved through democratic means. If infeasible, the constraint remains a 'snare' or 'tangled_rope' for current generations, requiring high suppression or leading to policy failure.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Uncertainty regarding the political and economic feasibility of degrowth without authoritarian measures."
+      "description": "Uncertainty regarding the political viability of degrowth policies."
     },
     {
-      "id": "intergenerational_cost_benefit_distribution",
-      "question": "How are the costs and benefits of degrowth transformation distributed across generations and global regions, and is this distribution perceived as just?",
-      "resolution_mechanism": "Comprehensive intergenerational accounting and deliberative democratic processes to establish perceived fairness of burden-sharing.",
-      "impact": "If the distribution is perceived as unjust by the current generation, resistance will increase, potentially leading to the constraint's collapse or requiring higher suppression. If just, it could become a more stable Rope.",
+      "id": "degrowth_efficacy_vs_technological_mitigation",
+      "question": "Does degrowth transformation offer a more legitimate and effective climate response than technological mitigation, or is it an ideological preference?",
+      "resolution_mechanism": "Comparative modeling and empirical validation of climate outcomes and societal well-being under degrowth vs. high-tech mitigation pathways, accounting for social and ecological externalities.",
+      "impact": "If degrowth is demonstrably more effective and legitimate, its claims to be the 'required' response are strengthened. If technological mitigation proves equally or more effective with less social disruption, the degrowth reading's 'snare' classification for current generations might be seen as an unnecessary cost.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "Ambiguity in the perceived justice of intergenerational and inter-regional cost-benefit distribution."
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the comparative efficacy and legitimacy of degrowth vs. technological climate solutions."
     },
     {
-      "id": "climate_response_kernel_reading",
-      "question": "Is this constraint a legitimate reading of the 'climate_response_legitimacy' kernel, or do alternative readings (mitigation_priority, adaptation_priority) offer equally or more legitimate pathways?",
-      "resolution_mechanism": "Resolution depends on the normative framework adopted: whether intergenerational equity and ecological limits are prioritized over economic growth and technological solutions.",
-      "impact": "If alternative readings are deemed more legitimate, this constraint would be reclassified as a Snare for the current generation, as its demands would be seen as unjustified extraction rather than necessary transformation.",
-      "confidence": "high",
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a valid reading of 'legitimate climate response' or an overreach of a specific ideological position?",
+      "resolution_mechanism": "Analysis of the foundational normative claims and their consistency with broader ethical frameworks for intergenerational justice and global equity, as well as empirical evidence of climate system dynamics.",
+      "impact": "If validated, this reading strengthens the argument for structural transformation. If deemed an overreach, its legitimacy as a 'required' response is weakened, potentially reclassifying it as a 'snare' driven by ideological imposition rather than climate necessity.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "This constraint is the 'degrowth_transformation' reading of the 'climate_response_legitimacy' kernel, emphasizing structural economic change over technological mitigation or adaptation."
+      "description": "This constraint is the 'degrowth_transformation' reading of the 'climate_response_legitimacy' kernel."
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
       "value": 0.7
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.75
+      "value": 0.9
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.1
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.1
+      "value": 0.11
     },
     {
       "metric": "theater_ratio",
@@ -123,21 +122,20 @@
     "end": 15
   },
   "commentary": {
-    "narrative_context": "This constraint posits that a legitimate response to climate change necessitates a fundamental shift away from the growth imperative in wealthy nations. This involves structural economic transformations such as universal basic services, reduced working hours, and democratic ownership of firms. It is a specific reading of the broader 'climate_response_legitimacy' kernel, emphasizing ecological limits and intergenerational equity over continuous economic expansion or purely technological solutions. The constraint implies significant costs for the current generation in developed economies, balanced by long-term benefits for future generations and global ecosystems.",
+    "narrative_context": "This constraint represents the 'degrowth transformation' reading of what constitutes a legitimate climate response. It posits that wealthy nations must dismantle their growth imperative through structural economic changes (e.g., universal basic services, reduced working hours, democratic firm ownership) to achieve a just and effective climate solution. This approach implies significant extraction from current generations in developed economies, who are asked to accept reduced material consumption and altered economic structures, for the benefit of future generations and global equity. The high extractiveness and suppression reflect the profound societal changes and resistance such a transformation would entail.",
     "key_agents": [
-      "wealthy_nations_current_generation: Primary target (powerful/constrained) — bears extraction through reduced consumption and economic restructuring.",
-      "future_generations: Primary beneficiary (powerless/trapped) — benefits from a stable climate and reduced ecological debt.",
-      "global_south_nations: Secondary beneficiary (organized/constrained) — benefits from reduced climate impacts and potential for more equitable resource distribution.",
-      "fossil_fuel_industries: Primary victim (institutional/constrained) — faces existential threat from the required transformation.",
-      "growth_dependent_corporations: Secondary victim (institutional/constrained) — faces fundamental restructuring or obsolescence.",
-      "degrowth_advocates: Agenda setter (organized/mobile) — promotes and articulates the necessity of this transformation.",
-      "political_elites_wealthy_nations: Agenda setter (institutional/constrained) — would be responsible for implementing policies, facing high resistance."
+      "current_developed_economy_citizens: Primary target (powerless/constrained) — bears extraction through reduced consumption and economic restructuring.",
+      "future_generations: Primary beneficiary (powerless/analytical) — benefits from a stable climate and reduced ecological debt.",
+      "global_south_nations: Secondary beneficiary (organized/constrained) — benefits from reduced historical emissions and a more equitable global economic system.",
+      "fossil_fuel_industries: Primary victim (institutional/trapped) — targeted for dismantling.",
+      "growth_dependent_political_parties: Primary victim (institutional/constrained) — faces existential threat from degrowth policies.",
+      "degrowth_advocates: Agenda setter (organized/mobile) — promotes and designs the structural transformation."
     ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely aims to coordinate a collective action problem (climate change) but involves significant, asymmetric extraction from the current generation in wealthy nations and specific industries. Extractiveness is high (0.65) due to the required reduction in material consumption and economic restructuring. Suppression is also high (0.75) because the transformation would face immense resistance from entrenched interests and requires active enforcement to overcome the status quo bias. Theater ratio is low (0.1) as the proposed actions are direct and functional, not performative. Accessibility collapse is moderate (0.4) as alternatives (technological mitigation, adaptation) are actively suppressed by this reading's framing, but not entirely eliminated. Resistance is very high (0.85) due to the fundamental challenge to existing economic paradigms and power structures.",
-    "perspectival_gap": "The current generation in wealthy nations would experience this as a Snare, as it demands significant sacrifices and restricts economic freedoms. Future generations and global South nations would perceive it as a Rope, delivering essential coordination and justice. Degrowth advocates see it as a necessary, albeit difficult, Rope. The engine's per-seat classification will reflect these divergences based on the declared roles and positional atoms.",
-    "directionality_logic": "Future generations and global South nations are clear beneficiaries (d near 0.0) as they gain a more stable climate and equitable resource distribution. The current generation in wealthy nations, fossil fuel industries, and growth-dependent corporations are targets (d near 1.0) as they bear the direct costs of economic restructuring and reduced consumption. Degrowth advocates are agenda setters, aiming to implement the constraint, thus benefiting from its adoption (d near 0.0-0.2). Political elites in wealthy nations, if they were to implement it, would be in a complex position, acting as agenda setters but also facing immense resistance and potential political costs (d near 0.5-0.7).",
-    "mandatrophy_analysis": "This constraint is far from mandatrophy; its mandate is urgent and growing. The challenge is its political feasibility and the willingness of the current generation to accept the required extraction. The classification as Tangled Rope prevents mislabeling it as a pure Snare (ignoring the genuine coordination function for future generations) or a pure Rope (ignoring the asymmetric extraction from the current generation).",
-    "kernel_context": "This constraint is the 'degrowth_transformation' reading of the 'climate_response_legitimacy' kernel. It argues that a legitimate climate response must dismantle the growth imperative in wealthy nations through structural economic transformation. This contrasts with the 'mitigation_priority' reading (focus on technological innovation and carbon pricing to decouple growth from emissions) and the 'adaptation_priority' reading (focus on building resilience to accepted warming impacts)."
+    "logic_rationale": "The high extractiveness (0.85) reflects the substantial economic and lifestyle changes demanded from current generations in wealthy nations. Suppression (0.90) is high due to the anticipated resistance from entrenched economic interests and the need for strong political will or even coercive measures to implement such radical transformation. Theater ratio is low (0.10) because the proposed changes are direct and functional, not performative. Accessibility collapse (0.70) is significant as the degrowth paradigm seeks to close off growth-oriented alternatives. Resistance (0.95) is extremely high, reflecting the fundamental challenge to existing economic and political systems.",
+    "perspectival_gap": "From the perspective of degrowth advocates, this is a necessary and legitimate 'rope' for collective survival, with current generations making sacrifices for a greater good. From the perspective of current developed economy citizens, it is a 'snare' that imposes severe costs and limits on their economic freedom and aspirations. Future generations, if they could speak, would likely see it as a 'rope' or even a 'mountain' of necessity.",
+    "directionality_logic": "Current developed economy citizens are targets (high d) as they bear the direct costs of economic restructuring and reduced consumption. Future generations and global south nations are beneficiaries (low d) as they gain from a more stable climate and equitable resource distribution. Fossil fuel industries and growth-dependent political parties are clear targets (high d) as their existence is directly challenged by the degrowth imperative. Degrowth advocates are agenda-setters, pushing for the constraint's implementation.",
+    "mandatrophy_analysis": "This constraint is a 'snare' because its coordination story (climate stability, intergenerational justice) is inseparable from its high, asymmetric extraction from current generations in wealthy nations. It requires active enforcement and suppresses alternatives (continued growth, technological-only solutions). The mandatrophy analysis here focuses on whether the 'mandate' of climate response is genuinely served by this specific, highly extractive approach, or if the extraction itself becomes the primary feature, with climate legitimacy as a cover. The high resistance and suppression suggest that the 'mandate' is deeply contested by those who bear the costs.",
+    "kernel_context": "This constraint is the 'degrowth_transformation' reading of the 'climate_response_legitimacy' kernel. It argues that a legitimate climate response necessitates a fundamental shift away from economic growth in wealthy nations. Sibling readings include 'mitigation_priority' (focus on technological solutions and carbon pricing) and 'adaptation_priority' (focus on resilience and coping with impacts)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
@@ -147,52 +145,131 @@
       "climate_response_legitimacy__mitigation_priority",
       "climate_response_legitimacy__adaptation_priority"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'climate_response_legitimacy' kernel, each representing a distinct approach to climate action. They are linked to highlight the contested nature of legitimate climate policy."
+    "dual_formulation_note": "This constraint is one reading of the 'climate_response_legitimacy' kernel. Its high extractiveness and suppression differentiate it from the less disruptive 'mitigation_priority' and 'adaptation_priority' readings, which have lower ε values and different stakeholder impacts."
+  },
+  "stakeholders": [
+    {
+      "name": "current_developed_economy_citizens",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Expected to bear the direct costs of degrowth policies, including reduced material consumption, altered work patterns, and economic restructuring. Their ability to resist is limited by the perceived urgency of climate action and the structural nature of the proposed changes."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Benefit from a more stable climate, reduced ecological degradation, and a potentially more equitable global system, without being dependent on unproven future technologies. They have no direct agency in the current policy debate."
+    },
+    {
+      "name": "global_south_nations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from reduced historical emissions from wealthy nations and a shift towards a more equitable global economic system that prioritizes well-being over endless growth. They are often victims of climate change impacts and historical exploitation."
+    },
+    {
+      "name": "fossil_fuel_industries",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face existential threat from degrowth policies that aim to drastically reduce energy demand and transition away from fossil fuels. Their assets would be stranded, and their business model rendered obsolete. They would exert immense political and economic pressure to resist."
+    },
+    {
+      "name": "growth_dependent_political_parties",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Their political platforms and legitimacy are often tied to promises of economic growth and prosperity. Degrowth policies would challenge their core ideology and electoral viability, forcing them to fundamentally transform or face irrelevance."
+    },
+    {
+      "name": "degrowth_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Propose, research, and advocate for the implementation of degrowth policies. They actively work to dismantle the growth imperative and promote alternative economic models. They bear the social and political costs of challenging the status quo."
+    },
+    {
+      "name": "technological_optimists",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for technological solutions to climate change that allow for continued economic growth. They are excluded from the degrowth framework, which views their approach as insufficient or counterproductive. They would argue for alternative, less disruptive pathways."
+    }
+  ],
+  "gain_flow": "future_generations",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "To coordinate a global, equitable, and ecologically sustainable response to climate change by aligning economic activity with planetary boundaries and social well-being, rather than endless growth.",
+    "transfer_function": "Transfers ecological space, resource availability, and climate stability from current generations in wealthy nations (via reduced consumption and economic restructuring) to future generations and global south nations.",
+    "absent_voices": "Technological optimists and proponents of green growth are excluded from this framework, as their solutions are deemed insufficient or perpetuating the core problem. They would argue for less disruptive, technology-driven pathways to climate mitigation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the degrowth imperative vanished, the current growth-oriented economic system would continue, likely leading to increased ecological overshoot and climate instability. The global economy would not spontaneously reorient towards sustainability without this structural transformation, and the distribution of climate burdens would remain inequitable.",
+    "founding_problem": "The fundamental problem is the inherent conflict between infinite economic growth on a finite planet, leading to ecological collapse, climate change, and exacerbated global inequalities.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Ecological economists, climate scientists (e.g., IPCC reports on planetary boundaries), and social justice advocates corroborate the problem's live status, citing ongoing ecological degradation and persistent inequalities. Mainstream economists and political leaders often contest the 'growth imperative' as the root cause, focusing instead on market failures or technological deficits."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "diffuse_epistemic",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "climate_response_legitimacy__mitigation_priority",
-        "relation": "influences"
+        "sibling_id": "mitigation_priority",
+        "relation": "forecloses"
       },
       {
-        "sibling_id": "climate_response_legitimacy__adaptation_priority",
-        "relation": "influences"
+        "sibling_id": "adaptation_priority",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "ecological_limits_supersede_economic_growth",
+        "atom": "infinite_growth_on_finite_planet_impossible",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "intergenerational_equity_demands_present_sacrifice",
+        "atom": "intergenerational_equity_requires_degrowth",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "planetary_boundaries_framework",
+    "reference_frame": "ecologically_constrained_justice_framework",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_neoliberal_era",
       "direction": "practice_drift",
       "magnitude": "severe",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

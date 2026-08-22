@@ -4,14 +4,15 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "af62c4cd-af66-4ef4-bc22-ecb82ba81755"
+    "story_uid": "04268dc5-62e9-483e-a05a-f63fce561a37",
+    "created_at": "2024-07-30T12:00:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.35,
-    "suppression": 0.2,
+    "extractiveness": 0.25,
+    "suppression": 0.4,
     "theater_ratio": 0.6,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.3,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.5,
     "claimed_type": "tangled_rope",
     "human_readable": "Unconditional Income Support: Universality Paradox Reading",
     "topic_domain": "political_economy/social_policy/welfare_state_theory",
@@ -25,144 +26,231 @@
       "targeted_program_recipients"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine 'universality paradox' or is it primarily a 'freedom floor' or 'dependency trap'?",
-      "resolution_mechanism": "Empirical analysis of policy outcomes in different implementations, focusing on the actual fiscal and social impacts, and the stated rationales of implementing parties versus their observed effects.",
-      "impact": "If primarily a 'freedom floor', the constraint would be a Rope (low extraction, high coordination). If a 'dependency trap', it would be a Snare (high extraction, high suppression). This reading emphasizes the political ambiguity and similar fiscal outcomes across different ideological justifications.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'unconditional_income_support' kernel, specifically the 'universality_paradox_reading'."
+      "name": "political_entrepreneurs",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Exploit the cross-ideological ambiguity of unconditional income support to build broad political coalitions, advancing their careers and policy agendas by appealing to diverse groups with different interpretations of the policy's intent and outcome."
     },
     {
-      "id": "fiscal_outcome_convergence",
-      "question": "To what extent do different UBI implementation paths (e.g., high vs. low grant, different clawback rates) truly converge on similar fiscal and distributional outcomes?",
-      "resolution_mechanism": "Comparative fiscal modeling and empirical evaluation of pilot programs across diverse policy designs and economic contexts.",
-      "impact": "If convergence is weak, the 'universality paradox' reading's core premise (similar fiscal outcomes despite ideological differences) is undermined, potentially shifting the constraint towards a more direct 'freedom floor' or 'dependency trap' classification depending on the dominant design.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The degree to which different UBI designs yield similar fiscal outcomes, masking ideological differences."
+      "name": "policy_designers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Utilize 'taxing-back' mechanisms to achieve similar fiscal and distributional outcomes across different UBI designs, allowing for rhetorical flexibility and masking the underlying ideological compromises. They benefit from the policy's adaptability to various political demands."
+    },
+    {
+      "name": "ideological_clarity",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Suffers from the policy's inherent ambiguity. The lack of a clear, consistent ideological grounding prevents coherent public debate and evaluation, making it difficult to assess the policy's true intent or long-term effects. This 'victim' is an abstract concept, not an agent."
+    },
+    {
+      "name": "targeted_program_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are at risk of losing existing, often more generous, targeted welfare benefits as universality is used to justify cuts or consolidation of social programs. While theoretically receiving a universal income, their net benefit may decrease, and their specific needs may be overlooked by a 'one-size-fits-all' approach."
+    },
+    {
+      "name": "fiscal_conservatives",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for UBI as a means to streamline the welfare state, reduce administrative overhead, and potentially replace existing targeted programs, aligning with their goals of fiscal austerity and smaller government. They are key in shaping the 'taxing-back' mechanisms."
+    },
+    {
+      "name": "social_justice_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Support UBI as a tool for poverty reduction, economic security, and social equality, seeing it as a step towards a more just society. They often overlook the 'Trojan horse' aspect, focusing on the universal provision rather than the potential for cuts to targeted aid."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates diverse political factions and policy goals under a single policy umbrella, allowing for the advancement of a seemingly universal income support system despite underlying ideological disagreements on its purpose and implementation.",
+    "transfer_function": "Transfers political capital and rhetorical flexibility to political entrepreneurs and policy designers by obscuring the true fiscal and social impacts of unconditional income support, while potentially transferring existing benefits away from targeted recipients.",
+    "absent_voices": "The voices of those who demand clear, ideologically consistent policy frameworks are often drowned out by the broad, ambiguous appeal of UBI. Also, the specific needs and vulnerabilities of targeted program recipients, who may be harmed by the shift to universality, are frequently marginalized in the broader debate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the political ambiguity surrounding unconditional income support vanished, the cross-ideological coalitions supporting it would likely fragment. Policy debates would become more polarized, and the current momentum for UBI, which relies on this ambiguity, would dissipate, leading to a significant rearrangement of social policy discourse and legislative priorities.",
+    "founding_problem": "The problem of building broad political consensus for significant social policy reform in ideologically fragmented societies, where direct appeals to specific ideological goals often fail.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Political scientists and policy analysts, independent of the direct beneficiaries, corroborate that political consensus-building for social policy remains a live and challenging problem, and that ambiguous policy framing is a common strategy to overcome it. Historical legislative analyses also support this reading."
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2025
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 2010,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
       "value": 0.25
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
+      "metric": "suppression_requirement",
+      "time_point": 2010,
       "value": 0.3
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "metric": "suppression_requirement",
+      "time_point": 2015,
       "value": 0.35
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.4
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
       "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 2020,
       "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2025,
       "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.15
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.18
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 10
-  },
   "commentary": {
-    "narrative_context": "This constraint describes unconditional income support (UIS) as a politically ambiguous policy vehicle, where its cross-ideological appeal (from libertarian minimal state to socialist welfare expansion) masks fundamentally incompatible normative commitments and implementation paths. The 'universality paradox' reading highlights how these divergent paths often converge on similar fiscal and distributional outcomes due to mechanisms like 'taxing back' the benefit, leading to a policy that is rhetorically flexible but ideologically muddled. This ambiguity allows political entrepreneurs to build broad coalitions but extracts a cost in ideological clarity and can lead to the dismantling of targeted programs under the guise of 'universality'.",
-    "key_agents": [
-      "political_entrepreneurs: Primary beneficiary (institutional/arbitrage) — exploit ambiguity for coalition building",
-      "policy_designers: Primary beneficiary (institutional/mobile) — use taxing-back mechanisms for rhetorical flexibility",
-      "ideological_clarity: Primary victim (non-agent) — suffers from the policy's inherent ambiguity",
-      "targeted_program_recipients: Primary victim (powerless/constrained) — lose existing support as universality is used to justify cuts",
-      "libertarian_advocates: Stakeholder (organized/mobile) — support UIS as a replacement for complex welfare states",
-      "socialist_advocates: Stakeholder (organized/mobile) — support UIS as a step towards greater economic equality",
-      "welfare_state_bureaucrats: Stakeholder (institutional/constrained) — administer existing programs, face potential redundancy or restructuring"
-    ],
-    "logic_rationale": "The extractiveness (0.35) is low because the 'taxing back' mechanism means the net transfer is often not as high as the gross benefit suggests, and the fiscal outcomes across different designs are similar. Suppression (0.20) is low because the policy's appeal is broad, but active enforcement is required to manage the 'taxing back' and program consolidation. Theater ratio (0.60) is high because the policy's rhetorical function (appealing to diverse ideologies) often outweighs its direct, transparent distributional impact, with much of the political activity focused on framing rather than clear outcomes. Accessibility collapse (0.40) is moderate as alternatives (targeted programs, other welfare reforms) are not fully collapsed but are often reframed or threatened by the push for universality. Resistance (0.30) is moderate, coming from those who fear the loss of targeted programs or ideological purity.",
-    "perspectival_gap": "Political entrepreneurs and policy designers experience this as a flexible tool for coalition building and policy innovation, allowing them to advance agendas under a broad banner. Targeted program recipients, however, experience it as a threat, where the promise of universality is used to justify cuts to existing, often more generous, targeted support. Ideological clarity, as a non-agent victim, experiences a degradation of coherent policy discourse.",
-    "directionality_logic": "Political entrepreneurs and policy designers are beneficiaries because they gain political capital and flexibility from the policy's ambiguity. Ideological clarity and targeted program recipients are victims because the ambiguity obscures true impacts and can lead to a net loss of support for vulnerable groups. Libertarian and socialist advocates are stakeholders who benefit from the rhetorical appeal but may become victims if the implementation deviates too far from their core principles.",
-    "mandatrophy_analysis": "The constraint is a Tangled Rope because it genuinely coordinates diverse political interests (cross-ideological appeal) but does so through asymmetric extraction (loss of ideological clarity, potential harm to targeted recipients). The 'Trojan horse' aspect suggests a latent mandatrophy, where the initial coordination function (building consensus for a new social policy) might eventually atrophy into pure extraction if the ambiguity is consistently exploited to dismantle existing support without delivering on the universal promise. The high theater ratio reflects this potential for performative consensus masking divergent real-world impacts."
+    "narrative_context": "This constraint describes the political ambiguity inherent in unconditional income support (UIS) proposals, where cross-ideological appeal masks incompatible implementation paths that often converge on similar fiscal outcomes due to 'taxing-back' mechanisms. This reading highlights how the policy functions as a 'Trojan horse,' allowing different factions to support it for contradictory reasons, ultimately benefiting political actors who can leverage this ambiguity. The claimed type is 'tangled_rope' because it genuinely coordinates diverse political interests but does so through a mechanism that extracts ideological clarity and potentially harms targeted beneficiaries.",
+    "logic_rationale": "The extractiveness (0.25) is low because the fiscal outcomes, after 'taxing-back,' are often similar to existing systems, meaning the direct monetary extraction from the overall economy is not dramatically higher. However, it extracts ideological clarity and potentially existing benefits from vulnerable groups. Suppression (0.4) is moderate, as the ambiguity itself suppresses clear opposition by allowing multiple interpretations. The theater ratio (0.6) is high because a significant portion of the political discourse around UIS is performative, focusing on its universal appeal while obscuring the actual distributional impacts and ideological compromises embedded in its design. The metrics show a slight increase in extractiveness and theater over time as the political strategy matures.",
+    "directionality_logic": "Political entrepreneurs and policy designers are beneficiaries (low d) as they gain flexibility and coalition-building power. Ideological clarity (an abstract victim) and targeted program recipients are payers (high d) as they bear the costs of ambiguity and potential benefit erosion. Fiscal conservatives and social justice advocates act as agenda-setters, each pushing for UIS from their own perspective, contributing to the ambiguity.",
+    "perspectival_gap": "From the perspective of political entrepreneurs, the ambiguity is a feature, enabling broad support. From the perspective of ideological clarity, it's a bug, preventing honest assessment. The engine will compute different classifications for these seats based on their declared roles and structural positions.",
+    "kernel_context": "This constraint is the 'universality_paradox_reading' of the 'unconditional_income_support' kernel. It focuses on how the policy's cross-ideological appeal masks incompatible implementation paths. Sibling readings include the 'freedom_floor_reading' (emphasizing autonomy and security) and the 'dependency_trap_reading' (highlighting disincentives and welfare dependency)."
   },
+  "omegas": [
+    {
+      "id": "fiscal_outcome_convergence",
+      "question": "To what extent do different unconditional income support designs, after 'taxing-back' mechanisms, truly converge on similar fiscal and distributional outcomes?",
+      "resolution_mechanism": "Comprehensive, independent fiscal modeling and empirical analysis of pilot programs across diverse economic contexts, comparing net transfers and administrative costs.",
+      "impact": "If convergence is strong, it reinforces the 'Trojan horse' reading, highlighting the performative nature of ideological debates. If divergence is significant, it would weaken this reading, suggesting that implementation paths do have distinct, measurable impacts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical verification of fiscal convergence across UBI designs."
+    },
+    {
+      "id": "ideological_ambiguity_utility",
+      "question": "Is the political utility of ideological ambiguity in social policy a sustainable strategy, or does it eventually lead to policy incoherence and public disillusionment?",
+      "resolution_mechanism": "Longitudinal studies of public trust in ambiguous social policies, tracking voter engagement and policy stability over multiple electoral cycles.",
+      "impact": "If ambiguity proves unsustainable, the 'Trojan horse' mechanism would eventually fail, forcing clearer ideological alignment. If sustainable, it suggests a persistent feature of political systems, reinforcing the constraint's current operation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Sustainability of political ambiguity as a policy-making strategy."
+    },
+    {
+      "id": "targeted_aid_displacement",
+      "question": "Does the implementation of universal income support consistently lead to the displacement or reduction of existing targeted welfare programs, and what is the net impact on vulnerable populations?",
+      "resolution_mechanism": "Comparative policy analysis across jurisdictions implementing UBI, specifically tracking changes in targeted aid budgets and outcomes for previously targeted recipients.",
+      "impact": "If displacement is widespread and detrimental, it strengthens the 'victim' status of targeted program recipients and the extractive nature of the 'universality paradox.' If targeted aid remains robust or is effectively integrated, it would mitigate this aspect of the reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of UBI on existing targeted welfare programs."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'unconditional_income_support' kernel, focusing on the political ambiguity and convergence of fiscal outcomes. It is distinct from the 'freedom_floor_reading' (emphasizing autonomy and stigma reduction) and the 'dependency_trap_reading' (emphasizing disincentives and upward redistribution), which are separate constraints."
+    "affects_constraints": [
+      "unconditional_income_support__freedom_floor_reading",
+      "unconditional_income_support__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'unconditional_income_support' kernel, focusing on its political ambiguity. It is linked to sibling readings that emphasize its potential as a 'freedom floor' or a 'dependency trap,' as these different interpretations are all part of the same overarching policy debate."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
     "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "unconditional_income_support__freedom_floor_reading",
+        "sibling_id": "freedom_floor_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "unconditional_income_support__dependency_trap_reading",
+        "sibling_id": "dependency_trap_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "policy_ambiguity_is_political_resource",
+        "atom": "policy_ambiguity_as_political_tool",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "fiscal_outcomes_converge_despite_ideology",
-        "role": "foundational",
+        "atom": "fiscal_convergence_across_design",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "ideological_polarization_in_welfare_reform",
+    "reference_frame": "political_consensus_through_ambiguity",
     "drift_state": {
       "moment": "contemporary_policy_discourse",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

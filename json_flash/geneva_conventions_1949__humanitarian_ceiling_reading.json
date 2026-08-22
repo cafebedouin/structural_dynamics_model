@@ -4,27 +4,103 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "b68eeaa1-b70a-459f-b16b-d0de2047046d"
+    "story_uid": "f1daaba2-8ac0-44bd-a9d7-6bd5e6d7277e"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.7,
-    "theater_ratio": 0.2,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.4,
-    "claimed_type": "rope",
+    "extractiveness": 0.65,
+    "suppression": 0.78,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
     "human_readable": "Geneva Conventions (1949): Humanitarian Ceiling Reading",
-    "topic_domain": "international_humanitarian_law/political_philosophy",
+    "topic_domain": "international_law/political_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "civilians_in_conflict_zones",
+      "civilian_populations",
       "detained_combatants",
       "medical_personnel"
     ],
     "victims": [
-      "state_military_planners",
-      "irregular_combatants_seeking_total_war"
+      "state_militaries",
+      "security_rationales"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "civilian_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive protection from direct targeting, indiscriminate attacks, and disproportionate harm. Their safety is prioritized above military advantage, even when caught in conflict zones. They have no direct means to enforce the conventions."
+    },
+    {
+      "name": "detained_combatants",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are entitled to humane treatment, due process, and protection from torture or degrading treatment, regardless of their combatant status. Their protections are absolute, not contingent on reciprocity."
+    },
+    {
+      "name": "medical_personnel",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are protected from attack and granted immunity to provide care to all wounded, without distinction. Their neutrality and mission are sacrosanct, even when operating in enemy territory."
+    },
+    {
+      "name": "state_militaries",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the asymmetric burden of adhering to absolute humanitarian standards, even when facing adversaries who do not. This constrains their operational flexibility, intelligence gathering, and targeting decisions, potentially increasing their own casualties or prolonging conflict. They must actively enforce these rules within their ranks."
+    },
+    {
+      "name": "security_rationales",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "The imperative for state security and military advantage is structurally subordinated to humanitarian principles. This means foregoing certain tactics or intelligence gains that would violate the conventions, even if they might enhance security. This is a conceptual 'payer' as a set of justifications that are suppressed."
+    },
+    {
+      "name": "international_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Interpret and enforce the conventions, holding states and individuals accountable for violations. They actively promote the humanitarian ceiling reading through jurisprudence and prosecution, acting as a primary institutional force for its persistence."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Monitor compliance, document violations, and lobby for stricter adherence to the humanitarian ceiling. They provide critical external pressure and analysis, shaping public discourse and influencing international legal bodies."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a universal, non-reciprocal framework for the conduct of armed conflict, ensuring a baseline of humanity and protection for non-combatants and those hors de combat, preventing a race to the bottom in wartime brutality.",
+    "transfer_function": "Transfers operational flexibility and potential security advantages from state militaries to civilian populations and detained combatants, in exchange for a universal standard of humane conduct in war.",
+    "absent_voices": "Military strategists and political leaders prioritizing 'total victory' or 'national survival' above all else would argue for greater flexibility in applying humanitarian law, especially against non-state actors. Their voices are often marginalized in international legal discourse but remain powerful in national policy debates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Geneva Conventions vanished, the conduct of armed conflict would rapidly degrade. State militaries would face fewer constraints, leading to increased civilian casualties, widespread abuse of prisoners, and a general erosion of any shared understanding of 'humane' warfare. The international legal and moral landscape would be fundamentally reshaped.",
+    "founding_problem": "The horrors of World War II, particularly the widespread targeting of civilians and mistreatment of prisoners, demonstrated the catastrophic consequences of a lack of universal, non-reciprocal humanitarian standards in armed conflict.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International humanitarian organizations, UN bodies, and numerous academic studies consistently attest to the ongoing relevance of the founding problem, citing contemporary conflicts where the absence or violation of these standards leads to immense suffering. This corroboration comes from outside the direct beneficiaries (civilian populations) and payers (state militaries) of the conventions."
   },
   "interval": {
     "start": 1949,
@@ -34,62 +110,62 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1949,
-      "value": 0.2
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1960,
-      "value": 0.22
+      "time_point": 1965,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1975,
-      "value": 0.25
+      "time_point": 1980,
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.28
+      "time_point": 1995,
+      "value": 0.63
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.3
+      "time_point": 2010,
+      "value": 0.64
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1949,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1960,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1975,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1990,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.68
+      "time_point": 1949,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.77
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.7
+      "value": 0.78
     },
     {
       "metric": "theater_ratio",
@@ -98,66 +174,95 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1960,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1975,
+      "time_point": 1965,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.18
+      "time_point": 1980,
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.2
+      "time_point": 1995,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.2
+      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'humanitarian ceiling' reading of the 1949 Geneva Conventions, which posits that the Conventions establish absolute, non-reciprocal humanitarian minimums that constrain state violence regardless of adversary compliance or security rationales. This reading emphasizes expansive civilian and detainee protections, including basic rights for irregular combatants, and places an asymmetric burden of restraint on state militaries. It stands in contrast to readings that emphasize reciprocity or prioritize state security.",
-    "logic_rationale": "The extractiveness (0.3) is moderate, reflecting the real operational costs and constraints placed on state militaries. Suppression (0.7) is high because this reading actively suppresses arguments for 'military necessity' or 'reciprocity' as justifications for violating humanitarian norms. Theater ratio (0.2) is low, as the commitment to these principles is generally genuine, though often challenged in practice. The increasing suppression over time reflects the hardening of international legal norms against derogation.",
-    "directionality_logic": "State military planners are payers, bearing the costs of operational restraint. Civilians, detained combatants, and medical personnel are clear beneficiaries, receiving protection. Irregular combatants seeking total war are victims, as their preferred tactics are explicitly constrained. International courts act as agenda-setters, enforcing this interpretation.",
-    "perspectival_gap": "From the perspective of state military planners, this reading imposes significant constraints and costs, potentially hindering operational effectiveness. From the perspective of civilians and humanitarian actors, it is a vital protective framework. The international courts uphold this reading, often against state resistance, creating a tension between legal interpretation and perceived national security interests.",
-    "kernel_context": "This constraint is the 'humanitarian ceiling' reading of the 1949 Geneva Conventions. It asserts that the Conventions establish absolute humanitarian minimums. Sibling readings include the 'conditional reciprocity' reading, which ties compliance to adversary behavior, and the 'security maximization' reading, which prioritizes state security over humanitarian norms in asymmetric conflict."
+    "narrative_context": "This constraint represents the 'humanitarian ceiling' reading of the 1949 Geneva Conventions, which posits that the conventions establish absolute, non-reciprocal minimum standards for the conduct of armed conflict. These standards constrain state violence regardless of adversary compliance or perceived security threats, prioritizing the protection of civilians and those hors de combat. This reading places an asymmetric burden on state militaries, suppressing security rationales that would otherwise justify degrading protections. The claimed type is 'tangled_rope' because it genuinely coordinates a global standard for humane warfare (beneficiaries) but does so by extracting significant operational flexibility and security advantages from state actors (victims), requiring active enforcement to hold.",
+    "key_agents": [
+      "civilian_populations: Primary beneficiary (powerless/trapped) — receive protection.",
+      "detained_combatants: Primary beneficiary (powerless/trapped) — receive humane treatment.",
+      "medical_personnel: Beneficiary (moderate/constrained) — protected in their mission.",
+      "state_militaries: Primary payer (institutional/constrained) — bear asymmetric burden.",
+      "security_rationales: Conceptual payer (institutional/identity_locked) — suppressed in favor of humanitarianism.",
+      "international_courts: Agenda setter (institutional/analytical) — enforce and interpret the conventions.",
+      "human_rights_advocates: Observer (organized/mobile) — monitor and lobby for adherence."
+    ],
+    "logic_rationale": "Extractiveness is high (0.65) because state militaries must forgo significant tactical advantages and bear increased risks to adhere to these absolute standards. Suppression is also high (0.78) as this reading actively suppresses security-maximization rationales and requires continuous enforcement against state interests that would prefer more flexibility. Theater ratio is moderate (0.40) because while there is genuine humanitarian work, there's also a performative aspect where states publicly commit to the ceiling while privately seeking loopholes or exceptions. The temporal measurements show a gradual increase in both extractiveness and suppression, reflecting the growing tension between humanitarian ideals and the realities of asymmetric warfare, where states feel increasingly constrained.",
+    "perspectival_gap": "From the perspective of civilian populations and detained combatants, this reading is a vital 'rope' providing essential protection. From the perspective of state militaries, it operates as a 'snare' or 'tangled rope,' imposing significant costs and constraints on their operations without guaranteed reciprocity. International courts and human rights advocates view it as a 'rope' or 'scaffold' for building a more humane international order. The engine's per-seat classification will reflect these divergences.",
+    "directionality_logic": "Civilian populations, detained combatants, and medical personnel are clear beneficiaries (low d) as the conventions directly protect them. State militaries and 'security rationales' are targets/payers (high d) because they bear the costs of compliance and have their operational freedom curtailed. International courts are agenda setters (d near symmetric) as they enforce the rules but also derive legitimacy from upholding them. Human rights advocates are observers (d near symmetric) as they promote the constraint but are not directly subject to its operational costs in the same way as militaries.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the constraint as a pure 'snare' by acknowledging its genuine coordination function in establishing universal humanitarian standards. However, it also prevents mislabeling it as a pure 'rope' by recognizing the substantial, asymmetric extraction from state militaries and the active suppression of security-first rationales. The rising theater ratio suggests a risk of future mandatrophy if the gap between declared adherence and actual practice widens, turning genuine coordination into mere performance.",
+    "kernel_context": "This constraint is the 'humanitarian ceiling' reading of the 1949 Geneva Conventions. It emphasizes absolute, non-reciprocal humanitarian minimums. Sibling readings include the 'conditional reciprocity' reading (conventions apply fully only when adversaries comply) and the 'security maximization' reading (conventions yield to operational necessity in asymmetric conflict)."
   },
   "omegas": [
     {
-      "id": "reciprocity_vs_absolute_duty",
-      "question": "To what extent is state compliance with the Geneva Conventions truly independent of adversary reciprocity, or does perceived non-reciprocity erode adherence to this humanitarian ceiling reading?",
-      "resolution_mechanism": "Empirical study of state practice in asymmetric conflicts where one party consistently violates IHL: does the 'humanitarian ceiling' reading persist in state doctrine and practice, or does it degrade towards a 'conditional reciprocity' model?",
-      "impact": "If reciprocity proves a strong determinant, the 'humanitarian ceiling' reading is less robust than claimed, and its effective extractiveness from state militaries might be lower (as they find justifications for non-compliance), while the suppression of security rationales is weaker.",
+      "id": "reciprocity_vs_absolutism",
+      "question": "To what extent is the 'humanitarian ceiling' reading genuinely non-reciprocal in practice, versus being subtly influenced by expectations of reciprocity from state actors?",
+      "resolution_mechanism": "Empirical study of state military doctrine and operational decisions in conflicts where adversaries demonstrably violate humanitarian law: does state behavior degrade in response, or maintain the ceiling?",
+      "impact": "If reciprocity is a strong implicit factor, the 'humanitarian ceiling' is less of an absolute constraint and more of a conditional one, shifting its classification closer to a 'conditional reciprocity' reading, potentially reducing its effective suppression and increasing its perceived extractiveness for state militaries.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The tension between the absolute duty claimed by this reading and the practical pressures of non-reciprocal warfare."
+      "description": "Ambiguity of non-reciprocal application in practice."
     },
     {
-      "id": "security_necessity_vs_humanitarian_ceiling",
-      "question": "Is the 'humanitarian ceiling' reading genuinely capable of suppressing 'military necessity' arguments in all contexts, or does a 'security maximization' rationale inevitably reassert itself in high-stakes conflicts?",
-      "resolution_mechanism": "Analysis of judicial decisions and state legal opinions during periods of perceived existential threat: are humanitarian protections consistently upheld, or are they systematically reinterpreted to permit actions previously deemed illegal?",
-      "impact": "If security maximization consistently overrides the humanitarian ceiling, this reading's suppression of security rationales is weaker than claimed, and its effective classification might shift towards a 'tangled rope' or 'snare' for those it purports to protect.",
+      "id": "security_rationale_suppression_efficacy",
+      "question": "How effectively does this reading suppress security-maximization rationales in actual state decision-making, particularly in asymmetric conflicts?",
+      "resolution_mechanism": "Analysis of classified military legal advice, internal policy debates, and post-conflict reviews: do security rationales consistently yield to humanitarian concerns, or are they merely reframed to appear compliant?",
+      "impact": "If security rationales are merely reframed rather than suppressed, the effective suppression of the constraint is lower than measured, and its theater ratio is higher, indicating a greater degree of performative compliance rather than genuine adherence. This would push the classification closer to a 'piton' or a more extractive 'tangled rope'.",
       "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of suppressing security rationales."
+    },
+    {
+      "id": "reading_framing_underdetermination",
+      "question": "Is the 'humanitarian ceiling' reading the most defensible framing of the Geneva Conventions, or does the 'conditional reciprocity' or 'security maximization' reading offer an equally coherent, albeit different, interpretation?",
+      "resolution_mechanism": "Conceptual analysis of the conventions' text, drafting history, and subsequent state practice, alongside philosophical arguments for the nature of international law. This is a debate over the core interpretive methodology.",
+      "impact": "If an alternative reading is found to be equally coherent, the classification of the Geneva Conventions as a whole becomes more contested, and the 'humanitarian ceiling' reading's claim to universal applicability is weakened. This would highlight the deep conceptual divisions within international humanitarian law.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "The conceptual contest between absolute humanitarianism and perceived state security imperatives."
+      "description": "Alternative coherent readings of the Geneva Conventions."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
-    "affects_constraints": [
-      "geneva_conventions_1949__conditional_reciprocity_reading",
-      "geneva_conventions_1949__security_maximization_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 1949 Geneva Conventions kernel. This 'humanitarian ceiling' reading emphasizes absolute, non-reciprocal humanitarian minimums, contrasting with 'conditional reciprocity' and 'security maximization' readings."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 1949 Geneva Conventions kernel, each representing a distinct structural claim about the conventions' operation and impact."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -165,45 +270,34 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "geneva_conventions_1949__conditional_reciprocity_reading",
-        "relation": "forecloses"
+        "sibling_id": "conditional_reciprocity_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "geneva_conventions_1949__security_maximization_reading",
-        "relation": "forecloses"
+        "sibling_id": "security_maximization_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "humanitarian_protections_are_absolute",
+        "atom": "humanitarian_imperative_absolute",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "non_reciprocity_does_not_abrogate_duty",
+        "atom": "non_reciprocity_principle",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "post_wwii_universal_humanitarian_consensus",
+    "reference_frame": "universal_humanitarian_law",
     "drift_state": {
       "moment": "contemporary_asymmetric_conflict_era",
-      "direction": "repudiation_pressure",
+      "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

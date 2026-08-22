@@ -39,9 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,26 +71,27 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gita_kurukshetra_discourse__universalist_devotional_reading
  *   human_readable: Bhagavad Gita: Universalist Devotional Reading
- *   domain: religious_studies/textual_hermeneutics/ethical_philosophy
+ *   domain: religious_studies/ethical_philosophy
  *
  * SUMMARY:
- *   This constraint represents a 'universalist devotional' reading of the
- *   Bhagavad Gita's Kurukshetra discourse. It emphasizes that devotion
- *   (bhakti) is a path to spiritual liberation accessible to all,
- *   irrespective of caste, and redefines dharma as surrender to divine will
- *   rather than adherence to prescribed social roles. This reading
- *   de-emphasizes the literal interpretation of violence in the text, viewing
- *   it as either allegorical or secondary to the core message of devotion. It
- *   structurally undermines traditional Brahminical gatekeeping authority and
- *   promotes egalitarian access to spiritual practice.
+ *   This constraint represents the 'universalist devotional' reading of the
+ *   Bhagavad Gita's Kurukshetra discourse. In this reading, the text teaches
+ *   that devotion (bhakti) is the supreme path to spiritual liberation,
+ *   accessible to all individuals regardless of their caste or social
+ *   standing. Dharma is reinterpreted as surrender to divine will rather than
+ *   strict adherence to prescribed social roles. This reading fundamentally
+ *   challenges traditional Brahminical gatekeeping and caste-based spiritual
+ *   exclusion, promoting an egalitarian spiritual access. The constraint's
+ *   claimed type is 'rope' because it genuinely coordinates a broad spiritual
+ *   community and offers net benefits to its participants, particularly the
+ *   historically marginalized, with minimal inherent extraction.
  *
  * KEY AGENTS:
- *   - universal_devotee_class: Primary beneficiary (powerless/mobile) — gains spiritual access and agency
- *   - marginalized_communities: Primary beneficiary (powerless/constrained) — gains spiritual inclusion and challenges social barriers
- *   - traditional_brahmins: Payer (institutional/constrained) — loses gatekeeping authority and social status
- *   - orthodox_scholars: Payer (organized/constrained) — resists reinterpretation that challenges literal readings
- *   - gita_text: Agenda setter (institutional/civilizational) — the kernel from which readings are derived
- *   - analytical_theologians: Observer (analytical/analytical) — studies the hermeneutical shifts and their social impact
+ *   - universal_devotee_class: Primary beneficiary (organized/mobile)
+ *   - marginalized_castes: Primary beneficiary (powerless/identity_locked)
+ *   - traditional_brahminical_priesthood: Primary payer (institutional/constrained)
+ *   - orthodox_scholars: Secondary payer (powerful/constrained)
+ *   - gandhian_pacifists: Analytical observer (organized/analytical)
  */
 
 /* ==========================================================================
@@ -94,54 +100,100 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(gita_kurukshetra_discourse__universalist_devotional_reading, 0.2).
-domain_priors:suppression_score(gita_kurukshetra_discourse__universalist_devotional_reading, 0.3).
-domain_priors:theater_ratio(gita_kurukshetra_discourse__universalist_devotional_reading, 0.1).
+domain_priors:suppression_score(gita_kurukshetra_discourse__universalist_devotional_reading, 0.1).
+domain_priors:theater_ratio(gita_kurukshetra_discourse__universalist_devotional_reading, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, extractiveness, 0.2).
-narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 0.3).
-narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 0.1).
+narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, resistance, 0.4).
+narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, accessibility_collapse, 0.8).
+narrative_ontology:constraint_metric(gita_kurukshetra_discourse__universalist_devotional_reading, resistance, 0.15).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(gita_kurukshetra_discourse__universalist_devotional_reading, rope).
 narrative_ontology:human_readable(gita_kurukshetra_discourse__universalist_devotional_reading, "Bhagavad Gita: Universalist Devotional Reading").
-narrative_ontology:topic_domain(gita_kurukshetra_discourse__universalist_devotional_reading, "religious_studies/textual_hermeneutics/ethical_philosophy").
+narrative_ontology:topic_domain(gita_kurukshetra_discourse__universalist_devotional_reading, "religious_studies/ethical_philosophy").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(gita_kurukshetra_discourse__universalist_devotional_reading, 'f4d7df2f-f447-4c2e-87bd-f5de5c364c31').
-narrative_ontology:cs_kernel_codification('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', fixed_text).
-narrative_ontology:cs_authority_grounding('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', lineage).
-narrative_ontology:cs_interpretation_layer_present('f4d7df2f-f447-4c2e-87bd-f5de5c364c31').
-narrative_ontology:cs_reading_relation('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', gita_kurukshetra_discourse__orthodox_literal_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', gita_kurukshetra_discourse__gandhian_allegorical_reading, coexists_with).
-narrative_ontology:cs_axiom('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', foundational, devotion_transcends_caste).
-narrative_ontology:cs_axiom_status(devotion_transcends_caste, holdable).
-narrative_ontology:cs_axiom_grounding('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', devotion_transcends_caste, deontological).
-narrative_ontology:cs_axiom('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', foundational, dharma_is_divine_surrender).
-narrative_ontology:cs_axiom_status(dharma_is_divine_surrender, holdable).
-narrative_ontology:cs_axiom_grounding('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', dharma_is_divine_surrender, theological).
-narrative_ontology:cs_reference_frame('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', egalitarian_bhakti_tradition).
-narrative_ontology:cs_drift_state('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', contemporary_global_hinduism, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('f4d7df2f-f447-4c2e-87bd-f5de5c364c31', '').
+narrative_ontology:cs_story_uid(gita_kurukshetra_discourse__universalist_devotional_reading, '1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3').
+narrative_ontology:cs_kernel_codification('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', fixed_text).
+narrative_ontology:cs_authority_grounding('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', lineage).
+narrative_ontology:cs_interpretation_layer_present('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3').
+narrative_ontology:cs_reading_relation('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', gita_kurukshetra_discourse__orthodox_literal_reading, influences).
+narrative_ontology:cs_reading_relation('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', gita_kurukshetra_discourse__gandhian_allegorical_reading, coexists_with).
+narrative_ontology:cs_axiom('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', foundational, bhakti_marga_supreme).
+narrative_ontology:cs_axiom_status(bhakti_marga_supreme, holdable).
+narrative_ontology:cs_axiom_grounding('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', bhakti_marga_supreme, deontological).
+narrative_ontology:cs_axiom('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', foundational, caste_no_spiritual_barrier).
+narrative_ontology:cs_axiom_status(caste_no_spiritual_barrier, holdable).
+narrative_ontology:cs_axiom_grounding('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', caste_no_spiritual_barrier, deontological).
+narrative_ontology:cs_reference_frame('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', egalitarian_devotional_path).
+narrative_ontology:cs_drift_state('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('1ac3793f-6da1-4db1-8d3b-be6a1cfaf7b3', '').
 narrative_ontology:cs_kernel_id(gita_kurukshetra_discourse__universalist_devotional_reading, gita_kurukshetra_discourse).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gita_kurukshetra_discourse__universalist_devotional_reading, universal_devotee_class).
-narrative_ontology:constraint_beneficiary(gita_kurukshetra_discourse__universalist_devotional_reading, marginalized_communities).
+narrative_ontology:constraint_beneficiary(gita_kurukshetra_discourse__universalist_devotional_reading, marginalized_castes).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(gita_kurukshetra_discourse__universalist_devotional_reading, traditional_brahminical_priesthood).
+narrative_ontology:constraint_victim(gita_kurukshetra_discourse__universalist_devotional_reading, orthodox_scholars).
+narrative_ontology:constraint_vindicates(gita_kurukshetra_discourse__universalist_devotional_reading, bhakti_marga_supremacy).
+narrative_ontology:constraint_vindicates(gita_kurukshetra_discourse__universalist_devotional_reading, egalitarian_spiritual_access).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Finds spiritual liberation and purpose through direct devotion, unmediated by traditional caste hierarchies. This reading empowers them by validating their spiritual path and dissolving traditional barriers to salvation.
+narrative_ontology:constraint_stakeholder(gita_kurukshetra_discourse__universalist_devotional_reading, universal_devotee_class, beneficiary,
+    organized, generational, mobile, global).
+
+% Are explicitly granted access to spiritual paths previously denied or restricted by caste. This reading offers a powerful counter-narrative to their traditional social and religious subjugation, providing dignity and hope.
+narrative_ontology:constraint_stakeholder(gita_kurukshetra_discourse__universalist_devotional_reading, marginalized_castes, beneficiary,
+    powerless, generational, identity_locked, regional).
+
+% Experiences a loss of exclusive spiritual authority and gatekeeping power. Their traditional role as sole interpreters and mediators of dharma is challenged, leading to a reduction in their social and religious influence.
+narrative_ontology:constraint_stakeholder(gita_kurukshetra_discourse__universalist_devotional_reading, traditional_brahminical_priesthood, payer,
+    institutional, generational, constrained, national).
+
+% Find their literal and caste-affirming interpretations of the Gita undermined. Their academic and religious careers may be built on defending traditional readings, making this universalist interpretation a direct challenge to their intellectual and social capital.
+narrative_ontology:constraint_stakeholder(gita_kurukshetra_discourse__universalist_devotional_reading, orthodox_scholars, payer,
+    powerful, biographical, constrained, national).
+
+% While not directly benefiting or paying, they observe this reading as a partial ally in de-emphasizing violence, though they might still find its devotional focus less aligned with their primary ethical concerns than their own allegorical reading.
+narrative_ontology:constraint_stakeholder(gita_kurukshetra_discourse__universalist_devotional_reading, gandhian_pacifists, observer,
+    organized, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates a diverse spiritual community around a shared devotional path, transcending social divisions and providing a common framework for ethical conduct rooted in divine surrender.
+% TRANSFER_FUNCTION: Transfers spiritual authority and access from traditional caste-based gatekeepers to individual devotees, regardless of their social standing. It also transfers a sense of agency and dignity to marginalized groups.
+% ABSENT_VOICES: Those who benefit from strict caste hierarchy and exclusive spiritual access are structurally excluded from this reading's interpretive community; they would argue for the divine sanction of social stratification and the necessity of ritual mediation.
+% DISAPPEARANCE_RATIONALE: If this reading vanished, the spiritual landscape for millions would revert to more restrictive, caste-bound interpretations, leading to a loss of agency and spiritual access for marginalized groups, and a re-consolidation of traditional priestly authority.
+% FOUNDING_PROBLEM: The problem of spiritual exclusion and social stratification based on birth, where access to divine grace and liberation was denied to vast segments of society.
+% FOUNDING_PROBLEM_CORROBORATION: Numerous devotional movements and social reform efforts throughout history, as well as contemporary academic scholarship on subaltern religious practices, corroborate the ongoing problem of spiritual exclusion and the historical role of this reading in challenging it. This corroboration comes from outside the immediate beneficiary groups, from historical records and sociological analyses.
+narrative_ontology:disappearance_verdict(gita_kurukshetra_discourse__universalist_devotional_reading, world_rearranges).
+narrative_ontology:founding_problem_status(gita_kurukshetra_discourse__universalist_devotional_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(gita_kurukshetra_discourse__universalist_devotional_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(gita_kurukshetra_discourse__universalist_devotional_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(gita_kurukshetra_discourse__universalist_devotional_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(gita_kurukshetra_discourse__universalist_devotional_reading, 0.2, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -156,16 +208,16 @@ narrative_ontology:story_seed(gita_kurukshetra_discourse__universalist_devotiona
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is low (0.2) because this reading primarily offers spiritual liberation and inclusion, rather than imposing significant costs. Suppression is moderate (0.3) as it challenges existing social hierarchies, but its 'enforcement' is primarily through persuasion and spiritual movement, not coercion. Theater ratio is low (0.1) as its core function of providing an accessible spiritual path is genuine. Accessibility collapse is moderate (0.7) because while it opens a path, it still requires commitment and understanding of complex spiritual concepts. Resistance is moderate (0.4) due to opposition from traditional authorities whose power it diminishes.
+ *   The extractiveness is low (0.2) because this reading primarily functions to open access and empower, rather than to extract from its adherents. Any 'cost' is largely the relinquishing of ego or attachment, which is framed as beneficial. Suppression is also low (0.1) as the reading's persistence relies on its appeal and transformative power, not coercion. Theater ratio is minimal (0.05) because its core message is direct and functional in fostering devotion. Accessibility collapse is high (0.8) because once understood, the path of universal devotion is presented as universally available and superior, making alternatives (like strict ritualism or caste-based paths) less appealing. Resistance is moderate (0.15) from those whose traditional authority is challenged.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the universal devotee class and marginalized communities, this reading is a liberating 'rope' that offers spiritual access and agency. For traditional Brahmins and orthodox scholars, it is a 'snare' or 'tangled_rope' that undermines their established authority and social order, extracting their traditional power and influence. The engine's per-seat classification will reflect this divergence based on the declared roles and exit options.
+ *   The traditional Brahminical priesthood and orthodox scholars experience this reading as highly extractive, as it directly undermines their social status, interpretive authority, and economic base. For the universal devotee class and marginalized castes, it is profoundly beneficial, offering liberation and dignity. The engine's per-seat classification will reflect this divergence, with payers experiencing a 'snare' or 'tangled_rope' due to the loss of their traditional rents, while beneficiaries experience a 'rope' or even a 'mountain' of spiritual truth.
  *
  * DIRECTIONALITY LOGIC:
- *   The universal devotee class and marginalized communities are clear beneficiaries (d near 0.0) as they gain spiritual access and challenge social barriers. Traditional Brahmins and orthodox scholars are targets (d near 1.0) as their gatekeeping authority and social status are undermined. The Gita text itself, as the kernel, is the agenda setter, but its 'directionality' is mediated by interpretation.
+ *   The universal devotee class and marginalized castes are clear beneficiaries (d near 0.0) as the reading grants them spiritual access and agency. The traditional Brahminical priesthood and orthodox scholars are payers (d near 1.0) because this reading directly challenges and diminishes their established authority and social capital. The reading subsidizes the former by dissolving barriers, and extracts from the latter by eroding their exclusive claims.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading prevents mislabeling a genuine coordination function (universal spiritual access) as pure extraction. While it extracts from traditional authorities, its primary function is to coordinate spiritual practice on an egalitarian basis. The 'mandate' is to provide a path to devotion, which remains live. The 'mandatrophy' would occur if the universalist claims became purely performative while actual social barriers persisted, turning it into a 'piton' or 'snare' for those it claims to liberate.
+ *   This reading actively resolves a form of mandatrophy present in older, more restrictive interpretations of the Gita. It re-establishes a 'live' founding problem (spiritual exclusion) and offers a solution that is still relevant, preventing the constraint from becoming a 'piton' of outdated ritualism. The classification as 'rope' prevents mislabeling it as pure extraction, acknowledging its genuine coordination and benefit-generating function for a broad base of adherents, while still recognizing the 'extraction' it performs on traditional gatekeepers by dissolving their power.
  */
 
 /* ==========================================================================
@@ -173,63 +225,66 @@ narrative_ontology:story_seed(gita_kurukshetra_discourse__universalist_devotiona
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_ambiguity,
-    'Is this constraint a genuine universalist teaching, or an interpretation that selectively emphasizes certain verses to undermine traditional social structures?',
-    'Comparative textual analysis across a wider range of Hindu scriptures and historical reception studies of the Gita''s interpretation by different schools of thought.',
-    'If a selective interpretation, its ''universalist'' claims might be seen as a strategic re-reading rather than an inherent property of the text, potentially reclassifying it as a ''tangled_rope'' for those whose traditional authority it undermines.',
+    kernel_reading_identity,
+    'Is this constraint a genuine, distinct reading of the Bhagavad Gita kernel, or merely a reformist interpretation within a broader orthodox framework?',
+    'Analysis of historical reception and independent theological development: if it generated distinct schools of thought and practice, it''s a distinct reading.',
+    'If a distinct reading, its classification stands. If merely an interpretation, its structural independence is weaker, potentially making it a ''tangled_rope'' within the larger orthodox ''snare''.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'Whether this reading constitutes a structurally independent constraint.').
+
+omega_variable(
+    violence_interpretation_ambiguity,
+    'Does this universalist devotional reading fully neutralize the ''righteous violence'' aspect of the Kurukshetra discourse, or does it merely de-emphasize it, leaving an ambiguity that could be re-activated?',
+    'Textual analysis of how proponents of this reading address the violence, and historical instances of its re-interpretation in contexts of conflict.',
+    'If fully neutralized, the reading''s ''rope'' classification is robust. If merely de-emphasized, a latent ''snare'' potential remains, increasing its effective extractiveness in certain contexts.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_ambiguity, conceptual, 'Ambiguity between inherent textual meaning and interpretive construction.').
+narrative_ontology:omega_variable(violence_interpretation_ambiguity, empirical, 'Ambiguity regarding the text''s stance on violence within this reading.').
 
 omega_variable(
-    caste_system_legitimacy,
-    'To what extent does this reading genuinely dissolve caste as a spiritual barrier, versus merely reinterpreting its function without challenging its social reality?',
-    'Sociological studies of devotional movements inspired by this reading, examining actual changes in social mobility and inter-caste relations among adherents.',
-    'If caste barriers persist despite the spiritual claims, the ''universalist'' aspect might be more theoretical than practical, reducing its effective coordination function and increasing its latent extractiveness for marginalized groups.',
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression of traditional authority structural (loss of social legitimacy) or internalized (traditionalists adopting devotional practices)?',
+    'Sociological studies tracking the actual decline in traditional priestly roles versus the adoption of devotional practices by former gatekeepers.',
+    'If structural, the constraint''s impact on traditional authority is external and measurable. If internalized, the ''suppression'' is a transformation, and the overall extractiveness from the traditional seat might be lower than perceived.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(caste_system_legitimacy, empirical, 'Effectiveness of spiritual universalism in challenging social hierarchy.').
-
-omega_variable(
-    violence_interpretation_neutrality,
-    'Does this reading genuinely render violence neither mandated nor central, or does it merely de-emphasize it to fit modern ethical sensibilities?',
-    'Analysis of the historical and contemporary ethical implications drawn by adherents of this reading, particularly in contexts of conflict or social justice movements.',
-    'If the de-emphasis is a modern imposition, the reading''s claim to ethical neutrality regarding violence might be seen as a form of ''theater_ratio'' masking a more complex textual reality, potentially affecting its ''claimed_type'' towards a ''tangled_rope'' if it implicitly enables inaction in the face of injustice.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(violence_interpretation_neutrality, conceptual, 'Neutrality of the reading regarding violence.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for traditional authority.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(gita_kurukshetra_discourse__universalist_devotional_reading, 0, 30).
+narrative_ontology:interval(gita_kurukshetra_discourse__universalist_devotional_reading, 100, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(gita_tr_t0, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(gita_tr_t10, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 10, 0.12).
-narrative_ontology:measurement(gita_tr_t20, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 20, 0.1).
-narrative_ontology:measurement(gita_tr_t30, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 30, 0.1).
+narrative_ontology:measurement(gita_tr_t100, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 100, 0.05).
+narrative_ontology:measurement(gita_tr_t500, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 500, 0.04).
+narrative_ontology:measurement(gita_tr_t1000, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 1000, 0.03).
+narrative_ontology:measurement(gita_tr_t1500, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 1500, 0.04).
+narrative_ontology:measurement(gita_tr_t2024, gita_kurukshetra_discourse__universalist_devotional_reading, theater_ratio, 2024, 0.05).
 
 % Extraction over time
-narrative_ontology:measurement(gita_be_t0, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(gita_be_t10, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 10, 0.22).
-narrative_ontology:measurement(gita_be_t20, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 20, 0.2).
-narrative_ontology:measurement(gita_be_t30, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 30, 0.2).
+narrative_ontology:measurement(gita_be_t100, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 100, 0.2).
+narrative_ontology:measurement(gita_be_t500, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 500, 0.18).
+narrative_ontology:measurement(gita_be_t1000, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 1000, 0.15).
+narrative_ontology:measurement(gita_be_t1500, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 1500, 0.17).
+narrative_ontology:measurement(gita_be_t2024, gita_kurukshetra_discourse__universalist_devotional_reading, base_extractiveness, 2024, 0.2).
 
 % Suppression requirement over time
-narrative_ontology:measurement(gita_su_t0, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(gita_su_t10, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 10, 0.32).
-narrative_ontology:measurement(gita_su_t20, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 20, 0.3).
-narrative_ontology:measurement(gita_su_t30, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 30, 0.3).
+narrative_ontology:measurement(gita_su_t100, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 100, 0.1).
+narrative_ontology:measurement(gita_su_t500, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 500, 0.08).
+narrative_ontology:measurement(gita_su_t1000, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 1000, 0.07).
+narrative_ontology:measurement(gita_su_t1500, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 1500, 0.09).
+narrative_ontology:measurement(gita_su_t2024, gita_kurukshetra_discourse__universalist_devotional_reading, suppression_requirement, 2024, 0.1).
 
 
 /* ==========================================================================
@@ -241,7 +296,7 @@ narrative_ontology:affects_constraint(gita_kurukshetra_discourse__universalist_d
 narrative_ontology:affects_constraint(gita_kurukshetra_discourse__universalist_devotional_reading, gita_kurukshetra_discourse__gandhian_allegorical_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three distinct readings of the Bhagavad Gita's Kurukshetra discourse kernel. Each reading has a different structural impact and classification, linked here as a constraint family.
+% This constraint is one of three distinct readings of the 'gita_kurukshetra_discourse' kernel. Each reading instantiates a different constraint with its own ε and classification. This reading emphasizes universal devotion and egalitarian access, contrasting with the orthodox literal reading (caste-based duty, righteous violence) and the Gandhian allegorical reading (internal struggle, non-violence).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

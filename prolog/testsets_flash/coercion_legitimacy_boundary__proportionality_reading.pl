@@ -41,6 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -56,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,15 +72,16 @@
  *   domain: public_health_policy/medical_ethics/constitutional_law
  *
  * SUMMARY:
- *   This constraint, the 'proportionality_reading' of the
- *   'coercion_legitimacy_boundary' kernel, asserts that the legitimacy of
- *   public health coercion (e.g., vaccine mandates, quarantines) is not
- *   absolute but scales with the severity and transmissibility of the
- *   disease. For highly severe and transmissible diseases like measles,
- *   coercion is deemed legitimate; for less severe ones like seasonal flu, it
- *   is not. This reading attempts to balance collective public health with
- *   individual autonomy through a case-by-case assessment, leading to a
- *   variable victim set depending on the pathogen.
+ *   This constraint defines the boundary of legitimate public health coercion
+ *   based on the proportionality principle: the severity of interventions
+ *   must match the severity and transmissibility of the disease. For example,
+ *   measles (high R0, severe outcomes) justifies mandates, while seasonal flu
+ *   (lower R0, generally milder outcomes) typically does not. This reading
+ *   aims for a moderate level of extraction, as it acknowledges the necessity
+ *   of some coercion for collective good but limits its scope. It is claimed
+ *   as a Tangled Rope because it genuinely coordinates public health while
+ *   extracting autonomy from individuals, requiring active enforcement to
+ *   maintain this balance.
  *
  */
 
@@ -108,27 +111,28 @@ narrative_ontology:topic_domain(coercion_legitimacy_boundary__proportionality_re
 domain_priors:requires_active_enforcement(coercion_legitimacy_boundary__proportionality_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(coercion_legitimacy_boundary__proportionality_reading, 'd38f190d-d5e0-4983-869f-176a32fc6437').
-narrative_ontology:cs_kernel_codification('d38f190d-d5e0-4983-869f-176a32fc6437', formalized).
-narrative_ontology:cs_authority_grounding('d38f190d-d5e0-4983-869f-176a32fc6437', lineage).
-narrative_ontology:cs_interpretation_layer_present('d38f190d-d5e0-4983-869f-176a32fc6437').
-narrative_ontology:cs_reading_relation('d38f190d-d5e0-4983-869f-176a32fc6437', coercion_legitimacy_boundary__bodily_autonomy_primary, forecloses).
-narrative_ontology:cs_reading_relation('d38f190d-d5e0-4983-869f-176a32fc6437', coercion_legitimacy_boundary__public_health_primary, coexists_with).
-narrative_ontology:cs_axiom('d38f190d-d5e0-4983-869f-176a32fc6437', foundational, coercion_must_be_necessary_and_proportional).
-narrative_ontology:cs_axiom_status(coercion_must_be_necessary_and_proportional, holdable).
-narrative_ontology:cs_axiom_grounding('d38f190d-d5e0-4983-869f-176a32fc6437', coercion_must_be_necessary_and_proportional, deontological).
-narrative_ontology:cs_axiom('d38f190d-d5e0-4983-869f-176a32fc6437', foundational, disease_severity_and_transmissibility_are_relevant_factors).
-narrative_ontology:cs_axiom_status(disease_severity_and_transmissibility_are_relevant_factors, holdable).
-narrative_ontology:cs_axiom_grounding('d38f190d-d5e0-4983-869f-176a32fc6437', disease_severity_and_transmissibility_are_relevant_factors, empirically_contingent).
-narrative_ontology:cs_reference_frame('d38f190d-d5e0-4983-869f-176a32fc6437', constitutional_proportionality_doctrine).
-narrative_ontology:cs_drift_state('d38f190d-d5e0-4983-869f-176a32fc6437', contemporary_pandemic_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('d38f190d-d5e0-4983-869f-176a32fc6437', '').
+narrative_ontology:cs_story_uid(coercion_legitimacy_boundary__proportionality_reading, '2916810a-bb14-4c1d-9dd5-f53163ea6c3e').
+narrative_ontology:cs_kernel_codification('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', formalized).
+narrative_ontology:cs_authority_grounding('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', lineage).
+narrative_ontology:cs_interpretation_layer_present('2916810a-bb14-4c1d-9dd5-f53163ea6c3e').
+narrative_ontology:cs_reading_relation('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', coercion_legitimacy_boundary__public_health_primary, coexists_with).
+narrative_ontology:cs_reading_relation('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', coercion_legitimacy_boundary__bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_axiom('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', foundational, coercion_must_be_proportionate_to_threat).
+narrative_ontology:cs_axiom_status(coercion_must_be_proportionate_to_threat, holdable).
+narrative_ontology:cs_axiom_grounding('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', coercion_must_be_proportionate_to_threat, deontological).
+narrative_ontology:cs_axiom('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', secondary, individual_autonomy_is_defeasible_by_collective_harm).
+narrative_ontology:cs_axiom_status(individual_autonomy_is_defeasible_by_collective_harm, holdable).
+narrative_ontology:cs_axiom_grounding('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', individual_autonomy_is_defeasible_by_collective_harm, deontological).
+narrative_ontology:cs_reference_frame('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', balancing_rights_and_duties).
+narrative_ontology:cs_drift_state('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('2916810a-bb14-4c1d-9dd5-f53163ea6c3e', '').
 narrative_ontology:cs_kernel_id(coercion_legitimacy_boundary__proportionality_reading, coercion_legitimacy_boundary).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(coercion_legitimacy_boundary__proportionality_reading, general_public).
 narrative_ontology:constraint_beneficiary(coercion_legitimacy_boundary__proportionality_reading, public_health_authorities).
+narrative_ontology:constraint_beneficiary(coercion_legitimacy_boundary__proportionality_reading, general_public).
 narrative_ontology:constraint_victim(coercion_legitimacy_boundary__proportionality_reading, individuals_subject_to_mandates).
+narrative_ontology:constraint_victim(coercion_legitimacy_boundary__proportionality_reading, religious_objectors).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -137,15 +141,35 @@ narrative_ontology:constraint_victim(coercion_legitimacy_boundary__proportionali
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Responsible for protecting public health, they assess disease threats and recommend or implement coercive measures. They benefit from the ability to act decisively in crises but are constrained by legal and ethical challenges to their authority.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__proportionality_reading, public_health_authorities, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Benefits from reduced disease transmission and protection from severe illness. They generally support measures that protect collective health, but their support can wane if measures are perceived as disproportionate or overreaching.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__proportionality_reading, general_public, beneficiary,
+    organized, biographical, mobile, national).
+
+% Bear the direct costs of coercive measures, such as mandatory vaccination or isolation. Their autonomy is curtailed, and they may face social or economic penalties for non-compliance. Their ability to resist is limited by legal enforcement.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__proportionality_reading, individuals_subject_to_mandates, payer,
+    powerless, immediate, constrained, local).
+
+% Face a conflict between religious beliefs and public health mandates. Their identity is often deeply tied to their objections, making exit (compliance) a profound personal cost. They often seek legal exemptions or challenge mandates in court.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__proportionality_reading, religious_objectors, payer,
+    moderate, generational, identity_locked, national).
+
+% Adjudicate challenges to public health mandates, balancing state powers against individual rights. Their rulings shape the boundaries of legitimate coercion and influence future policy. They operate within a framework of legal precedent and constitutional principles.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__proportionality_reading, constitutional_courts, observer,
+    institutional, civilizational, analytical, national).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Coordinates collective action to mitigate public health crises by establishing a framework for when individual liberties can be curtailed for the greater good, ensuring a baseline of public safety against infectious diseases.
-% TRANSFER_FUNCTION: Transfers a portion of individual autonomy and liberty from individuals to the state (public health authorities) in exchange for collective protection from severe infectious diseases. The extent of this transfer is proportional to the disease threat.
-% ABSENT_VOICES: Those who advocate for absolute bodily autonomy, regardless of public health risk, are often marginalized in policy discussions that adopt this proportionality framework. They would argue that no disease severity justifies involuntary medical intervention.
-% DISAPPEARANCE_RATIONALE: If the proportionality principle vanished, public health responses would either become overly coercive (if public health primary prevailed) or entirely ineffective (if bodily autonomy primary prevailed), leading to a breakdown in disease control or a severe erosion of individual rights. Society would have to re-establish a new balance.
-% FOUNDING_PROBLEM: The historical tension between individual liberty and collective safety during infectious disease outbreaks, where unchecked individual action could lead to widespread harm, and unchecked state power could lead to tyranny.
-% FOUNDING_PROBLEM_CORROBORATION: Legal scholars, ethicists, and public health historians widely corroborate the enduring nature of this tension. Judicial precedents in constitutional law (e.g., Jacobson v. Massachusetts) and ongoing debates during pandemics attest to the problem's live status, from sources outside the direct beneficiaries of public health mandates.
+% COORDINATION_FUNCTION: Establishes a framework for public health interventions that balances collective safety with individual liberties, ensuring that coercive measures are applied judiciously and only when justified by the severity of the threat.
+% TRANSFER_FUNCTION: Transfers a degree of individual autonomy to the state in exchange for collective health protection, with the extent of transfer determined by the proportionality of the disease threat.
+% ABSENT_VOICES: Those who advocate for absolute bodily autonomy, regardless of public health risk, are often marginalized in policy debates when severe threats emerge. Their arguments are heard in courts but rarely shape the initial policy response.
+% DISAPPEARANCE_RATIONALE: If the proportionality principle vanished, public health authorities would either over-mandate (leading to widespread resistance and rights violations) or under-mandate (leading to uncontrolled outbreaks), and the legal system would lack a coherent basis for adjudicating disputes. The balance between individual rights and collective good would collapse.
+% FOUNDING_PROBLEM: To prevent arbitrary state overreach in public health crises while enabling effective responses to genuine threats, by linking the legitimacy of coercion to the severity and transmissibility of the disease.
+% FOUNDING_PROBLEM_CORROBORATION: Legal scholars, medical ethicists, and historical analyses of past epidemics (e.g., smallpox, polio) corroborate the ongoing need for a proportionality framework to manage public health powers responsibly. The public health authorities themselves, while sometimes pushing boundaries, generally acknowledge the principle's necessity.
 narrative_ontology:disappearance_verdict(coercion_legitimacy_boundary__proportionality_reading, world_rearranges).
 narrative_ontology:founding_problem_status(coercion_legitimacy_boundary__proportionality_reading, live).
 
@@ -153,11 +177,12 @@ narrative_ontology:founding_problem_status(coercion_legitimacy_boundary__proport
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(coercion_legitimacy_boundary__proportionality_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(coercion_legitimacy_boundary__proportionality_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(coercion_legitimacy_boundary__proportionality_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(coercion_legitimacy_boundary__proportionality_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -172,16 +197,16 @@ narrative_ontology:story_seed(coercion_legitimacy_boundary__proportionality_read
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely coordinates collective action to prevent disease spread (benefiting the general public) but does so through asymmetric extraction (mandates on individuals). Extractiveness is moderate (0.45) due to the inherent burden of mandates, but not extreme because the principle aims to limit coercion. Suppression (0.6) is necessary to enforce mandates, but not total, as legal challenges and exemptions exist. The low theater ratio (0.1) reflects that the enforcement is generally functional, not performative, when applied proportionally.
+ *   Extractiveness is moderate (0.45) because it allows for significant curtailment of individual autonomy in severe cases, but not universally. Suppression is moderate-high (0.6) as it requires active legal and social enforcement to ensure compliance with mandates. Theater ratio is low (0.1) because the justification for coercion is generally tied to real epidemiological data and public health outcomes, with little performative maintenance. The victim set varies by pathogen: for measles, those mandated to vaccinate are victims; for flu, the constraint prevents mandates, so no victims are created by the constraint itself.
  *
  * PERSPECTIVAL GAP:
- *   Public health authorities (agenda-setters) view this as a necessary and just framework for protecting the population, experiencing it as a Rope. Individuals subject to mandates, particularly for diseases they perceive as low risk, experience it as a Snare due to the direct imposition on their autonomy. The engine's per-seat classification will capture this divergence.
+ *   Public health authorities view this as a necessary framework for effective disease control, balancing rights with responsibilities. Individuals subject to mandates, particularly those with strong objections, experience it as a direct infringement on their autonomy. Constitutional courts interpret and enforce this boundary, often mediating between these perspectives.
  *
  * DIRECTIONALITY LOGIC:
- *   Public health authorities and the general public are beneficiaries (d near 0.0) as they gain collective protection. Individuals subject to mandates are targets (d near 1.0) as they bear the direct costs of compliance. The proportionality principle aims to modulate this directionality, shifting it closer to symmetric for less severe threats and further towards target for severe ones.
+ *   Public health authorities and the general public are beneficiaries, gaining collective protection. Individuals subject to mandates and religious objectors are payers, bearing the costs of curtailed autonomy. Constitutional courts act as observers, adjudicating the application of the principle.
  *
  * MANDATROPHY ANALYSIS:
- *   The proportionality principle is designed to prevent mandatrophy by ensuring that coercive measures are only applied when the founding problem (severe disease threat) is 'live.' If coercion were applied indiscriminately to low-severity diseases, the constraint would drift towards a Snare, as its justification would become theatrical or purely extractive. The case-by-case adjudication is meant to keep the mandate 'live' only when truly needed.
+ *   This classification prevents mislabeling legitimate, albeit coercive, public health measures as pure extraction. By acknowledging both the coordination function (disease control) and the extraction (autonomy curtailment), it highlights the inherent tension that must be managed. The proportionality principle is intended to prevent mandatrophy by ensuring that the mandate's scope remains tied to its original, live problem (disease threat).
  */
 
 /* ==========================================================================
@@ -189,55 +214,53 @@ narrative_ontology:story_seed(coercion_legitimacy_boundary__proportionality_read
    ========================================================================== */
 
 omega_variable(
+    disease_severity_measurement_ambiguity,
+    'How is ''disease severity'' objectively measured and agreed upon, especially for novel pathogens or those with highly variable individual outcomes?',
+    'Standardized, transparent epidemiological metrics (e.g., R0, CFR, DALYs) adopted by international health organizations, with clear thresholds for triggering different levels of coercive intervention.',
+    'If severity metrics are ambiguous or contested, the proportionality principle becomes subjective, potentially leading to arbitrary coercion or insufficient response. This would increase effective extractiveness for individuals and reduce the coordination function for public health.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(disease_severity_measurement_ambiguity, empirical, 'Ambiguity in defining and measuring disease severity, which is central to the proportionality principle.').
+
+omega_variable(
     kernel_reading_identification,
-    'Is this constraint a genuine application of proportionality, or a cover for overreach?',
-    'Judicial review of specific mandates against established proportionality tests (necessity, suitability, strict sense proportionality).',
-    'If genuinely proportional, the constraint functions as a legitimate Tangled Rope balancing rights; if overreach, it shifts towards a Snare.',
+    'Is this constraint truly a ''proportionality_reading'' of the ''coercion_legitimacy_boundary'' kernel, or does it lean more towards ''public_health_primary'' or ''bodily_autonomy_primary'' in practice?',
+    'Analysis of judicial rulings and legislative debates over time: if rulings consistently emphasize balancing and context-dependency, it supports the proportionality reading. If they consistently prioritize one side, it suggests a different dominant reading.',
+    'If this reading is misidentified, the analysis of public health policy will be flawed, potentially underestimating extraction (if it''s actually ''public_health_primary'') or overestimating it (if it''s ''bodily_autonomy_primary'').',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''proportionality_reading'' of the ''coercion_legitimacy_boundary'' kernel.').
-
-omega_variable(
-    severity_threshold_ambiguity,
-    'Where is the precise threshold of disease severity and transmissibility that justifies coercion?',
-    'Consensus among epidemiologists, ethicists, and legal scholars, potentially codified in legislation or judicial precedent.',
-    'A clearer threshold would reduce arbitrary application and increase predictability, potentially lowering perceived extractiveness for those near the boundary.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(severity_threshold_ambiguity, empirical, 'Ambiguity in defining the ''severity'' and ''transmission'' metrics for proportionality.').
-
-omega_variable(
-    victim_set_variability,
-    'How does the victim set change with different pathogens, and is this change consistently applied?',
-    'Comparative analysis of mandate application across different disease outbreaks and jurisdictions.',
-    'Inconsistent application of the proportionality principle would indicate a drift towards arbitrary extraction, potentially reclassifying the constraint as a Snare for certain populations.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(victim_set_variability, empirical, 'The victim set (individuals subject to mandates) varies significantly based on the pathogen''s characteristics.').
+narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading of the ''coercion_legitimacy_boundary'' kernel. This omega documents the irreducible uncertainty of its precise alignment with the proportionality principle versus sibling readings.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(coercion_legitimacy_boundary__proportionality_reading, 0, 20).
+narrative_ontology:interval(coercion_legitimacy_boundary__proportionality_reading, 1900, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
+% Theater ratio over time
+narrative_ontology:measurement(coer_tr_t1900, coercion_legitimacy_boundary__proportionality_reading, theater_ratio, 1900, 0.05).
+narrative_ontology:measurement(coer_tr_t1950, coercion_legitimacy_boundary__proportionality_reading, theater_ratio, 1950, 0.08).
+narrative_ontology:measurement(coer_tr_t2000, coercion_legitimacy_boundary__proportionality_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(coer_tr_t2024, coercion_legitimacy_boundary__proportionality_reading, theater_ratio, 2024, 0.1).
+
 % Extraction over time
-narrative_ontology:measurement(coer_be_t0, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(coer_be_t10, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 10, 0.4).
-narrative_ontology:measurement(coer_be_t20, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 20, 0.45).
+narrative_ontology:measurement(coer_be_t1900, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 1900, 0.3).
+narrative_ontology:measurement(coer_be_t1950, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 1950, 0.4).
+narrative_ontology:measurement(coer_be_t2000, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 2000, 0.45).
+narrative_ontology:measurement(coer_be_t2024, coercion_legitimacy_boundary__proportionality_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(coer_su_t0, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 0, 0.5).
-narrative_ontology:measurement(coer_su_t10, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 10, 0.55).
-narrative_ontology:measurement(coer_su_t20, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 20, 0.6).
+narrative_ontology:measurement(coer_su_t1900, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 1900, 0.5).
+narrative_ontology:measurement(coer_su_t1950, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 1950, 0.55).
+narrative_ontology:measurement(coer_su_t2000, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 2000, 0.6).
+narrative_ontology:measurement(coer_su_t2024, coercion_legitimacy_boundary__proportionality_reading, suppression_requirement, 2024, 0.6).
 
 
 /* ==========================================================================
@@ -245,9 +268,6 @@ narrative_ontology:measurement(coer_su_t20, coercion_legitimacy_boundary__propor
    ========================================================================== */
 
 narrative_ontology:coordination_type(coercion_legitimacy_boundary__proportionality_reading, enforcement_mechanism).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'coercion_legitimacy_boundary' kernel, focusing on the proportionality of public health interventions. It is distinct from 'bodily_autonomy_primary' (categorical rejection of coercion) and 'public_health_primary' (categorical prioritization of collective health).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

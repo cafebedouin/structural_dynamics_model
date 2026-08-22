@@ -4,13 +4,13 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "e71b6819-e908-443c-9f12-1b3272564abf"
+    "story_uid": "96c20902-1569-4404-8975-db5e24714248"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.4,
+    "extractiveness": 0.65,
+    "suppression": 0.7,
     "theater_ratio": 0.85,
-    "accessibility_collapse": 0.3,
+    "accessibility_collapse": 0.4,
     "resistance": 0.2,
     "claimed_type": "piton",
     "human_readable": "Preparedness as Memorial Performance (Husk Reading)",
@@ -25,80 +25,112 @@
       "vulnerable_populations"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "husk_vs_competence_ambiguity",
-      "question": "Is this preparedness system a genuine competence-maintaining mechanism, or primarily a memorial performance (husk reading)?",
-      "resolution_mechanism": "Post-event operational audit under novel stress conditions: if competence collapses, it supports the husk reading. If it adapts effectively, it supports the competence reading.",
-      "impact": "If a husk, the system is a piton, extracting legitimacy without delivering function; if competence, it's a rope or tangled_rope, delivering genuine coordination.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Distinguishing performative from functional preparedness."
+      "name": "institutional_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sets the agenda for preparedness, emphasizing compliance with established procedures and visible drills. Benefits from the appearance of readiness and avoids accountability for actual competence gaps. Their careers depend on maintaining the illusion of control."
     },
     {
-      "id": "husk_reading_structural_delta",
-      "question": "What is the precise structural delta between the husk reading and the competence reading?",
-      "resolution_mechanism": "Comparative analysis of resource allocation: husk reading allocates resources to form-compliance (checklists, drills as ritual) over adaptive capacity (training for novel scenarios, cross-functional integration).",
-      "impact": "The husk reading implies high theater_ratio and low effective coordination, leading to a piton classification. The competence reading implies lower theater and higher effective coordination, leading to a rope or tangled_rope.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Structural differences between performative and functional preparedness."
+      "name": "public_relations_departments",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Leverage preparedness drills and formal plans to project an image of competence and responsibility to the public and media. Their success is measured by positive media coverage and public reassurance, not by operational outcomes."
     },
     {
-      "id": "mandatrophy_of_preparedness",
-      "question": "Has the mandate for preparedness atrophied from operational readiness to symbolic assurance?",
-      "resolution_mechanism": "Historical analysis of policy documents, budget allocations, and post-event inquiries: tracking the shift from outcome-based metrics to compliance-based metrics.",
-      "impact": "If mandatrophy is confirmed, the constraint is a piton, persisting due to inertia and symbolic value rather than functional necessity. If the mandate remains live, it suggests a different constraint type.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Assessing if preparedness mandate has shifted from function to symbol."
+      "name": "frontline_responders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Participate in drills and maintain formal compliance, often aware of the gap between performance and actual readiness. They bear the cost of ineffective training and the risk of operational failure in real crises. Their professional identity is tied to the institution, limiting exit."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the ultimate victims of preparedness failures. They rely on the promised competence of institutions and suffer disproportionately when memorial performance collapses under stress. They have no direct influence over preparedness policy."
+    },
+    {
+      "name": "external_auditors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review preparedness plans and drill reports for compliance with regulations. Their audits often focus on documentation and formal procedures, inadvertently reinforcing the memorial performance aspect rather than probing operational depth."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates institutional actors around a shared set of procedures and visible demonstrations of readiness, creating a sense of order and accountability in the face of potential disaster.",
+    "transfer_function": "Transfers resources (time, budget, attention) from genuine operational capacity building to performative compliance and public relations, from frontline competence to institutional image.",
+    "absent_voices": "Experienced operational experts who have left the system due to frustration with performative culture, and future victims of disaster who would demand genuine competence over theatrical displays.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this performative aspect vanished, institutions would either be forced to confront their actual competence gaps and invest in real readiness, or face immediate public and political backlash for their lack of demonstrable preparedness. The current equilibrium of 'looking prepared' would collapse.",
+    "founding_problem": "The need to demonstrate institutional readiness and accountability for disaster response, especially after past failures, and to reassure the public that risks are being managed.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Institutional leadership and public relations departments attest that the problem of demonstrating readiness is live. Frontline responders and external auditors, while critical of the current approach, corroborate the underlying need for demonstrable preparedness, but not the efficacy of the current system."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 5,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 10,
       "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.6
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.68
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
       "value": 0.75
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 10,
       "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.83
     },
     {
       "metric": "theater_ratio",
@@ -108,57 +140,75 @@
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.32
+      "value": 0.63
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.35
+      "value": 0.66
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.38
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.4
+      "value": 0.7
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes preparedness systems that prioritize the appearance of readiness over actual operational competence. Routines like drills and exercises are performed as memorial rituals, signaling compliance and reassuring stakeholders, but they lack the adaptive capacity needed to respond effectively to novel or complex disasters. The system feels like retention but is a 'husk' of its intended function, leading to competence collapse under real stress. This is one reading of the 'preparedness_commitment' kernel, focusing on the performative aspect.",
-    "key_agents": [
-      "institutional_leadership: Agenda setter (institutional/arbitrage) — benefits from perceived readiness, avoids accountability for actual competence.",
-      "public_relations_departments: Beneficiary (organized/mobile) — leverages preparedness rituals for positive public image.",
-      "frontline_responders: Payer (moderate/identity_locked) — bears the burden of ineffective drills and the consequences of competence gaps.",
-      "vulnerable_populations: Victim (powerless/trapped) — suffers directly from the failure of performative preparedness.",
-      "external_auditors: Observer (analytical/analytical) — attempts to assess true competence but often limited to reviewing compliance with formal procedures."
-    ],
-    "logic_rationale": "The high theater_ratio (0.85) reflects that most activity is performative, aimed at demonstrating compliance rather than building adaptive capacity. Extractiveness (0.6) is moderate, as it extracts resources and legitimacy from the public and frontline responders without delivering commensurate safety. Suppression (0.4) is present in the form of discouraging critical feedback and maintaining the illusion of competence. Accessibility collapse is low (0.3) because alternative approaches to preparedness are conceptually available, but institutionally suppressed. Resistance is low (0.2) because the performative nature often diffuses accountability and makes it hard to pinpoint specific failures until a crisis hits.",
-    "perspectival_gap": "Institutional leadership and public relations departments perceive this as a functional system that manages risk and maintains public trust. Frontline responders and vulnerable populations experience it as a system that fails when needed most, exposing them to greater risk due to a lack of genuine competence. The engine's classification will highlight this divergence.",
-    "directionality_logic": "Institutional leadership and public relations are beneficiaries, gaining legitimacy and positive image from the performance (low d). Frontline responders and vulnerable populations are victims/payers, bearing the costs of inadequate preparation (high d). External auditors are analytical observers (d=0.5).",
-    "mandatrophy_analysis": "This constraint is a prime example of mandatrophy, where the original mandate of 'operational readiness' has degraded into 'symbolic assurance.' The system persists due to institutional inertia and the benefits derived from the performance, rather than its original function. The high theater_ratio and the increasing extractiveness over time indicate this drift. Resolving mandatrophy would require a shift from compliance-based metrics to outcome-based metrics, forcing a re-evaluation of actual competence.",
-    "kernel_context": "This constraint is the 'husk_reading' of the 'preparedness_commitment' kernel. This reading posits that preparedness systems often devolve into memorial performances, where routines are enacted for symbolic value rather than operational competence. Sibling readings include the 'competence_reading' (preparedness as live, exercised knowledge) and the 'hybrid_reading' (preparedness as a layered system with both memorial and competence elements)."
+    "narrative_context": "This constraint describes preparedness as a set of routines that prioritize formal compliance and visible performance over genuine operational competence. Drills and plans become memorial acts, retaining the form of readiness without its adaptive capacity. This 'husk reading' highlights how the D5 break (decoupling of form from function) manifests as a collapse of competence under novel stress, despite high formal adherence. The claimed type is 'piton' because the primary function (actual readiness) has atrophied, but the constraint persists due to institutional inertia and the theatrical maintenance of 'being prepared'.",
+    "logic_rationale": "Extractiveness is high because resources are diverted from real capacity to performative displays, and the cost of actual failure is borne by frontline responders and vulnerable populations. Suppression is high because dissent about the efficacy of current preparedness is often marginalized or reframed as 'not understanding the process'. The theater ratio is very high (0.85) as the core activity is about appearing ready, not being ready. Accessibility collapse is moderate, as some alternatives (e.g., genuine, adaptive training) are theoretically available but institutionally suppressed. Resistance is low because the system is effective at absorbing or deflecting criticism.",
+    "directionality_logic": "Institutional leadership and public relations departments are beneficiaries, gaining legitimacy and positive image from the performative aspects. Frontline responders and vulnerable populations are payers, bearing the costs of inadequate preparation. External auditors, while observers, can inadvertently reinforce the performative aspect by focusing on formal compliance.",
+    "perspectival_gap": "From the perspective of institutional leadership, the constraint is a necessary 'rope' for coordinating complex readiness efforts. From the perspective of frontline responders and vulnerable populations, it operates as a 'snare' or 'piton', extracting resources and trust while delivering insufficient actual protection. The engine's computation of per-seat types will highlight this divergence.",
+    "mandatrophy_analysis": "The constraint's mandate (ensuring actual preparedness) has atrophied, replaced by a focus on the performance of preparedness. The classification as 'piton' prevents mislabeling this as a 'rope' (which would imply genuine coordination benefits for all) or a 'snare' (which would imply concentrated benefit for a party actively maintaining the extraction). Instead, it highlights the diffuse costs and the inertial persistence of a degraded function.",
+    "kernel_context": "This constraint, 'preparedness_commitment__husk_reading', is one reading of the 'preparedness_commitment' kernel. It instantiates the view that preparedness routines have become memorial performances, lacking operational competence. Sibling readings include 'competence_reading' (preparedness as live, exercised knowledge) and 'hybrid_reading' (preparedness as a layered system of memorial and competence elements)."
   },
+  "omegas": [
+    {
+      "id": "operational_vs_performative_budget_allocation",
+      "question": "What proportion of the preparedness budget is allocated to genuine operational capacity building versus performative drills and public relations?",
+      "resolution_mechanism": "Detailed, independently audited financial analysis of preparedness spending, categorizing expenditures by their direct contribution to adaptive operational competence versus formal compliance and image management.",
+      "impact": "If the majority of the budget is performative, it strengthens the 'piton' classification and the 'husk_reading'. If it's genuinely operational, it would shift towards a 'rope' or 'tangled_rope' classification, supporting the 'competence_reading' or 'hybrid_reading'.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishes resource allocation between actual competence and theatrical display."
+    },
+    {
+      "id": "accountability_for_failure",
+      "question": "To what extent are institutional leaders held accountable for actual operational failures during crises, as opposed to failures in formal compliance or public image?",
+      "resolution_mechanism": "Analysis of post-crisis investigations and personnel changes: do leaders face consequences for competence gaps, or only for visible missteps in communication or procedure?",
+      "impact": "If accountability is primarily for performance, it reinforces the 'husk_reading' and the 'piton' classification. If it's for operational competence, it would push towards a 'snare' (if leaders benefit from the extraction) or 'tangled_rope' (if there's genuine coordination with asymmetric costs).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Examines the true locus of accountability in preparedness systems."
+    },
+    {
+      "id": "husk_vs_competence_framing",
+      "question": "Is preparedness fundamentally about maintaining a visible commitment (husk reading) or about ensuring adaptive capacity (competence reading)?",
+      "resolution_mechanism": "Analysis of institutional discourse and resource allocation patterns over time: which framing consistently guides decision-making and investment?",
+      "impact": "If the 'husk reading' is the dominant frame, the constraint remains a piton. If the 'competence reading' gains ascendancy, the constraint would shift towards a rope or tangled rope, with a lower theater ratio and higher genuine coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The core conceptual ambiguity between performative and functional preparedness."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "preparedness_commitment__competence_reading",
       "preparedness_commitment__hybrid_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'preparedness_commitment' kernel. The husk reading emphasizes performative compliance over operational competence, contrasting with the competence reading's focus on live knowledge and the hybrid reading's layered approach."
+    "dual_formulation_note": "This constraint is one reading of the 'preparedness_commitment' kernel, focusing on the performative and competence-lacking aspects. It is linked to sibling readings that emphasize competence or a hybrid approach."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -166,45 +216,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "preparedness_commitment__competence_reading",
-        "relation": "forecloses"
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "preparedness_commitment__hybrid_reading",
-        "relation": "influences"
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "preparedness_as_symbolic_assurance",
+        "atom": "appearance_of_readiness_is_sufficient",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "compliance_equals_readiness",
+        "atom": "formal_compliance_equals_competence",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "ritualized_compliance_framework",
+    "reference_frame": "formal_compliance_framework",
     "drift_state": {
-      "moment": "contemporary_complex_disaster_era",
-      "direction": "practice_drift",
+      "moment": "contemporary_complex_threat_environment",
+      "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

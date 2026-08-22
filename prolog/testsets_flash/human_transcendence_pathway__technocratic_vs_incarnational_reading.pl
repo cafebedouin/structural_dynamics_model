@@ -41,7 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,25 +74,18 @@
  *   domain: political_theology/technology_ethics
  *
  * SUMMARY:
- *   This constraint represents the tension between two pathways to human
- *   transcendence: one achieved through technological optimization and
- *   elimination of limits (the technocratic/posthumanist vision), and the
- *   other as a gift of divine grace received in vulnerability (the
- *   Incarnational vision, particularly from Catholic Social Doctrine). This
- *   specific reading focuses on how the technocratic pathway, when dominant,
- *   functions as a snare, extracting from and suppressing those deemed
- *   'inefficient' or 'obsolete' by its logic, while claiming to offer
- *   universal human betterment. The Incarnational perspective serves as an
- *   analytical counterpoint, highlighting the victims of the technocratic
- *   approach.
+ *   This constraint represents the technocratic reading of human
+ *   transcendence, where human flourishing is achieved through technological
+ *   optimization and the elimination of biological limits
+ *   (transhumanism/posthumanism). It stands in stark contrast to an
+ *   Incarnational understanding of transcendence, which emphasizes divine
+ *   grace received in vulnerability. The technocratic pathway, while claiming
+ *   to 'improve' humanity, functions as a snare, extracting from and
+ *   suppressing those deemed 'inefficient' or 'unoptimized' to benefit an
+ *   enhancement-capable elite. The claimed type is 'snare' because the
+ *   coordination story (collective human progress) is a cover for asymmetric
+ *   extraction and suppression of alternatives.
  *
- * KEY AGENTS:
- *   - enhancement_capable_elites: Primary beneficiaries (powerful/arbitrage) — drive the technocratic vision, accrue benefits of optimization.
- *   - transhumanist_ideologues: Agenda setters (organized/analytical) — articulate and promote the technocratic vision, shaping policy and public discourse.
- *   - biologically_unmodified_humans: Primary victims (powerless/trapped) — face marginalization, obsolescence, or forced 'enhancement' under the technocratic paradigm.
- *   - vulnerable_populations: Victims (powerless/trapped) — disproportionately bear the costs of optimization, often excluded from benefits or subjected to coercive 'solutions'.
- *   - religious_communities_rejecting_optimization: Victims (organized/constrained) — resist the technocratic vision on theological grounds, facing social and institutional pressure.
- *   - catholic_social_doctrine_advocates: Observers/Agenda setters (institutional/analytical) — articulate the Incarnational counter-narrative, advocating for solidarity and human dignity in vulnerability.
  */
 
 /* ==========================================================================
@@ -98,17 +94,17 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0.85).
-domain_priors:suppression_score(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0.92).
+domain_priors:suppression_score(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0.9).
 domain_priors:theater_ratio(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, extractiveness, 0.85).
-narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 0.92).
+narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 0.9).
 narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, accessibility_collapse, 0.9).
-narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, resistance, 0.7).
+narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, accessibility_collapse, 0.75).
+narrative_ontology:constraint_metric(human_transcendence_pathway__technocratic_vs_incarnational_reading, resistance, 0.8).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(human_transcendence_pathway__technocratic_vs_incarnational_reading, snare).
@@ -118,29 +114,29 @@ narrative_ontology:topic_domain(human_transcendence_pathway__technocratic_vs_inc
 domain_priors:requires_active_enforcement(human_transcendence_pathway__technocratic_vs_incarnational_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(human_transcendence_pathway__technocratic_vs_incarnational_reading, '6efda5da-af40-467d-8334-31a49cdb1f86').
-narrative_ontology:cs_kernel_codification('6efda5da-af40-467d-8334-31a49cdb1f86', implicit).
-narrative_ontology:cs_authority_grounding('6efda5da-af40-467d-8334-31a49cdb1f86', extraction).
-narrative_ontology:cs_interpretation_layer_present('6efda5da-af40-467d-8334-31a49cdb1f86').
-narrative_ontology:cs_reading_relation('6efda5da-af40-467d-8334-31a49cdb1f86', human_transcendence_pathway__babel_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6efda5da-af40-467d-8334-31a49cdb1f86', human_transcendence_pathway__jerusalem_reading, coexists_with).
-narrative_ontology:cs_axiom('6efda5da-af40-467d-8334-31a49cdb1f86', foundational, human_perfection_through_technological_mastery).
-narrative_ontology:cs_axiom_status(human_perfection_through_technological_mastery, holdable).
-narrative_ontology:cs_axiom_grounding('6efda5da-af40-467d-8334-31a49cdb1f86', human_perfection_through_technological_mastery, empirically_contingent).
-narrative_ontology:cs_axiom('6efda5da-af40-467d-8334-31a49cdb1f86', foundational, vulnerability_as_obstacle_to_flourishing).
-narrative_ontology:cs_axiom_status(vulnerability_as_obstacle_to_flourishing, holdable).
-narrative_ontology:cs_axiom_grounding('6efda5da-af40-467d-8334-31a49cdb1f86', vulnerability_as_obstacle_to_flourishing, instrumental).
-narrative_ontology:cs_reference_frame('6efda5da-af40-467d-8334-31a49cdb1f86', unlimited_human_potential_through_science).
-narrative_ontology:cs_drift_state('6efda5da-af40-467d-8334-31a49cdb1f86', contemporary_technological_acceleration, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('6efda5da-af40-467d-8334-31a49cdb1f86', '').
+narrative_ontology:cs_story_uid(human_transcendence_pathway__technocratic_vs_incarnational_reading, '7f0e043a-d3f9-4a50-80f8-742391af7014').
+narrative_ontology:cs_kernel_codification('7f0e043a-d3f9-4a50-80f8-742391af7014', distributed).
+narrative_ontology:cs_authority_grounding('7f0e043a-d3f9-4a50-80f8-742391af7014', extraction).
+narrative_ontology:cs_interpretation_layer_present('7f0e043a-d3f9-4a50-80f8-742391af7014').
+narrative_ontology:cs_reading_relation('7f0e043a-d3f9-4a50-80f8-742391af7014', human_transcendence_pathway__babel_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7f0e043a-d3f9-4a50-80f8-742391af7014', human_transcendence_pathway__jerusalem_reading, forecloses).
+narrative_ontology:cs_axiom('7f0e043a-d3f9-4a50-80f8-742391af7014', foundational, technological_mastery_as_transcendence).
+narrative_ontology:cs_axiom_status(technological_mastery_as_transcendence, holdable).
+narrative_ontology:cs_axiom_grounding('7f0e043a-d3f9-4a50-80f8-742391af7014', technological_mastery_as_transcendence, instrumental).
+narrative_ontology:cs_axiom('7f0e043a-d3f9-4a50-80f8-742391af7014', foundational, biological_limits_as_defects).
+narrative_ontology:cs_axiom_status(biological_limits_as_defects, holdable).
+narrative_ontology:cs_axiom_grounding('7f0e043a-d3f9-4a50-80f8-742391af7014', biological_limits_as_defects, empirically_contingent).
+narrative_ontology:cs_reference_frame('7f0e043a-d3f9-4a50-80f8-742391af7014', unlimited_human_potential_through_tech).
+narrative_ontology:cs_drift_state('7f0e043a-d3f9-4a50-80f8-742391af7014', contemporary_ethical_critique, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('7f0e043a-d3f9-4a50-80f8-742391af7014', '').
 narrative_ontology:cs_kernel_id(human_transcendence_pathway__technocratic_vs_incarnational_reading, human_transcendence_pathway).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(human_transcendence_pathway__technocratic_vs_incarnational_reading, enhancement_capable_elites).
 narrative_ontology:constraint_beneficiary(human_transcendence_pathway__technocratic_vs_incarnational_reading, transhumanist_ideologues).
-narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_vs_incarnational_reading, biologically_unmodified_humans).
-narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_vs_incarnational_reading, vulnerable_populations).
-narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_vs_incarnational_reading, religious_communities_rejecting_optimization).
+narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_vs_incarnational_reading, biologically_unoptimized_populations).
+narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_vs_incarnational_reading, vulnerable_communities).
+narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_vs_incarnational_reading, religious_adherents_of_incarnational_theology).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -149,15 +145,39 @@ narrative_ontology:constraint_victim(human_transcendence_pathway__technocratic_v
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% These are the primary beneficiaries of the technocratic pathway, gaining access to advanced biotechnologies and AI-driven enhancements that promise extended lifespans, cognitive augmentation, and physical perfection. They actively fund and promote the research and development of these technologies, seeing themselves as the vanguard of a new evolutionary stage. Their position allows them to shape the narrative and direct resources towards their vision of human flourishing, often at the expense of those deemed 'less efficient' or 'obsolete'.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__technocratic_vs_incarnational_reading, enhancement_capable_elites, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% These agents actively articulate and disseminate the philosophical underpinnings of the technocratic transcendence pathway. They advocate for the radical transformation of human nature through technology, viewing biological limitations as problems to be solved rather than inherent aspects of being. Their role involves shaping public discourse, influencing policy, and driving the technological agenda, often dismissing alternative views as irrational or regressive. Their identity is deeply fused with the transhumanist project.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__technocratic_vs_incarnational_reading, transhumanist_ideologues, agenda_setter,
+    organized, civilizational, identity_locked, global).
+
+% These populations are deemed 'inefficient' or 'obsolete' by the technocratic framework. They bear the costs of this pathway through exclusion from advanced technologies, potential marginalization in a society increasingly valuing optimized traits, and the erosion of social safety nets that prioritize enhancement over basic welfare. Their 'natural' state is framed as a deficit, leading to systemic disadvantages and a lack of agency in shaping their own future.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__technocratic_vs_incarnational_reading, biologically_unoptimized_populations, payer,
+    powerless, biographical, trapped, global).
+
+% These communities, often already marginalized by economic or social factors, face intensified pressure under a technocratic transcendence paradigm. Resources are diverted from addressing their immediate needs (healthcare, education, environmental justice) towards speculative enhancement projects. They are at risk of being left behind, or actively displaced, as the definition of 'human' shifts towards technologically mediated capabilities. Their vulnerability is exploited by the system's focus on optimization.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__technocratic_vs_incarnational_reading, vulnerable_communities, payer,
+    powerless, generational, trapped, local).
+
+% These individuals and communities adhere to a theological framework that emphasizes human dignity, vulnerability, and transcendence through divine grace rather than technological mastery. They bear the cost of the technocratic pathway through the marginalization of their worldview, the erosion of ethical frameworks that value inherent human worth, and the pressure to conform to a technologically driven definition of progress. Their identity is deeply tied to their faith, making 'exit' from their theological commitments unthinkable.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__technocratic_vs_incarnational_reading, religious_adherents_of_incarnational_theology, payer,
+    organized, civilizational, identity_locked, global).
+
+% These advocates analyze the ethical implications of transhumanist claims from the perspective of Catholic Social Doctrine, which emphasizes integral human development, the common good, and preferential option for the poor. They critique the technocratic pathway's reductionist view of humanity and its potential to exacerbate inequalities. Their role is to articulate an alternative vision of transcendence rooted in solidarity and vulnerability, and to influence policy and public opinion.
+narrative_ontology:constraint_stakeholder(human_transcendence_pathway__technocratic_vs_incarnational_reading, catholic_social_doctrine_advocates, observer,
+    institutional, generational, analytical, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Coordinates human effort and resources towards the collective goal of overcoming biological and cognitive limits through technological means, promising a shared future of enhanced existence.
-% TRANSFER_FUNCTION: Transfers resources, attention, and societal value from traditional human forms and vulnerable populations to the development and implementation of enhancement technologies and the elites who control them.
-% ABSENT_VOICES: Those who advocate for the inherent dignity of natural human life, the value of vulnerability, or spiritual forms of transcendence are systematically marginalized or dismissed as 'anti-progress' or 'irrational'. Their voices are absent from the dominant discourse of technological optimization.
-% DISAPPEARANCE_RATIONALE: If the technocratic vision of transcendence and its associated constraints vanished, the societal focus on optimization would dissipate. Resources would be reallocated, research priorities would shift, and the value placed on 'natural' human existence and vulnerability would likely increase, leading to a profound rearrangement of social and ethical norms.
-% FOUNDING_PROBLEM: The perceived limits of human existence: mortality, disease, suffering, and cognitive imperfections, which are seen as obstacles to ultimate human flourishing.
-% FOUNDING_PROBLEM_CORROBORATION: The problem of human limits is universally acknowledged. However, the technocratic solution is contested. Transhumanist organizations and tech industry leaders corroborate the 'live' status of the problem and the efficacy of their solutions. Religious and ethical scholars, from outside the benefiting parties, corroborate the 'live' status of human limits but contest the technocratic framing of the solution, arguing it creates new problems while failing to address the deepest human longings.
+% COORDINATION_FUNCTION: The technocratic pathway coordinates global scientific and technological efforts towards a shared vision of human enhancement and the elimination of perceived biological limits, fostering collaboration among researchers, investors, and ideologues.
+% TRANSFER_FUNCTION: This pathway transfers resources, social status, and existential meaning from those deemed 'unoptimized' or 'obsolete' to those capable of, and advocating for, technological enhancement and radical human transformation.
+% ABSENT_VOICES: Future generations who might inherit a radically altered human condition without consent, and non-human life forms whose intrinsic value is diminished by an anthropocentric drive for technological mastery, are absent. They would argue for a more cautious, inclusive, and ecologically responsible approach to human evolution.
+% DISAPPEARANCE_RATIONALE: If the technocratic transcendence pathway and its underlying ideology vanished overnight, the global scientific and economic landscape would undergo a profound reorientation. Investment would shift from enhancement to addressing basic human needs and ecological restoration. The definition of human flourishing would revert to more traditional, less technologically deterministic forms, and the social hierarchy based on 'optimization' would collapse, leading to a rearrangement of power and resource distribution.
+% FOUNDING_PROBLEM: The founding problem addressed by the technocratic pathway is the perceived limitations of the human condition: mortality, disease, suffering, and cognitive/physical constraints. It seeks to overcome these through scientific and technological advancement.
+% FOUNDING_PROBLEM_CORROBORATION: Transhumanist ideologues and enhancement-capable elites attest that the problem of human limitation is profoundly live and urgent. However, religious adherents of incarnational theology and Catholic Social Doctrine advocates contest this, arguing that the 'problem' is misdiagnosed, and that vulnerability and finitude are integral to human experience, not merely defects to be eliminated. Independent philosophical and ethical analyses from outside the benefiting parties support the contested status, highlighting the normative assumptions embedded in the 'problem' definition.
 narrative_ontology:disappearance_verdict(human_transcendence_pathway__technocratic_vs_incarnational_reading, world_rearranges).
 narrative_ontology:founding_problem_status(human_transcendence_pathway__technocratic_vs_incarnational_reading, live).
 
@@ -165,11 +185,12 @@ narrative_ontology:founding_problem_status(human_transcendence_pathway__technocr
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(human_transcendence_pathway__technocratic_vs_incarnational_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(human_transcendence_pathway__technocratic_vs_incarnational_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(human_transcendence_pathway__technocratic_vs_incarnational_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -189,16 +210,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.85) is high because the technocratic pathway redefines human value in terms of quantifiable optimization, leading to the 'extraction' of potential from those who do not or cannot conform. Suppression (0.92) is severe, as the logic of optimization tends to marginalize or eliminate alternatives, including natural human limitations and spiritual transcendence. Theater ratio is low (0.1) because the technocratic project is genuinely driven by its stated goals of overcoming limits, even if the benefits are unevenly distributed. The increasing extractiveness and suppression over time reflect the accelerating pace of technological development and the hardening of the optimization paradigm.
+ *   The extractiveness (0.85) is high because the pathway systematically diverts resources and redefines human value in ways that disadvantage the majority for the benefit of a few. Suppression (0.90) is severe, as it involves not just economic exclusion but also ideological pressure to conform to a technologically mediated vision of humanity, effectively suppressing alternative pathways to meaning and flourishing. The low theater ratio (0.10) indicates that the stated goals of human improvement are largely aligned with the actual mechanisms of extraction and exclusion; there is little performative maintenance of a defunct function. Accessibility collapse (0.75) is high because the technocratic narrative often presents itself as the only 'rational' or 'progressive' path, making alternatives seem unviable or regressive. Resistance (0.80) is also high, reflecting significant opposition from religious, ethical, and social justice movements.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of enhancement-capable elites and transhumanist ideologues, the technocratic pathway is a 'rope' or 'scaffold' offering progress and liberation. From the perspective of vulnerable populations and religious communities, it is a 'snare' that redefines human flourishing in a way that excludes and exploits them. The engine's classification will reflect the latter, given the declared victims and high extraction/suppression.
+ *   From the perspective of the beneficiaries, this pathway is a 'rope' of collective human progress, solving the 'problem' of human limitation. From the perspective of the payers, it is a 'snare' that redefines human value to justify their marginalization and extraction. The engine's classification will highlight this divergence, showing how a claimed 'rope' functions as a 'snare' for those caught in its logic.
  *
  * DIRECTIONALITY LOGIC:
- *   Enhancement-capable elites and transhumanist ideologues are clear beneficiaries (d=0.0-0.2) as they define and profit from the optimization agenda. Biologically unmodified humans, vulnerable populations, and religious communities are targets (d=0.8-1.0) as they are either deemed obsolete, coerced into 'enhancement', or face systemic marginalization. Catholic Social Doctrine advocates, while promoting an alternative, are primarily analytical observers or agenda setters for a different paradigm, not direct beneficiaries or victims of the technocratic constraint itself.
+ *   Enhancement-capable elites and transhumanist ideologues are clear beneficiaries and agenda-setters, shaping the narrative and reaping the rewards of this pathway. Biologically unoptimized populations, vulnerable communities, and religious adherents of incarnational theology are the primary victims/payers, bearing the costs of exclusion, marginalization, and ideological suppression. Catholic Social Doctrine advocates serve as analytical observers, critiquing the system's inherent biases and proposing alternatives.
  *
- * MANDATROPHY ANALYSIS:
- *   The constraint's 'mandate' is to achieve human transcendence. The technocratic reading claims to fulfill this mandate through optimization. However, the analysis reveals that this 'mandate' is co-opted to justify extraction and suppression, particularly of those who do not fit the optimized ideal. The Incarnational counter-reading exposes this as a false summit, where the promise of transcendence becomes a cover for a new form of domination. The high extractiveness and suppression, coupled with the contested founding problem status, indicate a deep mandatrophy where the original human aspiration is perverted into a mechanism of control.
  */
 
 /* ==========================================================================
@@ -206,60 +225,69 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine reading of the ''human_transcendence_pathway'' kernel, or a distinct, unrelated constraint?',
-    'Analysis of foundational texts and philosophical arguments from both technocratic and Incarnational perspectives to identify shared underlying questions about human destiny and limits.',
-    'If a genuine reading, the classification contributes to understanding the contested nature of human flourishing. If unrelated, it should be reclassified as an independent constraint.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Confirms this constraint as a specific reading of the ''human_transcendence_pathway'' kernel.').
-
-omega_variable(
-    technocratic_vs_incarnational_ambiguity,
-    'Is the ''technocratic'' pathway truly distinct from the ''Incarnational'' pathway, or are there points of convergence or hybridity?',
-    'Empirical observation of technological development and its social integration, alongside theological and philosophical analysis of human flourishing, to identify any unexpected overlaps or divergences.',
-    'If distinct, the current classification holds. If hybridity is significant, the constraint may need to be decomposed into sub-readings or re-evaluated as a tangled rope.',
+    definition_of_human_flourishing,
+    'Is human flourishing primarily achieved through the elimination of biological limits and technological optimization, or through the embrace of vulnerability and relationality?',
+    'Longitudinal studies on the psychological and social well-being of enhanced vs. non-enhanced populations, and philosophical/theological consensus on the nature of human dignity.',
+    'If flourishing is found in vulnerability, the technocratic pathway''s foundational premise is undermined, reclassifying it as a pure snare built on a false premise. If optimization proves superior, the pathway gains ethical justification, potentially shifting its classification towards a tangled rope.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(technocratic_vs_incarnational_ambiguity, empirical, 'Examines the distinctness and potential overlap between technocratic and Incarnational approaches to transcendence.').
+narrative_ontology:omega_variable(definition_of_human_flourishing, conceptual, 'Ambiguity in the normative definition of human flourishing.').
+
+omega_variable(
+    technological_determinism_vs_agency,
+    'To what extent is the pursuit of technological transcendence an inevitable outcome of scientific progress (deterministic), versus a choice driven by specific ideological and economic interests (agency-driven)?',
+    'Historical analysis of technological development paths, and sociological studies of funding and influence networks within transhumanist movements.',
+    'If deterministic, the constraint might lean towards a ''mountain'' of technological inevitability, reducing the perceived agency of beneficiaries. If agency-driven, it reinforces the ''snare'' classification by highlighting the intentionality of extraction and suppression.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(technological_determinism_vs_agency, empirical, 'The degree to which technological transcendence is a deterministic or agency-driven phenomenon.').
 
 omega_variable(
     suppression_mechanism_ambiguity,
-    'Is the measured suppression structural (e.g., lack of access to enhancement technologies) or internalized (e.g., societal pressure to conform to optimized norms)?',
-    'Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed (e.g., access to technology is democratized), reclassify as partially internalized.',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.',
+    'Is the measured suppression structural (economic/technological exclusion) or internalized (ideological pressure leading to self-marginalization)?',
+    'Post-exit suppression trajectory: if individuals from ''unoptimized'' populations continue to feel inferior or self-limit even after structural barriers are removed, reclassify as partially internalized.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making the snare more insidious.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in the context of human optimization.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in the technocratic pathway.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0, 20).
+narrative_ontology:interval(human_transcendence_pathway__technocratic_vs_incarnational_reading, 1980, 2050).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(huma_tr_t0, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(huma_tr_t10, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 10, 0.15).
-narrative_ontology:measurement(huma_tr_t20, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 20, 0.1).
+narrative_ontology:measurement(huma_tr_t1980, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 1980, 0.05).
+narrative_ontology:measurement(huma_tr_t1995, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 1995, 0.08).
+narrative_ontology:measurement(huma_tr_t2010, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 2010, 0.1).
+narrative_ontology:measurement(huma_tr_t2025, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 2025, 0.1).
+narrative_ontology:measurement(huma_tr_t2040, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 2040, 0.1).
+narrative_ontology:measurement(huma_tr_t2050, human_transcendence_pathway__technocratic_vs_incarnational_reading, theater_ratio, 2050, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(huma_be_t0, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 0, 0.6).
-narrative_ontology:measurement(huma_be_t10, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 10, 0.75).
-narrative_ontology:measurement(huma_be_t20, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 20, 0.85).
+narrative_ontology:measurement(huma_be_t1980, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 1980, 0.4).
+narrative_ontology:measurement(huma_be_t1995, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 1995, 0.55).
+narrative_ontology:measurement(huma_be_t2010, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 2010, 0.7).
+narrative_ontology:measurement(huma_be_t2025, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 2025, 0.8).
+narrative_ontology:measurement(huma_be_t2040, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 2040, 0.83).
+narrative_ontology:measurement(huma_be_t2050, human_transcendence_pathway__technocratic_vs_incarnational_reading, base_extractiveness, 2050, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(huma_su_t0, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 0, 0.7).
-narrative_ontology:measurement(huma_su_t10, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 10, 0.8).
-narrative_ontology:measurement(huma_su_t20, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 20, 0.92).
+narrative_ontology:measurement(huma_su_t1980, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 1980, 0.3).
+narrative_ontology:measurement(huma_su_t1995, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 1995, 0.5).
+narrative_ontology:measurement(huma_su_t2010, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 2010, 0.7).
+narrative_ontology:measurement(huma_su_t2025, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 2025, 0.85).
+narrative_ontology:measurement(huma_su_t2040, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 2040, 0.88).
+narrative_ontology:measurement(huma_su_t2050, human_transcendence_pathway__technocratic_vs_incarnational_reading, suppression_requirement, 2050, 0.9).
 
 
 /* ==========================================================================
@@ -267,11 +295,12 @@ narrative_ontology:measurement(huma_su_t20, human_transcendence_pathway__technoc
    ========================================================================== */
 
 narrative_ontology:coordination_type(human_transcendence_pathway__technocratic_vs_incarnational_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(human_transcendence_pathway__technocratic_vs_incarnational_reading, 0.08).
 narrative_ontology:affects_constraint(human_transcendence_pathway__technocratic_vs_incarnational_reading, babel_reading).
 narrative_ontology:affects_constraint(human_transcendence_pathway__technocratic_vs_incarnational_reading, jerusalem_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'human_transcendence_pathway' kernel, each representing a distinct structural claim about how human flourishing is achieved and what costs are incurred. This reading focuses on the technocratic/Incarnational tension, while 'babel_reading' and 'jerusalem_reading' explore other facets of collective human endeavor and divine interaction.
+% This constraint is one reading of the 'human_transcendence_pathway' kernel, focusing on the technocratic/incarnational tension. It is linked to the 'babel_reading' and 'jerusalem_reading' as sibling interpretations of the same core human aspiration for transcendence.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

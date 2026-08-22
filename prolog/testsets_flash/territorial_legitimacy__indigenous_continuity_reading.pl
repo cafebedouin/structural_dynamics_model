@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,21 +68,28 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: territorial_legitimacy__indigenous_continuity_reading
- *   human_readable: Territorial Legitimacy: Indigenous Continuity Reading (1948 as Nakba)
+ *   human_readable: Territorial Legitimacy: Indigenous Continuity Reading
  *   domain: political_theory/international_law/territorial_sovereignty
  *
  * SUMMARY:
- *   This constraint defines territorial legitimacy through the lens of
- *   continuous indigenous habitation and anti-colonial self-determination,
- *   framing the 1948 establishment of Israel as the Nakba (catastrophe)
- *   rather than a legitimate partition. It structurally asserts Palestinian
- *   sovereignty over all of historic Palestine and views the Israeli state as
- *   an illegitimate settler-colonial entity, making the right of return for
- *   1948 refugees a central and non-negotiable claim. The high extractiveness
- *   and suppression reflect the ongoing dispossession and violent enforcement
- *   required to maintain the counter-narrative and physical control by the
- *   Israeli state, which this reading fundamentally challenges.
+ *   This constraint story instantiates the 'indigenous continuity' reading of
+ *   territorial legitimacy, which views the events of 1948 as the Nakba
+ *   (catastrophe) and asserts the continuous right of the Palestinian people
+ *   to self-determination and sovereignty over all of historic Palestine.
+ *   From this perspective, the Israeli state is a settler-colonial entity,
+ *   and its existence is fundamentally illegitimate. The constraint's high
+ *   extractiveness and suppression reflect the ongoing dispossession and
+ *   denial of rights experienced by the Palestinian people. The claimed type
+ *   is 'snare' because the coordination story (e.g., security for the Israeli
+ *   state) is seen as a cover for pure extraction and suppression of the
+ *   indigenous population.
  *
+ * KEY AGENTS:
+ *   - palestinian_people: Primary target (powerless/identity_locked) — bears full extraction
+ *   - israeli_state: Agenda setter (institutional/constrained) — enforces the dispossession
+ *   - international_community_supporters: Beneficiary (organized/mobile) — benefits from upholding international law
+ *   - international_community_opponents: Excluded (institutional/arbitrage) — actively undermines Palestinian claims
+ *   - human_rights_organizations: Observer (moderate/analytical) — documents violations
  */
 
 /* ==========================================================================
@@ -101,43 +112,83 @@ narrative_ontology:constraint_metric(territorial_legitimacy__indigenous_continui
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(territorial_legitimacy__indigenous_continuity_reading, snare).
-narrative_ontology:human_readable(territorial_legitimacy__indigenous_continuity_reading, "Territorial Legitimacy: Indigenous Continuity Reading (1948 as Nakba)").
+narrative_ontology:human_readable(territorial_legitimacy__indigenous_continuity_reading, "Territorial Legitimacy: Indigenous Continuity Reading").
 narrative_ontology:topic_domain(territorial_legitimacy__indigenous_continuity_reading, "political_theory/international_law/territorial_sovereignty").
 
 domain_priors:requires_active_enforcement(territorial_legitimacy__indigenous_continuity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(territorial_legitimacy__indigenous_continuity_reading, '37530d86-cc8a-4247-be72-015ba7b80932').
-narrative_ontology:cs_kernel_codification('37530d86-cc8a-4247-be72-015ba7b80932', distributed).
-narrative_ontology:cs_authority_grounding('37530d86-cc8a-4247-be72-015ba7b80932', distributed).
-narrative_ontology:cs_reading_relation('37530d86-cc8a-4247-be72-015ba7b80932', territorial_legitimacy__partition_reading, forecloses).
-narrative_ontology:cs_reading_relation('37530d86-cc8a-4247-be72-015ba7b80932', territorial_legitimacy__security_necessity_reading, forecloses).
-narrative_ontology:cs_axiom('37530d86-cc8a-4247-be72-015ba7b80932', foundational, indigenous_sovereignty_is_inalienable).
-narrative_ontology:cs_axiom_status(indigenous_sovereignty_is_inalienable, holdable).
-narrative_ontology:cs_axiom_grounding('37530d86-cc8a-4247-be72-015ba7b80932', indigenous_sovereignty_is_inalienable, deontological).
-narrative_ontology:cs_axiom('37530d86-cc8a-4247-be72-015ba7b80932', foundational, id_1948_nakba_is_foundational_dispossession).
-narrative_ontology:cs_axiom_status(id_1948_nakba_is_foundational_dispossession, holdable).
-narrative_ontology:cs_axiom_grounding('37530d86-cc8a-4247-be72-015ba7b80932', id_1948_nakba_is_foundational_dispossession, empirically_contingent).
-narrative_ontology:cs_reference_frame('37530d86-cc8a-4247-be72-015ba7b80932', pre_nakba_palestinian_sovereignty).
-narrative_ontology:cs_drift_state('37530d86-cc8a-4247-be72-015ba7b80932', contemporary, gap(practice_drift, severe, true)).
-narrative_ontology:cs_created_at('37530d86-cc8a-4247-be72-015ba7b80932', '').
+narrative_ontology:cs_story_uid(territorial_legitimacy__indigenous_continuity_reading, '8ae04861-977b-4b56-8e56-c4ea678fb500').
+narrative_ontology:cs_kernel_codification('8ae04861-977b-4b56-8e56-c4ea678fb500', distributed).
+narrative_ontology:cs_authority_grounding('8ae04861-977b-4b56-8e56-c4ea678fb500', distributed).
+narrative_ontology:cs_reading_relation('8ae04861-977b-4b56-8e56-c4ea678fb500', territorial_legitimacy__partition_reading, forecloses).
+narrative_ontology:cs_reading_relation('8ae04861-977b-4b56-8e56-c4ea678fb500', territorial_legitimacy__security_necessity_reading, forecloses).
+narrative_ontology:cs_axiom('8ae04861-977b-4b56-8e56-c4ea678fb500', foundational, indigenous_sovereignty_is_primary).
+narrative_ontology:cs_axiom_status(indigenous_sovereignty_is_primary, holdable).
+narrative_ontology:cs_axiom_grounding('8ae04861-977b-4b56-8e56-c4ea678fb500', indigenous_sovereignty_is_primary, deontological).
+narrative_ontology:cs_axiom('8ae04861-977b-4b56-8e56-c4ea678fb500', foundational, id_1948_nakba_is_foundational_injustice).
+narrative_ontology:cs_axiom_status(id_1948_nakba_is_foundational_injustice, holdable).
+narrative_ontology:cs_axiom_grounding('8ae04861-977b-4b56-8e56-c4ea678fb500', id_1948_nakba_is_foundational_injustice, empirically_contingent).
+narrative_ontology:cs_reference_frame('8ae04861-977b-4b56-8e56-c4ea678fb500', pre_1948_indigenous_sovereignty).
+narrative_ontology:cs_drift_state('8ae04861-977b-4b56-8e56-c4ea678fb500', contemporary_occupation_era, gap(practice_drift, severe, false)).
+narrative_ontology:cs_created_at('8ae04861-977b-4b56-8e56-c4ea678fb500', '').
 narrative_ontology:cs_kernel_id(territorial_legitimacy__indigenous_continuity_reading, territorial_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(territorial_legitimacy__indigenous_continuity_reading, palestinian_diaspora).
-narrative_ontology:constraint_beneficiary(territorial_legitimacy__indigenous_continuity_reading, palestinian_resistance_movements).
-narrative_ontology:constraint_victim(territorial_legitimacy__indigenous_continuity_reading, israeli_settlers).
-narrative_ontology:constraint_victim(territorial_legitimacy__indigenous_continuity_reading, israeli_state_institutions).
+narrative_ontology:constraint_victim(territorial_legitimacy__indigenous_continuity_reading, palestinian_people).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy__indigenous_continuity_reading, international_community_supporters).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% As the indigenous population, they bear the full cost of dispossession, displacement, and denial of self-determination. Their identity is deeply tied to the land, making exit unthinkable. They are the primary target of the constraint's enforcement.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__indigenous_continuity_reading, palestinian_people, payer,
+    powerless, generational, identity_locked, regional).
+
+% The state that, from this reading's perspective, enforces the dispossession and maintains control over the territory. Its legitimacy is derived from a settler-colonial project, and it actively suppresses Palestinian claims to sovereignty and return.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__indigenous_continuity_reading, israeli_state, agenda_setter,
+    institutional, generational, constrained, national).
+
+% States, organizations, and individuals who support Palestinian rights and self-determination. They benefit from upholding international law and anti-colonial principles, but their support often faces political and diplomatic constraints.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__indigenous_continuity_reading, international_community_supporters, beneficiary,
+    organized, biographical, mobile, global).
+
+% States and organizations that actively oppose or undermine Palestinian claims, often supporting the Israeli state's narrative. They are excluded from the moral and legal framework of indigenous continuity but actively shape the geopolitical context.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__indigenous_continuity_reading, international_community_opponents, excluded,
+    institutional, biographical, arbitrage, global).
+
+% Document and report on human rights violations, displacement, and denial of rights, providing evidence that supports the indigenous continuity reading. They operate as analytical observers, but their reports can influence international opinion and policy.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__indigenous_continuity_reading, human_rights_organizations, observer,
+    moderate, biographical, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: This reading asserts that the constraint's function is to coordinate the continuous indigenous habitation and self-determination of the Palestinian people, ensuring their rights are upheld against colonial displacement.
+% TRANSFER_FUNCTION: The constraint, as read, transfers sovereignty, land, and the right to self-determination from the Palestinian people to a settler-colonial entity, while denying the right of return for refugees.
+% ABSENT_VOICES: The voices of the dispossessed and displaced Palestinian refugees, particularly those from 1948, are often marginalized or silenced in international discourse, preventing their direct claims to return and sovereignty from being fully heard.
+% DISAPPEARANCE_RATIONALE: If the indigenous continuity reading of territorial legitimacy were universally adopted and enforced overnight, the entire geopolitical structure of the region would fundamentally rearrange. The Israeli state's current territorial claims and governance would be delegitimized, leading to a complete re-evaluation of borders, citizenship, and the right of return for millions of refugees. This would entail a massive shift in power, land ownership, and national identity.
+% FOUNDING_PROBLEM: The problem this reading addresses is the historical and ongoing dispossession of the indigenous Palestinian population, the denial of their right to self-determination, and the establishment of a settler-colonial state on their land, particularly the events of 1948 (Nakba).
+% FOUNDING_PROBLEM_CORROBORATION: The founding problem is attested as live by numerous UN resolutions, international human rights organizations (e.g., Amnesty International, Human Rights Watch), historical accounts from Palestinian and international scholars, and the continuous resistance and advocacy of the Palestinian people themselves. This corroboration comes from sources outside the direct beneficiaries of the current arrangement.
+narrative_ontology:disappearance_verdict(territorial_legitimacy__indigenous_continuity_reading, world_rearranges).
+narrative_ontology:founding_problem_status(territorial_legitimacy__indigenous_continuity_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(territorial_legitimacy__indigenous_continuity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(territorial_legitimacy__indigenous_continuity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(territorial_legitimacy__indigenous_continuity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(territorial_legitimacy__indigenous_continuity_reading, 0.95, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,14 +208,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.95) is extremely high because this reading asserts a complete dispossession of indigenous rights and land, with the Israeli state's existence itself being the primary mechanism of extraction. Suppression (0.98) is also extremely high, reflecting the military, political, and discursive force required to maintain the status quo against this claim. Theater ratio is low (0.1) because the struggle is existential and direct, with little performative maintenance; the claims are actively contested and enforced. Resistance is near maximal (0.99) as this reading is the foundation for continuous Palestinian resistance.
+ *   The extractiveness is extremely high (0.95) because the constraint fundamentally denies the self-determination and territorial rights of an entire indigenous population, leading to ongoing dispossession and violence. Suppression is also extremely high (0.98) due to the active military, legal, and political mechanisms used to maintain control and prevent Palestinian return or sovereignty. Theater ratio is low (0.1) because the core function of the constraint, from this reading, is direct extraction and suppression, with minimal performative cover. Accessibility collapse is high (0.9) as alternatives for Palestinian self-determination are systematically dismantled. Resistance is high (0.99) reflecting the continuous struggle for liberation.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of Palestinian beneficiaries, this reading is a fundamental truth and a call to justice, defining their identity and political project. From the perspective of Israeli payers, it is an existential threat that denies their right to self-determination and security, rendering their state illegitimate. The engine's classification will highlight this profound divergence, showing a snare from the Israeli seat and a foundational claim from the Palestinian seat.
+ *   From the perspective of the Palestinian people, the constraint is a snare of pure extraction and suppression. From the perspective of the Israeli state, it is framed as a security necessity or a legitimate outcome of international partition. The engine's classification will highlight this divergence, showing a snare from the Palestinian seat and potentially a different type from other seats, based on their declared structural relationships.
  *
  * DIRECTIONALITY LOGIC:
- *   Palestinian diaspora and resistance movements are the primary beneficiaries (d near 0.0) as this reading provides the moral and political foundation for their claims and actions. Israeli settlers and state institutions are the primary targets/victims (d near 1.0) as their legitimacy and existence are fundamentally challenged. International solidarity movements and critical international law scholars are observers who align with this reading, amplifying its claims.
+ *   The Palestinian people are the full target (d=1.0) as they bear the entire cost of dispossession and have no exit options due to identity-lock. The Israeli state, as the enforcer and beneficiary of the current territorial arrangement, sits at the beneficiary end (d=0.0). International community supporters, while advocating for Palestinian rights, are not directly extracted from, placing them closer to symmetric or beneficiary depending on their active involvement. International community opponents are structurally excluded from this reading's moral framework, but their actions contribute to the constraint's persistence.
  *
+ * MANDATROPHY ANALYSIS:
+ *   This reading argues that the constraint's mandate (e.g., 'security' or 'partition') is a cover for ongoing settler-colonial extraction. The high extractiveness and suppression, coupled with the 'snare' classification, prevent mislabeling this as a coordination mechanism. The persistence of the 'founding problem' (dispossession) as 'live' for the Palestinian people, despite the 'dead' or 'contested' status from other readings, highlights the ongoing nature of the extraction.
  */
 
 /* ==========================================================================
@@ -172,34 +225,24 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    historical_narrative_objectivity,
-    'To what extent can historical narratives of indigenous continuity and colonial dispossession be objectively established, independent of political claims?',
-    'Comprehensive, multi-disciplinary historical and archaeological research, peer-reviewed and accepted across diverse academic traditions, that establishes patterns of habitation and displacement prior to 1948.',
-    'If a robust, objective historical narrative strongly supports continuous indigenous Palestinian habitation and colonial dispossession, it strengthens this reading''s empirical grounding. If historical evidence is more ambiguous or contested, it highlights the conceptual/interpretive nature of the claim.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(historical_narrative_objectivity, empirical, 'The empirical basis for the indigenous continuity claim.').
-
-omega_variable(
-    self_determination_scope,
-    'Does the principle of anti-colonial self-determination inherently imply sovereignty over the entirety of historic Palestine, or can it be reconciled with a partitioned or shared sovereignty?',
-    'Legal and philosophical analysis of self-determination in post-colonial contexts, particularly cases involving multiple groups with historical claims to the same territory, and the evolution of international legal norms regarding partition vs. unitary states.',
-    'If self-determination is found to be inherently indivisible and applicable to the entire territory, this reading''s maximalist claims are strengthened. If it can accommodate other arrangements, it opens pathways for alternative resolutions that this reading currently forecloses.',
+    kernel_identity_indigenous_continuity,
+    'Is this constraint a genuine expression of indigenous continuity and anti-colonial self-determination, or is it a political claim framed as such?',
+    'Historical and legal analysis of indigenous rights frameworks, comparative studies of settler-colonial contexts, and verification of continuous habitation claims.',
+    'If verified as genuine, it strengthens the moral and legal imperative for Palestinian sovereignty. If found to be primarily a political framing, it would weaken its claim to foundational legitimacy.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(self_determination_scope, conceptual, 'The scope and indivisibility of anti-colonial self-determination.').
+narrative_ontology:omega_variable(kernel_identity_indigenous_continuity, conceptual, 'This constraint is one reading of the ''territorial_legitimacy'' kernel, specifically the ''indigenous_continuity_reading''. Sibling readings (''partition_reading'', ''security_necessity_reading'') would structurally alter the beneficiary/victim sets and the claimed legitimacy basis.').
 
 omega_variable(
-    right_of_return_feasibility,
-    'What are the practical and demographic implications of implementing a full right of return for 1948 refugees, and how does this impact the viability of any future state structures?',
-    'Demographic studies, urban planning analyses, and economic impact assessments of large-scale population movements, coupled with political feasibility studies regarding the integration of returning populations into a new state structure.',
-    'If implementation is deemed practically impossible or destabilizing without fundamental demographic shifts, it challenges the ''holdable'' status of the right of return as a foundational axiom within this reading. If feasible, it strengthens the reading''s actionable claims.',
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (external barriers) or internalized (cognitive patterns)?',
+    'Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed (e.g., if Palestinian refugees were granted right of return but still faced internal barriers to self-governance), reclassify as partially internalized.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making true liberation more complex.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(right_of_return_feasibility, empirical, 'Practical feasibility of the right of return.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in the context of occupation and displacement.').
 
 
 /* ==========================================================================
@@ -242,11 +285,10 @@ narrative_ontology:measurement(terr_su_t2024, territorial_legitimacy__indigenous
    ========================================================================== */
 
 narrative_ontology:coordination_type(territorial_legitimacy__indigenous_continuity_reading, identity_coordination).
-narrative_ontology:affects_constraint(territorial_legitimacy__indigenous_continuity_reading, international_humanitarian_law__occupation_reading).
-narrative_ontology:affects_constraint(territorial_legitimacy__indigenous_continuity_reading, right_of_return__un_resolution_194_reading).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'territorial_legitimacy' kernel. It defines legitimacy through indigenous continuity and anti-colonial self-determination, framing 1948 as the Nakba. It directly challenges the 'partition_reading' and 'security_necessity_reading' of the same kernel.
+narrative_ontology:affects_constraint(territorial_legitimacy__indigenous_continuity_reading, territorial_legitimacy__partition_reading).
+narrative_ontology:affects_constraint(territorial_legitimacy__indigenous_continuity_reading, territorial_legitimacy__security_necessity_reading).
+narrative_ontology:affects_constraint(territorial_legitimacy__indigenous_continuity_reading, right_of_return_for_palestinian_refugees).
+narrative_ontology:affects_constraint(territorial_legitimacy__indigenous_continuity_reading, israeli_settlement_expansion).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

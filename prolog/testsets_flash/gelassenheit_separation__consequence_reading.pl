@@ -39,9 +39,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,26 +69,19 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gelassenheit_separation__consequence_reading
- *   human_readable: Gelassenheit Separation: Consequence-Based Technology Adoption
- *   domain: religious_studies/technology_governance/commitment_systems
+ *   human_readable: Gelassenheit Separation (Consequence Reading)
+ *   domain: religious/social/technological
  *
  * SUMMARY:
- *   This constraint represents a 'consequence-based' reading of Gelassenheit
- *   (yielding/letting be) within certain Amish communities, where technology
- *   is evaluated primarily by its effects on core community practices such as
- *   visiting, mutual aid, and geographic rootedness. For example, a telephone
- *   might be permitted in a barn (to facilitate business and maintain
- *   rootedness) but forbidden in the home (to prevent erosion of visiting). A
- *   tractor might be allowed for belt power (to support mutual aid in
- *   farming) but not for field work (to avoid dependence on external systems
- *   and maintain community labor practices). This reading prioritizes the
- *   functional impact on community life over the mere appearance of
- *   technology or its structural entanglement with the 'English' world.
+ *   This constraint represents the 'consequence reading' of Gelassenheit
+ *   separation within Amish communities, where technology is evaluated based
+ *   on its practical effects on core community practices like visiting,
+ *   mutual aid, and geographic rootedness. Unlike other readings, this
+ *   approach allows for nuanced, context-dependent rules (e.g., telephones in
+ *   barns for business, but not in homes to preserve visiting). The
+ *   constraint aims to preserve social cohesion and traditional identity by
+ *   managing the impact of external technologies.
  *
- * KEY AGENTS:
- *   - amish_community_members: Primary beneficiaries (moderate/constrained) – benefit from preserved community practices.
- *   - ordnung_elders: Agenda-setters (institutional/constrained) – interpret and enforce the rules based on community consequences.
- *   - younger_generation: Payers (moderate/constrained) – bear the costs of restricted technology access but benefit from community cohesion.
  */
 
 /* ==========================================================================
@@ -93,55 +90,93 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(gelassenheit_separation__consequence_reading, 0.15).
-domain_priors:suppression_score(gelassenheit_separation__consequence_reading, 0.3).
+domain_priors:suppression_score(gelassenheit_separation__consequence_reading, 0.4).
 domain_priors:theater_ratio(gelassenheit_separation__consequence_reading, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, extractiveness, 0.15).
-narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, suppression_requirement, 0.3).
+narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, suppression_requirement, 0.4).
 narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, accessibility_collapse, 0.2).
+narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, accessibility_collapse, 0.3).
 narrative_ontology:constraint_metric(gelassenheit_separation__consequence_reading, resistance, 0.1).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(gelassenheit_separation__consequence_reading, rope).
-narrative_ontology:human_readable(gelassenheit_separation__consequence_reading, "Gelassenheit Separation: Consequence-Based Technology Adoption").
-narrative_ontology:topic_domain(gelassenheit_separation__consequence_reading, "religious_studies/technology_governance/commitment_systems").
+narrative_ontology:human_readable(gelassenheit_separation__consequence_reading, "Gelassenheit Separation (Consequence Reading)").
+narrative_ontology:topic_domain(gelassenheit_separation__consequence_reading, "religious/social/technological").
 
 domain_priors:requires_active_enforcement(gelassenheit_separation__consequence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(gelassenheit_separation__consequence_reading, '6e6395a7-0e72-4b00-a449-a9cd520515bb').
-narrative_ontology:cs_kernel_codification('6e6395a7-0e72-4b00-a449-a9cd520515bb', implicit).
-narrative_ontology:cs_authority_grounding('6e6395a7-0e72-4b00-a449-a9cd520515bb', practice).
-narrative_ontology:cs_interpretation_layer_present('6e6395a7-0e72-4b00-a449-a9cd520515bb').
-narrative_ontology:cs_reading_relation('6e6395a7-0e72-4b00-a449-a9cd520515bb', gelassenheit_separation__principle_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6e6395a7-0e72-4b00-a449-a9cd520515bb', gelassenheit_separation__artifact_reading, coexists_with).
-narrative_ontology:cs_axiom('6e6395a7-0e72-4b00-a449-a9cd520515bb', foundational, technology_evaluated_by_community_consequences).
-narrative_ontology:cs_axiom_status(technology_evaluated_by_community_consequences, holdable).
-narrative_ontology:cs_axiom_grounding('6e6395a7-0e72-4b00-a449-a9cd520515bb', technology_evaluated_by_community_consequences, instrumental).
-narrative_ontology:cs_axiom('6e6395a7-0e72-4b00-a449-a9cd520515bb', secondary, preservation_of_visiting_mutual_aid_rootedness_is_paramount).
-narrative_ontology:cs_axiom_status(preservation_of_visiting_mutual_aid_rootedness_is_paramount, holdable).
-narrative_ontology:cs_axiom_grounding('6e6395a7-0e72-4b00-a449-a9cd520515bb', preservation_of_visiting_mutual_aid_rootedness_is_paramount, deontological).
-narrative_ontology:cs_reference_frame('6e6395a7-0e72-4b00-a449-a9cd520515bb', community_practices_intact).
-narrative_ontology:cs_drift_state('6e6395a7-0e72-4b00-a449-a9cd520515bb', contemporary_technological_advancement, gap(practice_drift, minor, true)).
-narrative_ontology:cs_created_at('6e6395a7-0e72-4b00-a449-a9cd520515bb', '').
+narrative_ontology:cs_story_uid(gelassenheit_separation__consequence_reading, 'f9e82643-ec0a-48c2-abf2-b7d174406273').
+narrative_ontology:cs_kernel_codification('f9e82643-ec0a-48c2-abf2-b7d174406273', implicit).
+narrative_ontology:cs_authority_grounding('f9e82643-ec0a-48c2-abf2-b7d174406273', lineage).
+narrative_ontology:cs_interpretation_layer_present('f9e82643-ec0a-48c2-abf2-b7d174406273').
+narrative_ontology:cs_reading_relation('f9e82643-ec0a-48c2-abf2-b7d174406273', gelassenheit_separation__principle_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f9e82643-ec0a-48c2-abf2-b7d174406273', gelassenheit_separation__artifact_reading, coexists_with).
+narrative_ontology:cs_axiom('f9e82643-ec0a-48c2-abf2-b7d174406273', foundational, technology_evaluated_by_social_consequence).
+narrative_ontology:cs_axiom_status(technology_evaluated_by_social_consequence, holdable).
+narrative_ontology:cs_axiom_grounding('f9e82643-ec0a-48c2-abf2-b7d174406273', technology_evaluated_by_social_consequence, instrumental).
+narrative_ontology:cs_axiom('f9e82643-ec0a-48c2-abf2-b7d174406273', foundational, community_practices_as_primary_value).
+narrative_ontology:cs_axiom_status(community_practices_as_primary_value, holdable).
+narrative_ontology:cs_axiom_grounding('f9e82643-ec0a-48c2-abf2-b7d174406273', community_practices_as_primary_value, conventional).
+narrative_ontology:cs_reference_frame('f9e82643-ec0a-48c2-abf2-b7d174406273', community_practice_preservation).
+narrative_ontology:cs_drift_state('f9e82643-ec0a-48c2-abf2-b7d174406273', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('f9e82643-ec0a-48c2-abf2-b7d174406273', '').
 narrative_ontology:cs_kernel_id(gelassenheit_separation__consequence_reading, gelassenheit_separation).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gelassenheit_separation__consequence_reading, amish_community_members).
+narrative_ontology:constraint_beneficiary(gelassenheit_separation__consequence_reading, community_elders).
+narrative_ontology:constraint_victim(gelassenheit_separation__consequence_reading, individual_members_seeking_convenience).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from the preservation of traditional community practices, strong social bonds, and a sense of rootedness. They bear the cost of foregoing certain modern conveniences but gain social cohesion and spiritual alignment. Their identity is deeply intertwined with community norms.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__consequence_reading, amish_community_members, beneficiary,
+    moderate, generational, identity_locked, local).
+
+% Interpret and enforce the rules of Gelassenheit, guiding the community in technology adoption based on its perceived impact on core values like visiting, mutual aid, and geographic rootedness. They bear the responsibility of maintaining community integrity and face pressure from both internal desires for change and external societal influences.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__consequence_reading, community_elders, agenda_setter,
+    institutional, generational, constrained, local).
+
+% Bear the cost of restricted access to technologies that could offer personal convenience or economic advantage, such as personal telephones or modern farm equipment. Their desire for these technologies is suppressed by community norms and the threat of shunning, but they often find workarounds that align with the spirit of the rules (e.g., shared community phones).
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__consequence_reading, individual_members_seeking_convenience, payer,
+    powerless, biographical, identity_locked, local).
+
+% Observes Amish practices, often misunderstanding the nuanced, consequence-based approach to technology. It provides the external context against which 'separation' is defined, but does not directly participate in the constraint's operation.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__consequence_reading, english_society, observer,
+    institutional, generational, analytical, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates community members' technology use to preserve core social practices like face-to-face visiting, mutual aid networks, and local geographic rootedness, preventing technologies that would erode these bonds.
+% TRANSFER_FUNCTION: Transfers the right to adopt certain technologies from individual members to the collective judgment of the community, in exchange for maintaining social cohesion and traditional ways of life.
+% ABSENT_VOICES: Younger generations or members who leave the community might argue for greater individual autonomy in technology choices, emphasizing personal efficiency or broader connectivity over traditional social structures. Their voices are absent from the internal decision-making process.
+% DISAPPEARANCE_RATIONALE: If this consequence-based interpretation of Gelassenheit vanished, the Amish community's distinctive social fabric would rapidly unravel. Technologies previously restricted (e.g., personal phones in homes) would be adopted, leading to a decline in visiting, a weakening of mutual aid, and increased geographic mobility, fundamentally altering the community's structure and identity.
+% FOUNDING_PROBLEM: The problem of how to maintain a distinct religious and social identity in the face of rapid technological change and the pervasive influence of 'English' (non-Amish) society, specifically to prevent the erosion of core community practices.
+% FOUNDING_PROBLEM_CORROBORATION: Community elders and long-standing members attest that the threat of technology eroding social bonds remains live. Sociological studies of Amish communities from outside the benefiting parties corroborate the ongoing challenge of maintaining cultural distinctiveness amidst modern pressures, validating the problem's persistence.
+narrative_ontology:disappearance_verdict(gelassenheit_separation__consequence_reading, world_rearranges).
+narrative_ontology:founding_problem_status(gelassenheit_separation__consequence_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(gelassenheit_separation__consequence_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(gelassenheit_separation__consequence_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(gelassenheit_separation__consequence_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(gelassenheit_separation__consequence_reading, 0.15, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -156,16 +191,14 @@ narrative_ontology:story_seed(gelassenheit_separation__consequence_reading, 'non
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.15) because the rules are tailored to preserve community benefits, not to extract from members. Suppression is moderate (0.3) as there is active enforcement and social pressure, but the rules are generally accepted as serving a collective good. Theater ratio is low (0.05) because the evaluation is genuinely functional, not performative. Accessibility collapse is low (0.2) as alternatives (English society) are always present, but choosing them means leaving the community. Resistance is low (0.1) due to strong internal cohesion and shared values.
+ *   Extractiveness is low (0.15) because the rules are designed to preserve community well-being, not to extract from members. Suppression is moderate (0.4) as there are clear social pressures and consequences for non-compliance, but also flexibility and workarounds. Theater ratio is low (0.05) because the rules are genuinely applied based on their stated purpose. Accessibility collapse is moderate (0.3) as alternatives (modern technologies) are known but actively restricted. Resistance is low (0.1) due to strong internal commitment and the perceived benefits of the community structure.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of Amish community members, the constraint is a genuine Rope, coordinating their values and preserving their way of life. From an external, secular perspective, it might appear more extractive or suppressive due to the restrictions on technology, but within the community, the benefits of preserved practices are highly valued.
+ *   From the perspective of community elders, this constraint is a vital Rope, coordinating technology use to preserve a cherished way of life. From the perspective of an individual member desiring a personal phone for convenience, it might feel more like a Tangled Rope, where the coordination function comes with a personal cost that feels extractive. The identity-locked exit option for members is key to this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Amish community members are the primary beneficiaries, as the rules are designed to preserve their way of life and social fabric. Ordnung elders act as agenda-setters, interpreting and enforcing the rules in service of these community goals. Younger generations are payers, bearing the direct costs of technology restrictions, but also benefiting from the strong community bonds and mutual aid that these restrictions help maintain. There are no clear 'victims' in this reading, as the intent is collective benefit, and exit options (joining English society) are available, albeit with high social cost.
+ *   Community elders, as agenda-setters, are beneficiaries (d near 0.0) as they maintain the community's integrity and their leadership role. Amish community members are also beneficiaries (d near 0.0) due to the social cohesion and spiritual alignment, despite some restrictions. Individual members seeking convenience are payers (d near 1.0) as they bear the direct cost of restricted technology access, though their identity-locked status means exit is highly constrained.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint avoids mandatrophy by continuously re-evaluating technology based on its current and projected impact on community practices. The 'founding problem' of preserving a distinct way of life is still live, and the constraint adapts to new technologies by assessing their consequences, rather than adhering to rigid, outdated prohibitions. This dynamic assessment prevents the constraint from becoming a Piton or Snare by ensuring its function remains aligned with its mandate.
  */
 
 /* ==========================================================================
@@ -173,50 +206,49 @@ narrative_ontology:story_seed(gelassenheit_separation__consequence_reading, 'non
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine consequence-based reading of Gelassenheit separation, or is it primarily driven by other principles?',
-    'Analysis of community decisions on technology adoption over time, focusing on explicit justifications given for acceptance or rejection. If justifications consistently cite effects on community practices (visiting, mutual aid, rootedness), it supports the consequence reading. If justifications cite visible distinction or entanglement, it points to other readings.',
-    'If this is a genuine consequence reading, the constraint is a Rope, effectively coordinating community values. If it''s a cover for artifact-based or principle-based separation, its true extractiveness and suppression might be higher, reclassifying it as a Tangled Rope or Snare for those who do not share the underlying principle.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading of the ''gelassenheit_separation'' kernel, specifically the ''consequence_reading''. Sibling readings include ''principle_reading'' and ''artifact_reading''. This omega addresses the ambiguity of whether the observed practices genuinely stem from a consequence-based evaluation or are rationalizations for other underlying principles.').
-
-omega_variable(
-    consequence_measurement_ambiguity,
-    'How are ''visiting'', ''mutual aid'', and ''geographic rootedness'' objectively measured and weighed when evaluating technology?',
-    'Ethnographic study of community decision-making processes, identifying implicit or explicit metrics used by elders and community leaders. Documentation of specific cases where technology was permitted or forbidden based on these criteria.',
-    'If these consequences are subjectively or inconsistently applied, the constraint''s enforcement may appear arbitrary, increasing perceived suppression for those who disagree with the interpretation. If clear, consistent metrics exist, it reinforces the coordination function.',
+    consequence_assessment_objectivity,
+    'How objectively are the ''consequences'' of technology on visiting, mutual aid, and rootedness assessed, versus being influenced by pre-existing biases or traditional interpretations?',
+    'Longitudinal sociological studies tracking actual changes in community practices after technology adoption (e.g., shared phones) compared to elder predictions.',
+    'If assessments are highly subjective or biased, the constraint''s claimed coordination function might be partially theatrical, pushing it towards a Tangled Rope or even Snare if the ''consequences'' are selectively interpreted to maintain elder authority.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(consequence_measurement_ambiguity, empirical, 'The consequence-based reading relies on evaluating technology by its effect on community practices. This omega addresses the inherent ambiguity in measuring and weighing these effects, which could lead to inconsistent application.').
+narrative_ontology:omega_variable(consequence_assessment_objectivity, empirical, 'Ambiguity in how technology''s consequences are evaluated.').
+
+omega_variable(
+    identity_lock_strength,
+    'To what extent is the ''identity_locked'' exit option for individual members a result of genuine internal commitment versus social pressure and lack of viable alternatives?',
+    'Surveys and interviews with former members who have exited, exploring their reasons for leaving and the perceived barriers to exit, compared to those who remain.',
+    'If identity lock is primarily due to external social pressure and lack of alternatives, the effective suppression and extractiveness for individual members are higher than currently measured, potentially reclassifying their seat towards Snare.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_strength, empirical, 'Structural vs. internalized nature of identity lock.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(gelassenheit_separation__consequence_reading, 0, 20).
+narrative_ontology:interval(gelassenheit_separation__consequence_reading, 1950, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(gela_tr_t0, gelassenheit_separation__consequence_reading, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(gela_tr_t10, gelassenheit_separation__consequence_reading, theater_ratio, 10, 0.05).
-narrative_ontology:measurement(gela_tr_t20, gelassenheit_separation__consequence_reading, theater_ratio, 20, 0.05).
-
 % Extraction over time
-narrative_ontology:measurement(gela_be_t0, gelassenheit_separation__consequence_reading, base_extractiveness, 0, 0.1).
-narrative_ontology:measurement(gela_be_t10, gelassenheit_separation__consequence_reading, base_extractiveness, 10, 0.12).
-narrative_ontology:measurement(gela_be_t20, gelassenheit_separation__consequence_reading, base_extractiveness, 20, 0.15).
+narrative_ontology:measurement(gela_be_t1950, gelassenheit_separation__consequence_reading, base_extractiveness, 1950, 0.1).
+narrative_ontology:measurement(gela_be_t1970, gelassenheit_separation__consequence_reading, base_extractiveness, 1970, 0.12).
+narrative_ontology:measurement(gela_be_t1990, gelassenheit_separation__consequence_reading, base_extractiveness, 1990, 0.14).
+narrative_ontology:measurement(gela_be_t2010, gelassenheit_separation__consequence_reading, base_extractiveness, 2010, 0.15).
+narrative_ontology:measurement(gela_be_t2024, gelassenheit_separation__consequence_reading, base_extractiveness, 2024, 0.15).
 
 % Suppression requirement over time
-narrative_ontology:measurement(gela_su_t0, gelassenheit_separation__consequence_reading, suppression_requirement, 0, 0.25).
-narrative_ontology:measurement(gela_su_t10, gelassenheit_separation__consequence_reading, suppression_requirement, 10, 0.28).
-narrative_ontology:measurement(gela_su_t20, gelassenheit_separation__consequence_reading, suppression_requirement, 20, 0.3).
+narrative_ontology:measurement(gela_su_t1950, gelassenheit_separation__consequence_reading, suppression_requirement, 1950, 0.3).
+narrative_ontology:measurement(gela_su_t1970, gelassenheit_separation__consequence_reading, suppression_requirement, 1970, 0.35).
+narrative_ontology:measurement(gela_su_t1990, gelassenheit_separation__consequence_reading, suppression_requirement, 1990, 0.38).
+narrative_ontology:measurement(gela_su_t2010, gelassenheit_separation__consequence_reading, suppression_requirement, 2010, 0.4).
+narrative_ontology:measurement(gela_su_t2024, gelassenheit_separation__consequence_reading, suppression_requirement, 2024, 0.4).
 
 
 /* ==========================================================================
@@ -224,10 +256,11 @@ narrative_ontology:measurement(gela_su_t20, gelassenheit_separation__consequence
    ========================================================================== */
 
 narrative_ontology:coordination_type(gelassenheit_separation__consequence_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(gelassenheit_separation__consequence_reading, 0.08).
+narrative_ontology:affects_constraint(gelassenheit_separation__consequence_reading, gelassenheit_separation__principle_reading).
+narrative_ontology:affects_constraint(gelassenheit_separation__consequence_reading, gelassenheit_separation__artifact_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'gelassenheit_separation' kernel. Sibling readings include 'gelassenheit_separation__principle_reading' and 'gelassenheit_separation__artifact_reading', which focus on structural entanglement and visible distinction, respectively. All readings are linked by their common origin in the concept of Gelassenheit.
+% This constraint is one of three readings of the 'Gelassenheit separation' kernel, focusing on the practical consequences of technology. It is linked to the 'principle_reading' and 'artifact_reading' which offer alternative interpretations of separation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

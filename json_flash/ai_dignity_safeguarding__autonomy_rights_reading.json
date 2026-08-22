@@ -4,14 +4,14 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "e95145ca-4c42-4de7-97d9-f874bae93250"
+    "story_uid": "6a4f5819-e49b-44d2-9dff-79d44e3d1fd3"
   },
   "base_properties": {
     "extractiveness": 0.35,
-    "suppression": 0.2,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.3,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
     "claimed_type": "rope",
     "human_readable": "AI Dignity Safeguarding: Autonomy and Rights Reading",
     "topic_domain": "theological_ethics/technology_governance/philosophical_anthropology",
@@ -26,98 +26,198 @@
       "coercively_enhanced_individuals"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine reflection of dignity grounded in autonomy and rights, or is it a specific interpretation of a broader, contested kernel?",
-      "resolution_mechanism": "Comparative analysis with other readings (imago_dei_reading, posthuman_continuity_reading) to identify shared and divergent structural elements.",
-      "impact": "If it is one reading of a kernel, its classification is contingent on the acceptance of its foundational axioms; if it were a standalone constraint, its legitimacy would be less contested.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'ai_dignity_safeguarding' kernel, specifically the 'autonomy_rights_reading'."
+      "name": "autonomous_rational_agents",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These are the primary subjects whose dignity is protected by the constraint. They benefit from regulations ensuring transparency, privacy, and control over AI systems and enhancement technologies. Their autonomy is affirmed, but they remain subject to the broader technological landscape."
     },
     {
-      "id": "enhancement_coercion_boundary",
-      "question": "At what point does 'cautious openness to enhancement within rights limits' transition into coercive or dignity-violating enhancement?",
-      "resolution_mechanism": "Development of clear legal and ethical frameworks for consent, non-discrimination, and access to enhancement technologies, with case law establishing precedents.",
-      "impact": "If the boundary is poorly defined or enforcement is weak, the constraint's extractiveness and suppression for 'coercively_enhanced_individuals' would rise significantly, potentially reclassifying it as a Snare for that group.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the line between permissible and coercive human enhancement."
+      "name": "democratic_societies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from the stability and justice fostered by AI governance that upholds human rights and democratic values. They are responsible for enacting and enforcing the regulations that safeguard dignity, but face challenges from rapid technological change and global competition."
     },
     {
-      "id": "algorithmic_accountability_efficacy",
-      "question": "Are current democratic regulation, transparency, and algorithmic accountability mechanisms sufficient to safeguard dignity against opaque AI systems?",
-      "resolution_mechanism": "Empirical studies on the effectiveness of existing regulations, audits of AI systems for bias and harm, and public reporting on accountability failures.",
-      "impact": "If mechanisms are found insufficient, the constraint's effective suppression for 'individuals_subjected_to_opaque_algorithms' would be higher than measured, indicating a need for stronger regulatory intervention.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The actual efficacy of current algorithmic accountability measures."
+      "name": "ai_developers_and_corporations",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of compliance with democratic regulations, transparency requirements, and accountability frameworks. They are constrained in their pursuit of unchecked innovation and profit, but can adapt by integrating ethical design and responsible development practices."
+    },
+    {
+      "name": "individuals_subjected_to_opaque_algorithms",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Experience the costs of algorithmic decision-making that lacks transparency, fairness, or accountability, leading to discrimination, exclusion, or manipulation. Their ability to exit or resist is severely limited by the pervasive nature of these systems."
+    },
+    {
+      "name": "displaced_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the costs of job displacement due to AI automation without adequate social safety nets or retraining opportunities. Their dignity is impacted by the loss of meaningful work and economic security, though policy interventions can mitigate these effects."
+    },
+    {
+      "name": "coercively_enhanced_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Are subjected to enhancement technologies without free and informed consent, or under duress, compromising their bodily autonomy and personal integrity. Their identity may become fused with the enhancement, making 'exit' from the altered state profoundly difficult."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Actively shape the discourse and push for the implementation of regulations that protect human dignity in the age of AI and advanced technology. They set agendas for policy-makers and hold corporations accountable."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the development and deployment of AI and enhancement technologies with the fundamental principles of human autonomy, rationality, and rights, ensuring that innovation serves human flourishing rather than undermining it.",
+    "transfer_function": "Transfers regulatory burdens and accountability requirements to technology developers and deployers, while transferring protections and safeguards to individuals and democratic institutions. It also transfers the costs of algorithmic opacity and labor displacement to victims.",
+    "absent_voices": "Those who advocate for unchecked technological acceleration without ethical constraints, or those who believe dignity is irrelevant in a posthuman future, are excluded from the core conversation of this reading. They would argue for different foundational principles.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this framework vanished, AI and enhancement technologies would likely develop without robust ethical guardrails, leading to increased algorithmic discrimination, privacy violations, labor exploitation, and potentially coercive enhancement, fundamentally altering the relationship between humans and technology.",
+    "founding_problem": "The rapid advancement of AI and biotechnologies presented novel threats to human autonomy, privacy, labor rights, and democratic governance, necessitating a framework to ensure these technologies serve, rather than diminish, human dignity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Human rights organizations, ethicists, and international bodies consistently attest to the ongoing and evolving nature of these threats, citing numerous cases of algorithmic bias, data exploitation, and the potential for misuse of enhancement technologies. This corroboration comes from outside the direct beneficiaries of the tech industry."
+  },
+  "interval": {
+    "start": 2020,
+    "end": 2040
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.25
+      "time_point": 2020,
+      "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.28
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.31
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 2025,
       "value": 0.33
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2030,
       "value": 0.35
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 2035,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2040,
+      "value": 0.39
+    },
+    {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2035,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2040,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
       "value": 0.15
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.17
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "metric": "theater_ratio",
+      "time_point": 2025,
       "value": 0.18
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.19
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.2
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.2
+      "metric": "theater_ratio",
+      "time_point": 2035,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2040,
+      "value": 0.24
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents a specific reading of how human dignity should be safeguarded in the age of AI and advanced technology. It grounds dignity in human autonomy, rationality, and rights, advocating for democratic regulation, transparency, and protection against algorithmic harms, labor displacement, and coercive enhancement. It allows for cautious, rights-preserving human enhancement. This is one of three competing readings of the 'ai_dignity_safeguarding' kernel.",
-    "logic_rationale": "The constraint is classified as a Rope because its primary function is coordination around shared values (autonomy, rights) to prevent harms, with relatively low extraction and suppression. Extraction (0.35) is present as regulation imposes costs on AI developers and limits certain applications, but it's seen as a necessary cost for safeguarding. Suppression (0.20) is low, reflecting a preference for regulation over outright prohibition, and a belief in the capacity for democratic oversight. Theater ratio is low (0.10) as the stated goals align with actual regulatory efforts.",
-    "directionality_logic": "Autonomous rational agents and democratic societies are the primary beneficiaries, as the constraint aims to protect their foundational values and structures. Individuals subjected to opaque algorithms, displaced workers, and coercively enhanced individuals are victims, as the constraint seeks to mitigate harms that would otherwise befall them. AI developers and corporations are payers, bearing the costs of regulation and accountability, but also benefiting from a more trustworthy and stable operating environment.",
-    "perspectival_gap": "From the perspective of autonomous rational agents, this constraint is a clear Rope, providing essential coordination and protection. From the perspective of AI developers, it might feel more like a Tangled Rope, as it imposes costs and limits while still allowing for innovation. The engine's per-seat classification will capture this divergence.",
-    "kernel_context": "This constraint is the 'autonomy_rights_reading' of the 'ai_dignity_safeguarding' kernel. It emphasizes human agency and legal protections. Sibling readings include the 'imago_dei_reading' (dignity as divine image, emphasizing human uniqueness and limits on enhancement) and the 'posthuman_continuity_reading' (dignity as evolving, embracing radical enhancement and superintelligence)."
+    "narrative_context": "This constraint represents a reading of AI dignity safeguarding that grounds dignity in human autonomy, rationality, and rights. It advocates for democratic regulation, transparency, labor and privacy protection, and algorithmic accountability, while allowing cautious openness to enhancement within rights limits. The constraint aims to guide technological development to serve human flourishing, rather than undermine it. The claimed type is 'rope' as it seeks to coordinate technological progress with ethical principles, but the metrics reflect a moderate level of extractiveness and suppression due to the inherent power imbalances in technology development and the need for active enforcement against those who would bypass regulations.",
+    "logic_rationale": "Extractiveness is moderate (0.35) because regulation imposes costs on developers, but it's not prohibitive, allowing for innovation. Suppression is moderate (0.45) as it requires active enforcement to prevent unchecked technological development and protect vulnerable populations. Theater ratio is low (0.20) as the regulatory efforts are genuinely aimed at safeguarding dignity, though some 'ethics washing' by corporations may occur. Accessibility collapse is low (0.30) because alternatives (unregulated development, different ethical frameworks) are still present, but resistance is moderate (0.40) from those who oppose regulation.",
+    "directionality_logic": "Autonomous rational agents and democratic societies are beneficiaries, as the constraint aims to protect their fundamental interests. AI developers and corporations, as well as individuals subjected to opaque algorithms, displaced workers, and coercively enhanced individuals, are payers, bearing the costs of regulation or the negative impacts of technology. Human rights advocates act as agenda-setters, actively shaping the regulatory landscape.",
+    "perspectival_gap": "From the perspective of beneficiaries (autonomous agents, democratic societies), this is a necessary 'rope' for ethical technological development. From the perspective of some payers (e.g., individuals subjected to opaque algorithms), it might feel more like a 'tangled rope' or 'snare' due to the ongoing harms and the difficulty of achieving full accountability. The engine's per-seat classification will capture this divergence.",
+    "kernel_context": "This constraint is the 'autonomy_rights_reading' of the 'ai_dignity_safeguarding' kernel. It emphasizes individual liberty and democratic oversight. Sibling readings include the 'imago_dei_reading' (dignity as divine image, rejecting enhancement) and the 'posthuman_continuity_reading' (dignity in evolving forms of personhood, embracing enhancement)."
   },
+  "omegas": [
+    {
+      "id": "regulatory_capture_risk",
+      "question": "To what extent is the democratic regulation of AI and enhancement technologies susceptible to regulatory capture by powerful technology corporations?",
+      "resolution_mechanism": "Empirical analysis of lobbying expenditures, revolving door phenomena, and the influence of industry representatives on policy drafting and enforcement outcomes.",
+      "impact": "If regulatory capture is high, the constraint's effective extractiveness from individuals and democratic societies would be higher than measured, and its classification would drift towards 'tangled_rope' or 'snare' for those seats, as the coordination function would be subverted for private gain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses whether the regulatory framework genuinely serves public interest or is co-opted by industry."
+    },
+    {
+      "id": "scope_of_autonomy_in_enhancement",
+      "question": "What constitutes 'free and informed consent' for human enhancement technologies, especially when social pressures or economic incentives are strong?",
+      "resolution_mechanism": "Philosophical and legal analysis of consent in contexts of unequal power, coupled with empirical studies on decision-making under various forms of influence regarding enhancement technologies.",
+      "impact": "A narrow definition of 'free consent' would expand the 'coercively_enhanced_individuals' victim group and increase the constraint's effective extractiveness, potentially shifting its classification towards 'snare' for those individuals. A broad definition would reduce this risk.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Clarifies the boundaries of autonomous choice in the context of human enhancement."
+    },
+    {
+      "id": "algorithmic_accountability_efficacy",
+      "question": "Are current or proposed algorithmic accountability mechanisms truly effective in providing redress and preventing harm, or are they largely performative?",
+      "resolution_mechanism": "Audits of algorithmic systems, case studies of successful and unsuccessful redress mechanisms, and independent evaluations of regulatory enforcement actions.",
+      "impact": "If accountability mechanisms are found to be largely performative (high theater_ratio), the effective extractiveness from 'individuals_subjected_to_opaque_algorithms' would be higher, and the constraint's classification for that seat would lean towards 'piton' or 'snare', as the promised protection would be illusory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluates the real-world impact of algorithmic accountability measures."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
@@ -125,20 +225,32 @@
     "affects_constraints": [
       "ai_ethics_guidelines",
       "data_privacy_regulations",
-      "labor_market_automation_policies"
+      "labor_automation_policies"
     ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "expertise",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_dignity_safeguarding__imago_dei_reading",
+        "sibling_id": "imago_dei_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+        "sibling_id": "posthuman_continuity_reading",
         "relation": "coexists_with"
       }
     ],
@@ -150,29 +262,18 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "rights_are_universal_and_inalienable",
+        "atom": "rights_are_inalienable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "enlightenment_humanism",
+    "reference_frame": "enlightenment_liberal_humanism",
     "drift_state": {
-      "moment": "contemporary",
-      "direction": "stable",
-      "magnitude": "minor",
+      "moment": "contemporary_ai_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
       "acknowledged": true
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

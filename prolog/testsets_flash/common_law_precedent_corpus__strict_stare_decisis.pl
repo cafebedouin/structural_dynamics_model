@@ -39,9 +39,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,13 +75,22 @@
  *   domain: legal/jurisprudence
  *
  * SUMMARY:
- *   This constraint describes the 'strict stare decisis' reading of the
- *   common law precedent kernel, where prior judicial decisions are
- *   considered binding and can only be departed from with extraordinary
- *   justification. This reading emphasizes stability, predictability, and
- *   judicial restraint. It is one of several competing interpretations of how
- *   precedent should operate within common law systems.
+ *   This constraint describes the 'strict stare decisis' reading of common
+ *   law precedent, where past judicial rulings are considered highly binding
+ *   and can only be departed from under extraordinary circumstances. It is
+ *   presented as a mechanism for legal stability and predictability, but its
+ *   rigid application can lead to significant extraction from litigants and
+ *   social movements seeking to adapt law to contemporary realities. The
+ *   claimed type is 'tangled_rope' because it genuinely provides coordination
+ *   (stability) but also involves asymmetric extraction and requires active
+ *   enforcement to maintain its rigidity.
  *
+ * KEY AGENTS:
+ *   - judicial_conservatives: Primary agenda-setter (institutional/identity_locked) — actively enforces strict adherence to precedent.
+ *   - litigants_seeking_norm_change: Primary target (powerless/trapped) — bears the costs of rigid precedent.
+ *   - social_reform_advocates: Secondary target (organized/constrained) — constrained by the high bar for legal change.
+ *   - legal_system_stability: Abstract beneficiary (analytical/analytical) — benefits from predictability.
+ *   - judicial_moderates: Observer (institutional/constrained) — navigates the tension between stability and evolution.
  */
 
 /* ==========================================================================
@@ -85,18 +98,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(common_law_precedent_corpus__strict_stare_decisis, 0.45).
-domain_priors:suppression_score(common_law_precedent_corpus__strict_stare_decisis, 0.6).
+domain_priors:base_extractiveness(common_law_precedent_corpus__strict_stare_decisis, 0.65).
+domain_priors:suppression_score(common_law_precedent_corpus__strict_stare_decisis, 0.75).
 domain_priors:theater_ratio(common_law_precedent_corpus__strict_stare_decisis, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, extractiveness, 0.45).
-narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, extractiveness, 0.65).
+narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 0.75).
 narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, resistance, 0.3).
+narrative_ontology:constraint_metric(common_law_precedent_corpus__strict_stare_decisis, resistance, 0.4).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(common_law_precedent_corpus__strict_stare_decisis, tangled_rope).
@@ -106,29 +119,30 @@ narrative_ontology:topic_domain(common_law_precedent_corpus__strict_stare_decisi
 domain_priors:requires_active_enforcement(common_law_precedent_corpus__strict_stare_decisis).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(common_law_precedent_corpus__strict_stare_decisis, 'af3e03c3-5c21-42e7-a462-4d8f7c037230').
-narrative_ontology:cs_kernel_codification('af3e03c3-5c21-42e7-a462-4d8f7c037230', formalized).
-narrative_ontology:cs_authority_grounding('af3e03c3-5c21-42e7-a462-4d8f7c037230', lineage).
-narrative_ontology:cs_interpretation_layer_present('af3e03c3-5c21-42e7-a462-4d8f7c037230').
-narrative_ontology:cs_reading_relation('af3e03c3-5c21-42e7-a462-4d8f7c037230', common_law_precedent_corpus__evolutionary_framework, coexists_with).
-narrative_ontology:cs_reading_relation('af3e03c3-5c21-42e7-a462-4d8f7c037230', common_law_precedent_corpus__pluralist_balancing, coexists_with).
-narrative_ontology:cs_axiom('af3e03c3-5c21-42e7-a462-4d8f7c037230', foundational, precedent_as_binding_rule).
-narrative_ontology:cs_axiom_status(precedent_as_binding_rule, holdable).
-narrative_ontology:cs_axiom_grounding('af3e03c3-5c21-42e7-a462-4d8f7c037230', precedent_as_binding_rule, conventional).
-narrative_ontology:cs_axiom('af3e03c3-5c21-42e7-a462-4d8f7c037230', foundational, judicial_restraint_as_virtue).
-narrative_ontology:cs_axiom_status(judicial_restraint_as_virtue, holdable).
-narrative_ontology:cs_axiom_grounding('af3e03c3-5c21-42e7-a462-4d8f7c037230', judicial_restraint_as_virtue, deontological).
-narrative_ontology:cs_reference_frame('af3e03c3-5c21-42e7-a462-4d8f7c037230', classical_legal_positivism).
-narrative_ontology:cs_drift_state('af3e03c3-5c21-42e7-a462-4d8f7c037230', contemporary_legal_discourse, gap(revival_pressure, minor, true)).
-narrative_ontology:cs_created_at('af3e03c3-5c21-42e7-a462-4d8f7c037230', '').
+narrative_ontology:cs_story_uid(common_law_precedent_corpus__strict_stare_decisis, '493709c8-bae3-483e-9b1d-ec22c16c039b').
+narrative_ontology:cs_kernel_codification('493709c8-bae3-483e-9b1d-ec22c16c039b', formalized).
+narrative_ontology:cs_authority_grounding('493709c8-bae3-483e-9b1d-ec22c16c039b', lineage).
+narrative_ontology:cs_interpretation_layer_present('493709c8-bae3-483e-9b1d-ec22c16c039b').
+narrative_ontology:cs_reading_relation('493709c8-bae3-483e-9b1d-ec22c16c039b', common_law_precedent_corpus__evolutionary_framework, influences).
+narrative_ontology:cs_reading_relation('493709c8-bae3-483e-9b1d-ec22c16c039b', common_law_precedent_corpus__pluralist_balancing, influences).
+narrative_ontology:cs_axiom('493709c8-bae3-483e-9b1d-ec22c16c039b', foundational, precedent_binds_categorically).
+narrative_ontology:cs_axiom_status(precedent_binds_categorically, holdable).
+narrative_ontology:cs_axiom_grounding('493709c8-bae3-483e-9b1d-ec22c16c039b', precedent_binds_categorically, deontological).
+narrative_ontology:cs_axiom('493709c8-bae3-483e-9b1d-ec22c16c039b', foundational, judicial_restraint_is_supreme).
+narrative_ontology:cs_axiom_status(judicial_restraint_is_supreme, holdable).
+narrative_ontology:cs_axiom_grounding('493709c8-bae3-483e-9b1d-ec22c16c039b', judicial_restraint_is_supreme, conventional).
+narrative_ontology:cs_reference_frame('493709c8-bae3-483e-9b1d-ec22c16c039b', classical_legal_positivism).
+narrative_ontology:cs_drift_state('493709c8-bae3-483e-9b1d-ec22c16c039b', contemporary_human_rights_era, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('493709c8-bae3-483e-9b1d-ec22c16c039b', '').
 narrative_ontology:cs_kernel_id(common_law_precedent_corpus__strict_stare_decisis, common_law_precedent_corpus).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__strict_stare_decisis, judicial_legitimacy).
-narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__strict_stare_decisis, legal_certainty).
-narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__strict_stare_decisis, established_interests).
-narrative_ontology:constraint_victim(common_law_precedent_corpus__strict_stare_decisis, litigants_challenging_precedent).
-narrative_ontology:constraint_victim(common_law_precedent_corpus__strict_stare_decisis, social_movements_seeking_change).
+narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__strict_stare_decisis, judicial_conservatives).
+narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__strict_stare_decisis, legal_system_stability).
+narrative_ontology:constraint_victim(common_law_precedent_corpus__strict_stare_decisis, litigants_seeking_norm_change).
+narrative_ontology:constraint_victim(common_law_precedent_corpus__strict_stare_decisis, social_reform_advocates).
+narrative_ontology:constraint_vindicates(common_law_precedent_corpus__strict_stare_decisis, rule_of_law_doctrine).
+narrative_ontology:constraint_vindicates(common_law_precedent_corpus__strict_stare_decisis, judicial_restraint_principle).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -137,15 +151,36 @@ narrative_ontology:constraint_victim(common_law_precedent_corpus__strict_stare_d
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Judges and legal scholars who prioritize adherence to past rulings, viewing it as essential for legal predictability and limiting judicial activism. They actively enforce the strict application of precedent and resist its reinterpretation or overruling.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__strict_stare_decisis, judicial_conservatives, agenda_setter,
+    institutional, generational, identity_locked, national).
+
+% Parties in legal disputes whose cases challenge existing legal norms or seek to overturn established precedents. They face significant hurdles and costs due to the high bar for departing from precedent, often losing cases that might succeed under a more flexible interpretive framework.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__strict_stare_decisis, litigants_seeking_norm_change, payer,
+    powerless, immediate, trapped, local).
+
+% Organizations and movements pushing for legal changes to align with evolving social values. They find their efforts constrained by the rigidity of strict stare decisis, requiring extraordinary political or legislative action rather than judicial evolution.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__strict_stare_decisis, social_reform_advocates, payer,
+    organized, generational, constrained, national).
+
+% The abstract quality of a predictable and consistent legal framework. It benefits from strict adherence to precedent by reducing uncertainty and promoting public confidence in the law's impartiality, even if this comes at the cost of adaptability.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__strict_stare_decisis, legal_system_stability, beneficiary,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(common_law_precedent_corpus__strict_stare_decisis, legal_system_stability).
+
+% Judges and scholars who acknowledge the value of precedent but seek a balance between stability and the need for legal evolution. They observe the tension between strict adherence and societal change, often seeking narrow paths for distinguishing cases rather than outright overruling.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__strict_stare_decisis, judicial_moderates, observer,
+    institutional, biographical, constrained, national).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Provides a stable and predictable framework for legal decision-making, ensuring consistency across cases and allowing individuals and institutions to plan their actions with reasonable certainty about legal outcomes.
-% TRANSFER_FUNCTION: Transfers the burden of proof and argument from established legal principles to those seeking to overturn them, effectively transferring legal certainty and stability to the beneficiaries at the cost of flexibility for challengers.
-% ABSENT_VOICES: Future generations and marginalized groups whose interests may not have been adequately represented in past precedents are often absent from the conversation. They would argue for greater flexibility in precedent to address evolving societal norms and injustices.
-% DISAPPEARANCE_RATIONALE: If strict stare decisis vanished, the legal system would lose its primary mechanism for consistency. Every case would be decided de novo, leading to chaos, unpredictability, and a collapse of legal certainty. The entire structure of common law jurisprudence would need to be rebuilt.
-% FOUNDING_PROBLEM: The problem of arbitrary and inconsistent judicial decisions, leading to a lack of predictability and fairness in legal outcomes, which undermined public trust in the judiciary.
-% FOUNDING_PROBLEM_CORROBORATION: Legal scholars, practicing attorneys, and judicial opinions consistently corroborate the ongoing need for legal certainty and predictability, even while debating the optimal degree of rigidity. The problem of arbitrary justice remains a live concern, though the 'strict' interpretation of stare decisis is contested as the best solution.
+% COORDINATION_FUNCTION: Provides a stable, predictable framework for legal interpretation and application, ensuring consistency across judicial decisions and guiding legal actors on expected outcomes.
+% TRANSFER_FUNCTION: Transfers the burden of legal change from the judiciary to the legislative branch or requires extraordinary justification from litigants, preserving the authority of past rulings and the interpretive power of those who uphold them.
+% ABSENT_VOICES: Future generations and marginalized groups whose interests were not represented in past legal decisions are implicitly excluded. Their perspectives would challenge the legitimacy of rigidly binding past norms that do not reflect contemporary justice or social realities.
+% DISAPPEARANCE_RATIONALE: If strict stare decisis vanished, judicial decisions would lose their binding force, leading to legal chaos, unpredictable outcomes, and a collapse of confidence in the legal system's ability to provide consistent justice. Every case would be decided de novo, and the entire structure of common law would dissolve.
+% FOUNDING_PROBLEM: The problem of arbitrary judicial decision-making and unpredictable legal outcomes, leading to a lack of public trust and an inability for citizens to order their affairs according to known laws.
+% FOUNDING_PROBLEM_CORROBORATION: Legal historians and political scientists, alongside judicial conservatives, corroborate that the problem of legal uncertainty remains live, and strict stare decisis is seen as a bulwark against it. Social reform advocates, however, contest whether the current application of stare decisis genuinely solves this problem or merely entrenches outdated norms.
 narrative_ontology:disappearance_verdict(common_law_precedent_corpus__strict_stare_decisis, world_rearranges).
 narrative_ontology:founding_problem_status(common_law_precedent_corpus__strict_stare_decisis, live).
 
@@ -153,17 +188,23 @@ narrative_ontology:founding_problem_status(common_law_precedent_corpus__strict_s
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(common_law_precedent_corpus__strict_stare_decisis, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(common_law_precedent_corpus__strict_stare_decisis, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(common_law_precedent_corpus__strict_stare_decisis, 'none', 1).
+narrative_ontology:epsilon_provenance(common_law_precedent_corpus__strict_stare_decisis, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(common_law_precedent_corpus__strict_stare_decisis_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(common_law_precedent_corpus__strict_stare_decisis, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
 :- end_tests(common_law_precedent_corpus__strict_stare_decisis_tests).
 
 /* ==========================================================================
@@ -172,16 +213,16 @@ narrative_ontology:story_seed(common_law_precedent_corpus__strict_stare_decisis,
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely coordinates legal certainty and predictability (beneficiaries: judicial_legitimacy, legal_certainty) while simultaneously extracting from those who seek to challenge established norms (victims: litigants_challenging_precedent, social_movements_seeking_change). The extractiveness (0.45) reflects the high burden of proof and cost associated with overturning precedent. Suppression (0.6) is moderate, as alternatives (new legal arguments, legislative change) exist but are significantly constrained by the binding nature of prior rulings. Theater ratio (0.2) is low, indicating that the justification for stability is largely functional, though some performative adherence to 'settled law' may occur even when its underlying rationale has weakened.
+ *   Extractiveness is high (0.65) because the strict application of precedent often forces outcomes that are misaligned with contemporary justice or economic realities, imposing costs on those who cannot overcome the high bar for change. Suppression is also high (0.75) as the legal system actively suppresses attempts to overturn or significantly reinterpret precedent, requiring extraordinary justification and often lengthy, costly litigation. The theater ratio is low (0.20) because the commitment to precedent is largely genuine, though some arguments for its absolute necessity may be performative when applied to clearly outdated rulings. The metrics show a gradual increase in extractiveness and suppression over time, reflecting the hardening of this interpretive stance.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of judicial institutions and those benefiting from legal certainty, strict stare decisis is a necessary Rope, ensuring stability. From the perspective of litigants challenging precedent or social movements seeking legal change, it operates as a Snare, actively suppressing their ability to achieve desired outcomes. The engine's classification will reflect this divergence based on the declared roles and exit options.
+ *   From the perspective of judicial conservatives, strict stare decisis is a 'rope' that ensures the integrity and predictability of the legal system. From the perspective of litigants seeking norm change and social reform advocates, it operates as a 'snare' or 'tangled_rope', trapping them in outdated legal frameworks and extracting significant resources to achieve even minor adjustments. The engine will compute these divergent classifications based on the declared structural relationships and exit options.
  *
  * DIRECTIONALITY LOGIC:
- *   Judicial legitimacy and legal certainty are beneficiaries (d near 0.0) as the constraint provides a stable framework. Established interests also benefit from the inertia of prior rulings. Litigants challenging precedent and social movements seeking change are targets (d near 1.0) as they bear the direct costs and face high barriers to success. The constraint actively enforces its rigidity, requiring significant effort to overcome.
+ *   Judicial conservatives are beneficiaries (d near 0.0) as their interpretive framework is upheld and their authority reinforced. Litigants seeking norm change and social reform advocates are targets (d near 1.0) as they bear the direct costs of the constraint's rigidity. Legal system stability is an abstract beneficiary. Judicial moderates are observers, experiencing a more balanced directionality as they navigate the system's internal tensions.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (legal stability) is still live, but its application can lead to mandatrophy if it prevents necessary legal evolution in response to changing social conditions. The 'strict stare decisis' reading, by prioritizing stability, risks becoming a Piton if the 'extraordinary justification' threshold becomes performative, or a Snare if it is consistently used to protect entrenched interests. The current classification as Tangled Rope acknowledges both its coordination function and its extractive potential, preventing mislabeling as a pure Rope (ignoring extraction) or pure Snare (ignoring coordination).
+ *   The constraint's mandate to provide stability and predictability is still live, but its strict application risks entrenching outdated norms, leading to a potential mandatrophy where the 'coordination' function becomes a cover for 'extraction'. The high extractiveness and suppression, coupled with the 'contested' status of the founding problem, suggest a drift towards a snare-like operation for those seeking change, even as it maintains a rope-like function for those who benefit from stability. The classification as 'tangled_rope' captures this hybrid nature, preventing mislabeling it as pure coordination or pure extraction.
  */
 
 /* ==========================================================================
@@ -189,50 +230,66 @@ narrative_ontology:story_seed(common_law_precedent_corpus__strict_stare_decisis,
    ========================================================================== */
 
 omega_variable(
-    strict_stare_decisis_vs_evolutionary_framework,
-    'Is this constraint a genuine commitment to legal stability, or a mechanism for preserving existing power structures under the guise of stability?',
-    'Analysis of cases where precedent is overturned: if overturning consistently favors new powerful interests over established ones, it suggests a power-dynamic rather than stability-driven mechanism. If it consistently follows a clear, principled legal evolution, it supports the stability claim.',
-    'If primarily power-driven, the constraint''s effective extractiveness is higher, and its classification shifts closer to Snare. If genuinely stability-driven, it remains a Tangled Rope with a strong coordination function.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(strict_stare_decisis_vs_evolutionary_framework, conceptual, 'Ambiguity between genuine legal stability and power preservation.').
-
-omega_variable(
-    kernel_reading_identification,
-    'This constraint is the ''strict_stare_decisis'' reading of the ''common_law_precedent_corpus'' kernel. What would change if an ''evolutionary_framework'' or ''pluralist_balancing'' reading were adopted?',
-    'Observing judicial practice in jurisdictions that explicitly adopt these alternative readings, particularly regarding the frequency and justification for overturning precedent.',
-    'An ''evolutionary_framework'' reading would lower suppression and extractiveness by increasing the accessibility of challenging precedent, potentially shifting the constraint towards a Rope or even a Scaffold (if the evolution is seen as transitional). A ''pluralist_balancing'' reading would introduce more variability in extractiveness and suppression depending on the specific legal domain and context, making the constraint more dynamic.',
+    strictness_vs_adaptability_balance,
+    'What is the optimal balance between legal stability (strict stare decisis) and adaptability to evolving social norms and empirical realities?',
+    'Longitudinal studies comparing legal systems with different approaches to precedent, assessing outcomes in terms of justice, efficiency, and public trust. Deliberative democratic processes to establish societal preferences for legal change.',
+    'If a more adaptable approach is deemed optimal, the current strictness would be reclassified as excessive extraction. If strictness is reaffirmed, the current classification would be validated.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Impact of alternative readings of the common law precedent kernel.').
+narrative_ontology:omega_variable(strictness_vs_adaptability_balance, preference, 'The normative trade-off between legal rigidity and flexibility.').
+
+omega_variable(
+    judicial_activism_definition,
+    'Is the ''extraordinary justification'' required for departing from precedent a neutral standard, or is it selectively applied to suppress certain types of legal change?',
+    'Empirical analysis of judicial decisions, comparing the success rates of different types of challenges to precedent and identifying patterns of bias in the application of ''extraordinary justification'' criteria.',
+    'If the standard is found to be selectively applied, the suppression metric would be re-evaluated as higher and more targeted, pushing the constraint further towards a Snare classification for specific groups.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(judicial_activism_definition, empirical, 'Whether the standard for overturning precedent is neutrally applied.').
+
+omega_variable(
+    kernel_reading_ambiguity,
+    'Is this constraint a genuine ''strict stare decisis'' reading of common law precedent, or is it a more flexible ''evolutionary framework'' that is merely presented as strict for strategic reasons?',
+    'Analysis of judicial opinions and legal scholarship over time, focusing on the actual methods of distinguishing and reinterpreting precedent versus explicit overruling. Comparison with other common law jurisdictions.',
+    'If it is found to be a more flexible framework, the extractiveness and suppression metrics would be lower, and the claimed type might shift towards a ''Rope'' or ''Scaffold'' (if temporary) classification, reflecting a more adaptive system.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_ambiguity, conceptual, 'Ambiguity between strict and flexible readings of common law precedent.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(common_law_precedent_corpus__strict_stare_decisis, 0, 20).
+narrative_ontology:interval(common_law_precedent_corpus__strict_stare_decisis, 1950, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(comm_tr_t0, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(comm_tr_t10, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 10, 0.22).
-narrative_ontology:measurement(comm_tr_t20, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(comm_tr_t1950, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 1950, 0.1).
+narrative_ontology:measurement(comm_tr_t1970, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 1970, 0.15).
+narrative_ontology:measurement(comm_tr_t1990, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 1990, 0.18).
+narrative_ontology:measurement(comm_tr_t2010, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 2010, 0.19).
+narrative_ontology:measurement(comm_tr_t2024, common_law_precedent_corpus__strict_stare_decisis, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(comm_be_t0, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(comm_be_t10, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 10, 0.42).
-narrative_ontology:measurement(comm_be_t20, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 20, 0.45).
+narrative_ontology:measurement(comm_be_t1950, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 1950, 0.55).
+narrative_ontology:measurement(comm_be_t1970, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 1970, 0.6).
+narrative_ontology:measurement(comm_be_t1990, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 1990, 0.63).
+narrative_ontology:measurement(comm_be_t2010, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 2010, 0.64).
+narrative_ontology:measurement(comm_be_t2024, common_law_precedent_corpus__strict_stare_decisis, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(comm_su_t0, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(comm_su_t10, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 10, 0.58).
-narrative_ontology:measurement(comm_su_t20, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 20, 0.6).
+narrative_ontology:measurement(comm_su_t1950, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 1950, 0.65).
+narrative_ontology:measurement(comm_su_t1970, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 1970, 0.7).
+narrative_ontology:measurement(comm_su_t1990, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 1990, 0.73).
+narrative_ontology:measurement(comm_su_t2010, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 2010, 0.74).
+narrative_ontology:measurement(comm_su_t2024, common_law_precedent_corpus__strict_stare_decisis, suppression_requirement, 2024, 0.75).
 
 
 /* ==========================================================================
@@ -244,7 +301,7 @@ narrative_ontology:affects_constraint(common_law_precedent_corpus__strict_stare_
 narrative_ontology:affects_constraint(common_law_precedent_corpus__strict_stare_decisis, common_law_precedent_corpus__pluralist_balancing).
 
 % DUAL FORMULATION NOTE:
-% This constraint is the 'strict_stare_decisis' reading of the 'common_law_precedent_corpus' kernel. It is linked to sibling readings that offer alternative interpretations of how precedent should bind.
+% This constraint is one reading of the 'common_law_precedent_corpus' kernel. Its strict interpretation of stare decisis directly influences the operational space for more flexible readings by setting a high bar for legal change.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

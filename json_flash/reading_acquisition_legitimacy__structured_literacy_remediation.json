@@ -4,118 +4,239 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c504a001-b48d-41f9-9851-b24a3b74f8da"
+    "story_uid": "f6da3c65-ae06-4baa-b453-093f89d1b0e0"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.7,
+    "suppression": 0.78,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.55,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
     "claimed_type": "tangled_rope",
-    "human_readable": "Structured Literacy Remediation Mandate for Reading Acquisition",
+    "human_readable": "Structured Literacy Remediation Mandate for Vulnerable Learners",
     "topic_domain": "education_policy/cognitive_science/literacy_pedagogy",
     "requires_active_enforcement": true,
     "beneficiaries": [
+      "students_with_dyslexia_and_reading_difficulties",
       "structured_literacy_advocates",
-      "students_with_dyslexia",
-      "teacher_training_institutions"
+      "cognitive_science_researchers"
     ],
     "victims": [
-      "teachers_trained_in_other_methods",
-      "school_districts_with_legacy_curricula",
-      "students_without_specific_learning_disabilities"
+      "general_education_teachers",
+      "school_districts",
+      "students_without_diagnosed_difficulties"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine, independent mandate for structured literacy, or primarily a reaction to the failures of other reading instruction methods?",
-      "resolution_mechanism": "Longitudinal study of implementation in contexts without prior 'reading wars' controversies; analysis of policy documents for proactive vs. reactive framing.",
-      "impact": "If primarily reactive, its classification might shift towards a Scaffold (temporary support to fix a problem) rather than a Tangled Rope (ongoing coordination with extraction).",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'structured_literacy_remediation' reading of the 'reading_acquisition_legitimacy' kernel. It emphasizes designing instruction for vulnerable learners first, using explicit, cumulative, diagnostic principles. Sibling readings include 'phonics_decoding_primacy', 'whole_language_meaning_primacy', and 'balanced_literacy_integration'."
+      "name": "students_with_dyslexia_and_reading_difficulties",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These students are the primary intended beneficiaries, receiving explicit, systematic, and diagnostic instruction tailored to their needs, which is often unavailable in general education settings. Their 'exit' from reading difficulties depends entirely on effective instruction."
     },
     {
-      "id": "implementation_fidelity_vs_cost",
-      "question": "Is the high cost and training burden of implementing structured literacy a necessary coordination cost for effective remediation, or an extractive barrier to entry for teachers and districts?",
-      "resolution_mechanism": "Cost-benefit analysis comparing student outcomes with implementation costs across diverse socioeconomic contexts; analysis of alternative, lower-cost structured literacy models.",
-      "impact": "If costs are disproportionately high relative to outcomes, the 'extractiveness' metric would be further amplified, potentially pushing the classification closer to a Snare for some stakeholders.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Assesses whether implementation costs are justified by outcomes or represent an extractive burden."
+      "name": "structured_literacy_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Researchers, parent groups, and professional organizations who champion structured literacy principles. They actively lobby for policy changes, provide training, and publish research, seeking to embed these methods as the standard for all instruction, especially for vulnerable learners."
+    },
+    {
+      "name": "cognitive_science_researchers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Their research on reading acquisition and brain function provides the scientific grounding for structured literacy. Policies adopting these principles validate their work and often lead to increased funding and influence for their field."
+    },
+    {
+      "name": "general_education_teachers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Required to adopt new, often intensive, instructional methods that demand significant retraining, curriculum overhaul, and continuous diagnostic assessment. This imposes substantial time and resource costs, often without adequate support or reduced class sizes. Their exit options are limited by employment contracts and professional norms."
+    },
+    {
+      "name": "school_districts",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bear the financial and logistical burden of implementing structured literacy across all classrooms: purchasing new materials, funding extensive professional development, and managing resistance from staff. They face pressure from advocates and policymakers, with limited budget flexibility."
+    },
+    {
+      "name": "students_without_diagnosed_difficulties",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "While potentially benefiting from explicit instruction, they may experience a curriculum that feels overly prescriptive or slow-paced, potentially stifling their engagement with literature or advanced comprehension skills if not balanced. They have no direct exit from the mandated instructional approach."
+    },
+    {
+      "name": "whole_language_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Proponents of whole language or balanced literacy approaches, who argue for more holistic, meaning-centered instruction. Their pedagogical frameworks are increasingly marginalized or explicitly rejected by policies favoring structured literacy, limiting their influence and professional opportunities."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Ensures that all students, particularly those at risk of reading failure, receive a consistent, evidence-based approach to literacy instruction that addresses foundational skills systematically.",
+    "transfer_function": "Transfers pedagogical authority and resources towards explicit, diagnostic, and cumulative instructional methods, away from more emergent or balanced approaches. It also transfers the burden of extensive retraining and curriculum change to general education teachers and school districts.",
+    "absent_voices": "Advocates for whole language or balanced literacy, who would argue that an exclusive focus on remediation-grade structured literacy for all learners risks de-emphasizing meaning-making, critical thinking, and engagement with diverse texts, potentially harming advanced readers or those who learn differently. Their voices are often dismissed as 'unscientific' in the current policy climate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this mandate vanished, many school districts would revert to less structured, less resource-intensive literacy programs, potentially leaving vulnerable learners without the explicit instruction they need. The pedagogical landscape would become more varied, but also less consistently evidence-based for struggling readers.",
+    "founding_problem": "A significant and persistent population of students, particularly those with dyslexia or other learning disabilities, were failing to acquire basic reading skills due to inadequate, unsystematic, or unscientific instructional methods in general education.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Longitudinal studies on reading outcomes, diagnostic assessments showing persistent gaps in foundational skills, and advocacy groups representing parents of struggling readers consistently corroborate that the problem of reading failure for vulnerable learners remains live and urgent. This corroboration comes from independent researchers and parent organizations, not just the direct beneficiaries of structured literacy policy."
+  },
+  "interval": {
+    "start": 2000,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 2000,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.58
+      "time_point": 2005,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2010,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.55
+      "time_point": 2000,
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.62
+      "time_point": 2005,
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.7
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 2000,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 2005,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2015,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 10
-  },
   "commentary": {
-    "narrative_context": "This constraint mandates that reading instruction prioritize the needs of the most vulnerable learners, implementing explicit, cumulative, and diagnostic principles derived from structured literacy. This approach is often presented as a necessary remediation for widespread literacy failures, particularly for students with dyslexia and other learning disabilities. It requires significant shifts in teacher training, curriculum adoption, and assessment practices, leading to substantial costs and resistance from those invested in alternative pedagogical approaches.",
-    "key_agents": [
-      "structured_literacy_advocates: Agenda setter (institutional/arbitrage) — champions and enforces the mandate.",
-      "teachers_trained_in_other_methods: Payer (moderate/constrained) — bears the cost of retraining and curriculum change.",
-      "school_districts_with_legacy_curricula: Payer (organized/constrained) — bears the financial and logistical burden of systemic change.",
-      "students_with_dyslexia: Beneficiary (powerless/trapped) — directly benefits from targeted, effective instruction.",
-      "teacher_training_institutions: Beneficiary (institutional/mobile) — profits from increased demand for structured literacy certification.",
-      "parents_of_struggling_readers: Organized (powerful/constrained) — advocates for the mandate, but also bears indirect costs.",
-      "students_without_specific_learning_disabilities: Victim (powerless/trapped) — may experience instruction that is overly rigid or slow-paced, not optimally suited for their learning style, due to the 'vulnerable first' principle."
-    ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates effective instruction for vulnerable learners (a clear benefit) but does so with significant asymmetric extraction. The extractiveness (0.65) stems from the high cost of retraining, curriculum overhaul, and the suppression (0.70) of alternative, potentially effective, methods. The 'vulnerable first' principle, while beneficial for some, can impose costs on others. Theater ratio (0.20) is low, as the mandate is actively implemented, though some performative compliance may exist.",
-    "perspectival_gap": "From the perspective of structured_literacy_advocates and parents_of_struggling_readers, this is a necessary Rope, solving a critical coordination problem for effective literacy. From the perspective of teachers_trained_in_other_methods and school_districts_with_legacy_curricula, it is a Snare, imposing significant costs and suppressing established practices without full consideration of alternatives or local contexts. The engine will compute these divergent classifications based on the declared structural relationships.",
-    "directionality_logic": "Structured literacy advocates and teacher training institutions are clear beneficiaries (d near 0.0) due to increased influence and revenue. Students with dyslexia are also beneficiaries, as the instruction is designed for them. Teachers trained in other methods and school districts are payers (d near 1.0) due to the costs of compliance and loss of autonomy. Students without specific learning disabilities are victims, as the instruction may not be optimal for them. Parents of struggling readers are complex: beneficiaries of improved outcomes but also payers of increased taxes or tuition for specialized programs.",
-    "mandatrophy_analysis": "This constraint addresses a persistent problem of reading failure, so mandatrophy is not resolved. The classification as Tangled Rope acknowledges the genuine coordination function (improving literacy for vulnerable learners) while highlighting the extractive elements (costs imposed on other stakeholders, suppression of alternatives). It prevents mislabeling as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination)."
+    "narrative_context": "This constraint describes the policy mandate that reading instruction must prioritize the needs of the most vulnerable learners, specifically by adopting explicit, cumulative, and diagnostic principles derived from structured literacy. This approach, while highly beneficial for struggling readers, imposes significant costs and constraints on general education teachers and school districts, who must retrain and overhaul curricula. The constraint is claimed as a 'tangled_rope' because it genuinely coordinates effective instruction for a critical population (beneficiaries) but does so through a highly prescriptive and costly mandate that extracts from other stakeholders (victims).",
+    "logic_rationale": "The extractiveness (0.65) reflects the high costs of retraining, curriculum changes, and the potential narrowing of pedagogical approaches for teachers and districts. Suppression (0.78) is high due to the strong policy push, often backed by legislation, which limits alternatives and penalizes non-compliance. Theater ratio (0.20) is relatively low, as the core function of improving reading outcomes for vulnerable learners is genuinely pursued, though some performative compliance may exist. Accessibility collapse (0.60) indicates that while alternative pedagogies are not entirely eliminated, their viability within mainstream policy is significantly reduced. Resistance (0.70) is substantial, coming from educators and advocates for other literacy approaches who feel their expertise is devalued or that the mandate is too rigid.",
+    "directionality_logic": "Students with reading difficulties and structured literacy advocates are clear beneficiaries (low d). Cognitive science researchers also benefit from the validation and influence of their work. General education teachers and school districts are payers (high d) due to the imposed costs and loss of pedagogical autonomy. Students without diagnosed difficulties are also payers, as they may experience a less engaging curriculum. Whole language advocates are excluded, their pedagogical approach actively suppressed.",
+    "perspectival_gap": "From the perspective of structured literacy advocates and parents of struggling readers, this is a necessary 'rope' or even a 'mountain' of scientific consensus, ensuring equitable access to literacy. From the perspective of many general education teachers and advocates for broader literacy approaches, it functions as a 'snare' or 'tangled_rope,' imposing a narrow, costly, and potentially inappropriate pedagogical model on all learners.",
+    "kernel_context": "This constraint is the 'structured_literacy_remediation' reading of the 'reading_acquisition_legitimacy' kernel. It emphasizes designing instruction for the most vulnerable learners first, using explicit, cumulative, diagnostic principles. Sibling readings include 'phonics_decoding_primacy', 'whole_language_meaning_primacy', and 'balanced_literacy_integration'."
   },
+  "omegas": [
+    {
+      "id": "scope_of_remediation_for_all",
+      "question": "Is 'remediation-grade' instruction appropriate and beneficial for all learners, including those without diagnosed reading difficulties, or does it impose unnecessary constraints?",
+      "resolution_mechanism": "Longitudinal studies comparing outcomes for diverse learners in structured literacy-only environments versus those in more differentiated settings, measuring not just decoding but also comprehension, engagement, and critical thinking.",
+      "impact": "If remediation-grade instruction proves universally beneficial, the 'payer' status of students without difficulties would diminish. If it proves suboptimal for some, the constraint's extractiveness and suppression would be re-evaluated as higher for those groups.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 'vulnerable learners first' principle scales effectively to all students without negative side effects."
+    },
+    {
+      "id": "teacher_autonomy_vs_fidelity",
+      "question": "To what extent does the mandate for structured literacy stifle teacher autonomy and pedagogical innovation, and is this a necessary cost for fidelity to evidence-based practice?",
+      "resolution_mechanism": "Qualitative studies on teacher morale, retention, and self-reported pedagogical effectiveness under strict structured literacy mandates, alongside analysis of innovative practices that emerge outside these mandates.",
+      "impact": "If teacher autonomy is severely curtailed without clear benefits, the suppression metric for teachers would be higher. If fidelity to structured literacy is shown to be impossible without strict mandates, the suppression would be seen as a necessary coordination cost.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Balancing fidelity to evidence-based practice with teacher professionalism and autonomy."
+    },
+    {
+      "id": "funding_adequacy_for_implementation",
+      "question": "Are school districts and teachers receiving adequate funding and resources to implement structured literacy mandates effectively, or are they being asked to do more with less?",
+      "resolution_mechanism": "Audits of state and federal funding allocations for literacy initiatives, comparative analysis of implementation costs versus provided resources, and surveys of district and teacher resource needs.",
+      "impact": "If funding is inadequate, the extractiveness from school districts and teachers is higher than currently measured, as they are forced to reallocate existing, insufficient resources. This would strengthen the 'snare' or 'tangled_rope' classification for these seats.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the costs of implementation are fully covered by policy-makers or borne by implementers."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
     "affects_constraints": [
@@ -123,7 +244,7 @@
       "whole_language_meaning_primacy",
       "balanced_literacy_integration"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'reading_acquisition_legitimacy' kernel. Its ε value differs significantly from other readings due to its specific emphasis on remediation and the associated costs and enforcement mechanisms."
+    "dual_formulation_note": "This constraint is one reading of the 'reading_acquisition_legitimacy' kernel. Its emphasis on remediation-grade instruction for all learners influences the viability and legitimacy of other pedagogical approaches."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -145,35 +266,36 @@
     ],
     "axioms": [
       {
-        "atom": "vulnerable_learners_first_design",
+        "atom": "universal_design_for_vulnerable_learners",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "explicit_cumulative_diagnostic_instruction",
+        "atom": "explicit_diagnostic_cumulative_instruction_efficacy",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "universal_structured_literacy_implementation",
+    "reference_frame": "intervention_grade_instruction_as_universal_standard",
     "drift_state": {
-      "moment": "contemporary_policy_adoption",
+      "moment": "contemporary_policy_adoption_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

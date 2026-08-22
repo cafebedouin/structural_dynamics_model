@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,26 +69,23 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: magna_carta_constraint_authority__feudal_obsolescence_reading
- *   human_readable: Magna Carta's Feudal Obsolescence (Executive Discretion Reading)
+ *   human_readable: Magna Carta's Feudal Obsolescence (Reading)
  *   domain: constitutional_history/legal_philosophy/political_theory
  *
  * SUMMARY:
  *   This constraint represents the 'feudal obsolescence' reading of Magna
- *   Carta's authority, arguing that the 1215 charter was a specific baronial
- *   compact with no enduring constitutional force over modern sovereign
- *   states. This reading serves to maximize executive discretion and
- *   parliamentary power by dismissing historical constraints. It is presented
- *   as a historical truth, but functions as a Snare by extracting power from
- *   other constitutional actors and citizens who might appeal to charter
- *   rights.
+ *   Carta's authority, arguing that the 13th-century baronial compact has no
+ *   binding force over modern sovereignty structures. It is a reading that
+ *   maximizes executive and parliamentary discretion by dismissing historical
+ *   constraints as anachronistic. The constraint is claimed as a Piton
+ *   because its persistence relies more on institutional inertia and
+ *   rhetorical performance (e.g., celebrating its historical significance
+ *   while denying its legal force) than on active, concentrated benefit,
+ *   though it enables extraction by removing potential checks on power. The
+ *   metrics reflect a constraint that is largely performative in its
+ *   'maintenance' (high theater_ratio) but still enables significant
+ *   extraction by nullifying historical checks on power.
  *
- * KEY AGENTS:
- *   - executive_branch: Primary beneficiary (institutional/arbitrage) — gains discretion
- *   - parliamentary_majority: Secondary beneficiary (institutional/arbitrage) — gains legislative freedom
- *   - popular_constitutionalists: Primary victim (organized/constrained) — loses historical grounding for rights claims
- *   - juridical_restraint_advocates: Victim (organized/constrained) — loses precedent for judicial review
- *   - citizens_seeking_charter_rights: Victim (powerless/constrained) — loses appeal to historical rights
- *   - legal_historians: Observer (analytical/analytical) — analyzes historical context and contemporary interpretations
  */
 
 /* ==========================================================================
@@ -94,58 +95,95 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(magna_carta_constraint_authority__feudal_obsolescence_reading, 0.65).
 domain_priors:suppression_score(magna_carta_constraint_authority__feudal_obsolescence_reading, 0.7).
-domain_priors:theater_ratio(magna_carta_constraint_authority__feudal_obsolescence_reading, 0.4).
+domain_priors:theater_ratio(magna_carta_constraint_authority__feudal_obsolescence_reading, 0.8).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, extractiveness, 0.65).
 narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 0.8).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, resistance, 0.5).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, accessibility_collapse, 0.3).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__feudal_obsolescence_reading, resistance, 0.4).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(magna_carta_constraint_authority__feudal_obsolescence_reading, snare).
-narrative_ontology:human_readable(magna_carta_constraint_authority__feudal_obsolescence_reading, "Magna Carta's Feudal Obsolescence (Executive Discretion Reading)").
+narrative_ontology:constraint_claim(magna_carta_constraint_authority__feudal_obsolescence_reading, piton).
+narrative_ontology:human_readable(magna_carta_constraint_authority__feudal_obsolescence_reading, "Magna Carta's Feudal Obsolescence (Reading)").
 narrative_ontology:topic_domain(magna_carta_constraint_authority__feudal_obsolescence_reading, "constitutional_history/legal_philosophy/political_theory").
 
-domain_priors:requires_active_enforcement(magna_carta_constraint_authority__feudal_obsolescence_reading).
-
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(magna_carta_constraint_authority__feudal_obsolescence_reading, '1841eee0-967a-4fb5-82b3-8c0eab9e4bbc').
-narrative_ontology:cs_kernel_codification('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', fixed_text).
-narrative_ontology:cs_authority_grounding('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', extraction).
-narrative_ontology:cs_interpretation_layer_present('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc').
-narrative_ontology:cs_reading_relation('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', magna_carta_constraint_authority__living_constitutionalism_reading, forecloses).
-narrative_ontology:cs_reading_relation('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', magna_carta_constraint_authority__parliamentary_sovereignty_reading, coexists_with).
-narrative_ontology:cs_axiom('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', foundational, magna_carta_feudal_specific).
-narrative_ontology:cs_axiom_status(magna_carta_feudal_specific, holdable).
-narrative_ontology:cs_axiom_grounding('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', magna_carta_feudal_specific, empirically_contingent).
-narrative_ontology:cs_axiom('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', foundational, modern_sovereignty_unbound_by_ancient_charters).
-narrative_ontology:cs_axiom_status(modern_sovereignty_unbound_by_ancient_charters, holdable).
-narrative_ontology:cs_axiom_grounding('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', modern_sovereignty_unbound_by_ancient_charters, conventional).
-narrative_ontology:cs_reference_frame('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', id_13th_century_feudal_compact).
-narrative_ontology:cs_drift_state('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', contemporary_constitutional_discourse, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('1841eee0-967a-4fb5-82b3-8c0eab9e4bbc', '').
+narrative_ontology:cs_story_uid(magna_carta_constraint_authority__feudal_obsolescence_reading, '8aca83d4-79f2-4f9f-acd6-ee9f06e46f96').
+narrative_ontology:cs_kernel_codification('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', fixed_text).
+narrative_ontology:cs_authority_grounding('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', extraction).
+narrative_ontology:cs_interpretation_layer_present('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96').
+narrative_ontology:cs_reading_relation('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', magna_carta_constraint_authority__living_constitutionalism_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', magna_carta_constraint_authority__parliamentary_sovereignty_reading, coexists_with).
+narrative_ontology:cs_axiom('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', foundational, feudal_compacts_lack_modern_binding_force).
+narrative_ontology:cs_axiom_status(feudal_compacts_lack_modern_binding_force, holdable).
+narrative_ontology:cs_axiom_grounding('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', feudal_compacts_lack_modern_binding_force, conventional).
+narrative_ontology:cs_axiom('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', secondary, sovereignty_resides_in_contemporary_institutions).
+narrative_ontology:cs_axiom_status(sovereignty_resides_in_contemporary_institutions, holdable).
+narrative_ontology:cs_axiom_grounding('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', sovereignty_resides_in_contemporary_institutions, conventional).
+narrative_ontology:cs_reference_frame('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', modern_parliamentary_sovereignty).
+narrative_ontology:cs_drift_state('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('8aca83d4-79f2-4f9f-acd6-ee9f06e46f96', '').
 narrative_ontology:cs_kernel_id(magna_carta_constraint_authority__feudal_obsolescence_reading, magna_carta_constraint_authority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__feudal_obsolescence_reading, executive_branch).
 narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__feudal_obsolescence_reading, parliamentary_majority).
-narrative_ontology:constraint_victim(magna_carta_constraint_authority__feudal_obsolescence_reading, popular_constitutionalists).
+narrative_ontology:constraint_victim(magna_carta_constraint_authority__feudal_obsolescence_reading, popular_constitutionalism_advocates).
 narrative_ontology:constraint_victim(magna_carta_constraint_authority__feudal_obsolescence_reading, juridical_restraint_advocates).
-narrative_ontology:constraint_victim(magna_carta_constraint_authority__feudal_obsolescence_reading, citizens_seeking_charter_rights).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefits from the argument that Magna Carta is historically obsolete, thereby removing ancient constraints on executive power and maximizing discretion in modern governance. This reading allows for more flexible and unconstrained action.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__feudal_obsolescence_reading, executive_branch, beneficiary,
+    institutional, biographical, mobile, national).
+
+% Gains from the obsolescence reading by asserting that any enduring principles of Magna Carta have been fully absorbed into and superseded by modern statute law, which Parliament can freely amend or repeal. This reinforces parliamentary sovereignty.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__feudal_obsolescence_reading, parliamentary_majority, beneficiary,
+    institutional, biographical, mobile, national).
+
+% Bear the cost of this reading as it undermines claims for a broader, enduring constitutional tradition that empowers citizens and limits state power. Their arguments for popular sovereignty and fundamental rights are weakened.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__feudal_obsolescence_reading, popular_constitutionalism_advocates, payer,
+    organized, generational, constrained, national).
+
+% Suffer from this reading as it diminishes the role of courts in interpreting and enforcing ancient constitutional principles against legislative or executive overreach. It reduces the scope for judicial review based on historical charters.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__feudal_obsolescence_reading, juridical_restraint_advocates, payer,
+    organized, generational, constrained, national).
+
+% Analyze the historical context and original intent of Magna Carta, often providing evidence that supports or refutes claims of its modern relevance. Their work informs the debate but does not directly set policy.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__feudal_obsolescence_reading, legal_historians, observer,
+    analytical, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: This reading coordinates the understanding of constitutional authority by asserting a clear break between medieval feudal compacts and modern sovereign power, simplifying the legal landscape by removing ancient, ambiguous constraints.
+% TRANSFER_FUNCTION: Transfers interpretive authority over fundamental law from historical documents and judicial precedent to contemporary legislative and executive bodies, from advocates of inherited rights to those asserting modern state power.
+% ABSENT_VOICES: Those who believe in an unbroken chain of constitutional tradition, or who see Magna Carta as a foundational text for universal human rights, are marginalized by this reading. Their arguments for enduring principles are dismissed as anachronistic.
+% DISAPPEARANCE_RATIONALE: If the 'feudal obsolescence' reading vanished, the world would largely remain unchanged in terms of practical governance, as modern sovereignty structures already operate largely independent of Magna Carta's direct authority. The debate would shift, but the underlying power dynamics would persist.
+% FOUNDING_PROBLEM: The problem of reconciling an ancient feudal document with the demands of modern, centralized, and democratically accountable (or at least, electorally legitimized) state power.
+% FOUNDING_PROBLEM_CORROBORATION: Legal scholars and political theorists outside the direct beneficiaries (executive/parliamentary power) corroborate that the tension between historical documents and modern governance is a live and complex problem, though they may dispute this reading's resolution.
+narrative_ontology:disappearance_verdict(magna_carta_constraint_authority__feudal_obsolescence_reading, world_unchanged).
+narrative_ontology:founding_problem_status(magna_carta_constraint_authority__feudal_obsolescence_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(magna_carta_constraint_authority__feudal_obsolescence_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(magna_carta_constraint_authority__feudal_obsolescence_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(magna_carta_constraint_authority__feudal_obsolescence_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(magna_carta_constraint_authority__feudal_obsolescence_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,16 +203,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.65) is moderate-to-high, reflecting the significant power transfer to the executive and parliament. Suppression (0.70) is high because this reading actively dismisses and marginalizes alternative interpretations that assert Magna Carta's enduring relevance. The theater ratio (0.40) indicates that while some genuine historical scholarship supports the limited original scope, a substantial portion of its contemporary invocation is performative, aimed at justifying expanded state power rather than pure historical accuracy. The constraint is claimed as a Snare because its coordination story (historical accuracy) is cover for extraction (power consolidation).
+ *   The high theater_ratio (0.80) reflects that while Magna Carta is often celebrated symbolically, this reading denies its practical legal force, making its 'maintenance' largely performative. Extractiveness (0.65) is moderate-to-high because dismissing Magna Carta's authority removes a potential check on state power, allowing for greater discretion and potential extraction by the executive and legislature. Suppression (0.70) is also high, as this reading actively suppresses alternative interpretations that would assert enduring constitutional limits. Accessibility collapse is low (0.30) because alternative readings and arguments for enduring constitutionalism still exist and are actively pursued, though they face significant rhetorical and institutional barriers.
  *
  * PERSPECTIVAL GAP:
- *   The executive and parliamentary beneficiaries experience this as a liberation from anachronistic constraints, enabling efficient governance. The victims, however, experience it as a loss of fundamental rights and checks on power, a historical narrative used to justify unchecked authority. The engine's per-seat classification will reflect this divergence.
+ *   From the perspective of the executive and parliamentary majority, this reading is a pragmatic recognition of modern sovereignty. From the perspective of those advocating for popular constitutionalism and juridical restraint, it is a rhetorical maneuver to enable unchecked power. The engine's classification will highlight this divergence by showing different effective extraction for each seat.
  *
  * DIRECTIONALITY LOGIC:
- *   The executive branch and parliamentary majority are clear beneficiaries (d near 0.0) as this reading grants them greater freedom from historical and judicial oversight. Popular constitutionalists, juridical restraint advocates, and citizens seeking charter rights are victims (d near 1.0) as their claims are undermined by the assertion of obsolescence. Legal historians are analytical observers (d near 0.5).
+ *   The executive branch and parliamentary majority are beneficiaries, as this reading grants them greater freedom from historical constraints. Advocates of popular constitutionalism and juridical restraint are payers, as their arguments for limited government and fundamental rights are undermined. Legal historians act as observers, analyzing the historical context without directly benefiting or paying.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading itself is a form of mandatrophy resolution, asserting that Magna Carta's mandate is 'dead' in a modern context. However, the framework classifies it as a Snare because this 'resolution' is not benign; it enables extraction by dismissing historical checks on power. The classification prevents mislabeling this as a neutral historical observation when it actively facilitates power consolidation.
  */
 
 /* ==========================================================================
@@ -182,65 +218,68 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine historical assessment of Magna Carta''s limited original scope, or a strategic reading to justify expanded executive power?',
-    'Historical and legal scholarship on the intent and reception of Magna Carta in the 13th century, compared with contemporary political rhetoric invoking its obsolescence.',
-    'If a genuine historical assessment, the constraint accurately reflects a historical truth. If a strategic reading, it functions as a Snare, using historical narrative to extract power from other branches/citizens.',
-    confidence_without_resolution(medium)
+    historical_continuity_vs_discontinuity,
+    'Is there a genuine historical discontinuity between medieval feudal compacts and modern constitutionalism, or is there an unbroken, albeit evolving, tradition of constitutional restraint?',
+    'Extensive historical and legal scholarship, potentially leading to a consensus on the nature of constitutional evolution and the role of foundational documents.',
+    'If continuity is established, this reading''s premise of obsolescence is weakened, potentially reclassifying the constraint towards a more ''tangled_rope'' or ''snare'' type if its persistence is found to be purely extractive. If discontinuity is affirmed, the ''piton'' classification is strengthened.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''feudal obsolescence'' reading of the ''magna_carta_constraint_authority'' kernel. Sibling readings (living_constitutionalism_reading, parliamentary_sovereignty_reading) would assert ongoing or transformed authority.').
+narrative_ontology:omega_variable(historical_continuity_vs_discontinuity, conceptual, 'Ambiguity regarding the historical relationship between Magna Carta and modern constitutional structures.').
 
 omega_variable(
-    suppression_mechanism_ambiguity,
-    'Is the measured suppression of alternative readings structural (e.g., through judicial appointments) or internalized (e.g., through a dominant historical narrative in legal education)?',
-    'Analysis of judicial appointment patterns and legal curriculum content over time. If suppression persists after structural barriers are removed, it suggests internalization.',
-    'If internalized, the effective suppression of popular constitutionalism is higher than structural measures suggest, as advocates carry the suppression with them.',
+    rhetorical_performance_vs_functional_obsolescence,
+    'To what extent is the ''obsolescence'' claim a genuine reflection of Magna Carta''s diminished legal force, versus a rhetorical performance to justify expanded state power?',
+    'Analysis of legislative and judicial decisions where Magna Carta is invoked or dismissed, and the actual impact on state power. Examination of the ''theater_ratio'' in practice.',
+    'If primarily rhetorical, the ''theater_ratio'' is accurately high, but the underlying extractiveness might be higher than currently assessed, pushing it towards a ''snare''. If genuinely obsolete, the ''piton'' classification is more robust.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for alternative interpretations.').
+narrative_ontology:omega_variable(rhetorical_performance_vs_functional_obsolescence, empirical, 'Distinguishing genuine obsolescence from strategic rhetorical use.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(magna_carta_constraint_authority__feudal_obsolescence_reading, 0, 30).
+narrative_ontology:interval(magna_carta_constraint_authority__feudal_obsolescence_reading, 1900, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(magn_tr_t0, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(magn_tr_t10, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 10, 0.28).
-narrative_ontology:measurement(magn_tr_t20, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 20, 0.35).
-narrative_ontology:measurement(magn_tr_t30, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 30, 0.4).
+narrative_ontology:measurement(magn_tr_t1900, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 1900, 0.6).
+narrative_ontology:measurement(magn_tr_t1930, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 1930, 0.68).
+narrative_ontology:measurement(magn_tr_t1960, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 1960, 0.75).
+narrative_ontology:measurement(magn_tr_t1990, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 1990, 0.78).
+narrative_ontology:measurement(magn_tr_t2024, magna_carta_constraint_authority__feudal_obsolescence_reading, theater_ratio, 2024, 0.8).
 
 % Extraction over time
-narrative_ontology:measurement(magn_be_t0, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(magn_be_t10, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 10, 0.5).
-narrative_ontology:measurement(magn_be_t20, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 20, 0.6).
-narrative_ontology:measurement(magn_be_t30, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 30, 0.65).
+narrative_ontology:measurement(magn_be_t1900, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 1900, 0.5).
+narrative_ontology:measurement(magn_be_t1930, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 1930, 0.55).
+narrative_ontology:measurement(magn_be_t1960, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 1960, 0.6).
+narrative_ontology:measurement(magn_be_t1990, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 1990, 0.63).
+narrative_ontology:measurement(magn_be_t2024, magna_carta_constraint_authority__feudal_obsolescence_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(magn_su_t0, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 0, 0.45).
-narrative_ontology:measurement(magn_su_t10, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 10, 0.55).
-narrative_ontology:measurement(magn_su_t20, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 20, 0.65).
-narrative_ontology:measurement(magn_su_t30, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 30, 0.7).
+narrative_ontology:measurement(magn_su_t1900, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 1900, 0.55).
+narrative_ontology:measurement(magn_su_t1930, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 1930, 0.6).
+narrative_ontology:measurement(magn_su_t1960, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 1960, 0.65).
+narrative_ontology:measurement(magn_su_t1990, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 1990, 0.68).
+narrative_ontology:measurement(magn_su_t2024, magna_carta_constraint_authority__feudal_obsolescence_reading, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(magna_carta_constraint_authority__feudal_obsolescence_reading, enforcement_mechanism).
+narrative_ontology:coordination_type(magna_carta_constraint_authority__feudal_obsolescence_reading, identity_coordination).
 narrative_ontology:affects_constraint(magna_carta_constraint_authority__feudal_obsolescence_reading, magna_carta_constraint_authority__living_constitutionalism_reading).
 narrative_ontology:affects_constraint(magna_carta_constraint_authority__feudal_obsolescence_reading, magna_carta_constraint_authority__parliamentary_sovereignty_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'magna_carta_constraint_authority' kernel. Its assertion of obsolescence directly impacts the legitimacy and operational scope of sibling readings that claim ongoing or transformed authority for Magna Carta.
+% This constraint is one of three readings of the 'magna_carta_constraint_authority' kernel, focusing on its feudal obsolescence. The other readings ('living_constitutionalism_reading' and 'parliamentary_sovereignty_reading') offer alternative interpretations of its modern relevance and binding force.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

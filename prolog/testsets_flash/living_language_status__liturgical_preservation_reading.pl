@@ -39,8 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,13 +76,14 @@
  * SUMMARY:
  *   This constraint defines a language as 'living' if its sacred texts are
  *   continuously recited, studied, and used in ritual, asserting that
- *   liturgical transmission alone suffices for vitality. This is a specific
- *   reading of the broader 'living language status' kernel, emphasizing
- *   continuity of sacred practice over native generational transmission or
- *   new literary production. It coordinates a community around a fixed,
- *   sacred corpus, benefiting religious authorities who interpret and
- *   transmit these texts, while potentially marginalizing secular uses or
- *   communities.
+ *   liturgical transmission alone suffices for vitality. This reading is
+ *   often held by traditional religious authorities and communities who
+ *   prioritize the preservation of sacred tradition over daily, generative
+ *   use. It implicitly delegitimizes secular or modern uses of the language
+ *   as insufficient for 'living' status. The constraint is claimed as a Rope,
+ *   reflecting its coordination function for religious communities, but its
+ *   metrics show a low level of extraction from secular users and a moderate
+ *   level of suppression of alternative definitions of vitality.
  *
  */
 
@@ -85,18 +92,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(living_language_status__liturgical_preservation_reading, 0.2).
-domain_priors:suppression_score(living_language_status__liturgical_preservation_reading, 0.3).
+domain_priors:base_extractiveness(living_language_status__liturgical_preservation_reading, 0.15).
+domain_priors:suppression_score(living_language_status__liturgical_preservation_reading, 0.25).
 domain_priors:theater_ratio(living_language_status__liturgical_preservation_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, extractiveness, 0.2).
-narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, suppression_requirement, 0.3).
+narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, extractiveness, 0.15).
+narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, suppression_requirement, 0.25).
 narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, resistance, 0.15).
+narrative_ontology:constraint_metric(living_language_status__liturgical_preservation_reading, resistance, 0.1).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(living_language_status__liturgical_preservation_reading, rope).
@@ -104,37 +111,75 @@ narrative_ontology:human_readable(living_language_status__liturgical_preservatio
 narrative_ontology:topic_domain(living_language_status__liturgical_preservation_reading, "sociolinguistics/religious_studies/nationalism_studies").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(living_language_status__liturgical_preservation_reading, 'a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df').
-narrative_ontology:cs_kernel_codification('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', fixed_text).
-narrative_ontology:cs_authority_grounding('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', lineage).
-narrative_ontology:cs_interpretation_layer_present('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df').
-narrative_ontology:cs_reading_relation('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', living_language_status__native_generation_reading, coexists_with).
-narrative_ontology:cs_reading_relation('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', living_language_status__literary_continuity_reading, coexists_with).
-narrative_ontology:cs_axiom('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', foundational, sacred_text_transmission_is_life).
-narrative_ontology:cs_axiom_status(sacred_text_transmission_is_life, holdable).
-narrative_ontology:cs_axiom_grounding('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', sacred_text_transmission_is_life, theological).
-narrative_ontology:cs_axiom('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', secondary, daily_speech_is_not_necessary_for_vitality).
-narrative_ontology:cs_axiom_status(daily_speech_is_not_necessary_for_vitality, holdable).
-narrative_ontology:cs_axiom_grounding('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', daily_speech_is_not_necessary_for_vitality, conventional).
-narrative_ontology:cs_reference_frame('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', ancient_liturgical_tradition).
-narrative_ontology:cs_drift_state('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', contemporary_sociolinguistics_era, gap(stable, minor, false)).
-narrative_ontology:cs_created_at('a7dbad0b-d2a7-47e5-bc6f-5fd8fc04c3df', '').
+narrative_ontology:cs_story_uid(living_language_status__liturgical_preservation_reading, '96215bb1-3942-43d2-99a5-81936a48e0e0').
+narrative_ontology:cs_kernel_codification('96215bb1-3942-43d2-99a5-81936a48e0e0', fixed_text).
+narrative_ontology:cs_authority_grounding('96215bb1-3942-43d2-99a5-81936a48e0e0', lineage).
+narrative_ontology:cs_interpretation_layer_present('96215bb1-3942-43d2-99a5-81936a48e0e0').
+narrative_ontology:cs_reading_relation('96215bb1-3942-43d2-99a5-81936a48e0e0', living_language_status__native_generation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('96215bb1-3942-43d2-99a5-81936a48e0e0', living_language_status__literary_continuity_reading, coexists_with).
+narrative_ontology:cs_axiom('96215bb1-3942-43d2-99a5-81936a48e0e0', foundational, liturgical_transmission_suffices_for_vitality).
+narrative_ontology:cs_axiom_status(liturgical_transmission_suffices_for_vitality, holdable).
+narrative_ontology:cs_axiom_grounding('96215bb1-3942-43d2-99a5-81936a48e0e0', liturgical_transmission_suffices_for_vitality, conventional).
+narrative_ontology:cs_axiom('96215bb1-3942-43d2-99a5-81936a48e0e0', foundational, sacred_texts_are_the_language_kernel).
+narrative_ontology:cs_axiom_status(sacred_texts_are_the_language_kernel, holdable).
+narrative_ontology:cs_axiom_grounding('96215bb1-3942-43d2-99a5-81936a48e0e0', sacred_texts_are_the_language_kernel, theological).
+narrative_ontology:cs_reference_frame('96215bb1-3942-43d2-99a5-81936a48e0e0', continuous_liturgical_transmission).
+narrative_ontology:cs_drift_state('96215bb1-3942-43d2-99a5-81936a48e0e0', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('96215bb1-3942-43d2-99a5-81936a48e0e0', '').
 narrative_ontology:cs_kernel_id(living_language_status__liturgical_preservation_reading, living_language_status).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(living_language_status__liturgical_preservation_reading, rabbinical_authority).
-narrative_ontology:constraint_beneficiary(living_language_status__liturgical_preservation_reading, religious_scholars).
+narrative_ontology:constraint_beneficiary(living_language_status__liturgical_preservation_reading, religious_communities).
 narrative_ontology:constraint_victim(living_language_status__liturgical_preservation_reading, secular_speech_community).
+narrative_ontology:constraint_vindicates(living_language_status__liturgical_preservation_reading, tradition_as_continuity).
+narrative_ontology:constraint_vindicates(living_language_status__liturgical_preservation_reading, sacred_text_immutability).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Maintains the interpretive monopoly over sacred texts and rituals. This reading of 'living language' validates their role as custodians of tradition, ensuring the continuity of their authority and the relevance of the liturgical corpus. Their identity is fused with the preservation of this specific linguistic and religious practice.
+narrative_ontology:constraint_stakeholder(living_language_status__liturgical_preservation_reading, rabbinical_authority, agenda_setter,
+    institutional, generational, identity_locked, global).
+
+% Benefit from the stability and continuity of their religious practices and identity. The liturgical use of the language provides a direct link to their heritage and sacred texts, reinforcing communal bonds and a sense of timeless tradition. Their self-concept is deeply intertwined with this form of linguistic preservation.
+narrative_ontology:constraint_stakeholder(living_language_status__liturgical_preservation_reading, religious_communities, beneficiary,
+    organized, generational, identity_locked, global).
+
+% Their use of the language for daily communication, modern literature, or secular education is implicitly delegitimized or deemed 'less authentic' by this reading. They bear the cost of a diminished claim to the language's 'living' status, potentially facing cultural marginalization or accusations of desecration from traditionalists. Their exit is constrained by the desire to participate in the broader cultural sphere.
+narrative_ontology:constraint_stakeholder(living_language_status__liturgical_preservation_reading, secular_speech_community, payer,
+    moderate, biographical, constrained, national).
+
+% Analyze the linguistic properties and social functions of the language. They observe the dynamics of liturgical use versus secular use and often find themselves mediating between competing claims of linguistic vitality. Their role is to describe, not to adjudicate, the 'living' status.
+narrative_ontology:constraint_stakeholder(living_language_status__liturgical_preservation_reading, linguistic_scholars, observer,
+    analytical, biographical, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the continuous use and study of sacred texts within religious communities, ensuring the transmission of religious knowledge and ritual practice across generations.
+% TRANSFER_FUNCTION: Transfers cultural and religious authority to those who maintain liturgical practice, while implicitly transferring a diminished status to secular uses of the language.
+% ABSENT_VOICES: Advocates for modern, secular uses of the language, who would argue that vitality requires generative use beyond ritual, are often excluded from the discourse on 'living language' status within traditional religious institutions.
+% DISAPPEARANCE_RATIONALE: If this understanding of 'living language' vanished, the authority of rabbinical institutions would be challenged, religious communities would lose a key anchor for their identity, and the perceived value of liturgical practice would diminish, leading to a significant reorganization of religious and cultural life.
+% FOUNDING_PROBLEM: The problem of ensuring the continuity and sanctity of a language primarily associated with sacred texts, preventing its complete secularization or obsolescence.
+% FOUNDING_PROBLEM_CORROBORATION: Religious leaders and community members attest to the ongoing challenge of maintaining tradition in a modern world. Linguistic scholars, while not endorsing the normative claim, corroborate the historical and sociological reality of liturgical transmission as a mechanism for linguistic continuity within these communities.
+narrative_ontology:disappearance_verdict(living_language_status__liturgical_preservation_reading, world_rearranges).
+narrative_ontology:founding_problem_status(living_language_status__liturgical_preservation_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(living_language_status__liturgical_preservation_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(living_language_status__liturgical_preservation_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(living_language_status__liturgical_preservation_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(living_language_status__liturgical_preservation_reading, 0.15, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -149,16 +194,14 @@ narrative_ontology:story_seed(living_language_status__liturgical_preservation_re
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.2) is low because the primary function is coordination around a shared sacred practice, which benefits the community by preserving a cultural and religious heritage. Suppression (0.3) is moderate, as it implicitly discourages or delegitimizes alternative forms of language 'life' (e.g., secular daily speech) without direct coercion. Theater ratio (0.1) is low, as the rituals and study are genuinely performed for their stated purpose. The metrics reflect a system that primarily coordinates, with some implicit costs for those whose definition of 'living' differs.
+ *   Extractiveness is low (0.15) because the primary function is coordination around a fixed corpus, not direct material extraction. Suppression is moderate (0.25) as this reading actively suppresses alternative definitions of linguistic vitality, particularly those emphasizing native generation or modern literary output. Theater ratio is low (0.1) because the liturgical practices are genuinely functional for religious communities, not merely performative. Accessibility collapse is high (0.7) because for those who accept this definition, the path to 'living language' status is clear and narrow, collapsing other alternatives. Resistance is low (0.1) because the primary beneficiaries (religious authorities) face little internal resistance to this definition, and external resistance from secular communities is often dismissed as irrelevant to the sacred domain.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of rabbinical authority and religious scholars, this constraint is a pure Rope, ensuring the continuity of a sacred tradition. From the perspective of a secular speech community, it might be seen as a Tangled Rope, as it coordinates the preservation of the language but at the cost of delegitimizing its use in daily, non-sacred contexts, thereby extracting the potential for broader linguistic flourishing.
+ *   From the perspective of rabbinical authority, this is a pure Rope, coordinating the preservation of a sacred language. From the perspective of the secular speech community, it is a subtle Snare, extracting legitimacy from their linguistic practices. The engine's per-seat classification will reflect this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Rabbinical authority and religious scholars are primary beneficiaries (d=0.0-0.1) as their interpretive monopoly and social role are preserved and reinforced by this definition. The secular speech community is a victim (d=0.6-0.7) as their potential for broader, non-liturgical use of the language is implicitly suppressed or deemed 'not living.' The constraint subsidizes the religious institutions by validating their mode of transmission as the sole criterion for vitality.
+ *   Rabbinical authority and religious communities are beneficiaries, as this reading validates their roles and practices (d near 0.0). The secular speech community is a payer, as their linguistic practices are devalued (d near 1.0). Linguistic scholars are observers, analyzing the phenomenon without being directly subject to its normative claims (d near 0.5).
  *
- * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling a coordination mechanism (preserving sacred texts) as pure extraction, while still acknowledging the implicit costs and potential for delegitimization for those outside the liturgical framework. The low extractiveness and suppression suggest it's not a Snare, but the presence of victims and the potential for perspectival divergence indicate it's not a pure Mountain either. It functions as a Rope for its core beneficiaries, but with a subtle extractive component for others.
  */
 
 /* ==========================================================================
@@ -166,53 +209,59 @@ narrative_ontology:story_seed(living_language_status__liturgical_preservation_re
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine reflection of language vitality, or a specific reading of the ''living language status'' kernel that serves particular institutional interests?',
-    'Comparative analysis of language revitalization efforts across different traditions, assessing outcomes where liturgical use is the primary or sole mode of transmission versus those with native generation or literary production.',
-    'If primarily an institutional reading, the constraint''s classification shifts from Rope (coordination around a shared sacred practice) to Tangled Rope (coordination for some, extraction for others, by legitimizing a specific form of language use while delegitimizing others).',
+    definition_of_vitality,
+    'Is ''living'' status for a language fundamentally about its functional use in daily life and generative output, or about its continuous transmission within a sacred tradition?',
+    'Conceptual clarification and consensus within sociolinguistics and religious studies, or a shift in cultural values regarding linguistic heritage.',
+    'If functional use is prioritized, this reading''s claim to ''living'' status would be weakened, potentially reclassifying it as a Piton (theatrical preservation). If liturgical transmission is universally accepted, its Rope classification would be strengthened.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''liturgical_preservation_reading'' of the ''living_language_status'' kernel. Sibling readings (''native_generation_reading'', ''literary_continuity_reading'') would shift the beneficiary/victim structure and extractiveness.').
+narrative_ontology:omega_variable(definition_of_vitality, conceptual, 'Ambiguity in the core definition of linguistic vitality.').
 
 omega_variable(
-    suppression_mechanism_ambiguity,
-    'Is the measured suppression structural (lack of resources for secular use) or internalized (belief that secular use desecrates the language)?',
-    'Post-exit suppression trajectory: if secular communities continue to avoid using the language for daily speech even after resources for such use become available, reclassify as partially internalized.',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the secular community carries the suppression with them after exit.',
+    secular_use_legitimacy,
+    'To what extent does the liturgical preservation reading actively suppress or merely ignore the legitimacy of secular, generative uses of the language?',
+    'Empirical study of discourse within religious communities: analysis of sermons, texts, and pronouncements regarding secular linguistic initiatives.',
+    'If active suppression is high, the constraint''s ''suppression'' metric would be higher, pushing it towards a Tangled Rope or Snare classification for the secular speech community. If merely ignored, the current low suppression is accurate.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism regarding secular use of the language.').
+narrative_ontology:omega_variable(secular_use_legitimacy, empirical, 'Degree of active suppression vs. passive disregard for secular language use.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(living_language_status__liturgical_preservation_reading, 0, 30).
+narrative_ontology:interval(living_language_status__liturgical_preservation_reading, 1800, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(livi_tr_t0, living_language_status__liturgical_preservation_reading, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(livi_tr_t10, living_language_status__liturgical_preservation_reading, theater_ratio, 10, 0.09).
-narrative_ontology:measurement(livi_tr_t20, living_language_status__liturgical_preservation_reading, theater_ratio, 20, 0.1).
-narrative_ontology:measurement(livi_tr_t30, living_language_status__liturgical_preservation_reading, theater_ratio, 30, 0.1).
+narrative_ontology:measurement(livi_tr_t1800, living_language_status__liturgical_preservation_reading, theater_ratio, 1800, 0.08).
+narrative_ontology:measurement(livi_tr_t1850, living_language_status__liturgical_preservation_reading, theater_ratio, 1850, 0.09).
+narrative_ontology:measurement(livi_tr_t1900, living_language_status__liturgical_preservation_reading, theater_ratio, 1900, 0.09).
+narrative_ontology:measurement(livi_tr_t1950, living_language_status__liturgical_preservation_reading, theater_ratio, 1950, 0.1).
+narrative_ontology:measurement(livi_tr_t2000, living_language_status__liturgical_preservation_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(livi_tr_t2024, living_language_status__liturgical_preservation_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(livi_be_t0, living_language_status__liturgical_preservation_reading, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(livi_be_t10, living_language_status__liturgical_preservation_reading, base_extractiveness, 10, 0.18).
-narrative_ontology:measurement(livi_be_t20, living_language_status__liturgical_preservation_reading, base_extractiveness, 20, 0.2).
-narrative_ontology:measurement(livi_be_t30, living_language_status__liturgical_preservation_reading, base_extractiveness, 30, 0.2).
+narrative_ontology:measurement(livi_be_t1800, living_language_status__liturgical_preservation_reading, base_extractiveness, 1800, 0.1).
+narrative_ontology:measurement(livi_be_t1850, living_language_status__liturgical_preservation_reading, base_extractiveness, 1850, 0.12).
+narrative_ontology:measurement(livi_be_t1900, living_language_status__liturgical_preservation_reading, base_extractiveness, 1900, 0.13).
+narrative_ontology:measurement(livi_be_t1950, living_language_status__liturgical_preservation_reading, base_extractiveness, 1950, 0.14).
+narrative_ontology:measurement(livi_be_t2000, living_language_status__liturgical_preservation_reading, base_extractiveness, 2000, 0.15).
+narrative_ontology:measurement(livi_be_t2024, living_language_status__liturgical_preservation_reading, base_extractiveness, 2024, 0.15).
 
 % Suppression requirement over time
-narrative_ontology:measurement(livi_su_t0, living_language_status__liturgical_preservation_reading, suppression_requirement, 0, 0.25).
-narrative_ontology:measurement(livi_su_t10, living_language_status__liturgical_preservation_reading, suppression_requirement, 10, 0.28).
-narrative_ontology:measurement(livi_su_t20, living_language_status__liturgical_preservation_reading, suppression_requirement, 20, 0.3).
-narrative_ontology:measurement(livi_su_t30, living_language_status__liturgical_preservation_reading, suppression_requirement, 30, 0.3).
+narrative_ontology:measurement(livi_su_t1800, living_language_status__liturgical_preservation_reading, suppression_requirement, 1800, 0.2).
+narrative_ontology:measurement(livi_su_t1850, living_language_status__liturgical_preservation_reading, suppression_requirement, 1850, 0.22).
+narrative_ontology:measurement(livi_su_t1900, living_language_status__liturgical_preservation_reading, suppression_requirement, 1900, 0.23).
+narrative_ontology:measurement(livi_su_t1950, living_language_status__liturgical_preservation_reading, suppression_requirement, 1950, 0.24).
+narrative_ontology:measurement(livi_su_t2000, living_language_status__liturgical_preservation_reading, suppression_requirement, 2000, 0.25).
+narrative_ontology:measurement(livi_su_t2024, living_language_status__liturgical_preservation_reading, suppression_requirement, 2024, 0.25).
 
 
 /* ==========================================================================
@@ -220,9 +269,11 @@ narrative_ontology:measurement(livi_su_t30, living_language_status__liturgical_p
    ========================================================================== */
 
 narrative_ontology:coordination_type(living_language_status__liturgical_preservation_reading, identity_coordination).
+narrative_ontology:affects_constraint(living_language_status__liturgical_preservation_reading, living_language_status__native_generation_reading).
+narrative_ontology:affects_constraint(living_language_status__liturgical_preservation_reading, living_language_status__literary_continuity_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'living_language_status' kernel. Other readings, such as 'native_generation_reading' and 'literary_continuity_reading', represent alternative definitions of language vitality with different structural properties and stakeholder impacts.
+% This constraint is one of three readings of the 'living language status' kernel, each offering a different criterion for linguistic vitality. They are linked as a constraint family.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

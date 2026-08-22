@@ -4,141 +4,241 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c49b8ef0-28f1-4b4f-b3ce-150920b8fb92"
+    "story_uid": "fd021b9d-9fed-406a-bf05-90502531c142"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.7,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.5,
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
     "claimed_type": "tangled_rope",
-    "human_readable": "Expansive Federal Reading of the Commerce Clause",
-    "topic_domain": "constitutional_law/federalism/commerce_regulation",
+    "human_readable": "Expansive Federal Commerce Clause Reading",
+    "topic_domain": "constitutional_law/federalism",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "federal_administrative_state",
-      "national_policy_coherence_advocates",
-      "large_interstate_corporations"
+      "national_policy_coherence_advocates"
     ],
     "victims": [
       "state_autonomy",
-      "local_variation_advocates",
-      "intrastate_businesses"
+      "local_variation_advocates"
+    ],
+    "vindicated_propositions": [
+      "national_supremacy_doctrine",
+      "implied_powers_doctrine"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "reading_of_commerce_clause",
-      "question": "Is this constraint a genuine interpretation of the Commerce Clause's original meaning, or a policy choice justified by judicial precedent?",
-      "resolution_mechanism": "Historical-textual analysis of founding-era documents and debates, compared with modern economic realities and judicial reasoning.",
-      "impact": "If a genuine interpretation, its legitimacy is higher, reducing perceived extraction. If a policy choice, it is more clearly a constructed constraint, increasing perceived extraction and suppression for states and local actors.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'expansive_federal_reading' of the 'commerce_clause_text' kernel. Sibling readings ('originalist_narrow_reading', 'substantial_effects_limited_reading') would shift federal regulatory power and state autonomy."
+      "name": "federal_administrative_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "This reading grants the federal government broad authority to regulate economic activity, enabling federal agencies to implement national policies across diverse sectors. They benefit from expanded jurisdiction and a more uniform regulatory environment."
     },
     {
-      "id": "federal_vs_state_power_balance",
-      "question": "What is the optimal balance of federal and state power in regulating economic activity, considering efficiency, local responsiveness, and national coherence?",
-      "resolution_mechanism": "Empirical studies comparing economic outcomes and citizen satisfaction under different federal-state regulatory regimes; policy debate and legislative action.",
-      "impact": "A shift towards greater state autonomy would reduce the federal government's 'extraction' of regulatory power and increase the 'mobile' exit options for states; a shift towards federal preeminence would reinforce the current structure.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "The expansive reading prioritizes national coherence over local variation, a preference that is contested."
+      "name": "national_policy_coherence_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Groups and individuals who prioritize uniform national standards and policies over state-by-state variation. They benefit from the ability to address complex economic and social issues at a federal level, avoiding a 'race to the bottom' among states."
+    },
+    {
+      "name": "state_autonomy",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The collective interest of individual states in maintaining their sovereign powers and legislative discretion. This reading subordinates state regulatory authority to federal power in many economic spheres, leading to a loss of local control and policy experimentation."
+    },
+    {
+      "name": "local_variation_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Citizens and groups who prefer local control and diverse policy approaches tailored to specific community needs. They bear the cost of federal preemption and the imposition of national standards that may not fit local contexts."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The ultimate arbiter of the Commerce Clause's scope. Its interpretations define the boundaries of federal power. While not directly benefiting from specific policies, its institutional power is enhanced by the ability to shape the federal-state balance."
+    },
+    {
+      "name": "originalist_scholars",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legal scholars and jurists who advocate for a narrow interpretation of the Commerce Clause based on its original public meaning. Their arguments are often marginalized in the face of established expansive precedents, though they continue to influence dissenting opinions and academic discourse."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Enables the federal government to coordinate economic activity across state lines, preventing states from erecting trade barriers or undermining national economic policies, thereby fostering a unified national market.",
+    "transfer_function": "Transfers regulatory authority and policy-making power from individual states to the federal government, along with the associated resources and enforcement capabilities.",
+    "absent_voices": "Originalist and states' rights advocates, who would argue for a more limited federal role and greater state autonomy, are often outvoted or overruled in legislative and judicial contexts where this expansive reading holds sway.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this expansive reading vanished, federal agencies would lose jurisdiction over vast swathes of economic activity, leading to a regulatory vacuum, increased state-level protectionism, and a fragmented national market. The entire structure of federal economic regulation would collapse, necessitating a complete reorganization of governance.",
+    "founding_problem": "The Articles of Confederation failed to prevent states from imposing tariffs and trade barriers on each other, leading to economic disunity and instability, which the Commerce Clause was intended to remedy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and constitutional scholars widely corroborate the founding problem of interstate trade barriers under the Articles. The federal government and national business interests attest that the problem of economic fragmentation remains live, requiring a strong federal hand. States' rights advocates, however, contest the degree to which the current expansive reading is necessary to solve this problem, arguing it overshoots the original intent."
+  },
+  "interval": {
+    "start": 1937,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1937,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1950,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "time_point": 1970,
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.6
+      "time_point": 1990,
+      "value": 0.68
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.5
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.63
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 1937,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
       "value": 0.7
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1937,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.12
+      "time_point": 1970,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.11
+      "time_point": 1990,
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.1
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'expansive federal reading' of the U.S. Constitution's Commerce Clause, which interprets federal power to regulate all economic activity with a substantial aggregate effect on national markets. This reading has historically expanded federal authority, subordinating state power in many areas. It is one of several competing interpretations of the Commerce Clause, with significant implications for federalism and economic regulation.",
-    "key_agents": [
-      "federal_administrative_state: Primary beneficiary (institutional/arbitrage) — gains regulatory scope",
-      "national_policy_coherence_advocates: Beneficiary (organized/mobile) — benefits from uniform regulation",
-      "large_interstate_corporations: Beneficiary (powerful/arbitrage) — benefits from single regulatory framework",
-      "state_autonomy: Victim (institutional/constrained) — loses regulatory power",
-      "local_variation_advocates: Victim (organized/constrained) — bears costs of federal preemption",
-      "intrastate_businesses: Victim (moderate/constrained) — subject to federal rules despite local focus",
-      "supreme_court: Agenda setter (institutional/analytical) — adjudicates the scope of the clause"
-    ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it provides a genuine coordination function (national market coherence, uniform regulation) but also involves significant asymmetric extraction (federal power over state autonomy). Extractiveness is high (0.6) due to the transfer of regulatory authority from states to the federal government. Suppression (0.7) is also high, as states' ability to regulate independently is curtailed by federal preemption. Theater ratio is low (0.1) because the federal government actively exercises and enforces this expansive power, so there is little performative maintenance without functional effect.",
-    "perspectival_gap": "The federal administrative state and national policy advocates perceive this as a necessary coordination mechanism for a modern economy, ensuring efficiency and preventing a 'race to the bottom' among states. State autonomy advocates and local businesses, however, experience it as an extractive imposition that erodes local control and responsiveness. The Supreme Court, as the agenda setter, mediates these competing perspectives through its jurisprudence.",
-    "directionality_logic": "The federal administrative state, national policy advocates, and large interstate corporations are beneficiaries (low d) as they gain from a unified regulatory environment. State autonomy, local variation advocates, and intrastate businesses are victims (high d) as they lose regulatory power and flexibility. The Supreme Court, while an agenda setter, also acts as an analytical observer, attempting to balance competing claims.",
-    "mandatrophy_analysis": "The constraint's mandate (ensuring a functioning national market) is still live, but its scope has expanded significantly beyond its original intent, leading to a contested status. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination). The ongoing contestation over its scope suggests it is not a Piton, as there are still active beneficiaries and victims, and the function is not entirely atrophied."
+    "narrative_context": "This constraint represents the 'expansive federal reading' of the Commerce Clause, which interprets 'interstate commerce' to include all economic activity with a substantial aggregate effect on national markets. This reading, largely solidified during the New Deal era, dramatically expanded federal regulatory power, subordinating state autonomy in many economic spheres. It is presented as a Tangled Rope because it genuinely coordinates a national economy while simultaneously extracting regulatory power from states and local entities.",
+    "logic_rationale": "Extractiveness is high (0.65) because states lose significant regulatory power and the ability to tailor policies to local needs, which is a substantial cost. Suppression is also high (0.75) as federal preemption actively suppresses state-level alternatives and resistance. The theater ratio is moderate (0.20): while the federal government genuinely coordinates national markets, a portion of its activity is performative, defending its expansive jurisdiction against states' rights challenges rather than solely addressing market failures. The historical measurements reflect the expansion of federal power from the New Deal (1937) through its peak and subsequent minor retrenchment.",
+    "directionality_logic": "The federal administrative state and national policy advocates are clear beneficiaries, gaining power and policy coherence. State autonomy and local variation advocates are the primary payers, losing power and flexibility. The Supreme Court acts as an agenda-setter, defining the scope of this reading. Originalist scholars are excluded, their arguments for a narrower reading largely unheeded in the prevailing legal framework.",
+    "perspectival_gap": "From the perspective of federal agencies, this reading is a necessary Rope for national economic coordination. From the perspective of states and local advocates, it functions as a Snare, extracting their sovereign power. The engine's classification will reflect this divergence based on the structural data.",
+    "kernel_context": "This constraint is the 'expansive federal reading' of the Commerce Clause text. It stands in contrast to the 'originalist narrow reading' and the 'substantial effects limited reading,' both of which seek to constrain federal power more significantly. This reading emphasizes the federal government's role in ensuring a unified national economy."
   },
+  "omegas": [
+    {
+      "id": "aggregate_effects_threshold",
+      "question": "What constitutes a 'substantial aggregate effect' on national markets, and is this threshold consistently applied or subject to judicial discretion?",
+      "resolution_mechanism": "Empirical analysis of Supreme Court jurisprudence over time, identifying consistent criteria for 'substantiality' versus case-by-case ad hoc determinations.",
+      "impact": "If the threshold is consistently applied, it reinforces the rule-bound nature of the constraint. If it's discretionary, it highlights a potential for arbitrary expansion of federal power, increasing extractiveness for states.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in defining the scope of federal power under the 'substantial aggregate effects' test."
+    },
+    {
+      "id": "federal_vs_state_efficiency",
+      "question": "Is federal regulation under this expansive reading demonstrably more efficient or effective in solving national economic problems than a more decentralized, state-led approach?",
+      "resolution_mechanism": "Comparative economic and policy analysis of federal versus state regulatory outcomes in specific sectors, measuring efficiency, innovation, and responsiveness to diverse needs.",
+      "impact": "Evidence of federal inefficiency or overreach would weaken the coordination justification, pushing the constraint closer to a Snare. Evidence of superior federal outcomes would reinforce its Rope-like qualities.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the benefits of federal uniformity outweigh the costs of lost state autonomy and local variation."
+    },
+    {
+      "id": "originalist_challenge_viability",
+      "question": "Could a renewed originalist interpretation of the Commerce Clause gain sufficient judicial or political traction to significantly roll back the expansive federal reading?",
+      "resolution_mechanism": "Analysis of judicial appointments, shifts in legal scholarship, and public opinion trends regarding federalism and constitutional interpretation.",
+      "impact": "If a narrow originalist reading were to prevail, this constraint would be reclassified as a Piton or even a Snare, as its foundational premise would be undermined, and its persistence would rely on inertia or active suppression of the new interpretation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The potential for an alternative constitutional reading to displace the current expansive interpretation."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
     "affects_constraints": [
+      "commerce_clause_text__originalist_narrow_reading",
+      "commerce_clause_text__substantial_effects_limited_reading",
       "federal_environmental_regulation",
-      "federal_labor_standards",
-      "federal_healthcare_policy"
+      "national_labor_standards"
     ],
-    "dual_formulation_note": "This constraint is one of three distinct readings of the Commerce Clause kernel, each with different structural implications for federal power and state autonomy."
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Commerce Clause text, each with different structural implications for federal power and state autonomy. They are linked as a constraint family."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -156,7 +256,7 @@
     ],
     "axioms": [
       {
-        "atom": "aggregate_effects_doctrine",
+        "atom": "aggregate_effects_test_validity",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
@@ -168,23 +268,24 @@
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "new_deal_era_jurisprudence",
+    "reference_frame": "new_deal_constitutional_settlement",
     "drift_state": {
-      "moment": "contemporary_conservative_court_challenges",
-      "direction": "revival_pressure",
-      "magnitude": "minor",
+      "moment": "contemporary_federalism_debates",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

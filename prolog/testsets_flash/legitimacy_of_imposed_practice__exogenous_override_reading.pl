@@ -39,8 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,27 +70,24 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: legitimacy_of_imposed_practice__exogenous_override_reading
- *   human_readable: State Decree as Sufficient for Practice Displacement (Exogenous Override Reading)
+ *   human_readable: State Decree Authority as Exogenous Override
  *   domain: political_history/state_formation/cultural_imposition
  *
  * SUMMARY:
- *   This constraint describes the belief and practice that state decree
- *   authority is inherently sufficient to displace prior cultural or social
- *   practices, with compliance following directly from legal mandate,
- *   irrespective of whether the new practices are internalized by the
- *   population. It reflects a top-down, positivist view of state power in
- *   processes of modernization or cultural imposition. The
- *   'exogenous_override_reading' emphasizes the state's capacity to impose
- *   change from the outside, often through legal abolition of old practices
- *   and coercive enforcement of new ones, even if this leads to rural
- *   non-compliance and practical workarounds.
+ *   This constraint represents the 'exogenous override' reading of state
+ *   authority in cultural imposition, where legal mandates are considered
+ *   sufficient to displace prior practices, and compliance is expected
+ *   regardless of internalization. This reading emphasizes the state's power
+ *   to unilaterally define and enforce new norms, often seen in early
+ *   20th-century modernization campaigns (e.g., calendar reforms, dress
+ *   codes). The state's 'modernization agenda' is the primary beneficiary,
+ *   while rural populations bear the costs of adjustment and coercive
+ *   enforcement, often resorting to practical workarounds that create a gap
+ *   between formal compliance and actual practice. The claimed type is
+ *   'snare' because the coordination story (national unity, efficiency) is
+ *   cover for the extraction of compliance and legitimacy by the state,
+ *   enforced through suppression.
  *
- * KEY AGENTS:
- *   - state_bureaucracy: Agenda setter (institutional/generational) — issues decrees, enforces compliance.
- *   - rural_populations: Payer (powerless/generational) — bears adjustment costs, faces coercive enforcement, may engage in non-compliance.
- *   - traditional_elites: Payer (powerful/generational) — loses status and influence as prior practices are undermined.
- *   - state_modernization_agenda: Beneficiary (analytical/civilizational) — the abstract goal that benefits from the perceived success of imposed practices.
- *   - sociological_observers: Observer (analytical/civilizational) — analyzes the actual dynamics of compliance and internalization.
  */
 
 /* ==========================================================================
@@ -104,32 +105,32 @@ narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__exogenous_o
 narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 0.4).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__exogenous_override_reading, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__exogenous_override_reading, resistance, 0.6).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__exogenous_override_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__exogenous_override_reading, resistance, 0.5).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(legitimacy_of_imposed_practice__exogenous_override_reading, tangled_rope).
-narrative_ontology:human_readable(legitimacy_of_imposed_practice__exogenous_override_reading, "State Decree as Sufficient for Practice Displacement (Exogenous Override Reading)").
+narrative_ontology:constraint_claim(legitimacy_of_imposed_practice__exogenous_override_reading, snare).
+narrative_ontology:human_readable(legitimacy_of_imposed_practice__exogenous_override_reading, "State Decree Authority as Exogenous Override").
 narrative_ontology:topic_domain(legitimacy_of_imposed_practice__exogenous_override_reading, "political_history/state_formation/cultural_imposition").
 
 domain_priors:requires_active_enforcement(legitimacy_of_imposed_practice__exogenous_override_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(legitimacy_of_imposed_practice__exogenous_override_reading, 'aaeaa613-d071-4dff-bc26-f45e09519244').
-narrative_ontology:cs_kernel_codification('aaeaa613-d071-4dff-bc26-f45e09519244', formalized).
-narrative_ontology:cs_authority_grounding('aaeaa613-d071-4dff-bc26-f45e09519244', extraction).
-narrative_ontology:cs_interpretation_layer_present('aaeaa613-d071-4dff-bc26-f45e09519244').
-narrative_ontology:cs_reading_relation('aaeaa613-d071-4dff-bc26-f45e09519244', legitimacy_of_imposed_practice__endogenous_climb_reading, forecloses).
-narrative_ontology:cs_reading_relation('aaeaa613-d071-4dff-bc26-f45e09519244', legitimacy_of_imposed_practice__hybrid_scaffolding_reading, influences).
-narrative_ontology:cs_axiom('aaeaa613-d071-4dff-bc26-f45e09519244', foundational, state_decree_is_sufficient_for_compliance).
-narrative_ontology:cs_axiom_status(state_decree_is_sufficient_for_compliance, holdable).
-narrative_ontology:cs_axiom_grounding('aaeaa613-d071-4dff-bc26-f45e09519244', state_decree_is_sufficient_for_compliance, conventional).
-narrative_ontology:cs_axiom('aaeaa613-d071-4dff-bc26-f45e09519244', secondary, internalization_is_irrelevant_to_legitimacy).
-narrative_ontology:cs_axiom_status(internalization_is_irrelevant_to_legitimacy, holdable).
-narrative_ontology:cs_axiom_grounding('aaeaa613-d071-4dff-bc26-f45e09519244', internalization_is_irrelevant_to_legitimacy, deontological).
-narrative_ontology:cs_reference_frame('aaeaa613-d071-4dff-bc26-f45e09519244', legal_positivist_state_supremacy).
-narrative_ontology:cs_drift_state('aaeaa613-d071-4dff-bc26-f45e09519244', contemporary_postcolonial_critique, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('aaeaa613-d071-4dff-bc26-f45e09519244', '').
+narrative_ontology:cs_story_uid(legitimacy_of_imposed_practice__exogenous_override_reading, '9e77f788-c41e-4f36-99bc-82e38da09392').
+narrative_ontology:cs_kernel_codification('9e77f788-c41e-4f36-99bc-82e38da09392', formalized).
+narrative_ontology:cs_authority_grounding('9e77f788-c41e-4f36-99bc-82e38da09392', extraction).
+narrative_ontology:cs_interpretation_layer_present('9e77f788-c41e-4f36-99bc-82e38da09392').
+narrative_ontology:cs_reading_relation('9e77f788-c41e-4f36-99bc-82e38da09392', legitimacy_of_imposed_practice__endogenous_climb_reading, forecloses).
+narrative_ontology:cs_reading_relation('9e77f788-c41e-4f36-99bc-82e38da09392', legitimacy_of_imposed_practice__hybrid_scaffolding_reading, influences).
+narrative_ontology:cs_axiom('9e77f788-c41e-4f36-99bc-82e38da09392', foundational, state_decree_is_law).
+narrative_ontology:cs_axiom_status(state_decree_is_law, holdable).
+narrative_ontology:cs_axiom_grounding('9e77f788-c41e-4f36-99bc-82e38da09392', state_decree_is_law, conventional).
+narrative_ontology:cs_axiom('9e77f788-c41e-4f36-99bc-82e38da09392', foundational, compliance_is_sufficient_for_legitimacy).
+narrative_ontology:cs_axiom_status(compliance_is_sufficient_for_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('9e77f788-c41e-4f36-99bc-82e38da09392', compliance_is_sufficient_for_legitimacy, instrumental).
+narrative_ontology:cs_reference_frame('9e77f788-c41e-4f36-99bc-82e38da09392', unilateral_state_sovereignty).
+narrative_ontology:cs_drift_state('9e77f788-c41e-4f36-99bc-82e38da09392', contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('9e77f788-c41e-4f36-99bc-82e38da09392', '').
 narrative_ontology:cs_kernel_id(legitimacy_of_imposed_practice__exogenous_override_reading, legitimacy_of_imposed_practice).
 
 % --- Structural relationships ---
@@ -145,27 +146,49 @@ narrative_ontology:constraint_victim(legitimacy_of_imposed_practice__exogenous_o
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Enforces decrees, believing in the inherent authority of the state to reshape society. Benefits from the expansion of state power and the perceived success of modernization efforts. Their careers and legitimacy are tied to the effective implementation of state policy.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__exogenous_override_reading, state_bureaucracy, agenda_setter,
+    institutional, generational, constrained, national).
+
+% The abstract goal of transforming society through top-down legal and administrative means. Benefits from the perceived efficiency and universality of state-imposed practices, even if actual compliance is superficial.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__exogenous_override_reading, state_modernization_agenda, beneficiary,
+    analytical, civilizational, analytical, national).
+narrative_ontology:stakeholder_non_agent(legitimacy_of_imposed_practice__exogenous_override_reading, state_modernization_agenda).
+
+% Bear the direct costs of adjusting to new practices, often without understanding their rationale or having a voice in their formulation. Experience coercive enforcement and practical workarounds, leading to a gap between formal compliance and actual internalization.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__exogenous_override_reading, rural_populations, payer,
+    powerless, biographical, trapped, local).
+
+% Lose their customary authority and social standing as state decrees displace traditional practices. They may resist passively or seek to subvert enforcement, but their power is diminished by the state's direct imposition.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__exogenous_override_reading, traditional_elites, payer,
+    moderate, generational, constrained, regional).
+
+% Analyze the effectiveness and human rights implications of state-led modernization, often highlighting the gap between legal mandate and social reality. Their reports can influence international aid or diplomatic pressure.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__exogenous_override_reading, international_observers, observer,
+    analytical, generational, analytical, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: To establish a unified legal and social order across diverse populations, replacing disparate local practices with a single, centrally mandated set of norms and institutions, thereby facilitating state-led modernization and national integration.
-% TRANSFER_FUNCTION: Transfers authority over social and cultural practices from local communities and traditional elites to the central state. It also transfers the costs of adjusting to new norms and the burden of compliance onto rural populations, while accruing symbolic and material benefits (e.g., control, resources, legitimacy) to the state bureaucracy and its modernization agenda.
-% ABSENT_VOICES: Local community leaders, cultural preservationists, and advocates for indigenous rights are often excluded. They would argue for the value of prior practices, the right to self-determination in cultural matters, and the social costs of imposed change. Their absence allows the state's narrative of progress to dominate without direct challenge.
-% DISAPPEARANCE_RATIONALE: If the belief in state decree's sufficiency and its enforcement vanished, the state's capacity to impose new practices would collapse. Prior practices would likely re-emerge or adapt, local autonomy would increase, and the state's modernization agenda would face significant challenges, forcing a renegotiation of its relationship with diverse populations.
-% FOUNDING_PROBLEM: The problem of establishing a unified national identity and administrative control over diverse, often fragmented, populations with disparate local customs and legal systems, which were perceived as obstacles to 'modern' state-building and economic development.
-% FOUNDING_PROBLEM_CORROBORATION: State historians and official narratives attest that the problem of national unity and modernization remains live, justifying continued top-down imposition. However, postcolonial scholars, anthropologists, and local community leaders (from outside the benefiting parties) argue that the original problem has either been superseded by new challenges or was fundamentally misdiagnosed, and that the constraint now primarily serves to maintain state power and extract resources rather than genuinely solve societal problems.
+% COORDINATION_FUNCTION: Aims to coordinate societal behavior around a new set of state-sanctioned practices, replacing diverse local customs with a uniform national standard, thereby facilitating state administration and control.
+% TRANSFER_FUNCTION: Transfers authority and legitimacy from traditional local institutions and practices to the centralized state, extracting compliance and resources from local populations to serve the state's modernization agenda.
+% ABSENT_VOICES: Local community leaders and cultural practitioners, whose knowledge and authority are explicitly devalued by the state's top-down approach. Their perspectives on the value of traditional practices and the feasibility of imposed changes are systematically ignored.
+% DISAPPEARANCE_RATIONALE: If the state's authority to impose practices vanished, many traditional customs would likely re-emerge or adapt, and local forms of governance might regain influence. The state's administrative capacity would be severely hampered, and the 'modernized' practices would likely unravel without coercive enforcement.
+% FOUNDING_PROBLEM: The state perceived traditional, diverse local practices as obstacles to national unity, administrative efficiency, and 'progress,' leading to fragmentation and hindering centralized control.
+% FOUNDING_PROBLEM_CORROBORATION: State officials and proponents of modernization attest that the problem of 'backwardness' and fragmentation remains live, justifying continued top-down intervention. International development agencies sometimes corroborate the need for standardized practices, though often with caveats about local participation.
 narrative_ontology:disappearance_verdict(legitimacy_of_imposed_practice__exogenous_override_reading, world_rearranges).
-narrative_ontology:founding_problem_status(legitimacy_of_imposed_practice__exogenous_override_reading, contested).
+narrative_ontology:founding_problem_status(legitimacy_of_imposed_practice__exogenous_override_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(legitimacy_of_imposed_practice__exogenous_override_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(legitimacy_of_imposed_practice__exogenous_override_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(legitimacy_of_imposed_practice__exogenous_override_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(legitimacy_of_imposed_practice__exogenous_override_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,16 +208,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely attempts to coordinate a new social order (modernization, national unity) but does so through asymmetric extraction and coercion. Extractiveness (0.65) is high due to the costs imposed on populations forced to abandon established practices and adopt new ones without consultation. Suppression (0.75) is also high, reflecting the active enforcement required to maintain compliance against resistance. The theater ratio (0.4) indicates that a significant portion of enforcement is performative, aimed at demonstrating state authority rather than achieving genuine internalization, especially when non-compliance persists through workarounds. Accessibility collapse is moderate (0.4) as alternatives (prior practices) are legally abolished but persist informally, and resistance is moderate (0.6) due to active, though often covert, non-compliance.
+ *   Extractiveness is high (0.65) because the state imposes significant costs on populations forced to abandon established practices, often without commensurate benefits. Suppression is also high (0.75) as active enforcement (fines, arrests, propaganda) is required to maintain even superficial compliance. The theater ratio (0.4) reflects the gap between formal adherence and actual internalization; much of the 'compliance' is performative, masking continued traditional practices or workarounds. Resistance is moderate (0.5) due to passive non-compliance and local subversion, but rarely overt challenge given the high suppression.
  *
  * PERSPECTIVAL GAP:
- *   The state bureaucracy (agenda setter) perceives this as a legitimate and effective mechanism for progress, viewing any resistance as backwardness to be overcome. Rural populations (payers) experience it as an imposition, bearing the costs of adjustment and often finding ways to circumvent or resist the new norms. The state modernization agenda (beneficiary) is an abstract entity that 'benefits' from the appearance of compliance, regardless of its depth.
+ *   From the state's perspective, this is a necessary 'rope' for national development, coordinating society towards a modern future. From the perspective of rural populations, it is a 'snare' that extracts their cultural autonomy and resources through coercion. The engine's classification as 'snare' reflects the structural reality of asymmetric extraction and suppression, despite the state's 'rope' claim.
  *
  * DIRECTIONALITY LOGIC:
- *   The state bureaucracy and the abstract 'state_modernization_agenda' are the primary beneficiaries (low directionality), as they gain from the perceived success of the imposed practices and the consolidation of state power. Rural populations and traditional elites are the primary targets (high directionality), bearing the direct costs of compliance, loss of autonomy, and cultural disruption. The active enforcement mechanism ensures that the costs are borne by the targets, while the benefits accrue to the state's objectives.
+ *   The state bureaucracy and its modernization agenda are clear beneficiaries, as the constraint expands their power and legitimizes their vision (low directionality). Rural populations and traditional elites are targets, bearing the costs of displacement and enforcement (high directionality). International observers are analytical, neither benefiting nor paying directly.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling the constraint as a pure Rope (ignoring the coercive extraction) or a pure Snare (ignoring the genuine, if contested, coordination goal of state modernization). The 'tangled_rope' accurately captures the hybrid nature: a coordination function (modernization) is pursued through an extractive mechanism (imposed practices, coercive enforcement) that benefits the state while imposing costs on specific populations. Mandatrophy would occur if the 'modernization' goal became entirely theatrical, with enforcement serving only to maintain state power without any genuine societal benefit.
+ *   The constraint's mandate (national unity, efficiency) is presented as live, but the high extractiveness and theater ratio suggest a significant portion of its function has atrophied into rent-seeking (extraction of compliance for state power) rather than genuine coordination. The persistence relies on active enforcement rather than internalized legitimacy, indicating a snare-like dynamic where the founding problem is used as cover for ongoing extraction.
  */
 
 /* ==========================================================================
@@ -202,60 +225,72 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine reflection of state authority''s capacity to override prior practice, or is it a specific reading of the ''legitimacy_of_imposed_practice'' kernel?',
-    'Recognizing this as the ''exogenous_override_reading'' of the ''legitimacy_of_imposed_practice'' kernel, acknowledging sibling readings like ''endogenous_climb_reading'' and ''hybrid_scaffolding_reading''.',
-    'Framing this as a specific reading clarifies that its claims about compliance and displacement are not universally accepted, but rather represent a particular theoretical or historical stance on state power and cultural change.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''exogenous_override_reading'' of the ''legitimacy_of_imposed_practice'' kernel.').
-
-omega_variable(
-    displacement_completeness_ambiguity,
-    'To what extent does legal abolition truly displace prior practice, given rural non-compliance and practical workarounds?',
-    'Longitudinal ethnographic studies tracking the persistence of ''abolished'' practices in daily life, and quantitative analysis of enforcement efficacy versus actual behavioral change.',
-    'If displacement is consistently incomplete, the constraint''s effective suppression and extractiveness are lower than claimed, and its ''tangled_rope'' classification leans towards ''piton'' due to performative enforcement.',
+    actual_vs_formal_compliance,
+    'What is the true extent of internalization versus superficial compliance with state-imposed practices?',
+    'Longitudinal ethnographic studies and covert observation of daily life, comparing declared adherence with actual behavior over generations.',
+    'If internalization is low, the constraint''s effective suppression and theater ratio are higher than measured, indicating a more severe snare. If internalization is high, the constraint might be reclassified towards a tangled rope or even rope, as genuine coordination emerges.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(displacement_completeness_ambiguity, empirical, 'Ambiguity regarding the completeness of practice displacement by state decree.').
+narrative_ontology:omega_variable(actual_vs_formal_compliance, empirical, 'Distinguishing between coerced compliance and genuine adoption of new practices.').
 
 omega_variable(
-    coercion_vs_internalization_balance,
-    'What is the actual balance between coercive enforcement and any emergent internalization of new practices among the affected populations?',
-    'Sociological surveys and qualitative interviews with affected populations to gauge acceptance, belief, and integration of new norms, contrasted with observed compliance under duress.',
-    'If internalization is negligible and compliance is purely coercive, the constraint''s ''tangled_rope'' classification shifts closer to ''snare''; if some internalization is observed, the coordination function is partially vindicated.',
+    state_authority_grounding_ambiguity,
+    'Is the state''s authority to impose practices grounded in a genuine social contract or in coercive power alone?',
+    'Historical analysis of state formation, examining the role of popular consent, revolutionary legitimacy, or colonial imposition in establishing state power.',
+    'If grounded in coercion, the constraint is a pure snare. If a genuine social contract exists, the constraint might have a latent rope function, even if currently extractive, suggesting a tangled rope.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(state_authority_grounding_ambiguity, conceptual, 'Ambiguity regarding the foundational legitimacy of state authority.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (legal penalties, police enforcement) or internalized (fear, social pressure to conform)?',
+    'Post-decree relaxation studies: if compliance persists after active enforcement is removed, reclassify as partially internalized suppression.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making the snare more insidious.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(coercion_vs_internalization_balance, empirical, 'Balance between coercive enforcement and internalization of new practices.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in cultural imposition.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(legitimacy_of_imposed_practice__exogenous_override_reading, 0, 10).
+narrative_ontology:interval(legitimacy_of_imposed_practice__exogenous_override_reading, 1920, 1980).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(legi_tr_t0, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 0, 0.3).
-narrative_ontology:measurement(legi_tr_t5, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(legi_tr_t10, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 10, 0.4).
+narrative_ontology:measurement(legi_tr_t1920, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1920, 0.3).
+narrative_ontology:measurement(legi_tr_t1930, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1930, 0.35).
+narrative_ontology:measurement(legi_tr_t1940, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1940, 0.4).
+narrative_ontology:measurement(legi_tr_t1950, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1950, 0.45).
+narrative_ontology:measurement(legi_tr_t1960, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1960, 0.43).
+narrative_ontology:measurement(legi_tr_t1970, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1970, 0.41).
+narrative_ontology:measurement(legi_tr_t1980, legitimacy_of_imposed_practice__exogenous_override_reading, theater_ratio, 1980, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(legi_be_t0, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(legi_be_t5, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 5, 0.58).
-narrative_ontology:measurement(legi_be_t10, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 10, 0.65).
+narrative_ontology:measurement(legi_be_t1920, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1920, 0.55).
+narrative_ontology:measurement(legi_be_t1930, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1930, 0.6).
+narrative_ontology:measurement(legi_be_t1940, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1940, 0.65).
+narrative_ontology:measurement(legi_be_t1950, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1950, 0.68).
+narrative_ontology:measurement(legi_be_t1960, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1960, 0.67).
+narrative_ontology:measurement(legi_be_t1970, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1970, 0.66).
+narrative_ontology:measurement(legi_be_t1980, legitimacy_of_imposed_practice__exogenous_override_reading, base_extractiveness, 1980, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(legi_su_t0, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(legi_su_t5, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 5, 0.68).
-narrative_ontology:measurement(legi_su_t10, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 10, 0.75).
+narrative_ontology:measurement(legi_su_t1920, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1920, 0.65).
+narrative_ontology:measurement(legi_su_t1930, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1930, 0.7).
+narrative_ontology:measurement(legi_su_t1940, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1940, 0.75).
+narrative_ontology:measurement(legi_su_t1950, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1950, 0.78).
+narrative_ontology:measurement(legi_su_t1960, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1960, 0.77).
+narrative_ontology:measurement(legi_su_t1970, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1970, 0.76).
+narrative_ontology:measurement(legi_su_t1980, legitimacy_of_imposed_practice__exogenous_override_reading, suppression_requirement, 1980, 0.75).
 
 
 /* ==========================================================================
@@ -263,6 +298,11 @@ narrative_ontology:measurement(legi_su_t10, legitimacy_of_imposed_practice__exog
    ========================================================================== */
 
 narrative_ontology:coordination_type(legitimacy_of_imposed_practice__exogenous_override_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(legitimacy_of_imposed_practice__exogenous_override_reading, state_taxation_system).
+narrative_ontology:affects_constraint(legitimacy_of_imposed_practice__exogenous_override_reading, national_education_curriculum).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three readings of the 'legitimacy_of_imposed_practice' kernel, focusing on the state's capacity for exogenous override. Other readings explore endogenous adoption and hybrid scaffolding.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

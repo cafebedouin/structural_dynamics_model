@@ -39,9 +39,9 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,26 +68,30 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: legitimate_health_intervention__public_health_primary
- *   human_readable: Public Health Primary Intervention Mandate
+ *   human_readable: Public Health Primary Intervention (Population Morbidity/Mortality Reduction)
  *   domain: public_health_policy/medical_ethics/constitutional_law
  *
  * SUMMARY:
- *   This constraint represents the 'public_health_primary' reading of
- *   legitimate health interventions, where the state's authority to mandate
- *   measures (like vaccination or isolation) derives from their measurable
- *   impact on population-level morbidity and mortality. Individual refusal is
- *   framed as an externality imposed on the collective, justifying coercive
- *   enforcement. This reading prioritizes collective well-being over
- *   individual autonomy when a clear public health threat exists.
+ *   This constraint represents the 'public_health_primary' reading of the
+ *   'legitimate_health_intervention' kernel. It asserts that the legitimacy
+ *   of public health interventions derives from their measurable reduction in
+ *   population-level morbidity and mortality. Individual refusal of such
+ *   interventions is framed as the imposition of an externality on the
+ *   collective. This reading justifies strong enforcement mechanisms, such as
+ *   mandatory vaccination, employment termination for non-compliance, and
+ *   restrictions on access to public spaces, to protect the vulnerable and
+ *   maintain public health infrastructure. The high extractiveness and
+ *   suppression reflect the costs imposed on individuals who refuse to comply
+ *   and the active enforcement required to maintain the population-level
+ *   benefit.
  *
  * KEY AGENTS:
- *   - public_health_authorities: Agenda setter (institutional/analytical) — sets policy, enforces mandates.
- *   - immunocompromised_individuals: Beneficiary (powerless) — protected by reduced disease transmission.
- *   - general_population: Beneficiary (organized) — benefits from reduced disease burden, but also subject to mandates.
- *   - unvaccinated_individuals: Payer/Victim (powerless/constrained) — bears costs of mandates (e.g., job loss, access restrictions).
- *   - religious_objectors: Payer/Victim (powerless/constrained) — faces direct conflict between belief and mandate.
- *   - anti_vaccine_advocates: Payer/Victim (moderate/constrained) — actively resists, but faces significant suppression.
- *   - constitutional_courts: Observer (institutional/analytical) — adjudicates challenges to mandates, balancing rights.
+ *   - public_health_authorities: Agenda setter (institutional/global) — enforces compliance, sets policy.
+ *   - immunocompromised_individuals: Primary beneficiary (powerless/biographical) — protected by population immunity.
+ *   - general_population: Beneficiary (organized/generational) — benefits from reduced disease burden.
+ *   - unvaccinated_individuals: Primary payer/victim (powerless/immediate) — bears costs of non-compliance (employment loss, access restrictions).
+ *   - individuals_with_religious_exemptions: Payer/victim (powerless/biographical) — bears costs due to refusal based on belief.
+ *   - constitutional_lawyers: Observer (analytical/generational) — challenge the legality and ethical basis of interventions.
  */
 
 /* ==========================================================================
@@ -109,27 +114,27 @@ narrative_ontology:constraint_metric(legitimate_health_intervention__public_heal
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(legitimate_health_intervention__public_health_primary, tangled_rope).
-narrative_ontology:human_readable(legitimate_health_intervention__public_health_primary, "Public Health Primary Intervention Mandate").
+narrative_ontology:human_readable(legitimate_health_intervention__public_health_primary, "Public Health Primary Intervention (Population Morbidity/Mortality Reduction)").
 narrative_ontology:topic_domain(legitimate_health_intervention__public_health_primary, "public_health_policy/medical_ethics/constitutional_law").
 
 domain_priors:requires_active_enforcement(legitimate_health_intervention__public_health_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(legitimate_health_intervention__public_health_primary, '0cd3ac80-84a0-4a24-9c84-b51df70e0c25').
-narrative_ontology:cs_kernel_codification('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', formalized).
-narrative_ontology:cs_authority_grounding('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', expertise).
-narrative_ontology:cs_interpretation_layer_present('0cd3ac80-84a0-4a24-9c84-b51df70e0c25').
-narrative_ontology:cs_reading_relation('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', legitimate_health_intervention__bodily_autonomy_primary, forecloses).
-narrative_ontology:cs_reading_relation('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', legitimate_health_intervention__proportionality_reading, influences).
-narrative_ontology:cs_axiom('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', foundational, collective_health_supremacy).
-narrative_ontology:cs_axiom_status(collective_health_supremacy, holdable).
-narrative_ontology:cs_axiom_grounding('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', collective_health_supremacy, deontological).
-narrative_ontology:cs_axiom('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', foundational, individual_externality_imposition).
-narrative_ontology:cs_axiom_status(individual_externality_imposition, holdable).
-narrative_ontology:cs_axiom_grounding('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', individual_externality_imposition, empirically_contingent).
-narrative_ontology:cs_reference_frame('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', epidemiological_consensus_public_good).
-narrative_ontology:cs_drift_state('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', contemporary_pandemic_era, gap(revival_pressure, substantial, true)).
-narrative_ontology:cs_created_at('0cd3ac80-84a0-4a24-9c84-b51df70e0c25', '').
+narrative_ontology:cs_story_uid(legitimate_health_intervention__public_health_primary, '31cea546-07c7-40a5-b7a4-c184bc7d4940').
+narrative_ontology:cs_kernel_codification('31cea546-07c7-40a5-b7a4-c184bc7d4940', formalized).
+narrative_ontology:cs_authority_grounding('31cea546-07c7-40a5-b7a4-c184bc7d4940', expertise).
+narrative_ontology:cs_interpretation_layer_present('31cea546-07c7-40a5-b7a4-c184bc7d4940').
+narrative_ontology:cs_reading_relation('31cea546-07c7-40a5-b7a4-c184bc7d4940', legitimate_health_intervention__bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_reading_relation('31cea546-07c7-40a5-b7a4-c184bc7d4940', legitimate_health_intervention__proportionality_reading, influences).
+narrative_ontology:cs_axiom('31cea546-07c7-40a5-b7a4-c184bc7d4940', foundational, population_health_supremacy).
+narrative_ontology:cs_axiom_status(population_health_supremacy, holdable).
+narrative_ontology:cs_axiom_grounding('31cea546-07c7-40a5-b7a4-c184bc7d4940', population_health_supremacy, deontological).
+narrative_ontology:cs_axiom('31cea546-07c7-40a5-b7a4-c184bc7d4940', secondary, individual_refusal_as_externality).
+narrative_ontology:cs_axiom_status(individual_refusal_as_externality, holdable).
+narrative_ontology:cs_axiom_grounding('31cea546-07c7-40a5-b7a4-c184bc7d4940', individual_refusal_as_externality, empirically_contingent).
+narrative_ontology:cs_reference_frame('31cea546-07c7-40a5-b7a4-c184bc7d4940', collective_health_imperative).
+narrative_ontology:cs_drift_state('31cea546-07c7-40a5-b7a4-c184bc7d4940', contemporary_rights_discourse, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('31cea546-07c7-40a5-b7a4-c184bc7d4940', '').
 narrative_ontology:cs_kernel_id(legitimate_health_intervention__public_health_primary, legitimate_health_intervention).
 
 % --- Structural relationships ---
@@ -137,10 +142,7 @@ narrative_ontology:constraint_beneficiary(legitimate_health_intervention__public
 narrative_ontology:constraint_beneficiary(legitimate_health_intervention__public_health_primary, healthcare_systems).
 narrative_ontology:constraint_beneficiary(legitimate_health_intervention__public_health_primary, general_population).
 narrative_ontology:constraint_victim(legitimate_health_intervention__public_health_primary, unvaccinated_individuals).
-narrative_ontology:constraint_victim(legitimate_health_intervention__public_health_primary, religious_objectors).
-narrative_ontology:constraint_victim(legitimate_health_intervention__public_health_primary, anti_vaccine_advocates).
-narrative_ontology:constraint_vindicates(legitimate_health_intervention__public_health_primary, herd_immunity_principle).
-narrative_ontology:constraint_vindicates(legitimate_health_intervention__public_health_primary, public_good_over_private_interest).
+narrative_ontology:constraint_victim(legitimate_health_intervention__public_health_primary, individuals_with_religious_exemptions).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -149,15 +151,39 @@ narrative_ontology:constraint_vindicates(legitimate_health_intervention__public_
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Responsible for setting and enforcing public health policies, including mandatory interventions. They justify policies based on epidemiological data and population health outcomes. Their mandate is to reduce morbidity and mortality, and they benefit from compliance.
+narrative_ontology:constraint_stakeholder(legitimate_health_intervention__public_health_primary, public_health_authorities, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Highly vulnerable to infectious diseases, they rely on population-level immunity (herd immunity) for protection. They are direct beneficiaries of widespread compliance with public health interventions, as it reduces their risk of exposure and severe illness.
+narrative_ontology:constraint_stakeholder(legitimate_health_intervention__public_health_primary, immunocompromised_individuals, beneficiary,
+    powerless, biographical, trapped, local).
+
+% Benefits from reduced overall disease burden, stable healthcare systems, and economic continuity. While some individuals may bear indirect costs, the collective benefit from disease control is substantial.
+narrative_ontology:constraint_stakeholder(legitimate_health_intervention__public_health_primary, general_population, beneficiary,
+    organized, generational, mobile, national).
+
+% Individuals who refuse public health interventions (e.g., vaccination) for personal, philosophical, or medical reasons. They bear the direct costs of non-compliance, such as employment termination, restrictions on travel, or exclusion from public spaces. They are framed as imposing an externality on the collective.
+narrative_ontology:constraint_stakeholder(legitimate_health_intervention__public_health_primary, unvaccinated_individuals, payer,
+    powerless, immediate, identity_locked, local).
+
+% Individuals whose religious beliefs preclude participation in certain public health interventions. They face similar costs and restrictions as other unvaccinated individuals, often leading to legal challenges based on religious freedom.
+narrative_ontology:constraint_stakeholder(legitimate_health_intervention__public_health_primary, individuals_with_religious_exemptions, payer,
+    powerless, biographical, identity_locked, local).
+
+% Legal professionals who analyze and challenge public health mandates on constitutional grounds, such as bodily autonomy, religious freedom, or due process. They represent individuals and groups affected by the interventions and seek to balance individual rights with state power.
+narrative_ontology:constraint_stakeholder(legitimate_health_intervention__public_health_primary, constitutional_lawyers, observer,
+    powerful, generational, analytical, national).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: To reduce population-level morbidity and mortality from infectious diseases, ensuring collective immunity and protecting vulnerable individuals who cannot be vaccinated.
-% TRANSFER_FUNCTION: Transfers the burden of disease risk from the collective (especially vulnerable groups) to individuals who refuse public health interventions, through mandates and restrictions.
-% ABSENT_VOICES: Individuals with rare medical contraindications to vaccines, or those whose specific religious beliefs are not widely understood, may feel their voices are absent in the broad policy debates, leading to their marginalization in policy formulation.
-% DISAPPEARANCE_RATIONALE: If this constraint vanished overnight, public health authorities would lose their primary tool for managing epidemics. Vaccination rates would likely drop, leading to increased disease outbreaks, overwhelmed healthcare systems, and a significant rise in preventable deaths and long-term disabilities. Society would have to reorganize around a higher baseline of disease risk.
-% FOUNDING_PROBLEM: The historical problem of widespread infectious diseases causing mass casualties and societal disruption, necessitating collective action to protect public health.
-% FOUNDING_PROBLEM_CORROBORATION: Epidemiologists, public health organizations (e.g., WHO, CDC), and medical professionals universally corroborate that the founding problem of infectious disease threats remains live. Historical data on pandemics and ongoing endemic diseases provide strong evidence from outside the direct beneficiaries of enforcement.
+% COORDINATION_FUNCTION: To achieve population-level immunity and reduce the spread of infectious diseases, thereby protecting vulnerable individuals and preventing healthcare system overload.
+% TRANSFER_FUNCTION: Transfers the burden of disease risk from the collective (especially the vulnerable) to individuals who refuse to comply with public health interventions, through social and economic penalties.
+% ABSENT_VOICES: Individuals and advocacy groups who prioritize absolute bodily autonomy or specific religious freedoms would object to the coercive nature of these interventions. They are often marginalized in public health discourse, which prioritizes collective good.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, population-level morbidity and mortality would likely increase significantly, especially during outbreaks. Healthcare systems would be overwhelmed, and vulnerable populations would face severe risks. The social contract around collective health would fundamentally shift, leading to a reorganization of public health governance and individual responsibilities.
+% FOUNDING_PROBLEM: The problem of managing infectious disease outbreaks and protecting vulnerable populations from widespread illness and death, particularly when individual actions can impact collective health.
+% FOUNDING_PROBLEM_CORROBORATION: Public health organizations (e.g., WHO, CDC) and medical professionals universally corroborate that managing infectious diseases and protecting vulnerable populations remains a live and critical problem. Epidemiological data and historical precedents of disease outbreaks support this assessment from outside the immediate benefiting parties.
 narrative_ontology:disappearance_verdict(legitimate_health_intervention__public_health_primary, world_rearranges).
 narrative_ontology:founding_problem_status(legitimate_health_intervention__public_health_primary, live).
 
@@ -165,11 +191,12 @@ narrative_ontology:founding_problem_status(legitimate_health_intervention__publi
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(legitimate_health_intervention__public_health_primary, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(legitimate_health_intervention__public_health_primary, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(legitimate_health_intervention__public_health_primary, 'none', 1).
+narrative_ontology:epsilon_provenance(legitimate_health_intervention__public_health_primary, 0.78, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -189,16 +216,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (0.78) and suppression (0.85) reflect the coercive nature of public health mandates, which impose significant costs on non-compliant individuals (e.g., loss of employment, restricted access to public spaces). The 'tangled_rope' classification is chosen because there is a genuine coordination function (reducing disease burden for the collective, especially vulnerable populations) alongside asymmetric extraction from those who refuse to comply. The low theater ratio (0.1) indicates that the enforcement is largely functional, directly aimed at achieving public health outcomes, rather than performative. Accessibility collapse is moderate (0.6) as alternatives to compliance (e.g., avoiding public spaces, remote work) exist but are severely constrained. Resistance is high (0.7) due to strong individual and ideological opposition.
+ *   The constraint is classified as a Tangled Rope because it genuinely coordinates public health outcomes (benefiting the immunocompromised and general population) but achieves this through significant, asymmetric extraction from non-compliant individuals. The high extractiveness (0.78) reflects the severe consequences for those who refuse, such as job loss or exclusion from public life. Suppression (0.85) is high due to the active and often coercive enforcement by public health authorities. The theater ratio is low (0.1) as the interventions are largely functional in achieving their stated public health goals, with minimal performative elements. Accessibility collapse is moderate (0.6) as alternatives to compliance (e.g., avoiding public spaces, remote work) exist but are severely constrained. Resistance is high (0.7) due to strong individual rights advocacy and legal challenges.
  *
  * PERSPECTIVAL GAP:
- *   Public health authorities and immunocompromised individuals experience this as a necessary, life-saving coordination mechanism. Unvaccinated individuals and religious objectors experience it as a highly extractive and suppressive imposition on their bodily autonomy and beliefs. The engine's per-seat classification will reflect this divergence, with beneficiaries seeing a Rope-like function and victims experiencing a Snare-like extraction.
+ *   Public health authorities perceive this as a necessary coordination mechanism to protect the collective, with individual costs being a justified price for societal well-being. Unvaccinated individuals, however, experience it as pure extraction and suppression, a violation of bodily autonomy. The engine's per-seat classification would reflect this divergence, with authorities seeing a Rope and non-compliant individuals experiencing a Snare.
  *
  * DIRECTIONALITY LOGIC:
- *   Public health authorities are clear beneficiaries (d=0.0-0.1) as their mandate is fulfilled and their power is exercised. Immunocompromised individuals and the general population are also beneficiaries (d=0.0-0.2) as they are protected from disease. Unvaccinated individuals, religious objectors, and anti-vaccine advocates are clear targets (d=0.8-1.0) as they bear the direct costs of compliance or non-compliance. Constitutional courts are analytical observers (d=0.5).
+ *   Public health authorities are full beneficiaries (d=0.0) as they achieve their mandate and maintain societal order. Immunocompromised individuals and the general population are also beneficiaries (d=0.1-0.2) as they are directly protected. Unvaccinated individuals and those with religious exemptions are full targets (d=1.0) as they bear the full cost of non-compliance without direct benefit from the specific intervention they refuse. Constitutional lawyers are analytical observers (d=0.5).
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is not experiencing mandatrophy; its mandate (reducing morbidity/mortality) is actively pursued and its enforcement is functional. The challenge is not obsolescence but the ethical and legal contestation of its scope and methods. The classification as Tangled Rope prevents mislabeling it as a pure Snare by acknowledging its genuine coordination function, while still highlighting its extractive and suppressive aspects.
+ *   This constraint is not mandatrophic; its mandate (reducing morbidity/mortality) is actively pursued and demonstrably live, especially during public health crises. The classification as Tangled Rope prevents mislabeling it as pure extraction by acknowledging its genuine coordination function, while also highlighting the asymmetric costs imposed.
  */
 
 /* ==========================================================================
@@ -208,32 +235,22 @@ test(extraction_signature) :-
 omega_variable(
     kernel_reading_identification,
     'Is this constraint a genuine reflection of public health necessity, or an overreach of state power?',
-    'Empirical data on disease transmission rates and severity, combined with legal precedent on state police powers in public health emergencies.',
-    'If public health necessity is overwhelmingly demonstrated, the constraint is a legitimate Tangled Rope. If overreach, it leans towards Snare.',
+    'Comparative analysis with other readings of the ''legitimate_health_intervention'' kernel, specifically ''bodily_autonomy_primary'' and ''proportionality_reading'', to identify the specific points of structural divergence and their normative implications.',
+    'If the ''bodily_autonomy_primary'' reading were adopted, the victim set would shrink, and extractiveness would decrease significantly. If ''proportionality_reading'' were adopted, the constraint''s application would be highly conditional on disease severity and intervention invasiveness.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, empirical, 'This constraint is the ''public_health_primary'' reading of the ''legitimate_health_intervention'' kernel. Sibling readings (''bodily_autonomy_primary'', ''proportionality_reading'') would shift the victim/beneficiary balance and the perceived legitimacy of enforcement.').
+narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading (''public_health_primary'') of the ''legitimate_health_intervention'' kernel. It prioritizes population-level health outcomes over individual autonomy, viewing refusal as an externality.').
 
 omega_variable(
-    suppression_mechanism_ambiguity,
-    'Is the measured suppression structural (e.g., legal mandates) or internalized (e.g., social pressure, fear of exclusion)?',
-    'Post-exit suppression trajectory: if refusal persists after legal mandates are removed, reclassify as partially internalized. Surveys on reasons for compliance/non-compliance.',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests, as individuals carry the suppression with them. If purely structural, removal of mandates would lead to immediate behavioral shifts.',
+    externality_quantification,
+    'How precisely can the externality imposed by individual refusal be quantified in terms of population-level morbidity and mortality?',
+    'Epidemiological modeling and public health data analysis to establish a direct causal link and magnitude of harm from individual non-compliance.',
+    'If the externality is small or difficult to quantify, the justification for high suppression and extractiveness weakens, potentially shifting the constraint towards a ''snare'' or ''piton'' if the coordination function is deemed insufficient.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for vaccine mandates and access restrictions.').
-
-omega_variable(
-    proportionality_threshold_ambiguity,
-    'At what threshold of population-level morbidity/mortality does individual refusal constitute an unacceptable externality, justifying high suppression?',
-    'Consensus among epidemiologists and public health ethicists on risk assessment, and judicial review of public health orders.',
-    'A higher threshold would reduce the legitimacy of high suppression, pushing the constraint towards Snare. A lower threshold would reinforce its Tangled Rope classification.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(proportionality_threshold_ambiguity, preference, 'The ''proportionality_reading'' sibling would contest this threshold, arguing for a more nuanced balance.').
+narrative_ontology:omega_variable(externality_quantification, empirical, 'The degree to which individual refusal of public health measures directly translates to measurable population harm.').
 
 
 /* ==========================================================================
@@ -247,14 +264,14 @@ narrative_ontology:interval(legitimate_health_intervention__public_health_primar
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(legi_tr_t0, legitimate_health_intervention__public_health_primary, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(legi_tr_t5, legitimate_health_intervention__public_health_primary, theater_ratio, 5, 0.12).
+narrative_ontology:measurement(legi_tr_t0, legitimate_health_intervention__public_health_primary, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(legi_tr_t5, legitimate_health_intervention__public_health_primary, theater_ratio, 5, 0.1).
 narrative_ontology:measurement(legi_tr_t10, legitimate_health_intervention__public_health_primary, theater_ratio, 10, 0.1).
 narrative_ontology:measurement(legi_tr_t15, legitimate_health_intervention__public_health_primary, theater_ratio, 15, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(legi_be_t0, legitimate_health_intervention__public_health_primary, base_extractiveness, 0, 0.6).
-narrative_ontology:measurement(legi_be_t5, legitimate_health_intervention__public_health_primary, base_extractiveness, 5, 0.68).
+narrative_ontology:measurement(legi_be_t0, legitimate_health_intervention__public_health_primary, base_extractiveness, 0, 0.65).
+narrative_ontology:measurement(legi_be_t5, legitimate_health_intervention__public_health_primary, base_extractiveness, 5, 0.7).
 narrative_ontology:measurement(legi_be_t10, legitimate_health_intervention__public_health_primary, base_extractiveness, 10, 0.75).
 narrative_ontology:measurement(legi_be_t15, legitimate_health_intervention__public_health_primary, base_extractiveness, 15, 0.78).
 
@@ -272,7 +289,7 @@ narrative_ontology:measurement(legi_su_t15, legitimate_health_intervention__publ
 narrative_ontology:coordination_type(legitimate_health_intervention__public_health_primary, enforcement_mechanism).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'legitimate_health_intervention' kernel. Other readings (e.g., 'bodily_autonomy_primary', 'proportionality_reading') are distinct constraints with different structural properties and classifications.
+% This constraint is one of three readings of the 'legitimate_health_intervention' kernel, each representing a distinct structural claim about the balance between individual rights and public health.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

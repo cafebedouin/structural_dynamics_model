@@ -39,8 +39,10 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -56,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,24 +73,24 @@
  *   domain: educational_psychology/literacy_pedagogy/cognitive_science
  *
  * SUMMARY:
- *   This constraint represents the 'phonics-first' reading of literacy
- *   acquisition, asserting that explicit, systematic instruction in
- *   phoneme-grapheme correspondence is a prerequisite for reading
- *   comprehension. It mandates a specific instructional sequence,
- *   prioritizing decoding skills before exposure to connected text. This
- *   approach is often codified in curriculum standards and teacher training,
- *   leading to highly structured, sometimes scripted, lesson plans. It is one
- *   of several competing pedagogical approaches within the broader
- *   'literacy_acquisition_kernel' contest.
+ *   This constraint represents the 'phonics-first' reading of reading
+ *   acquisition, which mandates explicit, systematic instruction in
+ *   phoneme-grapheme correspondence as a prerequisite for connected text
+ *   exposure. It is a reading of the broader 'literacy_acquisition_kernel'
+ *   and stands in contrast to other pedagogical approaches. While it aims to
+ *   coordinate effective instruction, it also extracts from teacher autonomy
+ *   and potentially from students for whom this approach is redundant. The
+ *   metrics reflect a system that has become increasingly prescriptive and
+ *   enforced over time, driven by research findings and policy mandates.
  *
  * KEY AGENTS:
- *   - curriculum_publishers_phonics_programs: Agenda setter (institutional/arbitrage) — designs and markets phonics-first curricula.
- *   - educational_policymakers: Agenda setter (institutional/analytical) — mandates phonics-first approaches in standards and funding.
- *   - teachers_professional_judgment: Payer (moderate/constrained) — bears the cost of reduced autonomy and scripted instruction.
- *   - students_with_weak_phonological_awareness: Beneficiary (powerless/trapped) — benefits from systematic instruction that addresses their specific learning needs.
- *   - students_with_strong_phonological_awareness: Victim (powerless/trapped) — may be over-constrained by a rigid phonics-first approach that is redundant for them.
- *   - parents_advocating_for_phonics: Beneficiary (organized/mobile) — supports and advocates for phonics-first methods, often based on personal experience or research interpretation.
- *   - whole_language_advocates: Excluded (organized/constrained) — actively opposes the phonics-first mandate, arguing for holistic, meaning-based instruction.
+ *   - teachers_professional_judgment: Payer (moderate/identity_locked) — bears extraction of autonomy
+ *   - students_with_weak_phonological_awareness: Beneficiary (powerless/trapped) — benefits from explicit instruction
+ *   - curriculum_publishers_phonics_programs: Beneficiary (organized/arbitrage) — profits from mandates
+ *   - students_with_strong_phonological_awareness: Payer (powerless/trapped) — bears cost of redundant instruction
+ *   - school_administrators: Agenda-setter (institutional/constrained) — enforces mandates
+ *   - cognitive_science_researchers: Observer (analytical/analytical) — provides evidence, influences policy
+ *   - whole_language_advocates: Excluded (moderate/constrained) — marginalized by mandate
  */
 
 /* ==========================================================================
@@ -105,8 +108,8 @@ narrative_ontology:constraint_metric(literacy_acquisition_kernel__phonics_readin
 narrative_ontology:constraint_metric(literacy_acquisition_kernel__phonics_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(literacy_acquisition_kernel__phonics_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(literacy_acquisition_kernel__phonics_reading, resistance, 0.4).
+narrative_ontology:constraint_metric(literacy_acquisition_kernel__phonics_reading, accessibility_collapse, 0.4).
+narrative_ontology:constraint_metric(literacy_acquisition_kernel__phonics_reading, resistance, 0.7).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(literacy_acquisition_kernel__phonics_reading, tangled_rope).
@@ -116,22 +119,22 @@ narrative_ontology:topic_domain(literacy_acquisition_kernel__phonics_reading, "e
 domain_priors:requires_active_enforcement(literacy_acquisition_kernel__phonics_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(literacy_acquisition_kernel__phonics_reading, '00568ac8-4841-4bcb-9aa2-54280774f6ae').
-narrative_ontology:cs_kernel_codification('00568ac8-4841-4bcb-9aa2-54280774f6ae', formalized).
-narrative_ontology:cs_authority_grounding('00568ac8-4841-4bcb-9aa2-54280774f6ae', expertise).
-narrative_ontology:cs_interpretation_layer_present('00568ac8-4841-4bcb-9aa2-54280774f6ae').
-narrative_ontology:cs_reading_relation('00568ac8-4841-4bcb-9aa2-54280774f6ae', literacy_acquisition_kernel__whole_language_reading, forecloses).
-narrative_ontology:cs_reading_relation('00568ac8-4841-4bcb-9aa2-54280774f6ae', literacy_acquisition_kernel__balanced_literacy_reading, influences).
-narrative_ontology:cs_reading_relation('00568ac8-4841-4bcb-9aa2-54280774f6ae', literacy_acquisition_kernel__structured_literacy_reading, influences).
-narrative_ontology:cs_axiom('00568ac8-4841-4bcb-9aa2-54280774f6ae', foundational, decoding_is_primary_gateway_to_comprehension).
-narrative_ontology:cs_axiom_status(decoding_is_primary_gateway_to_comprehension, holdable).
-narrative_ontology:cs_axiom_grounding('00568ac8-4841-4bcb-9aa2-54280774f6ae', decoding_is_primary_gateway_to_comprehension, empirically_contingent).
-narrative_ontology:cs_axiom('00568ac8-4841-4bcb-9aa2-54280774f6ae', foundational, explicit_systematic_phonics_is_essential).
-narrative_ontology:cs_axiom_status(explicit_systematic_phonics_is_essential, holdable).
-narrative_ontology:cs_axiom_grounding('00568ac8-4841-4bcb-9aa2-54280774f6ae', explicit_systematic_phonics_is_essential, empirically_contingent).
-narrative_ontology:cs_reference_frame('00568ac8-4841-4bcb-9aa2-54280774f6ae', scientific_reading_research_consensus).
-narrative_ontology:cs_drift_state('00568ac8-4841-4bcb-9aa2-54280774f6ae', contemporary_pedagogical_practice, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('00568ac8-4841-4bcb-9aa2-54280774f6ae', '').
+narrative_ontology:cs_story_uid(literacy_acquisition_kernel__phonics_reading, 'e49c658b-31ae-4ad7-8b06-255d87068a60').
+narrative_ontology:cs_kernel_codification('e49c658b-31ae-4ad7-8b06-255d87068a60', formalized).
+narrative_ontology:cs_authority_grounding('e49c658b-31ae-4ad7-8b06-255d87068a60', expertise).
+narrative_ontology:cs_interpretation_layer_present('e49c658b-31ae-4ad7-8b06-255d87068a60').
+narrative_ontology:cs_reading_relation('e49c658b-31ae-4ad7-8b06-255d87068a60', literacy_acquisition_kernel__whole_language_reading, forecloses).
+narrative_ontology:cs_reading_relation('e49c658b-31ae-4ad7-8b06-255d87068a60', literacy_acquisition_kernel__balanced_literacy_reading, influences).
+narrative_ontology:cs_reading_relation('e49c658b-31ae-4ad7-8b06-255d87068a60', literacy_acquisition_kernel__structured_literacy_reading, coexists_with).
+narrative_ontology:cs_axiom('e49c658b-31ae-4ad7-8b06-255d87068a60', foundational, decoding_is_primary).
+narrative_ontology:cs_axiom_status(decoding_is_primary, holdable).
+narrative_ontology:cs_axiom_grounding('e49c658b-31ae-4ad7-8b06-255d87068a60', decoding_is_primary, empirically_contingent).
+narrative_ontology:cs_axiom('e49c658b-31ae-4ad7-8b06-255d87068a60', foundational, explicit_instruction_is_necessary).
+narrative_ontology:cs_axiom_status(explicit_instruction_is_necessary, holdable).
+narrative_ontology:cs_axiom_grounding('e49c658b-31ae-4ad7-8b06-255d87068a60', explicit_instruction_is_necessary, empirically_contingent).
+narrative_ontology:cs_reference_frame('e49c658b-31ae-4ad7-8b06-255d87068a60', science_of_reading_consensus).
+narrative_ontology:cs_drift_state('e49c658b-31ae-4ad7-8b06-255d87068a60', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('e49c658b-31ae-4ad7-8b06-255d87068a60', '').
 narrative_ontology:cs_kernel_id(literacy_acquisition_kernel__phonics_reading, literacy_acquisition_kernel).
 
 % --- Structural relationships ---
@@ -147,15 +150,43 @@ narrative_ontology:constraint_victim(literacy_acquisition_kernel__phonics_readin
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Teachers are often required to follow highly scripted phonics curricula, limiting their autonomy to adapt instruction based on student needs or their own pedagogical expertise. This can lead to professional dissatisfaction and a feeling of de-skilling.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, teachers_professional_judgment, payer,
+    moderate, biographical, identity_locked, local).
+
+% These students benefit significantly from explicit, systematic phonics instruction, which provides them with foundational decoding skills necessary for reading. Without it, they are at high risk of reading failure.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, students_with_weak_phonological_awareness, beneficiary,
+    powerless, immediate, trapped, local).
+
+% These publishers profit from the widespread adoption of phonics-first mandates, selling extensive, often scripted, instructional materials to school districts. They actively advocate for policies that reinforce this approach.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, curriculum_publishers_phonics_programs, beneficiary,
+    organized, generational, arbitrage, national).
+
+% For these students, highly explicit and systematic phonics instruction can be redundant, boring, and may delay their engagement with rich, connected texts, potentially dampening reading motivation and comprehension development.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, students_with_strong_phonological_awareness, payer,
+    powerless, immediate, trapped, local).
+
+% Implement and enforce phonics-first mandates, often driven by state-level policies, accountability metrics, and pressure from parent advocacy groups. They balance pedagogical effectiveness with political and financial considerations.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, school_administrators, agenda_setter,
+    institutional, biographical, constrained, local).
+
+% Conduct studies on reading acquisition, providing empirical evidence that often supports the importance of phonics. Their findings influence policy but do not directly set mandates.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, cognitive_science_researchers, observer,
+    analytical, generational, analytical, global).
+
+% Advocate for approaches that prioritize meaning-making and engagement with authentic texts, often viewing explicit phonics as secondary or even detrimental. Their pedagogical philosophy is often marginalized or actively suppressed by phonics-first mandates.
+narrative_ontology:constraint_stakeholder(literacy_acquisition_kernel__phonics_reading, whole_language_advocates, excluded,
+    moderate, generational, constrained, national).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Provides a standardized, research-backed instructional sequence for teaching reading, ensuring that foundational decoding skills are explicitly taught to all students, particularly benefiting those who do not acquire these skills implicitly.
-% TRANSFER_FUNCTION: Transfers instructional control and pedagogical decision-making from individual teachers to curriculum designers and policymakers, in exchange for a perceived reduction in student reading failure rates and increased accountability.
-% ABSENT_VOICES: Advocates for 'whole language' and 'balanced literacy' approaches are often marginalized in policy debates dominated by phonics-first proponents. They would argue for greater emphasis on meaning-making, motivation, and integrated literacy experiences, rather than a rigid, decoding-first sequence.
-% DISAPPEARANCE_RATIONALE: If the phonics-first mandate vanished, instructional practices would immediately diversify, with many teachers reverting to more integrated or 'balanced' approaches. Curriculum markets would shift, and the political landscape of literacy education would be fundamentally altered, leading to a significant reorganization of pedagogical norms and resource allocation.
-% FOUNDING_PROBLEM: A perceived crisis in reading achievement, particularly for students from disadvantaged backgrounds or with learning disabilities, attributed to insufficient or unsystematic phonics instruction in prior pedagogical models.
-% FOUNDING_PROBLEM_CORROBORATION: The problem of reading achievement gaps is widely attested by educational researchers, cognitive scientists, and parent advocacy groups (e.g., for dyslexia). While the specific solution (phonics-first mandate) is debated, the underlying problem of ensuring universal literacy remains a live concern, corroborated by national and international assessment data from outside the direct beneficiaries of phonics curricula.
+% COORDINATION_FUNCTION: Coordinates instructional practice across classrooms and schools to ensure a consistent, research-backed approach to teaching foundational reading skills, particularly decoding, to all students.
+% TRANSFER_FUNCTION: Transfers instructional control and pedagogical decision-making from individual teachers to prescribed curricula and mandates, while transferring foundational decoding skills to students, especially those at risk.
+% ABSENT_VOICES: Advocates for whole language or purely emergent literacy approaches are largely excluded from policy-making and curriculum selection processes, as their core tenets are seen as antithetical to phonics-first mandates. Their voices would highlight potential negative impacts on reading motivation and the over-simplification of reading as a cognitive process.
+% DISAPPEARANCE_RATIONALE: If the phonics-first mandate vanished overnight, many schools would revert to more eclectic or 'balanced' approaches, curriculum publishers would lose a significant market, and the instructional landscape for early literacy would become highly varied, potentially leading to inconsistent outcomes for students, especially those needing explicit support.
+% FOUNDING_PROBLEM: A significant portion of students, particularly those from disadvantaged backgrounds or with specific learning differences, were failing to acquire basic decoding skills, leading to widespread reading failure and educational inequity.
+% FOUNDING_PROBLEM_CORROBORATION: Cognitive science research consistently identifies phonological awareness and decoding as critical for reading acquisition, especially for struggling readers. Educational outcomes data continue to show disparities in reading proficiency, corroborating the ongoing need for effective foundational instruction. This is attested by independent researchers and educational advocacy groups, not just curriculum providers.
 narrative_ontology:disappearance_verdict(literacy_acquisition_kernel__phonics_reading, world_rearranges).
 narrative_ontology:founding_problem_status(literacy_acquisition_kernel__phonics_reading, live).
 
@@ -163,11 +194,12 @@ narrative_ontology:founding_problem_status(literacy_acquisition_kernel__phonics_
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(literacy_acquisition_kernel__phonics_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(literacy_acquisition_kernel__phonics_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(literacy_acquisition_kernel__phonics_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(literacy_acquisition_kernel__phonics_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -187,16 +219,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely coordinates (systematic instruction for struggling readers) but also extracts (from teacher autonomy and potentially from advanced learners). Extractiveness is high (0.65) due to the rigid curriculum mandates and the suppression of alternative pedagogical approaches. Suppression is also high (0.75) as teachers are often compelled to follow prescribed methods, with professional consequences for deviation. Theater ratio is low (0.1) because the instruction is genuinely delivered, even if its universal applicability is contested; it's not primarily performative. The rising extractiveness and suppression over time reflect the increasing institutionalization and enforcement of phonics-first mandates in many educational systems.
+ *   The extractiveness (0.65) is high due to the significant loss of teacher autonomy and the potential for redundant instruction for some students. Suppression (0.75) is also high, reflecting the active enforcement of mandates and the marginalization of alternative pedagogies. Theater ratio is low (0.1) because the instruction is genuinely intended to be effective, though its implementation may sometimes be performative rather than truly responsive. The increasing extractiveness and suppression over time reflect the 'reading wars' and the hardening of policy around phonics-first approaches.
  *
  * PERSPECTIVAL GAP:
- *   Teachers experience this as a highly extractive constraint on their professional judgment, while students with specific learning needs (e.g., dyslexia) may experience it as a beneficial coordination mechanism. Policymakers and curriculum publishers view it as a necessary standard for effective literacy instruction. The engine's per-seat classification will reflect these divergent experiences based on their declared roles and exit options.
+ *   From the perspective of students with weak phonological awareness, this constraint is a clear Rope or even a Scaffold, providing essential support. From the perspective of teachers whose professional judgment is overridden, or students for whom the instruction is redundant, it functions more as a Snare or Tangled Rope. The engine's per-seat classification will capture this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Curriculum publishers and educational policymakers are clear beneficiaries and agenda-setters (low d) as they profit from or enforce the phonics-first mandate. Teachers and some students are victims (high d) as their autonomy or learning preferences are suppressed. Parents advocating for phonics are beneficiaries (low d) as their preferred method is implemented. Whole language advocates are excluded (high d) as their approach is actively suppressed.
+ *   The 'os_marketplace_operator' (school_administrators and curriculum_publishers) benefits from the standardization and sale of curricula. 'Major_app_publishers' (teachers) bear the cost of reduced autonomy. 'Device_users' (students) are split: those with weak phonological awareness are beneficiaries, while those with strong awareness are payers of redundant instruction. 'Rival_payment_networks' (whole_language_advocates) are excluded from the pedagogical discourse.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (ensuring all students learn to read) is still live, but its specific implementation (phonics-first as a universal mandate) is contested. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring the extraction from teachers) or a Snare (ignoring the genuine benefits for some students). The ongoing debate about its efficacy and scope suggests it's not a Piton, as there are active beneficiaries and victims, and significant resources are invested in its maintenance and enforcement.
+ *   The constraint's mandate (addressing reading failure) is still live, but its implementation has become increasingly prescriptive, leading to concerns about over-extraction from teacher autonomy and student engagement. The classification as Tangled Rope acknowledges both the genuine coordination function (teaching foundational skills) and the asymmetric extraction (from teachers and some students). The omegas address the ongoing contestation of its scope and necessity.
  */
 
 /* ==========================================================================
@@ -204,70 +236,79 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine, independent claim, or one reading of the ''literacy_acquisition_kernel''?',
-    'The presence of ''literacy_acquisition_kernel'' in the kernel_context and cs_structure confirms it is a reading.',
-    'If a reading, its classification is understood in relation to sibling readings and the overall kernel contest; if independent, it stands alone.',
+    teacher_autonomy_vs_student_outcomes,
+    'Does the prescriptive nature of phonics-first mandates, by reducing teacher autonomy, ultimately hinder overall student reading development (e.g., comprehension, motivation) even as decoding skills improve?',
+    'Longitudinal studies comparing student outcomes (decoding, comprehension, motivation) in highly scripted phonics environments versus contexts where teachers have greater pedagogical flexibility within a phonics-informed framework.',
+    'If reduced autonomy negatively impacts broader outcomes, the effective extraction from teachers is higher, and the constraint''s overall benefit as a coordination mechanism is reduced, pushing it closer to a Snare. If outcomes are superior, the extraction is justified as a necessary cost of effective coordination.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(teacher_autonomy_vs_student_outcomes, empirical, 'Trade-off between instructional fidelity and teacher responsiveness.').
+
+omega_variable(
+    scope_of_phonics_necessity,
+    'Is explicit, systematic phonics instruction equally necessary and beneficial for ALL students, or is its primary benefit concentrated among students with specific learning challenges or weaker phonological awareness?',
+    'Meta-analyses of intervention studies that disaggregate effects by student baseline phonological awareness and prior reading ability. Neuroimaging studies identifying differential neural pathways activated by various instructional approaches.',
+    'If the benefit is highly concentrated, the constraint''s universal application extracts unnecessarily from students who would thrive with less explicit instruction, increasing its effective extractiveness for that group and strengthening the Snare-like qualities. If universally beneficial, the coordination function is stronger.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''phonics_reading'' of the ''literacy_acquisition_kernel''.').
+narrative_ontology:omega_variable(scope_of_phonics_necessity, empirical, 'Whether phonics instruction should be universally applied or differentiated.').
 
 omega_variable(
-    teacher_autonomy_vs_student_outcomes,
-    'Does the high extractiveness on teacher autonomy (via scripted phonics lessons) genuinely lead to improved student decoding outcomes, or is it an overreach?',
-    'Longitudinal studies comparing student outcomes (decoding, fluency, comprehension) in classrooms with high-fidelity phonics implementation vs. those with greater teacher autonomy in instructional method, controlling for student demographics.',
-    'If outcomes are significantly better, the extractiveness is a necessary cost of coordination; if not, it''s pure extraction from teachers.',
-    confidence_without_resolution(medium)
+    reading_as_decoding_vs_meaning_making,
+    'Is reading fundamentally a decoding process that enables comprehension, or is it a meaning-making process where decoding is one of several cues?',
+    'This is a conceptual and theoretical debate within cognitive science and education, unlikely to be resolved by a single empirical finding. Resolution would require a paradigm shift in how reading is defined and understood.',
+    'If reading is primarily meaning-making, the phonics-first mandate over-emphasizes a sub-component, making its coordination function less central and its extraction more pronounced. If decoding is primary, the mandate is well-aligned with the nature of reading.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(teacher_autonomy_vs_student_outcomes, empirical, 'Assesses the functional justification for extracting teacher autonomy.').
-
-omega_variable(
-    phonics_scope_for_all_learners,
-    'Is explicit, systematic phonics instruction equally beneficial for all students, or does it over-constrain those who acquire decoding skills more readily?',
-    'Differential impact studies on student groups with varying initial phonological awareness and language backgrounds. Analysis of engagement and motivation metrics for students who find phonics instruction redundant.',
-    'If universally beneficial, the constraint is a broad coordination mechanism; if differentially beneficial, it extracts from some students (e.g., boredom, reduced motivation) while benefiting others.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(phonics_scope_for_all_learners, empirical, 'Evaluates the universal applicability and potential over-prescription of phonics-first instruction.').
+narrative_ontology:omega_variable(reading_as_decoding_vs_meaning_making, conceptual, 'Fundamental definition of reading process.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(literacy_acquisition_kernel__phonics_reading, 0, 15).
+narrative_ontology:interval(literacy_acquisition_kernel__phonics_reading, 1980, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(lite_tr_t0, literacy_acquisition_kernel__phonics_reading, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(lite_tr_t5, literacy_acquisition_kernel__phonics_reading, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(lite_tr_t10, literacy_acquisition_kernel__phonics_reading, theater_ratio, 10, 0.11).
-narrative_ontology:measurement(lite_tr_t15, literacy_acquisition_kernel__phonics_reading, theater_ratio, 15, 0.1).
+narrative_ontology:measurement(lite_tr_t1980, literacy_acquisition_kernel__phonics_reading, theater_ratio, 1980, 0.05).
+narrative_ontology:measurement(lite_tr_t1990, literacy_acquisition_kernel__phonics_reading, theater_ratio, 1990, 0.08).
+narrative_ontology:measurement(lite_tr_t2000, literacy_acquisition_kernel__phonics_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(lite_tr_t2010, literacy_acquisition_kernel__phonics_reading, theater_ratio, 2010, 0.1).
+narrative_ontology:measurement(lite_tr_t2024, literacy_acquisition_kernel__phonics_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(lite_be_t0, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(lite_be_t5, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(lite_be_t10, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 10, 0.6).
-narrative_ontology:measurement(lite_be_t15, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 15, 0.65).
+narrative_ontology:measurement(lite_be_t1980, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 1980, 0.3).
+narrative_ontology:measurement(lite_be_t1990, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 1990, 0.45).
+narrative_ontology:measurement(lite_be_t2000, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 2000, 0.55).
+narrative_ontology:measurement(lite_be_t2010, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 2010, 0.6).
+narrative_ontology:measurement(lite_be_t2024, literacy_acquisition_kernel__phonics_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(lite_su_t0, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(lite_su_t5, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 5, 0.65).
-narrative_ontology:measurement(lite_su_t10, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 10, 0.7).
-narrative_ontology:measurement(lite_su_t15, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 15, 0.75).
+narrative_ontology:measurement(lite_su_t1980, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 1980, 0.4).
+narrative_ontology:measurement(lite_su_t1990, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 1990, 0.55).
+narrative_ontology:measurement(lite_su_t2000, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 2000, 0.65).
+narrative_ontology:measurement(lite_su_t2010, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 2010, 0.7).
+narrative_ontology:measurement(lite_su_t2024, literacy_acquisition_kernel__phonics_reading, suppression_requirement, 2024, 0.75).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(literacy_acquisition_kernel__phonics_reading, enforcement_mechanism).
+narrative_ontology:coordination_type(literacy_acquisition_kernel__phonics_reading, information_standard).
+narrative_ontology:affects_constraint(literacy_acquisition_kernel__phonics_reading, literacy_acquisition_kernel__whole_language_reading).
+narrative_ontology:affects_constraint(literacy_acquisition_kernel__phonics_reading, literacy_acquisition_kernel__balanced_literacy_reading).
+narrative_ontology:affects_constraint(literacy_acquisition_kernel__phonics_reading, literacy_acquisition_kernel__structured_literacy_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one reading of the 'literacy_acquisition_kernel'. Its structural properties and metrics reflect the specific claims and impacts of a phonics-first approach, distinct from other pedagogical readings of the same kernel.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

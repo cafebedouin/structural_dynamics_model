@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "70932df0-60ad-4dc3-86c4-5c10c41dcafc"
+    "story_uid": "c72b79e5-c795-4bbf-8529-ccf1e25cff18"
   },
   "base_properties": {
     "extractiveness": 0.68,
@@ -13,19 +13,95 @@
     "accessibility_collapse": 0.6,
     "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Climate Response Legitimacy: Adaptation Priority",
+    "human_readable": "Climate Response Legitimacy: Adaptation Priority Reading",
     "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "wealthy_nations",
       "fossil_fuel_industries",
-      "global_north_consumers"
+      "global_financial_institutions"
     ],
     "victims": [
-      "vulnerable_low_income_regions",
-      "future_generations",
-      "climate_migrants"
+      "vulnerable_populations",
+      "low_income_regions",
+      "future_generations"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "wealthy_nations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for and fund adaptation measures, often through loans, while largely maintaining their current economic models and emissions trajectories. They benefit from deferring costly mitigation and maintaining economic growth, shifting the burden of climate impacts to others."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the immediate and severe impacts of climate change, relying on adaptation funding that is often insufficient, conditional, or debt-creating. They have limited capacity to resist or exit their exposure to climate hazards."
+    },
+    {
+      "name": "low_income_regions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Experience significant adaptation deficits, requiring substantial external funding for resilience infrastructure. They are forced to accept the warming trajectory set by historical emitters and bear the costs of protecting their populations, often through increased national debt."
+    },
+    {
+      "name": "fossil_fuel_industries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from a climate response that prioritizes adaptation over aggressive mitigation, allowing for continued fossil fuel extraction and consumption. They actively lobby against policies that would constrain their operations."
+    },
+    {
+      "name": "global_financial_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Profit from financing adaptation projects, often through loans to vulnerable nations, which can increase debt burdens. They benefit from the continued flow of capital for climate-related investments without fundamentally altering the global economic system."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Will inherit a world with higher warming trajectories and compounded climate impacts due to deferred mitigation. They bear the long-term costs of current adaptation-focused strategies without having a voice in present policy decisions."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide the scientific basis for understanding climate change and its impacts, often highlighting the limitations of adaptation without aggressive mitigation. Their warnings about long-term risks are often acknowledged but not fully integrated into policy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates international efforts to fund and implement resilience infrastructure and adaptive capacity building in regions most affected by climate change, managing the immediate humanitarian and economic crises arising from climate impacts.",
+    "transfer_function": "Transfers financial resources, technology, and expertise from wealthier nations to vulnerable populations and low-income regions for adaptation, while simultaneously transferring the long-term costs of unmitigated warming to future generations and the immediate costs of impacts to vulnerable populations.",
+    "absent_voices": "Future generations are structurally absent, unable to advocate for more aggressive mitigation. Indigenous communities and frontline communities, though present, are often marginalized in decision-making processes, with their traditional knowledge and specific needs underrepresented.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this approach to climate response vanished, the immediate consequence would be a catastrophic increase in human suffering and economic disruption in vulnerable regions, as existing adaptation efforts would cease. Wealthier nations would face increased migration pressures and global instability, forcing a rapid, uncoordinated, and likely more costly shift towards either aggressive mitigation or a more coercive adaptation strategy.",
+    "founding_problem": "The recognition that climate change is already causing unavoidable impacts, particularly in vulnerable regions, and that immediate action is needed to protect lives and livelihoods, even as global emissions continue.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International climate reports (e.g., IPCC), humanitarian organizations, and scientific consensus corroborate the live status of climate impacts and the need for adaptation. However, the framing of adaptation as the primary legitimate response, rather than mitigation, is contested by many climate justice advocates and some scientific bodies."
   },
   "interval": {
     "start": 2000,
@@ -35,17 +111,17 @@
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.5
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.58
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2020,
-      "value": 0.65
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
@@ -55,27 +131,27 @@
     {
       "metric": "base_extractiveness",
       "time_point": 2040,
-      "value": 0.7
+      "value": 0.72
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2050,
-      "value": 0.72
+      "value": 0.75
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.6
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.65
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2020,
-      "value": 0.7
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
@@ -85,22 +161,22 @@
     {
       "metric": "suppression_requirement",
       "time_point": 2040,
-      "value": 0.78
+      "value": 0.8
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2050,
-      "value": 0.8
+      "value": 0.85
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.25
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.3
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
@@ -124,61 +200,50 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the 'adaptation priority' reading of legitimate climate response, which accepts a warming trajectory and focuses on protecting vulnerable populations through resilience and adaptive capacity. This approach allows wealthier nations to largely maintain their development models and defer costly mitigation, while low-income regions bear the immediate impacts and accumulate adaptation deficits. The constraint is framed as a necessary coordination mechanism but operates with significant asymmetric extraction.",
-    "key_agents": [
-      "wealthy_nations: Agenda setter (institutional/mobile) — benefits from deferred mitigation",
-      "vulnerable_low_income_regions: Payer (powerless/trapped) — bears immediate impacts and adaptation costs",
-      "fossil_fuel_industries: Beneficiary (institutional/arbitrage) — benefits from continued operations",
-      "future_generations: Victim (powerless/trapped) — bears compounded long-term costs",
-      "climate_scientists: Observer (analytical/analytical) — provides data, not policy",
-      "global_north_consumers: Beneficiary (organized/constrained) — benefits from status quo, insulated from impacts",
-      "climate_justice_advocates: Excluded (moderate/constrained) — marginalized voices for systemic change"
-    ],
-    "logic_rationale": "The extractiveness (0.68) is high because the adaptation deficit for vulnerable regions is substantial ($350B gap), and the costs to future generations are compounded. Suppression (0.75) is high because the policy framework actively suppresses alternatives like aggressive mitigation or 'loss and damage' reparations, and vulnerable regions have limited capacity to resist. Theater ratio (0.40) is moderate and rising, as the 'protection' narrative increasingly masks the underlying deferral of responsibility and continued emissions. The measurements show a clear trend of increasing extractiveness and suppression over time, reflecting the growing costs of adaptation and the hardening of the policy framework against mitigation alternatives.",
-    "perspectival_gap": "Wealthy nations and fossil fuel industries perceive this as a legitimate, pragmatic response to an unavoidable problem, coordinating necessary adaptation. Vulnerable regions and future generations experience it as a form of structural extraction, where their well-being is sacrificed to preserve the economic models of the powerful. The engine's per-seat classification will reflect this divergence, with beneficiaries seeing a Rope-like function and victims experiencing a Snare-like dynamic.",
-    "directionality_logic": "Wealthy nations and fossil fuel industries are clear beneficiaries (d near 0.0) as they avoid immediate, costly mitigation. Vulnerable low-income regions and future generations are primary targets (d near 1.0) as they bear the direct and deferred costs. Global North consumers are beneficiaries, enjoying the status quo. Climate justice advocates are excluded, their proposals suppressed. Climate scientists are analytical observers.",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely coordinates some adaptation efforts (preventing immediate humanitarian collapse) while simultaneously extracting from vulnerable populations and future generations by deferring mitigation. The mandatrophy analysis would focus on whether the 'unavoidable warming' premise has become a cover for continued emissions, and whether the coordination function (adaptation) is being used to justify the extraction (delayed mitigation). The rising extractiveness and theater ratio suggest a drift towards a more extractive function over time, indicating that the mandate may be outliving its original, more balanced, coordination function.",
-    "kernel_context": "This constraint, 'Adaptation Priority,' is one reading of the 'Climate Response Legitimacy' kernel. It instantiates a framework where accepting a warming trajectory and prioritizing adaptation is deemed legitimate. Sibling readings include 'Mitigation Priority' (focus on emissions reduction) and 'Degrowth Transformation' (focus on dismantling growth in wealthy nations)."
+    "narrative_context": "This constraint represents the 'adaptation priority' reading of legitimate climate response, where the warming trajectory is accepted, and the focus shifts to protecting vulnerable populations through resilience and adaptive capacity. This approach allows wealthy nations to largely maintain their development models and defer aggressive mitigation, while low-income regions and vulnerable populations bear the immediate impacts and the long-term costs of an adaptation deficit (estimated at $350B annually). The constraint is claimed as a Tangled Rope, reflecting its dual function of coordinating necessary adaptation efforts while extracting from vulnerable populations and future generations by deferring mitigation.",
+    "logic_rationale": "Extractiveness is high and rising because the adaptation deficit grows, and the costs of climate impacts disproportionately fall on those least responsible for emissions. Suppression is also high and increasing, as vulnerable populations are trapped by their exposure and lack of resources, and their calls for climate justice and mitigation are often sidelined. The theater ratio is moderate and rising, as adaptation funding often serves to maintain the status quo of emissions rather than genuinely solving the underlying problem, with some projects being performative rather than truly effective. The increasing extractiveness and suppression reflect the growing burden on victims and the active maintenance of a system that defers fundamental change.",
+    "directionality_logic": "Wealthy nations and fossil fuel industries are clear beneficiaries, as this approach allows them to continue their economic activities with less disruption. Global financial institutions also benefit from financing adaptation projects. Vulnerable populations, low-income regions, and future generations are the primary victims, bearing the direct and deferred costs of climate impacts and insufficient mitigation. The 'adaptation priority' reading structurally subsidizes the current economic models of wealthy nations at the expense of others.",
+    "perspectival_gap": "From the perspective of wealthy nations and industries, this is a pragmatic and necessary coordination mechanism to manage an unavoidable crisis. From the perspective of vulnerable populations and future generations, it is an extractive mechanism that perpetuates injustice and defers accountability, forcing them to adapt to a crisis they did not create. The engine's classification will highlight this divergence, showing a Tangled Rope for the victims and a more Rope-like or even Scaffold-like (temporary support) classification for the beneficiaries."
   },
   "omegas": [
     {
-      "id": "adaptation_deficit_causality",
-      "question": "Is the growing adaptation deficit in vulnerable regions primarily a consequence of insufficient funding for adaptation, or a structural outcome of continued high emissions by wealthy nations?",
-      "resolution_mechanism": "Economic modeling that isolates the impact of funding levels versus global emissions trajectories on adaptation capacity and costs in vulnerable regions.",
-      "impact": "If primarily due to insufficient funding, the constraint's coordination function (resource allocation) is underperforming. If primarily due to continued emissions, the constraint's extractive nature (deferring mitigation costs) is amplified, and the 'adaptation' framing is more theatrical.",
-      "confidence": "high",
+      "id": "adaptation_deficit_resolution",
+      "question": "Will the adaptation deficit be genuinely closed by sufficient, non-debt-creating finance, or will it continue to grow, exacerbating extraction?",
+      "resolution_mechanism": "Tracking of international climate finance flows, assessment of adaptation project effectiveness, and analysis of debt burdens in recipient nations over the next decade.",
+      "impact": "If the deficit is closed, the extractiveness from vulnerable populations would decrease, potentially shifting the constraint towards a more genuine Rope. If it grows, the constraint's Snare-like qualities would intensify.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Determines whether the adaptation deficit is a funding problem or an emissions problem."
+      "description": "Uncertainty regarding the actual financial burden of adaptation on vulnerable populations."
     },
     {
-      "id": "intergenerational_cost_discounting",
-      "question": "To what extent does the current policy framework implicitly discount the costs borne by future generations, and how would a lower discount rate alter the perceived legitimacy of adaptation-first approaches?",
-      "resolution_mechanism": "Ethical and economic analysis applying various intergenerational discount rates to the long-term costs and benefits of adaptation-priority versus mitigation-priority policies.",
-      "impact": "A lower discount rate would significantly increase the perceived costs of deferred mitigation, potentially reclassifying the adaptation-priority approach as more extractive and less legitimate from an intergenerational perspective.",
-      "confidence": "medium",
+      "id": "intergenerational_equity_framing",
+      "question": "Is the deferral of mitigation costs to future generations an acceptable trade-off for current adaptation, or an unacceptable intergenerational injustice?",
+      "resolution_mechanism": "Philosophical and ethical debate, intergenerational impact assessments, and legal challenges by youth climate movements. This is a conceptual and preference-based question.",
+      "impact": "If framed as unacceptable injustice, the extractiveness from future generations would be amplified, pushing the overall constraint towards a Snare. If framed as a necessary trade-off, the perceived extractiveness might be damped.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Examines the ethical discounting of future costs in climate policy."
+      "description": "Ambiguity in the ethical valuation of intergenerational climate burdens."
     },
     {
-      "id": "framing_of_unavoidable_warming",
-      "question": "Is the 'unavoidable warming' premise a genuine scientific constraint, or has it become a rhetorical tool to justify delayed mitigation and shift responsibility?",
-      "resolution_mechanism": "Content analysis of policy documents and public discourse, combined with expert elicitation on the scientific certainty and policy implications of 'unavoidable' warming versus 'avoidable' warming through aggressive action.",
-      "impact": "If primarily rhetorical, the constraint's 'naturalness' claim is undermined, increasing its perceived extractiveness and suppression of mitigation alternatives. If genuinely scientific, it reinforces the coordination function of adaptation.",
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine 'adaptation priority' response, or is it a cover story for 'mitigation deferral'?",
+      "resolution_mechanism": "Analysis of actual emissions trajectories and mitigation investments by wealthy nations over time. If mitigation efforts remain low despite adaptation funding, it supports the 'mitigation deferral' interpretation.",
+      "impact": "If reclassified as 'mitigation deferral', the extractiveness and suppression would be seen as higher, and the coordination function would be re-evaluated as largely theatrical, pushing the constraint towards a Snare or Piton.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Assesses the rhetorical vs. scientific status of 'unavoidable warming'."
+      "description": "Ambiguity in the true intent and function of the adaptation-first approach."
     }
   ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
   },
   "network": {
     "affects_constraints": [
-      "global_carbon_markets",
-      "international_development_aid",
-      "climate_migrant_policies"
+      "climate_response_legitimacy__mitigation_priority",
+      "climate_response_legitimacy__degrowth_transformation"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'Climate Response Legitimacy' kernel. It focuses on adaptation, while 'mitigation_priority' focuses on emissions reduction and 'degrowth_transformation' on systemic economic change. Each reading has distinct beneficiaries, victims, and structural properties."
+    "dual_formulation_note": "This constraint is one reading of the 'climate_response_legitimacy' kernel. Its focus on adaptation influences the viability and perceived urgency of both mitigation and degrowth approaches by absorbing political will and financial resources."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
@@ -187,11 +252,11 @@
     "reading_relations": [
       {
         "sibling_id": "mitigation_priority",
-        "relation": "influences"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "degrowth_transformation",
-        "relation": "coexists_with"
+        "relation": "influences"
       }
     ],
     "axioms": [
@@ -202,7 +267,7 @@
         "grounding_type": "conventional"
       },
       {
-        "atom": "vulnerable_populations_must_be_protected",
+        "atom": "vulnerable_populations_require_immediate_protection",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
@@ -210,21 +275,22 @@
     ],
     "reference_frame": "pragmatic_adaptation_framework",
     "drift_state": {
-      "moment": "contemporary_climate_crisis",
+      "moment": "contemporary_climate_negotiations",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

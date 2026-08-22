@@ -41,7 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,19 +70,28 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: biblical_source_text__critical_reconstructive_reading
- *   human_readable: Biblical Source Text: Critical Reconstructive Reading
+ *   human_readable: Critical Reconstructive Reading of Biblical Source Text
  *   domain: religious_authority/academic_scholarship
  *
  * SUMMARY:
- *   This constraint represents the academic discipline of biblical textual
- *   criticism, which prioritizes the historical recovery of the hypothetical
- *   'original' biblical text. It asserts that neither the grammatical
- *   structure nor the theological meaning of a text can be reliably
- *   established until its textual basis is critically reconstructed. This
- *   reading is foundational for academic biblical scholarship but can be
- *   highly extractive for confessional communities whose faith relies on the
- *   stability and authority of received translations or traditional texts.
+ *   This constraint represents the 'critical reconstructive' reading of
+ *   biblical source texts, which prioritizes the academic recovery of a
+ *   hypothetical original text over the structural or semantic fidelity of
+ *   received translations. It is a reading of the 'biblical_source_text'
+ *   kernel. While presented as an objective academic methodology, its
+ *   operation generates significant extraction from confessional communities
+ *   who rely on textual stability for their faith and practice. The
+ *   constraint is claimed as a Rope by its proponents (academic scholars) but
+ *   operates as a Tangled Rope due to its asymmetric impact and active
+ *   enforcement of its methodology.
  *
+ * KEY AGENTS:
+ *   - academic_biblical_scholars: Primary agenda-setter (institutional/constrained) — benefits from intellectual authority.
+ *   - critical_text_publishers: Beneficiary (organized/mobile) — profits from academic demand.
+ *   - confessional_communities: Primary payer (organized/identity_locked) — bears costs of textual instability.
+ *   - pastoral_leaders: Payer (moderate/constrained) — navigates academic findings for congregations.
+ *   - lay_readers: Payer (powerless/trapped) — experiences textual instability and erosion of direct authority.
+ *   - translation_theorists: Observer (analytical/analytical) — analyzes impacts without direct stake.
  */
 
 /* ==========================================================================
@@ -85,63 +99,115 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(biblical_source_text__critical_reconstructive_reading, 0.3).
-domain_priors:suppression_score(biblical_source_text__critical_reconstructive_reading, 0.2).
-domain_priors:theater_ratio(biblical_source_text__critical_reconstructive_reading, 0.1).
+domain_priors:base_extractiveness(biblical_source_text__critical_reconstructive_reading, 0.68).
+domain_priors:suppression_score(biblical_source_text__critical_reconstructive_reading, 0.75).
+domain_priors:theater_ratio(biblical_source_text__critical_reconstructive_reading, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, extractiveness, 0.3).
-narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, suppression_requirement, 0.2).
-narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, resistance, 0.4).
+narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, accessibility_collapse, 0.4).
+narrative_ontology:constraint_metric(biblical_source_text__critical_reconstructive_reading, resistance, 0.8).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(biblical_source_text__critical_reconstructive_reading, rope).
-narrative_ontology:human_readable(biblical_source_text__critical_reconstructive_reading, "Biblical Source Text: Critical Reconstructive Reading").
+narrative_ontology:constraint_claim(biblical_source_text__critical_reconstructive_reading, tangled_rope).
+narrative_ontology:human_readable(biblical_source_text__critical_reconstructive_reading, "Critical Reconstructive Reading of Biblical Source Text").
 narrative_ontology:topic_domain(biblical_source_text__critical_reconstructive_reading, "religious_authority/academic_scholarship").
 
+domain_priors:requires_active_enforcement(biblical_source_text__critical_reconstructive_reading).
+
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(biblical_source_text__critical_reconstructive_reading, 'a9667ac6-1ec6-447d-af29-aef766b81c47').
-narrative_ontology:cs_kernel_codification('a9667ac6-1ec6-447d-af29-aef766b81c47', formalized).
-narrative_ontology:cs_authority_grounding('a9667ac6-1ec6-447d-af29-aef766b81c47', expertise).
-narrative_ontology:cs_interpretation_layer_present('a9667ac6-1ec6-447d-af29-aef766b81c47').
-narrative_ontology:cs_reading_relation('a9667ac6-1ec6-447d-af29-aef766b81c47', biblical_source_text__formal_equivalence_reading, influences).
-narrative_ontology:cs_reading_relation('a9667ac6-1ec6-447d-af29-aef766b81c47', biblical_source_text__dynamic_equivalence_reading, influences).
-narrative_ontology:cs_axiom('a9667ac6-1ec6-447d-af29-aef766b81c47', foundational, hypothetical_original_text_is_primary).
+narrative_ontology:cs_story_uid(biblical_source_text__critical_reconstructive_reading, '460ce5c9-4d99-492f-857c-94899bb5ef5a').
+narrative_ontology:cs_kernel_codification('460ce5c9-4d99-492f-857c-94899bb5ef5a', distributed).
+narrative_ontology:cs_authority_grounding('460ce5c9-4d99-492f-857c-94899bb5ef5a', expertise).
+narrative_ontology:cs_interpretation_layer_present('460ce5c9-4d99-492f-857c-94899bb5ef5a').
+narrative_ontology:cs_reading_relation('460ce5c9-4d99-492f-857c-94899bb5ef5a', biblical_source_text__formal_equivalence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('460ce5c9-4d99-492f-857c-94899bb5ef5a', biblical_source_text__dynamic_equivalence_reading, coexists_with).
+narrative_ontology:cs_axiom('460ce5c9-4d99-492f-857c-94899bb5ef5a', foundational, hypothetical_original_text_is_primary).
 narrative_ontology:cs_axiom_status(hypothetical_original_text_is_primary, holdable).
-narrative_ontology:cs_axiom_grounding('a9667ac6-1ec6-447d-af29-aef766b81c47', hypothetical_original_text_is_primary, empirically_contingent).
-narrative_ontology:cs_axiom('a9667ac6-1ec6-447d-af29-aef766b81c47', foundational, meaning_subordinate_to_textual_basis).
-narrative_ontology:cs_axiom_status(meaning_subordinate_to_textual_basis, holdable).
-narrative_ontology:cs_axiom_grounding('a9667ac6-1ec6-447d-af29-aef766b81c47', meaning_subordinate_to_textual_basis, conventional).
-narrative_ontology:cs_reference_frame('a9667ac6-1ec6-447d-af29-aef766b81c47', critical_textual_scholarship_paradigm).
-narrative_ontology:cs_drift_state('a9667ac6-1ec6-447d-af29-aef766b81c47', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('a9667ac6-1ec6-447d-af29-aef766b81c47', '').
+narrative_ontology:cs_axiom_grounding('460ce5c9-4d99-492f-857c-94899bb5ef5a', hypothetical_original_text_is_primary, empirically_contingent).
+narrative_ontology:cs_axiom('460ce5c9-4d99-492f-857c-94899bb5ef5a', foundational, textual_basis_precedes_meaning_and_structure).
+narrative_ontology:cs_axiom_status(textual_basis_precedes_meaning_and_structure, holdable).
+narrative_ontology:cs_axiom_grounding('460ce5c9-4d99-492f-857c-94899bb5ef5a', textual_basis_precedes_meaning_and_structure, conventional).
+narrative_ontology:cs_reference_frame('460ce5c9-4d99-492f-857c-94899bb5ef5a', enlightenment_historical_criticism).
+narrative_ontology:cs_drift_state('460ce5c9-4d99-492f-857c-94899bb5ef5a', contemporary_postmodern_era, gap(practice_drift, minor, true)).
+narrative_ontology:cs_created_at('460ce5c9-4d99-492f-857c-94899bb5ef5a', '').
 narrative_ontology:cs_kernel_id(biblical_source_text__critical_reconstructive_reading, biblical_source_text).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(biblical_source_text__critical_reconstructive_reading, academic_biblical_scholars).
-narrative_ontology:constraint_beneficiary(biblical_source_text__critical_reconstructive_reading, critical_text_editors).
-narrative_ontology:constraint_victim(biblical_source_text__critical_reconstructive_reading, confessional_communities_unaware_of_textual_criticism).
-narrative_ontology:constraint_victim(biblical_source_text__critical_reconstructive_reading, pastors_and_theologians_reliant_on_received_texts).
+narrative_ontology:constraint_beneficiary(biblical_source_text__critical_reconstructive_reading, critical_text_publishers).
+narrative_ontology:constraint_victim(biblical_source_text__critical_reconstructive_reading, confessional_communities).
+narrative_ontology:constraint_victim(biblical_source_text__critical_reconstructive_reading, pastoral_leaders).
+narrative_ontology:constraint_victim(biblical_source_text__critical_reconstructive_reading, lay_readers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These scholars prioritize the reconstruction of a hypothetical 'original' biblical text through critical analysis of manuscripts. Their careers, publications, and academic legitimacy are tied to this methodology. They benefit from the intellectual authority derived from this approach, which often destabilizes traditional readings.
+narrative_ontology:constraint_stakeholder(biblical_source_text__critical_reconstructive_reading, academic_biblical_scholars, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Publishers of critical editions of the biblical text (e.g., Biblia Hebraica Stuttgartensia, Novum Testamentum Graece) benefit from the continuous academic demand for these reconstructed texts. Their market is sustained by the methodology of critical reconstruction.
+narrative_ontology:constraint_stakeholder(biblical_source_text__critical_reconstructive_reading, critical_text_publishers, beneficiary,
+    organized, biographical, mobile, global).
+
+% These communities often rely on received, stable translations for their theological and liturgical life. The critical reconstructive reading destabilizes their textual basis, creating cognitive dissonance and requiring them to adapt their understanding of scriptural authority, often at significant cost to their internal coherence and tradition.
+narrative_ontology:constraint_stakeholder(biblical_source_text__critical_reconstructive_reading, confessional_communities, payer,
+    organized, generational, identity_locked, global).
+
+% Caught between academic scholarship and their congregations, pastoral leaders must navigate the implications of a constantly evolving 'original' text. This often requires them to explain complex textual criticism to lay audiences, potentially undermining the perceived authority of the Bible in their communities. Their professional identity is often tied to the stability of the text.
+narrative_ontology:constraint_stakeholder(biblical_source_text__critical_reconstructive_reading, pastoral_leaders, payer,
+    moderate, biographical, constrained, local).
+
+% These individuals seek spiritual guidance and understanding from the Bible. The critical reconstructive approach can make the text feel inaccessible, unstable, and subject to expert interpretation, rather than a direct divine revelation. They bear the cost of intellectual confusion and the erosion of direct textual authority.
+narrative_ontology:constraint_stakeholder(biblical_source_text__critical_reconstructive_reading, lay_readers, payer,
+    powerless, immediate, trapped, local).
+
+% Analyze the methodologies and impacts of different translation approaches, including critical reconstruction. They observe the dynamics between academic rigor and community reception without directly participating in the confessional stakes.
+narrative_ontology:constraint_stakeholder(biblical_source_text__critical_reconstructive_reading, translation_theorists, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates academic biblical scholarship around a shared methodology for textual criticism, ensuring a consistent approach to reconstructing the earliest possible form of biblical texts.
+% TRANSFER_FUNCTION: Transfers intellectual authority and academic prestige to scholars proficient in textual criticism, while transferring a sense of textual instability and interpretive burden to confessional communities and lay readers.
+% ABSENT_VOICES: Historically, communities that prioritized oral tradition or liturgical stability over textual criticism were excluded. Today, many confessional communities feel their concerns about textual stability are marginalized in academic discourse.
+% DISAPPEARANCE_RATIONALE: If the critical reconstructive reading vanished, academic biblical studies would undergo a profound reorientation, likely shifting towards reception history or theological interpretation of extant texts. Confessional communities would experience a return to textual stability, but potentially at the cost of critical engagement with manuscript evidence.
+% FOUNDING_PROBLEM: The problem was the existence of numerous biblical manuscripts with variations, leading to uncertainty about the precise wording of the 'original' inspired text.
+% FOUNDING_PROBLEM_CORROBORATION: Academic biblical scholars universally attest that the problem of textual variation is live and requires ongoing critical work. Confessional communities, while often resistant to the implications, generally acknowledge the historical reality of manuscript differences, even if they prefer to resolve them through theological rather than purely critical means.
+narrative_ontology:disappearance_verdict(biblical_source_text__critical_reconstructive_reading, world_rearranges).
+narrative_ontology:founding_problem_status(biblical_source_text__critical_reconstructive_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(biblical_source_text__critical_reconstructive_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(biblical_source_text__critical_reconstructive_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(biblical_source_text__critical_reconstructive_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(biblical_source_text__critical_reconstructive_reading, 0.68, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(biblical_source_text__critical_reconstructive_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(biblical_source_text__critical_reconstructive_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
 :- end_tests(biblical_source_text__critical_reconstructive_reading_tests).
 
 /* ==========================================================================
@@ -150,16 +216,16 @@ narrative_ontology:story_seed(biblical_source_text__critical_reconstructive_read
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.3) is moderate for academic scholars, who are beneficiaries, but higher for confessional communities (victims) who may experience destabilization of their received texts. Suppression (0.2) is low as academic discourse is generally open, but there's an implicit suppression of alternative methodologies within the critical paradigm. Theater ratio (0.1) is low, as the work is primarily functional. The claimed type is 'rope' because it genuinely coordinates scholarly effort towards a common goal (textual reconstruction), but its application to broader religious contexts can become extractive.
+ *   Extractiveness is high (0.68) because the continuous process of textual reconstruction imposes significant intellectual and theological costs on confessional communities, who must constantly adapt to new 'original' readings. Suppression is also high (0.75) because the academic methodology is enforced through peer review, publication standards, and the marginalization of alternative approaches to textual authority. Theater ratio is low (0.15) as the academic work is genuinely rigorous, but its 'objectivity' often masks its disruptive impact on non-academic stakeholders. The historical measurements show a rise in extractiveness and suppression as critical methodology became more entrenched and its implications for confessional communities became more pronounced.
  *
  * PERSPECTIVAL GAP:
- *   Academic biblical scholars experience this as a 'rope' – a necessary and beneficial coordination mechanism for their work. Confessional communities, however, may experience it as a 'snare' or 'tangled_rope' due to the destabilization of their sacred texts and the perceived imposition of an external authority on their faith, leading to high effective extraction.
+ *   Academic biblical scholars perceive this as a Rope, a necessary coordination mechanism for scholarly rigor and historical accuracy. Confessional communities, however, experience it as a Snare or Tangled Rope, as it extracts stability and direct authority from their sacred texts, requiring them to pay intellectual and theological costs without direct benefit. The engine's classification will reflect this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Academic biblical scholars and critical text editors are beneficiaries (d near 0.0) as the constraint defines their field and provides a common framework. Confessional communities and pastors/theologians reliant on received texts are victims (d near 1.0) as their existing textual authorities are challenged, requiring them to either adapt or resist. The constraint subsidizes the academic enterprise while extracting from traditional religious adherence.
+ *   Academic biblical scholars and critical text publishers are beneficiaries, as their professional standing and market are enhanced by this methodology. Confessional communities, pastoral leaders, and lay readers are victims/payers, as they bear the costs of textual destabilization and interpretive complexity. Their identity-locked or trapped exit options amplify the extraction they experience.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (historical recovery) remains live within its academic domain. However, its application to broader religious contexts can lead to a 'mandatrophy-like' effect where the original academic mandate (textual purity) becomes a source of extraction when applied to communities whose primary mandate is spiritual formation or theological coherence, not historical reconstruction. The classification as 'rope' reflects its internal academic function, while the high extractiveness on victims highlights its external impact.
+ *   The constraint's mandate to recover the 'original' text remains live for academic scholars. However, for confessional communities, the original problem (manuscript variation) has been 'solved' in a way that creates new problems (textual instability, erosion of authority). The persistence of the methodology, despite its high costs for some stakeholders, prevents it from being a Piton, as there are clear beneficiaries actively maintaining it. It is a Tangled Rope because it genuinely coordinates academic work while extracting from others through the same structure.
  */
 
 /* ==========================================================================
@@ -167,60 +233,69 @@ narrative_ontology:story_seed(biblical_source_text__critical_reconstructive_read
    ========================================================================== */
 
 omega_variable(
-    natural_vs_constructed_textual_basis,
-    'Is the ''original text'' a discoverable natural artifact, or a scholarly construct shaped by interpretive choices?',
-    'Further archaeological discoveries or methodological consensus shifts within textual criticism.',
-    'If more of a construct, the authority of the ''reconstructed text'' is weakened, potentially reducing its extractiveness on confessional communities; if a natural artifact, its authority is strengthened.',
+    textual_stability_vs_critical_accuracy,
+    'Is the pursuit of a hypothetical ''original'' text at the cost of textual stability for confessional communities a necessary academic good, or an overreach of methodology?',
+    'Empirical study of the long-term impact of textual instability on religious adherence and community cohesion, balanced against the demonstrable gains in historical understanding from critical reconstruction.',
+    'If deemed an overreach, the extractiveness from confessional communities would be re-evaluated as unjustified, potentially reclassifying the constraint towards a Snare. If deemed necessary, the extraction would be seen as an unavoidable cost of academic rigor.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(natural_vs_constructed_textual_basis, conceptual, 'Ambiguity of the ''original text'' as a natural vs. constructed entity.').
+narrative_ontology:omega_variable(textual_stability_vs_critical_accuracy, preference, 'The tension between academic textual accuracy and community need for textual stability.').
 
 omega_variable(
-    impact_on_confessional_communities,
-    'To what extent does the critical reconstructive reading destabilize the faith of confessional communities, and is this an intended or unintended consequence?',
-    'Sociological studies of religious communities'' responses to textual criticism; theological and pastoral engagement with critical scholarship.',
-    'If the destabilization is severe and unmitigated, the constraint''s effective extractiveness on these communities is higher than measured; if communities adapt, it is lower.',
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression of alternative textual approaches structural (academic gatekeeping) or internalized (confessional communities'' self-censorship to avoid conflict)?',
+    'Post-exit suppression trajectory: if confessional communities, after disengaging from academic discourse, still suppress internal challenges to their received texts, it suggests internalized suppression. If they embrace alternative critical methods, it suggests structural suppression was dominant.',
+    'If internalized, the constraint''s effective suppression on confessional communities is higher than the structural measure suggests, as they carry the suppression with them. If structural, removing academic gatekeeping would lead to greater diversity in textual approaches.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(impact_on_confessional_communities, empirical, 'The actual impact of textual criticism on religious faith and practice.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in textual criticism.').
 
 omega_variable(
-    kernel_reading_identification,
-    'This constraint is the ''critical_reconstructive_reading'' of the ''biblical_source_text'' kernel. What would change if a ''formal_equivalence_reading'' or ''dynamic_equivalence_reading'' were adopted as primary?',
-    'Analysis of the structural implications of prioritizing source structure (formal) or target intelligibility (dynamic) over historical reconstruction.',
-    'Adopting a formal equivalence reading would shift focus to linguistic fidelity over historical reconstruction, potentially reducing extractiveness on communities comfortable with literal translations. Adopting a dynamic equivalence reading would prioritize communicative impact, potentially increasing extractiveness on those who value structural fidelity.',
-    confidence_without_resolution(high)
+    original_text_hypothetical_status,
+    'To what extent is the ''original'' text a reconstructible historical reality versus a methodological construct that serves academic interests?',
+    'Ongoing manuscript discoveries and advancements in computational textual criticism. If a definitive ''original'' text remains elusive despite advanced methods, it strengthens the ''methodological construct'' argument.',
+    'If primarily a construct, the justification for the high extractiveness on confessional communities weakens, as they are paying for a moving target. This would shift the constraint closer to a Snare.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Structural implications of alternative readings of the biblical_source_text kernel.').
+narrative_ontology:omega_variable(original_text_hypothetical_status, empirical, 'The ontological status of the ''original'' biblical text.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(biblical_source_text__critical_reconstructive_reading, 0, 20).
+narrative_ontology:interval(biblical_source_text__critical_reconstructive_reading, 1800, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(bibl_tr_t0, biblical_source_text__critical_reconstructive_reading, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(bibl_tr_t10, biblical_source_text__critical_reconstructive_reading, theater_ratio, 10, 0.08).
-narrative_ontology:measurement(bibl_tr_t20, biblical_source_text__critical_reconstructive_reading, theater_ratio, 20, 0.1).
+narrative_ontology:measurement(bibl_tr_t1800, biblical_source_text__critical_reconstructive_reading, theater_ratio, 1800, 0.05).
+narrative_ontology:measurement(bibl_tr_t1850, biblical_source_text__critical_reconstructive_reading, theater_ratio, 1850, 0.08).
+narrative_ontology:measurement(bibl_tr_t1900, biblical_source_text__critical_reconstructive_reading, theater_ratio, 1900, 0.1).
+narrative_ontology:measurement(bibl_tr_t1950, biblical_source_text__critical_reconstructive_reading, theater_ratio, 1950, 0.12).
+narrative_ontology:measurement(bibl_tr_t2000, biblical_source_text__critical_reconstructive_reading, theater_ratio, 2000, 0.15).
+narrative_ontology:measurement(bibl_tr_t2024, biblical_source_text__critical_reconstructive_reading, theater_ratio, 2024, 0.15).
 
 % Extraction over time
-narrative_ontology:measurement(bibl_be_t0, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 0, 0.2).
-narrative_ontology:measurement(bibl_be_t10, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 10, 0.25).
-narrative_ontology:measurement(bibl_be_t20, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 20, 0.3).
+narrative_ontology:measurement(bibl_be_t1800, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 1800, 0.4).
+narrative_ontology:measurement(bibl_be_t1850, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 1850, 0.5).
+narrative_ontology:measurement(bibl_be_t1900, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 1900, 0.6).
+narrative_ontology:measurement(bibl_be_t1950, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 1950, 0.65).
+narrative_ontology:measurement(bibl_be_t2000, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 2000, 0.68).
+narrative_ontology:measurement(bibl_be_t2024, biblical_source_text__critical_reconstructive_reading, base_extractiveness, 2024, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(bibl_su_t0, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 0, 0.15).
-narrative_ontology:measurement(bibl_su_t10, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 10, 0.18).
-narrative_ontology:measurement(bibl_su_t20, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 20, 0.2).
+narrative_ontology:measurement(bibl_su_t1800, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 1800, 0.3).
+narrative_ontology:measurement(bibl_su_t1850, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 1850, 0.45).
+narrative_ontology:measurement(bibl_su_t1900, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 1900, 0.6).
+narrative_ontology:measurement(bibl_su_t1950, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 1950, 0.7).
+narrative_ontology:measurement(bibl_su_t2000, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 2000, 0.75).
+narrative_ontology:measurement(bibl_su_t2024, biblical_source_text__critical_reconstructive_reading, suppression_requirement, 2024, 0.75).
 
 
 /* ==========================================================================
@@ -228,11 +303,12 @@ narrative_ontology:measurement(bibl_su_t20, biblical_source_text__critical_recon
    ========================================================================== */
 
 narrative_ontology:coordination_type(biblical_source_text__critical_reconstructive_reading, information_standard).
+narrative_ontology:boltzmann_floor_override(biblical_source_text__critical_reconstructive_reading, 0.05).
 narrative_ontology:affects_constraint(biblical_source_text__critical_reconstructive_reading, biblical_source_text__formal_equivalence_reading).
 narrative_ontology:affects_constraint(biblical_source_text__critical_reconstructive_reading, biblical_source_text__dynamic_equivalence_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'biblical_source_text' kernel. Its structural delta is low extractiveness on academic readers and high extractiveness on confessional communities, benefiting academic biblical scholarship. It influences other readings by establishing a foundational textual basis that they must either accept or explicitly reject.
+% This constraint is one reading of the 'biblical_source_text' kernel. Its methodology of critical reconstruction influences and coexists with other translation theories, particularly formal and dynamic equivalence readings, by setting the terms of engagement with the source text.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

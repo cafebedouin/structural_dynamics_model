@@ -4,11 +4,11 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "27aeea25-f0f1-44b6-bf66-bf152f8797e0"
+    "story_uid": "b3b3903a-cb06-43f9-bdde-65b569250e08"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.45,
+    "suppression": 0.4,
     "theater_ratio": 0.2,
     "accessibility_collapse": 0.3,
     "resistance": 0.55,
@@ -18,7 +18,7 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "property_owners",
-      "developers"
+      "real_estate_developers"
     ],
     "victims": [
       "local_governments",
@@ -27,98 +27,211 @@
     ],
     "vindicated_propositions": [
       "economic_liberty_doctrine",
-      "private_property_rights"
+      "limited_government_intervention"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "regulatory_takings_kernel_reading",
-      "question": "Is this constraint a genuine protection against government overreach, or an impediment to necessary public welfare regulations?",
-      "resolution_mechanism": "Empirical analysis of regulatory outcomes: does it primarily prevent arbitrary seizures, or does it chill legitimate public interest regulation?",
-      "impact": "If primarily an impediment, its classification shifts towards Snare for public interest stakeholders; if a genuine protection, it remains a Tangled Rope balancing interests.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'regulatory takings' reading of the broader 'takings_clause_boundary' kernel. It expands the concept of a 'taking' beyond physical appropriation to include severe diminution of economic value, introducing an ad hoc balancing test (Penn Central factors). Sibling readings ('physical_appropriation_reading', 'categorical_takings_reading') offer narrower or per se rules."
+      "name": "property_owners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Seek compensation when regulations significantly diminish their property's economic value, even without physical occupation. They benefit from the doctrine's protection against overreaching government action, but face high litigation costs."
     },
     {
-      "id": "too_far_ambiguity",
-      "question": "What constitutes 'too far' in diminishing economic value, and is this threshold consistently applied?",
-      "resolution_mechanism": "Analysis of judicial decisions over time for consistency and predictability in applying the Penn Central factors.",
-      "impact": "If 'too far' is arbitrary or inconsistent, the constraint's suppression and extractiveness are higher due to regulatory uncertainty and chilling effects; if predictable, it functions more as a clear boundary.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "The core ambiguity of the regulatory takings doctrine lies in defining the threshold for 'too far' diminution of value, leading to unpredictable outcomes."
+      "name": "real_estate_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Benefit from the regulatory takings doctrine by using it to challenge land-use restrictions that reduce development potential, thereby reducing their costs or increasing potential profits. They have resources to litigate."
+    },
+    {
+      "name": "local_governments",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the cost of potential compensation payments or the chilling effect on public-interest regulations due to fear of takings claims. They must balance public welfare with property rights, often facing legal challenges."
+    },
+    {
+      "name": "environmental_regulators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face legal challenges when implementing regulations to protect natural resources or public health, as these may be deemed regulatory takings. The doctrine constrains their ability to act decisively."
+    },
+    {
+      "name": "public_interest_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for regulations that serve collective goods (e.g., environmental protection, historic preservation) but find their efforts hampered by the threat of takings claims, which can make such regulations politically and financially unfeasible."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets the Takings Clause and applies the Penn Central balancing test, shaping the boundaries of regulatory power and property rights. Its decisions define the constraint and its enforcement."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a legal framework for adjudicating disputes between private property rights and government regulatory power, ensuring that the costs of public benefits are not unfairly borne by individual property owners.",
+    "transfer_function": "Potentially transfers financial compensation from government entities (and thus taxpayers) to private property owners when regulations are deemed to 'go too far' in diminishing economic value.",
+    "absent_voices": "Future generations, who would benefit from robust environmental and land-use regulations but whose interests are often discounted in present-day economic value calculations, are structurally absent from the immediate legal calculus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regulatory takings doctrine vanished, governments would have significantly more freedom to regulate land use and economic activity without fear of compensation claims. This would likely lead to more aggressive environmental protection, zoning, and public health regulations, fundamentally altering the balance between private property and public welfare.",
+    "founding_problem": "To prevent government from imposing burdens on private property that, while not a direct physical seizure, effectively destroy its value, forcing individuals to bear public costs alone.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars and property rights advocates attest that the problem of regulatory overreach remains live, citing ongoing cases where regulations severely impact property values. Public interest groups and some legal academics, however, argue that the doctrine itself creates a chilling effect on necessary regulation, suggesting the 'problem' is often a pretext for resisting public good."
+  },
+  "interval": {
+    "start": 1978,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1978,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1990,
       "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2000,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1978,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
       "value": 0.35
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.4
+      "time_point": 2000,
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.45
+      "time_point": 2010,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1978,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 1978,
-    "end": 2023
-  },
   "commentary": {
-    "narrative_context": "The 'regulatory takings' doctrine, primarily articulated in Penn Central Transportation Co. v. City of New York (1978), holds that government regulations that diminish property value 'too far' can constitute a taking requiring compensation, even without physical appropriation. This expands the scope of the Fifth Amendment's Takings Clause beyond direct physical seizures. It introduces an ad hoc, fact-specific balancing test, creating a complex and often unpredictable boundary for land-use and environmental regulations. This constraint is a reading of the broader 'takings_clause_boundary' kernel, focusing on economic impact rather than physical invasion.",
-    "key_agents": [
-      "property_owners: Primary beneficiaries (powerful/constrained) — protected from severe value diminution.",
-      "developers: Secondary beneficiaries (powerful/constrained) — benefit from limits on regulatory burdens.",
-      "local_governments: Primary targets (institutional/constrained) — face potential compensation claims for regulations.",
-      "environmental_regulators: Targets (institutional/constrained) — constrained in implementing protective regulations.",
-      "public_interest_advocates: Victims (organized/constrained) — see public welfare regulations chilled by takings claims.",
-      "courts: Agenda setters (institutional/analytical) — adjudicate takings claims, defining the 'too far' boundary."
-    ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates the balance between private property rights and public welfare regulations, but does so with significant asymmetric extraction. Property owners and developers benefit from the protection against value diminution, while local governments and regulators bear the costs of potential compensation or chilled regulation. The 'too far' standard introduces uncertainty, making the coordination function less efficient and increasing the extractive potential. Active enforcement by courts is required to adjudicate claims and maintain the boundary. Extractiveness is high due to the chilling effect on public regulation and the direct compensation costs. Suppression is moderate, as regulators are not entirely prevented from acting, but face significant hurdles. Theater ratio is low, as the legal process is genuinely functional, though complex.",
-    "perspectival_gap": "Property owners perceive this as a vital protection of their rights, ensuring fairness against government action. Regulators and public interest advocates, however, experience it as a significant impediment, forcing public goods to be privately purchased or abandoned, and creating a chilling effect on necessary regulations. The courts, as agenda setters, navigate this tension, often producing outcomes that satisfy neither side fully, but maintain the legal framework.",
-    "directionality_logic": "Property owners and developers are beneficiaries (d towards 0.0) as the constraint protects their economic interests. Local governments, environmental regulators, and public interest advocates are targets (d towards 1.0) as they bear the costs of compensation or foregone regulation. Courts are agenda setters (d towards 0.5), administering the balancing test.",
-    "mandatrophy_analysis": "The regulatory takings doctrine prevents mislabeling legitimate property protection as pure extraction, and vice versa. Its complexity, however, means that the 'mandate' of balancing private and public interests can drift towards favoring private interests due to the high cost and uncertainty for public actors. The ad hoc nature of the Penn Central test means it is always 'live' but its application can become more extractive over time if courts consistently favor property owners, leading to a form of 'mandatrophy' where the balancing function becomes a de facto barrier to public goods."
+    "narrative_context": "This constraint describes the 'regulatory takings' doctrine, primarily articulated in Penn Central Transportation Co. v. City of New York (1978), which holds that regulations that 'go too far' in diminishing property value can constitute a taking requiring compensation, even without physical appropriation. This is one reading of the broader Takings Clause kernel, emphasizing economic impact over physical invasion. The doctrine introduces an ad hoc balancing test, creating uncertainty for regulators but offering property owners a mechanism to challenge value-diminishing regulations.",
+    "logic_rationale": "The extractiveness (0.65) is substantial because the doctrine shifts potential costs from private property owners to the public purse, and its application is often unpredictable, creating a 'regulatory chill.' Suppression (0.40) is moderate; while it constrains government action, it doesn't entirely suppress regulation, but rather channels it through a complex legal process. Theater ratio (0.20) is low, as the legal process is genuinely adversarial, though some arguments may be performative. The claimed type is 'tangled_rope' because it genuinely coordinates the balance between public and private interests, but with clear asymmetric extraction from public entities to private owners, requiring active judicial enforcement.",
+    "directionality_logic": "Property owners and developers are beneficiaries, as the doctrine protects their economic interests and provides a pathway for compensation. Local governments, environmental regulators, and public interest advocates are payers, as they bear the costs of compensation or the chilling effect on public-interest regulations. The Supreme Court acts as the agenda-setter, defining and enforcing the boundaries of the doctrine.",
+    "perspectival_gap": "From the perspective of property owners, the doctrine is a necessary 'rope' protecting fundamental rights. From the perspective of regulators and public interest advocates, it often functions as a 'snare' that extracts public resources and stifles essential public welfare initiatives. The engine's classification will reflect this divergence based on the declared structural relationships and metrics.",
+    "mandatrophy_analysis": "The doctrine's mandate to prevent unfair burdens on individuals remains live, but its application has arguably drifted to prioritize private economic interests over collective public goods, leading to a contest over whether its original coordination function is still primary or if it has become primarily extractive. The 'contested' status of the founding problem reflects this tension.",
+    "kernel_context": "This constraint is the 'regulatory takings' reading of the 'takings_clause_boundary' kernel. It emerged from the Penn Central decision, focusing on the economic impact of regulations. Sibling readings include 'physical_appropriation_reading' (requiring direct physical invasion) and 'categorical_takings_reading' (per se rules for total value loss or permanent physical occupation)."
   },
+  "omegas": [
+    {
+      "id": "penn_central_balancing_test_objectivity",
+      "question": "Is the Penn Central ad hoc balancing test applied objectively, or does it reflect judicial policy preferences?",
+      "resolution_mechanism": "Empirical analysis of judicial decisions over time, correlating outcomes with the political leanings of judges or prevailing economic ideologies.",
+      "impact": "If subjective, the doctrine's extractiveness is more arbitrary and less predictable, potentially increasing its 'snare' characteristics for regulators. If objective, it reinforces its 'tangled_rope' function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Objectivity of the Penn Central balancing test."
+    },
+    {
+      "id": "chilling_effect_quantification",
+      "question": "To what extent does the threat of regulatory takings claims actually deter beneficial public-interest regulations?",
+      "resolution_mechanism": "Comparative studies of regulatory activity in jurisdictions with and without strong regulatory takings doctrines, or surveys of local government officials and regulators.",
+      "impact": "A strong chilling effect would increase the effective suppression of the constraint, pushing it closer to a 'snare' for public welfare. A weak effect would suggest the doctrine primarily functions as a legitimate check on government power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantification of the 'chilling effect' on regulation."
+    },
+    {
+      "id": "regulatory_takings_vs_physical_appropriation",
+      "question": "Is the conceptual distinction between regulatory takings and physical appropriations sufficiently clear, or does the 'goes too far' standard blur the line in practice?",
+      "resolution_mechanism": "Analysis of dissenting opinions and legal commentary on takings cases, focusing on arguments about the coherence of the distinction.",
+      "impact": "If the line is consistently blurred, it suggests a conceptual instability in the kernel, potentially leading to inconsistent application and increased perceived extraction for regulators. If clear, it reinforces the distinct structural claims of each reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Clarity of the distinction between regulatory and physical takings."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "land_use_zoning_regulations",
-      "environmental_protection_laws"
-    ],
-    "dual_formulation_note": "This constraint is the 'regulatory takings' reading of the 'takings_clause_boundary' kernel. It differs from 'physical_appropriation_reading' (which requires direct physical invasion) and 'categorical_takings_reading' (which applies per se rules to total value loss or permanent physical occupation) by introducing a flexible, fact-specific balancing test for regulations that merely diminish value."
+      "environmental_protection_regulations",
+      "zoning_laws",
+      "historic_preservation_ordinances"
+    ]
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
         "sibling_id": "physical_appropriation_reading",
-        "relation": "influences"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "categorical_takings_reading",
@@ -127,35 +240,36 @@
     ],
     "axioms": [
       {
-        "atom": "economic_value_is_property",
+        "atom": "economic_value_diminution_is_a_taking",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "balancing_test_for_regulatory_impact",
-        "role": "foundational",
+        "atom": "ad_hoc_balancing_is_appropriate",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
     "reference_frame": "penn_central_balancing_framework",
     "drift_state": {
-      "moment": "contemporary_judicial_era",
+      "moment": "contemporary",
       "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": true
+      "magnitude": "minor",
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

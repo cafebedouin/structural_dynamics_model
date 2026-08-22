@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "1379754b-f544-4473-a060-804838dd1e06"
+    "story_uid": "76c681bc-1e99-4810-aa0e-414052028d51"
   },
   "base_properties": {
     "extractiveness": 0.85,
@@ -21,10 +21,66 @@
       "anti_militarist_movements"
     ],
     "victims": [
-      "japanese_state_security_autonomy",
-      "japanese_military_personnel",
-      "defense_industry"
+      "japanese_state_security_apparatus",
+      "japanese_citizens_seeking_national_defense_autonomy"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "pacifist_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Actively interpret Article 9 as an absolute prohibition on any military force, including defensive. They lobby for strict adherence to this interpretation, viewing any deviation as a betrayal of constitutional principles. Their identity is deeply tied to this pacifist stance."
+    },
+    {
+      "name": "anti_militarist_movements",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the strict pacifist reading as it aligns with their broader goals of demilitarization and non-intervention. They use this interpretation to resist any expansion of Japan's military capabilities or role in international security."
+    },
+    {
+      "name": "japanese_state_security_apparatus",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bears the cost of this reading by being denied the ability to maintain conventional armed forces for national defense. It must navigate complex legal and political challenges to justify even minimal self-defense capabilities, often relying on euphemisms and reinterpretation. Its institutional identity is constrained by this constitutional interpretation."
+    },
+    {
+      "name": "japanese_citizens_seeking_national_defense_autonomy",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience a perceived lack of autonomous national defense, relying heavily on alliances for security. They bear the psychological and practical costs of this dependence, feeling that the state's ability to protect its citizens is compromised by the strict pacifist interpretation."
+    },
+    {
+      "name": "international_allies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observe the debate with concern, as the strict pacifist reading impacts Japan's ability to contribute to collective security arrangements. They exert diplomatic pressure for a more flexible interpretation that would allow for greater military cooperation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates national identity around a post-war commitment to peace and non-aggression, aiming to prevent any return to militarism.",
+    "transfer_function": "Transfers the burden of national defense from an autonomous military to reliance on alliances and diplomatic solutions, while transferring political capital to pacifist movements.",
+    "absent_voices": "Future generations who might face direct threats requiring autonomous defense capabilities are absent from the original drafting and ongoing interpretation, their potential needs unrepresented in the current debate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict pacifist reading vanished overnight, Japan would immediately face pressure to establish a conventional military, re-evaluate its alliances, and redefine its role in regional security. The entire security policy and constitutional framework would undergo a profound reorganization.",
+    "founding_problem": "The problem of preventing a resurgence of Japanese militarism and aggression after World War II, and establishing a new national identity rooted in peace.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Pacifist advocates attest the problem is still live, citing historical precedents and ongoing geopolitical tensions. Proponents of a more flexible interpretation, including elements within the state security apparatus and some citizens, argue the original problem has been sufficiently addressed and new security challenges necessitate a re-evaluation; international allies corroborate the need for a more robust defense posture."
   },
   "interval": {
     "start": 1947,
@@ -44,17 +100,17 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1980,
-      "value": 0.83
+      "value": 0.85
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.84
+      "value": 0.87
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.84
+      "value": 0.86
     },
     {
       "metric": "base_extractiveness",
@@ -64,22 +120,22 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1947,
-      "value": 0.85
+      "value": 0.95
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1960,
-      "value": 0.87
+      "value": 0.92
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1980,
-      "value": 0.88
+      "value": 0.9
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.89
+      "value": 0.88
     },
     {
       "metric": "suppression_requirement",
@@ -104,17 +160,17 @@
     {
       "metric": "theater_ratio",
       "time_point": 1980,
-      "value": 0.08
+      "value": 0.09
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.09
+      "value": 0.11
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.09
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
@@ -123,42 +179,42 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'strict pacifist' reading of Article 9 of the Japanese Constitution, which interprets the textual language 'never be maintained' as a categorical prohibition on any armed forces, including those for defensive purposes. Under this reading, Japan's renunciation of war is absolute, and self-defense must be achieved through non-military means or reliance on external alliances. This reading is highly extractive, as it fundamentally limits the state's security autonomy and creates an identity-locked situation for military personnel.",
-    "logic_rationale": "The extractiveness (0.85) is high because this reading imposes a severe limitation on national sovereignty regarding defense, forcing dependence on others. Suppression (0.90) is also very high, as this interpretation actively suppresses any domestic efforts to develop a conventional military capacity, relying on constitutional and legal enforcement. Theater ratio (0.10) is low because the constraint is genuinely enforced and its effects are real, not merely performative, though the existence of the Self-Defense Forces creates some performative tension. Accessibility collapse (0.95) is near total for military options, and resistance (0.70) is high due to ongoing political and public debate.",
-    "directionality_logic": "Pacifist advocates and anti-militarist movements are beneficiaries/agenda-setters, as this reading aligns with and empowers their ideological goals. The Japanese state's security autonomy, military personnel, and defense industry are victims/payers, bearing the direct costs of restricted defense capabilities and ambiguous legal status. Allied nations are indirect beneficiaries, gaining influence from Japan's security dependence.",
-    "perspectival_gap": "From the perspective of pacifist advocates, this is a foundational 'rope' that coordinates national identity around peace. From the perspective of the state and military personnel, it is a 'snare' that extracts sovereign defense capacity and creates an existential crisis for their roles. The engine's classification will reflect this divergence based on the structural data.",
-    "kernel_context": "This constraint is the 'strict pacifist' reading of the Article 9 war renunciation kernel. It interprets the constitutional text as an absolute prohibition on any military force. Sibling readings include the 'inherent right' reading (permitting defensive capacity) and the 'collective self-defense' reading (extending defense to allies)."
+    "narrative_context": "This constraint represents the 'strict pacifist' reading of Article 9 of the Japanese Constitution, which absolutely renounces war and prohibits the maintenance of any armed forces, even for self-defense. This reading interprets the textual language 'never be maintained' as a categorical prohibition, making organized military forces impermissible. Self-defense is seen as achievable only through non-military means or alliance dependence, with the Japanese state's security autonomy being a primary victim. The constraint is classified as a Snare due to its high extractiveness from the state's security function and the high suppression required to maintain this interpretation against evolving geopolitical realities.",
+    "logic_rationale": "The extractiveness is high (0.85) because this reading imposes a severe limitation on the state's sovereign right to self-defense, forcing reliance on external powers or non-military strategies even in the face of direct threats. Suppression is also very high (0.90) as this interpretation requires active legal, political, and social enforcement to prevent any rearmament or reinterpretation that would allow for a conventional military. The theater ratio is low (0.10) because, from this reading's perspective, the prohibition is absolute and not merely performative; any existing 'self-defense forces' are seen as a violation, not a theatrical maintenance of the original intent.",
+    "directionality_logic": "Pacifist advocates and anti-militarist movements are the primary beneficiaries, as this reading aligns with their ideological commitments and grants them significant political leverage. The Japanese state security apparatus and citizens seeking national defense autonomy are the primary payers, bearing the costs of limited defense capabilities and reliance on alliances. International allies act as observers, advocating for a more flexible interpretation.",
+    "perspectival_gap": "From the perspective of pacifist advocates, this constraint is a foundational Rope, coordinating a peaceful national identity. However, from the perspective of the state security apparatus, it operates as a Snare, extracting sovereign defense autonomy and requiring constant reinterpretation and suppression to maintain. The engine's classification as Snare reflects the structural reality of high extraction and suppression from the state's perspective, despite the claimed coordination function by its beneficiaries.",
+    "kernel_context": "This constraint is the 'strict pacifist' reading of Article 9 of the Japanese Constitution. It stands in contrast to the 'inherent right' reading, which permits minimum necessary defensive capacity, and the 'collective self-defense' reading, which allows military action to defend allies."
   },
   "omegas": [
     {
-      "id": "constitutional_interpretation_ambiguity",
-      "question": "Is the textual language 'never be maintained' an absolute prohibition on all armed forces, or does it permit a minimum necessary force for self-defense?",
-      "resolution_mechanism": "Supreme Court ruling explicitly clarifying the scope of 'armed forces' and 'war renunciation' in Article 9, or a constitutional amendment.",
-      "impact": "If interpreted to permit defensive forces, the extractiveness and suppression of this reading would significantly decrease, potentially reclassifying it from a snare to a tangled rope or even a rope, depending on the scope of permitted forces.",
+      "id": "absolute_prohibition_vs_inherent_right",
+      "question": "Is the textual language 'never be maintained' an absolute prohibition on any armed forces, or does it permit minimum necessary defensive capacity as an inherent right of sovereignty?",
+      "resolution_mechanism": "A definitive ruling by the Supreme Court of Japan or a constitutional amendment clarifying the scope of Article 9's prohibition.",
+      "impact": "If interpreted as permitting inherent self-defense, the extractiveness from the state security apparatus would decrease significantly, potentially reclassifying the constraint towards a Tangled Rope or even a Rope, depending on the scope of permitted forces.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Ambiguity in the constitutional text regarding military capacity."
+      "description": "Ambiguity regarding the absolute nature of the prohibition on armed forces."
     },
     {
-      "id": "security_autonomy_vs_pacifism",
-      "question": "Is the complete renunciation of military capacity a viable and desirable path to national security in the current geopolitical environment, or does it create a security vacuum?",
-      "resolution_mechanism": "Empirical analysis of Japan's security outcomes under this reading compared to counterfactuals with a more robust defense, and shifts in public and expert opinion on the efficacy of absolute pacifism.",
-      "impact": "If deemed unviable, the 'victim' status of state security autonomy would be amplified, and the 'beneficiary' status of pacifist advocates would be challenged, potentially shifting the constraint's overall classification towards a more severe snare.",
+      "id": "self_defense_through_alliances_efficacy",
+      "question": "Is self-defense through non-military means or alliance dependence genuinely sufficient for national security in the current geopolitical climate?",
+      "resolution_mechanism": "Empirical analysis of regional security threats, military capabilities of potential adversaries, and the reliability of alliance commitments under various scenarios.",
+      "impact": "If found insufficient, the perceived extractiveness from citizens seeking national defense autonomy would increase, intensifying pressure for reinterpretation or amendment. If found sufficient, it would strengthen the pacifist reading's legitimacy.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The practical efficacy and desirability of absolute pacifism for national security."
+      "description": "Efficacy of non-military and alliance-dependent self-defense."
     }
   ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [
-      "article_9_war_renunciation__inherent_right_reading",
-      "article_9_war_renunciation__collective_self_defense_reading",
-      "japan_us_security_alliance"
+      "inherent_right_reading",
+      "collective_self_defense_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three distinct readings of Article 9 of the Japanese Constitution, each with different structural implications for national security and military policy. They are linked as a constraint family."
+    "dual_formulation_note": "This constraint is one of three readings of Article 9 of the Japanese Constitution. It represents the strict pacifist interpretation, which is in direct tension with the inherent right and collective self-defense readings."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -166,45 +222,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "article_9_war_renunciation__inherent_right_reading",
+        "sibling_id": "inherent_right_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "article_9_war_renunciation__collective_self_defense_reading",
+        "sibling_id": "collective_self_defense_reading",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "armed_forces_categorically_prohibited",
+        "atom": "absolute_prohibition_on_military_force",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "war_renunciation_absolute",
-        "role": "foundational",
+        "atom": "national_identity_rooted_in_pacifism",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
     "reference_frame": "post_war_absolute_pacifism",
     "drift_state": {
-      "moment": "contemporary_geopolitical_shifts",
+      "moment": "contemporary_geopolitical_realities",
       "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

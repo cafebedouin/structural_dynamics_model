@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,27 +69,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: article_9_war_renunciation__collective_self_defense_reading
- *   human_readable: Japan's Article 9: Collective Self-Defense Interpretation
+ *   human_readable: Article 9: Collective Self-Defense Interpretation
  *   domain: constitutional_law/security_policy/institutional_legitimacy
  *
  * SUMMARY:
  *   This constraint represents the 'collective self-defense' reading of
  *   Japan's Article 9, which interprets the constitutional renunciation of
- *   war as permitting military action to defend allies when Japan's survival
- *   is threatened, even without direct attack on Japan. This reading allows
- *   for overseas deployments and joint operations, expanding the mission
- *   scope of the Self-Defense Forces (SDF). It is a contested interpretation
- *   that has incrementally absorbed geopolitical pressures, leading to an
- *   elastic constraint that balances constitutional text with security
- *   policy.
+ *   war to permit military action to defend allies even without direct attack
+ *   on Japan, provided Japan's survival is threatened. This reading expands
+ *   the mission scope of Japan's Self-Defense Forces, allowing for overseas
+ *   deployments and joint operations. It is a contested interpretation, with
+ *   significant political and social resistance, but has been incrementally
+ *   adopted by the Japanese government to adapt to evolving security
+ *   environments and alliance commitments. The constraint is claimed as a
+ *   Rope by its proponents (a necessary adaptation for collective security)
+ *   but operates with substantial extraction and suppression, making it a
+ *   Tangled Rope in practice.
  *
  * KEY AGENTS:
- *   - japanese_government: Agenda setter (institutional/generational) — interprets and implements Article 9.
- *   - us_military_alliance: Beneficiary (institutional/generational) — benefits from expanded SDF mission scope.
- *   - japanese_taxpayers: Payer (moderate/biographical) — bear the costs of increased defense spending and potential military engagement.
- *   - pacifist_citizens: Payer (powerless/biographical) — bear the cost of perceived constitutional erosion and increased militarization.
- *   - regional_stability_advocates: Victim (organized/generational) — see the expanded interpretation as destabilizing the region.
- *   - constitutional_scholars: Observer (analytical/civilizational) — analyze the legal and historical implications of the interpretation.
+ *   - japanese_government: Agenda-setter (institutional/generational) — drives the interpretation and benefits from enhanced security.
+ *   - us_military_alliance: Beneficiary (institutional/generational) — benefits from Japan's expanded military role.
+ *   - strict_pacifist_advocates: Payer (organized/generational) — bears the cost of constitutional erosion and militarization, identity-locked to a strict reading.
+ *   - inherent_right_advocates: Payer (moderate/biographical) — bears the cost of mission creep beyond direct self-defense.
+ *   - taxpayers: Payer (powerless/immediate) — bear financial costs of increased defense spending.
+ *   - regional_stability_advocates: Payer (organized/generational) — bear the cost of increased regional tensions.
+ *   - constitutional_scholars: Observer (analytical/civilizational) — analyze legal implications.
  */
 
 /* ==========================================================================
@@ -104,50 +112,100 @@ narrative_ontology:constraint_metric(article_9_war_renunciation__collective_self
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(article_9_war_renunciation__collective_self_defense_reading, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(article_9_war_renunciation__collective_self_defense_reading, resistance, 0.55).
+narrative_ontology:constraint_metric(article_9_war_renunciation__collective_self_defense_reading, resistance, 0.75).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(article_9_war_renunciation__collective_self_defense_reading, tangled_rope).
-narrative_ontology:human_readable(article_9_war_renunciation__collective_self_defense_reading, "Japan's Article 9: Collective Self-Defense Interpretation").
+narrative_ontology:human_readable(article_9_war_renunciation__collective_self_defense_reading, "Article 9: Collective Self-Defense Interpretation").
 narrative_ontology:topic_domain(article_9_war_renunciation__collective_self_defense_reading, "constitutional_law/security_policy/institutional_legitimacy").
 
 domain_priors:requires_active_enforcement(article_9_war_renunciation__collective_self_defense_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(article_9_war_renunciation__collective_self_defense_reading, 'c625b2b1-8279-4ce6-a64f-32c09e7bfa68').
-narrative_ontology:cs_kernel_codification('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', fixed_text).
-narrative_ontology:cs_authority_grounding('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', lineage).
-narrative_ontology:cs_interpretation_layer_present('c625b2b1-8279-4ce6-a64f-32c09e7bfa68').
-narrative_ontology:cs_reading_relation('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', article_9_war_renunciation__strict_pacifist_reading, forecloses).
-narrative_ontology:cs_reading_relation('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', article_9_war_renunciation__inherent_right_reading, influences).
-narrative_ontology:cs_axiom('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', foundational, collective_self_defense_is_inherent).
-narrative_ontology:cs_axiom_status(collective_self_defense_is_inherent, holdable).
-narrative_ontology:cs_axiom_grounding('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', collective_self_defense_is_inherent, conventional).
-narrative_ontology:cs_axiom('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', foundational, survival_threat_justifies_allied_defense).
-narrative_ontology:cs_axiom_status(survival_threat_justifies_allied_defense, holdable).
-narrative_ontology:cs_axiom_grounding('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', survival_threat_justifies_allied_defense, instrumental).
-narrative_ontology:cs_reference_frame('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', post_cold_war_alliance_adaptation).
-narrative_ontology:cs_drift_state('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', contemporary_geopolitical_realignment, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('c625b2b1-8279-4ce6-a64f-32c09e7bfa68', '').
+narrative_ontology:cs_story_uid(article_9_war_renunciation__collective_self_defense_reading, 'b81b907f-4d94-46af-b391-4ccd8bff18d5').
+narrative_ontology:cs_kernel_codification('b81b907f-4d94-46af-b391-4ccd8bff18d5', fixed_text).
+narrative_ontology:cs_authority_grounding('b81b907f-4d94-46af-b391-4ccd8bff18d5', lineage).
+narrative_ontology:cs_interpretation_layer_present('b81b907f-4d94-46af-b391-4ccd8bff18d5').
+narrative_ontology:cs_reading_relation('b81b907f-4d94-46af-b391-4ccd8bff18d5', article_9_war_renunciation__strict_pacifist_reading, forecloses).
+narrative_ontology:cs_reading_relation('b81b907f-4d94-46af-b391-4ccd8bff18d5', article_9_war_renunciation__inherent_right_reading, influences).
+narrative_ontology:cs_axiom('b81b907f-4d94-46af-b391-4ccd8bff18d5', foundational, collective_self_defense_is_inherent_right).
+narrative_ontology:cs_axiom_status(collective_self_defense_is_inherent_right, holdable).
+narrative_ontology:cs_axiom_grounding('b81b907f-4d94-46af-b391-4ccd8bff18d5', collective_self_defense_is_inherent_right, conventional).
+narrative_ontology:cs_axiom('b81b907f-4d94-46af-b391-4ccd8bff18d5', foundational, survival_threat_justifies_alliance_action).
+narrative_ontology:cs_axiom_status(survival_threat_justifies_alliance_action, holdable).
+narrative_ontology:cs_axiom_grounding('b81b907f-4d94-46af-b391-4ccd8bff18d5', survival_threat_justifies_alliance_action, instrumental).
+narrative_ontology:cs_reference_frame('b81b907f-4d94-46af-b391-4ccd8bff18d5', post_wwii_constitutional_order).
+narrative_ontology:cs_drift_state('b81b907f-4d94-46af-b391-4ccd8bff18d5', contemporary_geopolitical_realities, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('b81b907f-4d94-46af-b391-4ccd8bff18d5', '').
 narrative_ontology:cs_kernel_id(article_9_war_renunciation__collective_self_defense_reading, article_9_war_renunciation).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(article_9_war_renunciation__collective_self_defense_reading, japanese_government).
 narrative_ontology:constraint_beneficiary(article_9_war_renunciation__collective_self_defense_reading, us_military_alliance).
-narrative_ontology:constraint_beneficiary(article_9_war_renunciation__collective_self_defense_reading, defense_industry).
-narrative_ontology:constraint_victim(article_9_war_renunciation__collective_self_defense_reading, japanese_taxpayers).
-narrative_ontology:constraint_victim(article_9_war_renunciation__collective_self_defense_reading, pacifist_citizens).
+narrative_ontology:constraint_victim(article_9_war_renunciation__collective_self_defense_reading, strict_pacifist_advocates).
+narrative_ontology:constraint_victim(article_9_war_renunciation__collective_self_defense_reading, taxpayers).
 narrative_ontology:constraint_victim(article_9_war_renunciation__collective_self_defense_reading, regional_stability_advocates).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(article_9_war_renunciation__collective_self_defense_reading, inherent_right_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Interprets Article 9 to permit collective self-defense, expanding the scope of military operations and justifying increased defense spending. Benefits from enhanced security posture and alliance commitments, but faces domestic political resistance.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, japanese_government, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Benefits from Japan's expanded military capabilities and willingness to participate in collective security operations, strengthening regional deterrence and burden-sharing. Exerts diplomatic pressure for this interpretation.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, us_military_alliance, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Bear the cost of increased militarization and the perceived erosion of Japan's pacifist identity. They are deeply committed to a literal reading of Article 9 and view any military action as a violation. Their resistance is primarily political and ideological.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, strict_pacifist_advocates, payer,
+    organized, generational, identity_locked, national).
+
+% While accepting a limited right to self-defense, they view the collective self-defense interpretation as an overreach that destabilizes the constitutional order and risks entanglement in foreign conflicts. They bear the cost of this expanded mission scope.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, inherent_right_advocates, payer,
+    moderate, biographical, constrained, national).
+
+% Bear the financial cost of increased defense spending and potential military deployments. Their ability to influence policy is diffuse and limited.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, taxpayers, payer,
+    powerless, immediate, trapped, national).
+
+% Concerned that Japan's expanded military role could provoke regional arms races or destabilize existing security architectures. They bear the cost of increased regional tensions and potential conflict.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, regional_stability_advocates, payer,
+    organized, generational, constrained, regional).
+
+% Analyze the legal and historical implications of the collective self-defense interpretation, assessing its consistency with constitutional principles and international law. Their influence is primarily intellectual.
+narrative_ontology:constraint_stakeholder(article_9_war_renunciation__collective_self_defense_reading, constitutional_scholars, observer,
+    analytical, civilizational, analytical, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates Japan's security policy with its allies, particularly the US, by allowing for joint military operations and mutual defense, thereby enhancing regional deterrence and collective security.
+% TRANSFER_FUNCTION: Transfers the burden of collective security from allies to Japan, and transfers financial resources from domestic programs to defense spending. It also transfers interpretive authority over Article 9 from a strict textual reading to a more flexible, policy-driven one.
+% ABSENT_VOICES: Future generations of Japanese citizens, who will inherit the consequences of an expanded military role and potential foreign entanglements, are absent from the current debate. Also, a truly neutral international legal body, whose interpretation might differ from national interests, is not a direct participant.
+% DISAPPEARANCE_RATIONALE: If this interpretation vanished, Japan's security posture would revert to a narrower self-defense doctrine, significantly altering its alliance commitments and regional security dynamics. Defense spending would likely decrease, and diplomatic relations would shift, leading to a substantial reorganization of security policy.
+% FOUNDING_PROBLEM: The original Article 9 was designed to prevent Japan from ever engaging in aggressive warfare again after WWII, ensuring a pacifist state. The collective self-defense interpretation addresses the problem of how a pacifist constitution can adapt to modern security threats and alliance obligations.
+% FOUNDING_PROBLEM_CORROBORATION: The Japanese government and its allies attest that the problem of adapting to contemporary security threats is live, citing regional geopolitical instability. Strict pacifist advocates and many constitutional scholars, however, argue that the original problem of preventing aggressive war remains paramount and that the current interpretation creates new risks, not solutions.
+narrative_ontology:disappearance_verdict(article_9_war_renunciation__collective_self_defense_reading, world_rearranges).
+narrative_ontology:founding_problem_status(article_9_war_renunciation__collective_self_defense_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(article_9_war_renunciation__collective_self_defense_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(article_9_war_renunciation__collective_self_defense_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(article_9_war_renunciation__collective_self_defense_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(article_9_war_renunciation__collective_self_defense_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,16 +225,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.65) is substantial because the expanded interpretation allows for significant resource allocation to defense and potential overseas deployments, shifting costs to taxpayers and potentially involving Japan in conflicts not directly threatening its territory. Suppression (0.70) is high due to the government's active efforts to legitimize this interpretation through legal re-readings and policy changes, often overriding public dissent and constitutional challenges. The theater ratio (0.20) is moderate; while the SDF performs genuine defense functions, a portion of its expanded activities serves to symbolically affirm the collective self-defense doctrine and alliance commitments, rather than direct, immediate defense of Japan. The accessibility collapse (0.40) is moderate, as alternative interpretations (strict pacifism, inherent right) are still debated but face significant institutional barriers. Resistance (0.55) is also moderate, with ongoing public protests and legal challenges.
+ *   The extractiveness (0.65) reflects the significant shift in resources and constitutional interpretation away from a purely defensive posture, imposing costs on those who prefer a narrower reading or oppose militarization. Suppression (0.70) is high due to the government's active efforts to overcome domestic opposition and constitutional challenges to this interpretation, often through legislative means that limit public debate or judicial review. The theater ratio (0.20) is moderate; while the 'self-defense' justification is partly performative to legitimize expanded roles, there are genuine security concerns driving the policy. The increasing extractiveness and suppression over time reflect the gradual, contested expansion of this interpretation since the post-WWII era.
  *
  * PERSPECTIVAL GAP:
- *   The Japanese government and its US military allies perceive this interpretation as a necessary and legitimate adaptation to modern security challenges, ensuring collective security. For pacifist citizens and regional stability advocates, it represents an erosion of constitutional principles and a dangerous shift towards militarization, imposing costs and risks they oppose. The engine will compute different classifications for these seats based on their declared roles and positional atoms.
+ *   The Japanese government and its US allies perceive this interpretation as a necessary and beneficial adaptation (Rope-like coordination for security). However, strict pacifist and inherent-right advocates experience it as a highly extractive and suppressive mechanism that erodes constitutional principles and increases national risk (Snare-like extraction). The engine's computation of per-seat classifications will reflect this divergence based on their declared roles, power, and exit options.
  *
  * DIRECTIONALITY LOGIC:
- *   The Japanese government and the US military alliance are clear beneficiaries, gaining increased security flexibility and alliance strength (low d). Japanese taxpayers and pacifist citizens are payers, bearing the financial and ideological costs (high d). Regional stability advocates are victims, as their preferred stable, non-interventionist framework is undermined (high d).
+ *   The Japanese government and the US military alliance are clear beneficiaries, as this interpretation enables their strategic goals (low directionality). Strict pacifist advocates, inherent-right advocates, taxpayers, and regional stability advocates are targets, bearing the costs of militarization, constitutional erosion, and increased regional tensions (high directionality). The 'identity_locked' exit option for strict pacifist advocates further amplifies their effective extraction, as their commitment to the pacifist ideal makes exit from the debate unthinkable.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is a Tangled Rope because it genuinely coordinates collective security with allies (a coordination function) but does so with asymmetric extraction, imposing costs on taxpayers and those who prefer a narrower constitutional interpretation. The 'survival threatened' trigger is elastic, allowing for incremental mission expansion. The classification prevents mislabeling this as a pure Rope (ignoring extraction) or a Snare (ignoring the coordination function with allies).
+ *   This constraint is a Tangled Rope because it genuinely coordinates Japan's security with its allies (a coordination function) but does so with significant asymmetric extraction from domestic groups and constitutional principles, requiring active enforcement to maintain. It prevents mislabeling by acknowledging both the coordination aspect (addressing modern security threats) and the extractive aspect (imposing costs on those who adhere to a stricter constitutional interpretation). The 'contested' status of the founding problem further highlights the ongoing tension between the original mandate and its current interpretation.
  */
 
 /* ==========================================================================
@@ -184,66 +242,69 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    collective_self_defense_legitimacy,
-    'Is the collective self-defense interpretation a legitimate extension of Article 9''s inherent self-defense right, or a reinterpretation driven by geopolitical pressures?',
-    'Constitutional court ruling on the scope of ''survival threatened'' and ''collective self-defense'' under Article 9, or a national referendum on constitutional amendment.',
-    'If deemed illegitimate, the constraint would revert to a narrower interpretation, limiting overseas deployments and joint operations. If affirmed, it solidifies the expanded mission scope.',
+    constitutional_interpretation_legitimacy,
+    'Is the collective self-defense interpretation a legitimate evolution of Article 9''s intent, or a fundamental re-writing of the constitution through re-interpretation?',
+    'A constitutional amendment process, or a definitive Supreme Court ruling that explicitly addresses the scope of Article 9 in relation to collective self-defense.',
+    'If deemed a legitimate evolution, the constraint''s perceived legitimacy would increase, potentially reducing resistance. If deemed an illegitimate re-writing, it would face severe challenges to its authority, potentially leading to a constitutional crisis or a re-classification towards Snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(collective_self_defense_legitimacy, conceptual, 'Ambiguity of collective self-defense under Article 9.').
+narrative_ontology:omega_variable(constitutional_interpretation_legitimacy, conceptual, 'Ambiguity regarding the constitutional legitimacy of the collective self-defense interpretation.').
 
 omega_variable(
-    victim_set_stability,
-    'How stable is the victim set, particularly those relying on a narrower interpretation of Article 9 for regional stability?',
-    'Longitudinal study of public opinion, regional diplomatic responses, and legal challenges to SDF deployments.',
-    'If the victim set expands or becomes more vocal, it could increase resistance and challenge the legitimacy of the collective self-defense reading, potentially shifting the constraint towards a Snare or increasing its theater ratio.',
-    confidence_without_resolution(medium)
+    regional_security_vs_destabilization,
+    'Does Japan''s expanded role in collective self-defense genuinely enhance regional security, or does it contribute to an arms race and destabilize the region?',
+    'Long-term empirical analysis of regional military buildups, diplomatic relations, and conflict incidence following Japan''s policy shifts, corroborated by independent geopolitical experts.',
+    'If it demonstrably enhances security, the coordination function is strengthened, potentially reducing perceived extraction for some regional actors. If it destabilizes, the extractive nature (imposing risks on the region) would be amplified, pushing the classification further towards Snare.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(victim_set_stability, empirical, 'Impact of mission expansion on those relying on Article 9''s stability.').
+narrative_ontology:omega_variable(regional_security_vs_destabilization, empirical, 'Uncertainty about the actual impact of Japan''s collective self-defense policy on regional stability.').
 
 omega_variable(
     kernel_reading_identification,
-    'This constraint is a ''collective_self_defense_reading'' of the ''article_9_war_renunciation'' kernel. What structural elements would change if the ''strict_pacifist_reading'' or ''inherent_right_reading'' were adopted?',
-    'Analysis of legal precedent, government policy, and public discourse under alternative readings.',
-    'The ''strict_pacifist_reading'' would eliminate the Self-Defense Forces entirely, making the constraint a Mountain (physical/logical limit on military action). The ''inherent_right_reading'' would limit military action to direct defense of Japan, reducing extractiveness and suppression by narrowing mission scope.',
+    'This constraint is one reading of the ''article_9_war_renunciation'' kernel. What would a ''strict_pacifist_reading'' or ''inherent_right_reading'' change structurally?',
+    'Analysis of the structural deltas between this reading and its siblings, as defined in their respective constraint stories.',
+    'A ''strict_pacifist_reading'' would drastically reduce extractiveness and suppression, likely classifying as a Mountain or Rope. An ''inherent_right_reading'' would reduce extractiveness and suppression relative to this reading, but still allow for a defensive military, likely classifying as a Rope or less extractive Tangled Rope. The disagreement is located in the scope of permissible military action and the interpretation of ''war renunciation''.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Structural changes under sibling readings of Article 9.').
+narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is a specific reading of Article 9, with other readings having different structural implications.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(article_9_war_renunciation__collective_self_defense_reading, 0, 20).
+narrative_ontology:interval(article_9_war_renunciation__collective_self_defense_reading, 1947, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(arti_tr_t0, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(arti_tr_t5, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(arti_tr_t10, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 10, 0.15).
-narrative_ontology:measurement(arti_tr_t15, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 15, 0.18).
-narrative_ontology:measurement(arti_tr_t20, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(arti_tr_t1947, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 1947, 0.05).
+narrative_ontology:measurement(arti_tr_t1970, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 1970, 0.1).
+narrative_ontology:measurement(arti_tr_t1990, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 1990, 0.15).
+narrative_ontology:measurement(arti_tr_t2005, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 2005, 0.18).
+narrative_ontology:measurement(arti_tr_t2015, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 2015, 0.2).
+narrative_ontology:measurement(arti_tr_t2024, article_9_war_renunciation__collective_self_defense_reading, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(arti_be_t0, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(arti_be_t5, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(arti_be_t10, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(arti_be_t15, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 15, 0.6).
-narrative_ontology:measurement(arti_be_t20, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 20, 0.65).
+narrative_ontology:measurement(arti_be_t1947, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 1947, 0.1).
+narrative_ontology:measurement(arti_be_t1970, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 1970, 0.25).
+narrative_ontology:measurement(arti_be_t1990, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 1990, 0.4).
+narrative_ontology:measurement(arti_be_t2005, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 2005, 0.55).
+narrative_ontology:measurement(arti_be_t2015, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 2015, 0.6).
+narrative_ontology:measurement(arti_be_t2024, article_9_war_renunciation__collective_self_defense_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(arti_su_t0, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 0, 0.45).
-narrative_ontology:measurement(arti_su_t5, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 5, 0.52).
-narrative_ontology:measurement(arti_su_t10, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 10, 0.6).
-narrative_ontology:measurement(arti_su_t15, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 15, 0.65).
-narrative_ontology:measurement(arti_su_t20, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement(arti_su_t1947, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 1947, 0.2).
+narrative_ontology:measurement(arti_su_t1970, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 1970, 0.35).
+narrative_ontology:measurement(arti_su_t1990, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 1990, 0.5).
+narrative_ontology:measurement(arti_su_t2005, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 2005, 0.6).
+narrative_ontology:measurement(arti_su_t2015, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 2015, 0.65).
+narrative_ontology:measurement(arti_su_t2024, article_9_war_renunciation__collective_self_defense_reading, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
@@ -251,11 +312,12 @@ narrative_ontology:measurement(arti_su_t20, article_9_war_renunciation__collecti
    ========================================================================== */
 
 narrative_ontology:coordination_type(article_9_war_renunciation__collective_self_defense_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(article_9_war_renunciation__collective_self_defense_reading, japan_us_security_treaty).
-narrative_ontology:affects_constraint(article_9_war_renunciation__collective_self_defense_reading, regional_maritime_security_protocols).
+narrative_ontology:affects_constraint(article_9_war_renunciation__collective_self_defense_reading, us_japan_security_treaty).
+narrative_ontology:affects_constraint(article_9_war_renunciation__collective_self_defense_reading, japan_defense_budget_allocation).
+narrative_ontology:affects_constraint(article_9_war_renunciation__collective_self_defense_reading, regional_maritime_patrols).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'article_9_war_renunciation' kernel. Each reading represents a distinct constraint with its own structural properties and classification.
+% This constraint is one of three readings of the 'article_9_war_renunciation' kernel. The other readings are 'strict_pacifist_reading' and 'inherent_right_reading', each representing a distinct structural claim about Article 9's meaning and implications.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

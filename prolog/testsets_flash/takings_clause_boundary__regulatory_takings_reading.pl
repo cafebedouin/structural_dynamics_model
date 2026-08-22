@@ -43,6 +43,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,24 +74,16 @@
  *   domain: constitutional_law/property_rights/regulatory_theory
  *
  * SUMMARY:
- *   The 'regulatory takings' doctrine, primarily articulated in Penn Central
- *   Transportation Co. v. City of New York (1978), holds that government
- *   regulations that diminish property value 'too far' can constitute a
- *   taking requiring compensation, even without physical appropriation. This
- *   expands the scope of the Fifth Amendment's Takings Clause beyond direct
- *   physical seizures. It introduces an ad hoc, fact-specific balancing test,
- *   creating a complex and often unpredictable boundary for land-use and
- *   environmental regulations. This constraint is a reading of the broader
- *   'takings_clause_boundary' kernel, focusing on economic impact rather than
- *   physical invasion.
+ *   This constraint describes the 'regulatory takings' doctrine, primarily
+ *   articulated in Penn Central Transportation Co. v. City of New York
+ *   (1978), which holds that regulations that 'go too far' in diminishing
+ *   property value can constitute a taking requiring compensation, even
+ *   without physical appropriation. This is one reading of the broader
+ *   Takings Clause kernel, emphasizing economic impact over physical
+ *   invasion. The doctrine introduces an ad hoc balancing test, creating
+ *   uncertainty for regulators but offering property owners a mechanism to
+ *   challenge value-diminishing regulations.
  *
- * KEY AGENTS:
- *   - property_owners: Primary beneficiaries (powerful/constrained) — protected from severe value diminution.
- *   - developers: Secondary beneficiaries (powerful/constrained) — benefit from limits on regulatory burdens.
- *   - local_governments: Primary targets (institutional/constrained) — face potential compensation claims for regulations.
- *   - environmental_regulators: Targets (institutional/constrained) — constrained in implementing protective regulations.
- *   - public_interest_advocates: Victims (organized/constrained) — see public welfare regulations chilled by takings claims.
- *   - courts: Agenda setters (institutional/analytical) — adjudicate takings claims, defining the 'too far' boundary.
  */
 
 /* ==========================================================================
@@ -96,12 +92,12 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(takings_clause_boundary__regulatory_takings_reading, 0.65).
-domain_priors:suppression_score(takings_clause_boundary__regulatory_takings_reading, 0.45).
+domain_priors:suppression_score(takings_clause_boundary__regulatory_takings_reading, 0.4).
 domain_priors:theater_ratio(takings_clause_boundary__regulatory_takings_reading, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(takings_clause_boundary__regulatory_takings_reading, extractiveness, 0.65).
-narrative_ontology:constraint_metric(takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 0.45).
+narrative_ontology:constraint_metric(takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 0.4).
 narrative_ontology:constraint_metric(takings_clause_boundary__regulatory_takings_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
@@ -116,41 +112,85 @@ narrative_ontology:topic_domain(takings_clause_boundary__regulatory_takings_read
 domain_priors:requires_active_enforcement(takings_clause_boundary__regulatory_takings_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(takings_clause_boundary__regulatory_takings_reading, '27aeea25-f0f1-44b6-bf66-bf152f8797e0').
-narrative_ontology:cs_kernel_codification('27aeea25-f0f1-44b6-bf66-bf152f8797e0', formalized).
-narrative_ontology:cs_authority_grounding('27aeea25-f0f1-44b6-bf66-bf152f8797e0', lineage).
-narrative_ontology:cs_interpretation_layer_present('27aeea25-f0f1-44b6-bf66-bf152f8797e0').
-narrative_ontology:cs_reading_relation('27aeea25-f0f1-44b6-bf66-bf152f8797e0', takings_clause_boundary__physical_appropriation_reading, influences).
-narrative_ontology:cs_reading_relation('27aeea25-f0f1-44b6-bf66-bf152f8797e0', takings_clause_boundary__categorical_takings_reading, coexists_with).
-narrative_ontology:cs_axiom('27aeea25-f0f1-44b6-bf66-bf152f8797e0', foundational, economic_value_is_property).
-narrative_ontology:cs_axiom_status(economic_value_is_property, holdable).
-narrative_ontology:cs_axiom_grounding('27aeea25-f0f1-44b6-bf66-bf152f8797e0', economic_value_is_property, deontological).
-narrative_ontology:cs_axiom('27aeea25-f0f1-44b6-bf66-bf152f8797e0', foundational, balancing_test_for_regulatory_impact).
-narrative_ontology:cs_axiom_status(balancing_test_for_regulatory_impact, holdable).
-narrative_ontology:cs_axiom_grounding('27aeea25-f0f1-44b6-bf66-bf152f8797e0', balancing_test_for_regulatory_impact, conventional).
-narrative_ontology:cs_reference_frame('27aeea25-f0f1-44b6-bf66-bf152f8797e0', penn_central_balancing_framework).
-narrative_ontology:cs_drift_state('27aeea25-f0f1-44b6-bf66-bf152f8797e0', contemporary_judicial_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('27aeea25-f0f1-44b6-bf66-bf152f8797e0', '').
+narrative_ontology:cs_story_uid(takings_clause_boundary__regulatory_takings_reading, 'b3b3903a-cb06-43f9-bdde-65b569250e08').
+narrative_ontology:cs_kernel_codification('b3b3903a-cb06-43f9-bdde-65b569250e08', fixed_text).
+narrative_ontology:cs_authority_grounding('b3b3903a-cb06-43f9-bdde-65b569250e08', lineage).
+narrative_ontology:cs_interpretation_layer_present('b3b3903a-cb06-43f9-bdde-65b569250e08').
+narrative_ontology:cs_reading_relation('b3b3903a-cb06-43f9-bdde-65b569250e08', takings_clause_boundary__physical_appropriation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b3b3903a-cb06-43f9-bdde-65b569250e08', takings_clause_boundary__categorical_takings_reading, coexists_with).
+narrative_ontology:cs_axiom('b3b3903a-cb06-43f9-bdde-65b569250e08', foundational, economic_value_diminution_is_a_taking).
+narrative_ontology:cs_axiom_status(economic_value_diminution_is_a_taking, holdable).
+narrative_ontology:cs_axiom_grounding('b3b3903a-cb06-43f9-bdde-65b569250e08', economic_value_diminution_is_a_taking, deontological).
+narrative_ontology:cs_axiom('b3b3903a-cb06-43f9-bdde-65b569250e08', secondary, ad_hoc_balancing_is_appropriate).
+narrative_ontology:cs_axiom_status(ad_hoc_balancing_is_appropriate, holdable).
+narrative_ontology:cs_axiom_grounding('b3b3903a-cb06-43f9-bdde-65b569250e08', ad_hoc_balancing_is_appropriate, conventional).
+narrative_ontology:cs_reference_frame('b3b3903a-cb06-43f9-bdde-65b569250e08', penn_central_balancing_framework).
+narrative_ontology:cs_drift_state('b3b3903a-cb06-43f9-bdde-65b569250e08', contemporary, gap(practice_drift, minor, false)).
+narrative_ontology:cs_created_at('b3b3903a-cb06-43f9-bdde-65b569250e08', '').
 narrative_ontology:cs_kernel_id(takings_clause_boundary__regulatory_takings_reading, takings_clause_boundary).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(takings_clause_boundary__regulatory_takings_reading, property_owners).
-narrative_ontology:constraint_beneficiary(takings_clause_boundary__regulatory_takings_reading, developers).
+narrative_ontology:constraint_beneficiary(takings_clause_boundary__regulatory_takings_reading, real_estate_developers).
 narrative_ontology:constraint_victim(takings_clause_boundary__regulatory_takings_reading, local_governments).
 narrative_ontology:constraint_victim(takings_clause_boundary__regulatory_takings_reading, environmental_regulators).
 narrative_ontology:constraint_victim(takings_clause_boundary__regulatory_takings_reading, public_interest_advocates).
 narrative_ontology:constraint_vindicates(takings_clause_boundary__regulatory_takings_reading, economic_liberty_doctrine).
-narrative_ontology:constraint_vindicates(takings_clause_boundary__regulatory_takings_reading, private_property_rights).
+narrative_ontology:constraint_vindicates(takings_clause_boundary__regulatory_takings_reading, limited_government_intervention).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Seek compensation when regulations significantly diminish their property's economic value, even without physical occupation. They benefit from the doctrine's protection against overreaching government action, but face high litigation costs.
+narrative_ontology:constraint_stakeholder(takings_clause_boundary__regulatory_takings_reading, property_owners, beneficiary,
+    powerful, biographical, constrained, local).
+
+% Benefit from the regulatory takings doctrine by using it to challenge land-use restrictions that reduce development potential, thereby reducing their costs or increasing potential profits. They have resources to litigate.
+narrative_ontology:constraint_stakeholder(takings_clause_boundary__regulatory_takings_reading, real_estate_developers, beneficiary,
+    organized, biographical, mobile, regional).
+
+% Bear the cost of potential compensation payments or the chilling effect on public-interest regulations due to fear of takings claims. They must balance public welfare with property rights, often facing legal challenges.
+narrative_ontology:constraint_stakeholder(takings_clause_boundary__regulatory_takings_reading, local_governments, payer,
+    institutional, generational, constrained, local).
+
+% Face legal challenges when implementing regulations to protect natural resources or public health, as these may be deemed regulatory takings. The doctrine constrains their ability to act decisively.
+narrative_ontology:constraint_stakeholder(takings_clause_boundary__regulatory_takings_reading, environmental_regulators, payer,
+    institutional, generational, constrained, national).
+
+% Advocate for regulations that serve collective goods (e.g., environmental protection, historic preservation) but find their efforts hampered by the threat of takings claims, which can make such regulations politically and financially unfeasible.
+narrative_ontology:constraint_stakeholder(takings_clause_boundary__regulatory_takings_reading, public_interest_advocates, payer,
+    moderate, generational, constrained, national).
+
+% Interprets the Takings Clause and applies the Penn Central balancing test, shaping the boundaries of regulatory power and property rights. Its decisions define the constraint and its enforcement.
+narrative_ontology:constraint_stakeholder(takings_clause_boundary__regulatory_takings_reading, supreme_court, agenda_setter,
+    institutional, civilizational, analytical, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a legal framework for adjudicating disputes between private property rights and government regulatory power, ensuring that the costs of public benefits are not unfairly borne by individual property owners.
+% TRANSFER_FUNCTION: Potentially transfers financial compensation from government entities (and thus taxpayers) to private property owners when regulations are deemed to 'go too far' in diminishing economic value.
+% ABSENT_VOICES: Future generations, who would benefit from robust environmental and land-use regulations but whose interests are often discounted in present-day economic value calculations, are structurally absent from the immediate legal calculus.
+% DISAPPEARANCE_RATIONALE: If the regulatory takings doctrine vanished, governments would have significantly more freedom to regulate land use and economic activity without fear of compensation claims. This would likely lead to more aggressive environmental protection, zoning, and public health regulations, fundamentally altering the balance between private property and public welfare.
+% FOUNDING_PROBLEM: To prevent government from imposing burdens on private property that, while not a direct physical seizure, effectively destroy its value, forcing individuals to bear public costs alone.
+% FOUNDING_PROBLEM_CORROBORATION: Legal scholars and property rights advocates attest that the problem of regulatory overreach remains live, citing ongoing cases where regulations severely impact property values. Public interest groups and some legal academics, however, argue that the doctrine itself creates a chilling effect on necessary regulation, suggesting the 'problem' is often a pretext for resisting public good.
+narrative_ontology:disappearance_verdict(takings_clause_boundary__regulatory_takings_reading, world_rearranges).
+narrative_ontology:founding_problem_status(takings_clause_boundary__regulatory_takings_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(takings_clause_boundary__regulatory_takings_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(takings_clause_boundary__regulatory_takings_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(takings_clause_boundary__regulatory_takings_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(takings_clause_boundary__regulatory_takings_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,16 +210,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely coordinates the balance between private property rights and public welfare regulations, but does so with significant asymmetric extraction. Property owners and developers benefit from the protection against value diminution, while local governments and regulators bear the costs of potential compensation or chilled regulation. The 'too far' standard introduces uncertainty, making the coordination function less efficient and increasing the extractive potential. Active enforcement by courts is required to adjudicate claims and maintain the boundary. Extractiveness is high due to the chilling effect on public regulation and the direct compensation costs. Suppression is moderate, as regulators are not entirely prevented from acting, but face significant hurdles. Theater ratio is low, as the legal process is genuinely functional, though complex.
+ *   The extractiveness (0.65) is substantial because the doctrine shifts potential costs from private property owners to the public purse, and its application is often unpredictable, creating a 'regulatory chill.' Suppression (0.40) is moderate; while it constrains government action, it doesn't entirely suppress regulation, but rather channels it through a complex legal process. Theater ratio (0.20) is low, as the legal process is genuinely adversarial, though some arguments may be performative. The claimed type is 'tangled_rope' because it genuinely coordinates the balance between public and private interests, but with clear asymmetric extraction from public entities to private owners, requiring active judicial enforcement.
  *
  * PERSPECTIVAL GAP:
- *   Property owners perceive this as a vital protection of their rights, ensuring fairness against government action. Regulators and public interest advocates, however, experience it as a significant impediment, forcing public goods to be privately purchased or abandoned, and creating a chilling effect on necessary regulations. The courts, as agenda setters, navigate this tension, often producing outcomes that satisfy neither side fully, but maintain the legal framework.
+ *   From the perspective of property owners, the doctrine is a necessary 'rope' protecting fundamental rights. From the perspective of regulators and public interest advocates, it often functions as a 'snare' that extracts public resources and stifles essential public welfare initiatives. The engine's classification will reflect this divergence based on the declared structural relationships and metrics.
  *
  * DIRECTIONALITY LOGIC:
- *   Property owners and developers are beneficiaries (d towards 0.0) as the constraint protects their economic interests. Local governments, environmental regulators, and public interest advocates are targets (d towards 1.0) as they bear the costs of compensation or foregone regulation. Courts are agenda setters (d towards 0.5), administering the balancing test.
+ *   Property owners and developers are beneficiaries, as the doctrine protects their economic interests and provides a pathway for compensation. Local governments, environmental regulators, and public interest advocates are payers, as they bear the costs of compensation or the chilling effect on public-interest regulations. The Supreme Court acts as the agenda-setter, defining and enforcing the boundaries of the doctrine.
  *
  * MANDATROPHY ANALYSIS:
- *   The regulatory takings doctrine prevents mislabeling legitimate property protection as pure extraction, and vice versa. Its complexity, however, means that the 'mandate' of balancing private and public interests can drift towards favoring private interests due to the high cost and uncertainty for public actors. The ad hoc nature of the Penn Central test means it is always 'live' but its application can become more extractive over time if courts consistently favor property owners, leading to a form of 'mandatrophy' where the balancing function becomes a de facto barrier to public goods.
+ *   The doctrine's mandate to prevent unfair burdens on individuals remains live, but its application has arguably drifted to prioritize private economic interests over collective public goods, leading to a contest over whether its original coordination function is still primary or if it has become primarily extractive. The 'contested' status of the founding problem reflects this tension.
  */
 
 /* ==========================================================================
@@ -187,45 +227,66 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    regulatory_takings_kernel_reading,
-    'Is this constraint a genuine protection against government overreach, or an impediment to necessary public welfare regulations?',
-    'Empirical analysis of regulatory outcomes: does it primarily prevent arbitrary seizures, or does it chill legitimate public interest regulation?',
-    'If primarily an impediment, its classification shifts towards Snare for public interest stakeholders; if a genuine protection, it remains a Tangled Rope balancing interests.',
+    penn_central_balancing_test_objectivity,
+    'Is the Penn Central ad hoc balancing test applied objectively, or does it reflect judicial policy preferences?',
+    'Empirical analysis of judicial decisions over time, correlating outcomes with the political leanings of judges or prevailing economic ideologies.',
+    'If subjective, the doctrine''s extractiveness is more arbitrary and less predictable, potentially increasing its ''snare'' characteristics for regulators. If objective, it reinforces its ''tangled_rope'' function.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(regulatory_takings_kernel_reading, conceptual, 'This constraint is the ''regulatory takings'' reading of the broader ''takings_clause_boundary'' kernel. It expands the concept of a ''taking'' beyond physical appropriation to include severe diminution of economic value, introducing an ad hoc balancing test (Penn Central factors). Sibling readings (''physical_appropriation_reading'', ''categorical_takings_reading'') offer narrower or per se rules.').
+narrative_ontology:omega_variable(penn_central_balancing_test_objectivity, empirical, 'Objectivity of the Penn Central balancing test.').
 
 omega_variable(
-    too_far_ambiguity,
-    'What constitutes ''too far'' in diminishing economic value, and is this threshold consistently applied?',
-    'Analysis of judicial decisions over time for consistency and predictability in applying the Penn Central factors.',
-    'If ''too far'' is arbitrary or inconsistent, the constraint''s suppression and extractiveness are higher due to regulatory uncertainty and chilling effects; if predictable, it functions more as a clear boundary.',
+    chilling_effect_quantification,
+    'To what extent does the threat of regulatory takings claims actually deter beneficial public-interest regulations?',
+    'Comparative studies of regulatory activity in jurisdictions with and without strong regulatory takings doctrines, or surveys of local government officials and regulators.',
+    'A strong chilling effect would increase the effective suppression of the constraint, pushing it closer to a ''snare'' for public welfare. A weak effect would suggest the doctrine primarily functions as a legitimate check on government power.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(chilling_effect_quantification, empirical, 'Quantification of the ''chilling effect'' on regulation.').
+
+omega_variable(
+    regulatory_takings_vs_physical_appropriation,
+    'Is the conceptual distinction between regulatory takings and physical appropriations sufficiently clear, or does the ''goes too far'' standard blur the line in practice?',
+    'Analysis of dissenting opinions and legal commentary on takings cases, focusing on arguments about the coherence of the distinction.',
+    'If the line is consistently blurred, it suggests a conceptual instability in the kernel, potentially leading to inconsistent application and increased perceived extraction for regulators. If clear, it reinforces the distinct structural claims of each reading.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(too_far_ambiguity, empirical, 'The core ambiguity of the regulatory takings doctrine lies in defining the threshold for ''too far'' diminution of value, leading to unpredictable outcomes.').
+narrative_ontology:omega_variable(regulatory_takings_vs_physical_appropriation, conceptual, 'Clarity of the distinction between regulatory and physical takings.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(takings_clause_boundary__regulatory_takings_reading, 1978, 2023).
+narrative_ontology:interval(takings_clause_boundary__regulatory_takings_reading, 1978, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
+% Theater ratio over time
+narrative_ontology:measurement(taki_tr_t1978, takings_clause_boundary__regulatory_takings_reading, theater_ratio, 1978, 0.1).
+narrative_ontology:measurement(taki_tr_t1990, takings_clause_boundary__regulatory_takings_reading, theater_ratio, 1990, 0.15).
+narrative_ontology:measurement(taki_tr_t2000, takings_clause_boundary__regulatory_takings_reading, theater_ratio, 2000, 0.18).
+narrative_ontology:measurement(taki_tr_t2010, takings_clause_boundary__regulatory_takings_reading, theater_ratio, 2010, 0.19).
+narrative_ontology:measurement(taki_tr_t2024, takings_clause_boundary__regulatory_takings_reading, theater_ratio, 2024, 0.2).
+
 % Extraction over time
-narrative_ontology:measurement(taki_be_t0, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(taki_be_t10, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 10, 0.58).
-narrative_ontology:measurement(taki_be_t20, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 20, 0.65).
+narrative_ontology:measurement(taki_be_t1978, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 1978, 0.5).
+narrative_ontology:measurement(taki_be_t1990, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 1990, 0.58).
+narrative_ontology:measurement(taki_be_t2000, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 2000, 0.62).
+narrative_ontology:measurement(taki_be_t2010, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 2010, 0.64).
+narrative_ontology:measurement(taki_be_t2024, takings_clause_boundary__regulatory_takings_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(taki_su_t0, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(taki_su_t10, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 10, 0.4).
-narrative_ontology:measurement(taki_su_t20, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 20, 0.45).
+narrative_ontology:measurement(taki_su_t1978, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 1978, 0.3).
+narrative_ontology:measurement(taki_su_t1990, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 1990, 0.35).
+narrative_ontology:measurement(taki_su_t2000, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 2000, 0.38).
+narrative_ontology:measurement(taki_su_t2010, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 2010, 0.39).
+narrative_ontology:measurement(taki_su_t2024, takings_clause_boundary__regulatory_takings_reading, suppression_requirement, 2024, 0.4).
 
 
 /* ==========================================================================
@@ -233,11 +294,9 @@ narrative_ontology:measurement(taki_su_t20, takings_clause_boundary__regulatory_
    ========================================================================== */
 
 narrative_ontology:coordination_type(takings_clause_boundary__regulatory_takings_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(takings_clause_boundary__regulatory_takings_reading, land_use_zoning_regulations).
-narrative_ontology:affects_constraint(takings_clause_boundary__regulatory_takings_reading, environmental_protection_laws).
-
-% DUAL FORMULATION NOTE:
-% This constraint is the 'regulatory takings' reading of the 'takings_clause_boundary' kernel. It differs from 'physical_appropriation_reading' (which requires direct physical invasion) and 'categorical_takings_reading' (which applies per se rules to total value loss or permanent physical occupation) by introducing a flexible, fact-specific balancing test for regulations that merely diminish value.
+narrative_ontology:affects_constraint(takings_clause_boundary__regulatory_takings_reading, environmental_protection_regulations).
+narrative_ontology:affects_constraint(takings_clause_boundary__regulatory_takings_reading, zoning_laws).
+narrative_ontology:affects_constraint(takings_clause_boundary__regulatory_takings_reading, historic_preservation_ordinances).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

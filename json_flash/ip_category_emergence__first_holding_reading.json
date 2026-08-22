@@ -4,72 +4,199 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "e3b3beba-8b05-4ae0-94e1-b30046b4c59d"
+    "story_uid": "20ac4005-d9b8-482d-81ad-eef1441b52d4"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.4,
+    "extractiveness": 0.65,
+    "suppression": 0.7,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.2,
-    "claimed_type": "rope",
-    "human_readable": "IP Category Emergence: First Holding Reading (1710 Statute of Anne)",
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Statute of Anne's First Holding of Authorial Rights",
     "topic_domain": "legal_philosophy/intellectual_property/historical_jurisprudence",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "authors_as_rights_holders",
-      "public_domain"
+      "publishers_under_statute"
     ],
     "victims": [
-      "stationers_monopoly"
+      "public_domain_users",
+      "competing_printers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "authors_as_rights_holders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "For the first time, authors gained a statutory right to control the reproduction of their works for a fixed term, shifting from a system where rights primarily resided with printers. This provided a new, albeit limited, form of economic leverage."
+    },
+    {
+      "name": "publishers_under_statute",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "While losing their perpetual common law monopoly, publishers adapted to the new statutory framework, often acquiring rights from authors. They became the primary enforcers of the new, time-limited rights, benefiting from the clarity and enforceability of the statute over the previous ambiguous common law."
+    },
+    {
+      "name": "public_domain_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lost the ability to freely copy works after the statutory term expired, as the concept of a time-limited right meant works eventually entered a public domain, but only after a period of exclusive control. Before the statute, many works were effectively in a perpetual 'public domain' for anyone not part of the Stationers' Company."
+    },
+    {
+      "name": "competing_printers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Were now legally barred from reprinting works during the statutory term without permission, facing penalties. This curtailed their previous practice of reprinting popular works without formal authorization from the Stationers' Company, which had effectively operated as a closed guild."
+    },
+    {
+      "name": "stationers_company",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lost its long-standing common law monopoly over printing, which had effectively granted perpetual rights to its members. The Statute of Anne directly challenged and ultimately superseded this traditional power structure, shifting the locus of control."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the historical shift in legal philosophy and economic impact of the Statute of Anne, debating its true intent and long-term consequences for intellectual property law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Established a clear, statutory framework for copyright, replacing a fragmented common law system and the Stationers' Company's monopoly. It coordinated the rights of authors and publishers for a fixed term.",
+    "transfer_function": "Transferred exclusive rights to copy and print from a perpetual common law monopoly held by printers (Stationers' Company) to authors for a fixed term, which authors could then license to publishers. This created a new revenue stream for authors and a more defined, albeit time-limited, asset for publishers.",
+    "absent_voices": "The broader public, who might have argued for immediate and free access to knowledge, were not directly represented in the legislative process that balanced author/publisher interests. Their 'voice' was implicitly represented by the eventual entry of works into the public domain, but not in the initial setting of the term.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Statute of Anne and its principles vanished, the entire modern framework of copyright law would collapse. Authors would lose statutory protection, publishers would revert to a chaotic common law or guild-based system, and the concept of a time-limited public domain would cease to exist, fundamentally reorganizing the creative economy.",
+    "founding_problem": "The existing common law and Stationers' Company monopoly created uncertainty for authors, limited public access to works, and led to disputes over copying rights. There was a need for a clear, statutory basis for copyright that balanced authorial incentive with public benefit.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal historians and contemporary legislative debates corroborate that the problems of authorial incentive and clarity of rights were central. While the specific context of the Stationers' Company monopoly is dead, the underlying tension between creator rights and public access remains a live problem in IP law, attested by ongoing legislative reforms and international treaties."
   },
   "interval": {
     "start": 1710,
-    "end": 1710
+    "end": 1730
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 1710,
-      "value": 0.3
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1715,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1720,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1725,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1730,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1710,
-      "value": 0.4
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1715,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1720,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1725,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1730,
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
       "time_point": 1710,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1715,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1720,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1725,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1730,
       "value": 0.1
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story, 'IP Category Emergence: First Holding Reading (1710 Statute of Anne)', is one reading of the 'ip_category_emergence' kernel. It focuses on the Statute of Anne (1710) as the moment when the author-as-rights-holder entered the legitimate claimant set, marking a fundamental shift in the occupancy of intellectual property rights. This reading emphasizes the legal and structural change in who could 'hold' and enforce these rights, moving away from the Stationers' Company's perpetual monopoly towards statutory author protection and a limited term, ultimately benefiting the public domain.",
-    "logic_rationale": "The extractiveness is moderate (0.3) because while it introduced a new form of limited extraction for authors, it simultaneously curtailed the more extensive, perpetual extraction of the Stationers' Company. Suppression is moderate (0.4) as it required active enforcement to break the existing monopoly and establish the new statutory regime. Theater ratio is low (0.1) because the Statute of Anne was a genuinely functional piece of legislation that created a new legal category and system, not merely a performative act. Accessibility collapse is high (0.7) because the Statute fundamentally altered the legal landscape, making the previous common law claims largely inaccessible or irrelevant.",
-    "directionality_logic": "Authors became beneficiaries as their rights were legally recognized and protected. The Stationers' Company became a 'payer' in the sense that they lost their perpetual monopoly and had to adapt to a new, more constrained system. The public domain is a beneficiary due to the introduction of term limits. Parliament acted as the agenda-setter, enacting the new legal framework. Readers and consumers also benefited from increased access and competition.",
-    "perspectival_gap": "From the perspective of authors, the Statute of Anne was a liberation, establishing their rights. From the Stationers' perspective, it was a significant loss of established privilege and a new constraint on their business model. The engine's classification will reflect this divergence based on their declared roles and exit options.",
-    "kernel_context": "This constraint is the 'first_holding_reading' of the 'ip_category_emergence' kernel. It posits that the Statute of Anne in 1710 marked the first legal recognition of authors as primary rights holders, fundamentally changing who could 'hold' intellectual property. Sibling readings include 'thinkability_reading' (IP marks category emergence; ownable expression became legally coherent in 1710) and 'synchronic_diachronic_seam' (Thinkability and first-holding are either formally independent or temporal framing artifact)."
+    "narrative_context": "This constraint story, 'ip_category_emergence__first_holding_reading', interprets the Statute of Anne (1710) as the moment when the author, as a distinct rights-holder, entered the legitimate claimant set for intellectual property. It marks a shift from a system dominated by printers' monopolies to one where authors held statutory, albeit time-limited, rights. This reading emphasizes the change in the 'occupied set' of rights-holders and the corresponding shift in who benefited from and enforced these rights. The constraint is claimed as a Rope by its proponents (a coordination mechanism for authors and publishers) but operates with significant extraction and suppression, making it a Tangled Rope in practice.",
+    "logic_rationale": "The extractiveness (0.65) is due to the creation of exclusive rights that restrict public access for a period, transferring value from the public domain to authors/publishers. Suppression (0.70) is high because the statutory framework actively enforced these new exclusive rights, curtailing previous practices of free reprinting. Theater ratio is low (0.10) as the statute was genuinely functional in establishing a new legal order, not merely performative. The claimed type is 'rope' from the perspective of its proponents (coordinating authorial incentive), but the metrics reflect its actual operation as a 'tangled_rope' due to the asymmetric extraction and active enforcement.",
+    "directionality_logic": "Authors and publishers are beneficiaries, gaining new or clarified rights and revenue streams. The public domain users and competing printers are victims, losing previous freedoms to copy and facing new legal restrictions. The Stationers' Company, a former beneficiary, became excluded as its monopoly was dismantled. This shift in beneficiary and victim sets is central to the 'first holding' reading.",
+    "perspectival_gap": "From the perspective of authors and publishers, the Statute of Anne was a necessary coordination mechanism, a 'rope' that clarified rights and incentivized creation. From the perspective of the public and competing printers, it was an extractive 'snare' that restricted access and created new monopolies. The engine's classification as a 'tangled_rope' captures this hybrid nature, where a genuine coordination function is intertwined with asymmetric extraction.",
+    "kernel_context": "This constraint is the 'first_holding_reading' of the 'ip_category_emergence' kernel. It focuses on the Statute of Anne (1710) as the moment authors became statutory rights-holders, marking a shift in the legitimate claimant set. Sibling readings include the 'thinkability_reading' (focusing on the conceptual coherence of 'ownable expression') and the 'synchronic_diachronic_seam' (examining the relationship between conceptual emergence and historical enactment)."
   },
   "omegas": [
     {
-      "id": "causal_primacy_of_holding_vs_thinkability",
-      "question": "Did the legal 'holding' of rights by authors (first_holding_reading) enable the 'thinkability' of ownable expression, or vice versa?",
-      "resolution_mechanism": "Detailed historical-legal analysis of pre-1710 intellectual discourse and legislative intent: did the concept of authorial ownership precede or follow the legal mechanism for its enforcement?",
-      "impact": "If 'holding' enabled 'thinkability', this reading's causal primacy is strengthened. If 'thinkability' preceded 'holding', this reading describes an institutionalization of a pre-existing concept, influencing its classification as a response to a prior conceptual shift.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The causal relationship between the legal mechanism for holding rights and the conceptual coherence of ownable expression."
-    },
-    {
-      "id": "stationers_resistance_efficacy",
-      "question": "To what extent did the Stationers' Company effectively resist or subvert the intent of the Statute of Anne, and for how long?",
-      "resolution_mechanism": "Analysis of post-1710 legal cases, lobbying efforts, and publishing practices to determine the actual impact and enforcement challenges of the new statutory regime.",
-      "impact": "Higher effective resistance would suggest the 'suppression' metric was initially underestimated, and the transition from monopoly to statutory rights was more contested and prolonged than a single 'first holding' event implies.",
+      "id": "author_agency_vs_publisher_control",
+      "question": "To what extent did the Statute of Anne truly empower authors, versus merely shifting the locus of control from one set of publishers (Stationers' Company) to another (those who acquired authorial rights)?",
+      "resolution_mechanism": "Detailed historical analysis of author contracts and economic conditions post-1710, comparing author earnings and bargaining power before and after the statute.",
+      "impact": "If author agency remained low, the 'beneficiary' status of authors would be overstated, increasing the effective extraction for the 'publishers_under_statute' seat and pushing the constraint closer to a pure snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The actual efficacy of the Statute of Anne in immediately curtailing the Stationers' monopoly."
+      "description": "Ambiguity regarding the true beneficiary of authorial rights post-Statute of Anne."
+    },
+    {
+      "id": "conceptual_vs_enactment_priority",
+      "question": "Is the 'first holding' (enactment of statutory rights) the primary marker of IP category emergence, or is the 'thinkability' (conceptual coherence of ownable expression) a more fundamental prior condition?",
+      "resolution_mechanism": "Philosophical analysis of legal concepts and historical evidence of pre-1710 debates on intellectual property, independent of the Statute's passage.",
+      "impact": "If 'thinkability' is primary, this 'first holding' reading might be reclassified as a 'scaffold' built upon a more fundamental 'mountain' of conceptual coherence, or its extractiveness might be re-evaluated as a consequence of a prior, less extractive, conceptual constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Debate over whether the legal enactment or the conceptual coherence of IP is the more fundamental 'emergence' event."
     }
   ],
   "boltzmann": {
@@ -80,7 +207,7 @@
       "ip_category_emergence__thinkability_reading",
       "ip_category_emergence__synchronic_diachronic_seam"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'ip_category_emergence' kernel. This 'first_holding_reading' emphasizes the shift in who could legally hold IP rights, while the 'thinkability_reading' focuses on the conceptual coherence of ownable expression, and the 'synchronic_diachronic_seam' examines their relationship."
+    "dual_formulation_note": "This constraint is one reading of the 'ip_category_emergence' kernel, focusing on the Statute of Anne (1710) as the 'first holding' of authorial rights. It is linked to sibling readings that explore the conceptual 'thinkability' of IP and the synchronic/diachronic relationship between these emergence points."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -88,45 +215,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ip_category_emergence__thinkability_reading",
-        "relation": "influences"
+        "sibling_id": "thinkability_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "ip_category_emergence__synchronic_diachronic_seam",
-        "relation": "coexists_with"
+        "sibling_id": "synchronic_diachronic_seam",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "author_as_primary_rights_holder",
+        "atom": "statutory_grant_defines_right",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "statutory_term_limits_for_public_benefit",
-        "role": "secondary",
+        "atom": "author_as_primary_claimant",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "pre_statute_common_law_monopoly",
+    "reference_frame": "statutory_authorial_right_framework",
     "drift_state": {
-      "moment": "post_statute_era",
+      "moment": "contemporary_digital_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,102 +4,182 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "e0d8d90a-77f8-4984-9022-1cb71d90fc40",
-    "created_at": "2024-07-30T12:00:00Z"
+    "story_uid": "3227faf6-e2d6-4483-bec2-5a7b5e054256"
   },
   "base_properties": {
-    "extractiveness": 0.25,
-    "suppression": 0.1,
-    "theater_ratio": 0.05,
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.0,
     "accessibility_collapse": 0.9,
-    "resistance": 0.05,
+    "resistance": 0.02,
     "claimed_type": "mountain",
     "human_readable": "Kodashim Obligation: Study as Preparation for Messianic Restoration",
     "topic_domain": "religious_studies/jewish_law/textual_preservation",
-    "requires_active_enforcement": false,
     "emerges_naturally": true,
     "beneficiaries": [
       "messianic_future_generation"
+    ],
+    "victims": [
+      "current_generation_of_jews"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_law_vs_constructed_obligation",
-      "question": "Is the obligation to study Kodashim a genuine natural law (divinely ordained, immutable) or a constructed obligation that benefits identifiable agents (the future messianic generation)?",
-      "resolution_mechanism": "Theological consensus on the nature of divine commandment and the role of human agency in its perpetuation.",
-      "impact": "If purely natural law, its classification as Mountain is robust. If significantly constructed, the beneficiary structure (messianic_future_generation) would push it towards a False Summit Mountain (Tangled Rope) classification, highlighting the deferred extraction from the present generation.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity between divine command and human-maintained obligation."
+      "name": "current_generation_of_jews",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bears the deferred cosmic repair, as the sacrificial laws cannot be performed. Their study is an act of faith and preservation, a cost in time and intellectual effort, with the benefit deferred to a future generation. Identity is deeply tied to the continuity of Jewish law."
     },
     {
-      "id": "kernel_reading_distinction",
-      "question": "This constraint is the 'study_as_preparation' reading of the 'kodashim_obligation' kernel. How would the classification change under sibling readings?",
-      "resolution_mechanism": "Analyzing the 'study_as_performance' and 'study_as_archive' readings as separate constraints, each with its own metrics and stakeholder analysis.",
-      "impact": "The 'study_as_performance' reading would likely show higher extractiveness (present generation bears full cosmic burden) and potentially a different claimed type (e.g., Tangled Rope). The 'study_as_archive' reading would likely show lower extractiveness and be closer to a Rope or Mountain, with different beneficiaries (e.g., historical scholars).",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of alternative readings of the Kodashim obligation kernel."
+      "name": "messianic_future_generation",
+      "role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Will benefit from the preserved technical knowledge of sacrificial law, enabling its correct performance upon the rebuilding of the Temple. This generation is a conceptual beneficiary, representing the ultimate fulfillment of the religious obligation."
+    },
+    {
+      "name": "rabbis_and_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Are the primary interpreters and transmitters of Kodashim, emphasizing its binding nature and the preparatory role of study. They set the agenda for how this unperformable law is engaged with, ensuring its continuity and the technical knowledge required for its future restoration."
+    },
+    {
+      "name": "divine_covenant",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The overarching theological framework that mandates the sacrificial laws and their eventual restoration. It benefits from the continuity of the obligation and the preparatory study, as it affirms its eternal validity."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the preservation of complex, unperformable religious law across generations, ensuring the technical knowledge for sacrificial rites is maintained for a future messianic era.",
+    "transfer_function": "Transfers the obligation of study and the burden of deferred cosmic repair from past generations to the current one, and the technical knowledge of sacrificial law from the current generation to a future messianic generation.",
+    "absent_voices": "Those who might argue for a purely historical or symbolic reading of Kodashim, detaching it from future performance, are implicitly excluded by the emphasis on preparation and binding obligation. Their voices are present in other readings of the kernel.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the obligation to study Kodashim as preparation vanished, a core pillar of Jewish messianic hope and the continuity of religious law would collapse. The technical knowledge for future Temple service would be lost, fundamentally altering the religious landscape and the relationship to divine covenant.",
+    "founding_problem": "The destruction of the Second Temple rendered the sacrificial laws unperformable, creating a crisis of religious obligation and continuity for a central aspect of Jewish worship.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Rabbinic tradition and centuries of Jewish legal scholarship attest to the ongoing nature of this problem, with the unperformability of sacrifices remaining a central theological challenge. The problem is acknowledged by all major streams of traditional Judaism, even those with differing views on its resolution."
+  },
+  "interval": {
+    "start": 70,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.2
+      "time_point": 70,
+      "value": 0.1
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 100,
-      "value": 0.22
+      "time_point": 500,
+      "value": 0.12
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 200,
-      "value": 0.25
+      "time_point": 1000,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 70,
+      "value": 0.05
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 100,
-      "value": 0.1
+      "time_point": 500,
+      "value": 0.05
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 200,
-      "value": 0.1
+      "time_point": 1000,
+      "value": 0.05
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.05
+      "time_point": 70,
+      "value": 0.0
     },
     {
       "metric": "theater_ratio",
-      "time_point": 200,
-      "value": 0.05
+      "time_point": 500,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.0
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 200
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the obligation within Jewish law to study the Kodashim (sacrificial) order, despite the destruction of the Temple rendering actual performance impossible. This specific reading frames study not as a substitute for sacrifice, but as an instrumental preparation for its eventual messianic restoration. The constraint is understood as divinely ordained, immutable, and essential for the continuity of the covenant, with the primary beneficiary being a future, restored state of cosmic order and the generations who will live within it.",
-    "logic_rationale": "The extractiveness is low (0.25) because the 'cost' of study is primarily intellectual and spiritual effort, not material or coercive extraction. Suppression is low (0.1) as the obligation is largely internalized and self-enforced within the religious community, not through external coercion. Theater ratio is very low (0.05) because the study is considered genuinely functional for its stated purpose (preservation of knowledge for future performance), not merely performative. Accessibility collapse is high (0.9) as the divine origin and messianic imperative leave little room for alternative interpretations of the obligation's necessity. Resistance is low (0.05) due to the deeply ingrained theological acceptance of the obligation.",
-    "directionality_logic": "The 'messianic_future_generation' is the primary beneficiary (d=0.0), as they will directly benefit from the preserved knowledge enabling the restoration of sacrificial service. The 'current_generation_of_scholars' are both payers (bear the cost of study) and indirect beneficiaries (spiritual merit, communal role), placing their d closer to symmetric. The 'divine_authority' is the ultimate source and enforcer, but not a beneficiary in the extractive sense.",
-    "perspectival_gap": "From the perspective of the 'current_generation_of_scholars', the constraint is a demanding but spiritually rewarding obligation. From the perspective of the 'messianic_future_generation', it is a foundational act of preservation that ensures their ability to fulfill the commandments. The divine perspective (as understood by adherents) sees it as an eternal, unchanging command.",
-    "kernel_context": "This constraint is the 'study_as_preparation' reading of the 'kodashim_obligation' kernel. This reading emphasizes the instrumental value of study for a future, restored Temple service. It contrasts with the 'study_as_performance' reading, which views study as a present enactment of the sacrificial rite, and the 'study_as_archive' reading, which treats Kodashim as historical documentation without active obligation."
+    "narrative_context": "This constraint describes the obligation within traditional Jewish law to study the Kodashim (sacrificial) order, despite the destruction of the Temple rendering its performance impossible. This reading frames study not as a substitute for performance, but as an instrumental act of preparation, preserving the technical knowledge necessary for the messianic restoration of the Temple and its sacrificial service. It is a reading of the 'kodashim_obligation' kernel, distinct from 'study_as_performance' or 'study_as_archive'.",
+    "logic_rationale": "The constraint is claimed as a Mountain due to its perceived divine origin and immutable nature within this reading. Extractiveness is low (0.15) because the 'cost' of study is primarily intellectual and spiritual, freely undertaken as a religious obligation, with the benefit deferred to a future, ideal state. Suppression is negligible (0.05) as participation is voluntary, driven by internal commitment rather than external coercion. Theater ratio is 0.0 as the study is genuinely functional for its stated purpose of preservation and preparation. Accessibility collapse is high (0.9) because for those who accept the premise, there is no alternative to this form of engagement with the unperformable law. Resistance is low (0.02) as the obligation is widely accepted within the tradition.",
+    "directionality_logic": "The 'current_generation_of_jews' are the primary payers, bearing the cost of study and the deferred cosmic repair. The 'messianic_future_generation' is the beneficiary, receiving the preserved knowledge. Rabbis and scholars act as agenda-setters, guiding the interpretation and transmission of this obligation. The 'divine_covenant' is a non-agent beneficiary, representing the vindication of the eternal law.",
+    "perspectival_gap": "From the perspective of the 'current_generation_of_jews', the constraint is a binding, divinely ordained obligation that requires significant personal investment for a future, uncertain benefit. From the 'messianic_future_generation' (an analytical seat), it is a pure benefit, the successful transmission of vital knowledge. The 'rabbis_and_scholars' see it as a sacred duty of preservation and transmission.",
+    "kernel_context": "This constraint is the 'study_as_preparation' reading of the 'kodashim_obligation' kernel. It posits that sacrificial law remains binding but unperformable, and study preserves technical knowledge for messianic restoration. This contrasts with the 'study_as_performance' reading, which holds that study itself enacts the cosmic function, and 'study_as_archive', which views Kodashim as a defunct historical system."
   },
+  "omegas": [
+    {
+      "id": "divine_mandate_vs_human_interpretation",
+      "question": "Is the binding nature of Kodashim and the preparatory role of study a direct divine mandate, or a rabbinic interpretation developed in response to historical circumstances?",
+      "resolution_mechanism": "Theological and historical analysis of early rabbinic texts, examining the evolution of the 'study as preparation' concept post-Temple destruction.",
+      "impact": "If primarily a rabbinic interpretation, the 'emerges_naturally' claim for this constraint would be weakened, potentially reclassifying it from Mountain to a more constructed type (e.g., Rope or Tangled Rope), reflecting human agency in its establishment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the origin of the 'study as preparation' obligation."
+    },
+    {
+      "id": "messianic_restoration_certainty",
+      "question": "What is the certainty and imminence of the messianic restoration of the Temple and sacrificial service, and how does this affect the perceived value of preparatory study?",
+      "resolution_mechanism": "Empirical observation of historical events and theological developments; however, this is ultimately a matter of faith and cannot be empirically resolved.",
+      "impact": "If the messianic restoration is perceived as highly uncertain or indefinitely deferred, the 'beneficiary' status of the 'messianic_future_generation' might be weakened, and the 'extractiveness' on the 'current_generation_of_jews' could be perceived as higher, as the benefit becomes more abstract.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Uncertainty regarding the future fulfillment of the constraint's ultimate purpose."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
@@ -108,7 +188,7 @@
       "kodashim_obligation__study_as_performance",
       "kodashim_obligation__study_as_archive"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'kodashim_obligation' kernel, each representing a distinct structural claim about the nature and purpose of studying sacrificial law in the absence of the Temple."
+    "dual_formulation_note": "This constraint is one of three readings of the 'kodashim_obligation' kernel, each representing a distinct structural claim about the nature of studying sacrificial law after the Temple's destruction."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -116,45 +196,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "kodashim_obligation__study_as_performance",
+        "sibling_id": "study_as_performance",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "kodashim_obligation__study_as_archive",
+        "sibling_id": "study_as_archive",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
+        "atom": "sacrificial_law_eternally_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
         "atom": "study_is_instrumental_preparation",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "theological"
-      },
-      {
-        "atom": "messianic_restoration_is_future_event",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "theological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "divine_command_and_future_restoration",
+    "reference_frame": "post_temple_destruction_rabbinic_framework",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_era",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

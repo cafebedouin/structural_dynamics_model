@@ -39,7 +39,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -53,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,16 +73,14 @@
  *   domain: constitutional_law/civil_rights/law_enforcement_policy
  *
  * SUMMARY:
- *   This constraint story analyzes the Qualified Immunity doctrine from a
- *   'Constitutional Fidelity' reading, which views the doctrine as a
- *   judicially fabricated construct lacking constitutional or statutory
- *   authorization. From this perspective, the doctrine is illegitimate
- *   regardless of its purported policy outcomes, representing an overreach of
- *   judicial power that undermines the integrity of the constitutional text
- *   and the separation of powers. It is classified as a Snare because it
- *   systematically extracts legal recourse from victims of constitutional
- *   violations, primarily benefiting the institutional power of the
- *   judiciary.
+ *   This constraint story analyzes the doctrine of qualified immunity from a
+ *   'constitutional fidelity' reading. This reading asserts that qualified
+ *   immunity is a judicially fabricated doctrine lacking constitutional or
+ *   statutory authorization, and is therefore illegitimate regardless of its
+ *   purported policy outcomes. It views the doctrine as an expansion of
+ *   judicial power and a barrier to accountability for constitutional
+ *   violations. The metrics reflect the increasing extractiveness and
+ *   suppression of this judicially created barrier over time.
  *
  */
 
@@ -96,7 +100,7 @@ narrative_ontology:constraint_metric(qualified_immunity_doctrine__constitutional
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(qualified_immunity_doctrine__constitutional_fidelity_reading, accessibility_collapse, 0.9).
-narrative_ontology:constraint_metric(qualified_immunity_doctrine__constitutional_fidelity_reading, resistance, 0.8).
+narrative_ontology:constraint_metric(qualified_immunity_doctrine__constitutional_fidelity_reading, resistance, 0.7).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(qualified_immunity_doctrine__constitutional_fidelity_reading, snare).
@@ -106,37 +110,78 @@ narrative_ontology:topic_domain(qualified_immunity_doctrine__constitutional_fide
 domain_priors:requires_active_enforcement(qualified_immunity_doctrine__constitutional_fidelity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(qualified_immunity_doctrine__constitutional_fidelity_reading, '7a5b1458-68bc-4e49-bf29-b0d4e9b873ee').
-narrative_ontology:cs_kernel_codification('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', implicit).
-narrative_ontology:cs_authority_grounding('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', extraction).
-narrative_ontology:cs_interpretation_layer_present('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee').
-narrative_ontology:cs_reading_relation('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', qualified_immunity_doctrine__protective_scaffold_reading, forecloses).
-narrative_ontology:cs_reading_relation('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', qualified_immunity_doctrine__accountability_void_reading, coexists_with).
-narrative_ontology:cs_axiom('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', foundational, judicial_power_limited_to_text_and_statute).
-narrative_ontology:cs_axiom_status(judicial_power_limited_to_text_and_statute, holdable).
-narrative_ontology:cs_axiom_grounding('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', judicial_power_limited_to_text_and_statute, deontological).
-narrative_ontology:cs_axiom('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', foundational, constitutional_rights_are_self_executing).
-narrative_ontology:cs_axiom_status(constitutional_rights_are_self_executing, holdable).
-narrative_ontology:cs_axiom_grounding('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', constitutional_rights_are_self_executing, deontological).
-narrative_ontology:cs_reference_frame('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', constitutional_textualism_and_separation_of_powers).
-narrative_ontology:cs_drift_state('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', contemporary, gap(practice_drift, severe, false)).
-narrative_ontology:cs_created_at('7a5b1458-68bc-4e49-bf29-b0d4e9b873ee', '').
+narrative_ontology:cs_story_uid(qualified_immunity_doctrine__constitutional_fidelity_reading, 'b7082121-065c-4aab-8d85-dcd5e83d3468').
+narrative_ontology:cs_kernel_codification('b7082121-065c-4aab-8d85-dcd5e83d3468', implicit).
+narrative_ontology:cs_authority_grounding('b7082121-065c-4aab-8d85-dcd5e83d3468', lineage).
+narrative_ontology:cs_interpretation_layer_present('b7082121-065c-4aab-8d85-dcd5e83d3468').
+narrative_ontology:cs_reading_relation('b7082121-065c-4aab-8d85-dcd5e83d3468', qualified_immunity_doctrine__protective_scaffold_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b7082121-065c-4aab-8d85-dcd5e83d3468', qualified_immunity_doctrine__accountability_void_reading, coexists_with).
+narrative_ontology:cs_axiom('b7082121-065c-4aab-8d85-dcd5e83d3468', foundational, judicial_power_limited_to_constitution_and_statute).
+narrative_ontology:cs_axiom_status(judicial_power_limited_to_constitution_and_statute, holdable).
+narrative_ontology:cs_axiom_grounding('b7082121-065c-4aab-8d85-dcd5e83d3468', judicial_power_limited_to_constitution_and_statute, deontological).
+narrative_ontology:cs_axiom('b7082121-065c-4aab-8d85-dcd5e83d3468', foundational, accountability_for_constitutional_violations_is_fundamental).
+narrative_ontology:cs_axiom_status(accountability_for_constitutional_violations_is_fundamental, holdable).
+narrative_ontology:cs_axiom_grounding('b7082121-065c-4aab-8d85-dcd5e83d3468', accountability_for_constitutional_violations_is_fundamental, deontological).
+narrative_ontology:cs_reference_frame('b7082121-065c-4aab-8d85-dcd5e83d3468', original_constitutional_design_accountability).
+narrative_ontology:cs_drift_state('b7082121-065c-4aab-8d85-dcd5e83d3468', contemporary_judicial_practice, gap(practice_drift, severe, false)).
+narrative_ontology:cs_created_at('b7082121-065c-4aab-8d85-dcd5e83d3468', '').
 narrative_ontology:cs_kernel_id(qualified_immunity_doctrine__constitutional_fidelity_reading, qualified_immunity_doctrine).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(qualified_immunity_doctrine__constitutional_fidelity_reading, judiciary_institutional_power).
-narrative_ontology:constraint_victim(qualified_immunity_doctrine__constitutional_fidelity_reading, constitutional_rights_claimants).
-narrative_ontology:constraint_victim(qualified_immunity_doctrine__constitutional_fidelity_reading, constitutional_text_integrity).
+narrative_ontology:constraint_beneficiary(qualified_immunity_doctrine__constitutional_fidelity_reading, federal_judiciary).
+narrative_ontology:constraint_beneficiary(qualified_immunity_doctrine__constitutional_fidelity_reading, law_enforcement_officers).
+narrative_ontology:constraint_victim(qualified_immunity_doctrine__constitutional_fidelity_reading, victims_of_constitutional_violations).
+narrative_ontology:constraint_victim(qualified_immunity_doctrine__constitutional_fidelity_reading, civil_rights_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The federal courts, particularly the Supreme Court, created and continue to refine the doctrine of qualified immunity without explicit constitutional or statutory basis. This reading views them as expanding their own power by fabricating legal principles.
+narrative_ontology:constraint_stakeholder(qualified_immunity_doctrine__constitutional_fidelity_reading, federal_judiciary, agenda_setter,
+    institutional, generational, identity_locked, national).
+
+% Officers benefit from the doctrine by being shielded from liability in civil rights lawsuits unless their conduct violates 'clearly established statutory or constitutional rights of which a reasonable person would have known.' This reading sees them as beneficiaries of an illegitimate judicial overreach.
+narrative_ontology:constraint_stakeholder(qualified_immunity_doctrine__constitutional_fidelity_reading, law_enforcement_officers, beneficiary,
+    organized, biographical, constrained, local).
+
+% Individuals whose constitutional rights are violated by law enforcement often find their claims dismissed due to qualified immunity, even when a violation occurred. They bear the cost of the doctrine's existence by being denied legal recourse.
+narrative_ontology:constraint_stakeholder(qualified_immunity_doctrine__constitutional_fidelity_reading, victims_of_constitutional_violations, payer,
+    powerless, immediate, trapped, local).
+
+% Organizations and lawyers dedicated to protecting civil rights face significant hurdles in litigating cases against law enforcement due to qualified immunity. They expend considerable resources challenging a doctrine they view as illegitimate and an impediment to justice.
+narrative_ontology:constraint_stakeholder(qualified_immunity_doctrine__constitutional_fidelity_reading, civil_rights_advocates, payer,
+    organized, generational, constrained, national).
+
+% The legislative branch has not explicitly authorized qualified immunity, yet its attempts to reform or abolish the doctrine face judicial resistance and political inertia. This reading views the judiciary as having usurped legislative authority.
+narrative_ontology:constraint_stakeholder(qualified_immunity_doctrine__constitutional_fidelity_reading, legislative_branch, excluded,
+    institutional, generational, constrained, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: From this reading's perspective, the doctrine does not solve a legitimate coordination problem but rather creates a framework for judicial power expansion and officer impunity, under the guise of protecting law enforcement.
+% TRANSFER_FUNCTION: Transfers accountability for constitutional violations from individual officers and the state to the victims, effectively denying redress and shifting the burden of harm.
+% ABSENT_VOICES: The framers of the Constitution and the authors of Section 1983 (the civil rights statute under which most qualified immunity cases are brought) would object to a judicially created immunity that undermines the principle of government accountability.
+% DISAPPEARANCE_RATIONALE: If qualified immunity vanished overnight, the landscape of civil rights litigation would fundamentally change. More cases against officers would proceed, potentially leading to increased accountability, changes in police training and policy, and a rebalancing of power between citizens and the state. The federal judiciary would lose a significant area of discretionary power.
+% FOUNDING_PROBLEM: The doctrine was ostensibly created to protect government officials from frivolous lawsuits and the chilling effect of potential liability, allowing them to perform their duties without undue fear of litigation.
+% FOUNDING_PROBLEM_CORROBORATION: The federal judiciary and law enforcement agencies attest the problem is live, arguing that officers need protection to perform their duties effectively. Civil rights advocates and legal scholars, citing historical analysis and the lack of statutory basis, contend that the 'founding problem' is a pretext for judicial overreach and that the doctrine itself is the problem.
+narrative_ontology:disappearance_verdict(qualified_immunity_doctrine__constitutional_fidelity_reading, world_rearranges).
+narrative_ontology:founding_problem_status(qualified_immunity_doctrine__constitutional_fidelity_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(qualified_immunity_doctrine__constitutional_fidelity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(qualified_immunity_doctrine__constitutional_fidelity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(qualified_immunity_doctrine__constitutional_fidelity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(qualified_immunity_doctrine__constitutional_fidelity_reading, 0.9, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -156,13 +201,13 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is very high (0.9) because the doctrine effectively nullifies a significant portion of civil rights claims, denying justice to victims and insulating state actors from accountability. Suppression is also very high (0.95) as the doctrine actively suppresses legal challenges and alternative interpretations of official liability, creating a near-impenetrable shield. Theater ratio is low (0.1) because the doctrine's function is not performative; it is a direct and effective mechanism for achieving its (illegitimate, from this reading's view) ends. The metrics reflect the doctrine's actual impact on constitutional enforcement, which is severe and highly extractive.
+ *   The extractiveness is high (0.9) because the doctrine effectively denies legal recourse to victims of constitutional violations, transferring the cost of harm and the burden of proof onto them. Suppression is extremely high (0.95) as the doctrine actively shields officers from liability, making it nearly impossible for victims to succeed in court. The theater ratio is low (0.1) because, from this reading, the doctrine's stated purpose (protecting officers from frivolous lawsuits) is largely a cover for its actual function of granting impunity, with little genuine coordination benefit. The increasing values over time reflect the judicial expansion of the doctrine, making it progressively harder to overcome.
  *
  * PERSPECTIVAL GAP:
- *   From this reading, there is no legitimate 'perspectival gap' that would justify the doctrine. The doctrine is fundamentally illegitimate. Any 'coordination' or 'protection' claimed by other readings is seen as a cover for judicial overreach and extraction of constitutional fidelity. The divergence is between a claim of judicial authority and the actual constitutional structure.
+ *   From the perspective of the federal judiciary, the doctrine is a necessary judicial tool for managing litigation and ensuring effective governance. From the perspective of victims and civil rights advocates, it is an illegitimate barrier to justice. This story explicitly adopts the latter, constitutional fidelity, perspective, which sees the doctrine as a snare.
  *
  * DIRECTIONALITY LOGIC:
- *   The 'judiciary_institutional_power' is the primary beneficiary, as the doctrine expands its authority to create law. 'Constitutional_rights_claimants' are the primary victims, losing their ability to seek redress. The 'constitutional_text_integrity' is also a victim, as the text is undermined by judicial fabrication. Law enforcement officials are secondary beneficiaries, gaining protection from liability. The legislative branch is 'excluded' as its role in defining liability is usurped.
+ *   The federal judiciary is the primary agenda-setter and beneficiary, having expanded its own power through the doctrine's creation and refinement. Law enforcement officers are direct beneficiaries, shielded from liability. Victims of constitutional violations and civil rights advocates are the primary payers, bearing the costs of denied justice and increased litigation burden. The legislative branch is excluded, as its authority to define immunities has been usurped by the judiciary.
  *
  */
 
@@ -171,24 +216,24 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    judicial_fabrication_legitimacy,
-    'Is the judiciary''s power to create doctrines like qualified immunity, absent explicit constitutional or statutory authorization, a legitimate exercise of judicial power or an unconstitutional usurpation?',
-    'A Supreme Court decision explicitly overturning the doctrine on constitutional grounds, or a constitutional amendment clarifying judicial powers.',
-    'If deemed illegitimate, the entire doctrine collapses, fundamentally altering civil rights law. If deemed legitimate, this reading''s core premise is foreclosed, and the doctrine''s status shifts to a judicially sanctioned (though still potentially extractive) constraint.',
+    judicial_legitimacy_source,
+    'Does the federal judiciary possess inherent authority to create immunities not explicitly granted by the Constitution or statute?',
+    'A definitive Supreme Court ruling explicitly disavowing or affirming such inherent power, or a constitutional amendment clarifying the scope of judicial authority.',
+    'If such authority is denied, the doctrine is fundamentally illegitimate, reinforcing its classification as a snare. If affirmed, the doctrine gains a new, albeit controversial, source of legitimacy, potentially shifting its classification towards a tangled rope (if a coordination function is acknowledged).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(judicial_fabrication_legitimacy, conceptual, 'The fundamental question of judicial authority to create this doctrine.').
+narrative_ontology:omega_variable(judicial_legitimacy_source, conceptual, 'Ambiguity regarding the source and scope of judicial power to create legal immunities.').
 
 omega_variable(
-    constitutional_text_interpretation,
-    'Does the constitutional text, particularly 42 U.S.C. § 1983, implicitly or explicitly authorize a doctrine of qualified immunity, or does it mandate a strict liability standard for constitutional violations?',
-    'Historical legal scholarship on the intent of the 14th Amendment and § 1983, or a definitive Supreme Court ruling based solely on textual and historical analysis.',
-    'If the text is found to authorize immunity, this reading''s claim of fabrication is weakened. If it mandates strict liability, the doctrine is definitively unconstitutional.',
+    legislative_inaction_implication,
+    'Does congressional inaction on qualified immunity imply tacit approval or merely political gridlock?',
+    'Explicit legislative action (or clear, unambiguous inaction with stated intent) to either codify, reform, or abolish qualified immunity.',
+    'If inaction implies tacit approval, it could lend a thin layer of ''conventional'' legitimacy to the doctrine, slightly reducing its perceived extractiveness from a purely legalistic standpoint. If it''s merely gridlock, the doctrine''s lack of legislative grounding remains a core illegitimacy.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(constitutional_text_interpretation, empirical, 'Interpretation of constitutional and statutory text regarding official immunity.').
+narrative_ontology:omega_variable(legislative_inaction_implication, empirical, 'Whether legislative silence on qualified immunity constitutes implicit authorization or merely a failure to act.').
 
 
 /* ==========================================================================
@@ -201,24 +246,17 @@ narrative_ontology:interval(qualified_immunity_doctrine__constitutional_fidelity
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(qual_tr_t1967, qualified_immunity_doctrine__constitutional_fidelity_reading, theater_ratio, 1967, 0.05).
-narrative_ontology:measurement(qual_tr_t1982, qualified_immunity_doctrine__constitutional_fidelity_reading, theater_ratio, 1982, 0.08).
-narrative_ontology:measurement(qual_tr_t2000, qualified_immunity_doctrine__constitutional_fidelity_reading, theater_ratio, 2000, 0.1).
-narrative_ontology:measurement(qual_tr_t2010, qualified_immunity_doctrine__constitutional_fidelity_reading, theater_ratio, 2010, 0.1).
-narrative_ontology:measurement(qual_tr_t2024, qualified_immunity_doctrine__constitutional_fidelity_reading, theater_ratio, 2024, 0.1).
-
 % Extraction over time
-narrative_ontology:measurement(qual_be_t1967, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 1967, 0.1).
-narrative_ontology:measurement(qual_be_t1982, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 1982, 0.4).
-narrative_ontology:measurement(qual_be_t2000, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 2000, 0.7).
+narrative_ontology:measurement(qual_be_t1967, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 1967, 0.4).
+narrative_ontology:measurement(qual_be_t1980, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 1980, 0.6).
+narrative_ontology:measurement(qual_be_t1995, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 1995, 0.75).
 narrative_ontology:measurement(qual_be_t2010, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 2010, 0.85).
 narrative_ontology:measurement(qual_be_t2024, qualified_immunity_doctrine__constitutional_fidelity_reading, base_extractiveness, 2024, 0.9).
 
 % Suppression requirement over time
-narrative_ontology:measurement(qual_su_t1967, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 1967, 0.1).
-narrative_ontology:measurement(qual_su_t1982, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 1982, 0.45).
-narrative_ontology:measurement(qual_su_t2000, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 2000, 0.75).
+narrative_ontology:measurement(qual_su_t1967, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 1967, 0.5).
+narrative_ontology:measurement(qual_su_t1980, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 1980, 0.65).
+narrative_ontology:measurement(qual_su_t1995, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 1995, 0.8).
 narrative_ontology:measurement(qual_su_t2010, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 2010, 0.9).
 narrative_ontology:measurement(qual_su_t2024, qualified_immunity_doctrine__constitutional_fidelity_reading, suppression_requirement, 2024, 0.95).
 
@@ -227,6 +265,9 @@ narrative_ontology:measurement(qual_su_t2024, qualified_immunity_doctrine__const
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+narrative_ontology:coordination_type(qualified_immunity_doctrine__constitutional_fidelity_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(qualified_immunity_doctrine__constitutional_fidelity_reading, police_accountability_mechanisms).
+narrative_ontology:affects_constraint(qualified_immunity_doctrine__constitutional_fidelity_reading, civil_rights_litigation_access).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

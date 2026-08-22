@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,20 +69,28 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: marriage_authority__gender_rights_reading
- *   human_readable: Marriage Authority: Gender Equality Reading (Judicial Reform)
+ *   human_readable: Judicial Expansion of Constitutional Gender Equality in Personal Law
  *   domain: legal_pluralism/constitutional_law/comparative_family_law
  *
  * SUMMARY:
- *   This constraint represents the 'gender_rights_reading' of marriage
- *   authority, where judicial intervention expands constitutional equality
- *   guarantees to reform personal laws within communities. This reading
- *   targets specific discriminatory practices (e.g., triple talaq, unequal
- *   maintenance) rather than challenging the overall system of legal
- *   pluralism. It is a snare because it actively extracts traditional
- *   privileges from religious authorities and imposes new obligations, while
- *   simultaneously benefiting women's rights advocates and the judiciary by
- *   expanding their influence.
+ *   This constraint represents the 'gender rights' reading of marriage
+ *   authority, where judicial bodies actively interpret constitutional
+ *   equality guarantees to reform discriminatory practices within personal
+ *   laws (e.g., triple talaq, maintenance, property rights). It is a snare
+ *   because it targets specific practices that extract from women within
+ *   patriarchal systems, and its persistence relies on active judicial
+ *   enforcement against resistance from conservative communal authorities.
+ *   The claimed type is 'snare' because the primary function is to dismantle
+ *   existing extractive structures, rather than to coordinate a new,
+ *   universally beneficial arrangement.
  *
+ * KEY AGENTS:
+ *   - women_rights_advocates: Primary beneficiary (organized/constrained) — drive litigation for reform.
+ *   - progressive_judiciary: Agenda setter (institutional/analytical) — interprets and enforces constitutional equality.
+ *   - women_within_patriarchal_personal_law: Primary victim (powerless/identity_locked) — bear the costs of discriminatory practices.
+ *   - conservative_religious_authorities: Payer (organized/constrained) — resist judicial intervention.
+ *   - secularist_political_parties: Excluded (powerful/constrained) — advocate for a different reform mechanism (UCC).
+ *   - communal_leaders: Excluded (organized/constrained) — defend traditional personal law.
  */
 
 /* ==========================================================================
@@ -87,13 +99,13 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(marriage_authority__gender_rights_reading, 0.85).
-domain_priors:suppression_score(marriage_authority__gender_rights_reading, 0.75).
-domain_priors:theater_ratio(marriage_authority__gender_rights_reading, 0.1).
+domain_priors:suppression_score(marriage_authority__gender_rights_reading, 0.78).
+domain_priors:theater_ratio(marriage_authority__gender_rights_reading, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, extractiveness, 0.85).
-narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, accessibility_collapse, 0.6).
@@ -101,46 +113,90 @@ narrative_ontology:constraint_metric(marriage_authority__gender_rights_reading, 
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(marriage_authority__gender_rights_reading, snare).
-narrative_ontology:human_readable(marriage_authority__gender_rights_reading, "Marriage Authority: Gender Equality Reading (Judicial Reform)").
+narrative_ontology:human_readable(marriage_authority__gender_rights_reading, "Judicial Expansion of Constitutional Gender Equality in Personal Law").
 narrative_ontology:topic_domain(marriage_authority__gender_rights_reading, "legal_pluralism/constitutional_law/comparative_family_law").
 
 domain_priors:requires_active_enforcement(marriage_authority__gender_rights_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(marriage_authority__gender_rights_reading, '5cbf92d4-811f-4c15-aaf3-9e23871bd3bd').
-narrative_ontology:cs_kernel_codification('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', formalized).
-narrative_ontology:cs_authority_grounding('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', lineage).
-narrative_ontology:cs_interpretation_layer_present('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd').
-narrative_ontology:cs_reading_relation('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', marriage_authority__communal_autonomy_reading, influences).
-narrative_ontology:cs_reading_relation('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', marriage_authority__secularist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', marriage_authority__federalist_millet_reading, influences).
-narrative_ontology:cs_reading_relation('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', marriage_authority__judicial_harmonization_reading, coexists_with).
-narrative_ontology:cs_axiom('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', foundational, constitutional_equality_supremacy).
+narrative_ontology:cs_story_uid(marriage_authority__gender_rights_reading, '73de8760-da14-4de8-a413-cc53e7be9aa0').
+narrative_ontology:cs_kernel_codification('73de8760-da14-4de8-a413-cc53e7be9aa0', fixed_text).
+narrative_ontology:cs_authority_grounding('73de8760-da14-4de8-a413-cc53e7be9aa0', lineage).
+narrative_ontology:cs_interpretation_layer_present('73de8760-da14-4de8-a413-cc53e7be9aa0').
+narrative_ontology:cs_reading_relation('73de8760-da14-4de8-a413-cc53e7be9aa0', marriage_authority__communal_autonomy_reading, influences).
+narrative_ontology:cs_reading_relation('73de8760-da14-4de8-a413-cc53e7be9aa0', marriage_authority__secularist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('73de8760-da14-4de8-a413-cc53e7be9aa0', marriage_authority__federalist_millet_reading, influences).
+narrative_ontology:cs_reading_relation('73de8760-da14-4de8-a413-cc53e7be9aa0', marriage_authority__judicial_harmonization_reading, coexists_with).
+narrative_ontology:cs_axiom('73de8760-da14-4de8-a413-cc53e7be9aa0', foundational, constitutional_equality_supremacy).
 narrative_ontology:cs_axiom_status(constitutional_equality_supremacy, holdable).
-narrative_ontology:cs_axiom_grounding('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', constitutional_equality_supremacy, deontological).
-narrative_ontology:cs_axiom('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', foundational, gender_justice_as_fundamental_right).
+narrative_ontology:cs_axiom_grounding('73de8760-da14-4de8-a413-cc53e7be9aa0', constitutional_equality_supremacy, deontological).
+narrative_ontology:cs_axiom('73de8760-da14-4de8-a413-cc53e7be9aa0', foundational, gender_justice_as_fundamental_right).
 narrative_ontology:cs_axiom_status(gender_justice_as_fundamental_right, holdable).
-narrative_ontology:cs_axiom_grounding('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', gender_justice_as_fundamental_right, deontological).
-narrative_ontology:cs_reference_frame('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', constitutional_equality_framework).
-narrative_ontology:cs_drift_state('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', contemporary, gap(revival_pressure, substantial, true)).
-narrative_ontology:cs_created_at('5cbf92d4-811f-4c15-aaf3-9e23871bd3bd', '').
+narrative_ontology:cs_axiom_grounding('73de8760-da14-4de8-a413-cc53e7be9aa0', gender_justice_as_fundamental_right, deontological).
+narrative_ontology:cs_reference_frame('73de8760-da14-4de8-a413-cc53e7be9aa0', constitutional_equality_as_supreme_law).
+narrative_ontology:cs_drift_state('73de8760-da14-4de8-a413-cc53e7be9aa0', contemporary_human_rights_era, gap(revival_pressure, substantial, true)).
+narrative_ontology:cs_created_at('73de8760-da14-4de8-a413-cc53e7be9aa0', '').
 narrative_ontology:cs_kernel_id(marriage_authority__gender_rights_reading, marriage_authority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(marriage_authority__gender_rights_reading, women_rights_advocates).
-narrative_ontology:constraint_beneficiary(marriage_authority__gender_rights_reading, judiciary).
+narrative_ontology:constraint_beneficiary(marriage_authority__gender_rights_reading, progressive_judiciary).
 narrative_ontology:constraint_victim(marriage_authority__gender_rights_reading, women_within_patriarchal_personal_law).
-narrative_ontology:constraint_victim(marriage_authority__gender_rights_reading, traditional_religious_authorities).
+narrative_ontology:constraint_victim(marriage_authority__gender_rights_reading, conservative_religious_authorities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Actively litigate for gender equality within personal law, seeing judicial intervention as a necessary mechanism to reform discriminatory practices. They benefit from favorable court rulings that expand constitutional guarantees.
+narrative_ontology:constraint_stakeholder(marriage_authority__gender_rights_reading, women_rights_advocates, beneficiary,
+    organized, generational, constrained, national).
+
+% Interprets constitutional equality guarantees to apply to personal law, incrementally reforming practices like triple talaq, maintenance, and property rights. They set the agenda for reform through case law, often facing political backlash.
+narrative_ontology:constraint_stakeholder(marriage_authority__gender_rights_reading, progressive_judiciary, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Are the primary targets of discriminatory personal law practices, bearing the costs of unequal divorce, inheritance, and maintenance rules. While judicial reforms offer some relief, access to justice remains challenging, and social pressures often limit their ability to claim rights.
+narrative_ontology:constraint_stakeholder(marriage_authority__gender_rights_reading, women_within_patriarchal_personal_law, payer,
+    powerless, biographical, identity_locked, local).
+
+% Resist judicial intervention in personal law, viewing it as an infringement on communal autonomy and religious freedom. They bear the cost of losing interpretive authority and control over community norms, often mobilizing political and social resistance.
+narrative_ontology:constraint_stakeholder(marriage_authority__gender_rights_reading, conservative_religious_authorities, payer,
+    organized, generational, constrained, national).
+
+% Advocate for a Uniform Civil Code to replace all personal laws, but their legislative efforts are often stalled due to political sensitivities. While they align with gender equality goals, their preferred method (legislative UCC) is distinct from judicial incrementalism.
+narrative_ontology:constraint_stakeholder(marriage_authority__gender_rights_reading, secularist_political_parties, excluded,
+    powerful, generational, constrained, national).
+
+% Represent community interests and traditions, often opposing judicial reforms that they perceive as undermining their authority and cultural identity. Their voices are often heard in political discourse but are not directly part of the judicial process of constitutional interpretation.
+narrative_ontology:constraint_stakeholder(marriage_authority__gender_rights_reading, communal_leaders, excluded,
+    organized, generational, constrained, local).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Attempts to harmonize diverse personal law systems with constitutional guarantees of gender equality, providing a common legal floor for women's rights across different communities.
+% TRANSFER_FUNCTION: Transfers interpretive authority over personal law from religious/communal bodies to the constitutional judiciary, and aims to transfer rights and protections to women from patriarchal community structures.
+% ABSENT_VOICES: Secularist political parties, who advocate for a Uniform Civil Code, and communal leaders, who defend traditional personal law, are often excluded from the direct judicial discourse, though their influence is felt in the political sphere surrounding court decisions.
+% DISAPPEARANCE_RATIONALE: If judicial expansion of gender equality guarantees vanished, the legal landscape for women within personal law would revert to more discriminatory practices, leading to significant social and legal upheaval, and a loss of protections gained over decades of litigation.
+% FOUNDING_PROBLEM: The existence of multiple personal laws, often rooted in patriarchal traditions, led to significant gender inequality and discrimination against women within various communities, contradicting constitutional promises of equality.
+% FOUNDING_PROBLEM_CORROBORATION: Women's rights organizations, international human rights bodies, and independent legal scholars consistently attest that the problem of gender inequality within personal law remains live, despite judicial interventions. Their reports and advocacy provide corroboration from outside the immediate judicial or religious authority structures.
+narrative_ontology:disappearance_verdict(marriage_authority__gender_rights_reading, world_rearranges).
+narrative_ontology:founding_problem_status(marriage_authority__gender_rights_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(marriage_authority__gender_rights_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(marriage_authority__gender_rights_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(marriage_authority__gender_rights_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(marriage_authority__gender_rights_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -160,16 +216,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is high (0.85) because it reallocates significant rights and resources from traditional authorities and male members of communities to women, often against strong resistance. Suppression (0.75) is also high, as judicial rulings actively override existing communal norms and require enforcement against entrenched practices. The theater ratio is low (0.1) as the judicial actions are direct and intended to have real-world impact, not merely symbolic. Accessibility collapse is moderate (0.6) as it closes off traditional avenues for certain practices while opening new legal recourses.
+ *   Extractiveness is high (0.85) because the constraint directly confronts and aims to dismantle deeply entrenched, highly extractive patriarchal practices within personal law. Suppression (0.78) is also high, reflecting the active judicial enforcement required to overcome significant social and political resistance to these reforms. The theater ratio is low (0.20) because the judicial actions are genuinely aimed at substantive reform, not merely performative. The increasing extractiveness over time reflects the judiciary's growing assertiveness in tackling more sensitive and deeply entrenched discriminatory practices.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of women's rights advocates and the judiciary, this constraint is a necessary step towards justice and equality, potentially a scaffold or even a rope. However, from the perspective of traditional religious authorities and those who benefit from existing patriarchal structures, it is a clear snare, extracting their power and imposing new burdens. The engine's classification will reflect this divergence based on the declared roles and metrics.
+ *   From the perspective of women's rights advocates and the progressive judiciary, this constraint is a necessary intervention to secure fundamental rights. From the perspective of conservative religious authorities and communal leaders, it is an overreach that undermines religious freedom and communal autonomy. The engine's classification as a snare from the victim's seat captures the extractive nature of the practices being challenged, while the beneficiary seat might experience it as a rope or scaffold, providing necessary support for rights.
  *
  * DIRECTIONALITY LOGIC:
- *   The judiciary and women's rights advocates are beneficiaries (d near 0.0) as they gain influence and see their principles advanced. Traditional religious authorities and men within patriarchal personal law are victims (d near 1.0) as their traditional authority and privileges are curtailed. Women within patriarchal personal law are complex: they are victims of the original patriarchal system, but beneficiaries of this specific judicial reading, making their directionality closer to symmetric or even beneficiary depending on the specific context of the reform.
+ *   Women's rights advocates and the progressive judiciary are beneficiaries, as they gain legal victories and advance their agenda of gender equality (d near 0.0-0.2). Women within patriarchal personal law are clear victims, as they bear the direct costs of the discriminatory practices being challenged (d near 0.9-1.0). Conservative religious authorities are also victims/payers, as they lose authority and face challenges to their traditional interpretations (d near 0.7-0.8). Secularist political parties and communal leaders are excluded, as their preferred modes of engagement (legislative UCC or traditional autonomy) are not the primary mechanism of this specific judicial constraint.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint is not subject to mandatrophy in the traditional sense, as its mandate (gender equality) is actively being pursued and expanded. However, if the judicial reforms were to become purely symbolic without real-world enforcement, or if the 'gender rights' framing were used to justify other forms of extraction, it could drift towards a piton or a different form of snare. The current high extractiveness and active enforcement indicate it is far from atrophied.
  */
 
 /* ==========================================================================
@@ -177,47 +231,66 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine judicial expansion of constitutional equality, or a temporary re-framing of existing communal authority?',
-    'Long-term observation of judicial enforcement consistency and legislative response; if legislative action consistently undermines judicial rulings, it suggests re-framing rather than genuine expansion.',
-    'If a genuine expansion, the constraint is a scaffold for a more equitable legal system. If a re-framing, it remains a snare, with the judiciary acting as an agenda-setter for a new form of extraction.',
+    judicial_legitimacy_vs_communal_autonomy,
+    'To what extent does judicial intervention in personal law undermine the perceived legitimacy of communal autonomy and religious freedom, and what are the long-term consequences for social cohesion?',
+    'Longitudinal sociological studies on community perceptions of judicial authority and the impact of reforms on inter-communal relations, alongside legal analysis of the ''balancing act'' between rights and autonomy.',
+    'If judicial legitimacy is significantly eroded, it could lead to greater resistance, non-compliance, or demands for alternative legal frameworks, potentially reclassifying the constraint as a more coercive snare or even a piton if reforms become purely symbolic. If social cohesion is severely damaged, the coordination function of the state itself could be compromised.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''gender_rights_reading'' of the ''marriage_authority'' kernel. Sibling readings (communal_autonomy_reading, secularist_reading, federalist_millet_reading, judicial_harmonization_reading) would shift the beneficiary/victim structure and the claimed type.').
+narrative_ontology:omega_variable(judicial_legitimacy_vs_communal_autonomy, empirical, 'The tension between constitutional rights enforcement and the principle of communal self-governance.').
 
 omega_variable(
-    judicial_independence_vs_political_pressure,
-    'To what extent is the judiciary''s expansion of constitutional equality genuinely independent, versus influenced by political or social pressures?',
-    'Analysis of judicial appointments, dissenting opinions, and the correlation between rulings and shifts in political power or public opinion.',
-    'If politically influenced, the constraint''s claimed ''gender_rights_reading'' may be a temporary alignment rather than a stable structural shift, making its long-term persistence as a scaffold less likely.',
+    implementation_gap_vs_legal_reform,
+    'How significant is the gap between judicial pronouncements on gender equality in personal law and their actual implementation and impact on the ground for women?',
+    'Empirical studies measuring access to justice, enforcement of court orders, and changes in social practices and attitudes following judicial reforms. Analysis of legal aid availability and women''s agency in claiming rights.',
+    'If the implementation gap is wide, the constraint''s effective extractiveness from women may remain high despite legal reforms, and its theater_ratio might increase, indicating that the legal changes are more symbolic than substantive. This could push the classification towards a piton if the reforms are largely performative without real-world effect.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(implementation_gap_vs_legal_reform, empirical, 'The discrepancy between de jure legal changes and de facto lived realities for women.').
+
+omega_variable(
+    framing_under_determination_gender_rights,
+    'Is this constraint best framed as a judicial mechanism for rights enforcement, or as a political tool for state centralization and erosion of legal pluralism?',
+    'Analysis of judicial reasoning, political discourse surrounding judgments, and the long-term trajectory of state power relative to communal institutions. A shift in framing would depend on whether the primary effect is rights-based or power-based.',
+    'If framed as a political tool for state centralization, the constraint''s extractiveness might be re-evaluated as higher for communal institutions, and its suppression might be seen as targeting political autonomy rather than discriminatory practices. This could shift its classification towards a more overt snare or even a tangled rope if a coordination function (state unity) is acknowledged.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(judicial_independence_vs_political_pressure, empirical, 'Assesses the true autonomy of the judicial branch in enforcing this reading.').
+narrative_ontology:omega_variable(framing_under_determination_gender_rights, conceptual, 'Ambiguity in whether judicial reforms are primarily about rights or state power.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(marriage_authority__gender_rights_reading, 0, 15).
+narrative_ontology:interval(marriage_authority__gender_rights_reading, 1970, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
+% Theater ratio over time
+narrative_ontology:measurement(marr_tr_t1970, marriage_authority__gender_rights_reading, theater_ratio, 1970, 0.1).
+narrative_ontology:measurement(marr_tr_t1985, marriage_authority__gender_rights_reading, theater_ratio, 1985, 0.15).
+narrative_ontology:measurement(marr_tr_t2000, marriage_authority__gender_rights_reading, theater_ratio, 2000, 0.18).
+narrative_ontology:measurement(marr_tr_t2010, marriage_authority__gender_rights_reading, theater_ratio, 2010, 0.19).
+narrative_ontology:measurement(marr_tr_t2024, marriage_authority__gender_rights_reading, theater_ratio, 2024, 0.2).
+
 % Extraction over time
-narrative_ontology:measurement(marr_be_t0, marriage_authority__gender_rights_reading, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(marr_be_t5, marriage_authority__gender_rights_reading, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(marr_be_t10, marriage_authority__gender_rights_reading, base_extractiveness, 10, 0.8).
-narrative_ontology:measurement(marr_be_t15, marriage_authority__gender_rights_reading, base_extractiveness, 15, 0.85).
+narrative_ontology:measurement(marr_be_t1970, marriage_authority__gender_rights_reading, base_extractiveness, 1970, 0.7).
+narrative_ontology:measurement(marr_be_t1985, marriage_authority__gender_rights_reading, base_extractiveness, 1985, 0.75).
+narrative_ontology:measurement(marr_be_t2000, marriage_authority__gender_rights_reading, base_extractiveness, 2000, 0.8).
+narrative_ontology:measurement(marr_be_t2010, marriage_authority__gender_rights_reading, base_extractiveness, 2010, 0.83).
+narrative_ontology:measurement(marr_be_t2024, marriage_authority__gender_rights_reading, base_extractiveness, 2024, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(marr_su_t0, marriage_authority__gender_rights_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(marr_su_t5, marriage_authority__gender_rights_reading, suppression_requirement, 5, 0.65).
-narrative_ontology:measurement(marr_su_t10, marriage_authority__gender_rights_reading, suppression_requirement, 10, 0.7).
-narrative_ontology:measurement(marr_su_t15, marriage_authority__gender_rights_reading, suppression_requirement, 15, 0.75).
+narrative_ontology:measurement(marr_su_t1970, marriage_authority__gender_rights_reading, suppression_requirement, 1970, 0.65).
+narrative_ontology:measurement(marr_su_t1985, marriage_authority__gender_rights_reading, suppression_requirement, 1985, 0.7).
+narrative_ontology:measurement(marr_su_t2000, marriage_authority__gender_rights_reading, suppression_requirement, 2000, 0.75).
+narrative_ontology:measurement(marr_su_t2010, marriage_authority__gender_rights_reading, suppression_requirement, 2010, 0.77).
+narrative_ontology:measurement(marr_su_t2024, marriage_authority__gender_rights_reading, suppression_requirement, 2024, 0.78).
 
 
 /* ==========================================================================
@@ -225,13 +298,13 @@ narrative_ontology:measurement(marr_su_t15, marriage_authority__gender_rights_re
    ========================================================================== */
 
 narrative_ontology:coordination_type(marriage_authority__gender_rights_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, communal_autonomy_reading).
-narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, secularist_reading).
-narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, federalist_millet_reading).
-narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, judicial_harmonization_reading).
+narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, marriage_authority__communal_autonomy_reading).
+narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, marriage_authority__secularist_reading).
+narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, marriage_authority__federalist_millet_reading).
+narrative_ontology:affects_constraint(marriage_authority__gender_rights_reading, marriage_authority__judicial_harmonization_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'marriage_authority' kernel, focusing on gender equality through judicial reform. It is linked to other readings of the same kernel, which represent alternative framings of marriage authority in a plural legal system.
+% This constraint is one reading of the 'marriage_authority' kernel, focusing on judicial expansion of constitutional gender equality. It directly influences and is influenced by other readings of the same kernel, particularly those concerning communal autonomy and secularist reform.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

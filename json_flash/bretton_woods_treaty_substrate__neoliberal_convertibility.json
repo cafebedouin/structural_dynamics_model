@@ -4,153 +4,222 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "d85f4ef5-8ea8-42de-85cf-6972cd517287"
+    "story_uid": "6c54d5bd-7a99-4d4d-9e74-98dc0cf9889a"
   },
   "base_properties": {
-    "extractiveness": 0.85,
-    "suppression": 0.75,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.6,
-    "claimed_type": "snare",
-    "human_readable": "Bretton Woods Neoliberal Convertibility Reading: Constraints on Government Intervention for Free Capital Markets",
+    "extractiveness": 0.7,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bretton Woods: Neoliberal Convertibility Reading",
     "topic_domain": "international_political_economy/monetary_history/institutional_design",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "international_financial_institutions",
-      "global_capital_holders"
+      "global_capital_markets"
     ],
     "victims": [
-      "national_governments",
-      "domestic_policy_autonomy",
-      "labor_movements"
+      "national_policy_autonomy",
+      "developing_economies"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_ambiguity",
-      "question": "Is this constraint a genuine commitment to free capital markets, or a reinterpretation of Bretton Woods to serve neoliberal ends?",
-      "resolution_mechanism": "Historical analysis of policy shifts and institutional mandates post-1970s, comparing stated goals with actual outcomes and beneficiary structures.",
-      "impact": "If a reinterpretation, the constraint's claimed type shifts from a 'rope' (coordination for growth) to a 'snare' (extraction via imposed convertibility), with higher effective extraction for national governments.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity between original Bretton Woods intent and neoliberal reinterpretation."
+      "name": "international_financial_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Administers the rules of the international monetary system, promoting capital account liberalization and discouraging government intervention in markets. Benefits from the stability and growth of global capital flows."
     },
     {
-      "id": "policy_autonomy_vs_market_discipline",
-      "question": "To what extent does the 'discipline' imposed by free capital markets genuinely foster economic stability and growth, versus merely transferring wealth to global capital holders?",
-      "resolution_mechanism": "Empirical studies comparing economic performance and inequality in countries with varying degrees of capital account openness and policy autonomy over long time horizons.",
-      "impact": "If market discipline primarily transfers wealth, the constraint's extractiveness is higher and its coordination function is weaker, pushing it further towards a Snare. If it genuinely fosters broad-based growth, it might retain some Rope-like characteristics.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The true impact of capital market discipline on national economies."
+      "name": "global_capital_markets",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefits from the free movement of capital across borders, which increases investment opportunities and liquidity. This reading sees Bretton Woods as enabling this freedom by constraining national governments."
     },
     {
-      "id": "neoliberal_convertibility_reading_of_bretton_woods",
-      "question": "This constraint is the 'neoliberal_convertibility' reading of the 'bretton_woods_treaty_substrate' kernel. How would the classification change under the 'keynesian_embedded_liberalism' or 'sovereignty_defense' readings?",
-      "resolution_mechanism": "Analyze the structural deltas: 'keynesian_embedded_liberalism' would shift national policy autonomy from victim to beneficiary, and capital controls from violation to tool, likely yielding a Rope or Tangled Rope. 'sovereignty_defense' would emphasize national monetary control as a core beneficiary, potentially yielding a Rope or even a Mountain (if framed as an inherent right).",
-      "impact": "The classification would likely shift from Snare to Rope or Tangled Rope, with significantly lower extractiveness and suppression, and different beneficiary/victim sets, reflecting the alternative interpretations of the treaty's core purpose.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of alternative readings of the Bretton Woods kernel on constraint classification."
+      "name": "national_policy_autonomy",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The ability of national governments to use capital controls or other interventions to manage their economies is constrained. This is a conceptual agent representing the policy space lost to international financial discipline."
+    },
+    {
+      "name": "developing_economies",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Often face pressure to liberalize capital accounts, which can expose them to volatile capital flows and financial crises. Their policy options for managing these risks are limited by the prevailing interpretation of the Bretton Woods framework."
+    },
+    {
+      "name": "keynesian_economists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Would argue that capital controls are legitimate tools for macroeconomic management and that the original Bretton Woods design prioritized domestic stability over capital mobility. Their views are marginalized in this reading."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Establishes a framework for international monetary cooperation that facilitates cross-border capital flows and reduces exchange rate volatility, thereby coordinating global financial integration.",
+    "transfer_function": "Transfers policy autonomy from national governments to the international financial system, enabling greater freedom and profit for global capital markets at the cost of domestic economic management tools.",
+    "absent_voices": "Advocates for capital controls and greater national policy space, particularly from developing nations, are largely absent from the dominant discourse that champions capital account liberalization.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the neoliberal convertibility interpretation of Bretton Woods vanished, national governments would likely reassert greater control over capital flows, leading to a more fragmented and less integrated global financial system. Capital markets would face new barriers and volatility, and international financial institutions would lose significant influence.",
+    "founding_problem": "The post-WWII international monetary system needed stability to prevent competitive devaluations and facilitate trade, while also allowing for reconstruction and development.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "International financial institutions and proponents of free markets attest that the problem of capital market efficiency and global integration remains live. Critics, including many developing economies and heterodox economists, argue that the original problem of domestic policy space protection has been superseded by an agenda of financial liberalization, making the 'founding problem' a cover for new forms of extraction."
+  },
+  "interval": {
+    "start": 1971,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.6
+      "time_point": 1971,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.7
+      "time_point": 1985,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.8
+      "time_point": 2000,
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.85
+      "time_point": 2010,
+      "value": 0.68
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.75
+      "time_point": 1971,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.65
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.2
+      "time_point": 1971,
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1985,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.12
+      "time_point": 2000,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.1
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 1971,
-    "end": 2001
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'neoliberal convertibility' reading of the Bretton Woods treaty substrate, which emerged prominently after the collapse of the fixed exchange rate system in the early 1970s. In this reading, Bretton Woods is interpreted as fundamentally aiming to enable free capital markets by constraining government intervention, particularly through capital controls. This interpretation views national policy autonomy as a victim of necessary market discipline, and international finance as the primary beneficiary, with capital controls seen as violations rather than legitimate policy tools. The constraint is classified as a Snare due to its high extractiveness from national governments and its active suppression of alternative policy choices.",
-    "logic_rationale": "The extractiveness (0.85) is high because national governments are forced to prioritize capital mobility over domestic policy goals, leading to austerity measures and reduced social spending to maintain investor confidence. Suppression (0.75) is significant, as international financial institutions (IFIs) and global market pressures actively discourage and penalize deviations from capital account liberalization. The theater ratio (0.1) is low, indicating that the constraint's function is largely direct extraction and enforcement, with little performative maintenance. Accessibility collapse (0.7) is high as alternative development models (e.g., state-led industrialization with capital controls) are increasingly foreclosed. Resistance (0.6) is substantial, coming from national governments, labor movements, and civil society organizations pushing back against austerity and loss of sovereignty.",
-    "perspectival_gap": "From the perspective of international financial institutions and global capital holders, this constraint is a necessary 'Rope' for global economic efficiency and stability. From the perspective of national governments and domestic populations, it operates as a 'Snare' that extracts wealth and policy autonomy, forcing them into a race to the bottom to attract capital. The engine's classification as a Snare reflects the latter, more extractive, structural reality.",
-    "directionality_logic": "International financial institutions (IMF, World Bank) and global capital holders are the primary beneficiaries (d=0.0-0.2), as they profit from increased capital mobility and the 'discipline' imposed on national economies. National governments, particularly those in developing countries, are the primary targets (d=0.8-1.0), bearing the costs of constrained policy choices and capital flight. Domestic policy autonomy and labor movements are also victims, experiencing reduced leverage and social protections. The constraint subsidizes global finance by externalizing the costs of market volatility onto national populations.",
-    "mandatrophy_analysis": "This reading of Bretton Woods has not resolved mandatrophy; rather, it has reinterpreted the original mandate (post-WWII stability and reconstruction) to serve a new, more extractive function (global capital accumulation). The original problem of preventing competitive devaluations and fostering reconstruction has been largely superseded, but the institutional framework persists, now enforcing a different set of constraints. The classification as a Snare highlights this shift from a coordination-focused mandate to an extraction-focused one, preventing it from being mislabeled as a benign Rope or a natural Mountain.",
-    "kernel_context": "This constraint is the 'neoliberal_convertibility' reading of the 'bretton_woods_treaty_substrate' kernel. This reading emphasizes the role of Bretton Woods in enabling free capital markets by constraining government intervention. Sibling readings include 'keynesian_embedded_liberalism' (which emphasizes protecting domestic policy space via capital controls) and 'sovereignty_defense' (which prioritizes national monetary sovereignty above external discipline)."
+    "narrative_context": "This constraint represents the 'neoliberal convertibility' reading of the Bretton Woods system, particularly after the collapse of fixed exchange rates in the early 1970s. In this reading, Bretton Woods is interpreted as a framework that, over time, increasingly prioritized free capital markets and limited government intervention, leading to constraints on national policy autonomy. The claimed type is 'tangled_rope' because it offers a coordination function (global financial integration) but with significant asymmetric extraction (from national policy space to international finance).",
+    "logic_rationale": "Extractiveness is high (0.7) because the emphasis on capital mobility and convertibility imposes significant costs on national governments, particularly developing economies, by limiting their ability to manage domestic economic conditions. Suppression (0.65) reflects the institutional pressure from international financial bodies and the market discipline that discourages capital controls. Theater ratio is low (0.2) as the system is actively functional in shaping global finance, even if its stated coordination benefits are increasingly questioned by those bearing the costs.",
+    "directionality_logic": "International financial institutions and global capital markets are clear beneficiaries, as the system's rules facilitate their operations and profitability. National policy autonomy (represented as a conceptual agent) and developing economies are victims, as their policy space is curtailed. The 'identity_locked' exit for national_policy_autonomy reflects the deep institutional and ideological embedding of this interpretation, making a departure from it extremely difficult without fundamental systemic change.",
+    "perspectival_gap": "From the perspective of international financial institutions, this reading of Bretton Woods is a 'rope' that provides essential global coordination. From the perspective of national policy autonomy and developing economies, it operates as a 'snare' or 'tangled_rope' that extracts sovereignty and limits development options. The engine's per-seat classification will reflect this divergence.",
+    "mandatrophy_analysis": "The constraint's mandate has drifted from its original Keynesian intent of 'embedded liberalism' (protecting domestic policy space) to one that prioritizes capital mobility. This shift has not led to mandatrophy in the sense of a 'piton' because powerful beneficiaries (international finance) actively maintain and enforce this interpretation, ensuring its continued function as an extractive mechanism, not merely an inertial one. The 'contested' status of the founding problem highlights this drift.",
+    "kernel_context": "This constraint is the 'neoliberal_convertibility' reading of the 'bretton_woods_treaty_substrate' kernel. It emphasizes the role of Bretton Woods in enabling free capital markets and constraining government intervention. This contrasts with the 'keynesian_embedded_liberalism' reading, which focuses on protecting domestic policy space, and the 'sovereignty_defense' reading, which prioritizes national monetary sovereignty."
   },
+  "omegas": [
+    {
+      "id": "original_intent_vs_evolved_practice",
+      "question": "To what extent does the current 'neoliberal convertibility' interpretation align with the original intent of the Bretton Woods founders, or is it a significant evolution/deviation?",
+      "resolution_mechanism": "Historical analysis of primary source documents, diplomatic correspondence, and early policy debates from the Bretton Woods conference and immediate post-war period.",
+      "impact": "If it's a significant deviation, it strengthens the argument that the constraint is a 'tangled_rope' or 'snare' that has captured the original 'rope' or 'scaffold' intent. If it aligns, it suggests a more consistent 'rope' or 'mountain' (of economic law) from the outset.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assesses the historical fidelity of the neoliberal convertibility reading."
+    },
+    {
+      "id": "capital_mobility_vs_stability_tradeoff",
+      "question": "Is the emphasis on free capital markets (as per this reading) a net benefit for global economic stability and development, or does it introduce systemic risks and exacerbate inequality?",
+      "resolution_mechanism": "Empirical studies comparing economic performance, financial crises frequency, and inequality trends in countries with different capital account regimes, as well as counterfactual modeling.",
+      "impact": "If capital mobility is shown to consistently lead to instability and inequality, the 'extraction' component of this constraint is amplified, pushing it closer to a 'snare'. If it demonstrably leads to greater stability and development, the 'coordination' function is strengthened, moving it closer to a 'rope'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluates the real-world consequences of capital account liberalization."
+    },
+    {
+      "id": "reading_framing_underdetermination",
+      "question": "Is the 'neoliberal convertibility' framing the only defensible interpretation of the Bretton Woods kernel, or do alternative framings (e.g., 'keynesian_embedded_liberalism') offer equally coherent but structurally different classifications?",
+      "resolution_mechanism": "Conceptual analysis of the logical coherence and empirical fit of competing interpretations, assessing which framing best accounts for the observed institutional dynamics and outcomes.",
+      "impact": "If alternative framings are equally coherent and yield different classifications, it highlights the interpretive contestability of the kernel, suggesting the 'neoliberal convertibility' reading is a 'tangled_rope' sustained by a particular ideological consensus rather than an objective 'mountain' of economic necessity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Documents the interpretive contestability of the Bretton Woods kernel."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [
-      "washington_consensus_policy_prescriptions",
-      "structural_adjustment_programs"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'bretton_woods_treaty_substrate' kernel. This 'neoliberal_convertibility' reading emphasizes free capital markets and government non-intervention, contrasting with the 'keynesian_embedded_liberalism' reading (which prioritizes domestic policy space) and the 'sovereignty_defense' reading (which prioritizes national monetary autonomy)."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 'bretton_woods_treaty_substrate' kernel. It focuses on the system's role in enabling free capital markets by constraining national intervention, contrasting with readings that emphasize domestic policy space or national sovereignty."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "bretton_woods_treaty_substrate__keynesian_embedded_liberalism",
-        "relation": "forecloses"
+        "sibling_id": "keynesian_embedded_liberalism",
+        "relation": "influences"
       },
       {
-        "sibling_id": "bretton_woods_treaty_substrate__sovereignty_defense",
-        "relation": "coexists_with"
+        "sibling_id": "sovereignty_defense",
+        "relation": "influences"
       }
     ],
     "axioms": [
@@ -167,23 +236,24 @@
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "unfettered_capital_flows",
+    "reference_frame": "liberalized_capital_markets",
     "drift_state": {
-      "moment": "post_asian_financial_crisis",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
+      "moment": "contemporary_global_financial_system",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

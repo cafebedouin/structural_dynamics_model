@@ -4,14 +4,14 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "786c6ba5-2c59-473e-b7b9-0ec412bd05dd"
+    "story_uid": "cc9aa511-ce9b-42ea-9eaf-7fdb64899785"
   },
   "base_properties": {
-    "extractiveness": 0.6,
+    "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.5,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "UNCLOS Maritime Sovereignty: Hybrid Effective Control Reading",
     "topic_domain": "international_law/maritime_governance/geopolitical_strategy",
@@ -26,173 +26,206 @@
       "international_shipping"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_vs_artificial_feature_ambiguity",
-      "question": "Is the distinction between 'natural' and 'artificial' features sufficiently clear and consistently applied in practice, or does it allow for strategic reinterpretation?",
-      "resolution_mechanism": "Analysis of international court rulings and state practice over time; if rulings consistently uphold a clear distinction, ambiguity is low. If states frequently reclassify features to their advantage, ambiguity is high.",
-      "impact": "If ambiguous, the constraint's effective extractiveness increases for states capable of strategic reinterpretation, as they can leverage the ambiguity to expand claims. If clear, it functions more as a coordination mechanism.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in defining natural vs. artificial maritime features."
+      "name": "states_with_construction_capacity",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "These states actively engage in artificial island building and other maritime construction. They benefit from the ambiguity that allows claims to mature through effective control, expanding their maritime zones and resource access. They are the primary enforcers of these evolving claims."
     },
     {
-      "id": "effective_control_threshold_ambiguity",
-      "question": "What constitutes 'prolonged effective control absent challenge' for artificial features to mature into territorial claims, and is this threshold consistently applied?",
-      "resolution_mechanism": "Review of state protests, diplomatic responses, and military presence in contested areas. A clear, consistently enforced threshold reduces ambiguity; a vague or selectively enforced threshold increases it.",
-      "impact": "If the threshold is vague, it favors states with greater military and diplomatic capacity to assert and maintain control, increasing extraction from weaker claimants. If clear, it provides a more stable basis for coordination.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the criteria for 'effective control' over artificial features."
+      "name": "regional_maritime_powers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "States with significant naval and coast guard capabilities that can project power to enforce claims over both natural and artificial features. They benefit from the stability (or managed instability) this reading provides, allowing for gradual expansion of influence."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "This constraint is the 'hybrid_effective_control_reading' of the 'unclos_maritime_sovereignty' kernel. What would change if the 'strict_geographic_reading' or 'expansive_construction_reading' were adopted?",
-      "resolution_mechanism": "Conceptual analysis of legal precedents and state interpretations. The 'strict_geographic_reading' would reduce the scope of claims from artificial features, decreasing extraction. The 'expansive_construction_reading' would legitimize broader claims from artificial features, increasing extraction.",
-      "impact": "Adopting the 'strict_geographic_reading' would shift the constraint towards a Rope or even Mountain for natural features, and reduce the extractive potential of artificial ones. Adopting the 'expansive_construction_reading' would push it further towards a Snare, legitimizing more aggressive claims by powerful states.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Identification of this constraint as one reading of the UNCLOS maritime sovereignty kernel and its implications."
+      "name": "militarily_weaker_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "States with overlapping claims but insufficient military or economic power to challenge the prolonged effective control of larger states. They bear the cost of lost maritime zones and resources, with limited recourse beyond diplomatic protest."
+    },
+    {
+      "name": "states_without_construction_capacity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These states cannot build artificial features to expand their maritime claims. They are disadvantaged by a reading that allows such features to mature into territorial claims, as it creates an uneven playing field in resource competition."
+    },
+    {
+      "name": "international_shipping",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Commercial and military vessels that rely on freedom of navigation. They face increased uncertainty and potential restrictions as maritime claims expand and become contested, leading to longer routes or higher insurance costs."
+    },
+    {
+      "name": "unclos_arbitration_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International legal bodies tasked with interpreting UNCLOS and resolving maritime disputes. They observe the evolving practices and legal arguments, but their rulings depend on the willingness of states to submit to and abide by arbitration."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for states to assert and manage maritime claims, balancing the inherent rights of natural features with the evolving reality of human modification and effective control in disputed areas.",
+    "transfer_function": "Transfers potential maritime zones, resource rights, and strategic control from areas previously considered international waters or disputed zones to states capable of establishing and maintaining effective control over features, natural or artificial.",
+    "absent_voices": "Future generations and the global commons are absent. They would argue for a more restrictive interpretation of maritime claims to preserve freedom of navigation and shared resources, but their interests are not directly represented in current state-centric negotiations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hybrid reading vanished, the legal status of numerous artificial features and their associated claims would become immediately ambiguous or revert to strict UNCLOS interpretations. This would trigger widespread diplomatic protests, potential military confrontations over disputed zones, and a complete re-evaluation of maritime boundaries and resource access, fundamentally reorganizing geopolitical strategy.",
+    "founding_problem": "The original UNCLOS framework did not fully anticipate the scale and strategic importance of artificial island building and prolonged effective control in contested maritime areas, leading to ambiguity in how these activities affect sovereignty claims.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International legal scholars and geopolitical analysts, independent of claimant states, widely corroborate that the UNCLOS framework faces ongoing challenges in adapting to new technologies and state practices in maritime construction and control, confirming the problem is live and evolving."
+  },
+  "interval": {
+    "start": 1982,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1982,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
       "value": 0.45
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "metric": "suppression_requirement",
+      "time_point": 1995,
       "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.6
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.62
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 25,
+      "metric": "suppression_requirement",
+      "time_point": 2015,
       "value": 0.68
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 30,
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.75
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.8
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1982,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1995,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 2005,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2015,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.22
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.25
+      "time_point": 2024,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint describes a reading of UNCLOS (United Nations Convention on the Law of the Sea) that differentiates between natural and artificial maritime features for sovereignty claims. Natural features (islands, rocks) generate full territorial seas and Exclusive Economic Zones (EEZs). Artificial features (man-made islands, installations) initially generate only limited 500m safety zones, but can mature into broader territorial claims if a state exercises prolonged and unchallenged effective control. This hybrid approach attempts to balance traditional maritime law with the realities of modern construction and geopolitical assertion, but creates a gray area that favors states with the capacity to build and project power.",
+    "narrative_context": "This constraint represents the 'hybrid effective control' reading of UNCLOS maritime sovereignty, where natural features generate full maritime zones, but artificial features can mature into territorial claims through prolonged, unchallenged effective control. This reading acknowledges the legal distinction between natural and artificial features but allows for a de facto evolution of status based on state practice. It is a Tangled Rope because it provides a coordination mechanism for managing evolving claims while enabling asymmetric extraction by states with greater capacity for construction and enforcement.",
     "key_agents": [
-      "states_with_construction_capacity: Primary beneficiary (institutional/arbitrage) — leverages capacity to expand claims.",
-      "regional_maritime_powers: Primary beneficiary (institutional/arbitrage) — benefits from ambiguity and ability to project power.",
-      "militarily_weaker_claimants: Primary victim (powerless/trapped) — unable to challenge claims effectively.",
-      "states_without_construction_capacity: Victim (moderate/constrained) — unable to leverage the 'effective control' clause.",
-      "international_shipping: Victim (organized/constrained) — faces increased restrictions and potential disputes in newly claimed areas.",
-      "unclos_arbitration_bodies: Agenda setter/Observer (institutional/analytical) — interprets and adjudicates disputes, but often after facts on the ground are established."
+      "states_with_construction_capacity: Agenda-setter (institutional/mobile) — benefits from ambiguity, expands claims.",
+      "regional_maritime_powers: Beneficiary (powerful/constrained) — enforces claims, benefits from managed instability.",
+      "militarily_weaker_claimants: Payer (powerless/trapped) — loses maritime zones, limited recourse.",
+      "states_without_construction_capacity: Payer (moderate/constrained) — disadvantaged by uneven playing field.",
+      "international_shipping: Payer (organized/constrained) — faces uncertainty, increased costs.",
+      "unclos_arbitration_tribunals: Observer (institutional/analytical) — interprets law, resolves disputes."
     ],
-    "logic_rationale": "The extractiveness (0.6) is substantial because the 'effective control' clause allows powerful states to gradually expand their maritime claims beyond what strict geographic principles would permit, effectively extracting sovereign rights from the global commons or from weaker neighbors. Suppression (0.7) is high as the 'absent challenge' condition implies that states lacking military or diplomatic capacity to protest effectively are suppressed from asserting their rights. Theater ratio (0.2) is moderate; while there's genuine legal interpretation, the 'effective control' aspect often involves performative acts of presence and administration to solidify claims. Accessibility collapse (0.4) is moderate; while some alternatives (e.g., strict adherence to natural features) are conceptually available, the geopolitical reality makes them difficult to pursue. Resistance (0.5) is also moderate, as weaker states often protest diplomatically but rarely militarily.",
-    "perspectival_gap": "States with construction capacity and regional maritime powers view this reading as a pragmatic evolution of international law, allowing for necessary adaptation to new technologies and security needs. Militarily weaker claimants and states without construction capacity perceive it as a mechanism for powerful states to legitimize land-grabbing and expand their influence, effectively creating a two-tiered system of maritime rights. UNCLOS arbitration bodies attempt to apply the law neutrally, but often find themselves adjudicating disputes where facts on the ground, established through 'effective control,' heavily influence outcomes.",
-    "directionality_logic": "States with construction capacity and regional maritime powers are clear beneficiaries (d near 0.0) as they gain new territorial claims and strategic advantages. Militarily weaker claimants and states without construction capacity are victims (d near 1.0) as their potential claims are diminished or foreclosed by the actions of more powerful states. International shipping is also a victim, facing increased navigational restrictions. UNCLOS arbitration bodies are analytical observers (d near 0.5), tasked with interpreting and applying the law, but their decisions are influenced by the established facts of 'effective control'.",
-    "mandatrophy_analysis": "This reading of UNCLOS is not experiencing mandatrophy in the traditional sense, as its mandate (governing maritime claims) is still highly relevant. However, the 'effective control' clause introduces a potential for function creep, where a coordination mechanism (defining maritime zones) becomes an extraction mechanism (legitimizing expansion by force or economic power). The classification as a Tangled Rope reflects this hybrid nature, preventing it from being mislabeled as a pure Rope (which would ignore the asymmetric extraction) or a Snare (which would ignore the genuine coordination function for natural features).",
-    "kernel_context": "This constraint is the 'hybrid_effective_control_reading' of the 'unclos_maritime_sovereignty' kernel. This reading attempts to bridge the gap between traditional geographic principles and the geopolitical realities of artificial island building and prolonged presence. It stands in contrast to the 'strict_geographic_reading' which would only recognize natural features, and the 'expansive_construction_reading' which would grant full territorial rights to any effectively controlled artificial feature."
+    "logic_rationale": "Extractiveness is high (0.65) because this reading allows powerful states to expand their maritime control beyond strict geographic definitions, capturing resources and strategic advantage. Suppression (0.70) is also high, as militarily weaker states are effectively suppressed from challenging established 'effective control' claims. The theater ratio is moderate (0.20), reflecting that while there's genuine legal debate, some arguments for 'maturation' serve to legitimize pre-existing power dynamics. The metrics show a gradual increase in extractiveness and suppression over time, reflecting the increasing assertiveness of states in claiming maritime zones through construction and control.",
+    "perspectival_gap": "From the perspective of states with construction capacity, this reading offers a pragmatic path to resolving ambiguities and securing legitimate interests in evolving maritime landscapes. For weaker claimants, it is a mechanism by which powerful states incrementally erode established international law to their advantage, creating a de facto 'might makes right' scenario. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "States with construction capacity and regional maritime powers are beneficiaries, as the reading allows them to expand their influence and resource access. Militarily weaker claimants and states without construction capacity are payers, losing out on potential maritime zones. International shipping also acts as a payer due to increased uncertainty and potential restrictions. UNCLOS tribunals are observers, analyzing the situation without direct benefit or cost.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the constraint as a pure Snare by acknowledging the genuine coordination function of managing evolving claims in a complex maritime environment. However, it also highlights how this coordination can be leveraged for asymmetric extraction, preventing it from being mislabeled as a pure Rope. The 'maturation' aspect is a key area for mandatrophy, as the original intent of UNCLOS was not to reward artificial construction with full sovereignty."
   },
+  "omegas": [
+    {
+      "id": "natural_vs_artificial_feature_distinction",
+      "question": "Is the legal distinction between natural and artificial features, as it pertains to generating maritime zones, fundamentally eroding due to state practice and this 'hybrid' interpretation?",
+      "resolution_mechanism": "Analysis of future international court rulings and state practice: if artificial features are consistently treated as generating full zones, the distinction has eroded.",
+      "impact": "If the distinction erodes, the constraint shifts closer to the 'expansive construction' reading, increasing extractiveness for states without construction capacity and potentially reclassifying as a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the enduring legal significance of natural vs. artificial features."
+    },
+    {
+      "id": "effective_control_threshold_ambiguity",
+      "question": "What constitutes 'prolonged effective control absent challenge' sufficient for an artificial feature to mature into a territorial claim, and is this threshold consistently applied or subject to power dynamics?",
+      "resolution_mechanism": "Detailed case studies of specific claims and challenges, assessing the duration and nature of control, and the capacity of challenging states.",
+      "impact": "If the threshold is consistently high and objective, the constraint leans more towards a Tangled Rope. If it is low and primarily determined by the power of the claimant, it shifts towards a Snare, as 'absence of challenge' becomes 'suppression of challenge'.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Uncertainty in the criteria for 'maturation' of artificial claims."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint accurately identified as the 'hybrid effective control' reading of UNCLOS maritime sovereignty, or does it more closely align with a strict geographic or expansive construction reading?",
+      "resolution_mechanism": "Comparative analysis with the core tenets and state practices associated with the strict geographic and expansive construction readings, focusing on the treatment of artificial features and the role of effective control.",
+      "impact": "Misidentification would lead to an inaccurate classification and mischaracterization of the underlying power dynamics. If it's closer to strict geographic, extractiveness would be lower; if closer to expansive construction, extractiveness would be higher and suppression more overt.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Verifying the correct kernel reading for this constraint."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
       "unclos_maritime_sovereignty__strict_geographic_reading",
-      "unclos_maritime_sovereignty__expansive_construction_reading",
-      "freedom_of_navigation_operations",
-      "south_china_sea_arbitration_rulings"
+      "unclos_maritime_sovereignty__expansive_construction_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the UNCLOS maritime sovereignty kernel. Its hybrid approach influences both stricter and more expansive interpretations."
+    "dual_formulation_note": "This constraint is one of three readings of the UNCLOS maritime sovereignty kernel. This 'hybrid effective control' reading acknowledges both natural features and the maturation of artificial claims, influencing and coexisting with the 'strict geographic' and 'expansive construction' readings."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -200,12 +233,12 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "unclos_maritime_sovereignty__strict_geographic_reading",
-        "relation": "influences"
+        "sibling_id": "strict_geographic_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "unclos_maritime_sovereignty__expansive_construction_reading",
-        "relation": "influences"
+        "sibling_id": "expansive_construction_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
@@ -216,29 +249,30 @@
         "grounding_type": "conventional"
       },
       {
-        "atom": "effective_control_as_legitimizing_factor",
+        "atom": "effective_control_as_claim_maturation_factor",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "unclos_1982_text_and_early_practice",
+    "reference_frame": "unclos_original_intent_plus_state_practice",
     "drift_state": {
-      "moment": "contemporary_geopolitical_assertion_era",
+      "moment": "contemporary_maritime_expansion_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

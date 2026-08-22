@@ -4,14 +4,14 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "b2867636-899d-4f4a-aaf8-375e30bd5954"
+    "story_uid": "f637e142-7264-4982-b1a1-f85bbfa13023"
   },
   "base_properties": {
     "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.55,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
     "claimed_type": "tangled_rope",
     "human_readable": "Judicial Supremacy in Constitutional Interpretation",
     "topic_domain": "constitutional_law/political_theory/jurisprudence",
@@ -22,38 +22,93 @@
     ],
     "victims": [
       "legislature",
-      "executive_branch",
-      "popular_will"
+      "electorate"
+    ],
+    "vindicated_propositions": [
+      "constitutional_supremacy_doctrine",
+      "judicial_review_doctrine"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Claims and exercises final authority in interpreting the constitution, including the power to nullify legislative acts. Benefits from enhanced institutional prestige and control over legal outcomes. Its identity is fused with this guardianship role."
+    },
+    {
+      "name": "legislature",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Has its legislative acts subjected to judicial review and potential nullification. Bears the cost of having its democratic will overridden by unelected judges. Its options are to amend the constitution, pass new legislation, or accept judicial rulings."
+    },
+    {
+      "name": "electorate",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experiences the democratic process as potentially subordinate to judicial pronouncements. Benefits from rights protection but pays through reduced direct control over policy via elected representatives. Exit options are limited to electoral change or constitutional amendment."
+    },
+    {
+      "name": "rights_advocacy_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from a powerful judiciary that can enforce constitutional rights against legislative majorities. They use judicial channels to advance their agendas, often bypassing the legislative process. Their influence is amplified by judicial supremacy."
+    },
+    {
+      "name": "executive_branch",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must enforce judicial rulings, even when they conflict with its policy preferences or legislative agenda. Operates within the framework set by judicial interpretations, but can influence judicial appointments and public discourse."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a final, authoritative arbiter for constitutional disputes, ensuring a consistent interpretation of fundamental law and protecting individual rights from majoritarian overreach.",
+    "transfer_function": "Transfers ultimate interpretive authority over the constitution from the democratically elected legislature to the unelected judiciary, along with the power to nullify legislative acts.",
+    "absent_voices": "Proponents of parliamentary supremacy or popular sovereignty, who would argue that the legislature, as the most representative branch, should have the final say on constitutional meaning. Their voices are often marginalized in systems where judicial review is entrenched.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If judicial supremacy vanished, the balance of power would fundamentally shift. The legislature would gain unchecked power to interpret the constitution, potentially leading to rapid policy changes and a re-evaluation of fundamental rights. The legal system would lose its ultimate arbiter, leading to increased inter-branch conflict over constitutional meaning.",
+    "founding_problem": "To prevent legislative tyranny and protect fundamental rights by establishing an independent body with the authority to ensure all laws conform to the supreme law of the constitution.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, civil liberties organizations, and a significant portion of the public attest that the problem of potential legislative overreach and rights violations remains live, justifying judicial review. Critics from political science and some legal traditions contest the necessity of judicial supremacy for this purpose, arguing for alternative mechanisms of constitutional enforcement."
+  },
   "interval": {
-    "start": 1789,
+    "start": 1950,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1789,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1865,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1930,
-      "value": 0.55
+      "time_point": 1950,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1970,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
+      "time_point": 2010,
       "value": 0.63
     },
     {
@@ -63,27 +118,22 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1789,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1865,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1930,
-      "value": 0.6
+      "time_point": 1950,
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
+      "time_point": 2010,
       "value": 0.68
     },
     {
@@ -93,27 +143,22 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1789,
+      "time_point": 1950,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1865,
+      "time_point": 1970,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1930,
+      "time_point": 1990,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1970,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
+      "time_point": 2010,
       "value": 0.2
     },
     {
@@ -123,41 +168,60 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the 'judicial supremacy' reading of constitutional interpretive authority, where courts hold the final say on constitutional meaning, including the power to nullify legislative acts. It is one of several competing readings of how constitutional authority is distributed. This reading positions the judiciary as the ultimate guardian of fundamental rights, often at the expense of legislative will. The structural delta is that the judiciary enters the beneficiary set for interpretive authority, the legislature is subordinated, and coercion is legitimated via rights-compliance rather than democratic will.",
-    "logic_rationale": "Extractiveness is high (0.65) because the judiciary's interpretive power can significantly alter policy outcomes and impose costs on other branches and the popular will. Suppression (0.70) is also high, as the finality of judicial decisions actively suppresses alternative interpretations and legislative attempts to circumvent rulings. The theater ratio is low (0.20) because the judiciary's interpretive function is genuinely active, though its 'neutral arbiter' performance may mask some policy-making. The historical measurements show a gradual increase in both extractiveness and suppression as judicial review became more entrenched and expansive over time.",
-    "directionality_logic": "The judiciary is the primary beneficiary and agenda-setter, gaining institutional power and influence (low d). Rights advocacy groups also benefit by having a powerful institutional ally (low d). The legislature and executive branch are payers, as their authority is constrained and their actions subject to nullification (high d). The 'popular_will' is a victim, as its direct expression through elected representatives can be overridden (high d).",
-    "perspectival_gap": "From the judiciary's perspective, this is a necessary 'rope' for constitutional order and rights protection. From the legislature's and executive's perspective, it can feel like a 'snare' that extracts democratic authority. The engine's computation will likely show a tangled_rope or snare from the political branches' seats, while the judiciary's seat might compute as a rope or even a mountain (if its naturalness claim is accepted).",
-    "kernel_context": "This constraint, 'Judicial Supremacy in Constitutional Interpretation,' is a specific reading of the broader kernel 'constitutional_interpretive_authority.' It asserts the judiciary's final interpretive authority. Sibling readings include 'parliamentary_supremacy_reading' (legislative finality) and 'coordinate_construction_reading' (inter-branch dialogue)."
+    "narrative_context": "This constraint describes the 'judicial supremacy' reading of constitutional interpretive authority, where courts hold final say over the meaning of the constitution and can nullify legislative acts. This reading is often justified as a necessary safeguard for fundamental rights and constitutional order. The metrics reflect a system where judicial power has steadily increased, leading to higher extraction from the legislative branch and the electorate, and requiring active enforcement to maintain this hierarchical relationship. The claimed type is 'tangled_rope' because it provides a coordination function (finality in constitutional disputes) but also involves significant asymmetric extraction.",
+    "key_agents": [
+      "judiciary: Primary beneficiary and agenda-setter (institutional/identity_locked)",
+      "legislature: Primary target (institutional/constrained)",
+      "electorate: Secondary target (organized/constrained)",
+      "rights_advocacy_groups: Secondary beneficiary (organized/mobile)",
+      "executive_branch: Observer/enforcer (institutional/constrained)"
+    ],
+    "logic_rationale": "Extractiveness is high because the judiciary, an unelected body, effectively controls a significant portion of policy-making by setting constitutional boundaries, often against the expressed will of the legislature. Suppression is also high as the legislature's ability to enact its agenda is constrained by the threat of judicial review, and there are few direct mechanisms for the electorate to override judicial decisions. The theater ratio is low, indicating that the judicial function is genuinely active, though its scope has expanded. The increasing extractiveness and suppression over time reflect the historical trend of judicial power expansion in many constitutional democracies.",
+    "perspectival_gap": "From the judiciary's perspective, this is a necessary 'rope' for constitutional order and rights protection. From the legislature's and electorate's perspective, it can feel like a 'snare' or 'tangled_rope' where their democratic mandate is curtailed. The engine's per-seat classification will capture this divergence.",
+    "directionality_logic": "The judiciary is a clear beneficiary (d=0.0-0.1) as it gains institutional power and prestige. Rights advocacy groups also benefit (d=0.1-0.2) as they have a powerful avenue to advance their goals. The legislature and electorate are targets (d=0.7-0.9) as their power is curtailed. The executive branch is more symmetric (d=0.5) as it must enforce judicial decisions but also has its own constitutional role.",
+    "mandatrophy_analysis": "The constraint's mandate (protecting rights, ensuring constitutional order) is still live, but its operational form (judicial supremacy) is contested. The high extractiveness and suppression suggest that while a coordination function exists, it is intertwined with significant power asymmetry. This prevents mislabeling it as a pure rope, which would ignore the costs borne by the legislature and electorate.",
+    "kernel_context": "This constraint is the 'judicial supremacy' reading of the 'constitutional_interpretive_authority' kernel. Sibling readings include 'parliamentary_supremacy_reading' and 'coordinate_construction_reading'. This reading emphasizes the judiciary's final authority in constitutional matters."
   },
   "omegas": [
     {
       "id": "judicial_legitimacy_source",
-      "question": "Is judicial supremacy grounded in an inherent, non-majoritarian constitutional design, or is it a historically contingent assertion of power that could be legitimately challenged?",
-      "resolution_mechanism": "Comparative constitutional analysis of systems with different interpretive authority distributions, and historical analysis of the origins and evolution of judicial review in specific jurisdictions.",
-      "impact": "If inherent, the constraint's extractiveness is a necessary cost of constitutionalism. If contingent, it is a constructed constraint whose legitimacy is open to political contestation and potential re-negotiation.",
-      "confidence": "high",
+      "question": "Is the judiciary's claim to final interpretive authority grounded in a genuine constitutional mandate, or is it a self-asserted power that has become entrenched through practice?",
+      "resolution_mechanism": "Historical analysis of constitutional founding documents and early judicial practice, compared with contemporary legal theory and public acceptance.",
+      "impact": "If self-asserted, the constraint's legitimacy is weaker, potentially reclassifying it closer to a snare from the perspective of the legislature and electorate. If mandated, its coordination function is stronger.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Source of judicial supremacy's legitimacy: inherent constitutional design vs. historical contingency."
+      "description": "The source of judicial interpretive authority."
     },
     {
       "id": "rights_protection_efficacy",
-      "question": "Does judicial supremacy genuinely lead to better protection of fundamental rights compared to systems with more politically accountable interpretive authority?",
-      "resolution_mechanism": "Empirical studies comparing rights outcomes (e.g., civil liberties, social rights) in jurisdictions with judicial supremacy versus those with parliamentary supremacy or coordinate construction.",
-      "impact": "If rights protection is demonstrably superior, it strengthens the coordination function claim. If not, it weakens the justification for the extraction of legislative authority.",
-      "confidence": "medium",
+      "question": "Does judicial supremacy genuinely lead to better protection of fundamental rights compared to alternative models of constitutional interpretation?",
+      "resolution_mechanism": "Comparative empirical studies of rights outcomes in systems with and without judicial supremacy, controlling for other political and social factors.",
+      "impact": "If rights protection is not demonstrably superior, the primary justification for the extraction from the legislature and electorate is weakened, pushing the classification closer to a snare. If superior, it reinforces the coordination aspect.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Empirical efficacy of judicial supremacy in protecting rights."
+      "description": "Empirical efficacy of judicial supremacy in rights protection."
     },
     {
-      "id": "popular_will_subordination_threshold",
-      "question": "At what point does judicial nullification of legislative acts transition from legitimate rights protection to an illegitimate subordination of the popular will?",
-      "resolution_mechanism": "Normative and political theory analysis, combined with public opinion research on judicial legitimacy and the perceived democratic deficit. This is a preference-driven boundary.",
-      "impact": "The classification of 'popular_will' as a victim depends on this threshold. If the threshold is low, more judicial actions are seen as extractive; if high, more are seen as legitimate coordination.",
-      "confidence": "low",
+      "id": "democratic_deficit_tolerance",
+      "question": "To what extent is a 'democratic deficit' (unelected judges overriding elected representatives) an acceptable cost for constitutional stability and rights protection?",
+      "resolution_mechanism": "This is a normative question, resolvable only through societal value judgments and political philosophy, not empirical data.",
+      "impact": "Societies with a higher tolerance for democratic deficit would view the constraint as more of a rope; those with lower tolerance would view it as more of a snare.",
+      "confidence": "high",
       "type_class": "preference",
-      "description": "Defining the boundary between legitimate judicial review and illegitimate judicial overreach."
+      "description": "Societal tolerance for judicial override of democratic will."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_interpretive_authority__parliamentary_supremacy_reading",
+      "constitutional_interpretive_authority__coordinate_construction_reading",
+      "legislative_process_rules",
+      "civil_liberties_enforcement"
+    ]
+  },
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
@@ -174,13 +238,13 @@
     ],
     "axioms": [
       {
-        "atom": "judicial_review_is_final",
+        "atom": "judicial_review_is_inherent_constitutional_power",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "judiciary_is_rights_guardian",
+        "atom": "judiciary_is_final_arbiter_of_constitutional_meaning",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
@@ -195,14 +259,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

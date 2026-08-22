@@ -4,179 +4,246 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7a4caddd-3864-41b6-9aa8-28f3ea0d3c29"
+    "story_uid": "185d2436-76af-4b3f-a9a5-6f200a25818f"
   },
   "base_properties": {
     "extractiveness": 0.95,
-    "suppression": 0.98,
-    "theater_ratio": 0.05,
-    "accessibility_collapse": 0.9,
-    "resistance": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.9,
     "claimed_type": "snare",
-    "human_readable": "Dharmasastra Corpus: Abolitionist Rejection Reading",
+    "human_readable": "Dharmasastra Corpus (Abolitionist Rejection Reading)",
     "topic_domain": "religious_law/textual_interpretation/normative_authority",
     "requires_active_enforcement": true,
     "beneficiaries": [],
     "victims": [
       "dalits",
       "lower_castes",
-      "women",
-      "religious_minorities"
+      "women"
+    ],
+    "vindicated_propositions": [
+      "social_justice_imperative",
+      "human_equality_principle"
     ]
-  },
-  "interval": {
-    "start": 1000,
-    "end": 2024
-  },
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1000,
-      "value": 0.9
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1500,
-      "value": 0.92
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1800,
-      "value": 0.93
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1900,
-      "value": 0.94
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.95
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1000,
-      "value": 0.9
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1500,
-      "value": 0.93
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1800,
-      "value": 0.95
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1900,
-      "value": 0.97
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.98
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1000,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1500,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1800,
-      "value": 0.07
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1900,
-      "value": 0.06
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.05
-    }
-  ],
-  "commentary": {
-    "narrative_context": "This constraint represents the 'abolitionist rejection' reading of the Dharmasastra corpus, which views the entire textual framework and its associated caste system as fundamentally oppressive and without legitimate authority. From this perspective, the constraint operates as a snare, extracting from Dalits, lower castes, and women, and requiring active suppression to maintain its hierarchical structure. The abolitionist reading demands the complete dismantling of the system, rather than reinterpretation or reform. This is one reading of the 'dharmasastra_corpus' kernel, with sibling readings 'orthodox_literalist' and 'reformist_contextual'.",
-    "logic_rationale": "Extractiveness (0.95) and suppression (0.98) are extremely high because this reading identifies the Dharmasastra corpus as the foundational text for the caste system, which is inherently extractive and maintained through severe social, economic, and ritual coercion. Accessibility collapse (0.9) is high because the system is deeply embedded in social structures, making alternatives almost impossible for those trapped within it. Resistance (0.85) is also high, reflecting centuries of struggle against caste oppression. Theater ratio (0.05) is low because, from this perspective, the system's function is overtly oppressive, with minimal performative cover for genuine coordination.",
-    "perspectival_gap": "The abolitionist reading fundamentally rejects the legitimacy of the Dharmasastra corpus, seeing it as a tool of oppression. This contrasts sharply with orthodox readings that view it as sacred and beneficial, and reformist readings that seek to extract an ethical core. The engine's classification as a snare from this perspective highlights the structural violence inherent in the system, which is denied or rationalized by other readings.",
-    "directionality_logic": "Dalits, lower castes, and women are the primary targets (payers) of this constraint, bearing its full extractive force. Orthodox pundits and upper castes, while not explicitly listed as beneficiaries in this 'rejection' reading (as the constraint itself is seen as illegitimate), are implicitly the historical beneficiaries whose power is maintained by the system. Abolitionist activists are observers, seeking to dismantle the constraint.",
-    "mandatrophy_analysis": "From the abolitionist perspective, the Dharmasastra corpus never had a legitimate mandate beyond establishing and maintaining an oppressive hierarchy. Therefore, it is not a case of mandatrophy (function atrophying) but rather a recognition of its inherent extractive nature from its inception. The classification as a snare prevents mislabeling it as a degraded coordination mechanism or a temporary support structure."
   },
   "omegas": [
     {
       "id": "kernel_reading_identity",
-      "question": "Is this constraint a genuine 'abolitionist rejection' of the Dharmasastra corpus, or does it implicitly retain elements of the textual framework it purports to reject?",
-      "resolution_mechanism": "Analysis of proposed alternative frameworks and their practical implementation: if they draw on any Dharmic concepts or structures, the rejection is partial.",
-      "impact": "If elements are implicitly retained, the extractiveness and suppression might be slightly lower, and the classification might shift towards a more complex 'tangled_rope' if some coordination function is inadvertently preserved.",
-      "confidence": "medium",
+      "question": "Is this constraint a genuine, independent structural claim, or one reading of the Dharmasastra corpus kernel?",
+      "resolution_mechanism": "This is explicitly declared as one reading of the 'dharmasastra_corpus' kernel, instantiated by the 'abolitionist_rejection' perspective. Its structural properties are derived from this specific interpretive frame.",
+      "impact": "Recognizing it as a reading clarifies that its classification (Snare) is contingent on the abolitionist interpretive frame, which identifies the corpus as fundamentally extractive. Other readings (e.g., orthodox_literalist, reformist_contextual) would yield different classifications for the same underlying text.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Ambiguity in the completeness of the rejection of the Dharmasastra corpus."
+      "description": "This constraint is the 'abolitionist_rejection' reading of the 'dharmasastra_corpus' kernel."
+    },
+    {
+      "id": "legitimacy_of_authority",
+      "question": "Does the Dharmasastra corpus retain any legitimate authority, or is its authority wholly derived from historical oppression?",
+      "resolution_mechanism": "Analysis of the historical and contemporary impact of Dharmasastra on social structures, focusing on whether its prescriptive elements can be disentangled from their historical role in caste enforcement. If all beneficial elements are separable and re-groundable outside the corpus, its authority is wholly derived from oppression.",
+      "impact": "If no legitimate authority remains, the constraint is a pure Snare, with no coordination function. If some separable, legitimate authority could be identified, it might be reclassified as a Tangled Rope, acknowledging a vestigial coordination function alongside extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the residual legitimate authority of the Dharmasastra corpus."
     },
     {
       "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (economic dependency, legal barriers) or internalized (belief in karma, social pressure, identity fusion with caste)?",
-      "resolution_mechanism": "Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed (e.g., individuals migrating to contexts without overt caste discrimination still experience internalized caste identity or trauma), reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making true liberation more difficult.",
-      "confidence": "high",
+      "question": "Is the measured suppression structural (external barriers) or internalized (cognitive patterns that persist after barrier removal)?",
+      "resolution_mechanism": "Post-dismantling social trajectory: if hierarchical social patterns and self-limiting beliefs persist after formal caste structures are removed, reclassify as partially internalized suppression.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making full liberation more difficult.",
+      "confidence": "medium",
       "type_class": "empirical",
       "description": "Structural vs. internalized suppression mechanism in the caste system."
     }
   ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'abolitionist rejection' reading of the Dharmasastra corpus, which views the entire textual framework and its associated caste system as fundamentally oppressive. From this perspective, the Dharmasastra is a Snare, designed to extract labor, dignity, and autonomy from lower castes and women, with no legitimate coordination function. Its persistence relies on active suppression and the denial of alternatives, rather than any inherent naturalness or consensual agreement. The abolitionist stance demands the complete abandonment of the textual framework and the dismantling of the social hierarchy it underpins.",
+    "key_agents": [
+      "dalits: Primary target (powerless/trapped) — bears extreme extraction and suppression.",
+      "lower_castes: Primary target (powerless/identity_locked) — bears significant extraction and suppression.",
+      "women: Primary target (powerless/identity_locked) — bears extraction and suppression across all castes.",
+      "brahmins_and_upper_castes: Historical beneficiaries (institutional/arbitrage) — benefited from the system's hierarchy.",
+      "abolitionist_activists: Agenda setter/Observer (organized/generational) — actively resists the constraint and advocates for its dismantling.",
+      "orthodox_scholars: Agenda setter (institutional/generational) — defends the traditional interpretation and authority of Dharmasastra."
+    ],
+    "logic_rationale": "The extractiveness (0.95) is extremely high, reflecting the systemic deprivation and exploitation inherent in the caste system. Suppression (0.9) is also very high, as the system historically relied on severe social, economic, and physical coercion, and continues to suppress dissent and alternative social structures. Theater ratio (0.1) is low because, from this reading, there is little performative justification; the system's function is direct extraction. Accessibility collapse (0.8) is high due to the pervasive nature of caste, making exit from its social and economic strictures extremely difficult. Resistance (0.9) is high, reflecting centuries of struggle against the caste system.",
+    "perspectival_gap": "From the abolitionist perspective, there is no legitimate 'beneficiary' of the Dharmasastra, only historical perpetrators of extraction. The system is a pure Snare for its victims. Those who historically benefited (brahmins_and_upper_castes) did so through the oppression of others, not through genuine coordination. The engine's classification will reflect this extreme asymmetry.",
+    "directionality_logic": "Dalits, lower_castes, and women are full targets (d=1.0) due to their extreme lack of exit options and the direct extraction they face. Brahmins and upper castes were historical beneficiaries (d=0.0) as the system subsidized their status and resources. Abolitionist activists are external agents seeking to dismantle the constraint, effectively acting as analytical observers with high resistance.",
+    "mandatrophy_analysis": "From the abolitionist reading, the Dharmasastra never had a legitimate coordination function that atrophied. It was always a mechanism of extraction and oppression. Therefore, the concept of mandatrophy (a mandate outliving its function) does not apply; the constraint's function was always illegitimate. The classification as a Snare prevents mislabeling it as a degraded coordination mechanism (Piton) or a hybrid (Tangled Rope)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "caste_system_social_hierarchy",
+      "gender_roles_patriarchal_norms"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'dharmasastra_corpus' kernel. Its structural properties are derived from the abolitionist interpretive frame, which views the corpus as fundamentally oppressive and extractive. Other readings (orthodox_literalist, reformist_contextual) offer different classifications and structural properties for the same underlying text."
+  },
+  "stakeholders": [
+    {
+      "name": "dalits",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Historically and currently subjected to extreme social exclusion, economic exploitation, and violence, with virtually no means of escaping the prescribed roles and indignities imposed by the caste system derived from Dharmasastra. Their identity is deeply intertwined with their assigned status."
+    },
+    {
+      "name": "lower_castes",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Subjected to various forms of discrimination, limited opportunities, and social stigma, though with slightly more mobility than Dalits. Their social and economic life is heavily constrained by caste norms, making exit from the system's influence extremely difficult due to identity and community ties."
+    },
+    {
+      "name": "women",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Across all castes, women are subjected to patriarchal norms and restrictions on autonomy, education, and property rights, as prescribed by Dharmasastra. Their identity and social standing are often defined by their marital and familial roles, making individual exit from these norms highly challenging."
+    },
+    {
+      "name": "brahmins_and_upper_castes",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Historically and currently benefit from the social, economic, and ritual privileges conferred by the caste system. They occupy positions of power and influence, with their status often reinforced by the traditional interpretations of Dharmasastra. They have significant power to maintain or alter the system, but benefit from its current form."
+    },
+    {
+      "name": "abolitionist_activists",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Actively challenge the legitimacy and authority of Dharmasastra and the caste system. They advocate for radical social reform and the complete dismantling of hierarchical structures, often facing significant resistance and personal risk. Their power comes from collective action and moral authority."
+    },
+    {
+      "name": "orthodox_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Interpret and uphold the traditional authority of Dharmasastra, often emphasizing its ritual and moral prescriptions while defending or reinterpreting its caste-related aspects. Their careers and social standing are deeply tied to the preservation of the textual tradition and its interpretive lineage."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "From this reading, the Dharmasastra has no legitimate coordination function; its primary function is to establish and maintain a hierarchical social order through coercion.",
+    "transfer_function": "Transfers social status, economic resources, and ritual purity from lower castes and women to upper castes, while simultaneously extracting labor and obedience from the former.",
+    "absent_voices": "The voices of those historically silenced and marginalized by the caste system, particularly Dalits and lower-caste women, have been systematically excluded from the interpretive tradition. Their perspectives would unequivocally condemn the corpus as an instrument of oppression.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Dharmasastra corpus and its associated social structures were to vanish overnight, the entire social, economic, and religious fabric of societies where it holds sway would undergo a radical, transformative rearrangement. Hierarchies would collapse, new forms of social organization would emerge, and the distribution of power and resources would be fundamentally altered.",
+    "founding_problem": "The Dharmasastra was constructed to establish and legitimize a hierarchical social order (varna/jati system) and to regulate social conduct, ritual purity, and legal obligations within that order.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Orthodox scholars and traditionalists attest that the founding problem of maintaining social order and dharma is still live. Abolitionist activists and social scientists, however, argue that the 'problem' it solved was the consolidation of power for certain groups, and that this 'problem' (i.e., the desire for hierarchical control) is indeed still live, but illegitimate. Independent historical and sociological analyses corroborate the role of Dharmasastra in establishing and perpetuating social hierarchy."
+  },
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "dharmasastra_corpus__orthodox_literalist",
+        "sibling_id": "orthodox_literalist",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "dharmasastra_corpus__reformist_contextual",
+        "sibling_id": "reformist_contextual",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "dharmasastra_inherently_oppressive",
+        "atom": "inherent_equality_of_all_beings",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "caste_system_must_be_abolished",
+        "atom": "textual_legitimacy_derived_from_justice",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "pre_caste_egalitarian_society",
+    "reference_frame": "universal_human_equality",
     "drift_state": {
-      "moment": "contemporary_abolitionist_movement",
+      "moment": "contemporary_human_rights_era",
       "direction": "repudiation_pressure",
       "magnitude": "severe",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

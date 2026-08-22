@@ -4,26 +4,83 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "ae252cde-00f2-45db-8a99-f63115a3cf24"
+    "story_uid": "a69d3cc2-3006-4fc8-aeea-21d63e356fd3"
   },
   "base_properties": {
     "extractiveness": 0.45,
     "suppression": 0.3,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.6,
-    "resistance": 0.2,
+    "resistance": 0.25,
     "claimed_type": "rope",
-    "human_readable": "Republican Reading of Sovereign Legitimacy",
+    "human_readable": "Republican Reading of Popular Sovereignty",
     "topic_domain": "political_philosophy/constitutional_theory/legitimacy_studies",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "citizenry_with_voting_rights",
+      "citizenry_with_franchise",
       "elected_representatives"
     ],
     "victims": [
-      "excluded_from_franchise",
-      "political_minorities"
+      "excluded_populations",
+      "minority_factions"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "citizenry_with_franchise",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The source of legitimate authority, delegating power through elections and participatory mechanisms. Benefits from self-governance but is constrained by the practicalities of collective action and the potential for majoritarian overreach."
+    },
+    {
+      "name": "elected_representatives",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Exercise delegated authority, enacting laws and governing on behalf of the people. Their legitimacy is tied to electoral cycles and adherence to constitutional principles. They benefit from holding power but are accountable to the electorate."
+    },
+    {
+      "name": "excluded_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Those denied voting rights or effective participatory mechanisms. They bear the costs of governance without having a direct voice in its formation, experiencing the constraint as a form of extraction or suppression of their political agency."
+    },
+    {
+      "name": "minority_factions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "While possessing franchise, their interests may be systematically overridden by majoritarian rule. They pay the cost of policies they oppose and face challenges in achieving political representation or influence, experiencing a form of diffuse extraction."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the theoretical underpinnings and practical application of popular sovereignty and social contract theory. They assess the coherence and effectiveness of the republican model of legitimacy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a stable and legitimate framework for collective decision-making and governance by channeling popular will into representative institutions, preventing anarchy or arbitrary rule.",
+    "transfer_function": "Transfers political authority from the collective 'people' to elected officials, in exchange for governance and the protection of rights. It also transfers the burden of compliance from the governed to the governing, who must continually seek consent.",
+    "absent_voices": "Those historically or presently excluded from the franchise (e.g., non-citizens, certain historical demographics) would argue that the 'popular' in popular sovereignty is too narrowly defined, making the system less legitimate than claimed. Future generations, whose consent is presumed, also lack a direct voice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in legitimate authority flowing from popular consent vanished, the entire edifice of modern republican governance would collapse. Elections would lose meaning, laws would lose their moral force, and political systems would devolve into either pure power struggles or alternative, non-consensual forms of authority.",
+    "founding_problem": "To establish a stable and just form of government that avoids both the tyranny of monarchy and the chaos of direct democracy, by grounding authority in the consent of the governed.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Political theorists and historians attest to the ongoing challenge of balancing popular will with minority rights and institutional stability. Contemporary political discourse and constitutional debates consistently revisit the scope and limits of popular sovereignty, indicating the problem remains live. International human rights organizations also corroborate the ongoing struggle for universal franchise and political participation."
   },
   "interval": {
     "start": 1789,
@@ -33,27 +90,27 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1789,
-      "value": 0.3
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1850,
-      "value": 0.4
+      "time_point": 1865,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1900,
-      "value": 0.45
+      "time_point": 1920,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1950,
-      "value": 0.4
+      "time_point": 1965,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.45
+      "value": 0.43
     },
     {
       "metric": "base_extractiveness",
@@ -63,27 +120,27 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1789,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
       "value": 0.4
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1850,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1900,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1950,
+      "time_point": 1965,
       "value": 0.25
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.3
+      "value": 0.28
     },
     {
       "metric": "suppression_requirement",
@@ -93,27 +150,27 @@
     {
       "metric": "theater_ratio",
       "time_point": 1789,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1865,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1850,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1900,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.1
+      "time_point": 1965,
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.1
+      "value": 0.09
     },
     {
       "metric": "theater_ratio",
@@ -122,51 +179,48 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the 'republican reading' of sovereign legitimacy, where authority originates from the people and is delegated through consent, typically via democratic processes. It is grounded in popular sovereignty and social contract theory. This reading emphasizes accountability and the right of the governed to choose their rulers, but also acknowledges the potential for majoritarian extraction from minorities or those excluded from the franchise. The constraint is claimed as a Rope due to its genuine coordination function in establishing stable governance, but its moderate extractiveness and suppression reflect the ongoing costs and exclusions inherent in its operation.",
-    "logic_rationale": "Extractiveness is moderate (0.45) because while the system aims for collective benefit, it inherently extracts compliance and resources from all, and can impose costs on political minorities. Suppression is low (0.3) as the system relies on consent, but active enforcement is required to maintain order and suppress challenges to its foundational principles. Theater ratio is low (0.1) as the mechanisms of consent (elections, constitutional adherence) are generally functional, though their fairness and representativeness are subject to ongoing debate. Accessibility collapse is moderate (0.6) as alternatives to this system (e.g., monarchy, anarchy) are generally seen as less legitimate or viable within this framework, but not entirely impossible to conceive or advocate for. Resistance is low (0.2) because the system generally enjoys broad, if sometimes grudging, acceptance.",
-    "directionality_logic": "The citizenry with voting rights and elected representatives are primary beneficiaries, as they are the source and wielders of legitimate power, respectively. Those excluded from the franchise and political minorities are victims, as they bear the costs of governance without full participation or representation. The directionality for beneficiaries is low (subsidized by the system's stability), while for victims it is high (targeted by its exclusionary or majoritarian aspects).",
-    "perspectival_gap": "From the perspective of the citizenry and elected representatives, this constraint is a legitimate and beneficial framework for self-governance. From the perspective of excluded groups or political minorities, it can appear as a system that legitimizes their marginalization or the suppression of their interests, even if it is not a pure snare. The engine's per-seat classification will reflect this divergence.",
-    "mandatrophy_analysis": "The constraint's mandate (to provide legitimate, accountable governance) remains live. The classification as a Rope, rather than a Snare, prevents mislabeling genuine coordination as pure extraction, while acknowledging the real costs and exclusions. The ongoing need for active enforcement and the potential for majoritarian tyranny prevent it from being a pure Mountain, as its persistence is not entirely natural or self-sustaining without human action and vigilance.",
-    "kernel_context": "This constraint, 'sovereign_legitimacy__republican_reading', is one interpretation of the 'sovereign_legitimacy' kernel. It instantiates the view that legitimate authority flows upward from the people through delegated consent. Sibling readings include 'monarchical_reading' (authority flows downward from an inherited sovereign) and 'constitutional_hybrid_reading' (authority is dual-sourced, combining inherited and delegated elements)."
+    "narrative_context": "This constraint describes the 'republican reading' of legitimate authority, where power originates from the people and is delegated through consent, typically via elections and constitutional frameworks. It is grounded in popular sovereignty and social contract theory. While presented as a 'rope' by its proponents, ensuring coordination and self-governance, it carries a moderate level of extraction from those excluded from the franchise or whose voices are marginalized by majoritarian mechanisms. The historical measurements reflect the expansion of suffrage and reduction of overt suppression over time, leading to a decrease in extractiveness and suppression, though a slight recent uptick suggests new challenges.",
+    "logic_rationale": "The extractiveness (0.45) reflects the inherent costs of collective decision-making and the potential for majoritarian rule to impose costs on minorities, as well as the historical exclusion of certain groups. Suppression (0.30) is present in the mechanisms that define and limit who counts as 'the people' and how their consent is expressed, though it has decreased significantly over time with the expansion of democratic rights. The theater ratio (0.10) is low, indicating that the mechanisms of consent and representation are largely functional, though there can be performative aspects in political campaigns. Accessibility collapse (0.60) is moderate; while alternatives to republicanism exist, the established system makes them difficult to realize. Resistance (0.25) is present from excluded groups and those advocating for deeper forms of democracy.",
+    "directionality_logic": "The citizenry with franchise and elected representatives are beneficiaries, as they directly participate in and benefit from the self-governance framework. Excluded populations and minority factions are payers, as they bear the costs of a system where their consent is either not sought or their interests are systematically underrepresented. The directionality for excluded populations is high (near 1.0), while for minority factions it is moderate (closer to 0.7-0.8), reflecting their partial inclusion.",
+    "perspectival_gap": "From the perspective of the citizenry with franchise, this is a legitimate and beneficial 'rope' ensuring self-governance. From the perspective of excluded populations, it operates as a 'snare' or 'tangled rope' that extracts compliance without genuine consent. Elected representatives view it as a 'rope' that grants them authority, while minority factions may experience it as a 'tangled rope' due to majoritarian tyranny. The engine's per-seat classification will reflect these divergences.",
+    "mandatrophy_analysis": "This constraint is not currently experiencing mandatrophy. The founding problem of establishing legitimate governance through consent remains 'live', and the mechanisms of popular sovereignty, while imperfect, are still actively engaged. The slight increase in extractiveness and suppression in recent years suggests new challenges to the ideal of popular sovereignty, rather than an atrophy of its function. The classification as 'rope' (claimed) with moderate extraction (metrics) prevents mislabeling it as pure extraction, acknowledging its genuine coordination function, while also highlighting its costs.",
+    "kernel_context": "This constraint is the 'republican reading' of the 'sovereign_legitimacy' kernel. It posits that legitimate authority flows upward from the people through delegated consent. This reading stands in contrast to the 'monarchical_reading' (authority flows downward from a sovereign by inherited right) and the 'constitutional_hybrid_reading' (authority is dual-sourced, inherited and delegated, mediated by constitutional law)."
   },
   "omegas": [
     {
-      "id": "majoritarian_tyranny_risk",
-      "question": "To what extent does the republican reading's emphasis on majority rule lead to the systematic extraction from or suppression of political minorities, effectively turning it into a Snare for those groups?",
-      "resolution_mechanism": "Empirical analysis of legislative outcomes and judicial protections for minority rights over time, particularly in systems with weak constitutional checks on majoritarian power.",
-      "impact": "If majoritarian tyranny is consistently demonstrated, the effective classification for political minorities would shift towards Snare, indicating a higher degree of extraction and suppression than the overall Rope classification suggests.",
+      "id": "scope_of_the_people",
+      "question": "Who constitutes 'the people' whose consent grants legitimacy, and how is this definition enforced or contested?",
+      "resolution_mechanism": "Historical analysis of suffrage expansion, legal challenges to voting rights, and sociological studies of political inclusion/exclusion.",
+      "impact": "If 'the people' is narrowly defined and actively policed, the constraint's effective suppression and extractiveness are higher, potentially shifting its classification towards a 'snare' for excluded groups. If broadly inclusive, it reinforces the 'rope' classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity in the definition of 'the people' in popular sovereignty."
+    },
+    {
+      "id": "consent_mechanism_authenticity",
+      "question": "To what extent do electoral and participatory mechanisms genuinely reflect the 'delegated consent' of the people, versus being subject to manipulation or apathy?",
+      "resolution_mechanism": "Empirical studies of electoral integrity, voter turnout, political campaign finance, and public trust in institutions.",
+      "impact": "If consent mechanisms are found to be systematically compromised or performative, the 'theater_ratio' would increase, and the 'extractiveness' from the citizenry would be higher, as their consent is presumed rather than genuinely given. This could shift the classification towards a 'piton' or 'tangled_rope'.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assesses the risk of majoritarian rule becoming extractive for minorities."
+      "description": "Authenticity of consent mechanisms in republican governance."
     },
     {
-      "id": "consent_vs_coercion_boundary",
-      "question": "At what point does 'delegated consent' become indistinguishable from 'coerced compliance' for those with limited exit options or suppressed voices within the system?",
-      "resolution_mechanism": "Comparative analysis of political systems with varying degrees of electoral freedom, civil liberties, and protections for dissent. Examination of historical periods where franchise was restricted.",
-      "impact": "If the boundary is frequently crossed, the overall suppression metric for the constraint would be higher, and its classification would lean more towards Tangled Rope or Snare, as the 'consent' narrative would be revealed as cover for coercion.",
+      "id": "majoritarian_tyranny_threshold",
+      "question": "At what point does majoritarian rule, even if based on consent, become a form of 'tyranny of the majority' that extracts from or suppresses minority rights, thereby undermining its own legitimacy?",
+      "resolution_mechanism": "Legal and philosophical analysis of constitutional protections for minorities, historical case studies of majoritarian overreach, and normative debates on the limits of popular sovereignty.",
+      "impact": "If the threshold for majoritarian tyranny is low or frequently crossed, the 'extractiveness' from minority factions would be re-evaluated as higher, and the 'suppression' of their political agency more severe, potentially reclassifying the constraint as a 'tangled_rope' for these groups.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Examines the line between genuine consent and coerced compliance in republican systems."
-    },
-    {
-      "id": "republican_vs_monarchical_legitimacy",
-      "question": "Is the republican reading of sovereign legitimacy fundamentally incompatible with the monarchical reading, or can elements of both coexist within a single political framework?",
-      "resolution_mechanism": "Analysis of constitutional monarchies and historical transitions from monarchy to republic. Conceptual analysis of the logical coherence of combining inherited and delegated authority.",
-      "impact": "If fundamentally incompatible, the 'forecloses' relation to the monarchical reading is strengthened. If coexistence is robust, it supports the 'coexists_with' or 'influences' relations, suggesting a more complex, hybrid political reality.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Examines the compatibility of republican and monarchical legitimacy claims."
+      "description": "The boundary between legitimate majoritarian rule and majoritarian tyranny."
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [
-      "sovereign_legitimacy__monarchical_reading",
-      "sovereign_legitimacy__constitutional_hybrid_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'sovereign_legitimacy' kernel. The 'republican_reading' emphasizes popular sovereignty and delegated consent, contrasting with monarchical and hybrid constitutional models. Each reading represents a distinct structural claim about the source and flow of legitimate authority."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 'sovereign_legitimacy' kernel. It focuses on the upward flow of authority from the people through consent, contrasting with monarchical and constitutional hybrid readings."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -174,23 +228,23 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "sovereign_legitimacy__monarchical_reading",
+        "sibling_id": "monarchical_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "sovereign_legitimacy__constitutional_hybrid_reading",
+        "sibling_id": "constitutional_hybrid_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "legitimacy_from_popular_consent",
+        "atom": "authority_derives_from_consent",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "government_by_delegated_power",
+        "atom": "popular_sovereignty_is_supreme",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
@@ -198,21 +252,22 @@
     ],
     "reference_frame": "enlightenment_social_contract",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_political_polarization",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

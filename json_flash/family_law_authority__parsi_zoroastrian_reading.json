@@ -4,26 +4,83 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "a6631180-7e17-463b-9c1e-09f66cd41eec"
+    "story_uid": "182cba4d-f70b-491e-beec-fe543ea0d646"
   },
   "base_properties": {
-    "extractiveness": 0.4,
-    "suppression": 0.6,
-    "theater_ratio": 0.1,
+    "extractiveness": 0.45,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
     "accessibility_collapse": 0.7,
-    "resistance": 0.2,
+    "resistance": 0.3,
     "claimed_type": "tangled_rope",
-    "human_readable": "Parsi Zoroastrian Marriage Law",
+    "human_readable": "Parsi Zoroastrian Marriage as Community Preservation",
     "topic_domain": "comparative_law/religious_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "parsi_zoroastrian_community",
-      "zoroastrian_priesthood"
+      "priestly_council"
     ],
     "victims": [
-      "parsi_zoroastrian_individuals_seeking_intermarriage",
-      "children_of_interfaith_marriages"
+      "intermarrying_parsis",
+      "parsi_youth"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "parsi_zoroastrian_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Benefits from the preservation of its distinct cultural and religious identity through endogamous marriage, maintaining a small, cohesive group. The community's survival is seen as tied to these marital norms."
+    },
+    {
+      "name": "priestly_council",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Administers and enforces the religious laws governing marriage, including ritual validity and community recognition. They are the primary interpreters of tradition and hold significant social authority within the community."
+    },
+    {
+      "name": "intermarrying_parsis",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals who marry outside the Parsi Zoroastrian community. They face social ostracization, loss of community status, and their children may not be recognized as Parsi, bearing the direct costs of the endogamy requirement."
+    },
+    {
+      "name": "parsi_youth",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Younger generations who may face pressure to conform to endogamous norms, limiting their choice of partners. While not directly penalized for intermarriage until it occurs, the social expectation is a significant constraint on their personal autonomy."
+    },
+    {
+      "name": "secular_legal_systems",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National legal frameworks (e.g., in India) that recognize personal laws for religious communities but also uphold principles of individual rights and equality. They observe and sometimes adjudicate conflicts between religious and secular marital norms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the preservation of the distinct Parsi Zoroastrian ethno-religious identity and cultural heritage by regulating marriage practices to maintain endogamy and ritual purity.",
+    "transfer_function": "Transfers social status, community recognition, and religious legitimacy to endogamously married couples and their offspring, while denying these to intermarrying individuals and their families.",
+    "absent_voices": "Potential Parsi reformers advocating for more inclusive interpretations of community membership and marriage, who are often marginalized or silenced by traditional authorities. Also, non-Parsi spouses of intermarrying individuals, who have no standing within the community's internal governance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the religious laws governing Parsi marriage and the associated social enforcement vanished, the community's endogamous structure would rapidly dissolve. Intermarriage rates would likely increase, leading to a more diverse, less distinct Parsi population over generations, fundamentally altering the community's identity and demographic profile.",
+    "founding_problem": "The Parsi Zoroastrian community, as a small diaspora group, faced the existential threat of assimilation and loss of identity in foreign lands, particularly after migration from Persia.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Community elders and religious scholars consistently attest to the ongoing threat of demographic decline and cultural assimilation. While some younger members contest the efficacy or fairness of endogamy as a solution, the underlying problem of community preservation is widely acknowledged within and outside the community, including by sociological studies of diaspora groups."
   },
   "interval": {
     "start": 1900,
@@ -33,116 +90,143 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1900,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1950,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
+      "time_point": 1930,
       "value": 0.38
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.4
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1900,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1950,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.58
+      "time_point": 1930,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.67
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.6
+      "value": 0.65
     },
     {
       "metric": "theater_ratio",
       "time_point": 1900,
-      "value": 0.05
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.08
+      "time_point": 1930,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.09
+      "time_point": 1960,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.1
+      "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the Parsi Zoroastrian community's marriage laws, which are primarily designed to preserve the community's distinct ethno-religious identity through endogamy. It is a reading of the broader 'family_law_authority' kernel, emphasizing community preservation and priestly authority. The constraint operates as a Tangled Rope, providing coordination for community survival while extracting social and religious status from individuals who deviate from endogamous norms.",
-    "logic_rationale": "Extractiveness is moderate (0.4) as it primarily extracts social and religious status rather than direct economic value, but this is significant within the community. Suppression is higher (0.6) due to strong social pressure and the priesthood's authority in denying religious recognition for interfaith marriages and their offspring. Theater ratio is low (0.1) because the community preservation function is genuinely active and the rules are consistently enforced, not merely performed. Accessibility collapse is high (0.7) because for individuals seeking full community membership, there are few recognized alternatives to endogamous marriage.",
-    "perspectival_gap": "From the perspective of the Parsi Zoroastrian community and priesthood, the constraint is a necessary mechanism for cultural and religious survival (beneficiary seat). From the perspective of individuals seeking intermarriage, it is a restrictive and exclusionary force that imposes significant personal costs (payer/victim seats). The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "The Parsi Zoroastrian community and priesthood are beneficiaries (d near 0.0) as they gain from the preservation of their identity and the maintenance of their authority. Individuals seeking intermarriage and their children are victims/payers (d near 1.0) as they bear the costs of social exclusion and denial of religious status. Secular legal systems are observers, not directly affected by the internal religious rules.",
-    "kernel_context": "This constraint instantiates the 'parsi_zoroastrian_reading' of the 'family_law_authority' kernel. It emphasizes endogamy and priestly authority for community preservation, distinguishing it from sibling readings like the 'hindu_dharmashastra_reading' (sacramental samskara), 'muslim_shariat_reading' (civil contract under religious law), 'christian_canonical_reading' (sacrament/denominational governance), and 'secular_contractual_reading' (individual autonomy under state law)."
+    "narrative_context": "This constraint describes the Parsi Zoroastrian community's marriage norms, which are governed by religious law and tradition, with a strong emphasis on endogamy to preserve the community's distinct identity. It is a reading of the broader 'family_law_authority' kernel, focusing on the specific mechanisms and justifications within this small ethno-religious group. The constraint is claimed as a Tangled Rope due to its genuine coordination function (community preservation) coupled with asymmetric extraction from those who deviate from endogamous norms. The metrics reflect moderate extraction and significant suppression, as social and religious penalties for intermarriage are real and actively enforced.",
+    "logic_rationale": "The extractiveness (0.45) stems from the social and religious costs imposed on intermarrying Parsis, including loss of community status and non-recognition of children. Suppression (0.65) is high due to strong social pressure, religious authority, and the limited exit options for individuals deeply embedded in the community. The theater ratio (0.20) is relatively low, indicating that the primary function of community preservation is still actively pursued, though some rituals may have performative elements. The slight increase in extractiveness and suppression over the mid-20th century reflects a period of heightened concern over demographic decline and a tightening of community boundaries, with a slight relaxation in recent decades as globalized norms exert counter-pressure.",
+    "directionality_logic": "The Parsi Zoroastrian community and its priestly council are clear beneficiaries, as the constraint directly serves their goal of cultural and religious preservation. Intermarrying Parsis and Parsi youth are the primary payers, bearing the social and personal costs of the endogamy requirement. Secular legal systems act as observers, potentially intervening if religious norms conflict with broader human rights, but generally respecting community autonomy in personal law matters.",
+    "perspectival_gap": "From the perspective of the priestly council and many community elders, these marriage laws are a necessary Rope for the survival of a unique and ancient faith. From the perspective of intermarrying Parsis or those seeking greater individual autonomy, the same structure operates as a Snare, extracting personal freedom and imposing significant costs for choices that are legally permissible in the wider society. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'parsi_zoroastrian_reading' of the 'family_law_authority' kernel. It emphasizes endogamy and priestly authority for community preservation, distinguishing it from sibling readings like the 'hindu_dharmashastra_reading' (sacramental samskara), 'muslim_shariat_reading' (civil contract under Quranic law), 'christian_canonical_reading' (sacrament under ecclesiastical law), and 'secular_contractual_reading' (civil contract under state law)."
   },
   "omegas": [
     {
-      "id": "endogamy_necessity_for_survival",
-      "question": "Is strict endogamy truly necessary for the long-term survival of the Parsi Zoroastrian community, or are there alternative, more inclusive strategies for identity preservation?",
-      "resolution_mechanism": "Comparative sociological studies of other small diaspora communities that have adopted more inclusive marriage practices while maintaining cultural identity, or internal community debates leading to policy changes.",
-      "impact": "If endogamy is found not to be strictly necessary, the 'community preservation' justification for the constraint's extractiveness would weaken, potentially reclassifying it closer to a Snare for individuals.",
+      "id": "endogamy_necessity_ambiguity",
+      "question": "Is strict endogamy truly necessary for the long-term preservation of Parsi Zoroastrian identity, or are there alternative, more inclusive strategies for community survival?",
+      "resolution_mechanism": "Longitudinal sociological studies comparing demographic and cultural outcomes of Parsi communities with varying degrees of endogamy enforcement, or successful adoption of alternative community-building models.",
+      "impact": "If endogamy is found not to be strictly necessary, the justification for the constraint's suppressive and extractive elements would weaken, potentially reclassifying it closer to a Snare. If it is found to be critical, the Rope-like coordination function would be reinforced.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The empirical necessity of endogamy for community survival."
+      "description": "Whether endogamy is a necessary or merely traditional mechanism for community preservation."
     },
     {
-      "id": "priestly_authority_legitimacy",
-      "question": "To what extent is the priesthood's authority in defining community membership and marriage validity accepted by all segments of the Parsi Zoroastrian community, particularly younger generations and those in diaspora?",
-      "resolution_mechanism": "Surveys of community members, analysis of internal dissent and reform movements, and observation of adherence to priestly rulings in practice.",
-      "impact": "If priestly authority is widely contested, the constraint's effective suppression might be lower than measured, and its persistence would rely more on social inertia than active enforcement, pushing it towards a Piton or a more contested Tangled Rope.",
+      "id": "internalized_vs_structural_suppression",
+      "question": "To what extent is the suppression experienced by Parsi youth structural (social ostracism, religious penalties) versus internalized (self-censorship, identity fusion with community norms)?",
+      "resolution_mechanism": "Qualitative sociological research on Parsi youth experiences, including post-exit interviews with those who intermarried, to assess the persistence of self-imposed constraints after external pressures are removed.",
+      "impact": "If suppression is largely internalized, the effective suppression is higher than the structural measure suggests, as individuals carry the constraint with them. If primarily structural, external reforms would be more effective in reducing its impact.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The internal legitimacy of priestly authority over marriage."
+      "description": "Structural vs. internalized suppression mechanism for Parsi youth."
     },
     {
-      "id": "framing_under_determination_community_vs_individual",
-      "question": "Is the primary framing of marriage as a community-preserving institution (Parsi Zoroastrian reading) or as an individual contractual right (secular contractual reading) the more appropriate lens for analysis?",
-      "resolution_mechanism": "This is a conceptual omega. Resolution depends on the normative priorities of the observer: prioritizing collective identity vs. individual autonomy. No empirical resolution.",
-      "impact": "If the individual contractual framing were adopted, the constraint would be reclassified as a Snare, as its coordination function (community preservation) would be seen as a cover for extraction from individuals' autonomy.",
-      "confidence": "high",
+      "id": "community_definition_ambiguity",
+      "question": "What constitutes 'Parsi Zoroastrian identity' in the modern era, and can it accommodate individuals with mixed heritage or non-traditional marital choices without dissolving?",
+      "resolution_mechanism": "Community-wide referendums, theological reinterpretations by influential scholars, or the emergence of new, widely accepted community norms that redefine membership criteria.",
+      "impact": "A more inclusive definition would reduce the extractive and suppressive aspects of the marriage constraint, potentially shifting its classification towards a Rope or even a Scaffold (if transitional). A rigid definition reinforces the current Tangled Rope structure.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Conceptual choice between community-centric and individual-centric framings of marriage."
+      "description": "The conceptual boundary of Parsi Zoroastrian identity and its implications for marriage norms."
     }
   ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'family_law_authority' kernel, focusing on the Parsi Zoroastrian community's specific interpretation of marriage law for identity preservation. It is structurally distinct from other religious and secular readings of family law."
+    "dual_formulation_note": "This constraint is one reading of the 'family_law_authority' kernel, focusing on the Parsi Zoroastrian community's specific marriage laws and their role in identity preservation."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
-      {
-        "sibling_id": "christian_canonical_reading",
-        "relation": "coexists_with"
-      },
       {
         "sibling_id": "hindu_dharmashastra_reading",
         "relation": "coexists_with"
@@ -152,25 +236,29 @@
         "relation": "coexists_with"
       },
       {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "coexists_with"
+      },
+      {
         "sibling_id": "secular_contractual_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "endogamy_preserves_community_identity",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "priestly_authority_defines_ritual_validity",
+        "atom": "endogamy_as_community_preservation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
+      },
+      {
+        "atom": "priestly_authority_over_ritual_validity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
       }
     ],
-    "reference_frame": "traditional_zoroastrian_community_norms",
+    "reference_frame": "traditional_parsi_community_norms",
     "drift_state": {
       "moment": "contemporary_globalized_era",
       "direction": "practice_drift",
@@ -179,14 +267,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

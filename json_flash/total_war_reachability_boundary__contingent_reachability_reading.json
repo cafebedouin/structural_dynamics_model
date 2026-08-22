@@ -4,130 +4,191 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "4bc33217-a884-42cc-8e08-ce2d4f5d4cc9"
+    "story_uid": "910e6517-79dd-4b14-8846-cae3f5b06507"
   },
   "base_properties": {
     "extractiveness": 0.4,
-    "suppression": 0.3,
-    "theater_ratio": 0.6,
-    "accessibility_collapse": 0.4,
+    "suppression": 0.6,
+    "theater_ratio": 0.7,
+    "accessibility_collapse": 0.3,
     "resistance": 0.2,
     "claimed_type": "piton",
-    "human_readable": "Contingent Reachability of Total War (Technology-Dependent)",
-    "topic_domain": "international_relations/strategic_studies/nuclear_deterrence_theory",
+    "human_readable": "Contingent Total War Reachability Boundary",
+    "topic_domain": "international_relations/strategic_studies/nuclear_deterrence",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
-      "states_investing_in_destabilizing_tech"
+      "states_investing_in_destabilizing_technologies"
     ],
     "victims": [
-      "global_population"
-    ]
+      "global_populations"
+    ],
+    "has_sunset_clause": false
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "technological_reversal_probability",
-      "question": "What is the probability and timeline for a technological breakthrough that fundamentally alters the reachability of total war, making it 'winnable' again?",
-      "resolution_mechanism": "Expert assessment from military strategists, defense technologists, and intelligence agencies, updated with new R&D disclosures and doctrine shifts.",
-      "impact": "If the probability is high and near-term, the constraint is a true scaffold, requiring active management to prevent collapse. If low and distant, it leans more towards a stable piton or even a rope, where the current state is more enduring.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Uncertainty about future technological shifts impacting strategic stability."
+      "name": "states_investing_in_destabilizing_technologies",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "These states benefit from the perception that total war is becoming more reachable, as it justifies their investments in new offensive and defensive technologies that could shift the strategic balance. They gain leverage and influence by pushing the technological frontier."
     },
     {
-      "id": "kernel_reading_distinction",
-      "question": "Is the 'contingent reachability' reading fundamentally distinct from the 'contraction' or 'dropping' readings, or merely a temporal phase of one of them?",
-      "resolution_mechanism": "Analysis of the core assumptions about technology's role in strategic stability: if technology is a primary driver of feasibility, it's distinct. If it's secondary to political will or inherent nuclear effects, it's a phase.",
-      "impact": "If distinct, it validates this as a separate constraint. If a phase, it suggests this constraint should be nested within a broader 'total_war_reachability_boundary' constraint, with this reading as a temporal state.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Clarifying the conceptual boundary between different readings of total war reachability."
+      "name": "global_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "These populations bear the ultimate cost if the reachability boundary shifts and deterrence fails. They also pay for the escalating arms race through taxes and live under the constant threat of catastrophic conflict. Their agency in this dynamic is minimal."
     },
     {
-      "id": "piton_vs_scaffold_ambiguity",
-      "question": "Is the current contraction of total war reachability a true piton (atrophied capability, inertial persistence) or a scaffold (temporary support for a transition to a new, more stable equilibrium)?",
-      "resolution_mechanism": "Observing the trajectory of investment in destabilizing technologies and the rhetoric of strategic competition. If investment accelerates and rhetoric normalizes 'limited' nuclear war, it's a scaffold for a dangerous transition. If it remains low and deterrence rhetoric holds, it's a piton.",
-      "impact": "If a scaffold, the constraint is more dynamic and carries higher risk of collapse. If a piton, it's more stable but still requires vigilance against reversal.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing between inertial decay and temporary support for a transition."
+      "name": "nuclear_deterrence_theorists",
+      "role": "agenda_setter",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These theorists analyze and articulate the conditions of strategic stability and the feasibility of total war. Their interpretations influence policy and public perception, shaping the narrative around reachability. They administer the conceptual framework."
+    },
+    {
+      "name": "international_security_institutions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations like the UN or arms control bodies observe and attempt to manage the strategic environment. They are constrained by the actions of powerful states but work to mitigate risks and promote stability, often relying on theoretical frameworks to guide their efforts."
     }
   ],
+  "six_questions": {
+    "coordination_function": "The constraint implicitly coordinates state behavior by defining the perceived limits of acceptable conflict escalation, influencing strategic planning and resource allocation towards deterrence or counter-deterrence capabilities.",
+    "transfer_function": "It transfers a sense of security (or insecurity) and strategic leverage among states, while transferring the ultimate risk and cost of potential conflict to global populations.",
+    "absent_voices": "Future generations and non-state actors who would bear the consequences of total war are absent from the strategic discourse that defines this boundary. They would advocate for de-escalation and disarmament, but lack direct representation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the perceived reachability boundary for total war vanished, strategic planning would fundamentally alter. States might pursue more aggressive policies, or conversely, a new, more robust form of global security cooperation might emerge. The current deterrence architecture would collapse.",
+    "founding_problem": "The problem of managing the existential threat posed by nuclear weapons and preventing their use, while maintaining national security interests.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ongoing existence of nuclear arsenals, continuous strategic competition, and the persistent efforts of international security institutions to prevent proliferation and conflict attest to the founding problem's live status. This is corroborated by historical records of near-misses and current geopolitical tensions."
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 1991,
+      "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 2000,
       "value": 0.32
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.3
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.4
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.3
+      "time_point": 1991,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.7
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'contingent reachability' reading of the total war boundary, arguing that the feasibility of total war is not permanently foreclosed but is instead dependent on the current technological equilibrium. The current contraction of strategic space (making total war seem 'unwinnable') is viewed as a temporary piton, an atrophied capability that could reverse with new technological developments. Beneficiaries are states investing in destabilizing technologies, as they gain leverage, while victims are global populations if deterrence fails.",
-    "logic_rationale": "The constraint is classified as a piton because the capability for total war is atrophied but not eliminated; its persistence is due to a combination of institutional inertia (maintaining arsenals) and a perceived, but potentially reversible, technological barrier. Extractiveness is moderate (0.4) as resources are still diverted to maintaining deterrence and counter-deterrence capabilities. Suppression is low (0.3) because the constraint isn't actively enforced by a central authority, but rather emerges from the strategic landscape. Theater ratio is high (0.6) as much of nuclear strategy involves performative signaling and maintenance of capabilities that are theoretically unusable. The measurements show a slight decrease in extractiveness and suppression over time, reflecting a period of relative strategic stability, while theater ratio increases as the performative aspect of deterrence grows relative to its direct utility.",
-    "perspectival_gap": "States investing in destabilizing technologies might perceive this as a scaffold, a temporary state to be overcome, while the global population experiences it as a constant, low-level threat. Analytical observers might see it as a piton, a stable but potentially reversible condition.",
-    "directionality_logic": "States investing in destabilizing technologies are beneficiaries (d=0.0-0.2) as they gain strategic leverage and potentially shift the equilibrium in their favor. The global population is a victim (d=0.8-1.0) as they bear the existential risk if the constraint fails. Other states (non-investors) are payers (d=0.5-0.7) as they must maintain defensive capabilities or participate in arms control without actively seeking to destabilize the current state.",
-    "mandatrophy_analysis": "The constraint's mandate (preventing total war) is still live, but the mechanism (technological barriers) is seen as potentially atrophied and reversible. This classification prevents mislabeling it as a permanent 'mountain' (as in the contraction reading) or a stable 'rope' (as in the dropping reading), highlighting its contingent and potentially unstable nature. It flags the risk of mandatrophy if technological shifts render the current deterrence framework obsolete.",
-    "kernel_context": "This constraint is the 'contingent_reachability_reading' of the 'total_war_reachability_boundary' kernel. It posits that the feasibility of total war is not fixed but depends on the evolving technological landscape. This contrasts with the 'contraction_reading' (total war is permanently unwinnable due to nuclear weapons) and the 'dropping_reading' (total war is less probable but still reachable, with deterrence as a stable rope)."
+    "narrative_context": "This constraint represents the 'contingent reachability' reading of the total war boundary, arguing that the feasibility of total war is not a fixed 'mountain' but a 'piton'—an atrophied capability dependent on current technological and strategic equilibria. While total war currently appears 'unreachable' due to mutual assured destruction (MAD), this reading posits that technological advancements (e.g., advanced missile defense, hypersonic weapons, AI-driven command and control) could reverse this contraction, making total war 'reachable' again. The current 'contraction' is thus a temporary state, not a permanent one. The constraint is classified as a piton because the 'unreachability' is largely performative and inertial, maintained by a specific technological balance that could shift, rather than an inherent, unchangeable reality. The beneficiaries are states investing in destabilizing technologies, and the victims are global populations.",
+    "logic_rationale": "The extractiveness (0.4) is moderate, reflecting the costs of maintaining deterrence and the arms race, but not direct extraction from a coordinated activity. Suppression (0.6) is higher, as the strategic environment actively suppresses alternatives to the current deterrence paradigm. The high theater ratio (0.7) is key to the piton classification: the 'unreachability' of total war is largely a performance of strategic stability, maintained by a specific technological balance. If this balance shifts, the performance could break down, revealing the underlying reachability. Accessibility collapse (0.3) is low because technological change could open new pathways to total war, and resistance (0.2) is low because the concept of 'unreachability' is widely accepted, even if its contingency is debated.",
+    "directionality_logic": "States investing in destabilizing technologies are beneficiaries (d=0.0-0.2) because the perceived contingency of total war reachability justifies their strategic investments and enhances their leverage. Global populations are payers (d=0.8-1.0) as they bear the costs of the arms race and the ultimate risk of conflict. Nuclear deterrence theorists, while influential, are analytical observers (d=0.5) whose role is to interpret and articulate the boundary, not directly benefit or pay from its operation.",
+    "perspectival_gap": "The 'contingent reachability' reading highlights a fundamental perspectival gap between those who view total war's unreachability as a permanent state (e.g., the 'contraction_reading') and those who see it as a fragile, technology-dependent equilibrium. This reading emphasizes the agency of technological development in shaping strategic reality, which is often downplayed by more static deterrence theories. The engine's classification as a piton captures the performative and inertial aspects of the current 'unreachability' from this perspective.",
+    "kernel_context": "This constraint is the 'contingent_reachability_reading' of the 'total_war_reachability_boundary' kernel. It posits that total war's unreachability is a temporary, technology-dependent state, in contrast to the 'contraction_reading' (which sees unreachability as a permanent outcome of nuclear weapons) and the 'dropping_reading' (which views deterrence as a stable coordination equilibrium)."
   },
+  "omegas": [
+    {
+      "id": "technological_determinism_vs_strategic_choice",
+      "question": "To what extent is the reachability boundary determined by technological advancements versus strategic choices made by states?",
+      "resolution_mechanism": "Historical analysis of past technological shifts and their impact on strategic doctrine, combined with counterfactual modeling of alternative state responses to new technologies.",
+      "impact": "If technology is highly deterministic, the piton classification is robust. If strategic choice dominates, the constraint might be more of a tangled rope, actively maintained by states' decisions rather than technological inertia.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between technological determinism and human agency in shaping strategic reachability."
+    },
+    {
+      "id": "deterrence_stability_measurement",
+      "question": "How can the 'stability' of deterrence be objectively measured, and at what point does technological change constitute a 'destabilizing' shift sufficient to alter the reachability boundary?",
+      "resolution_mechanism": "Development of quantitative metrics for strategic stability (e.g., crisis stability, arms race stability) and agreed-upon thresholds for technological impact, potentially through international expert consensus.",
+      "impact": "Clearer metrics would reduce the 'theater ratio' by making the boundary's status more empirically verifiable, potentially shifting the classification towards a more stable rope or even a mountain if unreachability becomes robustly demonstrable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty in measuring deterrence stability and the impact of technological change."
+    },
+    {
+      "id": "kernel_reading_contingent_reachability",
+      "question": "Is total war reachability a contingent, technology-dependent boundary (this reading), or a permanently contracted space (contraction_reading), or a stable coordination equilibrium (dropping_reading)?",
+      "resolution_mechanism": "Future technological developments and their impact on strategic stability, combined with ongoing geopolitical events and the evolution of international norms.",
+      "impact": "If technological shifts make total war more feasible, this reading gains salience. If the nuclear taboo strengthens, the 'contraction_reading' might be favored. If deterrence remains stable despite technological change, the 'dropping_reading' might prevail.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "This constraint is one reading of the 'total_war_reachability_boundary' kernel. This omega documents the core disagreement with sibling readings."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
@@ -135,53 +196,53 @@
     "affects_constraints": [
       "total_war_reachability_boundary__contraction_reading",
       "total_war_reachability_boundary__dropping_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'total_war_reachability_boundary' kernel. This 'contingent_reachability_reading' emphasizes the technology-dependent and reversible nature of total war's feasibility, contrasting with readings that posit permanent contraction or stable deterrence."
+    ]
   },
   "cs_structure": {
-    "kernel_codification": "distributed",
-    "authority_grounding": "diffuse_epistemic",
+    "kernel_codification": "implicit",
+    "authority_grounding": "expertise",
+    "reference_frame": "post_cold_war_strategic_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_technological_acceleration",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
     "reading_relations": [
       {
-        "sibling_id": "total_war_reachability_boundary__contraction_reading",
+        "sibling_id": "contraction_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "total_war_reachability_boundary__dropping_reading",
+        "sibling_id": "dropping_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "strategic_feasibility_is_technology_dependent",
+        "atom": "strategic_reachability_is_technologically_contingent",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "current_strategic_stability_is_transient",
-        "role": "secondary",
+        "atom": "current_unreachability_is_an_atrophied_capability",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "post_cold_war_technological_equilibrium",
-    "drift_state": {
-      "moment": "contemporary_multi_polar_tech_race",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": true
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

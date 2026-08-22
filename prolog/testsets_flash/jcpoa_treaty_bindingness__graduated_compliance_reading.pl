@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,14 +73,17 @@
  *   domain: international_law/nuclear_non_proliferation/treaty_compliance
  *
  * SUMMARY:
- *   This constraint represents the JCPOA as a scaled reciprocal commitment,
- *   where enforcement is graduated and tied to proportional compliance
- *   assessment. This reading emphasizes de-escalation and the flexibility to
- *   adjust sanctions relief in response to Iranian actions, rather than a
- *   rigid, all-or-nothing approach. It is one reading of the broader
- *   'jcpoa_treaty_bindingness' kernel, distinct from interpretations
- *   emphasizing strict multilateral bindingness or unilateral transactional
- *   provisionality.
+ *   This constraint models the Joint Comprehensive Plan of Action (JCPOA)
+ *   through the lens of a 'graduated compliance' reading. In this
+ *   interpretation, the agreement functions as a scaled reciprocal commitment
+ *   where enforcement actions (e.g., sanctions re-imposition) are
+ *   proportional to the severity of Iranian non-compliance (e.g., enrichment
+ *   levels). The primary goal is de-escalation and maintaining a diplomatic
+ *   channel, even in the face of violations, rather than strict legal
+ *   adherence or maximalist pressure. Beneficiaries include advocates for
+ *   pragmatic diplomacy and economic actors seeking partial engagement with
+ *   Iran, while the Iranian nuclear program and economy bear the costs of
+ *   limitations and potential sanctions.
  *
  */
 
@@ -106,38 +113,86 @@ narrative_ontology:topic_domain(jcpoa_treaty_bindingness__graduated_compliance_r
 domain_priors:requires_active_enforcement(jcpoa_treaty_bindingness__graduated_compliance_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(jcpoa_treaty_bindingness__graduated_compliance_reading, '51b3553c-ee08-4982-8ff6-be61e729d830').
-narrative_ontology:cs_kernel_codification('51b3553c-ee08-4982-8ff6-be61e729d830', formalized).
-narrative_ontology:cs_authority_grounding('51b3553c-ee08-4982-8ff6-be61e729d830', lineage).
-narrative_ontology:cs_interpretation_layer_present('51b3553c-ee08-4982-8ff6-be61e729d830').
-narrative_ontology:cs_reading_relation('51b3553c-ee08-4982-8ff6-be61e729d830', jcpoa_treaty_bindingness__binding_multilateral_reading, coexists_with).
-narrative_ontology:cs_reading_relation('51b3553c-ee08-4982-8ff6-be61e729d830', jcpoa_treaty_bindingness__transactional_provisional_reading, coexists_with).
-narrative_ontology:cs_axiom('51b3553c-ee08-4982-8ff6-be61e729d830', foundational, proportional_response_principle).
-narrative_ontology:cs_axiom_status(proportional_response_principle, holdable).
-narrative_ontology:cs_axiom_grounding('51b3553c-ee08-4982-8ff6-be61e729d830', proportional_response_principle, conventional).
-narrative_ontology:cs_axiom('51b3553c-ee08-4982-8ff6-be61e729d830', foundational, de_escalation_priority).
+narrative_ontology:cs_story_uid(jcpoa_treaty_bindingness__graduated_compliance_reading, '738d10da-9a6b-4b79-9889-b2d8ac7bf378').
+narrative_ontology:cs_kernel_codification('738d10da-9a6b-4b79-9889-b2d8ac7bf378', formalized).
+narrative_ontology:cs_authority_grounding('738d10da-9a6b-4b79-9889-b2d8ac7bf378', lineage).
+narrative_ontology:cs_interpretation_layer_present('738d10da-9a6b-4b79-9889-b2d8ac7bf378').
+narrative_ontology:cs_reading_relation('738d10da-9a6b-4b79-9889-b2d8ac7bf378', jcpoa_treaty_bindingness__binding_multilateral_reading, coexists_with).
+narrative_ontology:cs_reading_relation('738d10da-9a6b-4b79-9889-b2d8ac7bf378', jcpoa_treaty_bindingness__transactional_provisional_reading, coexists_with).
+narrative_ontology:cs_axiom('738d10da-9a6b-4b79-9889-b2d8ac7bf378', foundational, proportionality_in_response).
+narrative_ontology:cs_axiom_status(proportionality_in_response, holdable).
+narrative_ontology:cs_axiom_grounding('738d10da-9a6b-4b79-9889-b2d8ac7bf378', proportionality_in_response, conventional).
+narrative_ontology:cs_axiom('738d10da-9a6b-4b79-9889-b2d8ac7bf378', foundational, de_escalation_priority).
 narrative_ontology:cs_axiom_status(de_escalation_priority, holdable).
-narrative_ontology:cs_axiom_grounding('51b3553c-ee08-4982-8ff6-be61e729d830', de_escalation_priority, instrumental).
-narrative_ontology:cs_reference_frame('51b3553c-ee08-4982-8ff6-be61e729d830', adaptive_diplomatic_framework).
-narrative_ontology:cs_drift_state('51b3553c-ee08-4982-8ff6-be61e729d830', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('51b3553c-ee08-4982-8ff6-be61e729d830', '').
+narrative_ontology:cs_axiom_grounding('738d10da-9a6b-4b79-9889-b2d8ac7bf378', de_escalation_priority, instrumental).
+narrative_ontology:cs_reference_frame('738d10da-9a6b-4b79-9889-b2d8ac7bf378', managed_proliferation_risk_framework).
+narrative_ontology:cs_drift_state('738d10da-9a6b-4b79-9889-b2d8ac7bf378', post_us_withdrawal_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('738d10da-9a6b-4b79-9889-b2d8ac7bf378', '').
 narrative_ontology:cs_kernel_id(jcpoa_treaty_bindingness__graduated_compliance_reading, jcpoa_treaty_bindingness).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(jcpoa_treaty_bindingness__graduated_compliance_reading, pragmatic_diplomacy_advocates).
-narrative_ontology:constraint_beneficiary(jcpoa_treaty_bindingness__graduated_compliance_reading, economic_actors_seeking_partial_engagement).
-narrative_ontology:constraint_victim(jcpoa_treaty_bindingness__graduated_compliance_reading, iranian_hardliners).
-narrative_ontology:constraint_victim(jcpoa_treaty_bindingness__graduated_compliance_reading, us_sanctions_hawks).
+narrative_ontology:constraint_beneficiary(jcpoa_treaty_bindingness__graduated_compliance_reading, economic_actors_seeking_engagement).
+narrative_ontology:constraint_victim(jcpoa_treaty_bindingness__graduated_compliance_reading, iranian_nuclear_program).
+narrative_ontology:constraint_victim(jcpoa_treaty_bindingness__graduated_compliance_reading, iranian_economy).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These actors prioritize de-escalation and diplomatic solutions, viewing the JCPOA's graduated approach as a successful model for managing complex international disputes. They benefit from the stability and engagement fostered by this reading.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, pragmatic_diplomacy_advocates, beneficiary,
+    organized, biographical, mobile, global).
+
+% Businesses and investors who seek to re-enter or expand operations in Iran benefit from the partial sanctions relief and the predictable, albeit fragile, framework for engagement that this reading provides. They are sensitive to any escalation that might disrupt trade.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, economic_actors_seeking_engagement, beneficiary,
+    powerful, immediate, arbitrage, global).
+
+% The program bears the costs of limitations on enrichment levels, centrifuge deployment, and intrusive inspections. While not a human agent, it represents the institutional and technical capacity that is constrained by the agreement.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, iranian_nuclear_program, payer,
+    institutional, generational, constrained, national).
+
+% The broader Iranian economy experiences the impact of sanctions, even with partial relief. It is constrained by the threat of re-imposed sanctions if compliance falters, and by the limited scope of economic engagement permitted under this reading.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, iranian_economy, payer,
+    institutional, biographical, identity_locked, national).
+
+% The signatory states (China, France, Germany, Russia, United Kingdom, United States) collectively administer the agreement, assess compliance, and determine proportional responses to violations. Their actions define the graduated enforcement mechanism.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, p5_plus_1_states, agenda_setter,
+    institutional, generational, constrained, global).
+
+% The International Atomic Energy Agency provides the technical assessment of Iran's nuclear activities, verifying compliance with the agreement's provisions. Its reports are crucial for the graduated enforcement mechanism.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, iaea, agenda_setter,
+    institutional, civilizational, analytical, universal).
+
+% These factions view the JCPOA as an infringement on national sovereignty and a capitulation to Western demands. They would advocate for full nuclear development and rejection of external oversight, but their influence is contained by the current diplomatic framework.
+narrative_ontology:constraint_stakeholder(jcpoa_treaty_bindingness__graduated_compliance_reading, hardline_iranian_factions, excluded,
+    organized, generational, identity_locked, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the reciprocal reduction of nuclear proliferation risk (Iran's enrichment capacity) with sanctions relief, through a mechanism that allows for proportional responses to deviations, aiming to prevent full collapse of the agreement.
+% TRANSFER_FUNCTION: Transfers sanctions relief (economic benefits) to Iran in exchange for verifiable limitations on its nuclear program (security benefits for other states). The transfer is scaled and reciprocal.
+% ABSENT_VOICES: Hardline factions in Iran and hawkish elements in the US and Israel are largely excluded from shaping the graduated compliance framework; they would advocate for maximalist positions (full nuclear program or full sanctions/regime change) that this reading seeks to avoid.
+% DISAPPEARANCE_RATIONALE: If the JCPOA's graduated compliance framework vanished, Iran would likely accelerate its nuclear program, leading to a rapid re-imposition of maximal sanctions, increased regional instability, and a heightened risk of military confrontation. The international diplomatic landscape would be fundamentally altered.
+% FOUNDING_PROBLEM: Iran's accelerating nuclear program posed a significant proliferation risk, leading to international sanctions and a diplomatic impasse, with a high risk of military conflict.
+% FOUNDING_PROBLEM_CORROBORATION: The IAEA continues to report on Iran's nuclear activities, and international diplomatic efforts consistently highlight the ongoing proliferation risk. While the immediate crisis of 2015 was averted, the underlying problem of nuclear proliferation in the region remains, corroborated by intelligence agencies and non-proliferation experts.
+narrative_ontology:disappearance_verdict(jcpoa_treaty_bindingness__graduated_compliance_reading, world_rearranges).
+narrative_ontology:founding_problem_status(jcpoa_treaty_bindingness__graduated_compliance_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(jcpoa_treaty_bindingness__graduated_compliance_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(jcpoa_treaty_bindingness__graduated_compliance_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(jcpoa_treaty_bindingness__graduated_compliance_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(jcpoa_treaty_bindingness__graduated_compliance_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -152,16 +207,16 @@ narrative_ontology:story_seed(jcpoa_treaty_bindingness__graduated_compliance_rea
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.45) is moderate, reflecting the reciprocal nature of the agreement where both sides make concessions. Suppression (0.6) is present due to the threat of sanctions snapback, but it is graduated, allowing for partial non-compliance without immediate collapse. The theater ratio (0.2) is low, as the compliance mechanisms are largely functional, though political posturing can introduce some performativity. The measurements reflect periods of increased tension (e.g., 2019 after US withdrawal) and subsequent de-escalation efforts.
+ *   The extractiveness (0.45) is moderate, reflecting the reciprocal nature where Iran gains sanctions relief but loses nuclear capabilities. Suppression (0.6) is significant, as the threat of re-imposed sanctions is a key enforcement mechanism. Theater ratio (0.2) is low, as the compliance assessment and graduated responses are generally genuine, though political posturing can introduce some performativity. The cyclical nature of measurements reflects periods of compliance and non-compliance, with corresponding adjustments in enforcement and sanctions relief.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of pragmatic diplomacy advocates, this reading of the JCPOA is a successful, flexible tool for managing proliferation. From the perspective of Iranian hardliners or US sanctions hawks, it is either an unacceptable compromise or an insufficient deterrent, respectively. The engine will compute these divergent classifications based on their declared structural positions and exit options.
+ *   From the perspective of the P5+1 states, this reading emphasizes a flexible, de-escalatory mechanism to manage proliferation risk. From Iran's perspective, it is a constraint on its sovereign right to nuclear development, albeit one that offers economic benefits. The 'iranian_nuclear_program' and 'iranian_economy' seats experience this as a tangible cost, while 'pragmatic_diplomacy_advocates' and 'economic_actors_seeking_engagement' perceive it as a beneficial framework for stability and opportunity.
  *
  * DIRECTIONALITY LOGIC:
- *   Iran is a primary target (payer) due to the limitations on its nuclear program. The P5+1 states are agenda-setters, collectively enforcing the constraint. Pragmatic diplomacy advocates and economic actors are beneficiaries, gaining from de-escalation and partial market access. Hardliners and hawks on both sides are victims, as the agreement constrains their preferred maximalist policies.
+ *   The 'p5_plus_1_states' and 'iaea' act as agenda-setters, defining and enforcing the graduated compliance. 'pragmatic_diplomacy_advocates' and 'economic_actors_seeking_engagement' are beneficiaries, gaining from the stability and opportunities this framework provides. The 'iranian_nuclear_program' and 'iranian_economy' are the primary payers, bearing the costs of restrictions and sanctions. The 'hardline_iranian_factions' are excluded, as their maximalist stance is incompatible with this reading's de-escalatory approach.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading prevents mislabeling the JCPOA as a pure snare by emphasizing its genuine coordination function (non-proliferation) and the reciprocal nature of commitments. It avoids treating the agreement as a mere 'piton' by acknowledging the active, albeit graduated, enforcement and the live founding problem of nuclear proliferation. The graduated enforcement mechanism is designed to prevent mandatrophy by allowing for adaptive responses rather than rigid adherence to an outdated mandate.
+ *   This reading prevents mislabeling the JCPOA as pure extraction by emphasizing the reciprocal nature of commitments and the genuine coordination function of de-escalation. It acknowledges the costs borne by Iran but frames them within a system designed to prevent a worse outcome (military conflict or unchecked proliferation). The graduated enforcement mechanism is intended to adapt to changing circumstances, preventing the constraint from becoming a 'piton' by allowing for dynamic adjustment rather than rigid adherence to an outdated mandate.
  */
 
 /* ==========================================================================
@@ -169,59 +224,69 @@ narrative_ontology:story_seed(jcpoa_treaty_bindingness__graduated_compliance_rea
    ========================================================================== */
 
 omega_variable(
-    graduated_enforcement_effectiveness,
-    'Is the graduated enforcement mechanism sufficiently robust to deter significant non-compliance, or does it invite incremental violations?',
-    'Empirical analysis of Iran''s compliance trajectory under graduated sanctions, compared to counterfactuals of ''all-or-nothing'' enforcement.',
-    'If graduated enforcement proves ineffective, the constraint''s effective extractiveness for Iran might be lower than intended, and its coordination function weakened, potentially shifting its classification towards a more performative or even failed type from the perspective of non-proliferation advocates.',
+    proportionality_assessment_ambiguity,
+    'What constitutes ''proportional'' non-compliance and ''proportional'' enforcement in practice, and is this assessment consistently applied by all P5+1 states?',
+    'Analysis of historical responses to Iranian deviations, and formal statements from P5+1 members regarding their criteria for proportionality. Divergence in criteria would indicate a conceptual ambiguity.',
+    'If proportionality is inconsistently applied, the constraint''s effective suppression and extractiveness could fluctuate unpredictably, leading to greater instability and potentially reclassifying it as a more extractive or less coordinated type from Iran''s perspective.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(graduated_enforcement_effectiveness, empirical, 'Effectiveness of proportional compliance assessment in deterring violations.').
+narrative_ontology:omega_variable(proportionality_assessment_ambiguity, empirical, 'Ambiguity in the practical application of graduated enforcement.').
+
+omega_variable(
+    de_escalation_vs_deterrence_priority,
+    'Does this reading prioritize de-escalation and diplomatic engagement over strict deterrence and maximal pressure, and is this prioritization shared by all key actors?',
+    'Examination of diplomatic statements, policy decisions, and resource allocation by P5+1 states. If some states consistently prioritize deterrence, it indicates a divergence in the underlying normative framework.',
+    'If deterrence is prioritized over de-escalation by key actors, the constraint''s ''tangled_rope'' nature could lean more towards ''snare'' due to increased coercive pressure and reduced coordination benefits for Iran.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(de_escalation_vs_deterrence_priority, preference, 'Underlying policy priority between de-escalation and deterrence.').
 
 omega_variable(
     kernel_reading_distinction,
-    'Is this ''graduated compliance'' reading of the JCPOA sufficiently distinct from the ''binding multilateral'' or ''transactional provisional'' readings, or do they represent overlapping policy preferences rather than structurally different constraints?',
-    'Analysis of policy outcomes and diplomatic statements: if different readings consistently lead to distinct enforcement actions, dispute resolution approaches, and economic engagement patterns, the structural distinction is confirmed.',
-    'If the readings are not structurally distinct, the framework might be over-decomposing the kernel, suggesting a single, more complex constraint with internal tensions rather than multiple, separate ones. This would require re-evaluating the ε-invariance principle for this specific kernel.',
+    'Is this ''graduated compliance'' reading truly distinct from the ''binding multilateral'' or ''transactional provisional'' readings, or does it merely represent a tactical approach within one of those frameworks?',
+    'Conceptual analysis of the core premises of each reading: if the underlying assumptions about treaty nature, enforcement philosophy, and dispute resolution mechanisms are fundamentally different, the readings are distinct. If they share core premises and differ only in application, they are not distinct kernels.',
+    'If not distinct, the classification of this constraint would collapse into one of the sibling readings, altering its claimed type and metric profile to match the dominant underlying framework.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_distinction, conceptual, 'Distinction between different interpretations of JCPOA bindingness.').
+narrative_ontology:omega_variable(kernel_reading_distinction, conceptual, 'Distinction between this reading and sibling readings of the JCPOA kernel.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(jcpoa_treaty_bindingness__graduated_compliance_reading, 2015, 2024).
+narrative_ontology:interval(jcpoa_treaty_bindingness__graduated_compliance_reading, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(jcpo_tr_t2015, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2015, 0.1).
-narrative_ontology:measurement(jcpo_tr_t2017, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2017, 0.15).
-narrative_ontology:measurement(jcpo_tr_t2019, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2019, 0.3).
-narrative_ontology:measurement(jcpo_tr_t2021, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2021, 0.25).
-narrative_ontology:measurement(jcpo_tr_t2023, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2023, 0.2).
-narrative_ontology:measurement(jcpo_tr_t2024, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2024, 0.2).
+narrative_ontology:measurement(jcpo_tr_t0, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(jcpo_tr_t2, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 2, 0.18).
+narrative_ontology:measurement(jcpo_tr_t4, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 4, 0.2).
+narrative_ontology:measurement(jcpo_tr_t6, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 6, 0.22).
+narrative_ontology:measurement(jcpo_tr_t8, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 8, 0.19).
+narrative_ontology:measurement(jcpo_tr_t10, jcpoa_treaty_bindingness__graduated_compliance_reading, theater_ratio, 10, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(jcpo_be_t2015, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2015, 0.5).
-narrative_ontology:measurement(jcpo_be_t2017, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2017, 0.45).
-narrative_ontology:measurement(jcpo_be_t2019, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2019, 0.6).
-narrative_ontology:measurement(jcpo_be_t2021, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2021, 0.55).
-narrative_ontology:measurement(jcpo_be_t2023, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2023, 0.45).
-narrative_ontology:measurement(jcpo_be_t2024, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2024, 0.45).
+narrative_ontology:measurement(jcpo_be_t0, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 0, 0.4).
+narrative_ontology:measurement(jcpo_be_t2, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 2, 0.38).
+narrative_ontology:measurement(jcpo_be_t4, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 4, 0.42).
+narrative_ontology:measurement(jcpo_be_t6, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 6, 0.45).
+narrative_ontology:measurement(jcpo_be_t8, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 8, 0.43).
+narrative_ontology:measurement(jcpo_be_t10, jcpoa_treaty_bindingness__graduated_compliance_reading, base_extractiveness, 10, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(jcpo_su_t2015, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2015, 0.7).
-narrative_ontology:measurement(jcpo_su_t2017, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2017, 0.65).
-narrative_ontology:measurement(jcpo_su_t2019, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2019, 0.8).
-narrative_ontology:measurement(jcpo_su_t2021, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2021, 0.7).
-narrative_ontology:measurement(jcpo_su_t2023, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2023, 0.6).
-narrative_ontology:measurement(jcpo_su_t2024, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2024, 0.6).
+narrative_ontology:measurement(jcpo_su_t0, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement(jcpo_su_t2, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 2, 0.5).
+narrative_ontology:measurement(jcpo_su_t4, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 4, 0.58).
+narrative_ontology:measurement(jcpo_su_t6, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 6, 0.6).
+narrative_ontology:measurement(jcpo_su_t8, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 8, 0.57).
+narrative_ontology:measurement(jcpo_su_t10, jcpoa_treaty_bindingness__graduated_compliance_reading, suppression_requirement, 10, 0.6).
 
 
 /* ==========================================================================
@@ -229,11 +294,11 @@ narrative_ontology:measurement(jcpo_su_t2024, jcpoa_treaty_bindingness__graduate
    ========================================================================== */
 
 narrative_ontology:coordination_type(jcpoa_treaty_bindingness__graduated_compliance_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(jcpoa_treaty_bindingness__graduated_compliance_reading, iran_nuclear_program_limitations).
-narrative_ontology:affects_constraint(jcpoa_treaty_bindingness__graduated_compliance_reading, international_sanctions_regime).
+narrative_ontology:affects_constraint(jcpoa_treaty_bindingness__graduated_compliance_reading, iran_sanctions_regime).
+narrative_ontology:affects_constraint(jcpoa_treaty_bindingness__graduated_compliance_reading, iran_nuclear_proliferation_status).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three distinct readings of the 'jcpoa_treaty_bindingness' kernel. The 'binding_multilateral_reading' emphasizes consensus-based modification, while the 'transactional_provisional_reading' allows for unilateral voiding. Each reading defines a structurally different constraint.
+% This constraint is one of three distinct readings of the JCPOA treaty bindingness kernel. This 'graduated compliance' reading emphasizes proportional responses and de-escalation, distinct from a 'binding multilateral' or 'transactional provisional' interpretation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

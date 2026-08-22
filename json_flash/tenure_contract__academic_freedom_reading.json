@@ -4,13 +4,13 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c30b2c34-2544-48f7-9282-65d0bebd5bff"
+    "story_uid": "af953fca-17ab-4f99-a831-b59220f3f5e2"
   },
   "base_properties": {
-    "extractiveness": 0.2,
+    "extractiveness": 0.15,
     "suppression": 0.1,
     "theater_ratio": 0.05,
-    "accessibility_collapse": 0.8,
+    "accessibility_collapse": 0.7,
     "resistance": 0.05,
     "claimed_type": "rope",
     "human_readable": "Academic Freedom via Tenure Contract",
@@ -22,119 +22,212 @@
       "public_discourse"
     ],
     "victims": [
-      "political_actors_seeking_control",
-      "institutional_administrators_seeking_conformity"
+      "external_political_actors",
+      "institutional_administrators"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine instantiation of academic freedom, or is it primarily a mechanism for institutional extraction or demographic reproduction?",
-      "resolution_mechanism": "Empirical analysis of tenure review outcomes (e.g., correlation between tenure denial and research critical of institutional interests, or demographic patterns in tenure awards vs. research output).",
-      "impact": "If primarily academic freedom, the classification as Rope holds. If found to be primarily extraction or reproduction, the classification would shift to Snare or Tangled Rope, respectively, for those readings.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'academic_freedom_reading' of the 'tenure_contract' kernel. Sibling readings ('institutional_extraction_reading', 'demographic_reproduction_reading') offer alternative structural interpretations."
+      "name": "tenured_faculty",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Protected from arbitrary dismissal, enabling them to pursue controversial research and express unpopular opinions without fear of job loss. This stability allows for long-term, high-risk projects. While exit is possible, the benefits of tenure make it a high-cost decision."
     },
     {
-      "id": "truth_seeking_efficacy",
-      "question": "To what extent does tenure actually enable high-risk, truth-seeking inquiry, versus merely protecting established academics?",
-      "resolution_mechanism": "Longitudinal studies tracking research topics and outcomes of tenured vs. non-tenured faculty, particularly in politically sensitive or institutionally challenging areas.",
-      "impact": "If tenure's effect on truth-seeking is weak, the 'academic_freedom_reading' loses empirical grounding, potentially shifting its classification towards a more inertial 'Piton' or a less effective 'Rope'.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Assesses the empirical effectiveness of tenure in fostering academic freedom."
+      "name": "students",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from access to diverse perspectives, cutting-edge research, and an environment where faculty are free to teach and inquire without undue external pressure. This enhances the quality and breadth of their education."
+    },
+    {
+      "name": "public_discourse",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Benefits from the independent generation and dissemination of knowledge, including critical analysis of societal issues, which might otherwise be suppressed by political or economic interests. This contributes to a more informed and robust public sphere."
+    },
+    {
+      "name": "external_political_actors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the 'cost' of being unable to easily suppress research or opinions that challenge their agendas. They face institutional and legal barriers to influencing academic content or personnel decisions, which limits their direct control over universities."
+    },
+    {
+      "name": "institutional_administrators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of reduced flexibility in personnel management and resource allocation. They cannot easily dismiss tenured faculty for financial reasons or institutional restructuring, which can lead to rigidity in academic departments. They also manage the political backlash from external actors."
+    },
+    {
+      "name": "contingent_faculty",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are not covered by tenure protections and often perform similar teaching and research duties with significantly less job security and lower pay. They would advocate for broader protections or alternative career paths but are largely excluded from the governance structures that determine tenure policy."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the pursuit of knowledge by protecting researchers from short-term political and institutional pressures, ensuring that inquiry can follow truth wherever it leads, even into uncomfortable territory.",
+    "transfer_function": "Transfers job security and intellectual autonomy to tenured faculty, in exchange for their commitment to long-term, high-quality research and teaching, and the public good of independent knowledge.",
+    "absent_voices": "Contingent faculty, who bear the precarity that tenure insulates tenured faculty from, are largely absent from the policy-making discussions around tenure. They would argue for a more equitable distribution of job security.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If tenure vanished overnight, academic institutions would quickly become more susceptible to political and economic pressures. Research agendas would shift towards safer, more fundable topics, and faculty would self-censor, leading to a significant decline in independent truth-seeking and critical inquiry.",
+    "founding_problem": "Universities were historically vulnerable to external political and religious interference, leading to the suppression of inconvenient truths and the dismissal of scholars for unpopular views.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic freedom organizations, faculty unions, and historical analyses of academic suppression attest that the problem of external interference remains live, citing ongoing political attacks on universities and specific faculty members. This corroboration comes from sources outside the direct beneficiaries of tenure."
+  },
+  "interval": {
+    "start": 1940,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1940,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.15
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.18
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.2
+      "metric": "suppression_requirement",
+      "time_point": 1940,
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1960,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
       "value": 0.08
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 2000,
       "value": 0.09
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1940,
       "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.05
+      "time_point": 1960,
+      "value": 0.03
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 1980,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.05
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the tenure contract in higher education as a mechanism for protecting academic freedom. From this reading, tenure decouples a researcher's survival from institutional or political pressures, thereby enabling high-risk, critical, and truth-seeking inquiry. It is presented as a coordination mechanism that benefits society by ensuring robust intellectual discourse and knowledge production, even when inconvenient to powerful actors. The metrics reflect this ideal-type operation, with low extraction and suppression, primarily targeting external pressures.",
-    "logic_rationale": "The low extractiveness (0.2) and suppression (0.1) reflect the ideal function of tenure: it extracts minimal direct cost from faculty (beyond the initial probationary period) and primarily suppresses external pressures on research, not internal dissent. The theater ratio is low (0.05) because, in this reading, the mechanism is genuinely functional for its stated purpose. Accessibility collapse is high (0.8) because, once tenure is granted, the protection against arbitrary dismissal is substantial. Resistance is low (0.05) from within the academic community, as the system is largely accepted as beneficial for academic freedom, though external political actors may resist its effects.",
-    "perspectival_gap": "From the perspective of tenured faculty, this constraint is a pure Rope, providing essential protection for their work. From the perspective of external political actors or institutional administrators seeking conformity, it is a barrier to control, experienced as a low-level Snare or Tangled Rope due to its resistance to their influence. Students and the public are indirect beneficiaries, gaining from the quality and independence of research.",
-    "directionality_logic": "Tenured faculty are primary beneficiaries (d=0.0-0.1) due to the protection and stability tenure provides. Students and the public are also beneficiaries (d=0.1-0.2) through access to independent research. Political actors and institutional administrators seeking to control research agendas are the targets/victims (d=0.8-0.9), as tenure limits their ability to exert direct influence or impose conformity. The constraint subsidizes academic independence by extracting from those who would suppress it.",
-    "mandatrophy_analysis": "This reading prevents mislabeling academic freedom as pure extraction by focusing on the protective function of tenure. It acknowledges that the mandate (protecting truth-seeking) is still live and actively served by the constraint, rather than having atrophied into mere inertia or rent-seeking. The low theater ratio and extractiveness support this view, distinguishing it from a Piton or Snare where the original mandate is lost."
+    "narrative_context": "This constraint story models the tenure contract from the perspective of academic freedom, where it functions as a protective mechanism for truth-seeking against external pressures. It is one reading of the 'tenure_contract' kernel. From this reading, tenure is a coordination mechanism that benefits faculty, students, and public discourse by enabling independent research and teaching. The costs are borne by external political actors and institutional administrators who face limitations on their ability to control academic output.",
+    "key_agents": [
+      "tenured_faculty: Primary beneficiary (powerful/constrained) — protected from arbitrary dismissal.",
+      "students: Beneficiary (moderate/mobile) — access to diverse, independent knowledge.",
+      "public_discourse: Beneficiary (analytical/analytical) — benefits from independent knowledge generation.",
+      "external_political_actors: Primary target (institutional/constrained) — limited ability to suppress research.",
+      "institutional_administrators: Target (institutional/constrained) — reduced flexibility in personnel management.",
+      "contingent_faculty: Excluded (powerless/trapped) — lack tenure protections, excluded from policy discussions."
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because, from this reading, the primary function is protection and coordination, not rent extraction. The 'costs' borne by external actors are the price of academic independence, not a transfer of wealth. Suppression is also low (0.1) as the constraint's purpose is to *prevent* suppression of academic inquiry. Accessibility collapse is high (0.7) because the alternatives to tenure (e.g., short-term contracts without protections) are seen as fundamentally undermining academic freedom. Resistance is low (0.05) from within the academic freedom framework, as the constraint is largely accepted as necessary. The slight increase in extractiveness and suppression over time reflects growing external pressures on higher education and the increasing precarity of non-tenured faculty, even within this reading.",
+    "perspectival_gap": "From the perspective of tenured faculty, the constraint is a pure Rope, providing essential protection. From the perspective of external political actors, it is a Snare that prevents them from exercising legitimate oversight. The engine will compute these divergences based on the declared roles and exit options.",
+    "directionality_logic": "Tenured faculty are clear beneficiaries (d=0.0-0.1) as they gain job security and intellectual freedom. Students and public discourse are also beneficiaries (d=0.1-0.2) through access to independent knowledge. External political actors and institutional administrators are targets (d=0.8-0.9) as their ability to control or influence academic affairs is constrained. Contingent faculty are excluded, meaning their interests are not directly served by this specific reading of the tenure contract, and they bear the costs of its rigidity without its benefits.",
+    "mandatrophy_analysis": "This reading argues that the founding problem (vulnerability to external interference) is still live, preventing mandatrophy. The classification as a Rope, with low extractiveness and suppression, reflects the view that tenure continues to serve its original coordination function effectively, rather than having atrophied into a mere performance or extraction mechanism. The low theater ratio supports this, indicating that the protective function is genuine and not merely ceremonial."
   },
+  "omegas": [
+    {
+      "id": "tenure_as_property_right_vs_academic_freedom",
+      "question": "Is tenure primarily a property right for individual faculty members, or a mechanism to secure academic freedom for the institution and public good?",
+      "resolution_mechanism": "Legal analysis of court rulings on tenure cases, particularly those involving dismissal for cause vs. financial exigency. Examination of institutional policies on faculty governance and intellectual property.",
+      "impact": "If primarily a property right, the 'extraction' from administrators (in terms of flexibility) might be reclassified as a cost of a labor contract, shifting the constraint towards a more neutral or even extractive classification from the institutional seat. If primarily for academic freedom, the Rope classification holds more strongly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the fundamental nature of tenure's protection."
+    },
+    {
+      "id": "effectiveness_of_academic_freedom_protection",
+      "question": "How effective is tenure in actually protecting academic freedom against contemporary forms of institutional displeasure or political backlash, especially in an era of declining public funding and increasing political polarization?",
+      "resolution_mechanism": "Empirical studies tracking instances of attempted interference, faculty self-censorship rates, and the outcomes of academic freedom disputes across different institutional contexts. Comparative analysis with non-tenure systems.",
+      "impact": "If tenure's effectiveness is found to be significantly diminished, the 'accessibility_collapse' for alternatives might be lower, and the 'resistance' higher, potentially shifting the classification towards a Piton (if the function is mostly theatrical) or a Snare (if it primarily extracts from faculty by creating a false sense of security).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical efficacy of tenure in its stated purpose."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "Given the 'tenure_contract' kernel, how do the 'academic_freedom_reading', 'institutional_extraction_reading', and 'demographic_reproduction_reading' structurally diverge, and what are the implications for policy interventions?",
+      "resolution_mechanism": "Comparative analysis of the stakeholder maps, beneficiary/victim declarations, and metric profiles generated for each reading. Identification of common and divergent policy levers across readings.",
+      "impact": "Understanding the structural divergence is crucial for designing effective policy interventions. If the academic freedom reading is dominant, policies might focus on strengthening tenure protections. If the extraction or reproduction readings are dominant, policies might focus on labor reform or diversity initiatives. The choice of reading dictates the problem definition and solution space.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural differences between competing readings of the tenure contract kernel."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "institutional_research_funding_allocation",
-      "university_governance_structures"
+      "university_governance_structures",
+      "research_funding_allocation",
+      "faculty_hiring_practices"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'tenure_contract' kernel, focusing on its role in academic freedom. Other readings (institutional_extraction_reading, demographic_reproduction_reading) exist and are modeled as separate constraints."
-  },
-  "directionality_overrides": [],
-  "six_questions": {
-    "coordination_function": "Coordinates the pursuit of knowledge by protecting researchers from external pressures, ensuring that inquiry can proceed without fear of reprisal, thereby fostering intellectual independence and robust critical discourse.",
-    "transfer_function": "Transfers job security and intellectual autonomy to tenured faculty, in exchange for their commitment to truth-seeking and high-quality research, while transferring a degree of control away from external political and internal administrative actors.",
-    "absent_voices": "Political actors seeking to control academic narratives, and institutional administrators prioritizing conformity over critical inquiry, are structurally resisted by tenure. They would argue for greater accountability and responsiveness to immediate societal or institutional needs, but their influence is curtailed by the protections tenure affords.",
-    "disappearance_verdict": "world_rearranges",
-    "disappearance_rationale": "If tenure vanished overnight, academic institutions would quickly become more susceptible to political and financial pressures. Research agendas would likely shift towards safer, more fundable, or politically palatable topics. Faculty would face increased precarity, potentially chilling controversial or critical inquiry. The quality and independence of public discourse would degrade as a result.",
-    "founding_problem": "The problem of ensuring intellectual independence and protecting scholars from arbitrary dismissal or political interference, particularly in fields of inquiry that challenge established norms or powerful interests.",
-    "founding_problem_status": "live",
-    "founding_problem_corroboration": "Academic associations, civil liberties organizations, and historical analyses of academic freedom cases consistently corroborate that the threat to intellectual independence remains live. While the specific forms of pressure may evolve, the fundamental problem of protecting high-risk inquiry persists, as attested by ongoing debates and legal challenges from outside the immediate beneficiary group of tenured faculty."
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
+    "dual_formulation_note": "This constraint is one of three readings of the 'tenure_contract' kernel. The other readings are 'institutional_extraction_reading' and 'demographic_reproduction_reading', each with distinct structural properties and classifications."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -142,34 +235,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "tenure_contract__institutional_extraction_reading",
+        "sibling_id": "institutional_extraction_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "tenure_contract__demographic_reproduction_reading",
+        "sibling_id": "demographic_reproduction_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "intellectual_independence_is_foundational",
+        "atom": "academic_freedom_is_foundational_to_truth_seeking",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "truth_seeking_requires_protection",
+        "atom": "tenure_is_the_primary_mechanism_for_academic_freedom",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "post_1940_aaup_statement_of_principles",
+    "reference_frame": "post_1940_aa_up_statement_of_principles",
     "drift_state": {
-      "moment": "contemporary_political_polarization",
-      "direction": "repudiation_pressure",
+      "moment": "contemporary_higher_education_crisis",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": true
     }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

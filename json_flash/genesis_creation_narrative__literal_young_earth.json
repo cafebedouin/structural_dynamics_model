@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "60c13ca4-8f5c-4a94-8f39-b625efdfd1ae"
+    "story_uid": "8eb91948-a91b-42e4-b70b-9b3783a155b8"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.78,
+    "extractiveness": 0.7,
+    "suppression": 0.85,
     "theater_ratio": 0.4,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.7,
-    "claimed_type": "tangled_rope",
-    "human_readable": "Literal Young Earth Creationism (Genesis 1-2)",
+    "accessibility_collapse": 0.75,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Genesis 1-2 as Literal Young Earth Creation",
     "topic_domain": "religious_studies/biblical_hermeneutics/science_religion_interface",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -21,134 +21,207 @@
       "young_earth_creationist_organizations"
     ],
     "victims": [
-      "theologians_favoring_theistic_evolution",
-      "scientists_of_faith",
-      "students_in_conservative_institutions"
+      "academically_trained_theologians",
+      "science_educators",
+      "congregants_with_scientific_literacy"
+    ],
+    "vindicated_propositions": [
+      "biblical_inerrancy_doctrine",
+      "literal_hermeneutic_supremacy"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_law_vs_constructed_ambiguity",
-      "question": "Is the literal young earth interpretation a genuine natural law derived from scripture, or a constructed constraint that benefits identifiable agents?",
-      "resolution_mechanism": "Analysis of hermeneutical methods and historical development of the doctrine, particularly its emergence in response to scientific challenges.",
-      "impact": "If constructed, the constraint's classification shifts from a claimed mountain (which it is not, but is often presented as) to a tangled rope or snare, reflecting its active enforcement and beneficiaries.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity between natural scriptural truth and institutional construction."
+      "name": "conservative_theological_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "These institutions define and enforce doctrinal statements requiring adherence to a literal, young-earth interpretation of Genesis. They benefit from maintaining a clear boundary against perceived theological liberalism and scientific naturalism, which reinforces their authority and funding base. Exit means losing institutional identity and donor support."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (institutional policies, funding) or internalized (cognitive patterns, fear of ostracism)?",
-      "resolution_mechanism": "Post-exit suppression trajectory: if suppression of non-literalist views persists after individuals leave conservative institutions, reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — individuals carry the suppression with them after exit, limiting intellectual freedom even in new contexts.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for non-literalist views."
+      "name": "young_earth_creationist_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These organizations promote and disseminate the literal young-earth view through media, museums, and educational materials. They receive significant financial and volunteer support from adherents, and their existence is predicated on the continued acceptance of this interpretation. Their influence would diminish if the interpretation lost its hold."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint accurately identified as the 'literal_young_earth' reading of the 'genesis_creation_narrative' kernel?",
-      "resolution_mechanism": "Comparison with other readings and their core tenets; verification that this constraint's structural properties align with the specific claims of 24-hour days and recent creation.",
-      "impact": "Misidentification would lead to incorrect mapping of axioms and reading relations, distorting the commitment system analysis.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Verification of kernel and reading identification."
+      "name": "academically_trained_theologians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Many theologians, trained in critical biblical scholarship and aware of scientific consensus, find themselves in tension with this literalist constraint. Adherence to it can be a requirement for employment or advancement in conservative institutions, forcing them to either compromise their academic integrity or seek employment elsewhere, often at significant career cost. Their identity is often fused with their professional role within these institutions."
+    },
+    {
+      "name": "science_educators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Public and private school science educators, particularly in regions influenced by conservative religious views, face pressure to either teach young-earth creationism or avoid topics like evolution. This compromises their professional standards and can lead to job insecurity or community ostracization. Their options are to conform, resist, or leave the profession/region."
+    },
+    {
+      "name": "congregants_with_scientific_literacy",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals within conservative congregations who understand scientific consensus (e.g., on evolution, geology, cosmology) often experience cognitive dissonance and spiritual distress. They may feel forced to choose between their faith community and intellectual honesty, leading to disengagement or internal conflict. Their identity is often deeply tied to their faith community."
+    },
+    {
+      "name": "mainstream_scientific_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observes the ongoing conflict between literal young-earth creationism and scientific consensus. While not directly paying, they bear the cost of public misunderstanding of science and the need to repeatedly articulate scientific findings against theological claims. They can offer expert testimony and publish research but cannot directly alter the constraint's internal enforcement."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a unified, unambiguous narrative of origins that reinforces a particular theological framework and a specific interpretation of biblical authority, fostering community cohesion among adherents.",
+    "transfer_function": "Transfers intellectual and spiritual conformity from adherents (theologians, educators, congregants) to conservative theological institutions and creationist organizations, in exchange for a sense of certainty, community, and theological purity.",
+    "absent_voices": "Scholars advocating for theistic evolution or allegorical readings are actively excluded from positions of influence within institutions enforcing this constraint. They would argue for a more nuanced hermeneutic that respects both scientific inquiry and theological depth, but their perspectives are suppressed to maintain doctrinal uniformity.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the literal young-earth interpretation and its enforcement vanished overnight, conservative theological institutions would face an immediate crisis of identity and authority. Many young-earth creationist organizations would lose their raison d'être. The landscape of science-religion dialogue would fundamentally shift, and many individuals would experience liberation from cognitive dissonance, leading to a reorganization of theological and educational priorities.",
+    "founding_problem": "The problem of reconciling biblical accounts of creation with emerging scientific theories (e.g., geology, evolution) in the 19th and 20th centuries, and the desire to maintain biblical inerrancy against perceived threats from naturalism.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Adherents and institutions promoting this view attest that the problem of defending biblical authority against scientific challenges is still very much alive. Critics, including many mainstream theologians and scientists, would argue that the 'problem' is a self-imposed hermeneutical one, not an external threat to biblical truth, but the internal perception of the problem remains live for the benefiting parties."
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1900,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1930,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.58
+      "time_point": 1960,
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.62
+      "time_point": 1990,
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 2024,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1900,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
       "value": 0.75
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.78
+      "time_point": 1990,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.85
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1900,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1990,
       "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 2024,
       "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the interpretation of Genesis 1-2 as an inerrant, literal, historical-scientific chronicle, asserting 24-hour creation days and a recent creation (Young Earth Creationism). It is a reading of the broader 'genesis_creation_narrative' kernel. This reading actively forecloses evolutionary theory and non-literal hermeneutics within its institutional adherents, leading to high suppression of dissenting views and significant extraction from those who must conform to maintain professional or social standing within conservative religious contexts.",
-    "key_agents": [
-      "conservative_theological_institutions: Agenda setter (institutional/arbitrage) — enforces literalist interpretation, benefits from doctrinal purity and institutional control.",
-      "young_earth_creationist_organizations: Beneficiary (organized/mobile) — promotes and benefits from the literalist reading, provides resources and community to adherents.",
-      "theologians_favoring_theistic_evolution: Payer (powerful/constrained) — face professional penalties or ostracism for non-literalist views in conservative settings.",
-      "scientists_of_faith: Payer (moderate/constrained) — must reconcile scientific findings with faith, often facing pressure to conform or leave conservative communities.",
-      "students_in_conservative_institutions: Payer (powerless/identity_locked) — required to affirm literalist views for academic progression or social acceptance.",
-      "secular_scientific_community: Observer (institutional/analytical) — views the constraint as a non-scientific, faith-based position, largely unaffected by its internal dynamics but observing its societal impact."
-    ],
-    "logic_rationale": "The constraint's extractiveness (0.65) stems from the intellectual and professional costs imposed on those who hold non-literalist views within institutions that enforce this reading. Suppression (0.78) is high due to active enforcement mechanisms like doctrinal statements, hiring practices, and curriculum mandates that exclude or penalize non-adherents. The theater ratio (0.4) reflects the ongoing effort to present the literalist reading as scientifically viable despite overwhelming scientific consensus to the contrary, often involving selective interpretation of data or creation of alternative 'scientific' frameworks. The rising extractiveness and suppression over time reflect an intensification of enforcement in response to external scientific and theological challenges.",
-    "perspectival_gap": "From the perspective of conservative theological institutions and YEC organizations, this constraint is a necessary defense of biblical truth and doctrinal purity, ensuring faithful adherence to scripture. From the perspective of theologians, scientists, and students who face pressure to conform, it is an extractive and suppressive mechanism that limits intellectual freedom and imposes significant personal and professional costs. The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "Conservative theological institutions and YEC organizations are clear beneficiaries (d=0.0-0.2) as they gain institutional legitimacy, control, and funding by upholding this interpretation. Theologians, scientists, and students who dissent are targets (d=0.8-1.0) as they bear the costs of intellectual conformity or professional exclusion. The secular scientific community is an analytical observer (d=0.5), largely outside the direct influence of this specific constraint's enforcement.",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it claims a coordination function (preserving biblical authority and doctrinal purity) but primarily operates through asymmetric extraction and suppression. The 'mandate' of preserving biblical inerrancy is used to justify the extraction of intellectual conformity and the suppression of alternative interpretations. The classification prevents mislabeling this as a 'Rope' (pure coordination) by highlighting the coercive enforcement and identifiable victims. The rising extractiveness and suppression indicate an enforcement ratchet, not a natural coordination outcome.",
-    "kernel_context": "This constraint is the 'literal_young_earth' reading of the 'genesis_creation_narrative' kernel. This reading asserts Genesis 1-2 as an inerrant historical-scientific account of creation in 24-hour days, leading to a recent creation. It stands in contrast to sibling readings such as 'theistic_evolutionary' (Genesis as theological framework compatible with science) and 'allegorical_ancient_near_east' (Genesis as mythopoetic literature)."
+    "narrative_context": "This constraint represents the interpretation of Genesis 1-2 as an inerrant historical-scientific chronicle, asserting 24-hour days and a recent creation. This reading is enforced within specific conservative theological and educational institutions, where it serves as a boundary marker for orthodoxy. It directly contradicts mainstream scientific consensus on cosmology, geology, and biology, leading to significant tension for individuals and institutions attempting to reconcile faith and science. This story is one reading of the 'genesis_creation_narrative' kernel.",
+    "logic_rationale": "The constraint is classified as a Snare because its primary function has shifted from genuine coordination (providing a theological framework) to asymmetric extraction (demanding intellectual conformity and suppressing alternative readings). Extractiveness is high (0.7) due to the significant intellectual and professional costs borne by those who deviate. Suppression is very high (0.85) because conservative institutions actively enforce this interpretation through employment requirements, doctrinal statements, and social pressure, effectively trapping individuals whose identities are tied to these communities. The theater ratio (0.4) reflects the performative defense of a 'scientific' reading that is largely rejected by the scientific community, often involving the creation of alternative scientific models that lack mainstream peer validation.",
+    "directionality_logic": "Conservative theological institutions and young-earth creationist organizations are clear beneficiaries, as this interpretation reinforces their authority, identity, and funding. Academically trained theologians, science educators, and congregants with scientific literacy are the primary payers, bearing the costs of intellectual compromise, career limitations, or spiritual distress. The mainstream scientific community acts as an observer, documenting the conflict but not directly subject to the constraint's internal enforcement mechanisms.",
+    "perspectival_gap": "From the perspective of the beneficiaries, this constraint is a necessary defense of biblical truth and a coordination mechanism for theological purity. From the perspective of the payers, it is an extractive and suppressive force that demands intellectual dishonesty and creates profound internal conflict. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'literal_young_earth' reading of the 'genesis_creation_narrative' kernel. Sibling readings include 'theistic_evolutionary' (Genesis compatible with science) and 'allegorical_ancient_near_east' (Genesis as mythopoetic literature). This reading forecloses the scientific claims of theistic evolution and the literary claims of the allegorical reading."
   },
+  "omegas": [
+    {
+      "id": "hermeneutical_vs_scientific_claim",
+      "question": "Is the literal young-earth interpretation primarily a hermeneutical claim about biblical authority, or a scientific claim about origins?",
+      "resolution_mechanism": "Analysis of institutional statements and publications: if the primary defense relies on scientific arguments (e.g., 'creation science'), it functions as a scientific claim; if on theological arguments about biblical inerrancy, it's hermeneutical.",
+      "impact": "If primarily a scientific claim, its empirical refutation by mainstream science would lead to a reclassification towards Piton or Snare due to the lack of functional coordination. If primarily hermeneutical, its persistence is less vulnerable to scientific data, but its suppressive nature on intellectual freedom remains.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the constraint's primary epistemic grounding."
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "To what extent is the 'identity_locked' exit option for theologians and congregants a result of professional dependence versus deeply internalized belief and community belonging?",
+      "resolution_mechanism": "Longitudinal studies of individuals who exit: if intellectual freedom is prioritized over career/community, the internalized component is weaker; if exit leads to profound identity crisis and isolation, it's stronger.",
+      "impact": "If internalized belief is the dominant lock, the effective suppression is higher and more resistant to external challenges (e.g., legal changes). If professional dependence is dominant, legal or institutional reforms could more easily reduce suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for identity-locked agents."
+    },
+    {
+      "id": "dominion_mandate_interpretation",
+      "question": "Does the 'dominion mandate' (Genesis 1:28) as interpreted by this reading lead to an extractive or stewardship-oriented relationship with the natural world?",
+      "resolution_mechanism": "Analysis of environmental policies and practices advocated by young-earth creationist organizations: if policies prioritize resource exploitation without ecological concern, it's extractive; if they emphasize responsible care, it's stewardship.",
+      "impact": "If interpreted as an exploitation license, the constraint contributes to broader environmental degradation, amplifying its negative externalities. If stewardship-oriented, it could mitigate some negative impacts, though the scientific conflict remains.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Impact of the 'dominion mandate' interpretation on environmental ethics."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "evolutionary_theory_acceptance",
-      "biblical_hermeneutics_curriculum",
-      "science_education_standards"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'genesis_creation_narrative' kernel, each with distinct structural properties and classifications. This reading (literal_young_earth) is substantially more extractive and suppressive than its siblings (theistic_evolutionary, allegorical_ancient_near_east) due to its active enforcement against scientific and theological alternatives."
+      "evolutionary_biology_education_standards",
+      "climate_change_denial_narrative"
+    ]
   },
-  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
@@ -165,19 +238,19 @@
     ],
     "axioms": [
       {
-        "atom": "genesis_literal_historical_scientific_account",
+        "atom": "biblical_inerrancy_literal_historical",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "evolution_categorically_false",
-        "role": "secondary",
+        "atom": "scientific_consensus_subordinate_to_scripture",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "biblical_inerrancy_literal_hermeneutic",
+    "reference_frame": "biblical_literalism_scientific_authority",
     "drift_state": {
       "moment": "contemporary_scientific_consensus",
       "direction": "axiom_overriding",
@@ -186,14 +259,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,25 +4,83 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7a5b1458-68bc-4e49-bf29-b0d4e9b873ee"
+    "story_uid": "b7082121-065c-4aab-8d85-dcd5e83d3468"
   },
   "base_properties": {
     "extractiveness": 0.9,
     "suppression": 0.95,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.9,
-    "resistance": 0.8,
+    "resistance": 0.7,
     "claimed_type": "snare",
     "human_readable": "Qualified Immunity Doctrine (Constitutional Fidelity Reading)",
     "topic_domain": "constitutional_law/civil_rights/law_enforcement_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "judiciary_institutional_power"
+      "federal_judiciary",
+      "law_enforcement_officers"
     ],
     "victims": [
-      "constitutional_rights_claimants",
-      "constitutional_text_integrity"
+      "victims_of_constitutional_violations",
+      "civil_rights_advocates"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The federal courts, particularly the Supreme Court, created and continue to refine the doctrine of qualified immunity without explicit constitutional or statutory basis. This reading views them as expanding their own power by fabricating legal principles."
+    },
+    {
+      "name": "law_enforcement_officers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Officers benefit from the doctrine by being shielded from liability in civil rights lawsuits unless their conduct violates 'clearly established statutory or constitutional rights of which a reasonable person would have known.' This reading sees them as beneficiaries of an illegitimate judicial overreach."
+    },
+    {
+      "name": "victims_of_constitutional_violations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals whose constitutional rights are violated by law enforcement often find their claims dismissed due to qualified immunity, even when a violation occurred. They bear the cost of the doctrine's existence by being denied legal recourse."
+    },
+    {
+      "name": "civil_rights_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations and lawyers dedicated to protecting civil rights face significant hurdles in litigating cases against law enforcement due to qualified immunity. They expend considerable resources challenging a doctrine they view as illegitimate and an impediment to justice."
+    },
+    {
+      "name": "legislative_branch",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The legislative branch has not explicitly authorized qualified immunity, yet its attempts to reform or abolish the doctrine face judicial resistance and political inertia. This reading views the judiciary as having usurped legislative authority."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "From this reading's perspective, the doctrine does not solve a legitimate coordination problem but rather creates a framework for judicial power expansion and officer impunity, under the guise of protecting law enforcement.",
+    "transfer_function": "Transfers accountability for constitutional violations from individual officers and the state to the victims, effectively denying redress and shifting the burden of harm.",
+    "absent_voices": "The framers of the Constitution and the authors of Section 1983 (the civil rights statute under which most qualified immunity cases are brought) would object to a judicially created immunity that undermines the principle of government accountability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If qualified immunity vanished overnight, the landscape of civil rights litigation would fundamentally change. More cases against officers would proceed, potentially leading to increased accountability, changes in police training and policy, and a rebalancing of power between citizens and the state. The federal judiciary would lose a significant area of discretionary power.",
+    "founding_problem": "The doctrine was ostensibly created to protect government officials from frivolous lawsuits and the chilling effect of potential liability, allowing them to perform their duties without undue fear of litigation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The federal judiciary and law enforcement agencies attest the problem is live, arguing that officers need protection to perform their duties effectively. Civil rights advocates and legal scholars, citing historical analysis and the lack of statutory basis, contend that the 'founding problem' is a pretext for judicial overreach and that the doctrine itself is the problem."
   },
   "interval": {
     "start": 1967,
@@ -32,17 +90,17 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1967,
-      "value": 0.1
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1982,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.7
+      "time_point": 1980,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.75
     },
     {
       "metric": "base_extractiveness",
@@ -57,17 +115,17 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1967,
-      "value": 0.1
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1982,
-      "value": 0.45
+      "time_point": 1980,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.75
+      "time_point": 1995,
+      "value": 0.8
     },
     {
       "metric": "suppression_requirement",
@@ -78,68 +136,52 @@
       "metric": "suppression_requirement",
       "time_point": 2024,
       "value": 0.95
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1967,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1982,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.1
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story analyzes the Qualified Immunity doctrine from a 'Constitutional Fidelity' reading, which views the doctrine as a judicially fabricated construct lacking constitutional or statutory authorization. From this perspective, the doctrine is illegitimate regardless of its purported policy outcomes, representing an overreach of judicial power that undermines the integrity of the constitutional text and the separation of powers. It is classified as a Snare because it systematically extracts legal recourse from victims of constitutional violations, primarily benefiting the institutional power of the judiciary.",
-    "logic_rationale": "The extractiveness is very high (0.9) because the doctrine effectively nullifies a significant portion of civil rights claims, denying justice to victims and insulating state actors from accountability. Suppression is also very high (0.95) as the doctrine actively suppresses legal challenges and alternative interpretations of official liability, creating a near-impenetrable shield. Theater ratio is low (0.1) because the doctrine's function is not performative; it is a direct and effective mechanism for achieving its (illegitimate, from this reading's view) ends. The metrics reflect the doctrine's actual impact on constitutional enforcement, which is severe and highly extractive.",
-    "directionality_logic": "The 'judiciary_institutional_power' is the primary beneficiary, as the doctrine expands its authority to create law. 'Constitutional_rights_claimants' are the primary victims, losing their ability to seek redress. The 'constitutional_text_integrity' is also a victim, as the text is undermined by judicial fabrication. Law enforcement officials are secondary beneficiaries, gaining protection from liability. The legislative branch is 'excluded' as its role in defining liability is usurped.",
-    "perspectival_gap": "From this reading, there is no legitimate 'perspectival gap' that would justify the doctrine. The doctrine is fundamentally illegitimate. Any 'coordination' or 'protection' claimed by other readings is seen as a cover for judicial overreach and extraction of constitutional fidelity. The divergence is between a claim of judicial authority and the actual constitutional structure.",
-    "kernel_context": "This constraint is a 'constitutional_fidelity_reading' of the 'qualified_immunity_doctrine' kernel. Sibling readings include the 'protective_scaffold_reading' (viewing immunity as necessary protection for law enforcement) and the 'accountability_void_reading' (viewing immunity as a systematic mechanism for impunity). This reading asserts the doctrine's illegitimacy due to its lack of constitutional or statutory basis, regardless of policy arguments."
+    "narrative_context": "This constraint story analyzes the doctrine of qualified immunity from a 'constitutional fidelity' reading. This reading asserts that qualified immunity is a judicially fabricated doctrine lacking constitutional or statutory authorization, and is therefore illegitimate regardless of its purported policy outcomes. It views the doctrine as an expansion of judicial power and a barrier to accountability for constitutional violations. The metrics reflect the increasing extractiveness and suppression of this judicially created barrier over time.",
+    "logic_rationale": "The extractiveness is high (0.9) because the doctrine effectively denies legal recourse to victims of constitutional violations, transferring the cost of harm and the burden of proof onto them. Suppression is extremely high (0.95) as the doctrine actively shields officers from liability, making it nearly impossible for victims to succeed in court. The theater ratio is low (0.1) because, from this reading, the doctrine's stated purpose (protecting officers from frivolous lawsuits) is largely a cover for its actual function of granting impunity, with little genuine coordination benefit. The increasing values over time reflect the judicial expansion of the doctrine, making it progressively harder to overcome.",
+    "directionality_logic": "The federal judiciary is the primary agenda-setter and beneficiary, having expanded its own power through the doctrine's creation and refinement. Law enforcement officers are direct beneficiaries, shielded from liability. Victims of constitutional violations and civil rights advocates are the primary payers, bearing the costs of denied justice and increased litigation burden. The legislative branch is excluded, as its authority to define immunities has been usurped by the judiciary.",
+    "perspectival_gap": "From the perspective of the federal judiciary, the doctrine is a necessary judicial tool for managing litigation and ensuring effective governance. From the perspective of victims and civil rights advocates, it is an illegitimate barrier to justice. This story explicitly adopts the latter, constitutional fidelity, perspective, which sees the doctrine as a snare.",
+    "kernel_context": "This constraint is the 'constitutional_fidelity_reading' of the 'qualified_immunity_doctrine' kernel. Sibling readings include 'protective_scaffold_reading' (viewing immunity as necessary protection for law enforcement) and 'accountability_void_reading' (viewing immunity as a systematic mechanism for impunity)."
   },
   "omegas": [
     {
-      "id": "judicial_fabrication_legitimacy",
-      "question": "Is the judiciary's power to create doctrines like qualified immunity, absent explicit constitutional or statutory authorization, a legitimate exercise of judicial power or an unconstitutional usurpation?",
-      "resolution_mechanism": "A Supreme Court decision explicitly overturning the doctrine on constitutional grounds, or a constitutional amendment clarifying judicial powers.",
-      "impact": "If deemed illegitimate, the entire doctrine collapses, fundamentally altering civil rights law. If deemed legitimate, this reading's core premise is foreclosed, and the doctrine's status shifts to a judicially sanctioned (though still potentially extractive) constraint.",
+      "id": "judicial_legitimacy_source",
+      "question": "Does the federal judiciary possess inherent authority to create immunities not explicitly granted by the Constitution or statute?",
+      "resolution_mechanism": "A definitive Supreme Court ruling explicitly disavowing or affirming such inherent power, or a constitutional amendment clarifying the scope of judicial authority.",
+      "impact": "If such authority is denied, the doctrine is fundamentally illegitimate, reinforcing its classification as a snare. If affirmed, the doctrine gains a new, albeit controversial, source of legitimacy, potentially shifting its classification towards a tangled rope (if a coordination function is acknowledged).",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "The fundamental question of judicial authority to create this doctrine."
+      "description": "Ambiguity regarding the source and scope of judicial power to create legal immunities."
     },
     {
-      "id": "constitutional_text_interpretation",
-      "question": "Does the constitutional text, particularly 42 U.S.C. § 1983, implicitly or explicitly authorize a doctrine of qualified immunity, or does it mandate a strict liability standard for constitutional violations?",
-      "resolution_mechanism": "Historical legal scholarship on the intent of the 14th Amendment and § 1983, or a definitive Supreme Court ruling based solely on textual and historical analysis.",
-      "impact": "If the text is found to authorize immunity, this reading's claim of fabrication is weakened. If it mandates strict liability, the doctrine is definitively unconstitutional.",
+      "id": "legislative_inaction_implication",
+      "question": "Does congressional inaction on qualified immunity imply tacit approval or merely political gridlock?",
+      "resolution_mechanism": "Explicit legislative action (or clear, unambiguous inaction with stated intent) to either codify, reform, or abolish qualified immunity.",
+      "impact": "If inaction implies tacit approval, it could lend a thin layer of 'conventional' legitimacy to the doctrine, slightly reducing its perceived extractiveness from a purely legalistic standpoint. If it's merely gridlock, the doctrine's lack of legislative grounding remains a core illegitimacy.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Interpretation of constitutional and statutory text regarding official immunity."
+      "description": "Whether legislative silence on qualified immunity constitutes implicit authorization or merely a failure to act."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "police_accountability_mechanisms",
+      "civil_rights_litigation_access"
+    ]
+  },
   "cs_structure": {
     "kernel_codification": "implicit",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
         "sibling_id": "protective_scaffold_reading",
-        "relation": "forecloses"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "accountability_void_reading",
@@ -148,35 +190,36 @@
     ],
     "axioms": [
       {
-        "atom": "judicial_power_limited_to_text_and_statute",
+        "atom": "judicial_power_limited_to_constitution_and_statute",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "constitutional_rights_are_self_executing",
+        "atom": "accountability_for_constitutional_violations_is_fundamental",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "constitutional_textualism_and_separation_of_powers",
+    "reference_frame": "original_constitutional_design_accountability",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_judicial_practice",
       "direction": "practice_drift",
       "magnitude": "severe",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

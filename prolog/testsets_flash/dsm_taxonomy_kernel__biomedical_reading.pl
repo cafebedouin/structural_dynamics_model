@@ -41,7 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,29 +70,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: dsm_taxonomy_kernel__biomedical_reading
- *   human_readable: DSM Taxonomy as Biomedical Disease Entities (Biomedical Reading)
+ *   human_readable: DSM Taxonomy as Objective Biomedical Entities (Biomedical Reading)
  *   domain: medical_epistemology/psychiatric_taxonomy/social_construction_of_illness
  *
  * SUMMARY:
- *   This constraint represents the 'biomedical reading' of the DSM
- *   (Diagnostic and Statistical Manual of Mental Disorders) taxonomy, which
- *   asserts that its categories correspond to objective neurobiological
- *   disease entities discoverable through empirical research. This reading
- *   underpins the medical model of mental illness, justifying pharmaceutical
- *   and other biological interventions. It is a Snare because it extracts
- *   from diagnosed individuals (through involuntary treatment, loss of
- *   autonomy, and financial burden) while benefiting the psychiatric
- *   establishment and pharmaceutical industry, with alternatives suppressed
- *   by the authority of medical science.
+ *   This constraint represents the 'biomedical reading' of the DSM taxonomy,
+ *   asserting that its categories correspond to objective neurobiological
+ *   disease entities. This reading underpins the current psychiatric
+ *   paradigm, enabling medical interventions and shaping public understanding
+ *   of mental health. The high extractiveness reflects the costs borne by
+ *   individuals diagnosed under this system, including involuntary treatment,
+ *   stigma, and the medicalization of normal human variation. The high
+ *   suppression is due to the institutional power of the psychiatric
+ *   establishment and pharmaceutical industry in defining and enforcing this
+ *   paradigm, often marginalizing alternative perspectives.
  *
- * KEY AGENTS:
- *   - psychiatric_establishment: Agenda setter (institutional/arbitrage) — defines categories, legitimizes interventions.
- *   - pharmaceutical_industry: Beneficiary (institutional/arbitrage) — profits from treatments aligned with categories.
- *   - institutions_requiring_conformity: Beneficiary (institutional/constrained) — uses diagnoses to manage non-conforming behavior.
- *   - diagnosed_individuals: Payer (powerless/trapped) — bears the direct costs of diagnosis and treatment, loss of autonomy.
- *   - families_of_diagnosed: Payer (moderate/constrained) — bears caregiving burden, financial costs, and social stigma.
- *   - neurodiversity_advocates: Excluded (organized/constrained) — challenge the pathologizing framework, advocate for alternative models.
- *   - critical_psychiatrists: Observer (analytical/analytical) — analyze the social and economic functions of the DSM, often from an external perspective.
  */
 
 /* ==========================================================================
@@ -108,39 +103,39 @@ narrative_ontology:constraint_metric(dsm_taxonomy_kernel__biomedical_reading, th
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(dsm_taxonomy_kernel__biomedical_reading, accessibility_collapse, 0.75).
-narrative_ontology:constraint_metric(dsm_taxonomy_kernel__biomedical_reading, resistance, 0.6).
+narrative_ontology:constraint_metric(dsm_taxonomy_kernel__biomedical_reading, resistance, 0.4).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(dsm_taxonomy_kernel__biomedical_reading, snare).
-narrative_ontology:human_readable(dsm_taxonomy_kernel__biomedical_reading, "DSM Taxonomy as Biomedical Disease Entities (Biomedical Reading)").
+narrative_ontology:human_readable(dsm_taxonomy_kernel__biomedical_reading, "DSM Taxonomy as Objective Biomedical Entities (Biomedical Reading)").
 narrative_ontology:topic_domain(dsm_taxonomy_kernel__biomedical_reading, "medical_epistemology/psychiatric_taxonomy/social_construction_of_illness").
 
 domain_priors:requires_active_enforcement(dsm_taxonomy_kernel__biomedical_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(dsm_taxonomy_kernel__biomedical_reading, '6c73d7bf-ff5a-417a-b532-881e09caa274').
-narrative_ontology:cs_kernel_codification('6c73d7bf-ff5a-417a-b532-881e09caa274', formalized).
-narrative_ontology:cs_authority_grounding('6c73d7bf-ff5a-417a-b532-881e09caa274', expertise).
-narrative_ontology:cs_interpretation_layer_present('6c73d7bf-ff5a-417a-b532-881e09caa274').
-narrative_ontology:cs_reading_relation('6c73d7bf-ff5a-417a-b532-881e09caa274', dsm_taxonomy_kernel__neurodiversity_reading, forecloses).
-narrative_ontology:cs_reading_relation('6c73d7bf-ff5a-417a-b532-881e09caa274', dsm_taxonomy_kernel__critical_psychiatry_reading, coexists_with).
-narrative_ontology:cs_axiom('6c73d7bf-ff5a-417a-b532-881e09caa274', foundational, mental_disorders_are_brain_diseases).
+narrative_ontology:cs_story_uid(dsm_taxonomy_kernel__biomedical_reading, 'eded1f61-ec5b-42c4-99a2-77b494a42e05').
+narrative_ontology:cs_kernel_codification('eded1f61-ec5b-42c4-99a2-77b494a42e05', formalized).
+narrative_ontology:cs_authority_grounding('eded1f61-ec5b-42c4-99a2-77b494a42e05', lineage).
+narrative_ontology:cs_interpretation_layer_present('eded1f61-ec5b-42c4-99a2-77b494a42e05').
+narrative_ontology:cs_reading_relation('eded1f61-ec5b-42c4-99a2-77b494a42e05', dsm_taxonomy_kernel__neurodiversity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('eded1f61-ec5b-42c4-99a2-77b494a42e05', dsm_taxonomy_kernel__critical_psychiatry_reading, coexists_with).
+narrative_ontology:cs_axiom('eded1f61-ec5b-42c4-99a2-77b494a42e05', foundational, mental_disorders_are_brain_diseases).
 narrative_ontology:cs_axiom_status(mental_disorders_are_brain_diseases, holdable).
-narrative_ontology:cs_axiom_grounding('6c73d7bf-ff5a-417a-b532-881e09caa274', mental_disorders_are_brain_diseases, empirically_contingent).
-narrative_ontology:cs_axiom('6c73d7bf-ff5a-417a-b532-881e09caa274', foundational, dsm_categories_reflect_objective_reality).
+narrative_ontology:cs_axiom_grounding('eded1f61-ec5b-42c4-99a2-77b494a42e05', mental_disorders_are_brain_diseases, empirically_contingent).
+narrative_ontology:cs_axiom('eded1f61-ec5b-42c4-99a2-77b494a42e05', foundational, dsm_categories_reflect_objective_reality).
 narrative_ontology:cs_axiom_status(dsm_categories_reflect_objective_reality, holdable).
-narrative_ontology:cs_axiom_grounding('6c73d7bf-ff5a-417a-b532-881e09caa274', dsm_categories_reflect_objective_reality, empirically_contingent).
-narrative_ontology:cs_reference_frame('6c73d7bf-ff5a-417a-b532-881e09caa274', scientific_medical_model).
-narrative_ontology:cs_drift_state('6c73d7bf-ff5a-417a-b532-881e09caa274', contemporary_empirical_challenges, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('6c73d7bf-ff5a-417a-b532-881e09caa274', '').
+narrative_ontology:cs_axiom_grounding('eded1f61-ec5b-42c4-99a2-77b494a42e05', dsm_categories_reflect_objective_reality, empirically_contingent).
+narrative_ontology:cs_reference_frame('eded1f61-ec5b-42c4-99a2-77b494a42e05', biomedical_disease_model).
+narrative_ontology:cs_drift_state('eded1f61-ec5b-42c4-99a2-77b494a42e05', contemporary_empirical_challenge, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('eded1f61-ec5b-42c4-99a2-77b494a42e05', '').
 narrative_ontology:cs_kernel_id(dsm_taxonomy_kernel__biomedical_reading, dsm_taxonomy_kernel).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dsm_taxonomy_kernel__biomedical_reading, psychiatric_establishment).
 narrative_ontology:constraint_beneficiary(dsm_taxonomy_kernel__biomedical_reading, pharmaceutical_industry).
-narrative_ontology:constraint_beneficiary(dsm_taxonomy_kernel__biomedical_reading, institutions_requiring_conformity).
-narrative_ontology:constraint_victim(dsm_taxonomy_kernel__biomedical_reading, diagnosed_individuals).
-narrative_ontology:constraint_victim(dsm_taxonomy_kernel__biomedical_reading, families_of_diagnosed).
+narrative_ontology:constraint_beneficiary(dsm_taxonomy_kernel__biomedical_reading, institutions_requiring_behavioral_conformity).
+narrative_ontology:constraint_victim(dsm_taxonomy_kernel__biomedical_reading, individuals_meeting_diagnostic_criteria).
+narrative_ontology:constraint_victim(dsm_taxonomy_kernel__biomedical_reading, families_of_diagnosed_individuals).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -149,27 +144,56 @@ narrative_ontology:constraint_victim(dsm_taxonomy_kernel__biomedical_reading, fa
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Defines, disseminates, and enforces the DSM diagnostic criteria. Benefits from the authority and funding associated with identifying and treating 'diseases.' Their professional identity is deeply tied to the biomedical model.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, psychiatric_establishment, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Develops and markets psychotropic medications. Benefits directly from the expansion of diagnostic categories that create new markets for their products. Actively funds research and advocacy that supports the biomedical model.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, pharmaceutical_industry, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Schools, workplaces, and legal systems that use DSM diagnoses to manage or exclude individuals whose behavior deviates from norms. Benefits from the medicalization of non-conformity, which provides a framework for intervention or removal.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, institutions_requiring_behavioral_conformity, beneficiary,
+    organized, biographical, mobile, national).
+
+% Are labeled with a disease entity, often leading to involuntary treatment, loss of legal capacity, social stigma, and lifelong reliance on medication. Their identity can become fused with the diagnosis, making exit from the medical system difficult.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, individuals_meeting_diagnostic_criteria, payer,
+    powerless, biographical, identity_locked, local).
+
+% Bear the emotional, financial, and social costs of managing a family member's 'illness.' Often pressured to accept the biomedical model and its prescribed treatments, with limited access to alternative frameworks or support.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, families_of_diagnosed_individuals, payer,
+    moderate, generational, constrained, local).
+
+% Challenge the biomedical model, arguing that diagnoses are social constructs serving institutional interests. Their perspectives are often marginalized within mainstream psychiatric discourse and funding structures.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, critical_psychiatry_advocates, excluded,
+    organized, generational, constrained, global).
+
+% Argue that many DSM categories pathologize natural human variation. Seek to reframe conditions as differences rather than diseases, challenging the fundamental premise of the biomedical reading. Their voices are often excluded from diagnostic manual revisions.
+narrative_ontology:constraint_stakeholder(dsm_taxonomy_kernel__biomedical_reading, neurodiversity_advocates, excluded,
+    organized, generational, constrained, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Provides a standardized nomenclature and diagnostic criteria for mental health professionals, facilitating communication, research, and treatment planning across different clinical settings.
-% TRANSFER_FUNCTION: Transfers authority over defining and treating mental distress from individuals and communities to medical professionals, and financial resources from healthcare systems and individuals to the pharmaceutical industry and psychiatric services.
-% ABSENT_VOICES: Individuals with lived experience of psychiatric diagnosis who reject the biomedical model, indigenous healing traditions, and alternative therapeutic approaches are largely excluded from the DSM's revision process; they would argue for de-medicalization and culturally sensitive, non-pathologizing frameworks.
-% DISAPPEARANCE_RATIONALE: If the DSM taxonomy vanished overnight, the entire structure of psychiatric care, pharmaceutical development, insurance coverage for mental health, and legal frameworks for mental illness would collapse and reorganize. There would be immense confusion initially, followed by a proliferation of alternative diagnostic and therapeutic models, and a fundamental shift in how societies understand and respond to mental distress.
-% FOUNDING_PROBLEM: The founding problem was the lack of a consistent, shared language for describing and classifying mental disorders, leading to diagnostic chaos and hindering research and effective treatment.
-% FOUNDING_PROBLEM_CORROBORATION: The psychiatric establishment attests the problem is still live, citing ongoing diagnostic challenges and the need for scientific rigor. Neurodiversity advocates and critical psychiatrists attest that while a common language is useful, the current taxonomy's biomedical framing has created new problems (pathologization, over-medicalization) that overshadow the original coordination benefit; independent sociological and historical analyses corroborate the shift in function.
+% COORDINATION_FUNCTION: Provides a standardized nomenclature for mental health conditions, enabling communication among clinicians, researchers, and insurance providers, and guiding treatment decisions based on a shared understanding of 'disease' entities.
+% TRANSFER_FUNCTION: Transfers authority over mental distress and behavioral variation from individuals and communities to medical professionals, enabling the flow of resources (funding, prescriptions) to the psychiatric and pharmaceutical industries, and imposing costs (stigma, treatment, loss of autonomy) on diagnosed individuals.
+% ABSENT_VOICES: Neurodiversity advocates and critical psychiatry scholars are largely excluded from the official diagnostic process; they would argue that the categories are arbitrary, harmful, or socially constructed, rather than objective biomedical facts.
+% DISAPPEARANCE_RATIONALE: If the DSM taxonomy as objective biomedical entities vanished overnight, the entire edifice of psychiatric diagnosis, pharmaceutical treatment, insurance billing, and legal frameworks for mental health would collapse. Clinical practice would become highly fragmented, research funding would be reallocated, and the social understanding of mental distress would undergo a radical transformation, likely leading to a re-evaluation of what constitutes 'illness' versus 'variation.'
+% FOUNDING_PROBLEM: The problem of inconsistent and unreliable diagnosis in psychiatry, leading to difficulties in research, treatment, and communication among clinicians.
+% FOUNDING_PROBLEM_CORROBORATION: The psychiatric establishment and pharmaceutical industry attest that the problem of diagnostic reliability and validity remains live, justifying ongoing research and revisions. However, critical psychiatry and neurodiversity advocates contest this, arguing that the problem has shifted from diagnostic inconsistency to the reification of categories that lack clear biological markers, and that the 'solution' has become the problem itself. Independent meta-analyses of diagnostic reliability and validity studies offer mixed corroboration, often showing lower inter-rater reliability than claimed.
 narrative_ontology:disappearance_verdict(dsm_taxonomy_kernel__biomedical_reading, world_rearranges).
-narrative_ontology:founding_problem_status(dsm_taxonomy_kernel__biomedical_reading, contested).
+narrative_ontology:founding_problem_status(dsm_taxonomy_kernel__biomedical_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(dsm_taxonomy_kernel__biomedical_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(dsm_taxonomy_kernel__biomedical_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(dsm_taxonomy_kernel__biomedical_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(dsm_taxonomy_kernel__biomedical_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -189,16 +213,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (0.85) reflects the significant costs borne by diagnosed individuals, including financial, social, and autonomy costs, often without clear evidence of 'cure'. Suppression (0.90) is severe due to the power of medical authority, involuntary commitment laws, and the lack of recognized alternatives within the dominant paradigm. The low theater ratio (0.20) indicates that while there is some performative aspect to maintaining the 'disease' narrative, the core function of diagnosis and treatment is actively pursued and enforced, rather than merely theatrical. The rising extractiveness and suppression over time reflect the increasing medicalization of distress and the expansion of diagnostic categories.
+ *   The extractiveness (0.85) is high because this reading enables significant transfers of autonomy, resources, and social control from individuals to the medical-industrial complex. Suppression (0.90) is also very high, as the institutional authority of psychiatry, backed by legal and economic power, actively suppresses alternative explanations for distress and non-conformity. The theater ratio (0.20) is relatively low, as the system genuinely aims to identify and treat 'diseases,' but a portion of its activity is performative, maintaining the illusion of objective biomedical discovery where empirical evidence is often lacking. Accessibility collapse (0.75) is substantial, as once a diagnosis is applied, alternative explanations or non-medical paths to understanding distress become difficult to access or legitimize. Resistance (0.40) is moderate, coming from patient advocacy groups, critical scholars, and neurodiversity movements, but it faces significant institutional inertia.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the psychiatric establishment and pharmaceutical industry, this constraint is a necessary framework for treating illness and improving public health (a claimed Rope or even Mountain). From the perspective of diagnosed individuals and their advocates, it is a system that pathologizes normal human variation, limits autonomy, and extracts resources (a Snare). The engine's classification as Snare reflects the structural reality of asymmetric extraction and suppression, regardless of the claimed coordination function.
+ *   From the perspective of the psychiatric establishment, this is a necessary framework for scientific progress and patient care (claimed as a Rope or even Mountain of objective science). From the perspective of diagnosed individuals and critical observers, it operates as a Snare, extracting autonomy and resources under the guise of medical necessity. The engine's computation of per-seat classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   The psychiatric establishment and pharmaceutical industry are clear beneficiaries (d=0.0-0.1) as they define the categories and profit from the interventions. Institutions requiring conformity also benefit from a framework that labels non-conforming behavior as 'illness'. Diagnosed individuals are the primary targets (d=0.9-1.0) due to the direct impact on their lives, often with limited exit options (trapped/identity_locked). Families bear secondary costs. Neurodiversity advocates and critical psychiatrists are excluded or analytical observers, with high d values reflecting their opposition to the constraint.
+ *   The psychiatric establishment, pharmaceutical industry, and institutions requiring conformity are clear beneficiaries, gaining authority, market share, and social control. Individuals meeting diagnostic criteria and their families are the primary payers, bearing the direct costs of diagnosis and treatment, and often experiencing identity-lock. Critical psychiatry and neurodiversity advocates are excluded, as their perspectives challenge the foundational premise of this reading.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint is a Snare because its primary function has shifted from genuinely coordinating care for severe mental illness to pathologizing a broader range of human experiences, creating markets for interventions, and enforcing social conformity. The 'coordination' story of providing a common language for clinicians serves as cover for the extractive and suppressive functions. The classification prevents mislabeling this as a Rope by highlighting the asymmetric costs and suppressed alternatives.
  */
 
 /* ==========================================================================
@@ -206,73 +228,80 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    biomedical_vs_social_construction,
-    'Is this constraint a reflection of objective neurobiological reality, or a social construct that benefits identifiable actors?',
-    'Longitudinal empirical research demonstrating consistent, specific neurobiological markers for each DSM category, independent of cultural context or pharmaceutical intervention.',
-    'If objective, the constraint moves towards a Mountain; if socially constructed, it remains a Snare, with higher effective extraction due to the false naturalization.',
-    confidence_without_resolution(low)
+    empirical_validation_of_categories,
+    'To what extent do DSM categories map to objective, empirically verifiable neurobiological disease entities?',
+    'Longitudinal neuroimaging studies, genetic research, and biomarker discovery that consistently identify distinct biological underpinnings for each diagnostic category, independent of behavioral presentation.',
+    'If strong empirical validation emerges, the extractiveness might be re-evaluated as a necessary cost of treating genuine disease, potentially shifting the classification towards a Tangled Rope or even Rope. If validation remains weak, the Snare classification is reinforced, highlighting the constructed nature of the categories.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(biomedical_vs_social_construction, empirical, 'Ambiguity between natural law and social construct for DSM categories.').
-
-omega_variable(
-    dsm_reading_identification,
-    'This constraint is the ''biomedical_reading'' of the ''dsm_taxonomy_kernel''. What would change if the ''neurodiversity_reading'' or ''critical_psychiatry_reading'' were adopted?',
-    'Analysis of policy and clinical practice shifts in jurisdictions adopting alternative frameworks.',
-    'The neurodiversity reading would shift the victim set from ''diagnosed_individuals'' to ''individuals_experiencing_distress_due_to_mismatch_with_norms'', and reduce extractiveness by reframing ''treatment'' as ''support''. The critical psychiatry reading would expose the pharmaceutical industry as the primary agenda_setter and increase measured extractiveness by revealing the market-creation function.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(dsm_reading_identification, conceptual, 'Impact of alternative readings of the DSM taxonomy kernel.').
+narrative_ontology:omega_variable(empirical_validation_of_categories, empirical, 'Uncertainty regarding the objective biological reality of DSM categories.').
 
 omega_variable(
     suppression_mechanism_ambiguity,
-    'Is the measured suppression structural (involuntary treatment, legal capacity loss) or internalized (self-pathologization, belief in inherent defect)?',
-    'Post-diagnosis trajectory of individuals in supportive, non-coercive environments: if self-pathologization persists after structural coercion is removed, reclassify as partially internalized.',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the diagnosed individual carries the suppression with them after formal exit or remission.',
+    'Is the measured suppression structural (institutional power, legal frameworks) or internalized (diagnosed individuals internalizing the ''sick'' identity)?',
+    'Post-diagnosis trajectory of individuals offered non-medical frameworks and support: if suppression persists after the medical-institutional mechanism is removed, reclassify as partially internalized.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making true liberation more difficult.',
     confidence_without_resolution(medium)
 ).
 
 narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in psychiatric diagnosis.').
+
+omega_variable(
+    framing_of_distress,
+    'Is mental distress fundamentally a biomedical illness, a social construct, or a form of human variation?',
+    'This is a conceptual and preference-based question, not empirically resolvable. Resolution would require a societal shift in values and epistemic frameworks regarding human experience.',
+    'A shift towards social construction or neurodiversity framings would fundamentally alter the perceived legitimacy and necessity of the biomedical reading, likely reducing its extractiveness and suppression in the long term.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(framing_of_distress, conceptual, 'Fundamental conceptual disagreement on the nature of mental distress.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(dsm_taxonomy_kernel__biomedical_reading, 0, 20).
+narrative_ontology:interval(dsm_taxonomy_kernel__biomedical_reading, 1980, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(dsm__tr_t0, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(dsm__tr_t10, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 10, 0.22).
-narrative_ontology:measurement(dsm__tr_t20, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(dsm__tr_t1980, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 1980, 0.1).
+narrative_ontology:measurement(dsm__tr_t1990, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 1990, 0.12).
+narrative_ontology:measurement(dsm__tr_t2000, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 2000, 0.15).
+narrative_ontology:measurement(dsm__tr_t2010, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 2010, 0.18).
+narrative_ontology:measurement(dsm__tr_t2024, dsm_taxonomy_kernel__biomedical_reading, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(dsm__be_t0, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(dsm__be_t10, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 10, 0.78).
-narrative_ontology:measurement(dsm__be_t20, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 20, 0.85).
+narrative_ontology:measurement(dsm__be_t1980, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 1980, 0.65).
+narrative_ontology:measurement(dsm__be_t1990, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 1990, 0.72).
+narrative_ontology:measurement(dsm__be_t2000, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 2000, 0.78).
+narrative_ontology:measurement(dsm__be_t2010, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 2010, 0.82).
+narrative_ontology:measurement(dsm__be_t2024, dsm_taxonomy_kernel__biomedical_reading, base_extractiveness, 2024, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(dsm__su_t0, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 0, 0.75).
-narrative_ontology:measurement(dsm__su_t10, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 10, 0.82).
-narrative_ontology:measurement(dsm__su_t20, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 20, 0.9).
+narrative_ontology:measurement(dsm__su_t1980, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 1980, 0.7).
+narrative_ontology:measurement(dsm__su_t1990, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 1990, 0.78).
+narrative_ontology:measurement(dsm__su_t2000, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 2000, 0.85).
+narrative_ontology:measurement(dsm__su_t2010, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 2010, 0.88).
+narrative_ontology:measurement(dsm__su_t2024, dsm_taxonomy_kernel__biomedical_reading, suppression_requirement, 2024, 0.9).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(dsm_taxonomy_kernel__biomedical_reading, information_standard).
-narrative_ontology:affects_constraint(dsm_taxonomy_kernel__biomedical_reading, mental_health_insurance_coverage).
-narrative_ontology:affects_constraint(dsm_taxonomy_kernel__biomedical_reading, pharmaceutical_research_funding).
+narrative_ontology:coordination_type(dsm_taxonomy_kernel__biomedical_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(dsm_taxonomy_kernel__biomedical_reading, 0.1).
+narrative_ontology:affects_constraint(dsm_taxonomy_kernel__biomedical_reading, mental_health_insurance_coverage_rules).
 narrative_ontology:affects_constraint(dsm_taxonomy_kernel__biomedical_reading, involuntary_commitment_laws).
+narrative_ontology:affects_constraint(dsm_taxonomy_kernel__biomedical_reading, pharmaceutical_research_funding_priorities).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'dsm_taxonomy_kernel'. Its extractiveness differs significantly from the 'neurodiversity_reading' and 'critical_psychiatry_reading' due to differing views on the ontological status and function of diagnostic categories.
+% This is one reading of the 'dsm_taxonomy_kernel'; other readings (neurodiversity, critical psychiatry) offer alternative structural analyses of the same underlying commitment.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

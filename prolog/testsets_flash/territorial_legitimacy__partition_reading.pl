@@ -39,9 +39,14 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,29 +71,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: territorial_legitimacy__partition_reading
- *   human_readable: Territorial Legitimacy via International Partition (UN Resolution 181)
+ *   human_readable: Territorial Legitimacy via International Partition (Partition Reading)
  *   domain: political_theory/international_law/territorial_sovereignty
  *
  * SUMMARY:
- *   This constraint defines territorial legitimacy in the Israeli-Palestinian
- *   conflict through the lens of international legal partition, primarily UN
- *   Resolution 181 (1948) and subsequent resolutions affirming the 1967
- *   lines. It posits the legitimacy of both Israeli and Palestinian states
- *   within recognized borders, rendering settlements beyond 1967
- *   illegitimate, and structurally enabling a two-state solution. It is a
- *   'tangled rope' because it genuinely attempts to coordinate competing
- *   claims but has become highly extractive due to incomplete enforcement and
- *   asymmetric power dynamics, requiring active enforcement to maintain its
- *   (contested) legitimacy.
+ *   This constraint represents the 'partition reading' of territorial
+ *   legitimacy in the Israeli-Palestinian conflict, grounded in UN Resolution
+ *   181 and subsequent international legal frameworks. It posits that both
+ *   Israeli and Palestinian states derive legitimacy from international
+ *   recognition within defined borders (e.g., 1948/1967 lines), making
+ *   settlements beyond these lines illegitimate and a two-state solution
+ *   structurally possible. The constraint is claimed as a Tangled Rope
+ *   because it offers a coordination function (recognized statehood) but
+ *   involves significant, actively enforced extraction from those whose
+ *   claims are marginalized by this framework.
  *
- * KEY AGENTS:
- *   - international_legal_framework: Agenda-setter (institutional/analytical) — provides normative basis
- *   - states_recognizing_1948_partition: Beneficiary (organized/mobile) — benefits from stable framework
- *   - palestinian_authority: Beneficiary/Payer (moderate/constrained) — seeks statehood, bears occupation costs
- *   - israeli_government: Beneficiary/Agenda-setter (institutional/constrained) — benefits from recognition, resists full implementation
- *   - palestinian_refugees: Victim (powerless/trapped) — bears displacement costs, right of return unresolved
- *   - israeli_settlers_beyond_1967_lines: Victim (moderate/identity_locked) — deemed illegitimate, faces potential displacement
- *   - human_rights_organizations: Observer (organized/analytical) — monitors adherence to international law
  */
 
 /* ==========================================================================
@@ -106,48 +104,97 @@ narrative_ontology:constraint_metric(territorial_legitimacy__partition_reading, 
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(territorial_legitimacy__partition_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(territorial_legitimacy__partition_reading, resistance, 0.5).
+narrative_ontology:constraint_metric(territorial_legitimacy__partition_reading, resistance, 0.8).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(territorial_legitimacy__partition_reading, tangled_rope).
-narrative_ontology:human_readable(territorial_legitimacy__partition_reading, "Territorial Legitimacy via International Partition (UN Resolution 181)").
+narrative_ontology:human_readable(territorial_legitimacy__partition_reading, "Territorial Legitimacy via International Partition (Partition Reading)").
 narrative_ontology:topic_domain(territorial_legitimacy__partition_reading, "political_theory/international_law/territorial_sovereignty").
 
 domain_priors:requires_active_enforcement(territorial_legitimacy__partition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(territorial_legitimacy__partition_reading, 'c2162f3e-fa1a-453d-b84f-b2136209e1cd').
-narrative_ontology:cs_kernel_codification('c2162f3e-fa1a-453d-b84f-b2136209e1cd', formalized).
-narrative_ontology:cs_authority_grounding('c2162f3e-fa1a-453d-b84f-b2136209e1cd', lineage).
-narrative_ontology:cs_interpretation_layer_present('c2162f3e-fa1a-453d-b84f-b2136209e1cd').
-narrative_ontology:cs_reading_relation('c2162f3e-fa1a-453d-b84f-b2136209e1cd', territorial_legitimacy__security_necessity_reading, coexists_with).
-narrative_ontology:cs_reading_relation('c2162f3e-fa1a-453d-b84f-b2136209e1cd', territorial_legitimacy__indigenous_continuity_reading, coexists_with).
-narrative_ontology:cs_axiom('c2162f3e-fa1a-453d-b84f-b2136209e1cd', foundational, state_sovereignty_via_international_recognition).
-narrative_ontology:cs_axiom_status(state_sovereignty_via_international_recognition, holdable).
-narrative_ontology:cs_axiom_grounding('c2162f3e-fa1a-453d-b84f-b2136209e1cd', state_sovereignty_via_international_recognition, conventional).
-narrative_ontology:cs_axiom('c2162f3e-fa1a-453d-b84f-b2136209e1cd', foundational, territorial_acquisition_by_force_is_illegitimate).
-narrative_ontology:cs_axiom_status(territorial_acquisition_by_force_is_illegitimate, holdable).
-narrative_ontology:cs_axiom_grounding('c2162f3e-fa1a-453d-b84f-b2136209e1cd', territorial_acquisition_by_force_is_illegitimate, deontological).
-narrative_ontology:cs_reference_frame('c2162f3e-fa1a-453d-b84f-b2136209e1cd', post_wwii_self_determination_framework).
-narrative_ontology:cs_drift_state('c2162f3e-fa1a-453d-b84f-b2136209e1cd', contemporary_unilateralism_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('c2162f3e-fa1a-453d-b84f-b2136209e1cd', '').
+narrative_ontology:cs_story_uid(territorial_legitimacy__partition_reading, 'c071c2a1-2d10-4b54-938b-99d705295557').
+narrative_ontology:cs_kernel_codification('c071c2a1-2d10-4b54-938b-99d705295557', formalized).
+narrative_ontology:cs_authority_grounding('c071c2a1-2d10-4b54-938b-99d705295557', lineage).
+narrative_ontology:cs_interpretation_layer_present('c071c2a1-2d10-4b54-938b-99d705295557').
+narrative_ontology:cs_reading_relation('c071c2a1-2d10-4b54-938b-99d705295557', territorial_legitimacy__security_necessity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c071c2a1-2d10-4b54-938b-99d705295557', territorial_legitimacy__indigenous_continuity_reading, coexists_with).
+narrative_ontology:cs_axiom('c071c2a1-2d10-4b54-938b-99d705295557', foundational, international_law_as_basis_for_sovereignty).
+narrative_ontology:cs_axiom_status(international_law_as_basis_for_sovereignty, holdable).
+narrative_ontology:cs_axiom_grounding('c071c2a1-2d10-4b54-938b-99d705295557', international_law_as_basis_for_sovereignty, conventional).
+narrative_ontology:cs_axiom('c071c2a1-2d10-4b54-938b-99d705295557', foundational, two_state_solution_as_just_outcome).
+narrative_ontology:cs_axiom_status(two_state_solution_as_just_outcome, holdable).
+narrative_ontology:cs_axiom_grounding('c071c2a1-2d10-4b54-938b-99d705295557', two_state_solution_as_just_outcome, deontological).
+narrative_ontology:cs_reference_frame('c071c2a1-2d10-4b54-938b-99d705295557', un_resolution_181_framework).
+narrative_ontology:cs_drift_state('c071c2a1-2d10-4b54-938b-99d705295557', contemporary_political_stalemate, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('c071c2a1-2d10-4b54-938b-99d705295557', '').
 narrative_ontology:cs_kernel_id(territorial_legitimacy__partition_reading, territorial_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(territorial_legitimacy__partition_reading, international_legal_framework).
-narrative_ontology:constraint_beneficiary(territorial_legitimacy__partition_reading, states_recognizing_1948_partition).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy__partition_reading, israeli_state_actors).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy__partition_reading, palestinian_authority_actors).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy__partition_reading, un_member_states).
 narrative_ontology:constraint_victim(territorial_legitimacy__partition_reading, palestinian_refugees).
-narrative_ontology:constraint_victim(territorial_legitimacy__partition_reading, israeli_settlers_beyond_1967_lines).
+narrative_ontology:constraint_victim(territorial_legitimacy__partition_reading, israeli_settlers_beyond_67_lines).
+narrative_ontology:constraint_vindicates(territorial_legitimacy__partition_reading, two_state_solution_doctrine).
+narrative_ontology:constraint_vindicates(territorial_legitimacy__partition_reading, international_law_supremacy).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefits from international recognition of its sovereignty within 1948/1967 borders, but faces pressure regarding settlements beyond these lines. Actively enforces its interpretation of security needs and territorial control.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__partition_reading, israeli_state_actors, beneficiary,
+    institutional, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(territorial_legitimacy__partition_reading, israeli_state_actors, agenda_setter).
+
+% Seeks full state recognition and sovereignty based on the partition plan and 1967 borders. Benefits from international support for a two-state solution, but struggles with effective territorial control and internal divisions.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__partition_reading, palestinian_authority_actors, beneficiary,
+    organized, generational, constrained, regional).
+narrative_ontology:stakeholder_secondary_role(territorial_legitimacy__partition_reading, palestinian_authority_actors, agenda_setter).
+
+% Uphold the principle of international law and UN resolutions as the basis for territorial legitimacy. They provide diplomatic and financial support, and exert pressure for a two-state solution, but face challenges in enforcement.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__partition_reading, un_member_states, agenda_setter,
+    institutional, civilizational, analytical, global).
+
+% Bear the cost of displacement and loss of property, with their right of return often unaddressed by the partition framework. Their claims are recognized by international law but remain largely unrealized.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__partition_reading, palestinian_refugees, payer,
+    powerless, generational, trapped, regional).
+
+% Their presence beyond the 1967 lines is considered illegitimate by this reading, creating legal and political vulnerability. They are often ideologically committed to their settlements, making exit difficult.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__partition_reading, israeli_settlers_beyond_67_lines, payer,
+    moderate, biographical, identity_locked, local).
+
+% Analyze and interpret international law, UN resolutions, and historical documents to assess the legitimacy of territorial claims. Their work informs policy debates but does not directly enforce outcomes.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy__partition_reading, international_legal_scholars, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a framework for international recognition of two sovereign states, aiming to resolve territorial disputes through a legally defined partition and mutual recognition.
+% TRANSFER_FUNCTION: Transfers claims of legitimate sovereignty and territorial control to both Israeli and Palestinian entities within internationally recognized borders, while imposing costs on those whose claims fall outside this framework.
+% ABSENT_VOICES: Those who reject the legitimacy of the partition framework entirely, such as proponents of a single, binational state, or those who assert exclusive historical claims to the entire territory. Their perspectives are marginalized by the dominant international legal discourse.
+% DISAPPEARANCE_RATIONALE: If the international legal framework for partition and state recognition vanished, the basis for diplomatic engagement, aid, and sanctions would collapse. The existing states' legitimacy would be fundamentally challenged, leading to a chaotic reorganization of territorial claims and power dynamics.
+% FOUNDING_PROBLEM: The problem of competing national aspirations and territorial claims in Mandate Palestine, requiring a framework for self-determination and peaceful coexistence for both Jewish and Arab populations.
+% FOUNDING_PROBLEM_CORROBORATION: UN resolutions, international diplomatic efforts, and the ongoing conflict itself corroborate that the problem of competing claims and the need for a resolution framework remain live. While the specific terms are contested, the underlying need for a legitimate basis for territorial division persists, attested by international bodies and numerous peace initiatives.
+narrative_ontology:disappearance_verdict(territorial_legitimacy__partition_reading, world_rearranges).
+narrative_ontology:founding_problem_status(territorial_legitimacy__partition_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(territorial_legitimacy__partition_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(territorial_legitimacy__partition_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(territorial_legitimacy__partition_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(territorial_legitimacy__partition_reading, 0.6, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,16 +214,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint's extractiveness (0.7 at end) is high because the framework, while offering a path to statehood for Palestinians, has not delivered full sovereignty or ended occupation, leading to ongoing costs for Palestinians. Suppression (0.85 at end) is also high, reflecting the active military and political efforts required to maintain the status quo and prevent alternative resolutions. Theater ratio (0.45 at end) indicates that while diplomatic efforts and legal pronouncements continue, a significant portion of the activity is performative, masking the lack of full implementation. The metrics show a trend of increasing extractiveness and suppression over time, reflecting the hardening of positions and the failure to achieve a lasting resolution.
+ *   The extractiveness (0.6) reflects the costs borne by Palestinian refugees and Israeli settlers beyond the 1967 lines, whose claims are not fully accommodated by this framework. Suppression (0.7) is high due to the active diplomatic and military enforcement required to maintain the existing territorial arrangements and marginalize alternative claims. The theater ratio (0.4) indicates that while genuine diplomatic efforts occur, a significant portion of international discourse and enforcement is performative, maintaining the 'possibility' of a two-state solution without fully resolving the underlying power asymmetries. The metrics show fluctuations reflecting periods of intense conflict and peace negotiations.
  *
  * PERSPECTIVAL GAP:
- *   The international legal framework and states recognizing partition view this as a legitimate, albeit challenging, path to peace. However, for Palestinian refugees and Israeli settlers beyond 1967, the framework imposes significant costs and existential threats, leading to a perception of extraction and suppression. The Israeli government benefits from recognition but experiences the framework as a constraint on its territorial ambitions.
+ *   From the perspective of UN member states, this framework is a necessary (if imperfect) Rope for international order and conflict resolution. For Palestinian refugees, it operates as a Snare, legitimizing their displacement while offering no concrete path to return. For Israeli settlers beyond the 1967 lines, it is also a Snare, delegitimizing their presence and threatening their identity-locked claims. The engine's per-seat classification will highlight these divergences.
  *
  * DIRECTIONALITY LOGIC:
- *   The international legal framework and states recognizing partition are beneficiaries (low d) as they uphold a principle of international order. The Palestinian Authority is a mixed beneficiary/payer, seeking statehood but bearing costs. The Israeli government is a beneficiary of recognition but a target regarding settlement policy. Palestinian refugees and Israeli settlers beyond 1967 are clear victims/targets (high d) as their claims or presence are directly challenged by this reading.
+ *   Israeli and Palestinian Authority actors are beneficiaries as they gain international recognition and a basis for statehood, though they also bear costs in terms of territorial concessions or internal political challenges. UN member states act as agenda-setters, promoting and enforcing this framework. Palestinian refugees and Israeli settlers beyond the 1967 lines are payers, bearing the direct costs of displacement or legal vulnerability. International legal scholars act as observers, analyzing the framework's application.
  *
- * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (two-state solution via partition) is still 'live' but its effectiveness is contested. The high extractiveness and suppression, coupled with a rising theater ratio, suggest that while the mandate persists, its function has degraded, becoming more about managing an intractable conflict than resolving it. This prevents mislabeling it as a pure rope (which would imply symmetric benefits) or a pure snare (which would ignore the genuine coordination function it still attempts to provide).
  */
 
 /* ==========================================================================
@@ -184,34 +229,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    enforcement_gap_vs_legitimacy,
-    'Is the perceived extractiveness of this reading due to a fundamental flaw in the partition principle itself, or primarily due to a lack of enforcement by the international community?',
-    'Analysis of historical instances where international legal frameworks were fully enforced, and their outcomes. Counterfactual modeling of full enforcement in this context.',
-    'If due to enforcement gap, the partition reading remains a valid (though unfulfilled) ''rope'' or ''scaffold''. If due to fundamental flaw, it is structurally a ''snare'' or ''tangled_rope'' regardless of enforcement.',
+    enforcement_effectiveness_ambiguity,
+    'Is the international legal framework for partition genuinely enforceable, or is its persistence primarily due to the balance of power among states?',
+    'Analysis of cases where international legal consensus has been successfully enforced against a powerful state''s objections, or conversely, where it has consistently failed.',
+    'If enforcement is primarily power-based, the constraint''s ''requires_active_enforcement'' is a misnomer, and its classification shifts closer to a Snare, as the coordination function is merely a cover for power projection. If genuinely enforceable, it retains its Tangled Rope character.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(enforcement_gap_vs_legitimacy, conceptual, 'Distinguishing between a flawed principle and flawed implementation.').
+narrative_ontology:omega_variable(enforcement_effectiveness_ambiguity, empirical, 'Ambiguity regarding the true source of the constraint''s persistence: legal authority vs. power dynamics.').
 
 omega_variable(
-    settler_identity_lock_resolution,
-    'To what extent is the ''identity_locked'' exit option for Israeli settlers beyond 1967 lines a genuine, irreducible identity fusion, versus a politically constructed and reversible attachment?',
-    'Sociological studies of settler communities, analysis of historical precedents for population transfers or withdrawals, and the role of state incentives/disincentives.',
-    'If genuinely irreducible, the human cost of enforcing the partition reading is higher, potentially shifting the classification towards a ''snare'' for this group. If reversible, the ''identity_locked'' status is a political artifact, and the constraint is less fundamentally extractive.',
+    two_state_solution_viability,
+    'Is the two-state solution, as envisioned by this partition reading, still a viable and implementable outcome given current demographic and political realities?',
+    'Empirical assessment of territorial contiguity, demographic trends, and political will for implementation, as evaluated by independent geopolitical analysts.',
+    'If no longer viable, the ''coordination function'' of this reading becomes purely theatrical, increasing the ''theater_ratio'' and shifting the constraint towards a Piton or Snare, as its stated purpose is unachievable.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(two_state_solution_viability, empirical, 'Uncertainty about the practical feasibility of the partition reading''s core outcome.').
+
+omega_variable(
+    refugee_right_of_return_status,
+    'How does the partition reading reconcile the right of return for Palestinian refugees (recognized by international law) with the demographic implications for a two-state solution?',
+    'Legal and political analysis of proposed mechanisms for implementing the right of return (e.g., compensation, phased return, return to a Palestinian state) and their acceptance by all parties.',
+    'If the right of return is structurally foreclosed by the partition reading''s implementation, the extraction from Palestinian refugees is higher and more permanent, pushing the constraint further towards a Snare. If a viable reconciliation exists, the extractiveness is mitigated.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(settler_identity_lock_resolution, empirical, 'Nature of identity lock for settlers.').
-
-omega_variable(
-    partition_vs_one_state_viability,
-    'Is the two-state solution, as envisioned by the partition reading, still a viable and just outcome, or has demographic and territorial reality rendered it obsolete, necessitating a one-state solution?',
-    'Demographic projections, analysis of territorial contiguity, and political feasibility studies for both two-state and one-state models.',
-    'If obsolete, the partition reading''s ''tangled rope'' classification might shift towards a ''piton'' (performing a function no longer viable) or even a ''snare'' (actively preventing a more just outcome). If still viable, its coordination function remains relevant.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(partition_vs_one_state_viability, preference, 'Viability of the two-state solution.').
+narrative_ontology:omega_variable(refugee_right_of_return_status, conceptual, 'Conceptual tension between the partition framework and the right of return.').
 
 
 /* ==========================================================================
@@ -228,25 +273,25 @@ narrative_ontology:interval(territorial_legitimacy__partition_reading, 1948, 202
 narrative_ontology:measurement(terr_tr_t1948, territorial_legitimacy__partition_reading, theater_ratio, 1948, 0.2).
 narrative_ontology:measurement(terr_tr_t1967, territorial_legitimacy__partition_reading, theater_ratio, 1967, 0.3).
 narrative_ontology:measurement(terr_tr_t1993, territorial_legitimacy__partition_reading, theater_ratio, 1993, 0.25).
-narrative_ontology:measurement(terr_tr_t2000, territorial_legitimacy__partition_reading, theater_ratio, 2000, 0.35).
-narrative_ontology:measurement(terr_tr_t2010, territorial_legitimacy__partition_reading, theater_ratio, 2010, 0.4).
-narrative_ontology:measurement(terr_tr_t2024, territorial_legitimacy__partition_reading, theater_ratio, 2024, 0.45).
+narrative_ontology:measurement(terr_tr_t2000, territorial_legitimacy__partition_reading, theater_ratio, 2000, 0.45).
+narrative_ontology:measurement(terr_tr_t2010, territorial_legitimacy__partition_reading, theater_ratio, 2010, 0.42).
+narrative_ontology:measurement(terr_tr_t2024, territorial_legitimacy__partition_reading, theater_ratio, 2024, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(terr_be_t1948, territorial_legitimacy__partition_reading, base_extractiveness, 1948, 0.4).
+narrative_ontology:measurement(terr_be_t1948, territorial_legitimacy__partition_reading, base_extractiveness, 1948, 0.5).
 narrative_ontology:measurement(terr_be_t1967, territorial_legitimacy__partition_reading, base_extractiveness, 1967, 0.6).
 narrative_ontology:measurement(terr_be_t1993, territorial_legitimacy__partition_reading, base_extractiveness, 1993, 0.55).
 narrative_ontology:measurement(terr_be_t2000, territorial_legitimacy__partition_reading, base_extractiveness, 2000, 0.65).
-narrative_ontology:measurement(terr_be_t2010, territorial_legitimacy__partition_reading, base_extractiveness, 2010, 0.68).
-narrative_ontology:measurement(terr_be_t2024, territorial_legitimacy__partition_reading, base_extractiveness, 2024, 0.7).
+narrative_ontology:measurement(terr_be_t2010, territorial_legitimacy__partition_reading, base_extractiveness, 2010, 0.62).
+narrative_ontology:measurement(terr_be_t2024, territorial_legitimacy__partition_reading, base_extractiveness, 2024, 0.6).
 
 % Suppression requirement over time
-narrative_ontology:measurement(terr_su_t1948, territorial_legitimacy__partition_reading, suppression_requirement, 1948, 0.5).
-narrative_ontology:measurement(terr_su_t1967, territorial_legitimacy__partition_reading, suppression_requirement, 1967, 0.7).
-narrative_ontology:measurement(terr_su_t1993, territorial_legitimacy__partition_reading, suppression_requirement, 1993, 0.65).
-narrative_ontology:measurement(terr_su_t2000, territorial_legitimacy__partition_reading, suppression_requirement, 2000, 0.75).
-narrative_ontology:measurement(terr_su_t2010, territorial_legitimacy__partition_reading, suppression_requirement, 2010, 0.8).
-narrative_ontology:measurement(terr_su_t2024, territorial_legitimacy__partition_reading, suppression_requirement, 2024, 0.85).
+narrative_ontology:measurement(terr_su_t1948, territorial_legitimacy__partition_reading, suppression_requirement, 1948, 0.6).
+narrative_ontology:measurement(terr_su_t1967, territorial_legitimacy__partition_reading, suppression_requirement, 1967, 0.75).
+narrative_ontology:measurement(terr_su_t1993, territorial_legitimacy__partition_reading, suppression_requirement, 1993, 0.7).
+narrative_ontology:measurement(terr_su_t2000, territorial_legitimacy__partition_reading, suppression_requirement, 2000, 0.8).
+narrative_ontology:measurement(terr_su_t2010, territorial_legitimacy__partition_reading, suppression_requirement, 2010, 0.78).
+narrative_ontology:measurement(terr_su_t2024, territorial_legitimacy__partition_reading, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
@@ -256,11 +301,9 @@ narrative_ontology:measurement(terr_su_t2024, territorial_legitimacy__partition_
 narrative_ontology:coordination_type(territorial_legitimacy__partition_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(territorial_legitimacy__partition_reading, territorial_legitimacy__security_necessity_reading).
 narrative_ontology:affects_constraint(territorial_legitimacy__partition_reading, territorial_legitimacy__indigenous_continuity_reading).
-narrative_ontology:affects_constraint(territorial_legitimacy__partition_reading, right_of_return_for_palestinians).
-narrative_ontology:affects_constraint(territorial_legitimacy__partition_reading, israeli_settlement_expansion).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'territorial_legitimacy' kernel. It focuses on international legal partition and state recognition. Other readings include 'security_necessity_reading' and 'indigenous_continuity_reading', which offer alternative bases for legitimacy.
+% This constraint is one of three readings of the 'territorial_legitimacy' kernel. Each reading offers a distinct basis for territorial claims and statehood, leading to different classifications and stakeholder impacts. They are linked as a constraint family.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

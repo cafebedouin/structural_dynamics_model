@@ -4,23 +4,21 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "280f4379-0d54-4bd2-9adc-224ae2e70f66"
+    "story_uid": "99a4680c-e0d2-4890-a171-7786130f6eb6"
   },
   "base_properties": {
-    "extractiveness": 0.4,
-    "suppression": 0.3,
+    "extractiveness": 0.3,
+    "suppression": 0.2,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.6,
+    "accessibility_collapse": 0.4,
     "resistance": 0.7,
     "claimed_type": "rope",
     "human_readable": "Constitutional Text (Popular Sovereignty Reading)",
     "topic_domain": "constitutional_theory/political_philosophy/comparative_law",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
-      "the_demos",
-      "democratic_participation"
+      "democratic_participation",
+      "the_demos"
     ],
     "victims": [
       "institutional_stability",
@@ -28,113 +26,205 @@
       "legislative_efficiency"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine expression of popular sovereignty, or a rhetorical cover for institutional power struggles?",
-      "resolution_mechanism": "Analysis of historical instances of constitutional change: whether popular movements genuinely drove change or were co-opted by institutional actors.",
-      "impact": "If genuine, it reinforces the 'rope' classification by highlighting the coordination of popular will. If rhetorical, it suggests a 'tangled_rope' or 'snare' where institutional actors benefit from the illusion of popular control.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'popular_sovereignty_reading' of the 'constitutional_text' kernel. Sibling readings include 'judicial_supremacy_reading' and 'legislative_sovereignty_reading'. The disagreement is located in the ultimate locus of interpretive authority."
+      "name": "the_demos",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The ultimate source of constitutional authority, capable of amending, re-interpreting, or even revolutionizing the constitutional order. Benefits from the flexibility and responsiveness of the constitution to popular will."
     },
     {
-      "id": "popular_will_vs_institutional_form",
-      "question": "How is 'the people's will' genuinely expressed and translated into constitutional meaning without being filtered or distorted by existing institutional forms?",
-      "resolution_mechanism": "Empirical study of constitutional conventions, referenda, and revolutionary moments: identifying mechanisms that genuinely bypass or subordinate institutional interpretation.",
-      "impact": "If such mechanisms are robust, the constraint functions as a 'rope' for democratic participation. If they are consistently weak or co-opted, the constraint's 'popular sovereignty' aspect becomes performative, pushing it towards 'piton' or 'tangled_rope'.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The challenge of translating abstract popular will into concrete constitutional action."
+      "name": "democratic_participation",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The active engagement of citizens in shaping constitutional meaning, through various forms of political action, referenda, or social movements. Directly benefits from the recognition of popular sovereignty."
     },
     {
-      "id": "stability_vs_flexibility_tradeoff",
-      "question": "What is the optimal balance between constitutional stability (favored by institutional readings) and flexibility (favored by popular sovereignty)?",
-      "resolution_mechanism": "Comparative analysis of constitutional systems with different amendment processes and judicial review powers, assessing long-term democratic health and adaptability.",
-      "impact": "A preference for stability would push this reading towards a 'tangled_rope' (acknowledging institutional costs), while a strong preference for flexibility would reinforce 'rope' (viewing institutional costs as necessary friction).",
-      "confidence": "high",
-      "type_class": "preference",
-      "description": "The inherent tension between constitutional stability and democratic responsiveness."
+      "name": "constitutional_courts",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interpret the constitution but are ultimately subordinate to the people's will. Their interpretations are provisional and subject to popular override. Bears the cost of potentially having their rulings overturned or ignored by popular movements."
+    },
+    {
+      "name": "legislature",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacts laws but is also subordinate to the people's ultimate interpretive authority. Its legislative power is bounded by the popular understanding of the constitution. Bears the cost of potential popular resistance or constitutional amendments that limit its power."
+    },
+    {
+      "name": "institutional_stability",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The predictability and endurance of constitutional structures. This reading, by emphasizing popular override, introduces a degree of instability compared to readings that prioritize institutional finality."
+    },
+    {
+      "name": "judicial_expertise",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The specialized knowledge and experience of judges in constitutional interpretation. This reading de-emphasizes the finality of judicial pronouncements, potentially reducing the perceived value of this expertise."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for collective self-governance where the ultimate authority rests with the people, ensuring that constitutional meaning can evolve with societal values and prevent institutional capture.",
+    "transfer_function": "Transfers ultimate interpretive authority from institutional actors (courts, legislature) to the broader populace, enabling popular will to shape constitutional meaning, while imposing costs on institutional stability and expert authority.",
+    "absent_voices": "Those who advocate for strict judicial supremacy or parliamentary sovereignty would argue that this reading introduces dangerous instability and undermines the rule of law by politicizing constitutional interpretation. They are often present in academic discourse but structurally excluded from the 'ultimate authority' role in this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished, the constitutional order would likely default to either judicial or legislative supremacy, fundamentally altering the balance of power and the mechanisms for constitutional change. Popular movements would lose a key legitimating narrative for extra-institutional action.",
+    "founding_problem": "To prevent tyranny and ensure that government remains accountable to the governed, by establishing the people as the ultimate source of legitimate power, even over the constitutional text itself.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians of democratic revolutions and political theorists attest to the enduring problem of institutional overreach and the need for popular checks. Contemporary social movements and constitutional reform advocates also corroborate the ongoing relevance of popular sovereignty against entrenched elites."
+  },
+  "interval": {
+    "start": 1787,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35
+      "time_point": 1787,
+      "value": 0.2
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.38
+      "time_point": 1865,
+      "value": 0.25
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.4
+      "time_point": 1930,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1787,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
       "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.28
+      "time_point": 1960,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.3
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1787,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1865,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1960,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the 'popular sovereignty' reading of a constitutional text, where the ultimate authority for constitutional interpretation and amendment rests with the people (the demos), not with specific institutional actors like courts or legislatures. It posits that the constitution's legitimacy flows from the constituent power of the people, who retain the right to alter or abolish government through formal (amendment, convention) or informal (revolutionary) means. This reading emphasizes democratic participation as the primary beneficiary, while acknowledging potential costs to institutional stability and the perceived expertise of judicial or legislative bodies.",
-    "key_agents": [
-      "the_demos: Primary beneficiary (organized/generational) — retains ultimate authority",
-      "constitutional_scholars: Agenda setter (analytical/generational) — articulate and defend this reading",
-      "judicial_institutions: Payer (institutional/generational) — their claims to supremacy are challenged",
-      "legislative_institutions: Payer (institutional/generational) — their claims to supremacy are challenged",
-      "popular_movements: Beneficiary (organized/biographical) — empowered by this reading",
-      "institutional_stability: Victim (analytical/civilizational) — potentially undermined by constant popular revision"
-    ],
-    "logic_rationale": "The extractiveness is moderate (0.4) because while it empowers the demos, it also imposes costs on institutional actors by subordinating their interpretive authority. Suppression is low (0.3) as this reading actively resists institutional suppression of popular will. Theater ratio is low (0.1) because the claim of popular sovereignty, while sometimes rhetorical, is a foundational principle that drives genuine political action and resistance. Resistance is high (0.7) because this reading is often invoked in opposition to established institutional interpretations.",
-    "perspectival_gap": "From the perspective of 'the_demos' and 'popular_movements', this constraint is a 'rope' that coordinates collective action and legitimizes their ultimate authority. From the perspective of 'judicial_institutions' and 'legislative_institutions', it can be seen as a 'tangled_rope' or even a 'snare' that undermines their established roles and introduces instability, forcing them to contend with extra-institutional pressures.",
-    "directionality_logic": "'The_demos' and 'democratic_participation' are clear beneficiaries (d=0.0-0.1) as the constraint directly empowers them. 'Judicial_institutions' and 'legislative_institutions' are targets (d=0.8-0.9) as their claims to final authority are challenged. 'Constitutional_scholars' are agenda-setters (d=0.2-0.3) as they articulate and defend this reading, benefiting from its intellectual currency. 'Institutional_stability' is a victim (d=1.0) as it bears the costs of potential disruption.",
-    "mandatrophy_analysis": "This reading prevents mislabeling genuine popular movements as mere 'resistance' to a legitimate 'mountain' of institutional authority. By asserting the demos as the ultimate source of constitutional meaning, it frames institutional resistance to popular will as a form of extraction, rather than a defense of natural law. It highlights that the 'mandate' of institutions is derived from, and subordinate to, the constituent power of the people.",
-    "kernel_context": "This constraint is the 'popular_sovereignty_reading' of the 'constitutional_text' kernel. It posits that the ultimate interpretive authority resides with the people, expressed through various means including amendment, convention, or even revolution. This stands in contrast to sibling readings such as 'judicial_supremacy_reading' (where courts hold final say) and 'legislative_sovereignty_reading' (where the legislature is supreme)."
+    "narrative_context": "This constraint represents the 'popular sovereignty' reading of a constitutional text, where the ultimate authority for constitutional interpretation and change resides with the people (the demos), rather than with courts or legislatures. It views the constitution as a living document whose meaning is ultimately determined by popular will, expressed through various means including amendment, convention, or even revolutionary action. The constraint is claimed as a Rope, as it aims to coordinate collective self-governance, but its metrics reflect a degree of extraction from institutional stability and a need for active popular resistance to maintain its principles.",
+    "logic_rationale": "Extractiveness is moderate (0.3) because while it empowers the people, it can impose costs on institutional actors by challenging their authority. Suppression is low (0.2) as this reading inherently resists top-down enforcement and relies on popular agency. Theater ratio is low (0.1) because the emphasis is on genuine popular engagement, not mere performance. Accessibility collapse is moderate (0.4) as institutional alternatives (judicial or legislative supremacy) are always present but are structurally subordinated. Resistance is high (0.7) because this reading often requires active popular mobilization to assert its principles against institutional inertia.",
+    "directionality_logic": "The Demos and democratic participation are clear beneficiaries, as the constraint directly empowers them. Constitutional courts and the legislature are payers, as their authority is constrained and their interpretations are subject to popular override. Institutional stability and judicial expertise are also 'victims' (payers) in this reading, as their claims to finality are challenged.",
+    "perspectival_gap": "From the perspective of the Demos, this is a pure Rope, ensuring democratic control. From the perspective of institutional actors (courts, legislature), it can feel like a Snare, as their established authority is constantly under potential threat of popular challenge. The engine's per-seat classification will reflect this divergence.",
+    "kernel_context": "This constraint is the 'popular_sovereignty_reading' of the 'constitutional_text' kernel. It stands in contrast to the 'judicial_supremacy_reading' and 'legislative_sovereignty_reading', which assign ultimate interpretive authority to courts and legislatures, respectively. This reading emphasizes the constituent power of the people as the ultimate source of constitutional meaning."
   },
+  "omegas": [
+    {
+      "id": "popular_will_definition",
+      "question": "How is 'the will of the people' genuinely ascertained and distinguished from transient majorities or mobilized factions?",
+      "resolution_mechanism": "Empirical study of constitutional conventions, referenda, and sustained social movements, alongside theoretical work on deliberative democracy and legitimate popular expression.",
+      "impact": "If 'popular will' is easily manipulated or indistinguishable from factional interests, this reading's coordination function collapses into a Snare, as it becomes a tool for majoritarian oppression rather than genuine self-governance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in defining and identifying legitimate 'popular will'."
+    },
+    {
+      "id": "institutional_stability_threshold",
+      "question": "At what point does the emphasis on popular override undermine necessary institutional stability and the rule of law?",
+      "resolution_mechanism": "Comparative legal analysis of constitutional systems with strong popular sovereignty mechanisms, examining their resilience during crises and their capacity for consistent governance.",
+      "impact": "If popular overrides lead to chronic instability or a breakdown of legal predictability, the constraint's classification shifts towards a Tangled Rope or Snare, as the costs to institutional function outweigh the benefits of popular control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The trade-off between popular sovereignty and institutional stability."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "constitutional_text__judicial_supremacy_reading",
-      "constitutional_text__legislative_sovereignty_reading",
-      "amendment_process_constraint",
-      "judicial_review_constraint"
-    ],
-    "dual_formulation_note": "This constraint is one of three distinct readings of the 'constitutional_text' kernel, each with different structural properties and beneficiaries/victims. They are linked as a constraint family."
+      "constitutional_text__legislative_sovereignty_reading"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -142,45 +232,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "constitutional_text__judicial_supremacy_reading",
+        "sibling_id": "judicial_supremacy_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "constitutional_text__legislative_sovereignty_reading",
+        "sibling_id": "legislative_sovereignty_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "demos_as_constituent_power",
+        "atom": "ultimate_authority_resides_with_the_people",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "institutional_subordination_to_popular_will",
-        "role": "foundational",
+        "atom": "constitutional_meaning_is_dynamic",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "founding_moment_of_popular_ratification",
+    "reference_frame": "constituent_power_of_the_demos",
     "drift_state": {
-      "moment": "contemporary_institutional_entrenchment",
+      "moment": "contemporary",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

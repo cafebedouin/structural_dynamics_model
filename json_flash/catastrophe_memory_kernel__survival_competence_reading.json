@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "d64705d4-ea7e-4064-8b5a-886669bf1b00"
+    "story_uid": "c89f77af-c5ab-4fdf-b96e-c9dcff2e4ec7"
   },
   "base_properties": {
     "extractiveness": 0.45,
@@ -13,118 +13,206 @@
     "accessibility_collapse": 0.4,
     "resistance": 0.3,
     "claimed_type": "tangled_rope",
-    "human_readable": "Ritual as Persecution-Survival Competence Transmission",
+    "human_readable": "Ritual as Catastrophe Survival Competence Transmission",
     "topic_domain": "religious_studies/collective_memory/ritual_practice",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "community_resilience",
-      "future_generations"
+      "community_resilience_under_threat"
     ],
     "victims": [
-      "assimilating_individuals",
-      "cultural_integration_pressures"
+      "assimilation_pressure",
+      "individual_autonomy"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identity",
-      "question": "Is this constraint primarily about transmitting survival competence, or is it better understood as a different reading of the catastrophe memory kernel?",
-      "resolution_mechanism": "Empirical study of ritual outcomes: does ritual participation demonstrably improve adaptive capacity and survival rates under threat, or does it primarily reinforce identity, encode trauma, or maintain boundaries?",
-      "impact": "If the primary function is different, the constraint would be reclassified under a sibling reading (e.g., symbol_continuity_reading as a Rope, trauma_encoding_reading as a Snare, boundary_maintenance_reading as a Tangled Rope with different beneficiaries/victims).",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'survival_competence_reading' of the 'catastrophe_memory_kernel'."
+      "name": "community_resilience_under_threat",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "The collective capacity of the community to withstand and recover from persecution. This resilience is directly strengthened by the ritual's transmission of survival strategies and historical lessons. The community benefits from the continuity of these adaptive patterns."
     },
     {
-      "id": "assimilation_pressure_source",
-      "question": "Is the 'assimilation pressure' a genuine external threat or an internalized group norm enforced by the community itself?",
-      "resolution_mechanism": "Sociological analysis of external vs. internal pressures on community members; ethnographic study of individual experiences of assimilation and community response.",
-      "impact": "If primarily internalized, the suppression metric might be higher, and the 'victims' would be more directly 'identity_locked' by internal community dynamics rather than external pressures, potentially shifting the classification towards a Snare.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Source of assimilation pressure on individuals."
+      "name": "assimilation_pressure",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The external societal forces that seek to absorb or dilute the distinct identity of the community. These pressures are resisted by the ritual, which incurs a 'cost' in terms of the effort and resources required to maintain distinct practices and boundaries against the dominant culture."
+    },
+    {
+      "name": "ritual_practitioners",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals who actively participate in and transmit the ritual. They are the carriers of the adaptive knowledge and the enforcers of its continuity. Their identity is often deeply intertwined with the ritual, making exit difficult."
+    },
+    {
+      "name": "individual_autonomy",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "The freedom of individuals within the community to choose their own path, potentially diverging from traditional practices. The ritual's demands for adherence and participation can constrain individual choices, representing a cost to personal freedom in favor of collective survival."
+    },
+    {
+      "name": "historical_memory_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics who study the mechanisms of collective memory and ritual. They analyze how rituals function to transmit knowledge and identity, observing the dynamics of the constraint without direct participation or benefit/cost."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the intergenerational transmission of practical knowledge and behavioral patterns necessary for a community's survival in the face of recurring persecution or existential threat, ensuring collective readiness and response.",
+    "transfer_function": "Transfers adaptive strategies, historical lessons, and a shared sense of vigilance from past generations to present and future members, at the cost of individual conformity and resistance to assimilation.",
+    "absent_voices": "Those who have assimilated into dominant cultures, or individuals within the community who prioritize individual freedom over collective survival, would argue against the strictures of the ritual, viewing them as burdensome rather than adaptive.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the ritual vanished, the community would lose a primary mechanism for rehearsing and transmitting survival competence. Over generations, this would likely lead to a significant erosion of collective adaptive capacity, increased vulnerability to external pressures, and potentially the dissolution of the distinct community identity, forcing a reorganization of its social and cultural structures.",
+    "founding_problem": "The recurring experience of persecution and existential threats, necessitating a robust and reliable mechanism for transmitting survival knowledge and maintaining collective identity across generations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Community elders and historians attest to the ongoing relevance of historical threats and the need for continued vigilance. Sociologists studying minority groups corroborate the persistent pressures of assimilation and the adaptive role of cultural practices in maintaining group cohesion and survival."
+  },
+  "interval": {
+    "start": 100,
+    "end": 200
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 100,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 120,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 140,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 160,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 180,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 100,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 120,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 140,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 160,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 180,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
       "value": 0.6
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.25
+      "time_point": 100,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 120,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 140,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
       "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.2
+      "time_point": 180,
+      "value": 0.21
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 200,
       "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint describes how ritual practices within a community facing historical or ongoing persecution function to encode and transmit practical adaptive capacities for survival. It's a 'survival-training' mechanism, where the 'mourning-practice' of past catastrophes serves as a rehearsal for future threats. The community benefits from enhanced resilience, while individuals face pressure to conform to these practices, bearing the costs of resisting assimilation into a dominant culture. This is one reading of the broader 'catastrophe_memory_kernel'.",
-    "key_agents": [
-      "community_elders: Agenda setter (institutional/generational) – transmit and enforce ritual practices.",
-      "community_members: Payer/Beneficiary (moderate/biographical) – participate in rituals, gain survival competence, bear assimilation costs.",
-      "assimilating_individuals: Victim (powerless/biographical) – bear the direct cost of resisting community norms or losing cultural connection.",
-      "dominant_culture: Excluded (institutional/civilizational) – exerts pressure for assimilation, but is not directly part of the ritual system."
-    ],
-    "logic_rationale": "The constraint is a Tangled Rope because it genuinely coordinates (transmitting survival skills for collective benefit) but also extracts (demanding conformity and imposing costs on individuals who might prefer assimilation). Extractiveness is moderate (0.45) as the 'cost' is primarily the effort of maintaining distinct cultural practices and resisting external pressures. Suppression is moderate (0.6) due to social pressure within the community to participate and the active enforcement of ritual adherence by elders. Theater ratio is low (0.2) because the rituals are largely functional in their stated purpose of preserving adaptive capacity, with minimal performative excess.",
-    "perspectival_gap": "From the perspective of community elders, the constraint is a vital Rope, ensuring the group's long-term survival. From the perspective of assimilating individuals, it can feel like a Snare, trapping them between cultural loyalty and external integration. The engine's classification as Tangled Rope reflects this hybrid nature.",
-    "directionality_logic": "Community elders (agenda_setter) are beneficiaries as they maintain the community's integrity and future. Community members are both beneficiaries (gaining survival competence) and payers (bearing the burden of ritual adherence and resisting assimilation). Assimilating individuals are victims, as they face the highest costs for non-conformity. The dominant culture is an external force, not directly participating in the constraint's internal dynamics, but its pressure is the context for the constraint's existence.",
-    "mandatrophy_analysis": "The constraint's mandate (persecution-survival) remains live as long as the community perceives a threat of persecution or assimilation. If external threats diminish significantly, the constraint could drift towards a Piton (ritual for ritual's sake) or a Snare (if the internal enforcement of cultural distinctiveness becomes purely extractive without a genuine external threat). The current classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring individual costs) or a pure Snare (ignoring the genuine survival function).",
-    "kernel_context": "This constraint is the 'survival_competence_reading' of the 'catastrophe_memory_kernel'. This kernel describes how communities remember and respond to past catastrophes. Sibling readings include 'symbol_continuity_reading' (ritual preserves collective identity), 'trauma_encoding_reading' (ritual encodes intergenerational trauma), and 'boundary_maintenance_reading' (ritual enforces group boundaries)."
+    "narrative_context": "This constraint models ritual practice as a mechanism for encoding and transmitting adaptive capacity for persecution-survival within a community. It is one reading of the 'catastrophe_memory_kernel'. The ritual functions as a form of 'survival training' by rehearsing historical responses to threats, thereby strengthening community resilience. However, this comes at the cost of individual autonomy and requires active enforcement against assimilation pressures. The claimed type is 'tangled_rope' because it genuinely coordinates survival strategies but also extracts costs from individuals and actively suppresses alternatives (assimilation).",
+    "logic_rationale": "The extractiveness (0.45) reflects the moderate cost imposed on individuals (conformity, limited autonomy) and the community (effort to maintain distinctiveness) for the benefit of collective survival. Suppression (0.6) is significant due to the active resistance against assimilation and the internal pressure to adhere to ritual practices for the sake of group cohesion. The theater ratio (0.2) is low, indicating that the ritual's function is largely genuine and not merely performative, though some elements might become ritualized beyond immediate practical utility over time. The 'identity_locked' exit option for community resilience and practitioners highlights the deep integration of the ritual with group and individual identity, making disengagement a profound loss of self or community.",
+    "directionality_logic": "Community resilience is the primary beneficiary, as the ritual directly enhances its capacity to survive. Assimilation pressure and individual autonomy are victims, bearing the costs of boundary maintenance and constrained choice, respectively. Ritual practitioners act as agenda-setters, actively maintaining and enforcing the practices. Scholars observe the dynamics analytically.",
+    "perspectival_gap": "From the perspective of community resilience, the ritual is a vital 'rope' for survival. From the perspective of individual autonomy, it can feel like a 'snare' due to the demands for conformity and the suppression of alternative life paths. The engine's per-seat classification will capture this divergence, showing a 'tangled_rope' overall due to the dual function and asymmetric costs.",
+    "kernel_context": "This constraint is the 'survival_competence_reading' of the 'catastrophe_memory_kernel'. Sibling readings include 'symbol_continuity_reading' (ritual preserves collective identity), 'trauma_encoding_reading' (ritual encodes intergenerational trauma), and 'boundary_maintenance_reading' (ritual enforces group boundaries)."
   },
+  "omegas": [
+    {
+      "id": "survival_vs_identity_priority",
+      "question": "Does the ritual primarily transmit practical survival competence, or is its primary function the maintenance of symbolic continuity and collective identity?",
+      "resolution_mechanism": "Comparative analysis of ritual content and historical outcomes: if changes in ritual directly correlate with changes in survival rates, it supports competence; if changes correlate with identity cohesion, it supports continuity.",
+      "impact": "If primarily identity, the extractiveness might be re-evaluated as a cost of belonging rather than a cost of training, potentially shifting the classification towards a 'rope' for identity coordination with lower extraction from individuals.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the primary function of the ritual: survival training vs. identity maintenance."
+    },
+    {
+      "id": "internalized_vs_structural_suppression",
+      "question": "Is the measured suppression primarily structural (external persecution, assimilation pressure) or internalized (cognitive patterns, identity fusion within the community)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if individuals who leave the community continue to experience internal resistance to assimilation, it indicates internalized suppression. If resistance drops immediately upon exit, it's primarily structural.",
+      "impact": "If internalized, the effective suppression is higher than the structural measure suggests, as individuals carry the suppression with them. This would amplify the 'snare' aspect for individual autonomy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in ritual adherence."
+    },
+    {
+      "id": "mandate_obsolescence",
+      "question": "Is the 'persecution-survival' mandate still genuinely live, or has the threat diminished such that the ritual's costs now outweigh its adaptive benefits?",
+      "resolution_mechanism": "Longitudinal sociological study of community vulnerability and external threats over several generations. Corroboration from independent security analysts on the nature of contemporary threats.",
+      "impact": "If the mandate is found to be 'dead', the constraint would shift towards a 'piton' or 'snare', as the coordination function has atrophied, leaving only the extraction and inertia.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the founding problem of persecution-survival remains relevant."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
@@ -134,38 +222,38 @@
       "catastrophe_memory_kernel__trauma_encoding_reading",
       "catastrophe_memory_kernel__boundary_maintenance_reading"
     ],
-    "dual_formulation_note": "This constraint is one of several readings of the 'catastrophe_memory_kernel', each representing a distinct structural claim about how ritual functions in response to collective trauma."
+    "dual_formulation_note": "This constraint is one of several readings of the 'catastrophe_memory_kernel', each focusing on a distinct structural function of collective memory rituals. This reading emphasizes the transmission of adaptive survival competence."
   },
   "cs_structure": {
     "kernel_codification": "implicit",
-    "authority_grounding": "lineage",
+    "authority_grounding": "practice",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "catastrophe_memory_kernel__symbol_continuity_reading",
+        "sibling_id": "symbol_continuity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_kernel__trauma_encoding_reading",
+        "sibling_id": "trauma_encoding_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_kernel__boundary_maintenance_reading",
+        "sibling_id": "boundary_maintenance_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "catastrophe_as_training_ground",
+        "atom": "ritual_as_adaptive_rehearsal",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "ritual_as_adaptive_rehearsal",
-        "role": "foundational",
+        "atom": "collective_survival_trumps_individual_autonomy",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "deontological"
       }
     ],
     "reference_frame": "community_as_survival_unit",
@@ -177,14 +265,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,26 +4,99 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c2162f3e-fa1a-453d-b84f-b2136209e1cd"
+    "story_uid": "c071c2a1-2d10-4b54-938b-99d705295557"
   },
   "base_properties": {
     "extractiveness": 0.6,
     "suppression": 0.7,
     "theater_ratio": 0.4,
     "accessibility_collapse": 0.6,
-    "resistance": 0.5,
+    "resistance": 0.8,
     "claimed_type": "tangled_rope",
-    "human_readable": "Territorial Legitimacy via International Partition (UN Resolution 181)",
+    "human_readable": "Territorial Legitimacy via International Partition (Partition Reading)",
     "topic_domain": "political_theory/international_law/territorial_sovereignty",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "international_legal_framework",
-      "states_recognizing_1948_partition"
+      "israeli_state_actors",
+      "palestinian_authority_actors",
+      "un_member_states"
     ],
     "victims": [
       "palestinian_refugees",
-      "israeli_settlers_beyond_1967_lines"
+      "israeli_settlers_beyond_67_lines"
+    ],
+    "vindicated_propositions": [
+      "two_state_solution_doctrine",
+      "international_law_supremacy"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "israeli_state_actors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from international recognition of its sovereignty within 1948/1967 borders, but faces pressure regarding settlements beyond these lines. Actively enforces its interpretation of security needs and territorial control."
+    },
+    {
+      "name": "palestinian_authority_actors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Seeks full state recognition and sovereignty based on the partition plan and 1967 borders. Benefits from international support for a two-state solution, but struggles with effective territorial control and internal divisions."
+    },
+    {
+      "name": "un_member_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Uphold the principle of international law and UN resolutions as the basis for territorial legitimacy. They provide diplomatic and financial support, and exert pressure for a two-state solution, but face challenges in enforcement."
+    },
+    {
+      "name": "palestinian_refugees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear the cost of displacement and loss of property, with their right of return often unaddressed by the partition framework. Their claims are recognized by international law but remain largely unrealized."
+    },
+    {
+      "name": "israeli_settlers_beyond_67_lines",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Their presence beyond the 1967 lines is considered illegitimate by this reading, creating legal and political vulnerability. They are often ideologically committed to their settlements, making exit difficult."
+    },
+    {
+      "name": "international_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze and interpret international law, UN resolutions, and historical documents to assess the legitimacy of territorial claims. Their work informs policy debates but does not directly enforce outcomes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for international recognition of two sovereign states, aiming to resolve territorial disputes through a legally defined partition and mutual recognition.",
+    "transfer_function": "Transfers claims of legitimate sovereignty and territorial control to both Israeli and Palestinian entities within internationally recognized borders, while imposing costs on those whose claims fall outside this framework.",
+    "absent_voices": "Those who reject the legitimacy of the partition framework entirely, such as proponents of a single, binational state, or those who assert exclusive historical claims to the entire territory. Their perspectives are marginalized by the dominant international legal discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the international legal framework for partition and state recognition vanished, the basis for diplomatic engagement, aid, and sanctions would collapse. The existing states' legitimacy would be fundamentally challenged, leading to a chaotic reorganization of territorial claims and power dynamics.",
+    "founding_problem": "The problem of competing national aspirations and territorial claims in Mandate Palestine, requiring a framework for self-determination and peaceful coexistence for both Jewish and Arab populations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "UN resolutions, international diplomatic efforts, and the ongoing conflict itself corroborate that the problem of competing claims and the need for a resolution framework remain live. While the specific terms are contested, the underlying need for a legitimate basis for territorial division persists, attested by international bodies and numerous peace initiatives."
   },
   "interval": {
     "start": 1948,
@@ -33,7 +106,7 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1948,
-      "value": 0.4
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
@@ -53,42 +126,42 @@
     {
       "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.68
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.7
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1948,
-      "value": 0.5
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1967,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1993,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
       "value": 0.75
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
+      "time_point": 1993,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
       "value": 0.8
     },
     {
       "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.85
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
@@ -108,63 +181,53 @@
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.35
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.4
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.45
+      "value": 0.4
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint defines territorial legitimacy in the Israeli-Palestinian conflict through the lens of international legal partition, primarily UN Resolution 181 (1948) and subsequent resolutions affirming the 1967 lines. It posits the legitimacy of both Israeli and Palestinian states within recognized borders, rendering settlements beyond 1967 illegitimate, and structurally enabling a two-state solution. It is a 'tangled rope' because it genuinely attempts to coordinate competing claims but has become highly extractive due to incomplete enforcement and asymmetric power dynamics, requiring active enforcement to maintain its (contested) legitimacy.",
-    "key_agents": [
-      "international_legal_framework: Agenda-setter (institutional/analytical) — provides normative basis",
-      "states_recognizing_1948_partition: Beneficiary (organized/mobile) — benefits from stable framework",
-      "palestinian_authority: Beneficiary/Payer (moderate/constrained) — seeks statehood, bears occupation costs",
-      "israeli_government: Beneficiary/Agenda-setter (institutional/constrained) — benefits from recognition, resists full implementation",
-      "palestinian_refugees: Victim (powerless/trapped) — bears displacement costs, right of return unresolved",
-      "israeli_settlers_beyond_1967_lines: Victim (moderate/identity_locked) — deemed illegitimate, faces potential displacement",
-      "human_rights_organizations: Observer (organized/analytical) — monitors adherence to international law"
-    ],
-    "logic_rationale": "The constraint's extractiveness (0.7 at end) is high because the framework, while offering a path to statehood for Palestinians, has not delivered full sovereignty or ended occupation, leading to ongoing costs for Palestinians. Suppression (0.85 at end) is also high, reflecting the active military and political efforts required to maintain the status quo and prevent alternative resolutions. Theater ratio (0.45 at end) indicates that while diplomatic efforts and legal pronouncements continue, a significant portion of the activity is performative, masking the lack of full implementation. The metrics show a trend of increasing extractiveness and suppression over time, reflecting the hardening of positions and the failure to achieve a lasting resolution.",
-    "perspectival_gap": "The international legal framework and states recognizing partition view this as a legitimate, albeit challenging, path to peace. However, for Palestinian refugees and Israeli settlers beyond 1967, the framework imposes significant costs and existential threats, leading to a perception of extraction and suppression. The Israeli government benefits from recognition but experiences the framework as a constraint on its territorial ambitions.",
-    "directionality_logic": "The international legal framework and states recognizing partition are beneficiaries (low d) as they uphold a principle of international order. The Palestinian Authority is a mixed beneficiary/payer, seeking statehood but bearing costs. The Israeli government is a beneficiary of recognition but a target regarding settlement policy. Palestinian refugees and Israeli settlers beyond 1967 are clear victims/targets (high d) as their claims or presence are directly challenged by this reading.",
-    "mandatrophy_analysis": "The constraint's mandate (two-state solution via partition) is still 'live' but its effectiveness is contested. The high extractiveness and suppression, coupled with a rising theater ratio, suggest that while the mandate persists, its function has degraded, becoming more about managing an intractable conflict than resolving it. This prevents mislabeling it as a pure rope (which would imply symmetric benefits) or a pure snare (which would ignore the genuine coordination function it still attempts to provide).",
-    "kernel_context": "This constraint is the 'partition_reading' of the 'territorial_legitimacy' kernel. It focuses on international legal frameworks like UN Resolution 181 and the 1967 borders as the basis for legitimacy. Sibling readings include the 'security_necessity_reading' (legitimacy via defensive control) and the 'indigenous_continuity_reading' (legitimacy via continuous habitation and anti-colonial self-determination)."
+    "narrative_context": "This constraint represents the 'partition reading' of territorial legitimacy in the Israeli-Palestinian conflict, grounded in UN Resolution 181 and subsequent international legal frameworks. It posits that both Israeli and Palestinian states derive legitimacy from international recognition within defined borders (e.g., 1948/1967 lines), making settlements beyond these lines illegitimate and a two-state solution structurally possible. The constraint is claimed as a Tangled Rope because it offers a coordination function (recognized statehood) but involves significant, actively enforced extraction from those whose claims are marginalized by this framework.",
+    "logic_rationale": "The extractiveness (0.6) reflects the costs borne by Palestinian refugees and Israeli settlers beyond the 1967 lines, whose claims are not fully accommodated by this framework. Suppression (0.7) is high due to the active diplomatic and military enforcement required to maintain the existing territorial arrangements and marginalize alternative claims. The theater ratio (0.4) indicates that while genuine diplomatic efforts occur, a significant portion of international discourse and enforcement is performative, maintaining the 'possibility' of a two-state solution without fully resolving the underlying power asymmetries. The metrics show fluctuations reflecting periods of intense conflict and peace negotiations.",
+    "directionality_logic": "Israeli and Palestinian Authority actors are beneficiaries as they gain international recognition and a basis for statehood, though they also bear costs in terms of territorial concessions or internal political challenges. UN member states act as agenda-setters, promoting and enforcing this framework. Palestinian refugees and Israeli settlers beyond the 1967 lines are payers, bearing the direct costs of displacement or legal vulnerability. International legal scholars act as observers, analyzing the framework's application.",
+    "perspectival_gap": "From the perspective of UN member states, this framework is a necessary (if imperfect) Rope for international order and conflict resolution. For Palestinian refugees, it operates as a Snare, legitimizing their displacement while offering no concrete path to return. For Israeli settlers beyond the 1967 lines, it is also a Snare, delegitimizing their presence and threatening their identity-locked claims. The engine's per-seat classification will highlight these divergences.",
+    "kernel_context": "This constraint is the 'partition_reading' of the 'territorial_legitimacy' kernel. It emphasizes international law and UN resolutions as the basis for statehood and borders. Sibling readings include the 'security_necessity_reading' (legitimacy via defensive control) and the 'indigenous_continuity_reading' (legitimacy via continuous habitation and anti-colonial self-determination)."
   },
   "omegas": [
     {
-      "id": "enforcement_gap_vs_legitimacy",
-      "question": "Is the perceived extractiveness of this reading due to a fundamental flaw in the partition principle itself, or primarily due to a lack of enforcement by the international community?",
-      "resolution_mechanism": "Analysis of historical instances where international legal frameworks were fully enforced, and their outcomes. Counterfactual modeling of full enforcement in this context.",
-      "impact": "If due to enforcement gap, the partition reading remains a valid (though unfulfilled) 'rope' or 'scaffold'. If due to fundamental flaw, it is structurally a 'snare' or 'tangled_rope' regardless of enforcement.",
+      "id": "enforcement_effectiveness_ambiguity",
+      "question": "Is the international legal framework for partition genuinely enforceable, or is its persistence primarily due to the balance of power among states?",
+      "resolution_mechanism": "Analysis of cases where international legal consensus has been successfully enforced against a powerful state's objections, or conversely, where it has consistently failed.",
+      "impact": "If enforcement is primarily power-based, the constraint's 'requires_active_enforcement' is a misnomer, and its classification shifts closer to a Snare, as the coordination function is merely a cover for power projection. If genuinely enforceable, it retains its Tangled Rope character.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinguishing between a flawed principle and flawed implementation."
-    },
-    {
-      "id": "settler_identity_lock_resolution",
-      "question": "To what extent is the 'identity_locked' exit option for Israeli settlers beyond 1967 lines a genuine, irreducible identity fusion, versus a politically constructed and reversible attachment?",
-      "resolution_mechanism": "Sociological studies of settler communities, analysis of historical precedents for population transfers or withdrawals, and the role of state incentives/disincentives.",
-      "impact": "If genuinely irreducible, the human cost of enforcing the partition reading is higher, potentially shifting the classification towards a 'snare' for this group. If reversible, the 'identity_locked' status is a political artifact, and the constraint is less fundamentally extractive.",
-      "confidence": "low",
       "type_class": "empirical",
-      "description": "Nature of identity lock for settlers."
+      "description": "Ambiguity regarding the true source of the constraint's persistence: legal authority vs. power dynamics."
     },
     {
-      "id": "partition_vs_one_state_viability",
-      "question": "Is the two-state solution, as envisioned by the partition reading, still a viable and just outcome, or has demographic and territorial reality rendered it obsolete, necessitating a one-state solution?",
-      "resolution_mechanism": "Demographic projections, analysis of territorial contiguity, and political feasibility studies for both two-state and one-state models.",
-      "impact": "If obsolete, the partition reading's 'tangled rope' classification might shift towards a 'piton' (performing a function no longer viable) or even a 'snare' (actively preventing a more just outcome). If still viable, its coordination function remains relevant.",
+      "id": "two_state_solution_viability",
+      "question": "Is the two-state solution, as envisioned by this partition reading, still a viable and implementable outcome given current demographic and political realities?",
+      "resolution_mechanism": "Empirical assessment of territorial contiguity, demographic trends, and political will for implementation, as evaluated by independent geopolitical analysts.",
+      "impact": "If no longer viable, the 'coordination function' of this reading becomes purely theatrical, increasing the 'theater_ratio' and shifting the constraint towards a Piton or Snare, as its stated purpose is unachievable.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "Viability of the two-state solution."
+      "type_class": "empirical",
+      "description": "Uncertainty about the practical feasibility of the partition reading's core outcome."
+    },
+    {
+      "id": "refugee_right_of_return_status",
+      "question": "How does the partition reading reconcile the right of return for Palestinian refugees (recognized by international law) with the demographic implications for a two-state solution?",
+      "resolution_mechanism": "Legal and political analysis of proposed mechanisms for implementing the right of return (e.g., compensation, phased return, return to a Palestinian state) and their acceptance by all parties.",
+      "impact": "If the right of return is structurally foreclosed by the partition reading's implementation, the extraction from Palestinian refugees is higher and more permanent, pushing the constraint further towards a Snare. If a viable reconciliation exists, the extractiveness is mitigated.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Conceptual tension between the partition framework and the right of return."
     }
   ],
   "boltzmann": {
@@ -173,11 +236,9 @@
   "network": {
     "affects_constraints": [
       "territorial_legitimacy__security_necessity_reading",
-      "territorial_legitimacy__indigenous_continuity_reading",
-      "right_of_return_for_palestinians",
-      "israeli_settlement_expansion"
+      "territorial_legitimacy__indigenous_continuity_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'territorial_legitimacy' kernel. It focuses on international legal partition and state recognition. Other readings include 'security_necessity_reading' and 'indigenous_continuity_reading', which offer alternative bases for legitimacy."
+    "dual_formulation_note": "This constraint is one of three readings of the 'territorial_legitimacy' kernel. Each reading offers a distinct basis for territorial claims and statehood, leading to different classifications and stakeholder impacts. They are linked as a constraint family."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -185,45 +246,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "territorial_legitimacy__security_necessity_reading",
+        "sibling_id": "security_necessity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "territorial_legitimacy__indigenous_continuity_reading",
+        "sibling_id": "indigenous_continuity_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "state_sovereignty_via_international_recognition",
+        "atom": "international_law_as_basis_for_sovereignty",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "territorial_acquisition_by_force_is_illegitimate",
+        "atom": "two_state_solution_as_just_outcome",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "post_wwii_self_determination_framework",
+    "reference_frame": "un_resolution_181_framework",
     "drift_state": {
-      "moment": "contemporary_unilateralism_era",
+      "moment": "contemporary_political_stalemate",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

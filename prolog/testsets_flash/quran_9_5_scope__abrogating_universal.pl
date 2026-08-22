@@ -39,9 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,20 +70,30 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: quran_9_5_scope__abrogating_universal
- *   human_readable: Quran 9:5 Abrogating Universal Jihad Obligation
+ *   human_readable: Quran 9:5 as Abrogating Universal Offensive Jihad
  *   domain: islamic_jurisprudence/hermeneutics/political_theology
  *
  * SUMMARY:
- *   This constraint represents the 'abrogating_universal' reading of Quran
- *   9:5, which interprets the verse as abrogating all prior peaceful verses
- *   and establishing universal offensive jihad against polytheists until
- *   their submission or conversion. This reading transforms what might
- *   otherwise be a contextual directive into a standing legal obligation for
- *   expansionist movements. It places all non-Muslims (and even moderate
- *   Muslims who reject this interpretation) into a victim set, legitimizing
- *   first-strike violence and suppressing any framework for peaceful
- *   coexistence.
+ *   This constraint models the interpretation of Quran 9:5 (the 'Verse of the
+ *   Sword') as abrogating all prior peaceful verses, thereby establishing
+ *   universal offensive jihad as a standing legal obligation until
+ *   polytheists submit or convert. This reading is a foundational ideological
+ *   pillar for various expansionist jihadi movements and radical clerical
+ *   authorities. It transforms all non-Muslims into legitimate targets in the
+ *   absence of formal submission, authorizing first-strike violence and
+ *   suppressing any frameworks for peaceful coexistence. The claimed type is
+ *   'snare' because its coordination story (unifying the Muslim community) is
+ *   a cover for pure extraction (violence, subjugation, resource transfer)
+ *   from identifiable victims, maintained through active enforcement and
+ *   suppression of alternatives.
  *
+ * KEY AGENTS:
+ *   - expansionist_jihadi_movements: Primary agenda-setter and beneficiary (organized/identity_locked) — actively enforces and benefits from ideological justification and conquest.
+ *   - radical_clerics: Primary beneficiary (powerful/constrained) — propagates the reading, gaining influence and authority.
+ *   - non_muslim_populations: Primary victim (powerless/trapped) — directly targeted by violence, forced conversion, or subjugation.
+ *   - moderate_muslim_scholars: Victim (moderate/constrained) — advocates for alternative readings, facing threats and marginalization.
+ *   - muslim_civilians_in_conflict_zones: Victim (powerless/trapped) — suffers displacement and violence in conflicts fueled by this interpretation.
+ *   - international_human_rights_organizations: Observer (organized/analytical) — documents impact, challenges legitimacy, but cannot directly alter enforcement.
  */
 
 /* ==========================================================================
@@ -98,40 +111,42 @@ narrative_ontology:constraint_metric(quran_9_5_scope__abrogating_universal, supp
 narrative_ontology:constraint_metric(quran_9_5_scope__abrogating_universal, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(quran_9_5_scope__abrogating_universal, accessibility_collapse, 0.9).
-narrative_ontology:constraint_metric(quran_9_5_scope__abrogating_universal, resistance, 0.8).
+narrative_ontology:constraint_metric(quran_9_5_scope__abrogating_universal, accessibility_collapse, 0.8).
+narrative_ontology:constraint_metric(quran_9_5_scope__abrogating_universal, resistance, 0.7).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(quran_9_5_scope__abrogating_universal, snare).
-narrative_ontology:human_readable(quran_9_5_scope__abrogating_universal, "Quran 9:5 Abrogating Universal Jihad Obligation").
+narrative_ontology:human_readable(quran_9_5_scope__abrogating_universal, "Quran 9:5 as Abrogating Universal Offensive Jihad").
 narrative_ontology:topic_domain(quran_9_5_scope__abrogating_universal, "islamic_jurisprudence/hermeneutics/political_theology").
 
 domain_priors:requires_active_enforcement(quran_9_5_scope__abrogating_universal).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(quran_9_5_scope__abrogating_universal, '0c310d6e-47fe-409b-87e1-a2ab56cd8400').
-narrative_ontology:cs_kernel_codification('0c310d6e-47fe-409b-87e1-a2ab56cd8400', fixed_text).
-narrative_ontology:cs_authority_grounding('0c310d6e-47fe-409b-87e1-a2ab56cd8400', lineage).
-narrative_ontology:cs_interpretation_layer_present('0c310d6e-47fe-409b-87e1-a2ab56cd8400').
-narrative_ontology:cs_reading_relation('0c310d6e-47fe-409b-87e1-a2ab56cd8400', quran_9_5_scope__contextual_defensive, forecloses).
-narrative_ontology:cs_reading_relation('0c310d6e-47fe-409b-87e1-a2ab56cd8400', quran_9_5_scope__progressive_synthesis, forecloses).
-narrative_ontology:cs_axiom('0c310d6e-47fe-409b-87e1-a2ab56cd8400', foundational, abrogation_of_peaceful_verses).
-narrative_ontology:cs_axiom_status(abrogation_of_peaceful_verses, holdable).
-narrative_ontology:cs_axiom_grounding('0c310d6e-47fe-409b-87e1-a2ab56cd8400', abrogation_of_peaceful_verses, conventional).
-narrative_ontology:cs_axiom('0c310d6e-47fe-409b-87e1-a2ab56cd8400', foundational, universal_offensive_jihad_obligation).
-narrative_ontology:cs_axiom_status(universal_offensive_jihad_obligation, holdable).
-narrative_ontology:cs_axiom_grounding('0c310d6e-47fe-409b-87e1-a2ab56cd8400', universal_offensive_jihad_obligation, theological).
-narrative_ontology:cs_reference_frame('0c310d6e-47fe-409b-87e1-a2ab56cd8400', classical_abrogating_jurisprudence).
-narrative_ontology:cs_drift_state('0c310d6e-47fe-409b-87e1-a2ab56cd8400', contemporary_global_islamic_discourse, gap(repudiation_pressure, substantial, false)).
-narrative_ontology:cs_created_at('0c310d6e-47fe-409b-87e1-a2ab56cd8400', '').
+narrative_ontology:cs_story_uid(quran_9_5_scope__abrogating_universal, '815c94f9-0c62-40a4-a5c3-dab28ec14d5a').
+narrative_ontology:cs_kernel_codification('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', fixed_text).
+narrative_ontology:cs_authority_grounding('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', lineage).
+narrative_ontology:cs_interpretation_layer_present('815c94f9-0c62-40a4-a5c3-dab28ec14d5a').
+narrative_ontology:cs_reading_relation('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', quran_9_5_scope__contextual_defensive, forecloses).
+narrative_ontology:cs_reading_relation('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', quran_9_5_scope__progressive_synthesis, forecloses).
+narrative_ontology:cs_axiom('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', foundational, verse_9_5_abrogates_peaceful_verses).
+narrative_ontology:cs_axiom_status(verse_9_5_abrogates_peaceful_verses, holdable).
+narrative_ontology:cs_axiom_grounding('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', verse_9_5_abrogates_peaceful_verses, theological).
+narrative_ontology:cs_axiom('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', foundational, universal_offensive_jihad_is_obligatory).
+narrative_ontology:cs_axiom_status(universal_offensive_jihad_is_obligatory, holdable).
+narrative_ontology:cs_axiom_grounding('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', universal_offensive_jihad_is_obligatory, theological).
+narrative_ontology:cs_reference_frame('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', classical_abrogating_jihad_doctrine).
+narrative_ontology:cs_drift_state('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', contemporary_global_context, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('815c94f9-0c62-40a4-a5c3-dab28ec14d5a', '').
 narrative_ontology:cs_kernel_id(quran_9_5_scope__abrogating_universal, quran_9_5_scope).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(quran_9_5_scope__abrogating_universal, expansionist_jihadi_movements).
 narrative_ontology:constraint_beneficiary(quran_9_5_scope__abrogating_universal, radical_clerics).
-narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, non_muslims).
-narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, moderate_muslims).
-narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, coexistence_advocates).
+narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, non_muslim_populations).
+narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, moderate_muslim_scholars).
+narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, muslim_civilians_in_conflict_zones).
+narrative_ontology:constraint_vindicates(quran_9_5_scope__abrogating_universal, doctrine_of_abrogation_nasikh).
+narrative_ontology:constraint_vindicates(quran_9_5_scope__abrogating_universal, supremacy_of_islamic_law).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -140,27 +155,52 @@ narrative_ontology:constraint_victim(quran_9_5_scope__abrogating_universal, coex
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% These groups interpret 9:5 as a divine mandate for perpetual offensive warfare against non-Muslims until their submission or conversion. They actively enforce this interpretation through violence and recruitment, benefiting from the ideological justification for their actions and the resources gained through conquest.
+narrative_ontology:constraint_stakeholder(quran_9_5_scope__abrogating_universal, expansionist_jihadi_movements, agenda_setter,
+    organized, generational, identity_locked, global).
+
+% These religious authorities propagate the abrogating_universal reading, gaining immense influence, followers, and often material support. Their careers and authority are built upon this interpretation, making any deviation a threat to their standing.
+narrative_ontology:constraint_stakeholder(quran_9_5_scope__abrogating_universal, radical_clerics, beneficiary,
+    powerful, biographical, constrained, global).
+
+% These populations are directly targeted by violence, forced conversion, or subjugation under this interpretation. Their options are resistance (often futile), flight, or submission, bearing the full cost of the constraint's enforcement.
+narrative_ontology:constraint_stakeholder(quran_9_5_scope__abrogating_universal, non_muslim_populations, payer,
+    powerless, immediate, trapped, local).
+
+% These scholars advocate for contextual or progressive readings of 9:5, often facing severe threats, persecution, or marginalization from proponents of the abrogating_universal view. They bear the cost of intellectual suppression and personal risk.
+narrative_ontology:constraint_stakeholder(quran_9_5_scope__abrogating_universal, moderate_muslim_scholars, payer,
+    moderate, biographical, constrained, global).
+
+% Caught in conflicts fueled by this interpretation, they suffer displacement, violence, and the breakdown of social order. They are often forced to choose sides or become victims of both sides, bearing immense human cost.
+narrative_ontology:constraint_stakeholder(quran_9_5_scope__abrogating_universal, muslim_civilians_in_conflict_zones, payer,
+    powerless, immediate, trapped, local).
+
+% These organizations document atrocities and advocate for the protection of civilians and religious minorities, challenging the legitimacy of actions justified by this interpretation. They analyze the constraint's impact but cannot directly alter its enforcement.
+narrative_ontology:constraint_stakeholder(quran_9_5_scope__abrogating_universal, international_human_rights_organizations, observer,
+    organized, generational, analytical, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Coordinates the actions and beliefs of adherents towards a unified goal of establishing Islamic supremacy through military expansion and conversion, providing a clear legal and theological justification for such actions.
-% TRANSFER_FUNCTION: Transfers autonomy, resources, and religious freedom from non-Muslim populations to the Islamic state or movement, and transfers theological authority from diverse interpretations to a singular, militant one.
-% ABSENT_VOICES: The voices of non-Muslims, who are directly targeted, are absent from the interpretive process. Also absent are the voices of early Islamic scholars who held more nuanced or contextual interpretations of jihad, and contemporary Muslim scholars advocating for peaceful coexistence or defensive-only jihad. Their perspectives are actively suppressed by this reading's assertion of abrogation.
-% DISAPPEARANCE_RATIONALE: If this specific reading of Quran 9:5 vanished overnight, it would fundamentally alter the theological and legal basis for many expansionist jihadi movements, likely leading to their collapse or radical reorientation. The global landscape of interfaith relations and conflict would significantly rearrange, as a major justification for religiously motivated violence would be removed. Moderate Islamic interpretations would gain prominence, and the victim sets would largely dissolve.
-% FOUNDING_PROBLEM: The problem this reading was built to solve was the perceived theological inconsistency between earlier peaceful verses and later, more militant ones, particularly in the context of the early Muslim community's expansion and conflicts with surrounding tribes. It sought to provide a clear, unified legal framework for military action and the treatment of non-Muslims.
-% FOUNDING_PROBLEM_CORROBORATION: Radical clerics and jihadi ideologues attest that the problem of theological inconsistency and the need for a clear mandate for offensive jihad remain live, citing ongoing conflicts and the perceived need to establish global Islamic rule. However, a vast majority of mainstream Islamic scholars and international legal bodies, from outside the benefiting parties, dispute this, arguing that the founding problem was either specific to the 7th century or is now superseded by principles of international law and interfaith dialogue. They corroborate that the 'problem' is now primarily a justification for political power, not a genuine theological dilemma.
+% COORDINATION_FUNCTION: For proponents, it coordinates a unified ideological and military front for the expansion of a specific interpretation of Islamic rule, providing clear directives for engagement with non-Muslims.
+% TRANSFER_FUNCTION: Transfers resources, territory, and populations from non-Muslim entities to expansionist jihadi movements, along with ideological legitimacy and authority to radical clerics.
+% ABSENT_VOICES: Victims of violence, religious minorities, and dissenting Muslim voices are actively suppressed or eliminated, preventing any challenge to the interpretation's legitimacy. Their absence ensures the narrative of divine mandate remains unchallenged within the enforcing groups.
+% DISAPPEARANCE_RATIONALE: If this interpretation vanished, the ideological justification for many jihadi movements would collapse, leading to a significant reduction in religiously motivated violence, a re-evaluation of interfaith relations, and a shift in the internal dynamics of Islamic jurisprudence. The geopolitical landscape would fundamentally alter.
+% FOUNDING_PROBLEM: The problem of establishing and expanding the early Islamic state's authority and territorial control in a hostile 7th-century Arabian context, particularly concerning polytheist tribes perceived as a threat.
+% FOUNDING_PROBLEM_CORROBORATION: Proponents claim the problem is 'live' as a universal, eternal command. However, a vast body of historical scholarship and the consensus of mainstream Islamic jurisprudence (outside the benefiting parties) attests that the specific historical context of 7th-century Arabia is 'dead' as a direct, universal legal command for offensive warfare today. Independent historical and textual analysis corroborates the context-specific nature of the original directive.
 narrative_ontology:disappearance_verdict(quran_9_5_scope__abrogating_universal, world_rearranges).
-narrative_ontology:founding_problem_status(quran_9_5_scope__abrogating_universal, live).
+narrative_ontology:founding_problem_status(quran_9_5_scope__abrogating_universal, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(quran_9_5_scope__abrogating_universal, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(quran_9_5_scope__abrogating_universal, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(quran_9_5_scope__abrogating_universal, 'none', 1).
+narrative_ontology:epsilon_provenance(quran_9_5_scope__abrogating_universal, 0.9, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -180,14 +220,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is very high (0.9) because this reading demands submission or conversion, extracting autonomy, resources, and even life from non-adherents. Suppression is also very high (0.95) as it actively delegitimizes and seeks to eliminate alternative interpretations and coexistence frameworks, requiring constant enforcement against dissenters and external 'targets'. The theater ratio is low (0.1) because the stated goal (universal submission/conversion) is directly pursued, with little performative cover for other functions. Resistance is high (0.8) due to the extreme demands placed on non-Muslims and the rejection by moderate Muslims.
+ *   The extractiveness is extremely high (0.9) because this interpretation mandates the subjugation or elimination of non-Muslims, leading to immense human and material costs for victims. Suppression is also very high (0.95) due to the active use of violence, intimidation, and ideological coercion to silence dissent and eliminate alternatives to this interpretation. The theater ratio is low (0.1) because the constraint's function is directly and brutally enacted; there is little performative cover for its core operations. The historical measurements show a rise in extractiveness and suppression, reflecting the increasing prominence and enforcement of this interpretation by various groups since the late 20th century.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of expansionist jihadi movements, this constraint is a divine command, a Mountain or a Rope for righteous action. From the perspective of non-Muslims and moderate Muslims, it is a clear Snare, an existential threat that demands active resistance. The engine's classification will reflect the latter, as the structural data points to extreme extraction and suppression.
+ *   From the perspective of expansionist jihadi movements and radical clerics, this constraint is a divinely ordained command, a 'rope' for unifying the faithful and establishing justice. From the perspective of non-Muslim populations and moderate Muslim scholars, it is a 'snare' of pure extraction and violence. The engine's classification will reflect the latter due to the high extractiveness and suppression, despite the proponents' 'rope' claim.
  *
  * DIRECTIONALITY LOGIC:
- *   Expansionist jihadi movements and radical clerics are the primary beneficiaries (d=0.0-0.1) as this reading provides them with a divine mandate for their agenda, legitimizing their actions and attracting followers. Non-Muslims are the primary targets (d=1.0) as they face the direct demands of submission or conversion. Moderate Muslims and coexistence advocates are also targets (d=0.8-0.9) as their interpretations and efforts are suppressed and delegitimized by this reading. The constraint subsidizes the expansionist agenda while extracting from all others.
+ *   Expansionist jihadi movements and radical clerics are clear beneficiaries, as the constraint provides ideological justification, recruits, and resources for their goals (low directionality). Non-Muslim populations, moderate Muslim scholars, and Muslim civilians in conflict zones are direct targets, bearing the full brunt of violence, subjugation, and suppression (high directionality).
  *
+ * MANDATROPHY ANALYSIS:
+ *   The constraint's founding problem (establishing early Islamic state authority) is 'dead' in its original context, yet the arrangement persists with 'world_rearranges' consequences if it vanished. This indicates a severe case of mandatrophy, where an interpretation designed for a specific historical exigency has been re-purposed to justify ongoing extraction. The classification as 'snare' prevents mislabeling this as a legitimate coordination mechanism, highlighting its coercive and extractive nature despite its proponents' claims of divine mandate.
  */
 
 /* ==========================================================================
@@ -195,53 +237,66 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    abrogation_doctrine_validity,
-    'Is the doctrine of abrogation (naskh) itself a valid hermeneutical principle for Quranic interpretation, or is it a later jurisprudential construct?',
-    'Scholarly consensus on the historical development of naskh theory and its textual basis; analysis of early Islamic legal methodology.',
-    'If naskh is invalid, the entire basis for 9:5 abrogating peaceful verses collapses, reclassifying this constraint as a constructed snare with no textual grounding. If valid, the debate shifts to the scope and application of 9:5.',
+    historical_context_vs_universal_application,
+    'Is Quran 9:5 a context-specific directive for 7th-century Arabia, or a universal, eternal legal command for all times and places?',
+    'Comprehensive historical-critical analysis of early Islamic sources, linguistic analysis of the Quranic text, and comparative study of classical and modern jurisprudential interpretations, particularly those outside the benefiting parties.',
+    'If context-specific, the constraint''s legitimacy for universal application collapses, reducing its extractiveness and suppression to near zero. If universal, its current high extractiveness and suppression are ideologically justified for its proponents.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(abrogation_doctrine_validity, conceptual, 'Validity of the abrogation doctrine as a hermeneutical tool.').
+narrative_ontology:omega_variable(historical_context_vs_universal_application, empirical, 'Ambiguity regarding the historical scope and applicability of Quran 9:5.').
 
 omega_variable(
-    kernel_reading_abrogating_universal,
-    'This constraint is the ''abrogating_universal'' reading of the ''quran_9_5_scope'' kernel. What would change if the ''contextual_defensive'' or ''progressive_synthesis'' readings were adopted?',
-    'Shift in dominant jurisprudential interpretation within influential Islamic legal schools or political movements.',
-    'If ''contextual_defensive'' were adopted, the victim set would shrink to only treaty-breakers, first-strike violence would be unauthorized, and the constraint would reclassify as a Rope or Mountain (defensive war). If ''progressive_synthesis'' were adopted, the constraint would become a historical artifact, reclassifying as a Piton or even disappearing.',
-    confidence_without_resolution(high)
+    abrogation_doctrine_validity,
+    'Is the doctrine of abrogation (nasikh wa mansukh) itself a valid hermeneutical principle, or is it a later jurisprudential construct used to reconcile conflicting verses?',
+    'Theological and jurisprudential debate within Islamic scholarship, examining the Quranic text for internal evidence of abrogation and the historical development of the doctrine.',
+    'If the doctrine of abrogation is invalid, the premise for 9:5 superseding peaceful verses collapses, fundamentally altering the constraint''s structural basis and reducing its extractiveness. If valid, the abrogating_universal reading gains a stronger internal theological justification.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_abrogating_universal, conceptual, 'Impact of alternative readings of Quran 9:5 on the constraint''s structure.').
+narrative_ontology:omega_variable(abrogation_doctrine_validity, conceptual, 'Uncertainty regarding the theological validity of the abrogation doctrine.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (external barriers, violence) or internalized (ideological indoctrination, fear of apostasy)?',
+    'Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed (e.g., individuals leaving jihadi groups still self-censor or fear reprisal), reclassify as partially internalized. Analysis of indoctrination methods and psychological impact on adherents.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — targets carry the suppression with them after exit, making genuine freedom of thought or action extremely difficult even in safe environments.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in ideological contexts.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(quran_9_5_scope__abrogating_universal, 0, 1000).
+narrative_ontology:interval(quran_9_5_scope__abrogating_universal, 1980, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(qura_tr_t0, quran_9_5_scope__abrogating_universal, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(qura_tr_t100, quran_9_5_scope__abrogating_universal, theater_ratio, 100, 0.15).
-narrative_ontology:measurement(qura_tr_t500, quran_9_5_scope__abrogating_universal, theater_ratio, 500, 0.12).
-narrative_ontology:measurement(qura_tr_t1000, quran_9_5_scope__abrogating_universal, theater_ratio, 1000, 0.1).
+narrative_ontology:measurement(qura_tr_t1980, quran_9_5_scope__abrogating_universal, theater_ratio, 1980, 0.15).
+narrative_ontology:measurement(qura_tr_t1990, quran_9_5_scope__abrogating_universal, theater_ratio, 1990, 0.12).
+narrative_ontology:measurement(qura_tr_t2000, quran_9_5_scope__abrogating_universal, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(qura_tr_t2010, quran_9_5_scope__abrogating_universal, theater_ratio, 2010, 0.08).
+narrative_ontology:measurement(qura_tr_t2024, quran_9_5_scope__abrogating_universal, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(qura_be_t0, quran_9_5_scope__abrogating_universal, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(qura_be_t100, quran_9_5_scope__abrogating_universal, base_extractiveness, 100, 0.8).
-narrative_ontology:measurement(qura_be_t500, quran_9_5_scope__abrogating_universal, base_extractiveness, 500, 0.85).
-narrative_ontology:measurement(qura_be_t1000, quran_9_5_scope__abrogating_universal, base_extractiveness, 1000, 0.9).
+narrative_ontology:measurement(qura_be_t1980, quran_9_5_scope__abrogating_universal, base_extractiveness, 1980, 0.75).
+narrative_ontology:measurement(qura_be_t1990, quran_9_5_scope__abrogating_universal, base_extractiveness, 1990, 0.8).
+narrative_ontology:measurement(qura_be_t2000, quran_9_5_scope__abrogating_universal, base_extractiveness, 2000, 0.85).
+narrative_ontology:measurement(qura_be_t2010, quran_9_5_scope__abrogating_universal, base_extractiveness, 2010, 0.9).
+narrative_ontology:measurement(qura_be_t2024, quran_9_5_scope__abrogating_universal, base_extractiveness, 2024, 0.9).
 
 % Suppression requirement over time
-narrative_ontology:measurement(qura_su_t0, quran_9_5_scope__abrogating_universal, suppression_requirement, 0, 0.75).
-narrative_ontology:measurement(qura_su_t100, quran_9_5_scope__abrogating_universal, suppression_requirement, 100, 0.85).
-narrative_ontology:measurement(qura_su_t500, quran_9_5_scope__abrogating_universal, suppression_requirement, 500, 0.9).
-narrative_ontology:measurement(qura_su_t1000, quran_9_5_scope__abrogating_universal, suppression_requirement, 1000, 0.95).
+narrative_ontology:measurement(qura_su_t1980, quran_9_5_scope__abrogating_universal, suppression_requirement, 1980, 0.7).
+narrative_ontology:measurement(qura_su_t1990, quran_9_5_scope__abrogating_universal, suppression_requirement, 1990, 0.8).
+narrative_ontology:measurement(qura_su_t2000, quran_9_5_scope__abrogating_universal, suppression_requirement, 2000, 0.9).
+narrative_ontology:measurement(qura_su_t2010, quran_9_5_scope__abrogating_universal, suppression_requirement, 2010, 0.95).
+narrative_ontology:measurement(qura_su_t2024, quran_9_5_scope__abrogating_universal, suppression_requirement, 2024, 0.95).
 
 
 /* ==========================================================================
@@ -249,13 +304,11 @@ narrative_ontology:measurement(qura_su_t1000, quran_9_5_scope__abrogating_univer
    ========================================================================== */
 
 narrative_ontology:coordination_type(quran_9_5_scope__abrogating_universal, identity_coordination).
-narrative_ontology:affects_constraint(quran_9_5_scope__abrogating_universal, quran_9_5_scope__contextual_defensive).
-narrative_ontology:affects_constraint(quran_9_5_scope__abrogating_universal, quran_9_5_scope__progressive_synthesis).
-narrative_ontology:affects_constraint(quran_9_5_scope__abrogating_universal, islamic_law_of_war).
-narrative_ontology:affects_constraint(quran_9_5_scope__abrogating_universal, dhimmi_status_application).
+narrative_ontology:affects_constraint(quran_9_5_scope__abrogating_universal, islamic_state_legitimacy_claims).
+narrative_ontology:affects_constraint(quran_9_5_scope__abrogating_universal, interfaith_dialogue_frameworks).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'quran_9_5_scope' kernel. Its structural properties (high extraction, universal victim set) are distinct from the 'contextual_defensive' and 'progressive_synthesis' readings, which would yield significantly lower extractiveness and different victim sets.
+% This constraint is one reading of the 'quran_9_5_scope' kernel. Its high extractiveness and suppression contrast sharply with contextual and progressive readings, which emphasize peace and defensive warfare.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

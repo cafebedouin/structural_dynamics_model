@@ -4,211 +4,265 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "eb759915-d61d-4dac-835f-7567bf6d59c2"
+    "story_uid": "e39ef46d-f353-4a27-903b-abe1c5850c54"
   },
   "base_properties": {
-    "extractiveness": 0.7,
-    "suppression": 0.85,
+    "extractiveness": 0.85,
+    "suppression": 0.9,
     "theater_ratio": 0.2,
     "accessibility_collapse": 0.75,
     "resistance": 0.4,
-    "claimed_type": "tangled_rope",
-    "human_readable": "Bhagavad Gita's Orthodox Literal Reading of Kurukshetra Discourse",
+    "claimed_type": "snare",
+    "human_readable": "Bhagavad Gita Kurukshetra Discourse: Orthodox Literal Reading",
     "topic_domain": "religious_studies/textual_hermeneutics/ethical_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "brahmin_priestly_class",
+      "brahmin_priesthood",
       "kshatriya_warrior_class",
-      "traditional_social_order"
+      "divinely_ordained_social_order"
     ],
     "victims": [
       "lower_castes",
-      "those_killed_in_dharmic_war"
+      "those_killed_in_dharmic_war",
+      "dissenting_interpretations"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "brahmin_priesthood",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "As traditional interpreters of sacred texts, they define and propagate the orthodox literal reading, maintaining their interpretive monopoly and the social order it justifies. They benefit from the stability and authority derived from this reading."
+    },
+    {
+      "name": "kshatriya_warrior_class",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Benefits from the legitimation of their duty to engage in 'righteous' violence and warfare, reinforcing their social status and power. Their dharma is explicitly tied to this interpretation."
+    },
+    {
+      "name": "divinely_ordained_social_order",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "The abstract concept of a caste-based social hierarchy, which is presented as divinely sanctioned and immutable by this reading. Its persistence is a core outcome of the constraint."
+    },
+    {
+      "name": "lower_castes",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are victims of the rigid caste hierarchy, bound by prescribed duties and denied social mobility, with their suffering justified as part of their dharma. Exit options are severely limited by social and religious enforcement."
+    },
+    {
+      "name": "those_killed_in_dharmic_war",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the ultimate cost of 'righteous' violence, their lives sacrificed in conflicts legitimized by this textual interpretation. They have no agency in the decision to wage war."
+    },
+    {
+      "name": "dissenting_interpretations",
+      "role": "excluded",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Alternative readings (e.g., allegorical, universalist) are actively suppressed or marginalized by the orthodox literal reading, which claims exclusive interpretive authority. Their voices are not given equal standing in the discourse."
+    },
+    {
+      "name": "secular_ethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the ethical implications of this reading, often critiquing its justification of violence and social inequality from a universalist human rights perspective. They do not participate in the internal religious discourse but comment on its societal impact."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, divinely sanctioned framework for social order and individual duty (dharma) within a hierarchical caste system, ensuring social stability and the performance of ritual and martial roles.",
+    "transfer_function": "Transfers social authority, interpretive power, and material benefits to the Brahmin and Kshatriya classes, while extracting obedience, labor, and lives from lower castes and those targeted by 'righteous' violence.",
+    "absent_voices": "The voices of lower castes, those who suffer from caste-based discrimination, and proponents of non-violent or egalitarian interpretations are systematically marginalized or silenced within the orthodox discourse. They would challenge the divine sanction of hierarchy and violence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this orthodox literal reading vanished, the foundational justification for caste-based duties and 'righteous' violence would collapse. This would lead to significant social upheaval, challenges to traditional authority structures, and a re-evaluation of ethical norms within dharmic traditions, fundamentally reorganizing social and religious life.",
+    "founding_problem": "The problem of maintaining social order, individual duty (dharma), and the legitimacy of warfare in ancient Indian society, particularly in the context of a warrior's moral dilemma regarding violence against kin.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Brahmin priesthood and traditional scholars attest that the problems of maintaining dharma and social order are still live, citing contemporary challenges to traditional values. However, secular ethicists and social reformers outside the benefiting parties contest the legitimacy of the 'founding problem' as framed, arguing it perpetuates inequality rather than solving a universal human dilemma."
   },
   "interval": {
     "start": 0,
-    "end": 2024
+    "end": 100
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 500,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1000,
-      "value": 0.7
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1500,
-      "value": 0.7
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.75
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 500,
       "value": 0.8
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 1000,
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1500,
+      "time_point": 0,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.85
+      "time_point": 25,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.9
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 500,
-      "value": 0.15
+      "time_point": 25,
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1000,
+      "time_point": 50,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1500,
-      "value": 0.2
+      "time_point": 75,
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
+      "time_point": 100,
       "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the orthodox literal reading of the Bhagavad Gita's Kurukshetra discourse, which mandates caste-based duty (varnashrama dharma) and legitimates righteous violence, particularly for the Kshatriya warrior class. It is a reading that has historically underpinned social hierarchy and justified conflict. This is one reading of the 'gita_kurukshetra_discourse' kernel, distinct from allegorical or universalist interpretations.",
-    "key_agents": [
-      "brahmin_priestly_class: Agenda setter (institutional/arbitrage) — interprets and propagates the reading, benefits from interpretive monopoly.",
-      "kshatriya_warrior_class: Beneficiary (powerful/constrained) — receives divine sanction for violence and social status.",
-      "lower_castes: Payer (powerless/identity_locked) — bears the costs of rigid social hierarchy and limited mobility.",
-      "those_killed_in_dharmic_war: Victim (powerless/trapped) — direct casualties of conflicts legitimized by the doctrine.",
-      "gandhian_scholars_and_activists: Excluded (organized/constrained) — advocate for non-violent, allegorical readings, marginalized by orthodox institutions.",
-      "universalist_devotees: Excluded (moderate/mobile) — focus on devotional aspects, challenging hierarchy, often operating outside traditional structures."
-    ],
-    "logic_rationale": "The extractiveness (0.7) is high due to the significant social and material benefits accrued by upper castes and the justification of violence. Suppression (0.85) is very high because the constraint is deeply embedded in religious authority and social structures, making dissent or exit extremely difficult, especially for lower castes who are identity-locked into their roles. Theater ratio (0.2) is low, indicating that the constraint's functions (maintaining hierarchy, justifying violence) are largely genuine from the perspective of its beneficiaries, not merely performative. Accessibility collapse is high (0.75) as alternatives to the prescribed social order are severely limited by religious and social enforcement. Resistance is moderate (0.4) but often suppressed or marginalized.",
-    "perspectival_gap": "The Brahmin and Kshatriya classes experience this as a legitimate, divinely ordained system of coordination and duty, with clear benefits. Lower castes and victims of 'dharmic war' experience it as a highly extractive and suppressive system that denies their agency and imposes severe costs. The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "The Brahmin priestly class and Kshatriya warrior class are clear beneficiaries, with the former acting as the primary agenda-setter. Lower castes and those killed in 'dharmic war' are direct victims. The constraint subsidizes the social and spiritual authority of the upper castes while extracting from the lower castes and those caught in conflicts. The 'identity_locked' exit option for lower castes further amplifies their directionality towards being targets.",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it presents a coordination function (social order, duty) but fundamentally relies on asymmetric extraction and active enforcement to maintain a rigid hierarchy. It prevents mislabeling by highlighting that the 'coordination' comes at a severe cost to identifiable victims, and its persistence is not purely voluntary but requires active suppression of alternatives and dissenting interpretations.",
-    "kernel_context": "This constraint is the 'orthodox_literal_reading' of the 'gita_kurukshetra_discourse' kernel. This reading interprets the Bhagavad Gita's narrative of the Kurukshetra war as a literal mandate for caste-based duty and righteous violence. Sibling readings include the 'gandhian_allegorical_reading' (war as internal struggle, non-violence) and the 'universalist_devotional_reading' (path-independent devotion, transcending caste)."
+    "kernel_context": "This constraint is the 'orthodox_literal_reading' of the 'gita_kurukshetra_discourse' kernel. It stands in contrast to the 'gandhian_allegorical_reading' (which views the battlefield as an internal struggle, foreclosing physical violence) and the 'universalist_devotional_reading' (which emphasizes bhakti accessible to all, coexisting but challenging the caste hierarchy). This reading asserts the literal truth of caste-based duties and the necessity of righteous violence."
   },
   "omegas": [
     {
-      "id": "literal_vs_allegorical_truth",
-      "question": "Is the Kurukshetra discourse primarily a literal historical/ethical mandate or an allegorical spiritual teaching?",
-      "resolution_mechanism": "Textual analysis of internal consistency, historical context of composition, and cross-referencing with other dharmic texts. However, ultimate resolution often depends on philosophical or theological commitments.",
-      "impact": "If allegorical, the justification for caste-based violence collapses, reclassifying the constraint as a Snare or Piton, as its coordination function would be revealed as cover. If literal, the current classification holds.",
+      "id": "divine_mandate_vs_social_construct",
+      "question": "Is the caste-based duty and righteous violence truly a divine mandate, or a social construct maintained by powerful groups for their benefit?",
+      "resolution_mechanism": "Comparative theological analysis across diverse dharmic traditions, historical-critical textual scholarship, and sociological studies of power dynamics in religious institutions.",
+      "impact": "If a social construct, the constraint's extractiveness and suppression are purely human-imposed, strengthening its classification as a Snare. If genuinely divine, it would lean towards a Mountain, but the presence of beneficiaries would still trigger False Summit detection.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Ambiguity in the primary mode of interpretation (literal vs. allegorical)."
+      "description": "Ambiguity between divine command and human-authored social control."
     },
     {
-      "id": "divine_mandate_vs_social_construct",
-      "question": "Is the caste hierarchy (varnashrama dharma) a divinely ordained, immutable social order, or a human-constructed system that benefits specific groups?",
-      "resolution_mechanism": "Sociological and historical analysis of caste evolution, comparison with other social stratification systems, and theological debate on the nature of divine will versus human agency. Empirical evidence of social mobility or its suppression is key.",
-      "impact": "If a social construct, the 'naturalness' claim of the constraint is undermined, revealing its extractive nature more clearly and potentially reclassifying it as a Snare. If divinely ordained, the beneficiaries' claims of legitimacy are strengthened.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Ambiguity regarding the divine vs. human origin of caste hierarchy."
-    },
-    {
-      "id": "suppression_mechanism_internalized",
-      "question": "To what extent is the suppression experienced by lower castes structural (external barriers) versus internalized (self-concept, belief in karma)?",
-      "resolution_mechanism": "Longitudinal studies of post-emancipation social mobility, psychological impact assessments, and analysis of cultural narratives. If suppression persists after external barriers are removed, it indicates internalized components.",
-      "impact": "If internalized suppression is a significant factor, the effective suppression is higher than structural measures suggest, making exit even more difficult and amplifying the constraint's extractive power.",
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (social/religious enforcement) or internalized (belief in one's dharma/karma)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if individuals continue to adhere to caste duties even after external enforcement is removed, it suggests internalized suppression. Sociological studies on agency and belief systems.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as individuals carry the suppression with them. This would make exit even more difficult and amplify the Snare classification.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for lower castes."
+      "description": "Structural vs. internalized suppression mechanism in caste adherence."
+    },
+    {
+      "id": "interpretive_monopoly_legitimacy",
+      "question": "Is the Brahmin priesthood's interpretive monopoly a legitimate function of preserving tradition, or a mechanism for controlling narrative and power?",
+      "resolution_mechanism": "Historical analysis of interpretive shifts, examination of challenges to authority, and comparison with other religious traditions' interpretive structures.",
+      "impact": "If primarily a power mechanism, it reinforces the Snare classification by highlighting the active suppression of alternative readings. If a legitimate preservation function, it might slightly reduce the perceived extractiveness of the 'agenda_setter' role, but not the overall constraint type.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy of interpretive authority in maintaining the reading."
     }
   ],
-  "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.08
-  },
-  "network": {
-    "affects_constraints": [
-      "gita_kurukshetra_discourse__gandhian_allegorical_reading",
-      "gita_kurukshetra_discourse__universalist_devotional_reading",
-      "traditional_hindu_legal_codes"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'gita_kurukshetra_discourse' kernel. This orthodox literal reading directly influences and is in tension with the allegorical and universalist readings by asserting a foundational, literal interpretation of duty and violence."
-  },
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "gita_kurukshetra_discourse__gandhian_allegorical_reading",
+        "sibling_id": "gandhian_allegorical_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "gita_kurukshetra_discourse__universalist_devotional_reading",
-        "relation": "forecloses"
+        "sibling_id": "universalist_devotional_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "varnashrama_dharma_divinely_ordained",
+        "atom": "caste_dharma_is_divine_mandate",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       },
       {
-        "atom": "kshatriya_duty_includes_righteous_violence",
+        "atom": "righteous_violence_is_permissible_for_kshatriya",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "ancient_dharmic_social_order",
+    "reference_frame": "vedic_social_order_and_dharma",
     "drift_state": {
-      "moment": "contemporary_secular_human_rights_era",
-      "direction": "authority_erosion",
+      "moment": "contemporary_globalized_ethics",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

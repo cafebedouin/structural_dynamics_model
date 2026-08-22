@@ -4,75 +4,117 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "1941982e-6a22-4d52-a31f-0adbcc94a944"
+    "story_uid": "7f667013-aecd-4403-82be-af54c040849c"
   },
   "base_properties": {
     "extractiveness": 0.15,
     "suppression": 0.05,
     "theater_ratio": 0.0,
-    "accessibility_collapse": 0.9,
+    "accessibility_collapse": 0.88,
     "resistance": 0.1,
     "claimed_type": "mountain",
     "human_readable": "Orthographic Legitimacy: Continuity with Tradition",
     "topic_domain": "political_linguistics/state_formation/commitment_systems",
     "emerges_naturally": true,
     "beneficiaries": [
-      "scholars_of_ottoman_texts",
-      "religious_clergy",
-      "cultural_conservatives"
+      "scholars_of_classical_texts",
+      "religious_authorities"
     ],
     "victims": [
       "post_reform_generations"
     ]
   },
-  "interval": {
-    "start": 1928,
-    "end": 2024
-  },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine natural law of linguistic continuity, or a constructed preference for a specific historical script?",
-      "resolution_mechanism": "Analysis of linguistic communities that have successfully transitioned scripts without perceived loss of tradition, or conversely, those where script change demonstrably severed cultural ties.",
-      "impact": "If a constructed preference, the 'mountain' classification is a false summit, and the constraint would reclassify as a 'tangled_rope' or 'snare' depending on enforcement and beneficiaries. If a genuine natural law, the classification holds.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between natural linguistic constraint and cultural preference for script."
+      "name": "scholars_of_classical_texts",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Their professional identity and access to knowledge are directly tied to the preservation of traditional orthography. They benefit from the continuity of script, which ensures their expertise remains relevant and the historical archive accessible."
     },
     {
-      "id": "impact_of_modernist_reading",
-      "question": "How would the structural properties of this constraint change if the 'modernist_reading' of orthographic legitimacy were adopted?",
-      "resolution_mechanism": "The modernist reading (alignment with Western modernity, rupture from Ottoman past) would likely shift the 'emerges_naturally' flag to false, increase 'suppression' (of traditionalists), and potentially increase 'extractiveness' (from those forced to adapt).",
-      "impact": "The constraint would likely reclassify from 'mountain' to 'snare' or 'tangled_rope', as it would be actively enforced and extract costs from those resisting the shift.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of an alternative kernel reading on constraint classification."
+      "name": "religious_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The legitimacy of religious texts and their interpretation often depends on the stability of the script in which they are written. They benefit from the constraint by maintaining direct access to sacred traditions without linguistic mediation."
     },
     {
-      "id": "impact_of_instrumentalist_reading",
-      "question": "How would the structural properties of this constraint change if the 'instrumentalist_reading' of orthographic legitimacy were adopted?",
-      "resolution_mechanism": "The instrumentalist reading (maximizing literacy and administrative efficiency) would likely shift the 'emerges_naturally' flag to false, potentially lower 'suppression' (if the new script is easier to learn), and shift 'beneficiaries' to the general populace and state administration.",
-      "impact": "The constraint would likely reclassify from 'mountain' to 'rope' or 'scaffold', as it would be justified by a clear coordination function and potentially have a sunset clause for the transition period.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of an alternative kernel reading on constraint classification."
+      "name": "post_reform_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "These generations, educated in a reformed or new script, face a structural barrier to accessing pre-reform historical, religious, and literary texts. They bear the cost of needing translation or specialized training to engage with their own cultural heritage."
+    },
+    {
+      "name": "cultural_conservatives",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Actively advocate for policies that preserve traditional orthography, viewing it as essential for national identity and cultural heritage. They set the agenda for educational and linguistic policy to resist script reforms."
+    },
+    {
+      "name": "linguistic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the evolution of scripts and their impact on cultural transmission. They observe the effects of orthographic changes on historical continuity and access to past knowledge, providing analytical insights without direct participation in the policy debate."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Ensures a consistent written medium across generations, allowing direct access to historical, religious, and literary texts without the need for translation or transliteration.",
+    "transfer_function": "Transfers cultural and historical knowledge across time by maintaining a stable orthographic link, from past generations to present and future ones. The cost is borne by those who might prefer a more 'efficient' or 'modern' script.",
+    "absent_voices": "Future generations who might prefer a more phonetically consistent or simpler script are not present to advocate for their needs, and their potential severance from historical texts is a deferred cost.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint of orthographic continuity vanished, the direct link to historical and religious texts would be broken for new generations, requiring massive translation efforts or leading to cultural amnesia. The entire educational and cultural infrastructure would need to reorganize.",
+    "founding_problem": "The problem of maintaining cultural and religious continuity across generations, ensuring that foundational texts remain directly accessible and authoritative.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Scholars of classical texts and religious authorities consistently attest to the ongoing importance of direct textual access for their disciplines and for cultural identity. Linguistic historians corroborate the challenge of maintaining such continuity across orthographic shifts."
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1928,
+      "time_point": 1900,
       "value": 0.1
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1950,
+      "time_point": 1920,
       "value": 0.12
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 1940,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
       "time_point": 1980,
-      "value": 0.14
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.15
     },
     {
       "metric": "base_extractiveness",
@@ -81,17 +123,32 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1928,
+      "time_point": 1900,
       "value": 0.05
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1950,
+      "time_point": 1920,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1940,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
       "value": 0.05
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1980,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
       "value": 0.05
     },
     {
@@ -101,17 +158,32 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1928,
+      "time_point": 1900,
       "value": 0.0
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1950,
+      "time_point": 1920,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1940,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
       "value": 0.0
     },
     {
       "metric": "theater_ratio",
       "time_point": 1980,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
       "value": 0.0
     },
     {
@@ -121,12 +193,32 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'continuity reading' of orthographic legitimacy, which posits that the value and authority of a script derive from its ability to preserve access to historical, religious, and literary traditions. It is framed as a natural consequence of linguistic evolution and cultural heritage, where a break in script continuity is seen as a loss rather than a choice. The primary 'victim' is the post-reform generation, which loses direct access to pre-reform texts. There are no clear 'beneficiaries' in the sense of active extraction, but rather those whose cultural and professional roles are tied to the preservation of traditional script.",
-    "logic_rationale": "The constraint is claimed as a Mountain because the difficulty of accessing historical texts after a script change is a 'natural' consequence of linguistic incompatibility, not an actively enforced extraction. Extractiveness is low (0.15) as it represents the inherent cost of a cultural/linguistic divide, not a rent. Suppression is negligible (0.05) because the constraint's persistence is due to the inherent difficulty of bridging the script gap, not active coercion. Theater ratio is 0.0 as there is no performative maintenance; the 'constraint' is the reality of the linguistic barrier itself. Accessibility collapse is high (0.9) because once the script changes, direct access to the old tradition collapses for new generations.",
-    "directionality_logic": "Scholars, clergy, and cultural conservatives are 'beneficiaries' in that their expertise and cultural capital are preserved and valued by this continuity. Post-reform generations are 'victims' as they bear the cost of needing translation or specialized education to access their own historical texts. The constraint subsidizes the former by maintaining the value of their knowledge, and extracts from the latter by creating a barrier to their heritage.",
-    "perspectival_gap": "From the perspective of those who value continuity, the constraint is a natural and necessary aspect of cultural preservation. From the perspective of post-reform generations, it is a barrier to their heritage, a 'cost' imposed by historical choices. The engine's classification will highlight this divergence, showing a mountain-like constraint for beneficiaries and a more extractive one for victims due to the inherent 'cost' of the linguistic divide.",
-    "kernel_context": "This constraint is the 'continuity_reading' of the 'orthographic_legitimacy_kernel'. This reading emphasizes the intrinsic value of preserving historical, religious, and literary traditions through an unbroken chain of script. It stands in contrast to the 'modernist_reading' (prioritizing alignment with Western modernity) and the 'instrumentalist_reading' (prioritizing literacy rates and administrative efficiency)."
+    "narrative_context": "This constraint represents the 'continuity reading' of orthographic legitimacy, where the value of a script derives from its ability to preserve direct access to historical, religious, and literary traditions. It is framed as a Mountain because the incompatibility between different scripts (e.g., Arabic vs. Latin script for Turkish) is a physical fact of the written medium, creating an irreducible barrier for those educated in a different system. The 'extraction' is the loss of direct access to heritage for post-reform generations, which is an inherent cost of script change, not an actively extracted rent. The beneficiaries are those whose roles depend on this continuity.",
+    "logic_rationale": "The low extractiveness (0.15) reflects that the 'cost' is primarily a structural barrier (incompatibility) rather than an active transfer of resources. Suppression is very low (0.05) because the constraint persists due to the nature of script itself, not active coercion. Theater ratio is 0.0 as there's no performative maintenance; the constraint is a direct consequence of the physical medium. Accessibility collapse is high (0.88) because once a script changes, direct access to the old script's texts collapses for new generations. Resistance is low (0.1) because the 'resistance' is typically against the *change* of script, not against the continuity itself.",
+    "directionality_logic": "Scholars and religious authorities are beneficiaries (d near 0.0) as their roles and knowledge are preserved by orthographic continuity. Post-reform generations are payers (d near 1.0) as they bear the cost of severed access. Cultural conservatives are agenda-setters, actively defending this continuity. Linguistic historians are observers.",
+    "perspectival_gap": "From the perspective of those who value continuity, the constraint is a natural, unavoidable aspect of cultural transmission. From the perspective of post-reform generations, it is a barrier to their own heritage, a 'cost' imposed by historical choices. The engine's classification will reflect this divergence.",
+    "kernel_context": "This constraint is the 'continuity_reading' of the 'orthographic_legitimacy_kernel'. Sibling readings include the 'modernist_reading' (legitimacy from alignment with Western modernity) and the 'instrumentalist_reading' (legitimacy from literacy rates and efficiency). This reading emphasizes the inherent value of an unbroken textual tradition."
   },
+  "omegas": [
+    {
+      "id": "natural_vs_constructed_barrier",
+      "question": "Is the 'severance' from historical texts a natural consequence of script change (a Mountain), or is it actively maintained by institutions that benefit from the continuity (a Snare)?",
+      "resolution_mechanism": "Analysis of educational curricula and state funding for translation/transliteration projects: if active efforts are made to *prevent* access to old texts, it leans Snare; if it's merely a lack of resources, it leans Mountain.",
+      "impact": "If found to be actively maintained, the constraint would reclassify from Mountain to Snare or Tangled Rope, with higher extractiveness and suppression.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between inherent script incompatibility and active institutional maintenance of historical textual barriers."
+    },
+    {
+      "id": "identity_lock_strength",
+      "question": "How strongly are the identities of scholars and religious authorities tied to the traditional script, and would they genuinely lose their 'power' if the script changed?",
+      "resolution_mechanism": "Sociological studies of professional identity in linguistic reform contexts, and analysis of how religious authority adapts to translated texts.",
+      "impact": "If identity-lock is weaker than assumed, their beneficiary status might be less pronounced, potentially shifting the overall classification towards a more neutral coordination (Rope) rather than a Mountain with beneficiaries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which professional and religious identities are genuinely dependent on orthographic continuity."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
@@ -135,7 +227,7 @@
       "orthographic_legitimacy_kernel__modernist_reading",
       "orthographic_legitimacy_kernel__instrumentalist_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'orthographic_legitimacy_kernel'. Each reading represents a distinct structural claim about the source of a script's authority and its impact on society."
+    "dual_formulation_note": "This constraint is one of three readings of the 'orthographic_legitimacy_kernel'. This 'continuity_reading' emphasizes the preservation of historical and religious tradition through stable orthography."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -143,45 +235,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "orthographic_legitimacy_kernel__modernist_reading",
+        "sibling_id": "modernist_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "orthographic_legitimacy_kernel__instrumentalist_reading",
+        "sibling_id": "instrumentalist_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "unbroken_textual_tradition_is_sacred",
+        "atom": "textual_continuity_is_sacred",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "script_reform_severs_cultural_identity",
-        "role": "secondary",
+        "atom": "historical_access_is_identity",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "ottoman_arabic_script_hegemony",
+    "reference_frame": "unbroken_textual_tradition",
     "drift_state": {
       "moment": "post_script_reform_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

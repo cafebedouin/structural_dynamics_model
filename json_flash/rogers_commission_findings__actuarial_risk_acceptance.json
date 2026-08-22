@@ -4,26 +4,93 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "fa0edfab-be53-4c8a-b71e-1d6787ef4b74"
+    "story_uid": "39e4e0b1-4dfa-495d-8f69-690d1440e0c5"
   },
   "base_properties": {
     "extractiveness": 0.65,
     "suppression": 0.7,
-    "theater_ratio": 0.4,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.45,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "Rogers Commission Findings: Actuarial Risk Acceptance",
     "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "mission_planners",
-      "program_management"
+      "program_managers"
     ],
     "victims": [
       "categorical_safety_norms",
-      "engineering_safety_advocates"
+      "engineering_teams"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "mission_planners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the ability to proceed with missions by quantifying and accepting risks, rather than being halted by absolute safety thresholds. This allows them to meet operational schedules and strategic objectives, but requires them to formally document and justify risk acceptance."
+    },
+    {
+      "name": "program_managers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are responsible for implementing the risk quantification and acceptance process. They gain flexibility in decision-making but bear the burden of ensuring documentation and securing 'informed decision-maker' acceptance. They are incentivized to keep programs moving."
+    },
+    {
+      "name": "engineering_teams",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bear the cost of shifting from an absolute safety paradigm to one of quantified risk. They must now provide probabilistic assessments and justify 'acceptable' failure rates, which can conflict with their professional ethos of preventing all foreseeable failures. Their identity is tied to technical integrity."
+    },
+    {
+      "name": "categorical_safety_norms",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Represent the prior, more absolute safety standards that are now being 'paid down' or diluted by the actuarial approach. They are not an agent but are structurally impacted as their authority diminishes in favor of quantified risk acceptance."
+    },
+    {
+      "name": "informed_decision_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are the individuals who must formally accept the documented failure probabilities. They hold significant power in authorizing missions but are constrained by the need to be 'informed' and to justify their acceptance, bearing the ultimate accountability for risk outcomes."
+    },
+    {
+      "name": "public_and_media",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Are largely excluded from the 'informed decision-maker' circle. They would likely object to the acceptance of any non-zero failure probability for human spaceflight, but their input is channeled through political processes rather than direct participation in risk acceptance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates complex, high-stakes technical programs by providing a framework for evaluating and accepting residual risks, allowing operations to proceed where absolute safety cannot be guaranteed.",
+    "transfer_function": "Transfers the burden of absolute safety guarantees from engineering design to a process of probabilistic quantification and formal acceptance by management, shifting accountability for residual risk.",
+    "absent_voices": "The general public and media are largely absent from the 'informed decision-maker' process, and would likely advocate for more stringent, less probabilistic safety standards. Their exclusion allows for a more technocratic risk acceptance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, mission planning would either halt due to inability to guarantee absolute safety, or proceed without formal risk acceptance, leading to a chaotic and unaccountable decision environment. The entire framework for high-stakes technical operations would need to be re-established.",
+    "founding_problem": "The Challenger disaster revealed a failure to adequately address known technical risks, leading to catastrophic outcomes despite prior warnings. The problem was how to manage and make decisions about complex systems with inherent, irreducible risks.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Engineering professional bodies and independent safety review boards corroborate that managing irreducible risk in complex systems remains a live problem. While the specific O-ring issue was resolved, the broader challenge of risk acceptance persists, as evidenced by ongoing debates in aerospace and nuclear safety."
   },
   "interval": {
     "start": 1986,
@@ -33,22 +100,22 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1986,
-      "value": 0.55
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1996,
-      "value": 0.6
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2006,
-      "value": 0.63
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2016,
-      "value": 0.65
+      "time_point": 2015,
+      "value": 0.64
     },
     {
       "metric": "base_extractiveness",
@@ -72,8 +139,8 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2016,
-      "value": 0.7
+      "time_point": 2015,
+      "value": 0.69
     },
     {
       "metric": "suppression_requirement",
@@ -83,75 +150,75 @@
     {
       "metric": "theater_ratio",
       "time_point": 1986,
-      "value": 0.3
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
       "time_point": 1996,
-      "value": 0.35
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 2006,
-      "value": 0.38
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2016,
-      "value": 0.4
+      "time_point": 2015,
+      "value": 0.19
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
-      "value": 0.4
+      "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'actuarial risk acceptance' reading of the Rogers Commission findings, where the core requirement is to quantify failure probabilities and have them accepted by informed decision-makers. This allows for continued operations under known risks, shifting the emphasis from absolute safety to managed risk. It is a tangled rope because it provides a coordination function (allowing complex operations to proceed) but also extracts from categorical safety norms and engineering advocates by forcing them into a probabilistic framework.",
-    "logic_rationale": "Extractiveness is high because the framework allows for operations with known, non-zero failure probabilities, effectively extracting 'safety margin' from the system. Suppression is also high as it actively suppresses alternative, more stringent safety paradigms (e.g., 'no known failure modes'). The theater ratio is moderate, as the documentation and acceptance process can become performative, prioritizing compliance with the process over genuine risk reduction. The metrics reflect a system that, while providing a coordination function, has become substantially extractive of safety margins and suppressive of dissenting safety philosophies.",
-    "perspectival_gap": "Mission planners and program management experience this as a necessary coordination mechanism for complex operations, allowing them to proceed responsibly. Engineering safety advocates and categorical safety norms experience it as an extractive force that compromises fundamental safety principles by legitimizing known risks.",
-    "directionality_logic": "Mission planners and program management are beneficiaries as they gain the ability to continue operations and manage political pressure. Engineering safety advocates and categorical safety norms are victims as their preferred, more stringent safety standards are sidelined. Informed decision-makers are payers, as they bear the ultimate responsibility for accepting the quantified risks.",
-    "mandatrophy_analysis": "The constraint's mandate (to prevent future Challenger-like disasters by ensuring risk accountability) is still live. However, the 'actuarial risk acceptance' reading risks mandatrophy if the process becomes purely performative, allowing high-risk operations to continue under the guise of 'informed acceptance' without genuinely reducing risk. The rising theater ratio and extractiveness over time suggest a drift towards this outcome, where the form of accountability (quantification and acceptance) displaces the substance (actual safety).",
-    "kernel_context": "This constraint is the 'actuarial risk acceptance' reading of the Rogers Commission findings. It emphasizes quantifying failure probabilities and formal acceptance by decision-makers. Sibling readings include 'engineering absolute threshold' (demanding redesign until zero known failure modes) and 'management compliance narrative' (focusing on documented process adherence regardless of actual risk reduction)."
+    "narrative_context": "This constraint represents the 'actuarial risk acceptance' reading of the Rogers Commission findings, which mandated that flight operations are acceptable if failure probabilities are documented and accepted by informed decision-makers. This shifts the safety paradigm from absolute engineering thresholds to a quantified, managed risk approach. The constraint is claimed as a Tangled Rope because it provides a coordination function (allowing complex operations to proceed) but also involves asymmetric extraction, primarily from traditional engineering safety norms and teams, benefiting mission planners and program managers.",
+    "logic_rationale": "Extractiveness is high (0.65) because the shift to actuarial risk allows for the 'acceptance' of non-zero failure probabilities, which can be seen as extracting from the prior, more stringent safety culture. Suppression (0.70) is significant as it requires active enforcement to ensure all parties adhere to the new risk quantification and acceptance protocols, suppressing alternative, more conservative safety approaches. Theater ratio (0.20) is relatively low, as the process is genuinely intended to manage risk, though there's a risk of it becoming performative over time. The metrics show a gradual increase in extractiveness and suppression as the actuarial approach becomes more entrenched.",
+    "perspectival_gap": "Mission planners and program managers experience this as a necessary coordination mechanism, enabling progress in high-risk endeavors. Engineering teams and those upholding categorical safety norms experience it as an extractive shift, forcing them to compromise on absolute safety in favor of quantified, accepted risk. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Mission planners and program managers are beneficiaries as they gain flexibility and the ability to proceed. Engineering teams and categorical safety norms are victims, as they bear the costs of this shift. Informed decision-makers are agenda-setters, holding the power to accept or reject risks, but also bearing accountability.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling coordination as pure extraction by acknowledging the genuine need to manage irreducible risks in complex systems. However, it also prevents mislabeling extraction as pure coordination by highlighting the shift in accountability and the potential for diluting safety standards under the guise of 'informed acceptance.' The 'contested' status of the founding problem indicates that while the original problem of managing risk is live, the solution's fairness and long-term efficacy are debated."
   },
   "omegas": [
     {
       "id": "risk_quantification_accuracy",
-      "question": "How accurate and comprehensive are the documented failure probabilities, especially for novel or complex systems?",
-      "resolution_mechanism": "Independent, adversarial auditing of risk models and data, comparing predicted vs. actual failure rates over time.",
-      "impact": "If quantification is systematically inaccurate or incomplete, the 'informed decision-making' is compromised, making the constraint a snare by creating a false sense of security and legitimizing unacceptable risks.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Accuracy of risk quantification in practice."
-    },
-    {
-      "id": "decision_maker_independence",
-      "question": "Are the 'informed decision-makers' truly independent in their acceptance of risk, or are they subject to political, budgetary, or mission-driven pressures that compel acceptance?",
-      "resolution_mechanism": "Analysis of decision-making contexts, including internal communications, budget allocations, and career incentives for decision-makers.",
-      "impact": "If decision-makers are not independent, their 'acceptance' is coerced, transforming the constraint into a snare by making the acceptance process a cover for pre-determined operational goals.",
+      "question": "How accurate and comprehensive are the probabilistic risk assessments, and do they truly capture all potential failure modes and their consequences?",
+      "resolution_mechanism": "Independent, long-term validation studies comparing predicted failure rates with actual incident data, and expert review of assessment methodologies.",
+      "impact": "If assessments are consistently inaccurate or incomplete, the 'informed decision-making' becomes illusory, increasing the effective extractiveness and potentially reclassifying the constraint towards a Snare, as it would be extracting safety under false pretenses.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Independence of risk acceptance decisions."
+      "description": "Uncertainty regarding the fidelity of risk quantification in practice."
     },
     {
-      "id": "actuarial_vs_categorical_framing",
-      "question": "Is the shift from categorical safety (e.g., 'no known failure modes') to actuarial risk acceptance (e.g., 'acceptable probability of failure') a conceptual necessity for complex systems, or a preference-driven choice that prioritizes mission over safety?",
-      "resolution_mechanism": "Philosophical and ethical analysis of safety paradigms, and comparison of outcomes in domains that maintain categorical vs. actuarial approaches.",
-      "impact": "If a preference-driven choice, the constraint's extractiveness from categorical safety norms is a policy choice, not an inherent necessity. If a conceptual necessity, the extraction is an unavoidable cost of operating complex systems.",
-      "confidence": "low",
+      "id": "informed_decision_maker_independence",
+      "question": "To what extent are 'informed decision-makers' truly independent and free from organizational or political pressure to accept risks, even when the probabilities are high?",
+      "resolution_mechanism": "Analysis of decision-making records, interviews with decision-makers, and examination of organizational incentive structures and accountability mechanisms.",
+      "impact": "If decision-makers are systematically pressured, the 'acceptance' becomes performative, increasing the theater_ratio and effective suppression, pushing the constraint towards a Piton or Snare, as the coordination function would be undermined by coerced consent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the genuine independence of risk acceptance."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "Is this 'actuarial risk acceptance' reading genuinely compatible with the 'engineering absolute threshold' and 'management compliance narrative' readings of the Rogers Commission findings, or does it fundamentally undermine them?",
+      "resolution_mechanism": "Longitudinal study of safety culture evolution in organizations adopting this reading, assessing whether absolute thresholds are still respected in practice and if compliance becomes a substitute for genuine risk reduction.",
+      "impact": "If this reading systematically forecloses the 'absolute threshold' by making it practically impossible to maintain, the constraint's effective extractiveness from engineering teams is higher. If it merely coexists, the impact is less severe. This is a core conceptual divergence between the readings.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Conceptual basis for actuarial risk framing."
+      "description": "The conceptual tension between different interpretations of the Rogers Commission findings."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
     "affects_constraints": [
-      "engineering_safety_standards",
-      "mission_launch_protocols"
+      "rogers_commission_findings__engineering_absolute_threshold",
+      "rogers_commission_findings__management_compliance_narrative"
     ],
-    "dual_formulation_note": "This constraint is one reading of the Rogers Commission findings, which is a kernel with multiple interpretations. Other readings include 'engineering_absolute_threshold' and 'management_compliance_narrative'."
+    "dual_formulation_note": "This constraint is one of three distinct readings of the Rogers Commission findings, each with different structural properties and impacts. This reading focuses on actuarial risk acceptance, while siblings focus on absolute engineering thresholds and management compliance narratives."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -159,45 +226,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "rogers_commission_findings__engineering_absolute_threshold",
+        "sibling_id": "engineering_absolute_threshold",
         "relation": "influences"
       },
       {
-        "sibling_id": "rogers_commission_findings__management_compliance_narrative",
+        "sibling_id": "management_compliance_narrative",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "quantifiable_risk_is_manageable_risk",
+        "atom": "quantified_risk_is_manageable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "informed_acceptance_legitimizes_risk",
+        "atom": "informed_acceptance_legitimizes_residual_risk",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "post_challenger_accountability_framework",
+    "reference_frame": "post_challenger_risk_management_paradigm",
     "drift_state": {
-      "moment": "contemporary_operational_pressure",
+      "moment": "contemporary",
       "direction": "practice_drift",
-      "magnitude": "substantial",
+      "magnitude": "minor",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

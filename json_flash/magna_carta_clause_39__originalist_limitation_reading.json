@@ -4,133 +4,152 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "d907d3ae-ac2e-4373-9894-a7762b0e1117"
+    "story_uid": "4b820bbf-3418-4c75-ab8d-d8efcfdbb797"
   },
   "base_properties": {
     "extractiveness": 0.3,
-    "suppression": 0.2,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.1,
-    "claimed_type": "rope",
-    "human_readable": "Magna Carta Clause 39 (Originalist Limitation Reading)",
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Magna Carta Clause 39: Originalist Limitation Reading",
     "topic_domain": "constitutional_law/legal_history/political_theory",
-    "requires_active_enforcement": true,
+    "emerges_naturally": true,
     "beneficiaries": [
-      "id_1215_barons",
-      "monarchy_legitimacy"
-    ],
-    "victims": [
-      "abusive_royal_officials"
+      "historical_scholars",
+      "originalist_legal_theorists"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "historical_scholars",
+      "role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Benefit from the clarity and intellectual rigor of interpreting historical documents within their original context, avoiding anachronism. Their careers and reputations are built on this methodology."
+    },
+    {
+      "name": "originalist_legal_theorists",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Utilize this reading to argue for a constrained interpretation of constitutional rights, limiting their expansion beyond the framers' original intent. Their professional identity is tied to this interpretive method."
+    },
+    {
+      "name": "contemporary_citizens",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of a limited interpretation of rights, potentially being denied protections that a more expansive reading of Clause 39 might afford. Their ability to challenge this interpretation is through political or judicial means, which are often slow and costly."
+    },
+    {
+      "name": "liberal_legal_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are excluded from the interpretive framework that prioritizes 1215 context over evolving societal norms. They advocate for a 'living constitution' approach, but their arguments are often dismissed by originalist courts."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, historically grounded framework for interpreting foundational legal texts, ensuring consistency with the original intent and preventing arbitrary reinterpretation.",
+    "transfer_function": "Transfers interpretive authority from contemporary moral or political considerations to historical evidence and original intent, limiting the scope of rights and governmental power to what was understood in 1215.",
+    "absent_voices": "Advocates for a 'living constitution' or evolving rights would object, arguing that a purely historical reading fails to address modern injustices. They are excluded by the interpretive methodology itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this originalist reading vanished, the interpretive landscape of constitutional law would fundamentally shift. Arguments for expansive rights based on evolving societal standards would gain significant ground, leading to a re-evaluation of numerous legal precedents and potentially altering the balance of power between individuals and the state.",
+    "founding_problem": "The problem of anachronistic interpretation of historical legal texts, where modern values are projected onto past documents, distorting their original meaning and intent.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical scholars and originalist legal theorists attest to the ongoing problem of anachronism in legal interpretation. Critics of originalism acknowledge the existence of anachronism but dispute its severity or relevance to contemporary constitutional application."
+  },
   "interval": {
-    "start": 1215,
+    "start": 1970,
     "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1215,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1300,
+      "time_point": 1970,
       "value": 0.25
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1600,
-      "value": 0.2
+      "time_point": 1985,
+      "value": 0.27
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1800,
-      "value": 0.15
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.29
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
       "value": 0.1
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1215,
-      "value": 0.2
+      "time_point": 2015,
+      "value": 0.1
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1300,
-      "value": 0.18
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1600,
-      "value": 0.15
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1800,
-      "value": 0.12
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1215,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1300,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1600,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1800,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 2024,
       "value": 0.1
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents an 'originalist limitation' reading of Magna Carta's Clause 39, asserting that its protections are strictly bounded by the specific feudal grievances and legal context of 1215. It limits royal abuses as understood at the time, primarily benefiting the barons who negotiated the charter. This reading contrasts sharply with more expansive interpretations that see Clause 39 as a foundational statement of universal due process rights. The constraint is claimed as a Rope because, within its narrow historical scope, it genuinely coordinated royal power with baronial expectations, providing mutual benefit and stability.",
-    "logic_rationale": "The base extractiveness is low (0.3 decreasing to 0.1) because this reading only extracts from specific, documented royal abuses, not from a broad class of actions. Suppression is low (0.2 decreasing to 0.1) as it primarily relies on the political power of the barons rather than widespread coercion. Theater ratio is low (0.1) because, within its historical context, the clause was a genuine attempt at legal reform, not mere performance. Accessibility collapse is high (0.7) because, for those seeking broader rights, this reading severely limits the available interpretations.",
-    "perspectival_gap": "From the perspective of the 1215 barons, this was a vital Rope, securing specific, tangible protections. From the perspective of modern citizens, this reading is an 'excluded' constraint, as it denies them the broader due process rights they might associate with Magna Carta. Originalist legal scholars act as agenda-setters, actively enforcing this narrow interpretation.",
-    "directionality_logic": "The 1215 barons are beneficiaries, gaining specific protections. Monarchy legitimacy is also a beneficiary, as the charter helped stabilize the realm. Abusive royal officials are the payers, as their arbitrary actions are constrained. Modern citizens are excluded, as their claims for universal rights are not recognized by this reading. Originalist legal scholars are agenda-setters, actively promoting and enforcing this interpretation.",
-    "mandatrophy_analysis": "This reading prevents mislabeling a historically specific coordination mechanism as a universal due process right. By limiting Clause 39 to its original context, it highlights how a constraint's function can be superseded or reinterpreted over time, avoiding the 'false summit' of claiming universal applicability for a historically contingent agreement. The 'dead' status of the founding problem, combined with the 'world unchanged' disappearance verdict, suggests that while the original problem is resolved, the constraint's historical significance persists, primarily in academic and interpretive debates rather than active legal enforcement for its original purpose.",
-    "kernel_context": "This constraint is the 'originalist limitation' reading of the Magna Carta's Clause 39. It interprets the clause as strictly limited to addressing specific royal abuses documented in 1215, primarily benefiting the feudal barons. This reading stands in contrast to the 'liberal due process' reading, which sees Clause 39 as a precursor to universal individual rights, and the 'feudal prerogative' reading, which emphasizes its role in preserving narrow procedural rights within the established hierarchical order."
+    "narrative_context": "This constraint represents an originalist reading of Magna Carta's Clause 39, asserting that its protections are strictly limited to the specific royal abuses documented in 1215 and apply primarily to the feudal barons who negotiated the charter. It is presented as a 'mountain' by its proponents, reflecting a belief in the fixed, immutable meaning of historical texts. The metrics, however, show a low but non-zero extractiveness, as this reading can limit contemporary rights, benefiting those who prefer a constrained government.",
+    "logic_rationale": "The low extractiveness (0.3) reflects that this reading primarily extracts by limiting the scope of potential rights, rather than imposing direct costs. Suppression (0.1) is low because it relies on interpretive authority rather than active coercion. Theater ratio is minimal (0.05) as the academic and legal work supporting this reading is genuinely focused on historical accuracy. Accessibility collapse is high (0.8) because once the originalist framework is accepted, alternative interpretations are largely foreclosed. Resistance is low (0.05) within the originalist framework itself, though it faces external resistance from other interpretive schools.",
+    "directionality_logic": "Historical scholars and originalist legal theorists are beneficiaries, as this reading validates their methodology and strengthens their arguments. Contemporary citizens are payers, as their rights may be limited by this interpretation. Liberal legal advocates are excluded, as their interpretive framework is fundamentally at odds with this reading.",
+    "perspectival_gap": "From the perspective of originalist scholars, this is a 'mountain' of historical truth. From the perspective of contemporary citizens seeking broader rights, it can feel like a 'snare' that limits their freedoms based on an outdated context. The engine's classification will capture this divergence.",
+    "kernel_context": "This constraint is an 'originalist_limitation_reading' of the 'magna_carta_clause_39' kernel. Sibling readings include the 'liberal_due_process_reading' (which sees Clause 39 as establishing universal individual rights) and the 'feudal_prerogative_reading' (which sees it as preserving narrow procedural rights within a hierarchical order)."
   },
   "omegas": [
     {
-      "id": "scope_of_due_process",
-      "question": "Is Clause 39's 'law of the land' or 'lawful judgment of his peers' limited to 1215 feudal custom, or does it contain an evolving principle of due process?",
-      "resolution_mechanism": "Analysis of legal developments in the centuries immediately following Magna Carta, examining whether interpretations expanded beyond the specific 1215 grievances without explicit amendment.",
-      "impact": "If an evolving principle is found, this originalist reading's extractiveness would be higher (as it suppresses broader rights), and its classification might shift towards a Snare for modern citizens. If strictly limited, its Rope classification holds for its historical context.",
+      "id": "historical_accuracy_vs_contemporary_relevance",
+      "question": "Is the primary purpose of interpreting Clause 39 to achieve historical accuracy, or to provide a framework for contemporary justice?",
+      "resolution_mechanism": "A societal consensus or judicial ruling explicitly prioritizing one goal over the other in constitutional interpretation.",
+      "impact": "If historical accuracy is paramount, this reading remains a 'mountain' of fixed meaning. If contemporary relevance is prioritized, its 'mountain' status would be challenged, potentially reclassifying it as a 'snare' or 'tangled_rope' that extracts by limiting modern rights.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Ambiguity regarding the historical scope of Clause 39's legal principles."
+      "description": "Ambiguity in the purpose of constitutional interpretation."
     },
     {
-      "id": "originalist_vs_living_constitution",
-      "question": "Is this constraint a genuine historical account of Clause 39's original intent, or a contemporary interpretive choice (originalism) that benefits certain legal/political agendas?",
-      "resolution_mechanism": "Examination of the political and jurisprudential motivations of modern originalist proponents, and comparison with non-originalist historical scholarship.",
-      "impact": "If primarily a contemporary interpretive choice, the 'monarchy_legitimacy' beneficiary might be re-evaluated as 'originalist_legal_scholars_legitimacy', and the constraint's 'emerges_naturally' status (if claimed) would be challenged, potentially shifting it towards a Tangled Rope or Snare for modern legal systems.",
+      "id": "victim_scope_ambiguity",
+      "question": "Are the 'victims' of this reading truly limited to contemporary citizens whose rights are constrained, or does it also include historical groups whose grievances were not fully addressed in 1215?",
+      "resolution_mechanism": "Further historical and legal scholarship on the scope of Magna Carta's protections beyond the immediate feudal context, or a re-evaluation of the concept of 'victimhood' in historical legal documents.",
+      "impact": "If the victim scope expands to include historically marginalized groups, the extractiveness of this reading would increase, potentially shifting its classification towards a 'snare' for those groups.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "Whether the originalist reading is a historical fact or a modern interpretive preference."
+      "type_class": "empirical",
+      "description": "Ambiguity in the scope of those negatively affected by the originalist reading."
     }
   ],
   "cs_structure": {
@@ -139,23 +158,23 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "magna_carta_clause_39__liberal_due_process_reading",
-        "relation": "forecloses"
+        "sibling_id": "liberal_due_process_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "magna_carta_clause_39__feudal_prerogative_reading",
+        "sibling_id": "feudal_prerogative_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "clause_39_limited_to_1215_grievances",
+        "atom": "original_public_meaning_supremacy",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "historical_context_determines_meaning",
+        "atom": "historical_context_limits_scope",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
@@ -165,19 +184,20 @@
     "drift_state": {
       "moment": "contemporary_legal_discourse",
       "direction": "practice_drift",
-      "magnitude": "severe",
-      "acknowledged": true
+      "magnitude": "substantial",
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

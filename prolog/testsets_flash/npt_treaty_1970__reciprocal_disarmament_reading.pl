@@ -39,9 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,27 +68,27 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: npt_treaty_1970__reciprocal_disarmament_reading
- *   human_readable: NPT Article VI as Reciprocal Disarmament Obligation
+ *   human_readable: NPT Article VI as Reciprocal Disarmament Bargain
  *   domain: international_law/nuclear_nonproliferation/regime_theory
  *
  * SUMMARY:
- *   This constraint represents the reading of the Nuclear Non-Proliferation
- *   Treaty (NPT) that emphasizes Article VI as a binding legal obligation for
- *   Nuclear Weapon States (NWS) to pursue disarmament with temporal urgency.
- *   It frames horizontal nonproliferation (NNWS not acquiring weapons) and
- *   vertical nonproliferation (NWS disarming) as a reciprocal bargain. From
- *   this perspective, the NPT is a Tangled Rope: it coordinates global
- *   security by preventing proliferation, but extracts from NWS by
- *   constraining their strategic autonomy and from NNWS by denying them a
- *   perceived security equalizer, while the lack of NWS disarmament
- *   verification creates an asymmetric burden.
+ *   This constraint models the NPT as a reciprocal disarmament bargain,
+ *   emphasizing Article VI's binding obligation for Nuclear Weapon States
+ *   (NWS) to disarm, in exchange for Non-Nuclear Weapon States (NNWS)
+ *   foregoing nuclear weapons. This reading views horizontal and vertical
+ *   nonproliferation as two sides of the same coin, with temporal urgency for
+ *   NWS disarmament. The increasing extractiveness and suppression over time
+ *   reflect the growing frustration of NNWS with the lack of NWS disarmament
+ *   progress, and the increasing enforcement required to maintain the
+ *   horizontal nonproliferation norm in the face of perceived NWS
+ *   non-compliance.
  *
  * KEY AGENTS:
- *   - nuclear_weapon_states: Primary target/payer (institutional/constrained) — bears extraction from disarmament obligation, but also benefits from nonproliferation.
- *   - non_nuclear_weapon_states_coalition: Primary beneficiary (organized/constrained) — benefits from nonproliferation, but pays by forgoing nuclear weapons.
- *   - international_atomic_energy_agency: Agenda setter (institutional/constrained) — enforces horizontal nonproliferation, but lacks mandate for vertical disarmament verification.
- *   - global_security_advocates: Beneficiary (organized/analytical) — benefits from reduced proliferation risk, advocates for full Article VI implementation.
- *   - nws_military_industrial_complexes: Victim (institutional/trapped) — bears extraction from potential disarmament, resists constraints on modernization.
+ *   - non_nuclear_weapon_states_coalition: Primary beneficiary (organized/constrained) – gains normative leverage, but security remains contingent.
+ *   - nuclear_weapon_states: Primary payer (institutional/constrained) – bears the normative cost of delayed disarmament, strategic autonomy constrained.
+ *   - non_nuclear_weapon_states_constrained: Secondary payer (moderate/identity_locked) – bears the cost of non-acquisition without reciprocal disarmament.
+ *   - international_atomic_energy_agency: Agenda setter (institutional/constrained) – enforces horizontal nonproliferation, but lacks mandate for Article VI.
+ *   - global_civil_society_disarmament_advocates: Excluded (organized/mobile) – advocates for full Article VI implementation, but without direct negotiation power.
  */
 
 /* ==========================================================================
@@ -108,44 +111,83 @@ narrative_ontology:constraint_metric(npt_treaty_1970__reciprocal_disarmament_rea
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(npt_treaty_1970__reciprocal_disarmament_reading, tangled_rope).
-narrative_ontology:human_readable(npt_treaty_1970__reciprocal_disarmament_reading, "NPT Article VI as Reciprocal Disarmament Obligation").
+narrative_ontology:human_readable(npt_treaty_1970__reciprocal_disarmament_reading, "NPT Article VI as Reciprocal Disarmament Bargain").
 narrative_ontology:topic_domain(npt_treaty_1970__reciprocal_disarmament_reading, "international_law/nuclear_nonproliferation/regime_theory").
 
 domain_priors:requires_active_enforcement(npt_treaty_1970__reciprocal_disarmament_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(npt_treaty_1970__reciprocal_disarmament_reading, '16e81125-18b0-4210-9f0a-194e466adaab').
-narrative_ontology:cs_kernel_codification('16e81125-18b0-4210-9f0a-194e466adaab', fixed_text).
-narrative_ontology:cs_authority_grounding('16e81125-18b0-4210-9f0a-194e466adaab', lineage).
-narrative_ontology:cs_interpretation_layer_present('16e81125-18b0-4210-9f0a-194e466adaab').
-narrative_ontology:cs_reading_relation('16e81125-18b0-4210-9f0a-194e466adaab', npt_treaty_1970__oligopoly_enforcement_reading, coexists_with).
-narrative_ontology:cs_reading_relation('16e81125-18b0-4210-9f0a-194e466adaab', npt_treaty_1970__withdrawal_sovereignty_reading, coexists_with).
-narrative_ontology:cs_axiom('16e81125-18b0-4210-9f0a-194e466adaab', foundational, article_vi_binding_and_urgent).
+narrative_ontology:cs_story_uid(npt_treaty_1970__reciprocal_disarmament_reading, '2b0a4d7c-e123-43de-bcd0-b354d84b4d7b').
+narrative_ontology:cs_kernel_codification('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', fixed_text).
+narrative_ontology:cs_authority_grounding('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', lineage).
+narrative_ontology:cs_interpretation_layer_present('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b').
+narrative_ontology:cs_reading_relation('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', npt_treaty_1970__oligopoly_enforcement_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', npt_treaty_1970__withdrawal_sovereignty_reading, coexists_with).
+narrative_ontology:cs_axiom('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', foundational, article_vi_binding_and_urgent).
 narrative_ontology:cs_axiom_status(article_vi_binding_and_urgent, holdable).
-narrative_ontology:cs_axiom_grounding('16e81125-18b0-4210-9f0a-194e466adaab', article_vi_binding_and_urgent, deontological).
-narrative_ontology:cs_axiom('16e81125-18b0-4210-9f0a-194e466adaab', foundational, horizontal_and_vertical_nonproliferation_reciprocal).
-narrative_ontology:cs_axiom_status(horizontal_and_vertical_nonproliferation_reciprocal, holdable).
-narrative_ontology:cs_axiom_grounding('16e81125-18b0-4210-9f0a-194e466adaab', horizontal_and_vertical_nonproliferation_reciprocal, conventional).
-narrative_ontology:cs_reference_frame('16e81125-18b0-4210-9f0a-194e466adaab', original_npt_bargain_integrity).
-narrative_ontology:cs_drift_state('16e81125-18b0-4210-9f0a-194e466adaab', contemporary_disarmament_stalemate, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('16e81125-18b0-4210-9f0a-194e466adaab', '').
+narrative_ontology:cs_axiom_grounding('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', article_vi_binding_and_urgent, deontological).
+narrative_ontology:cs_axiom('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', foundational, horizontal_and_vertical_nonproliferation_linked).
+narrative_ontology:cs_axiom_status(horizontal_and_vertical_nonproliferation_linked, holdable).
+narrative_ontology:cs_axiom_grounding('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', horizontal_and_vertical_nonproliferation_linked, conventional).
+narrative_ontology:cs_reference_frame('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', grand_bargain_reciprocity).
+narrative_ontology:cs_drift_state('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', contemporary_npt_review_cycle, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('2b0a4d7c-e123-43de-bcd0-b354d84b4d7b', '').
 narrative_ontology:cs_kernel_id(npt_treaty_1970__reciprocal_disarmament_reading, npt_treaty_1970).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(npt_treaty_1970__reciprocal_disarmament_reading, non_nuclear_weapon_states_coalition).
-narrative_ontology:constraint_beneficiary(npt_treaty_1970__reciprocal_disarmament_reading, global_security_advocates).
 narrative_ontology:constraint_victim(npt_treaty_1970__reciprocal_disarmament_reading, nuclear_weapon_states).
-narrative_ontology:constraint_victim(npt_treaty_1970__reciprocal_disarmament_reading, nws_military_industrial_complexes).
+narrative_ontology:constraint_victim(npt_treaty_1970__reciprocal_disarmament_reading, non_nuclear_weapon_states_constrained).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefits from the promise of eventual disarmament by NWS, which legitimizes their own non-acquisition. They gain normative leverage to press for Article VI compliance, but their security remains contingent on NWS actions. Their exit options are constrained by the security dilemma.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__reciprocal_disarmament_reading, non_nuclear_weapon_states_coalition, beneficiary,
+    organized, generational, constrained, global).
+
+% Are obligated by Article VI to pursue good-faith negotiations on disarmament. This reading places their strategic autonomy and modernization programs under normative pressure, making them 'payers' of the disarmament bargain. Their exit is constrained by the political costs of treaty withdrawal.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__reciprocal_disarmament_reading, nuclear_weapon_states, payer,
+    institutional, generational, constrained, global).
+
+% Have foregone nuclear weapons under the NPT, expecting reciprocal disarmament from NWS. They bear the cost of non-acquisition without seeing the promised disarmament, leading to a sense of structural injustice. Their identity as responsible non-proliferators makes withdrawal difficult.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__reciprocal_disarmament_reading, non_nuclear_weapon_states_constrained, payer,
+    moderate, biographical, identity_locked, national).
+
+% Administers safeguards for horizontal nonproliferation (Articles I-II) but lacks a mandate or verification mechanism for Article VI disarmament. This reading highlights the gap in its enforcement capacity regarding the reciprocal bargain.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__reciprocal_disarmament_reading, international_atomic_energy_agency, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Advocates for the full and urgent implementation of Article VI, viewing it as a moral and legal imperative. They are excluded from direct negotiation but exert pressure through public campaigns and international forums.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__reciprocal_disarmament_reading, global_civil_society_disarmament_advocates, excluded,
+    organized, generational, mobile, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates global security by establishing a reciprocal bargain: NNWS forego nuclear weapons in exchange for NWS pursuing disarmament, aiming to prevent both horizontal and vertical proliferation.
+% TRANSFER_FUNCTION: Transfers the right to develop nuclear weapons from NNWS to NWS (who retain them temporarily), in exchange for a promise of future disarmament. It also transfers security assurances and peaceful nuclear technology to NNWS.
+% ABSENT_VOICES: States that have withdrawn from the NPT or never joined, arguing the treaty is inherently discriminatory, would object to the continued retention of nuclear weapons by NWS. They are absent from the NPT review process.
+% DISAPPEARANCE_RATIONALE: If the NPT's reciprocal disarmament obligation vanished, the global nonproliferation regime would collapse. Many NNWS would likely pursue nuclear weapons, leading to a rapid increase in horizontal proliferation and a drastically less stable international security environment.
+% FOUNDING_PROBLEM: The problem of preventing the spread of nuclear weapons (horizontal proliferation) while also addressing the existential threat posed by existing nuclear arsenals (vertical proliferation), through a grand bargain.
+% FOUNDING_PROBLEM_CORROBORATION: The non-nuclear-weapon states coalition consistently attests that the founding problem of vertical proliferation remains live and unaddressed, citing the continued modernization of NWS arsenals. Independent security analysts and UN reports corroborate the ongoing threat and the lack of progress on disarmament.
+narrative_ontology:disappearance_verdict(npt_treaty_1970__reciprocal_disarmament_reading, world_rearranges).
+narrative_ontology:founding_problem_status(npt_treaty_1970__reciprocal_disarmament_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(npt_treaty_1970__reciprocal_disarmament_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(npt_treaty_1970__reciprocal_disarmament_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(npt_treaty_1970__reciprocal_disarmament_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(npt_treaty_1970__reciprocal_disarmament_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,16 +207,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.65) is high because NWS are compelled to forgo strategic advantages and NNWS forgo a perceived security equalizer. Suppression (0.70) is significant due to the active enforcement of horizontal nonproliferation and the diplomatic pressure on NWS. Theater ratio (0.40) reflects the performative aspects of NWS disarmament commitments that often lack concrete action or verification. The rising trend in extractiveness and suppression over time reflects the increasing frustration of NNWS with the slow pace of NWS disarmament and the hardening of nonproliferation enforcement.
+ *   The constraint is classified as a Tangled Rope because it genuinely coordinates horizontal nonproliferation (benefiting NNWS) but simultaneously extracts from NWS (by obligating disarmament) and from NNWS (who bear the cost of non-acquisition without full reciprocity). The extractiveness (0.65) is high due to the perceived imbalance in the bargain, with NWS retaining and modernizing arsenals while NNWS are strictly held to non-acquisition. Suppression (0.70) is significant, reflecting the active enforcement of horizontal nonproliferation and the diplomatic pressure on NWS to maintain the disarmament facade. Theater ratio (0.40) indicates that a substantial portion of NWS disarmament rhetoric and diplomatic activity is performative, masking a lack of genuine progress. The rising extractiveness and theater over time reflect the increasing gap between the promise of Article VI and its implementation.
  *
  * PERSPECTIVAL GAP:
- *   NWS experience this constraint as a necessary, albeit sometimes inconvenient, framework for global stability that legitimizes their existing arsenals while preventing new entrants. NNWS, particularly those in the 'coalition,' experience it as an increasingly unfair bargain where their commitments are strictly enforced, but NWS obligations are not met with similar urgency or verification. The engine's per-seat classification should reflect this divergence, with NWS showing a more beneficiary-like profile (despite being 'victims' of the disarmament obligation) due to the lack of enforcement, and NNWS showing a more target-like profile.
+ *   From the perspective of the NNWS coalition, the NPT is a Tangled Rope where they are coordinated into non-acquisition but pay through the lack of NWS disarmament. From the NWS perspective, it is a Rope that coordinates global security, with their disarmament obligation being a long-term aspiration rather than an immediate, binding cost. The engine's classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   The 'non_nuclear_weapon_states_coalition' are beneficiaries of horizontal nonproliferation (d=0.1), but also bear the cost of forgoing nuclear weapons (d=0.6), leading to a net moderate target directionality. 'Nuclear_weapon_states' are beneficiaries of horizontal nonproliferation (d=0.1) but are also the primary targets of the Article VI disarmament obligation (d=0.8), leading to a net moderate target directionality. The 'international_atomic_energy_agency' is an agenda setter with a symmetric directionality (d=0.5) as it enforces the regime but also faces limitations. 'NWS_military_industrial_complexes' are clear victims (d=0.9) as their existence is threatened by disarmament.
+ *   The NNWS coalition is a beneficiary due to the security benefits of horizontal nonproliferation and the normative leverage for disarmament (d near 0.0). NWS are payers because Article VI places a binding obligation on their strategic autonomy (d near 1.0). Non-nuclear-weapon states constrained are also payers, bearing the costs of non-acquisition without the promised reciprocity (d near 1.0). The IAEA is an agenda-setter, enforcing parts of the regime. Global civil society advocates are excluded, as their calls for disarmament are not directly integrated into the treaty's enforcement mechanisms.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading prevents mislabeling the NPT as a pure Snare by acknowledging the genuine coordination function of horizontal nonproliferation. However, it highlights the risk of mandatrophy in Article VI if the disarmament obligation remains unfulfilled, leading to a 'zombie' bargain where the original mandate (reciprocal disarmament) has atrophied but the constraint persists as an extractive mechanism for NNWS. The rising extractiveness and theater ratio in measurements indicate this drift.
+ *   This reading prevents mislabeling the NPT as a pure Rope by highlighting the unfulfilled reciprocal bargain. The increasing extractiveness and theater ratio over time suggest a drift towards a Snare if Article VI continues to be ignored, as the coordination function (horizontal nonproliferation) becomes cover for the extraction of strategic advantage by NWS. The 'live' status of the founding problem, coupled with 'world_rearranges' if it disappeared, indicates that the constraint's mandate is still relevant, but its implementation is deeply contested.
  */
 
 /* ==========================================================================
@@ -182,69 +224,66 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    article_vi_enforceability,
-    'Is Article VI''s disarmament obligation genuinely enforceable, or is it aspirational without a verification mechanism?',
-    'Establishment of a robust, intrusive, and universally accepted verification regime for NWS disarmament, or a UN Security Council resolution explicitly defining non-compliance and penalties.',
-    'If enforceable, the constraint''s extractiveness from NWS would be higher and its suppression of NNWS alternatives lower; if purely aspirational, it functions more as a Snare for NNWS, with the NWS as beneficiaries of a legitimizing cover story.',
+    article_vi_verifiability,
+    'Is Article VI''s disarmament obligation genuinely verifiable, or does the lack of a verification mechanism render it inherently aspirational?',
+    'Development and adoption of a robust, intrusive, and universally accepted verification regime for nuclear disarmament, similar to IAEA safeguards for non-acquisition.',
+    'If verifiable, the NWS''s non-compliance becomes a clear violation, increasing the constraint''s extractiveness and suppression. If inherently unverifiable, the ''reciprocal bargain'' aspect weakens, potentially reclassifying towards a more aspirational ''Rope'' for NWS.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(article_vi_verifiability, conceptual, 'Ambiguity regarding the verifiability of NWS disarmament obligations.').
+
+omega_variable(
+    nws_disarmament_intent,
+    'Do NWS genuinely intend to pursue nuclear disarmament in good faith, or is their Article VI commitment primarily a diplomatic facade to maintain the nonproliferation regime?',
+    'Analysis of NWS nuclear doctrine, spending on modernization vs. disarmament, and participation in disarmament negotiations over a multi-decade period, assessed by independent experts.',
+    'If intent is genuinely lacking, the theater_ratio would increase, and the constraint would lean more towards a ''Snare'' for NNWS. If genuine intent is demonstrated, extractiveness would decrease.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(article_vi_enforceability, empirical, 'Ambiguity of Article VI''s binding force without verification.').
+narrative_ontology:omega_variable(nws_disarmament_intent, empirical, 'Uncertainty about the true intentions of Nuclear Weapon States regarding disarmament.').
 
 omega_variable(
-    reciprocal_bargain_vs_oligopoly,
-    'Is the NPT fundamentally a reciprocal bargain (disarmament for nonproliferation), or an oligopoly enforcement mechanism (NWS retain weapons, NNWS forgo them)?',
-    'A shift in NWS behavior towards concrete, time-bound disarmament steps, or a formal declaration by a majority of NNWS that the bargain has failed.',
-    'If a genuine reciprocal bargain, the constraint is a Tangled Rope with NWS as victims of their own commitments; if an oligopoly, it is a Snare for NNWS, with NWS as beneficiaries.',
-    confidence_without_resolution(high)
+    kernel_reading_identity,
+    'Is this constraint a genuine ''reciprocal disarmament bargain'' reading of the NPT, or is it an over-interpretation of Article VI''s legal force?',
+    'Comparative legal analysis of treaty interpretation principles, state practice, and travaux préparatoires (preparatory works) of the NPT, assessed by international legal scholars.',
+    'If it is an over-interpretation, the constraint''s extractiveness from NWS would be lower, and its classification might shift towards a ''Rope'' or ''Tangled Rope'' with less emphasis on NWS as payers. If confirmed as a valid reading, the current classification holds.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reciprocal_bargain_vs_oligopoly, conceptual, 'Contested framing of the NPT''s core purpose.').
-
-omega_variable(
-    npt_kernel_reading_identification,
-    'This constraint is the ''reciprocal_disarmament_reading'' of the ''npt_treaty_1970'' kernel. How would the classification change under the ''oligopoly_enforcement_reading'' or ''withdrawal_sovereignty_reading''?',
-    'Analyzing the structural properties of the sibling readings as separate constraints.',
-    'The ''oligopoly_enforcement_reading'' would likely classify as a Snare for NNWS, with higher extractiveness and suppression. The ''withdrawal_sovereignty_reading'' would emphasize the fragility of the entire regime, potentially classifying as a Piton or a highly contested Tangled Rope.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(npt_kernel_reading_identification, conceptual, 'This constraint is one reading of the NPT kernel; other readings yield different classifications.').
+narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'This constraint is one reading of the NPT kernel (npt_treaty_1970). This ''reciprocal_disarmament_reading'' emphasizes Article VI as a binding, urgent obligation. Sibling readings include ''oligopoly_enforcement_reading'' (focus on horizontal nonproliferation) and ''withdrawal_sovereignty_reading'' (focus on Article X withdrawal rights). The disagreement is located in the legal weight and temporal urgency of Article VI versus other treaty provisions.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(npt_treaty_1970__reciprocal_disarmament_reading, 0, 50).
+narrative_ontology:interval(npt_treaty_1970__reciprocal_disarmament_reading, 1970, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(npt__tr_t0, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(npt__tr_t10, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 10, 0.25).
-narrative_ontology:measurement(npt__tr_t20, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 20, 0.3).
-narrative_ontology:measurement(npt__tr_t30, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 30, 0.35).
-narrative_ontology:measurement(npt__tr_t40, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 40, 0.38).
-narrative_ontology:measurement(npt__tr_t50, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 50, 0.4).
+narrative_ontology:measurement(npt__tr_t1970, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 1970, 0.1).
+narrative_ontology:measurement(npt__tr_t1985, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 1985, 0.2).
+narrative_ontology:measurement(npt__tr_t2000, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 2000, 0.3).
+narrative_ontology:measurement(npt__tr_t2010, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 2010, 0.35).
+narrative_ontology:measurement(npt__tr_t2024, npt_treaty_1970__reciprocal_disarmament_reading, theater_ratio, 2024, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(npt__be_t0, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(npt__be_t10, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(npt__be_t20, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 20, 0.6).
-narrative_ontology:measurement(npt__be_t30, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 30, 0.65).
-narrative_ontology:measurement(npt__be_t40, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 40, 0.68).
-narrative_ontology:measurement(npt__be_t50, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 50, 0.7).
+narrative_ontology:measurement(npt__be_t1970, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 1970, 0.4).
+narrative_ontology:measurement(npt__be_t1985, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 1985, 0.5).
+narrative_ontology:measurement(npt__be_t2000, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 2000, 0.58).
+narrative_ontology:measurement(npt__be_t2010, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 2010, 0.62).
+narrative_ontology:measurement(npt__be_t2024, npt_treaty_1970__reciprocal_disarmament_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(npt__su_t0, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(npt__su_t10, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 10, 0.6).
-narrative_ontology:measurement(npt__su_t20, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 20, 0.65).
-narrative_ontology:measurement(npt__su_t30, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 30, 0.7).
-narrative_ontology:measurement(npt__su_t40, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 40, 0.72).
-narrative_ontology:measurement(npt__su_t50, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 50, 0.75).
+narrative_ontology:measurement(npt__su_t1970, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 1970, 0.5).
+narrative_ontology:measurement(npt__su_t1985, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 1985, 0.58).
+narrative_ontology:measurement(npt__su_t2000, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 2000, 0.65).
+narrative_ontology:measurement(npt__su_t2010, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 2010, 0.68).
+narrative_ontology:measurement(npt__su_t2024, npt_treaty_1970__reciprocal_disarmament_reading, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
@@ -252,13 +291,9 @@ narrative_ontology:measurement(npt__su_t50, npt_treaty_1970__reciprocal_disarmam
    ========================================================================== */
 
 narrative_ontology:coordination_type(npt_treaty_1970__reciprocal_disarmament_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(npt_treaty_1970__reciprocal_disarmament_reading, npt_treaty_1970__oligopoly_enforcement_reading).
-narrative_ontology:affects_constraint(npt_treaty_1970__reciprocal_disarmament_reading, npt_treaty_1970__withdrawal_sovereignty_reading).
-narrative_ontology:affects_constraint(npt_treaty_1970__reciprocal_disarmament_reading, iran_nuclear_deal).
-narrative_ontology:affects_constraint(npt_treaty_1970__reciprocal_disarmament_reading, north_korea_nuclear_program).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three distinct readings of the NPT treaty kernel. The 'oligopoly_enforcement_reading' emphasizes Articles I-II and views Article VI as aspirational, while the 'withdrawal_sovereignty_reading' focuses on Article X. All three are linked as a constraint family.
+% This constraint is one reading of the NPT treaty kernel. It emphasizes Article VI as a binding reciprocal disarmament bargain, contrasting with readings that prioritize horizontal nonproliferation or withdrawal rights.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

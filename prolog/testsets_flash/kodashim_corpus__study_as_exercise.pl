@@ -39,9 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,18 +68,18 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: kodashim_corpus__study_as_exercise
- *   human_readable: Kodashim Corpus: Study as Exercise of Mitzvah
+ *   human_readable: Kodashim Corpus: Study as Mitzvah Performance
  *   domain: religious_studies/rabbinic_judaism/commitment_system_theory
  *
  * SUMMARY:
- *   This constraint represents the rabbinic Jewish reading that the
- *   intellectual and spiritual study of the Kodashim (sacrificial) corpus is
- *   itself a fulfillment of the mitzvah (divine commandment) of sacrifice. It
- *   provides a means for continuous engagement with divine law and
- *   maintenance of cosmic order in the absence of the Temple and physical
- *   sacrifices. This reading is a core component of post-Temple Jewish
- *   practice, transforming a literal ritual into an ongoing
- *   intellectual-spiritual discipline.
+ *   This constraint describes the rabbinic Jewish understanding that the
+ *   diligent study of the laws of sacrifice (Kodashim) is itself a
+ *   fulfillment of the mitzvah (divine commandment), effectively 'occupying'
+ *   the kernel of sacrificial practice in the absence of the Temple. This
+ *   reading provides a continuous mode of religious observance and spiritual
+ *   engagement, transforming a potentially inert legal corpus into a living
+ *   spiritual exercise. It is a reading of the 'kodashim_corpus' kernel,
+ *   specifically the 'study_as_exercise' interpretation.
  *
  */
 
@@ -100,40 +103,79 @@ narrative_ontology:constraint_metric(kodashim_corpus__study_as_exercise, resista
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(kodashim_corpus__study_as_exercise, rope).
-narrative_ontology:human_readable(kodashim_corpus__study_as_exercise, "Kodashim Corpus: Study as Exercise of Mitzvah").
+narrative_ontology:human_readable(kodashim_corpus__study_as_exercise, "Kodashim Corpus: Study as Mitzvah Performance").
 narrative_ontology:topic_domain(kodashim_corpus__study_as_exercise, "religious_studies/rabbinic_judaism/commitment_system_theory").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(kodashim_corpus__study_as_exercise, '5ed1079c-bf7f-4858-87b1-d1112c537d47').
-narrative_ontology:cs_kernel_codification('5ed1079c-bf7f-4858-87b1-d1112c537d47', fixed_text).
-narrative_ontology:cs_authority_grounding('5ed1079c-bf7f-4858-87b1-d1112c537d47', lineage).
-narrative_ontology:cs_interpretation_layer_present('5ed1079c-bf7f-4858-87b1-d1112c537d47').
-narrative_ontology:cs_reading_relation('5ed1079c-bf7f-4858-87b1-d1112c537d47', kodashim_corpus__performance_only, coexists_with).
-narrative_ontology:cs_reading_relation('5ed1079c-bf7f-4858-87b1-d1112c537d47', kodashim_corpus__substitution_archive, coexists_with).
-narrative_ontology:cs_axiom('5ed1079c-bf7f-4858-87b1-d1112c537d47', foundational, study_is_equivalent_to_action).
-narrative_ontology:cs_axiom_status(study_is_equivalent_to_action, holdable).
-narrative_ontology:cs_axiom_grounding('5ed1079c-bf7f-4858-87b1-d1112c537d47', study_is_equivalent_to_action, theological).
-narrative_ontology:cs_axiom('5ed1079c-bf7f-4858-87b1-d1112c537d47', secondary, divine_will_accommodates_circumstance).
-narrative_ontology:cs_axiom_status(divine_will_accommodates_circumstance, holdable).
-narrative_ontology:cs_axiom_grounding('5ed1079c-bf7f-4858-87b1-d1112c537d47', divine_will_accommodates_circumstance, theological).
-narrative_ontology:cs_reference_frame('5ed1079c-bf7f-4858-87b1-d1112c537d47', rabbinic_interpretive_continuity).
-narrative_ontology:cs_drift_state('5ed1079c-bf7f-4858-87b1-d1112c537d47', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('5ed1079c-bf7f-4858-87b1-d1112c537d47', '').
+narrative_ontology:cs_story_uid(kodashim_corpus__study_as_exercise, '67a26b5c-40c8-4edf-be52-f027bc4aa778').
+narrative_ontology:cs_kernel_codification('67a26b5c-40c8-4edf-be52-f027bc4aa778', fixed_text).
+narrative_ontology:cs_authority_grounding('67a26b5c-40c8-4edf-be52-f027bc4aa778', lineage).
+narrative_ontology:cs_interpretation_layer_present('67a26b5c-40c8-4edf-be52-f027bc4aa778').
+narrative_ontology:cs_reading_relation('67a26b5c-40c8-4edf-be52-f027bc4aa778', kodashim_corpus__performance_only, coexists_with).
+narrative_ontology:cs_reading_relation('67a26b5c-40c8-4edf-be52-f027bc4aa778', kodashim_corpus__substitution_archive, coexists_with).
+narrative_ontology:cs_axiom('67a26b5c-40c8-4edf-be52-f027bc4aa778', foundational, study_is_equivalent_to_performance).
+narrative_ontology:cs_axiom_status(study_is_equivalent_to_performance, holdable).
+narrative_ontology:cs_axiom_grounding('67a26b5c-40c8-4edf-be52-f027bc4aa778', study_is_equivalent_to_performance, deontological).
+narrative_ontology:cs_axiom('67a26b5c-40c8-4edf-be52-f027bc4aa778', secondary, divine_presence_through_intellectual_engagement).
+narrative_ontology:cs_axiom_status(divine_presence_through_intellectual_engagement, holdable).
+narrative_ontology:cs_axiom_grounding('67a26b5c-40c8-4edf-be52-f027bc4aa778', divine_presence_through_intellectual_engagement, theological).
+narrative_ontology:cs_reference_frame('67a26b5c-40c8-4edf-be52-f027bc4aa778', rabbinic_post_temple_halakha).
+narrative_ontology:cs_drift_state('67a26b5c-40c8-4edf-be52-f027bc4aa778', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('67a26b5c-40c8-4edf-be52-f027bc4aa778', '').
 narrative_ontology:cs_kernel_id(kodashim_corpus__study_as_exercise, kodashim_corpus).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(kodashim_corpus__study_as_exercise, talmudic_scholars).
+narrative_ontology:constraint_beneficiary(kodashim_corpus__study_as_exercise, rabbinic_scholars).
 narrative_ontology:constraint_beneficiary(kodashim_corpus__study_as_exercise, jewish_community).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(kodashim_corpus__study_as_exercise, lay_adherents).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The primary practitioners and interpreters of Kodashim. Their continuous intellectual engagement with the sacrificial laws is considered the fulfillment of the mitzvah, maintaining the spiritual order. Their professional and spiritual identity is deeply fused with this practice.
+narrative_ontology:constraint_stakeholder(kodashim_corpus__study_as_exercise, rabbinic_scholars, agenda_setter,
+    institutional, generational, identity_locked, global).
+
+% Benefits from the spiritual continuity and cosmic order maintained by the scholars' study. This reading provides a path for religious observance in the absence of the Temple, fostering communal identity and resilience.
+narrative_ontology:constraint_stakeholder(kodashim_corpus__study_as_exercise, jewish_community, beneficiary,
+    organized, generational, constrained, global).
+
+% Participate in the study of Kodashim to varying degrees, often through communal learning. They benefit from the spiritual merit and intellectual engagement, contributing to their personal religious practice without being primary interpreters.
+narrative_ontology:constraint_stakeholder(kodashim_corpus__study_as_exercise, lay_adherents, beneficiary,
+    moderate, biographical, mobile, local).
+
+% Believe that only the physical performance of sacrifices in a rebuilt Temple constitutes true fulfillment. While they may engage in study, they view it as preparation, not substitution, and are excluded from the 'study as performance' framing.
+narrative_ontology:constraint_stakeholder(kodashim_corpus__study_as_exercise, messianic_restorationists, excluded,
+    organized, civilizational, identity_locked, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the spiritual and intellectual engagement of the Jewish people with the divine commandments concerning sacrifices, providing a continuous mode of observance in the absence of the Temple.
+% TRANSFER_FUNCTION: Transfers spiritual merit and communal cohesion through the intellectual effort of studying the sacrificial laws, from scholars and adherents to the entire community and, cosmically, to the divine order.
+% ABSENT_VOICES: Messianic restorationists would object, arguing that study is merely a placeholder for actual performance, and that this reading diminishes the urgency and necessity of rebuilding the Temple and restoring physical sacrifices. Their voices are marginalized within the dominant rabbinic discourse that emphasizes intellectual engagement.
+% DISAPPEARANCE_RATIONALE: If the understanding that 'study is performance' vanished, a core pillar of post-Temple rabbinic Judaism would collapse. The spiritual practice of countless individuals and the communal identity of the Jewish people would be profoundly disrupted, leading to a crisis of religious meaning and continuity.
+% FOUNDING_PROBLEM: The destruction of the Second Temple and the cessation of physical sacrifices left a profound void in Jewish religious practice, threatening the continuity of divine commandment and spiritual connection.
+% FOUNDING_PROBLEM_CORROBORATION: Historical rabbinic texts, contemporary theological discourse, and the lived experience of Jewish communities for nearly two millennia corroborate that the problem of post-Temple observance remains live. The solution of 'study as performance' is widely attested as foundational to rabbinic Judaism by scholars and practitioners across diverse movements.
+narrative_ontology:disappearance_verdict(kodashim_corpus__study_as_exercise, world_rearranges).
+narrative_ontology:founding_problem_status(kodashim_corpus__study_as_exercise, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(kodashim_corpus__study_as_exercise, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(kodashim_corpus__study_as_exercise, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(kodashim_corpus__study_as_exercise, 'none', 1).
+narrative_ontology:epsilon_provenance(kodashim_corpus__study_as_exercise, 0.01, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -148,13 +190,13 @@ narrative_ontology:story_seed(kodashim_corpus__study_as_exercise, 'none', 1).
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is negligible (0.01) because this reading imposes no material cost or deprivation; rather, it offers a path to spiritual fulfillment. Suppression is low (0.05) as adherence is voluntary and driven by theological conviction, not coercion. Theater ratio is zero (0.0) as the study is considered genuinely efficacious, not merely performative. Accessibility collapse is high (0.9) because, within this framework, there are few alternatives to study for fulfilling the mitzvah in the present era. Resistance is low (0.02) as this reading is widely accepted within mainstream Rabbinic Judaism.
+ *   Extractiveness is negligible (0.01) because this constraint is a spiritual practice that benefits participants without imposing significant costs or extracting resources. Suppression is low (0.05) as participation is voluntary, though deeply embedded in religious identity. Theater ratio is zero, as the practice is considered genuinely functional and spiritually efficacious. Accessibility collapse is high (0.9) because for adherents of this reading, there are no viable alternatives to intellectual engagement for fulfilling the mitzvah in the current era. Resistance is low (0.02) because this reading is widely accepted within mainstream rabbinic Judaism.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the scholars and the community, this is a pure coordination mechanism, enabling religious life. From an external, purely historical-critical perspective, it is an interpretive adaptation to changed circumstances, but still not extractive. The core claim of fulfillment through study is central to its non-extractive nature.
+ *   From the perspective of rabbinic scholars and the mainstream Jewish community, this constraint is a pure Rope, coordinating spiritual practice and maintaining continuity. From the perspective of messianic restorationists, it might be seen as a form of 'theater' or 'substitution' that delays or distracts from the true, physical performance of sacrifices, though this reading does not impose costs on them directly.
  *
  * DIRECTIONALITY LOGIC:
- *   Talmudic scholars are the agenda-setters and primary beneficiaries, as their intellectual-spiritual work is directly validated and elevated by this reading. The broader Jewish community is also a beneficiary, gaining a path to spiritual continuity. There are no victims, as no one is deprived or coerced by this interpretive framework; it offers a solution, not an imposition. Divine Will is a non-agent beneficiary, representing the theological fulfillment.
+ *   Rabbinic scholars are primary beneficiaries and agenda-setters, as their identity and spiritual practice are centered on this study. The broader Jewish community and lay adherents are also beneficiaries, gaining spiritual merit and communal cohesion. There are no identifiable victims, as no party is deprived or bears asymmetric costs through this practice. Messianic restorationists are 'excluded' as their framing of the kernel differs fundamentally.
  *
  */
 
@@ -163,56 +205,56 @@ narrative_ontology:story_seed(kodashim_corpus__study_as_exercise, 'none', 1).
    ========================================================================== */
 
 omega_variable(
-    literal_vs_interpretive_fulfillment,
-    'Is the ''study as exercise'' reading a complete fulfillment of the mitzvah of sacrifice, or a necessary but incomplete substitute for physical performance?',
-    'Theological consensus shift or a future messianic era where physical sacrifice is restored, allowing for direct comparison of fulfillment modes.',
-    'If incomplete, the constraint''s ''fulfillment'' aspect would be reclassified as a temporary scaffold, and the ''performance_only'' reading would gain theological weight, potentially increasing perceived extraction for those who cannot perform physical sacrifice.',
+    kernel_occupation_ambiguity,
+    'Is the ''study as exercise'' reading a full occupation of the Kodashim kernel, or a temporary substitution awaiting physical restoration?',
+    'Theological consensus shift or the rebuilding of the Temple and resumption of sacrifices. If sacrifices resume, the ''study as exercise'' reading would likely be re-evaluated.',
+    'If it''s a full occupation, the constraint remains a Rope. If it''s a temporary substitution, its classification might shift towards Scaffold (transitional support) or even Piton (if the ''temporary'' aspect becomes performative over millennia).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(literal_vs_interpretive_fulfillment, conceptual, 'Ambiguity regarding the completeness of interpretive fulfillment versus literal ritual performance.').
+narrative_ontology:omega_variable(kernel_occupation_ambiguity, conceptual, 'Ambiguity regarding the permanence of ''study as exercise'' as a mode of observance.').
 
 omega_variable(
-    identity_lock_strength,
-    'To what extent is the ''identity_locked'' exit option for scholars and the community a result of genuine spiritual conviction versus institutional inertia or social pressure?',
-    'Sociological studies of religious adherence and apostasy within the community, particularly among those who disengage from traditional practice.',
-    'If primarily institutional inertia, the ''suppression'' metric might be understated, as internalized social pressure would contribute to the constraint''s persistence, even if not overtly coercive.',
+    identity_lock_vs_choice,
+    'To what extent is the ''identity_locked'' exit option for rabbinic scholars a genuine structural constraint versus a deeply internalized, chosen commitment?',
+    'Analysis of ex-Haredi communities and their post-exit identity formation. If the commitment persists after structural ties are severed, it''s more internalized; if it dissolves, it''s more structural.',
+    'If more structural, the ''suppression'' metric might be slightly higher for those within the system. If more internalized, the low suppression is accurate, reflecting genuine adherence.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_lock_strength, empirical, 'The balance between genuine conviction and social/institutional factors in maintaining adherence to the ''study as exercise'' reading.').
+narrative_ontology:omega_variable(identity_lock_vs_choice, empirical, 'Structural vs. internalized nature of identity lock for scholars.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(kodashim_corpus__study_as_exercise, 0, 2000).
+narrative_ontology:interval(kodashim_corpus__study_as_exercise, 70, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(koda_tr_t0, kodashim_corpus__study_as_exercise, theater_ratio, 0, 0.0).
+narrative_ontology:measurement(koda_tr_t70, kodashim_corpus__study_as_exercise, theater_ratio, 70, 0.0).
 narrative_ontology:measurement(koda_tr_t500, kodashim_corpus__study_as_exercise, theater_ratio, 500, 0.0).
 narrative_ontology:measurement(koda_tr_t1000, kodashim_corpus__study_as_exercise, theater_ratio, 1000, 0.0).
 narrative_ontology:measurement(koda_tr_t1500, kodashim_corpus__study_as_exercise, theater_ratio, 1500, 0.0).
-narrative_ontology:measurement(koda_tr_t2000, kodashim_corpus__study_as_exercise, theater_ratio, 2000, 0.0).
+narrative_ontology:measurement(koda_tr_t2024, kodashim_corpus__study_as_exercise, theater_ratio, 2024, 0.0).
 
 % Extraction over time
-narrative_ontology:measurement(koda_be_t0, kodashim_corpus__study_as_exercise, base_extractiveness, 0, 0.01).
+narrative_ontology:measurement(koda_be_t70, kodashim_corpus__study_as_exercise, base_extractiveness, 70, 0.01).
 narrative_ontology:measurement(koda_be_t500, kodashim_corpus__study_as_exercise, base_extractiveness, 500, 0.01).
 narrative_ontology:measurement(koda_be_t1000, kodashim_corpus__study_as_exercise, base_extractiveness, 1000, 0.01).
 narrative_ontology:measurement(koda_be_t1500, kodashim_corpus__study_as_exercise, base_extractiveness, 1500, 0.01).
-narrative_ontology:measurement(koda_be_t2000, kodashim_corpus__study_as_exercise, base_extractiveness, 2000, 0.01).
+narrative_ontology:measurement(koda_be_t2024, kodashim_corpus__study_as_exercise, base_extractiveness, 2024, 0.01).
 
 % Suppression requirement over time
-narrative_ontology:measurement(koda_su_t0, kodashim_corpus__study_as_exercise, suppression_requirement, 0, 0.05).
+narrative_ontology:measurement(koda_su_t70, kodashim_corpus__study_as_exercise, suppression_requirement, 70, 0.05).
 narrative_ontology:measurement(koda_su_t500, kodashim_corpus__study_as_exercise, suppression_requirement, 500, 0.05).
 narrative_ontology:measurement(koda_su_t1000, kodashim_corpus__study_as_exercise, suppression_requirement, 1000, 0.05).
 narrative_ontology:measurement(koda_su_t1500, kodashim_corpus__study_as_exercise, suppression_requirement, 1500, 0.05).
-narrative_ontology:measurement(koda_su_t2000, kodashim_corpus__study_as_exercise, suppression_requirement, 2000, 0.05).
+narrative_ontology:measurement(koda_su_t2024, kodashim_corpus__study_as_exercise, suppression_requirement, 2024, 0.05).
 
 
 /* ==========================================================================
@@ -220,11 +262,9 @@ narrative_ontology:measurement(koda_su_t2000, kodashim_corpus__study_as_exercise
    ========================================================================== */
 
 narrative_ontology:coordination_type(kodashim_corpus__study_as_exercise, identity_coordination).
-narrative_ontology:affects_constraint(kodashim_corpus__study_as_exercise, kodashim_corpus__performance_only).
-narrative_ontology:affects_constraint(kodashim_corpus__study_as_exercise, kodashim_corpus__substitution_archive).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'kodashim_corpus' kernel. This 'study_as_exercise' reading asserts that intellectual engagement with the laws of sacrifice is a complete fulfillment of the mitzvah, providing spiritual continuity. It is linked to the 'performance_only' reading (which awaits literal restoration) and the 'substitution_archive' reading (which views Kodashim as a superseded historical record).
+% This constraint is one of three readings of the 'kodashim_corpus' kernel. Its ε value is near zero, reflecting its nature as a spiritual practice, distinct from the 'performance_only' (also low ε) and 'substitution_archive' (potentially higher ε if it implies a loss of direct observance) readings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

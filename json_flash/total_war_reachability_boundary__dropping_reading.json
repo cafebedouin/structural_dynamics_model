@@ -4,26 +4,83 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "4c99f2d1-eb93-4ecd-b415-26b76ff82eeb"
+    "story_uid": "61b8c239-b507-41fb-9790-fbf0ce912e62"
   },
   "base_properties": {
-    "extractiveness": 0.3,
+    "extractiveness": 0.25,
     "suppression": 0.4,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.6,
-    "resistance": 0.2,
+    "resistance": 0.3,
     "claimed_type": "tangled_rope",
     "human_readable": "Total War Reachability Boundary (Dropping Probability Reading)",
     "topic_domain": "international_relations/strategic_studies",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "nuclear_powers",
-      "strategic_analysts"
+      "defense_establishments"
     ],
     "victims": [
-      "global_population",
+      "global_populations_under_threat",
       "non_nuclear_states"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_powers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain and modernize nuclear arsenals, articulate deterrence doctrines, and engage in strategic signaling. They benefit from the stability deterrence provides but bear the costs and risks of maintaining the capability and the constant threat of escalation."
+    },
+    {
+      "name": "defense_establishments",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Receive funding and political capital for maintaining deterrence capabilities, developing strategic theory, and managing nuclear forces. Their professional identity is often tied to the continued relevance of nuclear deterrence."
+    },
+    {
+      "name": "global_populations_under_threat",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Live under the constant, if low-probability, threat of nuclear annihilation. They bear the psychological and material costs of maintaining deterrence (taxes, civil defense, anxiety) without direct agency in its operation."
+    },
+    {
+      "name": "non_nuclear_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are subject to the strategic dynamics set by nuclear powers, often without a direct voice. They bear the costs of proliferation risks and the economic burden of maintaining conventional defenses against nuclear-armed neighbors, or seeking security guarantees."
+    },
+    {
+      "name": "arms_control_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Analyze the risks and benefits of nuclear deterrence, advocating for treaties and policies to reduce arsenals and prevent proliferation. They seek to shift the constraint towards a more stable, less extractive form of coordination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the behavior of nuclear-armed states by making the costs of direct conflict prohibitively high, thereby preventing large-scale conventional or nuclear war between them.",
+    "transfer_function": "Transfers the risk of existential catastrophe from direct military conflict to the global population, in exchange for a fragile strategic stability maintained by nuclear-armed states.",
+    "absent_voices": "Future generations, who bear the long-term risks of nuclear waste and potential catastrophe, are absent. Populations in non-nuclear states, whose security is directly impacted but who have no direct say in nuclear policy, are also largely excluded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the boundary of total war reachability vanished (i.e., total war became impossible or irrelevant), the strategic calculus of states would fundamentally alter. Conventional warfare might become more prevalent, or new forms of global governance would emerge to manage conflict, reorganizing international relations.",
+    "founding_problem": "The problem of preventing large-scale, devastating wars between great powers, particularly after the two World Wars and the advent of nuclear weapons.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians and international relations scholars widely corroborate the problem of great power conflict. While the specific mechanisms of deterrence are debated, the underlying problem of preventing total war remains a central concern for policymakers and analysts outside the nuclear powers themselves."
   },
   "interval": {
     "start": 1945,
@@ -33,27 +90,22 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1945,
-      "value": 0.6
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1962,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1989,
       "value": 0.7
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1991,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 2001,
-      "value": 0.35
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
@@ -63,7 +115,7 @@
     {
       "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.3
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
@@ -73,27 +125,22 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1962,
-      "value": 0.8
+      "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
+      "time_point": 1989,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1991,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 2001,
-      "value": 0.45
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2014,
-      "value": 0.5
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
@@ -108,22 +155,17 @@
     {
       "metric": "theater_ratio",
       "time_point": 1962,
-      "value": 0.1
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
+      "time_point": 1989,
       "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1991,
-      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 2001,
-      "value": 0.15
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
@@ -137,39 +179,39 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'dropping probability' reading of the total war reachability boundary. It posits that while the probability of total war has decreased since the Cold War, the possibility remains structurally reachable. Deterrence is understood as a 'tangled rope' – a coordination mechanism that prevents total war but extracts a persistent cost (existential risk, military spending) from the global population and non-nuclear states, while benefiting nuclear powers and strategic analysts. The constraint requires active enforcement through the maintenance of credible nuclear arsenals and doctrines.",
-    "logic_rationale": "The extractiveness (0.3) reflects the ongoing cost of maintaining deterrence and the existential risk, which has dropped from Cold War highs but remains significant. Suppression (0.4) is moderate, as alternatives to deterrence (e.g., global disarmament) are actively suppressed by the perceived necessity of nuclear arsenals. Theater ratio (0.1) is low, indicating that the core function of deterrence is still very real, not merely performative, though some aspects of strategic posturing might be theatrical. The metrics reflect a post-Cold War 'new normal' where the threat is less acute but still present.",
-    "directionality_logic": "Nuclear powers are agenda-setters and beneficiaries, as they control the deterrence mechanism and derive security from it, despite the costs. Non-nuclear states and the global population are victims, bearing the risk and costs without direct control or benefit. Strategic analysts benefit from the intellectual framework and continued relevance of deterrence theory. Peace activists are excluded, as their proposals for alternative security are not integrated into the dominant strategic discourse.",
-    "perspectival_gap": "Nuclear powers perceive deterrence as a necessary, if costly, 'rope' that prevents a worse outcome. Non-nuclear states and the global population experience it as a 'snare' – a system that imposes existential risk and costs without their consent or direct benefit. The engine's classification will reflect this divergence based on the declared roles and exit options.",
-    "kernel_context": "This constraint is the 'dropping_reading' of the 'total_war_reachability_boundary' kernel. It argues that total war's probability has dropped but remains reachable, and deterrence is a coordination equilibrium. This contrasts with the 'contraction_reading' (total war is no longer feasible) and the 'contingent_reachability_reading' (reachability is technology-dependent and could reverse)."
+    "narrative_context": "This constraint describes the 'dropping probability' reading of the total war reachability boundary, where total war remains a reachable, if less probable, outcome. Deterrence is framed as a 'tangled rope' – a coordination equilibrium that genuinely prevents war but involves significant asymmetric extraction from populations under threat, and requires active enforcement (maintaining arsenals, signaling resolve). The claimed type is 'tangled_rope' to reflect the inherent extraction and active maintenance, even as the probability of total war has dropped over time. The metrics reflect a decrease in extractiveness and suppression since the Cold War peak, but a persistent, non-zero level.",
+    "logic_rationale": "The extractiveness (0.25) is moderate, reflecting the ongoing cost and risk borne by global populations, even with reduced tensions. Suppression (0.4) is also moderate, as the threat of nuclear retaliation actively suppresses large-scale conventional conflict. Theater ratio (0.1) is low, indicating that the threat is largely real, not performative, though some signaling may be theatrical. The claimed type 'tangled_rope' reflects the dual nature of deterrence: a coordination function (preventing war) coupled with asymmetric extraction (populations under threat pay the cost of fear and resource allocation to defense).",
+    "directionality_logic": "Nuclear powers and their defense establishments are beneficiaries/agenda-setters, gaining strategic stability and resources. Global populations and non-nuclear states are payers, bearing the costs and risks. The directionality for nuclear powers is low (beneficiary), while for populations under threat it is high (target).",
+    "perspectival_gap": "Nuclear powers perceive deterrence as a necessary, if costly, coordination mechanism for global stability. Populations under threat, however, experience it as a constant, imposed burden and a source of existential anxiety. This divergence is captured by the 'tangled_rope' classification, which acknowledges both the coordination function and the asymmetric extraction.",
+    "kernel_context": "This constraint is the 'dropping_reading' of the 'total_war_reachability_boundary' kernel. It posits that total war, while less probable, remains a reachable outcome, and deterrence functions as a tangled rope. This contrasts with the 'contraction_reading' (total war is no longer feasible) and the 'contingent_reachability_reading' (reachability is technology-dependent and could reverse)."
   },
   "omegas": [
     {
       "id": "deterrence_stability_vs_risk",
-      "question": "Is the current level of deterrence stability genuinely robust, or does the persistent reachability of total war imply a higher, unacknowledged risk?",
-      "resolution_mechanism": "Analysis of near-miss incidents, escalation dynamics in regional conflicts, and the impact of emerging technologies on strategic stability. If these reveal a higher frequency of unmanaged escalation pathways, the risk is higher.",
-      "impact": "If the risk is higher, the constraint's effective extractiveness (from the global population) is underestimated, pushing it closer to a Snare. If stability is robust, the Tangled Rope classification holds.",
+      "question": "Is the current level of nuclear deterrence a stable equilibrium that minimizes total war risk, or does it inherently carry an unacceptable risk of accidental or escalatory conflict?",
+      "resolution_mechanism": "Long-term historical analysis of near-miss incidents, game-theoretic modeling of escalation pathways, and empirical studies of decision-making under extreme stress.",
+      "impact": "If deterrence is found to be inherently unstable, the extractiveness and suppression metrics would be re-evaluated upwards, potentially reclassifying it as a snare. If it's a robust equilibrium, the tangled_rope classification holds.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assessing the true stability of deterrence given persistent reachability."
+      "description": "Assesses the true stability and safety of nuclear deterrence as a coordination mechanism."
     },
     {
-      "id": "deterrence_as_rope_or_snare",
-      "question": "Is deterrence primarily a coordination mechanism (Rope) or an extractive one (Snare) from the perspective of non-nuclear states and the global population?",
-      "resolution_mechanism": "Surveying non-nuclear states' perceptions of security vs. imposed risk, and analyzing the opportunity costs of global military spending vs. alternative investments. If perceived costs significantly outweigh perceived benefits, it leans Snare.",
-      "impact": "If primarily extractive for these groups, the constraint's classification for those seats would shift from Tangled Rope to Snare, highlighting the asymmetric burden.",
+      "id": "deterrence_as_coordination_or_extraction",
+      "question": "Is the primary function of nuclear deterrence genuine coordination (preventing war) or primarily a mechanism for great powers to extract strategic advantage and maintain global hierarchy?",
+      "resolution_mechanism": "Analysis of resource allocation to nuclear programs versus other security measures, and examination of diplomatic outcomes where nuclear threats are implicitly or explicitly used to achieve non-proliferation or geopolitical goals.",
+      "impact": "If primarily extraction, the 'tangled_rope' classification would shift closer to 'snare', with higher effective extraction for non-nuclear states and global populations. If coordination is dominant, the current classification is robust.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "The normative framing of deterrence for non-nuclear actors."
+      "type_class": "conceptual",
+      "description": "Distinguishes the coordination function from the extractive function of nuclear deterrence."
     },
     {
-      "id": "natural_law_vs_construct",
-      "question": "Is the 'dropping probability' of total war a natural consequence of nuclear weapons (a Mountain-like feature), or a constructed outcome of active deterrence efforts (a Rope/Tangled Rope)?",
-      "resolution_mechanism": "Historical counterfactual analysis: what would have happened without active deterrence policies? If total war would have been more likely, it's a construct. If it would have been avoided anyway, it's closer to a natural law.",
-      "impact": "If a natural law, the extractiveness and suppression metrics would be re-evaluated as inherent features, not costs of a human-made system. If a construct, the current classification holds.",
-      "confidence": "low",
+      "id": "reachability_definition_ambiguity",
+      "question": "What constitutes 'reachability' for total war? Is it merely technical capability, or does it include political will and strategic doctrine? How does this definition influence the perceived probability?",
+      "resolution_mechanism": "Conceptual clarification through expert consensus on definitions of 'total war' and 'reachability' in strategic studies, and analysis of how different definitions impact risk assessments.",
+      "impact": "A narrow definition of reachability (e.g., purely technical) might support the 'contraction_reading' (total war is less reachable), while a broader definition (including political will) might reinforce this 'dropping_reading'. This would shift the perceived extractiveness and suppression accordingly.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "The ontological status of total war's reduced probability."
+      "description": "Ambiguity in the definition of 'total war reachability' and its impact on classification."
     }
   ],
   "boltzmann": {
@@ -177,22 +219,21 @@
   },
   "network": {
     "affects_constraints": [
-      "nuclear_non_proliferation_treaty",
-      "arms_control_regimes"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'total_war_reachability_boundary' kernel, focusing on the dropping probability of total war while maintaining its reachability. It is linked to the 'contraction_reading' and 'contingent_reachability_reading' which offer alternative interpretations of the same strategic reality."
+      "total_war_reachability_boundary__contingent_reachability_reading",
+      "total_war_reachability_boundary__contraction_reading"
+    ]
   },
   "cs_structure": {
-    "kernel_codification": "implicit",
-    "authority_grounding": "extraction",
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "total_war_reachability_boundary__contraction_reading",
+        "sibling_id": "contraction_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "total_war_reachability_boundary__contingent_reachability_reading",
+        "sibling_id": "contingent_reachability_reading",
         "relation": "coexists_with"
       }
     ],
@@ -204,29 +245,30 @@
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "deterrence_is_active_coordination",
+        "atom": "deterrence_is_coordination_with_extraction",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "post_nuclear_strategic_stability",
+    "reference_frame": "post_nuclear_realism",
     "drift_state": {
-      "moment": "contemporary_geopolitical_era",
-      "direction": "stable",
-      "magnitude": "minor",
+      "moment": "contemporary_strategic_environment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

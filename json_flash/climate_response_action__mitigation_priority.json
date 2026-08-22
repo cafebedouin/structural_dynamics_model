@@ -4,146 +4,241 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "76347bb4-8c75-420b-b90e-930b6522d975"
+    "story_uid": "5244efb4-d9f1-4d20-94aa-b6022d4c27af"
   },
   "base_properties": {
     "extractiveness": 0.65,
-    "suppression": 0.5,
+    "suppression": 0.7,
     "theater_ratio": 0.4,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.7,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Climate Response: Mitigation Priority (2°C, Tech, Markets, Growth)",
+    "human_readable": "Mitigation Priority Climate Response",
     "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "high_emitting_industries",
       "developed_nations_with_innovation_capacity",
-      "current_generations"
+      "current_generations_in_developed_nations"
     ],
     "victims": [
+      "vulnerable_regions_global_south",
       "future_generations",
-      "global_south_vulnerable_populations",
-      "low_carbon_transition_advocates"
+      "low_income_communities"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "technological_feasibility_uncertainty",
-      "question": "Is the assumed technological feasibility of large-scale carbon removal and green innovation realistic within the required timeframe and scale?",
-      "resolution_mechanism": "Empirical validation of carbon capture and storage (CCS) and renewable energy deployment rates against IPCC scenarios; independent engineering and economic assessments.",
-      "impact": "If technological solutions prove insufficient, the mitigation priority reading becomes a snare, shifting unmanageable climate impacts to future generations without viable solutions. If feasible, it remains a tangled rope with high but manageable costs.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Uncertainty regarding the technological capacity to meet mitigation goals while maintaining growth."
+      "name": "high_emitting_industries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefits from the emphasis on technological solutions and carbon markets, which allow continued operation with less immediate, radical transformation. Bears some costs for emissions reductions but avoids more disruptive changes to business models."
     },
     {
-      "id": "gdp_growth_decoupling_ambiguity",
-      "question": "Can GDP growth truly be decoupled from emissions at the scale and speed required to meet the 2°C target, or is there an inherent conflict?",
-      "resolution_mechanism": "Longitudinal economic data analysis comparing GDP growth rates with absolute emissions reductions across diverse economies; ecological footprint analysis.",
-      "impact": "If decoupling is not achievable, the mitigation priority reading is fundamentally flawed, requiring a re-evaluation towards degrowth or more radical economic transformation. If achievable, the current policy framework is sustainable.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity about the possibility of green growth."
+      "name": "developed_nations_with_innovation_capacity",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sets the agenda for climate policy, emphasizing mitigation through technology and market mechanisms. Benefits from potential economic growth through green technology exports and avoids immediate, large-scale adaptation costs. Bears some costs for R&D and emissions reductions."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine 'mitigation_priority' reading of the 'climate_response_action' kernel, or is it a different constraint entirely?",
-      "resolution_mechanism": "Compare the structural delta of this constraint with the declared deltas of 'adaptation_priority' and 'degrowth_transformation' readings. If the core assumptions and beneficiary/victim structures align with the 'mitigation_priority' delta, it is a valid reading.",
-      "impact": "If misidentified, the analysis of inter-reading dynamics (foreclosure, coexistence, influence) will be inaccurate, leading to incorrect predictions about policy pathways and stakeholder conflicts.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'climate_response_action' kernel, specifically 'mitigation_priority'."
+      "name": "current_generations_in_developed_nations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from policies that prioritize maintaining GDP growth and defer significant lifestyle changes. Bears some costs through carbon pricing or green taxes but avoids more drastic economic restructuring."
+    },
+    {
+      "name": "vulnerable_regions_global_south",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bears the disproportionate costs of deferred adaptation and residual climate impacts, despite having contributed least to emissions. Has limited capacity to influence global policy or implement large-scale mitigation/adaptation independently."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Will inherit the residual climate impacts and potential technological lock-in from current mitigation strategies. Bears the long-term costs of insufficient or delayed action, with no voice in current policy decisions."
+    },
+    {
+      "name": "low_income_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Often disproportionately affected by both climate impacts and the economic transitions required for mitigation, such as energy price increases or job losses in traditional industries. Has limited political power to shape policy outcomes."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide the scientific basis for climate targets and assess the feasibility and effectiveness of proposed solutions. Their warnings about the pace of change and the limits of technological solutions often conflict with the political and economic priorities embedded in this reading."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Aims to coordinate global efforts to reduce greenhouse gas emissions to limit global warming below 2°C, while allowing for continued economic growth and leveraging technological innovation.",
+    "transfer_function": "Transfers the immediate costs of radical economic transformation away from high-emitting industries and developed nations, while transferring the risks and costs of climate impacts and deferred adaptation to vulnerable regions and future generations.",
+    "absent_voices": "The voices of future generations are structurally absent, as are those of non-human species and ecosystems that bear the brunt of climate change. Indigenous communities and many Global South nations are often marginalized in policy-setting, despite being most affected.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this framework vanished, the global climate policy landscape would immediately reorganize. Without the 2°C target and the associated market mechanisms, nations would likely pursue more fragmented, self-interested, or radically different approaches (e.g., pure adaptation or degrowth), leading to a chaotic and uncertain future for climate action.",
+    "founding_problem": "The problem of anthropogenic climate change, specifically the need to reduce greenhouse gas emissions to prevent catastrophic global warming, while balancing environmental protection with economic development.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Climate scientists universally corroborate the live status of the climate change problem. International bodies like the IPCC and UN Framework Convention on Climate Change (UNFCCC) also corroborate the need for global action, though the specific approach (mitigation priority) is contested by other stakeholders."
+  },
+  "interval": {
+    "start": 1992,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1992,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2008,
       "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2016,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1992,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.5
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1992,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2016,
       "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'mitigation_priority' reading of global climate response, emphasizing limiting temperature rise to 2°C through emissions reductions, enabled by technological innovation and carbon markets, all while maintaining GDP growth. This approach concentrates costs on current high-emitting sectors for emissions reductions, defers adaptation costs to vulnerable regions, assumes the feasibility of future carbon removal technologies, and benefits nations with strong innovation capacity, while shifting residual climate impacts to future generations and the Global South.",
+    "narrative_context": "This constraint represents the 'mitigation priority' reading of global climate response, which emphasizes limiting temperature rise below 2°C primarily through emissions reductions, technological innovation, and carbon markets, all while maintaining GDP growth. This approach concentrates the immediate costs of emissions reductions on high-emitting sectors and developed nations, while deferring significant adaptation costs and shifting residual climate impacts to vulnerable regions and future generations. The constraint is claimed as a Rope by its proponents (a necessary coordination mechanism), but its operational metrics (high extractiveness and suppression) suggest it functions as a Tangled Rope, extracting from those least able to resist.",
     "key_agents": [
-      "developed_nations_with_innovation_capacity: Primary beneficiary (institutional/arbitrage) — benefits from market mechanisms and tech solutions.",
-      "high_emitting_industries: Primary beneficiary (organized/constrained) — benefits from continued growth and delayed radical transformation.",
-      "current_generations: Primary beneficiary (class/biographical) — benefits from maintaining current lifestyles and economic models.",
-      "future_generations: Primary victim (class/generational) — bears the deferred and residual climate impacts.",
-      "global_south_vulnerable_populations: Primary victim (class/trapped) — bears adaptation costs and disproportionate impacts.",
-      "low_carbon_transition_advocates: Payer/Excluded (organized/constrained) — pushes for more aggressive, equitable, and immediate action.",
-      "carbon_market_operators: Agenda setter (institutional/arbitrage) — administers the market mechanisms that enable this approach."
+      "high_emitting_industries: Beneficiary (institutional/constrained)",
+      "developed_nations_with_innovation_capacity: Agenda Setter (institutional/mobile)",
+      "current_generations_in_developed_nations: Beneficiary (organized/constrained)",
+      "vulnerable_regions_global_south: Payer (powerless/trapped)",
+      "future_generations: Payer (powerless/trapped)",
+      "low_income_communities: Payer (powerless/trapped)",
+      "climate_scientists: Observer (analytical/analytical)"
     ],
-    "logic_rationale": "The extractiveness (0.65) is high due to the intergenerational and international transfer of climate risk and cost. Suppression (0.5) is moderate, as alternatives like degrowth or immediate, large-scale adaptation are actively marginalized in policy discourse but not entirely eliminated. Theater ratio (0.4) reflects the gap between ambitious targets and insufficient action, with much activity focused on market mechanisms and pledges rather than deep structural change. The claimed type is 'tangled_rope' because it offers a coordination function (global emissions reduction framework) but with significant asymmetric extraction (costs borne by future generations and vulnerable populations).",
-    "perspectival_gap": "Developed nations and high-emitting industries perceive this as a necessary, balanced approach to climate action, allowing economic stability. Future generations and vulnerable populations, however, experience it as a deferral of responsibility and an imposition of uncompensated costs. The engine's per-seat classification will highlight this divergence.",
-    "directionality_logic": "Developed nations and high-emitting industries are beneficiaries (d=0.0-0.2) as they maintain economic growth and defer more radical changes. Future generations and vulnerable populations are victims (d=0.8-1.0) as they face unmitigated impacts and adaptation burdens. Carbon market operators are agenda setters (d=0.1-0.3) as they profit from administering the chosen mechanisms. Low-carbon transition advocates are payers/excluded (d=0.6-0.8) as they bear the costs of pushing for more stringent policies against entrenched interests.",
-    "mandatrophy_analysis": "This constraint is not yet mandatrophic, as the 'founding problem' of climate change is very much 'live'. However, the 'mitigation_priority' reading risks becoming a piton if its mechanisms (tech innovation, carbon markets) prove performative rather than effective, leading to continued extraction without solving the core problem. The current classification as a tangled rope reflects the ongoing, contested nature of its coordination and extraction functions.",
-    "kernel_context": "This constraint is the 'mitigation_priority' reading of the 'climate_response_action' kernel. This reading emphasizes a 2°C temperature limit, emissions reductions, technological innovation, carbon markets, and maintaining GDP growth. Sibling readings include 'adaptation_priority' (prioritizing resilience for vulnerable populations) and 'degrowth_transformation' (rejecting GDP growth for sufficiency and equity)."
+    "logic_rationale": "The extractiveness (0.65) is high because the costs of climate inaction and deferred adaptation are substantial and borne by specific, often powerless, groups. Suppression (0.70) is high due to the structural power of developed nations and high-emitting industries to shape policy, limiting alternatives for vulnerable populations and future generations. The theater ratio (0.40) reflects the gap between ambitious stated goals and the actual pace and equity of implementation, with much activity focused on maintaining the illusion of progress without fundamental shifts. The metrics show a clear trend of increasing extractiveness and suppression over time, indicating a drift from a more balanced coordination mechanism towards a more extractive one.",
+    "perspectival_gap": "From the perspective of developed nations and high-emitting industries, this approach is a necessary, pragmatic coordination to address climate change while preserving economic stability. From the perspective of vulnerable regions, future generations, and low-income communities, it is an extractive mechanism that defers costs and risks onto them, while benefiting those who caused the problem. The engine's per-seat classification should reflect this divergence.",
+    "directionality_logic": "Developed nations and high-emitting industries are beneficiaries (low d) as they shape the policy to minimize immediate disruption and leverage technological advantages. Vulnerable regions, future generations, and low-income communities are targets (high d) as they bear the disproportionate costs and risks with limited agency or exit options. Climate scientists are observers (d=0.5) providing data but not directly benefiting or paying.",
+    "mandatrophy_analysis": "This constraint is not yet mandatrophic, as the core problem of climate change is still live. However, the increasing extractiveness and theater ratio suggest a drift towards a 'zombie' state where the original mandate (effective climate action) is increasingly overshadowed by the function of maintaining existing economic structures. The classification as Tangled Rope, rather than a pure Rope, prevents mislabeling the coordination as purely beneficial when it clearly involves asymmetric extraction.",
+    "kernel_context": "This constraint, 'mitigation_priority', is one reading of the 'climate_response_action' kernel. It emphasizes emissions reductions, technological innovation, and GDP growth. Sibling readings include 'adaptation_priority' (prioritizing resilience for vulnerable populations) and 'degrowth_transformation' (rejecting GDP growth for sufficiency and equity)."
   },
+  "omegas": [
+    {
+      "id": "technological_feasibility_uncertainty",
+      "question": "Is the assumed technological feasibility of large-scale carbon removal and green energy transition realistic within the required timeframe to meet the 2°C target without more radical societal changes?",
+      "resolution_mechanism": "Empirical data on deployment rates, cost curves, and energy return on investment for key technologies over the next decade. Independent engineering and economic assessments.",
+      "impact": "If technological feasibility is lower than assumed, the extractiveness on future generations and vulnerable regions will be higher, as the deferred impacts will be more severe. This would push the classification closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the actual capacity of technology to deliver on mitigation promises."
+    },
+    {
+      "id": "intergenerational_equity_framing",
+      "question": "Is the deferral of adaptation costs and residual climate impacts to future generations and vulnerable regions an acceptable trade-off for maintaining current economic growth, or does it constitute an unjust intergenerational and international transfer?",
+      "resolution_mechanism": "Ethical and political deliberation, potentially leading to new international legal frameworks or reparations mechanisms. No purely empirical resolution.",
+      "impact": "If framed as an unjust transfer, the extractiveness of the constraint would be re-evaluated as significantly higher, and the moral legitimacy of the 'coordination' function would collapse, pushing the classification towards a Snare.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Ambiguity in the ethical framing of intergenerational and international climate justice."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression primarily structural (e.g., economic dependency, lack of political power for vulnerable groups) or internalized (e.g., fatalism, belief in technological salvation among beneficiaries)?",
+      "resolution_mechanism": "Analysis of resistance movements' success rates, policy shifts in response to advocacy, and surveys of public attitudes in both beneficiary and payer groups. If suppression persists after structural barriers are reduced, it suggests internalized components.",
+      "impact": "If internalized suppression is a significant factor, the effective suppression is higher than the structural measure suggests, as it operates even without overt coercion. This would amplify the effective extraction for targets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in climate policy."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.2
   },
   "network": {
     "affects_constraints": [
-      "climate_response_action__adaptation_priority",
-      "climate_response_action__degrowth_transformation"
+      "adaptation_priority",
+      "degrowth_transformation"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'climate_response_action' kernel, each representing a distinct approach to global climate policy. They are linked to capture the inter-reading dynamics."
-  },
-  "directionality_overrides": [],
-  "six_questions": {
-    "coordination_function": "To coordinate global efforts to reduce greenhouse gas emissions and limit global temperature rise to below 2°C, primarily through market-based mechanisms and technological development, while allowing for continued economic growth.",
-    "transfer_function": "Transfers the immediate burden of radical economic transformation away from high-emitting industries and developed nations, while transferring the risks and costs of future climate impacts and adaptation to future generations and vulnerable populations in the Global South.",
-    "absent_voices": "Indigenous communities and frontline communities in the Global South, who bear disproportionate climate impacts and adaptation costs, are largely absent from the high-level policy discussions that shape this reading. They would advocate for immediate adaptation funding and reparations, and question the equity of market-based solutions.",
-    "disappearance_verdict": "world_rearranges",
-    "disappearance_rationale": "If this framework disappeared, global climate policy would fragment, leading to either a rapid shift towards more radical degrowth or adaptation-focused approaches, or a complete collapse into uncoordinated national actions, drastically altering global economic and environmental trajectories.",
-    "founding_problem": "The existential threat of anthropogenic climate change, specifically the need to limit global temperature rise to avoid catastrophic impacts, while navigating the economic and political realities of a globalized, growth-oriented economy.",
-    "founding_problem_status": "live",
-    "founding_problem_corroboration": "The scientific consensus (IPCC reports) and the ongoing observable impacts of climate change (extreme weather, sea-level rise) corroborate that the founding problem is live. However, the efficacy of the proposed solutions within this reading is contested by environmental justice groups and some economists, who argue the problem is being addressed inadequately."
+    "dual_formulation_note": "This constraint is one reading of the 'climate_response_action' kernel. Its emphasis on mitigation and GDP growth influences, and is influenced by, alternative readings focusing on adaptation or degrowth."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -151,23 +246,23 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "climate_response_action__adaptation_priority",
+        "sibling_id": "adaptation_priority",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "climate_response_action__degrowth_transformation",
+        "sibling_id": "degrowth_transformation",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "economic_growth_is_non_negotiable",
+        "atom": "gdp_growth_is_compatible_with_climate_action",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "technological_innovation_will_solve_climate_crisis",
+        "atom": "technological_innovation_is_primary_solution",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
@@ -181,15 +276,18 @@
       "acknowledged": false
     }
   },
+  "gain_flow": "developed_nations_with_innovation_capacity",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

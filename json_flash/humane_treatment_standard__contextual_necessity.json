@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "ff35384e-0686-4782-afdd-78fdb4c5c9d5"
+    "story_uid": "a9f9da71-ac01-4baf-99a0-a41eba2ffbef"
   },
   "base_properties": {
     "extractiveness": 0.65,
@@ -13,153 +13,237 @@
     "accessibility_collapse": 0.6,
     "resistance": 0.5,
     "claimed_type": "tangled_rope",
-    "human_readable": "Humane Treatment Standard (Contextual Necessity Reading)",
+    "human_readable": "Contextual Necessity Reading of Humane Treatment Standard",
     "topic_domain": "international_humanitarian_law/state_security/human_rights",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "state_security_agencies",
-      "national_security_decision_makers"
+      "national_governments"
     ],
     "victims": [
-      "detainees_of_national_security_interest",
+      "detainees_deemed_high_value",
       "human_rights_advocates"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine interpretation of Common Article 3, or a re-framing to permit otherwise prohibited actions?",
-      "resolution_mechanism": "Analysis of international jurisprudence and state practice over time, particularly in non-belligerent contexts.",
-      "impact": "If a genuine interpretation, it highlights the flexibility of IHL; if a re-framing, it exposes a snare operating under the guise of legal interpretation.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'contextual_necessity' reading of the 'humane_treatment_standard' kernel."
+      "name": "state_security_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These agencies interpret and apply Common Article 3, asserting the right to use 'enhanced interrogation' techniques when national security is deemed at risk. They benefit from the discretion this reading provides, allowing them to extract information and maintain operational flexibility."
     },
     {
-      "id": "victim_set_definition",
-      "question": "Does the 'contextual necessity' reading genuinely narrow the victim set, or does it merely provide cover for broader application of enhanced interrogation?",
-      "resolution_mechanism": "Empirical review of interrogation practices and outcomes, comparing cases where 'necessity' was invoked versus those where it was not.",
-      "impact": "If the victim set is genuinely narrowed, the constraint is less extractive than it appears; if not, its extractiveness is higher and more widespread.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The 'contextual_necessity' reading shrinks the victim set to exclude high-value targets in necessity scenarios, making detainee protections conditional."
+      "name": "national_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Governments benefit from the perceived ability to protect national security through methods that might otherwise be prohibited. This reading provides a legal justification for actions taken by their security agencies, reducing political and legal accountability."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (legal/institutional barriers) or internalized (detainees' belief in the legitimacy of their treatment)?",
-      "resolution_mechanism": "Post-release psychological assessment and legal aid access: if suppression persists after the extractive mechanism is removed, reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism in detainee treatment."
+      "name": "detainees_deemed_high_value",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals are subjected to 'enhanced interrogation' techniques, bearing the direct costs of this interpretation. Their protections are conditional on the perceived national security imperative, making them victims of the constraint's flexibility."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These groups actively resist the contextual interpretation, arguing for an absolute prohibition on torture. They bear the cost of continuously challenging state practices and defending detainee rights, often facing political and legal pushback."
+    },
+    {
+      "name": "international_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These bodies review state practices against international law, but their enforcement power is limited by state sovereignty and political will. They observe the contest between interpretations and can issue rulings, but cannot directly compel compliance."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Allows states to coordinate their national security efforts by providing a framework that balances humanitarian concerns with perceived operational necessities in conflict and counter-terrorism contexts.",
+    "transfer_function": "Transfers discretion over the definition of 'humane treatment' from international legal norms to state security agencies, in exchange for perceived enhanced national security outcomes.",
+    "absent_voices": "Victims of 'enhanced interrogation' and their families are often silenced or discredited, their testimonies suppressed by national security classifications. They would unequivocally condemn the contextual interpretation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this contextual interpretation vanished, state security agencies would face immediate and absolute prohibitions on 'enhanced interrogation,' forcing a fundamental re-evaluation of their operational doctrines and potentially leading to increased legal accountability for past actions. The international human rights landscape would shift towards a more uniform standard.",
+    "founding_problem": "The problem of balancing state security imperatives, particularly in asymmetric conflicts or against non-state actors, with the traditional laws of armed conflict, which were primarily designed for interstate warfare.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National security experts and government officials attest that the problem of securing states against evolving threats remains live. Human rights organizations and international legal scholars, while disagreeing with the solution, acknowledge the persistent tension between security and rights, corroborating the problem's existence from outside the benefiting parties."
+  },
+  "interval": {
+    "start": 1949,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 1949,
+      "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 1970,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 2005,
       "value": 0.7
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 1949,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.75
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1949,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.35
+      "time_point": 2005,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.38
+      "time_point": 2015,
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 2024,
       "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 15
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'contextual necessity' reading of Common Article 3 of the Geneva Conventions, which posits that while a baseline of humane treatment is required, national security imperatives can override certain aspects, making humane treatment context-dependent and permitting 'enhanced interrogation' techniques. This reading grants discretion to state security agencies, making detainee protections conditional and effectively shrinking the victim set to exclude 'high-value targets' in perceived necessity scenarios.",
+    "narrative_context": "This constraint represents the 'contextual necessity' reading of Common Article 3 of the Geneva Conventions, which posits that while a baseline for humane treatment exists, national security imperatives can override it, permitting 'enhanced interrogation' techniques. This reading grants state security agencies significant discretion, making detainee protections conditional. The constraint is claimed as a Rope by its proponents (a necessary coordination for state security) but operates with high extraction and suppression, particularly for 'high-value' detainees, making it structurally a Tangled Rope.",
     "key_agents": [
-      "state_security_agencies: Agenda setter (institutional/arbitrage) — defines and applies 'necessity'",
-      "national_security_decision_makers: Beneficiary (institutional/arbitrage) — benefits from expanded operational latitude",
-      "detainees_of_national_security_interest: Payer (powerless/trapped) — bears the costs of conditional treatment",
-      "human_rights_advocates: Payer (organized/constrained) — bears the cost of defending the absolute standard",
-      "international_legal_bodies: Observer (institutional/analytical) — adjudicates compliance and legitimacy"
+      "State Security Agencies: Primary beneficiaries and agenda-setters (institutional/constrained)",
+      "National Governments: Beneficiaries (institutional/mobile)",
+      "Detainees Deemed High-Value: Primary victims (powerless/trapped)",
+      "Human Rights Advocates: Payers (organized/constrained)",
+      "International Courts: Observers (institutional/analytical)"
     ],
-    "logic_rationale": "The extractiveness (0.65) is substantial because this reading permits actions that would otherwise be prohibited, extracting dignity and rights from detainees. Suppression (0.75) is high due to the state's coercive power and the secrecy surrounding 'enhanced interrogation' practices. Theater ratio (0.4) reflects the ongoing rhetorical efforts to frame these practices as compliant with international law, despite their deviation from an absolute standard. Resistance (0.5) is moderate, coming primarily from human rights organizations and some international bodies, but often overridden by state claims of necessity. Accessibility collapse (0.6) is significant for detainees, as their legal and physical options are severely curtailed once designated a 'national security interest'.",
-    "perspectival_gap": "State security agencies and national security decision-makers experience this as a necessary flexibility (beneficiary seat), allowing them to protect national interests. Detainees and human rights advocates (payer seats) experience it as a dangerous erosion of fundamental rights, leading to abuse. The engine will compute these divergent classifications from the structural data.",
-    "directionality_logic": "State security agencies and national security decision-makers are clear beneficiaries (d near 0.0) as they gain operational discretion and avoid accountability for certain actions. Detainees are direct targets (d near 1.0) as they bear the full cost of conditional treatment. Human rights advocates are also targets (d near 0.7) as their mission is undermined and they expend resources to resist this interpretation. International legal bodies are analytical observers (d near 0.5).",
-    "mandatrophy_analysis": "This reading prevents mislabeling pure extraction as coordination by highlighting the conditional nature of 'humane treatment'. It exposes how a coordination problem (managing conflict) is leveraged to extract from a specific group (detainees) under the guise of 'necessity'. The constraint's mandate (national security) is used to justify practices that erode the very standards it purports to uphold, indicating a drift towards extraction.",
-    "kernel_context": "This constraint is the 'contextual_necessity' reading of the 'humane_treatment_standard' kernel, which is Common Article 3 of the Geneva Conventions. This reading asserts that humane treatment is context-dependent, allowing for 'enhanced interrogation' when national security imperatives override. Sibling readings include 'absolute_prohibition' (no circumstances permit torture) and 'proportionality_balancing' (dignity vs. security needs)."
+    "logic_rationale": "The extractiveness (0.65) is high because the reading allows for significant harm to detainees under the guise of necessity. Suppression (0.75) is also high, as states actively suppress information about these practices and resist external oversight. The theater ratio (0.4) reflects that while some security measures are genuine, a substantial portion of the justification and enforcement is performative, aimed at legitimizing practices that are otherwise legally dubious. The temporal measurements show a rise in extractiveness and suppression post-9/11, reflecting the increased adoption of this reading, followed by a slight decline due to increased scrutiny and legal challenges.",
+    "perspectival_gap": "State security agencies and national governments perceive this as a necessary and legitimate framework for national defense, viewing it as a Rope or even a Mountain (natural law of state survival). Detainees and human rights advocates, however, experience it as a Snare, a mechanism of pure extraction and coercion. The engine's classification as Tangled Rope captures the hybrid nature: a genuine (from the state's perspective) coordination problem (national security) coupled with asymmetric extraction and active enforcement.",
+    "directionality_logic": "State security agencies and national governments are clear beneficiaries, gaining operational flexibility and perceived security. Detainees are direct targets, bearing the physical and psychological costs. Human rights advocates are also targets, as their efforts to uphold absolute standards are undermined. International courts are analytical observers, attempting to adjudicate without direct enforcement power.",
+    "mandatrophy_analysis": "This classification prevents mislabeling by highlighting the extractive component. While proponents argue for a 'coordination' function (national security), the high extractiveness and suppression reveal that the 'coordination' comes at a severe cost to a specific group, maintained by active enforcement and suppression of alternatives. It is not a pure Rope because of the identifiable victims and the coercive overhead.",
+    "kernel_context": "This constraint is the 'contextual necessity' reading of the 'humane_treatment_standard' kernel. This reading asserts that while Common Article 3 sets a baseline, national security imperatives can justify 'enhanced interrogation.' This contrasts with the 'absolute_prohibition' reading (no circumstances permit torture) and the 'proportionality_balancing' reading (requires balancing dignity and security needs)."
   },
+  "omegas": [
+    {
+      "id": "necessity_definition_ambiguity",
+      "question": "Who defines 'national security imperative' and what criteria are used to determine when it overrides humane treatment standards?",
+      "resolution_mechanism": "Establishment of independent, transparent oversight bodies with judicial review power over declarations of 'national security imperative' and their application to interrogation techniques.",
+      "impact": "If the definition is solely internal to security agencies, extractiveness remains high due to unchecked discretion. If external, independent oversight is established, extractiveness would likely decrease as the scope for 'enhanced interrogation' narrows.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the definition and application of 'national security imperative'."
+    },
+    {
+      "id": "efficacy_of_enhanced_interrogation",
+      "question": "Is 'enhanced interrogation' genuinely effective in producing actionable intelligence that cannot be obtained through humane methods?",
+      "resolution_mechanism": "Declassification of intelligence reports and independent, rigorous empirical studies comparing intelligence yield from 'enhanced' vs. humane interrogation techniques.",
+      "impact": "If proven ineffective, the primary justification for this reading collapses, reclassifying it closer to a Snare. If proven uniquely effective, it would strengthen the 'coordination' argument, though not necessarily negate the extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical uncertainty regarding the efficacy of 'enhanced interrogation' techniques."
+    },
+    {
+      "id": "victim_set_expansion",
+      "question": "Does the 'contextual necessity' reading create a slippery slope, expanding the category of 'detainees deemed high-value' to include a broader range of individuals?",
+      "resolution_mechanism": "Longitudinal study of detainee classifications and interrogation practices across different conflict zones and over time, tracking the demographic and threat profiles of individuals subjected to 'enhanced interrogation'.",
+      "impact": "If the victim set expands, the constraint's overall extractiveness and suppression would be higher than currently measured, potentially shifting its classification towards a more severe Snare as the coordination function becomes a thinner cover.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the victim set of 'high-value' detainees expands over time due to the contextual interpretation."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "absolute_prohibition",
-      "proportionality_balancing",
-      "state_secrecy_doctrine",
-      "military_justice_system"
+      "absolute_prohibition_reading",
+      "proportionality_balancing_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'humane_treatment_standard' kernel (Common Article 3). Its extractiveness and suppression metrics differ significantly from the 'absolute_prohibition' reading, which would show negligible extraction and high suppression of prohibited acts."
+    "dual_formulation_note": "This constraint is one of three readings of the 'humane_treatment_standard' kernel. This 'contextual necessity' reading directly influences the operational space for the 'absolute prohibition' and 'proportionality balancing' readings by asserting a competing legal framework."
   },
-  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "humane_treatment_standard__absolute_prohibition",
-        "relation": "forecloses"
+        "sibling_id": "absolute_prohibition",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "humane_treatment_standard__proportionality_balancing",
-        "relation": "influences"
+        "sibling_id": "proportionality_balancing",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
@@ -167,7 +251,7 @@
         "atom": "national_security_overrides_absolute_prohibition",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "conventional"
       },
       {
         "atom": "humane_treatment_is_context_dependent",
@@ -176,23 +260,24 @@
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "state_sovereignty_and_security_priority",
+    "reference_frame": "state_sovereignty_security_paradigm",
     "drift_state": {
-      "moment": "post_9_11_era",
-      "direction": "practice_drift",
+      "moment": "contemporary_human_rights_era",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

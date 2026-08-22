@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,27 +69,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: competence_occupation__simulation_sufficiency
- *   human_readable: Simulation-Based Competence Sufficiency
- *   domain: high_reliability_organizations/safety_training/competence_maintenance
+ *   human_readable: Simulation Sufficiency for Competence Occupation
+ *   domain: high_reliability_organizations/safety_training
  *
  * SUMMARY:
- *   This constraint asserts that simulation-based drills are sufficient for
- *   maintaining operational competence in high-reliability organizations. It
- *   is a specific reading of the broader 'competence_occupation' kernel,
- *   which is contested. This reading emphasizes measurable training
- *   compliance and the scalability of simulation, leading to a significant
- *   industry built around providing these solutions. While it offers a
- *   coordination function (standardized training, reduced risk of real-world
- *   incidents), it also extracts resources and attention from alternative
- *   competence maintenance strategies, potentially creating a false sense of
- *   security.
+ *   This constraint represents the reading that simulation-based drills are
+ *   sufficient for competence occupation and skill decay prevention in
+ *   High-Reliability Organizations (HROs). It is one reading of the broader
+ *   'competence_occupation' kernel. This reading emphasizes compliance with
+ *   training hours and simulation fidelity as key metrics, leading to the
+ *   simulation industry becoming a primary beneficiary. The constraint is
+ *   claimed as a Tangled Rope because it offers a coordination function
+ *   (standardized training) but also involves significant asymmetric
+ *   extraction from frontline operators and public safety, whose actual
+ *   competence may be compromised by over-reliance on simulations.
  *
- * KEY AGENTS:
- *   - simulation_industry: Primary beneficiary (institutional/arbitrage) — profits from the mandate for simulation.
- *   - training_departments: Agenda setter/beneficiary (organized/constrained) — administers compliance, benefits from clear metrics.
- *   - frontline_operators: Payer/victim (moderate/identity_locked) — bears the risk of potential competence gaps, constrained by training mandates.
- *   - organizational_safety_culture: Victim (institutional/constrained) — suffers from potential over-reliance on simulation.
- *   - regulators: Agenda setter/observer (institutional/analytical) — mandates training, observes outcomes, can alter the constraint.
  */
 
 /* ==========================================================================
@@ -93,59 +91,99 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(competence_occupation__simulation_sufficiency, 0.6).
+domain_priors:base_extractiveness(competence_occupation__simulation_sufficiency, 0.65).
 domain_priors:suppression_score(competence_occupation__simulation_sufficiency, 0.7).
 domain_priors:theater_ratio(competence_occupation__simulation_sufficiency, 0.4).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, extractiveness, 0.6).
+narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, extractiveness, 0.65).
 narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, theater_ratio, 0.4).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, accessibility_collapse, 0.45).
 narrative_ontology:constraint_metric(competence_occupation__simulation_sufficiency, resistance, 0.3).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(competence_occupation__simulation_sufficiency, tangled_rope).
-narrative_ontology:human_readable(competence_occupation__simulation_sufficiency, "Simulation-Based Competence Sufficiency").
-narrative_ontology:topic_domain(competence_occupation__simulation_sufficiency, "high_reliability_organizations/safety_training/competence_maintenance").
+narrative_ontology:human_readable(competence_occupation__simulation_sufficiency, "Simulation Sufficiency for Competence Occupation").
+narrative_ontology:topic_domain(competence_occupation__simulation_sufficiency, "high_reliability_organizations/safety_training").
 
 domain_priors:requires_active_enforcement(competence_occupation__simulation_sufficiency).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(competence_occupation__simulation_sufficiency, '0b41c583-52b8-492f-a55a-1ec0ec5e9ef7').
-narrative_ontology:cs_kernel_codification('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', formalized).
-narrative_ontology:cs_authority_grounding('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', expertise).
-narrative_ontology:cs_interpretation_layer_present('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7').
-narrative_ontology:cs_reading_relation('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', competence_occupation__real_incident_necessity, forecloses).
-narrative_ontology:cs_reading_relation('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', competence_occupation__hybrid_occupation, influences).
-narrative_ontology:cs_axiom('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', foundational, simulation_fidelity_is_sufficient).
-narrative_ontology:cs_axiom_status(simulation_fidelity_is_sufficient, holdable).
-narrative_ontology:cs_axiom_grounding('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', simulation_fidelity_is_sufficient, empirically_contingent).
-narrative_ontology:cs_axiom('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', secondary, measurable_compliance_equals_competence).
-narrative_ontology:cs_axiom_status(measurable_compliance_equals_competence, holdable).
-narrative_ontology:cs_axiom_grounding('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', measurable_compliance_equals_competence, conventional).
-narrative_ontology:cs_reference_frame('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', simulation_driven_competence_assurance).
-narrative_ontology:cs_drift_state('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', contemporary_operational_context, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('0b41c583-52b8-492f-a55a-1ec0ec5e9ef7', '').
+narrative_ontology:cs_story_uid(competence_occupation__simulation_sufficiency, '8fd426ab-195c-47f9-8047-b39f03315f56').
+narrative_ontology:cs_kernel_codification('8fd426ab-195c-47f9-8047-b39f03315f56', formalized).
+narrative_ontology:cs_authority_grounding('8fd426ab-195c-47f9-8047-b39f03315f56', lineage).
+narrative_ontology:cs_interpretation_layer_present('8fd426ab-195c-47f9-8047-b39f03315f56').
+narrative_ontology:cs_reading_relation('8fd426ab-195c-47f9-8047-b39f03315f56', competence_occupation__real_incident_necessity, forecloses).
+narrative_ontology:cs_reading_relation('8fd426ab-195c-47f9-8047-b39f03315f56', competence_occupation__hybrid_occupation, influences).
+narrative_ontology:cs_axiom('8fd426ab-195c-47f9-8047-b39f03315f56', foundational, simulation_as_equivalent_experience).
+narrative_ontology:cs_axiom_status(simulation_as_equivalent_experience, holdable).
+narrative_ontology:cs_axiom_grounding('8fd426ab-195c-47f9-8047-b39f03315f56', simulation_as_equivalent_experience, conventional).
+narrative_ontology:cs_axiom('8fd426ab-195c-47f9-8047-b39f03315f56', secondary, measurable_compliance_as_competence_proxy).
+narrative_ontology:cs_axiom_status(measurable_compliance_as_competence_proxy, holdable).
+narrative_ontology:cs_axiom_grounding('8fd426ab-195c-47f9-8047-b39f03315f56', measurable_compliance_as_competence_proxy, instrumental).
+narrative_ontology:cs_reference_frame('8fd426ab-195c-47f9-8047-b39f03315f56', standardized_simulation_training_paradigm).
+narrative_ontology:cs_drift_state('8fd426ab-195c-47f9-8047-b39f03315f56', contemporary_safety_science_critiques, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('8fd426ab-195c-47f9-8047-b39f03315f56', '').
 narrative_ontology:cs_kernel_id(competence_occupation__simulation_sufficiency, competence_occupation).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(competence_occupation__simulation_sufficiency, simulation_industry).
-narrative_ontology:constraint_beneficiary(competence_occupation__simulation_sufficiency, training_departments).
+narrative_ontology:constraint_beneficiary(competence_occupation__simulation_sufficiency, hro_management).
 narrative_ontology:constraint_victim(competence_occupation__simulation_sufficiency, frontline_operators).
-narrative_ontology:constraint_victim(competence_occupation__simulation_sufficiency, organizational_safety_culture).
+narrative_ontology:constraint_victim(competence_occupation__simulation_sufficiency, public_safety_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Provides simulation platforms and services, benefiting directly from the widespread adoption of simulation-based training as the primary method for competence maintenance. Actively promotes the 'sufficiency' narrative.
+narrative_ontology:constraint_stakeholder(competence_occupation__simulation_sufficiency, simulation_industry, beneficiary,
+    organized, generational, mobile, global).
+
+% Implements and enforces simulation-based training protocols, viewing them as a cost-effective and compliant way to meet regulatory requirements for competence. Benefits from reduced operational disruption and perceived compliance.
+narrative_ontology:constraint_stakeholder(competence_occupation__simulation_sufficiency, hro_management, agenda_setter,
+    institutional, biographical, constrained, national).
+
+% Participate in simulation drills, often perceiving them as insufficient for real-world readiness but necessary for job retention and compliance. Bear the cost of potential skill decay if simulations are indeed inadequate.
+narrative_ontology:constraint_stakeholder(competence_occupation__simulation_sufficiency, frontline_operators, payer,
+    moderate, biographical, identity_locked, local).
+
+% Certify training programs and compliance, often relying on simulation hours and fidelity metrics as proxies for actual competence. Their mandates are fulfilled by the 'sufficiency' claim, simplifying oversight.
+narrative_ontology:constraint_stakeholder(competence_occupation__simulation_sufficiency, regulatory_bodies, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Bear the ultimate risk of competence decay leading to incidents. Advocate for more robust, real-world training and challenge the 'sufficiency' of simulations, but often lack direct influence over training mandates.
+narrative_ontology:constraint_stakeholder(competence_occupation__simulation_sufficiency, public_safety_advocates, payer,
+    organized, generational, mobile, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Standardizes competence maintenance across a large workforce, ensuring a baseline level of training and compliance through a scalable, repeatable method.
+% TRANSFER_FUNCTION: Transfers training budget from operational departments to the simulation industry, and transfers the burden of competence maintenance from diverse operational experience to structured simulation hours.
+% ABSENT_VOICES: Experienced operators who have witnessed the limitations of simulations in high-stress, novel situations are often marginalized in policy discussions, their anecdotal evidence dismissed in favor of quantitative simulation metrics.
+% DISAPPEARANCE_RATIONALE: If the belief in simulation sufficiency vanished, HROs would face a crisis in competence maintenance, scrambling for alternative, more costly, and disruptive training methods. Regulatory frameworks would need complete overhaul, and the simulation industry would lose its primary market.
+% FOUNDING_PROBLEM: Ensuring consistent, measurable competence across a large, geographically dispersed workforce in high-risk environments, while minimizing the cost and risk of real-world training.
+% FOUNDING_PROBLEM_CORROBORATION: HRO management and regulatory bodies attest that the problem of scalable competence maintenance is still live. Public safety advocates and some frontline operators contest the 'sufficiency' aspect, arguing the problem is being 'solved' inadequately, leading to latent risks.
+narrative_ontology:disappearance_verdict(competence_occupation__simulation_sufficiency, world_rearranges).
+narrative_ontology:founding_problem_status(competence_occupation__simulation_sufficiency, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(competence_occupation__simulation_sufficiency, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(competence_occupation__simulation_sufficiency, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(competence_occupation__simulation_sufficiency, 'none', 1).
+narrative_ontology:epsilon_provenance(competence_occupation__simulation_sufficiency, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,16 +203,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely coordinates (standardized training, perceived risk reduction) but also extracts (resources flow to the simulation industry, potential for competence gaps for operators). Extractiveness is high (0.6) due to the significant investment in simulation and the potential for misallocated resources if sufficiency is overstated. Suppression (0.7) is high because alternative views on competence occupation are often marginalized in favor of auditable training metrics. Theater ratio (0.4) is moderate, reflecting that while simulations have real value, a portion of their function is performative compliance. The increasing trend in extractiveness and suppression over time reflects the growing institutionalization and commercialization of this approach.
+ *   The extractiveness (0.65) stems from the cost of simulations and the potential for skill decay if they are not truly sufficient, leading to higher risk for operators and the public. Suppression (0.70) is high due to regulatory mandates and the difficulty for individual operators to challenge established training paradigms. The theater ratio (0.40) reflects that while simulations have a genuine training function, a significant portion of their maintenance is performative, aimed at satisfying compliance metrics rather than optimizing real-world readiness. The metrics show a trend of increasing extractiveness and suppression over time as the 'sufficiency' claim becomes more entrenched.
  *
  * PERSPECTIVAL GAP:
- *   The simulation industry and training departments experience this as a beneficial coordination mechanism, providing clear metrics and a scalable solution. Frontline operators and the broader safety culture, however, may experience it as an extractive force, diverting resources from more effective, but less measurable, competence maintenance strategies, and potentially leaving them underprepared for novel real-world challenges. Regulators sit in an analytical seat, evaluating the effectiveness and potential for regulatory capture.
+ *   HRO management and the simulation industry perceive this as a legitimate, efficient coordination mechanism (a Rope), while frontline operators and public safety advocates experience it as an extractive system that may compromise actual competence (a Snare). The engine's classification will reflect this divergence based on the structural data.
  *
  * DIRECTIONALITY LOGIC:
- *   The simulation industry is a clear beneficiary (d=0.0-0.1) as the constraint directly drives demand for their products. Training departments also benefit (d=0.1-0.2) from having a clear, auditable framework for competence. Frontline operators are targets (d=0.7-0.8) as they must comply with training, potentially at the expense of other forms of skill development, and bear the ultimate risk of competence gaps. Organizational safety culture is also a target (d=0.8-0.9) if the focus on simulation leads to a diluted understanding of true operational readiness. Regulators are analytical (d=0.5).
+ *   The simulation industry and HRO management are beneficiaries, gaining revenue and simplified compliance, respectively. Frontline operators and public safety advocates are payers, bearing the costs of inadequate training and latent risk. Regulatory bodies act as agenda-setters, enforcing the 'sufficiency' standard. The 'identity_locked' exit for frontline operators reflects their professional dependence on compliance with mandated training, even if they privately doubt its efficacy.
  *
- * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling the constraint as a pure Rope (overstating its coordination function) or a pure Snare (ignoring its genuine, albeit potentially overstated, coordination benefits). The 'contested' status of the founding problem (is fragmented/unsafe training still the primary problem, or has the solution itself become a problem?) highlights the potential for mandatrophy, where the initial coordination function is overshadowed by extraction. The omegas address the core ambiguities of whether the claimed sufficiency is empirically valid and whether the constraint is a genuine solution or a preference-driven reading of the competence kernel.
  */
 
 /* ==========================================================================
@@ -182,53 +218,66 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    simulation_fidelity_vs_realism,
-    'Does the fidelity of simulation-based drills genuinely occupy the competence kernel as effectively as real-world experience, or is there a critical gap?',
-    'Longitudinal studies comparing performance outcomes of simulation-trained vs. real-incident-experienced operators, particularly under novel or high-stress conditions not easily simulated.',
-    'If a critical gap exists, the constraint is more extractive (false sense of security, misallocated resources) and less coordinative than claimed, shifting it towards a Snare. If fidelity is sufficient, it reinforces the Tangled Rope classification.',
+    simulation_fidelity_vs_real_world_transfer,
+    'To what extent does high simulation fidelity translate into actual skill transfer and performance in novel, high-stress real-world scenarios?',
+    'Longitudinal studies comparing simulation performance to real-world incident outcomes, controlling for other training variables.',
+    'If transfer is low, the extractiveness and theater ratio of this constraint are significantly underestimated, pushing it closer to a Snare. If high, the Rope aspects are stronger.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(simulation_fidelity_vs_realism, empirical, 'Assesses the empirical claim of simulation sufficiency against actual competence occupation.').
+narrative_ontology:omega_variable(simulation_fidelity_vs_real_world_transfer, empirical, 'Empirical gap between simulation performance and real-world competence.').
 
 omega_variable(
-    kernel_reading_simulation_sufficiency,
-    'Is this constraint a genuine reflection of competence maintenance, or a reading of the ''competence_occupation'' kernel that prioritizes measurable training compliance and benefits the simulation industry?',
-    'Analysis of resource allocation: if investment in simulation significantly outweighs investment in other competence maintenance mechanisms (e.g., real-world operational experience, continuous procedural reinforcement), it suggests a preference-driven reading.',
-    'If it''s a preference-driven reading, the constraint''s ''naturalness'' is reduced, and its extractive component (benefiting the simulation industry) is amplified, pushing it closer to a Snare. This reading (simulation_sufficiency) forecloses the ''real_incident_necessity'' reading within a single operational framework, as one asserts sufficiency and the other necessity of real events.',
+    cost_benefit_of_alternative_training,
+    'What is the true cost-benefit ratio of alternative, more real-world-intensive training methods compared to simulation-based approaches, accounting for risk and operational disruption?',
+    'Comprehensive economic and risk analysis of alternative training regimes, including pilot programs for hybrid models.',
+    'If alternatives are found to be cost-effective and safer, the suppression metric of this constraint is artificially inflated, and its justification as a coordination mechanism weakens.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(cost_benefit_of_alternative_training, empirical, 'Economic and safety trade-offs of different training approaches.').
+
+omega_variable(
+    reading_contest_competence_occupation,
+    'Is ''simulation_sufficiency'' a genuine solution to competence maintenance, or a convenient institutional framing that benefits the simulation industry and HRO management?',
+    'Resolution of the ''simulation_fidelity_vs_real_world_transfer'' omega, combined with a shift in regulatory mandates to prioritize demonstrated real-world competence over simulation hours.',
+    'If resolved against ''sufficiency'', this reading would be reclassified from Tangled Rope to Snare, and the ''hybrid_occupation'' reading would gain legitimacy. If resolved for ''sufficiency'', it would move closer to a Rope.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_simulation_sufficiency, conceptual, 'This constraint is the ''simulation_sufficiency'' reading of the ''competence_occupation'' kernel. It treats simulation as sufficient, contrasting with ''real_incident_necessity'' (which it forecloses) and ''hybrid_occupation'' (with which it coexists but influences by diverting resources).').
+narrative_ontology:omega_variable(reading_contest_competence_occupation, conceptual, 'This constraint is one reading of the ''competence_occupation'' kernel. Sibling readings (''real_incident_necessity'', ''hybrid_occupation'') offer alternative framings of what constitutes sufficient competence occupation. The contest is over the structural necessity and efficacy of simulation as the primary mechanism.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(competence_occupation__simulation_sufficiency, 0, 15).
+narrative_ontology:interval(competence_occupation__simulation_sufficiency, 1990, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(comp_tr_t0, competence_occupation__simulation_sufficiency, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(comp_tr_t5, competence_occupation__simulation_sufficiency, theater_ratio, 5, 0.28).
-narrative_ontology:measurement(comp_tr_t10, competence_occupation__simulation_sufficiency, theater_ratio, 10, 0.35).
-narrative_ontology:measurement(comp_tr_t15, competence_occupation__simulation_sufficiency, theater_ratio, 15, 0.4).
+narrative_ontology:measurement(comp_tr_t1990, competence_occupation__simulation_sufficiency, theater_ratio, 1990, 0.2).
+narrative_ontology:measurement(comp_tr_t1998, competence_occupation__simulation_sufficiency, theater_ratio, 1998, 0.28).
+narrative_ontology:measurement(comp_tr_t2006, competence_occupation__simulation_sufficiency, theater_ratio, 2006, 0.33).
+narrative_ontology:measurement(comp_tr_t2014, competence_occupation__simulation_sufficiency, theater_ratio, 2014, 0.37).
+narrative_ontology:measurement(comp_tr_t2024, competence_occupation__simulation_sufficiency, theater_ratio, 2024, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(comp_be_t0, competence_occupation__simulation_sufficiency, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(comp_be_t5, competence_occupation__simulation_sufficiency, base_extractiveness, 5, 0.5).
-narrative_ontology:measurement(comp_be_t10, competence_occupation__simulation_sufficiency, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(comp_be_t15, competence_occupation__simulation_sufficiency, base_extractiveness, 15, 0.6).
+narrative_ontology:measurement(comp_be_t1990, competence_occupation__simulation_sufficiency, base_extractiveness, 1990, 0.4).
+narrative_ontology:measurement(comp_be_t1998, competence_occupation__simulation_sufficiency, base_extractiveness, 1998, 0.5).
+narrative_ontology:measurement(comp_be_t2006, competence_occupation__simulation_sufficiency, base_extractiveness, 2006, 0.58).
+narrative_ontology:measurement(comp_be_t2014, competence_occupation__simulation_sufficiency, base_extractiveness, 2014, 0.62).
+narrative_ontology:measurement(comp_be_t2024, competence_occupation__simulation_sufficiency, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(comp_su_t0, competence_occupation__simulation_sufficiency, suppression_requirement, 0, 0.5).
-narrative_ontology:measurement(comp_su_t5, competence_occupation__simulation_sufficiency, suppression_requirement, 5, 0.58).
-narrative_ontology:measurement(comp_su_t10, competence_occupation__simulation_sufficiency, suppression_requirement, 10, 0.65).
-narrative_ontology:measurement(comp_su_t15, competence_occupation__simulation_sufficiency, suppression_requirement, 15, 0.7).
+narrative_ontology:measurement(comp_su_t1990, competence_occupation__simulation_sufficiency, suppression_requirement, 1990, 0.45).
+narrative_ontology:measurement(comp_su_t1998, competence_occupation__simulation_sufficiency, suppression_requirement, 1998, 0.55).
+narrative_ontology:measurement(comp_su_t2006, competence_occupation__simulation_sufficiency, suppression_requirement, 2006, 0.62).
+narrative_ontology:measurement(comp_su_t2014, competence_occupation__simulation_sufficiency, suppression_requirement, 2014, 0.67).
+narrative_ontology:measurement(comp_su_t2024, competence_occupation__simulation_sufficiency, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
@@ -236,12 +285,8 @@ narrative_ontology:measurement(comp_su_t15, competence_occupation__simulation_su
    ========================================================================== */
 
 narrative_ontology:coordination_type(competence_occupation__simulation_sufficiency, enforcement_mechanism).
-narrative_ontology:affects_constraint(competence_occupation__simulation_sufficiency, competence_occupation__real_incident_necessity).
-narrative_ontology:affects_constraint(competence_occupation__simulation_sufficiency, competence_occupation__hybrid_occupation).
-narrative_ontology:affects_constraint(competence_occupation__simulation_sufficiency, safety_compliance_auditing).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'competence_occupation' kernel. Its structural properties and beneficiaries differ significantly from sibling readings like 'real_incident_necessity' and 'hybrid_occupation', which are modeled as separate constraints.
+narrative_ontology:affects_constraint(competence_occupation__simulation_sufficiency, hro_regulatory_compliance).
+narrative_ontology:affects_constraint(competence_occupation__simulation_sufficiency, hro_incident_reporting).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

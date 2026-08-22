@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,15 +75,15 @@
  *
  * SUMMARY:
  *   This constraint represents the 'continuity reading' of orthographic
- *   legitimacy, which posits that the value and authority of a script derive
- *   from its ability to preserve access to historical, religious, and
- *   literary traditions. It is framed as a natural consequence of linguistic
- *   evolution and cultural heritage, where a break in script continuity is
- *   seen as a loss rather than a choice. The primary 'victim' is the
- *   post-reform generation, which loses direct access to pre-reform texts.
- *   There are no clear 'beneficiaries' in the sense of active extraction, but
- *   rather those whose cultural and professional roles are tied to the
- *   preservation of traditional script.
+ *   legitimacy, where the value of a script derives from its ability to
+ *   preserve direct access to historical, religious, and literary traditions.
+ *   It is framed as a Mountain because the incompatibility between different
+ *   scripts (e.g., Arabic vs. Latin script for Turkish) is a physical fact of
+ *   the written medium, creating an irreducible barrier for those educated in
+ *   a different system. The 'extraction' is the loss of direct access to
+ *   heritage for post-reform generations, which is an inherent cost of script
+ *   change, not an actively extracted rent. The beneficiaries are those whose
+ *   roles depend on this continuity.
  *
  */
 
@@ -98,7 +102,7 @@ narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_
 narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, accessibility_collapse, 0.9).
+narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, accessibility_collapse, 0.88).
 narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, resistance, 0.1).
 
 % --- Constraint claim ---
@@ -109,38 +113,77 @@ narrative_ontology:topic_domain(orthographic_legitimacy_kernel__continuity_readi
 domain_priors:emerges_naturally(orthographic_legitimacy_kernel__continuity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(orthographic_legitimacy_kernel__continuity_reading, '1941982e-6a22-4d52-a31f-0adbcc94a944').
-narrative_ontology:cs_kernel_codification('1941982e-6a22-4d52-a31f-0adbcc94a944', fixed_text).
-narrative_ontology:cs_authority_grounding('1941982e-6a22-4d52-a31f-0adbcc94a944', lineage).
-narrative_ontology:cs_interpretation_layer_present('1941982e-6a22-4d52-a31f-0adbcc94a944').
-narrative_ontology:cs_reading_relation('1941982e-6a22-4d52-a31f-0adbcc94a944', orthographic_legitimacy_kernel__modernist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('1941982e-6a22-4d52-a31f-0adbcc94a944', orthographic_legitimacy_kernel__instrumentalist_reading, coexists_with).
-narrative_ontology:cs_axiom('1941982e-6a22-4d52-a31f-0adbcc94a944', foundational, unbroken_textual_tradition_is_sacred).
-narrative_ontology:cs_axiom_status(unbroken_textual_tradition_is_sacred, holdable).
-narrative_ontology:cs_axiom_grounding('1941982e-6a22-4d52-a31f-0adbcc94a944', unbroken_textual_tradition_is_sacred, deontological).
-narrative_ontology:cs_axiom('1941982e-6a22-4d52-a31f-0adbcc94a944', secondary, script_reform_severs_cultural_identity).
-narrative_ontology:cs_axiom_status(script_reform_severs_cultural_identity, holdable).
-narrative_ontology:cs_axiom_grounding('1941982e-6a22-4d52-a31f-0adbcc94a944', script_reform_severs_cultural_identity, empirically_contingent).
-narrative_ontology:cs_reference_frame('1941982e-6a22-4d52-a31f-0adbcc94a944', ottoman_arabic_script_hegemony).
-narrative_ontology:cs_drift_state('1941982e-6a22-4d52-a31f-0adbcc94a944', post_script_reform_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('1941982e-6a22-4d52-a31f-0adbcc94a944', '').
+narrative_ontology:cs_story_uid(orthographic_legitimacy_kernel__continuity_reading, '7f667013-aecd-4403-82be-af54c040849c').
+narrative_ontology:cs_kernel_codification('7f667013-aecd-4403-82be-af54c040849c', fixed_text).
+narrative_ontology:cs_authority_grounding('7f667013-aecd-4403-82be-af54c040849c', lineage).
+narrative_ontology:cs_interpretation_layer_present('7f667013-aecd-4403-82be-af54c040849c').
+narrative_ontology:cs_reading_relation('7f667013-aecd-4403-82be-af54c040849c', orthographic_legitimacy_kernel__modernist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7f667013-aecd-4403-82be-af54c040849c', orthographic_legitimacy_kernel__instrumentalist_reading, coexists_with).
+narrative_ontology:cs_axiom('7f667013-aecd-4403-82be-af54c040849c', foundational, textual_continuity_is_sacred).
+narrative_ontology:cs_axiom_status(textual_continuity_is_sacred, holdable).
+narrative_ontology:cs_axiom_grounding('7f667013-aecd-4403-82be-af54c040849c', textual_continuity_is_sacred, deontological).
+narrative_ontology:cs_axiom('7f667013-aecd-4403-82be-af54c040849c', foundational, historical_access_is_identity).
+narrative_ontology:cs_axiom_status(historical_access_is_identity, holdable).
+narrative_ontology:cs_axiom_grounding('7f667013-aecd-4403-82be-af54c040849c', historical_access_is_identity, conventional).
+narrative_ontology:cs_reference_frame('7f667013-aecd-4403-82be-af54c040849c', unbroken_textual_tradition).
+narrative_ontology:cs_drift_state('7f667013-aecd-4403-82be-af54c040849c', post_script_reform_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('7f667013-aecd-4403-82be-af54c040849c', '').
 narrative_ontology:cs_kernel_id(orthographic_legitimacy_kernel__continuity_reading, orthographic_legitimacy_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(orthographic_legitimacy_kernel__continuity_reading, scholars_of_ottoman_texts).
-narrative_ontology:constraint_beneficiary(orthographic_legitimacy_kernel__continuity_reading, religious_clergy).
-narrative_ontology:constraint_beneficiary(orthographic_legitimacy_kernel__continuity_reading, cultural_conservatives).
+narrative_ontology:constraint_beneficiary(orthographic_legitimacy_kernel__continuity_reading, scholars_of_classical_texts).
+narrative_ontology:constraint_beneficiary(orthographic_legitimacy_kernel__continuity_reading, religious_authorities).
 narrative_ontology:constraint_victim(orthographic_legitimacy_kernel__continuity_reading, post_reform_generations).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Their professional identity and access to knowledge are directly tied to the preservation of traditional orthography. They benefit from the continuity of script, which ensures their expertise remains relevant and the historical archive accessible.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, scholars_of_classical_texts, beneficiary,
+    moderate, generational, identity_locked, national).
+
+% The legitimacy of religious texts and their interpretation often depends on the stability of the script in which they are written. They benefit from the constraint by maintaining direct access to sacred traditions without linguistic mediation.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, religious_authorities, beneficiary,
+    institutional, civilizational, identity_locked, national).
+
+% These generations, educated in a reformed or new script, face a structural barrier to accessing pre-reform historical, religious, and literary texts. They bear the cost of needing translation or specialized training to engage with their own cultural heritage.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, post_reform_generations, payer,
+    powerless, biographical, trapped, national).
+
+% Actively advocate for policies that preserve traditional orthography, viewing it as essential for national identity and cultural heritage. They set the agenda for educational and linguistic policy to resist script reforms.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, cultural_conservatives, agenda_setter,
+    organized, generational, constrained, national).
+
+% Study the evolution of scripts and their impact on cultural transmission. They observe the effects of orthographic changes on historical continuity and access to past knowledge, providing analytical insights without direct participation in the policy debate.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, linguistic_historians, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Ensures a consistent written medium across generations, allowing direct access to historical, religious, and literary texts without the need for translation or transliteration.
+% TRANSFER_FUNCTION: Transfers cultural and historical knowledge across time by maintaining a stable orthographic link, from past generations to present and future ones. The cost is borne by those who might prefer a more 'efficient' or 'modern' script.
+% ABSENT_VOICES: Future generations who might prefer a more phonetically consistent or simpler script are not present to advocate for their needs, and their potential severance from historical texts is a deferred cost.
+% DISAPPEARANCE_RATIONALE: If the constraint of orthographic continuity vanished, the direct link to historical and religious texts would be broken for new generations, requiring massive translation efforts or leading to cultural amnesia. The entire educational and cultural infrastructure would need to reorganize.
+% FOUNDING_PROBLEM: The problem of maintaining cultural and religious continuity across generations, ensuring that foundational texts remain directly accessible and authoritative.
+% FOUNDING_PROBLEM_CORROBORATION: Scholars of classical texts and religious authorities consistently attest to the ongoing importance of direct textual access for their disciplines and for cultural identity. Linguistic historians corroborate the challenge of maintaining such continuity across orthographic shifts.
+narrative_ontology:disappearance_verdict(orthographic_legitimacy_kernel__continuity_reading, world_rearranges).
+narrative_ontology:founding_problem_status(orthographic_legitimacy_kernel__continuity_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(orthographic_legitimacy_kernel__continuity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(orthographic_legitimacy_kernel__continuity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(orthographic_legitimacy_kernel__continuity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(orthographic_legitimacy_kernel__continuity_reading, 0.15, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -148,6 +191,10 @@ narrative_ontology:story_seed(orthographic_legitimacy_kernel__continuity_reading
 
 :- begin_tests(orthographic_legitimacy_kernel__continuity_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, ExtMetricName, E),
@@ -170,13 +217,13 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is claimed as a Mountain because the difficulty of accessing historical texts after a script change is a 'natural' consequence of linguistic incompatibility, not an actively enforced extraction. Extractiveness is low (0.15) as it represents the inherent cost of a cultural/linguistic divide, not a rent. Suppression is negligible (0.05) because the constraint's persistence is due to the inherent difficulty of bridging the script gap, not active coercion. Theater ratio is 0.0 as there is no performative maintenance; the 'constraint' is the reality of the linguistic barrier itself. Accessibility collapse is high (0.9) because once the script changes, direct access to the old tradition collapses for new generations.
+ *   The low extractiveness (0.15) reflects that the 'cost' is primarily a structural barrier (incompatibility) rather than an active transfer of resources. Suppression is very low (0.05) because the constraint persists due to the nature of script itself, not active coercion. Theater ratio is 0.0 as there's no performative maintenance; the constraint is a direct consequence of the physical medium. Accessibility collapse is high (0.88) because once a script changes, direct access to the old script's texts collapses for new generations. Resistance is low (0.1) because the 'resistance' is typically against the *change* of script, not against the continuity itself.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of those who value continuity, the constraint is a natural and necessary aspect of cultural preservation. From the perspective of post-reform generations, it is a barrier to their heritage, a 'cost' imposed by historical choices. The engine's classification will highlight this divergence, showing a mountain-like constraint for beneficiaries and a more extractive one for victims due to the inherent 'cost' of the linguistic divide.
+ *   From the perspective of those who value continuity, the constraint is a natural, unavoidable aspect of cultural transmission. From the perspective of post-reform generations, it is a barrier to their own heritage, a 'cost' imposed by historical choices. The engine's classification will reflect this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Scholars, clergy, and cultural conservatives are 'beneficiaries' in that their expertise and cultural capital are preserved and valued by this continuity. Post-reform generations are 'victims' as they bear the cost of needing translation or specialized education to access their own historical texts. The constraint subsidizes the former by maintaining the value of their knowledge, and extracts from the latter by creating a barrier to their heritage.
+ *   Scholars and religious authorities are beneficiaries (d near 0.0) as their roles and knowledge are preserved by orthographic continuity. Post-reform generations are payers (d near 1.0) as they bear the cost of severed access. Cultural conservatives are agenda-setters, actively defending this continuity. Linguistic historians are observers.
  *
  */
 
@@ -185,62 +232,61 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine natural law of linguistic continuity, or a constructed preference for a specific historical script?',
-    'Analysis of linguistic communities that have successfully transitioned scripts without perceived loss of tradition, or conversely, those where script change demonstrably severed cultural ties.',
-    'If a constructed preference, the ''mountain'' classification is a false summit, and the constraint would reclassify as a ''tangled_rope'' or ''snare'' depending on enforcement and beneficiaries. If a genuine natural law, the classification holds.',
+    natural_vs_constructed_barrier,
+    'Is the ''severance'' from historical texts a natural consequence of script change (a Mountain), or is it actively maintained by institutions that benefit from the continuity (a Snare)?',
+    'Analysis of educational curricula and state funding for translation/transliteration projects: if active efforts are made to *prevent* access to old texts, it leans Snare; if it''s merely a lack of resources, it leans Mountain.',
+    'If found to be actively maintained, the constraint would reclassify from Mountain to Snare or Tangled Rope, with higher extractiveness and suppression.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Ambiguity between natural linguistic constraint and cultural preference for script.').
+narrative_ontology:omega_variable(natural_vs_constructed_barrier, conceptual, 'Ambiguity between inherent script incompatibility and active institutional maintenance of historical textual barriers.').
 
 omega_variable(
-    impact_of_modernist_reading,
-    'How would the structural properties of this constraint change if the ''modernist_reading'' of orthographic legitimacy were adopted?',
-    'The modernist reading (alignment with Western modernity, rupture from Ottoman past) would likely shift the ''emerges_naturally'' flag to false, increase ''suppression'' (of traditionalists), and potentially increase ''extractiveness'' (from those forced to adapt).',
-    'The constraint would likely reclassify from ''mountain'' to ''snare'' or ''tangled_rope'', as it would be actively enforced and extract costs from those resisting the shift.',
-    confidence_without_resolution(high)
+    identity_lock_strength,
+    'How strongly are the identities of scholars and religious authorities tied to the traditional script, and would they genuinely lose their ''power'' if the script changed?',
+    'Sociological studies of professional identity in linguistic reform contexts, and analysis of how religious authority adapts to translated texts.',
+    'If identity-lock is weaker than assumed, their beneficiary status might be less pronounced, potentially shifting the overall classification towards a more neutral coordination (Rope) rather than a Mountain with beneficiaries.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(impact_of_modernist_reading, conceptual, 'Impact of an alternative kernel reading on constraint classification.').
-
-omega_variable(
-    impact_of_instrumentalist_reading,
-    'How would the structural properties of this constraint change if the ''instrumentalist_reading'' of orthographic legitimacy were adopted?',
-    'The instrumentalist reading (maximizing literacy and administrative efficiency) would likely shift the ''emerges_naturally'' flag to false, potentially lower ''suppression'' (if the new script is easier to learn), and shift ''beneficiaries'' to the general populace and state administration.',
-    'The constraint would likely reclassify from ''mountain'' to ''rope'' or ''scaffold'', as it would be justified by a clear coordination function and potentially have a sunset clause for the transition period.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(impact_of_instrumentalist_reading, conceptual, 'Impact of an alternative kernel reading on constraint classification.').
+narrative_ontology:omega_variable(identity_lock_strength, empirical, 'The degree to which professional and religious identities are genuinely dependent on orthographic continuity.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(orthographic_legitimacy_kernel__continuity_reading, 1928, 2024).
+narrative_ontology:interval(orthographic_legitimacy_kernel__continuity_reading, 1900, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(orth_tr_t1928, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1928, 0.0).
-narrative_ontology:measurement(orth_tr_t1950, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1950, 0.0).
+narrative_ontology:measurement(orth_tr_t1900, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1900, 0.0).
+narrative_ontology:measurement(orth_tr_t1920, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1920, 0.0).
+narrative_ontology:measurement(orth_tr_t1940, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1940, 0.0).
+narrative_ontology:measurement(orth_tr_t1960, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1960, 0.0).
 narrative_ontology:measurement(orth_tr_t1980, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 1980, 0.0).
+narrative_ontology:measurement(orth_tr_t2000, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 2000, 0.0).
 narrative_ontology:measurement(orth_tr_t2024, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 2024, 0.0).
 
 % Extraction over time
-narrative_ontology:measurement(orth_be_t1928, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1928, 0.1).
-narrative_ontology:measurement(orth_be_t1950, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1950, 0.12).
-narrative_ontology:measurement(orth_be_t1980, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1980, 0.14).
+narrative_ontology:measurement(orth_be_t1900, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1900, 0.1).
+narrative_ontology:measurement(orth_be_t1920, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1920, 0.12).
+narrative_ontology:measurement(orth_be_t1940, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1940, 0.15).
+narrative_ontology:measurement(orth_be_t1960, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1960, 0.15).
+narrative_ontology:measurement(orth_be_t1980, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 1980, 0.15).
+narrative_ontology:measurement(orth_be_t2000, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 2000, 0.15).
 narrative_ontology:measurement(orth_be_t2024, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 2024, 0.15).
 
 % Suppression requirement over time
-narrative_ontology:measurement(orth_su_t1928, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1928, 0.05).
-narrative_ontology:measurement(orth_su_t1950, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1950, 0.05).
+narrative_ontology:measurement(orth_su_t1900, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1900, 0.05).
+narrative_ontology:measurement(orth_su_t1920, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1920, 0.05).
+narrative_ontology:measurement(orth_su_t1940, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1940, 0.05).
+narrative_ontology:measurement(orth_su_t1960, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1960, 0.05).
 narrative_ontology:measurement(orth_su_t1980, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 1980, 0.05).
+narrative_ontology:measurement(orth_su_t2000, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 2000, 0.05).
 narrative_ontology:measurement(orth_su_t2024, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 2024, 0.05).
 
 
@@ -253,7 +299,7 @@ narrative_ontology:affects_constraint(orthographic_legitimacy_kernel__continuity
 narrative_ontology:affects_constraint(orthographic_legitimacy_kernel__continuity_reading, orthographic_legitimacy_kernel__instrumentalist_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'orthographic_legitimacy_kernel'. Each reading represents a distinct structural claim about the source of a script's authority and its impact on society.
+% This constraint is one of three readings of the 'orthographic_legitimacy_kernel'. This 'continuity_reading' emphasizes the preservation of historical and religious tradition through stable orthography.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

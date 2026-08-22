@@ -4,127 +4,226 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "9f27d5ac-621a-4b29-9d0f-66783ad183ed"
+    "story_uid": "270021d1-fb0b-4abb-9ee2-77ed7e072700"
   },
   "base_properties": {
-    "extractiveness": 0.7,
-    "suppression": 0.85,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.85,
+    "suppression": 0.92,
+    "theater_ratio": 0.65,
     "accessibility_collapse": 0.75,
-    "resistance": 0.6,
-    "claimed_type": "tangled_rope",
+    "resistance": 0.4,
+    "claimed_type": "snare",
     "human_readable": "NPT Article IV/VI Pairing (Nonproliferation Primary Reading)",
     "topic_domain": "international_law/nuclear_governance/treaty_interpretation",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "nuclear_weapon_states",
-      "iaea"
+      "nuclear_weapon_states"
     ],
     "victims": [
       "non_nuclear_weapon_states",
-      "global_civil_society"
+      "global_disarmament_advocates"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "npt_kernel_reading_ambiguity",
-      "question": "Is the NPT a grand bargain of reciprocal obligations, or primarily a nonproliferation instrument?",
-      "resolution_mechanism": "Analysis of state practice, treaty review conference outcomes, and legal interpretations by international courts or advisory bodies over time.",
-      "impact": "If read as a grand bargain, the legitimacy of Article IV for non-nuclear-weapon states is conditional on Article VI progress, potentially reclassifying the constraint as a Snare if disarmament obligations are systematically ignored. If read as nonproliferation primary, the current classification holds.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the NPT kernel, emphasizing nonproliferation over disarmament."
+      "name": "nuclear_weapon_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "These states interpret the NPT as primarily a nonproliferation instrument, where their security interests justify maintaining their arsenals and controlling access to nuclear technology. They benefit from the two-tier order and the non-justiciability of Article VI."
     },
     {
-      "id": "article_vi_justiciability",
-      "question": "Is Article VI of the NPT a legally binding and justiciable obligation, or merely an aspirational statement of intent?",
-      "resolution_mechanism": "Referral to the International Court of Justice for an advisory opinion or a binding ruling in a contentious case, or a clear consensus among NPT state parties.",
-      "impact": "If found justiciable, the current reading's claim of non-justiciability would be overridden, increasing the extractiveness and suppression for non-nuclear-weapon states and potentially shifting the constraint towards a Snare due to unfulfilled obligations. If found aspirational, the current classification is reinforced.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity regarding the legal enforceability of nuclear disarmament obligations."
+      "name": "non_nuclear_weapon_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These states bear the primary burden of nonproliferation, accepting intrusive verification under Article III and foregoing nuclear weapons development, while receiving limited and conditional access to peaceful nuclear technology under Article IV. They are denied the security guarantees of nuclear weapons."
+    },
+    {
+      "name": "iaea",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The International Atomic Energy Agency is tasked with verifying compliance with Article III, ensuring that peaceful nuclear programs are not diverted to weapons. Its authority is derived from the NPT, but its mandate is shaped by the interpretations of its member states, particularly the nuclear weapon states."
+    },
+    {
+      "name": "global_disarmament_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "These groups and states actively campaign for nuclear disarmament, viewing the NPT as a step towards a nuclear-weapon-free world. They are frustrated by the perceived lack of progress on Article VI and the perpetuation of the two-tier system, bearing the cost of unfulfilled promises."
+    },
+    {
+      "name": "treaty_on_the_prohibition_of_nuclear_weapons_states",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States party to the TPNW explicitly prohibit nuclear weapons, challenging the legitimacy of the NPT's two-tier structure. They are excluded from the NPT's core decision-making processes and their interpretation of disarmament is actively resisted by nuclear weapon states."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the global nonproliferation regime by establishing a framework for states to forgo nuclear weapons in exchange for peaceful nuclear technology, under international verification.",
+    "transfer_function": "Transfers the burden of nuclear restraint and verification from nuclear weapon states to non-nuclear weapon states, in exchange for conditional access to peaceful nuclear technology.",
+    "absent_voices": "States and civil society groups advocating for immediate and complete nuclear disarmament (e.g., TPNW states) are largely excluded from the NPT's core interpretive and enforcement mechanisms, where their views on Article VI's binding nature are dismissed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this interpretation vanished, the global nonproliferation regime would face immediate and profound challenges. Non-nuclear weapon states would likely reconsider their commitments, potentially leading to horizontal proliferation. The existing security architecture, heavily reliant on the NPT's framework, would destabilize.",
+    "founding_problem": "The original problem was to prevent the spread of nuclear weapons beyond the initial five nuclear powers, while allowing for the peaceful use of nuclear energy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Nuclear weapon states and the IAEA consistently attest that horizontal proliferation remains a live and critical threat, justifying the continued emphasis on Article IV and III. Non-nuclear weapon states, while acknowledging proliferation risks, also highlight the live problem of vertical proliferation and the lack of disarmament progress."
+  },
+  "interval": {
+    "start": 1968,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1968,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.65
+      "time_point": 1980,
+      "value": 0.7
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.68
+      "time_point": 1992,
+      "value": 0.78
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 2004,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.75
+      "time_point": 1980,
+      "value": 0.78
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.8
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.83
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 1992,
       "value": 0.85
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.92
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1968,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 1980,
       "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.65
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the interpretation of the Nuclear Non-Proliferation Treaty (NPT) where Article IV (peaceful nuclear energy) is strictly conditional on Article III (safeguards verification), and Article VI (disarmament) is considered aspirational and non-justiciable. The authority for this interpretation derives from the security interests of nuclear weapon states in preventing horizontal proliferation. This reading effectively stabilizes a two-tier nuclear order, with weapon states retaining their arsenals and non-weapon states bearing perpetual restraint.",
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it offers a genuine coordination function (preventing proliferation) but couples it with asymmetric extraction. Non-nuclear-weapon states coordinate by foregoing nuclear weapons development, but pay by accepting a permanent security disadvantage and the non-enforceability of disarmament obligations. Extraction is high (0.7) due to the indefinite deferral of disarmament and the perpetuation of a two-tiered system. Suppression is very high (0.85) as the international system actively enforces nonproliferation through sanctions, military threats, and diplomatic pressure, while resisting efforts to enforce disarmament. Theater ratio is moderate (0.4) as disarmament rhetoric continues, but the actual practice of weapon states shows little movement towards the stated goal.",
-    "perspectival_gap": "Nuclear weapon states experience this as a Rope, as it secures their nonproliferation goals while preserving their arsenals. Non-nuclear-weapon states, particularly those with advanced nuclear energy programs, experience it as a Snare, as it imposes significant costs and limits their sovereign choices without reciprocal disarmament. The IAEA, as an institutional actor, experiences it as a Tangled Rope, balancing its verification mandate with the political realities of weapon state influence.",
-    "directionality_logic": "Nuclear weapon states are primary beneficiaries (d=0.0-0.1) as their security interests are prioritized and their arsenals are protected from enforcement. The IAEA is a beneficiary (d=0.1-0.2) as its mandate and funding are tied to the nonproliferation regime. Non-nuclear-weapon states are victims (d=0.8-0.9) as they bear the costs of restraint without the promised disarmament. Global civil society is also a victim (d=0.7-0.8) as its calls for disarmament are largely ignored.",
-    "mandatrophy_analysis": "This reading prevents mislabeling the constraint as a pure Rope by highlighting the asymmetric extraction inherent in the nonproliferation-first interpretation. It also prevents mislabeling it as a pure Snare by acknowledging the genuine, albeit unevenly distributed, coordination function of preventing horizontal proliferation. The 'mandate' of nonproliferation is live, but the 'mandate' of disarmament is effectively atrophied under this reading, leading to the Tangled Rope classification.",
-    "kernel_context": "This constraint is the 'nonproliferation primary' reading of the NPT Article IV/VI pairing kernel. It contrasts with the 'grand bargain' reading, which emphasizes reciprocity between nonproliferation and disarmament, and the 'abolitionist' reading, which prioritizes complete disarmament based on humanitarian law."
+    "narrative_context": "This constraint represents the 'nonproliferation primary' reading of the Nuclear Non-Proliferation Treaty (NPT), where the core obligation is to prevent horizontal proliferation (Article IV conditional on Article III verification), while Article VI (disarmament) is treated as an aspirational, non-justiciable goal. Authority for this reading derives from the security interests of nuclear weapon states. This interpretation stabilizes a two-tier nuclear order, with nuclear weapon states as permanent beneficiaries and non-nuclear weapon states as perpetual restraint-bearers. The constraint is claimed as a snare due to its high extraction and suppression, despite the NPT's original framing as a 'grand bargain' (a rope).",
+    "logic_rationale": "Extractiveness is high (0.85) because non-nuclear weapon states bear significant costs (verification, foregone security options) without reciprocal disarmament from nuclear weapon states. Suppression is very high (0.92) as the regime actively prevents non-nuclear weapon states from acquiring weapons, while nuclear weapon states' arsenals are effectively immune from enforcement. Theater ratio is high (0.65) because the disarmament rhetoric of Article VI is largely performative, masking the actual perpetuation of the two-tier system. The increasing extractiveness and suppression over time reflect the hardening of this interpretation and the growing gap between nonproliferation and disarmament.",
+    "directionality_logic": "Nuclear weapon states are clear beneficiaries (d=0.0-0.1) as they maintain their arsenals and control the nonproliferation agenda. Non-nuclear weapon states are targets (d=0.9-1.0) as they bear the costs of verification and restraint. Global disarmament advocates are also targets (d=0.8-0.9) as their goals are systematically frustrated. The IAEA, while an institutional actor, is constrained by the nuclear weapon states' interpretation, placing its effective directionality closer to symmetric but with a bias towards the agenda-setters.",
+    "perspectival_gap": "Nuclear weapon states perceive this as a necessary and effective regime for global stability (a rope or even a mountain of geopolitical reality). Non-nuclear weapon states and disarmament advocates experience it as an increasingly unfair and extractive snare, perpetuating an imbalance of power and security. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'nonproliferation primary' reading of the NPT Article IV/VI pairing kernel. It emphasizes the prevention of horizontal proliferation as the paramount goal, viewing Article VI's disarmament obligations as aspirational rather than legally binding. Sibling readings include the 'grand bargain' (reciprocal obligations) and 'abolitionist' (Article VI mandates complete disarmament) interpretations."
   },
+  "omegas": [
+    {
+      "id": "article_vi_justiciability",
+      "question": "Is Article VI of the NPT legally justiciable and enforceable, or is it purely aspirational?",
+      "resolution_mechanism": "International Court of Justice ruling on a state's non-compliance with Article VI, or a new treaty explicitly defining enforcement mechanisms for disarmament.",
+      "impact": "If justiciable, the extractiveness from non-nuclear weapon states would decrease, and the constraint might shift towards a tangled_rope or even a rope, as reciprocal obligations become enforceable. If purely aspirational, the snare classification is reinforced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the legal enforceability of NPT Article VI."
+    },
+    {
+      "id": "security_interest_vs_treaty_obligation",
+      "question": "Does the security interest of nuclear weapon states legitimately override their Article VI treaty obligations, or is this a self-serving interpretation?",
+      "resolution_mechanism": "A global security framework that demonstrably removes the perceived need for nuclear deterrence, or a consensus among international legal scholars rejecting the 'security interest' justification for non-compliance.",
+      "impact": "If security interests are deemed to legitimately override, the constraint's 'snare' nature is reframed as a 'tangled_rope' with a coordination function for global stability. If self-serving, the 'snare' classification is strengthened, highlighting the extractive nature of the interpretation.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether nuclear weapon states' security interests justify their interpretation of Article VI."
+    },
+    {
+      "id": "two_tier_order_permanence",
+      "question": "Is the two-tier nuclear order (weapon states vs. non-weapon states) a temporary arrangement or a permanently stabilized feature of the international system under this reading?",
+      "resolution_mechanism": "A clear, verifiable timeline for disarmament from nuclear weapon states, or a formal amendment to the NPT explicitly codifying the permanent right of certain states to possess nuclear weapons.",
+      "impact": "If temporary, the constraint might be reclassified as a scaffold, with a sunset clause for the two-tier system. If permanent, the snare classification is solidified, as the extraction becomes an enduring feature.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The intended duration and stability of the nuclear two-tier order."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one of three readings of the NPT Article IV/VI pairing kernel. The other readings are 'npt_article_iv_vi_pairing__grand_bargain' and 'npt_article_iv_vi_pairing__abolitionist'."
+    "affects_constraints": [
+      "npt_article_iv_vi_pairing__grand_bargain",
+      "npt_article_iv_vi_pairing__abolitionist",
+      "iran_nuclear_deal_jcpoa",
+      "north_korea_nuclear_program"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the NPT Article IV/VI pairing. This 'nonproliferation primary' reading emphasizes horizontal nonproliferation over disarmament."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -132,45 +231,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "npt_article_iv_vi_pairing__grand_bargain",
+        "sibling_id": "grand_bargain",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "npt_article_iv_vi_pairing__abolitionist",
-        "relation": "forecloses"
+        "sibling_id": "abolitionist",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "horizontal_proliferation_is_primary_threat",
+        "atom": "horizontal_proliferation_is_paramount_threat",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "nuclear_deterrence_is_legitimate",
+        "atom": "article_vi_is_aspirational_not_justiciable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "weapon_state_security_paradigm",
+    "reference_frame": "nuclear_weapon_state_security_paradigm",
     "drift_state": {
-      "moment": "contemporary_treaty_review_cycle",
+      "moment": "contemporary_international_relations",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

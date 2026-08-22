@@ -4,163 +4,240 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "d64ffd7e-de57-4838-b212-1534015f59f4"
+    "story_uid": "b3ea3c8d-9076-4507-b13b-d34664a2f5a9"
   },
   "base_properties": {
     "extractiveness": 0.3,
     "suppression": 0.2,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
     "claimed_type": "rope",
     "human_readable": "Common Article 3 Scope (ICRC Customary Law Reading)",
     "topic_domain": "international_humanitarian_law",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
     "beneficiaries": [
-      "international_committee_of_the_red_cross",
+      "icrc",
+      "humanitarian_organizations",
       "states_seeking_legitimacy"
     ],
+    "victims": [],
     "vindicated_propositions": [
       "customary_international_law_doctrine",
       "evolving_standards_of_humanity"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "customary_law_vs_treaty_law",
-      "question": "Is the ICRC's customary law reading of CA3's scope a genuine reflection of state practice and opinio juris, or an attempt to expand treaty obligations through interpretation?",
-      "resolution_mechanism": "Systematic review of state declarations, military manuals, and judicial decisions over time, focusing on explicit acceptance or rejection of the ICRC's methodology.",
-      "impact": "If genuinely customary, it provides a flexible mechanism for IHL adaptation. If an overreach, it risks undermining state consent to IHL and could lead to pushback against the ICRC's authority.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the source and authority of customary international law."
+      "name": "icrc",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The International Committee of the Red Cross (ICRC) actively researches, documents, and promotes the customary international law interpretation of Common Article 3, influencing states and international bodies. They benefit from the expansion of IHL's protective scope."
     },
     {
-      "id": "icrc_reading_vs_state_centric_reading",
-      "question": "Does the ICRC's customary reading of CA3's scope genuinely coexist with the 'state-centric' reading, or does it implicitly foreclose it by expanding the definition of armed conflict?",
-      "resolution_mechanism": "Analysis of state responses to ICRC reports and specific instances where states explicitly reject the customary reading's application to situations they deem internal law enforcement.",
-      "impact": "If it forecloses the state-centric reading, it implies a broader application of IHL than many states accept, potentially increasing resistance to IHL compliance. If it coexists, it offers a complementary, more expansive interpretation.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Relationship between ICRC customary reading and state-centric reading of CA3 scope."
+      "name": "humanitarian_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These organizations rely on the broadest possible application of IHL to protect civilians and provide aid in armed conflicts. The customary law reading provides a flexible mechanism for expanding protection, even if slower than other readings."
     },
     {
-      "id": "icrc_reading_vs_expansive_human_rights_reading",
-      "question": "Does the ICRC's customary reading of CA3's scope sufficiently incorporate human rights principles, or is it too conservative compared to the 'expansive human rights' reading?",
-      "resolution_mechanism": "Comparative legal analysis of the protections offered by each reading in specific conflict scenarios, particularly those involving non-state actors and internal disturbances.",
-      "impact": "If too conservative, it may leave gaps in protection for individuals in situations of violence. If it sufficiently incorporates human rights, it provides a pragmatic, widely accepted framework for protection.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "Adequacy of human rights integration in ICRC customary reading of CA3 scope."
+      "name": "states_seeking_legitimacy",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "States that wish to be seen as compliant with international law, or to influence its development, benefit from a framework that allows for the gradual evolution of norms through practice and opinio juris, rather than rigid treaty interpretation. They can selectively adopt practices to shape custom."
+    },
+    {
+      "name": "states_resisting_expansion",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Some states resist the expansion of CA3's scope, preferring a more restrictive, state-centric interpretation to preserve sovereignty and operational flexibility. They bear the cost of having to justify their practices against an evolving customary standard."
+    },
+    {
+      "name": "international_courts_and_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These bodies interpret and apply international law, including customary IHL. They observe state practice and opinio juris to determine the scope of CA3, influencing its practical application through their judgments."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a flexible, non-treaty mechanism for states to coordinate on the minimum humanitarian standards applicable in non-international armed conflicts, allowing for the gradual evolution and expansion of these standards through shared practice and legal conviction.",
+    "transfer_function": "Transfers interpretive authority and normative pressure from rigid treaty text to the evolving consensus of state practice and opinio juris, influencing how states conduct military operations and treat non-state armed groups.",
+    "absent_voices": "Non-state armed groups, while often subject to CA3, are not formal participants in the creation of customary international law and thus have no direct voice in shaping its scope, despite being primary targets of its application.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the customary international law reading of CA3's scope vanished, the legal framework for non-international armed conflicts would become significantly more rigid and less adaptable. States would lose a key mechanism for evolving humanitarian norms, leading to greater legal uncertainty and potentially reduced protection for victims, as the only remaining interpretations would be either strictly state-centric or purely aspirational human rights-based.",
+    "founding_problem": "The original Geneva Conventions did not adequately address non-international armed conflicts, leaving a gap in humanitarian protection. Common Article 3 was a minimal attempt to fill this, but its scope required further development.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ICRC, numerous humanitarian organizations, and many states attest that the problem of ensuring adequate humanitarian protection in diverse and evolving non-international armed conflicts remains live. Scholarly legal analysis from independent experts also corroborates the ongoing need for a dynamic interpretive framework for CA3."
+  },
+  "interval": {
+    "start": 1949,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1949,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
       "value": 0.25
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1990,
       "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2010,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1949,
       "value": 0.15
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1970,
       "value": 0.18
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1949,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
       "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.09
+      "time_point": 1990,
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the International Committee of the Red Cross's (ICRC) reading of the scope of Common Article 3 (CA3) of the Geneva Conventions, which holds that CA3's application is determined by evolving state practice and opinio juris, as tracked through customary international law. This reading allows for a dynamic interpretation of CA3, enabling its application to new forms of armed violence without requiring formal treaty amendments. It acts as a procedural constraint on interpretation, guiding how the scope of IHL is understood and expanded.",
-    "key_agents": [
-      "international_committee_of_the_red_cross: Agenda setter (institutional/analytical) — actively researches, publishes, and advocates for this reading.",
-      "states_seeking_legitimacy: Beneficiary (institutional/constrained) — benefit from a flexible, widely accepted framework for IHL application, especially when their actions might otherwise be ambiguous.",
-      "states_resisting_expansion: Payer (institutional/constrained) — bear the cost of potentially broader IHL obligations than they formally consented to, leading to resistance.",
-      "international_courts_and_tribunals: Observer (institutional/analytical) — interpret and apply IHL, often referencing customary law, thus influencing the practical scope of CA3.",
-      "non_state_armed_groups: Payer (powerless/trapped) — are increasingly subject to CA3 obligations under this reading, despite not being parties to the Geneva Conventions."
-    ],
-    "logic_rationale": "The extractiveness (0.3) is relatively low because this reading primarily provides a framework for interpretation rather than direct, heavy-handed extraction. However, it does impose obligations on states and non-state actors that they might not have explicitly consented to, hence the non-zero value. Suppression (0.2) is also low, as compliance is largely driven by legitimacy and reputation rather than direct coercion, though states resisting expansion face diplomatic pressure. Theater ratio (0.1) is minimal, as the ICRC's work in this area is genuinely functional. Accessibility collapse (0.7) is high because once a norm is recognized as customary, it becomes binding on all states, leaving little room for opting out. Resistance (0.15) is present from states that prefer a more restrictive interpretation, but it's generally contained within diplomatic and legal discourse.",
-    "perspectival_gap": "The ICRC and states seeking legitimacy view this reading as a vital, flexible mechanism for humanitarian protection. States resisting expansion, however, perceive it as an overreach that expands their obligations without explicit consent. Non-state armed groups, often the targets of CA3, experience it as an externally imposed legal framework.",
-    "directionality_logic": "The ICRC is a primary beneficiary and agenda-setter, as this reading enhances its role and influence in IHL. States seeking legitimacy also benefit from a clear, evolving framework. States resisting expansion and non-state armed groups are payers, as they bear the costs of expanded obligations. International courts and tribunals are observers, interpreting the law without direct benefit or cost from its operation.",
-    "mandatrophy_analysis": "This reading prevents mandatrophy by providing a mechanism for CA3's scope to evolve with changing conflict dynamics, ensuring the constraint remains relevant. Without this flexibility, CA3's mandate could atrophy as new forms of armed violence emerge that do not fit traditional definitions, leading to a gap in protection. The dynamic nature of customary law prevents the constraint from becoming a 'piton' of outdated treaty language.",
-    "kernel_context": "This constraint is the 'ICRC customary reading' of the 'common_article_3_scope' kernel. This reading emphasizes the dynamic nature of international law, where state practice and opinio juris can expand the application of treaty provisions like Common Article 3. It stands in contrast to a more restrictive 'state-centric reading' and a more expansive 'human rights reading'."
+    "narrative_context": "This constraint represents the ICRC's reading of Common Article 3 (CA3) of the Geneva Conventions, which holds that the scope of CA3 is determined by evolving state practice and opinio juris, as tracked through customary international law. This reading allows for a dynamic and expanding application of minimum humanitarian standards in non-international armed conflicts, adapting to new forms of organized violence without requiring formal treaty amendments. It functions as a coordination mechanism for states to gradually align their practices with evolving humanitarian norms.",
+    "logic_rationale": "The extractiveness is low (0.3) because this reading primarily facilitates coordination and expansion of protective norms, rather than imposing heavy costs or extracting rents. Suppression is low (0.2) as adherence relies on states' voluntary adoption of practice and opinio juris, rather than coercive enforcement. Theater ratio is low (0.1) because the ICRC's work in documenting customary law is genuinely functional, though some states may engage in performative compliance. The metrics reflect a constraint that is largely beneficial for humanitarian protection, even if its expansion is slower than some would prefer.",
+    "directionality_logic": "The ICRC and humanitarian organizations are clear beneficiaries, as this reading expands the protective scope of IHL. States seeking legitimacy also benefit by having a flexible framework for demonstrating compliance. States resisting expansion are payers, as they face pressure to conform to evolving customary norms. International courts and tribunals act as observers, interpreting and applying these norms.",
+    "perspectival_gap": "From the perspective of humanitarian organizations, this reading is a vital, if sometimes slow, mechanism for expanding protection. From the perspective of states resisting expansion, it can be seen as an encroachment on sovereignty. The engine's classification will reflect the overall coordination function with some friction for resistant states."
   },
+  "omegas": [
+    {
+      "id": "customary_law_vs_treaty_rigidity",
+      "question": "Is the flexibility of customary international law in determining CA3's scope a strength (adaptability) or a weakness (lack of clarity/enforceability)?",
+      "resolution_mechanism": "Empirical study of state compliance and judicial application in diverse conflict scenarios: if flexibility leads to consistent, effective protection, it's a strength; if it leads to arbitrary application or non-compliance, it's a weakness.",
+      "impact": "If a strength, the 'rope' classification is reinforced. If a weakness, the constraint might lean towards 'tangled_rope' due to the ambiguity creating opportunities for selective application and extraction by powerful states.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity of customary law's role in IHL scope."
+    },
+    {
+      "id": "state_practice_vs_humanitarian_imperative",
+      "question": "To what extent does 'state practice' genuinely reflect a humanitarian imperative, versus states' self-interest in limiting obligations?",
+      "resolution_mechanism": "Detailed analysis of state declarations and actions in specific conflicts, cross-referenced with their geopolitical interests and human rights records. Divergence would indicate self-interest overriding humanitarian concerns.",
+      "impact": "If state practice is primarily driven by self-interest, the extractiveness of this reading would be higher, as it would allow powerful states to shape norms to their advantage, potentially shifting it towards a 'tangled_rope' or 'snare' for vulnerable populations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Motivation behind state practice in customary law formation."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'icrc_customary_reading' of the 'common_article_3_scope' kernel. What would change if a sibling reading were adopted?",
+      "resolution_mechanism": "Analysis of judicial decisions or state declarations explicitly adopting a different reading.",
+      "impact": "If the 'state_centric_reading' were adopted, the scope of CA3 would narrow, reducing protection. If the 'expansive_human_rights_reading' were adopted, the scope would broaden more rapidly, potentially increasing state resistance. This reading provides a middle ground.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this as one reading of a contested kernel and outlines the impact of adopting sibling readings."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
       "common_article_3_scope__state_centric_reading",
-      "common_article_3_scope__expansive_human_rights_reading",
-      "ihl_applicability_to_non_state_actors"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the Common Article 3 scope kernel, focusing on customary international law. It is linked to other readings that emphasize state consent or human rights principles."
+      "common_article_3_scope__expansive_human_rights_reading"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "expertise",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "common_article_3_scope__state_centric_reading",
+        "sibling_id": "state_centric_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "common_article_3_scope__expansive_human_rights_reading",
-        "relation": "influences"
+        "sibling_id": "expansive_human_rights_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "ihl_evolves_through_custom",
+        "atom": "customary_law_as_dynamic_source",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "icrc_as_custodian_of_custom",
+        "atom": "opinio_juris_as_legal_conviction",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "dynamic_ihl_interpretation",
+    "reference_frame": "evolving_customary_standards",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -169,14 +246,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

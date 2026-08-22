@@ -41,13 +41,15 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -56,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -73,11 +76,12 @@
  *   This constraint represents the 'utility reading' of the Bitcoin consensus
  *   kernel, where the whitepaper is understood as establishing a minimum
  *   viable consensus mechanism designed for iterative improvement. This
- *   reading prioritizes the network's long-term utility, scalability, and
- *   adaptability through mechanisms like soft forks and layer-2 protocols,
- *   viewing them as legitimate evolution rather than violations of a fixed
- *   covenant. It contrasts with more rigid interpretations by allowing for a
- *   moderate degree of protocol change to enhance functionality and adoption.
+ *   reading emphasizes the network's adaptability through soft forks and
+ *   layer-2 protocols as legitimate evolution, crucial for its long-term
+ *   utility and adoption. Beneficiaries are adopters and builders who
+ *   leverage this adaptability, while 'monetary ossification guarantees' are
+ *   the conceptual victims, as the expectation of absolute immutability is
+ *   challenged.
  *
  */
 
@@ -105,38 +109,85 @@ narrative_ontology:human_readable(bitcoin_consensus_kernel__utility_reading, "Bi
 narrative_ontology:topic_domain(bitcoin_consensus_kernel__utility_reading, "cryptoeconomics/monetary_systems/distributed_consensus").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(bitcoin_consensus_kernel__utility_reading, '8310cb74-4bcb-433e-a3f8-41be1149eaf7').
-narrative_ontology:cs_kernel_codification('8310cb74-4bcb-433e-a3f8-41be1149eaf7', fixed_text).
-narrative_ontology:cs_authority_grounding('8310cb74-4bcb-433e-a3f8-41be1149eaf7', practice).
-narrative_ontology:cs_interpretation_layer_present('8310cb74-4bcb-433e-a3f8-41be1149eaf7').
-narrative_ontology:cs_reading_relation('8310cb74-4bcb-433e-a3f8-41be1149eaf7', bitcoin_consensus_kernel__maximalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('8310cb74-4bcb-433e-a3f8-41be1149eaf7', bitcoin_consensus_kernel__pragmatic_synthesis, coexists_with).
-narrative_ontology:cs_axiom('8310cb74-4bcb-433e-a3f8-41be1149eaf7', foundational, protocol_evolution_is_legitimate).
-narrative_ontology:cs_axiom_status(protocol_evolution_is_legitimate, holdable).
-narrative_ontology:cs_axiom_grounding('8310cb74-4bcb-433e-a3f8-41be1149eaf7', protocol_evolution_is_legitimate, instrumental).
-narrative_ontology:cs_axiom('8310cb74-4bcb-433e-a3f8-41be1149eaf7', secondary, utility_drives_adoption).
-narrative_ontology:cs_axiom_status(utility_drives_adoption, holdable).
-narrative_ontology:cs_axiom_grounding('8310cb74-4bcb-433e-a3f8-41be1149eaf7', utility_drives_adoption, empirically_contingent).
-narrative_ontology:cs_reference_frame('8310cb74-4bcb-433e-a3f8-41be1149eaf7', minimum_viable_consensus_for_evolution).
-narrative_ontology:cs_drift_state('8310cb74-4bcb-433e-a3f8-41be1149eaf7', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('8310cb74-4bcb-433e-a3f8-41be1149eaf7', '').
+narrative_ontology:cs_story_uid(bitcoin_consensus_kernel__utility_reading, '814e8802-e315-43ca-92f1-d12ede9c0e8f').
+narrative_ontology:cs_kernel_codification('814e8802-e315-43ca-92f1-d12ede9c0e8f', fixed_text).
+narrative_ontology:cs_authority_grounding('814e8802-e315-43ca-92f1-d12ede9c0e8f', distributed).
+narrative_ontology:cs_reading_relation('814e8802-e315-43ca-92f1-d12ede9c0e8f', bitcoin_consensus_kernel__maximalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('814e8802-e315-43ca-92f1-d12ede9c0e8f', bitcoin_consensus_kernel__pragmatic_synthesis, coexists_with).
+narrative_ontology:cs_axiom('814e8802-e315-43ca-92f1-d12ede9c0e8f', foundational, protocol_utility_trumps_absolute_immutability).
+narrative_ontology:cs_axiom_status(protocol_utility_trumps_absolute_immutability, holdable).
+narrative_ontology:cs_axiom_grounding('814e8802-e315-43ca-92f1-d12ede9c0e8f', protocol_utility_trumps_absolute_immutability, instrumental).
+narrative_ontology:cs_axiom('814e8802-e315-43ca-92f1-d12ede9c0e8f', secondary, soft_forks_are_legitimate_evolution).
+narrative_ontology:cs_axiom_status(soft_forks_are_legitimate_evolution, holdable).
+narrative_ontology:cs_axiom_grounding('814e8802-e315-43ca-92f1-d12ede9c0e8f', soft_forks_are_legitimate_evolution, conventional).
+narrative_ontology:cs_reference_frame('814e8802-e315-43ca-92f1-d12ede9c0e8f', minimum_viable_consensus_for_evolution).
+narrative_ontology:cs_drift_state('814e8802-e315-43ca-92f1-d12ede9c0e8f', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('814e8802-e315-43ca-92f1-d12ede9c0e8f', '').
 narrative_ontology:cs_kernel_id(bitcoin_consensus_kernel__utility_reading, bitcoin_consensus_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(bitcoin_consensus_kernel__utility_reading, adopters).
-narrative_ontology:constraint_beneficiary(bitcoin_consensus_kernel__utility_reading, builders).
+narrative_ontology:constraint_beneficiary(bitcoin_consensus_kernel__utility_reading, adopters_and_builders).
 narrative_ontology:constraint_beneficiary(bitcoin_consensus_kernel__utility_reading, layer_2_developers).
 narrative_ontology:constraint_victim(bitcoin_consensus_kernel__utility_reading, monetary_ossification_guarantees).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(bitcoin_consensus_kernel__utility_reading, node_operators).
+narrative_ontology:constraint_victim(bitcoin_consensus_kernel__utility_reading, maximalist_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from the network's adaptability, allowing for new use cases and scaling solutions. They actively contribute to the ecosystem's growth and see soft forks and layer-2 protocols as essential for long-term utility.
+narrative_ontology:constraint_stakeholder(bitcoin_consensus_kernel__utility_reading, adopters_and_builders, beneficiary,
+    organized, biographical, mobile, global).
+
+% Directly benefit from the ability to build new protocols and applications on top of Bitcoin, extending its functionality without altering the base layer. They view the base layer as a secure foundation for innovation.
+narrative_ontology:constraint_stakeholder(bitcoin_consensus_kernel__utility_reading, layer_2_developers, beneficiary,
+    moderate, biographical, mobile, global).
+
+% Maintain the Bitcoin protocol, proposing and implementing changes (primarily soft forks) that enhance its utility and security. They operate under a strong ethos of minimal, carefully considered changes.
+narrative_ontology:constraint_stakeholder(bitcoin_consensus_kernel__utility_reading, core_developers, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Run the software that validates transactions and enforces consensus rules. They bear the cost of upgrading software and validating new features introduced by soft forks, but also benefit from network improvements.
+narrative_ontology:constraint_stakeholder(bitcoin_consensus_kernel__utility_reading, node_operators, payer,
+    moderate, immediate, constrained, global).
+
+% Adhere to a strict interpretation of Bitcoin's whitepaper as an immutable monetary policy. They perceive any change, even soft forks, as a violation of the original covenant, leading to a perceived 'monetary ossification guarantee' being eroded.
+narrative_ontology:constraint_stakeholder(bitcoin_consensus_kernel__utility_reading, maximalist_advocates, payer,
+    organized, generational, identity_locked, global).
+
+% Represents the abstract concept of an unchangeable monetary policy, which is 'paid' or eroded by the utility-driven evolution of the protocol. This is not an agent but a conceptual victim of the reading's emphasis on iterative improvement.
+narrative_ontology:constraint_stakeholder(bitcoin_consensus_kernel__utility_reading, monetary_ossification_guarantees, payer,
+    powerless, civilizational, trapped, universal).
+narrative_ontology:stakeholder_non_agent(bitcoin_consensus_kernel__utility_reading, monetary_ossification_guarantees).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a decentralized, secure, and adaptable digital monetary system that can evolve through consensus-driven improvements (soft forks) and layered protocols, enabling broad utility.
+% TRANSFER_FUNCTION: Facilitates the transfer of value across the network, with the 'cost' of adaptability borne by those who prioritize absolute immutability, and the 'benefit' accruing to those who build and use new functionalities.
+% ABSENT_VOICES: Those who would advocate for a completely static, 'finished' protocol are present as maximalist advocates, but their arguments for absolute immutability are often sidelined in favor of practical utility and iterative development within the core development community.
+% DISAPPEARANCE_RATIONALE: If the consensus mechanism allowing iterative improvement vanished, the Bitcoin network would either stagnate, failing to adapt to new challenges and use cases, or fracture into incompatible versions, leading to a loss of its global monetary utility and network effect. The entire cryptoeconomic landscape would be fundamentally altered.
+% FOUNDING_PROBLEM: The problem of creating a decentralized digital cash system that could achieve consensus without a central authority, while also being robust enough to evolve and adapt to future needs.
+% FOUNDING_PROBLEM_CORROBORATION: The ongoing need for scaling solutions, security enhancements, and new application layers (e.g., Lightning Network) attests to the live status of the problem. Independent cryptographers and economists, not directly benefiting from specific protocol changes, corroborate the necessity of iterative improvement for the network's long-term viability.
+narrative_ontology:disappearance_verdict(bitcoin_consensus_kernel__utility_reading, world_rearranges).
+narrative_ontology:founding_problem_status(bitcoin_consensus_kernel__utility_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(bitcoin_consensus_kernel__utility_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(bitcoin_consensus_kernel__utility_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(bitcoin_consensus_kernel__utility_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(bitcoin_consensus_kernel__utility_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -151,16 +202,14 @@ narrative_ontology:story_seed(bitcoin_consensus_kernel__utility_reading, 'none',
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.45) is moderate, reflecting the 'cost' of maintaining a decentralized, evolving system (e.g., transaction fees, development overhead, the 'victimization' of absolute ossification guarantees). Suppression (0.30) is low, as this reading encourages participation in the evolution process rather than strictly enforcing a static state. Theater ratio (0.10) is low, indicating that most activity is genuinely functional, focused on development and improvement. The claimed type is 'rope' because it facilitates coordination among a broad set of beneficiaries (adopters, builders) for a common good (a useful, evolving monetary system) with relatively low coercive overhead, though it does 'extract' from the idea of absolute immutability.
+ *   The extractiveness (0.45) is moderate, reflecting the 'cost' of perceived deviation from absolute immutability for some, balanced against the benefits of innovation. Suppression (0.30) is low, as the mechanism relies on voluntary consensus rather than active coercion, though social pressure exists. Theater ratio (0.10) is low, indicating that most activity genuinely contributes to the network's function and evolution. The claimed type is 'rope' because it facilitates coordination for a broad set of users and developers, with moderate costs for those who prioritize a static protocol.
  *
  * PERSPECTIVAL GAP:
- *   Adopters and builders experience this as a beneficial, adaptive framework, while maximalist ideologues (who are 'payers' in this context) perceive it as a deviation from core principles. Core developers, as agenda-setters, navigate between these perspectives, aiming for changes that enhance utility without compromising fundamental security. The engine's per-seat classification would reflect these divergent experiences.
+ *   From the utility reading's perspective, the constraint is a flexible rope enabling innovation. From a maximalist perspective, it might be seen as a tangled rope or even a snare, extracting the promise of immutable monetary policy. The engine's per-seat classification will highlight this divergence based on the declared power, exit options, and roles of each stakeholder.
  *
  * DIRECTIONALITY LOGIC:
- *   Adopters, builders, and layer-2 developers are clear beneficiaries (low d) as the constraint enables their activities and provides a platform for growth. 'Monetary ossification guarantees' is an abstract victim (high d) because this reading directly challenges its absolute nature. Maximalist ideologues are also payers (high d) as their rigid worldview is 'extracted from' by the flexibility of this reading. Core developers, while agenda-setters, also bear the responsibility of maintaining the system, placing them closer to symmetric (moderate d) in their relationship to the constraint's evolution.
+ *   Adopters and builders, along with layer-2 developers, are clear beneficiaries (low d) as they gain from the network's evolving utility. Core developers, while agenda-setters, operate under a strong ethos of minimal change, making them closer to symmetric. Node operators bear some costs of upgrades but also benefit from network health. Maximalist advocates and the abstract 'monetary ossification guarantees' are the targets (high d), as their preference for absolute immutability is 'extracted' or eroded by the utility-driven evolution.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading inherently guards against mandatrophy by embracing iterative improvement. The 'founding problem' (decentralized digital cash) is considered 'live,' and the consensus mechanism is seen as a tool to continuously address it, preventing the constraint from becoming a 'piton' (atrophied function) or a 'snare' (pure extraction) by adapting to new challenges and opportunities. The moderate extractiveness is seen as a necessary cost of this ongoing adaptation, not a sign of decay.
  */
 
 /* ==========================================================================
@@ -168,69 +217,56 @@ narrative_ontology:story_seed(bitcoin_consensus_kernel__utility_reading, 'none',
    ========================================================================== */
 
 omega_variable(
-    utility_vs_immutability_tension,
-    'Is the pursuit of utility and iterative improvement fundamentally compatible with Bitcoin''s core value proposition of immutable monetary policy, or does it introduce an irreducible tension?',
-    'Long-term observation of network security, decentralization metrics, and user adoption trends in response to protocol changes. If utility-driven changes consistently lead to centralization or security vulnerabilities, the tension is real.',
-    'If incompatible, the ''utility reading'' might be reclassified as a ''tangled_rope'' or ''snare'' from the perspective of those prioritizing immutability, as it would be seen as extracting from the core promise. If compatible, it reinforces the ''rope'' classification.',
+    immutability_vs_utility_tradeoff,
+    'Is the perceived ''extraction'' from monetary ossification guarantees an unavoidable cost of achieving broader utility and adaptability, or is it a sign of a fundamental betrayal of Bitcoin''s original promise?',
+    'Long-term empirical observation of network security, decentralization, and adoption rates under various soft fork implementations, coupled with philosophical analysis of the ''original promise'' of Bitcoin.',
+    'If the ''extraction'' is deemed an unavoidable cost for essential utility, the ''rope'' classification is strengthened. If it''s seen as a betrayal, the constraint might lean towards a ''tangled rope'' or ''snare'' from the perspective of maximalist advocates.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(utility_vs_immutability_tension, conceptual, 'The inherent tension between evolving utility and absolute immutability in a decentralized monetary system.').
+narrative_ontology:omega_variable(immutability_vs_utility_tradeoff, conceptual, 'Ambiguity regarding the fundamental tradeoff between immutability and utility in Bitcoin''s evolution.').
 
 omega_variable(
-    soft_fork_governance_legitimacy,
-    'Does the current soft fork governance process genuinely represent broad consensus and decentralized decision-making, or is it susceptible to capture by a small group of core developers or powerful mining pools?',
-    'Empirical analysis of soft fork activation patterns, developer influence, and miner signaling behavior. Examination of dissenting voices and their ability to block or propose alternatives.',
-    'If captured, the ''rope'' classification would shift towards ''tangled_rope'' or ''snare'' for those excluded from decision-making, as the ''coordination'' would be revealed as asymmetric extraction of control. If genuinely decentralized, it strengthens the ''rope'' classification.',
+    soft_fork_legitimacy,
+    'To what extent do soft forks genuinely represent ''iterative improvement'' through broad consensus, versus being a form of ''governance capture'' by a subset of core developers?',
+    'Analysis of soft fork adoption patterns, including node signaling, miner support, and community discourse, across multiple protocol upgrades. Examination of the power dynamics within the core development community.',
+    'If soft forks are consistently driven by a narrow group without broad consensus, the ''agenda_setter'' role''s directionality might shift towards higher extraction, potentially reclassifying the constraint as a ''tangled rope'' from certain seats. If broad, decentralized consensus is consistently demonstrated, the ''rope'' classification is reinforced.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(soft_fork_governance_legitimacy, empirical, 'The true decentralization and legitimacy of the soft fork governance process.').
-
-omega_variable(
-    kernel_reading_ambiguity,
-    'Is this constraint a genuine ''utility reading'' of the Bitcoin consensus kernel, or is it a ''pragmatic synthesis'' reading that merely tolerates utility on upper layers while maintaining base layer immutability?',
-    'Analysis of core developer statements and implemented soft forks: if base layer monetary rules are ever modified (beyond bug fixes) for utility, it''s a utility reading. If utility is strictly confined to layer-2, it''s pragmatic synthesis.',
-    'If it''s a pragmatic synthesis, the extractiveness from ''monetary_ossification_guarantees'' would be lower, and the ''maximalist_ideologues'' would be less ''victimized'', potentially shifting the classification closer to a ''mountain'' for the base layer.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_ambiguity, conceptual, 'Distinguishing between a utility-first interpretation and a layered immutability approach.').
+narrative_ontology:omega_variable(soft_fork_legitimacy, empirical, 'The true nature of consensus for protocol changes (soft forks).').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(bitcoin_consensus_kernel__utility_reading, 0, 15).
+narrative_ontology:interval(bitcoin_consensus_kernel__utility_reading, 2008, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(bitc_tr_t0, bitcoin_consensus_kernel__utility_reading, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(bitc_tr_t3, bitcoin_consensus_kernel__utility_reading, theater_ratio, 3, 0.09).
-narrative_ontology:measurement(bitc_tr_t6, bitcoin_consensus_kernel__utility_reading, theater_ratio, 6, 0.09).
-narrative_ontology:measurement(bitc_tr_t9, bitcoin_consensus_kernel__utility_reading, theater_ratio, 9, 0.1).
-narrative_ontology:measurement(bitc_tr_t12, bitcoin_consensus_kernel__utility_reading, theater_ratio, 12, 0.1).
-narrative_ontology:measurement(bitc_tr_t15, bitcoin_consensus_kernel__utility_reading, theater_ratio, 15, 0.1).
+narrative_ontology:measurement(bitc_tr_t2008, bitcoin_consensus_kernel__utility_reading, theater_ratio, 2008, 0.05).
+narrative_ontology:measurement(bitc_tr_t2012, bitcoin_consensus_kernel__utility_reading, theater_ratio, 2012, 0.07).
+narrative_ontology:measurement(bitc_tr_t2016, bitcoin_consensus_kernel__utility_reading, theater_ratio, 2016, 0.08).
+narrative_ontology:measurement(bitc_tr_t2020, bitcoin_consensus_kernel__utility_reading, theater_ratio, 2020, 0.09).
+narrative_ontology:measurement(bitc_tr_t2024, bitcoin_consensus_kernel__utility_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(bitc_be_t0, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(bitc_be_t3, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 3, 0.38).
-narrative_ontology:measurement(bitc_be_t6, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 6, 0.4).
-narrative_ontology:measurement(bitc_be_t9, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 9, 0.42).
-narrative_ontology:measurement(bitc_be_t12, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 12, 0.44).
-narrative_ontology:measurement(bitc_be_t15, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 15, 0.45).
+narrative_ontology:measurement(bitc_be_t2008, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 2008, 0.15).
+narrative_ontology:measurement(bitc_be_t2012, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 2012, 0.25).
+narrative_ontology:measurement(bitc_be_t2016, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 2016, 0.35).
+narrative_ontology:measurement(bitc_be_t2020, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 2020, 0.4).
+narrative_ontology:measurement(bitc_be_t2024, bitcoin_consensus_kernel__utility_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(bitc_su_t0, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 0, 0.2).
-narrative_ontology:measurement(bitc_su_t3, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 3, 0.22).
-narrative_ontology:measurement(bitc_su_t6, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 6, 0.25).
-narrative_ontology:measurement(bitc_su_t9, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 9, 0.27).
-narrative_ontology:measurement(bitc_su_t12, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 12, 0.29).
-narrative_ontology:measurement(bitc_su_t15, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 15, 0.3).
+narrative_ontology:measurement(bitc_su_t2008, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 2008, 0.1).
+narrative_ontology:measurement(bitc_su_t2012, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 2012, 0.15).
+narrative_ontology:measurement(bitc_su_t2016, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 2016, 0.2).
+narrative_ontology:measurement(bitc_su_t2020, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 2020, 0.25).
+narrative_ontology:measurement(bitc_su_t2024, bitcoin_consensus_kernel__utility_reading, suppression_requirement, 2024, 0.3).
 
 
 /* ==========================================================================
@@ -238,12 +274,11 @@ narrative_ontology:measurement(bitc_su_t15, bitcoin_consensus_kernel__utility_re
    ========================================================================== */
 
 narrative_ontology:coordination_type(bitcoin_consensus_kernel__utility_reading, global_infrastructure).
-narrative_ontology:boltzmann_floor_override(bitcoin_consensus_kernel__utility_reading, 0.15).
 narrative_ontology:affects_constraint(bitcoin_consensus_kernel__utility_reading, bitcoin_consensus_kernel__maximalist_reading).
 narrative_ontology:affects_constraint(bitcoin_consensus_kernel__utility_reading, bitcoin_consensus_kernel__pragmatic_synthesis).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'bitcoin_consensus_kernel'. This 'utility_reading' emphasizes iterative improvement and layer-2 solutions, contrasting with the 'maximalist_reading' (immutable monetary policy) and the 'pragmatic_synthesis' (base layer immutable, upper layers flexible).
+% This constraint is one of three readings of the 'bitcoin_consensus_kernel'. This 'utility_reading' emphasizes iterative improvement and adaptability, contrasting with the 'maximalist_reading' (immutable monetary policy) and the 'pragmatic_synthesis' (immutable base, flexible upper layers).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

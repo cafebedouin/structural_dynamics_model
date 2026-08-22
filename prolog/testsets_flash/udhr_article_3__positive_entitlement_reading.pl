@@ -39,8 +39,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,29 +69,29 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: udhr_article_3__positive_entitlement_reading
- *   human_readable: UDHR Article 3: Positive Entitlement to Material Conditions
+ *   human_readable: UDHR Article 3: Positive Entitlement to Life and Security
  *   domain: constitutional_law/human_rights/political_philosophy
  *
  * SUMMARY:
  *   This constraint represents the 'positive entitlement' reading of Article
  *   3 of the Universal Declaration of Human Rights (UDHR), which interprets
- *   the right to life, liberty, and security of person as obligating states
- *   to provide the material conditions necessary for these rights (e.g.,
- *   welfare, healthcare, housing). This reading necessitates significant
- *   state intervention, often involving wealth redistribution and regulation,
- *   leading to high extractiveness and suppression for certain groups, while
- *   providing substantial benefits to others. It is claimed as a Tangled Rope
- *   due to its dual function of coordinating social welfare provision and
- *   extracting resources to do so, requiring active enforcement.
+ *   'life, liberty and security of person' as obligating states to actively
+ *   provide material conditions such as welfare, healthcare, and housing.
+ *   This reading leads to high extraction through wealth redistribution and
+ *   restrictions on certain liberties, primarily benefiting vulnerable groups
+ *   and human rights advocates, while imposing costs on property owners and
+ *   those advocating for unrestricted expression. The constraint is claimed
+ *   as a 'tangled_rope' due to its genuine coordination function (social
+ *   safety net) intertwined with significant asymmetric extraction and active
+ *   enforcement.
  *
  * KEY AGENTS:
- *   - vulnerable_citizens: Primary beneficiary (powerless/constrained) — receives state provision
- *   - social_welfare_agencies: Secondary beneficiary/agenda_setter (institutional/analytical) — administers and benefits from expanded mandate
- *   - property_owners: Primary payer (powerful/constrained) — bears wealth redistribution
- *   - taxpayers: Payer (moderate/constrained) — bears the financial burden of state provision
- *   - free_speech_advocates: Victim (organized/constrained) — may experience suppression of expression deemed harmful to 'security'
- *   - state_legislatures: Agenda setter (institutional/mobile) — enacts laws to implement entitlements
- *   - constitutional_courts: Agenda setter/observer (institutional/analytical) — adjudicates the scope and limits of these entitlements
+ *   - vulnerable_citizens: Primary beneficiary (powerless/trapped) — receives state provisions.
+ *   - human_rights_advocates: Agenda setter (organized/constrained) — pushes for this interpretation and its enforcement.
+ *   - property_rights_advocates: Primary payer (powerful/constrained) — bears costs of redistribution.
+ *   - unrestricted_expression_advocates: Payer (moderate/constrained) — faces restrictions on speech.
+ *   - taxpayers: Payer (organized/mobile) — funds state provisions.
+ *   - state_institutions: Agenda setter (institutional/identity_locked) — implements and enforces policies.
  */
 
 /* ==========================================================================
@@ -94,60 +99,104 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(udhr_article_3__positive_entitlement_reading, 0.85).
-domain_priors:suppression_score(udhr_article_3__positive_entitlement_reading, 0.75).
-domain_priors:theater_ratio(udhr_article_3__positive_entitlement_reading, 0.2).
+domain_priors:base_extractiveness(udhr_article_3__positive_entitlement_reading, 0.78).
+domain_priors:suppression_score(udhr_article_3__positive_entitlement_reading, 0.65).
+domain_priors:theater_ratio(udhr_article_3__positive_entitlement_reading, 0.4).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, extractiveness, 0.85).
-narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, theater_ratio, 0.2).
+narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, extractiveness, 0.78).
+narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, theater_ratio, 0.4).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, accessibility_collapse, 0.4).
+narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, accessibility_collapse, 0.45).
 narrative_ontology:constraint_metric(udhr_article_3__positive_entitlement_reading, resistance, 0.7).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(udhr_article_3__positive_entitlement_reading, tangled_rope).
-narrative_ontology:human_readable(udhr_article_3__positive_entitlement_reading, "UDHR Article 3: Positive Entitlement to Material Conditions").
+narrative_ontology:human_readable(udhr_article_3__positive_entitlement_reading, "UDHR Article 3: Positive Entitlement to Life and Security").
 narrative_ontology:topic_domain(udhr_article_3__positive_entitlement_reading, "constitutional_law/human_rights/political_philosophy").
 
 domain_priors:requires_active_enforcement(udhr_article_3__positive_entitlement_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(udhr_article_3__positive_entitlement_reading, '3a97bbc4-70f0-452d-8bf1-a87ab9473310').
-narrative_ontology:cs_kernel_codification('3a97bbc4-70f0-452d-8bf1-a87ab9473310', fixed_text).
-narrative_ontology:cs_authority_grounding('3a97bbc4-70f0-452d-8bf1-a87ab9473310', lineage).
-narrative_ontology:cs_interpretation_layer_present('3a97bbc4-70f0-452d-8bf1-a87ab9473310').
-narrative_ontology:cs_reading_relation('3a97bbc4-70f0-452d-8bf1-a87ab9473310', udhr_article_3__negative_liberty_reading, coexists_with).
-narrative_ontology:cs_reading_relation('3a97bbc4-70f0-452d-8bf1-a87ab9473310', udhr_article_3__procedural_hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom('3a97bbc4-70f0-452d-8bf1-a87ab9473310', foundational, state_has_positive_obligations).
+narrative_ontology:cs_story_uid(udhr_article_3__positive_entitlement_reading, '75d8f4be-f232-49ad-836c-5b428845108a').
+narrative_ontology:cs_kernel_codification('75d8f4be-f232-49ad-836c-5b428845108a', fixed_text).
+narrative_ontology:cs_authority_grounding('75d8f4be-f232-49ad-836c-5b428845108a', lineage).
+narrative_ontology:cs_interpretation_layer_present('75d8f4be-f232-49ad-836c-5b428845108a').
+narrative_ontology:cs_reading_relation('75d8f4be-f232-49ad-836c-5b428845108a', udhr_article_3__negative_liberty_reading, coexists_with).
+narrative_ontology:cs_reading_relation('75d8f4be-f232-49ad-836c-5b428845108a', udhr_article_3__procedural_hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('75d8f4be-f232-49ad-836c-5b428845108a', foundational, state_has_positive_obligations).
 narrative_ontology:cs_axiom_status(state_has_positive_obligations, holdable).
-narrative_ontology:cs_axiom_grounding('3a97bbc4-70f0-452d-8bf1-a87ab9473310', state_has_positive_obligations, deontological).
-narrative_ontology:cs_axiom('3a97bbc4-70f0-452d-8bf1-a87ab9473310', foundational, material_conditions_are_prerequisite_for_rights).
-narrative_ontology:cs_axiom_status(material_conditions_are_prerequisite_for_rights, holdable).
-narrative_ontology:cs_axiom_grounding('3a97bbc4-70f0-452d-8bf1-a87ab9473310', material_conditions_are_prerequisite_for_rights, empirically_contingent).
-narrative_ontology:cs_reference_frame('3a97bbc4-70f0-452d-8bf1-a87ab9473310', welfare_state_paradigm).
-narrative_ontology:cs_drift_state('3a97bbc4-70f0-452d-8bf1-a87ab9473310', contemporary_neoliberal_era, gap(repudiation_pressure, substantial, true)).
-narrative_ontology:cs_created_at('3a97bbc4-70f0-452d-8bf1-a87ab9473310', '').
+narrative_ontology:cs_axiom_grounding('75d8f4be-f232-49ad-836c-5b428845108a', state_has_positive_obligations, deontological).
+narrative_ontology:cs_axiom('75d8f4be-f232-49ad-836c-5b428845108a', foundational, material_conditions_are_rights).
+narrative_ontology:cs_axiom_status(material_conditions_are_rights, holdable).
+narrative_ontology:cs_axiom_grounding('75d8f4be-f232-49ad-836c-5b428845108a', material_conditions_are_rights, deontological).
+narrative_ontology:cs_reference_frame('75d8f4be-f232-49ad-836c-5b428845108a', post_wwii_social_justice_framework).
+narrative_ontology:cs_drift_state('75d8f4be-f232-49ad-836c-5b428845108a', contemporary, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('75d8f4be-f232-49ad-836c-5b428845108a', '').
 narrative_ontology:cs_kernel_id(udhr_article_3__positive_entitlement_reading, udhr_article_3).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(udhr_article_3__positive_entitlement_reading, vulnerable_citizens).
-narrative_ontology:constraint_beneficiary(udhr_article_3__positive_entitlement_reading, social_welfare_agencies).
-narrative_ontology:constraint_victim(udhr_article_3__positive_entitlement_reading, property_owners).
+narrative_ontology:constraint_beneficiary(udhr_article_3__positive_entitlement_reading, human_rights_advocates).
+narrative_ontology:constraint_victim(udhr_article_3__positive_entitlement_reading, property_rights_advocates).
+narrative_ontology:constraint_victim(udhr_article_3__positive_entitlement_reading, unrestricted_expression_advocates).
 narrative_ontology:constraint_victim(udhr_article_3__positive_entitlement_reading, taxpayers).
-narrative_ontology:constraint_victim(udhr_article_3__positive_entitlement_reading, free_speech_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Receives state-provided welfare, healthcare, and housing, which are deemed necessary for their life and security. Their well-being is directly tied to the state's active provision of these conditions.
+narrative_ontology:constraint_stakeholder(udhr_article_3__positive_entitlement_reading, vulnerable_citizens, beneficiary,
+    powerless, immediate, trapped, national).
+
+% Actively lobby for the interpretation and enforcement of Article 3 as a positive entitlement, pushing for legislative and judicial action to expand state provision of material conditions. They benefit from the expansion of human rights discourse and legal frameworks.
+narrative_ontology:constraint_stakeholder(udhr_article_3__positive_entitlement_reading, human_rights_advocates, agenda_setter,
+    organized, generational, constrained, global).
+
+% Bear the costs of wealth redistribution and state intervention in markets required to fund positive entitlements. They argue that such measures infringe on fundamental property rights and economic liberties.
+narrative_ontology:constraint_stakeholder(udhr_article_3__positive_entitlement_reading, property_rights_advocates, payer,
+    powerful, generational, constrained, national).
+
+% Experience restrictions on certain forms of expression (e.g., hate speech) justified by the need to protect the security and dignity of vulnerable groups. They argue for broader free speech protections.
+narrative_ontology:constraint_stakeholder(udhr_article_3__positive_entitlement_reading, unrestricted_expression_advocates, payer,
+    moderate, biographical, constrained, national).
+
+% Fund the state's provision of welfare, healthcare, and housing through taxation. While some may support these provisions, others bear the financial burden without directly benefiting or actively resisting.
+narrative_ontology:constraint_stakeholder(udhr_article_3__positive_entitlement_reading, taxpayers, payer,
+    organized, biographical, mobile, national).
+
+% Are obligated to implement policies and allocate resources to fulfill the positive entitlements. They interpret and enforce the reading, balancing competing claims and managing the administrative burden. Their legitimacy is tied to upholding human rights norms.
+narrative_ontology:constraint_stakeholder(udhr_article_3__positive_entitlement_reading, state_institutions, agenda_setter,
+    institutional, civilizational, identity_locked, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates state action and resource allocation to ensure a baseline of material conditions (welfare, healthcare, housing) for all citizens, preventing destitution and promoting social stability.
+% TRANSFER_FUNCTION: Transfers wealth and resources from higher-income individuals and corporations (via taxation) to vulnerable citizens, and restricts certain liberties (e.g., property use, speech) to secure collective well-being.
+% ABSENT_VOICES: Those who believe in minimal state intervention and absolute individual liberty are often marginalized in the discourse, arguing that such entitlements create dependency and stifle individual initiative.
+% DISAPPEARANCE_RATIONALE: If this reading of Article 3 vanished, states would likely retract many welfare provisions, leading to increased poverty, health crises, and social instability for vulnerable populations. The legal and political landscape around human rights would fundamentally shift, requiring a complete reorganization of social safety nets.
+% FOUNDING_PROBLEM: The historical problem of widespread poverty, lack of access to basic necessities, and vulnerability to economic and social shocks, particularly after major conflicts, which undermined human dignity and security.
+% FOUNDING_PROBLEM_CORROBORATION: International human rights bodies, NGOs, and academic researchers consistently attest to the ongoing global challenges of poverty, inadequate healthcare, and housing, corroborating that the founding problem remains live. While some economists and political theorists from outside the advocate groups contest the efficacy of state-led provision, the existence of the problem itself is widely acknowledged.
+narrative_ontology:disappearance_verdict(udhr_article_3__positive_entitlement_reading, world_rearranges).
+narrative_ontology:founding_problem_status(udhr_article_3__positive_entitlement_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(udhr_article_3__positive_entitlement_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(udhr_article_3__positive_entitlement_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(udhr_article_3__positive_entitlement_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(udhr_article_3__positive_entitlement_reading, 0.78, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,16 +216,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (0.85) reflects the substantial resources transferred from property owners and taxpayers to fund social welfare programs. Suppression (0.75) is high due to the coercive nature of taxation and potential restrictions on other rights (e.g., hate speech laws justified by 'security'). The theater ratio (0.20) is relatively low, indicating that the state's actions are largely functional in providing services, though some performative aspects exist in justifying interventions. Accessibility collapse (0.40) is moderate; while state provision aims to ensure access, alternatives (private healthcare, housing) still exist for those who can afford them. Resistance (0.70) is significant, stemming from those who bear the costs or perceive their rights as being infringed.
+ *   The high extractiveness (0.78) reflects the significant transfer of resources and restrictions on liberties required to fulfill positive entitlements. Suppression (0.65) is necessary to overcome resistance from those whose property or expressive freedoms are curtailed. The theater ratio (0.40) indicates that while genuine provision occurs, a substantial portion of the discourse and enforcement is performative, defending the expansive interpretation against challenges. The rising extractiveness and suppression over time reflect the increasing scope and enforcement of this reading since 1948.
  *
  * PERSPECTIVAL GAP:
- *   Vulnerable citizens experience this as a vital Rope or even a Mountain, providing essential support. Property owners and taxpayers, however, experience it as a Snare, extracting resources coercively. State legislatures and courts navigate the tension, attempting to balance competing rights and obligations. The engine's per-seat classification will reflect these divergences based on the declared structural relationships.
+ *   From the perspective of vulnerable citizens and human rights advocates, this reading is a vital 'rope' ensuring basic dignity and security. From the perspective of property rights and unrestricted expression advocates, it operates as a 'snare' that extracts wealth and curtails fundamental freedoms. State institutions, while acting as agenda setters, are identity-locked into upholding human rights norms, making exit from this interpretative framework difficult.
  *
  * DIRECTIONALITY LOGIC:
- *   Vulnerable citizens are full beneficiaries (d=0.0) as they receive direct state provision. Social welfare agencies are also beneficiaries (d=0.1) due to expanded mandates and resources. Property owners and taxpayers are targets (d=0.9-1.0) as they bear the direct costs of redistribution and taxation. Free speech advocates are also targets (d=0.8) if their expression is curtailed for 'security'. State legislatures and constitutional courts, while agenda-setters, have a more symmetric directionality (d=0.5) as they balance competing interests and uphold the constitutional framework.
+ *   Vulnerable citizens are full beneficiaries (d=0.0) as they receive direct provisions. Human rights advocates are also beneficiaries (d low) as their agenda is advanced. Property rights and unrestricted expression advocates are targets (d high) as they bear the direct costs and restrictions. Taxpayers are payers (d high-moderate). State institutions, while enforcing, are also identity-locked into the framework, making their directionality complex but leaning towards beneficiary of the legitimacy it confers.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading of Article 3 is not subject to mandatrophy in the traditional sense, as the 'founding problem' of ensuring basic human dignity and security remains live. However, the *means* of addressing it (e.g., specific welfare programs, levels of taxation) are constantly contested. The classification as Tangled Rope prevents mislabeling it as a pure Rope (ignoring extraction) or a pure Snare (ignoring coordination function).
+ *   This classification prevents mislabeling the constraint as a pure 'snare' by acknowledging its genuine coordination function in providing a social safety net. However, it also prevents mislabeling it as a pure 'rope' by highlighting the significant, actively enforced extraction from specific groups. The 'tangled_rope' classification captures the hybrid nature where the coordination story (ensuring basic rights) is used to justify substantial transfers and restrictions that benefit some at the expense of others, requiring continuous enforcement to maintain.
  */
 
 /* ==========================================================================
@@ -184,76 +233,80 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine interpretation of UDHR Article 3, or an overreach of state power?',
-    'Analysis of international jurisprudence and state practice, particularly in jurisdictions with strong social rights provisions.',
-    'If a genuine interpretation, it strengthens the legitimacy of state intervention for social welfare. If an overreach, it highlights the potential for human rights instruments to be used for extractive purposes.',
+    scope_of_positive_entitlement,
+    'What is the precise scope of ''material conditions necessary for life and security'' and how does it evolve with societal development?',
+    'Judicial precedent, legislative action, and international consensus on minimum standards for human dignity and well-being.',
+    'A narrower interpretation would reduce extractiveness and suppression, potentially shifting the classification towards a ''rope'' or ''scaffold''. A broader interpretation would increase extraction and suppression, pushing it closer to a ''snare''.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(scope_of_positive_entitlement, conceptual, 'Ambiguity in the definition of positive entitlements.').
+
+omega_variable(
+    efficacy_of_state_provision,
+    'Are state-provided material conditions the most effective and least extractive means to ensure life and security, compared to market-based or community-led alternatives?',
+    'Comparative empirical studies of different welfare models across jurisdictions, assessing outcomes for vulnerable populations and overall economic efficiency.',
+    'If alternatives are found to be more effective and less extractive, the justification for the current level of state intervention would weaken, potentially leading to policy shifts that reduce the constraint''s extractiveness.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(efficacy_of_state_provision, empirical, 'Whether state provision is the optimal mechanism for achieving the stated goals.').
+
+omega_variable(
+    kernel_reading_identity,
+    'Is this constraint a genuine positive entitlement, or a constructed interpretation that benefits identifiable agents?',
+    'Analysis of the historical drafting records of the UDHR, philosophical arguments regarding natural rights vs. positive rights, and the political economy of human rights advocacy.',
+    'If primarily a constructed interpretation, the ''tangled_rope'' classification would be reinforced, highlighting the political contestation over its meaning. If genuinely inherent, it would lean towards a ''mountain'' of moral philosophy, though still with beneficiaries.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''positive_entitlement_reading'' of the ''udhr_article_3'' kernel. Sibling readings include ''negative_liberty_reading'' (prohibits state deprivation) and ''procedural_hybrid_reading'' (due process guarantees). This reading differs by asserting active state obligations.').
-
-omega_variable(
-    scope_of_entitlement,
-    'What is the precise scope of ''material conditions necessary for life and security'' and how are these determined?',
-    'Legislative action, judicial precedent, and expert consensus on minimum standards for welfare, healthcare, and housing.',
-    'A broad interpretation increases state obligations and potential extraction from taxpayers; a narrow interpretation limits state intervention and potential benefits to vulnerable groups.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(scope_of_entitlement, empirical, 'The specific definition of ''material conditions'' is subject to ongoing debate and empirical measurement of societal needs.').
-
-omega_variable(
-    balancing_rights,
-    'How are the positive entitlements of this reading balanced against other rights, such as property rights and freedom of expression, which may be curtailed by state action to fulfill these entitlements?',
-    'Constitutional review processes, proportionality tests in legal adjudication, and public discourse on competing rights claims.',
-    'The balance struck determines the effective extractiveness and suppression experienced by different stakeholder groups. A strong emphasis on positive entitlements may lead to greater limitations on other rights.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(balancing_rights, preference, 'The inherent tension between positive entitlements and negative liberties, particularly concerning property and speech, is a core conceptual ambiguity.').
+narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'This constraint is one reading of the UDHR Article 3 kernel. This ''positive_entitlement_reading'' asserts an active state obligation. A sibling ''negative_liberty_reading'' would focus on freedom from state interference, while a ''procedural_hybrid_reading'' would emphasize due process. The disagreement is located in the fundamental nature of ''rights'' (positive vs. negative) and the role of the state.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(udhr_article_3__positive_entitlement_reading, 0, 20).
+narrative_ontology:interval(udhr_article_3__positive_entitlement_reading, 1948, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(udhr_tr_t0, udhr_article_3__positive_entitlement_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(udhr_tr_t5, udhr_article_3__positive_entitlement_reading, theater_ratio, 5, 0.23).
-narrative_ontology:measurement(udhr_tr_t10, udhr_article_3__positive_entitlement_reading, theater_ratio, 10, 0.22).
-narrative_ontology:measurement(udhr_tr_t15, udhr_article_3__positive_entitlement_reading, theater_ratio, 15, 0.21).
-narrative_ontology:measurement(udhr_tr_t20, udhr_article_3__positive_entitlement_reading, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(udhr_tr_t1948, udhr_article_3__positive_entitlement_reading, theater_ratio, 1948, 0.1).
+narrative_ontology:measurement(udhr_tr_t1968, udhr_article_3__positive_entitlement_reading, theater_ratio, 1968, 0.2).
+narrative_ontology:measurement(udhr_tr_t1988, udhr_article_3__positive_entitlement_reading, theater_ratio, 1988, 0.3).
+narrative_ontology:measurement(udhr_tr_t2008, udhr_article_3__positive_entitlement_reading, theater_ratio, 2008, 0.35).
+narrative_ontology:measurement(udhr_tr_t2024, udhr_article_3__positive_entitlement_reading, theater_ratio, 2024, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(udhr_be_t0, udhr_article_3__positive_entitlement_reading, base_extractiveness, 0, 0.6).
-narrative_ontology:measurement(udhr_be_t5, udhr_article_3__positive_entitlement_reading, base_extractiveness, 5, 0.68).
-narrative_ontology:measurement(udhr_be_t10, udhr_article_3__positive_entitlement_reading, base_extractiveness, 10, 0.75).
-narrative_ontology:measurement(udhr_be_t15, udhr_article_3__positive_entitlement_reading, base_extractiveness, 15, 0.8).
-narrative_ontology:measurement(udhr_be_t20, udhr_article_3__positive_entitlement_reading, base_extractiveness, 20, 0.85).
+narrative_ontology:measurement(udhr_be_t1948, udhr_article_3__positive_entitlement_reading, base_extractiveness, 1948, 0.4).
+narrative_ontology:measurement(udhr_be_t1968, udhr_article_3__positive_entitlement_reading, base_extractiveness, 1968, 0.55).
+narrative_ontology:measurement(udhr_be_t1988, udhr_article_3__positive_entitlement_reading, base_extractiveness, 1988, 0.68).
+narrative_ontology:measurement(udhr_be_t2008, udhr_article_3__positive_entitlement_reading, base_extractiveness, 2008, 0.75).
+narrative_ontology:measurement(udhr_be_t2024, udhr_article_3__positive_entitlement_reading, base_extractiveness, 2024, 0.78).
 
 % Suppression requirement over time
-narrative_ontology:measurement(udhr_su_t0, udhr_article_3__positive_entitlement_reading, suppression_requirement, 0, 0.5).
-narrative_ontology:measurement(udhr_su_t5, udhr_article_3__positive_entitlement_reading, suppression_requirement, 5, 0.58).
-narrative_ontology:measurement(udhr_su_t10, udhr_article_3__positive_entitlement_reading, suppression_requirement, 10, 0.65).
-narrative_ontology:measurement(udhr_su_t15, udhr_article_3__positive_entitlement_reading, suppression_requirement, 15, 0.7).
-narrative_ontology:measurement(udhr_su_t20, udhr_article_3__positive_entitlement_reading, suppression_requirement, 20, 0.75).
+narrative_ontology:measurement(udhr_su_t1948, udhr_article_3__positive_entitlement_reading, suppression_requirement, 1948, 0.3).
+narrative_ontology:measurement(udhr_su_t1968, udhr_article_3__positive_entitlement_reading, suppression_requirement, 1968, 0.45).
+narrative_ontology:measurement(udhr_su_t1988, udhr_article_3__positive_entitlement_reading, suppression_requirement, 1988, 0.58).
+narrative_ontology:measurement(udhr_su_t2008, udhr_article_3__positive_entitlement_reading, suppression_requirement, 2008, 0.62).
+narrative_ontology:measurement(udhr_su_t2024, udhr_article_3__positive_entitlement_reading, suppression_requirement, 2024, 0.65).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(udhr_article_3__positive_entitlement_reading, resource_allocation).
+narrative_ontology:coordination_type(udhr_article_3__positive_entitlement_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(udhr_article_3__positive_entitlement_reading, udhr_article_3__negative_liberty_reading).
+narrative_ontology:affects_constraint(udhr_article_3__positive_entitlement_reading, udhr_article_3__procedural_hybrid_reading).
+narrative_ontology:affects_constraint(udhr_article_3__positive_entitlement_reading, national_welfare_legislation).
+narrative_ontology:affects_constraint(udhr_article_3__positive_entitlement_reading, hate_speech_laws).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three distinct readings of UDHR Article 3, each with different structural implications and classifications. This reading focuses on positive state obligations.
+% This constraint is one of three distinct readings of the UDHR Article 3 kernel. Each reading has a different structural profile and classification. This 'positive_entitlement_reading' emphasizes state obligation for material conditions, contrasting with 'negative_liberty_reading' (freedom from state interference) and 'procedural_hybrid_reading' (due process guarantees).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

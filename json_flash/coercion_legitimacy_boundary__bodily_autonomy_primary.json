@@ -4,137 +4,228 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "eb7317de-2fce-45b4-9321-d8f7369d463c"
+    "story_uid": "8c0a19ca-fc4a-4319-a3ec-5403ba6865c8",
+    "created_at": "2024-07-30T12:00:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.1,
-    "theater_ratio": 0.05,
-    "accessibility_collapse": 0.15,
-    "resistance": 0.05,
+    "extractiveness": 0.45,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.15,
     "claimed_type": "rope",
-    "human_readable": "Bodily Autonomy as Primary in Medical Intervention",
+    "human_readable": "Bodily Autonomy as Primary Constraint on Medical Coercion",
     "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
       "individuals_seeking_autonomy",
-      "mandate_enforcers"
+      "medical_ethics_advocates"
     ],
     "victims": [
-      "immunocompromised_individuals"
+      "immunocompromised_individuals",
+      "public_health_authorities"
+    ],
+    "vindicated_propositions": [
+      "informed_consent_doctrine",
+      "individual_rights_philosophy"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine expression of a fundamental right, or a specific reading of a contested kernel?",
-      "resolution_mechanism": "Analysis of legal precedent and philosophical arguments across different jurisdictions and ethical traditions.",
-      "impact": "If a fundamental right, its classification as a Rope is robust. If a reading, its classification is contingent on the acceptance of the 'coercion_legitimacy_boundary' kernel and the 'bodily_autonomy_primary' interpretation, which could shift if other readings gain prominence.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading ('bodily_autonomy_primary') of the 'coercion_legitimacy_boundary' kernel."
+      "name": "individuals_seeking_autonomy",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "These individuals benefit from the constraint by having their right to refuse medical intervention upheld, even when it might contribute to collective risk. They experience freedom from state-mandated procedures."
     },
     {
-      "id": "sibling_reading_impact_proportionality",
-      "question": "How would the 'proportionality_reading' (coercion scales with disease severity) alter the beneficiary/victim structure?",
-      "resolution_mechanism": "Empirical data on disease severity and transmission rates, combined with legal analysis of proportionality tests.",
-      "impact": "The 'proportionality_reading' would shift the balance, potentially reducing the 'immunocompromised_individuals' victim set under low-severity threats, but increasing it under high-severity threats where mandates are deemed legitimate. It would also shift 'mandate_enforcers' from beneficiaries to agenda_setters with a more active role.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Impact of 'proportionality_reading' on constraint structure."
+      "name": "medical_ethics_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "These groups actively promote and defend the principle of bodily autonomy and informed consent as foundational to medical practice and law. They shape legal and ethical discourse around medical interventions."
     },
     {
-      "id": "sibling_reading_impact_public_health",
-      "question": "How would the 'public_health_primary' reading (state may compel intervention for collective harm) alter the beneficiary/victim structure?",
-      "resolution_mechanism": "Analysis of public health law and emergency powers, and epidemiological data on collective harm.",
-      "impact": "The 'public_health_primary' reading would significantly expand the 'immunocompromised_individuals' beneficiary set (as they are protected by mandates), and shift 'individuals_seeking_autonomy' into a victim role. 'Mandate_enforcers' would become primary agenda_setters, and the constraint would likely reclassify as a Tangled Rope or Snare due to increased extraction and suppression.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of 'public_health_primary' reading on constraint structure."
+      "name": "immunocompromised_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals bear the cost of this constraint by being exposed to higher risks of infectious disease from unvaccinated populations, as collective immunity is not prioritized over individual choice. Their health and safety are directly impacted."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These authorities are constrained in their ability to implement broad public health measures, such as mandatory vaccinations, even during epidemics, due to the prioritization of individual autonomy. They face challenges in controlling disease spread."
+    },
+    {
+      "name": "proportionality_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These advocates argue for a nuanced approach where coercion is permissible if proportional to the public health threat. They are excluded from the 'categorical impermissibility' framing of this reading."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear ethical and legal boundary for medical practice, ensuring that individual consent is paramount and fostering trust between patients and medical professionals.",
+    "transfer_function": "Transfers the burden of collective health risk from individuals who refuse intervention to vulnerable populations and public health systems, in exchange for upholding individual liberty.",
+    "absent_voices": "Advocates for a 'public health primary' approach, who would argue that collective harm prevention should, in certain severe circumstances, override individual autonomy. They are absent from the foundational premise of this constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, medical practice would fundamentally change, potentially allowing for compulsory interventions. Public health policy would shift dramatically towards collective good, and individual rights discourse would be severely diminished.",
+    "founding_problem": "The historical problem of involuntary medical experimentation and coercive state control over individual bodies, leading to abuses of power and violations of human dignity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Medical ethics boards, human rights organizations, and historical records of medical abuses corroborate the ongoing relevance of protecting individual bodily integrity against state or medical overreach. Legal scholars outside the immediate beneficiary group also attest to its foundational importance."
+  },
+  "interval": {
+    "start": 1947,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1947,
       "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.3
+      "time_point": 1970,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.3
+      "time_point": 1990,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.3
+      "time_point": 2010,
+      "value": 0.42
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.05
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.05
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1947,
       "value": 0.1
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.1
+      "time_point": 1970,
+      "value": 0.12
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.1
+      "time_point": 1990,
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 2010,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1947,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint asserts that medical intervention without an individual's consent is fundamentally impermissible, irrespective of any potential collective benefit. It prioritizes individual bodily autonomy as a primary ethical and legal boundary. This reading implies that even in public health crises, non-consensual interventions (like mandatory vaccination or treatment) are illegitimate. The constraint's low extractiveness and suppression reflect a system where individual choice is largely respected, and enforcement of non-consensual measures is minimal or absent. Immunocompromised individuals are listed as victims because this reading, by prioritizing individual autonomy, implicitly accepts their increased exposure risk from unvaccinated populations.",
-    "logic_rationale": "The constraint is classified as a Rope because it establishes a clear boundary that benefits individuals by protecting their autonomy, with minimal extraction or suppression. Its persistence relies on broad societal and legal acceptance of individual rights, rather than active enforcement against dissenters. The low extractiveness (0.3) reflects the 'cost' of not being able to compel action for collective benefit, which is diffuse. Suppression (0.1) is low because the constraint is largely self-enforcing through cultural norms and legal frameworks, rather than requiring active coercion. Theater ratio is negligible (0.05) as its function is direct and not performative.",
-    "perspectival_gap": "From the perspective of 'individuals_seeking_autonomy', this constraint is a clear Rope, protecting a fundamental right. From the perspective of 'immunocompromised_individuals', it might be perceived as a Snare, as their safety is compromised by the autonomy of others, leading to a higher effective extraction for them. 'Mandate_enforcers' benefit from a clear, non-interventionist boundary, simplifying their role.",
-    "directionality_logic": "'Individuals_seeking_autonomy' are clear beneficiaries (d=0.0-0.1) as the constraint directly protects their choice. 'Mandate_enforcers' are also beneficiaries (d=0.1-0.2) as this reading simplifies their role by setting a clear, non-coercive boundary. 'Immunocompromised_individuals' are victims (d=0.8-0.9) because the constraint's prioritization of individual autonomy over collective health directly increases their risk of exposure to preventable diseases.",
-    "mandatrophy_analysis": "This classification prevents mislabeling a fundamental rights protection as a form of extraction. While there are costs to collective health, the constraint's primary function is to coordinate individual liberty, not to extract from it. The low extractiveness and suppression metrics confirm it is not a Snare or Tangled Rope, despite the 'victim' declaration for immunocompromised individuals. The 'victim' status here highlights a consequence of the constraint's operation, not an extractive mechanism within it.",
-    "kernel_context": "This constraint is the 'bodily_autonomy_primary' reading of the 'coercion_legitimacy_boundary' kernel. This reading asserts that individual bodily autonomy is paramount, making non-consensual medical interventions impermissible. Sibling readings include 'public_health_primary' (collective harm-prevention outweighs individual autonomy) and 'proportionality_reading' (coercion legitimacy scales with disease severity)."
+    "narrative_context": "This constraint asserts that medical intervention without consent is categorically impermissible, prioritizing individual bodily autonomy above any collective benefit. It is a reading of the 'coercion_legitimacy_boundary' kernel, specifically the 'bodily_autonomy_primary' interpretation. While framed as a 'rope' by its proponents, its operation imposes costs on vulnerable populations and public health efforts, leading to a moderate extractiveness score. The constraint's persistence relies on strong ethical and legal advocacy rather than active enforcement against individuals, but it actively suppresses alternative public health framings.",
+    "key_agents": [
+      "individuals_seeking_autonomy: Primary beneficiary (moderate/mobile) — protected from coercion",
+      "medical_ethics_advocates: Agenda setter (organized/analytical) — defends the principle",
+      "immunocompromised_individuals: Primary payer (powerless/trapped) — bears increased health risk",
+      "public_health_authorities: Payer (institutional/constrained) — limited in policy options",
+      "proportionality_advocates: Excluded (organized/constrained) — their alternative framing is suppressed"
+    ],
+    "logic_rationale": "The extractiveness (0.45) reflects the societal cost of foregone collective health benefits and increased risk to vulnerable groups. Suppression (0.20) is low because it's not about coercing individuals, but rather suppressing alternative policy framings that would allow for coercion. Theater ratio (0.10) is low as the constraint is genuinely functional in protecting individual rights, not merely performative. Accessibility collapse (0.30) is moderate, as alternatives (e.g., public health mandates) are conceptually available but legally and ethically constrained. Resistance (0.15) is low, as the principle is widely accepted in many legal and ethical frameworks, though contested by public health advocates.",
+    "perspectival_gap": "From the perspective of individuals seeking autonomy and medical ethics advocates, this constraint is a fundamental protection (a rope). From the perspective of immunocompromised individuals and public health authorities, it imposes significant costs and limits their ability to ensure collective well-being (leaning towards a snare or tangled rope). The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Individuals seeking autonomy and medical ethics advocates are clear beneficiaries, as the constraint directly upholds their core values and rights. Immunocompromised individuals are victims, as they bear the health risks of reduced collective immunity. Public health authorities are also victims, as their mandate to protect the population is constrained. Proportionality advocates are excluded, as their alternative framing is not considered within this constraint's categorical impermissibility.",
+    "mandatrophy_analysis": "This constraint's mandate (protecting individual autonomy from medical coercion) remains live and highly relevant, especially in light of historical abuses and ongoing debates about state power. There is no evidence of mandatrophy; its function is actively defended and its core problem is still present. The classification prevents mislabeling it as a snare by acknowledging its genuine coordination function for individual rights, even while recognizing its extractive effects on other groups.",
+    "kernel_context": "This constraint is the 'bodily_autonomy_primary' reading of the 'coercion_legitimacy_boundary' kernel. This reading asserts the categorical impermissibility of medical intervention without consent. Sibling readings include 'public_health_primary' (prioritizing collective harm-prevention) and 'proportionality_reading' (allowing coercion scaled to disease severity)."
   },
+  "omegas": [
+    {
+      "id": "collective_harm_threshold",
+      "question": "At what threshold of collective harm (e.g., disease severity, transmission rate) would the 'categorical impermissibility' of this reading be challenged or overridden by a 'public health primary' or 'proportionality' reading?",
+      "resolution_mechanism": "Legal precedent from supreme court rulings during severe pandemics, or international human rights jurisprudence on public health emergencies.",
+      "impact": "If a clear threshold exists and is crossed, this reading's categorical nature would be reclassified, potentially shifting it towards a 'tangled_rope' or 'snare' from the perspective of public health authorities, or even a 'mountain' if the collective harm is deemed an irreducible limit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The point at which collective harm might challenge individual autonomy."
+    },
+    {
+      "id": "victim_set_expansion",
+      "question": "Does the 'immunocompromised_individuals' group fully capture the victim set, or are there other groups (e.g., healthcare workers, economic sectors) that bear significant, unacknowledged costs from this constraint?",
+      "resolution_mechanism": "Comprehensive epidemiological and economic impact studies during a public health crisis, disaggregated by population group and sector.",
+      "impact": "If the victim set is significantly larger or more diverse, the overall extractiveness of this constraint would be higher, potentially pushing its classification closer to a 'snare' from a societal perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the full scope of those harmed by the constraint is captured."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'coercion_legitimacy_boundary' kernel. Other readings (e.g., 'public_health_primary', 'proportionality_reading') would yield different classifications and structural properties."
+    "affects_constraints": [
+      "public_health_mandate_legitimacy",
+      "medical_research_ethics"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -142,45 +233,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "coercion_legitimacy_boundary__public_health_primary",
+        "sibling_id": "public_health_primary",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "coercion_legitimacy_boundary__proportionality_reading",
+        "sibling_id": "proportionality_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "bodily_integrity_absolute",
+        "atom": "individual_bodily_integrity_absolute",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "consent_precedes_benefit",
-        "role": "foundational",
+        "atom": "informed_consent_unwaivable",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "post_nuremberg_code_ethics",
+    "reference_frame": "nuremberg_code_principles",
     "drift_state": {
       "moment": "contemporary_pandemic_era",
-      "direction": "revival_pressure",
+      "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

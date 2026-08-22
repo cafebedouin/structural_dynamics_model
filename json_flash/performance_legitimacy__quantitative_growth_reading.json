@@ -4,13 +4,13 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "5397668a-11f2-4874-879c-e15a21395cf0"
+    "story_uid": "7eb0019c-5033-4b3f-901d-0b8d6600392d"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.4,
-    "accessibility_collapse": 0.6,
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.65,
     "resistance": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "Performance Legitimacy: Quantitative Growth Reading",
@@ -21,132 +21,242 @@
       "local_government_officials"
     ],
     "victims": [
+      "general_populace",
       "environmental_advocates",
-      "labor_migrants",
       "small_and_medium_enterprises"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_ambiguity",
-      "question": "Is this constraint primarily driven by the 'quantitative_growth_reading' of performance legitimacy, or are other readings (e.g., 'livelihood_security_reading') also significantly shaping policy?",
-      "resolution_mechanism": "Analysis of policy documents, budget allocations, and official rhetoric for explicit prioritization of GDP growth over other development metrics. If other metrics consistently override growth targets, reclassify as a different reading.",
-      "impact": "If other readings are dominant, the constraint's true beneficiaries and victims may shift, potentially altering its classification from Tangled Rope to a different type, or revealing a more complex, multi-layered constraint.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity in the dominant reading of performance legitimacy."
+      "name": "state_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The central authority that defines and enforces the growth targets. Their legitimacy is directly tied to achieving these targets, leading to policies that prioritize GDP expansion above other concerns. They benefit from the stability and perceived success that high growth rates provide."
     },
     {
-      "id": "growth_vs_sustainability_tradeoff",
-      "question": "To what extent is the pursuit of high GDP growth rates inherently in conflict with environmental sustainability and social equity?",
-      "resolution_mechanism": "Empirical studies correlating GDP growth with environmental degradation and Gini coefficient changes over time. Policy analysis of 'green GDP' initiatives and their implementation success.",
-      "impact": "If the conflict is inherent and severe, the 'quantitative_growth_reading' is fundamentally extractive from the environment and future generations, reinforcing its Tangled Rope nature. If trade-offs are manageable, it might lean more towards a Rope with externalized costs.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Trade-off between quantitative growth and other development goals."
+      "name": "industrial_export_complex",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Large state-owned enterprises and private companies heavily involved in export-oriented manufacturing and infrastructure. They receive preferential policies, subsidies, and access to capital, directly benefiting from the investment-driven growth model. Their success is measured by their contribution to GDP and exports."
     },
     {
-      "id": "legitimacy_source_shift",
-      "question": "Is the state's legitimacy genuinely derived from quantitative growth, or is this a convenient narrative to maintain an existing power structure that benefits from this growth?",
-      "resolution_mechanism": "Public opinion surveys on sources of state legitimacy, analysis of social unrest triggers, and historical comparison with periods of low growth. If legitimacy persists despite low growth, the grounding is not purely quantitative.",
-      "impact": "If growth is merely a cover, the constraint is more Snare-like, with the coordination story (stability through growth) serving as a justification for extraction. If it's a genuine, albeit contested, source of legitimacy, the Tangled Rope classification holds.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the true source of state legitimacy."
+      "name": "local_government_officials",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Their career progression and performance evaluations are primarily based on the GDP growth rates achieved in their jurisdictions. This incentivizes them to pursue large-scale, often environmentally costly, infrastructure and industrial projects, sometimes leading to overcapacity and debt."
+    },
+    {
+      "name": "general_populace",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "While benefiting from job creation and some improvements in living standards, they bear the costs of environmental degradation, social inequality, and potential economic instability from an over-reliance on quantitative growth. Their consent is assumed through the promise of future prosperity."
+    },
+    {
+      "name": "environmental_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the direct costs of pollution and resource depletion resulting from unchecked industrial expansion. Their efforts to push for sustainable practices are often suppressed or marginalized in favor of growth targets, making them targets of the constraint."
+    },
+    {
+      "name": "small_and_medium_enterprises",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Often struggle to compete with large state-backed entities for resources and market share. They face higher regulatory burdens and less access to capital, making them pay a disproportionate cost for an economic model that favors large-scale industrial players."
+    },
+    {
+      "name": "international_investors",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Monitor the growth rates and economic policies, seeking opportunities for investment. While not directly subject to the constraint's enforcement, their confidence in the growth narrative influences capital flows and external perceptions of legitimacy."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates national economic policy and local government actions towards a singular, measurable goal of GDP growth, ensuring a unified direction for development and resource allocation.",
+    "transfer_function": "Transfers economic resources, policy support, and political capital from environmental protection, social welfare, and smaller enterprises to large-scale industrial projects and export-oriented sectors, in exchange for high GDP figures and job creation.",
+    "absent_voices": "Genuine civil society organizations focused on environmental protection, labor rights, and equitable distribution of wealth are largely excluded from policy-making. They would advocate for a more balanced development model, but their concerns are often sidelined in favor of growth imperatives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legitimacy derived from quantitative GDP growth vanished overnight, the entire state-capitalist development model would collapse. Local officials would lose their primary performance metric, industrial complexes would lose their policy justification, and the state would need to rapidly redefine its social contract, leading to a fundamental reorganization of economic and political priorities.",
+    "founding_problem": "To rapidly industrialize and lift a large population out of poverty, requiring a clear, measurable, and enforceable metric for economic progress and governmental performance.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State leadership and beneficiaries attest the problem is still live, citing ongoing development needs and global competition. Environmental advocates and some economists, from outside the benefiting parties, attest that while poverty reduction was achieved, the singular focus on GDP growth has created new, severe problems (environmental, social, debt) that the original framework cannot address, rendering the founding problem 'dead' in its original form."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.55
+      "time_point": 1980,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.6
+      "time_point": 1990,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 2000,
       "value": 0.68
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1980,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1990,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.75
+      "time_point": 2000,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.85
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1980,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 2010,
       "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint describes a political-economic system where the legitimacy of the ruling authority is primarily derived from its ability to deliver high GDP growth rates. This 'quantitative growth reading' prioritizes economic expansion and job creation, often through investment-driven models, even if it entails costs like export dependency, industrial overcapacity, or environmental degradation. The constraint is actively enforced through policy directives, performance evaluations for officials, and suppression of dissenting views that challenge the growth-first paradigm.",
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates economic activity and provides jobs (a coordination function), but it does so with significant asymmetric extraction. The extraction comes from externalizing costs onto the environment, future generations, and often labor, while concentrating benefits on specific industrial sectors and officials whose careers depend on meeting growth targets. The high suppression (0.75) reflects the active enforcement of policies that prioritize growth and the suppression of alternative development models or critical voices. The rising extractiveness and suppression over time indicate an intensification of this growth-first approach, with increasing costs borne by victims.",
-    "perspectival_gap": "From the perspective of the industrial-export complex and local government officials, this is a necessary and effective coordination mechanism for national development and stability. From the perspective of environmental advocates or marginalized labor, it is a highly extractive system that sacrifices long-term well-being for short-term, unevenly distributed gains. The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "The industrial-export complex and local government officials are clear beneficiaries (d near 0.0) as their power and resources are directly tied to the growth model. Environmental advocates and labor migrants are victims (d near 1.0) as they bear the costs of pollution, resource depletion, and exploitative labor practices. SMEs are also victims, often struggling to compete with state-backed giants in a growth-driven economy. The general populace is a mixed bag, benefiting from job creation and rising living standards, but also bearing diffuse costs.",
-    "mandatrophy_analysis": "The constraint's mandate (delivering prosperity and stability) is still 'live' in the sense that growth is still desired, but its 'quantitative' interpretation has arguably outlived its optimal function. The persistence of this specific reading, despite calls for 'high-quality development' or 'livelihood security,' suggests a form of mandatrophy where the means (raw GDP growth) have become an end, sustained by the beneficiaries of the existing model. The classification as Tangled Rope, rather than Snare, acknowledges the genuine coordination function (jobs, economic activity) while highlighting the significant, actively enforced extraction that prevents a shift to less extractive development models."
+    "narrative_context": "This constraint describes a specific reading of 'performance legitimacy' in a state-capitalist context, where the state's right to rule is primarily justified by its ability to deliver high rates of GDP growth and job creation. This reading prioritizes quantitative economic expansion, often at the expense of environmental sustainability, social equity, or qualitative development. The constraint is actively enforced through top-down policy directives and cadre evaluation systems, creating a powerful incentive structure for local officials and benefiting large industrial complexes.",
+    "key_agents": [
+      "state_leadership: Primary agenda-setter (institutional/identity_locked) — defines and enforces growth targets.",
+      "industrial_export_complex: Primary beneficiary (organized/constrained) — receives preferential policies for contributing to GDP.",
+      "local_government_officials: Secondary beneficiary (powerful/identity_locked) — career tied to local GDP growth.",
+      "general_populace: Primary payer (powerless/constrained) — bears environmental and social costs.",
+      "environmental_advocates: Payer (moderate/constrained) — marginalized in favor of growth.",
+      "small_and_medium_enterprises: Payer (moderate/constrained) — struggle against large state-backed entities.",
+      "international_investors: Observer (organized/arbitrage) — monitor growth for investment opportunities."
+    ],
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates a vast economic system towards a common goal (rapid development and job creation), but does so with significant asymmetric extraction. Extractiveness is high (0.78) due to the costs borne by the environment and segments of the populace, and the suppression of alternative development paths. Suppression is very high (0.85) because the state actively enforces this growth model and limits dissent. Theater ratio is moderate (0.45), reflecting that while some growth figures are genuine, there's also significant performative reporting and 'face-saving' projects that prioritize optics over genuine utility. The metrics show a trend of increasing extractiveness and suppression as the growth model matured and its costs became more apparent, with a slight recent dip reflecting attempts to rebalance.",
+    "perspectival_gap": "State leadership and the industrial-export complex perceive this as a necessary and effective Rope, delivering prosperity and stability. The general populace, environmental advocates, and SMEs experience it as a Snare, where the benefits are unevenly distributed and the costs are substantial and unavoidable. The engine's per-seat classification will reflect these divergent experiences based on their declared power, exit options, and roles.",
+    "directionality_logic": "The state leadership and local government officials are beneficiaries, as their legitimacy and careers are directly tied to the growth figures. The industrial-export complex also benefits from the policies. The general populace, environmental advocates, and SMEs are payers, bearing the social and environmental costs. The 'identity_locked' exit option for state and local officials reflects that their professional and political identities are fused with the success of this growth model, making exit from this paradigm unthinkable without a fundamental shift in the state's self-conception.",
+    "mandatrophy_analysis": "The classification as Tangled Rope, rather than a pure Snare, acknowledges the genuine coordination function in the early stages of development. However, the high and increasing extractiveness and suppression, coupled with the 'contested' status of the founding problem, suggest a strong drift towards a Snare. The system's persistence is increasingly due to the beneficiaries' capture of the growth narrative and the suppression of alternatives, rather than the universal benefit of the coordination. The high theater ratio indicates that the performance of growth is becoming more important than its actual quality or sustainability."
   },
+  "omegas": [
+    {
+      "id": "growth_quality_vs_quantity",
+      "question": "Is the measured GDP growth genuinely improving overall societal well-being, or is it primarily driven by unsustainable investment and resource depletion?",
+      "resolution_mechanism": "Longitudinal studies tracking genuine progress indicators (GPI), environmental impact assessments, and Gini coefficient trends, independent of official GDP reporting.",
+      "impact": "If growth is found to be low-quality and unsustainable, the constraint's effective extractiveness would be re-evaluated upwards, and its coordination function would be seen as a cover for resource depletion, pushing it closer to a Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing between quantitative growth and qualitative development."
+    },
+    {
+      "id": "legitimacy_source_shift",
+      "question": "To what extent has the state's legitimacy shifted from genuine performance (solving poverty) to the mere maintenance of growth figures, regardless of their social or environmental cost?",
+      "resolution_mechanism": "Analysis of public discourse, policy documents, and official rhetoric over time, comparing emphasis on 'growth' versus 'quality of life' or 'sustainability'.",
+      "impact": "If the shift is substantial, the constraint's 'coordination' aspect becomes increasingly theatrical, and its classification would drift towards Piton or Snare, as the original mandate atrophies into a performance for power maintenance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Assessing the evolution of the state's legitimacy grounding."
+    },
+    {
+      "id": "overcapacity_and_debt_sustainability",
+      "question": "Are the investment-driven growth strategies leading to unsustainable levels of industrial overcapacity and local government debt, threatening future economic stability?",
+      "resolution_mechanism": "Independent audits of local government balance sheets, analysis of industrial capacity utilization rates, and assessment of non-performing loans in the financial system.",
+      "impact": "If overcapacity and debt are found to be severe and systemic, the long-term costs to the general populace would be re-evaluated upwards, increasing the constraint's extractiveness and highlighting its potential for future collapse, reinforcing a Snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Evaluating the sustainability of the investment-driven growth model."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
   },
   "network": {
     "affects_constraints": [
-      "livelihood_security_reading",
-      "qualitative_development_reading",
-      "techno_nationalist_reading"
+      "performance_legitimacy__livelihood_security_reading",
+      "performance_legitimacy__qualitative_development_reading",
+      "performance_legitimacy__techno_nationalist_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'performance_legitimacy' kernel. Its focus on quantitative growth rates structurally influences and often competes with other readings like 'livelihood_security_reading' and 'qualitative_development_reading' by allocating resources and political capital preferentially."
-  },
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": []
+    "dual_formulation_note": "This constraint is one reading of the 'performance_legitimacy' kernel. Its focus on quantitative growth influences, and is influenced by, other readings of state legitimacy."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
@@ -164,35 +274,36 @@
     ],
     "axioms": [
       {
-        "atom": "gdp_growth_is_primary_legitimacy_metric",
+        "atom": "gdp_growth_as_primary_legitimacy_metric",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "economic_stability_requires_continuous_expansion",
+        "atom": "investment_driven_development_is_optimal",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "post_reform_era_growth_consensus",
+    "reference_frame": "uninterrupted_high_gdp_growth",
     "drift_state": {
-      "moment": "contemporary_era_of_sustainability_calls",
-      "direction": "practice_drift",
+      "moment": "contemporary_era_of_sustainability_concerns",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

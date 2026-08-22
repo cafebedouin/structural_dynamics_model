@@ -4,143 +4,210 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c698e994-c818-4c0c-87fe-e4e164ee8b43"
+    "story_uid": "dca6d5ba-98db-4fce-8706-788a6c88d185"
   },
   "base_properties": {
     "extractiveness": 0.45,
     "suppression": 0.3,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.4,
+    "accessibility_collapse": 0.35,
     "resistance": 0.25,
     "claimed_type": "tangled_rope",
-    "human_readable": "Marriage as Pastoral Relationship (Civic-Pastoral Reading)",
+    "human_readable": "Marriage as Pastoral Discernment (Civic-Pastoral Reading)",
     "topic_domain": "religious_doctrine/canon_law/political_sociology",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "pastoral_clergy",
-      "laity_seeking_discernment"
+      "laity_seeking_annulment"
     ],
     "victims": [
-      "traditional_catholics",
+      "traditional_laity",
       "doctrinal_conservatives"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "pastoral_clergy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Tasked with applying doctrine compassionately in individual cases, often leading to annulments or accommodations for those in irregular unions. They benefit from increased flexibility and reduced pastoral burden, but face pressure from doctrinal conservatives."
+    },
+    {
+      "name": "laity_seeking_annulment",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Directly benefit from a more lenient and pastoral approach to marriage nullity, allowing them to regularize their status within the Church after marital breakdown. Their options are limited by the availability and interpretation of canon law."
+    },
+    {
+      "name": "traditional_laity",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Experience a relativization of the doctrine of indissolubility, leading to a perceived loss of normative clarity and stability in their faith. Their identity is deeply tied to the Church's traditional teachings, making exit unthinkable despite their dissatisfaction."
+    },
+    {
+      "name": "doctrinal_conservatives",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of what they perceive as doctrinal erosion and inconsistent application of canon law. They actively resist changes that dilute the traditional understanding of marriage, but their institutional power is often insufficient to halt the pastoral shift."
+    },
+    {
+      "name": "institutional_hierarchy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sets the overall pastoral direction, balancing doctrinal fidelity with compassionate application. They benefit from maintaining institutional unity and relevance in a changing world, but face internal dissent and external scrutiny."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the Church's pastoral response to marital breakdown, providing a framework for discernment and accommodation that aims to keep individuals within the sacramental life of the Church.",
+    "transfer_function": "Transfers pastoral flexibility and a sense of inclusion to individuals experiencing marital failure, while transferring a perceived loss of doctrinal certainty and institutional consistency to traditionalist factions.",
+    "absent_voices": "Strict legalists who would argue for a rigid, unyielding application of canon law without pastoral discretion are marginalized in this reading, as are those who advocate for a complete secularization of marriage within the Church.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this pastoral reading vanished, the Church's approach to marital breakdown would revert to a more rigid, less accommodating stance, leading to increased alienation for many laity and a crisis of pastoral care. The institutional response to human failure would reorganize around strict legalism.",
+    "founding_problem": "The Church faced a growing disconnect between its strict doctrine of marriage indissolubility and the lived realities of many faithful experiencing marital breakdown, leading to alienation and exclusion from sacramental life.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Pastoral surveys, anecdotal evidence from clergy, and theological discussions within the Church consistently attest to the ongoing challenge of reconciling doctrine with lived experience. This is corroborated by sociological studies on religious practice and marital trends."
+  },
   "interval": {
-    "start": 0,
-    "end": 20
+    "start": 1965,
+    "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1965,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
       "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.35
+      "time_point": 1995,
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.4
+      "time_point": 2010,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.43
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.4
+      "time_point": 1965,
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.35
+      "time_point": 1980,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.32
+      "time_point": 1995,
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.3
+      "time_point": 2010,
+      "value": 0.28
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1965,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 1995,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2010,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the 'civic-pastoral' reading of the Catholic Church's marriage sacrament, where indissolubility is treated as an ideal requiring compassionate discernment in individual cases, rather than an absolute, ontologically fixed reality. This reading emerged as a response to the perceived rigidity of traditional doctrine and aims to provide pastoral care to those in complex marital situations. It is one reading of the 'marriage_sacrament' kernel, distinct from the 'hierarchical_indissolubility_reading'.",
-    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the cost borne by traditional Catholics who experience doctrinal relativization and a loss of normative clarity. Suppression (0.30) is relatively low, as this reading seeks to reduce the coercive pressure on individuals, but still requires active enforcement to manage internal dissent and maintain a semblance of doctrinal consistency. The theater ratio (0.20) is present because the nominal ideal of indissolubility is maintained, even as pastoral practice introduces significant flexibility, creating a gap between stated doctrine and lived experience. The declining suppression_requirement over time reflects a shift away from strict enforcement towards a more pastoral approach.",
-    "directionality_logic": "Pastoral clergy and laity seeking discernment are beneficiaries (d near 0.0-0.2), gaining flexibility and compassion. Traditional Catholics and doctrinal conservatives are victims (d near 0.8-1.0), experiencing a loss of doctrinal stability and clarity. The magisterial authority, while nominally upholding indissolubility, benefits from maintaining institutional relevance and unity, but also bears the cost of internal dissent, placing its d closer to symmetric (0.4-0.6).",
-    "perspectival_gap": "From the perspective of pastoral clergy and laity seeking discernment, this reading functions as a compassionate rope, offering support and pathways for reconciliation. From the perspective of traditional Catholics, it operates as a tangled rope or even a snare, extracting doctrinal certainty and imposing ambiguity, while benefiting those who seek to circumvent traditional norms. The engine's per-seat classification will capture this divergence.",
-    "kernel_context": "This constraint is the 'civic_pastoral_reading' of the 'marriage_sacrament' kernel. It emphasizes pastoral care and discernment, contrasting with the 'hierarchical_indissolubility_reading' which prioritizes ontological fixity and strict hierarchical adjudication. The disagreement centers on the nature of indissolubility and the authority to interpret it in practice."
+    "narrative_context": "This constraint describes the 'civic-pastoral' reading of the Catholic Church's doctrine of marriage, where indissolubility is an ideal to be compassionately discerned in individual cases, acknowledging human failure. This reading prioritizes pastoral care and inclusion, often leading to more accessible annulment processes or accommodations for those in irregular unions. While framed as a 'tangled_rope' due to its coordination function (pastoral care) and asymmetric extraction (doctrinal relativization for traditionalists), the claimed type is 'rope' by the institutional hierarchy, reflecting their desired framing. The metrics, however, reflect the actual operation and its costs.",
+    "logic_rationale": "Extractiveness is moderate (0.45) as traditionalists experience a loss of doctrinal certainty and normative clarity, which is a significant cost to their identity and worldview. Suppression is low (0.30) because while traditionalist voices are often marginalized, they are not actively silenced or prevented from expressing dissent. Theater ratio is moderate (0.20) as the language of 'indissolubility as ideal' can sometimes mask a de facto shift in practice. Accessibility collapse is moderate (0.35) as alternatives for traditionalists (e.g., finding a more doctrinally strict community) are constrained by the global nature of the Church, but not entirely collapsed. Resistance is moderate (0.25) from traditionalist groups.",
+    "directionality_logic": "Pastoral clergy and laity seeking annulment are beneficiaries, experiencing greater flexibility and inclusion. Traditional laity and doctrinal conservatives are payers, bearing the cost of doctrinal relativization and perceived inconsistency. The institutional hierarchy acts as an agenda-setter, navigating the tension between doctrine and pastoral needs.",
+    "perspectival_gap": "From the perspective of pastoral clergy and those seeking annulment, this reading functions as a 'rope' or 'scaffold', providing necessary support and coordination for complex human situations. However, from the perspective of traditional laity and doctrinal conservatives, it operates as a 'snare' or 'tangled_rope', extracting their sense of doctrinal stability and identity. The engine's computation will highlight this divergence.",
+    "kernel_context": "This constraint is the 'civic_pastoral_reading' of the 'marriage_sacrament' kernel. It emphasizes marriage as a pastoral relationship subject to human failure, where indissolubility is an ideal requiring compassionate discernment. This stands in contrast to the 'hierarchical_indissolubility_reading', which views marriage as an ontological reality requiring strict hierarchical adjudication, where indissolubility is constitutive."
   },
   "omegas": [
     {
-      "id": "doctrinal_coherence_vs_pastoral_flexibility",
-      "question": "Can the ideal of indissolubility be genuinely upheld while simultaneously allowing for extensive pastoral discernment in individual cases, without undermining the doctrine's coherence?",
-      "resolution_mechanism": "Long-term theological analysis of the internal consistency of magisterial documents and the lived experience of the faithful. If the two readings prove irreconcilable, a formal doctrinal clarification would be required.",
-      "impact": "If irreconcilable, this reading would be reclassified as a snare for traditionalists, as the coordination story (upholding indissolubility) would be revealed as cover for a de facto change in doctrine. If reconcilable, its rope-like qualities would be strengthened.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The internal consistency of the civic-pastoral reading with core doctrine."
-    },
-    {
-      "id": "mandatrophy_of_indissolubility",
-      "question": "Has the original mandate of indissolubility (as an absolute, ontological reality) atrophied, and is the 'pastoral discernment' framework a new mandate layered over a vestigial structure?",
-      "resolution_mechanism": "Historical-theological analysis of the evolution of marriage doctrine and pastoral practice, comparing the stated justifications for indissolubility across different eras with contemporary applications.",
-      "impact": "If the original mandate is found to be dead, and the new pastoral approach is merely a way to maintain institutional relevance without genuine doctrinal change, the constraint would lean more towards a piton or snare for traditionalists, as the 'ideal' becomes theatrical.",
+      "id": "doctrinal_relativization_impact",
+      "question": "To what extent does the pastoral discernment approach genuinely relativize the doctrine of indissolubility, versus merely applying it with greater nuance?",
+      "resolution_mechanism": "Longitudinal study of annulment rates, canonical jurisprudence, and theological discourse over several decades, comparing stated doctrine with actual practice and its perceived impact on the faithful.",
+      "impact": "If it's a genuine relativization, the extraction from traditionalists is higher, pushing the classification closer to a Snare. If it's merely nuanced application, extraction is lower, supporting a Rope or Scaffold classification.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the original mandate of indissolubility has atrophied."
+      "description": "Ambiguity in whether pastoral discernment is a doctrinal shift or a nuanced application."
+    },
+    {
+      "id": "institutional_unity_cost",
+      "question": "Is the perceived erosion of institutional authority and doctrinal clarity a necessary cost for maintaining the broader unity and pastoral relevance of the Church in a modern context?",
+      "resolution_mechanism": "Sociological and theological analysis of Church membership trends, internal dissent, and external perceptions of the Church's coherence, weighed against the benefits of pastoral accommodation.",
+      "impact": "If the cost is deemed necessary for unity, the constraint's coordination function is stronger, supporting a Tangled Rope. If the cost is disproportionate, it suggests a more extractive dynamic.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Trade-off between doctrinal clarity and institutional unity/relevance."
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "For traditional laity, is their 'identity_locked' exit option primarily due to deep theological conviction, or is it reinforced by social and communal ties within traditionalist Catholic circles?",
+      "resolution_mechanism": "Qualitative sociological research (interviews, ethnography) exploring the motivations and social networks of traditionalist Catholics, distinguishing between internal theological commitment and external social reinforcement.",
+      "impact": "If primarily theological, the identity lock is more robust and less amenable to external intervention. If socially reinforced, interventions targeting social structures might weaken the lock, altering their effective directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of identity lock for traditional laity."
     }
   ],
   "boltzmann": {
-    "coordination_type": "attachment_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [
       "marriage_sacrament__hierarchical_indissolubility_reading"
     ],
-    "dual_formulation_note": "This constraint is the 'civic_pastoral_reading' of the 'marriage_sacrament' kernel, which also includes the 'hierarchical_indissolubility_reading'. The two readings represent different interpretations of the same core doctrine, with distinct structural implications for stakeholders."
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_sacrament' kernel. Its pastoral emphasis influences, and is influenced by, the more rigid 'hierarchical_indissolubility_reading'."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -148,7 +215,7 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "marriage_sacrament__hierarchical_indissolubility_reading",
+        "sibling_id": "hierarchical_indissolubility_reading",
         "relation": "coexists_with"
       }
     ],
@@ -160,29 +227,30 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "primacy_of_pastoral_discernment",
-        "role": "foundational",
+        "atom": "compassionate_discernment_in_individual_cases",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "pastoral_accompaniment_framework",
+    "reference_frame": "post_vatican_ii_pastoral_approach",
     "drift_state": {
       "moment": "contemporary_synodal_process",
-      "direction": "stable",
-      "magnitude": "minor",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

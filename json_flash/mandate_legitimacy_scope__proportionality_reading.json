@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "9a349207-89bd-4b0c-8469-71d57db532f1"
+    "story_uid": "567a88ff-1a9b-4022-aaa5-df841427f17b"
   },
   "base_properties": {
     "extractiveness": 0.45,
@@ -24,118 +24,197 @@
       "individuals_subject_to_mandate"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine application of proportionality, or is it a cover for a public health primary approach?",
-      "resolution_mechanism": "Analysis of mandate implementation: if mandates are applied broadly without granular assessment of severity/alternatives, it leans towards public_health_primary. If mandates are selectively applied and frequently adjusted based on new data, it supports proportionality_reading.",
-      "impact": "If it's a public_health_primary reading in disguise, the effective extractiveness and suppression are higher, as individual autonomy is systematically undervalued. If it's a genuine proportionality reading, the constraint is a more legitimate form of coordination.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'proportionality_reading' of the 'mandate_legitimacy_scope' kernel. Sibling readings include 'public_health_primary' and 'bodily_autonomy_primary'. The core disagreement is on the primary weighting of collective vs. individual rights."
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for protecting public health, they issue mandates based on scientific evidence. Their legitimacy is tied to demonstrating proportionality and necessity."
     },
     {
-      "id": "disease_severity_threshold",
-      "question": "What objective criteria define 'severe' disease, and how are these applied consistently across different pathogens?",
-      "resolution_mechanism": "Establishment of a transparent, evidence-based framework for disease severity assessment, including hospitalization rates, mortality, and long-term sequelae, applied by an independent body.",
-      "impact": "Lack of clear criteria allows for arbitrary application of mandates, increasing perceived extractiveness and suppression. Clear criteria would reduce ambiguity and enhance legitimacy.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Ambiguity in defining disease severity can shift the perceived legitimacy of mandates."
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals (e.g., immunocompromised, infants) who cannot be vaccinated or for whom vaccines are less effective, relying on herd immunity for protection. They benefit directly from mandates that increase community immunity."
     },
     {
-      "id": "less_restrictive_alternatives_scope",
-      "question": "What constitutes a 'less restrictive alternative' (e.g., masking, testing, remote work), and how are their efficacy and feasibility evaluated against mandates?",
-      "resolution_mechanism": "Systematic review and comparative effectiveness research on non-mandate interventions, alongside public health modeling of their impact on transmission and outcomes.",
-      "impact": "If effective, less restrictive alternatives are systematically ignored, the mandate's suppression is higher than justified. If genuinely ineffective, the mandate's legitimacy is strengthened.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The scope and effectiveness of alternatives are often contested, impacting mandate legitimacy."
+      "name": "individuals_subject_to_mandate",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the direct cost of mandates, including vaccination, testing, or exclusion from certain activities. Their autonomy is constrained, but the constraint is justified by proportionality."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor mandates for overreach, advocating for individual rights and less restrictive alternatives. They challenge mandates that fail the proportionality test."
+    },
+    {
+      "name": "healthcare_providers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Administer vaccines and manage public health crises. They benefit from reduced disease burden but may bear administrative costs and face ethical dilemmas regarding individual autonomy."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates individual actions (vaccination) to achieve collective immunity, protecting vulnerable populations and reducing overall disease burden, but only when the intervention is proportional to the threat.",
+    "transfer_function": "Transfers a degree of individual medical autonomy from citizens to public health authorities, in exchange for collective health benefits, but only when the severity of the disease, vaccine efficacy/safety, and lack of alternatives justify it.",
+    "absent_voices": "Individuals who would be disproportionately affected by mandates (e.g., those with rare medical contraindications, or those for whom the mandate imposes severe economic hardship without clear public health gain) are often marginalized in policy discussions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality principle vanished, public health mandates could become arbitrary or overreaching, leading to widespread resistance, erosion of public trust, and potentially ineffective or harmful interventions. The balance between individual rights and collective good would be lost, reorganizing public health governance.",
+    "founding_problem": "How to balance individual liberty with collective health needs, ensuring that state interventions are justified and do not impose undue burdens.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional law scholars, bioethicists, and public health ethicists consistently affirm the ongoing challenge of balancing these values, with court cases and policy debates regularly invoking proportionality as a core principle. This corroboration comes from outside the direct beneficiaries of mandates."
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1900,
       "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 1950,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2000,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1900,
       "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
+      "time_point": 1950,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 2000,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.6
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1900,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.1
+      "time_point": 2010,
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2020,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 10
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'proportionality_reading' of the 'mandate_legitimacy_scope' kernel. It asserts that the legitimacy of public health mandates (e.g., vaccine mandates) is not absolute but depends on a careful balancing of disease severity, vaccine safety and efficacy, and the availability of less restrictive alternatives. A mandate for a highly severe disease with a safe, effective vaccine and no viable alternatives (e.g., measles) would be considered legitimate, while a mandate for a mild disease with moderate vaccine efficacy and many alternatives (e.g., seasonal flu) would not. The constraint is a Tangled Rope because it aims to coordinate public health while extracting from individual autonomy, requiring active enforcement and balancing competing values.",
-    "key_agents": [
-      "public_health_authorities: Agenda setter (institutional/arbitrage) — sets and enforces mandates, balancing public good with individual rights.",
-      "individuals_subject_to_mandate: Payer (moderate/constrained) — bears the cost of compliance or faces penalties, with limited exit options.",
-      "vulnerable_populations: Beneficiary (powerless/immediate) — benefits from reduced disease transmission, but often lacks direct agency.",
-      "medical_autonomy_advocates: Excluded (organized/generational) — argues for individual rights as primary, often outside the mandate-setting process.",
-      "constitutional_courts: Observer (institutional/analytical) — adjudicates challenges to mandates based on constitutional principles."
-    ],
-    "logic_rationale": "The extractiveness (0.45) is moderate because the proportionality principle attempts to limit the burden on individuals, but some extraction of autonomy is inherent in any mandate. Suppression (0.6) is present due to the coercive nature of mandates and the penalties for non-compliance. Theater ratio (0.1) is low, as the constraint's function is genuinely to guide policy, not merely to perform. Accessibility collapse (0.4) is moderate, as individuals still have some choices (e.g., compliance vs. penalty) but direct alternatives to the mandate itself are limited. Resistance (0.5) is moderate, reflecting ongoing legal and public challenges to mandates.",
-    "perspectival_gap": "Public health authorities view this constraint as a necessary framework for protecting collective well-being, while individuals subject to mandates often perceive it as an infringement on personal liberty. The proportionality principle attempts to bridge this gap by providing criteria for legitimate imposition, but the interpretation and application of these criteria remain contentious, leading to different experiences of the constraint.",
-    "directionality_logic": "Public health authorities are beneficiaries (d=0.1) as the constraint legitimizes their actions and helps achieve public health goals. Vulnerable populations are also beneficiaries (d=0.2) as they are protected. Individuals subject to mandates are targets (d=0.8) as they bear the direct costs of compliance or penalties. Medical autonomy advocates are excluded (d=0.9) as their primary concern is often not fully integrated into the balancing act. Constitutional courts are analytical observers (d=0.5) as they evaluate the constraint's application impartially.",
-    "mandatrophy_analysis": "This constraint, by its very nature, is designed to prevent mandatrophy by requiring ongoing justification for mandates. If a mandate persists when disease severity decreases, vaccine efficacy wanes, or less restrictive alternatives become available, the proportionality principle would deem it illegitimate, forcing re-evaluation or removal. This prevents the constraint from becoming a Piton (inertial) or a Snare (pure extraction) by demanding a live, evidence-based justification for its continued existence. The challenge lies in the 'contested' status of the founding problem, where different parties disagree on whether the conditions for a mandate are still met.",
-    "kernel_context": "This constraint is the 'proportionality_reading' of the 'mandate_legitimacy_scope' kernel. This reading asserts that public health mandates must be proportional to the threat and respect individual rights where possible. It stands in contrast to the 'public_health_primary' reading, which prioritizes collective health outcomes, and the 'bodily_autonomy_primary' reading, which prioritizes individual consent above all else."
+    "narrative_context": "This constraint represents the 'proportionality reading' of public health mandate legitimacy. It asserts that mandates are legitimate only when they are proportional to the public health threat, considering disease severity, vaccine safety/efficacy, and the availability of less restrictive alternatives. This reading aims to balance collective good with individual rights, making mandate legitimacy conditional rather than absolute. The metrics reflect a constraint that can be moderately extractive and suppressive, but whose legitimacy is actively contested and requires ongoing justification.",
+    "logic_rationale": "Extractiveness (0.45) is moderate because mandates impose real costs on individuals, but these are justified by collective benefits under this reading. Suppression (0.6) is also moderate, reflecting the active enforcement required for mandates, but tempered by the need to demonstrate proportionality. The theater ratio (0.1) is low, as the justification for mandates is generally genuine, though it can be challenged. The temporal measurements show a rise in extractiveness and suppression during periods of heightened public health crisis (e.g., 2010-2020), followed by a decrease as the immediate crisis subsides and proportionality is re-evaluated.",
+    "directionality_logic": "Public health authorities are agenda-setters and beneficiaries, as they gain the ability to protect public health. Vulnerable populations are clear beneficiaries, relying on the mandates for protection. Individuals subject to mandates are payers, bearing the direct costs of compliance. Civil liberties advocates act as observers, challenging mandates that fail the proportionality test. Healthcare providers are both beneficiaries (reduced disease burden) and payers (administrative burden, ethical conflicts).",
+    "perspectival_gap": "From the perspective of public health authorities, this constraint is a necessary tool for coordination, ensuring collective well-being. From the perspective of individuals subject to mandates, it is an extractive force that curtails autonomy. The proportionality principle attempts to bridge this gap by setting conditions under which the extraction is deemed legitimate.",
+    "mandatrophy_analysis": "This constraint is designed to prevent mandatrophy by requiring ongoing justification based on proportionality. If the founding problem (balancing liberty and health) were to become 'dead' (e.g., if a disease became trivial or a vaccine unsafe), the proportionality principle would demand the mandate's removal, preventing it from becoming a piton or snare. The 'contested' status of the founding problem reflects the ongoing need for this analysis.",
+    "kernel_context": "This constraint, 'mandate_legitimacy_scope__proportionality_reading', is one reading of the 'mandate_legitimacy_scope' kernel. It posits that mandate legitimacy is conditional on proportionality. This reading coexists with 'public_health_primary' (which prioritizes collective health) and 'bodily_autonomy_primary' (which prioritizes individual consent), each offering a distinct framework for evaluating public health interventions."
   },
+  "omegas": [
+    {
+      "id": "proportionality_measurement_ambiguity",
+      "question": "How are 'disease severity', 'vaccine safety/efficacy', and 'less restrictive alternatives' objectively measured and weighted to determine proportionality?",
+      "resolution_mechanism": "Development of standardized, transparent, and publicly debated metrics and weighting schemes, potentially through independent expert panels or legislative processes.",
+      "impact": "Lack of clear metrics allows for subjective interpretation, potentially leading to mandates that are either over- or under-restrictive, shifting the constraint's effective extractiveness and suppression. Clear metrics would stabilize the constraint's operation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the operationalization of proportionality criteria."
+    },
+    {
+      "id": "shifting_social_contract",
+      "question": "Does the public's willingness to accept health mandates shift over time, and how does this affect the perceived legitimacy and resistance to the proportionality principle?",
+      "resolution_mechanism": "Longitudinal sociological studies and public opinion surveys tracking trust in institutions and attitudes towards collective action in health crises.",
+      "impact": "A decline in public trust or willingness to comply could increase resistance and suppression requirements, potentially pushing the constraint towards a snare if enforcement becomes disproportionately coercive.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The dynamic nature of the social contract underlying public health interventions."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'mandate_legitimacy_scope' kernel, focusing on proportionality. It is linked to 'public_health_primary' and 'bodily_autonomy_primary' readings, which represent alternative framings of mandate legitimacy."
-  },
-  "directionality_overrides": [],
-  "six_questions": {
-    "coordination_function": "To provide a principled framework for public health authorities to implement mandates that balance collective health protection with individual rights, ensuring legitimacy and public trust.",
-    "transfer_function": "Transfers a degree of individual autonomy (e.g., choice over medical procedures, freedom of movement) from individuals to the state, in exchange for collective health benefits and reduced disease burden.",
-    "absent_voices": "Individuals who prioritize absolute bodily autonomy or who distrust public health institutions are often marginalized in the mandate-setting process, arguing that no collective benefit can justify coerced medical intervention.",
-    "disappearance_verdict": "world_rearranges",
-    "disappearance_rationale": "If the proportionality principle vanished, public health mandates would either become arbitrary (leading to overreach and public backlash) or impossible to implement (leading to uncontrolled disease spread). The legal and ethical landscape for public health interventions would be fundamentally altered, requiring new frameworks for justification.",
-    "founding_problem": "The historical tension between state power to protect public health and individual rights, particularly in the context of infectious disease outbreaks where individual actions have collective consequences.",
-    "founding_problem_status": "live",
-    "founding_problem_corroboration": "Constitutional scholars and ethicists from diverse backgrounds corroborate the ongoing nature of this tension. Public health crises (e.g., pandemics) consistently reignite debates about the appropriate scope of state intervention, demonstrating that the problem is far from resolved. Legal challenges to mandates in various jurisdictions also attest to its live status."
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This constraint is part of a family of readings for the 'mandate_legitimacy_scope' kernel. Its ε value is distinct from sibling readings because it conditions legitimacy on proportionality, leading to different victim sets and levels of extraction depending on the specific public health context."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -153,35 +232,36 @@
     ],
     "axioms": [
       {
-        "atom": "mandates_must_be_least_restrictive",
+        "atom": "mandate_proportionality_required",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "collective_benefit_must_outweigh_individual_burden",
-        "role": "foundational",
+        "atom": "least_restrictive_alternative_principle",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "liberal_democratic_rights_framework",
+    "reference_frame": "constitutional_proportionality_framework",
     "drift_state": {
-      "moment": "contemporary_pandemic_response",
+      "moment": "contemporary_pandemic_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

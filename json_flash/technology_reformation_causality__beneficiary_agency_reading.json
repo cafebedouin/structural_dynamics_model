@@ -4,122 +4,188 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "7a59bafc-2575-4545-a9ea-a5d7976a6ac2"
+    "story_uid": "e0aa17f7-31e4-4dac-b23f-679b4f2af0ce"
   },
   "base_properties": {
     "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.4,
-    "resistance": 0.8,
+    "resistance": 0.75,
     "claimed_type": "tangled_rope",
-    "human_readable": "Reformation-Era Printing Press as Strategic Tool for Authority Bypass",
+    "human_readable": "Reformation-Era Printing Press as Authority Bypass Tool (Beneficiary Agency Reading)",
     "topic_domain": "history_of_technology/religious_history/media_studies",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "protestant_reformers",
-      "printers_publishers"
+      "printers_and_publishers"
     ],
     "victims": [
       "catholic_church_hierarchy",
       "traditional_scribal_guilds"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint accurately framed as the 'beneficiary agency' reading of the technology-Reformation causality kernel?",
-      "resolution_mechanism": "Comparative historical analysis of primary sources focusing on actor intentionality and strategic deployment of printing technology, contrasting with evidence for technological inevitability or co-evolutionary dynamics.",
-      "impact": "If this reading is confirmed, it strengthens the argument for human agency in technological adoption and the contingent nature of historical outcomes. If a sibling reading (e.g., technological determinism) is found more accurate, the constraint's classification would shift to reflect technology as a more autonomous force, potentially reducing the 'tangled_rope' aspect and increasing 'mountain' or 'rope' elements for the technology itself.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity in framing the role of technology in historical change."
+      "name": "protestant_reformers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Actively used the printing press to disseminate their theological arguments, vernacular Bibles, and critiques of the Catholic Church, bypassing traditional channels of authority and control. They benefited from the speed and reach of the press, but were constrained by censorship and the need for printer cooperation."
     },
     {
-      "id": "extraction_from_authority_bypass",
-      "question": "To what extent did the 'extraction' from the Catholic Church hierarchy directly translate into 'gain' for reformers and printers, beyond merely enabling their goals?",
-      "resolution_mechanism": "Quantitative analysis of wealth transfer, power shifts, and market share gains by reformers and printers directly attributable to the weakening of Church authority, rather than independent growth.",
-      "impact": "If the gains were primarily a direct result of the Church's loss, the 'tangled_rope' classification is robust. If gains were largely independent, the constraint might lean more towards a 'scaffold' (for technology) or 'rope' (for coordination among reformers/printers) with less direct extraction from the Church.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Measuring the directness and magnitude of extraction from the old authority structure."
+      "name": "printers_and_publishers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Saw significant economic opportunity in printing Reformation texts, which were in high demand. They formed strategic alliances with reformers, providing the means of production in exchange for profit and protection. Their mobility allowed them to evade some local censorship."
+    },
+    {
+      "name": "catholic_church_hierarchy",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Suffered a loss of control over information dissemination and theological interpretation. Their traditional authority was challenged by the rapid spread of dissenting ideas. They attempted to suppress printing through censorship and excommunication, but with limited success against the decentralized network."
+    },
+    {
+      "name": "traditional_scribal_guilds",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experienced a collapse in demand for their services as printed books became cheaper and more widely available. Their craft, once central to knowledge production, was rapidly marginalized, leading to economic ruin for many."
+    },
+    {
+      "name": "illiterate_populace",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "While the press enabled vernacular texts, a large portion of the population remained illiterate and could not directly access the printed material. They were influenced by public readings and sermons, but not direct consumers of the printed word, and thus excluded from direct participation in the print-driven discourse."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Enabled a decentralized, rapid, and wide-scale dissemination of reformist ideas and texts, coordinating the efforts of reformers and printers to bypass the centralized control of the Catholic Church.",
+    "transfer_function": "Transferred control over information flow and theological interpretation from the Catholic Church hierarchy to a coalition of Protestant reformers and commercial printers, generating profit for printers and ideological reach for reformers.",
+    "absent_voices": "The illiterate populace, whose access to information remained mediated despite the printing revolution, and those who lacked the resources or political will to engage with the new medium, were effectively excluded from shaping the discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strategic deployment of the printing press by reformers had not occurred, the Reformation would have unfolded very differently, likely remaining a localized academic dispute rather than a mass movement. The power dynamics of 16th-century Europe would have been fundamentally altered.",
+    "founding_problem": "The Catholic Church held a near-monopoly on information dissemination and theological interpretation, making it difficult for dissenting voices to reach a wide audience or challenge established doctrines effectively.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians of the Reformation and media studies scholars widely corroborate that the problem of centralized information control was effectively broken by the strategic use of the printing press, even if new forms of control later emerged. The original problem of a single, unchallengeable information gatekeeper is no longer live."
+  },
+  "interval": {
+    "start": 1517,
+    "end": 1560
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1517,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1525,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1535,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1545,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1560,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1517,
       "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1525,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1535,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1545,
       "value": 0.7
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.1
+      "metric": "suppression_requirement",
+      "time_point": 1560,
+      "value": 0.7
     }
   ],
-  "interval": {
-    "start": 1517,
-    "end": 1537
-  },
   "commentary": {
-    "narrative_context": "This constraint models the strategic deployment of printing technology by Protestant reformers and commercial printers during the early Reformation (c. 1517-1537). It posits that printing was a tool, not an autonomous cause, used by a coalition to bypass and undermine the Catholic Church's authority over information dissemination. The relationship between reformers and printers is characterized by mutual benefit and extraction, while the Church experiences suppression and loss of control.",
-    "key_agents": [
-      "protestant_reformers: Agenda setter (institutional/generational) — strategically deployed printing to disseminate new doctrines.",
-      "printers_publishers: Beneficiary/Payer (organized/biographical) — profited from printing reformist texts, but also invested in the technology and faced risks.",
-      "catholic_church_hierarchy: Victim (institutional/generational) — lost control over information flow, faced challenges to authority.",
-      "traditional_scribal_guilds: Victim (organized/biographical) — saw their craft and economic model disrupted by printing."
-    ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it involves a genuine coordination function (mass dissemination of ideas) coupled with asymmetric extraction. Reformers and printers coordinated to produce and distribute texts, benefiting from increased reach and profit. Simultaneously, this structure actively extracted authority and revenue from the Catholic Church and disrupted traditional scribal economies. Active enforcement was required by the Church to suppress printing, and by reformers/printers to evade censorship. The rising extractiveness and suppression over the interval reflect the escalating conflict and the increasing effectiveness of the printing coalition in challenging the established order.",
-    "perspectival_gap": "From the perspective of the Protestant reformers and printers, the printing press was a powerful tool for liberation and progress, enabling the spread of truth. From the perspective of the Catholic Church, it was a dangerous instrument of heresy and rebellion, actively undermining a divinely ordained order. The engine's classification will reflect this divergence, showing a beneficial 'rope' or 'scaffold' for the coalition, and a 'snare' for the Church.",
-    "directionality_logic": "Protestant reformers and printers are beneficiaries (d near 0.0) as they gain influence, followers, and profit by leveraging the press. The Catholic Church hierarchy and traditional scribal guilds are victims (d near 1.0) as they suffer loss of authority, control, and economic viability. The constraint's operation directly subsidizes the former by extracting from the latter.",
-    "mandatrophy_analysis": "This classification prevents mislabeling the strategic use of technology as a purely 'natural' or 'inevitable' development (a Mountain). By identifying beneficiaries and victims, and the active enforcement required, it highlights the constructed and extractive nature of the power shift, rather than attributing it solely to technological determinism. The 'tangled_rope' aspect captures the dual function of coordination and extraction inherent in the reformer-printer coalition's actions.",
-    "kernel_context": "This constraint instantiates the 'beneficiary agency' reading of the 'technology_reformation_causality' kernel. This reading emphasizes the intentional and strategic deployment of the printing press by reformers and printers to achieve specific goals, rather than viewing technology as an autonomous force (technological_determinism_reading) or as merely co-evolving with social actors (co_constitution_reading)."
+    "narrative_context": "This constraint story analyzes the role of the printing press in the Reformation from the 'beneficiary agency' perspective. It argues that the printing press was not a deterministic force, but a tool strategically deployed by Protestant reformers and commercial printers to bypass the established authority of the Catholic Church. The constraint is the emergent, actively enforced arrangement of information dissemination that extracted control from the Church while coordinating the efforts of reformers and printers. The claimed type is 'tangled_rope' because it served a genuine coordination function for the reformers and printers, but simultaneously extracted authority and resources from the Church and marginalized traditional scribal guilds.",
+    "logic_rationale": "The extractiveness (0.65) reflects the significant loss of control and revenue for the Catholic Church and scribal guilds. Suppression (0.7) is high because the Church actively, though ultimately unsuccessfully, tried to suppress the spread of printed reformist texts through censorship and other means. The 'tangled_rope' classification is appropriate as there was a clear coordination function (dissemination of new ideas) coupled with asymmetric extraction (from the Church). The low theater ratio (0.1) indicates that the activities of reformers and printers were highly functional, not performative.",
+    "directionality_logic": "Protestant reformers and printers were clear beneficiaries, gaining reach and profit respectively. The Catholic Church hierarchy and traditional scribal guilds were the primary victims, losing authority, members, and livelihoods. The constraint's operation directly subsidized the reformers' movement and the printers' businesses by enabling a new, more efficient, and less controllable information channel.",
+    "perspectival_gap": "From the perspective of the reformers and printers, the printing press was a powerful tool for liberation and progress, enabling a new form of coordination. From the perspective of the Catholic Church, it was a destructive force undermining centuries of established order. This story explicitly adopts the beneficiary agency reading, focusing on the strategic deployment and its extractive consequences for the established powers."
   },
+  "omegas": [
+    {
+      "id": "causality_vs_tool",
+      "question": "Was the printing press a primary cause of the Reformation, or merely a tool strategically utilized by agents?",
+      "resolution_mechanism": "Comparative historical analysis of other regions/periods with similar technological shifts but different social outcomes, or counterfactual history exploring the Reformation without the press.",
+      "impact": "If the press was a primary cause, the constraint's 'emerges_naturally' aspect would be higher, shifting it towards a mountain or rope. If it was purely a tool, the agency of reformers and printers remains central, reinforcing the 'tangled_rope' classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the printing press's causal role in the Reformation."
+    },
+    {
+      "id": "long_term_power_shift",
+      "question": "Did the shift in information control truly empower the populace, or did it merely transfer power to new elites (e.g., secular rulers, new religious authorities)?",
+      "resolution_mechanism": "Longitudinal studies of literacy rates, access to education, and political participation across different social strata in post-Reformation Europe.",
+      "impact": "If power merely shifted to new elites, the 'extractiveness' of the constraint might be re-evaluated as higher, with new beneficiaries emerging. If genuine popular empowerment occurred, the coordination function would be emphasized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the printing press led to genuine popular empowerment or merely a transfer of elite power."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'technology_reformation_causality' kernel, focusing on the strategic agency of reformers and printers. Sibling readings include 'technological_determinism_reading' and 'co_constitution_reading', which offer alternative causal accounts of the Reformation's relationship with printing technology."
+    "dual_formulation_note": "This constraint is one reading of the 'technology_reformation_causality' kernel. Other readings include 'technological_determinism_reading' and 'co_constitution_reading'."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "implicit",
-    "authority_grounding": "practice",
+    "authority_grounding": "distributed",
     "reading_relations": [
       {
         "sibling_id": "technological_determinism_reading",
@@ -135,32 +201,21 @@
         "atom": "technology_is_a_tool",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "human_agency_drives_adoption",
+        "atom": "human_agency_drives_change",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "actor_driven_technological_adoption",
+    "reference_frame": "agent_driven_technological_adoption",
     "drift_state": {
-      "moment": "contemporary_historical_scholarship",
-      "direction": "revival_pressure",
-      "magnitude": "substantial",
+      "moment": "contemporary_historical_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

@@ -39,8 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,22 +70,27 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: coercion_legitimacy_boundary__bodily_autonomy_primary
- *   human_readable: Bodily Autonomy as Primary in Medical Intervention
+ *   human_readable: Bodily Autonomy as Primary Constraint on Medical Coercion
  *   domain: public_health_policy/medical_ethics/constitutional_law
  *
  * SUMMARY:
- *   This constraint asserts that medical intervention without an individual's
- *   consent is fundamentally impermissible, irrespective of any potential
- *   collective benefit. It prioritizes individual bodily autonomy as a
- *   primary ethical and legal boundary. This reading implies that even in
- *   public health crises, non-consensual interventions (like mandatory
- *   vaccination or treatment) are illegitimate. The constraint's low
- *   extractiveness and suppression reflect a system where individual choice
- *   is largely respected, and enforcement of non-consensual measures is
- *   minimal or absent. Immunocompromised individuals are listed as victims
- *   because this reading, by prioritizing individual autonomy, implicitly
- *   accepts their increased exposure risk from unvaccinated populations.
+ *   This constraint asserts that medical intervention without consent is
+ *   categorically impermissible, prioritizing individual bodily autonomy
+ *   above any collective benefit. It is a reading of the
+ *   'coercion_legitimacy_boundary' kernel, specifically the
+ *   'bodily_autonomy_primary' interpretation. While framed as a 'rope' by its
+ *   proponents, its operation imposes costs on vulnerable populations and
+ *   public health efforts, leading to a moderate extractiveness score. The
+ *   constraint's persistence relies on strong ethical and legal advocacy
+ *   rather than active enforcement against individuals, but it actively
+ *   suppresses alternative public health framings.
  *
+ * KEY AGENTS:
+ *   - individuals_seeking_autonomy: Primary beneficiary (moderate/mobile) — protected from coercion
+ *   - medical_ethics_advocates: Agenda setter (organized/analytical) — defends the principle
+ *   - immunocompromised_individuals: Primary payer (powerless/trapped) — bears increased health risk
+ *   - public_health_authorities: Payer (institutional/constrained) — limited in policy options
+ *   - proportionality_advocates: Excluded (organized/constrained) — their alternative framing is suppressed
  */
 
 /* ==========================================================================
@@ -87,56 +98,99 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.3).
-domain_priors:suppression_score(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.1).
-domain_priors:theater_ratio(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.05).
+domain_priors:base_extractiveness(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.45).
+domain_priors:suppression_score(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.2).
+domain_priors:theater_ratio(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, extractiveness, 0.3).
-narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 0.1).
-narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, extractiveness, 0.45).
+narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 0.2).
+narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, accessibility_collapse, 0.15).
-narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, resistance, 0.05).
+narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, accessibility_collapse, 0.3).
+narrative_ontology:constraint_metric(coercion_legitimacy_boundary__bodily_autonomy_primary, resistance, 0.15).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(coercion_legitimacy_boundary__bodily_autonomy_primary, rope).
-narrative_ontology:human_readable(coercion_legitimacy_boundary__bodily_autonomy_primary, "Bodily Autonomy as Primary in Medical Intervention").
+narrative_ontology:human_readable(coercion_legitimacy_boundary__bodily_autonomy_primary, "Bodily Autonomy as Primary Constraint on Medical Coercion").
 narrative_ontology:topic_domain(coercion_legitimacy_boundary__bodily_autonomy_primary, "public_health_policy/medical_ethics/constitutional_law").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(coercion_legitimacy_boundary__bodily_autonomy_primary, 'eb7317de-2fce-45b4-9321-d8f7369d463c').
-narrative_ontology:cs_kernel_codification('eb7317de-2fce-45b4-9321-d8f7369d463c', formalized).
-narrative_ontology:cs_authority_grounding('eb7317de-2fce-45b4-9321-d8f7369d463c', lineage).
-narrative_ontology:cs_interpretation_layer_present('eb7317de-2fce-45b4-9321-d8f7369d463c').
-narrative_ontology:cs_reading_relation('eb7317de-2fce-45b4-9321-d8f7369d463c', coercion_legitimacy_boundary__public_health_primary, forecloses).
-narrative_ontology:cs_reading_relation('eb7317de-2fce-45b4-9321-d8f7369d463c', coercion_legitimacy_boundary__proportionality_reading, coexists_with).
-narrative_ontology:cs_axiom('eb7317de-2fce-45b4-9321-d8f7369d463c', foundational, bodily_integrity_absolute).
-narrative_ontology:cs_axiom_status(bodily_integrity_absolute, holdable).
-narrative_ontology:cs_axiom_grounding('eb7317de-2fce-45b4-9321-d8f7369d463c', bodily_integrity_absolute, deontological).
-narrative_ontology:cs_axiom('eb7317de-2fce-45b4-9321-d8f7369d463c', foundational, consent_precedes_benefit).
-narrative_ontology:cs_axiom_status(consent_precedes_benefit, holdable).
-narrative_ontology:cs_axiom_grounding('eb7317de-2fce-45b4-9321-d8f7369d463c', consent_precedes_benefit, deontological).
-narrative_ontology:cs_reference_frame('eb7317de-2fce-45b4-9321-d8f7369d463c', post_nuremberg_code_ethics).
-narrative_ontology:cs_drift_state('eb7317de-2fce-45b4-9321-d8f7369d463c', contemporary_pandemic_era, gap(revival_pressure, substantial, true)).
-narrative_ontology:cs_created_at('eb7317de-2fce-45b4-9321-d8f7369d463c', '').
+narrative_ontology:cs_story_uid(coercion_legitimacy_boundary__bodily_autonomy_primary, '8c0a19ca-fc4a-4319-a3ec-5403ba6865c8').
+narrative_ontology:cs_kernel_codification('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', formalized).
+narrative_ontology:cs_authority_grounding('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', lineage).
+narrative_ontology:cs_interpretation_layer_present('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8').
+narrative_ontology:cs_reading_relation('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', coercion_legitimacy_boundary__public_health_primary, forecloses).
+narrative_ontology:cs_reading_relation('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', coercion_legitimacy_boundary__proportionality_reading, coexists_with).
+narrative_ontology:cs_axiom('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', foundational, individual_bodily_integrity_absolute).
+narrative_ontology:cs_axiom_status(individual_bodily_integrity_absolute, holdable).
+narrative_ontology:cs_axiom_grounding('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', individual_bodily_integrity_absolute, deontological).
+narrative_ontology:cs_axiom('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', secondary, informed_consent_unwaivable).
+narrative_ontology:cs_axiom_status(informed_consent_unwaivable, holdable).
+narrative_ontology:cs_axiom_grounding('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', informed_consent_unwaivable, conventional).
+narrative_ontology:cs_reference_frame('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', nuremberg_code_principles).
+narrative_ontology:cs_drift_state('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', contemporary_pandemic_era, gap(repudiation_pressure, substantial, true)).
+narrative_ontology:cs_created_at('8c0a19ca-fc4a-4319-a3ec-5403ba6865c8', '2024-07-30T12:00:00Z').
 narrative_ontology:cs_kernel_id(coercion_legitimacy_boundary__bodily_autonomy_primary, coercion_legitimacy_boundary).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(coercion_legitimacy_boundary__bodily_autonomy_primary, individuals_seeking_autonomy).
-narrative_ontology:constraint_beneficiary(coercion_legitimacy_boundary__bodily_autonomy_primary, mandate_enforcers).
+narrative_ontology:constraint_beneficiary(coercion_legitimacy_boundary__bodily_autonomy_primary, medical_ethics_advocates).
 narrative_ontology:constraint_victim(coercion_legitimacy_boundary__bodily_autonomy_primary, immunocompromised_individuals).
+narrative_ontology:constraint_victim(coercion_legitimacy_boundary__bodily_autonomy_primary, public_health_authorities).
+narrative_ontology:constraint_vindicates(coercion_legitimacy_boundary__bodily_autonomy_primary, informed_consent_doctrine).
+narrative_ontology:constraint_vindicates(coercion_legitimacy_boundary__bodily_autonomy_primary, individual_rights_philosophy).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These individuals benefit from the constraint by having their right to refuse medical intervention upheld, even when it might contribute to collective risk. They experience freedom from state-mandated procedures.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__bodily_autonomy_primary, individuals_seeking_autonomy, beneficiary,
+    moderate, biographical, mobile, national).
+
+% These groups actively promote and defend the principle of bodily autonomy and informed consent as foundational to medical practice and law. They shape legal and ethical discourse around medical interventions.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__bodily_autonomy_primary, medical_ethics_advocates, agenda_setter,
+    organized, generational, analytical, global).
+
+% These individuals bear the cost of this constraint by being exposed to higher risks of infectious disease from unvaccinated populations, as collective immunity is not prioritized over individual choice. Their health and safety are directly impacted.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__bodily_autonomy_primary, immunocompromised_individuals, payer,
+    powerless, immediate, trapped, local).
+
+% These authorities are constrained in their ability to implement broad public health measures, such as mandatory vaccinations, even during epidemics, due to the prioritization of individual autonomy. They face challenges in controlling disease spread.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__bodily_autonomy_primary, public_health_authorities, payer,
+    institutional, biographical, constrained, national).
+
+% These advocates argue for a nuanced approach where coercion is permissible if proportional to the public health threat. They are excluded from the 'categorical impermissibility' framing of this reading.
+narrative_ontology:constraint_stakeholder(coercion_legitimacy_boundary__bodily_autonomy_primary, proportionality_advocates, excluded,
+    organized, biographical, constrained, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a clear ethical and legal boundary for medical practice, ensuring that individual consent is paramount and fostering trust between patients and medical professionals.
+% TRANSFER_FUNCTION: Transfers the burden of collective health risk from individuals who refuse intervention to vulnerable populations and public health systems, in exchange for upholding individual liberty.
+% ABSENT_VOICES: Advocates for a 'public health primary' approach, who would argue that collective harm prevention should, in certain severe circumstances, override individual autonomy. They are absent from the foundational premise of this constraint.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, medical practice would fundamentally change, potentially allowing for compulsory interventions. Public health policy would shift dramatically towards collective good, and individual rights discourse would be severely diminished.
+% FOUNDING_PROBLEM: The historical problem of involuntary medical experimentation and coercive state control over individual bodies, leading to abuses of power and violations of human dignity.
+% FOUNDING_PROBLEM_CORROBORATION: Medical ethics boards, human rights organizations, and historical records of medical abuses corroborate the ongoing relevance of protecting individual bodily integrity against state or medical overreach. Legal scholars outside the immediate beneficiary group also attest to its foundational importance.
+narrative_ontology:disappearance_verdict(coercion_legitimacy_boundary__bodily_autonomy_primary, world_rearranges).
+narrative_ontology:founding_problem_status(coercion_legitimacy_boundary__bodily_autonomy_primary, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(coercion_legitimacy_boundary__bodily_autonomy_primary, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(coercion_legitimacy_boundary__bodily_autonomy_primary, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(coercion_legitimacy_boundary__bodily_autonomy_primary, 'none', 1).
+narrative_ontology:epsilon_provenance(coercion_legitimacy_boundary__bodily_autonomy_primary, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -151,16 +205,16 @@ narrative_ontology:story_seed(coercion_legitimacy_boundary__bodily_autonomy_prim
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Rope because it establishes a clear boundary that benefits individuals by protecting their autonomy, with minimal extraction or suppression. Its persistence relies on broad societal and legal acceptance of individual rights, rather than active enforcement against dissenters. The low extractiveness (0.3) reflects the 'cost' of not being able to compel action for collective benefit, which is diffuse. Suppression (0.1) is low because the constraint is largely self-enforcing through cultural norms and legal frameworks, rather than requiring active coercion. Theater ratio is negligible (0.05) as its function is direct and not performative.
+ *   The extractiveness (0.45) reflects the societal cost of foregone collective health benefits and increased risk to vulnerable groups. Suppression (0.20) is low because it's not about coercing individuals, but rather suppressing alternative policy framings that would allow for coercion. Theater ratio (0.10) is low as the constraint is genuinely functional in protecting individual rights, not merely performative. Accessibility collapse (0.30) is moderate, as alternatives (e.g., public health mandates) are conceptually available but legally and ethically constrained. Resistance (0.15) is low, as the principle is widely accepted in many legal and ethical frameworks, though contested by public health advocates.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of 'individuals_seeking_autonomy', this constraint is a clear Rope, protecting a fundamental right. From the perspective of 'immunocompromised_individuals', it might be perceived as a Snare, as their safety is compromised by the autonomy of others, leading to a higher effective extraction for them. 'Mandate_enforcers' benefit from a clear, non-interventionist boundary, simplifying their role.
+ *   From the perspective of individuals seeking autonomy and medical ethics advocates, this constraint is a fundamental protection (a rope). From the perspective of immunocompromised individuals and public health authorities, it imposes significant costs and limits their ability to ensure collective well-being (leaning towards a snare or tangled rope). The engine's per-seat classification will reflect this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   'Individuals_seeking_autonomy' are clear beneficiaries (d=0.0-0.1) as the constraint directly protects their choice. 'Mandate_enforcers' are also beneficiaries (d=0.1-0.2) as this reading simplifies their role by setting a clear, non-coercive boundary. 'Immunocompromised_individuals' are victims (d=0.8-0.9) because the constraint's prioritization of individual autonomy over collective health directly increases their risk of exposure to preventable diseases.
+ *   Individuals seeking autonomy and medical ethics advocates are clear beneficiaries, as the constraint directly upholds their core values and rights. Immunocompromised individuals are victims, as they bear the health risks of reduced collective immunity. Public health authorities are also victims, as their mandate to protect the population is constrained. Proportionality advocates are excluded, as their alternative framing is not considered within this constraint's categorical impermissibility.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling a fundamental rights protection as a form of extraction. While there are costs to collective health, the constraint's primary function is to coordinate individual liberty, not to extract from it. The low extractiveness and suppression metrics confirm it is not a Snare or Tangled Rope, despite the 'victim' declaration for immunocompromised individuals. The 'victim' status here highlights a consequence of the constraint's operation, not an extractive mechanism within it.
+ *   This constraint's mandate (protecting individual autonomy from medical coercion) remains live and highly relevant, especially in light of historical abuses and ongoing debates about state power. There is no evidence of mandatrophy; its function is actively defended and its core problem is still present. The classification prevents mislabeling it as a snare by acknowledging its genuine coordination function for individual rights, even while recognizing its extractive effects on other groups.
  */
 
 /* ==========================================================================
@@ -168,63 +222,59 @@ narrative_ontology:story_seed(coercion_legitimacy_boundary__bodily_autonomy_prim
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine expression of a fundamental right, or a specific reading of a contested kernel?',
-    'Analysis of legal precedent and philosophical arguments across different jurisdictions and ethical traditions.',
-    'If a fundamental right, its classification as a Rope is robust. If a reading, its classification is contingent on the acceptance of the ''coercion_legitimacy_boundary'' kernel and the ''bodily_autonomy_primary'' interpretation, which could shift if other readings gain prominence.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading (''bodily_autonomy_primary'') of the ''coercion_legitimacy_boundary'' kernel.').
-
-omega_variable(
-    sibling_reading_impact_proportionality,
-    'How would the ''proportionality_reading'' (coercion scales with disease severity) alter the beneficiary/victim structure?',
-    'Empirical data on disease severity and transmission rates, combined with legal analysis of proportionality tests.',
-    'The ''proportionality_reading'' would shift the balance, potentially reducing the ''immunocompromised_individuals'' victim set under low-severity threats, but increasing it under high-severity threats where mandates are deemed legitimate. It would also shift ''mandate_enforcers'' from beneficiaries to agenda_setters with a more active role.',
+    collective_harm_threshold,
+    'At what threshold of collective harm (e.g., disease severity, transmission rate) would the ''categorical impermissibility'' of this reading be challenged or overridden by a ''public health primary'' or ''proportionality'' reading?',
+    'Legal precedent from supreme court rulings during severe pandemics, or international human rights jurisprudence on public health emergencies.',
+    'If a clear threshold exists and is crossed, this reading''s categorical nature would be reclassified, potentially shifting it towards a ''tangled_rope'' or ''snare'' from the perspective of public health authorities, or even a ''mountain'' if the collective harm is deemed an irreducible limit.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_impact_proportionality, empirical, 'Impact of ''proportionality_reading'' on constraint structure.').
+narrative_ontology:omega_variable(collective_harm_threshold, conceptual, 'The point at which collective harm might challenge individual autonomy.').
 
 omega_variable(
-    sibling_reading_impact_public_health,
-    'How would the ''public_health_primary'' reading (state may compel intervention for collective harm) alter the beneficiary/victim structure?',
-    'Analysis of public health law and emergency powers, and epidemiological data on collective harm.',
-    'The ''public_health_primary'' reading would significantly expand the ''immunocompromised_individuals'' beneficiary set (as they are protected by mandates), and shift ''individuals_seeking_autonomy'' into a victim role. ''Mandate_enforcers'' would become primary agenda_setters, and the constraint would likely reclassify as a Tangled Rope or Snare due to increased extraction and suppression.',
-    confidence_without_resolution(high)
+    victim_set_expansion,
+    'Does the ''immunocompromised_individuals'' group fully capture the victim set, or are there other groups (e.g., healthcare workers, economic sectors) that bear significant, unacknowledged costs from this constraint?',
+    'Comprehensive epidemiological and economic impact studies during a public health crisis, disaggregated by population group and sector.',
+    'If the victim set is significantly larger or more diverse, the overall extractiveness of this constraint would be higher, potentially pushing its classification closer to a ''snare'' from a societal perspective.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_impact_public_health, conceptual, 'Impact of ''public_health_primary'' reading on constraint structure.').
+narrative_ontology:omega_variable(victim_set_expansion, empirical, 'Whether the full scope of those harmed by the constraint is captured.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(coercion_legitimacy_boundary__bodily_autonomy_primary, 0, 30).
+narrative_ontology:interval(coercion_legitimacy_boundary__bodily_autonomy_primary, 1947, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(coer_tr_t0, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(coer_tr_t10, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 10, 0.05).
-narrative_ontology:measurement(coer_tr_t20, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 20, 0.05).
-narrative_ontology:measurement(coer_tr_t30, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 30, 0.05).
+narrative_ontology:measurement(coer_tr_t1947, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 1947, 0.05).
+narrative_ontology:measurement(coer_tr_t1970, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 1970, 0.07).
+narrative_ontology:measurement(coer_tr_t1990, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 1990, 0.08).
+narrative_ontology:measurement(coer_tr_t2010, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 2010, 0.09).
+narrative_ontology:measurement(coer_tr_t2020, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 2020, 0.12).
+narrative_ontology:measurement(coer_tr_t2024, coercion_legitimacy_boundary__bodily_autonomy_primary, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(coer_be_t0, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(coer_be_t10, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 10, 0.3).
-narrative_ontology:measurement(coer_be_t20, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 20, 0.3).
-narrative_ontology:measurement(coer_be_t30, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 30, 0.3).
+narrative_ontology:measurement(coer_be_t1947, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 1947, 0.3).
+narrative_ontology:measurement(coer_be_t1970, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 1970, 0.35).
+narrative_ontology:measurement(coer_be_t1990, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 1990, 0.4).
+narrative_ontology:measurement(coer_be_t2010, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 2010, 0.42).
+narrative_ontology:measurement(coer_be_t2020, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 2020, 0.48).
+narrative_ontology:measurement(coer_be_t2024, coercion_legitimacy_boundary__bodily_autonomy_primary, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(coer_su_t0, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 0, 0.1).
-narrative_ontology:measurement(coer_su_t10, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 10, 0.1).
-narrative_ontology:measurement(coer_su_t20, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 20, 0.1).
-narrative_ontology:measurement(coer_su_t30, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 30, 0.1).
+narrative_ontology:measurement(coer_su_t1947, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 1947, 0.1).
+narrative_ontology:measurement(coer_su_t1970, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 1970, 0.12).
+narrative_ontology:measurement(coer_su_t1990, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 1990, 0.15).
+narrative_ontology:measurement(coer_su_t2010, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 2010, 0.18).
+narrative_ontology:measurement(coer_su_t2020, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 2020, 0.25).
+narrative_ontology:measurement(coer_su_t2024, coercion_legitimacy_boundary__bodily_autonomy_primary, suppression_requirement, 2024, 0.2).
 
 
 /* ==========================================================================
@@ -232,9 +282,8 @@ narrative_ontology:measurement(coer_su_t30, coercion_legitimacy_boundary__bodily
    ========================================================================== */
 
 narrative_ontology:coordination_type(coercion_legitimacy_boundary__bodily_autonomy_primary, identity_coordination).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'coercion_legitimacy_boundary' kernel. Other readings (e.g., 'public_health_primary', 'proportionality_reading') would yield different classifications and structural properties.
+narrative_ontology:affects_constraint(coercion_legitimacy_boundary__bodily_autonomy_primary, public_health_mandate_legitimacy).
+narrative_ontology:affects_constraint(coercion_legitimacy_boundary__bodily_autonomy_primary, medical_research_ethics).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

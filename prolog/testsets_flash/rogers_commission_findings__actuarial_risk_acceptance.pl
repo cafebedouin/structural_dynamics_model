@@ -41,7 +41,12 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,13 +76,14 @@
  *
  * SUMMARY:
  *   This constraint represents the 'actuarial risk acceptance' reading of the
- *   Rogers Commission findings, where the core requirement is to quantify
- *   failure probabilities and have them accepted by informed decision-makers.
- *   This allows for continued operations under known risks, shifting the
- *   emphasis from absolute safety to managed risk. It is a tangled rope
- *   because it provides a coordination function (allowing complex operations
- *   to proceed) but also extracts from categorical safety norms and
- *   engineering advocates by forcing them into a probabilistic framework.
+ *   Rogers Commission findings, which mandated that flight operations are
+ *   acceptable if failure probabilities are documented and accepted by
+ *   informed decision-makers. This shifts the safety paradigm from absolute
+ *   engineering thresholds to a quantified, managed risk approach. The
+ *   constraint is claimed as a Tangled Rope because it provides a
+ *   coordination function (allowing complex operations to proceed) but also
+ *   involves asymmetric extraction, primarily from traditional engineering
+ *   safety norms and teams, benefiting mission planners and program managers.
  *
  */
 
@@ -87,16 +94,16 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(rogers_commission_findings__actuarial_risk_acceptance, 0.65).
 domain_priors:suppression_score(rogers_commission_findings__actuarial_risk_acceptance, 0.7).
-domain_priors:theater_ratio(rogers_commission_findings__actuarial_risk_acceptance, 0.4).
+domain_priors:theater_ratio(rogers_commission_findings__actuarial_risk_acceptance, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, extractiveness, 0.65).
 narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, resistance, 0.45).
+narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, accessibility_collapse, 0.4).
+narrative_ontology:constraint_metric(rogers_commission_findings__actuarial_risk_acceptance, resistance, 0.55).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(rogers_commission_findings__actuarial_risk_acceptance, tangled_rope).
@@ -106,38 +113,83 @@ narrative_ontology:topic_domain(rogers_commission_findings__actuarial_risk_accep
 domain_priors:requires_active_enforcement(rogers_commission_findings__actuarial_risk_acceptance).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(rogers_commission_findings__actuarial_risk_acceptance, 'fa0edfab-be53-4c8a-b71e-1d6787ef4b74').
-narrative_ontology:cs_kernel_codification('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', formalized).
-narrative_ontology:cs_authority_grounding('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', lineage).
-narrative_ontology:cs_interpretation_layer_present('fa0edfab-be53-4c8a-b71e-1d6787ef4b74').
-narrative_ontology:cs_reading_relation('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', rogers_commission_findings__engineering_absolute_threshold, influences).
-narrative_ontology:cs_reading_relation('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', rogers_commission_findings__management_compliance_narrative, coexists_with).
-narrative_ontology:cs_axiom('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', foundational, quantifiable_risk_is_manageable_risk).
-narrative_ontology:cs_axiom_status(quantifiable_risk_is_manageable_risk, holdable).
-narrative_ontology:cs_axiom_grounding('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', quantifiable_risk_is_manageable_risk, empirically_contingent).
-narrative_ontology:cs_axiom('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', foundational, informed_acceptance_legitimizes_risk).
-narrative_ontology:cs_axiom_status(informed_acceptance_legitimizes_risk, holdable).
-narrative_ontology:cs_axiom_grounding('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', informed_acceptance_legitimizes_risk, conventional).
-narrative_ontology:cs_reference_frame('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', post_challenger_accountability_framework).
-narrative_ontology:cs_drift_state('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', contemporary_operational_pressure, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('fa0edfab-be53-4c8a-b71e-1d6787ef4b74', '').
+narrative_ontology:cs_story_uid(rogers_commission_findings__actuarial_risk_acceptance, '39e4e0b1-4dfa-495d-8f69-690d1440e0c5').
+narrative_ontology:cs_kernel_codification('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', formalized).
+narrative_ontology:cs_authority_grounding('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', lineage).
+narrative_ontology:cs_interpretation_layer_present('39e4e0b1-4dfa-495d-8f69-690d1440e0c5').
+narrative_ontology:cs_reading_relation('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', rogers_commission_findings__engineering_absolute_threshold, influences).
+narrative_ontology:cs_reading_relation('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', rogers_commission_findings__management_compliance_narrative, coexists_with).
+narrative_ontology:cs_axiom('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', foundational, quantified_risk_is_manageable).
+narrative_ontology:cs_axiom_status(quantified_risk_is_manageable, holdable).
+narrative_ontology:cs_axiom_grounding('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', quantified_risk_is_manageable, empirically_contingent).
+narrative_ontology:cs_axiom('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', foundational, informed_acceptance_legitimizes_residual_risk).
+narrative_ontology:cs_axiom_status(informed_acceptance_legitimizes_residual_risk, holdable).
+narrative_ontology:cs_axiom_grounding('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', informed_acceptance_legitimizes_residual_risk, conventional).
+narrative_ontology:cs_reference_frame('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', post_challenger_risk_management_paradigm).
+narrative_ontology:cs_drift_state('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', contemporary, gap(practice_drift, minor, false)).
+narrative_ontology:cs_created_at('39e4e0b1-4dfa-495d-8f69-690d1440e0c5', '').
 narrative_ontology:cs_kernel_id(rogers_commission_findings__actuarial_risk_acceptance, rogers_commission_findings).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rogers_commission_findings__actuarial_risk_acceptance, mission_planners).
-narrative_ontology:constraint_beneficiary(rogers_commission_findings__actuarial_risk_acceptance, program_management).
+narrative_ontology:constraint_beneficiary(rogers_commission_findings__actuarial_risk_acceptance, program_managers).
 narrative_ontology:constraint_victim(rogers_commission_findings__actuarial_risk_acceptance, categorical_safety_norms).
-narrative_ontology:constraint_victim(rogers_commission_findings__actuarial_risk_acceptance, engineering_safety_advocates).
+narrative_ontology:constraint_victim(rogers_commission_findings__actuarial_risk_acceptance, engineering_teams).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from the ability to proceed with missions by quantifying and accepting risks, rather than being halted by absolute safety thresholds. This allows them to meet operational schedules and strategic objectives, but requires them to formally document and justify risk acceptance.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__actuarial_risk_acceptance, mission_planners, beneficiary,
+    powerful, immediate, constrained, national).
+
+% Are responsible for implementing the risk quantification and acceptance process. They gain flexibility in decision-making but bear the burden of ensuring documentation and securing 'informed decision-maker' acceptance. They are incentivized to keep programs moving.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__actuarial_risk_acceptance, program_managers, agenda_setter,
+    institutional, biographical, constrained, national).
+
+% Bear the cost of shifting from an absolute safety paradigm to one of quantified risk. They must now provide probabilistic assessments and justify 'acceptable' failure rates, which can conflict with their professional ethos of preventing all foreseeable failures. Their identity is tied to technical integrity.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__actuarial_risk_acceptance, engineering_teams, payer,
+    moderate, biographical, identity_locked, local).
+
+% Represent the prior, more absolute safety standards that are now being 'paid down' or diluted by the actuarial approach. They are not an agent but are structurally impacted as their authority diminishes in favor of quantified risk acceptance.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__actuarial_risk_acceptance, categorical_safety_norms, payer,
+    powerless, generational, trapped, universal).
+narrative_ontology:stakeholder_non_agent(rogers_commission_findings__actuarial_risk_acceptance, categorical_safety_norms).
+
+% Are the individuals who must formally accept the documented failure probabilities. They hold significant power in authorizing missions but are constrained by the need to be 'informed' and to justify their acceptance, bearing the ultimate accountability for risk outcomes.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__actuarial_risk_acceptance, informed_decision_makers, agenda_setter,
+    institutional, immediate, constrained, national).
+
+% Are largely excluded from the 'informed decision-maker' circle. They would likely object to the acceptance of any non-zero failure probability for human spaceflight, but their input is channeled through political processes rather than direct participation in risk acceptance.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__actuarial_risk_acceptance, public_and_media, excluded,
+    organized, immediate, mobile, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates complex, high-stakes technical programs by providing a framework for evaluating and accepting residual risks, allowing operations to proceed where absolute safety cannot be guaranteed.
+% TRANSFER_FUNCTION: Transfers the burden of absolute safety guarantees from engineering design to a process of probabilistic quantification and formal acceptance by management, shifting accountability for residual risk.
+% ABSENT_VOICES: The general public and media are largely absent from the 'informed decision-maker' process, and would likely advocate for more stringent, less probabilistic safety standards. Their exclusion allows for a more technocratic risk acceptance.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, mission planning would either halt due to inability to guarantee absolute safety, or proceed without formal risk acceptance, leading to a chaotic and unaccountable decision environment. The entire framework for high-stakes technical operations would need to be re-established.
+% FOUNDING_PROBLEM: The Challenger disaster revealed a failure to adequately address known technical risks, leading to catastrophic outcomes despite prior warnings. The problem was how to manage and make decisions about complex systems with inherent, irreducible risks.
+% FOUNDING_PROBLEM_CORROBORATION: Engineering professional bodies and independent safety review boards corroborate that managing irreducible risk in complex systems remains a live problem. While the specific O-ring issue was resolved, the broader challenge of risk acceptance persists, as evidenced by ongoing debates in aerospace and nuclear safety.
+narrative_ontology:disappearance_verdict(rogers_commission_findings__actuarial_risk_acceptance, world_rearranges).
+narrative_ontology:founding_problem_status(rogers_commission_findings__actuarial_risk_acceptance, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(rogers_commission_findings__actuarial_risk_acceptance, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(rogers_commission_findings__actuarial_risk_acceptance, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(rogers_commission_findings__actuarial_risk_acceptance, 'none', 1).
+narrative_ontology:epsilon_provenance(rogers_commission_findings__actuarial_risk_acceptance, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,16 +209,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high because the framework allows for operations with known, non-zero failure probabilities, effectively extracting 'safety margin' from the system. Suppression is also high as it actively suppresses alternative, more stringent safety paradigms (e.g., 'no known failure modes'). The theater ratio is moderate, as the documentation and acceptance process can become performative, prioritizing compliance with the process over genuine risk reduction. The metrics reflect a system that, while providing a coordination function, has become substantially extractive of safety margins and suppressive of dissenting safety philosophies.
+ *   Extractiveness is high (0.65) because the shift to actuarial risk allows for the 'acceptance' of non-zero failure probabilities, which can be seen as extracting from the prior, more stringent safety culture. Suppression (0.70) is significant as it requires active enforcement to ensure all parties adhere to the new risk quantification and acceptance protocols, suppressing alternative, more conservative safety approaches. Theater ratio (0.20) is relatively low, as the process is genuinely intended to manage risk, though there's a risk of it becoming performative over time. The metrics show a gradual increase in extractiveness and suppression as the actuarial approach becomes more entrenched.
  *
  * PERSPECTIVAL GAP:
- *   Mission planners and program management experience this as a necessary coordination mechanism for complex operations, allowing them to proceed responsibly. Engineering safety advocates and categorical safety norms experience it as an extractive force that compromises fundamental safety principles by legitimizing known risks.
+ *   Mission planners and program managers experience this as a necessary coordination mechanism, enabling progress in high-risk endeavors. Engineering teams and those upholding categorical safety norms experience it as an extractive shift, forcing them to compromise on absolute safety in favor of quantified, accepted risk. The engine's per-seat classification will reflect this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Mission planners and program management are beneficiaries as they gain the ability to continue operations and manage political pressure. Engineering safety advocates and categorical safety norms are victims as their preferred, more stringent safety standards are sidelined. Informed decision-makers are payers, as they bear the ultimate responsibility for accepting the quantified risks.
+ *   Mission planners and program managers are beneficiaries as they gain flexibility and the ability to proceed. Engineering teams and categorical safety norms are victims, as they bear the costs of this shift. Informed decision-makers are agenda-setters, holding the power to accept or reject risks, but also bearing accountability.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (to prevent future Challenger-like disasters by ensuring risk accountability) is still live. However, the 'actuarial risk acceptance' reading risks mandatrophy if the process becomes purely performative, allowing high-risk operations to continue under the guise of 'informed acceptance' without genuinely reducing risk. The rising theater ratio and extractiveness over time suggest a drift towards this outcome, where the form of accountability (quantification and acceptance) displaces the substance (actual safety).
+ *   The constraint prevents mislabeling coordination as pure extraction by acknowledging the genuine need to manage irreducible risks in complex systems. However, it also prevents mislabeling extraction as pure coordination by highlighting the shift in accountability and the potential for diluting safety standards under the guise of 'informed acceptance.' The 'contested' status of the founding problem indicates that while the original problem of managing risk is live, the solution's fairness and long-term efficacy are debated.
  */
 
 /* ==========================================================================
@@ -175,33 +227,33 @@ test(extraction_signature) :-
 
 omega_variable(
     risk_quantification_accuracy,
-    'How accurate and comprehensive are the documented failure probabilities, especially for novel or complex systems?',
-    'Independent, adversarial auditing of risk models and data, comparing predicted vs. actual failure rates over time.',
-    'If quantification is systematically inaccurate or incomplete, the ''informed decision-making'' is compromised, making the constraint a snare by creating a false sense of security and legitimizing unacceptable risks.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(risk_quantification_accuracy, empirical, 'Accuracy of risk quantification in practice.').
-
-omega_variable(
-    decision_maker_independence,
-    'Are the ''informed decision-makers'' truly independent in their acceptance of risk, or are they subject to political, budgetary, or mission-driven pressures that compel acceptance?',
-    'Analysis of decision-making contexts, including internal communications, budget allocations, and career incentives for decision-makers.',
-    'If decision-makers are not independent, their ''acceptance'' is coerced, transforming the constraint into a snare by making the acceptance process a cover for pre-determined operational goals.',
+    'How accurate and comprehensive are the probabilistic risk assessments, and do they truly capture all potential failure modes and their consequences?',
+    'Independent, long-term validation studies comparing predicted failure rates with actual incident data, and expert review of assessment methodologies.',
+    'If assessments are consistently inaccurate or incomplete, the ''informed decision-making'' becomes illusory, increasing the effective extractiveness and potentially reclassifying the constraint towards a Snare, as it would be extracting safety under false pretenses.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(decision_maker_independence, empirical, 'Independence of risk acceptance decisions.').
+narrative_ontology:omega_variable(risk_quantification_accuracy, empirical, 'Uncertainty regarding the fidelity of risk quantification in practice.').
 
 omega_variable(
-    actuarial_vs_categorical_framing,
-    'Is the shift from categorical safety (e.g., ''no known failure modes'') to actuarial risk acceptance (e.g., ''acceptable probability of failure'') a conceptual necessity for complex systems, or a preference-driven choice that prioritizes mission over safety?',
-    'Philosophical and ethical analysis of safety paradigms, and comparison of outcomes in domains that maintain categorical vs. actuarial approaches.',
-    'If a preference-driven choice, the constraint''s extractiveness from categorical safety norms is a policy choice, not an inherent necessity. If a conceptual necessity, the extraction is an unavoidable cost of operating complex systems.',
-    confidence_without_resolution(low)
+    informed_decision_maker_independence,
+    'To what extent are ''informed decision-makers'' truly independent and free from organizational or political pressure to accept risks, even when the probabilities are high?',
+    'Analysis of decision-making records, interviews with decision-makers, and examination of organizational incentive structures and accountability mechanisms.',
+    'If decision-makers are systematically pressured, the ''acceptance'' becomes performative, increasing the theater_ratio and effective suppression, pushing the constraint towards a Piton or Snare, as the coordination function would be undermined by coerced consent.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(actuarial_vs_categorical_framing, conceptual, 'Conceptual basis for actuarial risk framing.').
+narrative_ontology:omega_variable(informed_decision_maker_independence, empirical, 'Ambiguity regarding the genuine independence of risk acceptance.').
+
+omega_variable(
+    kernel_reading_divergence,
+    'Is this ''actuarial risk acceptance'' reading genuinely compatible with the ''engineering absolute threshold'' and ''management compliance narrative'' readings of the Rogers Commission findings, or does it fundamentally undermine them?',
+    'Longitudinal study of safety culture evolution in organizations adopting this reading, assessing whether absolute thresholds are still respected in practice and if compliance becomes a substitute for genuine risk reduction.',
+    'If this reading systematically forecloses the ''absolute threshold'' by making it practically impossible to maintain, the constraint''s effective extractiveness from engineering teams is higher. If it merely coexists, the impact is less severe. This is a core conceptual divergence between the readings.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_divergence, conceptual, 'The conceptual tension between different interpretations of the Rogers Commission findings.').
 
 
 /* ==========================================================================
@@ -215,24 +267,24 @@ narrative_ontology:interval(rogers_commission_findings__actuarial_risk_acceptanc
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(roge_tr_t1986, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 1986, 0.3).
-narrative_ontology:measurement(roge_tr_t1996, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 1996, 0.35).
-narrative_ontology:measurement(roge_tr_t2006, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 2006, 0.38).
-narrative_ontology:measurement(roge_tr_t2016, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 2016, 0.4).
-narrative_ontology:measurement(roge_tr_t2024, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 2024, 0.4).
+narrative_ontology:measurement(roge_tr_t1986, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 1986, 0.1).
+narrative_ontology:measurement(roge_tr_t1996, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 1996, 0.15).
+narrative_ontology:measurement(roge_tr_t2006, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 2006, 0.18).
+narrative_ontology:measurement(roge_tr_t2015, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 2015, 0.19).
+narrative_ontology:measurement(roge_tr_t2024, rogers_commission_findings__actuarial_risk_acceptance, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(roge_be_t1986, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 1986, 0.55).
-narrative_ontology:measurement(roge_be_t1996, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 1996, 0.6).
-narrative_ontology:measurement(roge_be_t2006, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 2006, 0.63).
-narrative_ontology:measurement(roge_be_t2016, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 2016, 0.65).
+narrative_ontology:measurement(roge_be_t1986, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 1986, 0.5).
+narrative_ontology:measurement(roge_be_t1996, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 1996, 0.58).
+narrative_ontology:measurement(roge_be_t2006, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 2006, 0.62).
+narrative_ontology:measurement(roge_be_t2015, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 2015, 0.64).
 narrative_ontology:measurement(roge_be_t2024, rogers_commission_findings__actuarial_risk_acceptance, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
 narrative_ontology:measurement(roge_su_t1986, rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 1986, 0.6).
 narrative_ontology:measurement(roge_su_t1996, rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 1996, 0.65).
 narrative_ontology:measurement(roge_su_t2006, rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 2006, 0.68).
-narrative_ontology:measurement(roge_su_t2016, rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 2016, 0.7).
+narrative_ontology:measurement(roge_su_t2015, rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 2015, 0.69).
 narrative_ontology:measurement(roge_su_t2024, rogers_commission_findings__actuarial_risk_acceptance, suppression_requirement, 2024, 0.7).
 
 
@@ -241,11 +293,12 @@ narrative_ontology:measurement(roge_su_t2024, rogers_commission_findings__actuar
    ========================================================================== */
 
 narrative_ontology:coordination_type(rogers_commission_findings__actuarial_risk_acceptance, enforcement_mechanism).
-narrative_ontology:affects_constraint(rogers_commission_findings__actuarial_risk_acceptance, engineering_safety_standards).
-narrative_ontology:affects_constraint(rogers_commission_findings__actuarial_risk_acceptance, mission_launch_protocols).
+narrative_ontology:boltzmann_floor_override(rogers_commission_findings__actuarial_risk_acceptance, 0.1).
+narrative_ontology:affects_constraint(rogers_commission_findings__actuarial_risk_acceptance, rogers_commission_findings__engineering_absolute_threshold).
+narrative_ontology:affects_constraint(rogers_commission_findings__actuarial_risk_acceptance, rogers_commission_findings__management_compliance_narrative).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the Rogers Commission findings, which is a kernel with multiple interpretations. Other readings include 'engineering_absolute_threshold' and 'management_compliance_narrative'.
+% This constraint is one of three distinct readings of the Rogers Commission findings, each with different structural properties and impacts. This reading focuses on actuarial risk acceptance, while siblings focus on absolute engineering thresholds and management compliance narratives.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -39,9 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,21 +68,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: sovereign_legitimacy__republican_reading
- *   human_readable: Republican Reading of Sovereign Legitimacy
+ *   human_readable: Republican Reading of Popular Sovereignty
  *   domain: political_philosophy/constitutional_theory/legitimacy_studies
  *
  * SUMMARY:
- *   This constraint describes the 'republican reading' of sovereign
- *   legitimacy, where authority originates from the people and is delegated
- *   through consent, typically via democratic processes. It is grounded in
- *   popular sovereignty and social contract theory. This reading emphasizes
- *   accountability and the right of the governed to choose their rulers, but
- *   also acknowledges the potential for majoritarian extraction from
- *   minorities or those excluded from the franchise. The constraint is
- *   claimed as a Rope due to its genuine coordination function in
- *   establishing stable governance, but its moderate extractiveness and
- *   suppression reflect the ongoing costs and exclusions inherent in its
- *   operation.
+ *   This constraint describes the 'republican reading' of legitimate
+ *   authority, where power originates from the people and is delegated
+ *   through consent, typically via elections and constitutional frameworks.
+ *   It is grounded in popular sovereignty and social contract theory. While
+ *   presented as a 'rope' by its proponents, ensuring coordination and
+ *   self-governance, it carries a moderate level of extraction from those
+ *   excluded from the franchise or whose voices are marginalized by
+ *   majoritarian mechanisms. The historical measurements reflect the
+ *   expansion of suffrage and reduction of overt suppression over time,
+ *   leading to a decrease in extractiveness and suppression, though a slight
+ *   recent uptick suggests new challenges.
  *
  */
 
@@ -99,48 +102,88 @@ narrative_ontology:constraint_metric(sovereign_legitimacy__republican_reading, t
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(sovereign_legitimacy__republican_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(sovereign_legitimacy__republican_reading, resistance, 0.2).
+narrative_ontology:constraint_metric(sovereign_legitimacy__republican_reading, resistance, 0.25).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(sovereign_legitimacy__republican_reading, rope).
-narrative_ontology:human_readable(sovereign_legitimacy__republican_reading, "Republican Reading of Sovereign Legitimacy").
+narrative_ontology:human_readable(sovereign_legitimacy__republican_reading, "Republican Reading of Popular Sovereignty").
 narrative_ontology:topic_domain(sovereign_legitimacy__republican_reading, "political_philosophy/constitutional_theory/legitimacy_studies").
 
 domain_priors:requires_active_enforcement(sovereign_legitimacy__republican_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(sovereign_legitimacy__republican_reading, 'ae252cde-00f2-45db-8a99-f63115a3cf24').
-narrative_ontology:cs_kernel_codification('ae252cde-00f2-45db-8a99-f63115a3cf24', formalized).
-narrative_ontology:cs_authority_grounding('ae252cde-00f2-45db-8a99-f63115a3cf24', lineage).
-narrative_ontology:cs_interpretation_layer_present('ae252cde-00f2-45db-8a99-f63115a3cf24').
-narrative_ontology:cs_reading_relation('ae252cde-00f2-45db-8a99-f63115a3cf24', sovereign_legitimacy__monarchical_reading, forecloses).
-narrative_ontology:cs_reading_relation('ae252cde-00f2-45db-8a99-f63115a3cf24', sovereign_legitimacy__constitutional_hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom('ae252cde-00f2-45db-8a99-f63115a3cf24', foundational, legitimacy_from_popular_consent).
-narrative_ontology:cs_axiom_status(legitimacy_from_popular_consent, holdable).
-narrative_ontology:cs_axiom_grounding('ae252cde-00f2-45db-8a99-f63115a3cf24', legitimacy_from_popular_consent, deontological).
-narrative_ontology:cs_axiom('ae252cde-00f2-45db-8a99-f63115a3cf24', foundational, government_by_delegated_power).
-narrative_ontology:cs_axiom_status(government_by_delegated_power, holdable).
-narrative_ontology:cs_axiom_grounding('ae252cde-00f2-45db-8a99-f63115a3cf24', government_by_delegated_power, conventional).
-narrative_ontology:cs_reference_frame('ae252cde-00f2-45db-8a99-f63115a3cf24', enlightenment_social_contract).
-narrative_ontology:cs_drift_state('ae252cde-00f2-45db-8a99-f63115a3cf24', contemporary, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('ae252cde-00f2-45db-8a99-f63115a3cf24', '').
+narrative_ontology:cs_story_uid(sovereign_legitimacy__republican_reading, 'a69d3cc2-3006-4fc8-aeea-21d63e356fd3').
+narrative_ontology:cs_kernel_codification('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', formalized).
+narrative_ontology:cs_authority_grounding('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', lineage).
+narrative_ontology:cs_interpretation_layer_present('a69d3cc2-3006-4fc8-aeea-21d63e356fd3').
+narrative_ontology:cs_reading_relation('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', sovereign_legitimacy__monarchical_reading, forecloses).
+narrative_ontology:cs_reading_relation('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', sovereign_legitimacy__constitutional_hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', foundational, authority_derives_from_consent).
+narrative_ontology:cs_axiom_status(authority_derives_from_consent, holdable).
+narrative_ontology:cs_axiom_grounding('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', authority_derives_from_consent, deontological).
+narrative_ontology:cs_axiom('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', foundational, popular_sovereignty_is_supreme).
+narrative_ontology:cs_axiom_status(popular_sovereignty_is_supreme, holdable).
+narrative_ontology:cs_axiom_grounding('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', popular_sovereignty_is_supreme, conventional).
+narrative_ontology:cs_reference_frame('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', enlightenment_social_contract).
+narrative_ontology:cs_drift_state('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', contemporary_political_polarization, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('a69d3cc2-3006-4fc8-aeea-21d63e356fd3', '').
 narrative_ontology:cs_kernel_id(sovereign_legitimacy__republican_reading, sovereign_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(sovereign_legitimacy__republican_reading, citizenry_with_voting_rights).
+narrative_ontology:constraint_beneficiary(sovereign_legitimacy__republican_reading, citizenry_with_franchise).
 narrative_ontology:constraint_beneficiary(sovereign_legitimacy__republican_reading, elected_representatives).
-narrative_ontology:constraint_victim(sovereign_legitimacy__republican_reading, excluded_from_franchise).
-narrative_ontology:constraint_victim(sovereign_legitimacy__republican_reading, political_minorities).
+narrative_ontology:constraint_victim(sovereign_legitimacy__republican_reading, excluded_populations).
+narrative_ontology:constraint_victim(sovereign_legitimacy__republican_reading, minority_factions).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The source of legitimate authority, delegating power through elections and participatory mechanisms. Benefits from self-governance but is constrained by the practicalities of collective action and the potential for majoritarian overreach.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__republican_reading, citizenry_with_franchise, beneficiary,
+    organized, generational, constrained, national).
+
+% Exercise delegated authority, enacting laws and governing on behalf of the people. Their legitimacy is tied to electoral cycles and adherence to constitutional principles. They benefit from holding power but are accountable to the electorate.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__republican_reading, elected_representatives, agenda_setter,
+    institutional, biographical, constrained, national).
+
+% Those denied voting rights or effective participatory mechanisms. They bear the costs of governance without having a direct voice in its formation, experiencing the constraint as a form of extraction or suppression of their political agency.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__republican_reading, excluded_populations, payer,
+    powerless, generational, trapped, national).
+
+% While possessing franchise, their interests may be systematically overridden by majoritarian rule. They pay the cost of policies they oppose and face challenges in achieving political representation or influence, experiencing a form of diffuse extraction.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__republican_reading, minority_factions, payer,
+    moderate, biographical, constrained, national).
+
+% Analyze the theoretical underpinnings and practical application of popular sovereignty and social contract theory. They assess the coherence and effectiveness of the republican model of legitimacy.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__republican_reading, constitutional_scholars, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a stable and legitimate framework for collective decision-making and governance by channeling popular will into representative institutions, preventing anarchy or arbitrary rule.
+% TRANSFER_FUNCTION: Transfers political authority from the collective 'people' to elected officials, in exchange for governance and the protection of rights. It also transfers the burden of compliance from the governed to the governing, who must continually seek consent.
+% ABSENT_VOICES: Those historically or presently excluded from the franchise (e.g., non-citizens, certain historical demographics) would argue that the 'popular' in popular sovereignty is too narrowly defined, making the system less legitimate than claimed. Future generations, whose consent is presumed, also lack a direct voice.
+% DISAPPEARANCE_RATIONALE: If the belief in legitimate authority flowing from popular consent vanished, the entire edifice of modern republican governance would collapse. Elections would lose meaning, laws would lose their moral force, and political systems would devolve into either pure power struggles or alternative, non-consensual forms of authority.
+% FOUNDING_PROBLEM: To establish a stable and just form of government that avoids both the tyranny of monarchy and the chaos of direct democracy, by grounding authority in the consent of the governed.
+% FOUNDING_PROBLEM_CORROBORATION: Political theorists and historians attest to the ongoing challenge of balancing popular will with minority rights and institutional stability. Contemporary political discourse and constitutional debates consistently revisit the scope and limits of popular sovereignty, indicating the problem remains live. International human rights organizations also corroborate the ongoing struggle for universal franchise and political participation.
+narrative_ontology:disappearance_verdict(sovereign_legitimacy__republican_reading, world_rearranges).
+narrative_ontology:founding_problem_status(sovereign_legitimacy__republican_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(sovereign_legitimacy__republican_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(sovereign_legitimacy__republican_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(sovereign_legitimacy__republican_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(sovereign_legitimacy__republican_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -155,16 +198,16 @@ narrative_ontology:story_seed(sovereign_legitimacy__republican_reading, 'none', 
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.45) because while the system aims for collective benefit, it inherently extracts compliance and resources from all, and can impose costs on political minorities. Suppression is low (0.3) as the system relies on consent, but active enforcement is required to maintain order and suppress challenges to its foundational principles. Theater ratio is low (0.1) as the mechanisms of consent (elections, constitutional adherence) are generally functional, though their fairness and representativeness are subject to ongoing debate. Accessibility collapse is moderate (0.6) as alternatives to this system (e.g., monarchy, anarchy) are generally seen as less legitimate or viable within this framework, but not entirely impossible to conceive or advocate for. Resistance is low (0.2) because the system generally enjoys broad, if sometimes grudging, acceptance.
+ *   The extractiveness (0.45) reflects the inherent costs of collective decision-making and the potential for majoritarian rule to impose costs on minorities, as well as the historical exclusion of certain groups. Suppression (0.30) is present in the mechanisms that define and limit who counts as 'the people' and how their consent is expressed, though it has decreased significantly over time with the expansion of democratic rights. The theater ratio (0.10) is low, indicating that the mechanisms of consent and representation are largely functional, though there can be performative aspects in political campaigns. Accessibility collapse (0.60) is moderate; while alternatives to republicanism exist, the established system makes them difficult to realize. Resistance (0.25) is present from excluded groups and those advocating for deeper forms of democracy.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the citizenry and elected representatives, this constraint is a legitimate and beneficial framework for self-governance. From the perspective of excluded groups or political minorities, it can appear as a system that legitimizes their marginalization or the suppression of their interests, even if it is not a pure snare. The engine's per-seat classification will reflect this divergence.
+ *   From the perspective of the citizenry with franchise, this is a legitimate and beneficial 'rope' ensuring self-governance. From the perspective of excluded populations, it operates as a 'snare' or 'tangled rope' that extracts compliance without genuine consent. Elected representatives view it as a 'rope' that grants them authority, while minority factions may experience it as a 'tangled rope' due to majoritarian tyranny. The engine's per-seat classification will reflect these divergences.
  *
  * DIRECTIONALITY LOGIC:
- *   The citizenry with voting rights and elected representatives are primary beneficiaries, as they are the source and wielders of legitimate power, respectively. Those excluded from the franchise and political minorities are victims, as they bear the costs of governance without full participation or representation. The directionality for beneficiaries is low (subsidized by the system's stability), while for victims it is high (targeted by its exclusionary or majoritarian aspects).
+ *   The citizenry with franchise and elected representatives are beneficiaries, as they directly participate in and benefit from the self-governance framework. Excluded populations and minority factions are payers, as they bear the costs of a system where their consent is either not sought or their interests are systematically underrepresented. The directionality for excluded populations is high (near 1.0), while for minority factions it is moderate (closer to 0.7-0.8), reflecting their partial inclusion.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (to provide legitimate, accountable governance) remains live. The classification as a Rope, rather than a Snare, prevents mislabeling genuine coordination as pure extraction, while acknowledging the real costs and exclusions. The ongoing need for active enforcement and the potential for majoritarian tyranny prevent it from being a pure Mountain, as its persistence is not entirely natural or self-sustaining without human action and vigilance.
+ *   This constraint is not currently experiencing mandatrophy. The founding problem of establishing legitimate governance through consent remains 'live', and the mechanisms of popular sovereignty, while imperfect, are still actively engaged. The slight increase in extractiveness and suppression in recent years suggests new challenges to the ideal of popular sovereignty, rather than an atrophy of its function. The classification as 'rope' (claimed) with moderate extraction (metrics) prevents mislabeling it as pure extraction, acknowledging its genuine coordination function, while also highlighting its costs.
  */
 
 /* ==========================================================================
@@ -172,34 +215,34 @@ narrative_ontology:story_seed(sovereign_legitimacy__republican_reading, 'none', 
    ========================================================================== */
 
 omega_variable(
-    majoritarian_tyranny_risk,
-    'To what extent does the republican reading''s emphasis on majority rule lead to the systematic extraction from or suppression of political minorities, effectively turning it into a Snare for those groups?',
-    'Empirical analysis of legislative outcomes and judicial protections for minority rights over time, particularly in systems with weak constitutional checks on majoritarian power.',
-    'If majoritarian tyranny is consistently demonstrated, the effective classification for political minorities would shift towards Snare, indicating a higher degree of extraction and suppression than the overall Rope classification suggests.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(majoritarian_tyranny_risk, empirical, 'Assesses the risk of majoritarian rule becoming extractive for minorities.').
-
-omega_variable(
-    consent_vs_coercion_boundary,
-    'At what point does ''delegated consent'' become indistinguishable from ''coerced compliance'' for those with limited exit options or suppressed voices within the system?',
-    'Comparative analysis of political systems with varying degrees of electoral freedom, civil liberties, and protections for dissent. Examination of historical periods where franchise was restricted.',
-    'If the boundary is frequently crossed, the overall suppression metric for the constraint would be higher, and its classification would lean more towards Tangled Rope or Snare, as the ''consent'' narrative would be revealed as cover for coercion.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(consent_vs_coercion_boundary, conceptual, 'Examines the line between genuine consent and coerced compliance in republican systems.').
-
-omega_variable(
-    republican_vs_monarchical_legitimacy,
-    'Is the republican reading of sovereign legitimacy fundamentally incompatible with the monarchical reading, or can elements of both coexist within a single political framework?',
-    'Analysis of constitutional monarchies and historical transitions from monarchy to republic. Conceptual analysis of the logical coherence of combining inherited and delegated authority.',
-    'If fundamentally incompatible, the ''forecloses'' relation to the monarchical reading is strengthened. If coexistence is robust, it supports the ''coexists_with'' or ''influences'' relations, suggesting a more complex, hybrid political reality.',
+    scope_of_the_people,
+    'Who constitutes ''the people'' whose consent grants legitimacy, and how is this definition enforced or contested?',
+    'Historical analysis of suffrage expansion, legal challenges to voting rights, and sociological studies of political inclusion/exclusion.',
+    'If ''the people'' is narrowly defined and actively policed, the constraint''s effective suppression and extractiveness are higher, potentially shifting its classification towards a ''snare'' for excluded groups. If broadly inclusive, it reinforces the ''rope'' classification.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(republican_vs_monarchical_legitimacy, conceptual, 'Examines the compatibility of republican and monarchical legitimacy claims.').
+narrative_ontology:omega_variable(scope_of_the_people, empirical, 'Ambiguity in the definition of ''the people'' in popular sovereignty.').
+
+omega_variable(
+    consent_mechanism_authenticity,
+    'To what extent do electoral and participatory mechanisms genuinely reflect the ''delegated consent'' of the people, versus being subject to manipulation or apathy?',
+    'Empirical studies of electoral integrity, voter turnout, political campaign finance, and public trust in institutions.',
+    'If consent mechanisms are found to be systematically compromised or performative, the ''theater_ratio'' would increase, and the ''extractiveness'' from the citizenry would be higher, as their consent is presumed rather than genuinely given. This could shift the classification towards a ''piton'' or ''tangled_rope''.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(consent_mechanism_authenticity, empirical, 'Authenticity of consent mechanisms in republican governance.').
+
+omega_variable(
+    majoritarian_tyranny_threshold,
+    'At what point does majoritarian rule, even if based on consent, become a form of ''tyranny of the majority'' that extracts from or suppresses minority rights, thereby undermining its own legitimacy?',
+    'Legal and philosophical analysis of constitutional protections for minorities, historical case studies of majoritarian overreach, and normative debates on the limits of popular sovereignty.',
+    'If the threshold for majoritarian tyranny is low or frequently crossed, the ''extractiveness'' from minority factions would be re-evaluated as higher, and the ''suppression'' of their political agency more severe, potentially reclassifying the constraint as a ''tangled_rope'' for these groups.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(majoritarian_tyranny_threshold, conceptual, 'The boundary between legitimate majoritarian rule and majoritarian tyranny.').
 
 
 /* ==========================================================================
@@ -213,27 +256,27 @@ narrative_ontology:interval(sovereign_legitimacy__republican_reading, 1789, 2024
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(sove_tr_t1789, sovereign_legitimacy__republican_reading, theater_ratio, 1789, 0.1).
-narrative_ontology:measurement(sove_tr_t1850, sovereign_legitimacy__republican_reading, theater_ratio, 1850, 0.1).
-narrative_ontology:measurement(sove_tr_t1900, sovereign_legitimacy__republican_reading, theater_ratio, 1900, 0.1).
-narrative_ontology:measurement(sove_tr_t1950, sovereign_legitimacy__republican_reading, theater_ratio, 1950, 0.1).
-narrative_ontology:measurement(sove_tr_t2000, sovereign_legitimacy__republican_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(sove_tr_t1789, sovereign_legitimacy__republican_reading, theater_ratio, 1789, 0.15).
+narrative_ontology:measurement(sove_tr_t1865, sovereign_legitimacy__republican_reading, theater_ratio, 1865, 0.12).
+narrative_ontology:measurement(sove_tr_t1920, sovereign_legitimacy__republican_reading, theater_ratio, 1920, 0.1).
+narrative_ontology:measurement(sove_tr_t1965, sovereign_legitimacy__republican_reading, theater_ratio, 1965, 0.08).
+narrative_ontology:measurement(sove_tr_t2000, sovereign_legitimacy__republican_reading, theater_ratio, 2000, 0.09).
 narrative_ontology:measurement(sove_tr_t2024, sovereign_legitimacy__republican_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(sove_be_t1789, sovereign_legitimacy__republican_reading, base_extractiveness, 1789, 0.3).
-narrative_ontology:measurement(sove_be_t1850, sovereign_legitimacy__republican_reading, base_extractiveness, 1850, 0.4).
-narrative_ontology:measurement(sove_be_t1900, sovereign_legitimacy__republican_reading, base_extractiveness, 1900, 0.45).
-narrative_ontology:measurement(sove_be_t1950, sovereign_legitimacy__republican_reading, base_extractiveness, 1950, 0.4).
-narrative_ontology:measurement(sove_be_t2000, sovereign_legitimacy__republican_reading, base_extractiveness, 2000, 0.45).
+narrative_ontology:measurement(sove_be_t1789, sovereign_legitimacy__republican_reading, base_extractiveness, 1789, 0.55).
+narrative_ontology:measurement(sove_be_t1865, sovereign_legitimacy__republican_reading, base_extractiveness, 1865, 0.5).
+narrative_ontology:measurement(sove_be_t1920, sovereign_legitimacy__republican_reading, base_extractiveness, 1920, 0.48).
+narrative_ontology:measurement(sove_be_t1965, sovereign_legitimacy__republican_reading, base_extractiveness, 1965, 0.42).
+narrative_ontology:measurement(sove_be_t2000, sovereign_legitimacy__republican_reading, base_extractiveness, 2000, 0.43).
 narrative_ontology:measurement(sove_be_t2024, sovereign_legitimacy__republican_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(sove_su_t1789, sovereign_legitimacy__republican_reading, suppression_requirement, 1789, 0.4).
-narrative_ontology:measurement(sove_su_t1850, sovereign_legitimacy__republican_reading, suppression_requirement, 1850, 0.35).
-narrative_ontology:measurement(sove_su_t1900, sovereign_legitimacy__republican_reading, suppression_requirement, 1900, 0.3).
-narrative_ontology:measurement(sove_su_t1950, sovereign_legitimacy__republican_reading, suppression_requirement, 1950, 0.25).
-narrative_ontology:measurement(sove_su_t2000, sovereign_legitimacy__republican_reading, suppression_requirement, 2000, 0.3).
+narrative_ontology:measurement(sove_su_t1789, sovereign_legitimacy__republican_reading, suppression_requirement, 1789, 0.7).
+narrative_ontology:measurement(sove_su_t1865, sovereign_legitimacy__republican_reading, suppression_requirement, 1865, 0.55).
+narrative_ontology:measurement(sove_su_t1920, sovereign_legitimacy__republican_reading, suppression_requirement, 1920, 0.4).
+narrative_ontology:measurement(sove_su_t1965, sovereign_legitimacy__republican_reading, suppression_requirement, 1965, 0.25).
+narrative_ontology:measurement(sove_su_t2000, sovereign_legitimacy__republican_reading, suppression_requirement, 2000, 0.28).
 narrative_ontology:measurement(sove_su_t2024, sovereign_legitimacy__republican_reading, suppression_requirement, 2024, 0.3).
 
 
@@ -242,11 +285,9 @@ narrative_ontology:measurement(sove_su_t2024, sovereign_legitimacy__republican_r
    ========================================================================== */
 
 narrative_ontology:coordination_type(sovereign_legitimacy__republican_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(sovereign_legitimacy__republican_reading, sovereign_legitimacy__monarchical_reading).
-narrative_ontology:affects_constraint(sovereign_legitimacy__republican_reading, sovereign_legitimacy__constitutional_hybrid_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'sovereign_legitimacy' kernel. The 'republican_reading' emphasizes popular sovereignty and delegated consent, contrasting with monarchical and hybrid constitutional models. Each reading represents a distinct structural claim about the source and flow of legitimate authority.
+% This constraint is one of three readings of the 'sovereign_legitimacy' kernel. It focuses on the upward flow of authority from the people through consent, contrasting with monarchical and constitutional hybrid readings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -39,9 +39,9 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -57,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,27 +68,24 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gold_fiat_transition_mechanism__creditor_discipline_reading
- *   human_readable: Post-Gold Standard Creditor Discipline Constraint (Creditor Discipline Reading)
+ *   human_readable: Gold-Fiat Transition: Elimination of Creditor Discipline
  *   domain: monetary_economics/political_economy/history_of_economic_thought
  *
  * SUMMARY:
- *   This constraint describes the shift in international monetary power
- *   dynamics following the abandonment of the gold standard, specifically
- *   from the perspective of creditor nations losing their disciplinary
- *   leverage. Under the gold standard, creditor nations could demand gold
- *   redemption for balance-of-payments surpluses, effectively vetoing debtor
- *   nations' expansionary fiscal policies. The transition to a fiat,
- *   reserve-currency-dominated system eliminated this veto power,
- *   transferring fiscal flexibility to debtor nations (especially the reserve
- *   currency issuer) and imposing a new form of discipline on non-reserve
- *   holders.
+ *   This constraint story analyzes the gold-fiat transition mechanism from
+ *   the perspective of 'creditor discipline'. It argues that the shift from a
+ *   gold-backed to a fiat monetary system, particularly after the Nixon Shock
+ *   in 1971, fundamentally altered the balance of power in international
+ *   finance. Specifically, it eliminated the ability of creditor nations to
+ *   discipline debtor nations (especially the reserve currency issuer)
+ *   through the threat of demanding gold redemption for their currency
+ *   holdings. This enabled greater fiscal flexibility for debtor nations but
+ *   also concentrated geopolitical power in the hands of the reserve currency
+ *   issuer, effectively removing a key external constraint on its own
+ *   economic policy. The constraint is claimed as a snare because the
+ *   coordination story (flexible monetary policy) is seen as cover for a
+ *   significant, asymmetric transfer of power and wealth.
  *
- * KEY AGENTS:
- *   - creditor_nations: Primary victim (institutional/constrained) — lost leverage
- *   - debtor_nations: Primary beneficiary (institutional/mobile) — gained fiscal flexibility
- *   - reserve_currency_issuer: Primary beneficiary (institutional/arbitrage) — gained seigniorage and policy autonomy
- *   - non_reserve_currency_issuers: Secondary victim (institutional/constrained) — faced new forms of discipline
- *   - international_monetary_fund: Agenda setter (institutional/analytical) — administered the Bretton Woods system and its transition
  */
 
 /* ==========================================================================
@@ -97,47 +95,46 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(gold_fiat_transition_mechanism__creditor_discipline_reading, 0.85).
 domain_priors:suppression_score(gold_fiat_transition_mechanism__creditor_discipline_reading, 0.9).
-domain_priors:theater_ratio(gold_fiat_transition_mechanism__creditor_discipline_reading, 0.1).
+domain_priors:theater_ratio(gold_fiat_transition_mechanism__creditor_discipline_reading, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, extractiveness, 0.85).
 narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 0.9).
-narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, accessibility_collapse, 0.75).
-narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, resistance, 0.7).
+narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(gold_fiat_transition_mechanism__creditor_discipline_reading, resistance, 0.1).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(gold_fiat_transition_mechanism__creditor_discipline_reading, snare).
-narrative_ontology:human_readable(gold_fiat_transition_mechanism__creditor_discipline_reading, "Post-Gold Standard Creditor Discipline Constraint (Creditor Discipline Reading)").
+narrative_ontology:human_readable(gold_fiat_transition_mechanism__creditor_discipline_reading, "Gold-Fiat Transition: Elimination of Creditor Discipline").
 narrative_ontology:topic_domain(gold_fiat_transition_mechanism__creditor_discipline_reading, "monetary_economics/political_economy/history_of_economic_thought").
 
 domain_priors:requires_active_enforcement(gold_fiat_transition_mechanism__creditor_discipline_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(gold_fiat_transition_mechanism__creditor_discipline_reading, '877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2').
-narrative_ontology:cs_kernel_codification('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', formalized).
-narrative_ontology:cs_authority_grounding('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', extraction).
-narrative_ontology:cs_interpretation_layer_present('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2').
-narrative_ontology:cs_reading_relation('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', gold_fiat_transition_mechanism__automatic_constraint_reading, coexists_with).
-narrative_ontology:cs_reading_relation('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', gold_fiat_transition_mechanism__composite_overdetermination_reading, coexists_with).
-narrative_ontology:cs_axiom('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', foundational, creditor_leverage_is_discipline).
-narrative_ontology:cs_axiom_status(creditor_leverage_is_discipline, holdable).
-narrative_ontology:cs_axiom_grounding('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', creditor_leverage_is_discipline, conventional).
-narrative_ontology:cs_axiom('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', foundational, fiscal_flexibility_is_sovereignty).
-narrative_ontology:cs_axiom_status(fiscal_flexibility_is_sovereignty, holdable).
-narrative_ontology:cs_axiom_grounding('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', fiscal_flexibility_is_sovereignty, deontological).
-narrative_ontology:cs_reference_frame('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', gold_standard_creditor_hegemony).
-narrative_ontology:cs_drift_state('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', post_bretton_woods_collapse, gap(authority_erosion, severe, true)).
-narrative_ontology:cs_created_at('877d0c9d-4a4f-4bd1-ab38-e7cb63e00ac2', '').
+narrative_ontology:cs_story_uid(gold_fiat_transition_mechanism__creditor_discipline_reading, '74abc922-628d-4511-adb5-d75e5532568a').
+narrative_ontology:cs_kernel_codification('74abc922-628d-4511-adb5-d75e5532568a', formalized).
+narrative_ontology:cs_authority_grounding('74abc922-628d-4511-adb5-d75e5532568a', extraction).
+narrative_ontology:cs_interpretation_layer_present('74abc922-628d-4511-adb5-d75e5532568a').
+narrative_ontology:cs_reading_relation('74abc922-628d-4511-adb5-d75e5532568a', gold_fiat_transition_mechanism__automatic_constraint_reading, coexists_with).
+narrative_ontology:cs_reading_relation('74abc922-628d-4511-adb5-d75e5532568a', gold_fiat_transition_mechanism__composite_overdetermination_reading, coexists_with).
+narrative_ontology:cs_axiom('74abc922-628d-4511-adb5-d75e5532568a', foundational, gold_redemption_threat_as_discipline).
+narrative_ontology:cs_axiom_status(gold_redemption_threat_as_discipline, holdable).
+narrative_ontology:cs_axiom_grounding('74abc922-628d-4511-adb5-d75e5532568a', gold_redemption_threat_as_discipline, conventional).
+narrative_ontology:cs_axiom('74abc922-628d-4511-adb5-d75e5532568a', foundational, fiscal_flexibility_as_national_sovereignty).
+narrative_ontology:cs_axiom_status(fiscal_flexibility_as_national_sovereignty, holdable).
+narrative_ontology:cs_axiom_grounding('74abc922-628d-4511-adb5-d75e5532568a', fiscal_flexibility_as_national_sovereignty, instrumental).
+narrative_ontology:cs_reference_frame('74abc922-628d-4511-adb5-d75e5532568a', post_bretton_woods_fiat_system).
+narrative_ontology:cs_drift_state('74abc922-628d-4511-adb5-d75e5532568a', contemporary_global_finance, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('74abc922-628d-4511-adb5-d75e5532568a', '').
 narrative_ontology:cs_kernel_id(gold_fiat_transition_mechanism__creditor_discipline_reading, gold_fiat_transition_mechanism).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gold_fiat_transition_mechanism__creditor_discipline_reading, debtor_nations).
 narrative_ontology:constraint_beneficiary(gold_fiat_transition_mechanism__creditor_discipline_reading, reserve_currency_issuer).
 narrative_ontology:constraint_victim(gold_fiat_transition_mechanism__creditor_discipline_reading, creditor_nations).
-narrative_ontology:constraint_victim(gold_fiat_transition_mechanism__creditor_discipline_reading, non_reserve_currency_issuers).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -146,27 +143,44 @@ narrative_ontology:constraint_victim(gold_fiat_transition_mechanism__creditor_di
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Gained significant fiscal flexibility and policy autonomy by no longer facing the threat of gold redemption runs, which previously disciplined their spending and balance of payments. They can now run larger deficits without immediate external constraint.
+narrative_ontology:constraint_stakeholder(gold_fiat_transition_mechanism__creditor_discipline_reading, debtor_nations, beneficiary,
+    powerful, generational, arbitrage, global).
+
+% The primary beneficiary, gaining immense geopolitical leverage and 'exorbitant privilege' by issuing the world's reserve currency without gold backing. This allows it to finance deficits more easily and exert influence through monetary policy, effectively eliminating external discipline on its own fiscal policy.
+narrative_ontology:constraint_stakeholder(gold_fiat_transition_mechanism__creditor_discipline_reading, reserve_currency_issuer, agenda_setter,
+    institutional, civilizational, arbitrage, global).
+
+% Lost their primary mechanism for disciplining debtor nations: the threat of demanding gold redemption for their dollar holdings. This reduced their leverage in international finance and trade, forcing them to accept fiat currency without the same level of external accountability.
+narrative_ontology:constraint_stakeholder(gold_fiat_transition_mechanism__creditor_discipline_reading, creditor_nations, payer,
+    organized, generational, constrained, global).
+
+% Observe and analyze the new monetary regime, adapting their lending and policy recommendations to a world without gold-backed currency. Their role shifted from enforcing gold-standard discipline to managing fiat currency flows and crises.
+narrative_ontology:constraint_stakeholder(gold_fiat_transition_mechanism__creditor_discipline_reading, international_financial_institutions, observer,
+    institutional, generational, analytical, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: To provide a stable international monetary system that facilitates trade and investment, replacing the gold standard's inherent deflationary bias and susceptibility to speculative attacks.
-% TRANSFER_FUNCTION: Transfers the power to create international liquidity and manage balance-of-payments adjustments from creditor nations (via gold redemption) to the reserve currency issuer and debtor nations (via fiscal and monetary policy).
-% ABSENT_VOICES: Advocates for a return to a gold-backed standard or a truly neutral international reserve asset (e.g., a global central bank currency) are largely excluded from mainstream policy debates, as their proposals challenge the fundamental structure of the current fiat system.
-% DISAPPEARANCE_RATIONALE: If the post-gold standard creditor discipline vanished overnight (e.g., if gold suddenly became the sole international reserve again), the global financial system would undergo a massive, disruptive reorganization. Debtor nations would face immediate fiscal constraints, and the reserve currency issuer would lose its seigniorage benefits, leading to a complete reordering of international power dynamics.
-% FOUNDING_PROBLEM: The gold standard imposed rigid constraints on domestic monetary policy, exacerbated economic downturns, and created an unstable international system prone to balance-of-payments crises and speculative attacks.
-% FOUNDING_PROBLEM_CORROBORATION: Economists and central bankers widely corroborate the problems of the gold standard, citing historical evidence of its deflationary bias and crisis proneness. However, the 'live' status of the problem is contested by some who argue that the current fiat system has introduced new forms of instability and moral hazard, suggesting the 'solution' created new problems.
-narrative_ontology:disappearance_verdict(gold_fiat_transition_mechanism__creditor_discipline_reading, world_rearranges).
+% COORDINATION_FUNCTION: The transition coordinated the global monetary system around a new, flexible standard no longer tied to a physical commodity, theoretically allowing for more responsive economic policy and preventing deflationary spirals.
+% TRANSFER_FUNCTION: Transferred significant economic and political power from creditor nations (who previously held the 'veto' via gold redemption) to debtor nations, particularly the issuer of the reserve currency, by removing a hard external constraint on fiscal and monetary policy.
+% ABSENT_VOICES: Advocates for a return to a gold standard or other commodity-backed money, who would argue for external discipline on government spending and against the inflationary potential of fiat currency, are largely marginalized in mainstream policy discourse.
+% DISAPPEARANCE_RATIONALE: The gold-fiat transition mechanism itself, as a historical event, cannot 'disappear'. Its effects are embedded in the current global monetary system. If the historical shift had not occurred, the world would be fundamentally different, but the mechanism itself is a past event.
+% FOUNDING_PROBLEM: The gold standard imposed rigid constraints on national monetary policy, leading to deflationary pressures and limiting governments' ability to respond to economic crises or finance public goods, particularly for debtor nations.
+% FOUNDING_PROBLEM_CORROBORATION: Economists and policymakers widely corroborate the problem of gold standard rigidity. However, the 'solution' (fiat currency) is contested by those who argue it merely shifted the problem from external discipline to internal political discipline, leading to different forms of instability. Independent historical analysis and economic modeling support the initial problem statement.
+narrative_ontology:disappearance_verdict(gold_fiat_transition_mechanism__creditor_discipline_reading, world_unchanged).
 narrative_ontology:founding_problem_status(gold_fiat_transition_mechanism__creditor_discipline_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(gold_fiat_transition_mechanism__creditor_discipline_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(gold_fiat_transition_mechanism__creditor_discipline_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(gold_fiat_transition_mechanism__creditor_discipline_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(gold_fiat_transition_mechanism__creditor_discipline_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -186,16 +200,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is high because creditor nations lost a significant tool for influencing international economic policy, effectively subsidizing debtor nations' fiscal autonomy. Suppression is high because the new system structurally prevents creditor nations from reasserting their former leverage; there is no 'exit' back to gold-backed discipline. Theater ratio is low as the constraint's operation is direct and functional, not performative. The increasing extractiveness and suppression over the interval reflect the gradual erosion of gold's influence and the hardening of the fiat system's disciplinary mechanisms.
+ *   The extractiveness is high (0.85-0.90) because the mechanism fundamentally shifted the cost of fiscal indiscipline from the debtor (via gold outflows) to the creditor (via accepting fiat currency without recourse). Suppression is also high (0.90) because the new system is enforced by the legal tender laws and the institutional power of central banks, with no viable alternative for creditor nations to re-impose gold-based discipline. Theater ratio is low (0.05) as the mechanism's function is direct and not performative; it achieved its goal of removing the gold constraint. Accessibility collapse is high (0.95) as the option of demanding gold redemption was effectively eliminated for creditor nations. Resistance is low (0.10) because, while some advocate for a return to gold, the current system is deeply entrenched and largely uncontested by major institutional actors.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of creditor nations, this constraint is a Snare, as they lost a powerful mechanism for enforcing fiscal discipline. From the perspective of debtor nations, it is a Rope, as it enabled greater fiscal flexibility and autonomy. The reserve currency issuer experiences it as an arbitrage opportunity, gaining significant seigniorage and policy space.
+ *   From the perspective of debtor nations and the reserve currency issuer, the transition was a necessary evolution towards a more flexible and stable global economy (a 'rope' or 'scaffold'). From the perspective of creditor nations, it was a structural expropriation of their disciplinary power, forcing them into a system where their claims could be diluted by inflation (a 'snare'). This story adopts the latter, more critical, reading.
  *
  * DIRECTIONALITY LOGIC:
- *   The reserve_currency_issuer and debtor_nations are beneficiaries (d near 0.0-0.2) as they gained fiscal flexibility and seigniorage. Creditor_nations and non_reserve_currency_issuers are victims (d near 0.8-1.0) as they lost leverage and faced new forms of discipline. The international_monetary_fund, as an agenda setter, sits closer to symmetric (d around 0.5), administering the system for all members, albeit with an inherent bias towards the dominant powers.
+ *   The reserve currency issuer and debtor nations are clear beneficiaries, experiencing low directionality as the constraint subsidizes their fiscal flexibility. Creditor nations are the primary targets, experiencing high directionality as they lost a critical leverage point. The mechanism fundamentally re-ordered the global financial hierarchy.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint is not about mandatrophy; rather, it describes a fundamental shift in the underlying mechanism of international monetary discipline. The 'mandate' of international monetary stability persisted, but the means of achieving it, and the distribution of power within that system, fundamentally changed. The classification as a Snare for creditor nations prevents mislabeling this power shift as a neutral 'coordination' mechanism.
  */
 
 /* ==========================================================================
@@ -203,65 +215,79 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint primarily about the elimination of creditor discipline, or is it better understood as an automatic physical constraint or a composite overdetermined event?',
-    'Historical analysis of policy debates and diplomatic records focusing on the explicit motivations and perceived impacts of the gold standard''s abandonment on international power dynamics.',
-    'If this ''creditor discipline'' reading is primary, the constraint is a Snare for creditor nations. If the ''automatic constraint'' reading is primary, it''s a Mountain. If ''composite overdetermination'' is primary, the constraint itself is a complex network of smaller constraints.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading of the ''gold_fiat_transition_mechanism'' kernel, specifically the ''creditor_discipline_reading''.').
-
-omega_variable(
-    creditor_leverage_mechanism,
-    'To what extent did the threat of gold redemption genuinely constrain debtor nations'' fiscal policy, versus serving as a symbolic justification for existing power imbalances?',
-    'Counterfactual historical analysis comparing fiscal policy outcomes in periods of high vs. low gold redemption threat, controlling for other geopolitical factors.',
-    'If the threat was a strong causal mechanism, the extractiveness and suppression metrics are accurate. If it was largely symbolic, the constraint''s true extractiveness might be lower, and its ''snare'' classification less robust.',
+    creditor_discipline_vs_fiscal_flexibility,
+    'Was the elimination of creditor veto power a necessary step towards global fiscal flexibility, or an unjustified transfer of power that enabled unchecked spending?',
+    'Long-term comparative analysis of economic stability and growth in gold-standard vs. fiat-standard eras, accounting for other confounding factors. Examination of the political economy of fiscal policy in both regimes.',
+    'If deemed necessary for flexibility, the extractiveness might be re-evaluated as a ''cost of coordination''. If unjustified, the snare classification is reinforced, highlighting the power transfer as the primary outcome.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(creditor_leverage_mechanism, empirical, 'Assessing the actual leverage of creditor nations under the gold standard.').
+narrative_ontology:omega_variable(creditor_discipline_vs_fiscal_flexibility, preference, 'Whether the trade-off between creditor discipline and fiscal flexibility was beneficial.').
+
+omega_variable(
+    reserve_currency_issuer_accountability,
+    'To what extent has the reserve currency issuer''s increased fiscal flexibility, enabled by the transition, been offset by new forms of accountability or self-discipline?',
+    'Empirical study of the reserve currency issuer''s fiscal and monetary policy decisions post-1971, and the emergence of new international norms or institutions that might impose soft constraints.',
+    'If new forms of accountability are significant, the effective extractiveness from creditor nations might be lower than initially assessed. If not, the concentration of power remains a key feature.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(reserve_currency_issuer_accountability, empirical, 'New forms of accountability for the reserve currency issuer.').
+
+omega_variable(
+    kernel_reading_creditor_discipline,
+    'Is this constraint a genuine historical mechanism, or is it an interpretation of a broader transition that overemphasizes the ''creditor discipline'' aspect?',
+    'Comparative historical analysis with other readings of the gold-fiat transition, assessing the empirical weight of the ''creditor discipline'' narrative against ''automatic constraint'' or ''composite overdetermination'' explanations.',
+    'If this reading is found to be a partial or overemphasized account, its classification might be re-contextualized within a broader ''composite overdetermination'' framework, potentially reducing its standalone extractiveness if the power transfer is seen as one of many effects.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_creditor_discipline, conceptual, 'This constraint is the ''creditor_discipline_reading'' of the ''gold_fiat_transition_mechanism'' kernel. It focuses on the geopolitical power shift and the elimination of external fiscal discipline. Sibling readings include ''automatic_constraint_reading'' (focus on physical limits to money creation) and ''composite_overdetermination_reading'' (focus on multiple, converging causes beyond a single mechanism).').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(gold_fiat_transition_mechanism__creditor_discipline_reading, 1944, 1974).
+narrative_ontology:interval(gold_fiat_transition_mechanism__creditor_discipline_reading, 1971, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(gold_tr_t0, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(gold_tr_t10, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 10, 0.08).
-narrative_ontology:measurement(gold_tr_t20, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 20, 0.1).
-narrative_ontology:measurement(gold_tr_t30, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 30, 0.1).
+narrative_ontology:measurement(gold_tr_t1971, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 1971, 0.05).
+narrative_ontology:measurement(gold_tr_t1980, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 1980, 0.05).
+narrative_ontology:measurement(gold_tr_t1990, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 1990, 0.05).
+narrative_ontology:measurement(gold_tr_t2000, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 2000, 0.05).
+narrative_ontology:measurement(gold_tr_t2010, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 2010, 0.05).
+narrative_ontology:measurement(gold_tr_t2024, gold_fiat_transition_mechanism__creditor_discipline_reading, theater_ratio, 2024, 0.05).
 
 % Extraction over time
-narrative_ontology:measurement(gold_be_t0, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 0, 0.2).
-narrative_ontology:measurement(gold_be_t10, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 10, 0.45).
-narrative_ontology:measurement(gold_be_t20, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 20, 0.7).
-narrative_ontology:measurement(gold_be_t30, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 30, 0.85).
+narrative_ontology:measurement(gold_be_t1971, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 1971, 0.85).
+narrative_ontology:measurement(gold_be_t1980, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 1980, 0.86).
+narrative_ontology:measurement(gold_be_t1990, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 1990, 0.87).
+narrative_ontology:measurement(gold_be_t2000, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 2000, 0.88).
+narrative_ontology:measurement(gold_be_t2010, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 2010, 0.89).
+narrative_ontology:measurement(gold_be_t2024, gold_fiat_transition_mechanism__creditor_discipline_reading, base_extractiveness, 2024, 0.9).
 
 % Suppression requirement over time
-narrative_ontology:measurement(gold_su_t0, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 0, 0.3).
-narrative_ontology:measurement(gold_su_t10, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 10, 0.55).
-narrative_ontology:measurement(gold_su_t20, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 20, 0.75).
-narrative_ontology:measurement(gold_su_t30, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 30, 0.9).
+narrative_ontology:measurement(gold_su_t1971, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 1971, 0.9).
+narrative_ontology:measurement(gold_su_t1980, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 1980, 0.9).
+narrative_ontology:measurement(gold_su_t1990, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 1990, 0.9).
+narrative_ontology:measurement(gold_su_t2000, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 2000, 0.9).
+narrative_ontology:measurement(gold_su_t2010, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 2010, 0.9).
+narrative_ontology:measurement(gold_su_t2024, gold_fiat_transition_mechanism__creditor_discipline_reading, suppression_requirement, 2024, 0.9).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(gold_fiat_transition_mechanism__creditor_discipline_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(gold_fiat_transition_mechanism__creditor_discipline_reading, gold_fiat_transition_mechanism__automatic_constraint_reading).
-narrative_ontology:affects_constraint(gold_fiat_transition_mechanism__creditor_discipline_reading, gold_fiat_transition_mechanism__composite_overdetermination_reading).
+narrative_ontology:coordination_type(gold_fiat_transition_mechanism__creditor_discipline_reading, resource_allocation).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'gold_fiat_transition_mechanism' kernel. Each reading offers a distinct structural interpretation of the transition's primary mechanism and impact, leading to different classifications and stakeholder dynamics. They are linked as a constraint family.
+% This constraint is one reading of the 'gold_fiat_transition_mechanism' kernel, focusing on the elimination of creditor discipline. Other readings exist, such as the 'automatic_constraint_reading' and 'composite_overdetermination_reading'.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

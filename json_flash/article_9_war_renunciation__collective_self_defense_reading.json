@@ -4,164 +4,254 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c625b2b1-8279-4ce6-a64f-32c09e7bfa68"
+    "story_uid": "b81b907f-4d94-46af-b391-4ccd8bff18d5"
   },
   "base_properties": {
     "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.2,
     "accessibility_collapse": 0.4,
-    "resistance": 0.55,
+    "resistance": 0.75,
     "claimed_type": "tangled_rope",
-    "human_readable": "Japan's Article 9: Collective Self-Defense Interpretation",
+    "human_readable": "Article 9: Collective Self-Defense Interpretation",
     "topic_domain": "constitutional_law/security_policy/institutional_legitimacy",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "japanese_government",
-      "us_military_alliance",
-      "defense_industry"
+      "us_military_alliance"
     ],
     "victims": [
-      "japanese_taxpayers",
-      "pacifist_citizens",
+      "strict_pacifist_advocates",
+      "taxpayers",
       "regional_stability_advocates"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "collective_self_defense_legitimacy",
-      "question": "Is the collective self-defense interpretation a legitimate extension of Article 9's inherent self-defense right, or a reinterpretation driven by geopolitical pressures?",
-      "resolution_mechanism": "Constitutional court ruling on the scope of 'survival threatened' and 'collective self-defense' under Article 9, or a national referendum on constitutional amendment.",
-      "impact": "If deemed illegitimate, the constraint would revert to a narrower interpretation, limiting overseas deployments and joint operations. If affirmed, it solidifies the expanded mission scope.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity of collective self-defense under Article 9."
+      "name": "japanese_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets Article 9 to permit collective self-defense, expanding the scope of military operations and justifying increased defense spending. Benefits from enhanced security posture and alliance commitments, but faces domestic political resistance."
     },
     {
-      "id": "victim_set_stability",
-      "question": "How stable is the victim set, particularly those relying on a narrower interpretation of Article 9 for regional stability?",
-      "resolution_mechanism": "Longitudinal study of public opinion, regional diplomatic responses, and legal challenges to SDF deployments.",
-      "impact": "If the victim set expands or becomes more vocal, it could increase resistance and challenge the legitimacy of the collective self-defense reading, potentially shifting the constraint towards a Snare or increasing its theater ratio.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Impact of mission expansion on those relying on Article 9's stability."
+      "name": "us_military_alliance",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefits from Japan's expanded military capabilities and willingness to participate in collective security operations, strengthening regional deterrence and burden-sharing. Exerts diplomatic pressure for this interpretation."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "This constraint is a 'collective_self_defense_reading' of the 'article_9_war_renunciation' kernel. What structural elements would change if the 'strict_pacifist_reading' or 'inherent_right_reading' were adopted?",
-      "resolution_mechanism": "Analysis of legal precedent, government policy, and public discourse under alternative readings.",
-      "impact": "The 'strict_pacifist_reading' would eliminate the Self-Defense Forces entirely, making the constraint a Mountain (physical/logical limit on military action). The 'inherent_right_reading' would limit military action to direct defense of Japan, reducing extractiveness and suppression by narrowing mission scope.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Structural changes under sibling readings of Article 9."
+      "name": "strict_pacifist_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of increased militarization and the perceived erosion of Japan's pacifist identity. They are deeply committed to a literal reading of Article 9 and view any military action as a violation. Their resistance is primarily political and ideological."
+    },
+    {
+      "name": "inherent_right_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "While accepting a limited right to self-defense, they view the collective self-defense interpretation as an overreach that destabilizes the constitutional order and risks entanglement in foreign conflicts. They bear the cost of this expanded mission scope."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the financial cost of increased defense spending and potential military deployments. Their ability to influence policy is diffuse and limited."
+    },
+    {
+      "name": "regional_stability_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Concerned that Japan's expanded military role could provoke regional arms races or destabilize existing security architectures. They bear the cost of increased regional tensions and potential conflict."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the legal and historical implications of the collective self-defense interpretation, assessing its consistency with constitutional principles and international law. Their influence is primarily intellectual."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates Japan's security policy with its allies, particularly the US, by allowing for joint military operations and mutual defense, thereby enhancing regional deterrence and collective security.",
+    "transfer_function": "Transfers the burden of collective security from allies to Japan, and transfers financial resources from domestic programs to defense spending. It also transfers interpretive authority over Article 9 from a strict textual reading to a more flexible, policy-driven one.",
+    "absent_voices": "Future generations of Japanese citizens, who will inherit the consequences of an expanded military role and potential foreign entanglements, are absent from the current debate. Also, a truly neutral international legal body, whose interpretation might differ from national interests, is not a direct participant.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this interpretation vanished, Japan's security posture would revert to a narrower self-defense doctrine, significantly altering its alliance commitments and regional security dynamics. Defense spending would likely decrease, and diplomatic relations would shift, leading to a substantial reorganization of security policy.",
+    "founding_problem": "The original Article 9 was designed to prevent Japan from ever engaging in aggressive warfare again after WWII, ensuring a pacifist state. The collective self-defense interpretation addresses the problem of how a pacifist constitution can adapt to modern security threats and alliance obligations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Japanese government and its allies attest that the problem of adapting to contemporary security threats is live, citing regional geopolitical instability. Strict pacifist advocates and many constitutional scholars, however, argue that the original problem of preventing aggressive war remains paramount and that the current interpretation creates new risks, not solutions."
+  },
+  "interval": {
+    "start": 1947,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1947,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2005,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 2015,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.45
+      "time_point": 1947,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.52
+      "time_point": 1970,
+      "value": 0.35
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 2015,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.7
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1947,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1990,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 2005,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'collective self-defense' reading of Japan's Article 9, which interprets the constitutional renunciation of war as permitting military action to defend allies when Japan's survival is threatened, even without direct attack on Japan. This reading allows for overseas deployments and joint operations, expanding the mission scope of the Self-Defense Forces (SDF). It is a contested interpretation that has incrementally absorbed geopolitical pressures, leading to an elastic constraint that balances constitutional text with security policy.",
+    "narrative_context": "This constraint represents the 'collective self-defense' reading of Japan's Article 9, which interprets the constitutional renunciation of war to permit military action to defend allies even without direct attack on Japan, provided Japan's survival is threatened. This reading expands the mission scope of Japan's Self-Defense Forces, allowing for overseas deployments and joint operations. It is a contested interpretation, with significant political and social resistance, but has been incrementally adopted by the Japanese government to adapt to evolving security environments and alliance commitments. The constraint is claimed as a Rope by its proponents (a necessary adaptation for collective security) but operates with substantial extraction and suppression, making it a Tangled Rope in practice.",
     "key_agents": [
-      "japanese_government: Agenda setter (institutional/generational) — interprets and implements Article 9.",
-      "us_military_alliance: Beneficiary (institutional/generational) — benefits from expanded SDF mission scope.",
-      "japanese_taxpayers: Payer (moderate/biographical) — bear the costs of increased defense spending and potential military engagement.",
-      "pacifist_citizens: Payer (powerless/biographical) — bear the cost of perceived constitutional erosion and increased militarization.",
-      "regional_stability_advocates: Victim (organized/generational) — see the expanded interpretation as destabilizing the region.",
-      "constitutional_scholars: Observer (analytical/civilizational) — analyze the legal and historical implications of the interpretation."
+      "japanese_government: Agenda-setter (institutional/generational) — drives the interpretation and benefits from enhanced security.",
+      "us_military_alliance: Beneficiary (institutional/generational) — benefits from Japan's expanded military role.",
+      "strict_pacifist_advocates: Payer (organized/generational) — bears the cost of constitutional erosion and militarization, identity-locked to a strict reading.",
+      "inherent_right_advocates: Payer (moderate/biographical) — bears the cost of mission creep beyond direct self-defense.",
+      "taxpayers: Payer (powerless/immediate) — bear financial costs of increased defense spending.",
+      "regional_stability_advocates: Payer (organized/generational) — bear the cost of increased regional tensions.",
+      "constitutional_scholars: Observer (analytical/civilizational) — analyze legal implications."
     ],
-    "logic_rationale": "The extractiveness (0.65) is substantial because the expanded interpretation allows for significant resource allocation to defense and potential overseas deployments, shifting costs to taxpayers and potentially involving Japan in conflicts not directly threatening its territory. Suppression (0.70) is high due to the government's active efforts to legitimize this interpretation through legal re-readings and policy changes, often overriding public dissent and constitutional challenges. The theater ratio (0.20) is moderate; while the SDF performs genuine defense functions, a portion of its expanded activities serves to symbolically affirm the collective self-defense doctrine and alliance commitments, rather than direct, immediate defense of Japan. The accessibility collapse (0.40) is moderate, as alternative interpretations (strict pacifism, inherent right) are still debated but face significant institutional barriers. Resistance (0.55) is also moderate, with ongoing public protests and legal challenges.",
-    "perspectival_gap": "The Japanese government and its US military allies perceive this interpretation as a necessary and legitimate adaptation to modern security challenges, ensuring collective security. For pacifist citizens and regional stability advocates, it represents an erosion of constitutional principles and a dangerous shift towards militarization, imposing costs and risks they oppose. The engine will compute different classifications for these seats based on their declared roles and positional atoms.",
-    "directionality_logic": "The Japanese government and the US military alliance are clear beneficiaries, gaining increased security flexibility and alliance strength (low d). Japanese taxpayers and pacifist citizens are payers, bearing the financial and ideological costs (high d). Regional stability advocates are victims, as their preferred stable, non-interventionist framework is undermined (high d).",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely coordinates collective security with allies (a coordination function) but does so with asymmetric extraction, imposing costs on taxpayers and those who prefer a narrower constitutional interpretation. The 'survival threatened' trigger is elastic, allowing for incremental mission expansion. The classification prevents mislabeling this as a pure Rope (ignoring extraction) or a Snare (ignoring the coordination function with allies).",
-    "kernel_context": "This constraint is the 'collective_self_defense_reading' of the 'article_9_war_renunciation' kernel. This reading interprets Article 9 to permit collective self-defense, allowing Japan to use military force to defend allies even if Japan itself is not directly attacked, provided its survival is threatened. Sibling readings include the 'strict_pacifist_reading' (which argues Article 9 prohibits any military force) and the 'inherent_right_reading' (which limits self-defense to direct attacks on Japan)."
+    "logic_rationale": "The extractiveness (0.65) reflects the significant shift in resources and constitutional interpretation away from a purely defensive posture, imposing costs on those who prefer a narrower reading or oppose militarization. Suppression (0.70) is high due to the government's active efforts to overcome domestic opposition and constitutional challenges to this interpretation, often through legislative means that limit public debate or judicial review. The theater ratio (0.20) is moderate; while the 'self-defense' justification is partly performative to legitimize expanded roles, there are genuine security concerns driving the policy. The increasing extractiveness and suppression over time reflect the gradual, contested expansion of this interpretation since the post-WWII era.",
+    "perspectival_gap": "The Japanese government and its US allies perceive this interpretation as a necessary and beneficial adaptation (Rope-like coordination for security). However, strict pacifist and inherent-right advocates experience it as a highly extractive and suppressive mechanism that erodes constitutional principles and increases national risk (Snare-like extraction). The engine's computation of per-seat classifications will reflect this divergence based on their declared roles, power, and exit options.",
+    "directionality_logic": "The Japanese government and the US military alliance are clear beneficiaries, as this interpretation enables their strategic goals (low directionality). Strict pacifist advocates, inherent-right advocates, taxpayers, and regional stability advocates are targets, bearing the costs of militarization, constitutional erosion, and increased regional tensions (high directionality). The 'identity_locked' exit option for strict pacifist advocates further amplifies their effective extraction, as their commitment to the pacifist ideal makes exit from the debate unthinkable.",
+    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely coordinates Japan's security with its allies (a coordination function) but does so with significant asymmetric extraction from domestic groups and constitutional principles, requiring active enforcement to maintain. It prevents mislabeling by acknowledging both the coordination aspect (addressing modern security threats) and the extractive aspect (imposing costs on those who adhere to a stricter constitutional interpretation). The 'contested' status of the founding problem further highlights the ongoing tension between the original mandate and its current interpretation."
   },
+  "omegas": [
+    {
+      "id": "constitutional_interpretation_legitimacy",
+      "question": "Is the collective self-defense interpretation a legitimate evolution of Article 9's intent, or a fundamental re-writing of the constitution through re-interpretation?",
+      "resolution_mechanism": "A constitutional amendment process, or a definitive Supreme Court ruling that explicitly addresses the scope of Article 9 in relation to collective self-defense.",
+      "impact": "If deemed a legitimate evolution, the constraint's perceived legitimacy would increase, potentially reducing resistance. If deemed an illegitimate re-writing, it would face severe challenges to its authority, potentially leading to a constitutional crisis or a re-classification towards Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the constitutional legitimacy of the collective self-defense interpretation."
+    },
+    {
+      "id": "regional_security_vs_destabilization",
+      "question": "Does Japan's expanded role in collective self-defense genuinely enhance regional security, or does it contribute to an arms race and destabilize the region?",
+      "resolution_mechanism": "Long-term empirical analysis of regional military buildups, diplomatic relations, and conflict incidence following Japan's policy shifts, corroborated by independent geopolitical experts.",
+      "impact": "If it demonstrably enhances security, the coordination function is strengthened, potentially reducing perceived extraction for some regional actors. If it destabilizes, the extractive nature (imposing risks on the region) would be amplified, pushing the classification further towards Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty about the actual impact of Japan's collective self-defense policy on regional stability."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is one reading of the 'article_9_war_renunciation' kernel. What would a 'strict_pacifist_reading' or 'inherent_right_reading' change structurally?",
+      "resolution_mechanism": "Analysis of the structural deltas between this reading and its siblings, as defined in their respective constraint stories.",
+      "impact": "A 'strict_pacifist_reading' would drastically reduce extractiveness and suppression, likely classifying as a Mountain or Rope. An 'inherent_right_reading' would reduce extractiveness and suppression relative to this reading, but still allow for a defensive military, likely classifying as a Rope or less extractive Tangled Rope. The disagreement is located in the scope of permissible military action and the interpretation of 'war renunciation'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is a specific reading of Article 9, with other readings having different structural implications."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "japan_us_security_treaty",
-      "regional_maritime_security_protocols"
+      "us_japan_security_treaty",
+      "japan_defense_budget_allocation",
+      "regional_maritime_patrols"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'article_9_war_renunciation' kernel. Each reading represents a distinct constraint with its own structural properties and classification."
+    "dual_formulation_note": "This constraint is one of three readings of the 'article_9_war_renunciation' kernel. The other readings are 'strict_pacifist_reading' and 'inherent_right_reading', each representing a distinct structural claim about Article 9's meaning and implications."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -169,45 +259,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "article_9_war_renunciation__strict_pacifist_reading",
+        "sibling_id": "strict_pacifist_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "article_9_war_renunciation__inherent_right_reading",
+        "sibling_id": "inherent_right_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "collective_self_defense_is_inherent",
+        "atom": "collective_self_defense_is_inherent_right",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "survival_threat_justifies_allied_defense",
+        "atom": "survival_threat_justifies_alliance_action",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "post_cold_war_alliance_adaptation",
+    "reference_frame": "post_wwii_constitutional_order",
     "drift_state": {
-      "moment": "contemporary_geopolitical_realignment",
+      "moment": "contemporary_geopolitical_realities",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

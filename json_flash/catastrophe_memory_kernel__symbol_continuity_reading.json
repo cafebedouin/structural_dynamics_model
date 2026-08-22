@@ -4,64 +4,149 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "0ec3e9f0-9881-4a2c-b5e9-4a4820332435"
+    "story_uid": "ffe2a4bf-78ce-4c05-a4dc-e68ebba3923a"
   },
   "base_properties": {
-    "extractiveness": 0.2,
-    "suppression": 0.3,
+    "extractiveness": 0.25,
+    "suppression": 0.4,
     "theater_ratio": 0.6,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.1,
-    "claimed_type": "piton",
-    "human_readable": "Ritual Preserves Symbolic Continuity and Collective Identity (Symbol Continuity Reading)",
+    "accessibility_collapse": 0.3,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Ritual Preserves Symbolic Continuity and Collective Identity",
     "topic_domain": "religious_studies/collective_memory/ritual_practice",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
-      "tradition_continuity",
-      "group_identity"
+      "community_identity",
+      "tradition_continuity"
     ],
     "victims": [
-      "adaptive_modification",
-      "individual_autonomy"
+      "adaptive_modification"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint primarily about symbolic continuity, or is it better understood as encoding survival competence, intergenerational trauma, or group boundary maintenance?",
-      "resolution_mechanism": "Empirical study of ritual function in different contexts: if the primary observed effect is symbolic transmission and identity reinforcement, this reading is validated. If it consistently yields adaptive survival skills, trauma processing, or boundary enforcement, a sibling reading is more appropriate.",
-      "impact": "If a sibling reading is more accurate, the classification (and associated metrics) would shift to reflect that primary function. For instance, a 'survival_competence_reading' might have lower theater_ratio and higher extractiveness (from those who fail to adapt).",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading (symbol_continuity_reading) of the catastrophe_memory_kernel. Sibling readings include survival_competence_reading, trauma_encoding_reading, and boundary_maintenance_reading. The core disagreement is on the primary function and beneficiary of the ritual."
+      "name": "community_members",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Participate in rituals that reinforce their shared history and identity, providing a sense of belonging and continuity. The cost is the rigidity of practice, which can feel anachronistic or burdensome."
     },
     {
-      "id": "ritual_rigidity_cost",
-      "question": "What is the actual cost of ritual rigidity in terms of foregone adaptive modification or individual autonomy?",
-      "resolution_mechanism": "Comparative analysis of groups with varying ritual rigidity in similar environments: measure differences in adaptation rates, innovation, and individual well-being.",
-      "impact": "If the costs are high, the extractiveness and suppression metrics for this reading would increase, potentially shifting it towards a Snare, as the 'symbolic continuity' justification would be seen as cover for the costs imposed.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The cost of maintaining symbolic continuity through rigid ritual practices, potentially hindering adaptive change."
+      "name": "religious_leaders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Administer and interpret the rituals, ensuring their faithful transmission across generations. They benefit from the authority derived from preserving tradition but bear the burden of maintaining adherence in changing times."
+    },
+    {
+      "name": "tradition_continuity",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The abstract concept of the tradition itself, which is sustained and given meaning by the ritual practice. It 'benefits' by persisting and remaining coherent over time."
+    },
+    {
+      "name": "adaptive_modification",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The potential for the ritual to evolve or adapt to new circumstances is constrained by the emphasis on strict symbolic continuity. This 'cost' is borne by the community's capacity for flexible response to change."
+    },
+    {
+      "name": "external_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the ritual's function in preserving identity and memory, analyzing its social and psychological effects without direct participation or enforcement."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective memory and identity by providing a shared symbolic framework and regular practices that link past, present, and future generations.",
+    "transfer_function": "Transfers symbolic meaning, historical narratives, and a sense of belonging from the past to current and future community members, at the cost of ritual rigidity.",
+    "absent_voices": "Reformers or modernizers within the community who advocate for adapting rituals to contemporary needs, arguing that strict adherence to historical forms can hinder relevance and engagement. Their voices are often marginalized by the emphasis on tradition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the ritual vanished, the community's shared identity and collective memory would fragment, leading to a loss of cohesion and a re-evaluation of their historical narrative. The social fabric would need to reorganize to find new ways of transmitting meaning.",
+    "founding_problem": "To prevent the dissolution of collective identity and the loss of shared memory following a catastrophic event or period of persecution, ensuring the community's survival as a distinct entity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Community historians and sociologists, alongside religious leaders, corroborate that the threat of identity dissolution remains, particularly in diasporic or secularizing contexts. Independent studies of collective memory and cultural transmission support the ongoing need for such practices."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.15
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.18
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
       "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
@@ -70,51 +155,69 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.55
+      "time_point": 20,
+      "value": 0.53
     },
     {
       "metric": "theater_ratio",
-      "time_point": 50,
+      "time_point": 40,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
       "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.25
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.28
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.3
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 50
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the function of ritual in preserving symbolic continuity and collective identity across generations, particularly in the context of catastrophic memory. It is a 'piton' because its primary function has atrophied into theatrical maintenance, with the 'beneficiary' being the abstract concept of tradition itself, rather than active agents. The costs are borne by those who might seek adaptive modification or individual expression outside the ritual's rigid forms.",
-    "key_agents": [
-      "religious_community: Agenda-setter (institutional/generational) — Administers and transmits the ritual forms.",
-      "tradition_continuity: Beneficiary (abstract/civilizational) — The abstract concept of the tradition's unbroken line, which is reinforced by the ritual.",
-      "group_identity: Beneficiary (abstract/civilizational) — The collective self-concept of the community, sustained by shared symbolic practice.",
-      "adaptive_modification: Victim (abstract/generational) — The potential for the community to adapt its practices or beliefs in response to changing circumstances, which is constrained by ritual rigidity.",
-      "individual_adherents: Payer (moderate/biographical) — Bear the costs of adhering to rigid ritual forms, potentially sacrificing individual autonomy or contemporary relevance.",
-      "critical_scholars: Observer (analytical/generational) — Analyze the ritual's function, its historical evolution, and its costs/benefits to the community."
-    ],
-    "logic_rationale": "The extractiveness is low (0.2) because the primary 'gain' is symbolic and diffuse (tradition, identity), not material. Suppression is moderate (0.3) as adherence is largely social and internalized, rather than coercively enforced. The theater_ratio is high (0.6) because the ritual's original, more active function (e.g., direct survival instruction) has largely faded, leaving behind a performative shell that primarily signals continuity. The constraint persists due to institutional inertia and the perceived value of unbroken tradition, even if its practical utility is diminished.",
-    "perspectival_gap": "From the perspective of the religious community, the ritual is a vital Rope, a necessary coordination mechanism for maintaining identity. From the perspective of an individual adherent seeking adaptive change, it can feel like a Snare, trapping them in outdated practices. The analytical observer sees it as a Piton, a structure whose original function has atrophied but persists due to inertia and symbolic value.",
-    "directionality_logic": "The abstract 'tradition_continuity' and 'group_identity' are beneficiaries (d=0.0-0.1) as they are reinforced by the ritual. The 'religious_community' as an institution is an agenda-setter (d=0.2-0.3) as it administers the ritual, but its 'benefit' is largely the perpetuation of its own role. 'Individual_adherents' are payers (d=0.7-0.8) as they bear the costs of rigidity. 'Adaptive_modification' is a victim (d=1.0) as its very possibility is suppressed by the constraint.",
-    "mandatrophy_analysis": "This constraint is a strong candidate for mandatrophy. Its original mandate might have been to transmit concrete survival skills or to process acute trauma. Over time, this active function has atrophied, but the ritual persists due to its symbolic power and the inertia of the institutions that administer it. The high theater_ratio (0.6) indicates that a significant portion of the activity is now performative, maintaining the appearance of function rather than delivering it. The classification as a Piton reflects this atrophy, preventing it from being mislabeled as a Rope (if its coordination function is now minimal) or a Snare (if the extraction is diffuse and primarily symbolic, rather than concentrated and material)."
+    "narrative_context": "This constraint describes how ritual functions to preserve symbolic continuity and collective identity across generations, particularly in communities that have experienced catastrophe. It is one reading of the 'catastrophe_memory_kernel', focusing on the transmission of identity through shared symbols and practices. The constraint's primary function is coordination, but it carries a low level of extraction due to the rigidity it imposes on adaptive modification. The claimed type is 'rope' because it genuinely coordinates, but the metrics reflect a degree of performativity and cost.",
+    "logic_rationale": "Extractiveness is low (0.25) because the primary 'cost' is the foregone opportunity for adaptive change, rather than direct material extraction. Suppression is moderate (0.4) as adherence is largely cultural and identity-driven, not coercively enforced. Theater ratio is high (0.6) because the 'performance' of the ritual is central to its function of symbolic transmission, even if its direct operational utility is low. Accessibility collapse is low (0.3) as alternatives for identity formation exist, but they come at the cost of breaking with tradition. Resistance is low (0.15) because the identity-locked nature of participation means most members do not actively resist the core practice, even if they may question its rigidity.",
+    "directionality_logic": "Community members and the abstract 'tradition continuity' are beneficiaries, as the ritual directly serves their interests in identity and persistence. Religious leaders are agenda-setters, guiding the ritual's practice. 'Adaptive modification' is a victim, representing the cost of rigidity. The identity-locked exit option for community members means their directionality is shifted slightly towards the target end, even as beneficiaries, reflecting the internal cost of non-participation.",
+    "perspectival_gap": "From the perspective of community members, the ritual is a vital rope, providing essential identity and connection. From an analytical perspective focused on adaptive capacity, the same ritual imposes a cost by limiting flexibility. The engine's computation of per-seat types will reflect this divergence.",
+    "kernel_context": "This constraint is the 'symbol_continuity_reading' of the 'catastrophe_memory_kernel'. Sibling readings include 'survival_competence_reading' (ritual as adaptive capacity), 'trauma_encoding_reading' (ritual as intergenerational trauma transmission), and 'boundary_maintenance_reading' (ritual as group boundary enforcement). This reading emphasizes the symbolic and identity-preserving aspects."
   },
+  "omegas": [
+    {
+      "id": "symbolic_vs_adaptive_function",
+      "question": "Is the primary function of the ritual symbolic continuity, or does it also encode and transmit adaptive survival competence?",
+      "resolution_mechanism": "Longitudinal ethnographic studies comparing ritual adherence with community resilience and survival rates in subsequent crises. If communities with stronger ritual adherence show higher adaptive capacity, the survival_competence_reading gains empirical support.",
+      "impact": "If the adaptive function is significant, the extractiveness of ritual rigidity might be re-evaluated as a necessary cost for a more vital coordination function (shifting towards a stronger Rope or even Mountain for survival). If purely symbolic, the current low extractiveness and high theater ratio are appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishes between symbolic and adaptive functions of ritual."
+    },
+    {
+      "id": "identity_lock_vs_coercion",
+      "question": "To what extent is the 'identity_locked' exit option for community members a genuine internal commitment versus a form of internalized suppression?",
+      "resolution_mechanism": "Studies of post-exit psychological trajectories: if individuals who leave the community experience lasting identity fragmentation and social isolation, it suggests a stronger internalized suppression component. If they successfully integrate new identities, it points to genuine commitment.",
+      "impact": "If internalized suppression is a significant factor, the effective suppression for community members is higher than the base metric suggests, potentially shifting their seat classification towards a Snare. If it's primarily genuine identity fusion, the current Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Clarifies the nature of identity-locked participation."
+    },
+    {
+      "id": "ritual_rigidity_cost_vs_benefit",
+      "question": "Is the 'cost' of adaptive modification truly a net negative, or is the rigidity itself a necessary component of symbolic stability and identity strength?",
+      "resolution_mechanism": "Comparative studies of communities with varying degrees of ritual flexibility: if more flexible communities show weaker identity or faster dissolution, it suggests rigidity is a benefit. If they show greater resilience and adaptation, it's a net cost.",
+      "impact": "If rigidity is a necessary benefit, the 'adaptive_modification' victim status might be re-evaluated, potentially lowering the overall extractiveness. If it's a clear cost, the current metrics are appropriate.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Evaluates the normative trade-off between ritual rigidity and adaptive capacity."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [
@@ -122,7 +225,7 @@
       "catastrophe_memory_kernel__trauma_encoding_reading",
       "catastrophe_memory_kernel__boundary_maintenance_reading"
     ],
-    "dual_formulation_note": "This constraint is one of four distinct readings of the 'catastrophe_memory_kernel'. Each reading emphasizes a different primary function and has a different structural profile. They are linked as a constraint family."
+    "dual_formulation_note": "This constraint is one reading of the 'catastrophe_memory_kernel', focusing on symbolic continuity. Its sibling readings address adaptive competence, trauma encoding, and boundary maintenance, each with distinct structural properties and extraction profiles."
   },
   "cs_structure": {
     "kernel_codification": "implicit",
@@ -130,28 +233,28 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "catastrophe_memory_kernel__survival_competence_reading",
+        "sibling_id": "survival_competence_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_kernel__trauma_encoding_reading",
+        "sibling_id": "trauma_encoding_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_kernel__boundary_maintenance_reading",
+        "sibling_id": "boundary_maintenance_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "symbolic_continuity_is_primary_function",
+        "atom": "symbolic_fidelity_preserves_identity",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "collective_identity_requires_shared_symbols",
-        "role": "foundational",
+        "atom": "ritual_form_is_memory_container",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
@@ -160,19 +263,20 @@
     "drift_state": {
       "moment": "contemporary_secular_era",
       "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
+      "magnitude": "minor",
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,114 +4,231 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "5cbf92d4-811f-4c15-aaf3-9e23871bd3bd"
+    "story_uid": "73de8760-da14-4de8-a413-cc53e7be9aa0"
   },
   "base_properties": {
     "extractiveness": 0.85,
-    "suppression": 0.75,
-    "theater_ratio": 0.1,
+    "suppression": 0.78,
+    "theater_ratio": 0.2,
     "accessibility_collapse": 0.6,
     "resistance": 0.7,
     "claimed_type": "snare",
-    "human_readable": "Marriage Authority: Gender Equality Reading (Judicial Reform)",
+    "human_readable": "Judicial Expansion of Constitutional Gender Equality in Personal Law",
     "topic_domain": "legal_pluralism/constitutional_law/comparative_family_law",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "women_rights_advocates",
-      "judiciary"
+      "progressive_judiciary"
     ],
     "victims": [
       "women_within_patriarchal_personal_law",
-      "traditional_religious_authorities"
+      "conservative_religious_authorities"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine judicial expansion of constitutional equality, or a temporary re-framing of existing communal authority?",
-      "resolution_mechanism": "Long-term observation of judicial enforcement consistency and legislative response; if legislative action consistently undermines judicial rulings, it suggests re-framing rather than genuine expansion.",
-      "impact": "If a genuine expansion, the constraint is a scaffold for a more equitable legal system. If a re-framing, it remains a snare, with the judiciary acting as an agenda-setter for a new form of extraction.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'gender_rights_reading' of the 'marriage_authority' kernel. Sibling readings (communal_autonomy_reading, secularist_reading, federalist_millet_reading, judicial_harmonization_reading) would shift the beneficiary/victim structure and the claimed type."
+      "name": "women_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Actively litigate for gender equality within personal law, seeing judicial intervention as a necessary mechanism to reform discriminatory practices. They benefit from favorable court rulings that expand constitutional guarantees."
     },
     {
-      "id": "judicial_independence_vs_political_pressure",
-      "question": "To what extent is the judiciary's expansion of constitutional equality genuinely independent, versus influenced by political or social pressures?",
-      "resolution_mechanism": "Analysis of judicial appointments, dissenting opinions, and the correlation between rulings and shifts in political power or public opinion.",
-      "impact": "If politically influenced, the constraint's claimed 'gender_rights_reading' may be a temporary alignment rather than a stable structural shift, making its long-term persistence as a scaffold less likely.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Assesses the true autonomy of the judicial branch in enforcing this reading."
+      "name": "progressive_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets constitutional equality guarantees to apply to personal law, incrementally reforming practices like triple talaq, maintenance, and property rights. They set the agenda for reform through case law, often facing political backlash."
+    },
+    {
+      "name": "women_within_patriarchal_personal_law",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Are the primary targets of discriminatory personal law practices, bearing the costs of unequal divorce, inheritance, and maintenance rules. While judicial reforms offer some relief, access to justice remains challenging, and social pressures often limit their ability to claim rights."
+    },
+    {
+      "name": "conservative_religious_authorities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Resist judicial intervention in personal law, viewing it as an infringement on communal autonomy and religious freedom. They bear the cost of losing interpretive authority and control over community norms, often mobilizing political and social resistance."
+    },
+    {
+      "name": "secularist_political_parties",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for a Uniform Civil Code to replace all personal laws, but their legislative efforts are often stalled due to political sensitivities. While they align with gender equality goals, their preferred method (legislative UCC) is distinct from judicial incrementalism."
+    },
+    {
+      "name": "communal_leaders",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Represent community interests and traditions, often opposing judicial reforms that they perceive as undermining their authority and cultural identity. Their voices are often heard in political discourse but are not directly part of the judicial process of constitutional interpretation."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Attempts to harmonize diverse personal law systems with constitutional guarantees of gender equality, providing a common legal floor for women's rights across different communities.",
+    "transfer_function": "Transfers interpretive authority over personal law from religious/communal bodies to the constitutional judiciary, and aims to transfer rights and protections to women from patriarchal community structures.",
+    "absent_voices": "Secularist political parties, who advocate for a Uniform Civil Code, and communal leaders, who defend traditional personal law, are often excluded from the direct judicial discourse, though their influence is felt in the political sphere surrounding court decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If judicial expansion of gender equality guarantees vanished, the legal landscape for women within personal law would revert to more discriminatory practices, leading to significant social and legal upheaval, and a loss of protections gained over decades of litigation.",
+    "founding_problem": "The existence of multiple personal laws, often rooted in patriarchal traditions, led to significant gender inequality and discrimination against women within various communities, contradicting constitutional promises of equality.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Women's rights organizations, international human rights bodies, and independent legal scholars consistently attest that the problem of gender inequality within personal law remains live, despite judicial interventions. Their reports and advocacy provide corroboration from outside the immediate judicial or religious authority structures."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1970,
       "value": 0.7
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 1985,
       "value": 0.75
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2000,
       "value": 0.8
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 2010,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
+      "time_point": 1970,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1985,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 2000,
       "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 15
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'gender_rights_reading' of marriage authority, where judicial intervention expands constitutional equality guarantees to reform personal laws within communities. This reading targets specific discriminatory practices (e.g., triple talaq, unequal maintenance) rather than challenging the overall system of legal pluralism. It is a snare because it actively extracts traditional privileges from religious authorities and imposes new obligations, while simultaneously benefiting women's rights advocates and the judiciary by expanding their influence.",
-    "logic_rationale": "The extractiveness is high (0.85) because it reallocates significant rights and resources from traditional authorities and male members of communities to women, often against strong resistance. Suppression (0.75) is also high, as judicial rulings actively override existing communal norms and require enforcement against entrenched practices. The theater ratio is low (0.1) as the judicial actions are direct and intended to have real-world impact, not merely symbolic. Accessibility collapse is moderate (0.6) as it closes off traditional avenues for certain practices while opening new legal recourses.",
-    "perspectival_gap": "From the perspective of women's rights advocates and the judiciary, this constraint is a necessary step towards justice and equality, potentially a scaffold or even a rope. However, from the perspective of traditional religious authorities and those who benefit from existing patriarchal structures, it is a clear snare, extracting their power and imposing new burdens. The engine's classification will reflect this divergence based on the declared roles and metrics.",
-    "directionality_logic": "The judiciary and women's rights advocates are beneficiaries (d near 0.0) as they gain influence and see their principles advanced. Traditional religious authorities and men within patriarchal personal law are victims (d near 1.0) as their traditional authority and privileges are curtailed. Women within patriarchal personal law are complex: they are victims of the original patriarchal system, but beneficiaries of this specific judicial reading, making their directionality closer to symmetric or even beneficiary depending on the specific context of the reform.",
-    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its mandate (gender equality) is actively being pursued and expanded. However, if the judicial reforms were to become purely symbolic without real-world enforcement, or if the 'gender rights' framing were used to justify other forms of extraction, it could drift towards a piton or a different form of snare. The current high extractiveness and active enforcement indicate it is far from atrophied."
+    "narrative_context": "This constraint represents the 'gender rights' reading of marriage authority, where judicial bodies actively interpret constitutional equality guarantees to reform discriminatory practices within personal laws (e.g., triple talaq, maintenance, property rights). It is a snare because it targets specific practices that extract from women within patriarchal systems, and its persistence relies on active judicial enforcement against resistance from conservative communal authorities. The claimed type is 'snare' because the primary function is to dismantle existing extractive structures, rather than to coordinate a new, universally beneficial arrangement.",
+    "key_agents": [
+      "women_rights_advocates: Primary beneficiary (organized/constrained) — drive litigation for reform.",
+      "progressive_judiciary: Agenda setter (institutional/analytical) — interprets and enforces constitutional equality.",
+      "women_within_patriarchal_personal_law: Primary victim (powerless/identity_locked) — bear the costs of discriminatory practices.",
+      "conservative_religious_authorities: Payer (organized/constrained) — resist judicial intervention.",
+      "secularist_political_parties: Excluded (powerful/constrained) — advocate for a different reform mechanism (UCC).",
+      "communal_leaders: Excluded (organized/constrained) — defend traditional personal law."
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because the constraint directly confronts and aims to dismantle deeply entrenched, highly extractive patriarchal practices within personal law. Suppression (0.78) is also high, reflecting the active judicial enforcement required to overcome significant social and political resistance to these reforms. The theater ratio is low (0.20) because the judicial actions are genuinely aimed at substantive reform, not merely performative. The increasing extractiveness over time reflects the judiciary's growing assertiveness in tackling more sensitive and deeply entrenched discriminatory practices.",
+    "perspectival_gap": "From the perspective of women's rights advocates and the progressive judiciary, this constraint is a necessary intervention to secure fundamental rights. From the perspective of conservative religious authorities and communal leaders, it is an overreach that undermines religious freedom and communal autonomy. The engine's classification as a snare from the victim's seat captures the extractive nature of the practices being challenged, while the beneficiary seat might experience it as a rope or scaffold, providing necessary support for rights.",
+    "directionality_logic": "Women's rights advocates and the progressive judiciary are beneficiaries, as they gain legal victories and advance their agenda of gender equality (d near 0.0-0.2). Women within patriarchal personal law are clear victims, as they bear the direct costs of the discriminatory practices being challenged (d near 0.9-1.0). Conservative religious authorities are also victims/payers, as they lose authority and face challenges to their traditional interpretations (d near 0.7-0.8). Secularist political parties and communal leaders are excluded, as their preferred modes of engagement (legislative UCC or traditional autonomy) are not the primary mechanism of this specific judicial constraint."
   },
+  "omegas": [
+    {
+      "id": "judicial_legitimacy_vs_communal_autonomy",
+      "question": "To what extent does judicial intervention in personal law undermine the perceived legitimacy of communal autonomy and religious freedom, and what are the long-term consequences for social cohesion?",
+      "resolution_mechanism": "Longitudinal sociological studies on community perceptions of judicial authority and the impact of reforms on inter-communal relations, alongside legal analysis of the 'balancing act' between rights and autonomy.",
+      "impact": "If judicial legitimacy is significantly eroded, it could lead to greater resistance, non-compliance, or demands for alternative legal frameworks, potentially reclassifying the constraint as a more coercive snare or even a piton if reforms become purely symbolic. If social cohesion is severely damaged, the coordination function of the state itself could be compromised.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The tension between constitutional rights enforcement and the principle of communal self-governance."
+    },
+    {
+      "id": "implementation_gap_vs_legal_reform",
+      "question": "How significant is the gap between judicial pronouncements on gender equality in personal law and their actual implementation and impact on the ground for women?",
+      "resolution_mechanism": "Empirical studies measuring access to justice, enforcement of court orders, and changes in social practices and attitudes following judicial reforms. Analysis of legal aid availability and women's agency in claiming rights.",
+      "impact": "If the implementation gap is wide, the constraint's effective extractiveness from women may remain high despite legal reforms, and its theater_ratio might increase, indicating that the legal changes are more symbolic than substantive. This could push the classification towards a piton if the reforms are largely performative without real-world effect.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The discrepancy between de jure legal changes and de facto lived realities for women."
+    },
+    {
+      "id": "framing_under_determination_gender_rights",
+      "question": "Is this constraint best framed as a judicial mechanism for rights enforcement, or as a political tool for state centralization and erosion of legal pluralism?",
+      "resolution_mechanism": "Analysis of judicial reasoning, political discourse surrounding judgments, and the long-term trajectory of state power relative to communal institutions. A shift in framing would depend on whether the primary effect is rights-based or power-based.",
+      "impact": "If framed as a political tool for state centralization, the constraint's extractiveness might be re-evaluated as higher for communal institutions, and its suppression might be seen as targeting political autonomy rather than discriminatory practices. This could shift its classification towards a more overt snare or even a tangled rope if a coordination function (state unity) is acknowledged.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in whether judicial reforms are primarily about rights or state power."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "communal_autonomy_reading",
-      "secularist_reading",
-      "federalist_millet_reading",
-      "judicial_harmonization_reading"
+      "marriage_authority__communal_autonomy_reading",
+      "marriage_authority__secularist_reading",
+      "marriage_authority__federalist_millet_reading",
+      "marriage_authority__judicial_harmonization_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'marriage_authority' kernel, focusing on gender equality through judicial reform. It is linked to other readings of the same kernel, which represent alternative framings of marriage authority in a plural legal system."
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_authority' kernel, focusing on judicial expansion of constitutional gender equality. It directly influences and is influenced by other readings of the same kernel, particularly those concerning communal autonomy and secularist reform."
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
@@ -146,23 +263,24 @@
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "constitutional_equality_framework",
+    "reference_frame": "constitutional_equality_as_supreme_law",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_human_rights_era",
       "direction": "revival_pressure",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

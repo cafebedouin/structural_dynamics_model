@@ -4,132 +4,219 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c7fbe8a5-b905-4456-ae01-64efbda35935"
+    "story_uid": "1019cc6e-6cd3-4080-81c7-f6c0afe4fca9"
   },
   "base_properties": {
-    "extractiveness": 0.85,
+    "extractiveness": 0.9,
     "suppression": 0.95,
     "theater_ratio": 0.1,
     "accessibility_collapse": 0.9,
-    "resistance": 0.7,
+    "resistance": 0.1,
     "claimed_type": "snare",
     "human_readable": "Personhood Contingent on Demonstrated Fitness",
     "topic_domain": "moral_philosophy/historical_ethics/commitment_systems",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "state_authority",
-      "dominant_social_group"
+      "dominant_social_groups"
     ],
     "victims": [
       "pre_fitness_entities",
-      "severely_disabled_infants",
-      "marginalized_groups"
+      "severely_disabled_infants"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "fitness_criteria_ambiguity",
-      "question": "What constitutes 'demonstrated fitness' and who defines it?",
-      "resolution_mechanism": "Historical analysis of legal codes and philosophical texts that instantiate this reading; examination of contemporary policy debates where similar criteria are proposed.",
-      "impact": "If criteria are vague or arbitrarily defined, the constraint's extractiveness and suppression are higher, as the 'fitness' test becomes a tool for social control rather than an objective measure. If criteria are clear and universally applicable, it might reduce perceived extraction, though the fundamental premise remains.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity in defining 'fitness' for personhood."
+      "name": "state_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Defines and enforces the criteria for personhood, granting or denying moral and legal standing based on demonstrated fitness. Benefits from the flexibility to exclude certain populations from rights and protections, reducing resource obligations and maintaining social hierarchies."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine reading of the 'personhood_boundary' kernel, or a distinct, unrelated constraint?",
-      "resolution_mechanism": "Analysis of historical and philosophical arguments that explicitly link personhood to fitness, demonstrating a lineage of thought that grounds this reading within the broader debate on personhood.",
-      "impact": "If it is a genuine reading, it highlights the contested nature of personhood and the potential for highly extractive interpretations. If it is unrelated, the 'personhood_boundary' kernel itself might be less contested than assumed, or the contestation lies elsewhere.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'personhood_boundary' kernel, specifically the 'fitness_contingent_reading'. Sibling readings include 'birth_threshold_reading' and 'potential_based_reading'. This reading differs by making moral standing conditional on demonstrated capabilities, allowing the state to exclude pre-test entities from the moral community."
+      "name": "dominant_social_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from the exclusion of 'unfit' entities, which can include access to resources, social status, and the avoidance of care burdens. They actively support and propagate the fitness-contingent definition of personhood."
     },
     {
-      "id": "state_authority_legitimacy",
-      "question": "What is the source of the state authority's legitimacy to define and enforce fitness criteria for personhood?",
-      "resolution_mechanism": "Examination of the political philosophy and legal history underpinning the state's claim to such authority. Is it derived from popular sovereignty, divine right, or a social contract that implicitly grants this power?",
-      "impact": "If the legitimacy is weak or contested, the constraint's suppression is more clearly coercive and less justified. If strongly legitimized, the suppression might be perceived as a necessary function of social order, even if still extractive.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Source of state authority to define personhood fitness."
+      "name": "pre_fitness_entities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These are individuals (e.g., infants, those with severe cognitive impairments) who have not yet, or cannot, demonstrate the 'fitness' criteria. They are denied moral standing, legal rights, and protections, making them vulnerable to exploitation or neglect."
+    },
+    {
+      "name": "severely_disabled_infants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Specifically targeted by this reading, as their condition may prevent them from ever meeting the 'fitness' criteria. They are denied personhood from birth, leading to a lack of legal protection and potential for instrumentalization."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Challenge the fitness-contingent definition, arguing for universal moral standing based on inherent humanity. They document abuses and advocate for legal reforms, but operate outside the direct enforcement mechanism of the state authority."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear, albeit exclusionary, boundary for who counts as a moral and legal subject, simplifying resource allocation and social obligations by defining a 'non-person' category.",
+    "transfer_function": "Transfers resources, care obligations, and moral consideration away from entities deemed 'unfit' towards those who meet the criteria, primarily benefiting the state and dominant social groups.",
+    "absent_voices": "The pre-fitness entities and severely disabled infants themselves are inherently unable to voice their objections. Their interests are represented, if at all, by external advocates who are often marginalized by the dominant framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If personhood were universally granted regardless of fitness, the state would face immense new obligations for care and protection, resource allocation would need to be fundamentally rethought, and the social hierarchies built on exclusion would collapse. The legal and moral landscape would be profoundly reshaped.",
+    "founding_problem": "To manage social burdens and resource scarcity by defining a subset of human life that does not qualify for full moral and legal protection, often in contexts of historical eugenics or social control.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "State authorities and dominant social groups continue to assert the necessity of such distinctions for social order and resource management. Human rights advocates, however, contest the legitimacy of this 'problem' itself, arguing it is a pretext for discrimination and extraction."
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.7
+      "time_point": 1900,
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.78
+      "time_point": 1930,
+      "value": 0.9
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1960,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.8
+      "time_point": 1930,
+      "value": 0.95
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.88
+      "time_point": 1960,
+      "value": 0.9
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1990,
+      "value": 0.98
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.95
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.15
+      "time_point": 1900,
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1930,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes a historical or philosophical position where personhood, and thus moral standing, is not inherent but contingent upon an individual demonstrating certain 'fitness' criteria (e.g., rationality, self-awareness, social contribution). Entities that do not meet these criteria, such as infants before a certain developmental stage or individuals with severe disabilities, are denied full moral standing. This grants state authority the power to exclude these pre-fitness entities from the moral community, often leading to their exploitation or neglect. The constraint is claimed as a snare due to its inherent extraction and suppression of vulnerable populations.",
+    "narrative_context": "This constraint defines personhood as contingent on demonstrated 'fitness' (e.g., cognitive capacity, social contribution), denying moral and legal standing to entities that do not meet these criteria. It is a reading of the broader 'personhood_boundary' kernel. This reading allows state authorities and dominant social groups to exclude certain populations, such as severely disabled infants or those with profound cognitive impairments, from the moral community, thereby reducing obligations and justifying differential treatment. The high extractiveness and suppression reflect the severe consequences for those excluded and the active enforcement required to maintain such a boundary.",
     "key_agents": [
-      "state_authority: Agenda setter (institutional/arbitrage) — defines and enforces fitness criteria, benefits from control.",
-      "dominant_social_group: Beneficiary (powerful/mobile) — benefits from the exclusion of others, maintains social hierarchy.",
-      "pre_fitness_entities: Victim (powerless/trapped) — denied moral standing, subject to exploitation.",
-      "severely_disabled_infants: Victim (powerless/trapped) — denied moral standing due to perceived lack of fitness.",
-      "marginalized_groups: Victim (powerless/constrained) — at risk of being reclassified as 'unfit' to justify their exploitation.",
-      "moral_philosophers: Observer (analytical/analytical) — analyze and critique the ethical implications of such a personhood definition."
+      "state_authority: Primary agenda-setter (institutional/arbitrage) — defines and enforces fitness criteria.",
+      "dominant_social_groups: Primary beneficiary (organized/mobile) — benefits from exclusion, supports the framework.",
+      "pre_fitness_entities: Primary target/victim (powerless/trapped) — denied moral standing, vulnerable.",
+      "severely_disabled_infants: Specific target/victim (powerless/trapped) — denied personhood due to inability to meet fitness criteria.",
+      "human_rights_advocates: Observer (organized/analytical) — challenges the framework, advocates for universal personhood."
     ],
-    "logic_rationale": "The extractiveness (0.85) is high because it denies fundamental rights and resources to a class of beings, allowing others to benefit from their lack of standing. Suppression (0.95) is severe, as the very definition of personhood is used to justify the denial of moral consideration, making resistance from the 'unfit' impossible by definition. Theater ratio is low (0.1) because the constraint is actively enforced and serves a clear, albeit extractive, function; there is little performative maintenance without real consequence. Accessibility collapse is high (0.9) because the conceptual framework itself collapses alternatives to personhood for the 'unfit'. Resistance (0.7) is high from those who advocate for universal personhood, but not from the 'unfit' themselves, who are structurally unable to resist.",
-    "perspectival_gap": "From the perspective of the state authority and dominant social group, this constraint might be framed as a necessary mechanism for social order or resource allocation, where only 'contributing' members receive full moral standing. From the perspective of the victims, it is a fundamental denial of their existence and rights, leading to severe exploitation. The engine's classification as a snare reflects the latter, highlighting the structural asymmetry.",
-    "directionality_logic": "The state authority and dominant social group are clear beneficiaries (d=0.0-0.2) as they gain control and resources by defining who counts as a person. Pre-fitness entities, severely disabled infants, and marginalized groups are direct targets (d=0.9-1.0) as they bear the full cost of exclusion and lack of moral standing. Moral philosophers act as analytical observers (d=0.5), analyzing the system without direct benefit or cost.",
-    "mandatrophy_analysis": "This constraint is a snare, not a piton, because it actively serves the function of maintaining social hierarchies and resource control for the beneficiaries, rather than persisting due to inertia. The 'mandate' of defining personhood is actively leveraged for extraction, not atrophied. The classification prevents mislabeling active exploitation as mere institutional decay."
+    "logic_rationale": "The extractiveness is extremely high because it denies fundamental rights and even existence to a class of beings, allowing for their instrumentalization or neglect. Suppression is also very high, as the excluded have no voice or means of resistance, and the state actively enforces their non-personhood. Theater ratio is low because the 'fitness' criteria are genuinely applied, even if their moral justification is contested. The claimed type is 'snare' because the coordination story (managing social burdens) is a cover for the severe, asymmetric extraction from the most vulnerable, maintained by active enforcement and suppression of alternatives.",
+    "perspectival_gap": "From the perspective of state authority and dominant social groups, this constraint is a necessary mechanism for social order and resource management, perhaps even a 'rope' or 'mountain' reflecting natural distinctions. From the perspective of the excluded and human rights advocates, it is a clear 'snare' designed to extract resources and avoid obligations by denying personhood.",
+    "directionality_logic": "State authority and dominant social groups are clear beneficiaries, as they gain flexibility and reduced obligations. Pre-fitness entities and severely disabled infants are clear victims, bearing the full cost of exclusion. Human rights advocates are observers, attempting to shift the moral and legal framework.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its 'mandate' (to define and enforce personhood based on fitness) is actively maintained by its beneficiaries. The problem it 'solves' (managing social burdens by exclusion) is still 'live' for those who benefit, even if its moral legitimacy is contested. The classification as a snare prevents mislabeling it as a legitimate coordination mechanism by highlighting the severe, asymmetric extraction and suppression."
   },
-  "boltzmann": {
-    "coordination_type": "identity_coordination"
-  },
-  "network": {
-    "affects_constraints": [
-      "birth_threshold_reading",
-      "potential_based_reading"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'personhood_boundary' kernel. It defines personhood as contingent on demonstrated fitness, leading to the exclusion of pre-fitness entities. It is linked to other readings of the same kernel, such as 'birth_threshold_reading' and 'potential_based_reading', which offer alternative definitions of personhood."
+  "omegas": [
+    {
+      "id": "fitness_criteria_objectivity",
+      "question": "Are the 'fitness' criteria for personhood objectively measurable and universally applicable, or are they culturally contingent and subject to arbitrary interpretation?",
+      "resolution_mechanism": "Cross-cultural comparative ethics and philosophical analysis of the criteria's grounding. Empirical studies on the variability of 'fitness' definitions across different societies and historical periods.",
+      "impact": "If arbitrary, the constraint's legitimacy as a 'natural' boundary collapses, reinforcing its classification as a constructed snare. If objective, it might lend a (contested) 'mountain' flavor to the boundary, though its extractive consequences would remain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the objectivity and universality of 'fitness' criteria for personhood."
+    },
+    {
+      "id": "moral_standing_vs_social_utility",
+      "question": "Is the denial of personhood based on a genuine lack of moral standing, or is it primarily driven by considerations of social utility and resource management?",
+      "resolution_mechanism": "Ethical analysis of the justifications provided by proponents versus the observed outcomes and benefits to the enforcing parties. Examination of historical contexts where similar criteria were applied.",
+      "impact": "If primarily utility-driven, the extractive nature of the constraint is further emphasized, solidifying its 'snare' classification. If genuinely based on a philosophical argument for lack of standing, it shifts the debate to the validity of that philosophical premise.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing between philosophical justification and utilitarian motives for denying personhood."
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine reading of the 'personhood_boundary' kernel, or an instrumentalization of the concept for extractive purposes?",
+      "resolution_mechanism": "Comparative analysis with other readings of the personhood kernel, examining consistency with broader philosophical traditions and the presence of identifiable beneficiaries.",
+      "impact": "If an instrumentalization, it highlights the 'snare' aspect and the performative nature of its philosophical claims. If a genuine, albeit contested, reading, it frames the conflict as a deeper philosophical disagreement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'personhood_boundary' kernel. A sibling reading, 'birth_threshold_reading', posits personhood at birth, and 'potential_based_reading' grounds it in potential for agency. This reading differs by requiring demonstrated fitness, leading to the exclusion of pre-fitness entities from the moral community."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -147,35 +234,24 @@
     ],
     "axioms": [
       {
-        "atom": "moral_standing_is_earned",
+        "atom": "moral_standing_requires_demonstrated_fitness",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "state_defines_moral_community",
+        "atom": "state_has_authority_to_define_personhood",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "meritocratic_moral_order",
+    "reference_frame": "fitness_based_social_order",
     "drift_state": {
       "moment": "contemporary_human_rights_era",
       "direction": "repudiation_pressure",
       "magnitude": "substantial",
       "acknowledged": false
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

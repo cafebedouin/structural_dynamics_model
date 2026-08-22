@@ -39,9 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,15 +72,15 @@
  *   domain: theological_ethics/technology_governance/philosophical_anthropology
  *
  * SUMMARY:
- *   This constraint, the 'Imago Dei Reading' of AI dignity safeguarding,
- *   posits human dignity as divinely endowed and inviolable, prior to any
- *   capability. It mandates AI subordination to humans and rejects
- *   enhancement that transgresses human nature. It is claimed as a Tangled
- *   Rope because it genuinely coordinates ethical development while
- *   extracting costs from those pursuing alternative technological futures.
- *   The metrics reflect a moderate but growing extractiveness as
- *   technological capabilities expand, requiring more active enforcement of
- *   the theological boundaries.
+ *   This constraint represents a theological reading of human dignity,
+ *   asserting it as the inviolable 'image of the Triune God,' equal in all
+ *   persons and prior to capability. It mandates AI subordination to humans
+ *   and rejects enhancement that 'transgresses human nature.' This reading,
+ *   while providing a clear ethical framework for its adherents, imposes
+ *   significant limitations on AI development and human enhancement research,
+ *   leading to a classification as a Tangled Rope due to its genuine
+ *   coordination function (ethical guidance) coupled with asymmetric
+ *   extraction (limiting technological and philosophical freedom for others).
  *
  */
 
@@ -96,8 +99,8 @@ narrative_ontology:constraint_metric(ai_dignity_safeguarding__imago_dei_reading,
 narrative_ontology:constraint_metric(ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ai_dignity_safeguarding__imago_dei_reading, accessibility_collapse, 0.6).
-narrative_ontology:constraint_metric(ai_dignity_safeguarding__imago_dei_reading, resistance, 0.3).
+narrative_ontology:constraint_metric(ai_dignity_safeguarding__imago_dei_reading, accessibility_collapse, 0.3).
+narrative_ontology:constraint_metric(ai_dignity_safeguarding__imago_dei_reading, resistance, 0.45).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_dignity_safeguarding__imago_dei_reading, tangled_rope).
@@ -107,39 +110,83 @@ narrative_ontology:topic_domain(ai_dignity_safeguarding__imago_dei_reading, "the
 domain_priors:requires_active_enforcement(ai_dignity_safeguarding__imago_dei_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ai_dignity_safeguarding__imago_dei_reading, '1a237def-1a16-4220-a862-60db72ae8387').
-narrative_ontology:cs_kernel_codification('1a237def-1a16-4220-a862-60db72ae8387', formalized).
-narrative_ontology:cs_authority_grounding('1a237def-1a16-4220-a862-60db72ae8387', lineage).
-narrative_ontology:cs_interpretation_layer_present('1a237def-1a16-4220-a862-60db72ae8387').
-narrative_ontology:cs_reading_relation('1a237def-1a16-4220-a862-60db72ae8387', ai_dignity_safeguarding__autonomy_rights_reading, coexists_with).
-narrative_ontology:cs_reading_relation('1a237def-1a16-4220-a862-60db72ae8387', ai_dignity_safeguarding__posthuman_continuity_reading, forecloses).
-narrative_ontology:cs_axiom('1a237def-1a16-4220-a862-60db72ae8387', foundational, human_dignity_imago_dei).
+narrative_ontology:cs_story_uid(ai_dignity_safeguarding__imago_dei_reading, 'd3212ee5-af90-42f3-bfea-fcdf076045d2').
+narrative_ontology:cs_kernel_codification('d3212ee5-af90-42f3-bfea-fcdf076045d2', formalized).
+narrative_ontology:cs_authority_grounding('d3212ee5-af90-42f3-bfea-fcdf076045d2', lineage).
+narrative_ontology:cs_interpretation_layer_present('d3212ee5-af90-42f3-bfea-fcdf076045d2').
+narrative_ontology:cs_reading_relation('d3212ee5-af90-42f3-bfea-fcdf076045d2', ai_dignity_safeguarding__autonomy_rights_reading, coexists_with).
+narrative_ontology:cs_reading_relation('d3212ee5-af90-42f3-bfea-fcdf076045d2', ai_dignity_safeguarding__posthuman_continuity_reading, forecloses).
+narrative_ontology:cs_axiom('d3212ee5-af90-42f3-bfea-fcdf076045d2', foundational, human_dignity_imago_dei).
 narrative_ontology:cs_axiom_status(human_dignity_imago_dei, holdable).
-narrative_ontology:cs_axiom_grounding('1a237def-1a16-4220-a862-60db72ae8387', human_dignity_imago_dei, theological).
-narrative_ontology:cs_axiom('1a237def-1a16-4220-a862-60db72ae8387', foundational, human_nature_fixed_and_inviolable).
-narrative_ontology:cs_axiom_status(human_nature_fixed_and_inviolable, holdable).
-narrative_ontology:cs_axiom_grounding('1a237def-1a16-4220-a862-60db72ae8387', human_nature_fixed_and_inviolable, deontological).
-narrative_ontology:cs_reference_frame('1a237def-1a16-4220-a862-60db72ae8387', classical_theological_anthropology).
-narrative_ontology:cs_drift_state('1a237def-1a16-4220-a862-60db72ae8387', contemporary_ai_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('1a237def-1a16-4220-a862-60db72ae8387', '').
+narrative_ontology:cs_axiom_grounding('d3212ee5-af90-42f3-bfea-fcdf076045d2', human_dignity_imago_dei, theological).
+narrative_ontology:cs_axiom('d3212ee5-af90-42f3-bfea-fcdf076045d2', foundational, ai_subordination_to_human_person).
+narrative_ontology:cs_axiom_status(ai_subordination_to_human_person, holdable).
+narrative_ontology:cs_axiom_grounding('d3212ee5-af90-42f3-bfea-fcdf076045d2', ai_subordination_to_human_person, deontological).
+narrative_ontology:cs_reference_frame('d3212ee5-af90-42f3-bfea-fcdf076045d2', classical_theological_anthropology).
+narrative_ontology:cs_drift_state('d3212ee5-af90-42f3-bfea-fcdf076045d2', contemporary_technological_acceleration, gap(repudiation_pressure, substantial, true)).
+narrative_ontology:cs_created_at('d3212ee5-af90-42f3-bfea-fcdf076045d2', '').
 narrative_ontology:cs_kernel_id(ai_dignity_safeguarding__imago_dei_reading, ai_dignity_safeguarding).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ai_dignity_safeguarding__imago_dei_reading, human_person_as_imago_dei).
 narrative_ontology:constraint_beneficiary(ai_dignity_safeguarding__imago_dei_reading, religious_institutions).
-narrative_ontology:constraint_victim(ai_dignity_safeguarding__imago_dei_reading, ai_developers_and_researchers).
+narrative_ontology:constraint_victim(ai_dignity_safeguarding__imago_dei_reading, ai_developers).
 narrative_ontology:constraint_victim(ai_dignity_safeguarding__imago_dei_reading, transhumanist_advocates).
-narrative_ontology:constraint_victim(ai_dignity_safeguarding__imago_dei_reading, persons_seeking_radical_enhancement).
+narrative_ontology:constraint_victim(ai_dignity_safeguarding__imago_dei_reading, persons_subjected_to_technocratic_reduction).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The theological concept of the human person, whose inherent dignity is protected by this constraint. Benefits from the subordination of AI and the rejection of transgressive enhancement, maintaining its unique status.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__imago_dei_reading, human_person_as_imago_dei, beneficiary,
+    institutional, civilizational, identity_locked, universal).
+
+% Advocates for and seeks to enforce this reading of dignity, shaping ethical guidelines and public discourse. Benefits from the preservation of a theological anthropology and the moral authority derived from defending it.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__imago_dei_reading, religious_institutions, agenda_setter,
+    organized, generational, constrained, global).
+
+% Faces limitations on AI development paths, particularly concerning autonomous agents or those that might blur the lines with human capabilities. Bears the cost of restricted innovation and market opportunities in certain areas.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__imago_dei_reading, ai_developers, payer,
+    powerful, biographical, constrained, global).
+
+% Finds their vision of human enhancement and posthuman futures directly opposed and rejected by this constraint. Bears the cost of social and ethical condemnation, and potential legal restrictions on research and application.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__imago_dei_reading, transhumanist_advocates, payer,
+    moderate, biographical, constrained, global).
+
+% Individuals whose dignity is violated by systems that treat them as mere data points or reducible to their capabilities, rather than as inherently valuable. This constraint aims to protect them, but they bear the immediate cost of such systems where they exist.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__imago_dei_reading, persons_subjected_to_technocratic_reduction, payer,
+    powerless, immediate, trapped, local).
+
+% Analyze the implications of this theological framework for broader ethical discourse and technology governance, often seeking common ground or identifying points of tension with secular human rights frameworks.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__imago_dei_reading, secular_ethicists, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates ethical development and deployment of AI and enhancement technologies by providing a clear, theologically grounded definition of human dignity and its boundaries, preventing perceived transgressions against human nature.
+% TRANSFER_FUNCTION: Transfers moral authority and definitional power over 'human nature' and 'dignity' to theological frameworks, limiting the scope of technological development and philosophical inquiry in other domains.
+% ABSENT_VOICES: Posthumanist philosophers and radical enhancement proponents are structurally excluded from the core definitional process; they would argue for an open-ended, evolutionary view of human nature and dignity, but their premises are rejected by this reading.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, the ethical landscape for AI and human enhancement would fundamentally shift. The theological grounding for human dignity would lose its prescriptive force, opening pathways for AI autonomy and human enhancement previously deemed transgressive, leading to a reorganization of research priorities, regulatory debates, and societal values.
+% FOUNDING_PROBLEM: The perceived threat of emerging technologies (AI, biotechnology) to traditional understandings of human nature, dignity, and the unique status of humanity in a created order.
+% FOUNDING_PROBLEM_CORROBORATION: Religious leaders and theologians universally attest to the live status of this problem, citing ongoing advancements in AI and genetic engineering. Some secular ethicists and human rights advocates also corroborate the concern about technological reductionism, though they ground dignity in different axioms.
+narrative_ontology:disappearance_verdict(ai_dignity_safeguarding__imago_dei_reading, world_rearranges).
+narrative_ontology:founding_problem_status(ai_dignity_safeguarding__imago_dei_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ai_dignity_safeguarding__imago_dei_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(ai_dignity_safeguarding__imago_dei_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(ai_dignity_safeguarding__imago_dei_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(ai_dignity_safeguarding__imago_dei_reading, 0.55, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,13 +206,13 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.55) because the constraint limits certain avenues of AI and enhancement research, imposing opportunity costs and redirecting innovation. Suppression (0.4) is present through advocacy, moral suasion, and attempts to influence policy, actively pushing back against transhumanist narratives. Theater ratio (0.2) is low, indicating that the efforts to safeguard dignity are largely genuine, though some performative aspects exist in public discourse. Accessibility collapse (0.6) is moderate, as alternative ethical frameworks and technological paths are not entirely foreclosed but are made more difficult to pursue. Resistance (0.3) is also moderate, coming from transhumanist movements and some secular ethicists.
+ *   The extractiveness (0.55) is moderate because the constraint limits certain avenues of technological development and philosophical inquiry, imposing costs on AI developers and transhumanist advocates. Suppression (0.4) is present through moral condemnation, social pressure, and advocacy for regulatory limits, though it's not absolute. The theater ratio (0.2) is low, as the constraint's proponents genuinely believe in and actively work towards its principles. The claimed type is 'tangled_rope' because it offers a coordination function (ethical clarity) but also extracts from those whose technological or philosophical pursuits are curtailed by its definitions.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of religious institutions, this is a necessary coordination mechanism for human flourishing. From the perspective of AI developers and transhumanists, it is an extractive and suppressive force limiting progress and individual autonomy. The engine's classification will highlight this divergence.
+ *   From the perspective of religious institutions, this constraint is a necessary 'rope' for safeguarding humanity's essence. From the perspective of AI developers and transhumanist advocates, it is a 'snare' that stifles progress and imposes an arbitrary, religiously-derived limit on human potential. The engine's classification as Tangled Rope reflects this hybrid nature, acknowledging both the coordination and extraction.
  *
  * DIRECTIONALITY LOGIC:
- *   Religious institutions act as agenda-setters, actively promoting and enforcing this reading. The 'human person as imago Dei' is the conceptual beneficiary, whose dignity is protected. AI developers, transhumanist advocates, and individuals seeking radical enhancement are payers, as their activities are constrained. Secular ethicists observe and critique, but are not directly subject to the constraint's enforcement in the same way.
+ *   The 'human_person_as_imago_dei' and 'religious_institutions' are beneficiaries, as the constraint protects their core tenets and enhances their moral authority. 'AI_developers' and 'transhumanist_advocates' are payers, bearing the costs of restricted innovation and philosophical rejection. 'Persons_subjected_to_technocratic_reduction' are also payers, as the constraint seeks to protect them from a harm that is already occurring, implying they bear the cost of that harm.
  *
  */
 
@@ -175,33 +222,23 @@ test(extraction_signature) :-
 
 omega_variable(
     theological_vs_secular_grounding,
-    'Is human dignity universally understood as the ''image of God'' or is it primarily a secular construct based on autonomy and rights?',
-    'Cross-cultural and interdisciplinary consensus building on the foundational sources of human dignity, or the emergence of a dominant global ethical framework.',
-    'If dignity is universally accepted as imago Dei, the constraint''s legitimacy and enforcement capacity would increase, potentially reducing resistance. If a secular grounding dominates, this reading would be reclassified as more extractive, relying on coercion rather than shared understanding.',
+    'Can the ethical principles derived from the ''imago Dei'' concept be translated into universally acceptable secular terms without losing their prescriptive force, or do they remain fundamentally tied to a specific theological framework?',
+    'Analysis of interfaith and secular dialogues on AI ethics; empirical study of the adoption and efficacy of ''imago Dei''-derived principles in secular policy documents.',
+    'If translatable, the constraint could gain broader societal legitimacy and enforcement mechanisms, potentially increasing its effective suppression. If not, it remains a powerful but niche ethical framework, limiting its scope and impact outside its theological base.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(theological_vs_secular_grounding, conceptual, 'Ambiguity regarding the universal applicability of theologically grounded dignity.').
+
+omega_variable(
+    definition_of_human_nature_transgression,
+    'What constitutes ''transgressing human nature'' in the context of enhancement, and is this definition fixed or subject to reinterpretation as technology advances?',
+    'Detailed theological and philosophical exegesis of ''human nature'' in light of specific emerging technologies (e.g., brain-computer interfaces, genetic editing for cognitive enhancement); consensus-building within religious and ethical communities.',
+    'A rigid, narrow definition would increase the constraint''s extractiveness by limiting more technologies. A flexible, evolving definition might reduce extractiveness but risk diluting the constraint''s core protective function.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(theological_vs_secular_grounding, conceptual, 'Ambiguity in the universal acceptance of a theological grounding for human dignity.').
-
-omega_variable(
-    transgression_boundary_definition,
-    'What specific enhancements ''transgress human nature'' and who authoritatively defines this boundary?',
-    'Development of clear, internationally recognized criteria for ''human nature'' and ''transgression'' within this theological framework, or a formal ecclesiastical body issuing definitive pronouncements.',
-    'Lack of clear definition allows for arbitrary enforcement and increases extractiveness for those whose innovations are deemed transgressive. Clearer boundaries could reduce perceived extractiveness by providing predictable rules, but might also increase suppression if the boundaries are strict.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(transgression_boundary_definition, empirical, 'Ambiguity in defining the boundary of ''transgressing human nature''.').
-
-omega_variable(
-    ai_subordination_enforceability,
-    'Is the ''subordination of AI'' a practically enforceable concept, or does it become a performative claim as AI capabilities advance?',
-    'Empirical observation of AI system autonomy and decision-making in critical contexts; technical audits of AI governance structures for human override capabilities.',
-    'If subordination becomes performative, the constraint''s theater_ratio would rise, and its effective extractiveness would increase as AI systems operate with de facto autonomy despite the stated rule. If genuinely enforceable, it remains a coordination mechanism.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(ai_subordination_enforceability, empirical, 'Practical enforceability of AI subordination as capabilities advance.').
+narrative_ontology:omega_variable(definition_of_human_nature_transgression, conceptual, 'Ambiguity in the boundaries of ''human nature'' and ''transgression''.').
 
 
 /* ==========================================================================
@@ -215,9 +252,9 @@ narrative_ontology:interval(ai_dignity_safeguarding__imago_dei_reading, 2000, 20
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ai_d_tr_t2000, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2000, 0.15).
-narrative_ontology:measurement(ai_d_tr_t2008, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2008, 0.18).
-narrative_ontology:measurement(ai_d_tr_t2016, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2016, 0.19).
+narrative_ontology:measurement(ai_d_tr_t2000, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(ai_d_tr_t2008, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2008, 0.15).
+narrative_ontology:measurement(ai_d_tr_t2016, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2016, 0.18).
 narrative_ontology:measurement(ai_d_tr_t2024, ai_dignity_safeguarding__imago_dei_reading, theater_ratio, 2024, 0.2).
 
 % Extraction over time
@@ -238,8 +275,9 @@ narrative_ontology:measurement(ai_d_su_t2024, ai_dignity_safeguarding__imago_dei
    ========================================================================== */
 
 narrative_ontology:coordination_type(ai_dignity_safeguarding__imago_dei_reading, identity_coordination).
-narrative_ontology:affects_constraint(ai_dignity_safeguarding__imago_dei_reading, ai_dignity_safeguarding__autonomy_rights_reading).
-narrative_ontology:affects_constraint(ai_dignity_safeguarding__imago_dei_reading, ai_dignity_safeguarding__posthuman_continuity_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three readings of the 'ai_dignity_safeguarding' kernel, each representing a distinct ethical framework for AI and human enhancement.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

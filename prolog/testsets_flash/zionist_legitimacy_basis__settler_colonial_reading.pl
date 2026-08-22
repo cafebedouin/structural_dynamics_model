@@ -39,7 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -53,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,20 +72,16 @@
  *   domain: political_history/nationalism/settler_colonialism
  *
  * SUMMARY:
- *   This constraint models Zionism as a European settler-colonial movement,
- *   focusing on its structural role in establishing an ethno-state through
- *   the displacement and subjugation of the indigenous Palestinian
- *   population. The core claim is that the colonial structure is constitutive
- *   of the state's legitimacy, rather than an incidental outcome. This
- *   reading emphasizes the ongoing nature of indigenous dispossession and the
- *   active enforcement required to maintain the existing power asymmetry.
+ *   This constraint story analyzes Zionism from a settler-colonial
+ *   perspective, viewing it as a movement that established an ethno-state
+ *   through the systematic displacement of indigenous Palestinians. This
+ *   reading emphasizes the structural violence inherent in the process, the
+ *   ongoing dispossession, and the mechanisms of control and suppression
+ *   required to maintain the state's ethno-national character. The high
+ *   extractiveness and suppression reflect the continuous nature of this
+ *   process since 1948. This is one reading of the 'Zionist Legitimacy Basis'
+ *   kernel.
  *
- * KEY AGENTS:
- *   - israeli_state_institutions: Agenda-setter (institutional/constrained) — enforces policies of displacement and control.
- *   - jewish_israeli_citizens: Beneficiary (organized/constrained) — benefits from preferential access and ethno-national identity.
- *   - palestinian_indigenous_population: Payer (powerless/trapped) — bears costs of displacement, dispossession, and military occupation.
- *   - international_law_frameworks: Victim (institutional/analytical) — undermined by settler-colonial practices.
- *   - anti_colonial_movements: Observer (organized/mobile) — analyze and challenge the settler-colonial framework.
  */
 
 /* ==========================================================================
@@ -88,18 +89,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(zionist_legitimacy_basis__settler_colonial_reading, 0.9).
+domain_priors:base_extractiveness(zionist_legitimacy_basis__settler_colonial_reading, 0.92).
 domain_priors:suppression_score(zionist_legitimacy_basis__settler_colonial_reading, 0.95).
-domain_priors:theater_ratio(zionist_legitimacy_basis__settler_colonial_reading, 0.6).
+domain_priors:theater_ratio(zionist_legitimacy_basis__settler_colonial_reading, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, extractiveness, 0.9).
+narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, extractiveness, 0.92).
 narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 0.6).
+narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 0.65).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, accessibility_collapse, 0.8).
-narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, resistance, 0.9).
+narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, accessibility_collapse, 0.88).
+narrative_ontology:constraint_metric(zionist_legitimacy_basis__settler_colonial_reading, resistance, 0.75).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(zionist_legitimacy_basis__settler_colonial_reading, snare).
@@ -109,38 +110,78 @@ narrative_ontology:topic_domain(zionist_legitimacy_basis__settler_colonial_readi
 domain_priors:requires_active_enforcement(zionist_legitimacy_basis__settler_colonial_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(zionist_legitimacy_basis__settler_colonial_reading, 'ac77cc1a-9d32-4661-8f82-e9b356fd4b11').
-narrative_ontology:cs_kernel_codification('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', formalized).
-narrative_ontology:cs_authority_grounding('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', extraction).
-narrative_ontology:cs_interpretation_layer_present('ac77cc1a-9d32-4661-8f82-e9b356fd4b11').
-narrative_ontology:cs_reading_relation('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', zionist_legitimacy_basis__national_liberation_reading, forecloses).
-narrative_ontology:cs_reading_relation('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', zionist_legitimacy_basis__religious_restoration_reading, forecloses).
-narrative_ontology:cs_axiom('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', foundational, settler_colonialism_inherently_illegitimate).
-narrative_ontology:cs_axiom_status(settler_colonialism_inherently_illegitimate, holdable).
-narrative_ontology:cs_axiom_grounding('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', settler_colonialism_inherently_illegitimate, deontological).
-narrative_ontology:cs_axiom('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', foundational, indigenous_displacement_is_constitutive).
+narrative_ontology:cs_story_uid(zionist_legitimacy_basis__settler_colonial_reading, 'eddd7153-665c-42d5-9b89-d5e195bc3909').
+narrative_ontology:cs_kernel_codification('eddd7153-665c-42d5-9b89-d5e195bc3909', formalized).
+narrative_ontology:cs_authority_grounding('eddd7153-665c-42d5-9b89-d5e195bc3909', extraction).
+narrative_ontology:cs_interpretation_layer_present('eddd7153-665c-42d5-9b89-d5e195bc3909').
+narrative_ontology:cs_reading_relation('eddd7153-665c-42d5-9b89-d5e195bc3909', zionist_legitimacy_basis__national_liberation_reading, forecloses).
+narrative_ontology:cs_reading_relation('eddd7153-665c-42d5-9b89-d5e195bc3909', zionist_legitimacy_basis__religious_restoration_reading, coexists_with).
+narrative_ontology:cs_axiom('eddd7153-665c-42d5-9b89-d5e195bc3909', foundational, settler_colonialism_is_inherently_unjust).
+narrative_ontology:cs_axiom_status(settler_colonialism_is_inherently_unjust, holdable).
+narrative_ontology:cs_axiom_grounding('eddd7153-665c-42d5-9b89-d5e195bc3909', settler_colonialism_is_inherently_unjust, deontological).
+narrative_ontology:cs_axiom('eddd7153-665c-42d5-9b89-d5e195bc3909', foundational, indigenous_displacement_is_constitutive).
 narrative_ontology:cs_axiom_status(indigenous_displacement_is_constitutive, holdable).
-narrative_ontology:cs_axiom_grounding('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', indigenous_displacement_is_constitutive, empirically_contingent).
-narrative_ontology:cs_reference_frame('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', anti_colonial_decolonization_framework).
-narrative_ontology:cs_drift_state('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('ac77cc1a-9d32-4661-8f82-e9b356fd4b11', '').
+narrative_ontology:cs_axiom_grounding('eddd7153-665c-42d5-9b89-d5e195bc3909', indigenous_displacement_is_constitutive, empirically_contingent).
+narrative_ontology:cs_reference_frame('eddd7153-665c-42d5-9b89-d5e195bc3909', anti_colonial_liberation_framework).
+narrative_ontology:cs_drift_state('eddd7153-665c-42d5-9b89-d5e195bc3909', contemporary_international_law_discourse, gap(revival_pressure, substantial, false)).
+narrative_ontology:cs_created_at('eddd7153-665c-42d5-9b89-d5e195bc3909', '').
 narrative_ontology:cs_kernel_id(zionist_legitimacy_basis__settler_colonial_reading, zionist_legitimacy_basis).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(zionist_legitimacy_basis__settler_colonial_reading, israeli_state_institutions).
 narrative_ontology:constraint_beneficiary(zionist_legitimacy_basis__settler_colonial_reading, jewish_israeli_citizens).
-narrative_ontology:constraint_victim(zionist_legitimacy_basis__settler_colonial_reading, palestinian_indigenous_population).
-narrative_ontology:constraint_victim(zionist_legitimacy_basis__settler_colonial_reading, international_law_frameworks).
+narrative_ontology:constraint_victim(zionist_legitimacy_basis__settler_colonial_reading, indigenous_palestinians).
+narrative_ontology:constraint_victim(zionist_legitimacy_basis__settler_colonial_reading, palestinian_diaspora).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Administers and enforces policies that maintain the ethno-national character of the state, including land laws, citizenship regulations, and security doctrines. Benefits directly from the control of territory and resources, and the demographic majority achieved through displacement.
+narrative_ontology:constraint_stakeholder(zionist_legitimacy_basis__settler_colonial_reading, israeli_state_institutions, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Benefit from preferential access to land, housing, and state resources, as well as security provisions and national identity tied to the state's existence. Their self-conception and material well-being are deeply intertwined with the settler-colonial project.
+narrative_ontology:constraint_stakeholder(zionist_legitimacy_basis__settler_colonial_reading, jewish_israeli_citizens, beneficiary,
+    organized, biographical, constrained, national).
+
+% Bear the direct costs of displacement, land confiscation, and denial of self-determination. They experience ongoing military occupation, administrative control, and legal discrimination, with limited to no avenues for redress or political participation within the existing state structure.
+narrative_ontology:constraint_stakeholder(zionist_legitimacy_basis__settler_colonial_reading, indigenous_palestinians, payer,
+    powerless, generational, trapped, local).
+
+% Denied the right of return to their ancestral lands, they maintain a collective identity and political aspiration tied to the land from which they were expelled. Their costs are the loss of homeland, cultural continuity, and the ongoing struggle for recognition and return.
+narrative_ontology:constraint_stakeholder(zionist_legitimacy_basis__settler_colonial_reading, palestinian_diaspora, payer,
+    powerless, generational, identity_locked, global).
+
+% Document and condemn human rights abuses, land confiscations, and discriminatory policies. They advocate for international law and Palestinian rights, but lack direct enforcement power over the Israeli state.
+narrative_ontology:constraint_stakeholder(zionist_legitimacy_basis__settler_colonial_reading, international_human_rights_organizations, observer,
+    organized, biographical, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the establishment and maintenance of a Jewish ethno-state in historic Palestine, providing a secure national home for Jewish people through the acquisition and control of land and resources.
+% TRANSFER_FUNCTION: Transfers land, resources, and political sovereignty from indigenous Palestinians to Jewish settlers and the Israeli state, along with the associated benefits of national self-determination and security for the latter.
+% ABSENT_VOICES: The voices of indigenous Palestinians, particularly those dispossessed and exiled, are systematically marginalized or suppressed within the dominant narratives of the state's founding. Their historical accounts and claims to land are actively denied or reframed.
+% DISAPPEARANCE_RATIONALE: If the settler-colonial basis of Zionism vanished overnight, the entire structure of the Israeli state, its land laws, citizenship regime, and demographic policies would be fundamentally challenged. The relationship between Jewish Israelis and Palestinians would be radically reconfigured, leading to a profound rearrangement of political, social, and economic life in the region.
+% FOUNDING_PROBLEM: To establish a secure national homeland for Jewish people in historic Palestine, addressing centuries of antisemitism and persecution in Europe.
+% FOUNDING_PROBLEM_CORROBORATION: The Israeli state and its supporters attest the problem is live, citing ongoing security threats and the historical necessity of a Jewish state. Indigenous Palestinians and many international observers attest that while the problem of antisemitism is real, its 'solution' through settler-colonialism created a new, ongoing problem of dispossession, and the founding problem's status is therefore contested by its victims.
+narrative_ontology:disappearance_verdict(zionist_legitimacy_basis__settler_colonial_reading, world_rearranges).
+narrative_ontology:founding_problem_status(zionist_legitimacy_basis__settler_colonial_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(zionist_legitimacy_basis__settler_colonial_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(zionist_legitimacy_basis__settler_colonial_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(zionist_legitimacy_basis__settler_colonial_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(zionist_legitimacy_basis__settler_colonial_reading, 0.92, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -160,16 +201,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is very high (0.9) because the entire state structure is built upon the systematic transfer of land and resources from one population to another. Suppression is also very high (0.95) due to the active military occupation, legal discrimination, and denial of rights necessary to maintain this structure. Theater ratio is moderate (0.6) as the justifications for state actions (e.g., security, historical right) increasingly serve to mask the underlying extractive and suppressive mechanisms. Accessibility collapse is high (0.8) for the indigenous population, as alternatives to their current subjugated status are systematically foreclosed. Resistance is high (0.9) reflecting the ongoing struggle of the Palestinian people against this framework.
+ *   Extractiveness is very high (0.92) because the very existence and expansion of the state, from this perspective, is predicated on the expropriation of land and resources from indigenous inhabitants. Suppression is also very high (0.95) due to the extensive military, legal, and administrative apparatus required to control and dispossess Palestinians, prevent their return, and suppress resistance. The theater ratio is high (0.65) as justifications for state actions often mask the underlying colonial logic with narratives of security or historical right, while the primary function remains territorial control and demographic engineering.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the Israeli state and its beneficiaries, the constraint is framed as a national liberation movement or religious restoration. From the perspective of the Palestinian indigenous population and anti-colonial movements, it is experienced as a highly extractive and suppressive settler-colonial project. The engine's classification will highlight this divergence by computing a Snare for the payer seats, contrasting with a claimed Rope or Mountain by the agenda-setter.
+ *   From the perspective of Israeli state institutions and Jewish Israeli citizens, the constraint might be framed as a national liberation movement (a 'rope' or 'scaffold' for a persecuted people). However, from the perspective of indigenous Palestinians, it is a 'snare' of ongoing dispossession and oppression. The engine's classification will highlight this divergence based on the declared structural relationships and metrics.
  *
  * DIRECTIONALITY LOGIC:
- *   Israeli state institutions and Jewish Israeli citizens are clear beneficiaries, deriving power and resources from the constraint's operation. The Palestinian indigenous population is the primary target, experiencing direct and severe extraction and suppression. International law frameworks are victims, as their principles are systematically violated. Anti-colonial movements act as analytical observers, exposing the structural dynamics.
+ *   Israeli state institutions and Jewish Israeli citizens are beneficiaries, as they gain land, resources, and national identity from the constraint's operation. Indigenous Palestinians and the Palestinian diaspora are the primary payers, bearing the costs of displacement, loss of sovereignty, and denial of rights. Their exit options are severely limited, ranging from trapped (for those under occupation) to identity_locked (for the diaspora whose identity is tied to return).
  *
- * MANDATROPHY ANALYSIS:
- *   The settler-colonial reading argues that the original mandate (Jewish self-determination) has been superseded by an extractive function (indigenous displacement and control). The constraint persists not because the initial problem is still being solved in a just manner, but because the beneficiaries actively maintain the extractive structure. The high extractiveness and suppression, coupled with the contested founding problem status, indicate a deep mandatrophy where the original coordination narrative serves as cover for ongoing extraction.
  */
 
 /* ==========================================================================
@@ -177,24 +216,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is Zionism best understood as a settler-colonial movement, a national liberation movement, or a religious restoration process?',
-    'Historical and sociological analysis focusing on land acquisition patterns, indigenous displacement, and the role of external colonial powers, as well as the self-identification and political agency of the affected populations.',
-    'If the settler-colonial reading is affirmed, the constraint''s legitimacy is fundamentally challenged, leading to calls for decolonization and reparations. If other readings prevail, the classification would shift towards a Rope (national liberation) or Mountain (religious restoration), with significantly lower extraction and suppression.',
+    historical_causality_of_displacement,
+    'To what extent was indigenous displacement a constitutive, intentional goal of the Zionist project, versus an unintended consequence of national self-determination?',
+    'Archival research into early Zionist planning documents, analysis of land acquisition policies, and comparative studies of other settler-colonial movements.',
+    'If displacement is proven constitutive, it strengthens the ''snare'' classification and the settler-colonial reading''s claim to structural truth. If largely unintended, it might shift the classification towards a ''tangled_rope'' with severe, but not primary, extractive outcomes.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading of the ''zionist_legitimacy_basis'' kernel. This reading, ''settler_colonial_reading'', emphasizes the colonial structure and indigenous displacement as constitutive. Sibling readings (''national_liberation_reading'', ''religious_restoration_reading'') offer alternative framings.').
+narrative_ontology:omega_variable(historical_causality_of_displacement, empirical, 'Determining the intentionality and centrality of indigenous displacement in the Zionist project.').
 
 omega_variable(
-    displacement_constitutive_vs_incidental,
-    'Is the displacement of the indigenous population an incidental outcome of Zionist state-building, or is it a constitutive element of the settler-colonial project?',
-    'Analysis of founding documents, historical policies, and demographic engineering efforts. If displacement was a planned and systematic feature, it is constitutive; if it was an unintended side-effect, it is incidental.',
-    'If constitutive, the high extractiveness and suppression are inherent to the constraint''s operation. If incidental, the constraint might be reformable to reduce extraction without dismantling its core function, potentially shifting towards a Tangled Rope.',
-    confidence_without_resolution(high)
+    legitimacy_of_ethno_national_states,
+    'Is the concept of an ethno-national state inherently extractive when established in a territory with an existing indigenous population, or can such a state be legitimate under certain conditions?',
+    'Conceptual analysis of international law, indigenous rights frameworks, and political philosophy concerning self-determination and state formation in contested territories.',
+    'If ethno-national states are deemed inherently extractive in such contexts, it reinforces the ''snare'' classification. If conditional legitimacy is possible, it opens pathways for alternative readings to gain conceptual traction.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(displacement_constitutive_vs_incidental, empirical, 'Examines whether indigenous displacement is a core feature or a side effect of the Zionist project.').
+narrative_ontology:omega_variable(legitimacy_of_ethno_national_states, conceptual, 'The inherent legitimacy (or lack thereof) of ethno-national states in settler-colonial contexts.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (military occupation, legal discrimination) or internalized (psychological impact of prolonged conflict, normalization of occupation)?',
+    'Post-occupation trajectory: if suppression persists after military and legal mechanisms are removed, reclassify as partially internalized. Analysis of Palestinian narratives and resistance movements.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit. This would deepen the ''snare'' classification by highlighting the pervasive nature of control.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in the context of occupation and dispossession.').
 
 
 /* ==========================================================================
@@ -210,25 +259,25 @@ narrative_ontology:interval(zionist_legitimacy_basis__settler_colonial_reading, 
 % Theater ratio over time
 narrative_ontology:measurement(zion_tr_t1948, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 1948, 0.4).
 narrative_ontology:measurement(zion_tr_t1967, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 1967, 0.5).
-narrative_ontology:measurement(zion_tr_t1987, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 1987, 0.55).
-narrative_ontology:measurement(zion_tr_t2000, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 2000, 0.58).
-narrative_ontology:measurement(zion_tr_t2014, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 2014, 0.6).
-narrative_ontology:measurement(zion_tr_t2024, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 2024, 0.6).
+narrative_ontology:measurement(zion_tr_t1987, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 1987, 0.6).
+narrative_ontology:measurement(zion_tr_t2000, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 2000, 0.63).
+narrative_ontology:measurement(zion_tr_t2014, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 2014, 0.65).
+narrative_ontology:measurement(zion_tr_t2024, zionist_legitimacy_basis__settler_colonial_reading, theater_ratio, 2024, 0.65).
 
 % Extraction over time
-narrative_ontology:measurement(zion_be_t1948, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 1948, 0.8).
-narrative_ontology:measurement(zion_be_t1967, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 1967, 0.85).
-narrative_ontology:measurement(zion_be_t1987, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 1987, 0.88).
-narrative_ontology:measurement(zion_be_t2000, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 2000, 0.89).
-narrative_ontology:measurement(zion_be_t2014, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 2014, 0.9).
-narrative_ontology:measurement(zion_be_t2024, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 2024, 0.9).
+narrative_ontology:measurement(zion_be_t1948, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 1948, 0.85).
+narrative_ontology:measurement(zion_be_t1967, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 1967, 0.88).
+narrative_ontology:measurement(zion_be_t1987, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 1987, 0.9).
+narrative_ontology:measurement(zion_be_t2000, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 2000, 0.91).
+narrative_ontology:measurement(zion_be_t2014, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 2014, 0.92).
+narrative_ontology:measurement(zion_be_t2024, zionist_legitimacy_basis__settler_colonial_reading, base_extractiveness, 2024, 0.92).
 
 % Suppression requirement over time
-narrative_ontology:measurement(zion_su_t1948, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 1948, 0.85).
-narrative_ontology:measurement(zion_su_t1967, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 1967, 0.9).
+narrative_ontology:measurement(zion_su_t1948, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 1948, 0.8).
+narrative_ontology:measurement(zion_su_t1967, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 1967, 0.88).
 narrative_ontology:measurement(zion_su_t1987, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 1987, 0.92).
-narrative_ontology:measurement(zion_su_t2000, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 2000, 0.93).
-narrative_ontology:measurement(zion_su_t2014, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 2014, 0.94).
+narrative_ontology:measurement(zion_su_t2000, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 2000, 0.94).
+narrative_ontology:measurement(zion_su_t2014, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 2014, 0.95).
 narrative_ontology:measurement(zion_su_t2024, zionist_legitimacy_basis__settler_colonial_reading, suppression_requirement, 2024, 0.95).
 
 
@@ -236,6 +285,10 @@ narrative_ontology:measurement(zion_su_t2024, zionist_legitimacy_basis__settler_
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+narrative_ontology:coordination_type(zionist_legitimacy_basis__settler_colonial_reading, identity_coordination).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three readings of the 'zionist_legitimacy_basis' kernel, alongside 'national_liberation_reading' and 'religious_restoration_reading'.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

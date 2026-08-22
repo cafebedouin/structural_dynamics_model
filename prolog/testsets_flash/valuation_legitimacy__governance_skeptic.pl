@@ -41,7 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,29 +70,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: valuation_legitimacy__governance_skeptic
- *   human_readable: Valuation Legitimacy: Governance Skeptic Reading
+ *   human_readable: Governance Skeptic Reading: Valuation Legitimacy Requires Minority Shareholder Protection
  *   domain: corporate_finance/technology_governance/space_economics
  *
  * SUMMARY:
- *   This constraint story, 'Valuation Legitimacy: Governance Skeptic
- *   Reading,' analyzes the valuation of a company under Elon Musk's control
- *   through the lens of corporate governance. It argues that the dual-class
- *   share structure, which grants Musk disproportionate voting power (82.4%
- *   with 42% equity), functions as a mechanism for extraction rather than
- *   pure value creation. The constraint is framed as a Snare, where minority
- *   shareholders are victims of a system designed to concentrate control and
- *   private benefits, suppressing their ability to influence governance or
- *   realize fair value. This is one reading of the 'valuation_legitimacy'
- *   kernel, focusing on the structural implications of governance for
- *   shareholder value.
+ *   This constraint represents the 'governance skeptic' reading of valuation
+ *   legitimacy, arguing that the company's dual-class share structure and
+ *   Musk's concentrated voting control (82.4% with 42% equity) enable
+ *   significant value extraction from minority shareholders. The reading
+ *   posits that the lack of independent governance mechanisms, coupled with
+ *   Musk's divided attention across multiple ventures and the renunciation of
+ *   corporate opportunities, leads to a valuation that reflects private
+ *   benefits of control rather than public shareholder value. The constraint
+ *   is claimed as a Rope by its proponents (Musk and early investors) but
+ *   operates as a Snare from the perspective of public shareholders.
  *
- * KEY AGENTS:
- *   - elon_musk: Agenda setter (institutional/arbitrage) — controls governance and benefits from private control.
- *   - early_class_b_shareholders: Beneficiary (powerful/mobile) — aligned with Musk's control, benefits from concentrated power.
- *   - class_a_shareholders: Payer (powerless/constrained) — bear financial risk without governance rights.
- *   - institutional_investors: Payer (organized/constrained) — disenfranchised by dual-class structure, limited influence.
- *   - future_investors: Victim (powerless/constrained) — pay premium for shares with no governance protection.
- *   - independent_board_members: Excluded (moderate/constrained) — structurally disempowered by lack of independence.
  */
 
 /* ==========================================================================
@@ -106,50 +103,93 @@ narrative_ontology:constraint_metric(valuation_legitimacy__governance_skeptic, t
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(valuation_legitimacy__governance_skeptic, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(valuation_legitimacy__governance_skeptic, resistance, 0.75).
+narrative_ontology:constraint_metric(valuation_legitimacy__governance_skeptic, resistance, 0.45).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(valuation_legitimacy__governance_skeptic, snare).
-narrative_ontology:human_readable(valuation_legitimacy__governance_skeptic, "Valuation Legitimacy: Governance Skeptic Reading").
+narrative_ontology:human_readable(valuation_legitimacy__governance_skeptic, "Governance Skeptic Reading: Valuation Legitimacy Requires Minority Shareholder Protection").
 narrative_ontology:topic_domain(valuation_legitimacy__governance_skeptic, "corporate_finance/technology_governance/space_economics").
 
 domain_priors:requires_active_enforcement(valuation_legitimacy__governance_skeptic).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(valuation_legitimacy__governance_skeptic, 'c1b0bf65-301a-4127-bdfa-f981b67f0a5b').
-narrative_ontology:cs_kernel_codification('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', formalized).
-narrative_ontology:cs_authority_grounding('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', extraction).
-narrative_ontology:cs_interpretation_layer_present('c1b0bf65-301a-4127-bdfa-f981b67f0a5b').
-narrative_ontology:cs_reading_relation('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', valuation_legitimacy__dcf_fundamentalist, coexists_with).
-narrative_ontology:cs_reading_relation('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', valuation_legitimacy__real_options_technologist, coexists_with).
-narrative_ontology:cs_reading_relation('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', valuation_legitimacy__musk_cult_believer, coexists_with).
-narrative_ontology:cs_axiom('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', foundational, minority_shareholder_protection_is_foundational).
+narrative_ontology:cs_story_uid(valuation_legitimacy__governance_skeptic, '08d2268e-2cfb-4ab8-a587-44534c54320e').
+narrative_ontology:cs_kernel_codification('08d2268e-2cfb-4ab8-a587-44534c54320e', formalized).
+narrative_ontology:cs_authority_grounding('08d2268e-2cfb-4ab8-a587-44534c54320e', extraction).
+narrative_ontology:cs_interpretation_layer_present('08d2268e-2cfb-4ab8-a587-44534c54320e').
+narrative_ontology:cs_reading_relation('08d2268e-2cfb-4ab8-a587-44534c54320e', valuation_legitimacy__dcf_fundamentalist, coexists_with).
+narrative_ontology:cs_reading_relation('08d2268e-2cfb-4ab8-a587-44534c54320e', valuation_legitimacy__real_options_technologist, coexists_with).
+narrative_ontology:cs_reading_relation('08d2268e-2cfb-4ab8-a587-44534c54320e', valuation_legitimacy__musk_cult_believer, coexists_with).
+narrative_ontology:cs_axiom('08d2268e-2cfb-4ab8-a587-44534c54320e', foundational, minority_shareholder_protection_is_foundational).
 narrative_ontology:cs_axiom_status(minority_shareholder_protection_is_foundational, holdable).
-narrative_ontology:cs_axiom_grounding('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', minority_shareholder_protection_is_foundational, deontological).
-narrative_ontology:cs_axiom('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', secondary, one_share_one_vote_is_normative).
-narrative_ontology:cs_axiom_status(one_share_one_vote_is_normative, holdable).
-narrative_ontology:cs_axiom_grounding('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', one_share_one_vote_is_normative, conventional).
-narrative_ontology:cs_reference_frame('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', standard_corporate_governance_framework).
-narrative_ontology:cs_drift_state('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', contemporary_musk_era, gap(practice_drift, severe, false)).
-narrative_ontology:cs_created_at('c1b0bf65-301a-4127-bdfa-f981b67f0a5b', '').
+narrative_ontology:cs_axiom_grounding('08d2268e-2cfb-4ab8-a587-44534c54320e', minority_shareholder_protection_is_foundational, deontological).
+narrative_ontology:cs_axiom('08d2268e-2cfb-4ab8-a587-44534c54320e', foundational, governance_structures_must_ensure_accountability).
+narrative_ontology:cs_axiom_status(governance_structures_must_ensure_accountability, holdable).
+narrative_ontology:cs_axiom_grounding('08d2268e-2cfb-4ab8-a587-44534c54320e', governance_structures_must_ensure_accountability, conventional).
+narrative_ontology:cs_reference_frame('08d2268e-2cfb-4ab8-a587-44534c54320e', standard_corporate_governance_framework).
+narrative_ontology:cs_drift_state('08d2268e-2cfb-4ab8-a587-44534c54320e', contemporary_tech_era, gap(practice_drift, severe, false)).
+narrative_ontology:cs_created_at('08d2268e-2cfb-4ab8-a587-44534c54320e', '').
 narrative_ontology:cs_kernel_id(valuation_legitimacy__governance_skeptic, valuation_legitimacy).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(valuation_legitimacy__governance_skeptic, elon_musk).
 narrative_ontology:constraint_beneficiary(valuation_legitimacy__governance_skeptic, early_class_b_shareholders).
-narrative_ontology:constraint_victim(valuation_legitimacy__governance_skeptic, class_a_shareholders).
+narrative_ontology:constraint_victim(valuation_legitimacy__governance_skeptic, class_a_public_shareholders).
 narrative_ontology:constraint_victim(valuation_legitimacy__governance_skeptic, institutional_investors).
-narrative_ontology:constraint_victim(valuation_legitimacy__governance_skeptic, future_investors).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Holds 82.4% voting control with 42% equity, enabling unilateral decision-making and control over corporate opportunities. Benefits from the dual-class structure and the ability to allocate resources across his various ventures without direct accountability to public shareholders.
+narrative_ontology:constraint_stakeholder(valuation_legitimacy__governance_skeptic, elon_musk, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Benefited from the initial dual-class structure, which concentrated voting power and allowed for long-term strategic decisions under Musk's leadership. Their gains are tied to the overall valuation, which this reading argues is inflated by private benefits of control.
+narrative_ontology:constraint_stakeholder(valuation_legitimacy__governance_skeptic, early_class_b_shareholders, beneficiary,
+    powerful, biographical, mobile, global).
+
+% Hold equity but possess virtually no voting rights, making them unable to influence governance or hold management accountable. They bear the risk of the company's ventures without the corresponding control, and their returns are diluted by the private benefits accruing to Musk.
+narrative_ontology:constraint_stakeholder(valuation_legitimacy__governance_skeptic, class_a_public_shareholders, payer,
+    powerless, immediate, constrained, global).
+
+% Invest in the company but face significant limitations due to the dual-class structure. While they have some collective voice, their ability to effect change is severely curtailed by Musk's voting control. Their exit options are limited by the size of their holdings and market liquidity.
+narrative_ontology:constraint_stakeholder(valuation_legitimacy__governance_skeptic, institutional_investors, payer,
+    organized, biographical, constrained, global).
+
+% The company operates under 'controlled company' exemptions, meaning it is not required to have independent compensation or nominating committees. Any independent voices on the board are structurally marginalized by the voting power of the controlling shareholder.
+narrative_ontology:constraint_stakeholder(valuation_legitimacy__governance_skeptic, independent_board_members, excluded,
+    moderate, biographical, identity_locked, national).
+
+% Analyze and critique the company's governance structure, highlighting the lack of minority shareholder protection and potential for value extraction. They advocate for reforms but have no direct power to implement them.
+narrative_ontology:constraint_stakeholder(valuation_legitimacy__governance_skeptic, corporate_governance_advocates, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The dual-class structure coordinates long-term vision and rapid execution under a single, powerful leader, theoretically enabling ambitious projects without short-term market pressures.
+% TRANSFER_FUNCTION: Transfers significant economic value and corporate opportunities from Class A public shareholders to Elon Musk and early Class B holders, in exchange for access to the company's growth potential.
+% ABSENT_VOICES: Independent compensation and nominating committees are absent due to 'controlled company' exemptions. These voices would advocate for executive compensation tied to public shareholder value and independent oversight, but are structurally excluded.
+% DISAPPEARANCE_RATIONALE: If the dual-class structure and Musk's controlling vote vanished overnight, the company's governance would immediately shift. Public shareholders would demand accountability, potentially leading to a change in leadership, a restructuring of the board, and a re-evaluation of corporate strategy and asset allocation. The valuation would likely be repriced to reflect a more conventional governance premium.
+% FOUNDING_PROBLEM: The company was founded with a vision for highly ambitious, long-term projects (e.g., space exploration, sustainable energy) that required insulation from short-term market pressures and a unified, decisive leadership.
+% FOUNDING_PROBLEM_CORROBORATION: Musk and his supporters attest that the founding problem of needing long-term, unconstrained leadership for 'impossible' goals remains live. Corporate governance advocates and some institutional investors, however, argue that while long-term vision is valuable, the current structure has evolved beyond necessity into a mechanism for extraction, with the original problem now serving as a cover story. Independent legal analysis of 'controlled company' exemptions supports the potential for abuse.
+narrative_ontology:disappearance_verdict(valuation_legitimacy__governance_skeptic, world_rearranges).
+narrative_ontology:founding_problem_status(valuation_legitimacy__governance_skeptic, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(valuation_legitimacy__governance_skeptic, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(valuation_legitimacy__governance_skeptic, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(valuation_legitimacy__governance_skeptic, 'none', 1).
+narrative_ontology:epsilon_provenance(valuation_legitimacy__governance_skeptic, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,16 +209,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extractiveness (0.85) reflects the significant potential for value transfer from public shareholders to the controlling shareholder due to the governance structure. Suppression (0.90) is severe because the dual-class structure effectively silences minority shareholders, and legal avenues for redress are limited by 'controlled company' exemptions and charter provisions. The low theater ratio (0.20) indicates that while some governance functions are performed, the primary purpose of the structure is to maintain control and enable extraction, not merely to appear compliant. The rising extractiveness and suppression over time reflect the increasing market capitalization and the entrenchment of the control structure, amplifying the potential for value transfer.
+ *   The high extractiveness (0.85) stems from the structural ability of the controlling shareholder to direct corporate assets and opportunities for personal benefit, effectively diluting the value for non-controlling shareholders. Suppression (0.90) is severe due to the dual-class structure, which legally disempowers Class A shareholders and prevents them from exercising meaningful governance rights or challenging management decisions. The theater ratio (0.20) is relatively low, as the governance structure is overtly designed for control rather than performative compliance; what 'theater' exists is the narrative of long-term vision justifying the control. Accessibility collapse is high (0.70) because the legal and structural barriers to challenging this governance model are substantial.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of Elon Musk and early Class B shareholders, the governance structure is a necessary 'Rope' that enables long-term vision and value creation by insulating leadership from short-term market pressures. From the perspective of Class A shareholders and institutional investors, it is a 'Snare' that facilitates extraction by concentrating power and suppressing accountability. The engine's classification will highlight this divergence by computing a Snare for the victim seats and a more benign type for the beneficiary seats.
+ *   From the perspective of Elon Musk and early Class B shareholders, the dual-class structure is a necessary 'Rope' for long-term value creation, insulating the company from short-term market pressures. However, from the perspective of Class A public shareholders and corporate governance advocates, the same structure functions as a 'Snare,' enabling extraction and suppressing accountability. The engine's computation of per-seat classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Elon Musk and early Class B shareholders are clear beneficiaries (d=0.0-0.1) as they directly benefit from the control premium and the ability to direct corporate assets. Class A shareholders, institutional investors, and future investors are targets (d=0.9-1.0) as they bear the costs of diluted governance rights and potential value extraction. The 'controlled company' exemptions and renounced corporate opportunities further solidify this asymmetric relationship.
+ *   Elon Musk and early Class B shareholders are clear beneficiaries, as the structure is designed to protect their control and allow for value capture. Class A public shareholders and institutional investors are targets, bearing the costs of diluted governance rights and potential value extraction. Their exit options are constrained by market liquidity and the lack of alternative investment vehicles with similar growth potential but better governance. Corporate governance advocates act as analytical observers.
  *
- * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (enabling visionary leadership for long-term value creation) is contested. While initially a 'Scaffold' for high-risk ventures, the governance skeptic reading argues it has drifted into a 'Snare' where the original coordination function is now cover for extraction. The classification prevents mislabeling by focusing on the actual power dynamics and value flows, rather than the stated purpose. The high extractiveness and suppression, coupled with the contested founding problem status, strongly suggest a Snare, despite the initial 'Rope' framing by beneficiaries.
  */
 
 /* ==========================================================================
@@ -186,66 +224,69 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    private_benefits_of_control_quantification,
-    'What is the precise monetary value of the private benefits of control accruing to Elon Musk and early Class B shareholders, beyond their pro-rata equity stake?',
-    'Independent forensic accounting and economic analysis, comparing the company''s valuation to peers with standard governance, and quantifying the value of renounced corporate opportunities and related-party transactions.',
-    'Quantifying these benefits would provide empirical evidence for the magnitude of extraction, potentially leading to regulatory intervention or successful shareholder litigation, and shifting the constraint''s perceived extractiveness from potential to realized.',
+    private_benefits_quantification,
+    'What is the precise monetary value of the private benefits of control accruing to Elon Musk and early Class B shareholders, relative to the total market capitalization?',
+    'Independent forensic accounting and economic analysis, potentially compelled by regulatory bodies or shareholder litigation, to quantify the value of renounced corporate opportunities, cross-company resource allocation, and non-market compensation.',
+    'A high quantification of private benefits would strengthen the ''snare'' classification and provide a basis for legal challenges or regulatory intervention to protect minority shareholders. A low quantification would weaken the extraction claim.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(private_benefits_of_control_quantification, empirical, 'Quantification of value extracted through control mechanisms.').
+narrative_ontology:omega_variable(private_benefits_quantification, empirical, 'Quantifying the value extracted through control mechanisms.').
 
 omega_variable(
     governance_structure_necessity,
-    'Is the dual-class share structure and concentrated control genuinely necessary for the company''s long-term success and innovation, or does it primarily serve to entrench management and facilitate extraction?',
-    'Comparative analysis with other innovative, high-growth companies that operate with standard one-share-one-vote governance, evaluating their ability to execute long-term strategies and attract capital.',
-    'If not necessary, the ''coordination'' justification for the structure collapses, strengthening the Snare classification. If proven necessary, it would introduce a genuine coordination component, potentially shifting the classification towards a Tangled Rope.',
+    'Is the current dual-class governance structure, with its extreme concentration of voting power, genuinely necessary to achieve the company''s long-term, ambitious goals, or are there alternative structures that could provide similar insulation with greater accountability?',
+    'Comparative analysis of other high-growth, long-term-oriented companies with different governance models (e.g., staggered boards, supermajority votes, sunset clauses on dual-class shares) and their ability to execute ambitious projects.',
+    'If less extractive alternatives exist and are viable, the ''snare'' classification is reinforced, as the current structure would be shown to be a choice for extraction over necessary coordination. If no viable alternatives exist, the coordination function gains more weight.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(governance_structure_necessity, conceptual, 'Necessity of concentrated control for innovation vs. entrenchment.').
+narrative_ontology:omega_variable(governance_structure_necessity, conceptual, 'Assessing the necessity of the current governance structure for its stated purpose.').
 
 omega_variable(
-    musk_time_allocation_conflict,
-    'How are conflicts of interest arising from Elon Musk''s divided time and corporate opportunities across multiple companies (e.g., Terafab benefits for Tesla/SpaceX) resolved, and who benefits from these resolutions?',
-    'Disclosure of inter-company agreements, board minutes, and independent assessments of resource allocation decisions, particularly for shared technologies or assets.',
-    'If resolutions consistently favor Musk''s other ventures or are not transparently fair to the public company, it would provide direct evidence of value leakage and strengthen the extraction argument, increasing the measured extractiveness.',
+    valuation_methodology_bias,
+    'To what extent does the company''s market valuation implicitly price in the private benefits of control, rather than solely reflecting future cash flows or technological optionality available to all shareholders?',
+    'Academic finance research comparing the company''s valuation multiples and control premiums to those of peer companies with different governance structures, adjusting for growth prospects and industry. This would involve disentangling the ''Musk premium'' from the ''governance discount''.',
+    'If a significant portion of the valuation is attributable to private benefits of control, it would confirm the ''governance skeptic'' reading''s core claim of extraction and mispricing for public shareholders. If the valuation is primarily driven by shared value creation, the ''snare'' classification would be challenged.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(musk_time_allocation_conflict, empirical, 'Resolution of conflicts of interest from Musk''s multiple roles.').
+narrative_ontology:omega_variable(valuation_methodology_bias, empirical, 'Determining if valuation reflects private benefits of control.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(valuation_legitimacy__governance_skeptic, 0, 20).
+narrative_ontology:interval(valuation_legitimacy__governance_skeptic, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(valu_tr_t0, valuation_legitimacy__governance_skeptic, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(valu_tr_t5, valuation_legitimacy__governance_skeptic, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(valu_tr_t10, valuation_legitimacy__governance_skeptic, theater_ratio, 10, 0.15).
-narrative_ontology:measurement(valu_tr_t15, valuation_legitimacy__governance_skeptic, theater_ratio, 15, 0.18).
-narrative_ontology:measurement(valu_tr_t20, valuation_legitimacy__governance_skeptic, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(valu_tr_t0, valuation_legitimacy__governance_skeptic, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(valu_tr_t2, valuation_legitimacy__governance_skeptic, theater_ratio, 2, 0.23).
+narrative_ontology:measurement(valu_tr_t4, valuation_legitimacy__governance_skeptic, theater_ratio, 4, 0.22).
+narrative_ontology:measurement(valu_tr_t6, valuation_legitimacy__governance_skeptic, theater_ratio, 6, 0.21).
+narrative_ontology:measurement(valu_tr_t8, valuation_legitimacy__governance_skeptic, theater_ratio, 8, 0.2).
+narrative_ontology:measurement(valu_tr_t10, valuation_legitimacy__governance_skeptic, theater_ratio, 10, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(valu_be_t0, valuation_legitimacy__governance_skeptic, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(valu_be_t5, valuation_legitimacy__governance_skeptic, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(valu_be_t10, valuation_legitimacy__governance_skeptic, base_extractiveness, 10, 0.8).
-narrative_ontology:measurement(valu_be_t15, valuation_legitimacy__governance_skeptic, base_extractiveness, 15, 0.83).
-narrative_ontology:measurement(valu_be_t20, valuation_legitimacy__governance_skeptic, base_extractiveness, 20, 0.85).
+narrative_ontology:measurement(valu_be_t0, valuation_legitimacy__governance_skeptic, base_extractiveness, 0, 0.75).
+narrative_ontology:measurement(valu_be_t2, valuation_legitimacy__governance_skeptic, base_extractiveness, 2, 0.78).
+narrative_ontology:measurement(valu_be_t4, valuation_legitimacy__governance_skeptic, base_extractiveness, 4, 0.81).
+narrative_ontology:measurement(valu_be_t6, valuation_legitimacy__governance_skeptic, base_extractiveness, 6, 0.83).
+narrative_ontology:measurement(valu_be_t8, valuation_legitimacy__governance_skeptic, base_extractiveness, 8, 0.84).
+narrative_ontology:measurement(valu_be_t10, valuation_legitimacy__governance_skeptic, base_extractiveness, 10, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(valu_su_t0, valuation_legitimacy__governance_skeptic, suppression_requirement, 0, 0.75).
-narrative_ontology:measurement(valu_su_t5, valuation_legitimacy__governance_skeptic, suppression_requirement, 5, 0.8).
-narrative_ontology:measurement(valu_su_t10, valuation_legitimacy__governance_skeptic, suppression_requirement, 10, 0.85).
-narrative_ontology:measurement(valu_su_t15, valuation_legitimacy__governance_skeptic, suppression_requirement, 15, 0.88).
-narrative_ontology:measurement(valu_su_t20, valuation_legitimacy__governance_skeptic, suppression_requirement, 20, 0.9).
+narrative_ontology:measurement(valu_su_t0, valuation_legitimacy__governance_skeptic, suppression_requirement, 0, 0.8).
+narrative_ontology:measurement(valu_su_t2, valuation_legitimacy__governance_skeptic, suppression_requirement, 2, 0.83).
+narrative_ontology:measurement(valu_su_t4, valuation_legitimacy__governance_skeptic, suppression_requirement, 4, 0.86).
+narrative_ontology:measurement(valu_su_t6, valuation_legitimacy__governance_skeptic, suppression_requirement, 6, 0.88).
+narrative_ontology:measurement(valu_su_t8, valuation_legitimacy__governance_skeptic, suppression_requirement, 8, 0.89).
+narrative_ontology:measurement(valu_su_t10, valuation_legitimacy__governance_skeptic, suppression_requirement, 10, 0.9).
 
 
 /* ==========================================================================
@@ -253,12 +294,13 @@ narrative_ontology:measurement(valu_su_t20, valuation_legitimacy__governance_ske
    ========================================================================== */
 
 narrative_ontology:coordination_type(valuation_legitimacy__governance_skeptic, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(valuation_legitimacy__governance_skeptic, 0.1).
 narrative_ontology:affects_constraint(valuation_legitimacy__governance_skeptic, dcf_fundamentalist).
 narrative_ontology:affects_constraint(valuation_legitimacy__governance_skeptic, real_options_technologist).
 narrative_ontology:affects_constraint(valuation_legitimacy__governance_skeptic, musk_cult_believer).
 
 % DUAL FORMULATION NOTE:
-% This constraint is the 'governance_skeptic' reading of the 'valuation_legitimacy' kernel. It focuses on the structural implications of corporate governance for shareholder value, contrasting with readings based on cash flows, technological options, or leadership charisma.
+% This constraint is one reading of the 'valuation_legitimacy' kernel. Its governance-skeptic perspective directly challenges the assumptions of other valuation methodologies and the 'Musk cult' narrative, influencing how those other constraints are perceived and applied in practice.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

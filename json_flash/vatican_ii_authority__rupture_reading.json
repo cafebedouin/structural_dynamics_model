@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "cd3197b2-8a60-4429-adf8-c2f40d6019c1"
+    "story_uid": "ec23babe-a3c1-486f-aaf9-95b6370b9ddc"
   },
   "base_properties": {
     "extractiveness": 0.85,
-    "suppression": 0.7,
+    "suppression": 0.75,
     "theater_ratio": 0.4,
     "accessibility_collapse": 0.6,
     "resistance": 0.8,
     "claimed_type": "snare",
-    "human_readable": "Vatican II as Rupture with Tradition",
+    "human_readable": "Vatican II as Rupture with Tradition (Rupture Reading)",
     "topic_domain": "theology/ecclesiology/religious_authority",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -21,10 +21,86 @@
       "liberal_theologians"
     ],
     "victims": [
-      "traditional_catholics",
+      "traditional_catholic_identity",
       "doctrinal_stability",
-      "traditional_clergy"
+      "traditionalist_clergy_laity"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "modernist_faction",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefits from the perceived rupture, which allows for reinterpretation of doctrine and practice in line with contemporary thought. They gain influence and legitimacy for their theological positions."
+    },
+    {
+      "name": "liberal_theologians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Find their theological approaches validated and promoted by the perceived break with prior tradition. They gain academic and ecclesiastical standing."
+    },
+    {
+      "name": "traditional_catholic_identity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Suffers from the perceived invalidation of pre-conciliar forms of worship, doctrine, and piety. Their identity is challenged by the claim of rupture, leading to a sense of loss and alienation within the Church."
+    },
+    {
+      "name": "doctrinal_stability",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The coherence and immutability of Catholic doctrine are seen as undermined by the alleged contradictions and errors in the Council's documents, leading to theological confusion and relativism."
+    },
+    {
+      "name": "traditionalist_clergy_laity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the direct costs of adhering to traditional practices and beliefs, often facing marginalization, censure, or exclusion from mainstream Church life. Their options are to conform, resist, or leave the visible Church."
+    },
+    {
+      "name": "roman_magisterium",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The official teaching authority of the Catholic Church, which promulgates and interprets the Council's documents. From the rupture reading's perspective, the Magisterium is either complicit in the rupture or unable to effectively suppress it, thereby enforcing the new, flawed paradigm."
+    },
+    {
+      "name": "society_of_st_pius_x",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "A traditionalist Catholic priestly society that explicitly rejects the legitimacy of Vatican II's reforms and maintains pre-conciliar liturgical and doctrinal practices. They serve as a primary institutional voice for the rupture reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The constraint, from this reading's perspective, fails to coordinate the faithful around a consistent, unchanging deposit of faith, instead coordinating a departure from it.",
+    "transfer_function": "Transfers doctrinal authority and legitimacy from prior tradition to the post-conciliar Magisterium and its favored theological interpretations, at the cost of traditional Catholic identity and doctrinal clarity.",
+    "absent_voices": "The voices of pre-conciliar saints, theologians, and popes, whose teachings are seen as contradicted by Vatican II, are effectively silenced or reinterpreted to fit the new paradigm. Their absence is structural, as their authority is implicitly or explicitly superseded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rupture reading of Vatican II vanished, the entire post-conciliar Catholic Church would be forced to re-evaluate its legitimacy and doctrinal foundations. Traditionalist groups would either reintegrate or find their raison d'être dissolved, and the modernist project would lose its foundational justification, leading to a profound reorganization of Catholic theology and practice.",
+    "founding_problem": "The rupture reading asserts that Vatican II was not built to solve a problem but rather created one: a departure from the perennial teaching and practice of the Church, leading to a crisis of faith and identity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Traditionalist theologians and historians, as well as many disillusioned faithful, attest that the crisis of faith and identity is ongoing and directly attributable to the Council. This is corroborated by declining Mass attendance, vocations, and belief in core doctrines in many parts of the world, which are seen as symptoms of the rupture."
   },
   "interval": {
     "start": 1962,
@@ -44,12 +120,12 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1990,
-      "value": 0.82
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2005,
-      "value": 0.85
+      "value": 0.83
     },
     {
       "metric": "base_extractiveness",
@@ -59,12 +135,12 @@
     {
       "metric": "suppression_requirement",
       "time_point": 1962,
-      "value": 0.4
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1975,
-      "value": 0.6
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
@@ -74,12 +150,12 @@
     {
       "metric": "suppression_requirement",
       "time_point": 2005,
-      "value": 0.7
+      "value": 0.73
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2024,
-      "value": 0.7
+      "value": 0.75
     },
     {
       "metric": "theater_ratio",
@@ -99,7 +175,7 @@
     {
       "metric": "theater_ratio",
       "time_point": 2005,
-      "value": 0.4
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
@@ -108,40 +184,49 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story instantiates the 'rupture' reading of Vatican II, where the Council's documents are seen as containing doctrinal errors or irreconcilable contradictions with prior Catholic teaching. This reading asserts that Vatican II represents a substantive break with tradition, leading to a crisis in the post-conciliar Church. The SSPX position is a key instantiation of this reading. The constraint is highly extractive, as it demands a fundamental reorientation of traditional Catholic identity and practice, enforced by institutional pressure and the marginalization of dissenters.",
-    "logic_rationale": "Extractiveness is high (0.85) because this reading implies a profound loss of doctrinal certainty and traditional identity for those who adhere to pre-conciliar Catholicism. Suppression (0.7) is significant, as traditionalists are often marginalized or disciplined for rejecting the Council's perceived innovations. Theater ratio (0.4) reflects that while some efforts are made to present the Council as continuous, the actual impact and interpretation, from this perspective, are often performative attempts to mask a deeper break. Resistance is high (0.8) due to ongoing, organized opposition from traditionalist groups.",
-    "perspectival_gap": "From the perspective of the 'modernist faction' (beneficiaries), Vatican II is a legitimate and necessary development, and the 'rupture' is a positive evolution. From the 'traditional Catholics' (victims), it is a catastrophic betrayal. The engine will compute these divergent classifications based on their structural positions.",
-    "directionality_logic": "The 'modernist faction' and 'liberal theologians' are beneficiaries (low d) as they gain influence and justification for their views. 'Traditional Catholics' and 'doctrinal stability' are victims (high d) as they bear the costs of doctrinal confusion and alienation. 'Traditional clergy' are payers (high d) facing career and conscience costs. SSPX adherents, while promoting this reading, also bear costs of separation, but their active role in maintaining an alternative structure gives them an 'agenda_setter' role within their own sphere.",
-    "mandatrophy_analysis": "This constraint is a snare because its coordination story (updating the Church for the modern world) is, from this reading's perspective, a cover for a profound extraction of traditional identity and doctrinal stability. The persistence of the constraint relies on suppressing traditionalist dissent and enforcing the new theological paradigm. The 'founding problem' of Church relevance is contested, suggesting the constraint's original mandate has been superseded by an extractive function.",
-    "kernel_context": "This constraint is the 'rupture_reading' of the 'vatican_ii_authority' kernel. Sibling readings include the 'continuity_reading' (Vatican II as organic development) and the 'composite_overdetermination_reading' (Vatican II as an unresolvable composite of incompatible shifts). This reading asserts a fundamental break, directly contradicting the continuity claim."
+    "narrative_context": "This constraint represents the 'rupture reading' of the Second Vatican Council, which asserts that the Council's documents contain doctrinal errors or irreconcilable contradictions with prior Catholic teaching, leading to a substantive break with tradition. From this perspective, the post-conciliar Church is in a state of crisis, and traditional Catholic identity and doctrinal stability are victims of this rupture. The SSPX (Society of St. Pius X) position is a prominent instantiation of this reading. The constraint is claimed as a snare because, from this perspective, the Council's authority is used to extract adherence to a flawed new paradigm, suppressing traditional alternatives.",
+    "key_agents": [
+      "modernist_faction: Primary beneficiary (institutional/mobile) — gains influence and legitimacy.",
+      "liberal_theologians: Secondary beneficiary (organized/mobile) — find their views validated.",
+      "traditional_catholic_identity: Primary victim (powerless/identity_locked) — challenged and undermined.",
+      "doctrinal_stability: Secondary victim (powerless/trapped) — coherence of doctrine is eroded.",
+      "traditionalist_clergy_laity: Payer (moderate/constrained) — face marginalization for adherence to tradition.",
+      "roman_magisterium: Agenda setter (institutional/constrained) — enforces the post-conciliar paradigm.",
+      "society_of_st_pius_x: Observer (organized/identity_locked) — institutional voice for the rupture reading."
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because the rupture reading views the post-conciliar Church as demanding adherence to a new, flawed doctrine, effectively extracting traditional identity and belief. Suppression is also high (0.75) due to the perceived marginalization and suppression of traditionalist voices and practices within the Church. Theater ratio is moderate (0.4) as efforts to present the Council as continuous with tradition are seen as performative, masking a deeper break. The metrics reflect the severity of the perceived crisis from this reading's perspective.",
+    "perspectival_gap": "The Roman Magisterium, from its own perspective, operates a 'continuity reading' (a different constraint) where Vatican II is an organic development. However, from the 'rupture reading' perspective, the Magisterium's actions (e.g., suppressing traditional rites or censuring traditionalist theologians) are seen as actively enforcing the rupture, making it an agenda-setter for a snare. This divergence is central to the conflict.",
+    "directionality_logic": "The 'modernist faction' and 'liberal theologians' are beneficiaries as their theological positions are validated and promoted by the perceived rupture. 'Traditional Catholic identity' and 'doctrinal stability' are victims, as their foundational principles are undermined. 'Traditionalist clergy and laity' are payers, bearing the social and ecclesiastical costs of resisting the new paradigm. The 'Roman Magisterium' acts as the agenda-setter, enforcing the post-conciliar order that, from this reading, constitutes the rupture.",
+    "mandatrophy_analysis": "From the rupture reading, the mandate of Vatican II (if it had one beyond rupture) has been entirely subverted. The constraint is not a degraded coordination mechanism but an active snare, extracting adherence to a new, flawed paradigm. The classification prevents mislabeling this as a mere 'piton' or 'tangled rope' by emphasizing the active extraction and suppression of traditional alternatives, rather than just inertial decay.",
+    "kernel_context": "This constraint is the 'rupture_reading' of the 'vatican_ii_authority' kernel. It posits that Vatican II represents a substantive break with Catholic tradition, containing doctrinal errors. This contrasts with the 'continuity_reading' (which sees organic development) and the 'composite_overdetermination_reading' (which views the Council as an irreconcilable composite of shifts)."
   },
   "omegas": [
     {
       "id": "doctrinal_contradiction_objectivity",
-      "question": "Are the alleged doctrinal errors and contradictions in Vatican II documents objectively irreconcilable with prior teaching, or are they matters of theological interpretation?",
-      "resolution_mechanism": "A definitive, universally accepted magisterial pronouncement clarifying the disputed points, or a consensus among theologians across the spectrum that such contradictions are either real or merely apparent.",
-      "impact": "If objectively irreconcilable, the Council's authority is fundamentally undermined, strengthening the snare classification. If reconcilable through interpretation, the extractiveness might be re-evaluated as a 'tangled rope' of contested interpretation rather than outright rupture.",
+      "question": "Are the alleged doctrinal errors or contradictions in Vatican II's documents objectively irreconcilable with prior teaching, or are they matters of theological interpretation?",
+      "resolution_mechanism": "A definitive, universally accepted theological analysis that either demonstrates irrefutable contradiction or provides a coherent synthesis accepted by all parties. This is unlikely to be resolved empirically.",
+      "impact": "If objectively irreconcilable, the rupture reading is validated, and the constraint's extractiveness is confirmed as illegitimate. If reconcilable through interpretation, the rupture reading's claims of error are weakened, potentially reclassifying the constraint as a 'tangled rope' or even 'rope' from a different perspective.",
       "confidence": "low",
       "type_class": "conceptual",
       "description": "The objective status of alleged doctrinal contradictions."
     },
     {
-      "id": "identity_fusion_traditionalists",
-      "question": "To what extent is the 'identity_locked' exit option for traditional Catholics a result of genuine theological conviction versus social/communal identity fusion within traditionalist enclaves?",
-      "resolution_mechanism": "Longitudinal studies of individuals who leave traditionalist communities: if their theological convictions persist but their social identity shifts, it suggests a stronger social fusion component.",
-      "impact": "If identity fusion is a dominant mechanism, the effective suppression and extractiveness are higher, as exit costs are amplified by the loss of self-concept and community, making the snare more potent.",
+      "id": "magisterial_intent_vs_effect",
+      "question": "Did the Roman Magisterium intend a rupture with tradition, or was the rupture an unintended consequence of reforms intended to be continuous?",
+      "resolution_mechanism": "Historical analysis of internal Church documents and statements, combined with theological hermeneutics, to discern the primary intent. This is a matter of ongoing scholarly debate.",
+      "impact": "If rupture was intended, the Magisterium's role as an agenda-setter for a snare is strengthened. If unintended, the constraint might be reclassified as a 'tangled rope' where a coordination effort (reform) had unforeseen extractive consequences.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for traditional Catholics."
+      "description": "The intent behind Vatican II's reforms versus their perceived effect."
     },
     {
-      "id": "kernel_framing_underdetermination",
-      "question": "Is the 'rupture' framing the most accurate lens for understanding Vatican II, or does the 'composite_overdetermination' reading better capture the structural ambiguity and multiple, incompatible shifts?",
-      "resolution_mechanism": "A comprehensive historical and theological analysis that accounts for all major doctrinal and pastoral shifts, demonstrating whether they cohere into a single 'rupture' or remain as an unresolvable composite.",
-      "impact": "If the composite reading is adopted, the constraint might be re-framed as a 'tangled rope' of competing interpretations rather than a clear 'snare' of rupture, shifting the focus from intentional error to structural ambiguity and its extractive consequences.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Alternative framings of the Vatican II kernel and their classification impact."
+      "id": "legitimacy_of_resistance",
+      "question": "Is resistance to the post-conciliar Magisterium (as exemplified by traditionalist groups) a legitimate defense of tradition or an act of schism?",
+      "resolution_mechanism": "A future, universally recognized ecclesiastical judgment on the canonical status of traditionalist resistance. This is a matter of ongoing theological and canonical dispute.",
+      "impact": "If legitimate, the 'payer' status of traditionalists is validated, and the constraint's suppression is seen as unjust. If schismatic, their 'payer' status is self-imposed, and the constraint's suppression is seen as legitimate enforcement of unity.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The theological and canonical legitimacy of traditionalist resistance."
     }
   ],
   "boltzmann": {
@@ -152,19 +237,19 @@
       "vatican_ii_authority__continuity_reading",
       "vatican_ii_authority__composite_overdetermination_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'vatican_ii_authority' kernel. This 'rupture_reading' focuses on the perceived doctrinal breaks and contradictions, leading to a snare classification. The 'continuity_reading' (a rope or scaffold) and 'composite_overdetermination_reading' (a tangled rope) offer alternative interpretations with different structural implications."
+    "dual_formulation_note": "This constraint is one of three readings of the 'vatican_ii_authority' kernel. This 'rupture_reading' posits a substantive break with tradition, contrasting with the 'continuity_reading' and the 'composite_overdetermination_reading'."
   },
   "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "vatican_ii_authority__continuity_reading",
+        "sibling_id": "continuity_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "vatican_ii_authority__composite_overdetermination_reading",
+        "sibling_id": "composite_overdetermination_reading",
         "relation": "coexists_with"
       }
     ],
@@ -176,7 +261,7 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "vatican_ii_documents_contain_error",
+        "atom": "vatican_ii_documents_contain_errors",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
@@ -184,21 +269,22 @@
     ],
     "reference_frame": "pre_conciliar_doctrinal_unity",
     "drift_state": {
-      "moment": "post_conciliar_era",
+      "moment": "contemporary_post_conciliar_era",
       "direction": "axiom_overriding",
       "magnitude": "severe",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

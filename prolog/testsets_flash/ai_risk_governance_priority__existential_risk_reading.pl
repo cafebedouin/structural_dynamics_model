@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,25 +69,29 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ai_risk_governance_priority__existential_risk_reading
- *   human_readable: AI Risk Governance: Existential Risk Prioritization
- *   domain: AI Governance/Technology Ethics/Risk Assessment
+ *   human_readable: AI Risk Governance: Existential Risk Priority
+ *   domain: ai_governance/technology_ethics/risk_assessment
  *
  * SUMMARY:
- *   This constraint asserts that AI risk governance must prioritize
- *   preventing superintelligence scenarios that could annihilate or
- *   permanently curtail humanity's potential. It is a specific reading of the
- *   broader 'AI risk governance priority' kernel, emphasizing long-term,
- *   high-impact, low-probability events over immediate, demonstrable harms.
- *   This prioritization shapes research agendas, funding flows, and policy
- *   discussions, often at the expense of other risk categories.
+ *   This constraint represents the 'existential risk' reading of AI
+ *   governance, where preventing superintelligence scenarios that could
+ *   annihilate or permanently curtail humanity's potential is the paramount
+ *   priority. It is a reading of the 'ai_risk_governance_priority' kernel.
+ *   This prioritization directs significant resources and policy attention
+ *   towards highly speculative, long-term risks, often at the expense of
+ *   addressing immediate, demonstrable harms. The constraint is claimed as a
+ *   Tangled Rope by its proponents, suggesting a necessary coordination
+ *   function for humanity's survival, but its operation exhibits high
+ *   extraction and suppression, particularly from those advocating for
+ *   near-term harms.
  *
  * KEY AGENTS:
- *   - x_risk_research_institutions: Primary beneficiary (institutional/arbitrage) — receive funding and legitimacy.
- *   - ai_labs_claiming_safety_leadership: Secondary beneficiary (institutional/constrained) — gain public trust and regulatory leeway.
- *   - near_term_harms_advocates: Primary victim (organized/constrained) — see their concerns deprioritized and resources diverted.
- *   - humanity_s_future_potential: Diffuse victim (universal/trapped) — the ultimate target of protection, but also potentially curtailed by misallocation of present resources.
- *   - policy_makers: Agenda setter (institutional/mobile) — allocate resources and set regulatory frameworks based on perceived priorities.
- *   - general_public: Payer/Beneficiary (moderate/constrained) — bears the costs of misallocated resources but benefits from genuine risk mitigation.
+ *   - x_risk_research_institutions: Primary agenda-setter (institutional/constrained)
+ *   - ai_labs_claiming_safety_leadership: Primary beneficiary (powerful/mobile)
+ *   - future_humanity: Primary victim (powerless/trapped)
+ *   - near_term_harms_advocates: Payer (organized/constrained)
+ *   - global_south_populations: Payer (powerless/trapped)
+ *   - policy_makers: Agenda-setter (institutional/constrained)
  */
 
 /* ==========================================================================
@@ -91,59 +99,104 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ai_risk_governance_priority__existential_risk_reading, 0.65).
-domain_priors:suppression_score(ai_risk_governance_priority__existential_risk_reading, 0.4).
-domain_priors:theater_ratio(ai_risk_governance_priority__existential_risk_reading, 0.55).
+domain_priors:base_extractiveness(ai_risk_governance_priority__existential_risk_reading, 0.68).
+domain_priors:suppression_score(ai_risk_governance_priority__existential_risk_reading, 0.75).
+domain_priors:theater_ratio(ai_risk_governance_priority__existential_risk_reading, 0.45).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, extractiveness, 0.65).
-narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 0.4).
-narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, theater_ratio, 0.55).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, theater_ratio, 0.45).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, resistance, 0.3).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__existential_risk_reading, resistance, 0.55).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_risk_governance_priority__existential_risk_reading, tangled_rope).
-narrative_ontology:human_readable(ai_risk_governance_priority__existential_risk_reading, "AI Risk Governance: Existential Risk Prioritization").
-narrative_ontology:topic_domain(ai_risk_governance_priority__existential_risk_reading, "AI Governance/Technology Ethics/Risk Assessment").
+narrative_ontology:human_readable(ai_risk_governance_priority__existential_risk_reading, "AI Risk Governance: Existential Risk Priority").
+narrative_ontology:topic_domain(ai_risk_governance_priority__existential_risk_reading, "ai_governance/technology_ethics/risk_assessment").
 
 domain_priors:requires_active_enforcement(ai_risk_governance_priority__existential_risk_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ai_risk_governance_priority__existential_risk_reading, 'ce691576-4e46-42f4-b11f-996547836d11').
-narrative_ontology:cs_kernel_codification('ce691576-4e46-42f4-b11f-996547836d11', distributed).
-narrative_ontology:cs_authority_grounding('ce691576-4e46-42f4-b11f-996547836d11', expertise).
-narrative_ontology:cs_interpretation_layer_present('ce691576-4e46-42f4-b11f-996547836d11').
-narrative_ontology:cs_reading_relation('ce691576-4e46-42f4-b11f-996547836d11', ai_risk_governance_priority__near_term_harms_reading, influences).
-narrative_ontology:cs_reading_relation('ce691576-4e46-42f4-b11f-996547836d11', ai_risk_governance_priority__bridge_reading, influences).
-narrative_ontology:cs_axiom('ce691576-4e46-42f4-b11f-996547836d11', foundational, existential_risk_is_paramount).
+narrative_ontology:cs_story_uid(ai_risk_governance_priority__existential_risk_reading, 'd914ca17-fc00-4d29-a54f-4936a4313d3e').
+narrative_ontology:cs_kernel_codification('d914ca17-fc00-4d29-a54f-4936a4313d3e', distributed).
+narrative_ontology:cs_authority_grounding('d914ca17-fc00-4d29-a54f-4936a4313d3e', expertise).
+narrative_ontology:cs_interpretation_layer_present('d914ca17-fc00-4d29-a54f-4936a4313d3e').
+narrative_ontology:cs_reading_relation('d914ca17-fc00-4d29-a54f-4936a4313d3e', ai_risk_governance_priority__near_term_harms_reading, influences).
+narrative_ontology:cs_reading_relation('d914ca17-fc00-4d29-a54f-4936a4313d3e', ai_risk_governance_priority__bridge_reading, coexists_with).
+narrative_ontology:cs_axiom('d914ca17-fc00-4d29-a54f-4936a4313d3e', foundational, existential_risk_is_paramount).
 narrative_ontology:cs_axiom_status(existential_risk_is_paramount, holdable).
-narrative_ontology:cs_axiom_grounding('ce691576-4e46-42f4-b11f-996547836d11', existential_risk_is_paramount, deontological).
-narrative_ontology:cs_axiom('ce691576-4e46-42f4-b11f-996547836d11', secondary, superintelligence_is_imminent_and_dangerous).
-narrative_ontology:cs_axiom_status(superintelligence_is_imminent_and_dangerous, holdable).
-narrative_ontology:cs_axiom_grounding('ce691576-4e46-42f4-b11f-996547836d11', superintelligence_is_imminent_and_dangerous, empirically_contingent).
-narrative_ontology:cs_reference_frame('ce691576-4e46-42f4-b11f-996547836d11', long_term_survival_framework).
-narrative_ontology:cs_drift_state('ce691576-4e46-42f4-b11f-996547836d11', contemporary_ai_development_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('ce691576-4e46-42f4-b11f-996547836d11', '').
+narrative_ontology:cs_axiom_grounding('d914ca17-fc00-4d29-a54f-4936a4313d3e', existential_risk_is_paramount, deontological).
+narrative_ontology:cs_axiom('d914ca17-fc00-4d29-a54f-4936a4313d3e', foundational, superintelligence_is_imminent_and_uncontrollable).
+narrative_ontology:cs_axiom_status(superintelligence_is_imminent_and_uncontrollable, holdable).
+narrative_ontology:cs_axiom_grounding('d914ca17-fc00-4d29-a54f-4936a4313d3e', superintelligence_is_imminent_and_uncontrollable, empirically_contingent).
+narrative_ontology:cs_reference_frame('d914ca17-fc00-4d29-a54f-4936a4313d3e', humanity_at_risk_from_agi).
+narrative_ontology:cs_drift_state('d914ca17-fc00-4d29-a54f-4936a4313d3e', contemporary_ai_acceleration_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('d914ca17-fc00-4d29-a54f-4936a4313d3e', '').
 narrative_ontology:cs_kernel_id(ai_risk_governance_priority__existential_risk_reading, ai_risk_governance_priority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__existential_risk_reading, x_risk_research_institutions).
 narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__existential_risk_reading, ai_labs_claiming_safety_leadership).
+narrative_ontology:constraint_victim(ai_risk_governance_priority__existential_risk_reading, future_humanity).
 narrative_ontology:constraint_victim(ai_risk_governance_priority__existential_risk_reading, near_term_harms_advocates).
-narrative_ontology:constraint_victim(ai_risk_governance_priority__existential_risk_reading, humanity_s_future_potential).
+narrative_ontology:constraint_victim(ai_risk_governance_priority__existential_risk_reading, global_south_populations).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These institutions define the scope of 'existential risk' and advocate for policy priorities, directing funding and research towards long-term alignment and control problems. They benefit from the prioritization of these risks, securing funding and influence.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__existential_risk_reading, x_risk_research_institutions, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Major AI development labs that publicly align with existential risk narratives, often using it to justify slower deployment or internal safety research, which can also serve as a competitive advantage or regulatory moat. They benefit from reduced scrutiny on present-day harms and increased legitimacy for their long-term research agendas.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__existential_risk_reading, ai_labs_claiming_safety_leadership, beneficiary,
+    powerful, biographical, mobile, global).
+
+% The ultimate 'victim' of existential risks, whose potential is either annihilated or permanently curtailed. They bear the hypothetical costs of inaction on superintelligence, but also the opportunity costs of resources diverted from present-day problems.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__existential_risk_reading, future_humanity, payer,
+    powerless, civilizational, trapped, universal).
+
+% Advocates for addressing immediate harms like bias, misinformation, and labor displacement. They bear the cost of diverted attention and resources, finding their concerns deprioritized or framed as secondary to speculative future risks.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__existential_risk_reading, near_term_harms_advocates, payer,
+    organized, immediate, constrained, global).
+
+% Populations disproportionately affected by present-day AI harms (e.g., surveillance, algorithmic bias in resource allocation, labor exploitation). They bear the direct costs of unmitigated harms while resources are directed towards distant, speculative risks.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__existential_risk_reading, global_south_populations, payer,
+    powerless, immediate, trapped, global).
+
+% Government bodies and international organizations tasked with developing AI policy. They are influenced by the dominant narratives and funding streams, often balancing competing priorities but leaning towards those with strong institutional backing.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__existential_risk_reading, policy_makers, agenda_setter,
+    institutional, generational, constrained, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates global attention and resources towards a specific class of highly speculative, high-impact risks associated with advanced AI, aiming to prevent catastrophic outcomes for humanity.
+% TRANSFER_FUNCTION: Transfers significant research funding, policy attention, and regulatory focus from immediate, demonstrable AI harms to long-term, speculative existential risks, primarily benefiting institutions and labs focused on these long-term scenarios.
+% ABSENT_VOICES: Future generations, who are the primary beneficiaries/victims of this constraint, are inherently absent. Additionally, many voices from marginalized communities experiencing present-day AI harms are often excluded or marginalized in high-level AI governance discussions, which tend to be dominated by technical experts and industry representatives.
+% DISAPPEARANCE_RATIONALE: If the prioritization of existential risk vanished, the AI governance landscape would immediately reorient. Resources would likely flow more towards mitigating present-day harms, and the framing of AI safety would shift from 'alignment' to 'fairness' and 'accountability'. Research institutions and labs currently benefiting from this prioritization would need to adapt or lose influence.
+% FOUNDING_PROBLEM: The potential for advanced artificial intelligence to develop capabilities beyond human control, leading to unforeseen and catastrophic outcomes for humanity, including extinction or permanent disempowerment.
+% FOUNDING_PROBLEM_CORROBORATION: The problem is attested as live by a significant portion of the AI research community, prominent public intellectuals, and some government bodies, who cite theoretical arguments and accelerating AI capabilities. Critics (outside the benefiting parties) argue the problem is speculative and distracts from more immediate, empirically verifiable harms, thus contesting its 'live' status as a primary concern.
+narrative_ontology:disappearance_verdict(ai_risk_governance_priority__existential_risk_reading, world_rearranges).
+narrative_ontology:founding_problem_status(ai_risk_governance_priority__existential_risk_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ai_risk_governance_priority__existential_risk_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(ai_risk_governance_priority__existential_risk_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(ai_risk_governance_priority__existential_risk_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(ai_risk_governance_priority__existential_risk_reading, 0.68, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,16 +216,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.65) is high because resources and attention are significantly diverted towards highly speculative, long-term risks, potentially at the expense of addressing demonstrable present harms. Suppression (0.4) is moderate; while alternative views are not strictly forbidden, they are often marginalized in dominant discourse and funding. Theater ratio (0.55) is high because a significant portion of 'safety' work under this framing is performative or directed at highly theoretical problems, rather than practical, verifiable interventions for current systems. Accessibility collapse (0.7) is high because once this prioritization is accepted, alternative risk frameworks become difficult to implement or fund. Resistance (0.3) is moderate, as there are active, organized groups advocating for different priorities.
+ *   The high extractiveness (0.68) reflects the diversion of resources and attention from present-day problems to speculative future ones. Suppression (0.75) is high due to the framing of existential risk as an 'all-of-humanity' problem, which can suppress dissent or alternative priorities by framing them as secondary or even irresponsible. The theater ratio (0.45) indicates that while some genuine safety work occurs, a significant portion of 'safety leadership' serves to legitimize the current power structures and deflect criticism regarding immediate harms. Accessibility collapse (0.6) is moderate because alternative framings (like near-term harms) are not entirely eliminated but are significantly marginalized. Resistance (0.55) is present from near-term harms advocates but is often outmatched by the institutional power of x-risk proponents.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of x-risk research institutions, this constraint is a necessary, even existential, coordination mechanism. From the perspective of near-term harms advocates, it is an extractive mechanism that diverts resources and attention from urgent, demonstrable problems. Policy makers navigate these competing claims, often influenced by the most vocal or well-funded narratives.
+ *   From the perspective of x-risk research institutions and AI labs, this constraint is a vital coordination mechanism for humanity's survival, justifying the allocation of resources. From the perspective of near-term harms advocates and global south populations, it operates as a snare, extracting resources and attention from their immediate suffering under the guise of a distant, speculative threat.
  *
  * DIRECTIONALITY LOGIC:
- *   X-risk research institutions and AI labs claiming safety leadership are beneficiaries, as this prioritization directs funding and legitimacy towards their work. Near-term harms advocates are victims, as their concerns are deprioritized. Humanity's future potential is a diffuse victim, as the prioritization might misallocate resources in the present, potentially curtailing future options. Policy makers are agenda setters, shaping the discourse and resource allocation.
+ *   X-risk research institutions and AI labs are beneficiaries (low d) as they gain funding, influence, and a favorable regulatory environment. Future humanity is a theoretical beneficiary but also a payer (high d) due to opportunity costs. Near-term harms advocates and global south populations are clear payers (high d) as their concerns are deprioritized. Policy makers are agenda-setters, balancing influence but often swayed by powerful narratives and institutional lobbying.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is a Tangled Rope because it genuinely attempts to coordinate efforts against a perceived existential threat (a coordination function), but it also exhibits asymmetric extraction by diverting resources and attention towards specific, often speculative, research agendas that benefit certain institutions, while potentially neglecting other, more immediate harms (asymmetric extraction). The 'mandate' to prevent existential risk is live, but its 'function' in practice may be captured by specific interests, leading to a form of mandatrophy where the original broad goal is narrowed to serve specific beneficiaries. The high theater ratio suggests that some 'safety' work is more about maintaining the narrative of prioritization than effective, broad-spectrum risk mitigation.
+ *   This constraint is a Tangled Rope because it claims a genuine coordination function (preventing human extinction) but exhibits significant asymmetric extraction (diverting resources from present harms) and requires active enforcement (suppressing alternative risk framings). It prevents mislabeling by highlighting that the coordination story is intertwined with a clear extractive dynamic, rather than being pure coordination or pure extraction.
  */
 
 /* ==========================================================================
@@ -180,75 +233,75 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine prioritization of existential risk, or a rhetorical framing to secure resources for specific research agendas?',
-    'Analysis of resource allocation patterns: if funding disproportionately flows to speculative, long-term alignment research over demonstrable near-term safety, it supports the latter.',
-    'If a rhetorical framing, the constraint''s effective extractiveness is higher, as it diverts resources from more immediate, verifiable harms.',
+    existential_risk_speculation_vs_empirical_harm,
+    'Is the prioritization of speculative existential risks over empirically demonstrable near-term harms justified by the probability and severity of the former, or does it reflect a bias towards abstract, technical problems?',
+    'Development of robust, empirically grounded methodologies for assessing the probability and impact of superintelligence scenarios, and comparative risk analysis against the cumulative impact of present-day harms.',
+    'If speculative risks are found to be significantly overblown or less probable than claimed, the extractiveness of this constraint would be reclassified as higher, and its coordination function diminished, potentially shifting its type towards a Snare. If robustly justified, its coordination function would be strengthened.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''existential_risk_reading'' of the ''ai_risk_governance_priority'' kernel. Sibling readings (''near_term_harms_reading'', ''bridge_reading'') would shift the victim set and resource allocation. The disagreement is located in the definition of ''priority'' and the scope of ''risk''.').
+narrative_ontology:omega_variable(existential_risk_speculation_vs_empirical_harm, empirical, 'Ambiguity regarding the empirical grounding of existential risk claims versus present harms.').
 
 omega_variable(
-    speculative_vs_demonstrated_harms,
-    'To what extent are the ''superintelligence scenarios'' a demonstrable threat versus a speculative one, and how does this affect the legitimacy of prioritization?',
-    'Empirical progress in AI capabilities and independent expert consensus on the feasibility and timeline of AGI and superintelligence.',
-    'If the threat remains highly speculative, the prioritization appears more extractive, diverting resources from demonstrable harms. If the threat becomes more concrete, the prioritization gains legitimacy.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(speculative_vs_demonstrated_harms, empirical, 'The balance between speculative future risks and demonstrated present harms is a core tension in this reading.').
-
-omega_variable(
-    mandatrophy_of_focus,
-    'Does the focus on existential risk, while potentially valid, lead to mandatrophy regarding present, demonstrable AI harms?',
-    'Tracking the resolution of near-term harms (e.g., algorithmic bias, labor displacement) in parallel with existential risk mitigation efforts. If near-term harms worsen or are neglected, it indicates mandatrophy.',
-    'If mandatrophy is present, the constraint functions as a Snare for those affected by near-term harms, as resources and attention are diverted.',
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression of alternative risk framings structural (institutional power, funding flows) or internalized (cognitive patterns that lead to self-censorship or dismissal of ''lesser'' risks)?',
+    'Analysis of discourse patterns, funding allocation mechanisms, and the career trajectories of researchers who challenge the existential risk prioritization. If suppression persists even when structural barriers are nominally removed, it suggests internalized mechanisms.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests, as it operates through self-reinforcing cognitive biases within the field. This would amplify the extractive nature of the constraint.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(mandatrophy_of_focus, empirical, 'Analysis of whether the existential risk focus inadvertently neglects or exacerbates present AI harms.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for alternative risk framings.').
+
+omega_variable(
+    framing_under_determination_ai_risk,
+    'Is the ''existential_risk_reading'' the only defensible framing for AI risk governance, or do alternative framings (e.g., ''near_term_harms_reading'') offer equally coherent, albeit different, structural analyses?',
+    'Comparative analysis of the problem-solution fit, stakeholder inclusion, and resource allocation outcomes across different risk framings. Resolution would involve identifying which framing best accounts for the full spectrum of AI''s societal impacts and stakeholder experiences.',
+    'If alternative framings are found to be equally or more coherent, it would challenge the legitimacy of this reading''s prioritization, potentially reclassifying it as a Snare by exposing its coordination story as cover for extraction. If this reading is uniquely coherent, its Tangled Rope classification would be reinforced.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(framing_under_determination_ai_risk, conceptual, 'The choice of framing for AI risk governance (existential vs. near-term harms) is under-determined by the evidence, leading to different structural classifications.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ai_risk_governance_priority__existential_risk_reading, 0, 15).
+narrative_ontology:interval(ai_risk_governance_priority__existential_risk_reading, 2015, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ai_r_tr_t0, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 0, 0.4).
-narrative_ontology:measurement(ai_r_tr_t5, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 5, 0.45).
-narrative_ontology:measurement(ai_r_tr_t10, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 10, 0.5).
-narrative_ontology:measurement(ai_r_tr_t15, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 15, 0.55).
+narrative_ontology:measurement(ai_r_tr_t2015, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 2015, 0.1).
+narrative_ontology:measurement(ai_r_tr_t2018, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 2018, 0.25).
+narrative_ontology:measurement(ai_r_tr_t2021, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 2021, 0.38).
+narrative_ontology:measurement(ai_r_tr_t2024, ai_risk_governance_priority__existential_risk_reading, theater_ratio, 2024, 0.45).
 
 % Extraction over time
-narrative_ontology:measurement(ai_r_be_t0, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(ai_r_be_t5, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(ai_r_be_t10, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 10, 0.6).
-narrative_ontology:measurement(ai_r_be_t15, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 15, 0.65).
+narrative_ontology:measurement(ai_r_be_t2015, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 2015, 0.4).
+narrative_ontology:measurement(ai_r_be_t2018, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 2018, 0.55).
+narrative_ontology:measurement(ai_r_be_t2021, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 2021, 0.62).
+narrative_ontology:measurement(ai_r_be_t2024, ai_risk_governance_priority__existential_risk_reading, base_extractiveness, 2024, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(ai_r_su_t0, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 0, 0.3).
-narrative_ontology:measurement(ai_r_su_t5, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 5, 0.35).
-narrative_ontology:measurement(ai_r_su_t10, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 10, 0.38).
-narrative_ontology:measurement(ai_r_su_t15, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 15, 0.4).
+narrative_ontology:measurement(ai_r_su_t2015, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 2015, 0.3).
+narrative_ontology:measurement(ai_r_su_t2018, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 2018, 0.5).
+narrative_ontology:measurement(ai_r_su_t2021, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 2021, 0.65).
+narrative_ontology:measurement(ai_r_su_t2024, ai_risk_governance_priority__existential_risk_reading, suppression_requirement, 2024, 0.75).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(ai_risk_governance_priority__existential_risk_reading, resource_allocation).
+narrative_ontology:coordination_type(ai_risk_governance_priority__existential_risk_reading, global_infrastructure).
 narrative_ontology:affects_constraint(ai_risk_governance_priority__existential_risk_reading, ai_risk_governance_priority__near_term_harms_reading).
 narrative_ontology:affects_constraint(ai_risk_governance_priority__existential_risk_reading, ai_risk_governance_priority__bridge_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'ai_risk_governance_priority' kernel. This 'existential_risk_reading' prioritizes long-term, catastrophic risks. The 'near_term_harms_reading' prioritizes immediate, demonstrable harms. The 'bridge_reading' attempts to integrate both. Each is a distinct constraint with different beneficiaries, victims, and extractiveness profiles.
+% This constraint is one reading of the 'ai_risk_governance_priority' kernel. It focuses on existential risks, while 'near_term_harms_reading' focuses on immediate impacts, and 'bridge_reading' attempts to integrate both. These are distinct constraints arising from different interpretations of the same underlying problem space.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -42,7 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,19 +69,20 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading
- *   human_readable: Bodily Autonomy Primacy in Vaccine Mandate Legitimacy
+ *   human_readable: Bodily Autonomy Primacy Reading of Vaccine Mandate Legitimacy
  *   domain: public_health_policy/constitutional_law/bioethics
  *
  * SUMMARY:
- *   This constraint represents the reading of vaccine mandate legitimacy
- *   where bodily autonomy is considered an absolute, self-sovereign right,
- *   making any state coercion categorically impermissible, regardless of
- *   public health outcomes. It is framed as a natural law, an unchangeable
- *   principle. This reading places immunocompromised individuals and other
- *   vulnerable populations at high exposure risk into the victim set, as
- *   their protection through collective immunity is foreclosed. Liberty
- *   advocacy movements and individuals opposed to mandates are the primary
- *   beneficiaries of this interpretation.
+ *   This constraint represents a specific reading of vaccine mandate
+ *   legitimacy, where individual bodily autonomy is considered an absolute
+ *   right, rendering state coercion for public health purposes categorically
+ *   impermissible. This reading emerged strongly during the COVID-19
+ *   pandemic, leading to significant societal debate and legal challenges
+ *   against public health measures. The constraint's high extractiveness and
+ *   suppression reflect the severe costs borne by vulnerable populations and
+ *   public health systems when this principle is applied absolutely, and the
+ *   active enforcement (legal and social) required to maintain this
+ *   interpretation against competing public health imperatives.
  *
  */
 
@@ -88,58 +92,106 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 0.85).
-domain_priors:suppression_score(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 0.95).
+domain_priors:suppression_score(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 0.9).
 domain_priors:theater_ratio(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, extractiveness, 0.85).
-narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 0.95).
+narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 0.9).
 narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, accessibility_collapse, 0.9).
-narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, resistance, 0.7).
+narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, accessibility_collapse, 0.2).
+narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, resistance, 0.8).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, mountain).
-narrative_ontology:human_readable(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, "Bodily Autonomy Primacy in Vaccine Mandate Legitimacy").
+narrative_ontology:constraint_claim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, snare).
+narrative_ontology:human_readable(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, "Bodily Autonomy Primacy Reading of Vaccine Mandate Legitimacy").
 narrative_ontology:topic_domain(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, "public_health_policy/constitutional_law/bioethics").
 
-domain_priors:emerges_naturally(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading).
+domain_priors:requires_active_enforcement(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, '4a9e88a4-9493-493a-b63a-026f3bdae193').
-narrative_ontology:cs_kernel_codification('4a9e88a4-9493-493a-b63a-026f3bdae193', formalized).
-narrative_ontology:cs_authority_grounding('4a9e88a4-9493-493a-b63a-026f3bdae193', lineage).
-narrative_ontology:cs_interpretation_layer_present('4a9e88a4-9493-493a-b63a-026f3bdae193').
-narrative_ontology:cs_reading_relation('4a9e88a4-9493-493a-b63a-026f3bdae193', vaccine_mandate_legitimacy__public_health_primacy_reading, forecloses).
-narrative_ontology:cs_reading_relation('4a9e88a4-9493-493a-b63a-026f3bdae193', vaccine_mandate_legitimacy__risk_stratification_reading, forecloses).
-narrative_ontology:cs_axiom('4a9e88a4-9493-493a-b63a-026f3bdae193', foundational, bodily_autonomy_absolute).
+narrative_ontology:cs_story_uid(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, '35dbc3f4-b60e-4803-a2e6-0d3c07e9505a').
+narrative_ontology:cs_kernel_codification('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', fixed_text).
+narrative_ontology:cs_authority_grounding('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', lineage).
+narrative_ontology:cs_interpretation_layer_present('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a').
+narrative_ontology:cs_reading_relation('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', vaccine_mandate_legitimacy__public_health_primacy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', vaccine_mandate_legitimacy__risk_stratification_reading, coexists_with).
+narrative_ontology:cs_axiom('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', foundational, bodily_autonomy_absolute).
 narrative_ontology:cs_axiom_status(bodily_autonomy_absolute, holdable).
-narrative_ontology:cs_axiom_grounding('4a9e88a4-9493-493a-b63a-026f3bdae193', bodily_autonomy_absolute, deontological).
-narrative_ontology:cs_axiom('4a9e88a4-9493-493a-b63a-026f3bdae193', foundational, state_coercion_categorically_impermissible_in_medical_matters).
+narrative_ontology:cs_axiom_grounding('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', bodily_autonomy_absolute, deontological).
+narrative_ontology:cs_axiom('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', foundational, state_coercion_categorically_impermissible_in_medical_matters).
 narrative_ontology:cs_axiom_status(state_coercion_categorically_impermissible_in_medical_matters, holdable).
-narrative_ontology:cs_axiom_grounding('4a9e88a4-9493-493a-b63a-026f3bdae193', state_coercion_categorically_impermissible_in_medical_matters, deontological).
-narrative_ontology:cs_reference_frame('4a9e88a4-9493-493a-b63a-026f3bdae193', unconditional_individual_sovereignty).
-narrative_ontology:cs_drift_state('4a9e88a4-9493-493a-b63a-026f3bdae193', contemporary_pandemic_era, gap(repudiation_pressure, substantial, false)).
-narrative_ontology:cs_created_at('4a9e88a4-9493-493a-b63a-026f3bdae193', '').
+narrative_ontology:cs_axiom_grounding('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', state_coercion_categorically_impermissible_in_medical_matters, deontological).
+narrative_ontology:cs_reference_frame('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', individual_rights_supremacy_framework).
+narrative_ontology:cs_drift_state('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', contemporary_pandemic_era, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('35dbc3f4-b60e-4803-a2e6-0d3c07e9505a', '').
 narrative_ontology:cs_kernel_id(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, vaccine_mandate_legitimacy).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, liberty_advocacy_movements).
 narrative_ontology:constraint_beneficiary(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, individuals_opposed_to_mandates).
 narrative_ontology:constraint_victim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, immunocompromised_individuals).
-narrative_ontology:constraint_victim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, vulnerable_populations_at_high_exposure_risk).
+narrative_ontology:constraint_victim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, vulnerable_populations).
+narrative_ontology:constraint_victim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, public_health_authorities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, healthcare_systems).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These movements gain legitimacy and support by championing absolute bodily autonomy, framing any state health intervention as an overreach. They benefit from the constraint's persistence as it provides a clear ideological battleground.
+narrative_ontology:constraint_stakeholder(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, liberty_advocacy_movements, beneficiary,
+    organized, generational, mobile, national).
+
+% These individuals benefit from the constraint by having their personal choices prioritized over collective health measures, avoiding mandatory vaccination or other interventions. Their benefit is the preservation of their perceived self-sovereignty.
+narrative_ontology:constraint_stakeholder(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, individuals_opposed_to_mandates, beneficiary,
+    moderate, biographical, constrained, local).
+
+% These individuals bear a disproportionate burden of exposure risk when vaccine mandates are deemed illegitimate. Their health and safety are directly compromised by the lack of collective immunity, with no viable exit from the increased risk.
+narrative_ontology:constraint_stakeholder(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, immunocompromised_individuals, payer,
+    powerless, immediate, trapped, local).
+
+% Similar to immunocompromised individuals, other vulnerable groups (e.g., elderly, those with specific comorbidities) face heightened risks of severe illness and death due to reduced herd immunity, bearing the costs of individual autonomy without protection.
+narrative_ontology:constraint_stakeholder(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, vulnerable_populations, payer,
+    powerless, immediate, trapped, local).
+
+% These authorities bear the cost of diminished capacity to implement effective public health interventions. Their mandate to protect collective health is undermined, leading to increased disease burden and strain on healthcare systems. They are constrained by legal challenges and public resistance.
+narrative_ontology:constraint_stakeholder(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, public_health_authorities, payer,
+    institutional, generational, constrained, national).
+
+% Healthcare systems face increased patient loads, resource strain, and burnout among staff when preventable diseases spread due to lack of mandates. They bear the operational and human costs of a less healthy population.
+narrative_ontology:constraint_stakeholder(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, healthcare_systems, payer,
+    institutional, biographical, constrained, regional).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: This reading asserts that the primary coordination function is to protect individual liberty and self-determination against state overreach, ensuring that medical decisions remain solely with the individual.
+% TRANSFER_FUNCTION: This reading transfers the burden of collective health risks (e.g., disease transmission, healthcare system strain) from individuals making autonomous choices to vulnerable populations and public health infrastructure.
+% ABSENT_VOICES: The voices of future generations, who might inherit a society with weakened public health protections, are absent. Also, the collective voice of the 'common good' or 'societal welfare' is systematically de-prioritized in this framework.
+% DISAPPEARANCE_RATIONALE: If this constraint (the absolute primacy of bodily autonomy over public health mandates) vanished, public health authorities would gain significant power to implement mandates, potentially leading to a rapid increase in vaccination rates and a decrease in disease transmission, fundamentally altering the balance between individual rights and collective welfare.
+% FOUNDING_PROBLEM: The founding problem this reading addresses is the historical and potential for state coercion in medical matters, including forced sterilization, unethical experimentation, and mandatory treatments, which infringe upon individual dignity and autonomy.
+% FOUNDING_PROBLEM_CORROBORATION: Civil liberties organizations and historical accounts of medical abuses corroborate the ongoing concern about state overreach. While public health authorities might argue the context has changed, the underlying principle of protecting individual bodily integrity remains a live concern for many, supported by legal scholars focused on individual rights.
+narrative_ontology:disappearance_verdict(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, world_rearranges).
+narrative_ontology:founding_problem_status(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -151,20 +203,6 @@ test(extraction_signature) :-
     domain_priors:base_extractiveness(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, E),
     E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(mountain_threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, ExtMetricName, E),
-    domain_priors:suppression_score(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, S),
-    E =< 0.25,
-    S =< 0.05.
-
-test(nl_profile_validation) :-
-    domain_priors:emerges_naturally(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading),
-    narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, resistance, R),
-    AC >= 0.85,
-    R =< 0.15.
-
 :- end_tests(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading_tests).
 
 /* ==========================================================================
@@ -173,16 +211,14 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.85) is high because the principle, when applied, extracts the right to collective protection from vulnerable groups. Suppression (0.95) is also very high, as this reading actively suppresses any alternative public health interventions that would infringe on individual autonomy, regardless of their efficacy. The theater ratio is low (0.1) because the principle is genuinely held and applied, not merely performed. Accessibility collapse is high (0.9) as it fundamentally collapses the legitimacy of any alternative public health policy that involves coercion. Resistance (0.7) is high from those who advocate for public health measures.
+ *   The high extractiveness (0.85) stems from the direct and indirect costs imposed on vulnerable groups and public health infrastructure due to reduced collective immunity. Suppression (0.9) is high because this reading actively suppresses alternative public health strategies and the voices advocating for them, often through legal challenges and strong social pressure. The low accessibility collapse (0.2) indicates that alternative public health strategies are well-understood and available, but actively resisted. Resistance (0.8) is high due to ongoing efforts by public health authorities and advocates for vulnerable groups to challenge this absolute interpretation.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of liberty advocates, this is a Mountain, an unassailable principle. From the perspective of public health officials and vulnerable populations, it operates as a Snare, extracting collective safety and imposing significant risks. The engine's classification will highlight this divergence.
+ *   From the perspective of liberty advocates, this constraint is a 'rope' or even a 'mountain' of fundamental rights, ensuring individual freedom. From the perspective of immunocompromised individuals and public health authorities, it operates as a 'snare,' trapping them in a high-risk environment with limited recourse. The engine's classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Individuals opposed to mandates and liberty advocacy movements are beneficiaries (d=0.0-0.1) as their core values are upheld and their freedom from state intervention is maximized. Immunocompromised individuals and vulnerable populations are victims (d=0.9-1.0) as they bear the direct costs of increased exposure risk due to the absence of mandates. Public health authorities are targets (d=0.8-0.9) as their ability to implement protective measures is severely constrained.
+ *   Liberty advocacy movements and individuals opposed to mandates are clear beneficiaries, as their core values are upheld. Immunocompromised individuals, vulnerable populations, and public health authorities are victims, bearing the direct and systemic costs of this interpretation. Healthcare systems also bear significant costs. The directionality for beneficiaries is low (subsidized), while for victims it is high (targeted).
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint, framed as a Mountain, asserts an eternal and unchanging principle. Mandatrophy analysis would focus on whether the 'naturalness' of this absolute autonomy is genuinely universal or a historically contingent construct. If it were found to be a constructed principle whose original justification (e.g., protection against specific historical abuses) has atrophied, but it persists due to institutional inertia or concentrated beneficiaries, it would reclassify from a Mountain to a Snare or Tangled Rope. The current framing resists such analysis by asserting natural law status.
  */
 
 /* ==========================================================================
@@ -190,50 +226,59 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    natural_law_vs_constructed_autonomy,
-    'Is the absolute primacy of bodily autonomy a natural law, or a constructed legal/ethical principle that benefits identifiable agents?',
-    'Philosophical and legal analysis of the historical evolution of autonomy concepts, and empirical analysis of the social and political movements that champion absolute autonomy in specific contexts.',
-    'If a natural law, the constraint is a genuine Mountain. If constructed, and benefits accrue to specific groups, it would reclassify as a Tangled Rope or Snare, depending on the degree of extraction and suppression.',
+    absolute_vs_proportional_autonomy,
+    'Is bodily autonomy an absolute right, or is it subject to proportionality tests when collective harm is at stake?',
+    'Judicial rulings establishing a clear legal framework for balancing individual rights against public health imperatives, or a societal consensus shift on the limits of individual liberty in a pandemic context.',
+    'If autonomy is deemed proportional, the extractiveness on vulnerable populations would decrease, and the constraint might reclassify from a snare to a tangled rope or even a rope, depending on the balance struck.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_constructed_autonomy, conceptual, 'Ambiguity between natural law and constructed principle for bodily autonomy.').
+narrative_ontology:omega_variable(absolute_vs_proportional_autonomy, conceptual, 'Ambiguity regarding the scope and limits of bodily autonomy in public health.').
 
 omega_variable(
-    kernel_reading_identification,
-    'This constraint is the ''bodily_autonomy_primacy_reading'' of the ''vaccine_mandate_legitimacy'' kernel. What would change if a sibling reading were adopted?',
-    'Adoption of ''public_health_primacy_reading'' would shift the victim set (unvaccinated become targets, not beneficiaries) and reframe the constraint as a Rope or Tangled Rope. Adoption of ''risk_stratification_reading'' would introduce proportionality tests, making blanket mandates Snares but targeted ones potentially Ropes.',
-    'The classification of the constraint and the identification of beneficiaries/victims would fundamentally change, reflecting a different balance of rights and duties.',
-    confidence_without_resolution(high)
+    causal_link_unvaccinated_to_vulnerable_harm,
+    'What is the precise causal link and magnitude of harm from unvaccinated individuals to immunocompromised and vulnerable populations?',
+    'Epidemiological studies and public health data providing robust, peer-reviewed evidence on transmission rates, severity, and healthcare burden attributable to unvaccinated populations.',
+    'Stronger evidence of direct and severe harm would weaken the ''bodily autonomy primacy'' argument by highlighting the externality, potentially shifting public and legal opinion towards collective responsibility. Weaker evidence would reinforce the current reading.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Impact of alternative readings of the vaccine mandate legitimacy kernel.').
+narrative_ontology:omega_variable(causal_link_unvaccinated_to_vulnerable_harm, empirical, 'Empirical uncertainty about the direct harm caused by unvaccinated individuals to others.').
+
+omega_variable(
+    mandate_effectiveness_vs_social_cohesion,
+    'Does the enforcement of vaccine mandates achieve sufficient public health benefits to outweigh the social costs of coercion and erosion of trust in public institutions?',
+    'Longitudinal studies comparing health outcomes and social cohesion in jurisdictions with and without mandates, alongside qualitative research on public trust and compliance.',
+    'If mandates are shown to be highly effective with minimal social cost, the ''bodily autonomy primacy'' reading would face significant challenge. If social costs are high and benefits marginal, this reading would gain further traction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(mandate_effectiveness_vs_social_cohesion, empirical, 'Trade-off between mandate effectiveness and social cohesion/trust.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 0, 10).
+narrative_ontology:interval(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, 2020, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio over time
-narrative_ontology:measurement(vacc_tr_t0, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(vacc_tr_t5, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, theater_ratio, 5, 0.1).
-narrative_ontology:measurement(vacc_tr_t10, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, theater_ratio, 10, 0.1).
-
 % Extraction over time
-narrative_ontology:measurement(vacc_be_t0, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 0, 0.8).
-narrative_ontology:measurement(vacc_be_t5, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 5, 0.82).
-narrative_ontology:measurement(vacc_be_t10, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 10, 0.85).
+narrative_ontology:measurement(vacc_be_t2020, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 2020, 0.75).
+narrative_ontology:measurement(vacc_be_t2021, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 2021, 0.8).
+narrative_ontology:measurement(vacc_be_t2022, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 2022, 0.83).
+narrative_ontology:measurement(vacc_be_t2023, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 2023, 0.84).
+narrative_ontology:measurement(vacc_be_t2024, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, base_extractiveness, 2024, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(vacc_su_t0, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 0, 0.9).
-narrative_ontology:measurement(vacc_su_t5, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 5, 0.92).
-narrative_ontology:measurement(vacc_su_t10, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 10, 0.95).
+narrative_ontology:measurement(vacc_su_t2020, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 2020, 0.8).
+narrative_ontology:measurement(vacc_su_t2021, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 2021, 0.85).
+narrative_ontology:measurement(vacc_su_t2022, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 2022, 0.88).
+narrative_ontology:measurement(vacc_su_t2023, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 2023, 0.89).
+narrative_ontology:measurement(vacc_su_t2024, vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, suppression_requirement, 2024, 0.9).
 
 
 /* ==========================================================================
@@ -241,11 +286,8 @@ narrative_ontology:measurement(vacc_su_t10, vaccine_mandate_legitimacy__bodily_a
    ========================================================================== */
 
 narrative_ontology:coordination_type(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, identity_coordination).
-narrative_ontology:affects_constraint(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, vaccine_mandate_legitimacy__public_health_primacy_reading).
-narrative_ontology:affects_constraint(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, vaccine_mandate_legitimacy__risk_stratification_reading).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'vaccine_mandate_legitimacy' kernel. This reading asserts the absolute primacy of bodily autonomy, foreclosing state coercion. The other readings (public_health_primacy_reading, risk_stratification_reading) offer alternative frameworks for mandate legitimacy.
+narrative_ontology:affects_constraint(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, public_health_policy__collective_action_problem).
+narrative_ontology:affects_constraint(vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading, healthcare_resource_allocation__ethical_framework).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

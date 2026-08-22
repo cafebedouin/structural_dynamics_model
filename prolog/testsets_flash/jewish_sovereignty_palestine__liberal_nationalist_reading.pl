@@ -39,10 +39,10 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -58,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,28 +69,23 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: jewish_sovereignty_palestine__liberal_nationalist_reading
- *   human_readable: Jewish Collective Self-Determination in Palestine (Liberal Nationalist Reading)
+ *   human_readable: Jewish Collective Self-Determination (Liberal Nationalist Reading)
  *   domain: political_philosophy/nationalism_studies/postcolonial_theory
  *
  * SUMMARY:
- *   This constraint represents the 'liberal nationalist' reading of Jewish
- *   sovereignty in Palestine. It asserts the Jewish people's right to
- *   collective self-determination, legitimately exercised through statehood
- *   in their ancestral homeland, but crucially acknowledges the co-equal
- *   self-determination claims of Palestinians. This reading therefore
- *   necessitates a framework of territorial compromise, such as partition or
- *   a binational state, to accommodate both national aspirations. It is a
- *   contested claim, requiring active enforcement to maintain its boundaries
- *   against both internal (more maximalist Zionist) and external (Palestinian
- *   rejectionist) challenges.
+ *   This constraint represents the liberal nationalist reading of Jewish
+ *   self-determination in Palestine, which asserts the right of the Jewish
+ *   people to statehood in their ancestral homeland while simultaneously
+ *   recognizing the co-equal right of the Palestinian people to
+ *   self-determination, typically advocating for a two-state solution or a
+ *   binational framework. The constraint is framed as a 'tangled rope'
+ *   because it attempts to coordinate two competing national claims but
+ *   inherently involves asymmetric extraction from the Palestinian side due
+ *   to the historical power imbalance and territorial outcomes. The metrics
+ *   reflect a moderate level of extraction and suppression, as this reading
+ *   necessitates active enforcement to maintain a delicate balance and often
+ *   faces resistance from both maximalist Jewish and Palestinian factions.
  *
- * KEY AGENTS:
- *   - jewish_collective_as_nation: Primary beneficiary (institutional/generational) — exercises self-determination
- *   - palestinian_collective_as_nation: Primary victim (institutional/generational) — bears costs of territorial compromise
- *   - israeli_state_institutions: Agenda setter (institutional/generational) — administers and enforces the state's existence
- *   - international_community: Observer (institutional/civilizational) — adjudicates legitimacy and mediates conflict
- *   - religious_zionist_factions: Excluded (organized/generational) — reject territorial compromise, push for maximalist claims
- *   - post_zionist_intellectuals: Observer (analytical/generational) — critique the national framework's impact on civic equality
  */
 
 /* ==========================================================================
@@ -98,50 +94,48 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(jewish_sovereignty_palestine__liberal_nationalist_reading, 0.45).
-domain_priors:suppression_score(jewish_sovereignty_palestine__liberal_nationalist_reading, 0.3).
-domain_priors:theater_ratio(jewish_sovereignty_palestine__liberal_nationalist_reading, 0.1).
+domain_priors:suppression_score(jewish_sovereignty_palestine__liberal_nationalist_reading, 0.6).
+domain_priors:theater_ratio(jewish_sovereignty_palestine__liberal_nationalist_reading, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, extractiveness, 0.45).
-narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 0.3).
-narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, resistance, 0.5).
+narrative_ontology:constraint_metric(jewish_sovereignty_palestine__liberal_nationalist_reading, resistance, 0.7).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(jewish_sovereignty_palestine__liberal_nationalist_reading, tangled_rope).
-narrative_ontology:human_readable(jewish_sovereignty_palestine__liberal_nationalist_reading, "Jewish Collective Self-Determination in Palestine (Liberal Nationalist Reading)").
+narrative_ontology:human_readable(jewish_sovereignty_palestine__liberal_nationalist_reading, "Jewish Collective Self-Determination (Liberal Nationalist Reading)").
 narrative_ontology:topic_domain(jewish_sovereignty_palestine__liberal_nationalist_reading, "political_philosophy/nationalism_studies/postcolonial_theory").
 
 domain_priors:requires_active_enforcement(jewish_sovereignty_palestine__liberal_nationalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(jewish_sovereignty_palestine__liberal_nationalist_reading, '6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1').
-narrative_ontology:cs_kernel_codification('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', formalized).
-narrative_ontology:cs_authority_grounding('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', lineage).
-narrative_ontology:cs_interpretation_layer_present('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1').
-narrative_ontology:cs_reading_relation('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', jewish_sovereignty_palestine__settler_colonial_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', jewish_sovereignty_palestine__religious_zionist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', jewish_sovereignty_palestine__cultural_zionist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', jewish_sovereignty_palestine__post_zionist_reading, coexists_with).
-narrative_ontology:cs_axiom('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', foundational, universal_national_self_determination).
-narrative_ontology:cs_axiom_status(universal_national_self_determination, holdable).
-narrative_ontology:cs_axiom_grounding('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', universal_national_self_determination, deontological).
-narrative_ontology:cs_axiom('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', foundational, co_equal_rights_of_indigenous_populations).
-narrative_ontology:cs_axiom_status(co_equal_rights_of_indigenous_populations, holdable).
-narrative_ontology:cs_axiom_grounding('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', co_equal_rights_of_indigenous_populations, deontological).
-narrative_ontology:cs_reference_frame('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', two_state_solution_framework).
-narrative_ontology:cs_drift_state('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', contemporary_political_reality, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('6cc08bbc-1c7a-493e-888e-cb6b3b7ceae1', '').
+narrative_ontology:cs_story_uid(jewish_sovereignty_palestine__liberal_nationalist_reading, 'da660c32-8e2c-4a1b-8d85-bcf25f7c5110').
+narrative_ontology:cs_kernel_codification('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', formalized).
+narrative_ontology:cs_authority_grounding('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', lineage).
+narrative_ontology:cs_interpretation_layer_present('da660c32-8e2c-4a1b-8d85-bcf25f7c5110').
+narrative_ontology:cs_reading_relation('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', jewish_sovereignty_palestine__settler_colonial_reading, forecloses).
+narrative_ontology:cs_reading_relation('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', jewish_sovereignty_palestine__religious_zionist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', jewish_sovereignty_palestine__cultural_zionist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', jewish_sovereignty_palestine__post_zionist_reading, coexists_with).
+narrative_ontology:cs_axiom('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', foundational, co_equal_national_self_determination).
+narrative_ontology:cs_axiom_status(co_equal_national_self_determination, holdable).
+narrative_ontology:cs_axiom_grounding('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', co_equal_national_self_determination, deontological).
+narrative_ontology:cs_axiom('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', secondary, territorial_partition_as_just_solution).
+narrative_ontology:cs_axiom_status(territorial_partition_as_just_solution, holdable).
+narrative_ontology:cs_axiom_grounding('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', territorial_partition_as_just_solution, instrumental).
+narrative_ontology:cs_reference_frame('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', mutual_recognition_and_partition).
+narrative_ontology:cs_drift_state('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', contemporary_political_stalemate, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('da660c32-8e2c-4a1b-8d85-bcf25f7c5110', '').
 narrative_ontology:cs_kernel_id(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_sovereignty_palestine).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_collective_as_nation).
 narrative_ontology:constraint_victim(jewish_sovereignty_palestine__liberal_nationalist_reading, palestinian_collective_as_nation).
-narrative_ontology:constraint_vindicates(jewish_sovereignty_palestine__liberal_nationalist_reading, universal_self_determination_principle).
-narrative_ontology:constraint_vindicates(jewish_sovereignty_palestine__liberal_nationalist_reading, right_to_national_homeland).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -150,15 +144,31 @@ narrative_ontology:constraint_vindicates(jewish_sovereignty_palestine__liberal_n
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Benefits from the recognition of collective self-determination and the establishment of a state in the ancestral homeland. This reading emphasizes the right to national self-expression and security, often requiring territorial compromise with Palestinian claims.
+narrative_ontology:constraint_stakeholder(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_collective_as_nation, beneficiary,
+    institutional, generational, identity_locked, national).
+
+% Bears the costs of territorial partition or shared sovereignty, as their own self-determination claims are constrained by the establishment of a Jewish state. This reading acknowledges their co-equal right to self-determination.
+narrative_ontology:constraint_stakeholder(jewish_sovereignty_palestine__liberal_nationalist_reading, palestinian_collective_as_nation, payer,
+    organized, generational, trapped, national).
+
+% Advocates for a two-state solution or a binational framework based on principles of national self-determination and human rights. They seek to mediate between competing claims and enforce international law.
+narrative_ontology:constraint_stakeholder(jewish_sovereignty_palestine__liberal_nationalist_reading, liberal_international_institutions, agenda_setter,
+    institutional, generational, analytical, global).
+
+% Monitor the implementation of self-determination rights for both Jewish and Palestinian peoples, ensuring that any statehood arrangement respects individual and collective rights, and that no population is dispossessed or denied fundamental freedoms.
+narrative_ontology:constraint_stakeholder(jewish_sovereignty_palestine__liberal_nationalist_reading, human_rights_advocates, observer,
+    organized, biographical, analytical, global).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: To provide a framework for the Jewish people to exercise collective self-determination and establish statehood in their ancestral homeland, while simultaneously attempting to accommodate the co-equal self-determination claims of the Palestinian people through territorial compromise or shared governance.
-% TRANSFER_FUNCTION: Transfers sovereign control over a portion of the ancestral homeland to the Jewish collective, in exchange for a commitment to a framework that acknowledges Palestinian rights, thereby transferring a portion of Palestinian self-determination potential to the Jewish state.
-% ABSENT_VOICES: Religious Zionist factions, who reject territorial compromise on theological grounds, and Palestinian rejectionist groups, who deny the legitimacy of Jewish statehood, are both excluded from the liberal nationalist discourse, as their maximalist positions undermine the possibility of a negotiated settlement.
-% DISAPPEARANCE_RATIONALE: If this specific liberal nationalist reading vanished, the political landscape would immediately polarize further. Without the framework of co-equal claims and compromise, the conflict would likely escalate, with maximalist claims from both sides becoming dominant, leading to a complete reorganization of diplomatic efforts and potentially increased violence.
-% FOUNDING_PROBLEM: The historical problem of Jewish statelessness and persecution, coupled with the aspiration for national self-determination in their ancestral homeland, alongside the existing Palestinian Arab population's own national aspirations and presence in that land.
-% FOUNDING_PROBLEM_CORROBORATION: The problem of competing national claims over the same territory is widely attested by international bodies (e.g., UN resolutions, peace process frameworks), numerous academic studies in political science and history, and the ongoing conflict itself. While the specific 'liberal nationalist' solution is contested, the underlying problem it seeks to address is undeniably live and corroborated by external observers.
+% COORDINATION_FUNCTION: To provide a framework for the Jewish people to exercise their right to collective self-determination and establish a national home, while simultaneously acknowledging and accommodating the self-determination rights of the Palestinian people, typically through a two-state solution or binational arrangement.
+% TRANSFER_FUNCTION: Transfers territorial control and sovereign authority to the Jewish collective, while simultaneously requiring a transfer of land or shared governance to the Palestinian collective, often mediated by international frameworks.
+% ABSENT_VOICES: Radical anti-Zionist groups who reject any form of Jewish national self-determination in Palestine, and maximalist Zionist groups who reject any Palestinian national rights in the same territory. Both are excluded from the liberal nationalist discourse of mutual recognition and compromise.
+% DISAPPEARANCE_RATIONALE: If the liberal nationalist framework for Jewish self-determination vanished, the conflict would likely revert to more zero-sum, maximalist claims from both sides, potentially leading to increased violence and a breakdown of any existing peace processes or shared governance structures. The international diplomatic efforts built around this framework would collapse.
+% FOUNDING_PROBLEM: The historical statelessness and persecution of the Jewish people, coupled with their deep historical and cultural ties to the land of Palestine, alongside the indigenous presence and developing national consciousness of the Palestinian people in the same territory.
+% FOUNDING_PROBLEM_CORROBORATION: Historians and international legal scholars corroborate the historical context of Jewish persecution and connection to the land, as well as the emergence of Palestinian national identity. UN resolutions and numerous international diplomatic efforts attest to the ongoing nature of the problem and the need for a resolution that respects both national claims.
 narrative_ontology:disappearance_verdict(jewish_sovereignty_palestine__liberal_nationalist_reading, world_rearranges).
 narrative_ontology:founding_problem_status(jewish_sovereignty_palestine__liberal_nationalist_reading, live).
 
@@ -166,11 +176,12 @@ narrative_ontology:founding_problem_status(jewish_sovereignty_palestine__liberal
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(jewish_sovereignty_palestine__liberal_nationalist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(jewish_sovereignty_palestine__liberal_nationalist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(jewish_sovereignty_palestine__liberal_nationalist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(jewish_sovereignty_palestine__liberal_nationalist_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,16 +196,14 @@ narrative_ontology:story_seed(jewish_sovereignty_palestine__liberal_nationalist_
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely attempts to coordinate two competing national claims (Jewish and Palestinian self-determination) but inherently involves asymmetric extraction (Palestinians must compromise on territory or sovereignty for Jewish statehood). Extractiveness (0.45) is moderate, reflecting the expectation of territorial compromise, but not zero. Suppression (0.30) is present due to the need for active enforcement to maintain borders and manage conflict arising from competing claims. Theater ratio (0.10) is low, as the state's functions are largely genuine, though the 'coordination' aspect is heavily contested. The slight increase in extractiveness and suppression over time reflects the historical difficulty of achieving equitable compromise and the ongoing need for enforcement.
+ *   The extractiveness (0.45) is moderate because this reading, by its nature, seeks a compromise that involves territorial division and shared sovereignty, which is less extractive than a zero-sum claim but still imposes significant costs on the Palestinian collective. Suppression (0.6) is necessary to enforce any agreed-upon partition or binational framework against resistance from those who reject compromise. The theater ratio (0.2) is relatively low, as the coordination function (managing two national claims) is genuine, though often strained. The temporal measurements show fluctuations in extractiveness and suppression, reflecting periods of intensified conflict and diplomatic efforts.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the Jewish collective, this constraint is a legitimate exercise of national rights, a hard-won Rope. From the perspective of the Palestinian collective, it is a Snare, as it imposes a compromise on their own self-determination. The liberal nationalist reading attempts to bridge this gap by acknowledging both claims, but the structural reality of competing claims over finite territory means one party's gain is necessarily another's loss, leading to a Tangled Rope classification from an analytical seat.
+ *   From the perspective of the Jewish collective (beneficiary), this framework is a legitimate exercise of national rights and a necessary path to security. From the perspective of the Palestinian collective (payer), it represents a compromise that still entails significant loss and ongoing suppression of their full national aspirations. The engine's per-seat classification would highlight this divergence, showing a more 'rope-like' experience for beneficiaries and a more 'snare-like' experience for payers.
  *
  * DIRECTIONALITY LOGIC:
- *   The Jewish collective is the primary beneficiary (d=0.0-0.2) as the constraint legitimizes their statehood. The Palestinian collective is the primary target (d=0.8-1.0) as they must accept territorial compromise. Israeli state institutions act as the agenda-setter (d=0.1-0.3), enforcing the state's existence and its boundaries. The international community is an analytical observer (d=0.5). Religious Zionist factions are excluded (d=0.9-1.0) as their maximalist claims are incompatible with the liberal nationalist framework's need for compromise. Post-Zionist intellectuals are also observers (d=0.5), analyzing the constraint's long-term effects.
+ *   The Jewish collective, as a nation, is the primary beneficiary, gaining statehood and self-determination. The Palestinian collective, as a nation, is the primary payer, bearing the costs of territorial compromise and constrained sovereignty. Liberal international institutions act as agenda-setters, attempting to mediate and enforce a balanced solution. Human rights advocates observe and critique the process, ensuring adherence to international norms.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint is not subject to mandatrophy in the traditional sense, as the core problem of competing national claims remains live. However, the 'liberal nationalist' framing itself could become a form of mandatrophy if it ceases to genuinely pursue equitable compromise and instead becomes a rhetorical cover for continued expansion or denial of Palestinian rights. The classification as Tangled Rope, rather than a pure Rope, acknowledges this inherent tension and the risk of drift towards a Snare if the coordination function atrophies while extraction persists.
  */
 
 /* ==========================================================================
@@ -202,57 +211,69 @@ narrative_ontology:story_seed(jewish_sovereignty_palestine__liberal_nationalist_
    ========================================================================== */
 
 omega_variable(
-    natural_right_vs_historical_contingency,
-    'Is the Jewish right to self-determination in Palestine a universal natural right, or a historically contingent claim requiring negotiation with existing populations?',
-    'International legal consensus on the application of self-determination principles in contested territories, and the outcome of negotiations between claimant groups.',
-    'If a natural right, the constraint''s legitimacy is inherent and extractiveness is minimized (costs are ''tragic necessity''); if historically contingent, extractiveness is higher (costs are ''unjust imposition'') and requires active justification.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(natural_right_vs_historical_contingency, conceptual, 'Ambiguity between inherent right and negotiated claim.').
-
-omega_variable(
-    co_equal_claimants_vs_subordinate_status,
-    'Does this reading genuinely treat Palestinians as co-equal self-determination claimants, or does it implicitly subordinate their claim to the Jewish claim?',
-    'Analysis of policy outcomes: whether proposed solutions (e.g., partition, binationalism) are genuinely equitable and implementable, or if they consistently result in Palestinian dispossession or limited sovereignty.',
-    'If co-equal, the constraint functions as a genuine (if difficult) coordination problem; if subordinate, it functions as a snare, using the language of rights to mask extraction.',
+    territorial_compromise_feasibility,
+    'Is a genuinely equitable territorial compromise, as envisioned by this liberal nationalist reading, still feasible given existing settlement expansion and demographic realities?',
+    'Empirical assessment of land use, demographic trends, and political will for land swaps or shared sovereignty arrangements.',
+    'If not feasible, the ''tangled rope'' classification would drift towards ''snare'' as the coordination function (equitable partition) becomes performative, and the extraction from Palestinians becomes more absolute. If feasible, the ''tangled rope'' classification is reinforced.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(co_equal_claimants_vs_subordinate_status, empirical, 'Whether Palestinian self-determination is genuinely co-equal or implicitly subordinated.').
+narrative_ontology:omega_variable(territorial_compromise_feasibility, empirical, 'Feasibility of equitable territorial compromise.').
 
 omega_variable(
-    liberal_nationalist_vs_other_readings,
-    'This constraint is the ''liberal_nationalist_reading'' of the ''jewish_sovereignty_palestine'' kernel. How would the classification change under a ''settler_colonial_reading'' or ''religious_zionist_reading''?',
-    'Comparing the structural properties (beneficiaries, victims, extractiveness, suppression) of this reading with those of the sibling readings, as instantiated in their respective constraint stories.',
-    'A ''settler_colonial_reading'' would likely yield higher extractiveness and suppression, classifying as a Snare. A ''religious_zionist_reading'' would likely claim Mountain status with lower extractiveness, but potentially higher suppression if it denies Palestinian claims entirely.',
-    confidence_without_resolution(high)
+    co_equal_self_determination_sincerity,
+    'To what extent is the ''co-equal self-determination'' axiom genuinely held and acted upon by the primary beneficiaries and agenda-setters, versus being a rhetorical cover for continued asymmetric power dynamics?',
+    'Analysis of policy decisions, resource allocation, and diplomatic actions over time, particularly regarding Palestinian state-building and sovereignty.',
+    'If found to be largely rhetorical, the constraint''s extractiveness and suppression would be re-evaluated upwards, pushing it closer to a ''snare'' as the coordination narrative loses its grounding. If genuine, the ''tangled rope'' classification is more robust.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(liberal_nationalist_vs_other_readings, conceptual, 'Impact of alternative kernel readings on classification.').
+narrative_ontology:omega_variable(co_equal_self_determination_sincerity, conceptual, 'Sincerity of the co-equal self-determination principle.').
+
+omega_variable(
+    liberal_nationalist_vs_settler_colonial_framing,
+    'Is this liberal nationalist reading fundamentally distinct from, or merely a more palatable articulation of, a settler-colonial dynamic?',
+    'Comparative historical analysis of other settler-colonial contexts, focusing on land acquisition, indigenous displacement, and the role of ''liberal'' justifications. Examination of the ''settler_colonial_reading'' sibling constraint.',
+    'If the distinction is found to be superficial, the classification would shift dramatically towards ''snare'' from the perspective of the Palestinian collective, and the ''tangled rope'' framing would be seen as a form of legitimizing cover. If the distinction holds, the current classification is maintained.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(liberal_nationalist_vs_settler_colonial_framing, conceptual, 'Distinction between liberal nationalism and settler colonialism.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(jewish_sovereignty_palestine__liberal_nationalist_reading, 0, 30).
+narrative_ontology:interval(jewish_sovereignty_palestine__liberal_nationalist_reading, 1948, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
+% Theater ratio over time
+narrative_ontology:measurement(jewi_tr_t1948, jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 1948, 0.1).
+narrative_ontology:measurement(jewi_tr_t1967, jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 1967, 0.15).
+narrative_ontology:measurement(jewi_tr_t1993, jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 1993, 0.2).
+narrative_ontology:measurement(jewi_tr_t2000, jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 2000, 0.25).
+narrative_ontology:measurement(jewi_tr_t2010, jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 2010, 0.2).
+narrative_ontology:measurement(jewi_tr_t2024, jewish_sovereignty_palestine__liberal_nationalist_reading, theater_ratio, 2024, 0.2).
+
 % Extraction over time
-narrative_ontology:measurement(jewi_be_t0, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 0, 0.4).
-narrative_ontology:measurement(jewi_be_t10, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 10, 0.45).
-narrative_ontology:measurement(jewi_be_t20, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 20, 0.5).
-narrative_ontology:measurement(jewi_be_t30, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 30, 0.45).
+narrative_ontology:measurement(jewi_be_t1948, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 1948, 0.4).
+narrative_ontology:measurement(jewi_be_t1967, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 1967, 0.5).
+narrative_ontology:measurement(jewi_be_t1993, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 1993, 0.45).
+narrative_ontology:measurement(jewi_be_t2000, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 2000, 0.55).
+narrative_ontology:measurement(jewi_be_t2010, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 2010, 0.5).
+narrative_ontology:measurement(jewi_be_t2024, jewish_sovereignty_palestine__liberal_nationalist_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(jewi_su_t0, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 0, 0.25).
-narrative_ontology:measurement(jewi_su_t10, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 10, 0.3).
-narrative_ontology:measurement(jewi_su_t20, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 20, 0.35).
-narrative_ontology:measurement(jewi_su_t30, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 30, 0.3).
+narrative_ontology:measurement(jewi_su_t1948, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 1948, 0.5).
+narrative_ontology:measurement(jewi_su_t1967, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 1967, 0.7).
+narrative_ontology:measurement(jewi_su_t1993, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 1993, 0.6).
+narrative_ontology:measurement(jewi_su_t2000, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 2000, 0.75).
+narrative_ontology:measurement(jewi_su_t2010, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 2010, 0.65).
+narrative_ontology:measurement(jewi_su_t2024, jewish_sovereignty_palestine__liberal_nationalist_reading, suppression_requirement, 2024, 0.6).
 
 
 /* ==========================================================================
@@ -260,12 +281,13 @@ narrative_ontology:measurement(jewi_su_t30, jewish_sovereignty_palestine__libera
    ========================================================================== */
 
 narrative_ontology:coordination_type(jewish_sovereignty_palestine__liberal_nationalist_reading, identity_coordination).
-narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, israeli_citizenship_law).
-narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, palestinian_right_of_return).
-narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, jerusalem_status_quo).
+narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_sovereignty_palestine__settler_colonial_reading).
+narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_sovereignty_palestine__religious_zionist_reading).
+narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_sovereignty_palestine__cultural_zionist_reading).
+narrative_ontology:affects_constraint(jewish_sovereignty_palestine__liberal_nationalist_reading, jewish_sovereignty_palestine__post_zionist_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of several readings of the 'jewish_sovereignty_palestine' kernel. Each reading represents a distinct structural claim with different beneficiaries, victims, and extractiveness profiles. They are linked as a constraint family.
+% This constraint is one reading of the 'jewish_sovereignty_palestine' kernel. Its extractiveness and suppression metrics reflect the specific structural outcomes of the liberal nationalist approach, which seeks to balance competing national claims through territorial compromise and mutual recognition.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

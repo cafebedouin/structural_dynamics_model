@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,25 +69,20 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: common_law_precedent_corpus__pluralist_balancing
- *   human_readable: Common Law Precedent (Pluralist Balancing Reading)
+ *   human_readable: Common Law Precedent: Pluralist Balancing Reading
  *   domain: legal/jurisprudence
  *
  * SUMMARY:
- *   This constraint describes the common law system's treatment of precedent
- *   through the lens of 'pluralist balancing,' where the weight of prior
- *   judicial decisions varies significantly based on the specific legal
- *   domain, factual context, and policy considerations. It aims to balance
- *   legal stability with the need for adaptation, but this flexibility
- *   introduces complexity and unpredictability for some actors. This is one
- *   reading of the 'common_law_precedent_corpus' kernel, distinct from
- *   'strict_stare_decisis' and 'evolutionary_framework' readings.
+ *   This constraint describes the 'pluralist balancing' reading of common law
+ *   precedent, where the weight of prior judicial decisions is not absolute
+ *   but varies by legal domain and context, requiring judges to balance
+ *   stability with adaptation on a case-by-case basis. This approach is
+ *   claimed as a 'rope' (a flexible coordination mechanism) but operates with
+ *   significant extraction and suppression, particularly for litigants and
+ *   lower courts facing unpredictable outcomes and high interpretive costs.
+ *   The claimed type reflects the ideal, while the metrics reflect the
+ *   operational reality.
  *
- * KEY AGENTS:
- *   - appellate_judges: Agenda setter (institutional/arbitrage) — interpret and apply precedent with discretion.
- *   - legal_scholars: Beneficiary (analytical/analytical) — benefit from the interpretive complexity and debate.
- *   - litigants: Payer (powerless/constrained) — bear the costs of unpredictable outcomes and higher legal fees.
- *   - lower_court_judges: Payer (organized/constrained) — must navigate complex and sometimes conflicting precedents with limited interpretive authority.
- *   - legal_practitioners: Payer (moderate/constrained) — advise clients under conditions of interpretive uncertainty.
  */
 
 /* ==========================================================================
@@ -91,59 +90,99 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(common_law_precedent_corpus__pluralist_balancing, 0.6).
+domain_priors:base_extractiveness(common_law_precedent_corpus__pluralist_balancing, 0.65).
 domain_priors:suppression_score(common_law_precedent_corpus__pluralist_balancing, 0.7).
 domain_priors:theater_ratio(common_law_precedent_corpus__pluralist_balancing, 0.2).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, extractiveness, 0.6).
+narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, extractiveness, 0.65).
 narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, accessibility_collapse, 0.4).
-narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, resistance, 0.5).
+narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(common_law_precedent_corpus__pluralist_balancing, resistance, 0.45).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(common_law_precedent_corpus__pluralist_balancing, tangled_rope).
-narrative_ontology:human_readable(common_law_precedent_corpus__pluralist_balancing, "Common Law Precedent (Pluralist Balancing Reading)").
+narrative_ontology:human_readable(common_law_precedent_corpus__pluralist_balancing, "Common Law Precedent: Pluralist Balancing Reading").
 narrative_ontology:topic_domain(common_law_precedent_corpus__pluralist_balancing, "legal/jurisprudence").
 
 domain_priors:requires_active_enforcement(common_law_precedent_corpus__pluralist_balancing).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(common_law_precedent_corpus__pluralist_balancing, '7c9acfd2-d537-4c61-9023-844343a41077').
-narrative_ontology:cs_kernel_codification('7c9acfd2-d537-4c61-9023-844343a41077', formalized).
-narrative_ontology:cs_authority_grounding('7c9acfd2-d537-4c61-9023-844343a41077', lineage).
-narrative_ontology:cs_interpretation_layer_present('7c9acfd2-d537-4c61-9023-844343a41077').
-narrative_ontology:cs_reading_relation('7c9acfd2-d537-4c61-9023-844343a41077', common_law_precedent_corpus__strict_stare_decisis, coexists_with).
-narrative_ontology:cs_reading_relation('7c9acfd2-d537-4c61-9023-844343a41077', common_law_precedent_corpus__evolutionary_framework, coexists_with).
-narrative_ontology:cs_axiom('7c9acfd2-d537-4c61-9023-844343a41077', foundational, precedent_weight_context_dependent).
-narrative_ontology:cs_axiom_status(precedent_weight_context_dependent, holdable).
-narrative_ontology:cs_axiom_grounding('7c9acfd2-d537-4c61-9023-844343a41077', precedent_weight_context_dependent, conventional).
-narrative_ontology:cs_axiom('7c9acfd2-d537-4c61-9023-844343a41077', foundational, stability_adaptation_balance_required).
-narrative_ontology:cs_axiom_status(stability_adaptation_balance_required, holdable).
-narrative_ontology:cs_axiom_grounding('7c9acfd2-d537-4c61-9023-844343a41077', stability_adaptation_balance_required, deontological).
-narrative_ontology:cs_reference_frame('7c9acfd2-d537-4c61-9023-844343a41077', post_realist_jurisprudence).
-narrative_ontology:cs_drift_state('7c9acfd2-d537-4c61-9023-844343a41077', contemporary_judicial_practice, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('7c9acfd2-d537-4c61-9023-844343a41077', '').
+narrative_ontology:cs_story_uid(common_law_precedent_corpus__pluralist_balancing, '146dd649-7f9d-4852-aad3-bacde25092c0').
+narrative_ontology:cs_kernel_codification('146dd649-7f9d-4852-aad3-bacde25092c0', formalized).
+narrative_ontology:cs_authority_grounding('146dd649-7f9d-4852-aad3-bacde25092c0', lineage).
+narrative_ontology:cs_interpretation_layer_present('146dd649-7f9d-4852-aad3-bacde25092c0').
+narrative_ontology:cs_reading_relation('146dd649-7f9d-4852-aad3-bacde25092c0', common_law_precedent_corpus__strict_stare_decisis, coexists_with).
+narrative_ontology:cs_reading_relation('146dd649-7f9d-4852-aad3-bacde25092c0', common_law_precedent_corpus__evolutionary_framework, coexists_with).
+narrative_ontology:cs_axiom('146dd649-7f9d-4852-aad3-bacde25092c0', foundational, contextual_precedent_weight).
+narrative_ontology:cs_axiom_status(contextual_precedent_weight, holdable).
+narrative_ontology:cs_axiom_grounding('146dd649-7f9d-4852-aad3-bacde25092c0', contextual_precedent_weight, conventional).
+narrative_ontology:cs_axiom('146dd649-7f9d-4852-aad3-bacde25092c0', foundational, balancing_stability_adaptation).
+narrative_ontology:cs_axiom_status(balancing_stability_adaptation, holdable).
+narrative_ontology:cs_axiom_grounding('146dd649-7f9d-4852-aad3-bacde25092c0', balancing_stability_adaptation, instrumental).
+narrative_ontology:cs_reference_frame('146dd649-7f9d-4852-aad3-bacde25092c0', flexible_common_law_tradition).
+narrative_ontology:cs_drift_state('146dd649-7f9d-4852-aad3-bacde25092c0', contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('146dd649-7f9d-4852-aad3-bacde25092c0', '').
 narrative_ontology:cs_kernel_id(common_law_precedent_corpus__pluralist_balancing, common_law_precedent_corpus).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__pluralist_balancing, appellate_judges).
-narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__pluralist_balancing, legal_scholars).
+narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__pluralist_balancing, appellate_judiciary).
+narrative_ontology:constraint_beneficiary(common_law_precedent_corpus__pluralist_balancing, legal_profession).
 narrative_ontology:constraint_victim(common_law_precedent_corpus__pluralist_balancing, litigants).
-narrative_ontology:constraint_victim(common_law_precedent_corpus__pluralist_balancing, lower_court_judges).
+narrative_ontology:constraint_victim(common_law_precedent_corpus__pluralist_balancing, lower_courts).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Sets the effective weight of precedent by deciding which cases warrant re-evaluation and how to balance stability with adaptation. Benefits from the flexibility to shape law while maintaining an appearance of continuity.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__pluralist_balancing, appellate_judiciary, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Must apply precedent but face uncertainty due to the pluralist balancing approach, leading to higher reversal rates or the need for extensive justification for their decisions. Their professional identity is tied to upholding the legal system.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__pluralist_balancing, lower_courts, payer,
+    organized, biographical, identity_locked, local).
+
+% Bear the direct costs of legal uncertainty and unpredictable outcomes, especially when precedent weight shifts or is balanced differently across domains. They are bound by the court's decisions with limited recourse.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__pluralist_balancing, litigants, payer,
+    powerless, immediate, trapped, local).
+
+% Benefits from the complexity and interpretive demands of a pluralist balancing approach, which increases the need for specialized legal expertise and argument. This can lead to higher fees and sustained demand for their services.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__pluralist_balancing, legal_profession, beneficiary,
+    organized, biographical, constrained, national).
+
+% Analyze and critique the application of precedent, identifying inconsistencies and proposing frameworks for balancing stability and adaptation. Their work influences future judicial reasoning but does not directly set precedent.
+narrative_ontology:constraint_stakeholder(common_law_precedent_corpus__pluralist_balancing, legal_scholars, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a framework for judicial decision-making that allows for legal stability while accommodating societal changes and specific contextual demands, preventing rigid adherence to outdated rules.
+% TRANSFER_FUNCTION: Transfers interpretive authority and flexibility to higher courts and legal experts, while imposing costs of uncertainty and complexity on lower courts and litigants.
+% ABSENT_VOICES: Citizens and communities directly impacted by legal decisions, who often lack the means or standing to influence the balancing act of precedent. They would advocate for greater predictability and accessibility in legal outcomes.
+% DISAPPEARANCE_RATIONALE: If the pluralist balancing approach to precedent vanished, the legal system would either become excessively rigid (if strict stare decisis prevailed) or entirely chaotic (if precedent had no weight), fundamentally altering judicial function and legal predictability.
+% FOUNDING_PROBLEM: The need to reconcile the common law's demand for consistency with the evolving nature of society and the unique circumstances of individual cases, avoiding both stagnation and arbitrary decision-making.
+% FOUNDING_PROBLEM_CORROBORATION: Legal scholars and historical analyses attest to the enduring tension between stability and adaptation in common law systems. Judicial opinions frequently acknowledge this balancing act, even if the specific outcomes are contested.
+narrative_ontology:disappearance_verdict(common_law_precedent_corpus__pluralist_balancing, world_rearranges).
+narrative_ontology:founding_problem_status(common_law_precedent_corpus__pluralist_balancing, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(common_law_precedent_corpus__pluralist_balancing, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(common_law_precedent_corpus__pluralist_balancing, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(common_law_precedent_corpus__pluralist_balancing, 'none', 1).
+narrative_ontology:epsilon_provenance(common_law_precedent_corpus__pluralist_balancing, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,16 +202,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it genuinely coordinates the legal system by providing a framework for judicial decision-making (beneficiaries: appellate judges, legal scholars) but also involves significant asymmetric extraction (victims: litigants, lower court judges) due to the unpredictability and high costs associated with navigating its flexible application. Active enforcement is required to maintain the hierarchy of courts and the authority of appellate decisions. Extractiveness is moderate (0.6) due to the costs of litigation and uncertainty. Suppression is high (0.7) because litigants have limited options to avoid the system, and lower courts are bound by higher court interpretations. Theater ratio is low (0.2) as the balancing act is a genuine, albeit complex, judicial function, not mere performance.
+ *   The extractiveness (0.65) stems from the unpredictable nature of balancing, which creates high costs for those seeking legal certainty. Suppression (0.70) is high because the system actively enforces the interpretive authority of higher courts, limiting the autonomy of lower courts and litigants to challenge precedent. The theater ratio (0.20) is moderate; while there's genuine legal reasoning, some judicial rhetoric about 'balancing' can mask discretionary choices. Accessibility collapse (0.60) is moderate, as alternatives (e.g., legislative action) exist but are often slow or costly. Resistance (0.45) is present from litigants and some legal scholars, but not enough to fundamentally alter the system.
  *
  * PERSPECTIVAL GAP:
- *   Appellate judges experience this as a flexible tool for justice, allowing adaptation to new circumstances, while litigants and lower court judges experience it as a source of uncertainty and increased burden. Appellate judges benefit from the intellectual challenge and interpretive authority, while litigants pay for the complexity. Legal scholars benefit from the rich interpretive material it provides.
+ *   From the perspective of the appellate judiciary, this approach is a necessary and sophisticated mechanism for legal evolution. From the perspective of litigants and lower courts, it can feel like an arbitrary and costly system where the rules are constantly in flux, making legal outcomes less predictable and more expensive. The engine's per-seat classification should reflect this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Appellate judges are beneficiaries (d=0.1) as they wield significant interpretive power and discretion. Legal scholars are also beneficiaries (d=0.2) as the complexity fuels their research and commentary. Litigants are targets (d=0.9) due to the high costs and unpredictable outcomes. Lower court judges (d=0.8) are targets because they must apply complex and sometimes ambiguous precedent without the same interpretive freedom. Legal practitioners (d=0.7) are also targets as they must advise clients under conditions of interpretive uncertainty.
+ *   The appellate judiciary benefits from the flexibility and interpretive power this reading affords, allowing them to shape law. The legal profession also benefits from the increased demand for specialized expertise. Lower courts and litigants bear the costs of uncertainty and complexity, making them targets of extraction. The 'identity_locked' exit for lower courts reflects their professional obligation to apply precedent, even when its weight is ambiguous.
  *
- * MANDATROPHY ANALYSIS:
- *   The pluralist balancing reading prevents mislabeling the system as a pure Snare by acknowledging the genuine coordination function of providing a framework for legal stability and adaptation. However, it also prevents mislabeling it as a pure Rope by highlighting the significant extraction and suppression inherent in its unpredictable application and the costs borne by those subject to it. The 'contested' status of the founding problem reflects the ongoing debate about whether the system's flexibility serves justice or merely judicial discretion.
  */
 
 /* ==========================================================================
@@ -180,24 +217,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine instantiation of pluralist balancing, or is it a rhetorical cover for a de facto strict stare decisis or evolutionary framework?',
-    'Empirical analysis of judicial opinions over time, coding for explicit balancing tests versus strict application or overt reinterpretation. Compare stated methodology with actual outcomes.',
-    'If it''s a cover for strict stare decisis, the effective extractiveness for litigants is higher due to less flexibility. If it''s a cover for an evolutionary framework, the extractiveness for lower courts is lower due to more interpretive leeway.',
+    interpretive_discretion_vs_arbitrariness,
+    'Is the ''balancing'' inherent in this reading a legitimate exercise of judicial discretion or a cover for arbitrary decision-making?',
+    'Empirical analysis of judicial outcomes across similar cases and domains: high variance without clear, articulated principles would suggest arbitrariness.',
+    'If arbitrary, the extractiveness and suppression would be reclassified higher, indicating a ''snare'' for litigants. If legitimate, the ''tangled_rope'' classification would be reinforced, with extraction seen as a cost of necessary flexibility.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, empirical, 'Ambiguity in the actual application of pluralist balancing versus other readings of precedent.').
+narrative_ontology:omega_variable(interpretive_discretion_vs_arbitrariness, empirical, 'Distinguishing legitimate judicial discretion from arbitrary application of precedent.').
 
 omega_variable(
-    domain_specificity_ambiguity,
-    'How consistently is the ''domain and context'' variability applied, and is it predictable for litigants?',
-    'Quantitative legal studies analyzing variance in precedent application across different legal domains and judicial panels, measuring predictability for legal practitioners.',
-    'If application is inconsistent and unpredictable, the constraint''s effective suppression and extractiveness for litigants are higher due to increased uncertainty and litigation costs.',
+    domain_specificity_justification,
+    'Are the differences in precedent weight across legal domains genuinely justified by structural differences in those domains, or are they a historical artifact?',
+    'Comparative legal analysis across jurisdictions with different approaches to precedent, examining whether domain-specific variations are consistently observed and justified.',
+    'If unjustified, the complexity and associated costs for litigants would be seen as unnecessary extraction, pushing the classification closer to a ''snare''. If justified, it supports the ''tangled_rope'' as a necessary adaptation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(domain_specificity_ambiguity, empirical, 'Uncertainty regarding the actual variability of precedent weight across domains.').
+narrative_ontology:omega_variable(domain_specificity_justification, conceptual, 'Whether domain-specific variations in precedent weight are structurally justified.').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression structural (e.g., lack of legal aid, high litigation costs) or internalized (e.g., lower courts'' deference to higher courts due to professional identity)?',
+    'Post-exit suppression trajectory: if lower courts continue to defer even after structural barriers are reduced, reclassify as partially internalized. If litigants gain more agency with reduced costs, it''s structural.',
+    'If internalized, the constraint''s effective suppression on lower courts is higher than the structural measure suggests, as they carry the suppression with them. If structural, remedies focus on external barriers.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism for lower courts and litigants.').
 
 
 /* ==========================================================================
@@ -211,24 +258,24 @@ narrative_ontology:interval(common_law_precedent_corpus__pluralist_balancing, 19
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(comm_tr_t1950, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 1950, 0.1).
-narrative_ontology:measurement(comm_tr_t1970, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 1970, 0.15).
-narrative_ontology:measurement(comm_tr_t1990, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 1990, 0.18).
-narrative_ontology:measurement(comm_tr_t2010, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 2010, 0.2).
+narrative_ontology:measurement(comm_tr_t1950, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 1950, 0.15).
+narrative_ontology:measurement(comm_tr_t1970, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 1970, 0.18).
+narrative_ontology:measurement(comm_tr_t1990, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 1990, 0.2).
+narrative_ontology:measurement(comm_tr_t2010, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 2010, 0.22).
 narrative_ontology:measurement(comm_tr_t2024, common_law_precedent_corpus__pluralist_balancing, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(comm_be_t1950, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 1950, 0.45).
-narrative_ontology:measurement(comm_be_t1970, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 1970, 0.5).
-narrative_ontology:measurement(comm_be_t1990, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 1990, 0.55).
-narrative_ontology:measurement(comm_be_t2010, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 2010, 0.58).
-narrative_ontology:measurement(comm_be_t2024, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 2024, 0.6).
+narrative_ontology:measurement(comm_be_t1950, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 1950, 0.55).
+narrative_ontology:measurement(comm_be_t1970, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 1970, 0.6).
+narrative_ontology:measurement(comm_be_t1990, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 1990, 0.63).
+narrative_ontology:measurement(comm_be_t2010, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 2010, 0.66).
+narrative_ontology:measurement(comm_be_t2024, common_law_precedent_corpus__pluralist_balancing, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(comm_su_t1950, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 1950, 0.55).
-narrative_ontology:measurement(comm_su_t1970, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 1970, 0.6).
-narrative_ontology:measurement(comm_su_t1990, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 1990, 0.65).
-narrative_ontology:measurement(comm_su_t2010, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 2010, 0.68).
+narrative_ontology:measurement(comm_su_t1950, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 1950, 0.6).
+narrative_ontology:measurement(comm_su_t1970, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 1970, 0.65).
+narrative_ontology:measurement(comm_su_t1990, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 1990, 0.68).
+narrative_ontology:measurement(comm_su_t2010, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 2010, 0.7).
 narrative_ontology:measurement(comm_su_t2024, common_law_precedent_corpus__pluralist_balancing, suppression_requirement, 2024, 0.7).
 
 
@@ -237,11 +284,11 @@ narrative_ontology:measurement(comm_su_t2024, common_law_precedent_corpus__plura
    ========================================================================== */
 
 narrative_ontology:coordination_type(common_law_precedent_corpus__pluralist_balancing, enforcement_mechanism).
-narrative_ontology:affects_constraint(common_law_precedent_corpus__pluralist_balancing, common_law_precedent_corpus__strict_stare_decisis).
-narrative_ontology:affects_constraint(common_law_precedent_corpus__pluralist_balancing, common_law_precedent_corpus__evolutionary_framework).
+narrative_ontology:affects_constraint(common_law_precedent_corpus__pluralist_balancing, strict_stare_decisis).
+narrative_ontology:affects_constraint(common_law_precedent_corpus__pluralist_balancing, evolutionary_framework).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'common_law_precedent_corpus' kernel. Each reading represents a distinct structural claim about how precedent operates, with different extractiveness and stakeholder dynamics. They are linked as a constraint family.
+% This constraint is one of three readings of the 'common_law_precedent_corpus' kernel. This 'pluralist_balancing' reading emphasizes context-dependent weight, contrasting with 'strict_stare_decisis' (absolute binding) and 'evolutionary_framework' (normative adaptation).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

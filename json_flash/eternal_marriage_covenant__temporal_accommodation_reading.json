@@ -4,144 +4,130 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "9cf0d90c-390b-458e-86b2-75ef77048ea7"
+    "story_uid": "2223811c-17d2-43fc-9454-8f71217db947"
   },
   "base_properties": {
     "extractiveness": 0.3,
-    "suppression": 0.4,
-    "theater_ratio": 0.6,
+    "suppression": 0.6,
+    "theater_ratio": 0.4,
     "accessibility_collapse": 0.7,
     "resistance": 0.2,
-    "claimed_type": "piton",
+    "claimed_type": "scaffold",
     "human_readable": "Eternal Marriage Covenant (Temporal Accommodation Reading)",
     "topic_domain": "religious_law/political_theology/commitment_system_dynamics",
     "requires_active_enforcement": true,
+    "has_sunset_clause": true,
     "beneficiaries": [
       "church_leadership",
-      "mainstream_members"
+      "church_members"
     ],
     "victims": [
-      "fundamentalist_splinter_groups",
-      "historical_polygamist_families"
+      "polygamous_families_in_transition"
+    ],
+    "vindicated_propositions": [
+      "obedience_to_law_of_land",
+      "divine_law_is_eternal"
     ]
   },
-  "interval": {
-    "start": 1890,
-    "end": 2024
-  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the suspension of polygamous practice a temporary accommodation to external pressure, or a permanent doctrinal shift?",
+      "resolution_mechanism": "Future prophetic pronouncements or changes in church policy regarding the practice if political constraints were removed.",
+      "impact": "If permanent, the 'immutable commandment' reading is foreclosed; if temporary, this 'temporal accommodation' reading remains valid, and the 'immutable commandment' reading is merely dormant.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the 'temporal accommodation' reading of the 'eternal_marriage_covenant' kernel. Sibling readings include 'immutable_commandment_reading' and 'prophetic_override_reading'. The core disagreement is whether the suspension is temporary or permanent."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of polygamous practice structural (federal law) or internalized (church teaching and social pressure)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if individuals continue to avoid polygamous practice even after leaving the church or moving to jurisdictions where it is legal, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, even if federal law changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for polygamous practice."
+    }
+  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1890,
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1920,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1950,
+      "time_point": 20,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 30,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1890,
+      "time_point": 0,
       "value": 0.9
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1920,
+      "time_point": 10,
       "value": 0.8
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1950,
+      "time_point": 20,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.4
+      "time_point": 30,
+      "value": 0.6
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1890,
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1920,
+      "time_point": 20,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.6
+      "time_point": 30,
+      "value": 0.4
     }
   ],
-  "commentary": {
-    "narrative_context": "This constraint represents the 'temporal accommodation' reading of the eternal marriage covenant, specifically regarding the practice of plural marriage. It posits that the 1890 Manifesto, which suspended the practice, was a temporary measure to comply with federal law, not a renunciation of the eternal doctrine. The principle remains valid but dormant, awaiting a future restoration when political constraints lift. This reading allows the church to maintain doctrinal consistency while achieving social and legal integration. The constraint is claimed as a Piton because its original function (avoiding legal persecution) is largely 'dead,' but the doctrine is maintained through performative adherence and a narrative of future restoration, extracting costs from those who interpret the doctrine literally.",
-    "logic_rationale": "Extractiveness has decreased over time as the direct legal pressure subsided, but it remains significant for splinter groups. Suppression has also decreased as the church's internal enforcement against plural marriage became less overt, but it still exists for those who defy the accommodation. The theater ratio has increased significantly: the 'suspension' is now largely performative, maintaining a doctrinal claim without active practice, while the actual function of avoiding legal persecution has atrophied. The high accessibility_collapse (0.7) reflects the difficulty of maintaining the practice outside the mainstream church, and the moderate resistance (0.2) comes primarily from marginalized groups.",
-    "perspectival_gap": "Church leadership and mainstream members experience this as a successful, divinely guided adaptation, preserving the church's mission. Fundamentalist splinter groups and historical polygamist families experience it as a betrayal and an ongoing source of extraction and suppression, forcing them to abandon core tenets or face severe consequences. The federal government, as an external enforcer, sees it as a successful application of legal supremacy.",
-    "directionality_logic": "Church leadership and mainstream members are beneficiaries, gaining social acceptance and legal stability. Fundamentalist splinter groups and historical polygamist families are victims, bearing the costs of doctrinal non-compliance and social marginalization. The federal government is an agenda-setter whose pressure initiated the accommodation. Secular society is an observer, noting the church's adaptation.",
-    "mandatrophy_analysis": "The constraint exhibits clear mandatrophy. The original mandate (avoiding federal persecution for plural marriage) is largely 'dead' as a live threat. However, the constraint persists, not because it solves a current coordination problem for all, but due to institutional inertia, the desire to maintain doctrinal consistency, and the benefits of social acceptance for the mainstream church. The 'eternal principle remains valid' narrative is a theatrical element that allows the constraint to persist as a Piton, extracting costs from those who are identity-locked to the original doctrine, while the primary beneficiaries (church leadership, mainstream members) no longer face the original problem."
+  "interval": {
+    "start": 0,
+    "end": 30
   },
-  "omegas": [
-    {
-      "id": "natural_law_vs_constructed_ambiguity",
-      "question": "Is the 'eternal marriage covenant' a genuine natural law or an institutionally constructed constraint that benefits identifiable agents?",
-      "resolution_mechanism": "Analysis of theological texts and historical practice, cross-referenced with sociological studies of religious authority and institutional maintenance.",
-      "impact": "If a genuine natural law, its classification as Piton is a misreading of its persistence. If constructed, the Piton classification is accurate, highlighting its performative maintenance.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between natural law and institutional construct."
-    },
-    {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (excommunication, legal penalties) or internalized (social pressure, identity fusion)?",
-      "resolution_mechanism": "Post-exit suppression trajectory for former members of splinter groups: if suppression persists after the extractive mechanism is removed, reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism."
-    },
-    {
-      "id": "temporal_accommodation_vs_renunciation",
-      "question": "Is the Manifesto a temporary suspension of practice (accommodation) or a permanent renunciation of the doctrine of plural marriage?",
-      "resolution_mechanism": "Future prophetic pronouncements or a shift in official church doctrine. If the practice is never restored despite political conditions allowing it, the 'accommodation' reading weakens.",
-      "impact": "If a permanent renunciation, the 'immutable commandment' reading is foreclosed, and the 'prophetic override' reading gains strength. This would fundamentally alter the doctrinal basis of the constraint.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Ambiguity over the permanence of the Manifesto's suspension."
-    }
-  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the 'temporal accommodation' reading of the eternal marriage covenant, specifically concerning the practice of polygamy within a religious tradition. This reading posits that while the doctrine of plural marriage remains an eternal principle, its practice is suspended due to external pressures (e.g., federal law). The suspension is viewed as a temporary measure, with the doctrine remaining valid but dormant, awaiting a future restoration when political constraints lift. This framing allows the church to maintain doctrinal consistency while complying with the law of the land.",
+    "key_agents": [
+      "church_leadership: Agenda setter (institutional/arbitrage) — administers the suspension, interprets doctrine.",
+      "church_members: Beneficiary/Payer (organized/constrained) — benefit from church standing, bear costs of compliance.",
+      "polygamous_families_in_transition: Victim (powerless/trapped) — bear the direct costs of abandoning practice.",
+      "federal_government: Agenda setter (institutional/analytical) — enforces anti-polygamy laws."
+    ],
+    "logic_rationale": "The constraint is classified as a Scaffold because it represents a temporary support structure for the church's legal standing and social acceptance, intended to be transitional until external conditions change. Extractiveness (0.3) is moderate, reflecting the internal tension and the cost of abandoning a core practice, but lower than a Snare because the doctrine itself is not renounced. Suppression (0.6) is significant due to both federal law and internal church enforcement. Theater ratio (0.4) is present as the church publicly maintains the doctrine's validity while not practicing it, creating a performative aspect to its adherence. The measurements show a decrease in extractiveness and suppression over time as the accommodation becomes more established, and a rise in theater ratio as the gap between doctrine and practice widens.",
+    "perspectival_gap": "Church leadership experiences this as a necessary, temporary adaptation that preserves the institution and its core doctrines. Members who previously practiced polygamy, or who believe in its eternal validity, experience it as a significant personal sacrifice and a suppression of divine command. The federal government views its anti-polygamy laws as a fixed mountain, with the church's accommodation as a necessary compliance.",
+    "directionality_logic": "Church leadership is a beneficiary (d=0.1) as the accommodation preserves the church's legal status and avoids conflict with the federal government. Church members are both beneficiaries (d=0.4) of the church's stability and payers of the social and personal cost of compliance. Polygamous families in transition are victims (d=0.9) as they bear the direct and immediate costs of abandoning their lifestyle and family structure. The federal government, while an external enforcer, is not a direct stakeholder in the internal constraint's operation, but its laws create the external pressure.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the accommodation as a permanent doctrinal shift (which would be a Rope or even a Mountain from a 'prophetic override' perspective). By identifying it as a Scaffold, the framework highlights its transitional nature and the underlying tension between doctrine and practice, which is crucial for understanding its potential for future change or reversal. It also avoids mislabeling it as a pure Snare, acknowledging the genuine coordination function of maintaining the church's legal standing."
+  },
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
@@ -150,7 +136,56 @@
       "immutable_commandment_reading",
       "prophetic_override_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'eternal_marriage_covenant' kernel. It focuses on the 'temporal accommodation' interpretation, where practice is suspended but doctrine remains valid. It affects and is affected by sibling readings that emphasize immutability or prophetic override."
+    "dual_formulation_note": "This constraint is one reading of the 'eternal_marriage_covenant' kernel. It is linked to 'immutable_commandment_reading' and 'prophetic_override_reading' as sibling interpretations of the same core doctrine, each with different implications for practice and authority."
+  },
+  "stakeholders": [
+    {
+      "name": "church_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Administers the suspension of polygamous practice, interprets doctrine, and navigates the church's relationship with secular law. Benefits from maintaining the church's legal standing and public image, but bears the internal tension of doctrinal consistency."
+    },
+    {
+      "name": "church_members",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Benefit from continued membership in the church and its community, but bear the cost of conforming to the suspended practice, which may conflict with personal beliefs or family history. Their identity is deeply tied to the church's teachings."
+    },
+    {
+      "name": "polygamous_families_in_transition",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Directly impacted by the suspension, facing legal and social pressure to abandon polygamous practices. They bear significant personal, familial, and economic costs, with limited options for recourse or exit without losing their community or facing legal repercussions."
+    },
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforces anti-polygamy laws, creating the external pressure that led to the church's accommodation. Its role is to uphold secular law, and it views the church's suspension of practice as compliance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the church's adherence to secular law while preserving the integrity of its eternal doctrines, allowing the institution to maintain its legal status and social acceptance.",
+    "transfer_function": "Transfers the burden of compliance from the church as an institution to individual members, particularly those who previously practiced or believed in polygamy, in exchange for the church's continued legal and social standing.",
+    "absent_voices": "Fundamentalist groups who continue to practice polygamy, viewing the Manifesto as a betrayal of divine law. They are excluded from the mainstream church's discourse and face legal persecution.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this accommodation vanished overnight, the church would face immediate legal challenges and social condemnation, potentially losing its tax-exempt status and institutional legitimacy. The relationship between the church and the federal government would be severely strained, and internal doctrinal conflicts would resurface, forcing a re-evaluation of core tenets.",
+    "founding_problem": "The church faced existential threats from the federal government due to its practice of polygamy, including confiscation of property, disenfranchisement of members, and imprisonment of leaders.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical records, legal documents from the late 19th century, and contemporary academic analyses corroborate the severe federal pressure and existential threat faced by the church. These sources, external to the church's direct beneficiaries, confirm the problem's historical reality and its ongoing relevance in shaping church policy."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -168,35 +203,36 @@
     ],
     "axioms": [
       {
-        "atom": "divine_law_temporarily_suspended",
+        "atom": "divine_law_is_eternal_but_practice_can_be_suspended",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       },
       {
-        "atom": "obedience_to_law_of_land_takes_precedence",
+        "atom": "obedience_to_law_of_land_is_a_divine_mandate",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "theological"
       }
     ],
-    "reference_frame": "eternal_doctrine_unfolding_in_time",
+    "reference_frame": "eternal_doctrine_with_temporal_flexibility",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_era",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

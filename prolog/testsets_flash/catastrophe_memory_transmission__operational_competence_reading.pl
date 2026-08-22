@@ -39,9 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +57,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,15 +72,23 @@
  *   domain: religious_studies/collective_memory/ritual_studies
  *
  * SUMMARY:
- *   This constraint represents the 'operational competence' reading of
- *   catastrophe memory transmission through ritual. Here, ritual is
- *   understood primarily as a mechanism to encode and transmit practical
- *   survival skills, pattern recognition, resource coordination, and threat
- *   assessment rehearsal. Its value is in its functional yield for future
- *   survival capacity. This is one reading of the
- *   'catastrophe_memory_transmission' kernel, which also includes
- *   'symbol_continuity_reading' and 'hybrid_embedded_reading'.
+ *   This constraint describes ritual as a mechanism for transmitting
+ *   operational competence for survival, focusing on its functional role in
+ *   pattern recognition, resource coordination, and threat assessment
+ *   rehearsal. Examples include the Passover Seder's emphasis on rapid
+ *   departure readiness or Tisha B'Av's implicit training in resource
+ *   scarcity. This is one specific reading of a broader kernel concerning
+ *   catastrophe memory transmission, emphasizing the practical, rather than
+ *   purely symbolic or identity-preserving, aspects of ritual. The constraint
+ *   is claimed as a Rope, reflecting its genuine coordination function with
+ *   low extraction, but the metrics are authored independently to reflect its
+ *   actual operation.
  *
+ * KEY AGENTS:
+ *   - ritual_practitioners: Primary beneficiaries (moderate power/constrained exit) – gain survival competence.
+ *   - future_community_members: Ultimate beneficiaries (powerless/analytical exit) – inherit preparedness.
+ *   - analytical_observers: External evaluators (analytical power/analytical exit) – assess operational yield.
+ *   - symbol_focused_practitioners: Excluded voices (moderate power/identity_locked exit) – prioritize symbolic meaning.
  */
 
 /* ==========================================================================
@@ -95,7 +106,7 @@ narrative_ontology:constraint_metric(catastrophe_memory_transmission__operationa
 narrative_ontology:constraint_metric(catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(catastrophe_memory_transmission__operational_competence_reading, accessibility_collapse, 0.75).
+narrative_ontology:constraint_metric(catastrophe_memory_transmission__operational_competence_reading, accessibility_collapse, 0.7).
 narrative_ontology:constraint_metric(catastrophe_memory_transmission__operational_competence_reading, resistance, 0.05).
 
 % --- Constraint claim ---
@@ -104,37 +115,69 @@ narrative_ontology:human_readable(catastrophe_memory_transmission__operational_c
 narrative_ontology:topic_domain(catastrophe_memory_transmission__operational_competence_reading, "religious_studies/collective_memory/ritual_studies").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(catastrophe_memory_transmission__operational_competence_reading, '98376a8a-bb78-456f-95ee-36fbde85345c').
-narrative_ontology:cs_kernel_codification('98376a8a-bb78-456f-95ee-36fbde85345c', implicit).
-narrative_ontology:cs_authority_grounding('98376a8a-bb78-456f-95ee-36fbde85345c', practice).
-narrative_ontology:cs_interpretation_layer_present('98376a8a-bb78-456f-95ee-36fbde85345c').
-narrative_ontology:cs_reading_relation('98376a8a-bb78-456f-95ee-36fbde85345c', catastrophe_memory_transmission__symbol_continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation('98376a8a-bb78-456f-95ee-36fbde85345c', catastrophe_memory_transmission__hybrid_embedded_reading, coexists_with).
-narrative_ontology:cs_axiom('98376a8a-bb78-456f-95ee-36fbde85345c', foundational, ritual_as_operational_training).
+narrative_ontology:cs_story_uid(catastrophe_memory_transmission__operational_competence_reading, 'ad31ad48-1e64-4b06-8dd6-45bb6455b646').
+narrative_ontology:cs_kernel_codification('ad31ad48-1e64-4b06-8dd6-45bb6455b646', implicit).
+narrative_ontology:cs_authority_grounding('ad31ad48-1e64-4b06-8dd6-45bb6455b646', practice).
+narrative_ontology:cs_interpretation_layer_present('ad31ad48-1e64-4b06-8dd6-45bb6455b646').
+narrative_ontology:cs_reading_relation('ad31ad48-1e64-4b06-8dd6-45bb6455b646', catastrophe_memory_transmission__symbol_continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ad31ad48-1e64-4b06-8dd6-45bb6455b646', catastrophe_memory_transmission__hybrid_embedded_reading, coexists_with).
+narrative_ontology:cs_axiom('ad31ad48-1e64-4b06-8dd6-45bb6455b646', foundational, ritual_as_operational_training).
 narrative_ontology:cs_axiom_status(ritual_as_operational_training, holdable).
-narrative_ontology:cs_axiom_grounding('98376a8a-bb78-456f-95ee-36fbde85345c', ritual_as_operational_training, empirically_contingent).
-narrative_ontology:cs_axiom('98376a8a-bb78-456f-95ee-36fbde85345c', foundational, survival_competence_is_transmissible).
-narrative_ontology:cs_axiom_status(survival_competence_is_transmissible, holdable).
-narrative_ontology:cs_axiom_grounding('98376a8a-bb78-456f-95ee-36fbde85345c', survival_competence_is_transmissible, empirically_contingent).
-narrative_ontology:cs_reference_frame('98376a8a-bb78-456f-95ee-36fbde85345c', functional_transmission_paradigm).
-narrative_ontology:cs_drift_state('98376a8a-bb78-456f-95ee-36fbde85345c', contemporary_secularization_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('98376a8a-bb78-456f-95ee-36fbde85345c', '').
+narrative_ontology:cs_axiom_grounding('ad31ad48-1e64-4b06-8dd6-45bb6455b646', ritual_as_operational_training, empirically_contingent).
+narrative_ontology:cs_reference_frame('ad31ad48-1e64-4b06-8dd6-45bb6455b646', functional_survival_mechanism).
+narrative_ontology:cs_drift_state('ad31ad48-1e64-4b06-8dd6-45bb6455b646', contemporary_academic_discourse, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('ad31ad48-1e64-4b06-8dd6-45bb6455b646', '').
 narrative_ontology:cs_kernel_id(catastrophe_memory_transmission__operational_competence_reading, catastrophe_memory_transmission).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(catastrophe_memory_transmission__operational_competence_reading, future_generations).
-narrative_ontology:constraint_beneficiary(catastrophe_memory_transmission__operational_competence_reading, community_leaders).
-narrative_ontology:constraint_victim(catastrophe_memory_transmission__operational_competence_reading, those_mistaking_symbol_for_substance).
+narrative_ontology:constraint_beneficiary(catastrophe_memory_transmission__operational_competence_reading, future_community_members).
+narrative_ontology:constraint_beneficiary(catastrophe_memory_transmission__operational_competence_reading, ritual_practitioners).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Engage in rituals that, from this reading, directly train for future survival scenarios (e.g., rapid departure, resource management). They benefit from enhanced preparedness and the social cohesion that comes from shared competence.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_transmission__operational_competence_reading, ritual_practitioners, beneficiary,
+    moderate, biographical, constrained, local).
+
+% Are the ultimate beneficiaries of the transmitted operational competence, inheriting a community better equipped to face future catastrophes. They do not actively participate in the constraint's maintenance but benefit from its successful operation.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_transmission__operational_competence_reading, future_community_members, beneficiary,
+    powerless, generational, analytical, local).
+
+% Study the functional aspects of ritual, identifying how specific practices contribute to tangible survival skills and collective resilience. They evaluate the 'operational yield' of ritual elements.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_transmission__operational_competence_reading, analytical_observers, observer,
+    analytical, generational, analytical, global).
+
+% Prioritize the symbolic and identity-preserving aspects of ritual, potentially overlooking or downplaying its direct operational training function. They might object to a purely functional interpretation, seeing it as reductive.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_transmission__operational_competence_reading, symbol_focused_practitioners, excluded,
+    moderate, biographical, identity_locked, local).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates collective action and prepares a community for future catastrophic events by encoding and transmitting practical survival skills, pattern recognition, and resource management strategies through ritualized rehearsal.
+% TRANSFER_FUNCTION: Transfers practical knowledge, behavioral patterns, and collective readiness for crisis response across generations, from past experiences to future community members.
+% ABSENT_VOICES: Those who view ritual primarily as symbolic or identity-preserving might object, arguing that reducing ritual to mere operational competence misses its deeper cultural and spiritual significance. They are often present within the community but their perspective is not centered in this reading.
+% DISAPPEARANCE_RATIONALE: If this constraint vanished, communities would lose a vital, non-explicit mechanism for transmitting survival competence. Future generations would be less prepared for recurring catastrophes, leading to higher mortality, social fragmentation, and a loss of collective resilience. The world would rearrange itself around less effective, more costly, and less coordinated responses to crisis.
+% FOUNDING_PROBLEM: The recurring threat of catastrophe (e.g., famine, exodus, invasion) and the challenge of transmitting complex, non-propositional survival knowledge across generations without formal schooling.
+% FOUNDING_PROBLEM_CORROBORATION: Anthropological studies of disaster-prone communities, historical accounts of ritualized responses to crisis, and cognitive science research on embodied learning corroborate the problem's historical and ongoing relevance. These sources, external to the immediate ritual practitioners, attest to the efficacy of such transmission mechanisms.
+narrative_ontology:disappearance_verdict(catastrophe_memory_transmission__operational_competence_reading, world_rearranges).
+narrative_ontology:founding_problem_status(catastrophe_memory_transmission__operational_competence_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(catastrophe_memory_transmission__operational_competence_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(catastrophe_memory_transmission__operational_competence_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(catastrophe_memory_transmission__operational_competence_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(catastrophe_memory_transmission__operational_competence_reading, 0.15, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -149,14 +192,16 @@ narrative_ontology:story_seed(catastrophe_memory_transmission__operational_compe
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Rope because its primary function is genuine coordination for collective survival, with low extractiveness and suppression. The 'victim' group (those mistaking symbol for substance) highlights a failure mode where the operational content is lost, leading to a form of self-extraction due to misunderstanding, rather than active coercion. The low theater ratio reflects that the ritual's elements are largely functional, even if their purpose is not always consciously articulated by participants. Accessibility collapse is high because, once the operational value is understood, alternatives for such robust, trans-generational competence transmission are few.
+ *   Extractiveness is low (0.15) because the primary 'cost' is the time and effort of ritual participation, which is offset by the direct benefit of enhanced survival competence. Suppression is also low (0.2) as participation is largely voluntary, driven by perceived utility and social cohesion rather than coercion. Theater ratio is minimal (0.1) because the rituals, in this reading, are genuinely functional, with little performative excess beyond what serves the transmission goal. Accessibility collapse is moderate (0.7) because while alternatives for transmitting this specific type of embodied, non-propositional knowledge are limited, other forms of learning exist. Resistance is low (0.05) as the benefits are widely recognized within the community.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of community leaders, the ritual is a vital, low-cost coordination mechanism. From the perspective of those who only see the symbolic form, it might appear as an inert tradition, but this reading emphasizes the underlying operational function. The engine's classification will reflect the overall low extractiveness and high coordination, consistent with a Rope.
+ *   From the perspective of ritual practitioners, the constraint is a beneficial coordination mechanism. From an analytical observer's perspective, it is a functional system for knowledge transfer. There is no significant divergence in perceived type, as the operational benefits are clear. However, other readings of the same kernel would emphasize different aspects, leading to different classifications.
  *
  * DIRECTIONALITY LOGIC:
- *   Community leaders and future generations are the primary beneficiaries, gaining resilience and continuity. Ritual participants bear the cost of participation but are also beneficiaries of the competence. Those mistaking symbol for substance are victims because they fail to extract the operational value, effectively paying for a performance without gaining its core benefit. Anthropological observers are analytical, outside the direct flow of costs and benefits.
+ *   Ritual practitioners are beneficiaries because they directly acquire survival skills. Future community members are also beneficiaries, inheriting a more resilient community. There are no direct 'victims' in this reading, as the 'cost' of ritual is outweighed by its functional benefits. Symbol-focused practitioners are 'excluded' in the sense that their primary interpretive frame is not centered here, but they are not 'victims' of extraction.
  *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint is not subject to mandatrophy in this reading because the founding problem (catastrophe preparedness) remains live, and the ritual continues to effectively address it. The classification as a Rope prevents mislabeling it as pure extraction, as its coordination function is genuine and ongoing.
  */
 
 /* ==========================================================================
@@ -165,33 +210,23 @@ narrative_ontology:story_seed(catastrophe_memory_transmission__operational_compe
 
 omega_variable(
     operational_vs_symbolic_primacy,
-    'Is the operational competence the primary function of the ritual, or is it a secondary effect of symbolic continuity?',
-    'Comparative analysis of ritual efficacy in communities where operational content is explicitly taught versus those where it is implicitly transmitted through symbolic fidelity. If explicit teaching yields higher competence, operational primacy is supported.',
-    'If symbolic continuity is primary, the constraint might lean towards a more ''Mountain'' or ''Piton'' classification for the symbolic aspects, with operational competence being a less robust ''Rope'' component. If operational competence is primary, the ''Rope'' classification is strengthened.',
+    'Is the primary function of this ritual the transmission of operational competence, or is it the preservation of symbolic continuity and identity?',
+    'Empirical studies comparing community resilience outcomes with fidelity to operational vs. symbolic ritual elements, or ethnographic analysis of participant self-understanding and stated goals.',
+    'If symbolic primacy is established, the constraint might reclassify towards a different type (e.g., identity_coordination Rope or even a Piton if the operational function atrophies). If operational primacy is confirmed, the Rope classification is strengthened.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(operational_vs_symbolic_primacy, conceptual, 'Ambiguity regarding the primary function of ritual: operational transmission vs. symbolic preservation.').
+narrative_ontology:omega_variable(operational_vs_symbolic_primacy, conceptual, 'Ambiguity regarding the primary function of ritual: operational training vs. symbolic preservation.').
 
 omega_variable(
-    competence_measurement_validity,
-    'How reliably can ''survival competence'' be measured and attributed to ritual transmission, independent of other learning mechanisms?',
-    'Longitudinal studies tracking communities'' responses to actual or simulated catastrophes, correlating outcomes with ritual adherence and comparing to control groups without such rituals.',
-    'If competence is difficult to measure or is primarily derived from other sources, the ''beneficiary'' claim for future generations weakens, potentially shifting the constraint towards a more ''Piton'' or ''Snare'' if the costs of participation remain high without clear benefit.',
+    universality_of_competence_extraction,
+    'Is the mechanism of transmitting survival competence through ritual a universal, irreducible feature of human collective memory (a Mountain), or a culturally contingent coordination strategy (a Rope)?',
+    'Cross-cultural comparative studies of disaster response and knowledge transmission, or cognitive science research on the fundamental mechanisms of embodied collective memory.',
+    'If universal, the constraint would reclassify as a Mountain, with negligible extraction. If culturally contingent, the Rope classification holds, emphasizing its constructed nature.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(competence_measurement_validity, empirical, 'Uncertainty in measuring the direct impact of ritual on survival competence.').
-
-omega_variable(
-    natural_law_vs_constructed_competence,
-    'Is the transmission of operational competence through ritual a universal, emergent property of human collective memory (Mountain), or a culturally constructed coordination mechanism (Rope)?',
-    'Cross-cultural comparative studies of diverse societies'' catastrophe memory rituals. If similar operational structures emerge independently across vastly different cultural contexts, it supports a ''Mountain'' claim. If structures are highly context-dependent, it supports ''Rope''.',
-    'If a ''Mountain'' (natural law) is established, the extractiveness and suppression metrics would be re-evaluated as inherent costs of an irreducible reality. If ''Rope'' (constructed coordination) is confirmed, the current metrics hold, and the potential for optimization or alternative mechanisms remains.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(natural_law_vs_constructed_competence, conceptual, 'Ambiguity between natural law and constructed coordination for competence transmission.').
+narrative_ontology:omega_variable(universality_of_competence_extraction, empirical, 'Whether the competence transmission is a universal law or a cultural construct.').
 
 
 /* ==========================================================================
@@ -205,8 +240,8 @@ narrative_ontology:interval(catastrophe_memory_transmission__operational_compete
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(cata_tr_t0, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(cata_tr_t25, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 25, 0.08).
+narrative_ontology:measurement(cata_tr_t0, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(cata_tr_t25, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 25, 0.09).
 narrative_ontology:measurement(cata_tr_t50, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 50, 0.1).
 narrative_ontology:measurement(cata_tr_t75, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 75, 0.09).
 narrative_ontology:measurement(cata_tr_t100, catastrophe_memory_transmission__operational_competence_reading, theater_ratio, 100, 0.1).
@@ -231,11 +266,6 @@ narrative_ontology:measurement(cata_su_t100, catastrophe_memory_transmission__op
    ========================================================================== */
 
 narrative_ontology:coordination_type(catastrophe_memory_transmission__operational_competence_reading, identity_coordination).
-narrative_ontology:affects_constraint(catastrophe_memory_transmission__operational_competence_reading, catastrophe_memory_transmission__symbol_continuity_reading).
-narrative_ontology:affects_constraint(catastrophe_memory_transmission__operational_competence_reading, catastrophe_memory_transmission__hybrid_embedded_reading).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'catastrophe_memory_transmission' kernel. This 'operational_competence_reading' focuses on the functional transmission of survival skills, distinct from the 'symbol_continuity_reading' (identity/mourning) and 'hybrid_embedded_reading' (inseparable form/function).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

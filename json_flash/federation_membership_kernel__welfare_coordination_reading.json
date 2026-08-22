@@ -4,27 +4,93 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "a2a758f1-b956-4eb9-9298-d25d62489298"
+    "story_uid": "c19a026f-9b65-4095-a341-97542bb00a42"
   },
   "base_properties": {
     "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.2,
-    "accessibility_collapse": 0.45,
+    "accessibility_collapse": 0.4,
     "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "EU Free Movement via Welfare Coordination",
-    "topic_domain": "political_economy/federalism/migration_policy/welfare_state_theory",
+    "human_readable": "EU Welfare Coordination for Free Movement",
+    "topic_domain": "political_economy/federalism/migration_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "eu_institutions",
-      "sending_member_states_via_remittances"
+      "sending_member_states"
     ],
     "victims": [
       "posted_workers",
-      "receiving_member_state_labor_markets",
-      "sending_member_states_via_brain_drain"
+      "receiving_member_state_labor_markets"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "eu_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The European Commission and Court of Justice of the European Union (ECJ) interpret and enforce rules balancing free movement with national welfare autonomy, particularly anti-social-dumping measures. They benefit from the stability of the single market and the perception of managed integration."
+    },
+    {
+      "name": "sending_member_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the ability of their citizens to seek employment in other EU countries, alleviating domestic unemployment and generating remittances. However, they lose skilled workers without direct fiscal compensation for their education and social investment."
+    },
+    {
+      "name": "receiving_member_state_labor_markets",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience dual pressure from free movement: posted workers (often with 2-year social levy exemptions) can undercut local wages, and permanent migrants increase competition for jobs and social services. This creates downward pressure on wages and strains welfare systems, leading to social dumping concerns."
+    },
+    {
+      "name": "posted_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Are often employed under conditions that, while legal under EU rules, lead to lower wages and social contributions than local workers, making them targets for cost-competition. They face precarious employment and limited access to full welfare benefits in the host state, despite contributing to its economy."
+    },
+    {
+      "name": "national_welfare_systems",
+      "role": "excluded",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are the underlying structures that bear the costs of free movement without direct representation in EU-level policy debates. Their design autonomy is preserved, but they are forced to adapt to the fiscal and social pressures of migration without supranational harmonization or compensatory mechanisms."
+    },
+    {
+      "name": "trade_unions",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Observe and advocate for the protection of national labor standards and welfare provisions against social dumping. They represent the interests of local workers and often contest the current balance of free movement and national autonomy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the operation of national welfare systems across EU member states to facilitate free movement of labor while preventing outright social dumping and preserving national welfare design autonomy.",
+    "transfer_function": "Transfers labor and economic activity from sending to receiving states, and implicitly transfers some social costs (e.g., welfare strain, wage depression) from mobile workers and employers to receiving state labor markets and welfare systems.",
+    "absent_voices": "The direct fiscal and social costs borne by national welfare systems are not fully represented in the EU's policy-making, which prioritizes free movement and single market principles. Local communities and social service providers in receiving states often bear uncompensated burdens.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this coordination framework vanished, free movement would likely collapse into unmanaged competition or be severely restricted by national protectionist measures, leading to significant economic and social disruption across the EU. National welfare systems would face immediate, unmitigated pressures.",
+    "founding_problem": "The original problem was to enable economic integration and labor mobility across diverse national welfare systems without requiring full harmonization, which was politically unfeasible.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "EU institutions and member states generally agree that the problem of balancing free movement with national welfare autonomy remains live, though they dispute the effectiveness and fairness of the current coordination mechanisms. Academic studies and national policy debates corroborate the ongoing tension."
   },
   "interval": {
     "start": 1992,
@@ -34,21 +100,16 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1992,
-      "value": 0.4
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1998,
-      "value": 0.48
+      "time_point": 2000,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2004,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2010,
+      "time_point": 2008,
       "value": 0.6
     },
     {
@@ -68,17 +129,12 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1998,
-      "value": 0.55
+      "time_point": 2000,
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2004,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2010,
+      "time_point": 2008,
       "value": 0.65
     },
     {
@@ -98,23 +154,18 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1998,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2004,
+      "time_point": 2000,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
+      "time_point": 2008,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 2016,
-      "value": 0.19
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
@@ -123,39 +174,39 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the EU's approach to free movement as operating through the coordination of national welfare systems, rather than full supranational harmonization. It focuses on the enforcement of anti-social-dumping rules while preserving member state welfare design autonomy. This is one reading of the 'federation_membership_kernel', emphasizing the practical coordination challenges and the resulting extraction from specific worker and labor market segments.",
-    "logic_rationale": "The extractiveness (0.65) is driven by the structural delta: posted workers face wage undercutting, and receiving state labor markets experience competitive pressure. Suppression (0.70) is high due to the active enforcement of anti-social-dumping rules and the legal complexities that limit worker mobility and access to host state benefits. The theater ratio (0.20) is relatively low, indicating that the coordination function is still largely genuine, but there's a growing performative aspect in balancing national sovereignty claims with single market principles.",
-    "perspectival_gap": "EU institutions and sending member states (via remittances) perceive this as a necessary coordination mechanism for the single market. However, posted workers and receiving member state labor markets experience it as an extractive mechanism that creates unfair competition and social strain. The classification will likely diverge significantly between these seats.",
-    "directionality_logic": "EU institutions are agenda-setters and beneficiaries, as they maintain the single market and political stability. Sending member states are mixed: beneficiaries through remittances, but victims through brain drain. Posted workers and receiving state labor markets are clear victims, bearing the costs of wage undercutting and labor market pressure. National welfare administrators are agenda-setters, balancing national interests with EU obligations.",
-    "mandatrophy_analysis": "The constraint's mandate (coordinating welfare systems for free movement) is still live, but its operation has accumulated extractive elements. The classification as a Tangled Rope prevents mislabeling it as a pure Rope (ignoring extraction) or a Snare (ignoring coordination). The rising extractiveness over time suggests a drift towards greater rent-seeking within the coordination framework, indicating a need for re-evaluation of the balance between coordination and extraction."
+    "narrative_context": "This constraint describes the EU's approach to free movement as a coordination mechanism for national welfare systems, rather than through supranational harmonization. It focuses on the enforcement of anti-social-dumping rules while preserving member state welfare design autonomy. The reading highlights the costs borne by posted workers and receiving state labor markets, which are often obscured by the official narrative of balanced coordination. The claimed type is 'tangled_rope' because it genuinely coordinates (free movement) but also extracts (from posted workers and receiving labor markets) through asymmetric rules.",
+    "logic_rationale": "Extractiveness is high (0.65) because the system, while enabling free movement, creates conditions for social dumping and wage undercutting, transferring value from vulnerable workers and local labor markets. Suppression (0.70) is significant due to the legal and institutional barriers preventing alternative labor market arrangements or stronger national protections. Theater ratio (0.20) is moderate; while there's genuine coordination, the 'preservation of autonomy' narrative sometimes masks the actual pressures on national systems. The metrics reflect a system that has become more extractive and suppressive over time as free movement expanded without commensurate social harmonization.",
+    "directionality_logic": "EU institutions and sending member states are beneficiaries, as they achieve political and economic goals (single market, unemployment relief). Posted workers and receiving state labor markets are victims, bearing the direct costs of wage depression and welfare strain. Trade unions and national welfare systems act as observers or excluded parties, advocating for or absorbing the consequences without full agency in the EU-level design.",
+    "perspectival_gap": "From the perspective of EU institutions, this is a complex but necessary coordination to maintain the single market. From the perspective of posted workers and receiving state labor markets, it's a system that facilitates exploitation and unfair competition. The engine's per-seat classification will reflect this divergence, with beneficiaries seeing a 'rope' or 'scaffold' and victims experiencing a 'snare' or 'tangled_rope'.",
+    "kernel_context": "This constraint is the 'welfare_coordination_reading' of the 'federation_membership_kernel'. It posits that free movement operates through coordination of national welfare systems, with anti-social-dumping rules, rather than full harmonization. Sibling readings include the 'integration_reading' (emphasizing expansive supranational rights) and the 'member_sovereignty_reading' (emphasizing national control over welfare and borders)."
   },
   "omegas": [
     {
-      "id": "welfare_coordination_vs_harmonization",
-      "question": "Is the current level of welfare coordination sufficient to prevent social dumping and ensure fair competition, or is greater supranational harmonization required?",
-      "resolution_mechanism": "Empirical studies comparing labor market outcomes and social protection levels in different EU member states under the current coordination regime versus hypothetical harmonization scenarios.",
-      "impact": "If coordination is deemed insufficient, the constraint's extractiveness and suppression might be re-evaluated as higher, pushing it closer to a Snare. If sufficient, its Rope-like qualities would be emphasized.",
+      "id": "social_dumping_quantification",
+      "question": "What is the precise economic and social cost of 'social dumping' facilitated by the current free movement and welfare coordination rules?",
+      "resolution_mechanism": "Comprehensive, independent econometric studies comparing wage and social contribution differentials for posted workers versus local equivalents, and their impact on national welfare budgets.",
+      "impact": "If costs are demonstrably high, it would strengthen the 'snare' classification for affected workers and receiving states, potentially leading to demands for stricter enforcement or harmonization. If low, it would support the 'rope' framing of the coordination mechanism.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Ambiguity regarding the optimal level of welfare integration for free movement."
+      "description": "Quantifying the true costs of social dumping under current EU rules."
     },
     {
-      "id": "natural_law_vs_constructed_coordination",
-      "question": "Is the preservation of national welfare design autonomy a 'natural' and unchangeable feature of the EU, or a constructed political choice that could be altered?",
-      "resolution_mechanism": "Analysis of legal precedents, treaty revisions, and political will within the EU. If member states consistently resist harmonization, it suggests a strong, almost 'mountain-like' political constraint. If political will shifts, it's a constructed choice.",
-      "impact": "If it's a constructed choice, the constraint's extractiveness is more clearly attributable to policy decisions rather than inherent limits, potentially increasing the perceived agency of EU institutions to alter it. If 'natural', the extraction might be seen as an unavoidable cost.",
+      "id": "welfare_design_autonomy_vs_pressure",
+      "question": "To what extent does the 'preservation of member state welfare design autonomy' truly exist, given the pressures exerted by free movement and anti-social-dumping rules?",
+      "resolution_mechanism": "Comparative policy analysis across member states, examining the actual policy space available for welfare reform and the degree to which national choices are constrained by EU law and market dynamics.",
+      "impact": "If autonomy is largely illusory, it would shift the constraint closer to a 'snare' for national welfare systems, as they are forced to adapt without genuine choice. If substantial, it would reinforce the 'tangled_rope' aspect of managed coordination.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether national welfare autonomy is an irreducible limit or a policy choice."
+      "description": "Assessing the reality of national welfare design autonomy under EU free movement."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint accurately identified as the 'welfare_coordination_reading' of the 'federation_membership_kernel', or does it conflate elements of the 'integration_reading' or 'member_sovereignty_reading'?",
-      "resolution_mechanism": "Expert review by EU law and political economy scholars, comparing the structural elements of this constraint against the defined characteristics of the sibling readings. Focus on the specific mechanisms of enforcement and the declared beneficiaries/victims.",
-      "impact": "Misidentification could lead to an inaccurate classification and misattribution of extraction. If it leans more towards 'integration', the extractiveness might be seen as a cost of deeper integration; if towards 'member_sovereignty', as a cost of national protectionism.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Verifying the precise instantiation of this kernel reading."
+      "id": "coordination_vs_extraction_framing",
+      "question": "Is the primary function of the current framework genuine coordination of diverse welfare systems, or is it primarily an extractive mechanism that leverages free movement for economic advantage?",
+      "resolution_mechanism": "Analysis of policy outcomes: if the benefits of free movement are broadly distributed and costs are mitigated, it's coordination. If benefits concentrate and costs externalize, it's extraction. This is the core contest between the 'welfare_coordination_reading' and the 'integration_reading' (which often downplays costs).",
+      "impact": "A resolution towards extraction would reclassify the constraint as a 'snare' for many seats, while a resolution towards coordination would support a 'rope' or 'tangled_rope' classification.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The fundamental framing of the EU's free movement and welfare interaction."
     }
   ],
   "boltzmann": {
@@ -166,7 +217,7 @@
       "federation_membership_kernel__integration_reading",
       "federation_membership_kernel__member_sovereignty_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'federation_membership_kernel', focusing on the coordination of national welfare systems. It is linked to the 'integration_reading' and 'member_sovereignty_reading' as part of a constraint family that captures the contested nature of EU free movement."
+    "dual_formulation_note": "This constraint is one of three readings of the 'federation_membership_kernel', focusing on the coordination of national welfare systems. It is linked to the 'integration_reading' and 'member_sovereignty_reading' which offer alternative interpretations of free movement within the EU."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -174,11 +225,11 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "federation_membership_kernel__integration_reading",
+        "sibling_id": "integration_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "federation_membership_kernel__member_sovereignty_reading",
+        "sibling_id": "member_sovereignty_reading",
         "relation": "coexists_with"
       }
     ],
@@ -196,23 +247,24 @@
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "coordinated_national_welfare_systems",
+    "reference_frame": "managed_integration_with_national_autonomy",
     "drift_state": {
-      "moment": "contemporary_eu_expansion_era",
+      "moment": "contemporary_enlargement_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

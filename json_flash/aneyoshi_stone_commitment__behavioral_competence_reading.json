@@ -4,46 +4,70 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c6fe876b-c6cb-48d4-93e8-91a57340b33c"
+    "story_uid": "ff75b091-fd4e-4361-8a3e-35a4f33b0ebc"
   },
   "base_properties": {
     "extractiveness": 0.05,
     "suppression": 0.1,
-    "theater_ratio": 0.0,
+    "theater_ratio": 0.02,
     "accessibility_collapse": 0.9,
-    "resistance": 0.05,
+    "resistance": 0.01,
     "claimed_type": "mountain",
     "human_readable": "Aneyoshi Stone Commitment (Behavioral Competence Reading)",
     "topic_domain": "disaster_anthropology/commitment_systems/temporal_institutional_analysis",
+    "requires_active_enforcement": false,
     "emerges_naturally": true,
     "beneficiaries": [
       "aneyoshi_residents"
+    ],
+    "vindicated_propositions": [
+      "intergenerational_wisdom",
+      "disaster_preparedness_efficacy"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "aneyoshi_residents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Residents of Aneyoshi who, for generations, have adhered to the stone's directive to build above a certain elevation. They directly benefit from the protection against tsunamis, as evidenced by their survival in the 2011 disaster. Their adherence is a cultural norm, reinforced by historical memory."
+    },
+    {
+      "name": "local_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "The local government implicitly upholds the stone's directive through land-use planning and building codes that respect the traditional high-ground settlement patterns. While not actively 'enforcing' the stone, their policies align with its guidance, reinforcing its operational force."
+    },
+    {
+      "name": "disaster_preparedness_experts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and practitioners who study disaster resilience and intergenerational knowledge transfer. They observe the Aneyoshi case as a successful example of long-term behavioral compliance with a traditional warning system, validating the stone's effectiveness."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates land-use decisions across generations to ensure community safety from tsunamis by establishing a clear, high-ground building line.",
+    "transfer_function": "Transfers safety and resilience across generations by constraining individual building choices, effectively transferring potential risk from future residents to the present generation's adherence.",
+    "absent_voices": "Past generations who died in previous tsunamis are the 'absent voices' whose experience is encoded in the stone's warning. Their absence is the very reason the stone exists.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stone's commitment vanished, future generations might build closer to the coast, increasing their vulnerability to tsunamis and potentially leading to catastrophic loss of life, as seen in other communities that did not adhere to similar warnings.",
+    "founding_problem": "Repeated catastrophic loss of life from tsunamis, leading to the need for a permanent, intergenerational warning system to prevent future generations from rebuilding in dangerous low-lying areas.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The 2011 Tohoku earthquake and tsunami, where Aneyoshi's adherence to the stone's warning resulted in zero casualties, provides strong empirical corroboration from outside the immediate community, validating the founding problem's continued relevance and the stone's efficacy."
   },
   "interval": {
     "start": 1933,
     "end": 2011
   },
-  "omegas": [
-    {
-      "id": "kernel_reading_ambiguity",
-      "question": "Is the Aneyoshi Stone a live land-use rule (behavioral competence reading) or a commemorative husk (commemorative husk reading)?",
-      "resolution_mechanism": "Empirical observation of land-use decisions post-2011 tsunami: if new construction continues to respect the stone's elevation, the behavioral competence reading is strengthened. If construction disregards it, the commemorative husk reading is strengthened.",
-      "impact": "If the behavioral competence reading is correct, the constraint is a Mountain (or Rope) that genuinely protects residents. If the commemorative husk reading is correct, it is a Piton or Snare, where the 'natural law' claim is cover for inertia or extraction.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Ambiguity between active land-use rule and symbolic memorial."
-    },
-    {
-      "id": "natural_law_vs_social_norm",
-      "question": "Is the Aneyoshi Stone's directive a natural law (unavoidable consequence of geography) or a deeply internalized social norm (cultural choice)?",
-      "resolution_mechanism": "Cross-cultural comparison with similar coastal communities lacking such directives: if they consistently suffer higher casualties from tsunamis, it suggests the stone's rule approximates a natural law. If not, it's a powerful social norm.",
-      "impact": "If a natural law, its Mountain classification is robust. If a social norm, it's a highly effective Rope, but its persistence is contingent on cultural transmission, not physical inevitability.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinction between a natural hazard constraint and a culturally enforced safety norm."
-    }
-  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
@@ -71,6 +95,31 @@
       "value": 0.05
     },
     {
+      "metric": "theater_ratio",
+      "time_point": 1933,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.02
+    },
+    {
       "metric": "suppression_requirement",
       "time_point": 1933,
       "value": 0.1
@@ -94,48 +143,48 @@
       "metric": "suppression_requirement",
       "time_point": 2011,
       "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1933,
-      "value": 0.0
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.0
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1970,
-      "value": 0.0
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.0
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2011,
-      "value": 0.0
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes the Aneyoshi Stone as a live land-use rule, where its directive to build above a certain elevation retained operational force in building location decisions for 78 years, from the 1933 tsunami to the 2011 tsunami. In this reading, the stone functions as an active regulatory mechanism, and compliance with its directive is causally linked to the survival of the village in 2011. The constraint is presented as a Mountain due to its direct connection to the physical reality of tsunami hazards and its low extractiveness, with residents benefiting from its protective function.",
-    "logic_rationale": "The low extractiveness (0.05) reflects that the stone's directive imposes minimal cost, primarily restricting building location to higher ground, which is a direct safety benefit. Suppression (0.1) is low because compliance is largely voluntary, driven by a clear understanding of the hazard and intergenerational transmission of knowledge, rather than active coercion. The theater ratio is zero, as the stone's function is entirely practical and effective. Accessibility collapse is high (0.9) because the alternative (building below the stone's height) is understood to be catastrophically risky, effectively collapsing that option. Resistance is low (0.05) because the rule is widely accepted as essential for survival.",
-    "directionality_logic": "Aneyoshi residents are the primary beneficiaries (d=0.0) as the stone's directive directly protects their lives and property from tsunamis. There are no identifiable victims in this reading, as the constraint is understood to be a necessary adaptation to a natural hazard, not an extractive mechanism. The constraint subsidizes the residents by enabling their continued habitation in a high-risk area.",
-    "perspectival_gap": "From the perspective of the Aneyoshi residents, the stone's directive is a clear, life-saving rule, a 'natural law' of their environment. From an external, more skeptical perspective (e.g., the 'commemorative husk' reading), the stone might be seen as a symbolic artifact whose behavioral force is either imagined or has decayed. This story instantiates the 'behavioral competence' reading, where the stone's directive is genuinely operative.",
-    "kernel_context": "This constraint is the 'behavioral competence' reading of the 'aneyoshi_stone_commitment' kernel. This reading posits the stone as an active, behavior-shaping land-use rule, directly responsible for the village's survival in the 2011 tsunami. A sibling reading, 'commemorative_husk_reading', would interpret the stone as a mere memorial, its behavioral force having atrophied over time."
+    "narrative_context": "This constraint story represents the 'behavioral competence' reading of the Aneyoshi tsunami stone commitment. In this reading, the stone functions as a live, operational land-use rule that has successfully guided building location decisions for generations, directly contributing to the community's survival in the 2011 tsunami. The constraint is classified as a Mountain due to its enduring, almost natural-law-like influence on behavior, with negligible extraction and high accessibility collapse for alternatives (building below the line).",
+    "key_agents": [
+      "Aneyoshi residents: Primary beneficiaries (moderate power/constrained exit) — adhere to the directive and are protected.",
+      "Local government: Agenda-setter (institutional power/constrained exit) — implicitly upholds the directive through land-use policy.",
+      "Disaster preparedness experts: Analytical observers (analytical power/analytical exit) — validate the stone's efficacy."
+    ],
+    "logic_rationale": "The extractiveness is very low (0.05) because the 'cost' of adherence (building higher up) is overwhelmingly offset by the benefit of survival. Suppression is low (0.1) as adherence is primarily cultural and self-enforced, rather than requiring active coercion. The theater ratio is negligible (0.02) as the stone's function is direct and effective, not performative. Accessibility collapse is high (0.9) because the catastrophic consequences of ignoring the directive make alternatives (building lower) effectively unthinkable. Resistance is minimal (0.01) due to the clear, empirically validated benefit of compliance. The claimed type is Mountain because, in this reading, the stone's directive acts as an irreducible limit on safe settlement, akin to a natural law of the landscape.",
+    "directionality_logic": "Aneyoshi residents are clear beneficiaries, as the constraint directly ensures their safety. The local government, by aligning its policies, also benefits from a resilient community. There are no direct 'victims' in this reading, as the constraint serves a collective good with minimal individual cost. The directionality for residents is near 0.0 (full beneficiary) due to the life-saving outcome.",
+    "perspectival_gap": "This reading emphasizes the stone's active, behavioral influence. A contrasting 'commemorative husk' reading would see the stone as a mere memorial, with its behavioral force having atrophied. The engine's classification would diverge significantly between these readings, with the 'husk' reading likely computing as a Piton or even a non-constraint, while this reading computes as a Mountain.",
+    "kernel_context": "This constraint is the 'behavioral competence' reading of the Aneyoshi stone commitment. It posits the stone as an active, behavior-shaping land-use rule. Sibling readings, such as the 'commemorative husk' reading, would interpret the stone as a symbolic artifact with no active behavioral force."
   },
+  "omegas": [
+    {
+      "id": "behavioral_vs_commemorative_function",
+      "question": "Is the Aneyoshi stone primarily an active behavioral constraint on land use, or has it largely decayed into a commemorative artifact?",
+      "resolution_mechanism": "Longitudinal ethnographic study of land-use decisions and community narratives in Aneyoshi and comparable communities over multiple generations, particularly after major disaster events.",
+      "impact": "If resolved as a behavioral constraint (this reading), the classification as Mountain holds. If resolved as a commemorative husk, the constraint would reclassify as a Piton (atrophied function, maintained theatrically) or even a non-constraint, with significantly higher theater_ratio and lower accessibility_collapse.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between the stone's active behavioral role and its symbolic, commemorative role."
+    },
+    {
+      "id": "natural_law_vs_cultural_norm",
+      "question": "To what extent does the stone's directive function as an 'emerges_naturally' physical limit (a natural law of tsunami safety), versus a culturally constructed and maintained norm?",
+      "resolution_mechanism": "Comparative analysis with other coastal communities: if similar warnings are ignored with catastrophic results, it highlights the cultural maintenance aspect. If all communities universally avoid low-lying areas after a tsunami, it points to a more 'natural law' understanding.",
+      "impact": "If more strongly a cultural norm, the 'emerges_naturally' flag might be reconsidered, potentially shifting the classification from a pure Mountain to a highly effective Rope, acknowledging the human coordination component more explicitly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the 'naturalness' of the constraint's emergence and persistence."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "aneyoshi_stone_commitment__commemorative_husk_reading"
+      "disaster_resilience_policy"
     ],
-    "dual_formulation_note": "This constraint is one of two readings of the 'Aneyoshi Stone Commitment' kernel. This 'behavioral competence' reading emphasizes the stone's active role in land-use decisions and village survival, contrasting with the 'commemorative husk' reading which views it as a symbolic artifact with decayed behavioral force."
+    "dual_formulation_note": "This constraint is one of two primary readings of the 'aneyoshi_stone_commitment' kernel. This 'behavioral_competence_reading' emphasizes the stone's active role in shaping land-use behavior, while the 'commemorative_husk_reading' (a sibling constraint) focuses on its symbolic, non-operational function. Both are linked as part of the same kernel."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -143,41 +192,42 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "aneyoshi_stone_commitment__commemorative_husk_reading",
+        "sibling_id": "commemorative_husk_reading",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "stone_directive_is_active_land_use_rule",
+        "atom": "intergenerational_tsunami_safety_is_paramount",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "compliance_ensures_survival",
-        "role": "secondary",
+        "atom": "historical_warnings_are_behaviorally_binding",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       }
     ],
     "reference_frame": "post_1933_tsunami_rebuilding_directive",
     "drift_state": {
-      "moment": "pre_2011_tsunami",
+      "moment": "contemporary_2011_tohoku_tsunami",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

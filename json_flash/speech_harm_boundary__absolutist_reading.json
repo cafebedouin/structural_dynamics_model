@@ -4,144 +4,243 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "a6b09ae5-7689-40f2-b3a1-fdfb4e3b8f79"
+    "story_uid": "d07cd727-19e8-4a52-8c28-919a04a4c841"
   },
   "base_properties": {
     "extractiveness": 0.85,
     "suppression": 0.1,
     "theater_ratio": 0.05,
-    "accessibility_collapse": 0.9,
+    "accessibility_collapse": 0.2,
     "resistance": 0.7,
-    "claimed_type": "tangled_rope",
-    "human_readable": "Absolutist Reading of Speech Harm Boundary",
+    "claimed_type": "snare",
+    "human_readable": "Absolutist Speech Protection (High Harm Threshold)",
     "topic_domain": "constitutional_law/political_philosophy/communication_ethics",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "speakers_with_controversial_views",
-      "public_discourse"
+      "speakers_of_controversial_speech",
+      "free_speech_advocates"
     ],
     "victims": [
       "targets_of_harmful_speech",
       "vulnerable_groups"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine absolutist reading of speech protection, or is it a rhetorical cover for other interests?",
-      "resolution_mechanism": "Analysis of judicial decisions and legislative actions: if the unprotected categories expand or the harm threshold lowers in practice, it indicates a shift away from absolutism.",
-      "impact": "If genuinely absolutist, it prioritizes speaker autonomy at high cost to targets. If rhetorical, it's a snare for targets and a rope for powerful speakers.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'absolutist_reading' of the 'speech_harm_boundary' kernel."
+      "name": "speakers_of_controversial_speech",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "These individuals benefit from a broad scope of protected speech, allowing them to express views that may be offensive or harmful to others without legal repercussions, unless it falls into a very narrow, unprotected category. Their autonomy is maximized."
     },
     {
-      "id": "harm_threshold_objectivity",
-      "question": "Is the 'extremely high' harm override threshold an objective standard, or is its application subject to interpretive bias favoring certain types of speech or speakers?",
-      "resolution_mechanism": "Empirical study of how the threshold is applied across different contexts and against different speakers/targets; analysis of judicial reasoning for consistency.",
-      "impact": "If biased, the effective extraction from vulnerable groups is higher than the stated threshold implies, making the constraint more Snare-like for them.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity in the application of the harm override threshold."
+      "name": "targets_of_harmful_speech",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals bear the direct costs of speech that causes emotional distress, reputational damage, or incites hostility, without adequate legal recourse due to the high threshold for intervention. They are often left to absorb the harm."
     },
     {
-      "id": "sibling_reading_impact_dignity",
-      "question": "How would adopting the 'dignity_reading' (speech protection subordinate to human dignity) structurally alter this constraint?",
-      "resolution_mechanism": "Hypothetical legal analysis: if dignity were paramount, personhood-denying speech would be unprotected, significantly lowering the harm override threshold and expanding victim categories.",
-      "impact": "The 'dignity_reading' would transform this constraint from a Tangled Rope (high speaker autonomy, high harm cost) into a more balanced Rope or even a Mountain for dignity itself, by re-prioritizing the victim's experience.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of the 'dignity_reading' sibling on this constraint."
+      "name": "free_speech_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "These groups actively defend the broad interpretation of speech protection, viewing any restriction as a slippery slope to censorship. They benefit from the legal precedent that prioritizes speaker autonomy over potential harm."
     },
     {
-      "id": "sibling_reading_impact_harm_balancing",
-      "question": "How would adopting the 'harm_balancing_reading' (speech protection yields to demonstrated harm) structurally alter this constraint?",
-      "resolution_mechanism": "Comparative legal analysis: jurisdictions employing harm balancing typically have lower thresholds for intervention and a broader range of unprotected speech, based on proportionality.",
-      "impact": "The 'harm_balancing_reading' would reduce the extractiveness from targets by allowing more frequent overrides, shifting the constraint closer to a Rope or Scaffold, depending on the specific balancing test.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of the 'harm_balancing_reading' sibling on this constraint."
+      "name": "vulnerable_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "These groups are disproportionately affected by hate speech, incitement to discrimination, and other forms of harmful expression, experiencing systemic marginalization and psychological distress with limited legal protection. Their identity makes exit from the target position impossible."
+    },
+    {
+      "name": "courts_and_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These institutions interpret and enforce the boundaries of protected speech. Under this reading, they are constrained to apply a very high harm threshold, often leading to outcomes that prioritize speaker rights over victim protection, even when significant harm is evident."
+    },
+    {
+      "name": "legislators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These bodies are responsible for crafting laws that balance speech rights with public safety and order. Under this absolutist reading, their ability to regulate harmful speech is severely limited by judicial precedent, making it difficult to address emerging forms of harm."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear, albeit high, threshold for what constitutes unprotected speech, providing predictability for speakers and minimizing state intervention in expression.",
+    "transfer_function": "Transfers the burden of harm from speakers of controversial or offensive speech to the targets and vulnerable groups, who must absorb the negative impacts without legal redress.",
+    "absent_voices": "Victims of speech-related harm, particularly those from marginalized communities, are often unheard in the legal discourse that shapes this absolutist interpretation. Their experiences of harm are systematically de-prioritized or dismissed as the 'cost of free speech'.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this absolutist reading vanished, the legal landscape around speech would immediately shift. Courts would likely adopt more nuanced balancing tests, leading to increased regulation of harmful speech, more legal recourse for victims, and a re-evaluation of the scope of speaker autonomy. The balance of power between speakers and targets would fundamentally alter.",
+    "founding_problem": "The constraint was established to prevent government censorship and protect a robust marketplace of ideas, ensuring that unpopular or dissenting views could be expressed without fear of suppression.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Free speech advocates and some legal scholars attest that the threat of government overreach remains live, necessitating strong protections. However, targets of harmful speech and human rights organizations argue that the problem has shifted, and the current framework now enables harm rather than preventing it, making the 'live' status contested."
+  },
+  "interval": {
+    "start": 1969,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1969,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
       "value": 0.75
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.78
+      "time_point": 1990,
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.81
+      "time_point": 2000,
+      "value": 0.82
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.83
+      "time_point": 2010,
+      "value": 0.84
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.15
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.12
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.11
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 1969,
       "value": 0.1
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1980,
       "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1969,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents an 'absolutist' reading of free speech, where protection for expression is near-absolute and the threshold for overriding it due to harm is extremely high. This reading prioritizes speaker autonomy and robust public discourse, even at the cost of significant harm to individuals or groups. It is one reading of the broader 'speech_harm_boundary' kernel, which is contested by 'harm_balancing_reading' and 'dignity_reading' siblings.",
+    "narrative_context": "This constraint represents an absolutist reading of speech protection, where the threshold for overriding speech rights due to harm is extremely high. It prioritizes speaker autonomy and a broad 'marketplace of ideas' over the protection of individuals or groups from the harms of speech. The constraint is claimed as a 'rope' by its proponents (a coordination mechanism for open discourse), but its high extractiveness from targets of harmful speech and active enforcement of a narrow unprotected category leads to a 'snare' classification from the perspective of those bearing the costs. The metrics reflect the actual operation, not the claimed ideal.",
     "key_agents": [
-      "speakers_with_controversial_views: Primary beneficiary (powerful/mobile) — benefits from broad protection",
-      "targets_of_harmful_speech: Primary victim (powerless/trapped) — bears the cost of high harm threshold",
-      "vulnerable_groups: Secondary victim (powerless/identity_locked) — disproportionately affected by harmful speech",
-      "judicial_authorities: Agenda setter (institutional/analytical) — interprets and enforces the harm boundary",
-      "public_discourse: Beneficiary (diffuse/civilizational) — benefits from robust, unconstrained speech"
+      "speakers_of_controversial_speech: Primary beneficiary (mobile exit) — benefits from broad protection.",
+      "targets_of_harmful_speech: Primary payer (trapped exit) — bears the costs of unprotected harm.",
+      "free_speech_advocates: Secondary beneficiary (analytical exit) — defends the broad interpretation.",
+      "vulnerable_groups: Secondary payer (identity_locked exit) — disproportionately affected by harm.",
+      "courts_and_judiciary: Agenda setter (constrained exit) — interprets and enforces the high harm threshold.",
+      "legislators: Agenda setter (constrained exit) — limited in ability to regulate harmful speech."
     ],
-    "logic_rationale": "The extractiveness is high (0.85) because the constraint imposes significant costs (unmitigated harm) on targets for the benefit of speakers. Suppression is low (0.1) because the constraint's core function is to *prevent* suppression of speech, not to enforce it, except for the very narrow categories of unprotected speech. Theater ratio is low (0.05) as the constraint is actively and genuinely enforced according to its stated principles. Accessibility collapse is high (0.9) because, once the absolutist principle is accepted, alternatives for restricting speech are almost entirely foreclosed. Resistance is high (0.7) from those who bear the harms, leading to ongoing legal and social challenges.",
-    "perspectival_gap": "Speakers with controversial views experience this as a Rope or even a Mountain, as their speech is largely unconstrained. Targets of harmful speech, however, experience it as a Snare or Tangled Rope, as they bear significant costs with little recourse. Judicial authorities, acting as agenda setters, navigate this tension by upholding the high harm threshold, which benefits the abstract ideal of 'public discourse' but extracts from specific victims.",
-    "directionality_logic": "Speakers with controversial views are full beneficiaries (d=0.0) as the constraint subsidizes their expression by externalizing harm costs. Targets of harmful speech are full targets (d=1.0) as they bear the direct and unmitigated costs. Vulnerable groups are also targets, often identity-locked, amplifying their effective extraction. Judicial authorities are agenda setters, balancing the abstract benefit of free speech with the concrete costs, but their enforcement of the high harm threshold structurally benefits speakers.",
-    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its 'mandate' (protecting speech) is still considered live. However, the *balance* of its mandate is contested: whether its original intent was to protect speech so absolutely that it imposes such high costs on targets, or if the high extractiveness is an unintended consequence of an absolutist interpretation. The 'founding_problem_status' being 'contested' reflects this ongoing debate."
+    "logic_rationale": "The high extractiveness (0.85) reflects the significant and often unmitigated harm borne by targets of speech that falls below the extremely high intervention threshold. Suppression is low (0.1) because the constraint's purpose is to minimize suppression of speech, not to enforce it. Theater ratio is low (0.05) as the system genuinely operates to protect speech, even if the consequences are extractive for others. Accessibility collapse is low (0.2) because alternatives to harmful speech (e.g., counter-speech, private action) are theoretically available, but often ineffective against systemic harm. Resistance is high (0.7) due to ongoing advocacy and legal challenges from groups seeking greater protection from speech-related harm.",
+    "perspectival_gap": "From the perspective of speakers and free speech advocates, this constraint is a 'rope' that coordinates open discourse and protects fundamental liberties. From the perspective of targets and vulnerable groups, it operates as a 'snare' that extracts their safety and dignity, leaving them exposed to harm under the guise of freedom. The courts, as agenda-setters, are caught between these competing interpretations, often forced by precedent to uphold the absolutist reading.",
+    "directionality_logic": "Speakers of controversial speech and free speech advocates are clear beneficiaries, as the constraint maximizes their autonomy and influence (low directionality). Targets of harmful speech and vulnerable groups are clear victims, bearing the costs of the constraint's operation (high directionality, especially for identity_locked vulnerable groups). Courts and legislators, while powerful, are constrained by the absolutist interpretation, making their directionality more symmetric, as they must uphold a system that benefits some while harming others.",
+    "mandatrophy_analysis": "This reading prevents mislabeling broad speech protection as pure extraction by acknowledging its genuine coordination function for speakers. However, it risks mislabeling the extraction from targets as a necessary cost of coordination, rather than an asymmetric burden. The high extractiveness and resistance metrics, coupled with the 'contested' status of the founding problem, suggest a potential for mandatrophy where the original coordination function (preventing censorship) has been overshadowed by the enablement of harm.",
+    "kernel_context": "This constraint is an 'absolutist_reading' of the 'speech_harm_boundary' kernel. Sibling readings include the 'harm_balancing_reading' (which would prioritize proportionality between speech and harm) and the 'dignity_reading' (which would subordinate speech to human dignity and categorically unprotected personhood-denying speech)."
   },
+  "omegas": [
+    {
+      "id": "absolutism_vs_harm_threshold",
+      "question": "Is the high harm threshold a necessary component of robust free speech, or an arbitrary line that enables harm?",
+      "resolution_mechanism": "Comparative legal analysis of jurisdictions with different harm thresholds and their impact on both speech vitality and victim protection. Empirical studies on the actual chilling effect of lower thresholds vs. the actual harm prevented.",
+      "impact": "If the threshold is found to be arbitrary, it would weaken the justification for the absolutist reading, potentially shifting classification towards a 'tangled_rope' or 'snare' for targets. If necessary, it would reinforce the 'rope' aspect for speakers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the high harm threshold is structurally justified or merely a policy choice."
+    },
+    {
+      "id": "identity_locked_victim_agency",
+      "question": "To what extent does the 'identity_locked' status of vulnerable groups genuinely prevent exit, versus being a rhetorical framing to highlight their disproportionate burden?",
+      "resolution_mechanism": "Sociological studies on the lived experience of vulnerable groups, examining their actual capacity to 'exit' or mitigate the effects of harmful speech, and the psychological costs of such 'exit' attempts. Legal analysis of available protective measures and their efficacy.",
+      "impact": "If 'identity_locked' is found to be primarily rhetorical, it would reduce the effective extraction from these groups (lower d), potentially shifting their seat classification. If it reflects a genuine structural inability to exit, it reinforces the 'snare' classification for them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The true nature of 'identity_locked' exit for vulnerable groups."
+    },
+    {
+      "id": "founding_problem_obsolescence",
+      "question": "Has the original problem of government censorship been sufficiently mitigated such that the absolutist reading now primarily serves to protect harmful speech rather than dissenting speech?",
+      "resolution_mechanism": "Historical analysis of censorship trends, comparative studies of speech regulation in different eras, and analysis of contemporary threats to free expression. Examination of the types of speech currently protected by the high threshold.",
+      "impact": "If the original problem is largely obsolete, it would strengthen the argument for mandatrophy, reclassifying the constraint towards a 'piton' or 'snare' for targets, as its primary function would have shifted from coordination to extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem of censorship is still the primary driver of the absolutist reading."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
       "speech_harm_boundary__harm_balancing_reading",
       "speech_harm_boundary__dignity_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three distinct readings of the 'speech_harm_boundary' kernel. Each reading has a different structural extractiveness and beneficiary/victim profile, necessitating separate constraint stories. This 'absolutist_reading' prioritizes speaker autonomy, while 'harm_balancing_reading' and 'dignity_reading' offer alternative frameworks for balancing speech with harm or dignity."
+    "dual_formulation_note": "This constraint is one reading of the 'speech_harm_boundary' kernel. Its absolutist interpretation directly influences the operational space and legitimacy of alternative readings that seek to balance speech with harm or dignity."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -149,45 +248,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "speech_harm_boundary__harm_balancing_reading",
+        "sibling_id": "harm_balancing_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "speech_harm_boundary__dignity_reading",
+        "sibling_id": "dignity_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "speech_autonomy_maximization",
+        "atom": "marketplace_of_ideas_maximization",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "harm_as_secondary_consideration",
+        "atom": "state_neutrality_on_content",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "marketplace_of_ideas_ideal",
+    "reference_frame": "unfettered_expression_paradigm",
     "drift_state": {
       "moment": "contemporary_digital_era",
-      "direction": "stable",
-      "magnitude": "minor",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

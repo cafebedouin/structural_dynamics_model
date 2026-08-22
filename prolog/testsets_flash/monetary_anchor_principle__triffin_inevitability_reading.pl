@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,19 +69,23 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: monetary_anchor_principle__triffin_inevitability_reading
- *   human_readable: Triffin Dilemma Inevitability of Gold Standard Collapse
+ *   human_readable: Triffin Dilemma Inevitability (Monetary Anchor Principle Reading)
  *   domain: monetary_economics/political_economy/international_finance
  *
  * SUMMARY:
- *   This constraint describes the structural inevitability of the Bretton
- *   Woods system's collapse due to the Triffin dilemma. As the US dollar
- *   served as the global reserve currency, the US had to run persistent
- *   balance of payments deficits to supply sufficient liquidity for global
- *   trade and growth. However, these deficits simultaneously undermined
- *   confidence in the dollar's convertibility to gold, leading to a run on US
- *   gold reserves and ultimately forcing the abandonment of the gold
- *   standard. This reading frames the collapse as a logical consequence of
- *   the system's design, rather than a policy choice or a contingent event.
+ *   This constraint represents the 'Triffin inevitability' reading of the
+ *   monetary anchor principle, asserting that the collapse of the Bretton
+ *   Woods system was a structural inevitability due to the inherent
+ *   contradiction of a reserve currency issuer (US) under a gold standard. To
+ *   provide sufficient global liquidity, the US had to run deficits, which
+ *   eventually depleted its gold reserves, making the gold-dollar
+ *   convertibility unsustainable. This reading frames the transition as a
+ *   physical/logical impossibility, not a policy choice. The constraint is
+ *   claimed as a Mountain because it describes an irreducible economic limit,
+ *   not a human-made arrangement that could be sustained by enforcement. The
+ *   Bretton Woods institutional framework is identified as a 'victim' because
+ *   it was the system that ultimately failed due to this structural
+ *   contradiction.
  *
  */
 
@@ -88,50 +96,92 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(monetary_anchor_principle__triffin_inevitability_reading, 0.05).
 domain_priors:suppression_score(monetary_anchor_principle__triffin_inevitability_reading, 0.95).
-domain_priors:theater_ratio(monetary_anchor_principle__triffin_inevitability_reading, 0.0).
+domain_priors:theater_ratio(monetary_anchor_principle__triffin_inevitability_reading, 0.01).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, extractiveness, 0.05).
 narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 0.01).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, accessibility_collapse, 0.9).
-narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, resistance, 0.05).
+narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, accessibility_collapse, 0.98).
+narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, resistance, 0.02).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(monetary_anchor_principle__triffin_inevitability_reading, mountain).
-narrative_ontology:human_readable(monetary_anchor_principle__triffin_inevitability_reading, "Triffin Dilemma Inevitability of Gold Standard Collapse").
+narrative_ontology:human_readable(monetary_anchor_principle__triffin_inevitability_reading, "Triffin Dilemma Inevitability (Monetary Anchor Principle Reading)").
 narrative_ontology:topic_domain(monetary_anchor_principle__triffin_inevitability_reading, "monetary_economics/political_economy/international_finance").
 
 domain_priors:emerges_naturally(monetary_anchor_principle__triffin_inevitability_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(monetary_anchor_principle__triffin_inevitability_reading, '4a7eb49c-2f90-478d-ad18-4a51dfd6502d').
-narrative_ontology:cs_kernel_codification('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', implicit).
-narrative_ontology:cs_authority_grounding('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', self_enforcing).
-narrative_ontology:cs_reading_relation('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', monetary_anchor_principle__punctuated_swap_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', monetary_anchor_principle__overdetermined_composite_reading, coexists_with).
-narrative_ontology:cs_axiom('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', foundational, gold_convertibility_and_global_liquidity_are_contradictory).
-narrative_ontology:cs_axiom_status(gold_convertibility_and_global_liquidity_are_contradictory, holdable).
-narrative_ontology:cs_axiom_grounding('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', gold_convertibility_and_global_liquidity_are_contradictory, empirically_contingent).
-narrative_ontology:cs_reference_frame('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', triffin_dilemma_as_structural_law).
-narrative_ontology:cs_drift_state('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', contemporary, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('4a7eb49c-2f90-478d-ad18-4a51dfd6502d', '').
+narrative_ontology:cs_story_uid(monetary_anchor_principle__triffin_inevitability_reading, 'c7e2a482-50c8-4eb6-bfaa-d1c1490adb50').
+narrative_ontology:cs_kernel_codification('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', implicit).
+narrative_ontology:cs_authority_grounding('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', diffuse_epistemic).
+narrative_ontology:cs_reading_relation('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', monetary_anchor_principle__punctuated_swap_reading, forecloses).
+narrative_ontology:cs_reading_relation('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', monetary_anchor_principle__overdetermined_composite_reading, influences).
+narrative_ontology:cs_axiom('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', foundational, reserve_currency_dilemma_is_structural_contradiction).
+narrative_ontology:cs_axiom_status(reserve_currency_dilemma_is_structural_contradiction, holdable).
+narrative_ontology:cs_axiom_grounding('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', reserve_currency_dilemma_is_structural_contradiction, empirically_contingent).
+narrative_ontology:cs_axiom('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', foundational, gold_standard_inherently_unstable_for_global_reserve).
+narrative_ontology:cs_axiom_status(gold_standard_inherently_unstable_for_global_reserve, holdable).
+narrative_ontology:cs_axiom_grounding('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', gold_standard_inherently_unstable_for_global_reserve, empirically_contingent).
+narrative_ontology:cs_reference_frame('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', gold_standard_structural_contradiction).
+narrative_ontology:cs_drift_state('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', contemporary_economic_theory, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('c7e2a482-50c8-4eb6-bfaa-d1c1490adb50', '').
 narrative_ontology:cs_kernel_id(monetary_anchor_principle__triffin_inevitability_reading, monetary_anchor_principle).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(monetary_anchor_principle__triffin_inevitability_reading, bretton_woods_institutional_framework).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(monetary_anchor_principle__triffin_inevitability_reading, global_financial_markets).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The system itself, which was designed around the gold-dollar peg, was the ultimate 'victim' of the inherent contradiction. It could not escape its own design flaws.
+narrative_ontology:constraint_stakeholder(monetary_anchor_principle__triffin_inevitability_reading, bretton_woods_institutional_framework, payer,
+    institutional, generational, trapped, global).
+
+% As the issuer of the reserve currency, the US Treasury was forced to manage the dilemma, running deficits to provide global liquidity while simultaneously seeing its gold reserves depleted. Its choices were limited by the structural contradiction.
+narrative_ontology:constraint_stakeholder(monetary_anchor_principle__triffin_inevitability_reading, us_treasury, agenda_setter,
+    institutional, biographical, constrained, global).
+
+% The IMF observed and analyzed the growing instability of the Bretton Woods system, recognizing the Triffin dilemma as a fundamental structural flaw. It could propose solutions but could not alter the underlying economic laws.
+narrative_ontology:constraint_stakeholder(monetary_anchor_principle__triffin_inevitability_reading, international_monetary_fund, observer,
+    institutional, generational, analytical, global).
+
+% Benefited from the liquidity provided by US deficits, but also contributed to the pressure on gold reserves by converting dollars to gold when confidence wavered. Their actions accelerated the dilemma's resolution.
+narrative_ontology:constraint_stakeholder(monetary_anchor_principle__triffin_inevitability_reading, global_financial_markets, beneficiary,
+    organized, immediate, mobile, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provided a stable international monetary system with fixed exchange rates and a reliable source of global liquidity, facilitating international trade and investment.
+% TRANSFER_FUNCTION: The system implicitly transferred the cost of maintaining global liquidity to the reserve currency issuer (US), which bore the burden of managing the gold-dollar convertibility.
+% ABSENT_VOICES: Developing nations, whose economic stability was often collateral damage in the larger international monetary system, had limited voice in the design or reform of the Bretton Woods system. They would have argued for a more equitable and less volatile system.
+% DISAPPEARANCE_RATIONALE: If the Triffin dilemma (as a structural inevitability) had not existed, the Bretton Woods system might have persisted longer or evolved differently, fundamentally altering the trajectory of international finance and global economic power dynamics. The world would have rearranged around a different monetary anchor principle.
+% FOUNDING_PROBLEM: The post-WWII need for a stable international monetary system to prevent competitive devaluations and facilitate reconstruction and trade.
+% FOUNDING_PROBLEM_CORROBORATION: Economists and historians widely corroborate the founding problem. However, the Triffin dilemma itself demonstrated that the solution contained the seeds of its own demise, rendering the original problem 'dead' in its Bretton Woods form, even if the need for monetary stability remains 'live' in new forms. Academic consensus and historical records from outside the US Treasury or IMF support this.
+narrative_ontology:disappearance_verdict(monetary_anchor_principle__triffin_inevitability_reading, world_rearranges).
+narrative_ontology:founding_problem_status(monetary_anchor_principle__triffin_inevitability_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(monetary_anchor_principle__triffin_inevitability_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(monetary_anchor_principle__triffin_inevitability_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(monetary_anchor_principle__triffin_inevitability_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(monetary_anchor_principle__triffin_inevitability_reading, 0.05, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -139,6 +189,10 @@ narrative_ontology:story_seed(monetary_anchor_principle__triffin_inevitability_r
 
 :- begin_tests(monetary_anchor_principle__triffin_inevitability_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(monetary_anchor_principle__triffin_inevitability_reading, ExtMetricName, E),
@@ -161,16 +215,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is very low (0.05) because the dilemma is a structural, almost mathematical, contradiction, not a mechanism for rent extraction by any specific party. The 'extraction' is the system's self-consumption of its own reserves. Suppression is high (0.95) because the underlying economic laws and the demand for global liquidity were unyielding; there was no 'alternative' to the dilemma itself. Theater ratio is zero as there was no performative maintenance of a non-functional aspect; the system was genuinely functional until its inherent contradiction became critical. Accessibility collapse is high (0.9) because the alternatives to facing the dilemma (e.g., not supplying liquidity, or not maintaining gold convertibility) were either economically unfeasible or would have meant abandoning the system's core tenets. Resistance is low (0.05) because the dilemma was a systemic force, not something that could be actively resisted by any single actor within the framework.
+ *   Extractiveness is very low (0.05) because the dilemma itself was a structural necessity, not a mechanism for rent extraction by any single party. Suppression is very high (0.95) because the underlying economic laws were unyielding; no amount of policy intervention could 'suppress' the dilemma's eventual resolution. Theater ratio is negligible (0.01) as there was no performative maintenance of a non-functional aspect; the system was genuinely functional until the structural limits were reached. Accessibility collapse is high (0.98) because there was no viable alternative within the gold-standard framework once the dilemma matured. Resistance is low (0.02) because the dilemma was a systemic problem, not one that could be 'resisted' by individual actors.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the Bretton Woods institutional framework, the constraint was an inescapable logical trap. From the perspective of the global economy, it was a necessary but unstable mechanism for liquidity provision. There is no significant perspectival gap in the *nature* of the constraint, only in its implications for different actors.
+ *   From the perspective of the Bretton Woods framework, the dilemma was an existential threat that forced a system-level collapse. From the perspective of the US Treasury, it was an intractable policy challenge. Both seats experienced the constraint as an unyielding force, but with different operational implications. The engine's computation of per-seat classification should reflect this shared experience of inevitability.
  *
  * DIRECTIONALITY LOGIC:
- *   The Bretton Woods institutional framework is the primary 'victim' in the sense that it was the entity that failed due to the dilemma (d=1.0). The US Treasury, while an 'agenda setter', was structurally compelled by the dilemma, making its directionality closer to a target than a beneficiary (d=0.7). The global economy was a beneficiary of the liquidity but also subject to the instability (d=0.3).
+ *   The Bretton Woods framework is the primary 'payer' as it bore the ultimate cost of the dilemma's resolution. The US Treasury, as the reserve currency issuer, was an 'agenda_setter' forced to manage the contradiction, but ultimately a 'payer' of the structural cost. Global financial markets were incidental 'beneficiaries' of the liquidity but also contributed to the pressure. The dilemma itself was a systemic force, not a mechanism for concentrated benefit.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is a Mountain, representing a fundamental economic principle. Mandatrophy is not applicable as it describes a structural inevitability, not a human-designed constraint that has outlived its function. The 'mandate' was to provide global liquidity under a gold standard, which was structurally impossible to sustain indefinitely.
+ *   The Triffin dilemma was not a case of mandatrophy; its mandate (providing global liquidity under a gold standard) was structurally impossible to sustain. The constraint did not atrophy; it reached its logical conclusion. The classification as a Mountain prevents mislabeling this structural inevitability as a human-made constraint that simply outlived its usefulness.
  */
 
 /* ==========================================================================
@@ -179,23 +233,23 @@ test(nl_profile_validation) :-
 
 omega_variable(
     triffin_dilemma_natural_law_vs_policy_choice,
-    'Is the Triffin dilemma a ''natural law'' of international finance, or could alternative policy choices (e.g., different reserve management, earlier SDR adoption) have averted or significantly delayed the collapse?',
-    'Counterfactual historical analysis and economic modeling of alternative policy paths, assessing their feasibility and likely outcomes under the prevailing conditions.',
-    'If alternative policies could have averted the collapse, the constraint''s ''mountain'' classification would be weakened, suggesting a greater role for human agency and policy choices, potentially shifting it towards a ''tangled_rope'' or ''snare'' if specific actors benefited from the ''inevitability'' narrative. If no feasible alternatives existed, the mountain classification is reinforced.',
+    'Was the Triffin dilemma a genuine natural law of international finance, or were there policy choices that could have averted or mitigated its ''inevitable'' outcome?',
+    'Counterfactual historical analysis exploring alternative policy paths (e.g., earlier SDR adoption, different gold-dollar convertibility rules) and their projected outcomes, or comparative analysis with other reserve currency systems.',
+    'If policy choices could have averted it, the constraint''s ''emerges_naturally'' claim would be weakened, potentially reclassifying it from a Mountain to a Snare (if the ''inevitability'' was used to justify extraction) or a Tangled Rope (if it was a poorly designed coordination mechanism).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(triffin_dilemma_natural_law_vs_policy_choice, conceptual, 'Ambiguity between structural inevitability and policy contingency in the Triffin dilemma.').
+narrative_ontology:omega_variable(triffin_dilemma_natural_law_vs_policy_choice, conceptual, 'Ambiguity between structural inevitability and policy-driven outcome.').
 
 omega_variable(
-    causal_primacy_of_triffin_dilemma,
-    'To what extent was the Triffin dilemma the *primary* cause of the Bretton Woods collapse, versus other contributing factors like the Vietnam War deficits, rising inflation, or the emergence of alternative financial centers?',
-    'Detailed historical and econometric analysis disentangling the causal weight of various factors leading to the collapse, potentially using counterfactual simulations.',
-    'If other factors were equally or more primary, this reading''s claim of ''inevitability'' solely due to Triffin would be weakened, potentially supporting the ''overdetermined_composite_reading'' and shifting the constraint''s classification away from a pure mountain towards a more complex, multi-causal ''tangled_rope'' or ''snare'' if specific policy choices amplified the other factors.',
-    confidence_without_resolution(medium)
+    systemic_victim_vs_beneficiary_of_transition,
+    'While the Bretton Woods framework was a ''victim'' of the dilemma, did specific actors or nations benefit from the transition to a floating exchange rate regime, and does this imply a hidden extractive function?',
+    'Economic analysis of wealth transfers and power shifts post-1971, identifying specific actors who gained disproportionately from the new monetary order.',
+    'If identifiable beneficiaries captured significant gains from the transition, the ''extractiveness'' of the underlying ''inevitability'' might be re-evaluated as a Snare, where the ''natural law'' served as cover for a power shift.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(causal_primacy_of_triffin_dilemma, empirical, 'The causal primacy of the Triffin dilemma versus other factors in the Bretton Woods collapse.').
+narrative_ontology:omega_variable(systemic_victim_vs_beneficiary_of_transition, empirical, 'Whether the systemic ''victim'' masks specific beneficiaries of the system''s collapse.').
 
 
 /* ==========================================================================
@@ -209,24 +263,27 @@ narrative_ontology:interval(monetary_anchor_principle__triffin_inevitability_rea
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(mone_tr_t1944, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1944, 0.0).
-narrative_ontology:measurement(mone_tr_t1950, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1950, 0.0).
-narrative_ontology:measurement(mone_tr_t1958, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1958, 0.0).
-narrative_ontology:measurement(mone_tr_t1965, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1965, 0.0).
-narrative_ontology:measurement(mone_tr_t1971, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1971, 0.0).
+narrative_ontology:measurement(mone_tr_t1944, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1944, 0.01).
+narrative_ontology:measurement(mone_tr_t1950, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1950, 0.01).
+narrative_ontology:measurement(mone_tr_t1958, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1958, 0.01).
+narrative_ontology:measurement(mone_tr_t1965, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1965, 0.01).
+narrative_ontology:measurement(mone_tr_t1970, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1970, 0.01).
+narrative_ontology:measurement(mone_tr_t1971, monetary_anchor_principle__triffin_inevitability_reading, theater_ratio, 1971, 0.01).
 
 % Extraction over time
 narrative_ontology:measurement(mone_be_t1944, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1944, 0.01).
-narrative_ontology:measurement(mone_be_t1950, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1950, 0.02).
-narrative_ontology:measurement(mone_be_t1958, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1958, 0.03).
-narrative_ontology:measurement(mone_be_t1965, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1965, 0.04).
+narrative_ontology:measurement(mone_be_t1950, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1950, 0.01).
+narrative_ontology:measurement(mone_be_t1958, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1958, 0.02).
+narrative_ontology:measurement(mone_be_t1965, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1965, 0.03).
+narrative_ontology:measurement(mone_be_t1970, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1970, 0.04).
 narrative_ontology:measurement(mone_be_t1971, monetary_anchor_principle__triffin_inevitability_reading, base_extractiveness, 1971, 0.05).
 
 % Suppression requirement over time
-narrative_ontology:measurement(mone_su_t1944, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1944, 0.95).
-narrative_ontology:measurement(mone_su_t1950, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1950, 0.95).
-narrative_ontology:measurement(mone_su_t1958, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1958, 0.95).
-narrative_ontology:measurement(mone_su_t1965, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1965, 0.95).
+narrative_ontology:measurement(mone_su_t1944, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1944, 0.85).
+narrative_ontology:measurement(mone_su_t1950, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1950, 0.88).
+narrative_ontology:measurement(mone_su_t1958, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1958, 0.91).
+narrative_ontology:measurement(mone_su_t1965, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1965, 0.93).
+narrative_ontology:measurement(mone_su_t1970, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1970, 0.94).
 narrative_ontology:measurement(mone_su_t1971, monetary_anchor_principle__triffin_inevitability_reading, suppression_requirement, 1971, 0.95).
 
 

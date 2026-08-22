@@ -42,6 +42,9 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,25 +69,26 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: humane_treatment_standard__contextual_necessity
- *   human_readable: Humane Treatment Standard (Contextual Necessity Reading)
+ *   human_readable: Contextual Necessity Reading of Humane Treatment Standard
  *   domain: international_humanitarian_law/state_security/human_rights
  *
  * SUMMARY:
  *   This constraint represents the 'contextual necessity' reading of Common
  *   Article 3 of the Geneva Conventions, which posits that while a baseline
- *   of humane treatment is required, national security imperatives can
- *   override certain aspects, making humane treatment context-dependent and
- *   permitting 'enhanced interrogation' techniques. This reading grants
- *   discretion to state security agencies, making detainee protections
- *   conditional and effectively shrinking the victim set to exclude
- *   'high-value targets' in perceived necessity scenarios.
+ *   for humane treatment exists, national security imperatives can override
+ *   it, permitting 'enhanced interrogation' techniques. This reading grants
+ *   state security agencies significant discretion, making detainee
+ *   protections conditional. The constraint is claimed as a Rope by its
+ *   proponents (a necessary coordination for state security) but operates
+ *   with high extraction and suppression, particularly for 'high-value'
+ *   detainees, making it structurally a Tangled Rope.
  *
  * KEY AGENTS:
- *   - state_security_agencies: Agenda setter (institutional/arbitrage) — defines and applies 'necessity'
- *   - national_security_decision_makers: Beneficiary (institutional/arbitrage) — benefits from expanded operational latitude
- *   - detainees_of_national_security_interest: Payer (powerless/trapped) — bears the costs of conditional treatment
- *   - human_rights_advocates: Payer (organized/constrained) — bears the cost of defending the absolute standard
- *   - international_legal_bodies: Observer (institutional/analytical) — adjudicates compliance and legitimacy
+ *   - State Security Agencies: Primary beneficiaries and agenda-setters (institutional/constrained)
+ *   - National Governments: Beneficiaries (institutional/mobile)
+ *   - Detainees Deemed High-Value: Primary victims (powerless/trapped)
+ *   - Human Rights Advocates: Payers (organized/constrained)
+ *   - International Courts: Observers (institutional/analytical)
  */
 
 /* ==========================================================================
@@ -106,44 +111,84 @@ narrative_ontology:constraint_metric(humane_treatment_standard__contextual_neces
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(humane_treatment_standard__contextual_necessity, tangled_rope).
-narrative_ontology:human_readable(humane_treatment_standard__contextual_necessity, "Humane Treatment Standard (Contextual Necessity Reading)").
+narrative_ontology:human_readable(humane_treatment_standard__contextual_necessity, "Contextual Necessity Reading of Humane Treatment Standard").
 narrative_ontology:topic_domain(humane_treatment_standard__contextual_necessity, "international_humanitarian_law/state_security/human_rights").
 
 domain_priors:requires_active_enforcement(humane_treatment_standard__contextual_necessity).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(humane_treatment_standard__contextual_necessity, 'ff35384e-0686-4782-afdd-78fdb4c5c9d5').
-narrative_ontology:cs_kernel_codification('ff35384e-0686-4782-afdd-78fdb4c5c9d5', fixed_text).
-narrative_ontology:cs_authority_grounding('ff35384e-0686-4782-afdd-78fdb4c5c9d5', extraction).
-narrative_ontology:cs_interpretation_layer_present('ff35384e-0686-4782-afdd-78fdb4c5c9d5').
-narrative_ontology:cs_reading_relation('ff35384e-0686-4782-afdd-78fdb4c5c9d5', humane_treatment_standard__absolute_prohibition, forecloses).
-narrative_ontology:cs_reading_relation('ff35384e-0686-4782-afdd-78fdb4c5c9d5', humane_treatment_standard__proportionality_balancing, influences).
-narrative_ontology:cs_axiom('ff35384e-0686-4782-afdd-78fdb4c5c9d5', foundational, national_security_overrides_absolute_prohibition).
+narrative_ontology:cs_story_uid(humane_treatment_standard__contextual_necessity, 'a9f9da71-ac01-4baf-99a0-a41eba2ffbef').
+narrative_ontology:cs_kernel_codification('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', fixed_text).
+narrative_ontology:cs_authority_grounding('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', extraction).
+narrative_ontology:cs_interpretation_layer_present('a9f9da71-ac01-4baf-99a0-a41eba2ffbef').
+narrative_ontology:cs_reading_relation('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', humane_treatment_standard__absolute_prohibition, coexists_with).
+narrative_ontology:cs_reading_relation('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', humane_treatment_standard__proportionality_balancing, coexists_with).
+narrative_ontology:cs_axiom('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', foundational, national_security_overrides_absolute_prohibition).
 narrative_ontology:cs_axiom_status(national_security_overrides_absolute_prohibition, holdable).
-narrative_ontology:cs_axiom_grounding('ff35384e-0686-4782-afdd-78fdb4c5c9d5', national_security_overrides_absolute_prohibition, instrumental).
-narrative_ontology:cs_axiom('ff35384e-0686-4782-afdd-78fdb4c5c9d5', foundational, humane_treatment_is_context_dependent).
+narrative_ontology:cs_axiom_grounding('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', national_security_overrides_absolute_prohibition, conventional).
+narrative_ontology:cs_axiom('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', foundational, humane_treatment_is_context_dependent).
 narrative_ontology:cs_axiom_status(humane_treatment_is_context_dependent, holdable).
-narrative_ontology:cs_axiom_grounding('ff35384e-0686-4782-afdd-78fdb4c5c9d5', humane_treatment_is_context_dependent, conventional).
-narrative_ontology:cs_reference_frame('ff35384e-0686-4782-afdd-78fdb4c5c9d5', state_sovereignty_and_security_priority).
-narrative_ontology:cs_drift_state('ff35384e-0686-4782-afdd-78fdb4c5c9d5', post_9_11_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('ff35384e-0686-4782-afdd-78fdb4c5c9d5', '').
+narrative_ontology:cs_axiom_grounding('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', humane_treatment_is_context_dependent, conventional).
+narrative_ontology:cs_reference_frame('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', state_sovereignty_security_paradigm).
+narrative_ontology:cs_drift_state('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', contemporary_human_rights_era, gap(repudiation_pressure, substantial, false)).
+narrative_ontology:cs_created_at('a9f9da71-ac01-4baf-99a0-a41eba2ffbef', '').
 narrative_ontology:cs_kernel_id(humane_treatment_standard__contextual_necessity, humane_treatment_standard).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(humane_treatment_standard__contextual_necessity, state_security_agencies).
-narrative_ontology:constraint_beneficiary(humane_treatment_standard__contextual_necessity, national_security_decision_makers).
-narrative_ontology:constraint_victim(humane_treatment_standard__contextual_necessity, detainees_of_national_security_interest).
+narrative_ontology:constraint_beneficiary(humane_treatment_standard__contextual_necessity, national_governments).
+narrative_ontology:constraint_victim(humane_treatment_standard__contextual_necessity, detainees_deemed_high_value).
 narrative_ontology:constraint_victim(humane_treatment_standard__contextual_necessity, human_rights_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These agencies interpret and apply Common Article 3, asserting the right to use 'enhanced interrogation' techniques when national security is deemed at risk. They benefit from the discretion this reading provides, allowing them to extract information and maintain operational flexibility.
+narrative_ontology:constraint_stakeholder(humane_treatment_standard__contextual_necessity, state_security_agencies, agenda_setter,
+    institutional, biographical, constrained, national).
+
+% Governments benefit from the perceived ability to protect national security through methods that might otherwise be prohibited. This reading provides a legal justification for actions taken by their security agencies, reducing political and legal accountability.
+narrative_ontology:constraint_stakeholder(humane_treatment_standard__contextual_necessity, national_governments, beneficiary,
+    institutional, generational, mobile, national).
+
+% These individuals are subjected to 'enhanced interrogation' techniques, bearing the direct costs of this interpretation. Their protections are conditional on the perceived national security imperative, making them victims of the constraint's flexibility.
+narrative_ontology:constraint_stakeholder(humane_treatment_standard__contextual_necessity, detainees_deemed_high_value, payer,
+    powerless, immediate, trapped, local).
+
+% These groups actively resist the contextual interpretation, arguing for an absolute prohibition on torture. They bear the cost of continuously challenging state practices and defending detainee rights, often facing political and legal pushback.
+narrative_ontology:constraint_stakeholder(humane_treatment_standard__contextual_necessity, human_rights_advocates, payer,
+    organized, generational, constrained, global).
+
+% These bodies review state practices against international law, but their enforcement power is limited by state sovereignty and political will. They observe the contest between interpretations and can issue rulings, but cannot directly compel compliance.
+narrative_ontology:constraint_stakeholder(humane_treatment_standard__contextual_necessity, international_courts, observer,
+    institutional, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Allows states to coordinate their national security efforts by providing a framework that balances humanitarian concerns with perceived operational necessities in conflict and counter-terrorism contexts.
+% TRANSFER_FUNCTION: Transfers discretion over the definition of 'humane treatment' from international legal norms to state security agencies, in exchange for perceived enhanced national security outcomes.
+% ABSENT_VOICES: Victims of 'enhanced interrogation' and their families are often silenced or discredited, their testimonies suppressed by national security classifications. They would unequivocally condemn the contextual interpretation.
+% DISAPPEARANCE_RATIONALE: If this contextual interpretation vanished, state security agencies would face immediate and absolute prohibitions on 'enhanced interrogation,' forcing a fundamental re-evaluation of their operational doctrines and potentially leading to increased legal accountability for past actions. The international human rights landscape would shift towards a more uniform standard.
+% FOUNDING_PROBLEM: The problem of balancing state security imperatives, particularly in asymmetric conflicts or against non-state actors, with the traditional laws of armed conflict, which were primarily designed for interstate warfare.
+% FOUNDING_PROBLEM_CORROBORATION: National security experts and government officials attest that the problem of securing states against evolving threats remains live. Human rights organizations and international legal scholars, while disagreeing with the solution, acknowledge the persistent tension between security and rights, corroborating the problem's existence from outside the benefiting parties.
+narrative_ontology:disappearance_verdict(humane_treatment_standard__contextual_necessity, world_rearranges).
+narrative_ontology:founding_problem_status(humane_treatment_standard__contextual_necessity, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(humane_treatment_standard__contextual_necessity, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(humane_treatment_standard__contextual_necessity, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(humane_treatment_standard__contextual_necessity, 'none', 1).
+narrative_ontology:epsilon_provenance(humane_treatment_standard__contextual_necessity, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,16 +208,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.65) is substantial because this reading permits actions that would otherwise be prohibited, extracting dignity and rights from detainees. Suppression (0.75) is high due to the state's coercive power and the secrecy surrounding 'enhanced interrogation' practices. Theater ratio (0.4) reflects the ongoing rhetorical efforts to frame these practices as compliant with international law, despite their deviation from an absolute standard. Resistance (0.5) is moderate, coming primarily from human rights organizations and some international bodies, but often overridden by state claims of necessity. Accessibility collapse (0.6) is significant for detainees, as their legal and physical options are severely curtailed once designated a 'national security interest'.
+ *   The extractiveness (0.65) is high because the reading allows for significant harm to detainees under the guise of necessity. Suppression (0.75) is also high, as states actively suppress information about these practices and resist external oversight. The theater ratio (0.4) reflects that while some security measures are genuine, a substantial portion of the justification and enforcement is performative, aimed at legitimizing practices that are otherwise legally dubious. The temporal measurements show a rise in extractiveness and suppression post-9/11, reflecting the increased adoption of this reading, followed by a slight decline due to increased scrutiny and legal challenges.
  *
  * PERSPECTIVAL GAP:
- *   State security agencies and national security decision-makers experience this as a necessary flexibility (beneficiary seat), allowing them to protect national interests. Detainees and human rights advocates (payer seats) experience it as a dangerous erosion of fundamental rights, leading to abuse. The engine will compute these divergent classifications from the structural data.
+ *   State security agencies and national governments perceive this as a necessary and legitimate framework for national defense, viewing it as a Rope or even a Mountain (natural law of state survival). Detainees and human rights advocates, however, experience it as a Snare, a mechanism of pure extraction and coercion. The engine's classification as Tangled Rope captures the hybrid nature: a genuine (from the state's perspective) coordination problem (national security) coupled with asymmetric extraction and active enforcement.
  *
  * DIRECTIONALITY LOGIC:
- *   State security agencies and national security decision-makers are clear beneficiaries (d near 0.0) as they gain operational discretion and avoid accountability for certain actions. Detainees are direct targets (d near 1.0) as they bear the full cost of conditional treatment. Human rights advocates are also targets (d near 0.7) as their mission is undermined and they expend resources to resist this interpretation. International legal bodies are analytical observers (d near 0.5).
+ *   State security agencies and national governments are clear beneficiaries, gaining operational flexibility and perceived security. Detainees are direct targets, bearing the physical and psychological costs. Human rights advocates are also targets, as their efforts to uphold absolute standards are undermined. International courts are analytical observers, attempting to adjudicate without direct enforcement power.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading prevents mislabeling pure extraction as coordination by highlighting the conditional nature of 'humane treatment'. It exposes how a coordination problem (managing conflict) is leveraged to extract from a specific group (detainees) under the guise of 'necessity'. The constraint's mandate (national security) is used to justify practices that erode the very standards it purports to uphold, indicating a drift towards extraction.
+ *   This classification prevents mislabeling by highlighting the extractive component. While proponents argue for a 'coordination' function (national security), the high extractiveness and suppression reveal that the 'coordination' comes at a severe cost to a specific group, maintained by active enforcement and suppression of alternatives. It is not a pure Rope because of the identifiable victims and the coercive overhead.
  */
 
 /* ==========================================================================
@@ -180,63 +225,69 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine interpretation of Common Article 3, or a re-framing to permit otherwise prohibited actions?',
-    'Analysis of international jurisprudence and state practice over time, particularly in non-belligerent contexts.',
-    'If a genuine interpretation, it highlights the flexibility of IHL; if a re-framing, it exposes a snare operating under the guise of legal interpretation.',
-    confidence_without_resolution(medium)
+    necessity_definition_ambiguity,
+    'Who defines ''national security imperative'' and what criteria are used to determine when it overrides humane treatment standards?',
+    'Establishment of independent, transparent oversight bodies with judicial review power over declarations of ''national security imperative'' and their application to interrogation techniques.',
+    'If the definition is solely internal to security agencies, extractiveness remains high due to unchecked discretion. If external, independent oversight is established, extractiveness would likely decrease as the scope for ''enhanced interrogation'' narrows.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''contextual_necessity'' reading of the ''humane_treatment_standard'' kernel.').
+narrative_ontology:omega_variable(necessity_definition_ambiguity, conceptual, 'Ambiguity in the definition and application of ''national security imperative''.').
 
 omega_variable(
-    victim_set_definition,
-    'Does the ''contextual necessity'' reading genuinely narrow the victim set, or does it merely provide cover for broader application of enhanced interrogation?',
-    'Empirical review of interrogation practices and outcomes, comparing cases where ''necessity'' was invoked versus those where it was not.',
-    'If the victim set is genuinely narrowed, the constraint is less extractive than it appears; if not, its extractiveness is higher and more widespread.',
+    efficacy_of_enhanced_interrogation,
+    'Is ''enhanced interrogation'' genuinely effective in producing actionable intelligence that cannot be obtained through humane methods?',
+    'Declassification of intelligence reports and independent, rigorous empirical studies comparing intelligence yield from ''enhanced'' vs. humane interrogation techniques.',
+    'If proven ineffective, the primary justification for this reading collapses, reclassifying it closer to a Snare. If proven uniquely effective, it would strengthen the ''coordination'' argument, though not necessarily negate the extraction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(victim_set_definition, empirical, 'The ''contextual_necessity'' reading shrinks the victim set to exclude high-value targets in necessity scenarios, making detainee protections conditional.').
+narrative_ontology:omega_variable(efficacy_of_enhanced_interrogation, empirical, 'Empirical uncertainty regarding the efficacy of ''enhanced interrogation'' techniques.').
 
 omega_variable(
-    suppression_mechanism_ambiguity,
-    'Is the measured suppression structural (legal/institutional barriers) or internalized (detainees'' belief in the legitimacy of their treatment)?',
-    'Post-release psychological assessment and legal aid access: if suppression persists after the extractive mechanism is removed, reclassify as partially internalized.',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.',
+    victim_set_expansion,
+    'Does the ''contextual necessity'' reading create a slippery slope, expanding the category of ''detainees deemed high-value'' to include a broader range of individuals?',
+    'Longitudinal study of detainee classifications and interrogation practices across different conflict zones and over time, tracking the demographic and threat profiles of individuals subjected to ''enhanced interrogation''.',
+    'If the victim set expands, the constraint''s overall extractiveness and suppression would be higher than currently measured, potentially shifting its classification towards a more severe Snare as the coordination function becomes a thinner cover.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs. internalized suppression mechanism in detainee treatment.').
+narrative_ontology:omega_variable(victim_set_expansion, empirical, 'Whether the victim set of ''high-value'' detainees expands over time due to the contextual interpretation.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(humane_treatment_standard__contextual_necessity, 0, 15).
+narrative_ontology:interval(humane_treatment_standard__contextual_necessity, 1949, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(huma_tr_t0, humane_treatment_standard__contextual_necessity, theater_ratio, 0, 0.3).
-narrative_ontology:measurement(huma_tr_t5, humane_treatment_standard__contextual_necessity, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(huma_tr_t10, humane_treatment_standard__contextual_necessity, theater_ratio, 10, 0.38).
-narrative_ontology:measurement(huma_tr_t15, humane_treatment_standard__contextual_necessity, theater_ratio, 15, 0.4).
+narrative_ontology:measurement(huma_tr_t1949, humane_treatment_standard__contextual_necessity, theater_ratio, 1949, 0.1).
+narrative_ontology:measurement(huma_tr_t1970, humane_treatment_standard__contextual_necessity, theater_ratio, 1970, 0.2).
+narrative_ontology:measurement(huma_tr_t1990, humane_treatment_standard__contextual_necessity, theater_ratio, 1990, 0.3).
+narrative_ontology:measurement(huma_tr_t2005, humane_treatment_standard__contextual_necessity, theater_ratio, 2005, 0.5).
+narrative_ontology:measurement(huma_tr_t2015, humane_treatment_standard__contextual_necessity, theater_ratio, 2015, 0.45).
+narrative_ontology:measurement(huma_tr_t2024, humane_treatment_standard__contextual_necessity, theater_ratio, 2024, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(huma_be_t0, humane_treatment_standard__contextual_necessity, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(huma_be_t5, humane_treatment_standard__contextual_necessity, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(huma_be_t10, humane_treatment_standard__contextual_necessity, base_extractiveness, 10, 0.6).
-narrative_ontology:measurement(huma_be_t15, humane_treatment_standard__contextual_necessity, base_extractiveness, 15, 0.65).
+narrative_ontology:measurement(huma_be_t1949, humane_treatment_standard__contextual_necessity, base_extractiveness, 1949, 0.3).
+narrative_ontology:measurement(huma_be_t1970, humane_treatment_standard__contextual_necessity, base_extractiveness, 1970, 0.45).
+narrative_ontology:measurement(huma_be_t1990, humane_treatment_standard__contextual_necessity, base_extractiveness, 1990, 0.55).
+narrative_ontology:measurement(huma_be_t2005, humane_treatment_standard__contextual_necessity, base_extractiveness, 2005, 0.7).
+narrative_ontology:measurement(huma_be_t2015, humane_treatment_standard__contextual_necessity, base_extractiveness, 2015, 0.68).
+narrative_ontology:measurement(huma_be_t2024, humane_treatment_standard__contextual_necessity, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(huma_su_t0, humane_treatment_standard__contextual_necessity, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(huma_su_t5, humane_treatment_standard__contextual_necessity, suppression_requirement, 5, 0.65).
-narrative_ontology:measurement(huma_su_t10, humane_treatment_standard__contextual_necessity, suppression_requirement, 10, 0.7).
-narrative_ontology:measurement(huma_su_t15, humane_treatment_standard__contextual_necessity, suppression_requirement, 15, 0.75).
+narrative_ontology:measurement(huma_su_t1949, humane_treatment_standard__contextual_necessity, suppression_requirement, 1949, 0.4).
+narrative_ontology:measurement(huma_su_t1970, humane_treatment_standard__contextual_necessity, suppression_requirement, 1970, 0.55).
+narrative_ontology:measurement(huma_su_t1990, humane_treatment_standard__contextual_necessity, suppression_requirement, 1990, 0.65).
+narrative_ontology:measurement(huma_su_t2005, humane_treatment_standard__contextual_necessity, suppression_requirement, 2005, 0.8).
+narrative_ontology:measurement(huma_su_t2015, humane_treatment_standard__contextual_necessity, suppression_requirement, 2015, 0.78).
+narrative_ontology:measurement(huma_su_t2024, humane_treatment_standard__contextual_necessity, suppression_requirement, 2024, 0.75).
 
 
 /* ==========================================================================
@@ -244,13 +295,11 @@ narrative_ontology:measurement(huma_su_t15, humane_treatment_standard__contextua
    ========================================================================== */
 
 narrative_ontology:coordination_type(humane_treatment_standard__contextual_necessity, enforcement_mechanism).
-narrative_ontology:affects_constraint(humane_treatment_standard__contextual_necessity, absolute_prohibition).
-narrative_ontology:affects_constraint(humane_treatment_standard__contextual_necessity, proportionality_balancing).
-narrative_ontology:affects_constraint(humane_treatment_standard__contextual_necessity, state_secrecy_doctrine).
-narrative_ontology:affects_constraint(humane_treatment_standard__contextual_necessity, military_justice_system).
+narrative_ontology:affects_constraint(humane_treatment_standard__contextual_necessity, absolute_prohibition_reading).
+narrative_ontology:affects_constraint(humane_treatment_standard__contextual_necessity, proportionality_balancing_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the 'humane_treatment_standard' kernel (Common Article 3). Its extractiveness and suppression metrics differ significantly from the 'absolute_prohibition' reading, which would show negligible extraction and high suppression of prohibited acts.
+% This constraint is one of three readings of the 'humane_treatment_standard' kernel. This 'contextual necessity' reading directly influences the operational space for the 'absolute prohibition' and 'proportionality balancing' readings by asserting a competing legal framework.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

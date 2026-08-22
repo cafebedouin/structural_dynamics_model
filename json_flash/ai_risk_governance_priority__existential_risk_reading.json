@@ -4,146 +4,214 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "ce691576-4e46-42f4-b11f-996547836d11"
+    "story_uid": "d914ca17-fc00-4d29-a54f-4936a4313d3e"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.4,
-    "theater_ratio": 0.55,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.3,
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "AI Risk Governance: Existential Risk Prioritization",
-    "topic_domain": "AI Governance/Technology Ethics/Risk Assessment",
+    "human_readable": "AI Risk Governance: Existential Risk Priority",
+    "topic_domain": "ai_governance/technology_ethics/risk_assessment",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "x_risk_research_institutions",
       "ai_labs_claiming_safety_leadership"
     ],
     "victims": [
+      "future_humanity",
       "near_term_harms_advocates",
-      "humanity_s_future_potential"
+      "global_south_populations"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine prioritization of existential risk, or a rhetorical framing to secure resources for specific research agendas?",
-      "resolution_mechanism": "Analysis of resource allocation patterns: if funding disproportionately flows to speculative, long-term alignment research over demonstrable near-term safety, it supports the latter.",
-      "impact": "If a rhetorical framing, the constraint's effective extractiveness is higher, as it diverts resources from more immediate, verifiable harms.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'existential_risk_reading' of the 'ai_risk_governance_priority' kernel. Sibling readings ('near_term_harms_reading', 'bridge_reading') would shift the victim set and resource allocation. The disagreement is located in the definition of 'priority' and the scope of 'risk'."
+      "name": "x_risk_research_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These institutions define the scope of 'existential risk' and advocate for policy priorities, directing funding and research towards long-term alignment and control problems. They benefit from the prioritization of these risks, securing funding and influence."
     },
     {
-      "id": "speculative_vs_demonstrated_harms",
-      "question": "To what extent are the 'superintelligence scenarios' a demonstrable threat versus a speculative one, and how does this affect the legitimacy of prioritization?",
-      "resolution_mechanism": "Empirical progress in AI capabilities and independent expert consensus on the feasibility and timeline of AGI and superintelligence.",
-      "impact": "If the threat remains highly speculative, the prioritization appears more extractive, diverting resources from demonstrable harms. If the threat becomes more concrete, the prioritization gains legitimacy.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "The balance between speculative future risks and demonstrated present harms is a core tension in this reading."
+      "name": "ai_labs_claiming_safety_leadership",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Major AI development labs that publicly align with existential risk narratives, often using it to justify slower deployment or internal safety research, which can also serve as a competitive advantage or regulatory moat. They benefit from reduced scrutiny on present-day harms and increased legitimacy for their long-term research agendas."
     },
     {
-      "id": "mandatrophy_of_focus",
-      "question": "Does the focus on existential risk, while potentially valid, lead to mandatrophy regarding present, demonstrable AI harms?",
-      "resolution_mechanism": "Tracking the resolution of near-term harms (e.g., algorithmic bias, labor displacement) in parallel with existential risk mitigation efforts. If near-term harms worsen or are neglected, it indicates mandatrophy.",
-      "impact": "If mandatrophy is present, the constraint functions as a Snare for those affected by near-term harms, as resources and attention are diverted.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Analysis of whether the existential risk focus inadvertently neglects or exacerbates present AI harms."
+      "name": "future_humanity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The ultimate 'victim' of existential risks, whose potential is either annihilated or permanently curtailed. They bear the hypothetical costs of inaction on superintelligence, but also the opportunity costs of resources diverted from present-day problems."
+    },
+    {
+      "name": "near_term_harms_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocates for addressing immediate harms like bias, misinformation, and labor displacement. They bear the cost of diverted attention and resources, finding their concerns deprioritized or framed as secondary to speculative future risks."
+    },
+    {
+      "name": "global_south_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Populations disproportionately affected by present-day AI harms (e.g., surveillance, algorithmic bias in resource allocation, labor exploitation). They bear the direct costs of unmitigated harms while resources are directed towards distant, speculative risks."
+    },
+    {
+      "name": "policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Government bodies and international organizations tasked with developing AI policy. They are influenced by the dominant narratives and funding streams, often balancing competing priorities but leaning towards those with strong institutional backing."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates global attention and resources towards a specific class of highly speculative, high-impact risks associated with advanced AI, aiming to prevent catastrophic outcomes for humanity.",
+    "transfer_function": "Transfers significant research funding, policy attention, and regulatory focus from immediate, demonstrable AI harms to long-term, speculative existential risks, primarily benefiting institutions and labs focused on these long-term scenarios.",
+    "absent_voices": "Future generations, who are the primary beneficiaries/victims of this constraint, are inherently absent. Additionally, many voices from marginalized communities experiencing present-day AI harms are often excluded or marginalized in high-level AI governance discussions, which tend to be dominated by technical experts and industry representatives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the prioritization of existential risk vanished, the AI governance landscape would immediately reorient. Resources would likely flow more towards mitigating present-day harms, and the framing of AI safety would shift from 'alignment' to 'fairness' and 'accountability'. Research institutions and labs currently benefiting from this prioritization would need to adapt or lose influence.",
+    "founding_problem": "The potential for advanced artificial intelligence to develop capabilities beyond human control, leading to unforeseen and catastrophic outcomes for humanity, including extinction or permanent disempowerment.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is attested as live by a significant portion of the AI research community, prominent public intellectuals, and some government bodies, who cite theoretical arguments and accelerating AI capabilities. Critics (outside the benefiting parties) argue the problem is speculative and distracts from more immediate, empirically verifiable harms, thus contesting its 'live' status as a primary concern."
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 2015,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 2018,
       "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.6
+      "time_point": 2021,
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.65
+      "time_point": 2024,
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 2015,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 2018,
       "value": 0.5
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.55
+      "time_point": 2015,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 15
-  },
   "commentary": {
-    "narrative_context": "This constraint asserts that AI risk governance must prioritize preventing superintelligence scenarios that could annihilate or permanently curtail humanity's potential. It is a specific reading of the broader 'AI risk governance priority' kernel, emphasizing long-term, high-impact, low-probability events over immediate, demonstrable harms. This prioritization shapes research agendas, funding flows, and policy discussions, often at the expense of other risk categories.",
+    "narrative_context": "This constraint represents the 'existential risk' reading of AI governance, where preventing superintelligence scenarios that could annihilate or permanently curtail humanity's potential is the paramount priority. It is a reading of the 'ai_risk_governance_priority' kernel. This prioritization directs significant resources and policy attention towards highly speculative, long-term risks, often at the expense of addressing immediate, demonstrable harms. The constraint is claimed as a Tangled Rope by its proponents, suggesting a necessary coordination function for humanity's survival, but its operation exhibits high extraction and suppression, particularly from those advocating for near-term harms.",
     "key_agents": [
-      "x_risk_research_institutions: Primary beneficiary (institutional/arbitrage) — receive funding and legitimacy.",
-      "ai_labs_claiming_safety_leadership: Secondary beneficiary (institutional/constrained) — gain public trust and regulatory leeway.",
-      "near_term_harms_advocates: Primary victim (organized/constrained) — see their concerns deprioritized and resources diverted.",
-      "humanity_s_future_potential: Diffuse victim (universal/trapped) — the ultimate target of protection, but also potentially curtailed by misallocation of present resources.",
-      "policy_makers: Agenda setter (institutional/mobile) — allocate resources and set regulatory frameworks based on perceived priorities.",
-      "general_public: Payer/Beneficiary (moderate/constrained) — bears the costs of misallocated resources but benefits from genuine risk mitigation."
+      "x_risk_research_institutions: Primary agenda-setter (institutional/constrained)",
+      "ai_labs_claiming_safety_leadership: Primary beneficiary (powerful/mobile)",
+      "future_humanity: Primary victim (powerless/trapped)",
+      "near_term_harms_advocates: Payer (organized/constrained)",
+      "global_south_populations: Payer (powerless/trapped)",
+      "policy_makers: Agenda-setter (institutional/constrained)"
     ],
-    "logic_rationale": "The extractiveness (0.65) is high because resources and attention are significantly diverted towards highly speculative, long-term risks, potentially at the expense of addressing demonstrable present harms. Suppression (0.4) is moderate; while alternative views are not strictly forbidden, they are often marginalized in dominant discourse and funding. Theater ratio (0.55) is high because a significant portion of 'safety' work under this framing is performative or directed at highly theoretical problems, rather than practical, verifiable interventions for current systems. Accessibility collapse (0.7) is high because once this prioritization is accepted, alternative risk frameworks become difficult to implement or fund. Resistance (0.3) is moderate, as there are active, organized groups advocating for different priorities.",
-    "perspectival_gap": "From the perspective of x-risk research institutions, this constraint is a necessary, even existential, coordination mechanism. From the perspective of near-term harms advocates, it is an extractive mechanism that diverts resources and attention from urgent, demonstrable problems. Policy makers navigate these competing claims, often influenced by the most vocal or well-funded narratives.",
-    "directionality_logic": "X-risk research institutions and AI labs claiming safety leadership are beneficiaries, as this prioritization directs funding and legitimacy towards their work. Near-term harms advocates are victims, as their concerns are deprioritized. Humanity's future potential is a diffuse victim, as the prioritization might misallocate resources in the present, potentially curtailing future options. Policy makers are agenda setters, shaping the discourse and resource allocation.",
-    "mandatrophy_analysis": "This constraint is a Tangled Rope because it genuinely attempts to coordinate efforts against a perceived existential threat (a coordination function), but it also exhibits asymmetric extraction by diverting resources and attention towards specific, often speculative, research agendas that benefit certain institutions, while potentially neglecting other, more immediate harms (asymmetric extraction). The 'mandate' to prevent existential risk is live, but its 'function' in practice may be captured by specific interests, leading to a form of mandatrophy where the original broad goal is narrowed to serve specific beneficiaries. The high theater ratio suggests that some 'safety' work is more about maintaining the narrative of prioritization than effective, broad-spectrum risk mitigation."
+    "logic_rationale": "The high extractiveness (0.68) reflects the diversion of resources and attention from present-day problems to speculative future ones. Suppression (0.75) is high due to the framing of existential risk as an 'all-of-humanity' problem, which can suppress dissent or alternative priorities by framing them as secondary or even irresponsible. The theater ratio (0.45) indicates that while some genuine safety work occurs, a significant portion of 'safety leadership' serves to legitimize the current power structures and deflect criticism regarding immediate harms. Accessibility collapse (0.6) is moderate because alternative framings (like near-term harms) are not entirely eliminated but are significantly marginalized. Resistance (0.55) is present from near-term harms advocates but is often outmatched by the institutional power of x-risk proponents.",
+    "perspectival_gap": "From the perspective of x-risk research institutions and AI labs, this constraint is a vital coordination mechanism for humanity's survival, justifying the allocation of resources. From the perspective of near-term harms advocates and global south populations, it operates as a snare, extracting resources and attention from their immediate suffering under the guise of a distant, speculative threat.",
+    "directionality_logic": "X-risk research institutions and AI labs are beneficiaries (low d) as they gain funding, influence, and a favorable regulatory environment. Future humanity is a theoretical beneficiary but also a payer (high d) due to opportunity costs. Near-term harms advocates and global south populations are clear payers (high d) as their concerns are deprioritized. Policy makers are agenda-setters, balancing influence but often swayed by powerful narratives and institutional lobbying.",
+    "mandatrophy_analysis": "This constraint is a Tangled Rope because it claims a genuine coordination function (preventing human extinction) but exhibits significant asymmetric extraction (diverting resources from present harms) and requires active enforcement (suppressing alternative risk framings). It prevents mislabeling by highlighting that the coordination story is intertwined with a clear extractive dynamic, rather than being pure coordination or pure extraction.",
+    "kernel_context": "This constraint, 'AI Risk Governance: Existential Risk Priority', is one reading of the 'ai_risk_governance_priority' kernel. It prioritizes preventing superintelligence scenarios that could annihilate or permanently curtail humanity's potential. Sibling readings include 'near_term_harms_reading' (prioritizing present harms) and 'bridge_reading' (integrating both). This reading emphasizes the long-term, speculative, and potentially catastrophic aspects of AI development."
   },
+  "omegas": [
+    {
+      "id": "existential_risk_speculation_vs_empirical_harm",
+      "question": "Is the prioritization of speculative existential risks over empirically demonstrable near-term harms justified by the probability and severity of the former, or does it reflect a bias towards abstract, technical problems?",
+      "resolution_mechanism": "Development of robust, empirically grounded methodologies for assessing the probability and impact of superintelligence scenarios, and comparative risk analysis against the cumulative impact of present-day harms.",
+      "impact": "If speculative risks are found to be significantly overblown or less probable than claimed, the extractiveness of this constraint would be reclassified as higher, and its coordination function diminished, potentially shifting its type towards a Snare. If robustly justified, its coordination function would be strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the empirical grounding of existential risk claims versus present harms."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of alternative risk framings structural (institutional power, funding flows) or internalized (cognitive patterns that lead to self-censorship or dismissal of 'lesser' risks)?",
+      "resolution_mechanism": "Analysis of discourse patterns, funding allocation mechanisms, and the career trajectories of researchers who challenge the existential risk prioritization. If suppression persists even when structural barriers are nominally removed, it suggests internalized mechanisms.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as it operates through self-reinforcing cognitive biases within the field. This would amplify the extractive nature of the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for alternative risk framings."
+    },
+    {
+      "id": "framing_under_determination_ai_risk",
+      "question": "Is the 'existential_risk_reading' the only defensible framing for AI risk governance, or do alternative framings (e.g., 'near_term_harms_reading') offer equally coherent, albeit different, structural analyses?",
+      "resolution_mechanism": "Comparative analysis of the problem-solution fit, stakeholder inclusion, and resource allocation outcomes across different risk framings. Resolution would involve identifying which framing best accounts for the full spectrum of AI's societal impacts and stakeholder experiences.",
+      "impact": "If alternative framings are found to be equally or more coherent, it would challenge the legitimacy of this reading's prioritization, potentially reclassifying it as a Snare by exposing its coordination story as cover for extraction. If this reading is uniquely coherent, its Tangled Rope classification would be reinforced.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The choice of framing for AI risk governance (existential vs. near-term harms) is under-determined by the evidence, leading to different structural classifications."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
       "ai_risk_governance_priority__near_term_harms_reading",
       "ai_risk_governance_priority__bridge_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'ai_risk_governance_priority' kernel. This 'existential_risk_reading' prioritizes long-term, catastrophic risks. The 'near_term_harms_reading' prioritizes immediate, demonstrable harms. The 'bridge_reading' attempts to integrate both. Each is a distinct constraint with different beneficiaries, victims, and extractiveness profiles."
+    "dual_formulation_note": "This constraint is one reading of the 'ai_risk_governance_priority' kernel. It focuses on existential risks, while 'near_term_harms_reading' focuses on immediate impacts, and 'bridge_reading' attempts to integrate both. These are distinct constraints arising from different interpretations of the same underlying problem space."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
@@ -151,12 +219,12 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_risk_governance_priority__near_term_harms_reading",
+        "sibling_id": "near_term_harms_reading",
         "relation": "influences"
       },
       {
-        "sibling_id": "ai_risk_governance_priority__bridge_reading",
-        "relation": "influences"
+        "sibling_id": "bridge_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
@@ -167,29 +235,30 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "superintelligence_is_imminent_and_dangerous",
-        "role": "secondary",
+        "atom": "superintelligence_is_imminent_and_uncontrollable",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "long_term_survival_framework",
+    "reference_frame": "humanity_at_risk_from_agi",
     "drift_state": {
-      "moment": "contemporary_ai_development_era",
+      "moment": "contemporary_ai_acceleration_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

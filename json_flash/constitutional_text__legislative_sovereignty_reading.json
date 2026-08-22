@@ -4,121 +4,200 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "fb126ecc-b917-458c-8af6-fcce15468693"
+    "story_uid": "47bd138a-ff8e-464b-bff7-bd035348ec9b"
   },
   "base_properties": {
-    "extractiveness": 0.4,
-    "suppression": 0.3,
+    "extractiveness": 0.45,
+    "suppression": 0.6,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.45,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.3,
     "claimed_type": "rope",
-    "human_readable": "Legislative Sovereignty Reading of Constitutional Text",
+    "human_readable": "Constitutional Text: Legislative Sovereignty Reading",
     "topic_domain": "constitutional_theory/political_philosophy/comparative_law",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
       "legislature",
-      "majoritarian_will"
+      "majority_will"
     ],
     "victims": [
-      "minority_rights_advocates",
-      "judicial_branch"
+      "minority_rights_advocates"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "legislative_vs_judicial_supremacy",
-      "question": "Is the constitutional text truly establishing legislative supremacy, or is this reading a political interpretation that downplays judicial review?",
-      "resolution_mechanism": "Analysis of constitutional amendment procedures, historical practice of notwithstanding clauses, and the actual legal effect of judicial rulings on legislation.",
-      "impact": "If legislative supremacy is structurally embedded, the constraint is a Rope coordinating majoritarian will. If it's a political interpretation, the constraint might be a Tangled Rope where the legislature extracts power from the judiciary and minorities.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity between legislative and judicial final authority on constitutional meaning."
+      "name": "legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "As the supreme interpreter of the constitution, the legislature has the final say on constitutional meaning, often through mechanisms like notwithstanding clauses. This allows it to enact laws reflecting the majority will, even if they conflict with judicial interpretations."
     },
     {
-      "id": "reading_of_constitutional_text",
-      "question": "This constraint is the 'legislative_sovereignty_reading' of the 'constitutional_text' kernel. What would change if a 'judicial_supremacy_reading' or 'popular_sovereignty_reading' were adopted?",
-      "resolution_mechanism": "Empirical observation of legal outcomes and political practice under different constitutional interpretations.",
-      "impact": "A 'judicial_supremacy_reading' would shift authority to the courts, potentially increasing protection for minority rights but reducing legislative flexibility. A 'popular_sovereignty_reading' would emphasize direct citizen involvement, potentially destabilizing both legislative and judicial authority. This reading emphasizes majoritarian will and legislative flexibility.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of alternative readings of the constitutional text kernel."
+      "name": "courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Courts provide advisory opinions on constitutional matters and review legislation for compliance, but their interpretations are not final. Their role is to inform the legislature, not to override its ultimate authority."
+    },
+    {
+      "name": "majority_will",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The legislative sovereignty reading ensures that the will of the elected majority can be directly translated into law, reflecting current public sentiment and policy preferences without being unduly constrained by judicial review."
+    },
+    {
+      "name": "minority_rights_advocates",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Minority rights advocates bear the cost of this reading, as their protections can be overridden by legislative action. They rely on political processes and public opinion rather than judicial enforcement for their claims."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the implications of legislative supremacy for constitutional stability, democratic accountability, and rights protection. They contribute to the ongoing debate about the proper balance of power."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, final arbiter of constitutional meaning, ensuring that legislative action can proceed with certainty and reflect the current democratic mandate, avoiding perpetual judicial deadlock.",
+    "transfer_function": "Transfers ultimate interpretive authority over the constitution from the judiciary to the legislature, thereby empowering the elected majority to define constitutional boundaries.",
+    "absent_voices": "Advocates for strong judicial review and entrenched minority rights, who would argue that legislative supremacy risks tyranny of the majority and undermines fundamental protections, are structurally marginalized in this framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If legislative sovereignty vanished, the constitutional landscape would immediately shift towards judicial supremacy or popular sovereignty, leading to a re-evaluation of legislative powers, judicial roles, and the enforceability of rights. The balance of power would fundamentally reorganize.",
+    "founding_problem": "To ensure that the elected representatives of the people have the final say in governing, preventing an unelected judiciary from thwarting the democratic will and ensuring flexibility in constitutional interpretation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Political scientists and some legal scholars, outside the legislature itself, corroborate that the tension between democratic accountability and judicial review remains a live problem in many constitutional systems, justifying mechanisms for legislative finality."
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.38
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1900,
       "value": 0.4
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.25
+      "metric": "base_extractiveness",
+      "time_point": 1930,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.28
+      "time_point": 1900,
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.3
+      "time_point": 1930,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.6
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1900,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.1
+      "time_point": 1990,
+      "value": 0.11
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes a reading of a constitutional text where the legislature holds ultimate authority over constitutional meaning, often through mechanisms like 'notwithstanding clauses' or simple legislative override of judicial decisions. Courts may offer advice or initial interpretations, but the final say rests with the elected representatives. This reading prioritizes majoritarian democracy and legislative flexibility over judicial checks on power.",
-    "key_agents": [
-      "legislature: Agenda setter (institutional/generational) — holds final interpretive authority.",
-      "majoritarian_will: Beneficiary (organized/generational) — its preferences are directly enacted.",
-      "judicial_branch: Payer (institutional/generational) — its interpretive authority is advisory, not final.",
-      "minority_rights_advocates: Victim (organized/generational) — their protections are subject to legislative override.",
-      "constitutional_scholars: Observer (analytical/generational) — analyze the structural implications of this reading."
-    ],
-    "logic_rationale": "Extractiveness is moderate (0.4) as the legislature can override judicial decisions, potentially at the expense of minority rights or long-term constitutional principles. Suppression is low (0.3) because the mechanisms for legislative supremacy are typically explicit in the constitutional text or established convention, not covert. Theater ratio is low (0.1) as the legislative override is a direct and functional exercise of power, not merely performative. Accessibility collapse is moderate (0.6) as judicial avenues for challenging legislation are constrained, but not entirely eliminated. Resistance is moderate (0.45) from those advocating for stronger judicial review or minority protections.",
-    "perspectival_gap": "From the perspective of the legislature and majoritarian will, this constraint is a Rope, ensuring democratic accountability and responsiveness. From the perspective of the judicial branch and minority rights advocates, it can feel more extractive, as their claims can be overridden. The engine will compute these divergences based on the declared roles and attributes.",
-    "directionality_logic": "The legislature and majoritarian will are clear beneficiaries (d near 0.0) as they gain final interpretive authority. The judicial branch and minority rights advocates are targets (d near 1.0) as their power or protections are subject to legislative override. Constitutional scholars are analytical observers (d near 0.5).",
-    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in the traditional sense, as its function (ensuring legislative supremacy) is actively maintained. The question is whether this function is genuinely coordinative or becomes extractive when applied to minority rights. The classification as Rope reflects the coordination of majoritarian governance, while the moderate extractiveness and suppression metrics capture the costs borne by other seats.",
-    "kernel_context": "This constraint is the 'legislative_sovereignty_reading' of the 'constitutional_text' kernel. It posits that the constitutional framework grants ultimate interpretive authority to the legislature. Sibling readings include 'judicial_supremacy_reading' (courts have final say) and 'popular_sovereignty_reading' (the people retain ultimate authority)."
+    "narrative_context": "This constraint describes the 'legislative sovereignty' reading of a constitutional text, where parliament holds ultimate authority over constitutional meaning, with judicial review being advisory rather than final. Mechanisms like 'notwithstanding clauses' or simple legislative override ensure that the elected legislature can assert its interpretation. This reading prioritizes majoritarian democracy and legislative flexibility, but at the potential cost of minority rights protection. The constraint is claimed as a Rope from the perspective of its proponents, as it provides a clear framework for governance, but its operation involves active enforcement against judicial overreach and can lead to extraction from minority groups.",
+    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the potential for the majority to impose its will on minorities, but not necessarily a pure rent-seeking mechanism. Suppression (0.6) is present as judicial alternatives are actively constrained, and minority voices may find their avenues for redress limited. The theater ratio (0.1) is low, as the legislative supremacy is generally a functional aspect of the constitutional system, not merely performative. Accessibility collapse (0.7) is relatively high because the ultimate interpretive authority is concentrated, limiting alternative paths for constitutional interpretation. Resistance (0.3) is moderate, as there is ongoing debate and advocacy for stronger judicial review, but it does not fundamentally challenge the legislative's final say within this framework.",
+    "directionality_logic": "The legislature and the majority will are clear beneficiaries, as the constraint empowers them to shape constitutional meaning. Minority rights advocates are the primary victims, as their claims can be overridden. Courts act as observers or advisors, their directionality is near symmetric as they perform their function but do not hold ultimate power. Constitutional scholars are analytical observers.",
+    "perspectival_gap": "From the perspective of the legislature and the majority, this is a legitimate and necessary coordination mechanism for democratic governance. From the perspective of minority rights advocates, it can be experienced as a snare, as their protections are vulnerable to legislative override. The engine's per-seat classification will reflect this divergence based on the declared roles and exit options.",
+    "kernel_context": "This constraint is the 'legislative sovereignty' reading of the 'constitutional_text' kernel. It posits that the legislature has the final say on constitutional meaning. Sibling readings include 'judicial_supremacy_reading' (courts have final say) and 'popular_sovereignty_reading' (the people retain ultimate authority)."
   },
+  "omegas": [
+    {
+      "id": "balance_of_power_legitimacy",
+      "question": "Is the balance of power established by legislative sovereignty genuinely democratic and legitimate, or does it risk majoritarian tyranny?",
+      "resolution_mechanism": "Comparative analysis of constitutional outcomes in systems with varying degrees of legislative supremacy, focusing on long-term stability, rights protection, and public trust.",
+      "impact": "If it consistently leads to erosion of rights or instability, the 'rope' classification would shift towards 'tangled_rope' or 'snare' for minority seats; if it proves robust and adaptable, the 'rope' classification would be reinforced.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Assessing the normative implications of legislative supremacy."
+    },
+    {
+      "id": "notwithstanding_clause_use_frequency",
+      "question": "How frequently are 'notwithstanding clauses' or similar override mechanisms actually invoked, and what is the political cost of their use?",
+      "resolution_mechanism": "Empirical study of legislative history and political discourse surrounding the use of override clauses in relevant jurisdictions.",
+      "impact": "Frequent, low-cost use would indicate higher effective extractiveness and suppression, pushing the classification towards 'snare' for minority seats. Infrequent, high-cost use would suggest a more constrained legislative power, reinforcing the 'rope' classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical frequency and political cost of legislative overrides."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one of three readings of the 'constitutional_text' kernel, alongside 'judicial_supremacy_reading' and 'popular_sovereignty_reading'."
+    "affects_constraints": [
+      "constitutional_text__judicial_supremacy_reading",
+      "constitutional_text__popular_sovereignty_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'constitutional_text' kernel, each representing a different locus of ultimate constitutional authority. They are linked as a constraint family."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -136,35 +215,36 @@
     ],
     "axioms": [
       {
-        "atom": "legislative_will_is_supreme",
+        "atom": "legislative_supremacy_principle",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "judicial_review_is_advisory",
+        "atom": "democratic_accountability_priority",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
     ],
     "reference_frame": "parliamentary_sovereignty_tradition",
     "drift_state": {
       "moment": "contemporary_rights_charter_era",
-      "direction": "revival_pressure",
-      "magnitude": "minor",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

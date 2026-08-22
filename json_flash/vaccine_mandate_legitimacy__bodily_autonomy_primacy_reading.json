@@ -4,127 +4,207 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "4a9e88a4-9493-493a-b63a-026f3bdae193"
+    "story_uid": "35dbc3f4-b60e-4803-a2e6-0d3c07e9505a"
   },
   "base_properties": {
     "extractiveness": 0.85,
-    "suppression": 0.95,
+    "suppression": 0.9,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.9,
-    "resistance": 0.7,
-    "claimed_type": "mountain",
-    "human_readable": "Bodily Autonomy Primacy in Vaccine Mandate Legitimacy",
+    "accessibility_collapse": 0.2,
+    "resistance": 0.8,
+    "claimed_type": "snare",
+    "human_readable": "Bodily Autonomy Primacy Reading of Vaccine Mandate Legitimacy",
     "topic_domain": "public_health_policy/constitutional_law/bioethics",
-    "emerges_naturally": true,
+    "requires_active_enforcement": true,
     "beneficiaries": [
       "liberty_advocacy_movements",
       "individuals_opposed_to_mandates"
     ],
     "victims": [
       "immunocompromised_individuals",
-      "vulnerable_populations_at_high_exposure_risk"
+      "vulnerable_populations",
+      "public_health_authorities"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_law_vs_constructed_autonomy",
-      "question": "Is the absolute primacy of bodily autonomy a natural law, or a constructed legal/ethical principle that benefits identifiable agents?",
-      "resolution_mechanism": "Philosophical and legal analysis of the historical evolution of autonomy concepts, and empirical analysis of the social and political movements that champion absolute autonomy in specific contexts.",
-      "impact": "If a natural law, the constraint is a genuine Mountain. If constructed, and benefits accrue to specific groups, it would reclassify as a Tangled Rope or Snare, depending on the degree of extraction and suppression.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity between natural law and constructed principle for bodily autonomy."
+      "name": "liberty_advocacy_movements",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "These movements gain legitimacy and support by championing absolute bodily autonomy, framing any state health intervention as an overreach. They benefit from the constraint's persistence as it provides a clear ideological battleground."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "This constraint is the 'bodily_autonomy_primacy_reading' of the 'vaccine_mandate_legitimacy' kernel. What would change if a sibling reading were adopted?",
-      "resolution_mechanism": "Adoption of 'public_health_primacy_reading' would shift the victim set (unvaccinated become targets, not beneficiaries) and reframe the constraint as a Rope or Tangled Rope. Adoption of 'risk_stratification_reading' would introduce proportionality tests, making blanket mandates Snares but targeted ones potentially Ropes.",
-      "impact": "The classification of the constraint and the identification of beneficiaries/victims would fundamentally change, reflecting a different balance of rights and duties.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Impact of alternative readings of the vaccine mandate legitimacy kernel."
+      "name": "individuals_opposed_to_mandates",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These individuals benefit from the constraint by having their personal choices prioritized over collective health measures, avoiding mandatory vaccination or other interventions. Their benefit is the preservation of their perceived self-sovereignty."
+    },
+    {
+      "name": "immunocompromised_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals bear a disproportionate burden of exposure risk when vaccine mandates are deemed illegitimate. Their health and safety are directly compromised by the lack of collective immunity, with no viable exit from the increased risk."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Similar to immunocompromised individuals, other vulnerable groups (e.g., elderly, those with specific comorbidities) face heightened risks of severe illness and death due to reduced herd immunity, bearing the costs of individual autonomy without protection."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These authorities bear the cost of diminished capacity to implement effective public health interventions. Their mandate to protect collective health is undermined, leading to increased disease burden and strain on healthcare systems. They are constrained by legal challenges and public resistance."
+    },
+    {
+      "name": "healthcare_systems",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Healthcare systems face increased patient loads, resource strain, and burnout among staff when preventable diseases spread due to lack of mandates. They bear the operational and human costs of a less healthy population."
     }
   ],
+  "six_questions": {
+    "coordination_function": "This reading asserts that the primary coordination function is to protect individual liberty and self-determination against state overreach, ensuring that medical decisions remain solely with the individual.",
+    "transfer_function": "This reading transfers the burden of collective health risks (e.g., disease transmission, healthcare system strain) from individuals making autonomous choices to vulnerable populations and public health infrastructure.",
+    "absent_voices": "The voices of future generations, who might inherit a society with weakened public health protections, are absent. Also, the collective voice of the 'common good' or 'societal welfare' is systematically de-prioritized in this framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint (the absolute primacy of bodily autonomy over public health mandates) vanished, public health authorities would gain significant power to implement mandates, potentially leading to a rapid increase in vaccination rates and a decrease in disease transmission, fundamentally altering the balance between individual rights and collective welfare.",
+    "founding_problem": "The founding problem this reading addresses is the historical and potential for state coercion in medical matters, including forced sterilization, unethical experimentation, and mandatory treatments, which infringe upon individual dignity and autonomy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Civil liberties organizations and historical accounts of medical abuses corroborate the ongoing concern about state overreach. While public health authorities might argue the context has changed, the underlying principle of protecting individual bodily integrity remains a live concern for many, supported by legal scholars focused on individual rights."
+  },
+  "interval": {
+    "start": 2020,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 2020,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
       "value": 0.8
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.82
+      "time_point": 2022,
+      "value": 0.83
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2023,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 2020,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.9
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.92
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.95
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 10
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the reading of vaccine mandate legitimacy where bodily autonomy is considered an absolute, self-sovereign right, making any state coercion categorically impermissible, regardless of public health outcomes. It is framed as a natural law, an unchangeable principle. This reading places immunocompromised individuals and other vulnerable populations at high exposure risk into the victim set, as their protection through collective immunity is foreclosed. Liberty advocacy movements and individuals opposed to mandates are the primary beneficiaries of this interpretation.",
-    "logic_rationale": "The extractiveness (0.85) is high because the principle, when applied, extracts the right to collective protection from vulnerable groups. Suppression (0.95) is also very high, as this reading actively suppresses any alternative public health interventions that would infringe on individual autonomy, regardless of their efficacy. The theater ratio is low (0.1) because the principle is genuinely held and applied, not merely performed. Accessibility collapse is high (0.9) as it fundamentally collapses the legitimacy of any alternative public health policy that involves coercion. Resistance (0.7) is high from those who advocate for public health measures.",
-    "perspectival_gap": "From the perspective of liberty advocates, this is a Mountain, an unassailable principle. From the perspective of public health officials and vulnerable populations, it operates as a Snare, extracting collective safety and imposing significant risks. The engine's classification will highlight this divergence.",
-    "directionality_logic": "Individuals opposed to mandates and liberty advocacy movements are beneficiaries (d=0.0-0.1) as their core values are upheld and their freedom from state intervention is maximized. Immunocompromised individuals and vulnerable populations are victims (d=0.9-1.0) as they bear the direct costs of increased exposure risk due to the absence of mandates. Public health authorities are targets (d=0.8-0.9) as their ability to implement protective measures is severely constrained.",
-    "mandatrophy_analysis": "This constraint, framed as a Mountain, asserts an eternal and unchanging principle. Mandatrophy analysis would focus on whether the 'naturalness' of this absolute autonomy is genuinely universal or a historically contingent construct. If it were found to be a constructed principle whose original justification (e.g., protection against specific historical abuses) has atrophied, but it persists due to institutional inertia or concentrated beneficiaries, it would reclassify from a Mountain to a Snare or Tangled Rope. The current framing resists such analysis by asserting natural law status."
+    "narrative_context": "This constraint represents a specific reading of vaccine mandate legitimacy, where individual bodily autonomy is considered an absolute right, rendering state coercion for public health purposes categorically impermissible. This reading emerged strongly during the COVID-19 pandemic, leading to significant societal debate and legal challenges against public health measures. The constraint's high extractiveness and suppression reflect the severe costs borne by vulnerable populations and public health systems when this principle is applied absolutely, and the active enforcement (legal and social) required to maintain this interpretation against competing public health imperatives.",
+    "logic_rationale": "The high extractiveness (0.85) stems from the direct and indirect costs imposed on vulnerable groups and public health infrastructure due to reduced collective immunity. Suppression (0.9) is high because this reading actively suppresses alternative public health strategies and the voices advocating for them, often through legal challenges and strong social pressure. The low accessibility collapse (0.2) indicates that alternative public health strategies are well-understood and available, but actively resisted. Resistance (0.8) is high due to ongoing efforts by public health authorities and advocates for vulnerable groups to challenge this absolute interpretation.",
+    "directionality_logic": "Liberty advocacy movements and individuals opposed to mandates are clear beneficiaries, as their core values are upheld. Immunocompromised individuals, vulnerable populations, and public health authorities are victims, bearing the direct and systemic costs of this interpretation. Healthcare systems also bear significant costs. The directionality for beneficiaries is low (subsidized), while for victims it is high (targeted).",
+    "perspectival_gap": "From the perspective of liberty advocates, this constraint is a 'rope' or even a 'mountain' of fundamental rights, ensuring individual freedom. From the perspective of immunocompromised individuals and public health authorities, it operates as a 'snare,' trapping them in a high-risk environment with limited recourse. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'bodily_autonomy_primacy_reading' of the 'vaccine_mandate_legitimacy' kernel. It asserts the absolute right to medical self-sovereignty. Sibling readings include the 'public_health_primacy_reading' (state duty to prevent collective harm) and the 'risk_stratification_reading' (mandate legitimacy contingent on actuarial risk)."
   },
+  "omegas": [
+    {
+      "id": "absolute_vs_proportional_autonomy",
+      "question": "Is bodily autonomy an absolute right, or is it subject to proportionality tests when collective harm is at stake?",
+      "resolution_mechanism": "Judicial rulings establishing a clear legal framework for balancing individual rights against public health imperatives, or a societal consensus shift on the limits of individual liberty in a pandemic context.",
+      "impact": "If autonomy is deemed proportional, the extractiveness on vulnerable populations would decrease, and the constraint might reclassify from a snare to a tangled rope or even a rope, depending on the balance struck.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the scope and limits of bodily autonomy in public health."
+    },
+    {
+      "id": "causal_link_unvaccinated_to_vulnerable_harm",
+      "question": "What is the precise causal link and magnitude of harm from unvaccinated individuals to immunocompromised and vulnerable populations?",
+      "resolution_mechanism": "Epidemiological studies and public health data providing robust, peer-reviewed evidence on transmission rates, severity, and healthcare burden attributable to unvaccinated populations.",
+      "impact": "Stronger evidence of direct and severe harm would weaken the 'bodily autonomy primacy' argument by highlighting the externality, potentially shifting public and legal opinion towards collective responsibility. Weaker evidence would reinforce the current reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical uncertainty about the direct harm caused by unvaccinated individuals to others."
+    },
+    {
+      "id": "mandate_effectiveness_vs_social_cohesion",
+      "question": "Does the enforcement of vaccine mandates achieve sufficient public health benefits to outweigh the social costs of coercion and erosion of trust in public institutions?",
+      "resolution_mechanism": "Longitudinal studies comparing health outcomes and social cohesion in jurisdictions with and without mandates, alongside qualitative research on public trust and compliance.",
+      "impact": "If mandates are shown to be highly effective with minimal social cost, the 'bodily autonomy primacy' reading would face significant challenge. If social costs are high and benefits marginal, this reading would gain further traction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trade-off between mandate effectiveness and social cohesion/trust."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "vaccine_mandate_legitimacy__public_health_primacy_reading",
-      "vaccine_mandate_legitimacy__risk_stratification_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'vaccine_mandate_legitimacy' kernel. This reading asserts the absolute primacy of bodily autonomy, foreclosing state coercion. The other readings (public_health_primacy_reading, risk_stratification_reading) offer alternative frameworks for mandate legitimacy."
+      "public_health_policy__collective_action_problem",
+      "healthcare_resource_allocation__ethical_framework"
+    ]
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "vaccine_mandate_legitimacy__public_health_primacy_reading",
-        "relation": "forecloses"
+        "sibling_id": "public_health_primacy_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
-        "relation": "forecloses"
+        "sibling_id": "risk_stratification_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
@@ -141,7 +221,7 @@
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "unconditional_individual_sovereignty",
+    "reference_frame": "individual_rights_supremacy_framework",
     "drift_state": {
       "moment": "contemporary_pandemic_era",
       "direction": "repudiation_pressure",
@@ -150,14 +230,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

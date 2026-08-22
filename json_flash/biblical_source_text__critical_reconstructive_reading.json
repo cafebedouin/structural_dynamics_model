@@ -4,137 +4,258 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "a9667ac6-1ec6-447d-af29-aef766b81c47"
+    "story_uid": "460ce5c9-4d99-492f-857c-94899bb5ef5a"
   },
   "base_properties": {
-    "extractiveness": 0.3,
-    "suppression": 0.2,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.7,
-    "resistance": 0.4,
-    "claimed_type": "rope",
-    "human_readable": "Biblical Source Text: Critical Reconstructive Reading",
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Critical Reconstructive Reading of Biblical Source Text",
     "topic_domain": "religious_authority/academic_scholarship",
-    "requires_active_enforcement": false,
-    "emerges_naturally": false,
+    "requires_active_enforcement": true,
     "beneficiaries": [
       "academic_biblical_scholars",
-      "critical_text_editors"
+      "critical_text_publishers"
     ],
     "victims": [
-      "confessional_communities_unaware_of_textual_criticism",
-      "pastors_and_theologians_reliant_on_received_texts"
+      "confessional_communities",
+      "pastoral_leaders",
+      "lay_readers"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_vs_constructed_textual_basis",
-      "question": "Is the 'original text' a discoverable natural artifact, or a scholarly construct shaped by interpretive choices?",
-      "resolution_mechanism": "Further archaeological discoveries or methodological consensus shifts within textual criticism.",
-      "impact": "If more of a construct, the authority of the 'reconstructed text' is weakened, potentially reducing its extractiveness on confessional communities; if a natural artifact, its authority is strengthened.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity of the 'original text' as a natural vs. constructed entity."
+      "name": "academic_biblical_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These scholars prioritize the reconstruction of a hypothetical 'original' biblical text through critical analysis of manuscripts. Their careers, publications, and academic legitimacy are tied to this methodology. They benefit from the intellectual authority derived from this approach, which often destabilizes traditional readings."
     },
     {
-      "id": "impact_on_confessional_communities",
-      "question": "To what extent does the critical reconstructive reading destabilize the faith of confessional communities, and is this an intended or unintended consequence?",
-      "resolution_mechanism": "Sociological studies of religious communities' responses to textual criticism; theological and pastoral engagement with critical scholarship.",
-      "impact": "If the destabilization is severe and unmitigated, the constraint's effective extractiveness on these communities is higher than measured; if communities adapt, it is lower.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The actual impact of textual criticism on religious faith and practice."
+      "name": "critical_text_publishers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publishers of critical editions of the biblical text (e.g., Biblia Hebraica Stuttgartensia, Novum Testamentum Graece) benefit from the continuous academic demand for these reconstructed texts. Their market is sustained by the methodology of critical reconstruction."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "This constraint is the 'critical_reconstructive_reading' of the 'biblical_source_text' kernel. What would change if a 'formal_equivalence_reading' or 'dynamic_equivalence_reading' were adopted as primary?",
-      "resolution_mechanism": "Analysis of the structural implications of prioritizing source structure (formal) or target intelligibility (dynamic) over historical reconstruction.",
-      "impact": "Adopting a formal equivalence reading would shift focus to linguistic fidelity over historical reconstruction, potentially reducing extractiveness on communities comfortable with literal translations. Adopting a dynamic equivalence reading would prioritize communicative impact, potentially increasing extractiveness on those who value structural fidelity.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Structural implications of alternative readings of the biblical_source_text kernel."
+      "name": "confessional_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "These communities often rely on received, stable translations for their theological and liturgical life. The critical reconstructive reading destabilizes their textual basis, creating cognitive dissonance and requiring them to adapt their understanding of scriptural authority, often at significant cost to their internal coherence and tradition."
+    },
+    {
+      "name": "pastoral_leaders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Caught between academic scholarship and their congregations, pastoral leaders must navigate the implications of a constantly evolving 'original' text. This often requires them to explain complex textual criticism to lay audiences, potentially undermining the perceived authority of the Bible in their communities. Their professional identity is often tied to the stability of the text."
+    },
+    {
+      "name": "lay_readers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals seek spiritual guidance and understanding from the Bible. The critical reconstructive approach can make the text feel inaccessible, unstable, and subject to expert interpretation, rather than a direct divine revelation. They bear the cost of intellectual confusion and the erosion of direct textual authority."
+    },
+    {
+      "name": "translation_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the methodologies and impacts of different translation approaches, including critical reconstruction. They observe the dynamics between academic rigor and community reception without directly participating in the confessional stakes."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates academic biblical scholarship around a shared methodology for textual criticism, ensuring a consistent approach to reconstructing the earliest possible form of biblical texts.",
+    "transfer_function": "Transfers intellectual authority and academic prestige to scholars proficient in textual criticism, while transferring a sense of textual instability and interpretive burden to confessional communities and lay readers.",
+    "absent_voices": "Historically, communities that prioritized oral tradition or liturgical stability over textual criticism were excluded. Today, many confessional communities feel their concerns about textual stability are marginalized in academic discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the critical reconstructive reading vanished, academic biblical studies would undergo a profound reorientation, likely shifting towards reception history or theological interpretation of extant texts. Confessional communities would experience a return to textual stability, but potentially at the cost of critical engagement with manuscript evidence.",
+    "founding_problem": "The problem was the existence of numerous biblical manuscripts with variations, leading to uncertainty about the precise wording of the 'original' inspired text.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic biblical scholars universally attest that the problem of textual variation is live and requires ongoing critical work. Confessional communities, while often resistant to the implications, generally acknowledge the historical reality of manuscript differences, even if they prefer to resolve them through theological rather than purely critical means."
+  },
+  "interval": {
+    "start": 1800,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.2
+      "time_point": 1800,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.25
+      "time_point": 1850,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1900,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
       "value": 0.3
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.15
+      "time_point": 1850,
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.18
+      "time_point": 1900,
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.2
+      "time_point": 1950,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1800,
       "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1850,
       "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 1900,
       "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.15
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the academic discipline of biblical textual criticism, which prioritizes the historical recovery of the hypothetical 'original' biblical text. It asserts that neither the grammatical structure nor the theological meaning of a text can be reliably established until its textual basis is critically reconstructed. This reading is foundational for academic biblical scholarship but can be highly extractive for confessional communities whose faith relies on the stability and authority of received translations or traditional texts.",
-    "logic_rationale": "The extractiveness (0.3) is moderate for academic scholars, who are beneficiaries, but higher for confessional communities (victims) who may experience destabilization of their received texts. Suppression (0.2) is low as academic discourse is generally open, but there's an implicit suppression of alternative methodologies within the critical paradigm. Theater ratio (0.1) is low, as the work is primarily functional. The claimed type is 'rope' because it genuinely coordinates scholarly effort towards a common goal (textual reconstruction), but its application to broader religious contexts can become extractive.",
-    "perspectival_gap": "Academic biblical scholars experience this as a 'rope' – a necessary and beneficial coordination mechanism for their work. Confessional communities, however, may experience it as a 'snare' or 'tangled_rope' due to the destabilization of their sacred texts and the perceived imposition of an external authority on their faith, leading to high effective extraction.",
-    "directionality_logic": "Academic biblical scholars and critical text editors are beneficiaries (d near 0.0) as the constraint defines their field and provides a common framework. Confessional communities and pastors/theologians reliant on received texts are victims (d near 1.0) as their existing textual authorities are challenged, requiring them to either adapt or resist. The constraint subsidizes the academic enterprise while extracting from traditional religious adherence.",
-    "mandatrophy_analysis": "The constraint's mandate (historical recovery) remains live within its academic domain. However, its application to broader religious contexts can lead to a 'mandatrophy-like' effect where the original academic mandate (textual purity) becomes a source of extraction when applied to communities whose primary mandate is spiritual formation or theological coherence, not historical reconstruction. The classification as 'rope' reflects its internal academic function, while the high extractiveness on victims highlights its external impact."
+    "narrative_context": "This constraint represents the 'critical reconstructive' reading of biblical source texts, which prioritizes the academic recovery of a hypothetical original text over the structural or semantic fidelity of received translations. It is a reading of the 'biblical_source_text' kernel. While presented as an objective academic methodology, its operation generates significant extraction from confessional communities who rely on textual stability for their faith and practice. The constraint is claimed as a Rope by its proponents (academic scholars) but operates as a Tangled Rope due to its asymmetric impact and active enforcement of its methodology.",
+    "key_agents": [
+      "academic_biblical_scholars: Primary agenda-setter (institutional/constrained) — benefits from intellectual authority.",
+      "critical_text_publishers: Beneficiary (organized/mobile) — profits from academic demand.",
+      "confessional_communities: Primary payer (organized/identity_locked) — bears costs of textual instability.",
+      "pastoral_leaders: Payer (moderate/constrained) — navigates academic findings for congregations.",
+      "lay_readers: Payer (powerless/trapped) — experiences textual instability and erosion of direct authority.",
+      "translation_theorists: Observer (analytical/analytical) — analyzes impacts without direct stake."
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because the continuous process of textual reconstruction imposes significant intellectual and theological costs on confessional communities, who must constantly adapt to new 'original' readings. Suppression is also high (0.75) because the academic methodology is enforced through peer review, publication standards, and the marginalization of alternative approaches to textual authority. Theater ratio is low (0.15) as the academic work is genuinely rigorous, but its 'objectivity' often masks its disruptive impact on non-academic stakeholders. The historical measurements show a rise in extractiveness and suppression as critical methodology became more entrenched and its implications for confessional communities became more pronounced.",
+    "perspectival_gap": "Academic biblical scholars perceive this as a Rope, a necessary coordination mechanism for scholarly rigor and historical accuracy. Confessional communities, however, experience it as a Snare or Tangled Rope, as it extracts stability and direct authority from their sacred texts, requiring them to pay intellectual and theological costs without direct benefit. The engine's classification will reflect this divergence.",
+    "directionality_logic": "Academic biblical scholars and critical text publishers are beneficiaries, as their professional standing and market are enhanced by this methodology. Confessional communities, pastoral leaders, and lay readers are victims/payers, as they bear the costs of textual destabilization and interpretive complexity. Their identity-locked or trapped exit options amplify the extraction they experience.",
+    "mandatrophy_analysis": "The constraint's mandate to recover the 'original' text remains live for academic scholars. However, for confessional communities, the original problem (manuscript variation) has been 'solved' in a way that creates new problems (textual instability, erosion of authority). The persistence of the methodology, despite its high costs for some stakeholders, prevents it from being a Piton, as there are clear beneficiaries actively maintaining it. It is a Tangled Rope because it genuinely coordinates academic work while extracting from others through the same structure.",
+    "kernel_context": "This constraint is the 'critical_reconstructive_reading' of the 'biblical_source_text' kernel. It stands in contrast to the 'formal_equivalence_reading' (prioritizing source structure) and 'dynamic_equivalence_reading' (prioritizing target language communicative effectiveness), both of which offer different approaches to resolving textual variation and translation challenges."
   },
+  "omegas": [
+    {
+      "id": "textual_stability_vs_critical_accuracy",
+      "question": "Is the pursuit of a hypothetical 'original' text at the cost of textual stability for confessional communities a necessary academic good, or an overreach of methodology?",
+      "resolution_mechanism": "Empirical study of the long-term impact of textual instability on religious adherence and community cohesion, balanced against the demonstrable gains in historical understanding from critical reconstruction.",
+      "impact": "If deemed an overreach, the extractiveness from confessional communities would be re-evaluated as unjustified, potentially reclassifying the constraint towards a Snare. If deemed necessary, the extraction would be seen as an unavoidable cost of academic rigor.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The tension between academic textual accuracy and community need for textual stability."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of alternative textual approaches structural (academic gatekeeping) or internalized (confessional communities' self-censorship to avoid conflict)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if confessional communities, after disengaging from academic discourse, still suppress internal challenges to their received texts, it suggests internalized suppression. If they embrace alternative critical methods, it suggests structural suppression was dominant.",
+      "impact": "If internalized, the constraint's effective suppression on confessional communities is higher than the structural measure suggests, as they carry the suppression with them. If structural, removing academic gatekeeping would lead to greater diversity in textual approaches.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in textual criticism."
+    },
+    {
+      "id": "original_text_hypothetical_status",
+      "question": "To what extent is the 'original' text a reconstructible historical reality versus a methodological construct that serves academic interests?",
+      "resolution_mechanism": "Ongoing manuscript discoveries and advancements in computational textual criticism. If a definitive 'original' text remains elusive despite advanced methods, it strengthens the 'methodological construct' argument.",
+      "impact": "If primarily a construct, the justification for the high extractiveness on confessional communities weakens, as they are paying for a moving target. This would shift the constraint closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The ontological status of the 'original' biblical text."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
   },
   "network": {
     "affects_constraints": [
       "biblical_source_text__formal_equivalence_reading",
       "biblical_source_text__dynamic_equivalence_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'biblical_source_text' kernel. Its structural delta is low extractiveness on academic readers and high extractiveness on confessional communities, benefiting academic biblical scholarship. It influences other readings by establishing a foundational textual basis that they must either accept or explicitly reject."
+    "dual_formulation_note": "This constraint is one reading of the 'biblical_source_text' kernel. Its methodology of critical reconstruction influences and coexists with other translation theories, particularly formal and dynamic equivalence readings, by setting the terms of engagement with the source text."
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "distributed",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "biblical_source_text__formal_equivalence_reading",
-        "relation": "influences"
+        "sibling_id": "formal_equivalence_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "biblical_source_text__dynamic_equivalence_reading",
-        "relation": "influences"
+        "sibling_id": "dynamic_equivalence_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
@@ -145,29 +266,30 @@
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "meaning_subordinate_to_textual_basis",
+        "atom": "textual_basis_precedes_meaning_and_structure",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "critical_textual_scholarship_paradigm",
+    "reference_frame": "enlightenment_historical_criticism",
     "drift_state": {
-      "moment": "contemporary",
-      "direction": "stable",
+      "moment": "contemporary_postmodern_era",
+      "direction": "practice_drift",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

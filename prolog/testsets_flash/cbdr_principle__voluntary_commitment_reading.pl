@@ -41,7 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -69,25 +74,19 @@
  *   domain: international_climate_governance/treaty_law/development_economics
  *
  * SUMMARY:
- *   This constraint represents the 'voluntary commitment and technology
+ *   This constraint represents the 'voluntary contributions and technology
  *   transfer' reading of the Common But Differentiated Responsibilities
  *   (CBDR) principle in international climate governance. Under this reading,
  *   developed nations are primarily obligated to facilitate technology
- *   transfer, while emissions reductions are framed as nationally determined
- *   and voluntary. This interpretation allows developed nations to avoid
- *   legally binding emissions targets and extensive financial compensation
- *   for climate impacts, shifting the burden of adaptation and residual
- *   damage onto developing nations. The constraint is claimed as a Tangled
- *   Rope because it purports to coordinate global climate action while
- *   simultaneously enabling asymmetric extraction.
+ *   transfer, while all nations make nationally determined, non-binding
+ *   contributions to emissions reductions. This interpretation allows
+ *   developed nations to avoid legally enforceable emissions targets and
+ *   significant financial liabilities for historical emissions, shifting the
+ *   burden of climate action and adaptation costs onto developing nations.
+ *   The constraint is claimed as a 'tangled_rope' because it provides a
+ *   framework for global coordination (all nations participate) but embeds
+ *   significant asymmetric extraction.
  *
- * KEY AGENTS:
- *   - developed_nations: Agenda setter (institutional/arbitrage) — benefits from flexible commitments.
- *   - developing_nations: Payer (organized/constrained) — bears adaptation costs without sufficient compensation.
- *   - multinational_corporations: Beneficiary (powerful/arbitrage) — operates with fewer regulatory burdens.
- *   - vulnerable_communities: Victim (powerless/trapped) — directly impacted by climate change, lacks resources.
- *   - international_climate_negotiators: Agenda setter (institutional/constrained) — attempts to balance demands within the voluntary framework.
- *   - climate_scientists: Observer (analytical/analytical) — provides scientific basis, lacks direct enforcement power.
  */
 
 /* ==========================================================================
@@ -96,17 +95,17 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(cbdr_principle__voluntary_commitment_reading, 0.65).
-domain_priors:suppression_score(cbdr_principle__voluntary_commitment_reading, 0.45).
-domain_priors:theater_ratio(cbdr_principle__voluntary_commitment_reading, 0.55).
+domain_priors:suppression_score(cbdr_principle__voluntary_commitment_reading, 0.7).
+domain_priors:theater_ratio(cbdr_principle__voluntary_commitment_reading, 0.4).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, extractiveness, 0.65).
-narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, theater_ratio, 0.55).
+narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, theater_ratio, 0.4).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, accessibility_collapse, 0.3).
-narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, resistance, 0.7).
+narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, accessibility_collapse, 0.45).
+narrative_ontology:constraint_metric(cbdr_principle__voluntary_commitment_reading, resistance, 0.55).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(cbdr_principle__voluntary_commitment_reading, tangled_rope).
@@ -116,37 +115,81 @@ narrative_ontology:topic_domain(cbdr_principle__voluntary_commitment_reading, "i
 domain_priors:requires_active_enforcement(cbdr_principle__voluntary_commitment_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(cbdr_principle__voluntary_commitment_reading, '4145aec6-5133-485a-a602-3a4285a173af').
-narrative_ontology:cs_kernel_codification('4145aec6-5133-485a-a602-3a4285a173af', formalized).
-narrative_ontology:cs_authority_grounding('4145aec6-5133-485a-a602-3a4285a173af', lineage).
-narrative_ontology:cs_interpretation_layer_present('4145aec6-5133-485a-a602-3a4285a173af').
-narrative_ontology:cs_reading_relation('4145aec6-5133-485a-a602-3a4285a173af', cbdr_principle__historical_responsibility_reading, coexists_with).
-narrative_ontology:cs_axiom('4145aec6-5133-485a-a602-3a4285a173af', foundational, national_sovereignty_over_emissions_targets).
-narrative_ontology:cs_axiom_status(national_sovereignty_over_emissions_targets, holdable).
-narrative_ontology:cs_axiom_grounding('4145aec6-5133-485a-a602-3a4285a173af', national_sovereignty_over_emissions_targets, conventional).
-narrative_ontology:cs_axiom('4145aec6-5133-485a-a602-3a4285a173af', foundational, technology_transfer_as_primary_developed_nation_obligation).
-narrative_ontology:cs_axiom_status(technology_transfer_as_primary_developed_nation_obligation, holdable).
-narrative_ontology:cs_axiom_grounding('4145aec6-5133-485a-a602-3a4285a173af', technology_transfer_as_primary_developed_nation_obligation, instrumental).
-narrative_ontology:cs_reference_frame('4145aec6-5133-485a-a602-3a4285a173af', rio_declaration_framework).
-narrative_ontology:cs_drift_state('4145aec6-5133-485a-a602-3a4285a173af', contemporary_climate_crisis, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('4145aec6-5133-485a-a602-3a4285a173af', '').
+narrative_ontology:cs_story_uid(cbdr_principle__voluntary_commitment_reading, '617d8837-5bf4-46e3-8afb-2224166155e2').
+narrative_ontology:cs_kernel_codification('617d8837-5bf4-46e3-8afb-2224166155e2', formalized).
+narrative_ontology:cs_authority_grounding('617d8837-5bf4-46e3-8afb-2224166155e2', lineage).
+narrative_ontology:cs_interpretation_layer_present('617d8837-5bf4-46e3-8afb-2224166155e2').
+narrative_ontology:cs_reading_relation('617d8837-5bf4-46e3-8afb-2224166155e2', cbdr_principle__historical_responsibility_reading, coexists_with).
+narrative_ontology:cs_axiom('617d8837-5bf4-46e3-8afb-2224166155e2', foundational, national_sovereignty_over_emissions).
+narrative_ontology:cs_axiom_status(national_sovereignty_over_emissions, holdable).
+narrative_ontology:cs_axiom_grounding('617d8837-5bf4-46e3-8afb-2224166155e2', national_sovereignty_over_emissions, conventional).
+narrative_ontology:cs_axiom('617d8837-5bf4-46e3-8afb-2224166155e2', foundational, technology_transfer_as_primary_obligation).
+narrative_ontology:cs_axiom_status(technology_transfer_as_primary_obligation, holdable).
+narrative_ontology:cs_axiom_grounding('617d8837-5bf4-46e3-8afb-2224166155e2', technology_transfer_as_primary_obligation, instrumental).
+narrative_ontology:cs_reference_frame('617d8837-5bf4-46e3-8afb-2224166155e2', voluntary_national_action_framework).
+narrative_ontology:cs_drift_state('617d8837-5bf4-46e3-8afb-2224166155e2', contemporary_climate_crisis, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('617d8837-5bf4-46e3-8afb-2224166155e2', '').
 narrative_ontology:cs_kernel_id(cbdr_principle__voluntary_commitment_reading, cbdr_principle).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cbdr_principle__voluntary_commitment_reading, developed_nations).
 narrative_ontology:constraint_beneficiary(cbdr_principle__voluntary_commitment_reading, multinational_corporations).
 narrative_ontology:constraint_victim(cbdr_principle__voluntary_commitment_reading, developing_nations).
-narrative_ontology:constraint_victim(cbdr_principle__voluntary_commitment_reading, vulnerable_communities).
+narrative_ontology:constraint_victim(cbdr_principle__voluntary_commitment_reading, climate_vulnerable_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from the flexibility of setting their own climate targets without legally binding emissions reduction obligations. Their primary obligation is framed as technology transfer, which often aligns with their economic interests. They avoid significant financial liabilities for historical emissions and adaptation costs.
+narrative_ontology:constraint_stakeholder(cbdr_principle__voluntary_commitment_reading, developed_nations, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Bear the disproportionate burden of climate change impacts and adaptation costs without guaranteed financial compensation. They receive technology transfer, but often on terms that do not fully address their needs or build local capacity. They are expected to make voluntary contributions despite limited resources.
+narrative_ontology:constraint_stakeholder(cbdr_principle__voluntary_commitment_reading, developing_nations, payer,
+    organized, generational, constrained, global).
+
+% Benefit from a regulatory environment that prioritizes voluntary national commitments, allowing them to influence national policies and avoid stringent international regulations. They can profit from technology transfer initiatives, often selling proprietary solutions rather than facilitating open access.
+narrative_ontology:constraint_stakeholder(cbdr_principle__voluntary_commitment_reading, multinational_corporations, beneficiary,
+    powerful, biographical, arbitrage, global).
+
+% Suffer the direct consequences of climate change (sea-level rise, extreme weather, resource scarcity) with minimal access to compensatory finance or effective adaptation support. Their voices are often marginalized in international negotiations, and their needs are not adequately met by voluntary commitments.
+narrative_ontology:constraint_stakeholder(cbdr_principle__voluntary_commitment_reading, climate_vulnerable_communities, payer,
+    powerless, immediate, trapped, local).
+
+% Administer the framework of nationally determined contributions and facilitate technology transfer discussions. They are tasked with balancing the demands of different nation groups, often prioritizing consensus and voluntary action over legally binding obligations to maintain participation.
+narrative_ontology:constraint_stakeholder(cbdr_principle__voluntary_commitment_reading, international_climate_negotiators, agenda_setter,
+    institutional, biographical, constrained, global).
+
+% Provide scientific assessments of climate change impacts and mitigation pathways. They observe the gap between voluntary commitments and the requirements for limiting global warming, often highlighting the inadequacy of current pledges.
+narrative_ontology:constraint_stakeholder(cbdr_principle__voluntary_commitment_reading, climate_scientists, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates international climate action by providing a framework for all nations to contribute to global emissions reductions and adaptation efforts, while acknowledging differentiated responsibilities.
+% TRANSFER_FUNCTION: Transfers the primary burden of emissions reductions and adaptation costs to developing nations and climate-vulnerable communities, while transferring flexibility and economic opportunities (e.g., through technology sales) to developed nations and multinational corporations.
+% ABSENT_VOICES: Future generations and non-human species, who bear the long-term consequences of insufficient climate action, are structurally absent from the negotiation table. Their interests are represented by advocates, but they lack direct agency.
+% DISAPPEARANCE_RATIONALE: If this reading of CBDR vanished, the international climate regime would face immediate collapse or radical restructuring. Developed nations would lose their justification for voluntary targets, potentially facing demands for legally binding obligations and reparations. Developing nations would lose the (albeit limited) framework for technology transfer and would likely seek new mechanisms for climate justice and compensation.
+% FOUNDING_PROBLEM: The original problem was how to achieve global climate action while recognizing the historical and developmental differences between nations, avoiding a 'one-size-fits-all' approach that developing nations found inequitable.
+% FOUNDING_PROBLEM_CORROBORATION: Developed nations and some international climate bodies attest that the problem of equitable burden-sharing is still live, justifying the voluntary approach. Developing nations and climate justice advocates argue that the original problem has been reinterpreted to serve the interests of powerful states, and the current framework exacerbates inequities, supported by independent analyses of climate finance flows and emissions trajectories.
+narrative_ontology:disappearance_verdict(cbdr_principle__voluntary_commitment_reading, world_rearranges).
+narrative_ontology:founding_problem_status(cbdr_principle__voluntary_commitment_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(cbdr_principle__voluntary_commitment_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(cbdr_principle__voluntary_commitment_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(cbdr_principle__voluntary_commitment_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(cbdr_principle__voluntary_commitment_reading, 0.65, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -166,16 +209,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.65) is high because the voluntary nature of commitments allows developed nations to externalize significant climate costs onto developing nations. Suppression (0.45) is moderate, reflecting the diplomatic pressure and economic leverage exerted by developed nations to maintain this reading, but not outright coercion. Theater ratio (0.55) is high, as the emphasis on 'voluntary contributions' and 'technology transfer' often serves as a performative cover for insufficient action and continued extraction, with the actual transfer often occurring on commercial terms rather than as a compensatory mechanism. Resistance (0.7) is high, reflecting the strong and persistent objections from developing nations and civil society groups.
+ *   The extractiveness (0.65) is high because the voluntary nature of commitments allows developed nations to externalize costs, while developing nations face increasing climate impacts without adequate compensation. Suppression (0.70) is also high, as the framework actively suppresses demands for binding targets and historical responsibility through diplomatic pressure and the framing of 'national sovereignty' over emissions. The theater ratio (0.40) reflects the performative aspect of 'voluntary' pledges that often fall short of scientific recommendations, while the underlying structure of differentiated responsibilities is maintained rhetorically. The metrics show a trend of increasing extractiveness and suppression over time, indicating a drift towards a more extractive arrangement.
  *
  * PERSPECTIVAL GAP:
- *   Developed nations and multinational corporations perceive this reading as a pragmatic and equitable approach to global climate action, emphasizing shared responsibility and capacity-building. Developing nations and vulnerable communities, however, experience it as a mechanism that perpetuates historical injustices, extracts resources (through continued emissions and uncompensated damages), and suppresses their demands for climate justice. The engine's per-seat classification should reflect this divergence, with beneficiaries seeing a Rope-like function and victims experiencing a Snare-like extraction.
+ *   From the perspective of developed nations, this reading of CBDR is a pragmatic 'rope' that enables global participation by respecting national sovereignty. From the perspective of developing nations, it operates as a 'snare' or 'tangled_rope,' extracting resources and flexibility while offering insufficient support. The engine's classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Developed nations and multinational corporations are clear beneficiaries (d near 0.0) as they retain flexibility and avoid significant costs. Developing nations and vulnerable communities are targets (d near 1.0) as they bear the costs of climate change and receive inadequate support. International climate negotiators sit closer to symmetric (d near 0.5) as they mediate within the existing framework, while climate scientists are analytical observers (d near 0.5).
+ *   Developed nations and multinational corporations are clear beneficiaries, as they retain flexibility and profit from technology transfer. Developing nations and climate-vulnerable communities are the primary payers, bearing the costs of climate change and constrained in their development pathways. International climate negotiators act as agenda-setters, managing the process within the established voluntary framework. Climate scientists serve as observers, documenting the gap between policy and climate reality.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading of CBDR risks mandatrophy by allowing the 'differentiation' aspect to become a permanent justification for inaction rather than a temporary measure to facilitate equitable transition. The initial mandate to ensure equitable burden-sharing is undermined by the voluntary nature of commitments, leading to a situation where the 'coordination' function (global participation) serves as cover for continued extraction (unequal burden-sharing). The high theater ratio and contested founding problem status indicate a drift towards a performative rather than functional constraint.
  */
 
 /* ==========================================================================
@@ -183,34 +224,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    cbdr_framing_ambiguity,
-    'Is this reading of CBDR a genuine attempt at global coordination, or a strategic framing by developed nations to avoid accountability?',
-    'Analysis of actual emissions trajectories and financial flows relative to scientific targets and historical responsibility. If emissions continue to rise and finance falls short, it supports the strategic framing hypothesis.',
-    'If a strategic framing, the constraint''s effective extractiveness is higher, and its classification shifts closer to a Snare. If genuine, it remains a Tangled Rope with a higher coordination component.',
+    true_cost_of_tech_transfer,
+    'Is the ''technology transfer'' obligation genuinely meeting the needs of developing nations and building local capacity, or is it primarily a market for developed nation corporations?',
+    'Independent audits of technology transfer projects, tracking of intellectual property rights, and assessment of local capacity building outcomes versus market-driven sales.',
+    'If primarily market-driven, the ''beneficiary'' aspect for developing nations is further diminished, increasing the constraint''s effective extractiveness and pushing it closer to a pure snare. If genuinely capacity-building, the coordination function is stronger.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(cbdr_framing_ambiguity, conceptual, 'Ambiguity between coordination and strategic extraction in CBDR interpretation.').
+narrative_ontology:omega_variable(true_cost_of_tech_transfer, empirical, 'Assesses the true nature and impact of technology transfer under this reading.').
 
 omega_variable(
-    technology_transfer_efficacy,
-    'Is the technology transfer obligation under this reading genuinely effective in building capacity in developing nations, or is it primarily a commercial transaction that benefits developed nation corporations?',
-    'Empirical studies tracking the terms, accessibility, and impact of transferred technologies, assessing whether they lead to genuine capacity building or increased dependency.',
-    'If primarily commercial, the ''beneficiary'' role of developing nations in technology transfer is diminished, increasing their overall victimhood and the constraint''s extractiveness. If genuinely effective, it supports the coordination function.',
+    legitimacy_of_voluntary_vs_binding,
+    'Is the emphasis on ''voluntary'' contributions a legitimate mechanism for global coordination, or a strategic maneuver to avoid accountability for historical emissions?',
+    'Analysis of negotiation transcripts, diplomatic communications, and the historical evolution of climate treaty language, alongside a comparison of emissions trajectories under voluntary vs. binding regimes.',
+    'If primarily a strategic maneuver, the ''coordination'' aspect of the tangled rope is weakened, and the constraint leans more towards a snare. If genuinely necessary for broad participation, the coordination function is affirmed.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(technology_transfer_efficacy, empirical, 'Effectiveness and equity of technology transfer mechanisms.').
+narrative_ontology:omega_variable(legitimacy_of_voluntary_vs_binding, conceptual, 'Examines the underlying rationale for the voluntary nature of commitments.').
 
 omega_variable(
-    kernel_reading_divergence,
-    'Given the ''historical_responsibility_reading'' of CBDR, what specific structural elements of the international climate regime would change if that reading gained dominance over this ''voluntary_commitment_reading''?',
-    'Comparative legal and policy analysis of proposed climate frameworks under each reading, focusing on binding targets, financial mechanisms, and loss and damage provisions.',
-    'The ''historical_responsibility_reading'' would likely shift developed nations into a victim role for binding emissions and financial obligations, while reducing the victimhood of developing nations by providing greater compensation and support. This highlights the zero-sum nature of the kernel contest.',
+    mandate_drift_from_original_cbdr,
+    'Has the ''voluntary commitment'' reading of CBDR drifted significantly from the original intent of the principle as articulated in the UNFCCC?',
+    'Comparative textual analysis of the UNFCCC Preamble and Article 3 with subsequent COP decisions and national communications, alongside expert legal interpretations of treaty evolution.',
+    'If significant drift is confirmed, the constraint''s ''mandatrophy_resolved'' status would be challenged, indicating a shift from its original problem-solving mandate to a more extractive function.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_divergence, conceptual, 'Structural implications of alternative CBDR kernel readings.').
+narrative_ontology:omega_variable(mandate_drift_from_original_cbdr, empirical, 'Assesses the historical fidelity of this reading to the original CBDR principle.').
 
 
 /* ==========================================================================
@@ -225,24 +266,24 @@ narrative_ontology:interval(cbdr_principle__voluntary_commitment_reading, 1992, 
 
 % Theater ratio over time
 narrative_ontology:measurement(cbdr_tr_t1992, cbdr_principle__voluntary_commitment_reading, theater_ratio, 1992, 0.2).
-narrative_ontology:measurement(cbdr_tr_t2000, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2000, 0.3).
-narrative_ontology:measurement(cbdr_tr_t2008, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2008, 0.4).
-narrative_ontology:measurement(cbdr_tr_t2016, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2016, 0.5).
-narrative_ontology:measurement(cbdr_tr_t2024, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2024, 0.55).
+narrative_ontology:measurement(cbdr_tr_t2000, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2000, 0.28).
+narrative_ontology:measurement(cbdr_tr_t2008, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2008, 0.33).
+narrative_ontology:measurement(cbdr_tr_t2016, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2016, 0.37).
+narrative_ontology:measurement(cbdr_tr_t2024, cbdr_principle__voluntary_commitment_reading, theater_ratio, 2024, 0.4).
 
 % Extraction over time
-narrative_ontology:measurement(cbdr_be_t1992, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 1992, 0.4).
-narrative_ontology:measurement(cbdr_be_t2000, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 2000, 0.5).
+narrative_ontology:measurement(cbdr_be_t1992, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 1992, 0.45).
+narrative_ontology:measurement(cbdr_be_t2000, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 2000, 0.52).
 narrative_ontology:measurement(cbdr_be_t2008, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 2008, 0.58).
 narrative_ontology:measurement(cbdr_be_t2016, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 2016, 0.62).
 narrative_ontology:measurement(cbdr_be_t2024, cbdr_principle__voluntary_commitment_reading, base_extractiveness, 2024, 0.65).
 
 % Suppression requirement over time
-narrative_ontology:measurement(cbdr_su_t1992, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 1992, 0.3).
-narrative_ontology:measurement(cbdr_su_t2000, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2000, 0.35).
-narrative_ontology:measurement(cbdr_su_t2008, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2008, 0.4).
-narrative_ontology:measurement(cbdr_su_t2016, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2016, 0.43).
-narrative_ontology:measurement(cbdr_su_t2024, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2024, 0.45).
+narrative_ontology:measurement(cbdr_su_t1992, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 1992, 0.5).
+narrative_ontology:measurement(cbdr_su_t2000, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2000, 0.58).
+narrative_ontology:measurement(cbdr_su_t2008, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2008, 0.64).
+narrative_ontology:measurement(cbdr_su_t2016, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2016, 0.68).
+narrative_ontology:measurement(cbdr_su_t2024, cbdr_principle__voluntary_commitment_reading, suppression_requirement, 2024, 0.7).
 
 
 /* ==========================================================================
@@ -250,11 +291,12 @@ narrative_ontology:measurement(cbdr_su_t2024, cbdr_principle__voluntary_commitme
    ========================================================================== */
 
 narrative_ontology:coordination_type(cbdr_principle__voluntary_commitment_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(cbdr_principle__voluntary_commitment_reading, 0.1).
 narrative_ontology:affects_constraint(cbdr_principle__voluntary_commitment_reading, paris_agreement_ndc_framework).
-narrative_ontology:affects_constraint(cbdr_principle__voluntary_commitment_reading, green_climate_fund_mechanisms).
+narrative_ontology:affects_constraint(cbdr_principle__voluntary_commitment_reading, loss_and_damage_fund_negotiations).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the broader 'cbdr_principle' kernel. The 'historical_responsibility_reading' is a sibling constraint with a different beneficiary/victim structure and extractiveness profile.
+% This constraint is one reading of the 'cbdr_principle' kernel. Its sibling, 'historical_responsibility_reading', emphasizes binding emissions reductions and loss/damage financing, leading to a different classification.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

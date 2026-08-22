@@ -39,8 +39,11 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,25 +74,16 @@
  *   domain: public_health_ethics/constitutional_law/medical_autonomy
  *
  * SUMMARY:
- *   This constraint represents the 'proportionality_reading' of the
- *   'mandate_legitimacy_scope' kernel. It asserts that the legitimacy of
- *   public health mandates (e.g., vaccine mandates) is not absolute but
- *   depends on a careful balancing of disease severity, vaccine safety and
- *   efficacy, and the availability of less restrictive alternatives. A
- *   mandate for a highly severe disease with a safe, effective vaccine and no
- *   viable alternatives (e.g., measles) would be considered legitimate, while
- *   a mandate for a mild disease with moderate vaccine efficacy and many
- *   alternatives (e.g., seasonal flu) would not. The constraint is a Tangled
- *   Rope because it aims to coordinate public health while extracting from
- *   individual autonomy, requiring active enforcement and balancing competing
- *   values.
+ *   This constraint represents the 'proportionality reading' of public health
+ *   mandate legitimacy. It asserts that mandates are legitimate only when
+ *   they are proportional to the public health threat, considering disease
+ *   severity, vaccine safety/efficacy, and the availability of less
+ *   restrictive alternatives. This reading aims to balance collective good
+ *   with individual rights, making mandate legitimacy conditional rather than
+ *   absolute. The metrics reflect a constraint that can be moderately
+ *   extractive and suppressive, but whose legitimacy is actively contested
+ *   and requires ongoing justification.
  *
- * KEY AGENTS:
- *   - public_health_authorities: Agenda setter (institutional/arbitrage) — sets and enforces mandates, balancing public good with individual rights.
- *   - individuals_subject_to_mandate: Payer (moderate/constrained) — bears the cost of compliance or faces penalties, with limited exit options.
- *   - vulnerable_populations: Beneficiary (powerless/immediate) — benefits from reduced disease transmission, but often lacks direct agency.
- *   - medical_autonomy_advocates: Excluded (organized/generational) — argues for individual rights as primary, often outside the mandate-setting process.
- *   - constitutional_courts: Observer (institutional/analytical) — adjudicates challenges to mandates based on constitutional principles.
  */
 
 /* ==========================================================================
@@ -117,27 +112,31 @@ narrative_ontology:topic_domain(mandate_legitimacy_scope__proportionality_readin
 domain_priors:requires_active_enforcement(mandate_legitimacy_scope__proportionality_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(mandate_legitimacy_scope__proportionality_reading, '9a349207-89bd-4b0c-8469-71d57db532f1').
-narrative_ontology:cs_kernel_codification('9a349207-89bd-4b0c-8469-71d57db532f1', formalized).
-narrative_ontology:cs_authority_grounding('9a349207-89bd-4b0c-8469-71d57db532f1', lineage).
-narrative_ontology:cs_interpretation_layer_present('9a349207-89bd-4b0c-8469-71d57db532f1').
-narrative_ontology:cs_reading_relation('9a349207-89bd-4b0c-8469-71d57db532f1', mandate_legitimacy_scope__public_health_primary, coexists_with).
-narrative_ontology:cs_reading_relation('9a349207-89bd-4b0c-8469-71d57db532f1', mandate_legitimacy_scope__bodily_autonomy_primary, coexists_with).
-narrative_ontology:cs_axiom('9a349207-89bd-4b0c-8469-71d57db532f1', foundational, mandates_must_be_least_restrictive).
-narrative_ontology:cs_axiom_status(mandates_must_be_least_restrictive, holdable).
-narrative_ontology:cs_axiom_grounding('9a349207-89bd-4b0c-8469-71d57db532f1', mandates_must_be_least_restrictive, deontological).
-narrative_ontology:cs_axiom('9a349207-89bd-4b0c-8469-71d57db532f1', foundational, collective_benefit_must_outweigh_individual_burden).
-narrative_ontology:cs_axiom_status(collective_benefit_must_outweigh_individual_burden, holdable).
-narrative_ontology:cs_axiom_grounding('9a349207-89bd-4b0c-8469-71d57db532f1', collective_benefit_must_outweigh_individual_burden, instrumental).
-narrative_ontology:cs_reference_frame('9a349207-89bd-4b0c-8469-71d57db532f1', liberal_democratic_rights_framework).
-narrative_ontology:cs_drift_state('9a349207-89bd-4b0c-8469-71d57db532f1', contemporary_pandemic_response, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('9a349207-89bd-4b0c-8469-71d57db532f1', '').
+narrative_ontology:cs_story_uid(mandate_legitimacy_scope__proportionality_reading, '567a88ff-1a9b-4022-aaa5-df841427f17b').
+narrative_ontology:cs_kernel_codification('567a88ff-1a9b-4022-aaa5-df841427f17b', formalized).
+narrative_ontology:cs_authority_grounding('567a88ff-1a9b-4022-aaa5-df841427f17b', lineage).
+narrative_ontology:cs_interpretation_layer_present('567a88ff-1a9b-4022-aaa5-df841427f17b').
+narrative_ontology:cs_reading_relation('567a88ff-1a9b-4022-aaa5-df841427f17b', mandate_legitimacy_scope__public_health_primary, coexists_with).
+narrative_ontology:cs_reading_relation('567a88ff-1a9b-4022-aaa5-df841427f17b', mandate_legitimacy_scope__bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_axiom('567a88ff-1a9b-4022-aaa5-df841427f17b', foundational, mandate_proportionality_required).
+narrative_ontology:cs_axiom_status(mandate_proportionality_required, holdable).
+narrative_ontology:cs_axiom_grounding('567a88ff-1a9b-4022-aaa5-df841427f17b', mandate_proportionality_required, deontological).
+narrative_ontology:cs_axiom('567a88ff-1a9b-4022-aaa5-df841427f17b', secondary, least_restrictive_alternative_principle).
+narrative_ontology:cs_axiom_status(least_restrictive_alternative_principle, holdable).
+narrative_ontology:cs_axiom_grounding('567a88ff-1a9b-4022-aaa5-df841427f17b', least_restrictive_alternative_principle, instrumental).
+narrative_ontology:cs_reference_frame('567a88ff-1a9b-4022-aaa5-df841427f17b', constitutional_proportionality_framework).
+narrative_ontology:cs_drift_state('567a88ff-1a9b-4022-aaa5-df841427f17b', contemporary_pandemic_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('567a88ff-1a9b-4022-aaa5-df841427f17b', '').
 narrative_ontology:cs_kernel_id(mandate_legitimacy_scope__proportionality_reading, mandate_legitimacy_scope).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mandate_legitimacy_scope__proportionality_reading, public_health_authorities).
 narrative_ontology:constraint_beneficiary(mandate_legitimacy_scope__proportionality_reading, vulnerable_populations).
 narrative_ontology:constraint_victim(mandate_legitimacy_scope__proportionality_reading, individuals_subject_to_mandate).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(mandate_legitimacy_scope__proportionality_reading, healthcare_providers).
+narrative_ontology:constraint_victim(mandate_legitimacy_scope__proportionality_reading, healthcare_providers).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -146,15 +145,36 @@ narrative_ontology:constraint_victim(mandate_legitimacy_scope__proportionality_r
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% Responsible for protecting public health, they issue mandates based on scientific evidence. Their legitimacy is tied to demonstrating proportionality and necessity.
+narrative_ontology:constraint_stakeholder(mandate_legitimacy_scope__proportionality_reading, public_health_authorities, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Individuals (e.g., immunocompromised, infants) who cannot be vaccinated or for whom vaccines are less effective, relying on herd immunity for protection. They benefit directly from mandates that increase community immunity.
+narrative_ontology:constraint_stakeholder(mandate_legitimacy_scope__proportionality_reading, vulnerable_populations, beneficiary,
+    powerless, biographical, trapped, local).
+
+% Bear the direct cost of mandates, including vaccination, testing, or exclusion from certain activities. Their autonomy is constrained, but the constraint is justified by proportionality.
+narrative_ontology:constraint_stakeholder(mandate_legitimacy_scope__proportionality_reading, individuals_subject_to_mandate, payer,
+    moderate, immediate, constrained, local).
+
+% Monitor mandates for overreach, advocating for individual rights and less restrictive alternatives. They challenge mandates that fail the proportionality test.
+narrative_ontology:constraint_stakeholder(mandate_legitimacy_scope__proportionality_reading, civil_liberties_advocates, observer,
+    organized, generational, analytical, national).
+
+% Administer vaccines and manage public health crises. They benefit from reduced disease burden but may bear administrative costs and face ethical dilemmas regarding individual autonomy.
+narrative_ontology:constraint_stakeholder(mandate_legitimacy_scope__proportionality_reading, healthcare_providers, beneficiary,
+    organized, biographical, constrained, local).
+narrative_ontology:stakeholder_secondary_role(mandate_legitimacy_scope__proportionality_reading, healthcare_providers, payer).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: To provide a principled framework for public health authorities to implement mandates that balance collective health protection with individual rights, ensuring legitimacy and public trust.
-% TRANSFER_FUNCTION: Transfers a degree of individual autonomy (e.g., choice over medical procedures, freedom of movement) from individuals to the state, in exchange for collective health benefits and reduced disease burden.
-% ABSENT_VOICES: Individuals who prioritize absolute bodily autonomy or who distrust public health institutions are often marginalized in the mandate-setting process, arguing that no collective benefit can justify coerced medical intervention.
-% DISAPPEARANCE_RATIONALE: If the proportionality principle vanished, public health mandates would either become arbitrary (leading to overreach and public backlash) or impossible to implement (leading to uncontrolled disease spread). The legal and ethical landscape for public health interventions would be fundamentally altered, requiring new frameworks for justification.
-% FOUNDING_PROBLEM: The historical tension between state power to protect public health and individual rights, particularly in the context of infectious disease outbreaks where individual actions have collective consequences.
-% FOUNDING_PROBLEM_CORROBORATION: Constitutional scholars and ethicists from diverse backgrounds corroborate the ongoing nature of this tension. Public health crises (e.g., pandemics) consistently reignite debates about the appropriate scope of state intervention, demonstrating that the problem is far from resolved. Legal challenges to mandates in various jurisdictions also attest to its live status.
+% COORDINATION_FUNCTION: Coordinates individual actions (vaccination) to achieve collective immunity, protecting vulnerable populations and reducing overall disease burden, but only when the intervention is proportional to the threat.
+% TRANSFER_FUNCTION: Transfers a degree of individual medical autonomy from citizens to public health authorities, in exchange for collective health benefits, but only when the severity of the disease, vaccine efficacy/safety, and lack of alternatives justify it.
+% ABSENT_VOICES: Individuals who would be disproportionately affected by mandates (e.g., those with rare medical contraindications, or those for whom the mandate imposes severe economic hardship without clear public health gain) are often marginalized in policy discussions.
+% DISAPPEARANCE_RATIONALE: If the proportionality principle vanished, public health mandates could become arbitrary or overreaching, leading to widespread resistance, erosion of public trust, and potentially ineffective or harmful interventions. The balance between individual rights and collective good would be lost, reorganizing public health governance.
+% FOUNDING_PROBLEM: How to balance individual liberty with collective health needs, ensuring that state interventions are justified and do not impose undue burdens.
+% FOUNDING_PROBLEM_CORROBORATION: Constitutional law scholars, bioethicists, and public health ethicists consistently affirm the ongoing challenge of balancing these values, with court cases and policy debates regularly invoking proportionality as a core principle. This corroboration comes from outside the direct beneficiaries of mandates.
 narrative_ontology:disappearance_verdict(mandate_legitimacy_scope__proportionality_reading, world_rearranges).
 narrative_ontology:founding_problem_status(mandate_legitimacy_scope__proportionality_reading, live).
 
@@ -162,11 +182,12 @@ narrative_ontology:founding_problem_status(mandate_legitimacy_scope__proportiona
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(mandate_legitimacy_scope__proportionality_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(mandate_legitimacy_scope__proportionality_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(mandate_legitimacy_scope__proportionality_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(mandate_legitimacy_scope__proportionality_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -181,16 +202,16 @@ narrative_ontology:story_seed(mandate_legitimacy_scope__proportionality_reading,
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.45) is moderate because the proportionality principle attempts to limit the burden on individuals, but some extraction of autonomy is inherent in any mandate. Suppression (0.6) is present due to the coercive nature of mandates and the penalties for non-compliance. Theater ratio (0.1) is low, as the constraint's function is genuinely to guide policy, not merely to perform. Accessibility collapse (0.4) is moderate, as individuals still have some choices (e.g., compliance vs. penalty) but direct alternatives to the mandate itself are limited. Resistance (0.5) is moderate, reflecting ongoing legal and public challenges to mandates.
+ *   Extractiveness (0.45) is moderate because mandates impose real costs on individuals, but these are justified by collective benefits under this reading. Suppression (0.6) is also moderate, reflecting the active enforcement required for mandates, but tempered by the need to demonstrate proportionality. The theater ratio (0.1) is low, as the justification for mandates is generally genuine, though it can be challenged. The temporal measurements show a rise in extractiveness and suppression during periods of heightened public health crisis (e.g., 2010-2020), followed by a decrease as the immediate crisis subsides and proportionality is re-evaluated.
  *
  * PERSPECTIVAL GAP:
- *   Public health authorities view this constraint as a necessary framework for protecting collective well-being, while individuals subject to mandates often perceive it as an infringement on personal liberty. The proportionality principle attempts to bridge this gap by providing criteria for legitimate imposition, but the interpretation and application of these criteria remain contentious, leading to different experiences of the constraint.
+ *   From the perspective of public health authorities, this constraint is a necessary tool for coordination, ensuring collective well-being. From the perspective of individuals subject to mandates, it is an extractive force that curtails autonomy. The proportionality principle attempts to bridge this gap by setting conditions under which the extraction is deemed legitimate.
  *
  * DIRECTIONALITY LOGIC:
- *   Public health authorities are beneficiaries (d=0.1) as the constraint legitimizes their actions and helps achieve public health goals. Vulnerable populations are also beneficiaries (d=0.2) as they are protected. Individuals subject to mandates are targets (d=0.8) as they bear the direct costs of compliance or penalties. Medical autonomy advocates are excluded (d=0.9) as their primary concern is often not fully integrated into the balancing act. Constitutional courts are analytical observers (d=0.5) as they evaluate the constraint's application impartially.
+ *   Public health authorities are agenda-setters and beneficiaries, as they gain the ability to protect public health. Vulnerable populations are clear beneficiaries, relying on the mandates for protection. Individuals subject to mandates are payers, bearing the direct costs of compliance. Civil liberties advocates act as observers, challenging mandates that fail the proportionality test. Healthcare providers are both beneficiaries (reduced disease burden) and payers (administrative burden, ethical conflicts).
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint, by its very nature, is designed to prevent mandatrophy by requiring ongoing justification for mandates. If a mandate persists when disease severity decreases, vaccine efficacy wanes, or less restrictive alternatives become available, the proportionality principle would deem it illegitimate, forcing re-evaluation or removal. This prevents the constraint from becoming a Piton (inertial) or a Snare (pure extraction) by demanding a live, evidence-based justification for its continued existence. The challenge lies in the 'contested' status of the founding problem, where different parties disagree on whether the conditions for a mandate are still met.
+ *   This constraint is designed to prevent mandatrophy by requiring ongoing justification based on proportionality. If the founding problem (balancing liberty and health) were to become 'dead' (e.g., if a disease became trivial or a vaccine unsafe), the proportionality principle would demand the mandate's removal, preventing it from becoming a piton or snare. The 'contested' status of the founding problem reflects the ongoing need for this analysis.
  */
 
 /* ==========================================================================
@@ -198,60 +219,59 @@ narrative_ontology:story_seed(mandate_legitimacy_scope__proportionality_reading,
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine application of proportionality, or is it a cover for a public health primary approach?',
-    'Analysis of mandate implementation: if mandates are applied broadly without granular assessment of severity/alternatives, it leans towards public_health_primary. If mandates are selectively applied and frequently adjusted based on new data, it supports proportionality_reading.',
-    'If it''s a public_health_primary reading in disguise, the effective extractiveness and suppression are higher, as individual autonomy is systematically undervalued. If it''s a genuine proportionality reading, the constraint is a more legitimate form of coordination.',
+    proportionality_measurement_ambiguity,
+    'How are ''disease severity'', ''vaccine safety/efficacy'', and ''less restrictive alternatives'' objectively measured and weighted to determine proportionality?',
+    'Development of standardized, transparent, and publicly debated metrics and weighting schemes, potentially through independent expert panels or legislative processes.',
+    'Lack of clear metrics allows for subjective interpretation, potentially leading to mandates that are either over- or under-restrictive, shifting the constraint''s effective extractiveness and suppression. Clear metrics would stabilize the constraint''s operation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is the ''proportionality_reading'' of the ''mandate_legitimacy_scope'' kernel. Sibling readings include ''public_health_primary'' and ''bodily_autonomy_primary''. The core disagreement is on the primary weighting of collective vs. individual rights.').
+narrative_ontology:omega_variable(proportionality_measurement_ambiguity, conceptual, 'Ambiguity in the operationalization of proportionality criteria.').
 
 omega_variable(
-    disease_severity_threshold,
-    'What objective criteria define ''severe'' disease, and how are these applied consistently across different pathogens?',
-    'Establishment of a transparent, evidence-based framework for disease severity assessment, including hospitalization rates, mortality, and long-term sequelae, applied by an independent body.',
-    'Lack of clear criteria allows for arbitrary application of mandates, increasing perceived extractiveness and suppression. Clear criteria would reduce ambiguity and enhance legitimacy.',
+    shifting_social_contract,
+    'Does the public''s willingness to accept health mandates shift over time, and how does this affect the perceived legitimacy and resistance to the proportionality principle?',
+    'Longitudinal sociological studies and public opinion surveys tracking trust in institutions and attitudes towards collective action in health crises.',
+    'A decline in public trust or willingness to comply could increase resistance and suppression requirements, potentially pushing the constraint towards a snare if enforcement becomes disproportionately coercive.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(disease_severity_threshold, empirical, 'Ambiguity in defining disease severity can shift the perceived legitimacy of mandates.').
-
-omega_variable(
-    less_restrictive_alternatives_scope,
-    'What constitutes a ''less restrictive alternative'' (e.g., masking, testing, remote work), and how are their efficacy and feasibility evaluated against mandates?',
-    'Systematic review and comparative effectiveness research on non-mandate interventions, alongside public health modeling of their impact on transmission and outcomes.',
-    'If effective, less restrictive alternatives are systematically ignored, the mandate''s suppression is higher than justified. If genuinely ineffective, the mandate''s legitimacy is strengthened.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(less_restrictive_alternatives_scope, empirical, 'The scope and effectiveness of alternatives are often contested, impacting mandate legitimacy.').
+narrative_ontology:omega_variable(shifting_social_contract, empirical, 'The dynamic nature of the social contract underlying public health interventions.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(mandate_legitimacy_scope__proportionality_reading, 0, 10).
+narrative_ontology:interval(mandate_legitimacy_scope__proportionality_reading, 1900, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(mand_tr_t0, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(mand_tr_t5, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 5, 0.1).
-narrative_ontology:measurement(mand_tr_t10, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 10, 0.1).
+narrative_ontology:measurement(mand_tr_t1900, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 1900, 0.05).
+narrative_ontology:measurement(mand_tr_t1950, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 1950, 0.08).
+narrative_ontology:measurement(mand_tr_t2000, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 2000, 0.1).
+narrative_ontology:measurement(mand_tr_t2010, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 2010, 0.12).
+narrative_ontology:measurement(mand_tr_t2020, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 2020, 0.15).
+narrative_ontology:measurement(mand_tr_t2024, mandate_legitimacy_scope__proportionality_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(mand_be_t0, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(mand_be_t5, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 5, 0.4).
-narrative_ontology:measurement(mand_be_t10, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 10, 0.45).
+narrative_ontology:measurement(mand_be_t1900, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 1900, 0.3).
+narrative_ontology:measurement(mand_be_t1950, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 1950, 0.4).
+narrative_ontology:measurement(mand_be_t2000, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 2000, 0.45).
+narrative_ontology:measurement(mand_be_t2010, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 2010, 0.5).
+narrative_ontology:measurement(mand_be_t2020, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 2020, 0.55).
+narrative_ontology:measurement(mand_be_t2024, mandate_legitimacy_scope__proportionality_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(mand_su_t0, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 0, 0.5).
-narrative_ontology:measurement(mand_su_t5, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 5, 0.55).
-narrative_ontology:measurement(mand_su_t10, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 10, 0.6).
+narrative_ontology:measurement(mand_su_t1900, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 1900, 0.5).
+narrative_ontology:measurement(mand_su_t1950, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 1950, 0.55).
+narrative_ontology:measurement(mand_su_t2000, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 2000, 0.6).
+narrative_ontology:measurement(mand_su_t2010, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 2010, 0.65).
+narrative_ontology:measurement(mand_su_t2020, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 2020, 0.7).
+narrative_ontology:measurement(mand_su_t2024, mandate_legitimacy_scope__proportionality_reading, suppression_requirement, 2024, 0.6).
 
 
 /* ==========================================================================
@@ -259,9 +279,11 @@ narrative_ontology:measurement(mand_su_t10, mandate_legitimacy_scope__proportion
    ========================================================================== */
 
 narrative_ontology:coordination_type(mandate_legitimacy_scope__proportionality_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(mandate_legitimacy_scope__proportionality_reading, public_health_primary).
+narrative_ontology:affects_constraint(mandate_legitimacy_scope__proportionality_reading, bodily_autonomy_primary).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'mandate_legitimacy_scope' kernel, focusing on proportionality. It is linked to 'public_health_primary' and 'bodily_autonomy_primary' readings, which represent alternative framings of mandate legitimacy.
+% This constraint is part of a family of readings for the 'mandate_legitimacy_scope' kernel. Its ε value is distinct from sibling readings because it conditions legitimacy on proportionality, leading to different victim sets and levels of extraction depending on the specific public health context.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

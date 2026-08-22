@@ -4,139 +4,201 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "1841eee0-967a-4fb5-82b3-8c0eab9e4bbc"
+    "story_uid": "8aca83d4-79f2-4f9f-acd6-ee9f06e46f96"
   },
   "base_properties": {
     "extractiveness": 0.65,
     "suppression": 0.7,
-    "theater_ratio": 0.4,
-    "accessibility_collapse": 0.6,
-    "resistance": 0.5,
-    "claimed_type": "snare",
-    "human_readable": "Magna Carta's Feudal Obsolescence (Executive Discretion Reading)",
+    "theater_ratio": 0.8,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
+    "claimed_type": "piton",
+    "human_readable": "Magna Carta's Feudal Obsolescence (Reading)",
     "topic_domain": "constitutional_history/legal_philosophy/political_theory",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
     "beneficiaries": [
       "executive_branch",
       "parliamentary_majority"
     ],
     "victims": [
-      "popular_constitutionalists",
-      "juridical_restraint_advocates",
-      "citizens_seeking_charter_rights"
+      "popular_constitutionalism_advocates",
+      "juridical_restraint_advocates"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine historical assessment of Magna Carta's limited original scope, or a strategic reading to justify expanded executive power?",
-      "resolution_mechanism": "Historical and legal scholarship on the intent and reception of Magna Carta in the 13th century, compared with contemporary political rhetoric invoking its obsolescence.",
-      "impact": "If a genuine historical assessment, the constraint accurately reflects a historical truth. If a strategic reading, it functions as a Snare, using historical narrative to extract power from other branches/citizens.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'feudal obsolescence' reading of the 'magna_carta_constraint_authority' kernel. Sibling readings (living_constitutionalism_reading, parliamentary_sovereignty_reading) would assert ongoing or transformed authority."
+      "name": "executive_branch",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from the argument that Magna Carta is historically obsolete, thereby removing ancient constraints on executive power and maximizing discretion in modern governance. This reading allows for more flexible and unconstrained action."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression of alternative readings structural (e.g., through judicial appointments) or internalized (e.g., through a dominant historical narrative in legal education)?",
-      "resolution_mechanism": "Analysis of judicial appointment patterns and legal curriculum content over time. If suppression persists after structural barriers are removed, it suggests internalization.",
-      "impact": "If internalized, the effective suppression of popular constitutionalism is higher than structural measures suggest, as advocates carry the suppression with them.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for alternative interpretations."
+      "name": "parliamentary_majority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gains from the obsolescence reading by asserting that any enduring principles of Magna Carta have been fully absorbed into and superseded by modern statute law, which Parliament can freely amend or repeal. This reinforces parliamentary sovereignty."
+    },
+    {
+      "name": "popular_constitutionalism_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of this reading as it undermines claims for a broader, enduring constitutional tradition that empowers citizens and limits state power. Their arguments for popular sovereignty and fundamental rights are weakened."
+    },
+    {
+      "name": "juridical_restraint_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Suffer from this reading as it diminishes the role of courts in interpreting and enforcing ancient constitutional principles against legislative or executive overreach. It reduces the scope for judicial review based on historical charters."
+    },
+    {
+      "name": "legal_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the historical context and original intent of Magna Carta, often providing evidence that supports or refutes claims of its modern relevance. Their work informs the debate but does not directly set policy."
     }
   ],
+  "six_questions": {
+    "coordination_function": "This reading coordinates the understanding of constitutional authority by asserting a clear break between medieval feudal compacts and modern sovereign power, simplifying the legal landscape by removing ancient, ambiguous constraints.",
+    "transfer_function": "Transfers interpretive authority over fundamental law from historical documents and judicial precedent to contemporary legislative and executive bodies, from advocates of inherited rights to those asserting modern state power.",
+    "absent_voices": "Those who believe in an unbroken chain of constitutional tradition, or who see Magna Carta as a foundational text for universal human rights, are marginalized by this reading. Their arguments for enduring principles are dismissed as anachronistic.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the 'feudal obsolescence' reading vanished, the world would largely remain unchanged in terms of practical governance, as modern sovereignty structures already operate largely independent of Magna Carta's direct authority. The debate would shift, but the underlying power dynamics would persist.",
+    "founding_problem": "The problem of reconciling an ancient feudal document with the demands of modern, centralized, and democratically accountable (or at least, electorally legitimized) state power.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars and political theorists outside the direct beneficiaries (executive/parliamentary power) corroborate that the tension between historical documents and modern governance is a live and complex problem, though they may dispute this reading's resolution."
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1900,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1930,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 1990,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.65
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.45
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.8
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1900,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 1930,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 1990,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.7
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.28
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.4
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'feudal obsolescence' reading of Magna Carta's authority, arguing that the 1215 charter was a specific baronial compact with no enduring constitutional force over modern sovereign states. This reading serves to maximize executive discretion and parliamentary power by dismissing historical constraints. It is presented as a historical truth, but functions as a Snare by extracting power from other constitutional actors and citizens who might appeal to charter rights.",
-    "key_agents": [
-      "executive_branch: Primary beneficiary (institutional/arbitrage) — gains discretion",
-      "parliamentary_majority: Secondary beneficiary (institutional/arbitrage) — gains legislative freedom",
-      "popular_constitutionalists: Primary victim (organized/constrained) — loses historical grounding for rights claims",
-      "juridical_restraint_advocates: Victim (organized/constrained) — loses precedent for judicial review",
-      "citizens_seeking_charter_rights: Victim (powerless/constrained) — loses appeal to historical rights",
-      "legal_historians: Observer (analytical/analytical) — analyzes historical context and contemporary interpretations"
-    ],
-    "logic_rationale": "The extractiveness (0.65) is moderate-to-high, reflecting the significant power transfer to the executive and parliament. Suppression (0.70) is high because this reading actively dismisses and marginalizes alternative interpretations that assert Magna Carta's enduring relevance. The theater ratio (0.40) indicates that while some genuine historical scholarship supports the limited original scope, a substantial portion of its contemporary invocation is performative, aimed at justifying expanded state power rather than pure historical accuracy. The constraint is claimed as a Snare because its coordination story (historical accuracy) is cover for extraction (power consolidation).",
-    "perspectival_gap": "The executive and parliamentary beneficiaries experience this as a liberation from anachronistic constraints, enabling efficient governance. The victims, however, experience it as a loss of fundamental rights and checks on power, a historical narrative used to justify unchecked authority. The engine's per-seat classification will reflect this divergence.",
-    "directionality_logic": "The executive branch and parliamentary majority are clear beneficiaries (d near 0.0) as this reading grants them greater freedom from historical and judicial oversight. Popular constitutionalists, juridical restraint advocates, and citizens seeking charter rights are victims (d near 1.0) as their claims are undermined by the assertion of obsolescence. Legal historians are analytical observers (d near 0.5).",
-    "mandatrophy_analysis": "This reading itself is a form of mandatrophy resolution, asserting that Magna Carta's mandate is 'dead' in a modern context. However, the framework classifies it as a Snare because this 'resolution' is not benign; it enables extraction by dismissing historical checks on power. The classification prevents mislabeling this as a neutral historical observation when it actively facilitates power consolidation.",
-    "kernel_context": "This constraint is the 'feudal obsolescence' reading of the 'magna_carta_constraint_authority' kernel. This reading asserts that Magna Carta was a specific baronial compact with no binding authority over modern sovereignty structures. Sibling readings include the 'living_constitutionalism_reading' (asserting inherited due process and lawful restraint) and the 'parliamentary_sovereignty_reading' (asserting Magna Carta's restraints survive only as absorbed into parliamentary statute law)."
+    "narrative_context": "This constraint represents the 'feudal obsolescence' reading of Magna Carta's authority, arguing that the 13th-century baronial compact has no binding force over modern sovereignty structures. It is a reading that maximizes executive and parliamentary discretion by dismissing historical constraints as anachronistic. The constraint is claimed as a Piton because its persistence relies more on institutional inertia and rhetorical performance (e.g., celebrating its historical significance while denying its legal force) than on active, concentrated benefit, though it enables extraction by removing potential checks on power. The metrics reflect a constraint that is largely performative in its 'maintenance' (high theater_ratio) but still enables significant extraction by nullifying historical checks on power.",
+    "logic_rationale": "The high theater_ratio (0.80) reflects that while Magna Carta is often celebrated symbolically, this reading denies its practical legal force, making its 'maintenance' largely performative. Extractiveness (0.65) is moderate-to-high because dismissing Magna Carta's authority removes a potential check on state power, allowing for greater discretion and potential extraction by the executive and legislature. Suppression (0.70) is also high, as this reading actively suppresses alternative interpretations that would assert enduring constitutional limits. Accessibility collapse is low (0.30) because alternative readings and arguments for enduring constitutionalism still exist and are actively pursued, though they face significant rhetorical and institutional barriers.",
+    "directionality_logic": "The executive branch and parliamentary majority are beneficiaries, as this reading grants them greater freedom from historical constraints. Advocates of popular constitutionalism and juridical restraint are payers, as their arguments for limited government and fundamental rights are undermined. Legal historians act as observers, analyzing the historical context without directly benefiting or paying.",
+    "perspectival_gap": "From the perspective of the executive and parliamentary majority, this reading is a pragmatic recognition of modern sovereignty. From the perspective of those advocating for popular constitutionalism and juridical restraint, it is a rhetorical maneuver to enable unchecked power. The engine's classification will highlight this divergence by showing different effective extraction for each seat.",
+    "kernel_context": "This constraint is the 'feudal obsolescence' reading of the 'magna_carta_constraint_authority' kernel. It argues that Magna Carta is a historically specific document with no modern binding authority. Sibling readings include 'living_constitutionalism_reading' (which sees Magna Carta as an evolving source of rights) and 'parliamentary_sovereignty_reading' (which views its principles as absorbed into and superseded by parliamentary statute)."
   },
+  "omegas": [
+    {
+      "id": "historical_continuity_vs_discontinuity",
+      "question": "Is there a genuine historical discontinuity between medieval feudal compacts and modern constitutionalism, or is there an unbroken, albeit evolving, tradition of constitutional restraint?",
+      "resolution_mechanism": "Extensive historical and legal scholarship, potentially leading to a consensus on the nature of constitutional evolution and the role of foundational documents.",
+      "impact": "If continuity is established, this reading's premise of obsolescence is weakened, potentially reclassifying the constraint towards a more 'tangled_rope' or 'snare' type if its persistence is found to be purely extractive. If discontinuity is affirmed, the 'piton' classification is strengthened.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the historical relationship between Magna Carta and modern constitutional structures."
+    },
+    {
+      "id": "rhetorical_performance_vs_functional_obsolescence",
+      "question": "To what extent is the 'obsolescence' claim a genuine reflection of Magna Carta's diminished legal force, versus a rhetorical performance to justify expanded state power?",
+      "resolution_mechanism": "Analysis of legislative and judicial decisions where Magna Carta is invoked or dismissed, and the actual impact on state power. Examination of the 'theater_ratio' in practice.",
+      "impact": "If primarily rhetorical, the 'theater_ratio' is accurately high, but the underlying extractiveness might be higher than currently assessed, pushing it towards a 'snare'. If genuinely obsolete, the 'piton' classification is more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing genuine obsolescence from strategic rhetorical use."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "magna_carta_constraint_authority__living_constitutionalism_reading",
       "magna_carta_constraint_authority__parliamentary_sovereignty_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the 'magna_carta_constraint_authority' kernel. Its assertion of obsolescence directly impacts the legitimacy and operational scope of sibling readings that claim ongoing or transformed authority for Magna Carta."
+    "dual_formulation_note": "This constraint is one of three readings of the 'magna_carta_constraint_authority' kernel, focusing on its feudal obsolescence. The other readings ('living_constitutionalism_reading' and 'parliamentary_sovereignty_reading') offer alternative interpretations of its modern relevance and binding force."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -144,45 +206,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "magna_carta_constraint_authority__living_constitutionalism_reading",
-        "relation": "forecloses"
+        "sibling_id": "living_constitutionalism_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "magna_carta_constraint_authority__parliamentary_sovereignty_reading",
+        "sibling_id": "parliamentary_sovereignty_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "magna_carta_feudal_specific",
+        "atom": "feudal_compacts_lack_modern_binding_force",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "modern_sovereignty_unbound_by_ancient_charters",
-        "role": "foundational",
+        "atom": "sovereignty_resides_in_contemporary_institutions",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "id_13th_century_feudal_compact",
+    "reference_frame": "modern_parliamentary_sovereignty",
     "drift_state": {
-      "moment": "contemporary_constitutional_discourse",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

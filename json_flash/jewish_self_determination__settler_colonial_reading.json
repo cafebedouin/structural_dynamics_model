@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "f72a4b1e-da22-4fd0-af06-6da565ff1a09"
+    "story_uid": "d2ee0f0b-ab3d-42c7-bc37-2e875172dff9"
   },
   "base_properties": {
-    "extractiveness": 0.9,
-    "suppression": 0.95,
-    "theater_ratio": 0.1,
-    "accessibility_collapse": 0.8,
-    "resistance": 0.7,
+    "extractiveness": 0.92,
+    "suppression": 0.88,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.85,
     "claimed_type": "snare",
-    "human_readable": "Zionism as a Settler-Colonial Project (Palestinian Reading)",
+    "human_readable": "Zionism as a Settler-Colonial Project",
     "topic_domain": "political_philosophy/nationalism_studies/postcolonial_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -21,109 +21,210 @@
       "israeli_state"
     ],
     "victims": [
-      "palestinian_arabs",
-      "displaced_palestinians"
+      "palestinian_arabs"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine settler-colonial project, or is it better understood through a different reading of Jewish self-determination?",
-      "resolution_mechanism": "Historical analysis of land acquisition, legal frameworks (e.g., Law of Return vs. Palestinian refugee rights), and demographic changes, focusing on power asymmetries and dispossession mechanisms.",
-      "impact": "If confirmed as settler-colonial, the classification as 'snare' is robust. If a different reading (e.g., indigenous return) gains explanatory power, the constraint's classification would shift towards 'tangled_rope' or even 'rope' from a different perspective, with different beneficiaries and victims.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'jewish_self_determination' kernel, specifically the 'settler_colonial_reading'. Sibling readings include liberal_nationalist_reading, indigenous_return_reading, religious_covenant_reading, and diasporist_reading, each with different structural implications."
+      "name": "european_jewish_settlers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Benefits from land acquisition, resource control, and legal protections that prioritize their presence and expansion. Their identity and material well-being are deeply intertwined with the settler-colonial project."
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (legal/military) or internalized (psychological impact of occupation)?",
-      "resolution_mechanism": "Post-occupation trajectory: if suppression persists after military/legal mechanisms are removed, reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism for Palestinian population."
+      "name": "israeli_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The primary institutional actor that designs, implements, and enforces policies of dispossession, settlement expansion, and legal discrimination. Its legitimacy and existence are tied to the ongoing project."
+    },
+    {
+      "name": "palestinian_arabs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The indigenous population subjected to systematic displacement, land confiscation, resource deprivation, and legal exclusion. They bear the full cost of the settler-colonial project, with limited options for resistance or exit."
+    },
+    {
+      "name": "international_human_rights_organizations",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Document and condemn human rights abuses, land confiscation, and discriminatory laws. They provide critical analysis but lack direct enforcement power over the Israeli state."
+    },
+    {
+      "name": "postcolonial_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze Zionism through the lens of settler-colonial theory, identifying patterns of dispossession, racialization, and state-building that mirror other colonial contexts. Their work informs critical discourse but does not directly alter policy."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the acquisition and control of land and resources for the benefit of European Jewish settlers, establishing a new society on existing indigenous territory.",
+    "transfer_function": "Transfers land, water, and other resources from indigenous Palestinian Arabs to European Jewish settlers and the Israeli state, along with political power and legal rights.",
+    "absent_voices": "The voices of dispossessed Palestinians, particularly those in diaspora or under occupation, are systematically marginalized in dominant international discourse. Their narratives of dispossession and resistance are often suppressed or reframed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the settler-colonial framework vanished, the entire legal, political, and demographic structure of the region would be fundamentally altered. Land ownership, citizenship rights, and resource allocation would have to be renegotiated, leading to a complete reorganization of society.",
+    "founding_problem": "The problem of establishing a Jewish national home in Palestine, perceived as a solution to European antisemitism and the lack of Jewish sovereignty.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Israeli state and its supporters continue to assert the necessity of maintaining a Jewish majority and control over the land for security and national self-determination. Palestinian and international human rights organizations corroborate the ongoing nature of the dispossession, but frame it as a problem of colonial expansion, not national liberation."
+  },
+  "interval": {
+    "start": 1948,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.75
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.8
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1948,
       "value": 0.85
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 1967,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
       "value": 0.9
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.91
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.92
+    },
+    {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1948,
       "value": 0.8
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1967,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.9
+      "time_point": 1987,
+      "value": 0.87
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.95
+      "time_point": 2000,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.88
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1948,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 1967,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.12
+      "time_point": 2014,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.1
+      "time_point": 2024,
+      "value": 0.15
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint models Zionism as a European settler-colonial project, focusing on the systematic dispossession of indigenous Palestinians through violence and legal exclusion. This reading emphasizes the structural mechanisms that facilitate the transfer of land and resources to Jewish settlers and the Israeli state, while simultaneously suppressing Palestinian resistance and denying their right of return. The constraint's persistence relies heavily on active enforcement and the suppression of alternatives for the Palestinian population.",
-    "logic_rationale": "The high extractiveness (0.9) reflects the ongoing transfer of land, resources, and sovereignty from Palestinians to the Israeli state and Jewish settlers. Suppression (0.95) is extremely high due to military occupation, legal discrimination (e.g., differential citizenship rights, land laws), and restrictions on movement and political organization. The low theater ratio (0.1) indicates that the project's stated goals (security, self-determination) are largely a cover for the primary function of territorial expansion and demographic control. Accessibility collapse (0.8) is high as alternatives for Palestinians (e.g., independent statehood, right of return) are systematically foreclosed. Resistance (0.7) is also high, reflecting continuous Palestinian struggle against dispossession.",
-    "perspectival_gap": "From the perspective of Palestinian Arabs, this constraint is a clear snare, designed for their dispossession. From the perspective of European Jewish settlers and the Israeli state, it is framed as a legitimate act of self-determination or indigenous return, often obscuring the extractive and suppressive elements. The engine's classification will highlight this divergence.",
-    "directionality_logic": "European Jewish settlers and the Israeli state are the primary beneficiaries (d=0.0-0.1), as they gain land, resources, and political control. Palestinian Arabs and displaced Palestinians are the primary victims (d=0.9-1.0), bearing the costs of dispossession, occupation, and legal exclusion. International bodies and human rights organizations act as observers, often documenting the extractive and suppressive aspects.",
-    "mandatrophy_analysis": "This reading argues that the original mandate of Zionism, if framed as a response to antisemitism and a quest for Jewish self-determination, has been co-opted or transformed into a settler-colonial project. The persistence of the constraint is not due to an unmet original need for Jewish self-determination in a non-extractive form, but rather due to the ongoing benefits of extraction for the beneficiaries and the active suppression of victims. The 'snare' classification prevents mislabeling this as a legitimate coordination mechanism for Jewish self-determination, instead highlighting its extractive core from the Palestinian perspective."
+    "narrative_context": "This constraint models Zionism as a European settler-colonial project, focusing on the systematic dispossession of indigenous Palestinians through violence and legal exclusion. It is one reading of the 'Jewish self-determination' kernel. From this perspective, the constraint's structure is designed for extraction and the elimination of an indigenous population, making it a snare. The beneficiaries are European Jewish settlers and the Israeli state, while Palestinian Arabs are the victims, experiencing displacement, occupation, and legal discrimination.",
+    "logic_rationale": "The extractiveness (0.92) is high due to ongoing land confiscation, settlement expansion, and differential legal status that systematically disadvantages Palestinians. Suppression (0.88) is also very high, reflecting the active military occupation, legal frameworks (like the Law of Return asymmetry), and physical barriers that prevent Palestinian return and self-determination. The theater ratio (0.15) is low, as the project's primary function is direct control and expansion, with minimal performative cover. Resistance is high (0.85) due to continuous Palestinian struggle against the occupation and dispossession.",
+    "directionality_logic": "European Jewish settlers and the Israeli state are clear beneficiaries, with their power and exit options reflecting their structural advantage. Palestinian Arabs are the primary targets, trapped by the constraint's mechanisms of control and dispossession. International human rights organizations and postcolonial scholars act as observers, documenting and analyzing the constraint's operation without direct participation in its benefits or costs.",
+    "perspectival_gap": "The settler-colonial reading fundamentally diverges from other readings of Jewish self-determination. While other readings might emphasize national liberation or religious fulfillment, this reading highlights the inherent extractive and suppressive nature of the project from the perspective of the indigenous population. The engine's classification will reflect this high extraction and suppression, contrasting with claims of self-determination or return.",
+    "kernel_context": "This constraint is the 'settler_colonial_reading' of the 'jewish_self_determination' kernel. Sibling readings include 'liberal_nationalist_reading', 'indigenous_return_reading', 'religious_covenant_reading', and 'diasporist_reading'. This reading frames Zionism as a colonial enterprise, emphasizing dispossession and systemic violence against Palestinians."
   },
+  "omegas": [
+    {
+      "id": "historical_causality_of_dispossession",
+      "question": "To what extent was the dispossession of Palestinians a direct, intentional outcome of Zionist ideology and planning, versus an unintended consequence of conflict and demographic shifts?",
+      "resolution_mechanism": "Declassified archival documents, historical scholarship on Zionist planning, and oral histories from Palestinian refugees.",
+      "impact": "If intentional, it strengthens the snare classification and the claim of systematic settler-colonialism. If largely unintended, it might shift the classification towards a tangled rope, acknowledging a coordination problem with severe, but not fully premeditated, extractive outcomes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the intentionality of Palestinian dispossession."
+    },
+    {
+      "id": "indigeneity_of_jewish_people",
+      "question": "Is the Jewish claim to indigeneity in the land of Israel/Palestine compatible with the settler-colonial framework, or does it fundamentally alter the classification?",
+      "resolution_mechanism": "Conceptual analysis of indigeneity in postcolonial theory, historical and archaeological evidence of continuous Jewish presence, and comparative studies of indigenous rights movements.",
+      "impact": "If Jewish indigeneity is recognized as a primary claim, it challenges the 'European settler' aspect of the reading, potentially shifting the constraint's origin story and the nature of its beneficiaries. However, it does not negate the dispossession of Palestinians, but rather reframes the conflict as a clash of indigenous claims, potentially leading to a more complex tangled_rope or even a contested mountain classification from a different reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The conceptual tension between Jewish indigeneity and settler-colonial analysis."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'jewish_self_determination' kernel, focusing on its settler-colonial aspects. Other readings (liberal_nationalist_reading, indigenous_return_reading, religious_covenant_reading, diasporist_reading) offer alternative structural interpretations of the same kernel."
+    "affects_constraints": [
+      "israeli_citizenship_law",
+      "law_of_return_asymmetry",
+      "settlement_expansion_policy"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -136,7 +237,7 @@
       },
       {
         "sibling_id": "indigenous_return_reading",
-        "relation": "forecloses"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "religious_covenant_reading",
@@ -149,35 +250,24 @@
     ],
     "axioms": [
       {
-        "atom": "zionism_is_settler_colonialism",
+        "atom": "zionism_as_european_colonialism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "palestinian_dispossession_as_systematic",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "indigenous_rights_are_paramount",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "european_colonial_expansion",
+    "reference_frame": "colonial_settler_state_formation",
     "drift_state": {
-      "moment": "contemporary_postcolonial_critique",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
+      "moment": "contemporary_postcolonial_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": false
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

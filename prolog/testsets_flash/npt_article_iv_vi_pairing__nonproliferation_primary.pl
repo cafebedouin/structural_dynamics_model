@@ -39,8 +39,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,15 +73,17 @@
  *   domain: international_law/nuclear_governance/treaty_interpretation
  *
  * SUMMARY:
- *   This constraint represents the interpretation of the Nuclear
- *   Non-Proliferation Treaty (NPT) where Article IV (peaceful nuclear energy)
- *   is strictly conditional on Article III (safeguards verification), and
- *   Article VI (disarmament) is considered aspirational and non-justiciable.
- *   The authority for this interpretation derives from the security interests
- *   of nuclear weapon states in preventing horizontal proliferation. This
- *   reading effectively stabilizes a two-tier nuclear order, with weapon
- *   states retaining their arsenals and non-weapon states bearing perpetual
- *   restraint.
+ *   This constraint represents the 'nonproliferation primary' reading of the
+ *   Nuclear Non-Proliferation Treaty (NPT), where the core obligation is to
+ *   prevent horizontal proliferation (Article IV conditional on Article III
+ *   verification), while Article VI (disarmament) is treated as an
+ *   aspirational, non-justiciable goal. Authority for this reading derives
+ *   from the security interests of nuclear weapon states. This interpretation
+ *   stabilizes a two-tier nuclear order, with nuclear weapon states as
+ *   permanent beneficiaries and non-nuclear weapon states as perpetual
+ *   restraint-bearers. The constraint is claimed as a snare due to its high
+ *   extraction and suppression, despite the NPT's original framing as a
+ *   'grand bargain' (a rope).
  *
  */
 
@@ -85,59 +92,98 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(npt_article_iv_vi_pairing__nonproliferation_primary, 0.7).
-domain_priors:suppression_score(npt_article_iv_vi_pairing__nonproliferation_primary, 0.85).
-domain_priors:theater_ratio(npt_article_iv_vi_pairing__nonproliferation_primary, 0.4).
+domain_priors:base_extractiveness(npt_article_iv_vi_pairing__nonproliferation_primary, 0.85).
+domain_priors:suppression_score(npt_article_iv_vi_pairing__nonproliferation_primary, 0.92).
+domain_priors:theater_ratio(npt_article_iv_vi_pairing__nonproliferation_primary, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, extractiveness, 0.7).
-narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, extractiveness, 0.85).
+narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 0.92).
+narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 0.65).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, accessibility_collapse, 0.75).
-narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, resistance, 0.6).
+narrative_ontology:constraint_metric(npt_article_iv_vi_pairing__nonproliferation_primary, resistance, 0.4).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(npt_article_iv_vi_pairing__nonproliferation_primary, tangled_rope).
+narrative_ontology:constraint_claim(npt_article_iv_vi_pairing__nonproliferation_primary, snare).
 narrative_ontology:human_readable(npt_article_iv_vi_pairing__nonproliferation_primary, "NPT Article IV/VI Pairing (Nonproliferation Primary Reading)").
 narrative_ontology:topic_domain(npt_article_iv_vi_pairing__nonproliferation_primary, "international_law/nuclear_governance/treaty_interpretation").
 
 domain_priors:requires_active_enforcement(npt_article_iv_vi_pairing__nonproliferation_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(npt_article_iv_vi_pairing__nonproliferation_primary, '9f27d5ac-621a-4b29-9d0f-66783ad183ed').
-narrative_ontology:cs_kernel_codification('9f27d5ac-621a-4b29-9d0f-66783ad183ed', fixed_text).
-narrative_ontology:cs_authority_grounding('9f27d5ac-621a-4b29-9d0f-66783ad183ed', extraction).
-narrative_ontology:cs_interpretation_layer_present('9f27d5ac-621a-4b29-9d0f-66783ad183ed').
-narrative_ontology:cs_reading_relation('9f27d5ac-621a-4b29-9d0f-66783ad183ed', npt_article_iv_vi_pairing__grand_bargain, coexists_with).
-narrative_ontology:cs_reading_relation('9f27d5ac-621a-4b29-9d0f-66783ad183ed', npt_article_iv_vi_pairing__abolitionist, forecloses).
-narrative_ontology:cs_axiom('9f27d5ac-621a-4b29-9d0f-66783ad183ed', foundational, horizontal_proliferation_is_primary_threat).
-narrative_ontology:cs_axiom_status(horizontal_proliferation_is_primary_threat, holdable).
-narrative_ontology:cs_axiom_grounding('9f27d5ac-621a-4b29-9d0f-66783ad183ed', horizontal_proliferation_is_primary_threat, empirically_contingent).
-narrative_ontology:cs_axiom('9f27d5ac-621a-4b29-9d0f-66783ad183ed', foundational, nuclear_deterrence_is_legitimate).
-narrative_ontology:cs_axiom_status(nuclear_deterrence_is_legitimate, holdable).
-narrative_ontology:cs_axiom_grounding('9f27d5ac-621a-4b29-9d0f-66783ad183ed', nuclear_deterrence_is_legitimate, conventional).
-narrative_ontology:cs_reference_frame('9f27d5ac-621a-4b29-9d0f-66783ad183ed', weapon_state_security_paradigm).
-narrative_ontology:cs_drift_state('9f27d5ac-621a-4b29-9d0f-66783ad183ed', contemporary_treaty_review_cycle, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('9f27d5ac-621a-4b29-9d0f-66783ad183ed', '').
+narrative_ontology:cs_story_uid(npt_article_iv_vi_pairing__nonproliferation_primary, '270021d1-fb0b-4abb-9ee2-77ed7e072700').
+narrative_ontology:cs_kernel_codification('270021d1-fb0b-4abb-9ee2-77ed7e072700', fixed_text).
+narrative_ontology:cs_authority_grounding('270021d1-fb0b-4abb-9ee2-77ed7e072700', extraction).
+narrative_ontology:cs_interpretation_layer_present('270021d1-fb0b-4abb-9ee2-77ed7e072700').
+narrative_ontology:cs_reading_relation('270021d1-fb0b-4abb-9ee2-77ed7e072700', npt_article_iv_vi_pairing__grand_bargain, coexists_with).
+narrative_ontology:cs_reading_relation('270021d1-fb0b-4abb-9ee2-77ed7e072700', npt_article_iv_vi_pairing__abolitionist, coexists_with).
+narrative_ontology:cs_axiom('270021d1-fb0b-4abb-9ee2-77ed7e072700', foundational, horizontal_proliferation_is_paramount_threat).
+narrative_ontology:cs_axiom_status(horizontal_proliferation_is_paramount_threat, holdable).
+narrative_ontology:cs_axiom_grounding('270021d1-fb0b-4abb-9ee2-77ed7e072700', horizontal_proliferation_is_paramount_threat, empirically_contingent).
+narrative_ontology:cs_axiom('270021d1-fb0b-4abb-9ee2-77ed7e072700', foundational, article_vi_is_aspirational_not_justiciable).
+narrative_ontology:cs_axiom_status(article_vi_is_aspirational_not_justiciable, holdable).
+narrative_ontology:cs_axiom_grounding('270021d1-fb0b-4abb-9ee2-77ed7e072700', article_vi_is_aspirational_not_justiciable, conventional).
+narrative_ontology:cs_reference_frame('270021d1-fb0b-4abb-9ee2-77ed7e072700', nuclear_weapon_state_security_paradigm).
+narrative_ontology:cs_drift_state('270021d1-fb0b-4abb-9ee2-77ed7e072700', contemporary_international_relations, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('270021d1-fb0b-4abb-9ee2-77ed7e072700', '').
 narrative_ontology:cs_kernel_id(npt_article_iv_vi_pairing__nonproliferation_primary, npt_article_iv_vi_pairing).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(npt_article_iv_vi_pairing__nonproliferation_primary, nuclear_weapon_states).
-narrative_ontology:constraint_beneficiary(npt_article_iv_vi_pairing__nonproliferation_primary, iaea).
 narrative_ontology:constraint_victim(npt_article_iv_vi_pairing__nonproliferation_primary, non_nuclear_weapon_states).
-narrative_ontology:constraint_victim(npt_article_iv_vi_pairing__nonproliferation_primary, global_civil_society).
+narrative_ontology:constraint_victim(npt_article_iv_vi_pairing__nonproliferation_primary, global_disarmament_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% These states interpret the NPT as primarily a nonproliferation instrument, where their security interests justify maintaining their arsenals and controlling access to nuclear technology. They benefit from the two-tier order and the non-justiciability of Article VI.
+narrative_ontology:constraint_stakeholder(npt_article_iv_vi_pairing__nonproliferation_primary, nuclear_weapon_states, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% These states bear the primary burden of nonproliferation, accepting intrusive verification under Article III and foregoing nuclear weapons development, while receiving limited and conditional access to peaceful nuclear technology under Article IV. They are denied the security guarantees of nuclear weapons.
+narrative_ontology:constraint_stakeholder(npt_article_iv_vi_pairing__nonproliferation_primary, non_nuclear_weapon_states, payer,
+    organized, generational, constrained, global).
+
+% The International Atomic Energy Agency is tasked with verifying compliance with Article III, ensuring that peaceful nuclear programs are not diverted to weapons. Its authority is derived from the NPT, but its mandate is shaped by the interpretations of its member states, particularly the nuclear weapon states.
+narrative_ontology:constraint_stakeholder(npt_article_iv_vi_pairing__nonproliferation_primary, iaea, agenda_setter,
+    institutional, civilizational, constrained, global).
+
+% These groups and states actively campaign for nuclear disarmament, viewing the NPT as a step towards a nuclear-weapon-free world. They are frustrated by the perceived lack of progress on Article VI and the perpetuation of the two-tier system, bearing the cost of unfulfilled promises.
+narrative_ontology:constraint_stakeholder(npt_article_iv_vi_pairing__nonproliferation_primary, global_disarmament_advocates, payer,
+    moderate, generational, identity_locked, global).
+
+% States party to the TPNW explicitly prohibit nuclear weapons, challenging the legitimacy of the NPT's two-tier structure. They are excluded from the NPT's core decision-making processes and their interpretation of disarmament is actively resisted by nuclear weapon states.
+narrative_ontology:constraint_stakeholder(npt_article_iv_vi_pairing__nonproliferation_primary, treaty_on_the_prohibition_of_nuclear_weapons_states, excluded,
+    organized, generational, constrained, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the global nonproliferation regime by establishing a framework for states to forgo nuclear weapons in exchange for peaceful nuclear technology, under international verification.
+% TRANSFER_FUNCTION: Transfers the burden of nuclear restraint and verification from nuclear weapon states to non-nuclear weapon states, in exchange for conditional access to peaceful nuclear technology.
+% ABSENT_VOICES: States and civil society groups advocating for immediate and complete nuclear disarmament (e.g., TPNW states) are largely excluded from the NPT's core interpretive and enforcement mechanisms, where their views on Article VI's binding nature are dismissed.
+% DISAPPEARANCE_RATIONALE: If this interpretation vanished, the global nonproliferation regime would face immediate and profound challenges. Non-nuclear weapon states would likely reconsider their commitments, potentially leading to horizontal proliferation. The existing security architecture, heavily reliant on the NPT's framework, would destabilize.
+% FOUNDING_PROBLEM: The original problem was to prevent the spread of nuclear weapons beyond the initial five nuclear powers, while allowing for the peaceful use of nuclear energy.
+% FOUNDING_PROBLEM_CORROBORATION: Nuclear weapon states and the IAEA consistently attest that horizontal proliferation remains a live and critical threat, justifying the continued emphasis on Article IV and III. Non-nuclear weapon states, while acknowledging proliferation risks, also highlight the live problem of vertical proliferation and the lack of disarmament progress.
+narrative_ontology:disappearance_verdict(npt_article_iv_vi_pairing__nonproliferation_primary, world_rearranges).
+narrative_ontology:founding_problem_status(npt_article_iv_vi_pairing__nonproliferation_primary, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(npt_article_iv_vi_pairing__nonproliferation_primary, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(npt_article_iv_vi_pairing__nonproliferation_primary, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(npt_article_iv_vi_pairing__nonproliferation_primary, 'none', 1).
+narrative_ontology:epsilon_provenance(npt_article_iv_vi_pairing__nonproliferation_primary, 0.85, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,16 +203,14 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it offers a genuine coordination function (preventing proliferation) but couples it with asymmetric extraction. Non-nuclear-weapon states coordinate by foregoing nuclear weapons development, but pay by accepting a permanent security disadvantage and the non-enforceability of disarmament obligations. Extraction is high (0.7) due to the indefinite deferral of disarmament and the perpetuation of a two-tiered system. Suppression is very high (0.85) as the international system actively enforces nonproliferation through sanctions, military threats, and diplomatic pressure, while resisting efforts to enforce disarmament. Theater ratio is moderate (0.4) as disarmament rhetoric continues, but the actual practice of weapon states shows little movement towards the stated goal.
+ *   Extractiveness is high (0.85) because non-nuclear weapon states bear significant costs (verification, foregone security options) without reciprocal disarmament from nuclear weapon states. Suppression is very high (0.92) as the regime actively prevents non-nuclear weapon states from acquiring weapons, while nuclear weapon states' arsenals are effectively immune from enforcement. Theater ratio is high (0.65) because the disarmament rhetoric of Article VI is largely performative, masking the actual perpetuation of the two-tier system. The increasing extractiveness and suppression over time reflect the hardening of this interpretation and the growing gap between nonproliferation and disarmament.
  *
  * PERSPECTIVAL GAP:
- *   Nuclear weapon states experience this as a Rope, as it secures their nonproliferation goals while preserving their arsenals. Non-nuclear-weapon states, particularly those with advanced nuclear energy programs, experience it as a Snare, as it imposes significant costs and limits their sovereign choices without reciprocal disarmament. The IAEA, as an institutional actor, experiences it as a Tangled Rope, balancing its verification mandate with the political realities of weapon state influence.
+ *   Nuclear weapon states perceive this as a necessary and effective regime for global stability (a rope or even a mountain of geopolitical reality). Non-nuclear weapon states and disarmament advocates experience it as an increasingly unfair and extractive snare, perpetuating an imbalance of power and security. The engine's classification will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Nuclear weapon states are primary beneficiaries (d=0.0-0.1) as their security interests are prioritized and their arsenals are protected from enforcement. The IAEA is a beneficiary (d=0.1-0.2) as its mandate and funding are tied to the nonproliferation regime. Non-nuclear-weapon states are victims (d=0.8-0.9) as they bear the costs of restraint without the promised disarmament. Global civil society is also a victim (d=0.7-0.8) as its calls for disarmament are largely ignored.
+ *   Nuclear weapon states are clear beneficiaries (d=0.0-0.1) as they maintain their arsenals and control the nonproliferation agenda. Non-nuclear weapon states are targets (d=0.9-1.0) as they bear the costs of verification and restraint. Global disarmament advocates are also targets (d=0.8-0.9) as their goals are systematically frustrated. The IAEA, while an institutional actor, is constrained by the nuclear weapon states' interpretation, placing its effective directionality closer to symmetric but with a bias towards the agenda-setters.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading prevents mislabeling the constraint as a pure Rope by highlighting the asymmetric extraction inherent in the nonproliferation-first interpretation. It also prevents mislabeling it as a pure Snare by acknowledging the genuine, albeit unevenly distributed, coordination function of preventing horizontal proliferation. The 'mandate' of nonproliferation is live, but the 'mandate' of disarmament is effectively atrophied under this reading, leading to the Tangled Rope classification.
  */
 
 /* ==========================================================================
@@ -174,53 +218,69 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    npt_kernel_reading_ambiguity,
-    'Is the NPT a grand bargain of reciprocal obligations, or primarily a nonproliferation instrument?',
-    'Analysis of state practice, treaty review conference outcomes, and legal interpretations by international courts or advisory bodies over time.',
-    'If read as a grand bargain, the legitimacy of Article IV for non-nuclear-weapon states is conditional on Article VI progress, potentially reclassifying the constraint as a Snare if disarmament obligations are systematically ignored. If read as nonproliferation primary, the current classification holds.',
-    confidence_without_resolution(high)
+    article_vi_justiciability,
+    'Is Article VI of the NPT legally justiciable and enforceable, or is it purely aspirational?',
+    'International Court of Justice ruling on a state''s non-compliance with Article VI, or a new treaty explicitly defining enforcement mechanisms for disarmament.',
+    'If justiciable, the extractiveness from non-nuclear weapon states would decrease, and the constraint might shift towards a tangled_rope or even a rope, as reciprocal obligations become enforceable. If purely aspirational, the snare classification is reinforced.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(npt_kernel_reading_ambiguity, conceptual, 'This constraint is one reading of the NPT kernel, emphasizing nonproliferation over disarmament.').
+narrative_ontology:omega_variable(article_vi_justiciability, conceptual, 'Ambiguity regarding the legal enforceability of NPT Article VI.').
 
 omega_variable(
-    article_vi_justiciability,
-    'Is Article VI of the NPT a legally binding and justiciable obligation, or merely an aspirational statement of intent?',
-    'Referral to the International Court of Justice for an advisory opinion or a binding ruling in a contentious case, or a clear consensus among NPT state parties.',
-    'If found justiciable, the current reading''s claim of non-justiciability would be overridden, increasing the extractiveness and suppression for non-nuclear-weapon states and potentially shifting the constraint towards a Snare due to unfulfilled obligations. If found aspirational, the current classification is reinforced.',
+    security_interest_vs_treaty_obligation,
+    'Does the security interest of nuclear weapon states legitimately override their Article VI treaty obligations, or is this a self-serving interpretation?',
+    'A global security framework that demonstrably removes the perceived need for nuclear deterrence, or a consensus among international legal scholars rejecting the ''security interest'' justification for non-compliance.',
+    'If security interests are deemed to legitimately override, the constraint''s ''snare'' nature is reframed as a ''tangled_rope'' with a coordination function for global stability. If self-serving, the ''snare'' classification is strengthened, highlighting the extractive nature of the interpretation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(article_vi_justiciability, conceptual, 'Ambiguity regarding the legal enforceability of nuclear disarmament obligations.').
+narrative_ontology:omega_variable(security_interest_vs_treaty_obligation, preference, 'Whether nuclear weapon states'' security interests justify their interpretation of Article VI.').
+
+omega_variable(
+    two_tier_order_permanence,
+    'Is the two-tier nuclear order (weapon states vs. non-weapon states) a temporary arrangement or a permanently stabilized feature of the international system under this reading?',
+    'A clear, verifiable timeline for disarmament from nuclear weapon states, or a formal amendment to the NPT explicitly codifying the permanent right of certain states to possess nuclear weapons.',
+    'If temporary, the constraint might be reclassified as a scaffold, with a sunset clause for the two-tier system. If permanent, the snare classification is solidified, as the extraction becomes an enduring feature.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(two_tier_order_permanence, empirical, 'The intended duration and stability of the nuclear two-tier order.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(npt_article_iv_vi_pairing__nonproliferation_primary, 0, 30).
+narrative_ontology:interval(npt_article_iv_vi_pairing__nonproliferation_primary, 1968, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(npt__tr_t0, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 0, 0.3).
-narrative_ontology:measurement(npt__tr_t10, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 10, 0.35).
-narrative_ontology:measurement(npt__tr_t20, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 20, 0.38).
-narrative_ontology:measurement(npt__tr_t30, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 30, 0.4).
+narrative_ontology:measurement(npt__tr_t1968, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 1968, 0.3).
+narrative_ontology:measurement(npt__tr_t1980, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 1980, 0.4).
+narrative_ontology:measurement(npt__tr_t1992, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 1992, 0.5).
+narrative_ontology:measurement(npt__tr_t2004, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 2004, 0.58).
+narrative_ontology:measurement(npt__tr_t2016, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 2016, 0.62).
+narrative_ontology:measurement(npt__tr_t2024, npt_article_iv_vi_pairing__nonproliferation_primary, theater_ratio, 2024, 0.65).
 
 % Extraction over time
-narrative_ontology:measurement(npt__be_t0, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 0, 0.6).
-narrative_ontology:measurement(npt__be_t10, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 10, 0.65).
-narrative_ontology:measurement(npt__be_t20, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 20, 0.68).
-narrative_ontology:measurement(npt__be_t30, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 30, 0.7).
+narrative_ontology:measurement(npt__be_t1968, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 1968, 0.6).
+narrative_ontology:measurement(npt__be_t1980, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 1980, 0.7).
+narrative_ontology:measurement(npt__be_t1992, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 1992, 0.78).
+narrative_ontology:measurement(npt__be_t2004, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 2004, 0.82).
+narrative_ontology:measurement(npt__be_t2016, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 2016, 0.84).
+narrative_ontology:measurement(npt__be_t2024, npt_article_iv_vi_pairing__nonproliferation_primary, base_extractiveness, 2024, 0.85).
 
 % Suppression requirement over time
-narrative_ontology:measurement(npt__su_t0, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 0, 0.75).
-narrative_ontology:measurement(npt__su_t10, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 10, 0.8).
-narrative_ontology:measurement(npt__su_t20, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 20, 0.83).
-narrative_ontology:measurement(npt__su_t30, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 30, 0.85).
+narrative_ontology:measurement(npt__su_t1968, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 1968, 0.7).
+narrative_ontology:measurement(npt__su_t1980, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 1980, 0.78).
+narrative_ontology:measurement(npt__su_t1992, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 1992, 0.85).
+narrative_ontology:measurement(npt__su_t2004, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 2004, 0.9).
+narrative_ontology:measurement(npt__su_t2016, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 2016, 0.91).
+narrative_ontology:measurement(npt__su_t2024, npt_article_iv_vi_pairing__nonproliferation_primary, suppression_requirement, 2024, 0.92).
 
 
 /* ==========================================================================
@@ -228,9 +288,13 @@ narrative_ontology:measurement(npt__su_t30, npt_article_iv_vi_pairing__nonprolif
    ========================================================================== */
 
 narrative_ontology:coordination_type(npt_article_iv_vi_pairing__nonproliferation_primary, enforcement_mechanism).
+narrative_ontology:affects_constraint(npt_article_iv_vi_pairing__nonproliferation_primary, npt_article_iv_vi_pairing__grand_bargain).
+narrative_ontology:affects_constraint(npt_article_iv_vi_pairing__nonproliferation_primary, npt_article_iv_vi_pairing__abolitionist).
+narrative_ontology:affects_constraint(npt_article_iv_vi_pairing__nonproliferation_primary, iran_nuclear_deal_jcpoa).
+narrative_ontology:affects_constraint(npt_article_iv_vi_pairing__nonproliferation_primary, north_korea_nuclear_program).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the NPT Article IV/VI pairing kernel. The other readings are 'npt_article_iv_vi_pairing__grand_bargain' and 'npt_article_iv_vi_pairing__abolitionist'.
+% This constraint is one of three readings of the NPT Article IV/VI pairing. This 'nonproliferation primary' reading emphasizes horizontal nonproliferation over disarmament.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

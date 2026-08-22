@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c16a7736-3870-4948-80c9-2d4295741106"
+    "story_uid": "a845489f-3c69-4b69-b80c-602451b3b1bf"
   },
   "base_properties": {
     "extractiveness": 0.05,
@@ -13,37 +13,93 @@
     "accessibility_collapse": 0.9,
     "resistance": 0.05,
     "claimed_type": "mountain",
-    "human_readable": "Dueling's Cultural Unthinkability (Dignity Culture Contraction Reading)",
+    "human_readable": "Dignity Culture's Displacement of Dueling",
     "topic_domain": "historical_sociology/cultural_anthropology/legal_history",
     "emerges_naturally": true,
     "beneficiaries": [
       "dignity_culture_adherents"
+    ],
+    "victims": [
+      "honor_culture_practitioners"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "dignity_culture_adherents",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Individuals and institutions whose moral framework emphasizes inherent individual worth, legal rights, and self-restraint, making dueling unthinkable. They benefit from a social order where disputes are resolved through legal and civil means, not violence."
+    },
+    {
+      "name": "honor_culture_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals who historically adhered to a code where personal honor was paramount and required violent defense against perceived slights. Their framework became culturally illegible and socially sanctioned, forcing them to abandon core identity tenets or face ostracization."
+    },
+    {
+      "name": "legal_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The formal institutions that codified anti-dueling laws and enforced them, reflecting and reinforcing the shift towards dignity culture. They provide alternative dispute resolution mechanisms."
+    },
+    {
+      "name": "social_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics who study the historical evolution of cultural norms, honor codes, and the mechanisms of social change. They analyze the interplay between cultural shifts and institutional changes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates social interactions around a shared understanding of individual worth and the appropriate means of dispute resolution, replacing a system based on personal honor and violent redress.",
+    "transfer_function": "Transfers the right to violent self-redress from individuals to the state's legal system, and shifts social capital from those who defend honor violently to those who adhere to dignity norms.",
+    "absent_voices": "The 'ghosts' of honor-culture adherents, whose entire social and moral framework was rendered obsolete and illegitimate. They would argue for the necessity of personal honor defense in a world where state protection was insufficient or dishonorable.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "This constraint describes a fundamental cultural substrate. If the 'dignity culture' framework were to disappear overnight, it would imply a collapse of modern legal and social systems, leading to a complete societal reorganization, not merely a return to dueling. The constraint itself is the new 'natural' state.",
+    "founding_problem": "Honor cultures generated cycles of violence and instability, where personal slights escalated into deadly encounters, undermining state authority and civil order.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Legal historians and sociologists widely corroborate that the problem of honor-based violence was a significant driver for the rise of state-backed legal systems and the cultural shift towards dignity. Contemporary legal frameworks and social norms attest to the problem being largely resolved, with dueling now seen as an anachronism."
+  },
   "interval": {
-    "start": 1700,
+    "start": 1800,
     "end": 1900
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1700,
+      "time_point": 1800,
       "value": 0.15
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1750,
+      "time_point": 1820,
       "value": 0.1
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1800,
+      "time_point": 1840,
       "value": 0.08
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1850,
+      "time_point": 1860,
       "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1880,
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
@@ -52,23 +108,28 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1700,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1750,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1800,
-      "value": 0.75
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1850,
+      "time_point": 1820,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1840,
       "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1860,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1880,
+      "value": 0.93
     },
     {
       "metric": "suppression_requirement",
@@ -77,87 +138,78 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint models the disappearance of dueling as a consequence of a fundamental cultural shift from an 'honor culture' to a 'dignity culture.' In this 'contraction reading,' dueling became unthinkable not primarily due to legal prohibition or institutional alternatives, but because the underlying cultural axioms that made it meaningful (e.g., honor as a property to be defended by violence) were displaced by a new framework emphasizing universal human dignity and the state's monopoly on violence. This reading posits the dignity culture as an emergent, self-enforcing 'mountain' that renders dueling culturally impossible, rather than merely illegal or impractical.",
-    "logic_rationale": "The constraint is claimed as a Mountain because the shift to dignity culture is presented as an irreversible, foundational change in normative substrate, making dueling culturally unthinkable. Extractiveness is low (0.05) because the 'extraction' is the loss of a cultural practice, not a direct transfer of resources; it's a redefinition of the social game itself. Suppression is high (0.95) because the dignity culture actively suppresses the very conceptual space for dueling, making it morally repugnant and socially impossible. Accessibility collapse is high (0.9) as the cultural alternatives (dueling as legitimate redress) are almost entirely gone. Resistance is low (0.05) because the cultural shift is so profound that active resistance to dueling's disappearance is minimal; those who might resist are identity-locked into a superseded framework.",
-    "directionality_logic": "Dignity culture adherents are beneficiaries (d near 0.0) as their worldview is validated and enforced, leading to a more stable social order from their perspective. Honor culture practitioners are victims (d near 1.0) as their entire framework for social interaction and self-worth is invalidated and suppressed. State legal systems are agenda-setters, but their role is secondary to the cultural shift; they enforce what the culture has already made unthinkable. Legal scholars are analytical observers.",
-    "perspectival_gap": "From the perspective of dignity culture adherents, the disappearance of dueling is a natural, beneficial evolution towards a more civilized society. From the perspective of historical honor culture practitioners, it represents a profound loss of a vital mechanism for maintaining social order and personal standing, leaving them disoriented and disempowered. The engine's classification of 'mountain' reflects the former, while the high suppression and victim declaration reflect the latter's experience.",
-    "kernel_context": "This constraint is the 'contraction_reading' of the 'dueling_disappearance_mechanism' kernel. It argues that dueling became culturally unthinkable due to the displacement of honor-culture axioms by an emergent dignity culture. Sibling readings include the 'institutional_displacement_reading' (dueling fell to fringe through institutional substitution) and the 'overdetermined_composite_reading' (dueling's decline was causally overdetermined by multiple factors)."
+    "narrative_context": "This constraint describes the cultural shift where dueling became unthinkable due to the ascendance of 'dignity culture' over 'honor culture'. In this reading, dignity culture acts as a fundamental, almost 'natural law' substrate, making the very concept of dueling illegitimate. The constraint is claimed as a Mountain because the cultural shift is presented as irreversible and foundational, making dueling's disappearance a consequence of a changed social ontology rather than mere institutional or legal prohibition. The beneficiaries are those who thrive in a dignity-based society, while the victims are those whose honor-bound identities became culturally illegible.",
+    "logic_rationale": "The extractiveness is low (0.05) because dignity culture, in this reading, is not primarily about extracting resources but about establishing a new, less violent social order. Suppression is extremely high (0.95) because the honor-culture framework was not merely regulated but actively suppressed and delegitimized, making alternatives (like dueling) culturally unthinkable. Accessibility collapse is high (0.9) as the very conceptual space for dueling vanished. Resistance is low (0.05) because the shift was so profound that active resistance to the new cultural paradigm became marginal. The temporal measurements show a steady increase in suppression as dignity culture solidified its dominance, and a decrease in extractiveness as the 'cost' of the cultural shift became less about active extraction and more about the 'natural' state of affairs.",
+    "directionality_logic": "Dignity culture adherents are beneficiaries (d near 0.0) as the new cultural framework aligns with their values and provides a stable social order. Honor culture practitioners are victims (d near 1.0) because their core identity and means of redress were rendered illegitimate and suppressed. Legal systems act as agenda-setters, codifying and enforcing the new cultural norms, benefiting from increased state authority.",
+    "perspectival_gap": "From the perspective of dignity culture adherents, the constraint is a natural evolution towards a more civilized society, a Mountain. From the perspective of honor culture practitioners, it was a profound and violent suppression of their way of life, a Snare. This story adopts the 'Mountain' framing of the dominant dignity culture, with the high suppression and victim declarations reflecting the cost to the displaced honor culture.",
+    "kernel_context": "This constraint is the 'contraction_reading' of the 'dueling_disappearance_mechanism' kernel. It posits that dueling became unthinkable due to a fundamental cultural shift from honor to dignity, making the former culturally illegible. Sibling readings include 'institutional_displacement_reading' (dueling fell due to alternative dispute resolution mechanisms) and 'overdetermined_composite_reading' (multiple factors caused dueling's decline)."
   },
   "omegas": [
     {
-      "id": "cultural_vs_institutional_causation",
-      "question": "Was the decline of dueling primarily driven by the cultural shift to dignity culture (this reading), or by the rise of alternative institutional dispute resolution mechanisms (institutional_displacement_reading)?",
-      "resolution_mechanism": "Comparative historical analysis of regions where cultural shifts preceded institutional changes, or vice versa; counterfactual analysis of societies with strong dignity culture but weak state institutions.",
-      "impact": "If institutional displacement was primary, this constraint would be reclassified as a Rope or Tangled Rope (coordinating new institutions), and the 'mountain' claim of dignity culture's inevitability would be weakened. If cultural shift was primary, this reading's Mountain classification is strengthened.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Distinguishing cultural vs. institutional drivers of dueling's decline."
-    },
-    {
-      "id": "irreversibility_of_dignity_culture",
-      "question": "Is the shift to dignity culture truly an irreversible 'mountain' (as claimed), or could a resurgence of honor-based values make dueling thinkable again under certain conditions?",
-      "resolution_mechanism": "Sociological analysis of contemporary 'honor killings' or other forms of private violence in dignity-culture contexts; theoretical exploration of conditions under which dignity culture might erode.",
-      "impact": "If dignity culture is not irreversible, the 'mountain' classification is too strong, and the constraint might be reclassified as a deeply entrenched Snare or Tangled Rope, maintained by active (though subtle) cultural enforcement rather than natural law.",
+      "id": "cultural_vs_institutional_causality",
+      "question": "Was the decline of dueling primarily a cultural shift (dignity displacing honor) or an institutional one (legal systems and courts displacing dueling as a dispute resolution mechanism)?",
+      "resolution_mechanism": "Comparative historical analysis of societies with similar legal reforms but different cultural trajectories, or vice versa. Examining the timing of cultural shifts relative to legal enforcement.",
+      "impact": "If primarily institutional, this constraint would be reclassified as a Tangled Rope or Snare, with legal systems as agenda-setters actively extracting the right to violence. If primarily cultural, the Mountain classification holds, with legal systems as reflections of the cultural shift.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Assessing the true 'mountain' nature of dignity culture's displacement of honor culture."
+      "description": "Ambiguity in the primary causal mechanism for dueling's disappearance."
+    },
+    {
+      "id": "naturalness_of_dignity_culture",
+      "question": "Is 'dignity culture' truly a natural, irreversible substrate (a Mountain), or is it a constructed and contingent social arrangement that could be challenged or reversed (a Snare or Tangled Rope)?",
+      "resolution_mechanism": "Long-term historical observation of cultural resilience and reversibility, or cross-cultural comparison with societies that have resisted or reversed similar shifts. Analysis of active enforcement mechanisms still required to maintain dignity norms.",
+      "impact": "If dignity culture is found to be a contingent construct, the 'Mountain' classification would be a false summit, reclassifying to a Tangled Rope or Snare, with higher extractiveness and suppression attributed to its maintenance.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The naturalness and irreversibility of dignity culture as a social substrate."
     }
   ],
-  "boltzmann": {
-    "coordination_type": "identity_coordination"
-  },
-  "network": {
-    "affects_constraints": [
-      "dueling_disappearance_mechanism__institutional_displacement_reading",
-      "dueling_disappearance_mechanism__overdetermined_composite_reading"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'dueling_disappearance_mechanism' kernel. It focuses on the cultural displacement of honor-culture axioms by dignity culture, leading to dueling becoming unthinkable. Other readings emphasize institutional substitution or a composite of factors."
-  },
   "cs_structure": {
     "kernel_codification": "implicit",
     "authority_grounding": "practice",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "dueling_disappearance_mechanism__institutional_displacement_reading",
+        "sibling_id": "institutional_displacement_reading",
         "relation": "influences"
       },
       {
-        "sibling_id": "dueling_disappearance_mechanism__overdetermined_composite_reading",
+        "sibling_id": "overdetermined_composite_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "universal_human_dignity_supersedes_honor",
+        "atom": "individual_inherent_worth",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "state_monopoly_on_violence_is_absolute",
+        "atom": "state_monopoly_on_violence",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "honor_culture_legitimacy_of_duel",
+    "reference_frame": "dignity_culture_ascendant",
     "drift_state": {
-      "moment": "post_enlightenment_cultural_shift",
-      "direction": "practice_drift",
-      "magnitude": "severe",
+      "moment": "contemporary_globalized_society",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,180 +4,276 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "41da0010-a1c7-4060-8d55-b7577bf0e04d"
+    "story_uid": "849afe97-b015-47b5-a47a-6a95826af91e"
   },
   "base_properties": {
     "extractiveness": 0.85,
     "suppression": 0.9,
-    "theater_ratio": 0.4,
+    "theater_ratio": 0.6,
     "accessibility_collapse": 0.75,
-    "resistance": 0.8,
+    "resistance": 0.2,
     "claimed_type": "snare",
     "human_readable": "LDS Marriage Commitment Reversal (Exogenous Override Reading)",
-    "topic_domain": "religious_institutional_history/commitment_systems/political_theology",
+    "topic_domain": "religious_institutional_history/political_theology",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "federal_government",
-      "us_public_opinion"
+      "federal_government_us"
     ],
     "victims": [
-      "lds_church_sovereignty",
-      "polygamous_families"
+      "lds_institutional_sovereignty",
+      "lds_members_practicing_plural_marriage"
+    ],
+    "vindicated_propositions": [
+      "federal_supremacy_doctrine",
+      "territorial_sovereignty_doctrine"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint primarily an exogenous override, an endogenous reinterpretation, or a persistent doctrine-practice gap?",
-      "resolution_mechanism": "Analysis of primary source documents (e.g., Woodruff Manifesto, official church statements, federal court records) for explicit causal claims and internal doctrinal shifts vs. external pressures. This reading emphasizes federal coercion as the primary driver.",
-      "impact": "If primarily exogenous, the constraint is a Snare imposed by external power. If endogenous, it's a Rope or Tangled Rope of internal coordination. If a gap, it's a Piton of inertial doctrine.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'exogenous_override_reading' of the 'marriage_commitment_reversal' kernel. Sibling readings include 'endogenous_reinterpretation_reading' and 'practice_doctrine_gap'."
+      "name": "federal_government_us",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Exerted immense legal and political pressure, including disincorporation of the church, seizure of assets, and imprisonment of leaders, to compel the cessation of plural marriage. Benefited from establishing federal supremacy over territorial religious practice."
     },
     {
-      "id": "doctrinal_revision_ambiguity",
-      "question": "To what extent did the suspension of polygamous practice constitute an internal doctrinal revision versus a temporary compliance under duress?",
-      "resolution_mechanism": "Examination of subsequent doctrinal developments and official interpretations within the LDS Church regarding Section 132 of the Doctrine and Covenants. If Section 132 is still affirmed as principle, it supports the duress reading.",
-      "impact": "If no genuine doctrinal revision occurred, the 'exogenous_override_reading' is strengthened, highlighting the coercive nature of the constraint. If revision is evident, it leans towards the 'endogenous_reinterpretation_reading'.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity regarding the permanence of doctrinal change versus temporary compliance."
+      "name": "lds_institutional_sovereignty",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffered direct extraction of its institutional autonomy and property. Forced to publicly suspend a core religious practice under threat of complete destruction. The cost of non-compliance was existential."
+    },
+    {
+      "name": "lds_members_practicing_plural_marriage",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Faced imprisonment, loss of property, and social ostracization for continuing the practice. Their commitment was deeply tied to their religious identity, making exit from the practice or the church unthinkable, but compliance with federal law unavoidable."
+    },
+    {
+      "name": "lds_general_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Issued the manifestos suspending plural marriage under duress. While acting as agenda-setters for the church, they were themselves targets of federal coercion, bearing the cost of institutional compromise to ensure survival."
+    },
+    {
+      "name": "us_supreme_court",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Upheld federal laws against plural marriage, establishing legal precedent for the limits of religious freedom when conflicting with state interests. Its rulings provided the legal framework for federal coercion."
     }
   ],
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.7
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.85
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.8
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.9
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.4
-    }
-  ],
+  "six_questions": {
+    "coordination_function": "The federal government coordinated its various branches (legislative, executive, judicial) to enforce a uniform legal standard across its territories, asserting its sovereignty over local religious practices.",
+    "transfer_function": "Transferred institutional autonomy, property, and the right to define marriage from the LDS Church to the federal government, in exchange for the church's continued legal existence.",
+    "absent_voices": "The voices of those who believed plural marriage was a divinely commanded practice, and who resisted federal authority on religious grounds, were suppressed through legal and physical coercion. Their perspectives were systematically excluded from the dominant legal and political discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the federal coercion had vanished, the LDS Church would likely have continued the practice of plural marriage, and the legal landscape regarding religious freedom and federal authority in territories would have been fundamentally different. The entire trajectory of federal-religious relations in the American West would have reorganized.",
+    "founding_problem": "The federal government perceived the practice of plural marriage in its territories as a challenge to its legal and moral authority, an affront to national norms, and an obstacle to Utah's statehood.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians and legal scholars, independent of both the federal government and the LDS Church, corroborate that the federal government's primary problem (asserting sovereignty and enforcing monogamy) was resolved through coercion. The problem is 'dead' because the practice was suspended and federal authority established, though the doctrinal principle remains."
+  },
   "interval": {
     "start": 1862,
     "end": 1890
   },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1862,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1870,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1878,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1882,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1887,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1890,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1862,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1870,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1878,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1882,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1887,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1862,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1870,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1878,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1882,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1887,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1890,
+      "value": 0.6
+    }
+  ],
   "commentary": {
-    "narrative_context": "This constraint describes the reversal of the LDS Church's practice of plural marriage, specifically through the lens of external coercion by the United States federal government. It posits that the change was not primarily driven by internal doctrinal reinterpretation but by overwhelming federal legislative and judicial pressure, including the threat of disincorporation and seizure of church assets. Section 132 of the Doctrine and Covenants, which outlines the principle of plural marriage, is understood to have remained doctrinally intact, with practice suspended due to external force.",
-    "key_agents": [
-      "federal_government: Primary agenda_setter (institutional/civilizational) — imposed the constraint",
-      "lds_church_sovereignty: Primary victim (institutional/generational) — bore the extraction of autonomy",
-      "polygamous_families: Direct victims (powerless/biographical) — forced to abandon practice",
-      "us_public_opinion: Beneficiary (organized/generational) — saw its moral norms enforced",
-      "lds_leadership: Payer/agenda_setter (institutional/generational) — navigated compliance under duress",
-      "historical_scholars: Observer (analytical/civilizational) — analyze the causal drivers"
-    ],
-    "logic_rationale": "The extractiveness (0.85) is high because the federal government successfully compelled a sovereign religious institution to abandon a core practice, effectively extracting institutional autonomy. Suppression (0.90) is severe, reflecting the comprehensive legal and military power brought to bear, leaving no viable exit for the Church or its members to continue the practice publicly. The theater ratio (0.40) indicates that while some internal justification for the change was presented, a significant portion of the public messaging and compliance was performative, masking the underlying coercion. Accessibility collapse (0.75) is high as legal and social alternatives for continuing the practice were systematically eliminated. Resistance (0.80) was initially high, leading to federal escalation, but eventually yielded to overwhelming force.",
-    "perspectival_gap": "The federal government's perspective would frame this as enforcing federal law and moral norms, a legitimate exercise of national sovereignty. The LDS Church, from this reading, experienced it as an existential threat and an infringement on religious freedom, a coercive act. The engine's classification will reflect this divergence, with the federal government as a beneficiary of a Snare, and the Church as a victim.",
-    "directionality_logic": "The federal government is a full beneficiary (d=0.0) as it successfully imposed its will and expanded its territorial control over the LDS Church's institutional autonomy. The LDS Church's sovereignty is a full target (d=1.0) as it was compelled to abandon a core practice under duress. Polygamous families are also targets (d=1.0) as they faced direct legal and social consequences. US public opinion is a beneficiary (d=0.0) as its moral norms were enforced. LDS leadership, while acting as agenda-setters in implementing the change, were also payers (d=0.7) due to the immense pressure they faced.",
-    "mandatrophy_analysis": "This reading prevents mislabeling the constraint as an internal 'Rope' of religious evolution or a 'Mountain' of inevitable social change. By emphasizing exogenous coercion, it correctly identifies the active, extractive force at play, rather than attributing the outcome to internal dynamics or natural progression. The persistence of Section 132 as doctrine, despite the suspension of practice, is key to this distinction, indicating that the mandate for plural marriage was not internally revoked but externally suppressed."
+    "narrative_context": "This constraint describes the cessation of plural marriage by the LDS Church as a direct result of overwhelming federal coercion, without an internal doctrinal revision. The federal government, through a series of legislative acts and judicial rulings, systematically dismantled the church's institutional and economic power, forcing a public suspension of the practice. This reading emphasizes the external, extractive force that compelled the change, viewing the church's actions as a strategic retreat under duress rather than an internal reinterpretation of divine will. Section 132 of the Doctrine and Covenants, which outlines the theological basis for plural marriage, remained in the scriptural canon, indicating a preservation of the principle despite the suspension of practice.",
+    "logic_rationale": "Extractiveness is very high (0.85) because the federal government directly extracted institutional autonomy and property from the LDS Church. Suppression is also very high (0.90) due to the severe legal and political penalties imposed, leaving virtually no viable exit for the church or its members. Theater ratio is high (0.60) because the public suspension of plural marriage was a performance of compliance, while the underlying doctrinal principle (Section 132) remained unrevised, creating a gap between declared practice and internal commitment. The claimed type is 'snare' because the coordination story (federal unity, national morality) was cover for the extraction of institutional sovereignty and the suppression of religious practice.",
+    "directionality_logic": "The federal government is the clear beneficiary and agenda-setter, using its institutional power to achieve its policy goals. LDS institutional sovereignty and individual members practicing plural marriage are the primary victims, bearing the full cost of federal coercion. LDS General Authorities, while acting as agenda-setters for the church, were simultaneously victims of federal pressure, forced to make decisions under duress.",
+    "perspectival_gap": "From the federal government's perspective, this was a necessary assertion of national sovereignty and moral order (a 'rope' or 'scaffold' to achieve statehood). From the LDS Church's perspective, particularly in this reading, it was a 'snare' – an externally imposed, highly extractive, and suppressive constraint that forced a compromise of core religious principles for institutional survival.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the cessation of plural marriage as a purely internal, voluntary 'rope' (endogenous reinterpretation) or a 'scaffold' (temporary measure for statehood that then dissolved). By highlighting the external coercion and the preservation of the underlying doctrine, it correctly identifies the constraint as a 'snare' where institutional survival was extracted at the cost of religious autonomy, and the mandate (federal supremacy) was achieved through force, not coordination."
   },
+  "omegas": [
+    {
+      "id": "internal_vs_external_causation",
+      "question": "To what extent was the cessation of plural marriage driven by genuine internal reinterpretation of divine will (endogenous reinterpretation reading) versus external federal coercion (exogenous override reading)?",
+      "resolution_mechanism": "Analysis of primary sources (e.g., Woodruff's journals, church council minutes, federal legislative records) to weigh the relative influence of internal spiritual discernment against explicit federal threats and legal actions.",
+      "impact": "If internal reinterpretation was dominant, the constraint would shift towards a 'rope' or 'scaffold' for the church, with lower extractiveness. If external coercion was dominant, this 'snare' classification is reinforced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the primary causal driver of the policy change."
+    },
+    {
+      "id": "doctrinal_status_of_section_132",
+      "question": "Is Section 132 of the Doctrine and Covenants, which outlines plural marriage, still considered a live, binding doctrinal principle within the LDS Church, or has its status been effectively superseded by subsequent revelations and practice?",
+      "resolution_mechanism": "Official doctrinal statements, authoritative interpretations by General Authorities, and ongoing theological discourse within the church. Examination of how the text is taught and understood in contemporary contexts.",
+      "impact": "If Section 132 is considered fully superseded, the 'theater_ratio' would decrease, and the constraint might move closer to a 'piton' (a historical artifact) or a 'rope' (a new, internally accepted norm). If it remains a live principle, the 'snare' classification is reinforced due to the ongoing tension between doctrine and practice.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the current doctrinal status of the foundational text."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Was the suppression of plural marriage primarily structural (legal penalties, asset seizures) or internalized (members' belief in the necessity of compliance for institutional survival)?",
+      "resolution_mechanism": "Post-coercion behavior: if the practice had resumed widely after federal threats receded, it would indicate primarily structural suppression. Its continued absence suggests a degree of internalized compliance or institutional adaptation.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as the church carried the suppression with them after the immediate threat. This would reinforce the 'snare' classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is one reading of the 'marriage_commitment_reversal' kernel, focusing on external coercion. Other readings include 'endogenous_reinterpretation_reading' and 'practice_doctrine_gap', which offer alternative causal accounts for the same historical event."
+    "affects_constraints": [
+      "marriage_commitment_reversal__endogenous_reinterpretation_reading",
+      "marriage_commitment_reversal__practice_doctrine_gap"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_commitment_reversal' kernel. This 'exogenous_override_reading' emphasizes federal coercion as the primary driver for the cessation of plural marriage, distinct from readings that focus on internal reinterpretation or the resulting doctrine-practice gap."
   },
   "cs_structure": {
-    "kernel_codification": "fixed_text",
+    "kernel_codification": "formalized",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "marriage_commitment_reversal__endogenous_reinterpretation_reading",
+        "sibling_id": "endogenous_reinterpretation_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "marriage_commitment_reversal__practice_doctrine_gap",
+        "sibling_id": "practice_doctrine_gap",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "federal_sovereignty_over_territorial_religious_practice",
+        "atom": "federal_supremacy_over_religious_practice",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "religious_freedom_subordinate_to_public_morality",
-        "role": "secondary",
+        "atom": "institutional_survival_trumps_practice",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "federal_supremacy_over_territorial_morality",
+    "reference_frame": "federal_territorial_sovereignty",
     "drift_state": {
-      "moment": "contemporary_religious_freedom_jurisprudence",
-      "direction": "authority_erosion",
+      "moment": "post_manifesto_era",
+      "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

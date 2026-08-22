@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "eb402296-82fd-4bc0-b1fb-3c4516bee650"
+    "story_uid": "a48a5621-08ba-4591-8110-2d119e27b6ee"
   },
   "base_properties": {
-    "extractiveness": 0.6,
+    "extractiveness": 0.65,
     "suppression": 0.7,
     "theater_ratio": 0.2,
     "accessibility_collapse": 0.4,
-    "resistance": 0.5,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "AI Risk Prioritization: Existential Risk Reading",
+    "human_readable": "AI Risk Prioritization: Existential Risk Focus",
     "topic_domain": "ai_safety/technology_governance/risk_assessment",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -21,107 +21,196 @@
       "longtermist_funders"
     ],
     "victims": [
-      "near_term_ai_harms_researchers",
+      "near_term_ai_harms_advocates",
       "future_humanity"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "x_risk_research_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These institutions define the problem of AGI existential risk, conduct alignment research, and advocate for policy interventions. They receive significant funding based on this prioritization and shape the discourse around AI safety. Their influence is tied to the perceived urgency and severity of x-risk."
+    },
+    {
+      "name": "longtermist_funders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Provide substantial financial resources to x-risk research and advocacy. Their philanthropic and investment strategies are explicitly aligned with safeguarding the long-term future of humanity, making AGI x-risk a primary concern. They benefit from the validation and prioritization of their worldview."
+    },
+    {
+      "name": "near_term_ai_harms_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for addressing immediate and observable harms of AI, such as bias, discrimination, labor displacement, and surveillance. They find their concerns deprioritized and underfunded in favor of speculative future risks, bearing the cost of diverted attention and resources."
+    },
+    {
+      "name": "future_humanity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The ultimate potential victim of unaligned AGI, bearing the existential threat. This group includes non-existent persons whose welfare is projected into the future. Their interests are represented by x-risk advocates, but they have no direct agency or exit options."
+    },
+    {
+      "name": "policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for regulating AI development and deployment. They are influenced by both x-risk and near-term harms narratives, often struggling to balance competing priorities and allocate resources effectively. Their decisions shape the regulatory landscape."
+    },
+    {
+      "name": "ai_developers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop and deploy AI systems. While they benefit from the focus on long-term safety (which can legitimize their work), they also bear the costs of potential regulatory burdens and the moral hazard of focusing on distant risks over present ones. Some actively engage in alignment research."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates global efforts and resources towards a singular, long-term goal of preventing human extinction from misaligned AGI, by focusing research, funding, and policy on AGI alignment and capability controls.",
+    "transfer_function": "Transfers significant intellectual, financial, and political capital from addressing near-term, tangible AI harms to speculative, long-term existential risks. This includes diverting research grants, policy attention, and public discourse.",
+    "absent_voices": "Communities disproportionately affected by current AI harms (e.g., those facing algorithmic bias, job displacement, or surveillance) are often marginalized in the x-risk-dominated discourse. Their immediate suffering is framed as a lesser priority compared to future extinction.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the existential risk prioritization vanished, the AI safety field would immediately reorient towards near-term harms, algorithmic justice, and ethical deployment. Funding would shift, research agendas would change, and policy efforts would focus on present-day impacts, fundamentally altering the landscape of AI governance.",
+    "founding_problem": "The potential for advanced artificial intelligence to develop goals misaligned with human values, leading to an uncontrollable intelligence explosion and catastrophic outcomes for humanity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is attested by leading AI researchers, philosophers, and public intellectuals who have articulated the technical and philosophical challenges of AGI alignment. While the probability and timeline are debated, the conceptual possibility of the problem is widely acknowledged across various expert communities, including those not directly benefiting from x-risk funding."
+  },
   "interval": {
-    "start": 2020,
-    "end": 2050
+    "start": 2015,
+    "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.4
+      "time_point": 2015,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2025,
+      "time_point": 2018,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
       "value": 0.5
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
+      "metric": "suppression_requirement",
+      "time_point": 2018,
       "value": 0.6
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.5
+      "time_point": 2021,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2025,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2030,
+      "time_point": 2024,
       "value": 0.7
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2020,
+      "time_point": 2015,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2025,
+      "time_point": 2018,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2030,
+      "time_point": 2021,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'existential risk' reading of AI risk prioritization, where the primary concern is misaligned AGI leading to human extinction, and alignment research is paramount. This reading frames near-term harms as secondary or distractions. It is a reading of the 'ai_risk_prioritization' kernel, which also includes the 'near_term_harms_reading' sibling.",
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates a significant research effort (alignment research) but also involves asymmetric extraction. Resources (funding, attention, talent) are extracted from areas focused on near-term AI harms and directed towards existential risk. Active enforcement is present through funding mechanisms, academic prestige, and public advocacy that marginalizes alternative framings. Extractiveness is moderate (0.6) due to the significant redirection of resources. Suppression is high (0.7) because alternative risk framings are actively downplayed or dismissed as less important. Theater ratio is low (0.2) as the core research is genuine, but some advocacy may overstate the immediacy or certainty of the threat to maintain prioritization.",
-    "perspectival_gap": "From the perspective of x-risk research institutions and longtermist funders, this is a crucial coordination mechanism for humanity's survival. From the perspective of near-term AI harms researchers, it is an extractive mechanism that diverts resources from urgent, observable problems to speculative, distant ones. Future humanity, as the ultimate victim, has no direct perspective but is represented by the x-risk community.",
-    "directionality_logic": "X-risk research institutions and longtermist funders are clear beneficiaries (d=0.0-0.2) as their agendas and funding priorities are amplified. Near-term AI harms researchers are payers (d=0.8-1.0) as their work is deprioritized and underfunded. Future humanity is a victim (d=1.0) as their very existence is at stake, and their interests are unilaterally defined by the beneficiaries. Policy makers and AI developers are complex, often acting as both beneficiaries (of a clear, albeit narrow, agenda) and payers (of resources or attention diverted from other areas).",
-    "mandatrophy_analysis": "The constraint's mandate (preventing existential risk) is still considered 'live' by its proponents. However, the 'contested' status of the founding problem (is it truly the *primary* problem?) suggests a potential for mandatrophy if the existential threat is later deemed less immediate or if near-term harms become undeniably catastrophic. The classification as Tangled Rope, rather than a pure Rope, acknowledges the extractive and suppressive elements inherent in this prioritization, preventing it from being mislabeled as purely beneficial coordination.",
-    "kernel_context": "This constraint is the 'existential_risk_reading' of the 'ai_risk_prioritization' kernel. It posits that AI risk is primarily existential, focusing on misaligned AGI and the paramount importance of alignment research. Its sibling reading, 'near_term_harms_reading', emphasizes immediate, measurable harms of deployed AI systems."
+    "narrative_context": "This constraint represents the prioritization of AI existential risk (x-risk) over near-term harms within the broader AI safety discourse. It asserts that misaligned AGI poses an extinction-level threat, making alignment research and capability controls paramount. This reading frames near-term harms as secondary or even distracting from the 'real' problem. The constraint operates by directing funding, research agendas, and policy attention towards x-risk, often at the expense of other AI safety concerns. The claimed type is 'tangled_rope' because it genuinely coordinates a complex, global problem (preventing extinction) but does so with significant asymmetric extraction from those concerned with immediate harms.",
+    "key_agents": [
+      "x_risk_research_institutions: Primary agenda-setter (institutional/constrained) – defines the problem and directs resources.",
+      "longtermist_funders: Primary beneficiary (powerful/mobile) – provides funding, validates worldview.",
+      "near_term_ai_harms_advocates: Primary payer (organized/constrained) – bears costs of deprioritization.",
+      "future_humanity: Ultimate victim (powerless/trapped) – the theoretical beneficiary of x-risk prevention, but also the ultimate target of the threat.",
+      "policy_makers: Agenda-setter (institutional/constrained) – balances competing narratives, allocates resources.",
+      "ai_developers: Beneficiary/Payer (powerful/mobile) – benefits from legitimacy, bears potential regulatory costs."
+    ],
+    "logic_rationale": "The extractiveness (0.65) is high because resources and attention are significantly diverted from addressing present, measurable harms to a speculative, albeit severe, future risk. Suppression (0.70) is also high, as alternative framings (e.g., algorithmic justice) are actively marginalized or dismissed as less important. The theater ratio (0.20) is relatively low, indicating that the core alignment research is genuine, but there's a performative aspect in how other concerns are downplayed. The increasing extractiveness and suppression over time reflect the growing dominance of the x-risk narrative and the associated institutionalization of its priorities.",
+    "perspectival_gap": "From the perspective of x-risk institutions and longtermist funders, this constraint is a necessary coordination mechanism to prevent a catastrophic future. From the perspective of near-term harms advocates, it is an extractive mechanism that diverts resources from urgent, tangible problems, effectively making them 'pay' for a distant, uncertain one. Future humanity, as the ultimate victim, has no agency in this gap.",
+    "directionality_logic": "X-risk research institutions and longtermist funders are beneficiaries, as the constraint directs resources and legitimacy towards their agendas. Near-term harms advocates and future humanity are payers/victims, as their concerns are deprioritized or they bear the ultimate, albeit theoretical, cost of the threat. AI developers and policymakers have mixed directionality, benefiting from some aspects while bearing costs in others.",
+    "mandatrophy_analysis": "The constraint's mandate (preventing AGI extinction) is still 'live' and widely attested, preventing it from being a piton. However, the 'tangled_rope' classification highlights that while the coordination function is real, it comes with significant asymmetric extraction, preventing it from being a pure rope. The contestation around the 'founding_problem_status' (live vs. solved/shifted) is key to understanding its current operation as a tangled rope rather than a snare, as the coordination function is still genuinely perceived by many as necessary.",
+    "kernel_context": "This constraint is the 'existential_risk_reading' of the 'ai_risk_prioritization' kernel. It focuses on the catastrophic potential of misaligned AGI. Its sibling reading, 'near_term_harms_reading', emphasizes present-day algorithmic bias, discrimination, and other societal impacts of AI."
   },
   "omegas": [
     {
-      "id": "immediacy_of_threat",
-      "question": "Is the existential threat from AGI imminent (within 10-20 years) or a more distant, speculative risk (50+ years)?",
-      "resolution_mechanism": "Empirical progress in AGI capabilities, expert consensus shifts, and the emergence of concrete, uncontained AGI prototypes.",
-      "impact": "If the threat is more distant, the urgency of this prioritization framework diminishes, potentially reallocating resources to near-term harms. If imminent, it reinforces the current prioritization.",
-      "confidence": "medium",
+      "id": "probability_of_agi_x_risk",
+      "question": "What is the actual probability and timeline of AGI existential risk, and how does it compare to the certainty and scale of near-term AI harms?",
+      "resolution_mechanism": "Further empirical and theoretical research on AGI capabilities, alignment techniques, and societal impact, combined with robust, independent risk assessments that compare different classes of AI risk.",
+      "impact": "If the probability of AGI x-risk is lower or further in the future than currently prioritized, resources would shift towards near-term harms, potentially reclassifying this constraint as a snare or piton. If higher, it would reinforce the current prioritization.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "The timescale and certainty of AGI existential risk."
+      "description": "Uncertainty regarding the likelihood and timing of AGI existential threats."
     },
     {
       "id": "resource_allocation_efficiency",
-      "question": "Is the current allocation of resources to existential risk research the most effective way to mitigate *all* AI-related risks, or does it create blind spots for other critical issues?",
-      "resolution_mechanism": "Comparative analysis of risk mitigation outcomes across different funding models and research prioritization frameworks, including those focused on near-term harms.",
-      "impact": "If inefficient, it would suggest the extractive component is higher than measured, as resources are not optimally deployed for overall risk reduction. If efficient, it would strengthen the coordination claim.",
-      "confidence": "low",
+      "question": "Is the current allocation of resources to AGI alignment research the most effective way to mitigate overall AI risk, considering both existential and near-term threats?",
+      "resolution_mechanism": "Comprehensive cost-benefit analysis and impact assessments of different AI safety interventions, comparing the effectiveness of x-risk-focused vs. near-term-focused strategies.",
+      "impact": "If current allocation is found inefficient, it would suggest the constraint is more extractive than coordinative, potentially shifting its classification towards a snare. If efficient, it would strengthen the 'rope' aspect.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Efficiency of resource allocation for overall AI risk mitigation."
+      "description": "Efficiency of resource allocation in mitigating AI risk."
     },
     {
-      "id": "framing_under_determination",
-      "question": "Is the 'existential risk' framing the only defensible way to conceptualize the primary threat of AI, or is it a choice that serves specific institutional interests?",
-      "resolution_mechanism": "Analysis of the historical development of AI risk discourse, the funding landscape, and the sociological dynamics of the AI safety community.",
-      "impact": "If it's primarily a choice serving interests, the constraint's 'coordination' function is weaker, and its 'extraction' function is stronger, potentially reclassifying it closer to a Snare. If it's the only defensible framing, the Tangled Rope classification holds.",
+      "id": "framing_of_near_term_harms",
+      "question": "To what extent is the framing of near-term AI harms as 'distractions' a genuine assessment of their relative importance, versus a rhetorical strategy to maintain x-risk prioritization?",
+      "resolution_mechanism": "Discourse analysis, stakeholder interviews, and examination of funding patterns to identify explicit or implicit suppression of alternative narratives. Analysis of whether x-risk solutions genuinely address near-term harms as a byproduct.",
+      "impact": "If primarily rhetorical, the suppression metric is higher, and the constraint leans more towards a snare. If a genuine assessment, the coordination function is stronger.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The conceptual framing of AI risk and its potential for bias."
+      "description": "Ambiguity in the framing of near-term harms relative to x-risk."
     }
   ],
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "ai_governance_frameworks",
-      "ai_ethics_research_funding"
-    ],
-    "dual_formulation_note": "This constraint is the 'existential_risk_reading' of the 'ai_risk_prioritization' kernel. Its sibling, 'near_term_harms_reading', focuses on immediate, observable harms of AI systems."
+      "ai_ethics_funding_allocation",
+      "ai_governance_regulatory_focus"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "distributed",
@@ -129,41 +218,42 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_risk_prioritization__near_term_harms_reading",
+        "sibling_id": "near_term_harms_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "agi_poses_extinction_threat",
+        "atom": "agi_poses_existential_threat",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "alignment_research_is_paramount",
+        "atom": "longtermism_is_moral_priority",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "humanity_at_risk_from_agi",
+    "reference_frame": "agi_alignment_as_primary_safety_goal",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
       "magnitude": "minor",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,13 +4,13 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "0ee09839-39cb-47eb-9212-fed0f1239573"
+    "story_uid": "8f148de2-c7aa-487a-a8f9-5a058738131a"
   },
   "base_properties": {
     "extractiveness": 0.45,
     "suppression": 0.6,
-    "theater_ratio": 0.7,
-    "accessibility_collapse": 0.4,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.7,
     "resistance": 0.3,
     "claimed_type": "tangled_rope",
     "human_readable": "Endogenous Reinterpretation of Marriage Commitment (Woodruff's Vision)",
@@ -18,123 +18,203 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "institutional_leadership",
-      "church_members_seeking_social_acceptance"
+      "church_members_seeking_legitimacy"
     ],
     "victims": [
       "theological_consistency",
-      "members_committed_to_prior_doctrine"
+      "dissenting_members"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "revelation_authenticity_ambiguity",
-      "question": "Was Woodruff's September 23 vision a genuine divine revelation, or a strategic reinterpretation framed as such to preserve institutional legitimacy amidst external pressure?",
-      "resolution_mechanism": "Historical analysis of internal church records, personal diaries, and contemporary accounts for evidence of pre-vision internal theological debate or external political negotiation that shaped the 'revelation's' content.",
-      "impact": "If a strategic reinterpretation, the constraint's extractiveness from theological consistency is higher, and its suppression of internal dissent is more pronounced, shifting its classification closer to a Snare. If genuine, it reinforces the Mountain-like aspect of divine will, but still functions as a Tangled Rope due to the beneficiaries.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity regarding the authenticity of the divine revelation vs. strategic reinterpretation."
+      "name": "institutional_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The prophet and senior leadership who received and promulgated the revelation. They maintain interpretive authority, preserve institutional legitimacy, and navigate the theological shift while maintaining member cohesion. Their identity is fused with the institution's divine mandate."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint best understood as an endogenous reinterpretation of God's will, or as an exogenous override of practice, or as a persistent gap between doctrine and practice?",
-      "resolution_mechanism": "Analysis of the primary source texts and institutional pronouncements: does the text explicitly claim divine intervention (endogenous), or merely suspend practice due to external threat (exogenous), or maintain the doctrine while suspending practice without explicit justification (gap)?",
-      "impact": "If exogenous, the constraint's extractiveness from members is higher due to coercion. If a practice-doctrine gap, the constraint's theater_ratio is higher as the institution maintains a performative adherence to a non-practiced doctrine. This reading (endogenous) preserves institutional legitimacy by framing the change as divine will.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the 'marriage_commitment_reversal' kernel, specifically the 'endogenous_reinterpretation_reading'. Sibling readings include 'exogenous_override_reading' and 'practice_doctrine_gap'."
+      "name": "theological_consistency",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The internal coherence and immutability of divine will. It 'pays' by being reinterpreted or seemingly contradicted, creating a challenge for those who seek a stable, unchanging divine law. Its 'costs' are borne by those who must reconcile the apparent shift in God's command."
+    },
+    {
+      "name": "dissenting_members",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Members who struggle to reconcile the new revelation with prior doctrine or who feel their prior commitments are invalidated. They face social pressure to conform, potential excommunication, or the difficult choice of leaving the community. Their costs are social and spiritual."
+    },
+    {
+      "name": "church_members_seeking_legitimacy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Members who accept the new revelation as a legitimate reinterpretation of divine will, allowing them to maintain their faith while complying with external pressures. They benefit from continued institutional belonging and the perceived divine sanction of their actions."
+    },
+    {
+      "name": "external_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government and legal bodies that imposed pressure leading to the change in practice. They observe the internal religious response, assessing its compliance with secular law, but do not directly participate in the theological reinterpretation."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the collective action of the religious community by providing a unified, divinely sanctioned path forward in response to changed circumstances, maintaining institutional cohesion and member loyalty.",
+    "transfer_function": "Transfers interpretive authority and institutional legitimacy to the current leadership, while transferring the burden of theological reconciliation and potential cognitive dissonance to the membership, particularly those who dissent.",
+    "absent_voices": "Historical figures or prior doctrinal interpretations that would directly contradict the new revelation are effectively silenced or reinterpreted to fit the new narrative. Their 'objection' is absorbed into the ongoing theological discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the endogenous reinterpretation vanished, the institutional leadership would face a severe legitimacy crisis, the community would fracture over the unresolved doctrinal conflict, and the prior practice would either reassert itself or be seen as having been abandoned without divine sanction, leading to widespread disaffiliation.",
+    "founding_problem": "The problem of reconciling a divinely commanded practice with overwhelming external legal and social pressure that threatened the institution's survival, without appearing to abandon God's will.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The institutional leadership attests the problem is live, as the need to adapt divine commands to changing contexts is an ongoing challenge. External historians and sociologists corroborate the historical pressure and the institutional imperative to survive, supporting the 'live' status of the underlying problem, even if they dispute the divine nature of the solution."
+  },
+  "interval": {
+    "start": 1890,
+    "end": 1900
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1890,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 1892,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1894,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1896,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1898,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.48
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 1890,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 1892,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1894,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1896,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1898,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
       "value": 0.6
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.5
+      "time_point": 1890,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.58
+      "time_point": 1892,
+      "value": 0.17
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.65
+      "time_point": 1894,
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.7
+      "time_point": 1896,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1898,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.2
     }
   ],
-  "interval": {
-    "start": 1890,
-    "end": 1905
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the institutional shift in the Church of Jesus Christ of Latter-day Saints regarding plural marriage, specifically through the lens of President Wilford Woodruff's 1890 Manifesto (Official Declaration 1) and subsequent clarifications, framed as an internal divine revelation. This reading emphasizes the reinterpretation of God's will under changed circumstances, allowing the institution to adapt while maintaining the prophet's interpretive authority. It is one reading of the broader 'marriage_commitment_reversal' kernel, which also includes interpretations focusing on external coercion or a doctrine-practice gap.",
-    "key_agents": [
-      "institutional_leadership: Agenda setter (institutional/arbitrage) — maintains interpretive authority.",
-      "theological_consistency: Victim (powerless/civilizational) — bears the cost of doctrinal shift.",
-      "church_members_seeking_social_acceptance: Beneficiary (organized/constrained) — benefits from reduced social stigma.",
-      "members_committed_to_prior_doctrine: Payer (moderate/identity_locked) — bears the cost of abandoning deeply held beliefs.",
-      "federal_government: Observer (institutional/analytical) — external pressure driving the change."
-    ],
-    "logic_rationale": "The constraint is classified as a Tangled Rope because it serves a genuine coordination function (aligning church practice with societal norms to ensure institutional survival) but involves asymmetric extraction. Extraction is moderate (0.45) as it extracts from theological consistency and from members deeply committed to the prior doctrine, who must reconcile the shift. Suppression is moderate (0.6) as internal dissent was managed through the authority of revelation. Theater ratio is high (0.7) because the 'revelation' narrative serves to obscure the underlying strategic adaptation to external pressure, maintaining a performative adherence to divine guidance while fundamentally altering practice. The temporal measurements show increasing extractiveness and theater as the reinterpretation solidifies and the institutional narrative becomes more entrenched.",
-    "perspectival_gap": "From the perspective of institutional leadership, the constraint is a necessary, divinely guided adaptation (closer to a Rope). From the perspective of theological consistency and members committed to prior doctrine, it represents a significant, costly shift that strains belief (closer to a Snare). The engine's computation of per-seat classification will reflect this divergence.",
-    "directionality_logic": "Institutional leadership is a beneficiary (d=0.0-0.1) as the constraint preserves their authority and the institution's viability. Theological consistency is a victim (d=0.9-1.0) as its integrity is compromised. Church members seeking social acceptance are beneficiaries (d=0.1-0.2) as they gain relief from persecution. Members committed to prior doctrine are payers (d=0.7-0.8) due to the identity-locked nature of their commitment and the cost of reconciling the doctrinal shift. The federal government is an observer (d=0.5) as its pressure is external to the internal reinterpretation mechanism.",
-    "mandatrophy_analysis": "The constraint prevents mislabeling a strategic adaptation as a pure Mountain (unchanging divine will) or a pure Snare (simple coercion). By framing the change as revelation, the institution avoids the appearance of pure coercion, but the underlying adaptive function and the costs borne by theological consistency and some members reveal its Tangled Rope nature. The high theater ratio indicates that the 'revelation' narrative is a significant part of its maintenance, obscuring the strategic elements.",
-    "kernel_context": "This constraint is the 'endogenous_reinterpretation_reading' of the 'marriage_commitment_reversal' kernel. This reading posits that the reversal of plural marriage practice was driven by an internal divine revelation (Woodruff's 1890 Manifesto), reinterpreting God's will to adapt to changed circumstances. Sibling readings include the 'exogenous_override_reading' (focusing on external federal coercion) and the 'practice_doctrine_gap' (highlighting the discrepancy between maintained doctrine and suspended practice)."
+    "narrative_context": "This constraint describes the reinterpretation of a divinely commanded practice (plural marriage) through an internal divine revelation (Woodruff's 1890 Manifesto) that effectively reversed the practice while preserving institutional legitimacy. The constraint is framed as a 'tangled rope' because it genuinely coordinates the community's response to external pressure, but does so by extracting a cost from theological consistency and from dissenting members who must reconcile the apparent shift in divine will. The revelation narrative obscures the underlying doctrine-practice gap, allowing the institution to adapt without admitting a change in fundamental principles.",
+    "logic_rationale": "Extractiveness is moderate (0.45) because the reinterpretation preserves the institution's core, but at the cost of theological consistency and the cognitive burden on members. Suppression is high (0.6) due to the strong social and spiritual pressure to accept the prophet's revelation as binding, limiting exit options for dissenting members. Theater ratio is low (0.2) because the revelation is presented as a genuine divine communication, not merely a performative act, though it serves a clear institutional function. The metrics reflect the internal dynamics of a commitment system adapting to external pressure through a divinely sanctioned reinterpretation.",
+    "directionality_logic": "Institutional leadership benefits from maintaining interpretive authority and institutional survival (low d). Theological consistency (an abstract entity) and dissenting members bear the costs of reinterpretation and conformity (high d). Church members seeking legitimacy benefit from the clear path to compliance and continued belonging (low d). External authorities are observers, their d is analytical.",
+    "perspectival_gap": "From the perspective of the institutional leadership, this is a divinely guided adaptation (rope-like coordination). From the perspective of theological consistency or dissenting members, it is an extraction of prior truth or personal conviction (snare-like extraction). The engine computes this divergence from the structural data.",
+    "kernel_context": "This constraint is the 'endogenous_reinterpretation_reading' of the 'marriage_commitment_reversal' kernel. It describes the reversal of a religious practice through an internal divine revelation, reinterpreting God's will under changed circumstances. Sibling readings include 'exogenous_override_reading' (practice reversed by external coercion without internal doctrinal revision) and 'practice_doctrine_gap' (structural ambiguity where principle is preserved but practice suspended)."
   },
+  "omegas": [
+    {
+      "id": "divine_will_immutability",
+      "question": "Is divine will immutable, or can it be reinterpreted/adapted by contemporary revelation in response to changing circumstances?",
+      "resolution_mechanism": "Theological consensus across diverse faith traditions, or a meta-revelation clarifying the nature of divine communication.",
+      "impact": "If immutable, the reinterpretation is a human-driven adaptation, not a divine one, increasing extractiveness from theological consistency. If adaptable, the reinterpretation is a legitimate coordination, reducing perceived extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the nature of divine will and its susceptibility to reinterpretation."
+    },
+    {
+      "id": "revelation_authenticity",
+      "question": "Was the Woodruff Manifesto a genuine divine revelation, or an institutional response to overwhelming external pressure framed as revelation?",
+      "resolution_mechanism": "Historical analysis of internal church records, personal testimonies, and external political pressures leading up to the Manifesto, seeking to disentangle divine inspiration from institutional pragmatism.",
+      "impact": "If primarily an institutional response, the theater_ratio would be higher, and the extractiveness from theological consistency more pronounced. If genuine, the coordination function is stronger, and extraction lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The authenticity of the divine revelation as distinct from institutional pragmatism."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "exogenous_override_reading",
-      "practice_doctrine_gap"
+      "marriage_commitment_reversal__exogenous_override_reading",
+      "marriage_commitment_reversal__practice_doctrine_gap"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'marriage_commitment_reversal' kernel. Each reading offers a distinct structural interpretation of the same historical event, with different beneficiaries, victims, and classifications. They are linked to capture the contested nature of the institutional shift."
+    "dual_formulation_note": "This constraint is one reading of the 'marriage_commitment_reversal' kernel. It focuses on the internal theological reinterpretation as the mechanism for change, influencing how the external coercion and the doctrine-practice gap are understood."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -152,35 +232,36 @@
     ],
     "axioms": [
       {
-        "atom": "divine_will_is_dynamic",
+        "atom": "divine_will_is_adaptable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       },
       {
-        "atom": "prophetic_revelation_is_supreme",
+        "atom": "prophetic_revelation_is_binding",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       }
     ],
-    "reference_frame": "prophetic_guidance_adaptive_to_circumstance",
+    "reference_frame": "continuous_revelation_paradigm",
     "drift_state": {
-      "moment": "contemporary_theological_discourse",
+      "moment": "post_manifesto_era",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

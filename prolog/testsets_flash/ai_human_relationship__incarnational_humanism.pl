@@ -39,8 +39,12 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,20 +70,17 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ai_human_relationship__incarnational_humanism
  *   human_readable: AI for Integral Human Development (Incarnational Humanism Reading)
- *   domain: political_theology/technology_ethics
+ *   domain: catholic_social_teaching/technology_ethics/political_theology
  *
  * SUMMARY:
- *   This constraint, 'AI for Integral Human Development,' represents the
- *   'incarnational humanism' reading of the broader 'AI-human relationship'
- *   kernel. It posits that AI must serve the holistic development of the
- *   human person, grounded in the concept of Imago Dei, and be ordered
- *   towards the common good, solidarity, and a preferential option for the
- *   poor. Technology is evaluated by its capacity to make life 'more human,'
- *   and subsidiarity is understood as empowering intermediary bodies. This
- *   reading actively 'disarms' AI from competitive domination and views work
- *   as a vocation, not a commodity. It is presented as a Mountain due to its
- *   foundational theological and philosophical claims, which are considered
- *   immutable within this framework.
+ *   This constraint represents the 'incarnational humanism' reading of the
+ *   AI-human relationship, rooted in Catholic Social Teaching. It posits that
+ *   AI must serve integral human development, ordering technology to the
+ *   common good, solidarity, and a preferential option for the poor,
+ *   recognizing the human person as imago Dei and irreducible to
+ *   optimization. This reading emphasizes technology's role in making life
+ *   'more human' and 'disarming' AI from competitive domination. It is a
+ *   normative framework, not a descriptive account of current AI practices.
  *
  */
 
@@ -97,67 +99,102 @@ narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humani
 narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, accessibility_collapse, 0.88).
-narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, resistance, 0.02).
+narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, accessibility_collapse, 0.1).
+narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, resistance, 0.05).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(ai_human_relationship__incarnational_humanism, mountain).
+narrative_ontology:constraint_claim(ai_human_relationship__incarnational_humanism, rope).
 narrative_ontology:human_readable(ai_human_relationship__incarnational_humanism, "AI for Integral Human Development (Incarnational Humanism Reading)").
-narrative_ontology:topic_domain(ai_human_relationship__incarnational_humanism, "political_theology/technology_ethics").
-
-domain_priors:emerges_naturally(ai_human_relationship__incarnational_humanism).
+narrative_ontology:topic_domain(ai_human_relationship__incarnational_humanism, "catholic_social_teaching/technology_ethics/political_theology").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ai_human_relationship__incarnational_humanism, '1fec45f0-159a-4082-9f57-cf5de4d846c5').
-narrative_ontology:cs_kernel_codification('1fec45f0-159a-4082-9f57-cf5de4d846c5', formalized).
-narrative_ontology:cs_authority_grounding('1fec45f0-159a-4082-9f57-cf5de4d846c5', lineage).
-narrative_ontology:cs_interpretation_layer_present('1fec45f0-159a-4082-9f57-cf5de4d846c5').
-narrative_ontology:cs_reading_relation('1fec45f0-159a-4082-9f57-cf5de4d846c5', ai_human_relationship__technocratic_optimization, forecloses).
-narrative_ontology:cs_reading_relation('1fec45f0-159a-4082-9f57-cf5de4d846c5', ai_human_relationship__instrumental_subsidiarity, coexists_with).
-narrative_ontology:cs_axiom('1fec45f0-159a-4082-9f57-cf5de4d846c5', foundational, human_person_imago_dei_irreducible_to_optimization).
+narrative_ontology:cs_story_uid(ai_human_relationship__incarnational_humanism, '17b677e6-456c-4df5-b08b-4f32dff0936a').
+narrative_ontology:cs_kernel_codification('17b677e6-456c-4df5-b08b-4f32dff0936a', formalized).
+narrative_ontology:cs_authority_grounding('17b677e6-456c-4df5-b08b-4f32dff0936a', lineage).
+narrative_ontology:cs_interpretation_layer_present('17b677e6-456c-4df5-b08b-4f32dff0936a').
+narrative_ontology:cs_reading_relation('17b677e6-456c-4df5-b08b-4f32dff0936a', ai_human_relationship__technocratic_optimization, forecloses).
+narrative_ontology:cs_reading_relation('17b677e6-456c-4df5-b08b-4f32dff0936a', ai_human_relationship__instrumental_subsidiarity, influences).
+narrative_ontology:cs_axiom('17b677e6-456c-4df5-b08b-4f32dff0936a', foundational, human_person_imago_dei_irreducible_to_optimization).
 narrative_ontology:cs_axiom_status(human_person_imago_dei_irreducible_to_optimization, holdable).
-narrative_ontology:cs_axiom_grounding('1fec45f0-159a-4082-9f57-cf5de4d846c5', human_person_imago_dei_irreducible_to_optimization, deontological).
-narrative_ontology:cs_axiom('1fec45f0-159a-4082-9f57-cf5de4d846c5', foundational, technology_ordered_to_integral_human_development).
-narrative_ontology:cs_axiom_status(technology_ordered_to_integral_human_development, holdable).
-narrative_ontology:cs_axiom_grounding('1fec45f0-159a-4082-9f57-cf5de4d846c5', technology_ordered_to_integral_human_development, deontological).
-narrative_ontology:cs_reference_frame('1fec45f0-159a-4082-9f57-cf5de4d846c5', catholic_social_teaching_tradition).
-narrative_ontology:cs_drift_state('1fec45f0-159a-4082-9f57-cf5de4d846c5', contemporary_ai_development, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('1fec45f0-159a-4082-9f57-cf5de4d846c5', '').
+narrative_ontology:cs_axiom_grounding('17b677e6-456c-4df5-b08b-4f32dff0936a', human_person_imago_dei_irreducible_to_optimization, deontological).
+narrative_ontology:cs_axiom('17b677e6-456c-4df5-b08b-4f32dff0936a', foundational, technology_must_serve_integral_human_development).
+narrative_ontology:cs_axiom_status(technology_must_serve_integral_human_development, holdable).
+narrative_ontology:cs_axiom_grounding('17b677e6-456c-4df5-b08b-4f32dff0936a', technology_must_serve_integral_human_development, instrumental).
+narrative_ontology:cs_reference_frame('17b677e6-456c-4df5-b08b-4f32dff0936a', integral_human_development_framework).
+narrative_ontology:cs_drift_state('17b677e6-456c-4df5-b08b-4f32dff0936a', contemporary_ai_development, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('17b677e6-456c-4df5-b08b-4f32dff0936a', '').
 narrative_ontology:cs_kernel_id(ai_human_relationship__incarnational_humanism, ai_human_relationship).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(ai_human_relationship__incarnational_humanism, human_person_as_imago_dei).
+narrative_ontology:constraint_beneficiary(ai_human_relationship__incarnational_humanism, human_person).
+narrative_ontology:constraint_beneficiary(ai_human_relationship__incarnational_humanism, common_good).
+narrative_ontology:constraint_beneficiary(ai_human_relationship__incarnational_humanism, vulnerable_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(ai_human_relationship__incarnational_humanism, ai_developers_and_corporations).
+narrative_ontology:constraint_vindicates(ai_human_relationship__incarnational_humanism, integral_human_development_doctrine).
+narrative_ontology:constraint_vindicates(ai_human_relationship__incarnational_humanism, preferential_option_for_the_poor).
+narrative_ontology:constraint_vindicates(ai_human_relationship__incarnational_humanism, dignity_of_work).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The ultimate end and measure of all technology, understood as imago Dei, irreducible to any instrumental or optimizing logic. Benefits from technology that genuinely enhances human flourishing in all its dimensions.
+narrative_ontology:constraint_stakeholder(ai_human_relationship__incarnational_humanism, human_person, beneficiary,
+    powerless, generational, identity_locked, universal).
+
+% Those most susceptible to the negative impacts of unbridled technological development, and for whom a preferential option is made. Benefits from AI designed to address their specific needs and empower them.
+narrative_ontology:constraint_stakeholder(ai_human_relationship__incarnational_humanism, vulnerable_populations, beneficiary,
+    powerless, generational, trapped, global).
+
+% Promote and articulate the principles of integral human development, common good, solidarity, and the preferential option for the poor as guiding frameworks for AI ethics and policy. Seek to shape technological development through moral persuasion and advocacy.
+narrative_ontology:constraint_stakeholder(ai_human_relationship__incarnational_humanism, catholic_social_teaching_advocates, agenda_setter,
+    organized, generational, constrained, global).
+
+% Are called to reorient their development and deployment practices away from pure profit or efficiency maximization towards human-centered goals. This may involve foregoing certain lucrative applications or adopting more costly, ethically aligned design principles.
+narrative_ontology:constraint_stakeholder(ai_human_relationship__incarnational_humanism, ai_developers_and_corporations, payer,
+    institutional, biographical, mobile, global).
+
+% Are urged to create regulatory frameworks that 'disarm' AI from competitive domination and ensure its alignment with integral human development, rather than merely mitigating risks or promoting economic growth. This requires a shift in foundational assumptions about technology's purpose.
+narrative_ontology:constraint_stakeholder(ai_human_relationship__incarnational_humanism, policy_makers, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Advocate for AI as a tool for efficiency and productivity, often viewing human value through an optimizing lens. Their perspective is fundamentally at odds with the incarnational humanism reading, which sees human dignity as irreducible to such metrics.
+narrative_ontology:constraint_stakeholder(ai_human_relationship__incarnational_humanism, technocratic_optimization_advocates, excluded,
+    powerful, biographical, constrained, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the development and deployment of AI technologies towards a shared vision of human flourishing, ensuring that innovation serves the dignity of every person and the common good, rather than narrow interests or purely economic metrics.
+% TRANSFER_FUNCTION: Transfers moral and ethical guidance from Catholic Social Teaching to the domain of AI development, aiming to reorient technological priorities from profit/efficiency to human dignity, solidarity, and justice. This implies a transfer of resources and attention away from purely extractive or optimizing applications.
+% ABSENT_VOICES: Those who view AI primarily as a neutral tool for efficiency or as an instrument for maximizing productivity, without a foundational commitment to integral human development, are excluded from this framework's core assumptions. They would argue for a more 'value-neutral' or economically driven approach.
+% DISAPPEARANCE_RATIONALE: If this ethical framework vanished, AI development would likely revert to purely instrumental or profit-driven motives, leading to increased social inequality, dehumanizing applications, and a further erosion of human dignity, especially for the vulnerable. The trajectory of technological progress would fundamentally shift.
+% FOUNDING_PROBLEM: The problem of technology's potential to dehumanize, exacerbate inequality, and reduce human persons to mere data points or economic units, particularly in the context of powerful emerging technologies like AI.
+% FOUNDING_PROBLEM_CORROBORATION: The Catholic Church, various interfaith organizations, and numerous secular ethicists and human rights advocates attest to the ongoing and intensifying nature of this problem. Reports from NGOs on AI's impact on labor, surveillance, and algorithmic bias provide empirical corroboration from outside the immediate beneficiary set.
+narrative_ontology:disappearance_verdict(ai_human_relationship__incarnational_humanism, world_rearranges).
+narrative_ontology:founding_problem_status(ai_human_relationship__incarnational_humanism, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ai_human_relationship__incarnational_humanism, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(ai_human_relationship__incarnational_humanism, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(ai_human_relationship__incarnational_humanism, 'none', 1).
+narrative_ontology:epsilon_provenance(ai_human_relationship__incarnational_humanism, 0.15, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(ai_human_relationship__incarnational_humanism_tests).
-
-test(mountain_threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, ExtMetricName, E),
-    domain_priors:suppression_score(ai_human_relationship__incarnational_humanism, S),
-    E =< 0.25,
-    S =< 0.05.
-
-test(nl_profile_validation) :-
-    domain_priors:emerges_naturally(ai_human_relationship__incarnational_humanism),
-    narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(ai_human_relationship__incarnational_humanism, resistance, R),
-    AC >= 0.85,
-    R =< 0.15.
-
 :- end_tests(ai_human_relationship__incarnational_humanism_tests).
 
 /* ==========================================================================
@@ -166,14 +203,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is low (0.15) because this framework is primarily prescriptive and aspirational, aiming to guide rather than extract. Any 'extraction' is conceptual, representing the cost of reorienting technological development away from purely utilitarian goals. Suppression is low (0.05) as it relies on moral persuasion and intellectual leadership rather than coercive enforcement. Theater ratio is low (0.1) because its proponents genuinely seek to implement these principles, though practical implementation faces significant challenges. Accessibility collapse is high (0.88) and resistance low (0.02) because, within its own theological-philosophical framework, the principles are considered self-evident and universally applicable, leaving little room for 'alternatives' that would contradict the core tenets of human dignity.
+ *   The constraint is claimed as a Rope because it aims for genuine coordination around shared ethical principles, with net benefits for all (especially the human person and vulnerable populations). Its extractiveness is low (0.15) as it primarily seeks to reorient existing extractive systems rather than being extractive itself. Suppression is low (0.05) as it relies on moral persuasion and advocacy, not coercion. Theater ratio is low (0.1) as its proponents genuinely seek to implement these principles, though practical implementation faces significant challenges. Accessibility collapse and resistance are low because it is a normative framework that seeks to open new pathways for ethical development, rather than closing existing ones or meeting direct, organized resistance against its existence.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of 'Catholic_social_teaching_proponents' and 'marginalized_communities,' this is a foundational Mountain, a self-evident truth about human dignity and the purpose of technology. From the perspective of 'AI_developers_and_corporations' and 'technocratic_optimization_advocates,' it is a prescriptive framework that imposes significant costs and limits on their preferred modes of operation, potentially appearing as a Snare or Tangled Rope due to the 'disarming' of competitive domination.
+ *   From the perspective of 'AI_developers_and_corporations' or 'technocratic_optimization_advocates', this framework might appear as an external imposition or a 'snare' that limits their freedom and profitability. However, from the perspective of 'human_person' or 'vulnerable_populations', it is a 'rope' that offers protection and promotes genuine human flourishing. The engine's per-seat classification will capture this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   The 'human_person_as_imago_dei' is the ultimate beneficiary (d=0.0), as the constraint exists to protect and promote their integral development. 'Catholic_social_teaching_proponents' act as agenda-setters (d=0.1), actively shaping the discourse. 'AI_developers_and_corporations' are payers (d=0.8) as they bear the cost of reorienting their practices. 'Marginalized_communities' are direct beneficiaries (d=0.0) of the preferential option. 'Technocratic_optimization_advocates' are excluded (d=1.0) as their core premises are incompatible with this reading.
+ *   The 'human_person' and 'vulnerable_populations' are the primary beneficiaries, as the framework is designed to protect and promote their dignity and flourishing. 'Catholic_social_teaching_advocates' and 'policy_makers' act as agenda-setters, promoting and implementing the framework. 'AI_developers_and_corporations' are positioned as payers, as adopting this framework requires them to internalize ethical costs and potentially forgo profit-maximizing opportunities. 'Technocratic_optimization_advocates' are excluded, as their foundational premises are incompatible with this reading.
  *
+ * MANDATROPHY ANALYSIS:
+ *   This framework is actively being developed and promoted in response to contemporary challenges posed by AI, so mandatrophy is not a concern. Its mandate is live and evolving, seeking to prevent the 'mandatrophy' of human dignity in the face of technological advancement rather than suffering from it.
  */
 
 /* ==========================================================================
@@ -181,63 +220,70 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    natural_law_vs_constructed_ethics,
-    'Is this constraint a genuine natural law derived from human nature and divine revelation, or a constructed ethical framework that benefits identifiable agents (e.g., the Catholic Church''s moral authority)?',
-    'Philosophical and theological debate, cross-cultural ethical consensus on human dignity, and empirical observation of whether its principles are universally recognized or require specific faith commitments.',
-    'If purely natural law, its Mountain classification is robust. If significantly constructed for institutional benefit, it might reclassify as a Tangled Rope or Snare, with the Church as a beneficiary of its own moral authority.',
+    incarnational_humanism_vs_technocratic_optimization,
+    'Is the ''human person as imago Dei irreducible to optimization'' a genuinely distinct and actionable principle, or can it be co-opted and reframed within a technocratic optimization paradigm?',
+    'Empirical observation of AI governance and design outcomes: if policies and technologies consistently prioritize human dignity over efficiency when they conflict, the principle is distinct. If ''human flourishing'' is redefined as ''optimized human performance,'' it is co-opted.',
+    'If distinct, this reading remains a robust ''rope'' for ethical AI. If co-opted, its principles become ''theater'' (higher theater_ratio) within a ''snare'' of technocratic control, effectively becoming a ''tangled_rope'' or ''snare'' from the perspective of the human person.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_constructed_ethics, conceptual, 'Ambiguity between a universal moral truth and an institutionally articulated ethical framework.').
+narrative_ontology:omega_variable(incarnational_humanism_vs_technocratic_optimization, conceptual, 'Distinction between human dignity and optimization metrics.').
 
 omega_variable(
-    implementation_as_extraction,
-    'To what extent does the practical implementation of ''disarming AI from competitive domination'' or ''work as vocation'' become an extractive mechanism for those who must conform to it?',
-    'Empirical studies of companies attempting to implement these principles: measure the economic costs, market share impacts, and competitive disadvantages incurred, and assess whether these costs are disproportionate to the stated ethical gains.',
-    'If implementation costs are high and disproportionately borne by certain actors without clear, shared benefits, the constraint''s effective extractiveness would be higher, potentially shifting its classification towards a Tangled Rope for those actors.',
+    solidarity_as_conscious_choice_vs_interdependence,
+    'Is ''solidarity as conscious choice transforming interdependence'' a practical and scalable mechanism for ethical AI development, or does it remain an aspirational ideal without concrete implementation pathways?',
+    'Case studies of AI projects explicitly designed and governed by principles of solidarity, demonstrating measurable positive impacts on vulnerable populations and equitable distribution of benefits. Analysis of policy mechanisms that incentivize or mandate such approaches.',
+    'If practical, the ''rope'' classification holds, as it genuinely coordinates for the common good. If merely aspirational, the framework''s effectiveness in mitigating extraction from vulnerable populations is reduced, potentially shifting it towards a ''piton'' (if its function atrophies) or a ''tangled_rope'' (if it becomes a cover for continued extraction).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(implementation_as_extraction, empirical, 'The potential for ethical ideals to become extractive in practice.').
+narrative_ontology:omega_variable(solidarity_as_conscious_choice_vs_interdependence, empirical, 'Feasibility and impact of solidarity in AI development.').
 
 omega_variable(
-    framing_under_determination_ai_human_relationship,
-    'Is the ''incarnational_humanism'' reading the most defensible framing of the AI-human relationship, or would ''technocratic_optimization'' or ''instrumental_subsidiarity'' offer a more accurate or pragmatic account?',
-    'Ongoing philosophical, ethical, and policy debates, as well as the observed societal outcomes of AI development under different guiding principles. The choice of framing depends on one''s foundational anthropological and teleological commitments.',
-    'Adopting the ''technocratic_optimization'' reading would likely classify the constraint as a Rope (coordinating efficiency) or even a Mountain (if optimization is seen as an inherent good), with different beneficiaries and victims. The ''instrumental_subsidiarity'' reading would likely yield a Rope or Tangled Rope, focusing on governance mechanisms.',
+    kernel_reading_distinction,
+    'Is this ''incarnational humanism'' reading of the AI-human relationship sufficiently distinct from ''instrumental subsidiarity'' and ''technocratic optimization'' to warrant separate constraint classifications, or do they represent points on a continuum?',
+    'Analysis of foundational axioms and their implications for policy and design: if the core normative claims lead to fundamentally different AI systems and governance structures, the distinction is warranted. If they converge on similar practical outcomes, they may be better modeled as variations of a single constraint.',
+    'If distinct, the current classification as a ''rope'' for this reading is valid. If not, the ''rope'' classification might be misleading, as the underlying structural dynamics could be more extractive (e.g., if ''instrumental subsidiarity'' allows for significant unaddressed harms, or ''technocratic optimization'' is the dominant, unacknowledged force).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(framing_under_determination_ai_human_relationship, conceptual, 'The choice of foundational ethical framework for AI is under-determined by empirical facts alone.').
+narrative_ontology:omega_variable(kernel_reading_distinction, conceptual, 'Clarifying the boundaries between different readings of the AI-human relationship kernel.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ai_human_relationship__incarnational_humanism, 0, 50).
+narrative_ontology:interval(ai_human_relationship__incarnational_humanism, 2018, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ai_h_tr_t0, ai_human_relationship__incarnational_humanism, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(ai_h_tr_t50, ai_human_relationship__incarnational_humanism, theater_ratio, 50, 0.1).
+narrative_ontology:measurement(ai_h_tr_t2018, ai_human_relationship__incarnational_humanism, theater_ratio, 2018, 0.08).
+narrative_ontology:measurement(ai_h_tr_t2020, ai_human_relationship__incarnational_humanism, theater_ratio, 2020, 0.09).
+narrative_ontology:measurement(ai_h_tr_t2022, ai_human_relationship__incarnational_humanism, theater_ratio, 2022, 0.09).
+narrative_ontology:measurement(ai_h_tr_t2024, ai_human_relationship__incarnational_humanism, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(ai_h_be_t0, ai_human_relationship__incarnational_humanism, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(ai_h_be_t50, ai_human_relationship__incarnational_humanism, base_extractiveness, 50, 0.15).
+narrative_ontology:measurement(ai_h_be_t2018, ai_human_relationship__incarnational_humanism, base_extractiveness, 2018, 0.1).
+narrative_ontology:measurement(ai_h_be_t2020, ai_human_relationship__incarnational_humanism, base_extractiveness, 2020, 0.12).
+narrative_ontology:measurement(ai_h_be_t2022, ai_human_relationship__incarnational_humanism, base_extractiveness, 2022, 0.14).
+narrative_ontology:measurement(ai_h_be_t2024, ai_human_relationship__incarnational_humanism, base_extractiveness, 2024, 0.15).
 
 % Suppression requirement over time
-narrative_ontology:measurement(ai_h_su_t0, ai_human_relationship__incarnational_humanism, suppression_requirement, 0, 0.05).
-narrative_ontology:measurement(ai_h_su_t50, ai_human_relationship__incarnational_humanism, suppression_requirement, 50, 0.05).
+narrative_ontology:measurement(ai_h_su_t2018, ai_human_relationship__incarnational_humanism, suppression_requirement, 2018, 0.03).
+narrative_ontology:measurement(ai_h_su_t2020, ai_human_relationship__incarnational_humanism, suppression_requirement, 2020, 0.04).
+narrative_ontology:measurement(ai_h_su_t2022, ai_human_relationship__incarnational_humanism, suppression_requirement, 2022, 0.04).
+narrative_ontology:measurement(ai_h_su_t2024, ai_human_relationship__incarnational_humanism, suppression_requirement, 2024, 0.05).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
+narrative_ontology:coordination_type(ai_human_relationship__incarnational_humanism, identity_coordination).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

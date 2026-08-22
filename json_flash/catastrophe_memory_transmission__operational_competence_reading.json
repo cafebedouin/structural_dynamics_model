@@ -4,26 +4,71 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "98376a8a-bb78-456f-95ee-36fbde85345c"
+    "story_uid": "ad31ad48-1e64-4b06-8dd6-45bb6455b646"
   },
   "base_properties": {
     "extractiveness": 0.15,
     "suppression": 0.2,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.75,
+    "accessibility_collapse": 0.7,
     "resistance": 0.05,
     "claimed_type": "rope",
     "human_readable": "Catastrophe Memory Transmission (Operational Competence Reading)",
     "topic_domain": "religious_studies/collective_memory/ritual_studies",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
     "beneficiaries": [
-      "future_generations",
-      "community_leaders"
+      "future_community_members",
+      "ritual_practitioners"
     ],
-    "victims": [
-      "those_mistaking_symbol_for_substance"
-    ]
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "ritual_practitioners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Engage in rituals that, from this reading, directly train for future survival scenarios (e.g., rapid departure, resource management). They benefit from enhanced preparedness and the social cohesion that comes from shared competence."
+    },
+    {
+      "name": "future_community_members",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Are the ultimate beneficiaries of the transmitted operational competence, inheriting a community better equipped to face future catastrophes. They do not actively participate in the constraint's maintenance but benefit from its successful operation."
+    },
+    {
+      "name": "analytical_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the functional aspects of ritual, identifying how specific practices contribute to tangible survival skills and collective resilience. They evaluate the 'operational yield' of ritual elements."
+    },
+    {
+      "name": "symbol_focused_practitioners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Prioritize the symbolic and identity-preserving aspects of ritual, potentially overlooking or downplaying its direct operational training function. They might object to a purely functional interpretation, seeing it as reductive."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective action and prepares a community for future catastrophic events by encoding and transmitting practical survival skills, pattern recognition, and resource management strategies through ritualized rehearsal.",
+    "transfer_function": "Transfers practical knowledge, behavioral patterns, and collective readiness for crisis response across generations, from past experiences to future community members.",
+    "absent_voices": "Those who view ritual primarily as symbolic or identity-preserving might object, arguing that reducing ritual to mere operational competence misses its deeper cultural and spiritual significance. They are often present within the community but their perspective is not centered in this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, communities would lose a vital, non-explicit mechanism for transmitting survival competence. Future generations would be less prepared for recurring catastrophes, leading to higher mortality, social fragmentation, and a loss of collective resilience. The world would rearrange itself around less effective, more costly, and less coordinated responses to crisis.",
+    "founding_problem": "The recurring threat of catastrophe (e.g., famine, exodus, invasion) and the challenge of transmitting complex, non-propositional survival knowledge across generations without formal schooling.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Anthropological studies of disaster-prone communities, historical accounts of ritualized responses to crisis, and cognitive science research on embodied learning corroborate the problem's historical and ongoing relevance. These sources, external to the immediate ritual practitioners, attest to the efficacy of such transmission mechanisms."
   },
   "interval": {
     "start": 0,
@@ -83,12 +128,12 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.05
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.08
+      "value": 0.09
     },
     {
       "metric": "theater_ratio",
@@ -107,50 +152,55 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the 'operational competence' reading of catastrophe memory transmission through ritual. Here, ritual is understood primarily as a mechanism to encode and transmit practical survival skills, pattern recognition, resource coordination, and threat assessment rehearsal. Its value is in its functional yield for future survival capacity. This is one reading of the 'catastrophe_memory_transmission' kernel, which also includes 'symbol_continuity_reading' and 'hybrid_embedded_reading'.",
-    "logic_rationale": "The constraint is classified as a Rope because its primary function is genuine coordination for collective survival, with low extractiveness and suppression. The 'victim' group (those mistaking symbol for substance) highlights a failure mode where the operational content is lost, leading to a form of self-extraction due to misunderstanding, rather than active coercion. The low theater ratio reflects that the ritual's elements are largely functional, even if their purpose is not always consciously articulated by participants. Accessibility collapse is high because, once the operational value is understood, alternatives for such robust, trans-generational competence transmission are few.",
-    "directionality_logic": "Community leaders and future generations are the primary beneficiaries, gaining resilience and continuity. Ritual participants bear the cost of participation but are also beneficiaries of the competence. Those mistaking symbol for substance are victims because they fail to extract the operational value, effectively paying for a performance without gaining its core benefit. Anthropological observers are analytical, outside the direct flow of costs and benefits.",
-    "perspectival_gap": "From the perspective of community leaders, the ritual is a vital, low-cost coordination mechanism. From the perspective of those who only see the symbolic form, it might appear as an inert tradition, but this reading emphasizes the underlying operational function. The engine's classification will reflect the overall low extractiveness and high coordination, consistent with a Rope.",
-    "kernel_context": "This constraint is the 'operational_competence_reading' of the 'catastrophe_memory_transmission' kernel. This reading emphasizes the practical, functional aspects of ritual in transmitting survival skills. It contrasts with the 'symbol_continuity_reading' which focuses on identity and mourning, and the 'hybrid_embedded_reading' which sees operational capacity as inseparable from symbolic form."
+    "narrative_context": "This constraint describes ritual as a mechanism for transmitting operational competence for survival, focusing on its functional role in pattern recognition, resource coordination, and threat assessment rehearsal. Examples include the Passover Seder's emphasis on rapid departure readiness or Tisha B'Av's implicit training in resource scarcity. This is one specific reading of a broader kernel concerning catastrophe memory transmission, emphasizing the practical, rather than purely symbolic or identity-preserving, aspects of ritual. The constraint is claimed as a Rope, reflecting its genuine coordination function with low extraction, but the metrics are authored independently to reflect its actual operation.",
+    "key_agents": [
+      "ritual_practitioners: Primary beneficiaries (moderate power/constrained exit) – gain survival competence.",
+      "future_community_members: Ultimate beneficiaries (powerless/analytical exit) – inherit preparedness.",
+      "analytical_observers: External evaluators (analytical power/analytical exit) – assess operational yield.",
+      "symbol_focused_practitioners: Excluded voices (moderate power/identity_locked exit) – prioritize symbolic meaning."
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because the primary 'cost' is the time and effort of ritual participation, which is offset by the direct benefit of enhanced survival competence. Suppression is also low (0.2) as participation is largely voluntary, driven by perceived utility and social cohesion rather than coercion. Theater ratio is minimal (0.1) because the rituals, in this reading, are genuinely functional, with little performative excess beyond what serves the transmission goal. Accessibility collapse is moderate (0.7) because while alternatives for transmitting this specific type of embodied, non-propositional knowledge are limited, other forms of learning exist. Resistance is low (0.05) as the benefits are widely recognized within the community.",
+    "perspectival_gap": "From the perspective of ritual practitioners, the constraint is a beneficial coordination mechanism. From an analytical observer's perspective, it is a functional system for knowledge transfer. There is no significant divergence in perceived type, as the operational benefits are clear. However, other readings of the same kernel would emphasize different aspects, leading to different classifications.",
+    "directionality_logic": "Ritual practitioners are beneficiaries because they directly acquire survival skills. Future community members are also beneficiaries, inheriting a more resilient community. There are no direct 'victims' in this reading, as the 'cost' of ritual is outweighed by its functional benefits. Symbol-focused practitioners are 'excluded' in the sense that their primary interpretive frame is not centered here, but they are not 'victims' of extraction.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in this reading because the founding problem (catastrophe preparedness) remains live, and the ritual continues to effectively address it. The classification as a Rope prevents mislabeling it as pure extraction, as its coordination function is genuine and ongoing."
   },
   "omegas": [
     {
       "id": "operational_vs_symbolic_primacy",
-      "question": "Is the operational competence the primary function of the ritual, or is it a secondary effect of symbolic continuity?",
-      "resolution_mechanism": "Comparative analysis of ritual efficacy in communities where operational content is explicitly taught versus those where it is implicitly transmitted through symbolic fidelity. If explicit teaching yields higher competence, operational primacy is supported.",
-      "impact": "If symbolic continuity is primary, the constraint might lean towards a more 'Mountain' or 'Piton' classification for the symbolic aspects, with operational competence being a less robust 'Rope' component. If operational competence is primary, the 'Rope' classification is strengthened.",
+      "question": "Is the primary function of this ritual the transmission of operational competence, or is it the preservation of symbolic continuity and identity?",
+      "resolution_mechanism": "Empirical studies comparing community resilience outcomes with fidelity to operational vs. symbolic ritual elements, or ethnographic analysis of participant self-understanding and stated goals.",
+      "impact": "If symbolic primacy is established, the constraint might reclassify towards a different type (e.g., identity_coordination Rope or even a Piton if the operational function atrophies). If operational primacy is confirmed, the Rope classification is strengthened.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Ambiguity regarding the primary function of ritual: operational transmission vs. symbolic preservation."
+      "description": "Ambiguity regarding the primary function of ritual: operational training vs. symbolic preservation."
     },
     {
-      "id": "competence_measurement_validity",
-      "question": "How reliably can 'survival competence' be measured and attributed to ritual transmission, independent of other learning mechanisms?",
-      "resolution_mechanism": "Longitudinal studies tracking communities' responses to actual or simulated catastrophes, correlating outcomes with ritual adherence and comparing to control groups without such rituals.",
-      "impact": "If competence is difficult to measure or is primarily derived from other sources, the 'beneficiary' claim for future generations weakens, potentially shifting the constraint towards a more 'Piton' or 'Snare' if the costs of participation remain high without clear benefit.",
+      "id": "universality_of_competence_extraction",
+      "question": "Is the mechanism of transmitting survival competence through ritual a universal, irreducible feature of human collective memory (a Mountain), or a culturally contingent coordination strategy (a Rope)?",
+      "resolution_mechanism": "Cross-cultural comparative studies of disaster response and knowledge transmission, or cognitive science research on the fundamental mechanisms of embodied collective memory.",
+      "impact": "If universal, the constraint would reclassify as a Mountain, with negligible extraction. If culturally contingent, the Rope classification holds, emphasizing its constructed nature.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Uncertainty in measuring the direct impact of ritual on survival competence."
-    },
-    {
-      "id": "natural_law_vs_constructed_competence",
-      "question": "Is the transmission of operational competence through ritual a universal, emergent property of human collective memory (Mountain), or a culturally constructed coordination mechanism (Rope)?",
-      "resolution_mechanism": "Cross-cultural comparative studies of diverse societies' catastrophe memory rituals. If similar operational structures emerge independently across vastly different cultural contexts, it supports a 'Mountain' claim. If structures are highly context-dependent, it supports 'Rope'.",
-      "impact": "If a 'Mountain' (natural law) is established, the extractiveness and suppression metrics would be re-evaluated as inherent costs of an irreducible reality. If 'Rope' (constructed coordination) is confirmed, the current metrics hold, and the potential for optimization or alternative mechanisms remains.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity between natural law and constructed coordination for competence transmission."
+      "description": "Whether the competence transmission is a universal law or a cultural construct."
     }
   ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [
-      "catastrophe_memory_transmission__symbol_continuity_reading",
-      "catastrophe_memory_transmission__hybrid_embedded_reading"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'catastrophe_memory_transmission' kernel. This 'operational_competence_reading' focuses on the functional transmission of survival skills, distinct from the 'symbol_continuity_reading' (identity/mourning) and 'hybrid_embedded_reading' (inseparable form/function)."
+    "affects_constraints": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
   },
   "cs_structure": {
     "kernel_codification": "implicit",
@@ -158,11 +208,11 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "catastrophe_memory_transmission__symbol_continuity_reading",
+        "sibling_id": "symbol_continuity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_transmission__hybrid_embedded_reading",
+        "sibling_id": "hybrid_embedded_reading",
         "relation": "coexists_with"
       }
     ],
@@ -172,31 +222,14 @@
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "survival_competence_is_transmissible",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "functional_transmission_paradigm",
+    "reference_frame": "functional_survival_mechanism",
     "drift_state": {
-      "moment": "contemporary_secularization_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
+      "moment": "contemporary_academic_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "gemini-2.5-flash",
-    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
-    "seeded_from": "none",
-    "draw": 1
   }
 }

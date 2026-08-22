@@ -4,158 +4,254 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "325f1067-f755-4baa-9f81-3f93c2adfb2d"
+    "story_uid": "05f9fc54-c341-43bf-b7fa-f890dd4d1c09"
   },
   "base_properties": {
-    "extractiveness": 0.45,
-    "suppression": 0.6,
+    "extractiveness": 0.4,
+    "suppression": 0.5,
     "theater_ratio": 0.1,
-    "accessibility_collapse": 0.4,
-    "resistance": 0.3,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
     "claimed_type": "rope",
     "human_readable": "Acceptable Risk: Option Value Preserving Energy Pathways",
     "topic_domain": "risk_assessment/energy_policy/decision_theory",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
-      "future_decision_makers",
-      "energy_security_planners"
+      "future_generations",
+      "energy_system_planners"
     ],
     "victims": [
-      "single_pathway_advocates",
+      "advocates_for_single_pathway",
       "opportunity_costs_of_premature_closure"
     ]
   },
-  "interval": {
-    "start": 2000,
-    "end": 2050
-  },
+  "omegas": [
+    {
+      "id": "deep_uncertainty_definition",
+      "question": "What constitutes 'deep uncertainty' in energy planning, and at what point does it resolve sufficiently to narrow pathways?",
+      "resolution_mechanism": "Consensus among decision theorists and energy modelers on criteria for deep uncertainty, and empirical observation of resolution over time.",
+      "impact": "If deep uncertainty is deemed resolved, the justification for maintaining multiple pathways weakens, potentially shifting the constraint towards a more extractive or less coordinated form as resources are diverted from less optimal options.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the definition and resolution of deep uncertainty."
+    },
+    {
+      "id": "cost_of_optionality_vs_benefit",
+      "question": "Is the cost of maintaining multiple energy pathways (e.g., subsidies for less efficient options, R&D for diverse technologies) justified by the option value preserved?",
+      "resolution_mechanism": "Long-term economic and strategic analysis comparing the realized benefits of flexibility against the cumulative costs of maintaining options.",
+      "impact": "If costs significantly outweigh benefits, the constraint's extractiveness would be higher than currently assessed, potentially reclassifying it as a Tangled Rope or Snare, as resources are extracted for a non-optimal outcome.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the economic justification of option value preservation."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "This constraint is the 'option_value_preserving' reading of the 'acceptable_risk_energy' kernel. How would the classification change under the 'catastrophic_tail_dominant' or 'expected_value_dominant' readings?",
+      "resolution_mechanism": "Explicit modeling of each sibling reading's stakeholder structure, beneficiary/victim sets, and metric profiles.",
+      "impact": "The 'catastrophic_tail_dominant' reading would likely show higher suppression of fossil fuel pathways and higher extractiveness from those who benefit from them. The 'expected_value_dominant' reading would likely show higher suppression of less efficient or higher-cost pathways, regardless of their option value, and higher extractiveness from those who advocate for them. This reading (option_value_preserving) explicitly balances these extremes, leading to moderate suppression and extractiveness.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Documenting the structural differences between kernel readings."
+    }
+  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
+      "time_point": 0,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.45
+      "time_point": 15,
+      "value": 0.39
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.48
+      "time_point": 20,
+      "value": 0.41
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2040,
-      "value": 0.47
+      "time_point": 25,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2050,
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.45
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
       "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.55
+      "time_point": 15,
+      "value": 0.49
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.6
+      "time_point": 20,
+      "value": 0.51
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2030,
-      "value": 0.62
+      "time_point": 25,
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2040,
-      "value": 0.61
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2050,
-      "value": 0.6
+      "time_point": 30,
+      "value": 0.5
     }
   ],
-  "commentary": {
-    "narrative_context": "This constraint describes an approach to 'acceptable risk' in energy policy that prioritizes maintaining multiple viable energy pathways (e.g., nuclear, fossil, various renewables) to preserve decision flexibility under deep uncertainty. It is a reading of the 'acceptable_risk_energy' kernel, focusing on the option value of keeping diverse technologies alive rather than committing to a single optimal path. The constraint is claimed as a Rope because it genuinely coordinates long-term planning and benefits future generations, but it involves moderate extraction from those advocating for immediate, singular energy transitions and requires active enforcement to resist political pressures for premature closure of options.",
-    "logic_rationale": "The extractiveness (0.45) reflects the cost of maintaining diverse pathways, which includes R&D, infrastructure, and regulatory support for technologies that might not be 'optimal' in the short term, and the opportunity costs of not fully committing to a single, potentially cheaper, path. Suppression (0.6) is moderate because it actively resists political and economic pressures to prematurely abandon or over-commit to specific energy sources. Theater ratio is low (0.1) as the policy is genuinely aimed at preserving options, not merely performing. Accessibility collapse is moderate (0.4) as alternatives (single-pathway commitments) are understood but actively resisted by the framework. Resistance (0.3) is present from advocates of more decisive, less diversified energy strategies.",
-    "directionality_logic": "Future decision-makers and energy security planners are clear beneficiaries, gaining flexibility and resilience. Single-pathway advocates and the abstract 'opportunity costs of premature closure' are the payers/victims, bearing the costs of diversification. Risk assessment analysts act as agenda-setters, framing the policy debate. The constraint's directionality is towards preserving options, which benefits those who value long-term adaptability.",
-    "perspectival_gap": "From the perspective of future decision-makers, this is a clear Rope, providing immense benefit. From single-pathway advocates, it might feel more like a Tangled Rope or even a Snare, as their preferred, 'optimal' path is suppressed and resources are diverted. The engine's per-seat classification will capture this divergence.",
-    "kernel_context": "This constraint is the 'option_value_preserving' reading of the 'acceptable_risk_energy' kernel. It contrasts with the 'catastrophic_tail_dominant' reading (prioritizing avoidance of extreme, low-probability events) and the 'expected_value_dominant' reading (minimizing aggregate expected harm). This reading emphasizes maintaining flexibility and optionality in the face of deep uncertainty."
+  "interval": {
+    "start": 0,
+    "end": 30
   },
-  "omegas": [
+  "commentary": {
+    "narrative_context": "This constraint, 'Acceptable Risk: Option Value Preserving Energy Pathways,' is a reading of the broader 'acceptable_risk_energy' kernel. It posits that under deep uncertainty, maintaining multiple energy pathways (e.g., nuclear, fossil fuels, renewables) is a form of risk management that preserves future decision flexibility. This approach avoids premature closure on any single pathway, even if some options appear suboptimal in the short term, recognizing that future conditions or technological breakthroughs might alter their relative value. It implies a moderate level of extraction from those who advocate for immediate, singular pathway optimization, and a moderate suppression of extreme positions.",
+    "key_agents": [
+      "future_generations: Primary beneficiary (generational/analytical) — benefits from preserved flexibility",
+      "energy_system_planners: Primary beneficiary (biographical/institutional) — benefits from a robust decision space",
+      "advocates_for_single_pathway: Primary target (biographical/organized) — bears the cost of delayed optimization",
+      "opportunity_costs_of_premature_closure: Victim (civilizational/analytical) — represents the foregone benefits of a more flexible future",
+      "environmental_advocates: Secondary target (biographical/organized) — may bear costs of continued fossil fuel viability",
+      "nuclear_industry: Secondary beneficiary (biographical/organized) — benefits from continued viability of nuclear options"
+    ],
+    "logic_rationale": "The constraint is classified as a Rope because it genuinely coordinates diverse interests around a shared goal of long-term resilience and flexibility, with participants being net beneficiaries of the preserved options. Extractiveness (0.4) is moderate, reflecting the costs of maintaining diverse pathways and the opportunity costs of not immediately optimizing for a single 'best' solution. Suppression (0.5) is also moderate, as it actively pushes back against strong advocacy for singular, immediate solutions (e.g., 'all renewables now' or 'all nuclear now') but does not eliminate them. Theater ratio is low (0.1) as the activities (R&D, infrastructure maintenance) are genuinely functional for option preservation. Accessibility collapse is low (0.3) because alternatives (single-pathway optimization) are still visible and advocated for, but their immediate adoption is constrained by the option-value logic. Resistance is moderate (0.4) from those who prefer immediate optimization.",
+    "perspectival_gap": "Energy system planners and future generations perceive this as a beneficial coordination mechanism, ensuring resilience. Advocates for single pathways, however, may view it as an inefficient allocation of resources, extracting from their preferred, 'optimal' solution by delaying its full implementation. The engine's per-seat classification will capture this divergence.",
+    "directionality_logic": "Future generations and energy system planners are beneficiaries, as they gain from the preserved flexibility and reduced long-term risk. Advocates for single pathways and the 'opportunity costs of premature closure' are victims, as resources are diverted from their preferred immediate optimization. Environmental advocates might be secondary targets if the strategy prolongs the use of fossil fuels, while the nuclear industry might be a secondary beneficiary if it keeps nuclear options viable.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the maintenance of options as pure extraction. While there are costs, the core justification is a genuine coordination problem (managing deep uncertainty for future benefit). If the 'deep uncertainty' were to resolve, and the constraint persisted without adapting, it would drift towards a Piton or Snare, as the coordination function atrophies and the costs become pure extraction. The current framing, however, is functional.",
+    "kernel_context": "This constraint is the 'option_value_preserving' reading of the 'acceptable_risk_energy' kernel. This kernel describes how societies define and manage acceptable risk in energy policy. Sibling readings include 'catastrophic_tail_dominant' (prioritizing avoidance of extreme, low-probability events) and 'expected_value_dominant' (optimizing for aggregate expected harm/benefit). This reading emphasizes maintaining flexibility under uncertainty."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'acceptable_risk_energy' kernel. Sibling readings include 'catastrophic_tail_dominant' and 'expected_value_dominant', each representing a distinct approach to energy risk management."
+  },
+  "stakeholders": [
     {
-      "id": "option_value_quantification",
-      "question": "How can the 'option value' of maintaining diverse energy pathways be robustly quantified and compared against more direct cost-benefit analyses?",
-      "resolution_mechanism": "Development of advanced real options analysis models specifically tailored to energy systems under deep uncertainty, validated by historical case studies of technological lock-in or missed opportunities.",
-      "impact": "If option value can be robustly quantified, it strengthens the justification for this reading, potentially shifting its perceived extractiveness downward by demonstrating the long-term benefits outweigh short-term costs. If not, it risks being seen as a less rigorous justification for maintaining costly options.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Quantification of option value in energy policy."
+      "name": "future_generations",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Benefits from a diverse and flexible energy portfolio, ensuring that future societies are not locked into suboptimal or dangerous pathways due to present-day decisions under uncertainty. This is an analytical seat representing their interests."
     },
     {
-      "id": "premature_closure_definition",
-      "question": "What constitutes 'premature closure' of an energy pathway, and how is it distinguished from a rational decision to phase out an obsolete or unviable technology?",
-      "resolution_mechanism": "Establishment of clear, agreed-upon criteria for technological viability, cost-effectiveness, and environmental impact that trigger a 'closure' decision, rather than simply 'maintaining optionality'.",
-      "impact": "A clear definition would reduce the perceived suppression on single-pathway advocates, as the framework would provide transparent conditions for when an option is genuinely no longer worth preserving. Without it, the constraint risks being seen as arbitrarily maintaining options.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Defining the boundary between preserving options and maintaining unviable ones."
+      "name": "energy_system_planners",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from having a wider array of viable options and technologies to deploy as future conditions unfold. This approach provides a robust framework for long-term planning, reducing the risk of stranded assets or technological lock-in. They administer the policies that maintain these pathways."
     },
     {
-      "id": "kernel_reading_divergence",
-      "question": "Is the 'option_value_preserving' reading genuinely distinct from 'expected_value_dominant' or 'catastrophic_tail_dominant', or is it a rhetorical reframing of similar underlying risk preferences?",
-      "resolution_mechanism": "Detailed analysis of policy decisions made under each framework, comparing resource allocation, technology choices, and risk tolerances. If the actual policy outcomes are consistently different, the readings are distinct.",
-      "impact": "If the readings are found to be structurally similar, it suggests a deeper, more fundamental 'acceptable_risk_energy' constraint, and the current reading might be reclassified as a variant or a less distinct articulation.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinguishing the structural differences between acceptable risk readings."
+      "name": "advocates_for_single_pathway",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears the cost of delayed or non-exclusive adoption of their preferred energy pathway (e.g., 'all renewables now' or 'all nuclear now'). They argue for immediate optimization based on current best estimates, viewing the maintenance of other options as inefficient or risky. Their advocacy is moderately suppressed by the option-value logic."
+    },
+    {
+      "name": "opportunity_costs_of_premature_closure",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Represents the foregone benefits or increased risks that would arise if society prematurely committed to a single energy pathway, losing the flexibility to adapt to unforeseen future challenges or opportunities. This is an analytical construct of a victim."
+    },
+    {
+      "name": "environmental_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "May bear the cost of continued viability of fossil fuel pathways, which this strategy might entail to preserve options. They advocate for rapid decarbonization and may see this approach as too slow or compromising on climate goals."
+    },
+    {
+      "name": "nuclear_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from policies that ensure the continued viability and development of nuclear energy as a long-term option, even if its immediate economic competitiveness is challenged. This approach provides a strategic rationale for its existence."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates long-term energy planning by ensuring a diverse portfolio of energy technologies and infrastructure remains viable, hedging against deep uncertainties in future climate, technology, and geopolitical landscapes. It prevents premature lock-in to potentially suboptimal pathways.",
+    "transfer_function": "Transfers resources (e.g., R&D funding, infrastructure maintenance, policy support) to maintain a broader range of energy options than immediate optimization would suggest. It also transfers the burden of uncertainty across generations, providing flexibility to future decision-makers.",
+    "absent_voices": "Advocates for immediate, radical shifts to a single, 'perfect' energy solution (e.g., 100% renewables by 2030, or a global nuclear build-out) are implicitly excluded or moderated. Their voices are present in public discourse but their preferred singular approach is suppressed by the option-value logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, energy policy would likely swing towards immediate optimization based on current dominant models (either expected value or catastrophic tail risk), leading to rapid divestment from 'suboptimal' pathways. This would reduce long-term flexibility and potentially lock future generations into a less resilient energy system, forcing a rearrangement of strategic planning.",
+    "founding_problem": "The founding problem was the risk of irreversible commitment to energy pathways under conditions of deep uncertainty (e.g., unknown future climate impacts, unpredictable technological breakthroughs, geopolitical shifts), leading to potentially catastrophic long-term consequences or foregone opportunities.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Decision theorists, strategic planners, and intergovernmental bodies (e.g., IPCC scenarios, IEA long-term outlooks) corroborate that deep uncertainty in energy futures remains a live problem, justifying the need for option value preservation. This is attested by academic literature and policy reports from outside the direct beneficiaries of specific energy industries."
+  },
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "formalized",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+        "sibling_id": "catastrophic_tail_dominant",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "acceptable_risk_energy__expected_value_dominant",
+        "sibling_id": "expected_value_dominant",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "future_flexibility_is_paramount",
+        "atom": "flexibility_under_uncertainty_is_value",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "instrumental"
       },
       {
-        "atom": "deep_uncertainty_precludes_single_optimization",
+        "atom": "irreversible_commitments_are_risky",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "robust_decision_making_under_uncertainty",
+    "reference_frame": "robust_decision_making_framework",
     "drift_state": {
       "moment": "contemporary",
       "direction": "stable",
@@ -164,14 +260,15 @@
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

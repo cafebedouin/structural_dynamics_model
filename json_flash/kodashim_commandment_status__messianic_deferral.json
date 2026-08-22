@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "99dd79c3-eb07-4cfc-8ee4-725088d89cce"
+    "story_uid": "9be75b39-1613-4fea-99cf-9c6791679b41"
   },
   "base_properties": {
     "extractiveness": 0.45,
@@ -14,56 +14,111 @@
     "resistance": 0.15,
     "claimed_type": "tangled_rope",
     "human_readable": "Kodashim Commandment Status: Messianic Deferral Reading",
-    "topic_domain": "religious_studies/halakhic_theory/commitment_system_analysis",
+    "topic_domain": "religious_studies/halakhic_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "rabbinic_authorities",
-      "messianic_aspirants"
+      "rabbinic_scholars",
+      "messianic_movement_adherents"
     ],
     "victims": [
       "present_generation_needs",
       "community_resources"
+    ],
+    "vindicated_propositions": [
+      "halakhic_continuity",
+      "messianic_redemption_doctrine"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_identification",
-      "question": "Is this constraint a genuine messianic deferral, or is it a reinterpretation that serves present institutional interests?",
-      "resolution_mechanism": "Analysis of historical shifts in halakhic interpretation and resource allocation patterns over time, particularly during periods of messianic fervor versus institutional consolidation.",
-      "impact": "If primarily serving institutional interests, the constraint's extractiveness is higher, and its classification shifts closer to a Snare, as the 'deferral' becomes a cover for ongoing resource capture.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "This constraint is the 'messianic_deferral' reading of the 'kodashim_commandment_status' kernel. Sibling readings ('performance_only', 'study_as_performance') would alter the victim set and the justification for present-day resource allocation."
+      "name": "rabbinic_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Interpret and transmit the Halakha, including the Kodashim laws. Their intellectual work maintains the 'readiness' for future restoration, solidifying their role as custodians of tradition and justifying the deferral. They benefit from the intellectual engagement and the perpetuation of their scholarly authority."
     },
     {
-      "id": "opportunity_cost_quantification",
-      "question": "What is the quantifiable opportunity cost of deferring present-generation needs and community resources to maintain readiness for future restoration?",
-      "resolution_mechanism": "Economic and social impact studies comparing resource allocation under this reading versus alternative readings that prioritize present-day community welfare or reallocate resources from readiness maintenance.",
-      "impact": "A high quantifiable opportunity cost would increase the effective extractiveness, particularly for 'present_generation_needs' and 'community_resources', potentially shifting the classification towards a Snare.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Quantifying the real-world impact of deferring present needs for future messianic readiness."
+      "name": "messianic_movement_adherents",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Derive meaning and purpose from the belief in the future restoration of the Temple and its sacrificial service. The deferral reading provides a framework for their eschatological hopes and justifies their present-day commitment to study and preparation. They are sustained by the narrative of future fulfillment."
+    },
+    {
+      "name": "present_generation_needs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Represent the immediate, tangible needs of the community (e.g., social welfare, economic development) that might be deprioritized or under-resourced due to the emphasis on abstract study and future-oriented preparation. They bear the opportunity cost of resources and attention diverted to the deferred commandment."
+    },
+    {
+      "name": "community_resources",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Financial and human capital within the community that is allocated towards maintaining scholarly institutions, publishing texts, and supporting individuals dedicated to the study of Kodashim, rather than being directed to other communal priorities. This represents the material cost of the deferral."
+    },
+    {
+      "name": "secular_critics",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Observe and critique the allocation of resources and intellectual effort towards a commandment that cannot be performed. They question the practical utility and opportunity costs, often from a utilitarian or humanist perspective, but have no direct power to alter the constraint."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the collective religious life and intellectual activity of a community around a shared future vision, ensuring the preservation of complex ritual knowledge across generations despite its present inapplicability.",
+    "transfer_function": "Transfers intellectual and material resources (scholarly effort, communal funds) from immediate communal needs and alternative religious expressions towards the maintenance of a deferred ritual system and the authority of its interpreters.",
+    "absent_voices": "Those who prioritize immediate social justice, economic development, or alternative forms of spiritual engagement would object to the extensive allocation of resources and intellectual focus on a presently unperformable commandment. Their voices are often marginalized by the dominant religious discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the messianic deferral reading vanished, the entire structure of rabbinic authority, scholarly institutions, and messianic movements would be fundamentally challenged. Resources and intellectual energy would be reallocated, and the community's collective identity and future orientation would undergo a profound reordering.",
+    "founding_problem": "The destruction of the Temple left a core set of commandments (Kodashim, sacrificial laws) unperformable, creating a crisis of religious continuity and meaning for a community whose covenantal life was centered on the Temple.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Rabbinic tradition and historical texts attest to the profound crisis caused by the Temple's destruction. While secular critics might question the 'problem' itself, the historical and theological sources within the tradition consistently corroborate the foundational challenge of maintaining covenantal life without the Temple."
+  },
+  "interval": {
+    "start": 0,
+    "end": 1950
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 800,
       "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.45
+      "time_point": 1200,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 1600,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
       "value": 0.45
     },
     {
@@ -73,69 +128,105 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 400,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.6
+      "time_point": 1200,
+      "value": 0.57
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 1600,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
       "value": 0.6
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.1
+      "time_point": 400,
+      "value": 0.07
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.1
+      "time_point": 800,
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 1200,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.095
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 30
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the 'messianic_deferral' reading of the Kodashim (sacrifices) commandment status within Halakhic Judaism. It asserts that while the Temple and its sacrificial rites are currently suspended, the commandments themselves are not obsolete. Instead, their study and the maintenance of readiness for their future restoration (in a rebuilt Temple) constitute a present obligation. This reading justifies the allocation of significant intellectual and communal resources towards a future-contingent practice, creating an opportunity cost for present-generation needs.",
-    "key_agents": [
-      "rabbinic_authorities: Agenda setter (institutional/arbitrage) — interpret and enforce the deferral, benefiting from the intellectual and spiritual capital it generates.",
-      "messianic_aspirants: Beneficiary (organized/identity_locked) — find purpose and meaning in the deferral, their identity fused with the expectation of future restoration.",
-      "present_generation_needs: Payer (powerless/constrained) — bear the opportunity cost of resources diverted to future readiness, such as communal funds for study instead of social welfare.",
-      "community_resources: Payer (powerless/constrained) — financial and human capital allocated to maintaining readiness for a future event, rather than addressing immediate communal challenges.",
-      "halakhic_scholars: Beneficiary (organized/identity_locked) — their careers and intellectual pursuits are centered on the study of these laws, reinforcing the deferral.",
-      "secular_community_members: Excluded (moderate/mobile) — may question the allocation of resources but lack formal authority within the religious framework."
-    ],
-    "logic_rationale": "The extractiveness (0.45) is moderate, reflecting the opportunity cost of diverting resources and attention from present needs to future readiness. Suppression (0.6) is significant, as questioning the messianic deferral can lead to social and religious ostracization within the community. Theater ratio (0.1) is low, as the study and readiness are genuinely believed to be functional for the future, not merely performative. Accessibility collapse (0.7) is high because within this framework, alternatives to maintaining readiness are largely foreclosed by theological commitment. Resistance (0.15) is low due to the strong social and theological pressures against questioning the deferral.",
-    "perspectival_gap": "Rabbinic authorities and messianic aspirants experience this as a vital, coordinative constraint, ensuring the continuity of tradition and the fulfillment of divine will. For present-generation needs and community resources, it operates as an extractive mechanism, diverting tangible benefits to an uncertain future. Halakhic scholars benefit from the intellectual capital and status derived from this study, while secular community members may see it as an inefficient allocation of resources.",
-    "directionality_logic": "Rabbinic authorities and messianic aspirants are beneficiaries (d near 0.0) as they gain spiritual authority, communal cohesion, and purpose from maintaining the deferral. Present-generation needs and community resources are victims (d near 1.0) as they bear the direct opportunity costs. Halakhic scholars are also beneficiaries, as their professional identity and livelihood are tied to the study of these laws. The constraint is actively enforced through social norms, religious education, and the authority of rabbinic leadership.",
-    "mandatrophy_analysis": "The constraint avoids being a Piton because the mandate (readiness for messianic restoration) is still considered live and actively pursued by beneficiaries, even if its direct fulfillment is deferred. It is not a pure Snare because there is a genuine coordination function (maintaining halakhic continuity and communal identity through shared expectation). It is a Tangled Rope because it coordinates the community around a shared future vision while simultaneously extracting resources and deferring present needs through the same structure, requiring active enforcement to maintain this balance.",
-    "kernel_context": "This constraint, 'kodashim_commandment_status__messianic_deferral', is one reading of the 'kodashim_commandment_status' kernel. It posits that sacrificial laws are suspended but not obsolete, requiring study and readiness for future restoration. Sibling readings include 'performance_only' (sacrifices are entirely suspended without the Temple) and 'study_as_performance' (studying the laws is itself the fulfillment of the commandment)."
+    "narrative_context": "This constraint describes the 'messianic deferral' reading of the Kodashim (sacrificial laws) commandment status within Jewish Halakhic theory. Following the destruction of the Second Temple, the performance of these commandments became impossible. This reading asserts that while performance is suspended, the commandments are not obsolete; rather, their study and theoretical maintenance are crucial for readiness for a future messianic restoration of the Temple. This reading frames the extensive scholarly engagement with these laws as a vital, active form of religious commitment, even in the absence of physical performance. The constraint is claimed as a Rope by its adherents, but its metrics reflect a Tangled Rope due to the opportunity costs and resource allocation it demands from the community.",
+    "logic_rationale": "The extractiveness (0.45) stems from the opportunity cost: resources (intellectual, financial, communal attention) are diverted to the study of unperformable laws, rather than immediate communal needs. Suppression (0.6) is moderate, arising from the strong social and religious pressure to conform to rabbinic authority and the messianic narrative, which discourages questioning the value of this deferral. Theater ratio (0.1) is low because the study is genuinely rigorous and believed to be functional for future readiness, not merely performative. Accessibility collapse (0.7) is high because for adherents, the alternative of simply abandoning these laws is largely unthinkable within the framework of Halakhic continuity. Resistance (0.15) is low, as overt resistance to this established religious framework is rare, though internal questioning and quiet re-prioritization of resources may occur.",
+    "perspectival_gap": "From the perspective of rabbinic scholars and messianic adherents, this constraint is a vital Rope, ensuring the continuity of tradition and preparing for redemption. From the perspective of those focused on present-generation needs or secular critics, it appears as a Tangled Rope, extracting resources and attention for a deferred, abstract goal, with the coordination function serving to legitimize this extraction.",
+    "directionality_logic": "Rabbinic scholars and messianic movement adherents are beneficiaries, as their authority, purpose, and identity are deeply intertwined with this reading. Present-generation needs and community resources are payers, bearing the opportunity costs and direct allocation of resources. Secular critics are observers, analyzing the dynamics without direct participation or enforcement power.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy by actively re-framing the 'suspension' as 'deferral with active preparation.' The mandate (to observe Kodashim) is not obsolete but transformed into a mandate for study and readiness. This active re-interpretation prevents the constraint from becoming a Piton, as there are clear beneficiaries (scholars, messianic adherents) who actively maintain its function, albeit a re-interpreted one. The 'founding problem status' being 'live' (though contested) further reinforces this, preventing a clear mandatrophy verdict.",
+    "kernel_context": "This constraint is the 'messianic_deferral' reading of the 'kodashim_commandment_status' kernel. This reading asserts that the sacrificial laws, though unperformable without the Temple, are not obsolete but suspended, requiring active study and preparation for a future messianic restoration. Sibling readings include 'performance_only' (laws are suspended, no present fulfillment) and 'study_as_performance' (study itself fulfills the commandment)."
   },
+  "omegas": [
+    {
+      "id": "opportunity_cost_quantification",
+      "question": "What is the quantifiable opportunity cost of resources (intellectual, financial, human capital) allocated to the study of Kodashim versus alternative communal needs?",
+      "resolution_mechanism": "Detailed economic and sociological studies within religious communities, comparing resource allocation patterns and their impact on various communal sectors.",
+      "impact": "A high quantifiable opportunity cost would strengthen the 'extraction' component of the constraint, potentially shifting its classification closer to a Snare from the perspective of the 'present_generation_needs' seat. A low cost would support the 'coordination' aspect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the real-world impact of resource allocation choices."
+    },
+    {
+      "id": "messianic_deferral_vs_performance_only",
+      "question": "Is the 'messianic deferral' reading genuinely distinct from a 'performance only' reading, or is the 'study for readiness' merely a sophisticated form of 'husk' maintenance?",
+      "resolution_mechanism": "Theological and philosophical analysis of the internal coherence and practical implications of each reading, particularly regarding the nature of 'readiness' and 'fulfillment' in the absence of performance.",
+      "impact": "If the 'study for readiness' is deemed functionally equivalent to 'husk' maintenance, the extractiveness might be re-evaluated as higher (more theater, less genuine coordination), potentially pushing the classification towards a Piton or Snare, as the coordination story becomes weaker.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing active deferral from passive suspension."
+    },
+    {
+      "id": "identity_lock_strength",
+      "question": "How strong is the 'identity_locked' exit option for rabbinic scholars and messianic adherents? Would a shift away from this reading fundamentally undermine their professional or spiritual identity?",
+      "resolution_mechanism": "Sociological studies of religious identity formation, interviews with individuals who have shifted their views on these matters, and analysis of institutional responses to such shifts.",
+      "impact": "If the identity lock is extremely strong, it amplifies the effective suppression and extractiveness for these groups, even if they are beneficiaries, as their 'benefit' is tied to a system with high internal costs for dissent. If weaker, it suggests more agency and less structural coercion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assessing the binding force of identity on adherence to the constraint."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "kodashim_commandment_status__performance_only",
-      "kodashim_commandment_status__study_as_performance"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'kodashim_commandment_status' kernel. This reading emphasizes future readiness and deferral, while 'performance_only' emphasizes present suspension, and 'study_as_performance' emphasizes intellectual engagement as fulfillment. Each reading has distinct beneficiaries, victims, and extractiveness profiles."
+      "halakhic_curriculum_design",
+      "communal_resource_allocation_priorities"
+    ]
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -143,45 +234,46 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "kodashim_commandment_status__performance_only",
+        "sibling_id": "performance_only",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "kodashim_commandment_status__study_as_performance",
-        "relation": "influences"
+        "sibling_id": "study_as_performance",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "commandment_eternal_though_suspended",
+        "atom": "commandment_temporally_suspended_not_obsolete",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "theological"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "messianic_era_restores_temple",
-        "role": "secondary",
+        "atom": "study_maintains_readiness_for_restoration",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       }
     ],
-    "reference_frame": "halakhic_continuity_through_deferral",
+    "reference_frame": "post_temple_destruction_halakha",
     "drift_state": {
-      "moment": "contemporary_secular_era",
-      "direction": "practice_drift",
+      "moment": "contemporary_era",
+      "direction": "stable",
       "magnitude": "minor",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

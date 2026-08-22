@@ -39,10 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +58,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,25 +69,21 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: biblical_authority__sola_scriptura_reading
- *   human_readable: Sola Scriptura: Scripture Alone as Sufficient and Self-Interpreting Authority
+ *   human_readable: Sola Scriptura as Self-Interpreting Authority
  *   domain: theology/religious_studies/history_of_christianity
  *
  * SUMMARY:
- *   This constraint represents the 'Sola Scriptura' principle, a foundational
- *   tenet of many Protestant traditions, asserting that the Bible is the
- *   sole, sufficient, and self-interpreting source of religious authority for
- *   Christian doctrine and practice. It emphasizes individual interpretation
- *   and congregational autonomy, leading to lower clerical extraction but
- *   also higher doctrinal fragmentation across communities. This is one
- *   reading of the broader 'biblical_authority' kernel.
+ *   This constraint represents the 'sola scriptura' principle, a foundational
+ *   tenet of the Protestant Reformation, asserting that Scripture alone is
+ *   the sufficient and self-interpreting authority for Christian doctrine and
+ *   practice. It is a reading of the broader 'biblical_authority' kernel.
+ *   This reading emphasizes individual access to and interpretation of the
+ *   Bible, leading to reduced clerical extraction but increased doctrinal
+ *   fragmentation. The metrics reflect a relatively low extractiveness and
+ *   suppression, consistent with a coordination mechanism that empowers
+ *   individuals, but with a rising trend in extractiveness as the costs of
+ *   doctrinal fragmentation become more apparent.
  *
- * KEY AGENTS:
- *   - lay_believers: Primary beneficiary (moderate/mobile) — gains interpretive autonomy.
- *   - individual_interpreters: Primary beneficiary (moderate/mobile) — gains direct access to authority.
- *   - clergy: Agenda setter (organized/constrained) — shifts role from authoritative interpreter to facilitator/teacher.
- *   - denominational_bodies: Payer/Agenda setter (institutional/constrained) — struggles with maintaining doctrinal coherence.
- *   - doctrinal_coherence_across_communities: Victim (analytical/trapped) — suffers from lack of centralized adjudication.
- *   - theologians: Observer (analytical/analytical) — analyzes interpretive methods and doctrinal outcomes.
  */
 
 /* ==========================================================================
@@ -91,13 +91,13 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(biblical_authority__sola_scriptura_reading, 0.3).
-domain_priors:suppression_score(biblical_authority__sola_scriptura_reading, 0.2).
+domain_priors:base_extractiveness(biblical_authority__sola_scriptura_reading, 0.25).
+domain_priors:suppression_score(biblical_authority__sola_scriptura_reading, 0.15).
 domain_priors:theater_ratio(biblical_authority__sola_scriptura_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(biblical_authority__sola_scriptura_reading, extractiveness, 0.3).
-narrative_ontology:constraint_metric(biblical_authority__sola_scriptura_reading, suppression_requirement, 0.2).
+narrative_ontology:constraint_metric(biblical_authority__sola_scriptura_reading, extractiveness, 0.25).
+narrative_ontology:constraint_metric(biblical_authority__sola_scriptura_reading, suppression_requirement, 0.15).
 narrative_ontology:constraint_metric(biblical_authority__sola_scriptura_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
@@ -106,40 +106,84 @@ narrative_ontology:constraint_metric(biblical_authority__sola_scriptura_reading,
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(biblical_authority__sola_scriptura_reading, rope).
-narrative_ontology:human_readable(biblical_authority__sola_scriptura_reading, "Sola Scriptura: Scripture Alone as Sufficient and Self-Interpreting Authority").
+narrative_ontology:human_readable(biblical_authority__sola_scriptura_reading, "Sola Scriptura as Self-Interpreting Authority").
 narrative_ontology:topic_domain(biblical_authority__sola_scriptura_reading, "theology/religious_studies/history_of_christianity").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(biblical_authority__sola_scriptura_reading, '8b25adbf-43bb-45d6-87ef-a422a1e14b7e').
-narrative_ontology:cs_kernel_codification('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', fixed_text).
-narrative_ontology:cs_authority_grounding('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', distributed).
-narrative_ontology:cs_reading_relation('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', biblical_authority__tradition_scripture_reading, forecloses).
-narrative_ontology:cs_reading_relation('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', biblical_authority__conciliar_reading, forecloses).
-narrative_ontology:cs_axiom('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', foundational, scripture_is_perspicuous).
+narrative_ontology:cs_story_uid(biblical_authority__sola_scriptura_reading, '8420e98d-d504-4b70-8223-9b1727e54e3d').
+narrative_ontology:cs_kernel_codification('8420e98d-d504-4b70-8223-9b1727e54e3d', fixed_text).
+narrative_ontology:cs_authority_grounding('8420e98d-d504-4b70-8223-9b1727e54e3d', distributed).
+narrative_ontology:cs_reading_relation('8420e98d-d504-4b70-8223-9b1727e54e3d', biblical_authority__tradition_scripture_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8420e98d-d504-4b70-8223-9b1727e54e3d', biblical_authority__conciliar_reading, coexists_with).
+narrative_ontology:cs_axiom('8420e98d-d504-4b70-8223-9b1727e54e3d', foundational, scripture_alone_is_sufficient).
+narrative_ontology:cs_axiom_status(scripture_alone_is_sufficient, holdable).
+narrative_ontology:cs_axiom_grounding('8420e98d-d504-4b70-8223-9b1727e54e3d', scripture_alone_is_sufficient, deontological).
+narrative_ontology:cs_axiom('8420e98d-d504-4b70-8223-9b1727e54e3d', foundational, scripture_is_perspicuous).
 narrative_ontology:cs_axiom_status(scripture_is_perspicuous, holdable).
-narrative_ontology:cs_axiom_grounding('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', scripture_is_perspicuous, deontological).
-narrative_ontology:cs_axiom('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', foundational, tradition_is_subordinate_to_scripture).
-narrative_ontology:cs_axiom_status(tradition_is_subordinate_to_scripture, holdable).
-narrative_ontology:cs_axiom_grounding('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', tradition_is_subordinate_to_scripture, deontological).
-narrative_ontology:cs_reference_frame('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', reformation_era_scriptural_primacy).
-narrative_ontology:cs_drift_state('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', contemporary_theological_discourse, gap(practice_drift, minor, true)).
-narrative_ontology:cs_created_at('8b25adbf-43bb-45d6-87ef-a422a1e14b7e', '').
+narrative_ontology:cs_axiom_grounding('8420e98d-d504-4b70-8223-9b1727e54e3d', scripture_is_perspicuous, deontological).
+narrative_ontology:cs_reference_frame('8420e98d-d504-4b70-8223-9b1727e54e3d', reformation_era_individual_access).
+narrative_ontology:cs_drift_state('8420e98d-d504-4b70-8223-9b1727e54e3d', contemporary_theological_pluralism, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('8420e98d-d504-4b70-8223-9b1727e54e3d', '').
 narrative_ontology:cs_kernel_id(biblical_authority__sola_scriptura_reading, biblical_authority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(biblical_authority__sola_scriptura_reading, lay_believers).
 narrative_ontology:constraint_beneficiary(biblical_authority__sola_scriptura_reading, individual_interpreters).
 narrative_ontology:constraint_victim(biblical_authority__sola_scriptura_reading, doctrinal_coherence_across_communities).
+narrative_ontology:constraint_vindicates(biblical_authority__sola_scriptura_reading, priesthood_of_all_believers).
+narrative_ontology:constraint_vindicates(biblical_authority__sola_scriptura_reading, individual_conscience).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Empowered to read and interpret scripture for themselves, without requiring clerical mediation. This grants significant autonomy in matters of faith and practice, but also places the burden of interpretation on the individual.
+narrative_ontology:constraint_stakeholder(biblical_authority__sola_scriptura_reading, lay_believers, beneficiary,
+    moderate, biographical, mobile, local).
+
+% Benefits from the principle that scripture is accessible and understandable to all, fostering a direct relationship with the text. This leads to diverse interpretations and the formation of new theological perspectives.
+narrative_ontology:constraint_stakeholder(biblical_authority__sola_scriptura_reading, individual_interpreters, beneficiary,
+    moderate, biographical, mobile, local).
+
+% While still providing guidance and teaching, their authority is derived from their ability to expound scripture, not from an inherent magisterial role. Their interpretations are subject to challenge by lay members who also claim direct access to the text.
+narrative_ontology:constraint_stakeholder(biblical_authority__sola_scriptura_reading, clerical_leadership, agenda_setter,
+    organized, generational, constrained, regional).
+
+% Suffers from the lack of a centralized, authoritative interpretive body. While individual communities may achieve internal coherence, the broader landscape of 'sola scriptura' traditions is marked by significant theological diversity and fragmentation, making inter-community doctrinal agreement difficult.
+narrative_ontology:constraint_stakeholder(biblical_authority__sola_scriptura_reading, doctrinal_coherence_across_communities, payer,
+    powerless, generational, trapped, global).
+narrative_ontology:stakeholder_non_agent(biblical_authority__sola_scriptura_reading, doctrinal_coherence_across_communities).
+
+% Explicitly rejected as a necessary interpretive authority. While historical insights may be valued, their pronouncements are not binding in the same way as scripture itself, leading to their exclusion from the primary interpretive framework.
+narrative_ontology:constraint_stakeholder(biblical_authority__sola_scriptura_reading, ecumenical_councils_and_patristic_consensus, excluded,
+    institutional, civilizational, identity_locked, universal).
+narrative_ontology:stakeholder_non_agent(biblical_authority__sola_scriptura_reading, ecumenical_councils_and_patristic_consensus).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates individual believers around a common textual authority, enabling decentralized theological development and congregational autonomy.
+% TRANSFER_FUNCTION: Transfers interpretive authority from a centralized clerical or traditional body to the individual believer and local community, fostering spiritual independence.
+% ABSENT_VOICES: Those who advocate for the necessity of tradition or conciliar authority for interpretation are structurally excluded from this framework, as their claims are deemed secondary or unnecessary to the direct understanding of scripture.
+% DISAPPEARANCE_RATIONALE: If 'sola scriptura' vanished, the theological landscape of Protestantism would fundamentally shift. Individual interpretive autonomy would be undermined, leading to a scramble for new authoritative sources, likely resulting in either a return to traditional authorities or a complete collapse of shared doctrinal frameworks.
+% FOUNDING_PROBLEM: The perceived corruption and unbiblical practices of the medieval church, coupled with a desire to make religious authority directly accessible to the common person.
+% FOUNDING_PROBLEM_CORROBORATION: Historians of the Reformation and contemporary theologians from various traditions corroborate the historical context and ongoing relevance of the desire for direct access to scripture and resistance to perceived external authorities. Lay believers continue to attest to the importance of individual interpretation.
+narrative_ontology:disappearance_verdict(biblical_authority__sola_scriptura_reading, world_rearranges).
+narrative_ontology:founding_problem_status(biblical_authority__sola_scriptura_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(biblical_authority__sola_scriptura_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(biblical_authority__sola_scriptura_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(biblical_authority__sola_scriptura_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(biblical_authority__sola_scriptura_reading, 0.25, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -154,16 +198,16 @@ narrative_ontology:story_seed(biblical_authority__sola_scriptura_reading, 'none'
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.3) because the principle inherently resists centralized control over interpretation, thus limiting opportunities for institutional rent-seeking. Suppression is also low (0.2) as it promotes individual conscience and discourages coercive enforcement of specific interpretations beyond local congregational norms. Theater ratio is low (0.1) as the principle is generally enacted directly, with little performative maintenance masking other functions. The metrics reflect the intended structural delta of low clerical extraction and high individual autonomy.
+ *   The low extractiveness (0.25) reflects the principle's intent to remove intermediaries and their associated costs, empowering lay believers. Suppression (0.15) is also low, as the constraint actively resists external interpretive authorities rather than imposing them. The initial high suppression_requirement in 1517 reflects the active struggle against established church authority, which then declined as the principle became more established. Theater ratio is low (0.1), indicating that the principle's function (individual interpretation) is largely genuine, though some performative aspects may exist in defending its purity against perceived compromises. Accessibility collapse is moderate (0.4) because while it removes external barriers, the complexity of scripture itself still presents interpretive challenges. Resistance is moderate (0.3) as it faces ongoing challenges from traditions that emphasize other forms of authority.
  *
  * PERSPECTIVAL GAP:
- *   Clergy within 'sola scriptura' traditions experience this constraint as a Rope, enabling their role as teachers and facilitators, but also as a Payer, as they lose the authoritative interpretive monopoly. Lay believers experience it as a Rope, granting them direct access to divine authority. Doctrinal coherence, as an abstract entity, is a victim, as the lack of a central adjudicator leads to fragmentation.
+ *   From the perspective of lay believers, 'sola scriptura' is a liberating rope, freeing them from hierarchical control. From the perspective of those concerned with church unity or historical continuity, it might appear as a tangled rope or even a snare, leading to fragmentation and theological instability. The engine's per-seat classification will capture this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Lay believers and individual interpreters are beneficiaries (d near 0.0) as they gain direct access to scripture and interpretive freedom. Clergy and denominational bodies are agenda setters/payers (d near 0.5-0.7) as they administer the principle but also bear the costs of maintaining coherence without a centralized authority. Doctrinal coherence is a victim (d near 1.0) as it is structurally undermined by the principle's emphasis on individual interpretation.
+ *   Lay believers and individual interpreters are clear beneficiaries, gaining direct access to religious authority. Clerical leadership, while still present, shifts from an exclusive interpretive authority to a facilitative role, reducing their extractive capacity. Doctrinal coherence across communities is a 'victim' in the sense that the principle's emphasis on individual interpretation inherently leads to diverse and sometimes conflicting theological positions, making unified doctrine difficult to maintain.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's mandate (individual access to scripture, resistance to clerical hierarchy) remains live. The classification as Rope prevents mislabeling the resulting doctrinal fragmentation as pure extraction, acknowledging the genuine coordination function of empowering individual believers. The tension between individual autonomy and collective coherence is inherent to this reading, not a sign of mandatrophy.
+ *   The constraint's mandate (empowering individuals and decentralizing authority) remains largely live, though its status is 'contested' due to ongoing debates about its practical consequences (e.g., denominationalism, theological relativism). The low theater ratio and relatively stable extractiveness suggest it has not significantly atrophied into a piton, but the rising extractiveness over time indicates that the costs of its operation (doctrinal fragmentation) are accumulating.
  */
 
 /* ==========================================================================
@@ -171,60 +215,66 @@ narrative_ontology:story_seed(biblical_authority__sola_scriptura_reading, 'none'
    ========================================================================== */
 
 omega_variable(
-    sola_scriptura_vs_tradition_ambiguity,
-    'Is ''Scripture alone'' truly self-interpreting, or does it implicitly rely on an unacknowledged interpretive tradition?',
-    'Comparative analysis of interpretive divergences across ''sola scriptura'' denominations; historical tracing of how initial interpretations became normative.',
-    'If an unacknowledged tradition is found to be operative, the constraint''s claimed self-sufficiency is weakened, potentially increasing its effective extractiveness by obscuring the true source of interpretive authority.',
+    doctrinal_fragmentation_cost,
+    'Is the observed doctrinal fragmentation an inherent, unavoidable cost of individual interpretive freedom, or a remediable side-effect of insufficient communal interpretive practices within the ''sola scriptura'' framework?',
+    'Empirical study of ''sola scriptura'' communities that have successfully maintained high levels of doctrinal coherence through robust communal interpretive disciplines, compared to those that have not.',
+    'If remediable, the ''extractiveness'' attributed to doctrinal incoherence could be reduced, potentially reclassifying the constraint as a purer rope. If inherent, the current extractiveness is a necessary cost of the principle.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(sola_scriptura_vs_tradition_ambiguity, conceptual, 'Ambiguity of ''self-interpreting'' in practice.').
+narrative_ontology:omega_variable(doctrinal_fragmentation_cost, empirical, 'Assesses whether doctrinal fragmentation is a necessary or contingent outcome of ''sola scriptura''.').
 
 omega_variable(
-    doctrinal_fragmentation_as_cost_or_feature,
-    'Is the resulting doctrinal fragmentation (victim: doctrinal_coherence_across_communities) an unavoidable cost of lay autonomy, or a structural flaw that undermines the constraint''s coordination function?',
-    'Empirical study of the impact of fragmentation on faith communities and individual believers; theological arguments for the necessity of a unified interpretive authority.',
-    'If fragmentation is deemed a structural flaw, the constraint''s classification might shift towards a Tangled Rope, as the coordination (lay autonomy) comes at a significant, unacknowledged cost (coherence).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(doctrinal_fragmentation_as_cost_or_feature, preference, 'Evaluating doctrinal fragmentation as a cost or feature.').
-
-omega_variable(
-    kernel_reading_identification,
-    'This constraint is the ''sola_scriptura_reading'' of the ''biblical_authority'' kernel. How would its structural properties change if viewed through the ''tradition_scripture_reading'' or ''conciliar_reading''?',
-    'Analyze the structural deltas: ''tradition_scripture_reading'' would likely increase clerical extraction and suppression, while ''conciliar_reading'' would shift authority to historical councils, potentially reducing individual interpretive autonomy.',
-    'The ''sola_scriptura_reading'' emphasizes lay autonomy and low clerical extraction. Sibling readings would introduce higher institutional authority, potentially increasing extractiveness and suppression for individual believers.',
+    self_interpreting_ambiguity,
+    'To what extent is Scripture truly ''self-interpreting'' without any external interpretive framework (e.g., historical context, linguistic tools, theological presuppositions)?',
+    'Conceptual analysis of hermeneutical theory and empirical observation of interpretive disagreements even among those committed to ''sola scriptura''.',
+    'If Scripture is not entirely self-interpreting, then the ''sola scriptura'' reading implicitly relies on unacknowledged interpretive traditions or tools, which could introduce hidden forms of authority or extraction, pushing extractiveness upward.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'Identifies this as one reading of the ''biblical_authority'' kernel and outlines structural deltas of sibling readings.').
+narrative_ontology:omega_variable(self_interpreting_ambiguity, conceptual, 'Examines the conceptual coherence of Scripture''s ''self-interpreting'' claim.').
+
+omega_variable(
+    clerical_authority_reconstitution,
+    'Does the ''sola scriptura'' principle, by decentralizing authority, merely shift the locus of clerical authority from a formal hierarchy to informal charismatic leaders or influential scholars, thereby reconstituting extraction in a different form?',
+    'Sociological studies of ''sola scriptura'' communities to identify patterns of informal authority and their impact on individual interpretive freedom and resource allocation.',
+    'If informal authority structures effectively re-centralize interpretive power and extract resources (e.g., through control of publishing, media, or educational institutions), the effective extractiveness of the constraint would be higher than currently measured.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(clerical_authority_reconstitution, empirical, 'Investigates whether informal authority replaces formal clerical authority under ''sola scriptura''.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(biblical_authority__sola_scriptura_reading, 0, 200).
+narrative_ontology:interval(biblical_authority__sola_scriptura_reading, 1517, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(bibl_tr_t0, biblical_authority__sola_scriptura_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(bibl_tr_t100, biblical_authority__sola_scriptura_reading, theater_ratio, 100, 0.1).
-narrative_ontology:measurement(bibl_tr_t200, biblical_authority__sola_scriptura_reading, theater_ratio, 200, 0.1).
+narrative_ontology:measurement(bibl_tr_t1517, biblical_authority__sola_scriptura_reading, theater_ratio, 1517, 0.05).
+narrative_ontology:measurement(bibl_tr_t1600, biblical_authority__sola_scriptura_reading, theater_ratio, 1600, 0.07).
+narrative_ontology:measurement(bibl_tr_t1750, biblical_authority__sola_scriptura_reading, theater_ratio, 1750, 0.08).
+narrative_ontology:measurement(bibl_tr_t1900, biblical_authority__sola_scriptura_reading, theater_ratio, 1900, 0.09).
+narrative_ontology:measurement(bibl_tr_t2024, biblical_authority__sola_scriptura_reading, theater_ratio, 2024, 0.1).
 
 % Extraction over time
-narrative_ontology:measurement(bibl_be_t0, biblical_authority__sola_scriptura_reading, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(bibl_be_t100, biblical_authority__sola_scriptura_reading, base_extractiveness, 100, 0.28).
-narrative_ontology:measurement(bibl_be_t200, biblical_authority__sola_scriptura_reading, base_extractiveness, 200, 0.3).
+narrative_ontology:measurement(bibl_be_t1517, biblical_authority__sola_scriptura_reading, base_extractiveness, 1517, 0.1).
+narrative_ontology:measurement(bibl_be_t1600, biblical_authority__sola_scriptura_reading, base_extractiveness, 1600, 0.15).
+narrative_ontology:measurement(bibl_be_t1750, biblical_authority__sola_scriptura_reading, base_extractiveness, 1750, 0.2).
+narrative_ontology:measurement(bibl_be_t1900, biblical_authority__sola_scriptura_reading, base_extractiveness, 1900, 0.23).
+narrative_ontology:measurement(bibl_be_t2024, biblical_authority__sola_scriptura_reading, base_extractiveness, 2024, 0.25).
 
 % Suppression requirement over time
-narrative_ontology:measurement(bibl_su_t0, biblical_authority__sola_scriptura_reading, suppression_requirement, 0, 0.15).
-narrative_ontology:measurement(bibl_su_t100, biblical_authority__sola_scriptura_reading, suppression_requirement, 100, 0.18).
-narrative_ontology:measurement(bibl_su_t200, biblical_authority__sola_scriptura_reading, suppression_requirement, 200, 0.2).
+narrative_ontology:measurement(bibl_su_t1517, biblical_authority__sola_scriptura_reading, suppression_requirement, 1517, 0.8).
+narrative_ontology:measurement(bibl_su_t1600, biblical_authority__sola_scriptura_reading, suppression_requirement, 1600, 0.6).
+narrative_ontology:measurement(bibl_su_t1750, biblical_authority__sola_scriptura_reading, suppression_requirement, 1750, 0.4).
+narrative_ontology:measurement(bibl_su_t1900, biblical_authority__sola_scriptura_reading, suppression_requirement, 1900, 0.2).
+narrative_ontology:measurement(bibl_su_t2024, biblical_authority__sola_scriptura_reading, suppression_requirement, 2024, 0.15).
 
 
 /* ==========================================================================
@@ -232,13 +282,6 @@ narrative_ontology:measurement(bibl_su_t200, biblical_authority__sola_scriptura_
    ========================================================================== */
 
 narrative_ontology:coordination_type(biblical_authority__sola_scriptura_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(biblical_authority__sola_scriptura_reading, 0.08).
-narrative_ontology:affects_constraint(biblical_authority__sola_scriptura_reading, biblical_authority__tradition_scripture_reading).
-narrative_ontology:affects_constraint(biblical_authority__sola_scriptura_reading, biblical_authority__conciliar_reading).
-narrative_ontology:affects_constraint(biblical_authority__sola_scriptura_reading, denominational_autonomy_norms).
-
-% DUAL FORMULATION NOTE:
-% This constraint is one reading of the 'biblical_authority' kernel. Its structural properties (low clerical extraction, high doctrinal fragmentation) are distinct from sibling readings that emphasize tradition or conciliar authority. Each reading is modeled as a separate constraint.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

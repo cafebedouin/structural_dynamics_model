@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "16e81125-18b0-4210-9f0a-194e466adaab"
+    "story_uid": "2b0a4d7c-e123-43de-bcd0-b354d84b4d7b"
   },
   "base_properties": {
     "extractiveness": 0.65,
@@ -13,168 +13,204 @@
     "accessibility_collapse": 0.45,
     "resistance": 0.75,
     "claimed_type": "tangled_rope",
-    "human_readable": "NPT Article VI as Reciprocal Disarmament Obligation",
+    "human_readable": "NPT Article VI as Reciprocal Disarmament Bargain",
     "topic_domain": "international_law/nuclear_nonproliferation/regime_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "non_nuclear_weapon_states_coalition",
-      "global_security_advocates"
+      "non_nuclear_weapon_states_coalition"
     ],
     "victims": [
       "nuclear_weapon_states",
-      "nws_military_industrial_complexes"
+      "non_nuclear_weapon_states_constrained"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "article_vi_enforceability",
-      "question": "Is Article VI's disarmament obligation genuinely enforceable, or is it aspirational without a verification mechanism?",
-      "resolution_mechanism": "Establishment of a robust, intrusive, and universally accepted verification regime for NWS disarmament, or a UN Security Council resolution explicitly defining non-compliance and penalties.",
-      "impact": "If enforceable, the constraint's extractiveness from NWS would be higher and its suppression of NNWS alternatives lower; if purely aspirational, it functions more as a Snare for NNWS, with the NWS as beneficiaries of a legitimizing cover story.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity of Article VI's binding force without verification."
+      "name": "non_nuclear_weapon_states_coalition",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefits from the promise of eventual disarmament by NWS, which legitimizes their own non-acquisition. They gain normative leverage to press for Article VI compliance, but their security remains contingent on NWS actions. Their exit options are constrained by the security dilemma."
     },
     {
-      "id": "reciprocal_bargain_vs_oligopoly",
-      "question": "Is the NPT fundamentally a reciprocal bargain (disarmament for nonproliferation), or an oligopoly enforcement mechanism (NWS retain weapons, NNWS forgo them)?",
-      "resolution_mechanism": "A shift in NWS behavior towards concrete, time-bound disarmament steps, or a formal declaration by a majority of NNWS that the bargain has failed.",
-      "impact": "If a genuine reciprocal bargain, the constraint is a Tangled Rope with NWS as victims of their own commitments; if an oligopoly, it is a Snare for NNWS, with NWS as beneficiaries.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Contested framing of the NPT's core purpose."
+      "name": "nuclear_weapon_states",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are obligated by Article VI to pursue good-faith negotiations on disarmament. This reading places their strategic autonomy and modernization programs under normative pressure, making them 'payers' of the disarmament bargain. Their exit is constrained by the political costs of treaty withdrawal."
     },
     {
-      "id": "npt_kernel_reading_identification",
-      "question": "This constraint is the 'reciprocal_disarmament_reading' of the 'npt_treaty_1970' kernel. How would the classification change under the 'oligopoly_enforcement_reading' or 'withdrawal_sovereignty_reading'?",
-      "resolution_mechanism": "Analyzing the structural properties of the sibling readings as separate constraints.",
-      "impact": "The 'oligopoly_enforcement_reading' would likely classify as a Snare for NNWS, with higher extractiveness and suppression. The 'withdrawal_sovereignty_reading' would emphasize the fragility of the entire regime, potentially classifying as a Piton or a highly contested Tangled Rope.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the NPT kernel; other readings yield different classifications."
+      "name": "non_nuclear_weapon_states_constrained",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Have foregone nuclear weapons under the NPT, expecting reciprocal disarmament from NWS. They bear the cost of non-acquisition without seeing the promised disarmament, leading to a sense of structural injustice. Their identity as responsible non-proliferators makes withdrawal difficult."
+    },
+    {
+      "name": "international_atomic_energy_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Administers safeguards for horizontal nonproliferation (Articles I-II) but lacks a mandate or verification mechanism for Article VI disarmament. This reading highlights the gap in its enforcement capacity regarding the reciprocal bargain."
+    },
+    {
+      "name": "global_civil_society_disarmament_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates for the full and urgent implementation of Article VI, viewing it as a moral and legal imperative. They are excluded from direct negotiation but exert pressure through public campaigns and international forums."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates global security by establishing a reciprocal bargain: NNWS forego nuclear weapons in exchange for NWS pursuing disarmament, aiming to prevent both horizontal and vertical proliferation.",
+    "transfer_function": "Transfers the right to develop nuclear weapons from NNWS to NWS (who retain them temporarily), in exchange for a promise of future disarmament. It also transfers security assurances and peaceful nuclear technology to NNWS.",
+    "absent_voices": "States that have withdrawn from the NPT or never joined, arguing the treaty is inherently discriminatory, would object to the continued retention of nuclear weapons by NWS. They are absent from the NPT review process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the NPT's reciprocal disarmament obligation vanished, the global nonproliferation regime would collapse. Many NNWS would likely pursue nuclear weapons, leading to a rapid increase in horizontal proliferation and a drastically less stable international security environment.",
+    "founding_problem": "The problem of preventing the spread of nuclear weapons (horizontal proliferation) while also addressing the existential threat posed by existing nuclear arsenals (vertical proliferation), through a grand bargain.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The non-nuclear-weapon states coalition consistently attests that the founding problem of vertical proliferation remains live and unaddressed, citing the continued modernization of NWS arsenals. Independent security analysts and UN reports corroborate the ongoing threat and the lack of progress on disarmament."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1970,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.55
+      "time_point": 2000,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.6
+      "time_point": 2010,
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 2024,
       "value": 0.65
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 40,
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
       "value": 0.68
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 50,
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.7
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1970,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
       "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2000,
       "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 2010,
       "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
+      "time_point": 2024,
       "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.72
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.75
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 50
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the reading of the Nuclear Non-Proliferation Treaty (NPT) that emphasizes Article VI as a binding legal obligation for Nuclear Weapon States (NWS) to pursue disarmament with temporal urgency. It frames horizontal nonproliferation (NNWS not acquiring weapons) and vertical nonproliferation (NWS disarming) as a reciprocal bargain. From this perspective, the NPT is a Tangled Rope: it coordinates global security by preventing proliferation, but extracts from NWS by constraining their strategic autonomy and from NNWS by denying them a perceived security equalizer, while the lack of NWS disarmament verification creates an asymmetric burden.",
+    "narrative_context": "This constraint models the NPT as a reciprocal disarmament bargain, emphasizing Article VI's binding obligation for Nuclear Weapon States (NWS) to disarm, in exchange for Non-Nuclear Weapon States (NNWS) foregoing nuclear weapons. This reading views horizontal and vertical nonproliferation as two sides of the same coin, with temporal urgency for NWS disarmament. The increasing extractiveness and suppression over time reflect the growing frustration of NNWS with the lack of NWS disarmament progress, and the increasing enforcement required to maintain the horizontal nonproliferation norm in the face of perceived NWS non-compliance.",
     "key_agents": [
-      "nuclear_weapon_states: Primary target/payer (institutional/constrained) — bears extraction from disarmament obligation, but also benefits from nonproliferation.",
-      "non_nuclear_weapon_states_coalition: Primary beneficiary (organized/constrained) — benefits from nonproliferation, but pays by forgoing nuclear weapons.",
-      "international_atomic_energy_agency: Agenda setter (institutional/constrained) — enforces horizontal nonproliferation, but lacks mandate for vertical disarmament verification.",
-      "global_security_advocates: Beneficiary (organized/analytical) — benefits from reduced proliferation risk, advocates for full Article VI implementation.",
-      "nws_military_industrial_complexes: Victim (institutional/trapped) — bears extraction from potential disarmament, resists constraints on modernization."
+      "non_nuclear_weapon_states_coalition: Primary beneficiary (organized/constrained) – gains normative leverage, but security remains contingent.",
+      "nuclear_weapon_states: Primary payer (institutional/constrained) – bears the normative cost of delayed disarmament, strategic autonomy constrained.",
+      "non_nuclear_weapon_states_constrained: Secondary payer (moderate/identity_locked) – bears the cost of non-acquisition without reciprocal disarmament.",
+      "international_atomic_energy_agency: Agenda setter (institutional/constrained) – enforces horizontal nonproliferation, but lacks mandate for Article VI.",
+      "global_civil_society_disarmament_advocates: Excluded (organized/mobile) – advocates for full Article VI implementation, but without direct negotiation power."
     ],
-    "logic_rationale": "The extractiveness (0.65) is high because NWS are compelled to forgo strategic advantages and NNWS forgo a perceived security equalizer. Suppression (0.70) is significant due to the active enforcement of horizontal nonproliferation and the diplomatic pressure on NWS. Theater ratio (0.40) reflects the performative aspects of NWS disarmament commitments that often lack concrete action or verification. The rising trend in extractiveness and suppression over time reflects the increasing frustration of NNWS with the slow pace of NWS disarmament and the hardening of nonproliferation enforcement.",
-    "perspectival_gap": "NWS experience this constraint as a necessary, albeit sometimes inconvenient, framework for global stability that legitimizes their existing arsenals while preventing new entrants. NNWS, particularly those in the 'coalition,' experience it as an increasingly unfair bargain where their commitments are strictly enforced, but NWS obligations are not met with similar urgency or verification. The engine's per-seat classification should reflect this divergence, with NWS showing a more beneficiary-like profile (despite being 'victims' of the disarmament obligation) due to the lack of enforcement, and NNWS showing a more target-like profile.",
-    "directionality_logic": "The 'non_nuclear_weapon_states_coalition' are beneficiaries of horizontal nonproliferation (d=0.1), but also bear the cost of forgoing nuclear weapons (d=0.6), leading to a net moderate target directionality. 'Nuclear_weapon_states' are beneficiaries of horizontal nonproliferation (d=0.1) but are also the primary targets of the Article VI disarmament obligation (d=0.8), leading to a net moderate target directionality. The 'international_atomic_energy_agency' is an agenda setter with a symmetric directionality (d=0.5) as it enforces the regime but also faces limitations. 'NWS_military_industrial_complexes' are clear victims (d=0.9) as their existence is threatened by disarmament.",
-    "mandatrophy_analysis": "This reading prevents mislabeling the NPT as a pure Snare by acknowledging the genuine coordination function of horizontal nonproliferation. However, it highlights the risk of mandatrophy in Article VI if the disarmament obligation remains unfulfilled, leading to a 'zombie' bargain where the original mandate (reciprocal disarmament) has atrophied but the constraint persists as an extractive mechanism for NNWS. The rising extractiveness and theater ratio in measurements indicate this drift."
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates horizontal nonproliferation (benefiting NNWS) but simultaneously extracts from NWS (by obligating disarmament) and from NNWS (who bear the cost of non-acquisition without full reciprocity). The extractiveness (0.65) is high due to the perceived imbalance in the bargain, with NWS retaining and modernizing arsenals while NNWS are strictly held to non-acquisition. Suppression (0.70) is significant, reflecting the active enforcement of horizontal nonproliferation and the diplomatic pressure on NWS to maintain the disarmament facade. Theater ratio (0.40) indicates that a substantial portion of NWS disarmament rhetoric and diplomatic activity is performative, masking a lack of genuine progress. The rising extractiveness and theater over time reflect the increasing gap between the promise of Article VI and its implementation.",
+    "perspectival_gap": "From the perspective of the NNWS coalition, the NPT is a Tangled Rope where they are coordinated into non-acquisition but pay through the lack of NWS disarmament. From the NWS perspective, it is a Rope that coordinates global security, with their disarmament obligation being a long-term aspiration rather than an immediate, binding cost. The engine's classification will highlight this divergence.",
+    "directionality_logic": "The NNWS coalition is a beneficiary due to the security benefits of horizontal nonproliferation and the normative leverage for disarmament (d near 0.0). NWS are payers because Article VI places a binding obligation on their strategic autonomy (d near 1.0). Non-nuclear-weapon states constrained are also payers, bearing the costs of non-acquisition without the promised reciprocity (d near 1.0). The IAEA is an agenda-setter, enforcing parts of the regime. Global civil society advocates are excluded, as their calls for disarmament are not directly integrated into the treaty's enforcement mechanisms.",
+    "mandatrophy_analysis": "This reading prevents mislabeling the NPT as a pure Rope by highlighting the unfulfilled reciprocal bargain. The increasing extractiveness and theater ratio over time suggest a drift towards a Snare if Article VI continues to be ignored, as the coordination function (horizontal nonproliferation) becomes cover for the extraction of strategic advantage by NWS. The 'live' status of the founding problem, coupled with 'world_rearranges' if it disappeared, indicates that the constraint's mandate is still relevant, but its implementation is deeply contested."
   },
+  "omegas": [
+    {
+      "id": "article_vi_verifiability",
+      "question": "Is Article VI's disarmament obligation genuinely verifiable, or does the lack of a verification mechanism render it inherently aspirational?",
+      "resolution_mechanism": "Development and adoption of a robust, intrusive, and universally accepted verification regime for nuclear disarmament, similar to IAEA safeguards for non-acquisition.",
+      "impact": "If verifiable, the NWS's non-compliance becomes a clear violation, increasing the constraint's extractiveness and suppression. If inherently unverifiable, the 'reciprocal bargain' aspect weakens, potentially reclassifying towards a more aspirational 'Rope' for NWS.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the verifiability of NWS disarmament obligations."
+    },
+    {
+      "id": "nws_disarmament_intent",
+      "question": "Do NWS genuinely intend to pursue nuclear disarmament in good faith, or is their Article VI commitment primarily a diplomatic facade to maintain the nonproliferation regime?",
+      "resolution_mechanism": "Analysis of NWS nuclear doctrine, spending on modernization vs. disarmament, and participation in disarmament negotiations over a multi-decade period, assessed by independent experts.",
+      "impact": "If intent is genuinely lacking, the theater_ratio would increase, and the constraint would lean more towards a 'Snare' for NNWS. If genuine intent is demonstrated, extractiveness would decrease.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty about the true intentions of Nuclear Weapon States regarding disarmament."
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine 'reciprocal disarmament bargain' reading of the NPT, or is it an over-interpretation of Article VI's legal force?",
+      "resolution_mechanism": "Comparative legal analysis of treaty interpretation principles, state practice, and travaux préparatoires (preparatory works) of the NPT, assessed by international legal scholars.",
+      "impact": "If it is an over-interpretation, the constraint's extractiveness from NWS would be lower, and its classification might shift towards a 'Rope' or 'Tangled Rope' with less emphasis on NWS as payers. If confirmed as a valid reading, the current classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the NPT kernel (npt_treaty_1970). This 'reciprocal_disarmament_reading' emphasizes Article VI as a binding, urgent obligation. Sibling readings include 'oligopoly_enforcement_reading' (focus on horizontal nonproliferation) and 'withdrawal_sovereignty_reading' (focus on Article X withdrawal rights). The disagreement is located in the legal weight and temporal urgency of Article VI versus other treaty provisions."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [
-      "npt_treaty_1970__oligopoly_enforcement_reading",
-      "npt_treaty_1970__withdrawal_sovereignty_reading",
-      "iran_nuclear_deal",
-      "north_korea_nuclear_program"
-    ],
-    "dual_formulation_note": "This constraint is one of three distinct readings of the NPT treaty kernel. The 'oligopoly_enforcement_reading' emphasizes Articles I-II and views Article VI as aspirational, while the 'withdrawal_sovereignty_reading' focuses on Article X. All three are linked as a constraint family."
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the NPT treaty kernel. It emphasizes Article VI as a binding reciprocal disarmament bargain, contrasting with readings that prioritize horizontal nonproliferation or withdrawal rights."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -182,11 +218,11 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "npt_treaty_1970__oligopoly_enforcement_reading",
+        "sibling_id": "oligopoly_enforcement_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "npt_treaty_1970__withdrawal_sovereignty_reading",
+        "sibling_id": "withdrawal_sovereignty_reading",
         "relation": "coexists_with"
       }
     ],
@@ -198,29 +234,30 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "horizontal_and_vertical_nonproliferation_reciprocal",
+        "atom": "horizontal_and_vertical_nonproliferation_linked",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "original_npt_bargain_integrity",
+    "reference_frame": "grand_bargain_reciprocity",
     "drift_state": {
-      "moment": "contemporary_disarmament_stalemate",
+      "moment": "contemporary_npt_review_cycle",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

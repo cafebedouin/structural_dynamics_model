@@ -39,10 +39,13 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,14 +74,15 @@
  *   domain: constitutional_law/legal_history/political_theory
  *
  * SUMMARY:
- *   This constraint story models Magna Carta (1215) as a specific feudal
- *   contract primarily benefiting landowning barons by limiting the arbitrary
- *   power of King John. In this reading, 'free men' refers exclusively to the
- *   contracting parties (the barons), and the protections offered are not
- *   universal but specific to the feudal relationship between the monarch and
- *   his direct vassals. The constraint's scope is limited to the direct
- *   relationship between the King and the barons, with no explicit or
- *   implicit extension to commoners, women, or non-landowners.
+ *   This constraint story models Magna Carta (1215) through the 'baronial
+ *   privilege' reading, which interprets the charter primarily as a feudal
+ *   contract between King John and his landowning barons. Under this reading,
+ *   the protections and rights granted were specific to the contracting
+ *   parties, with 'free men' understood to mean landowning individuals, not a
+ *   universal category. The constraint's function was to limit the King's
+ *   arbitrary power over his direct vassals, rather than to establish
+ *   universal rights. This reading is one of several interpretations of the
+ *   Magna Carta kernel.
  *
  */
 
@@ -86,18 +91,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(magna_carta_1215__baronial_privilege_reading, 0.3).
-domain_priors:suppression_score(magna_carta_1215__baronial_privilege_reading, 0.6).
+domain_priors:base_extractiveness(magna_carta_1215__baronial_privilege_reading, 0.2).
+domain_priors:suppression_score(magna_carta_1215__baronial_privilege_reading, 0.7).
 domain_priors:theater_ratio(magna_carta_1215__baronial_privilege_reading, 0.1).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, extractiveness, 0.3).
-narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, extractiveness, 0.2).
+narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, suppression_requirement, 0.7).
 narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, theater_ratio, 0.1).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, accessibility_collapse, 0.7).
-narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, resistance, 0.2).
+narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(magna_carta_1215__baronial_privilege_reading, resistance, 0.3).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(magna_carta_1215__baronial_privilege_reading, rope).
@@ -107,36 +112,78 @@ narrative_ontology:topic_domain(magna_carta_1215__baronial_privilege_reading, "c
 domain_priors:requires_active_enforcement(magna_carta_1215__baronial_privilege_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(magna_carta_1215__baronial_privilege_reading, '38042cde-65b6-4780-8c73-6bb462400469').
-narrative_ontology:cs_kernel_codification('38042cde-65b6-4780-8c73-6bb462400469', fixed_text).
-narrative_ontology:cs_authority_grounding('38042cde-65b6-4780-8c73-6bb462400469', lineage).
-narrative_ontology:cs_interpretation_layer_present('38042cde-65b6-4780-8c73-6bb462400469').
-narrative_ontology:cs_reading_relation('38042cde-65b6-4780-8c73-6bb462400469', magna_carta_1215__universal_rights_reading, forecloses).
-narrative_ontology:cs_reading_relation('38042cde-65b6-4780-8c73-6bb462400469', magna_carta_1215__living_document_reading, coexists_with).
-narrative_ontology:cs_axiom('38042cde-65b6-4780-8c73-6bb462400469', foundational, feudal_contract_supremacy).
-narrative_ontology:cs_axiom_status(feudal_contract_supremacy, holdable).
-narrative_ontology:cs_axiom_grounding('38042cde-65b6-4780-8c73-6bb462400469', feudal_contract_supremacy, conventional).
-narrative_ontology:cs_axiom('38042cde-65b6-4780-8c73-6bb462400469', foundational, free_men_equals_landowners).
-narrative_ontology:cs_axiom_status(free_men_equals_landowners, holdable).
-narrative_ontology:cs_axiom_grounding('38042cde-65b6-4780-8c73-6bb462400469', free_men_equals_landowners, empirically_contingent).
-narrative_ontology:cs_reference_frame('38042cde-65b6-4780-8c73-6bb462400469', feudal_contract_framework).
-narrative_ontology:cs_drift_state('38042cde-65b6-4780-8c73-6bb462400469', contemporary_constitutional_theory, gap(axiom_overriding, severe, false)).
-narrative_ontology:cs_created_at('38042cde-65b6-4780-8c73-6bb462400469', '').
+narrative_ontology:cs_story_uid(magna_carta_1215__baronial_privilege_reading, 'caf80fb0-aafd-4053-94aa-df670d186169').
+narrative_ontology:cs_kernel_codification('caf80fb0-aafd-4053-94aa-df670d186169', fixed_text).
+narrative_ontology:cs_authority_grounding('caf80fb0-aafd-4053-94aa-df670d186169', lineage).
+narrative_ontology:cs_interpretation_layer_present('caf80fb0-aafd-4053-94aa-df670d186169').
+narrative_ontology:cs_reading_relation('caf80fb0-aafd-4053-94aa-df670d186169', magna_carta_1215__universal_rights_reading, forecloses).
+narrative_ontology:cs_reading_relation('caf80fb0-aafd-4053-94aa-df670d186169', magna_carta_1215__living_document_reading, coexists_with).
+narrative_ontology:cs_axiom('caf80fb0-aafd-4053-94aa-df670d186169', foundational, free_men_equals_landowning_barons).
+narrative_ontology:cs_axiom_status(free_men_equals_landowning_barons, holdable).
+narrative_ontology:cs_axiom_grounding('caf80fb0-aafd-4053-94aa-df670d186169', free_men_equals_landowning_barons, conventional).
+narrative_ontology:cs_axiom('caf80fb0-aafd-4053-94aa-df670d186169', foundational, magna_carta_is_feudal_contract).
+narrative_ontology:cs_axiom_status(magna_carta_is_feudal_contract, holdable).
+narrative_ontology:cs_axiom_grounding('caf80fb0-aafd-4053-94aa-df670d186169', magna_carta_is_feudal_contract, conventional).
+narrative_ontology:cs_reference_frame('caf80fb0-aafd-4053-94aa-df670d186169', feudal_contract_framework_1215).
+narrative_ontology:cs_drift_state('caf80fb0-aafd-4053-94aa-df670d186169', contemporary_constitutional_discourse, gap(axiom_overriding, severe, false)).
+narrative_ontology:cs_created_at('caf80fb0-aafd-4053-94aa-df670d186169', '').
 narrative_ontology:cs_kernel_id(magna_carta_1215__baronial_privilege_reading, magna_carta_1215).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(magna_carta_1215__baronial_privilege_reading, landowning_barons).
 narrative_ontology:constraint_victim(magna_carta_1215__baronial_privilege_reading, king_john).
+narrative_ontology:constraint_vindicates(magna_carta_1215__baronial_privilege_reading, feudal_contract_doctrine).
+narrative_ontology:constraint_vindicates(magna_carta_1215__baronial_privilege_reading, limited_monarchy_principle).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The primary beneficiaries of Magna Carta under this reading, securing specific feudal rights and protections against arbitrary royal power. Their power derived from land ownership and military capacity, allowing them to negotiate with the King. Exit options were limited to rebellion or submission, both with high costs.
+narrative_ontology:constraint_stakeholder(magna_carta_1215__baronial_privilege_reading, landowning_barons, beneficiary,
+    powerful, generational, constrained, national).
+
+% The primary target of the constraint, forced to concede specific rights and limit his arbitrary power. His options were to accept the charter or face continued baronial rebellion, which threatened his throne. The constraint extracted royal prerogatives and revenue.
+narrative_ontology:constraint_stakeholder(magna_carta_1215__baronial_privilege_reading, king_john, payer,
+    institutional, biographical, constrained, national).
+
+% Under this reading, commoners and non-landowners were largely outside the scope of Magna Carta's protections, as 'free men' was interpreted narrowly. They had no direct voice in its creation and derived little direct benefit, remaining subject to feudal lords and royal authority without new legal recourse.
+narrative_ontology:constraint_stakeholder(magna_carta_1215__baronial_privilege_reading, commoners_non_landowners, excluded,
+    powerless, immediate, trapped, local).
+
+% Successors to King John, who inherited the charter and its limitations on royal power. While they could attempt to reinterpret or ignore it, the charter established a precedent that required ongoing negotiation and enforcement, shaping the future of English monarchy.
+narrative_ontology:constraint_stakeholder(magna_carta_1215__baronial_privilege_reading, future_monarchs, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Analyze Magna Carta's original intent and historical context, contributing to the understanding of its scope and limitations. Their work informs contemporary legal and political theory but does not directly alter the constraint's operation.
+narrative_ontology:constraint_stakeholder(magna_carta_1215__baronial_privilege_reading, legal_historians, observer,
+    analytical, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Established a formal agreement between the King and his barons to resolve a feudal crisis, defining specific rights and obligations to prevent arbitrary royal rule and ensure a measure of stability within the feudal system.
+% TRANSFER_FUNCTION: Transferred specific feudal rights and legal protections from the King's absolute prerogative to the landowning barons, limiting royal power and securing baronial privileges.
+% ABSENT_VOICES: Commoners, women, and non-landowners were largely excluded from the negotiations and the direct benefits of the charter. They would have argued for broader protections and a more inclusive definition of 'free men' if present, but their interests were not represented.
+% DISAPPEARANCE_RATIONALE: If Magna Carta vanished, the historical trajectory of English constitutional law would be fundamentally altered. The precedent for limiting royal power and establishing contractual governance would be lost, leading to a different evolution of state power and individual rights.
+% FOUNDING_PROBLEM: King John's arbitrary rule, excessive taxation, and abuses of feudal custom led to widespread discontent and rebellion among the English barons, threatening civil war and the stability of the realm.
+% FOUNDING_PROBLEM_CORROBORATION: Legal historians and political theorists widely corroborate that the specific feudal grievances of 1215 are long dead. The problem of arbitrary state power, however, is still live, leading to later reinterpretations of the charter. Independent historical scholarship from outside the benefiting parties supports this assessment.
+narrative_ontology:disappearance_verdict(magna_carta_1215__baronial_privilege_reading, world_rearranges).
+narrative_ontology:founding_problem_status(magna_carta_1215__baronial_privilege_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(magna_carta_1215__baronial_privilege_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(magna_carta_1215__baronial_privilege_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(magna_carta_1215__baronial_privilege_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(magna_carta_1215__baronial_privilege_reading, 0.2, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -151,16 +198,14 @@ narrative_ontology:story_seed(magna_carta_1215__baronial_privilege_reading, 'non
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Rope because it genuinely coordinated a collective action problem among the barons to limit the King's arbitrary power, with clear beneficiaries (barons) and a clear target (the King). Extraction is moderate (0.3) as it limits the King's ability to extract arbitrarily, but the barons themselves are not extracting from a broader population through this specific document. Suppression (0.6) reflects the need for active enforcement by the barons to hold the King to the terms, but it's not suppressing alternatives for a wider populace. Theater ratio is low (0.1) as its function was direct and immediate for its intended beneficiaries.
+ *   The constraint is classified as a Rope because it genuinely solved a collective action problem (limiting arbitrary royal power) for its direct beneficiaries (the barons) with relatively low extraction from them. However, its scope was narrow, and it required active enforcement by the barons to hold the King accountable. Extraction is low because the charter primarily redistributed existing rights rather than creating new extractive mechanisms. Suppression is high because the King's power was substantial, and the barons needed to actively suppress his arbitrary actions. Theater ratio is low, as the charter's provisions were largely functional for its intended scope.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of the landowning barons, this was a crucial coordination mechanism to secure their rights against an overreaching monarch. From the King's perspective, it was a forced concession that constrained his power. For commoners and other non-contracting parties, the document had little direct impact, as its protections did not extend to them.
+ *   From the perspective of the landowning barons, Magna Carta was a vital coordination mechanism that secured their rights and brought stability. From the King's perspective, it was a forced concession that extracted power. From the perspective of commoners, it was largely irrelevant to their daily lives. The engine's per-seat classification would reflect these divergences based on the declared roles and attributes.
  *
  * DIRECTIONALITY LOGIC:
- *   The landowning_barons are the primary beneficiaries (d near 0.0) as the constraint directly protects their feudal rights and property. King_John is the primary target (d near 1.0) as his arbitrary power is curtailed. Commoners and other non-landowners are largely outside the scope of this specific reading, neither directly benefiting nor being directly targeted by its provisions.
+ *   The landowning barons are clear beneficiaries, gaining specific protections. King John is the primary payer, losing some of his arbitrary power and revenue. Commoners and non-landowners are excluded, receiving no direct benefit and remaining subject to existing power structures. Future monarchs act as agenda-setters, inheriting the constraint and its implications for royal authority.
  *
- * MANDATROPHY ANALYSIS:
- *   This reading prevents mislabeling the original Magna Carta as a universal rights document, which would obscure its specific historical context and the limited scope of its initial application. By focusing on its function as a feudal contract, it highlights a genuine coordination problem among the elite without projecting later interpretations onto the 1215 text. The constraint's mandate was to stabilize the feudal relationship, which it did for a time, before later reinterpretations broadened its scope.
  */
 
 /* ==========================================================================
@@ -169,49 +214,55 @@ narrative_ontology:story_seed(magna_carta_1215__baronial_privilege_reading, 'non
 
 omega_variable(
     scope_of_free_men,
-    'Is ''free men'' in Magna Carta (1215) limited to landowning barons, or does it encompass a broader class of individuals?',
-    'Historical linguistic analysis of 13th-century legal texts and social structures, combined with contemporary interpretations of feudal law.',
-    'If limited to barons, the constraint is a specific feudal contract (Rope); if broader, it begins to approach a universal rights document (Tangled Rope or Snare, depending on enforcement and extraction from non-barons).',
-    confidence_without_resolution(high)
+    'Was the term ''free men'' in Magna Carta intended to apply only to landowning barons, or did it implicitly extend to a broader class of individuals?',
+    'Further historical linguistic analysis of 13th-century legal terminology and social structures, alongside examination of early judicial interpretations.',
+    'If ''free men'' was broader, the constraint''s beneficiary set expands, and its classification might shift towards a more inclusive Rope or even a nascent Scaffold for broader rights, rather than a narrow baronial privilege.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(scope_of_free_men, empirical, 'Ambiguity in the definition of ''free men'' in Magna Carta.').
+narrative_ontology:omega_variable(scope_of_free_men, empirical, 'Ambiguity in the original scope of ''free men'' in Magna Carta.').
 
 omega_variable(
-    kernel_reading_divergence,
-    'This constraint is the ''baronial_privilege_reading'' of the ''magna_carta_1215'' kernel. How would the classification change under the ''universal_rights_reading'' or ''living_document_reading''?',
-    'Analyzing the structural properties (beneficiaries, victims, extractiveness, suppression) of the alternative readings as distinct constraints.',
-    'The ''universal_rights_reading'' would likely yield a Tangled Rope or Snare due to broader application and potential for extraction from the state, while the ''living_document_reading'' would emphasize adaptive interpretation, potentially shifting classification over time.',
+    feudal_contract_vs_proto_constitution,
+    'Is Magna Carta best understood as a specific feudal contract addressing immediate grievances, or as a foundational proto-constitutional document establishing enduring principles?',
+    'Analysis of its subsequent reissues and the evolution of its legal and political reception over centuries, particularly its invocation in later constitutional struggles.',
+    'If proto-constitutional, its ''claimed_type'' as a Rope might be more robust, and its ''time_horizon'' for beneficiaries would extend, influencing its long-term classification and its role in later legal developments.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_divergence, conceptual, 'Impact of alternative readings of Magna Carta on its classification.').
+narrative_ontology:omega_variable(feudal_contract_vs_proto_constitution, conceptual, 'Conceptual framing of Magna Carta''s fundamental nature.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(magna_carta_1215__baronial_privilege_reading, 1215, 1315).
+narrative_ontology:interval(magna_carta_1215__baronial_privilege_reading, 1215, 1600).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(magn_tr_t0, magna_carta_1215__baronial_privilege_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(magn_tr_t50, magna_carta_1215__baronial_privilege_reading, theater_ratio, 50, 0.08).
-narrative_ontology:measurement(magn_tr_t100, magna_carta_1215__baronial_privilege_reading, theater_ratio, 100, 0.05).
+narrative_ontology:measurement(magn_tr_t1215, magna_carta_1215__baronial_privilege_reading, theater_ratio, 1215, 0.1).
+narrative_ontology:measurement(magn_tr_t1300, magna_carta_1215__baronial_privilege_reading, theater_ratio, 1300, 0.12).
+narrative_ontology:measurement(magn_tr_t1400, magna_carta_1215__baronial_privilege_reading, theater_ratio, 1400, 0.15).
+narrative_ontology:measurement(magn_tr_t1500, magna_carta_1215__baronial_privilege_reading, theater_ratio, 1500, 0.18).
+narrative_ontology:measurement(magn_tr_t1600, magna_carta_1215__baronial_privilege_reading, theater_ratio, 1600, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(magn_be_t0, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(magn_be_t50, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 50, 0.25).
-narrative_ontology:measurement(magn_be_t100, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 100, 0.2).
+narrative_ontology:measurement(magn_be_t1215, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 1215, 0.2).
+narrative_ontology:measurement(magn_be_t1300, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 1300, 0.18).
+narrative_ontology:measurement(magn_be_t1400, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 1400, 0.15).
+narrative_ontology:measurement(magn_be_t1500, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 1500, 0.12).
+narrative_ontology:measurement(magn_be_t1600, magna_carta_1215__baronial_privilege_reading, base_extractiveness, 1600, 0.1).
 
 % Suppression requirement over time
-narrative_ontology:measurement(magn_su_t0, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(magn_su_t50, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 50, 0.5).
-narrative_ontology:measurement(magn_su_t100, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 100, 0.4).
+narrative_ontology:measurement(magn_su_t1215, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 1215, 0.7).
+narrative_ontology:measurement(magn_su_t1300, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 1300, 0.65).
+narrative_ontology:measurement(magn_su_t1400, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 1400, 0.6).
+narrative_ontology:measurement(magn_su_t1500, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 1500, 0.55).
+narrative_ontology:measurement(magn_su_t1600, magna_carta_1215__baronial_privilege_reading, suppression_requirement, 1600, 0.5).
 
 
 /* ==========================================================================
@@ -219,12 +270,11 @@ narrative_ontology:measurement(magn_su_t100, magna_carta_1215__baronial_privileg
    ========================================================================== */
 
 narrative_ontology:coordination_type(magna_carta_1215__baronial_privilege_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(magna_carta_1215__baronial_privilege_reading, 0.1).
-narrative_ontology:affects_constraint(magna_carta_1215__baronial_privilege_reading, magna_carta_1215__universal_rights_reading).
-narrative_ontology:affects_constraint(magna_carta_1215__baronial_privilege_reading, magna_carta_1215__living_document_reading).
+narrative_ontology:affects_constraint(magna_carta_1215__baronial_privilege_reading, english_common_law_development).
+narrative_ontology:affects_constraint(magna_carta_1215__baronial_privilege_reading, parliamentary_sovereignty_evolution).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three distinct readings of the Magna Carta (1215) kernel. Each reading has a different structural interpretation of its beneficiaries, scope, and impact, leading to different classifications. They are linked as a constraint family.
+% This is one reading of the Magna Carta (1215) kernel, focusing on its original intent as a feudal contract for baronial privilege. Other readings (universal rights, living document) are distinct constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

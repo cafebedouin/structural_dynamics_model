@@ -41,6 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
     narrative_ontology:disappearance_verdict/2,
     narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,21 +74,22 @@
  *   domain: political_history/state_formation/cultural_imposition
  *
  * SUMMARY:
- *   This constraint describes the challenge faced by a modernizing state
- *   attempting to displace traditional practices (e.g., lunar calendars,
- *   traditional dress codes) with new, state-sanctioned norms. From the
- *   'endogenous climb' reading, such imposed commitments fail without
- *   bottom-up adoption pathways, leading to persistent resistance and the
- *   need for continuous, often theatrical, enforcement. The state's
- *   modernization timeline becomes a victim, while communities preserving
- *   their autonomy are beneficiaries of the constraint's inherent resistance
- *   to top-down change.
+ *   This constraint represents the 'endogenous climb' reading of
+ *   state-imposed cultural practices, where genuine displacement requires
+ *   bottom-up adoption and internalization. The story focuses on the failure
+ *   of top-down mandates (like calendar or dress reforms) to achieve full
+ *   cultural transformation without deep societal buy-in. The state's efforts
+ *   are met with resistance and partial, often superficial, adoption, leading
+ *   to a high theater ratio as enforcement continues despite limited genuine
+ *   change. The constraint is claimed as a Piton because the primary function
+ *   (cultural transformation) has atrophied, but the state continues
+ *   performative maintenance.
  *
  * KEY AGENTS:
- *   - modernizing_state: Agenda setter (institutional/generational) — attempts to impose new practices.
- *   - local_populations: Payer (powerless/generational) — resists imposed practices, retains traditional norms.
- *   - communities_preserving_autonomy: Beneficiary (organized/generational) — maintains cultural distinctiveness.
- *   - state_modernization_timeline: Victim (analytical/generational) — suffers delays and resource drain due to resistance.
+ *   - state_modernizers: Agenda-setter (institutional/constrained) — attempts to impose new practices.
+ *   - communities_preserving_autonomy: Beneficiary (organized/identity_locked) — resists imposition, maintains traditions.
+ *   - state_modernization_timeline: Payer (analytical/trapped) — bears the systemic cost of failed reforms.
+ *   - urban_adopters: Beneficiary/Payer (moderate/mobile) — selectively adopts practices, often superficially.
  */
 
 /* ==========================================================================
@@ -92,48 +97,51 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.6).
-domain_priors:suppression_score(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.7).
-domain_priors:theater_ratio(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.4).
+domain_priors:base_extractiveness(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.25).
+domain_priors:suppression_score(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.4).
+domain_priors:theater_ratio(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.6).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, extractiveness, 0.6).
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 0.7).
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 0.4).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, extractiveness, 0.25).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 0.4).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 0.6).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, accessibility_collapse, 0.45).
-narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, resistance, 0.8).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, accessibility_collapse, 0.3).
+narrative_ontology:constraint_metric(legitimacy_of_imposed_practice__endogenous_climb_reading, resistance, 0.7).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(legitimacy_of_imposed_practice__endogenous_climb_reading, snare).
+narrative_ontology:constraint_claim(legitimacy_of_imposed_practice__endogenous_climb_reading, piton).
 narrative_ontology:human_readable(legitimacy_of_imposed_practice__endogenous_climb_reading, "Endogenous Climb for Imposed Practice").
 narrative_ontology:topic_domain(legitimacy_of_imposed_practice__endogenous_climb_reading, "political_history/state_formation/cultural_imposition").
 
 domain_priors:requires_active_enforcement(legitimacy_of_imposed_practice__endogenous_climb_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(legitimacy_of_imposed_practice__endogenous_climb_reading, 'af008cbc-0cb0-4b5a-b9b5-88b78bd0999c').
-narrative_ontology:cs_kernel_codification('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', formalized).
-narrative_ontology:cs_authority_grounding('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', lineage).
-narrative_ontology:cs_interpretation_layer_present('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c').
-narrative_ontology:cs_reading_relation('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', legitimacy_of_imposed_practice__exogenous_override_reading, forecloses).
-narrative_ontology:cs_reading_relation('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', legitimacy_of_imposed_practice__hybrid_scaffolding_reading, coexists_with).
-narrative_ontology:cs_axiom('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', foundational, practice_legitimacy_requires_internalization).
-narrative_ontology:cs_axiom_status(practice_legitimacy_requires_internalization, holdable).
-narrative_ontology:cs_axiom_grounding('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', practice_legitimacy_requires_internalization, empirically_contingent).
-narrative_ontology:cs_axiom('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', secondary, state_decree_insufficient_for_cultural_change).
-narrative_ontology:cs_axiom_status(state_decree_insufficient_for_cultural_change, holdable).
-narrative_ontology:cs_axiom_grounding('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', state_decree_insufficient_for_cultural_change, empirically_contingent).
-narrative_ontology:cs_reference_frame('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', organic_cultural_evolution).
-narrative_ontology:cs_drift_state('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', post_colonial_state_formation, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('af008cbc-0cb0-4b5a-b9b5-88b78bd0999c', '').
+narrative_ontology:cs_story_uid(legitimacy_of_imposed_practice__endogenous_climb_reading, 'ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf').
+narrative_ontology:cs_kernel_codification('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', formalized).
+narrative_ontology:cs_authority_grounding('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', practice).
+narrative_ontology:cs_interpretation_layer_present('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf').
+narrative_ontology:cs_reading_relation('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', legitimacy_of_imposed_practice__exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', legitimacy_of_imposed_practice__hybrid_scaffolding_reading, coexists_with).
+narrative_ontology:cs_axiom('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', foundational, practice_requires_internalization).
+narrative_ontology:cs_axiom_status(practice_requires_internalization, holdable).
+narrative_ontology:cs_axiom_grounding('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', practice_requires_internalization, empirically_contingent).
+narrative_ontology:cs_axiom('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', secondary, top_down_mandate_insufficient_for_cultural_change).
+narrative_ontology:cs_axiom_status(top_down_mandate_insufficient_for_cultural_change, holdable).
+narrative_ontology:cs_axiom_grounding('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', top_down_mandate_insufficient_for_cultural_change, empirically_contingent).
+narrative_ontology:cs_reference_frame('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', bottom_up_cultural_evolution).
+narrative_ontology:cs_drift_state('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', post_imposition_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('ec7cd3bf-56b1-45ce-a97f-1359bbd6e9bf', '').
 narrative_ontology:cs_kernel_id(legitimacy_of_imposed_practice__endogenous_climb_reading, legitimacy_of_imposed_practice).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(legitimacy_of_imposed_practice__endogenous_climb_reading, communities_preserving_autonomy).
 narrative_ontology:constraint_victim(legitimacy_of_imposed_practice__endogenous_climb_reading, state_modernization_timeline).
-narrative_ontology:constraint_victim(legitimacy_of_imposed_practice__endogenous_climb_reading, local_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(legitimacy_of_imposed_practice__endogenous_climb_reading, urban_adopters).
+narrative_ontology:constraint_victim(legitimacy_of_imposed_practice__endogenous_climb_reading, urban_adopters).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -142,38 +150,52 @@ narrative_ontology:constraint_victim(legitimacy_of_imposed_practice__endogenous_
    standardized across readings (OQ-84).
    ========================================================================== */
 
+% The state apparatus attempting to impose new practices (e.g., a new calendar or dress code) to align with a modernization agenda. They bear the cost of enforcement and the reputational cost of failed implementation, but their institutional identity is tied to the success of the reforms.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__endogenous_climb_reading, state_modernizers, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Local communities and cultural groups who resist the imposed practices, often maintaining traditional customs in private or through subtle forms of defiance. They benefit by preserving their cultural identity and autonomy, despite state efforts. Their 'exit' is the continued practice of their traditions.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__endogenous_climb_reading, communities_preserving_autonomy, beneficiary,
+    organized, generational, identity_locked, local).
+
+% The abstract timeline and goals of the state's modernization project. It 'pays' in terms of delays, resource expenditure, and the failure to achieve its targets for cultural transformation. This is an analytical agent representing the systemic cost of failed imposition.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__endogenous_climb_reading, state_modernization_timeline, payer,
+    analytical, generational, trapped, national).
+narrative_ontology:stakeholder_non_agent(legitimacy_of_imposed_practice__endogenous_climb_reading, state_modernization_timeline).
+
+% Individuals or groups in urban centers who adopt some imposed practices (e.g., new dress codes) due to social pressure, economic incentives, or perceived modernity, but may retain traditional practices in private. They benefit from social integration but may bear a cost of cultural dissonance.
+narrative_ontology:constraint_stakeholder(legitimacy_of_imposed_practice__endogenous_climb_reading, urban_adopters, beneficiary,
+    moderate, biographical, mobile, regional).
+narrative_ontology:stakeholder_secondary_role(legitimacy_of_imposed_practice__endogenous_climb_reading, urban_adopters, payer).
+
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Attempts to coordinate a national identity and standardized social practices across diverse local populations, aiming for administrative efficiency and perceived modernity.
-% TRANSFER_FUNCTION: Transfers cultural norms, social capital, and administrative control from local communities to the central state, while extracting compliance and resources from local populations.
-% ABSENT_VOICES: Traditional elders and local cultural leaders, whose authority is undermined by state imposition, are excluded from the policy-making process. Their voices would emphasize the value of traditional practices and the social costs of their displacement.
-% DISAPPEARANCE_RATIONALE: If the state's imposed practices and their enforcement vanished, local populations would likely revert to traditional practices, and the state's administrative and cultural authority would be significantly diminished, leading to a reorganization of social and political structures.
-% FOUNDING_PROBLEM: The problem of creating a unified national identity and modern administrative state out of diverse, traditional communities, often in a post-colonial context.
-% FOUNDING_PROBLEM_CORROBORATION: The state's continued efforts to enforce these practices, and the ongoing resistance from local populations, corroborate that the problem of national integration and modernization is still live. Independent historians and anthropologists document the persistent tension between state goals and local realities.
+% COORDINATION_FUNCTION: The constraint attempts to coordinate a national identity and standardized social practices aligned with a state-led modernization vision, replacing diverse local customs with a unified, modern cultural framework.
+% TRANSFER_FUNCTION: Transfers cultural capital, social legitimacy, and adherence from traditional practices to state-sanctioned modern practices. It also transfers enforcement resources from the state to the maintenance of these new norms, and time/effort from communities to resisting or selectively adopting them.
+% ABSENT_VOICES: Historical and cultural scholars who would argue that top-down cultural imposition rarely achieves genuine, lasting transformation without deep societal buy-in, and that such efforts often lead to cultural loss and resentment rather than true modernization.
+% DISAPPEARANCE_RATIONALE: If the state's efforts to impose new practices vanished overnight, traditional practices would likely re-emerge more openly, and the state's modernization timeline would be significantly altered, forcing a re-evaluation of its cultural transformation goals. The social landscape would revert to a more diverse, less centrally controlled set of customs.
+% FOUNDING_PROBLEM: The state perceived a lack of national unity and 'backwardness' in diverse local customs, hindering its vision of a modern, unified nation-state capable of competing on the global stage.
+% FOUNDING_PROBLEM_CORROBORATION: State archives and official histories attest to the founding problem as a live concern for national development. However, independent historians and anthropologists, from outside the benefiting state apparatus, argue that the 'problem' was often a pretext for consolidating power and that the original diversity was not inherently a barrier to progress, thus contesting its status.
 narrative_ontology:disappearance_verdict(legitimacy_of_imposed_practice__endogenous_climb_reading, world_rearranges).
-narrative_ontology:founding_problem_status(legitimacy_of_imposed_practice__endogenous_climb_reading, live).
+narrative_ontology:founding_problem_status(legitimacy_of_imposed_practice__endogenous_climb_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(legitimacy_of_imposed_practice__endogenous_climb_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(legitimacy_of_imposed_practice__endogenous_climb_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(legitimacy_of_imposed_practice__endogenous_climb_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(legitimacy_of_imposed_practice__endogenous_climb_reading, 0.25, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(legitimacy_of_imposed_practice__endogenous_climb_reading_tests).
-
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(legitimacy_of_imposed_practice__endogenous_climb_reading, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
-
 :- end_tests(legitimacy_of_imposed_practice__endogenous_climb_reading_tests).
 
 /* ==========================================================================
@@ -182,16 +204,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.6) reflects the cost imposed on local populations to comply with new practices, even superficially. Suppression (0.7) is high because the state must actively enforce the new norms against persistent cultural inertia. The theater ratio (0.4) indicates that a significant portion of state activity is performative, maintaining the illusion of compliance while genuine internalization is low. Resistance (0.8) is high due to the deep-seated nature of traditional practices and the lack of bottom-up adoption pathways. Accessibility collapse (0.45) is moderate, as alternatives (traditional practices) are not fully eliminated but pushed into private spheres.
+ *   Extractiveness is moderate (0.25) because the state expends resources on enforcement without achieving full compliance, and communities bear the cost of resistance. Suppression is moderate (0.4) as the state has coercive power but cannot fully suppress cultural practices. Theater ratio is high (0.6) because much of the state's activity is performative enforcement, masking the underlying failure of genuine internalization. Resistance is high (0.7) due to persistent community autonomy. Accessibility collapse is low (0.3) as communities find ways to maintain alternatives. The metrics reflect a constraint that is nominally enforced but largely ineffective in its primary goal, persisting more through inertia and performance than actual function.
  *
  * PERSPECTIVAL GAP:
- *   The modernizing state perceives the constraint as a necessary 'rope' for national cohesion and progress, with resistance as an irrational impediment. Local populations experience it as a 'snare' that extracts cultural autonomy and imposes alien norms. The engine's classification will likely diverge from the state's claimed 'rope' due to high extractiveness and suppression.
+ *   From the perspective of the 'state_modernizers', the constraint is a necessary (if challenging) Rope or Scaffold for national development. From the 'communities_preserving_autonomy', it is a Snare or Piton that attempts to extract their cultural identity. The 'endogenous_climb_reading' aligns more with the latter, emphasizing the difficulty of top-down cultural change.
  *
  * DIRECTIONALITY LOGIC:
- *   The modernizing_state, as the agenda_setter, benefits from the perceived (if not actual) compliance with its modernization agenda. Local_populations are targets, bearing the costs of cultural disruption and forced adaptation. Communities_preserving_autonomy are beneficiaries because the constraint's inherent resistance allows them to maintain their distinctiveness. The state_modernization_timeline is a victim because the imposed practices fail to achieve rapid, genuine displacement, leading to delays and resource drain.
+ *   The 'state_modernizers' are the agenda-setters, expending resources but failing to achieve their full goals, making their directionality closer to symmetric or even slightly negative due to the high theater. 'Communities_preserving_autonomy' are beneficiaries in this reading, as their resistance allows them to retain their cultural practices, effectively subsidizing their autonomy. The 'state_modernization_timeline' is an analytical victim, bearing the costs of delay and failure. 'Urban_adopters' are mixed, benefiting from social integration but paying through partial cultural compromise.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint highlights how a mandate (state modernization) can become 'mandatrophic' when it fails to account for the social dynamics of practice displacement. The state's mandate to modernize is not resolved, but its effectiveness is severely hampered by the lack of bottom-up adoption. The classification as a 'snare' for local populations, despite the state's 'rope' framing, prevents mislabeling a coercive imposition as genuine coordination.
+ *   This constraint is a Piton because the original mandate (cultural transformation) has largely failed, yet the state continues to expend resources on its performative maintenance. The 'endogenous_climb_reading' highlights this mandatrophy by emphasizing that genuine change requires internalization, which was not achieved. The classification prevents mislabeling this as a functioning Rope or Scaffold, instead revealing its inertial persistence despite functional atrophy. The high theater ratio and persistent resistance are key indicators of this mandatrophy.
  */
 
 /* ==========================================================================
@@ -199,50 +221,72 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_identification,
-    'Is this constraint a genuine reflection of the ''endogenous climb'' principle, or is it merely a failed ''exogenous override'' that lacked sufficient coercive force?',
-    'Comparative historical analysis of similar state-building efforts with varying levels of coercive capacity and ideological scaffolding. If high coercion consistently fails without bottom-up adoption, it supports the endogenous climb reading.',
-    'If genuinely an ''endogenous climb'' reading, it implies that top-down imposition of practices is inherently limited without internal buy-in, leading to high resistance and low effective extraction. If a failed ''exogenous override'', it suggests the state simply didn''t try hard enough, and the constraint''s classification would shift towards a more extractive ''snare'' if the state had more power.',
+    internalization_measurement_ambiguity,
+    'How can ''internalization'' of practice be reliably measured, distinct from superficial compliance or performative adoption?',
+    'Longitudinal ethnographic studies, analysis of private vs. public practice, and linguistic shifts over multiple generations. If private practices persist unchanged for generations despite public compliance, internalization is low.',
+    'If internalization is found to be consistently low, it strengthens the Piton classification and the ''endogenous_climb_reading''. If higher than assumed, it might shift towards a Tangled Rope or even a Scaffold, suggesting more effective (though still potentially extractive) transformation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_identification, conceptual, 'This constraint is one reading (''endogenous_climb_reading'') of the ''legitimacy_of_imposed_practice'' kernel. Sibling readings include ''exogenous_override_reading'' and ''hybrid_scaffolding_reading''. This reading emphasizes the necessity of bottom-up adoption for the success of imposed practices, contrasting with views that prioritize state decree or hybrid approaches.').
+narrative_ontology:omega_variable(internalization_measurement_ambiguity, empirical, 'Distinguishing genuine cultural adoption from mere outward compliance.').
 
 omega_variable(
-    internalization_measurement_ambiguity,
-    'How can ''internalization'' of a practice be reliably measured, especially when public compliance coexists with private retention of prior practices?',
-    'Longitudinal ethnographic studies, analysis of private correspondence, and archaeological evidence of household practices. The persistence of prior practices in private spheres despite public compliance would indicate low internalization.',
-    'If internalization is low despite outward compliance, the constraint''s effective suppression is higher than structural measures suggest, as it relies on constant monitoring and enforcement rather than genuine adoption. This would push the classification towards a ''snare'' for the local populations.',
+    state_intent_vs_effect,
+    'Was the state''s primary intent genuinely ''modernization'' and ''unity'', or was it primarily ''control'' and ''extraction'' of cultural autonomy, with modernization as a cover story?',
+    'Analysis of internal state documents, comparative studies of similar reforms in other contexts, and the long-term outcomes for state power vs. societal well-being. If the reforms consistently led to increased state control and resource extraction without demonstrable societal benefit, the ''extraction'' intent is stronger.',
+    'If the primary intent was extraction, the constraint''s base extractiveness would be re-evaluated upward, and its claimed type would shift more definitively towards a Snare, regardless of the ''endogenous climb'' dynamics.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(state_intent_vs_effect, conceptual, 'Ambiguity of state''s true motivation behind cultural imposition.').
+
+omega_variable(
+    reading_difference_on_causality,
+    'Does the ''endogenous_climb_reading'' accurately capture the causal mechanism of practice displacement, or do sibling readings offer a more complete account?',
+    'Comparative historical analysis across multiple cases of cultural imposition, evaluating which reading''s predictions (e.g., persistence of lunar calendar, partial dress adoption) are most consistently borne out by evidence. This would involve directly testing the ''exogenous_override_reading'' (state decree is sufficient) and ''hybrid_scaffolding_reading'' (mandate + ideology).',
+    'If the ''exogenous_override_reading'' or ''hybrid_scaffolding_reading'' is found to be more causally accurate, it would challenge the core premise of this constraint, potentially leading to a reclassification of the underlying mechanism from Piton to a more actively enforced (and potentially more effective) Snare or Tangled Rope.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(internalization_measurement_ambiguity, empirical, 'Ambiguity in measuring genuine internalization versus performative compliance for imposed practices.').
+narrative_ontology:omega_variable(reading_difference_on_causality, conceptual, 'This constraint is one reading of the ''legitimacy_of_imposed_practice'' kernel. This omega documents the structural difference between this reading and its siblings, specifically on the causal role of bottom-up adoption vs. top-down decree. The ''endogenous_climb_reading'' emphasizes the necessity of bottom-up adoption, while ''exogenous_override_reading'' emphasizes top-down decree, and ''hybrid_scaffolding_reading'' emphasizes a combination. The disagreement is located in the ''authority_grounding'' and ''kernel_codification'' of the underlying commitment system.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(legitimacy_of_imposed_practice__endogenous_climb_reading, 0, 20).
+narrative_ontology:interval(legitimacy_of_imposed_practice__endogenous_climb_reading, 1920, 1980).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(legi_tr_t0, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 0, 0.3).
-narrative_ontology:measurement(legi_tr_t10, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 10, 0.35).
-narrative_ontology:measurement(legi_tr_t20, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 20, 0.4).
+narrative_ontology:measurement(legi_tr_t1920, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1920, 0.4).
+narrative_ontology:measurement(legi_tr_t1930, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1930, 0.5).
+narrative_ontology:measurement(legi_tr_t1940, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1940, 0.6).
+narrative_ontology:measurement(legi_tr_t1950, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1950, 0.65).
+narrative_ontology:measurement(legi_tr_t1960, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1960, 0.63).
+narrative_ontology:measurement(legi_tr_t1970, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1970, 0.6).
+narrative_ontology:measurement(legi_tr_t1980, legitimacy_of_imposed_practice__endogenous_climb_reading, theater_ratio, 1980, 0.6).
 
 % Extraction over time
-narrative_ontology:measurement(legi_be_t0, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 0, 0.5).
-narrative_ontology:measurement(legi_be_t10, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(legi_be_t20, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 20, 0.6).
+narrative_ontology:measurement(legi_be_t1920, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1920, 0.3).
+narrative_ontology:measurement(legi_be_t1930, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1930, 0.28).
+narrative_ontology:measurement(legi_be_t1940, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1940, 0.25).
+narrative_ontology:measurement(legi_be_t1950, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1950, 0.23).
+narrative_ontology:measurement(legi_be_t1960, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1960, 0.24).
+narrative_ontology:measurement(legi_be_t1970, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1970, 0.25).
+narrative_ontology:measurement(legi_be_t1980, legitimacy_of_imposed_practice__endogenous_climb_reading, base_extractiveness, 1980, 0.25).
 
 % Suppression requirement over time
-narrative_ontology:measurement(legi_su_t0, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 0, 0.6).
-narrative_ontology:measurement(legi_su_t10, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 10, 0.65).
-narrative_ontology:measurement(legi_su_t20, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement(legi_su_t1920, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1920, 0.5).
+narrative_ontology:measurement(legi_su_t1930, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1930, 0.45).
+narrative_ontology:measurement(legi_su_t1940, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1940, 0.4).
+narrative_ontology:measurement(legi_su_t1950, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1950, 0.38).
+narrative_ontology:measurement(legi_su_t1960, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1960, 0.39).
+narrative_ontology:measurement(legi_su_t1970, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1970, 0.4).
+narrative_ontology:measurement(legi_su_t1980, legitimacy_of_imposed_practice__endogenous_climb_reading, suppression_requirement, 1980, 0.4).
 
 
 /* ==========================================================================
@@ -250,6 +294,9 @@ narrative_ontology:measurement(legi_su_t20, legitimacy_of_imposed_practice__endo
    ========================================================================== */
 
 narrative_ontology:coordination_type(legitimacy_of_imposed_practice__endogenous_climb_reading, identity_coordination).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three readings of the 'legitimacy_of_imposed_practice' kernel. This 'endogenous_climb_reading' focuses on the necessity of bottom-up adoption for successful practice displacement, contrasting with the 'exogenous_override_reading' (state decree is sufficient) and 'hybrid_scaffolding_reading' (mandate + ideology).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "d2bb0e6e-712d-4f06-a6a2-8cf653958782"
+    "story_uid": "180e7283-b5f8-405e-a2a2-62d98f3fc114"
   },
   "base_properties": {
     "extractiveness": 0.65,
@@ -15,134 +15,176 @@
     "claimed_type": "snare",
     "human_readable": "Temple Sacrifice Obligation: Study as Archiving",
     "topic_domain": "religious_studies/halakhic_authority/commitment_systems",
-    "requires_active_enforcement": false,
-    "emerges_naturally": false,
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "rabbinic_scholars",
-      "halakhic_tradition"
+      "rabbinic_authority",
+      "religious_scholars"
     ],
     "victims": [
-      "divine_command",
+      "unfulfilled_divine_command",
       "jewish_people"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_ambiguity",
-      "question": "Is the study of Temple sacrifice laws a fulfillment, a suspension, or merely an archiving of the obligation?",
-      "resolution_mechanism": "Theological consensus shift or a messianic event enabling Temple reconstruction and resumption of sacrifices.",
-      "impact": "If study is a fulfillment (study_as_occupation), the constraint's extractiveness would be low, and it would classify as a Rope. If the obligation is suspended (messianic_suspension), the constraint would be inert, classifying as a Piton. This reading (study_as_archiving) maintains high extractiveness due to non-compliance.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity in the status of Temple sacrifice obligation in absence of the Temple."
+      "name": "rabbinic_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintains the binding status of the Temple sacrifice laws, even in their unperformable state. Emphasizes study as a means of preserving knowledge for future restoration, but explicitly denies it fulfills the actual obligation. Benefits from the continued relevance of complex halakhic study."
     },
     {
-      "id": "divine_command_agency",
-      "question": "To what extent can a 'divine command' be considered a 'victim' in the same sense as human agents?",
-      "resolution_mechanism": "Philosophical and theological clarification on the nature of divine agency and the implications of non-compliance with divine will.",
-      "impact": "If the divine command cannot be a victim, the constraint's victim set is reduced to the Jewish people, potentially altering the perceived severity of extraction, though the structural non-compliance remains.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Theological status of a divine command as a 'victim'."
+      "name": "religious_scholars",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Dedicate their lives to the intricate study of sacrificial laws. Their intellectual and professional identity is deeply tied to this pursuit. They benefit from the academic and spiritual prestige associated with mastering this complex body of knowledge, even if it doesn't fulfill the core obligation."
+    },
+    {
+      "name": "jewish_people",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bear the burden of an unfulfilled divine command. While study offers spiritual engagement, the core obligation remains unmet, creating a sense of collective spiritual deficit. Their identity is tied to the covenant, making exit from the obligation unthinkable."
+    },
+    {
+      "name": "unfulfilled_divine_command",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The divine imperative for Temple sacrifice remains unfulfilled due to the absence of the Temple. This 'victim' is the abstract representation of the unmet covenantal requirement, from which extraction flows as a spiritual deficit."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Coordinates the preservation of a complex body of religious law and ritual knowledge across generations, ensuring its continuity and readiness for a future restoration.",
+    "transfer_function": "Transfers the spiritual burden of an unfulfilled divine command from the realm of active ritual performance to a state of perpetual study and anticipation, while transferring intellectual prestige and authority to those who master the laws.",
+    "absent_voices": "Ancient prophets who emphasized immediate obedience over deferred hope might object, as would those who seek more direct, performative avenues for fulfilling divine commands in the present. Their voices are absent due to the historical destruction of the Temple and the subsequent shift in religious practice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the entire framework of post-Temple Judaism, which balances the binding nature of the command with its current unperformability, would collapse. The spiritual and intellectual life of the Jewish people would need to fundamentally reorganize around a new understanding of divine obligation and its fulfillment.",
+    "founding_problem": "The destruction of the Second Temple rendered the central act of Jewish worship (sacrifices) impossible, creating a crisis of how to maintain divine obligation and covenantal relationship in its absence.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The continued longing for the rebuilding of the Temple and the daily prayers for its restoration, attested by liturgical texts and communal practice across millennia, corroborate that the problem of unfulfilled sacrifice remains live for the Jewish people. This is attested by the community's own continuous tradition, not just the rabbinic authority."
+  },
+  "interval": {
+    "start": 70,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 70,
       "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 100,
+      "time_point": 500,
       "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 200,
+      "time_point": 1000,
       "value": 0.63
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 300,
+      "time_point": 1500,
       "value": 0.64
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 400,
+      "time_point": 2024,
       "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.9
+      "time_point": 70,
+      "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 100,
-      "value": 0.9
+      "time_point": 500,
+      "value": 0.87
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 200,
-      "value": 0.9
+      "time_point": 1000,
+      "value": 0.88
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 300,
-      "value": 0.9
+      "time_point": 1500,
+      "value": 0.89
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 400,
+      "time_point": 2024,
       "value": 0.9
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 70,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 100,
+      "time_point": 500,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 200,
+      "time_point": 1000,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 300,
+      "time_point": 1500,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 400,
+      "time_point": 2024,
       "value": 0.1
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 400
-  },
   "commentary": {
-    "narrative_context": "This constraint represents the Halakhic (Jewish law) understanding that the obligation for Temple sacrifices remains binding, but in the absence of the Temple, study of these laws serves to preserve the knowledge for future restoration, rather than fulfilling the actual sacrificial command. The entire post-Temple period (since 70 CE) is thus a state of non-compliance with a divine command, creating a continuous, unresolvable extraction from the perspective of the divine will and the Jewish people's collective obligation. The authority structure (rabbinic tradition) maintains the binding status of this unperformable law.",
-    "logic_rationale": "Extractiveness is high (0.65) because the core obligation is unfulfilled, representing a continuous 'debt' or 'lack' in the religious system. Suppression is very high (0.9) because the physical destruction of the Temple makes the command literally impossible to perform, leaving no alternative for direct compliance. Theater ratio is low (0.1) because the study is genuinely aimed at preservation and future performance, not merely a performative substitute for the actual sacrifice. Accessibility collapse is near total (0.95) as the physical means to perform the sacrifices are absent. Resistance is low (0.05) as the impossibility is widely accepted within the tradition, and study is the prescribed response.",
-    "directionality_logic": "The 'divine_command' is the primary victim, as its will is unfulfilled (d=1.0). The 'jewish_people' are also victims, bearing the collective burden of non-compliance (d=0.9). 'Rabbinic_scholars' and the 'halakhic_tradition' are beneficiaries (d=0.1-0.2), as the study and interpretation of these laws become central to their authority and the continuity of the tradition in the Temple's absence. This reading emphasizes the ongoing, unfulfilled nature of the obligation.",
-    "perspectival_gap": "From the perspective of the divine command, there is a continuous, unresolvable extraction due to non-compliance. From the perspective of rabbinic scholars, the constraint provides a framework for intellectual and spiritual engagement, ensuring the tradition's continuity. The Jewish people experience a collective longing and a sense of unfulfilled religious duty.",
-    "kernel_context": "This constraint, 'study_as_archiving', is one reading of the 'temple_sacrifice_obligation' kernel. It posits that the study of sacrificial laws preserves knowledge for future restoration but does not fulfill the actual obligation. This contrasts with the 'study_as_occupation' reading, which holds that study *does* constitute a legitimate fulfillment, and the 'messianic_suspension' reading, which argues the obligation is suspended until the messianic era."
+    "narrative_context": "This constraint describes the reading of the Temple sacrifice obligation where its study is seen as a vital act of archiving knowledge for future restoration, but explicitly does not fulfill the actual divine command. This creates a state of perpetual non-compliance for the Jewish people, with the rabbinic authority maintaining the binding status of an unperformable law. The constraint is classified as a Snare because it extracts a spiritual deficit from the Jewish people (the unfulfilled divine command) while providing a coordination function (knowledge preservation) that primarily benefits the rabbinic authority and religious scholars, whose roles are sustained by the complexity of the unperformable law. The high suppression reflects the theological and historical impossibility of performing the sacrifices, which is not a choice but a structural reality.",
+    "logic_rationale": "Extractiveness is moderate (0.65) because the entire post-Temple period is characterized by non-compliance with a central divine command, creating a spiritual deficit. Suppression is very high (0.90) due to the physical impossibility of performing sacrifices without a Temple, making exit from this state of non-compliance structurally impossible. Theater ratio is low (0.10) because the study is genuinely aimed at knowledge preservation, not merely performative maintenance of a defunct ritual. The claimed type is Snare because the coordination function (knowledge preservation) serves to maintain the authority and intellectual life of the rabbinic class, while the core obligation remains unfulfilled for the broader community, creating a persistent extraction.",
+    "directionality_logic": "Rabbinic authority and religious scholars are beneficiaries, as their roles and intellectual pursuits are sustained by the ongoing study of these complex laws. The Jewish people are payers, bearing the spiritual burden of the unfulfilled command. The 'unfulfilled divine command' is an abstract victim, representing the unmet covenantal requirement from which extraction flows as a spiritual deficit. The identity-locked exit option for the Jewish people reflects the deep covenantal ties that make abandoning the obligation unthinkable.",
+    "perspectival_gap": "From the perspective of rabbinic authority and scholars, this constraint is a necessary and meaningful adaptation to historical circumstances, preserving tradition. From the perspective of the unfulfilled divine command and the Jewish people, it represents a persistent state of non-compliance and spiritual longing. The engine's classification as a Snare highlights this asymmetry, where the 'solution' (study) benefits certain stakeholders while the core 'problem' (unfulfilled obligation) persists for others.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a Rope or Scaffold. While study provides a coordination function (knowledge preservation), it does not resolve the core problem of the unfulfilled obligation. It is not a Scaffold because it lacks a sunset clause and is not transitional; it is a permanent adaptation. It is not a Rope because the benefits are asymmetric and there is a clear victim (the unfulfilled command and the Jewish people bearing its burden). The persistence of the constraint is not due to inertia (Piton) but active maintenance of a binding, albeit unperformable, law.",
+    "kernel_context": "This constraint, 'temple_sacrifice_obligation__study_as_archiving', is one reading of the 'temple_sacrifice_obligation' kernel. It posits that studying the laws of sacrifice preserves knowledge for future restoration but does not fulfill the actual divine command. This reading stands in contrast to 'messianic_suspension', which holds the obligation is suspended, and 'study_as_occupation', which claims study itself fulfills the obligation."
   },
+  "omegas": [
+    {
+      "id": "fulfillment_vs_preservation",
+      "question": "Does the act of studying the laws of sacrifice, in any meaningful sense, constitute a form of 'fulfillment' of the divine command, or is it purely an act of preservation?",
+      "resolution_mechanism": "Theological consensus shift or a new authoritative halakhic ruling that redefines the nature of fulfillment in the absence of the Temple.",
+      "impact": "If study were deemed a form of fulfillment, the extractiveness from the 'unfulfilled_divine_command' would decrease significantly, potentially reclassifying the constraint as a Rope or even a Mountain (if the fulfillment is seen as inherent to the act of study). If it remains purely preservation, the Snare classification holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the spiritual efficacy of study in fulfilling the sacrifice obligation."
+    },
+    {
+      "id": "messianic_era_impact",
+      "question": "How would the re-establishment of the Temple and the resumption of sacrifices impact the authority and role of rabbinic scholars whose careers are built on the study of unperformable laws?",
+      "resolution_mechanism": "Observation of the actual dynamics following a hypothetical messianic restoration, or a detailed sociological study of how religious authority adapts to radical shifts in practice.",
+      "impact": "If the authority of scholars diminishes significantly, it would reveal a greater extractive component in the current arrangement, as their status is tied to the unperformability. If their role adapts seamlessly, it would suggest a more genuine coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty about the future role of scholars if the Temple is rebuilt."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
-  },
-  "network": {
-    "affects_constraints": [
-      "temple_sacrifice_obligation__study_as_occupation",
-      "temple_sacrifice_obligation__messianic_suspension"
-    ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'temple_sacrifice_obligation' kernel, each with distinct structural properties and classifications. This reading emphasizes the unfulfilled nature of the obligation, with study serving as archiving."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -150,23 +192,23 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "temple_sacrifice_obligation__study_as_occupation",
+        "sibling_id": "messianic_suspension",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "temple_sacrifice_obligation__messianic_suspension",
+        "sibling_id": "study_as_occupation",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "divine_command_remains_binding_and_unfulfilled",
+        "atom": "obligation_remains_binding_unfulfilled",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "study_is_preparation_not_substitution",
+        "atom": "study_is_archival_not_substitutive",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
@@ -174,21 +216,22 @@
     ],
     "reference_frame": "post_temple_halakhic_continuity",
     "drift_state": {
-      "moment": "contemporary_era",
+      "moment": "contemporary",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -41,7 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,18 +70,20 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: marriage_sacrament__civic_pastoral_reading
- *   human_readable: Marriage as Pastoral Relationship (Civic-Pastoral Reading)
+ *   human_readable: Marriage as Pastoral Discernment (Civic-Pastoral Reading)
  *   domain: religious_doctrine/canon_law/political_sociology
  *
  * SUMMARY:
  *   This constraint describes the 'civic-pastoral' reading of the Catholic
- *   Church's marriage sacrament, where indissolubility is treated as an ideal
- *   requiring compassionate discernment in individual cases, rather than an
- *   absolute, ontologically fixed reality. This reading emerged as a response
- *   to the perceived rigidity of traditional doctrine and aims to provide
- *   pastoral care to those in complex marital situations. It is one reading
- *   of the 'marriage_sacrament' kernel, distinct from the
- *   'hierarchical_indissolubility_reading'.
+ *   Church's doctrine of marriage, where indissolubility is an ideal to be
+ *   compassionately discerned in individual cases, acknowledging human
+ *   failure. This reading prioritizes pastoral care and inclusion, often
+ *   leading to more accessible annulment processes or accommodations for
+ *   those in irregular unions. While framed as a 'tangled_rope' due to its
+ *   coordination function (pastoral care) and asymmetric extraction
+ *   (doctrinal relativization for traditionalists), the claimed type is
+ *   'rope' by the institutional hierarchy, reflecting their desired framing.
+ *   The metrics, however, reflect the actual operation and its costs.
  *
  */
 
@@ -95,48 +102,88 @@ narrative_ontology:constraint_metric(marriage_sacrament__civic_pastoral_reading,
 narrative_ontology:constraint_metric(marriage_sacrament__civic_pastoral_reading, theater_ratio, 0.2).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(marriage_sacrament__civic_pastoral_reading, accessibility_collapse, 0.4).
+narrative_ontology:constraint_metric(marriage_sacrament__civic_pastoral_reading, accessibility_collapse, 0.35).
 narrative_ontology:constraint_metric(marriage_sacrament__civic_pastoral_reading, resistance, 0.25).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(marriage_sacrament__civic_pastoral_reading, tangled_rope).
-narrative_ontology:human_readable(marriage_sacrament__civic_pastoral_reading, "Marriage as Pastoral Relationship (Civic-Pastoral Reading)").
+narrative_ontology:human_readable(marriage_sacrament__civic_pastoral_reading, "Marriage as Pastoral Discernment (Civic-Pastoral Reading)").
 narrative_ontology:topic_domain(marriage_sacrament__civic_pastoral_reading, "religious_doctrine/canon_law/political_sociology").
 
 domain_priors:requires_active_enforcement(marriage_sacrament__civic_pastoral_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(marriage_sacrament__civic_pastoral_reading, 'c698e994-c818-4c0c-87fe-e4e164ee8b43').
-narrative_ontology:cs_kernel_codification('c698e994-c818-4c0c-87fe-e4e164ee8b43', formalized).
-narrative_ontology:cs_authority_grounding('c698e994-c818-4c0c-87fe-e4e164ee8b43', lineage).
-narrative_ontology:cs_interpretation_layer_present('c698e994-c818-4c0c-87fe-e4e164ee8b43').
-narrative_ontology:cs_reading_relation('c698e994-c818-4c0c-87fe-e4e164ee8b43', marriage_sacrament__hierarchical_indissolubility_reading, coexists_with).
-narrative_ontology:cs_axiom('c698e994-c818-4c0c-87fe-e4e164ee8b43', foundational, indissolubility_as_pastoral_ideal).
+narrative_ontology:cs_story_uid(marriage_sacrament__civic_pastoral_reading, 'dca6d5ba-98db-4fce-8706-788a6c88d185').
+narrative_ontology:cs_kernel_codification('dca6d5ba-98db-4fce-8706-788a6c88d185', formalized).
+narrative_ontology:cs_authority_grounding('dca6d5ba-98db-4fce-8706-788a6c88d185', lineage).
+narrative_ontology:cs_interpretation_layer_present('dca6d5ba-98db-4fce-8706-788a6c88d185').
+narrative_ontology:cs_reading_relation('dca6d5ba-98db-4fce-8706-788a6c88d185', marriage_sacrament__hierarchical_indissolubility_reading, coexists_with).
+narrative_ontology:cs_axiom('dca6d5ba-98db-4fce-8706-788a6c88d185', foundational, indissolubility_as_pastoral_ideal).
 narrative_ontology:cs_axiom_status(indissolubility_as_pastoral_ideal, holdable).
-narrative_ontology:cs_axiom_grounding('c698e994-c818-4c0c-87fe-e4e164ee8b43', indissolubility_as_pastoral_ideal, deontological).
-narrative_ontology:cs_axiom('c698e994-c818-4c0c-87fe-e4e164ee8b43', foundational, primacy_of_pastoral_discernment).
-narrative_ontology:cs_axiom_status(primacy_of_pastoral_discernment, holdable).
-narrative_ontology:cs_axiom_grounding('c698e994-c818-4c0c-87fe-e4e164ee8b43', primacy_of_pastoral_discernment, conventional).
-narrative_ontology:cs_reference_frame('c698e994-c818-4c0c-87fe-e4e164ee8b43', pastoral_accompaniment_framework).
-narrative_ontology:cs_drift_state('c698e994-c818-4c0c-87fe-e4e164ee8b43', contemporary_synodal_process, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('c698e994-c818-4c0c-87fe-e4e164ee8b43', '').
+narrative_ontology:cs_axiom_grounding('dca6d5ba-98db-4fce-8706-788a6c88d185', indissolubility_as_pastoral_ideal, deontological).
+narrative_ontology:cs_axiom('dca6d5ba-98db-4fce-8706-788a6c88d185', secondary, compassionate_discernment_in_individual_cases).
+narrative_ontology:cs_axiom_status(compassionate_discernment_in_individual_cases, holdable).
+narrative_ontology:cs_axiom_grounding('dca6d5ba-98db-4fce-8706-788a6c88d185', compassionate_discernment_in_individual_cases, instrumental).
+narrative_ontology:cs_reference_frame('dca6d5ba-98db-4fce-8706-788a6c88d185', post_vatican_ii_pastoral_approach).
+narrative_ontology:cs_drift_state('dca6d5ba-98db-4fce-8706-788a6c88d185', contemporary_synodal_process, gap(revival_pressure, substantial, true)).
+narrative_ontology:cs_created_at('dca6d5ba-98db-4fce-8706-788a6c88d185', '').
 narrative_ontology:cs_kernel_id(marriage_sacrament__civic_pastoral_reading, marriage_sacrament).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(marriage_sacrament__civic_pastoral_reading, pastoral_clergy).
-narrative_ontology:constraint_beneficiary(marriage_sacrament__civic_pastoral_reading, laity_seeking_discernment).
-narrative_ontology:constraint_victim(marriage_sacrament__civic_pastoral_reading, traditional_catholics).
+narrative_ontology:constraint_beneficiary(marriage_sacrament__civic_pastoral_reading, laity_seeking_annulment).
+narrative_ontology:constraint_victim(marriage_sacrament__civic_pastoral_reading, traditional_laity).
 narrative_ontology:constraint_victim(marriage_sacrament__civic_pastoral_reading, doctrinal_conservatives).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Tasked with applying doctrine compassionately in individual cases, often leading to annulments or accommodations for those in irregular unions. They benefit from increased flexibility and reduced pastoral burden, but face pressure from doctrinal conservatives.
+narrative_ontology:constraint_stakeholder(marriage_sacrament__civic_pastoral_reading, pastoral_clergy, agenda_setter,
+    institutional, biographical, constrained, local).
+
+% Directly benefit from a more lenient and pastoral approach to marriage nullity, allowing them to regularize their status within the Church after marital breakdown. Their options are limited by the availability and interpretation of canon law.
+narrative_ontology:constraint_stakeholder(marriage_sacrament__civic_pastoral_reading, laity_seeking_annulment, beneficiary,
+    powerless, immediate, constrained, local).
+
+% Experience a relativization of the doctrine of indissolubility, leading to a perceived loss of normative clarity and stability in their faith. Their identity is deeply tied to the Church's traditional teachings, making exit unthinkable despite their dissatisfaction.
+narrative_ontology:constraint_stakeholder(marriage_sacrament__civic_pastoral_reading, traditional_laity, payer,
+    organized, generational, identity_locked, global).
+
+% Bear the cost of what they perceive as doctrinal erosion and inconsistent application of canon law. They actively resist changes that dilute the traditional understanding of marriage, but their institutional power is often insufficient to halt the pastoral shift.
+narrative_ontology:constraint_stakeholder(marriage_sacrament__civic_pastoral_reading, doctrinal_conservatives, payer,
+    powerful, generational, constrained, global).
+
+% Sets the overall pastoral direction, balancing doctrinal fidelity with compassionate application. They benefit from maintaining institutional unity and relevance in a changing world, but face internal dissent and external scrutiny.
+narrative_ontology:constraint_stakeholder(marriage_sacrament__civic_pastoral_reading, institutional_hierarchy, agenda_setter,
+    institutional, generational, constrained, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the Church's pastoral response to marital breakdown, providing a framework for discernment and accommodation that aims to keep individuals within the sacramental life of the Church.
+% TRANSFER_FUNCTION: Transfers pastoral flexibility and a sense of inclusion to individuals experiencing marital failure, while transferring a perceived loss of doctrinal certainty and institutional consistency to traditionalist factions.
+% ABSENT_VOICES: Strict legalists who would argue for a rigid, unyielding application of canon law without pastoral discretion are marginalized in this reading, as are those who advocate for a complete secularization of marriage within the Church.
+% DISAPPEARANCE_RATIONALE: If this pastoral reading vanished, the Church's approach to marital breakdown would revert to a more rigid, less accommodating stance, leading to increased alienation for many laity and a crisis of pastoral care. The institutional response to human failure would reorganize around strict legalism.
+% FOUNDING_PROBLEM: The Church faced a growing disconnect between its strict doctrine of marriage indissolubility and the lived realities of many faithful experiencing marital breakdown, leading to alienation and exclusion from sacramental life.
+% FOUNDING_PROBLEM_CORROBORATION: Pastoral surveys, anecdotal evidence from clergy, and theological discussions within the Church consistently attest to the ongoing challenge of reconciling doctrine with lived experience. This is corroborated by sociological studies on religious practice and marital trends.
+narrative_ontology:disappearance_verdict(marriage_sacrament__civic_pastoral_reading, world_rearranges).
+narrative_ontology:founding_problem_status(marriage_sacrament__civic_pastoral_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(marriage_sacrament__civic_pastoral_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild_gemini', 'agent/example_platform_commission.json',
+narrative_ontology:story_provenance(marriage_sacrament__civic_pastoral_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_gemini+stakeholder_backfill', 'agent/example_platform_commission.json',
     'gemini-2.5-flash', 'max_tokens=16384,temperature=0.1,thinking_budget=0').
 narrative_ontology:story_seed(marriage_sacrament__civic_pastoral_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(marriage_sacrament__civic_pastoral_reading, 0.45, 'gemini-2.5-flash', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -151,13 +198,13 @@ narrative_ontology:story_seed(marriage_sacrament__civic_pastoral_reading, 'none'
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.45) is moderate, reflecting the cost borne by traditional Catholics who experience doctrinal relativization and a loss of normative clarity. Suppression (0.30) is relatively low, as this reading seeks to reduce the coercive pressure on individuals, but still requires active enforcement to manage internal dissent and maintain a semblance of doctrinal consistency. The theater ratio (0.20) is present because the nominal ideal of indissolubility is maintained, even as pastoral practice introduces significant flexibility, creating a gap between stated doctrine and lived experience. The declining suppression_requirement over time reflects a shift away from strict enforcement towards a more pastoral approach.
+ *   Extractiveness is moderate (0.45) as traditionalists experience a loss of doctrinal certainty and normative clarity, which is a significant cost to their identity and worldview. Suppression is low (0.30) because while traditionalist voices are often marginalized, they are not actively silenced or prevented from expressing dissent. Theater ratio is moderate (0.20) as the language of 'indissolubility as ideal' can sometimes mask a de facto shift in practice. Accessibility collapse is moderate (0.35) as alternatives for traditionalists (e.g., finding a more doctrinally strict community) are constrained by the global nature of the Church, but not entirely collapsed. Resistance is moderate (0.25) from traditionalist groups.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of pastoral clergy and laity seeking discernment, this reading functions as a compassionate rope, offering support and pathways for reconciliation. From the perspective of traditional Catholics, it operates as a tangled rope or even a snare, extracting doctrinal certainty and imposing ambiguity, while benefiting those who seek to circumvent traditional norms. The engine's per-seat classification will capture this divergence.
+ *   From the perspective of pastoral clergy and those seeking annulment, this reading functions as a 'rope' or 'scaffold', providing necessary support and coordination for complex human situations. However, from the perspective of traditional laity and doctrinal conservatives, it operates as a 'snare' or 'tangled_rope', extracting their sense of doctrinal stability and identity. The engine's computation will highlight this divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Pastoral clergy and laity seeking discernment are beneficiaries (d near 0.0-0.2), gaining flexibility and compassion. Traditional Catholics and doctrinal conservatives are victims (d near 0.8-1.0), experiencing a loss of doctrinal stability and clarity. The magisterial authority, while nominally upholding indissolubility, benefits from maintaining institutional relevance and unity, but also bears the cost of internal dissent, placing its d closer to symmetric (0.4-0.6).
+ *   Pastoral clergy and laity seeking annulment are beneficiaries, experiencing greater flexibility and inclusion. Traditional laity and doctrinal conservatives are payers, bearing the cost of doctrinal relativization and perceived inconsistency. The institutional hierarchy acts as an agenda-setter, navigating the tension between doctrine and pastoral needs.
  *
  */
 
@@ -166,67 +213,78 @@ narrative_ontology:story_seed(marriage_sacrament__civic_pastoral_reading, 'none'
    ========================================================================== */
 
 omega_variable(
-    doctrinal_coherence_vs_pastoral_flexibility,
-    'Can the ideal of indissolubility be genuinely upheld while simultaneously allowing for extensive pastoral discernment in individual cases, without undermining the doctrine''s coherence?',
-    'Long-term theological analysis of the internal consistency of magisterial documents and the lived experience of the faithful. If the two readings prove irreconcilable, a formal doctrinal clarification would be required.',
-    'If irreconcilable, this reading would be reclassified as a snare for traditionalists, as the coordination story (upholding indissolubility) would be revealed as cover for a de facto change in doctrine. If reconcilable, its rope-like qualities would be strengthened.',
+    doctrinal_relativization_impact,
+    'To what extent does the pastoral discernment approach genuinely relativize the doctrine of indissolubility, versus merely applying it with greater nuance?',
+    'Longitudinal study of annulment rates, canonical jurisprudence, and theological discourse over several decades, comparing stated doctrine with actual practice and its perceived impact on the faithful.',
+    'If it''s a genuine relativization, the extraction from traditionalists is higher, pushing the classification closer to a Snare. If it''s merely nuanced application, extraction is lower, supporting a Rope or Scaffold classification.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(doctrinal_coherence_vs_pastoral_flexibility, conceptual, 'The internal consistency of the civic-pastoral reading with core doctrine.').
+narrative_ontology:omega_variable(doctrinal_relativization_impact, empirical, 'Ambiguity in whether pastoral discernment is a doctrinal shift or a nuanced application.').
 
 omega_variable(
-    mandatrophy_of_indissolubility,
-    'Has the original mandate of indissolubility (as an absolute, ontological reality) atrophied, and is the ''pastoral discernment'' framework a new mandate layered over a vestigial structure?',
-    'Historical-theological analysis of the evolution of marriage doctrine and pastoral practice, comparing the stated justifications for indissolubility across different eras with contemporary applications.',
-    'If the original mandate is found to be dead, and the new pastoral approach is merely a way to maintain institutional relevance without genuine doctrinal change, the constraint would lean more towards a piton or snare for traditionalists, as the ''ideal'' becomes theatrical.',
+    institutional_unity_cost,
+    'Is the perceived erosion of institutional authority and doctrinal clarity a necessary cost for maintaining the broader unity and pastoral relevance of the Church in a modern context?',
+    'Sociological and theological analysis of Church membership trends, internal dissent, and external perceptions of the Church''s coherence, weighed against the benefits of pastoral accommodation.',
+    'If the cost is deemed necessary for unity, the constraint''s coordination function is stronger, supporting a Tangled Rope. If the cost is disproportionate, it suggests a more extractive dynamic.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(institutional_unity_cost, preference, 'Trade-off between doctrinal clarity and institutional unity/relevance.').
+
+omega_variable(
+    identity_lock_mechanism,
+    'For traditional laity, is their ''identity_locked'' exit option primarily due to deep theological conviction, or is it reinforced by social and communal ties within traditionalist Catholic circles?',
+    'Qualitative sociological research (interviews, ethnography) exploring the motivations and social networks of traditionalist Catholics, distinguishing between internal theological commitment and external social reinforcement.',
+    'If primarily theological, the identity lock is more robust and less amenable to external intervention. If socially reinforced, interventions targeting social structures might weaken the lock, altering their effective directionality.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(mandatrophy_of_indissolubility, empirical, 'Whether the original mandate of indissolubility has atrophied.').
+narrative_ontology:omega_variable(identity_lock_mechanism, empirical, 'Mechanism of identity lock for traditional laity.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(marriage_sacrament__civic_pastoral_reading, 0, 20).
+narrative_ontology:interval(marriage_sacrament__civic_pastoral_reading, 1965, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(marr_tr_t0, marriage_sacrament__civic_pastoral_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(marr_tr_t5, marriage_sacrament__civic_pastoral_reading, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(marr_tr_t10, marriage_sacrament__civic_pastoral_reading, theater_ratio, 10, 0.18).
-narrative_ontology:measurement(marr_tr_t15, marriage_sacrament__civic_pastoral_reading, theater_ratio, 15, 0.2).
-narrative_ontology:measurement(marr_tr_t20, marriage_sacrament__civic_pastoral_reading, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(marr_tr_t1965, marriage_sacrament__civic_pastoral_reading, theater_ratio, 1965, 0.05).
+narrative_ontology:measurement(marr_tr_t1980, marriage_sacrament__civic_pastoral_reading, theater_ratio, 1980, 0.1).
+narrative_ontology:measurement(marr_tr_t1995, marriage_sacrament__civic_pastoral_reading, theater_ratio, 1995, 0.15).
+narrative_ontology:measurement(marr_tr_t2010, marriage_sacrament__civic_pastoral_reading, theater_ratio, 2010, 0.18).
+narrative_ontology:measurement(marr_tr_t2024, marriage_sacrament__civic_pastoral_reading, theater_ratio, 2024, 0.2).
 
 % Extraction over time
-narrative_ontology:measurement(marr_be_t0, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 0, 0.3).
-narrative_ontology:measurement(marr_be_t5, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(marr_be_t10, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 10, 0.4).
-narrative_ontology:measurement(marr_be_t15, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 15, 0.43).
-narrative_ontology:measurement(marr_be_t20, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 20, 0.45).
+narrative_ontology:measurement(marr_be_t1965, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 1965, 0.2).
+narrative_ontology:measurement(marr_be_t1980, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 1980, 0.3).
+narrative_ontology:measurement(marr_be_t1995, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 1995, 0.38).
+narrative_ontology:measurement(marr_be_t2010, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 2010, 0.42).
+narrative_ontology:measurement(marr_be_t2024, marriage_sacrament__civic_pastoral_reading, base_extractiveness, 2024, 0.45).
 
 % Suppression requirement over time
-narrative_ontology:measurement(marr_su_t0, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 0, 0.4).
-narrative_ontology:measurement(marr_su_t5, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 5, 0.35).
-narrative_ontology:measurement(marr_su_t10, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 10, 0.32).
-narrative_ontology:measurement(marr_su_t15, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 15, 0.3).
-narrative_ontology:measurement(marr_su_t20, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 20, 0.3).
+narrative_ontology:measurement(marr_su_t1965, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 1965, 0.15).
+narrative_ontology:measurement(marr_su_t1980, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 1980, 0.2).
+narrative_ontology:measurement(marr_su_t1995, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 1995, 0.25).
+narrative_ontology:measurement(marr_su_t2010, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 2010, 0.28).
+narrative_ontology:measurement(marr_su_t2024, marriage_sacrament__civic_pastoral_reading, suppression_requirement, 2024, 0.3).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(marriage_sacrament__civic_pastoral_reading, attachment_coordination).
+narrative_ontology:coordination_type(marriage_sacrament__civic_pastoral_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(marriage_sacrament__civic_pastoral_reading, 0.08).
 narrative_ontology:affects_constraint(marriage_sacrament__civic_pastoral_reading, marriage_sacrament__hierarchical_indissolubility_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is the 'civic_pastoral_reading' of the 'marriage_sacrament' kernel, which also includes the 'hierarchical_indissolubility_reading'. The two readings represent different interpretations of the same core doctrine, with distinct structural implications for stakeholders.
+% This constraint is one reading of the 'marriage_sacrament' kernel. Its pastoral emphasis influences, and is influenced by, the more rigid 'hierarchical_indissolubility_reading'.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -4,14 +4,14 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "926bd386-9299-4976-90e0-b34a0a5fed46"
+    "story_uid": "fc24dde3-4b88-41b6-9684-957c7dd4234b"
   },
   "base_properties": {
     "extractiveness": 0.25,
     "suppression": 0.15,
     "theater_ratio": 0.05,
     "accessibility_collapse": 0.2,
-    "resistance": 0.08,
+    "resistance": 0.1,
     "claimed_type": "rope",
     "human_readable": "Nicene Creed Authority: Symbolic Confessional Reading",
     "topic_domain": "systematic_theology/ecclesiology/history_of_christian_doctrine",
@@ -23,98 +23,178 @@
     ],
     "victims": [],
     "vindicated_propositions": [
-      "theological_pluralism",
-      "communal_discernment",
-      "personal_faith_autonomy"
+      "historical_critical_method",
+      "theological_contextualism"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "creed_as_kernel_reading",
-      "question": "Is this constraint a genuine expression of communal faith, or a subtle form of identity-based exclusion?",
-      "resolution_mechanism": "Examine the actual practices of interfaith dialogue and theological diversity within communities adhering to this reading. If genuine pluralism and open inquiry are consistently practiced, it supports the communal faith reading. If it primarily serves to define an 'in-group' against others, it leans towards identity-based exclusion.",
-      "impact": "If it's primarily identity-based exclusion, its effective extractiveness and suppression would be higher for those outside the 'in-group', reclassifying it closer to a Tangled Rope for excluded parties.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Ambiguity between genuine communal faith and identity-based exclusion."
+      "name": "local_congregations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from the creed serving as a flexible, unifying statement of faith that allows for diverse interpretations and contextual applications, fostering community without rigid dogmatism. They retain autonomy in theological discernment."
     },
     {
-      "id": "kernel_reading_identification",
-      "question": "This constraint is the 'symbolic_confessional_reading' of the 'nicene_creed_authority' kernel. How would its classification change if interpreted as the 'strict_orthodox_reading' or 'liturgical_habituation_reading'?",
-      "resolution_mechanism": "Analyzing the structural deltas of the sibling readings: 'strict_orthodox_reading' would imply higher extractiveness and suppression due to binding metaphysical ontology and sanctions for deviation. 'liturgical_habituation_reading' would shift focus to identity coordination through performance, potentially increasing theater_ratio.",
-      "impact": "Adopting the 'strict_orthodox_reading' would likely reclassify this constraint as a Snare or Tangled Rope due to high extractiveness and suppression. Adopting the 'liturgical_habituation_reading' would likely classify it as an Identity Coordination Rope or Tangled Rope, with different beneficiaries and victims.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "This constraint is one reading of the Nicene Creed authority kernel; other readings would yield different classifications."
+      "name": "individual_believers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Experience the creed as a guide for personal faith and spiritual formation, rather than a strict doctrinal test. They are empowered to engage with its meaning through personal reflection and communal discernment, without fear of ecclesiastical censure for nuanced interpretations."
+    },
+    {
+      "name": "theological_pluralists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Find their approach to theology affirmed, as this reading of the creed supports diverse expressions of faith and interfaith dialogue. They benefit from a framework that values ongoing theological inquiry and contextual relevance over dogmatic uniformity."
+    },
+    {
+      "name": "centralized_ecclesiastical_authorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the 'cost' of diminished direct control over doctrinal interpretation and enforcement. Their authority is decentralized, requiring them to engage in persuasion and dialogue rather than issuing binding pronouncements. This reading challenges their traditional role as ultimate arbiters of orthodoxy."
+    },
+    {
+      "name": "strict_orthodox_theologians",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Would object to this reading's relativization of the creed's metaphysical claims and its emphasis on contingency. They are excluded from the interpretive framework that prioritizes communal discernment over fixed dogma, finding their foundational commitments undermined."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, historically rooted language for expressing Christian faith that allows for diverse theological interpretations and contextual applications, fostering unity in confession rather than uniformity in doctrine.",
+    "transfer_function": "Transfers interpretive authority from centralized ecclesiastical bodies to local communities and individual believers, enabling theological flexibility and contextual relevance.",
+    "absent_voices": "Strict orthodox theologians and centralized authorities who advocate for a literal, metaphysically binding interpretation of the creed are marginalized or excluded from this interpretive framework, as their views are seen as antithetical to its core tenets of contingency and discernment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the Nicene Creed's authority vanished, many progressive and mainline Protestant denominations would lose a key theological justification for their inclusive practices and pluralistic approaches to doctrine. It would force a re-evaluation of their confessional identity and potentially lead to greater fragmentation or a return to more rigid dogmatic stances.",
+    "founding_problem": "The problem of maintaining Christian unity and theological relevance in diverse cultural contexts, while respecting historical tradition without succumbing to rigid dogmatism or anachronistic metaphysical claims.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Theologians and church historians from various traditions (e.g., post-liberal, liberation theology, process theology) corroborate the ongoing challenge of balancing tradition with contemporary understanding, and the need for interpretive flexibility. This is attested in academic discourse and denominational debates, not just by those who benefit from this specific reading."
+  },
+  "interval": {
+    "start": 1960,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.2
+      "time_point": 1960,
+      "value": 0.3
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.22
+      "time_point": 1980,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2000,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
       "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 1960,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.12
+      "time_point": 1980,
+      "value": 0.18
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 2000,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.05
+      "time_point": 1960,
+      "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.05
+      "time_point": 1980,
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 2000,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.05
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 20
-  },
   "commentary": {
-    "narrative_context": "This constraint describes the Nicene Creed's authority when interpreted through a 'symbolic confessional' lens. In this reading, the creed serves as a historical witness to faith, a communal confession, and a guide for theological reflection, rather than a rigid metaphysical binding. Its authority is derived from the ongoing discernment of the community and the personal faith of individuals, allowing for theological pluralism and interfaith engagement. This contrasts sharply with readings that emphasize strict ontological adherence or purely liturgical function.",
-    "key_agents": [
-      "local_congregations: Primary beneficiary (institutional/mobile) — empowered by communal discernment",
-      "individual_believers: Primary beneficiary (moderate/mobile) — empowered by personal faith",
-      "theological_pluralists: Primary beneficiary (organized/mobile) — enabled by interpretive flexibility",
-      "centralized_denominational_authorities: Agenda setter (institutional/constrained) — their authority is inverted/diffused by this reading",
-      "strict_orthodox_theologians: Excluded (powerful/constrained) — their interpretive framework is challenged"
-    ],
-    "logic_rationale": "The extractiveness (0.25) and suppression (0.15) are low because this reading explicitly de-emphasizes coercive enforcement of doctrinal uniformity. The creed functions as a 'rope' for communal identity and theological reflection, providing a shared language without demanding strict adherence to a single metaphysical interpretation. Theater ratio is low (0.05) as the constraint's function is genuinely about communal witness and personal faith, not performative maintenance of an atrophied mandate. Accessibility collapse is low (0.2) and resistance is low (0.08) because this reading allows for diverse theological positions and does not actively suppress alternatives.",
-    "perspectival_gap": "From the perspective of local congregations and individual believers, this reading of the creed is a liberating force, enabling genuine faith and community without undue external pressure. For centralized denominational authorities, it represents a diffusion or inversion of their traditional authority, as the locus of interpretive power shifts to the community and individual. Strict orthodox theologians would perceive this reading as a weakening of doctrinal truth and a threat to the church's integrity.",
-    "directionality_logic": "Local congregations, individual believers, and theological pluralists are beneficiaries (d near 0.0) as this reading empowers their agency and validates their diverse approaches. Centralized denominational authorities, while still existing, find their power to enforce strict doctrinal adherence diminished, making them indirect targets or having their agenda-setting role inverted (d shifts towards 0.5 or higher for their traditional role). Strict orthodox theologians are effectively excluded from the conversation, as their framework for authority is not recognized by this reading.",
-    "mandatrophy_analysis": "This reading actively prevents mandatrophy by re-centering the creed's function on living communal discernment and personal faith, rather than a static, externally imposed dogma. It acknowledges the historical contingency of the creed, preventing it from becoming a 'piton' of inert tradition or a 'snare' of coercive orthodoxy. The mandate is kept 'live' by its continuous re-interpretation and application within the community, rather than being allowed to atrophy into a mere historical artifact or a tool for institutional control."
+    "narrative_context": "This constraint describes the authority of the Nicene Creed as understood through a 'symbolic confessional' reading, common in many mainline Protestant traditions. In this reading, the creed functions as a historically contingent witness to faith, whose authority derives from ongoing community discernment and personal faith, rather than from a fixed, literal metaphysical ontology. It emphasizes the creed's symbolic and confessional role, allowing for theological pluralism and contextual interpretation. This reading actively resists attempts by centralized authorities to impose a singular, rigid interpretation, thereby inverting the traditional power dynamics of creedal authority.",
+    "logic_rationale": "Extractiveness is low (0.25) because this reading actively minimizes coercive doctrinal enforcement, prioritizing communal discernment and individual conscience. Suppression is also low (0.15) as it permits theological pluralism and resists dogmatic imposition. The theater ratio is very low (0.05) because the constraint's function is genuinely about fostering flexible confessional identity, not maintaining an illusion of rigid orthodoxy. The metrics reflect a constraint that liberates rather than binds, consistent with a 'rope' classification. The temporal measurements show a slight decrease in extractiveness and suppression over time, reflecting a continued move towards greater theological openness and less centralized control within traditions adopting this reading.",
+    "directionality_logic": "Local congregations, individual believers, and theological pluralists are beneficiaries, as this reading empowers their interpretive autonomy and fosters inclusive theological environments. Centralized ecclesiastical authorities are 'payers' in the sense that they bear the cost of diminished direct control and must adapt to a more decentralized, persuasive mode of authority. There are no 'victims' in the traditional sense, as the constraint's operation is designed to minimize extraction and coercion.",
+    "perspectival_gap": "From the perspective of local congregations and individual believers, this reading of the creed is a liberating 'rope' that facilitates shared identity without imposing undue burdens. From the perspective of centralized ecclesiastical authorities, it might be experienced as a 'tangled rope' or even a 'snare' that undermines their traditional role and authority, forcing them to relinquish control over doctrine. The engine's per-seat classification would capture this divergence.",
+    "kernel_context": "This constraint is the 'symbolic_confessional_reading' of the 'nicene_creed_authority' kernel. It stands in contrast to the 'strict_orthodox_reading' (which emphasizes literal metaphysical binding and centralized enforcement) and the 'liturgical_habituation_reading' (which focuses on the creed's role in identity formation through ritual, independent of cognitive assent)."
   },
+  "omegas": [
+    {
+      "id": "interpretive_authority_locus",
+      "question": "Does the authority of the Nicene Creed truly reside in community discernment and personal faith, or is there an implicit, unacknowledged centralizing force that still shapes interpretation?",
+      "resolution_mechanism": "Empirical study of theological controversies: if a 'consensus' emerges that consistently aligns with a particular institutional agenda despite stated pluralism, it suggests an unacknowledged centralizing force.",
+      "impact": "If an implicit centralizing force is found, the constraint's true suppression and extractiveness would be higher, potentially reclassifying it towards a 'tangled_rope' for those whose discernment is subtly guided.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity of where interpretive authority truly resides."
+    },
+    {
+      "id": "boundary_function_vs_pluralism",
+      "question": "At what point does the emphasis on historical contingency and pluralism erode the creed's function as a meaningful boundary marker for Christian identity, potentially leading to a 'piton' of theological incoherence?",
+      "resolution_mechanism": "Longitudinal study of denominational identity and interfaith dialogue: if the creed ceases to provide a distinct confessional identity or becomes indistinguishable from other faith statements, its boundary function has atrophied.",
+      "impact": "If the boundary function atrophies, the constraint could drift towards a 'piton' where its original purpose is lost, but it is maintained for theatrical or inertial reasons, with diffuse costs of incoherence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The tension between theological pluralism and the creed's role as an identity boundary."
+    },
+    {
+      "id": "naturalness_of_contingency",
+      "question": "Is the historical contingency of the creed a 'mountain' of historical fact, or is its interpretation as 'contingent witness' a 'snare' for those who seek a more absolute theological grounding?",
+      "resolution_mechanism": "Philosophical analysis of historical epistemology and theological hermeneutics: if the claim of contingency is itself presented as an unchallengeable dogma, it functions as a snare for those seeking alternative interpretive frameworks.",
+      "impact": "If the 'contingent witness' claim functions as an unchallengeable dogma, its suppression would be higher for those who seek a more absolute theological grounding, potentially reclassifying it as a 'tangled_rope' or 'snare' for that specific seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the 'contingent witness' claim is a descriptive fact or a prescriptive interpretive framework."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "nicene_creed_authority__strict_orthodox_reading",
+      "nicene_creed_authority__liturgical_habituation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the Nicene Creed's authority. Its 'symbolic confessional' interpretation emphasizes historical contingency and community discernment, contrasting with 'strict orthodox' and 'liturgical habituation' readings."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -131,35 +211,36 @@
     ],
     "axioms": [
       {
-        "atom": "creed_as_historical_witness",
+        "atom": "creed_as_contingent_witness",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "empirically_contingent"
       },
       {
         "atom": "authority_from_communal_discernment",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "post_reformation_confessionalism",
+    "reference_frame": "post_critical_theological_paradigm",
     "drift_state": {
-      "moment": "contemporary_theological_pluralism",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

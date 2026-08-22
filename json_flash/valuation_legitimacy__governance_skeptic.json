@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "c1b0bf65-301a-4127-bdfa-f981b67f0a5b"
+    "story_uid": "08d2268e-2cfb-4ab8-a587-44534c54320e"
   },
   "base_properties": {
     "extractiveness": 0.85,
     "suppression": 0.9,
     "theater_ratio": 0.2,
     "accessibility_collapse": 0.7,
-    "resistance": 0.75,
+    "resistance": 0.45,
     "claimed_type": "snare",
-    "human_readable": "Valuation Legitimacy: Governance Skeptic Reading",
+    "human_readable": "Governance Skeptic Reading: Valuation Legitimacy Requires Minority Shareholder Protection",
     "topic_domain": "corporate_finance/technology_governance/space_economics",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -21,139 +21,211 @@
       "early_class_b_shareholders"
     ],
     "victims": [
-      "class_a_shareholders",
-      "institutional_investors",
-      "future_investors"
+      "class_a_public_shareholders",
+      "institutional_investors"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "elon_musk",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds 82.4% voting control with 42% equity, enabling unilateral decision-making and control over corporate opportunities. Benefits from the dual-class structure and the ability to allocate resources across his various ventures without direct accountability to public shareholders."
+    },
+    {
+      "name": "early_class_b_shareholders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefited from the initial dual-class structure, which concentrated voting power and allowed for long-term strategic decisions under Musk's leadership. Their gains are tied to the overall valuation, which this reading argues is inflated by private benefits of control."
+    },
+    {
+      "name": "class_a_public_shareholders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold equity but possess virtually no voting rights, making them unable to influence governance or hold management accountable. They bear the risk of the company's ventures without the corresponding control, and their returns are diluted by the private benefits accruing to Musk."
+    },
+    {
+      "name": "institutional_investors",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Invest in the company but face significant limitations due to the dual-class structure. While they have some collective voice, their ability to effect change is severely curtailed by Musk's voting control. Their exit options are limited by the size of their holdings and market liquidity."
+    },
+    {
+      "name": "independent_board_members",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The company operates under 'controlled company' exemptions, meaning it is not required to have independent compensation or nominating committees. Any independent voices on the board are structurally marginalized by the voting power of the controlling shareholder."
+    },
+    {
+      "name": "corporate_governance_advocates",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze and critique the company's governance structure, highlighting the lack of minority shareholder protection and potential for value extraction. They advocate for reforms but have no direct power to implement them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The dual-class structure coordinates long-term vision and rapid execution under a single, powerful leader, theoretically enabling ambitious projects without short-term market pressures.",
+    "transfer_function": "Transfers significant economic value and corporate opportunities from Class A public shareholders to Elon Musk and early Class B holders, in exchange for access to the company's growth potential.",
+    "absent_voices": "Independent compensation and nominating committees are absent due to 'controlled company' exemptions. These voices would advocate for executive compensation tied to public shareholder value and independent oversight, but are structurally excluded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dual-class structure and Musk's controlling vote vanished overnight, the company's governance would immediately shift. Public shareholders would demand accountability, potentially leading to a change in leadership, a restructuring of the board, and a re-evaluation of corporate strategy and asset allocation. The valuation would likely be repriced to reflect a more conventional governance premium.",
+    "founding_problem": "The company was founded with a vision for highly ambitious, long-term projects (e.g., space exploration, sustainable energy) that required insulation from short-term market pressures and a unified, decisive leadership.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Musk and his supporters attest that the founding problem of needing long-term, unconstrained leadership for 'impossible' goals remains live. Corporate governance advocates and some institutional investors, however, argue that while long-term vision is valuable, the current structure has evolved beyond necessity into a mechanism for extraction, with the original problem now serving as a cover story. Independent legal analysis of 'controlled company' exemptions supports the potential for abuse."
   },
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.7
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
       "value": 0.75
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.8
+      "time_point": 2,
+      "value": 0.78
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 4,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
       "value": 0.83
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 8,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.75
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
       "value": 0.8
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.85
+      "time_point": 2,
+      "value": 0.83
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 4,
+      "value": 0.86
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
       "value": 0.88
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 8,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
       "value": 0.9
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.12
+      "time_point": 2,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
       "value": 0.2
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story, 'Valuation Legitimacy: Governance Skeptic Reading,' analyzes the valuation of a company under Elon Musk's control through the lens of corporate governance. It argues that the dual-class share structure, which grants Musk disproportionate voting power (82.4% with 42% equity), functions as a mechanism for extraction rather than pure value creation. The constraint is framed as a Snare, where minority shareholders are victims of a system designed to concentrate control and private benefits, suppressing their ability to influence governance or realize fair value. This is one reading of the 'valuation_legitimacy' kernel, focusing on the structural implications of governance for shareholder value.",
-    "key_agents": [
-      "elon_musk: Agenda setter (institutional/arbitrage) — controls governance and benefits from private control.",
-      "early_class_b_shareholders: Beneficiary (powerful/mobile) — aligned with Musk's control, benefits from concentrated power.",
-      "class_a_shareholders: Payer (powerless/constrained) — bear financial risk without governance rights.",
-      "institutional_investors: Payer (organized/constrained) — disenfranchised by dual-class structure, limited influence.",
-      "future_investors: Victim (powerless/constrained) — pay premium for shares with no governance protection.",
-      "independent_board_members: Excluded (moderate/constrained) — structurally disempowered by lack of independence."
-    ],
-    "logic_rationale": "The high extractiveness (0.85) reflects the significant potential for value transfer from public shareholders to the controlling shareholder due to the governance structure. Suppression (0.90) is severe because the dual-class structure effectively silences minority shareholders, and legal avenues for redress are limited by 'controlled company' exemptions and charter provisions. The low theater ratio (0.20) indicates that while some governance functions are performed, the primary purpose of the structure is to maintain control and enable extraction, not merely to appear compliant. The rising extractiveness and suppression over time reflect the increasing market capitalization and the entrenchment of the control structure, amplifying the potential for value transfer.",
-    "perspectival_gap": "From the perspective of Elon Musk and early Class B shareholders, the governance structure is a necessary 'Rope' that enables long-term vision and value creation by insulating leadership from short-term market pressures. From the perspective of Class A shareholders and institutional investors, it is a 'Snare' that facilitates extraction by concentrating power and suppressing accountability. The engine's classification will highlight this divergence by computing a Snare for the victim seats and a more benign type for the beneficiary seats.",
-    "directionality_logic": "Elon Musk and early Class B shareholders are clear beneficiaries (d=0.0-0.1) as they directly benefit from the control premium and the ability to direct corporate assets. Class A shareholders, institutional investors, and future investors are targets (d=0.9-1.0) as they bear the costs of diluted governance rights and potential value extraction. The 'controlled company' exemptions and renounced corporate opportunities further solidify this asymmetric relationship.",
-    "mandatrophy_analysis": "The constraint's mandate (enabling visionary leadership for long-term value creation) is contested. While initially a 'Scaffold' for high-risk ventures, the governance skeptic reading argues it has drifted into a 'Snare' where the original coordination function is now cover for extraction. The classification prevents mislabeling by focusing on the actual power dynamics and value flows, rather than the stated purpose. The high extractiveness and suppression, coupled with the contested founding problem status, strongly suggest a Snare, despite the initial 'Rope' framing by beneficiaries.",
-    "kernel_context": "This constraint is the 'governance_skeptic' reading of the 'valuation_legitimacy' kernel. This reading asserts that legitimate valuation requires robust governance structures to protect minority shareholders, and that the current dual-class structure enables extraction. Sibling readings include 'dcf_fundamentalist' (valuation from proven cash flows), 'real_options_technologist' (valuation from technological option space), and 'musk_cult_believer' (valuation from Musk's track record)."
+    "narrative_context": "This constraint represents the 'governance skeptic' reading of valuation legitimacy, arguing that the company's dual-class share structure and Musk's concentrated voting control (82.4% with 42% equity) enable significant value extraction from minority shareholders. The reading posits that the lack of independent governance mechanisms, coupled with Musk's divided attention across multiple ventures and the renunciation of corporate opportunities, leads to a valuation that reflects private benefits of control rather than public shareholder value. The constraint is claimed as a Rope by its proponents (Musk and early investors) but operates as a Snare from the perspective of public shareholders.",
+    "logic_rationale": "The high extractiveness (0.85) stems from the structural ability of the controlling shareholder to direct corporate assets and opportunities for personal benefit, effectively diluting the value for non-controlling shareholders. Suppression (0.90) is severe due to the dual-class structure, which legally disempowers Class A shareholders and prevents them from exercising meaningful governance rights or challenging management decisions. The theater ratio (0.20) is relatively low, as the governance structure is overtly designed for control rather than performative compliance; what 'theater' exists is the narrative of long-term vision justifying the control. Accessibility collapse is high (0.70) because the legal and structural barriers to challenging this governance model are substantial.",
+    "directionality_logic": "Elon Musk and early Class B shareholders are clear beneficiaries, as the structure is designed to protect their control and allow for value capture. Class A public shareholders and institutional investors are targets, bearing the costs of diluted governance rights and potential value extraction. Their exit options are constrained by market liquidity and the lack of alternative investment vehicles with similar growth potential but better governance. Corporate governance advocates act as analytical observers.",
+    "perspectival_gap": "From the perspective of Elon Musk and early Class B shareholders, the dual-class structure is a necessary 'Rope' for long-term value creation, insulating the company from short-term market pressures. However, from the perspective of Class A public shareholders and corporate governance advocates, the same structure functions as a 'Snare,' enabling extraction and suppressing accountability. The engine's computation of per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'governance_skeptic' reading of the 'valuation_legitimacy' kernel. It argues that legitimate valuation requires robust governance structures protecting minority shareholders. This contrasts with the 'dcf_fundamentalist' reading (focus on discounted cash flows), the 'real_options_technologist' reading (focus on technological option value), and the 'musk_cult_believer' reading (focus on Musk's personal track record)."
   },
   "omegas": [
     {
-      "id": "private_benefits_of_control_quantification",
-      "question": "What is the precise monetary value of the private benefits of control accruing to Elon Musk and early Class B shareholders, beyond their pro-rata equity stake?",
-      "resolution_mechanism": "Independent forensic accounting and economic analysis, comparing the company's valuation to peers with standard governance, and quantifying the value of renounced corporate opportunities and related-party transactions.",
-      "impact": "Quantifying these benefits would provide empirical evidence for the magnitude of extraction, potentially leading to regulatory intervention or successful shareholder litigation, and shifting the constraint's perceived extractiveness from potential to realized.",
+      "id": "private_benefits_quantification",
+      "question": "What is the precise monetary value of the private benefits of control accruing to Elon Musk and early Class B shareholders, relative to the total market capitalization?",
+      "resolution_mechanism": "Independent forensic accounting and economic analysis, potentially compelled by regulatory bodies or shareholder litigation, to quantify the value of renounced corporate opportunities, cross-company resource allocation, and non-market compensation.",
+      "impact": "A high quantification of private benefits would strengthen the 'snare' classification and provide a basis for legal challenges or regulatory intervention to protect minority shareholders. A low quantification would weaken the extraction claim.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Quantification of value extracted through control mechanisms."
+      "description": "Quantifying the value extracted through control mechanisms."
     },
     {
       "id": "governance_structure_necessity",
-      "question": "Is the dual-class share structure and concentrated control genuinely necessary for the company's long-term success and innovation, or does it primarily serve to entrench management and facilitate extraction?",
-      "resolution_mechanism": "Comparative analysis with other innovative, high-growth companies that operate with standard one-share-one-vote governance, evaluating their ability to execute long-term strategies and attract capital.",
-      "impact": "If not necessary, the 'coordination' justification for the structure collapses, strengthening the Snare classification. If proven necessary, it would introduce a genuine coordination component, potentially shifting the classification towards a Tangled Rope.",
+      "question": "Is the current dual-class governance structure, with its extreme concentration of voting power, genuinely necessary to achieve the company's long-term, ambitious goals, or are there alternative structures that could provide similar insulation with greater accountability?",
+      "resolution_mechanism": "Comparative analysis of other high-growth, long-term-oriented companies with different governance models (e.g., staggered boards, supermajority votes, sunset clauses on dual-class shares) and their ability to execute ambitious projects.",
+      "impact": "If less extractive alternatives exist and are viable, the 'snare' classification is reinforced, as the current structure would be shown to be a choice for extraction over necessary coordination. If no viable alternatives exist, the coordination function gains more weight.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Necessity of concentrated control for innovation vs. entrenchment."
+      "description": "Assessing the necessity of the current governance structure for its stated purpose."
     },
     {
-      "id": "musk_time_allocation_conflict",
-      "question": "How are conflicts of interest arising from Elon Musk's divided time and corporate opportunities across multiple companies (e.g., Terafab benefits for Tesla/SpaceX) resolved, and who benefits from these resolutions?",
-      "resolution_mechanism": "Disclosure of inter-company agreements, board minutes, and independent assessments of resource allocation decisions, particularly for shared technologies or assets.",
-      "impact": "If resolutions consistently favor Musk's other ventures or are not transparently fair to the public company, it would provide direct evidence of value leakage and strengthen the extraction argument, increasing the measured extractiveness.",
+      "id": "valuation_methodology_bias",
+      "question": "To what extent does the company's market valuation implicitly price in the private benefits of control, rather than solely reflecting future cash flows or technological optionality available to all shareholders?",
+      "resolution_mechanism": "Academic finance research comparing the company's valuation multiples and control premiums to those of peer companies with different governance structures, adjusting for growth prospects and industry. This would involve disentangling the 'Musk premium' from the 'governance discount'.",
+      "impact": "If a significant portion of the valuation is attributable to private benefits of control, it would confirm the 'governance skeptic' reading's core claim of extraction and mispricing for public shareholders. If the valuation is primarily driven by shared value creation, the 'snare' classification would be challenged.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Resolution of conflicts of interest from Musk's multiple roles."
+      "description": "Determining if valuation reflects private benefits of control."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
   },
   "network": {
     "affects_constraints": [
@@ -161,7 +233,7 @@
       "real_options_technologist",
       "musk_cult_believer"
     ],
-    "dual_formulation_note": "This constraint is the 'governance_skeptic' reading of the 'valuation_legitimacy' kernel. It focuses on the structural implications of corporate governance for shareholder value, contrasting with readings based on cash flows, technological options, or leadership charisma."
+    "dual_formulation_note": "This constraint is one reading of the 'valuation_legitimacy' kernel. Its governance-skeptic perspective directly challenges the assumptions of other valuation methodologies and the 'Musk cult' narrative, influencing how those other constraints are perceived and applied in practice."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
@@ -189,29 +261,30 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "one_share_one_vote_is_normative",
-        "role": "secondary",
+        "atom": "governance_structures_must_ensure_accountability",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
     "reference_frame": "standard_corporate_governance_framework",
     "drift_state": {
-      "moment": "contemporary_musk_era",
+      "moment": "contemporary_tech_era",
       "direction": "practice_drift",
       "magnitude": "severe",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

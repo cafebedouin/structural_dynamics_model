@@ -4,14 +4,14 @@
     "version": "1.0",
     "generated_date": "2024-07-30",
     "status": "ACTIVE",
-    "story_uid": "fb43c1ed-3664-419d-bd1d-cdb0c7d8ac7b"
+    "story_uid": "e9d2abc2-e265-45ce-a1b0-92dd76badd70"
   },
   "base_properties": {
     "extractiveness": 0.85,
     "suppression": 0.9,
     "theater_ratio": 0.2,
     "accessibility_collapse": 0.95,
-    "resistance": 0.75,
+    "resistance": 0.7,
     "claimed_type": "mountain",
     "human_readable": "Jewish Self-Determination: Religious Covenant Reading",
     "topic_domain": "political_philosophy/nationalism_studies/postcolonial_theory",
@@ -22,20 +22,73 @@
       "settlement_enterprise"
     ],
     "victims": [
-      "secular_territorial_negotiation_framework",
-      "palestinian_self_determination"
+      "secular_negotiation_frameworks",
+      "palestinian_population"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "religious_zionist_movement",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Interprets the divine covenant as a mandate for Jewish sovereignty over the entire land, viewing territorial compromise as a religious transgression. Actively promotes and supports settlement expansion, influencing state policy through political and religious institutions. Their identity is fused with the fulfillment of this covenant."
+    },
+    {
+      "name": "settlement_enterprise",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Directly benefits from the religious covenant reading, which provides a theological justification for their presence and expansion in disputed territories. They receive state support and protection, and their actions are framed as fulfilling a divine command, making exit unthinkable for many participants."
+    },
+    {
+      "name": "secular_negotiation_frameworks",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Represents the diplomatic and legal structures for territorial compromise based on international law and political agreements. This framework is undermined and often foreclosed by the religious covenant reading, which asserts a non-negotiable divine right to the land, rendering secular solutions illegitimate."
+    },
+    {
+      "name": "palestinian_population",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bears the direct costs of territorial expansion justified by the religious covenant reading, including displacement, loss of land, and denial of self-determination. Their claims to indigenous rights and self-determination are systematically suppressed by the theological framing of Jewish sovereignty."
+    },
+    {
+      "name": "international_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observes the conflict, often attempting to mediate through secular frameworks. Their efforts are frequently frustrated by the religious covenant reading, which dismisses international law as irrelevant to a divine mandate. They can impose diplomatic or economic pressure but cannot alter the theological premise."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the actions and identity of religious Zionist groups and settlers around a shared theological mandate for territorial control, providing a coherent framework for collective action and legitimizing expansion.",
+    "transfer_function": "Transfers land, resources, and political authority from the Palestinian population and secular negotiation frameworks to the religious Zionist movement and settlement enterprise, justified by divine right.",
+    "absent_voices": "Palestinian voices advocating for self-determination and secular governance are systematically excluded from the discourse shaped by the religious covenant reading. Diasporist Jewish voices, who prioritize Jewish ethical universalism over territorial nationalism, are also marginalized.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the religious covenant reading vanished overnight, the theological justification for settlement expansion would collapse, significantly altering the political landscape. The religious Zionist movement would lose its core ideological coherence, and secular negotiation frameworks would gain legitimacy, leading to a fundamental reorganization of territorial claims and power dynamics.",
+    "founding_problem": "The perceived existential threat to Jewish identity and continuity after centuries of diaspora and persecution, leading to a desire for secure self-determination in the ancestral homeland.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Religious Zionist leaders and their followers attest that the problem of Jewish insecurity and the divine mandate remain live. Critics, including some Jewish scholars and human rights organizations, acknowledge the historical context of insecurity but argue that the religious covenant reading has been instrumentalized to justify ongoing dispossession, shifting the nature of the 'problem' from existential threat to expansionist ideology."
+  },
   "interval": {
-    "start": 1948,
+    "start": 1967,
     "end": 2024
   },
   "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1948,
-      "value": 0.6
-    },
     {
       "metric": "base_extractiveness",
       "time_point": 1967,
@@ -43,18 +96,18 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1987,
-      "value": 0.78
+      "time_point": 1980,
+      "value": 0.75
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.82
+      "time_point": 1995,
+      "value": 0.8
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2010,
-      "value": 0.84
+      "value": 0.83
     },
     {
       "metric": "base_extractiveness",
@@ -63,28 +116,23 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1948,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1967,
-      "value": 0.78
+      "value": 0.75
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1987,
+      "time_point": 1980,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
       "value": 0.85
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.88
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 2010,
-      "value": 0.89
+      "value": 0.88
     },
     {
       "metric": "suppression_requirement",
@@ -93,28 +141,23 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1948,
+      "time_point": 1967,
       "value": 0.1
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1967,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1987,
+      "time_point": 1980,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
+      "time_point": 1995,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.19
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
@@ -123,40 +166,47 @@
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint represents the reading of Jewish self-determination that grounds territorial claims in a divine covenant, making sovereignty a religious obligation. It is presented as a 'mountain' within its own theological framework (divine command is immutable), but its operationalization in a secular political context makes it function as a highly extractive and suppressive constraint. The high extractiveness and suppression reflect the costs imposed on those who do not share or are actively harmed by this theological claim, particularly the secular negotiation framework and Palestinian self-determination. The 'emerges_naturally: true' reflects the internal theological claim of divine origin, which is then contested by the omegas.",
-    "logic_rationale": "The extractiveness (0.85) is high because the absolute nature of the divine claim forecloses compromise and imposes a non-negotiable framework on others. Suppression (0.90) is severe as it actively delegitimizes and suppresses alternative secular or indigenous claims to the same territory. Theater ratio (0.20) is low because the religious conviction is genuine, but some political actions taken in its name may have performative elements. Accessibility collapse is very high (0.95) because, within this framework, no legitimate alternative to the divine mandate exists. Resistance is high (0.75) due to the ongoing conflict with those whose claims are suppressed.",
-    "directionality_logic": "The religious Zionist movement and settlement enterprise are clear beneficiaries (d=0.0-0.1) as they gain legitimacy and material support from this reading. The secular territorial negotiation framework and Palestinian self-determination are clear victims (d=0.9-1.0) as their claims are directly undermined and suppressed. International law bodies are observers (d=0.5) attempting to apply a different framework, while diaspora Jewish communities are often excluded (d=0.7-0.8) if their views diverge from the dominant religious Zionist narrative.",
-    "perspectival_gap": "From the perspective of the religious Zionist movement, this is a divinely ordained, immutable 'mountain' that coordinates a sacred mission. From the perspective of secular negotiation frameworks and Palestinian self-determination, it operates as a 'snare' or 'tangled rope' that extracts land and suppresses rights through an actively enforced, non-negotiable claim. The engine's classification will highlight this divergence.",
-    "mandatrophy_analysis": "The constraint's mandate (fulfilling the divine covenant) is considered 'live' within its own framework, preventing a mandatrophy resolution from within. However, the high extractiveness and suppression, coupled with the 'contested' status of the founding problem, indicate that from an external, secular perspective, the constraint functions as a highly extractive mechanism that has outlived its original coordination function (if any, for non-adherents) and now primarily serves to maintain a power asymmetry.",
-    "kernel_context": "This constraint is the 'religious_covenant_reading' of the 'jewish_self_determination' kernel. This reading asserts that the Jewish claim to the land derives from an immutable divine covenant, making territorial sovereignty a religious obligation. Sibling readings include the 'liberal_nationalist_reading' (Jewish people as a nation with equal self-determination), 'indigenous_return_reading' (Zionism as decolonization), 'settler_colonial_reading' (Zionism as dispossession), and 'diasporist_reading' (Jewish flourishing through diaspora pluralism)."
+    "narrative_context": "This constraint represents the Jewish claim to the land as derived from a divine covenant, framing territorial sovereignty as a religious obligation. This reading positions the claim as a 'mountain' (divine command, immutable) but its operationalization in secular political contexts, particularly through the settlement enterprise, functions as a 'tangled rope' or 'snare' due to its high extractiveness and suppression of alternative frameworks and populations. The claimed type is 'mountain' reflecting the internal theological perspective, while the metrics reflect its external impact and enforcement.",
+    "key_agents": [
+      "religious_zionist_movement: Primary agenda-setter (institutional/identity_locked) — interprets and enforces the divine mandate.",
+      "settlement_enterprise: Primary beneficiary (organized/identity_locked) — directly benefits from the theological justification for expansion.",
+      "secular_negotiation_frameworks: Primary victim (institutional/trapped) — undermined by the religious claim.",
+      "palestinian_population: Primary victim (powerless/trapped) — bears the direct costs of territorial expansion.",
+      "international_community: Observer (institutional/analytical) — attempts to mediate but is often dismissed by the religious framing."
+    ],
+    "logic_rationale": "The high extractiveness (0.85) and suppression (0.9) reflect the real-world impact of this reading: it actively dispossesses one population while foreclosing secular avenues for resolution. The 'mountain' claim is based on the internal logic of divine command, which is absolute within its own framework, leading to a high accessibility collapse (0.95) for those who accept it. However, the active enforcement and resistance (0.7) indicate it is not a universally accepted natural law, but a contested claim requiring continuous defense. The low theater ratio (0.2) suggests that the religious justification is genuinely held and acted upon, not merely performative.",
+    "perspectival_gap": "From the perspective of the religious Zionist movement, this is a divine mandate, an unchangeable 'mountain' that coordinates their actions. From the perspective of the Palestinian population and secular negotiation frameworks, it operates as a 'snare' or 'tangled rope,' extracting land and rights through a religiously justified, actively enforced system. The engine's classification will highlight this divergence.",
+    "directionality_logic": "The religious Zionist movement and settlement enterprise are clear beneficiaries (d near 0.0) as they gain land and political influence, and their identity is locked into the constraint. Secular negotiation frameworks and the Palestinian population are clear targets (d near 1.0) as they lose land, rights, and legitimacy. The international community is an observer, attempting to influence but not directly subject to the constraint's internal logic.",
+    "mandatrophy_analysis": "The constraint's mandate (divine covenant) is considered 'live' by its proponents, preventing a 'piton' classification. However, the high extractiveness and suppression, coupled with the 'contested' status of the founding problem, suggest that while the mandate persists, its function has drifted significantly from addressing existential insecurity to justifying territorial expansion. The classification as a 'mountain' (claimed type) with high extractiveness (metrics) highlights this tension, preventing mislabeling it as pure coordination.",
+    "kernel_context": "This constraint is the 'religious_covenant_reading' of the 'jewish_self_determination' kernel. It asserts that the Jewish claim to the land is a divine obligation, making territorial sovereignty non-negotiable. Sibling readings include 'liberal_nationalist_reading', 'indigenous_return_reading', 'settler_colonial_reading', and 'diasporist_reading', each offering a distinct interpretation of Jewish self-determination and its relationship to the land."
   },
   "omegas": [
     {
-      "id": "divine_vs_secular_legitimacy",
-      "question": "Is the divine covenant a legitimate basis for territorial sovereignty in a pluralistic international system, or is it a theological claim that cannot supersede secular legal frameworks?",
-      "resolution_mechanism": "No empirical resolution; depends on a conceptual/normative choice regarding the hierarchy of legal and moral authority (theological vs. international law).",
-      "impact": "If divine covenant is accepted as supreme, the constraint is a genuine mountain; if secular law is supreme, it functions as a snare or tangled rope, with the 'mountain' claim serving as cover.",
-      "confidence": "high",
+      "id": "divine_mandate_vs_political_instrumentalization",
+      "question": "Is the religious covenant reading a genuine, immutable divine mandate, or has it been instrumentalized to serve political and territorial expansionist goals?",
+      "resolution_mechanism": "Theological and historical analysis of the evolution of interpretations, combined with empirical observation of the correlation between religious rhetoric and political outcomes (e.g., settlement growth vs. security needs).",
+      "impact": "If instrumentalized, the 'mountain' claim is a cover for a 'snare' or 'tangled rope,' increasing effective extractiveness and justifying reclassification. If a genuine mandate, the internal logic of the 'mountain' holds, but its external impact remains extractive.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The fundamental conflict between theological and secular claims to legitimacy."
+      "description": "Ambiguity between genuine religious belief and political instrumentalization of a divine claim."
     },
     {
       "id": "identity_lock_vs_coercion",
-      "question": "To what extent is the 'identity_locked' exit option for the religious Zionist movement a genuine internal commitment, versus a product of external political and social coercion that makes alternative identities unthinkable?",
-      "resolution_mechanism": "Sociological studies of identity formation in highly politicized religious communities, examining the role of state incentives, social pressure, and educational systems in reinforcing the 'identity_locked' status.",
-      "impact": "If primarily internal, the identity_lock is a feature of the agent's genuine commitment. If substantially external, the 'identity_locked' status is itself a form of suppression, increasing the effective extractiveness of the constraint on the agent.",
-      "confidence": "medium",
+      "question": "To what extent is the 'identity_locked' exit option for religious Zionists and settlers a genuine internal commitment, versus a product of structural coercion and social pressure within their communities?",
+      "resolution_mechanism": "Sociological studies of individual motivations and exit narratives, analysis of community sanctions for dissent, and comparison with similar identity-based movements.",
+      "impact": "If primarily coerced, the effective suppression is higher, and the 'identity_locked' status is less about free commitment and more about structural entrapment, potentially reclassifying the constraint as more snare-like for these agents.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Distinguishing genuine identity fusion from coerced identity."
+      "description": "Distinguishing genuine identity fusion from community-level coercion in 'identity_locked' agents."
     },
     {
-      "id": "mountain_or_snare_of_policy",
-      "question": "Is this constraint a genuine 'mountain' of divine command, or a 'snare' of policy that leverages religious belief to achieve political ends?",
-      "resolution_mechanism": "Analysis of the historical evolution of the 'divine covenant' claim in relation to political and territorial expansion, examining whether the theological interpretation adapted to political opportunities or genuinely drove them.",
-      "impact": "If primarily a mountain, its extractiveness is an inherent cost of a divine mandate. If primarily a snare, its extractiveness is a product of human agency and power, making it amenable to political resolution.",
+      "id": "secular_framework_legitimacy",
+      "question": "Can secular negotiation frameworks ever achieve legitimacy or efficacy in resolving territorial disputes when confronted with a claim grounded in divine covenant?",
+      "resolution_mechanism": "Empirical observation of successful or failed negotiations in similar contexts, and analysis of the conditions under which religious and secular claims can be reconciled or compartmentalized.",
+      "impact": "If secular frameworks are inherently foreclosed, the constraint's suppression of alternatives is absolute, reinforcing its 'mountain' aspect for proponents and its 'snare' aspect for targets. If reconciliation is possible, the suppression is contingent, opening pathways for resolution.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Ambiguity between natural law and constructed policy."
+      "description": "The inherent compatibility or incompatibility of religious and secular claims in territorial disputes."
     }
   ],
   "boltzmann": {
@@ -168,8 +218,7 @@
       "jewish_self_determination__indigenous_return_reading",
       "jewish_self_determination__settler_colonial_reading",
       "jewish_self_determination__diasporist_reading"
-    ],
-    "dual_formulation_note": "This constraint is one reading of the 'jewish_self_determination' kernel. Its high extractiveness and suppression stem from its absolute theological claims, which directly conflict with secular and alternative indigenous claims to the same territory. Other readings of this kernel offer different justifications and outcomes."
+    ]
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
@@ -177,53 +226,54 @@
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "jewish_self_determination__liberal_nationalist_reading",
+        "sibling_id": "liberal_nationalist_reading",
         "relation": "influences"
       },
       {
-        "sibling_id": "jewish_self_determination__indigenous_return_reading",
+        "sibling_id": "indigenous_return_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "jewish_self_determination__settler_colonial_reading",
-        "relation": "forecloses"
-      },
-      {
-        "sibling_id": "jewish_self_determination__diasporist_reading",
+        "sibling_id": "settler_colonial_reading",
         "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diasporist_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "divine_covenant_grants_land",
+        "atom": "divine_covenant_unconditional_land_grant",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "theological"
       },
       {
-        "atom": "territorial_sovereignty_is_religious_obligation",
+        "atom": "territorial_sovereignty_religious_obligation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "biblical_covenant_fulfillment",
+    "reference_frame": "biblical_covenantal_mandate",
     "drift_state": {
-      "moment": "contemporary_international_relations",
-      "direction": "authority_erosion",
+      "moment": "contemporary_political_reality",
+      "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild_gemini",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_gemini+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "gemini-2.5-flash",
     "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }
