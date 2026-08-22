@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__narrow_warning_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "72e89a90-a976-4ba8-a909-904611b84c8c"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.22,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.35,
+    "claimed_type": "scaffold",
+    "human_readable": "Beta Designation as Time-Bounded Testing Disclosure (Narrow Warning Reading)",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "software_publishers_conducting_genuine_testing",
+      "beta_testing_participants"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "informed_consent_to_known_defect_risk",
+      "testing_phase_disclosure_adequacy_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_publishers_conducting_genuine_testing",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Labels a product 'beta' to disclose that it is undergoing genuine pre-release testing, gaining a bounded, temporary reduction in exposure to claims arising from disclosed, testing-phase defects. Must actually ship a final, fully-liable release within a genuine testing window or the designation lapses and full liability re-attaches retroactively to the testing period under this reading."
+    },
+    {
+      "name": "beta_testing_participants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Opt into beta programs knowingly, receiving early access and a role in improving the product in exchange for accepting disclosed instability risk. Retain full recourse for undisclosed defects, and for any harm outside the scope of what the beta disclosure actually warned about; can exit the beta program at will."
+    },
+    {
+      "name": "courts_and_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a given 'beta' designation was a genuine, time-bounded testing phase or a pretextual label used to indefinitely dodge liability. Under this reading, courts scrutinize duration, disclosure content, and whether base product liability for undisclosed harms was actually preserved."
+    },
+    {
+      "name": "downstream_consumers_of_released_product",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Purchase or use the product after it exits beta and is marketed as a finished release. They were never part of the beta program and did not consent to any testing-phase risk; under this reading they are outside the beta designation's scope entirely and retain ordinary full liability protection."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allows publishers to disclose genuine pre-release instability to a bounded, opted-in group of users, enabling real-world testing that improves the eventual released product while giving testers a clear, honest signal about the risk they are accepting.",
+    "transfer_function": "Moves a narrow, disclosed slice of testing-phase risk from publisher to informed, consenting beta participants for the duration of a genuine testing window; moves nothing from parties who never consented to beta status, and moves nothing at all once the designation expires or is found pretextual.",
+    "absent_voices": "Downstream consumers who buy the finished, post-beta release have no voice in how the beta period was conducted, but under this reading they are also outside its scope and are not exposed to any transferred risk — their absence is not a suppressed grievance because the shield does not reach them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this narrow reading of beta designation disappeared, publishers would either forgo real-world pre-release testing (reducing product quality and defect discovery) or would test covertly without disclosure, converting a transparent, consent-based arrangement into a hidden one — the informed-testing coordination function would have to be reconstructed some other way.",
+    "founding_problem": "Software could not be adequately tested against real-world use conditions without external testers, but testers exposed to genuine early-stage instability needed a clear signal of that risk and publishers needed some bounded assurance they would not face full-release liability for defects they were actively still hunting during a disclosed testing window.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent software-quality researchers and consumer-protection litigators (outside the publisher beneficiary class) corroborate that disclosed beta testing genuinely surfaces defects undetectable in internal QA, and that courts applying this narrow reading have in practice voided beta shields where duration was indefinite or disclosure was thin — evidence the doctrine is being tested against its own genealogy rather than simply asserted by publishers."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Software publishers commonly designate a product 'beta' to disclose that it remains under active testing, informing users of elevated instability risk in exchange for early access. This story instantiates the narrow warning reading of the contested 'beta designation' kernel: the designation functions as time-bounded, good-faith testing disclosure, base product liability for undisclosed defects is preserved throughout, and the shield is void ab initio if the testing period is not genuine (indefinite duration, no real defect-fixing activity, or disclosure that does not match actual risk). This is a low-extraction, low-coordination-overhead scaffold — the coordination function (honest testing disclosure) is real and modest, and the shield sunsets by design when the testing phase ends or is exposed as pretextual.",
+    "key_agents": [
+      "software_publishers_conducting_genuine_testing: agenda_setter/beneficiary (organized/constrained) — sets and administers the designation, bears the sunset condition",
+      "beta_testing_participants: beneficiary/payer (moderate/mobile) — accepts disclosed risk, retains recourse for undisclosed harm",
+      "courts_and_regulators: observer (institutional/analytical) — adjudicates genuineness of the testing phase",
+      "downstream_consumers_of_released_product: excluded (powerless/constrained) — outside the designation's scope under this reading"
+    ],
+    "logic_rationale": "Extractiveness is low (0.28) and stable because this reading limits the shield strictly to disclosed, testing-phase-specific risk accepted by consenting participants; the slight upward drift reflects ordinary scope-creep pressure toward calling ever-longer periods 'beta,' but the reading's genuineness requirement caps how far that can go before a court reclassifies. Suppression is low (0.22) because participants are informed and can exit the beta program; there is no coercion to remain a tester. Theater ratio is low and only mildly rising (0.08 to 0.15) — most beta programs under this reading do real defect-fixing work, though some drift toward performative 'beta' labeling for marketing purposes is observable over time. Accessibility collapse and resistance are both moderate-low, consistent with a genuine, functioning scaffold rather than an entrenched extraction structure.",
+    "directionality_logic": "Publishers are near-beneficiary but not purely so — the sunset condition and the retroactive liability reattachment for pretextual use constrain their position; they bear real risk if the testing window is later found non-genuine. Beta testers sit close to symmetric: real benefit (early access, product influence) balanced against disclosed, bounded risk they accepted knowingly, with full exit available. Downstream consumers are entirely outside this reading's scope — the shield does not reach them, so they are neither beneficiaries nor victims here, only excluded from the beta-phase conversation while remaining structurally unaffected by it.",
+    "mandatrophy_analysis": "The founding problem (need for disclosed, consent-based real-world testing) remains live and is corroborated by parties outside the publisher class, which is why this reading resists mandatrophy: the shield expires with the testing phase by construction (has_sunset_clause), and courts under this reading actively police genuineness rather than rubber-stamping indefinite 'beta' labeling. This prevents the coordination function from calcifying into a permanent extraction vehicle — the moment duration or disclosure content stops tracking genuine testing, this reading's own logic voids the shield.",
+    "kernel_context": "This constraint instantiates the narrow_warning_reading of the beta_designation_doctrine kernel. Two sibling readings exist as separate constraints: expansive_shield_reading treats the designation as a comprehensive, potentially indefinite liability waiver applicable to all software contexts (a far more extractive constraint with a much higher ε, since duration and disclosure genuineness are not policed); severity_carve_out_reading holds that beta designation is categorically unavailable for life-safety, financial, or other critical systems regardless of testing status, which this narrow reading does not itself assert but does not foreclose — a life-safety beta program could in principle satisfy this reading's genuineness test while still being barred by the severity carve-out's categorical rule. The three readings differ sharply in ε and in classification: narrow_warning_reading is a modest scaffold, expansive_shield_reading would likely compute as a snare or tangled_rope, and severity_carve_out_reading operates as a domain-restriction rule layered on top of either."
+  },
+  "omegas": [
+    {
+      "id": "genuineness_of_testing_phase_ambiguity",
+      "question": "How does a court or regulator reliably distinguish a genuine, good-faith testing phase from a pretextual 'beta' label used to extend liability protection indefinitely?",
+      "resolution_mechanism": "Establish objective proxies: rate of defect-fix commits, existence of a published or internally-tracked release criterion, actual duration relative to comparable products' testing phases, and whether marketing materials describe the product as feature-complete despite the beta label.",
+      "impact": "If no reliable proxy exists, the narrow reading collapses in practice into the expansive_shield_reading, because publishers can indefinitely claim genuineness without effective external check — this would raise this constraint's effective extraction toward the expansive reading's profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether genuineness of a testing phase can be reliably verified, which is load-bearing for keeping this reading distinct from the expansive_shield_reading."
+    },
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Which of the three readings (narrow_warning, expansive_shield, severity_carve_out) does controlling law in a given jurisdiction actually adopt, and is that choice stable across contexts (consumer software vs. embedded/critical systems)?",
+      "resolution_mechanism": "Survey case law and statutory consumer-protection provisions across jurisdictions to determine which reading (or hybrid) is operative; track whether courts apply severity_carve_out as an override on top of narrow_warning_reading in critical-systems cases.",
+      "impact": "If most jurisdictions in practice apply something closer to expansive_shield_reading, this narrow reading is aspirational/minority doctrine rather than the operative legal rule, which would not change this story's own authored ε but would change how much real-world weight this reading should be given in downstream analysis.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Documents that this story is one of three live readings of a single contested kernel, and that the operative legal reading is itself unsettled."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__severity_carve_out_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the beta_designation_doctrine kernel, each authored as a separate constraint per the epsilon-invariance principle. narrow_warning_reading (this story) authors a low, stable epsilon (~0.28) reflecting a bounded, genuinely time-limited testing disclosure with preserved base liability. expansive_shield_reading would author a substantially higher epsilon reflecting indefinite-duration, all-context liability waiver. severity_carve_out_reading operates orthogonally as a categorical domain restriction rather than a duration/disclosure test, and would likely author its own distinct epsilon around the cost of misapplying any beta shield to critical systems. The three are linked via affects_constraints because a court adopting one reading structurally forecloses or pressures the others within that jurisdiction's controlling doctrine."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "severity_carve_out_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "shield_expires_with_genuine_testing_phase",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "base_liability_for_undisclosed_defects_survives_beta_label",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "consent_based_bounded_disclosure_regime",
+    "drift_state": {
+      "moment": "contemporary_saas_continuous_release_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

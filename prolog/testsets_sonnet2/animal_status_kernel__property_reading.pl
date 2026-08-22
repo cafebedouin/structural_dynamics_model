@@ -1,0 +1,354 @@
+% ============================================================================
+% CONSTRAINT STORY: animal_status_kernel__property_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-15
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_animal_status_kernel__property_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: animal_status_kernel__property_reading
+ *   human_readable: Animal-as-Property Legal Status (Property Reading)
+ *   domain: moral_philosophy/legal_theory/animal_ethics
+ *
+ * SUMMARY:
+ *   This story instantiates the property reading of the animal-status kernel:
+ *   animals are chattel, moral considerability derives entirely from
+ *   ownership rights, and economic value is the sole relevant metric for how
+ *   animals may be used. Anti-cruelty statutes exist but are structurally
+ *   aimed at protecting owner property value and public sensibility, not at
+ *   recognizing any independent animal interest. This is one of three
+ *   readings of a shared kernel — the welfare reading retains property status
+ *   but layers on welfare-based use constraints, and the abolitionist reading
+ *   rejects property status entirely as itself the injustice. Each reading is
+ *   authored as its own ε-invariant constraint per the decomposition rule;
+ *   this file addresses only the property reading, on its own terms, as the
+ *   arrangement its own proponents would describe.
+ *
+ * KEY AGENTS:
+ *   - livestock_industry_owners: primary beneficiary (institutional/arbitrage) — captures economic surplus from unconstrained use
+ *   - biomedical_research_institutions: beneficiary (institutional/arbitrage) — uses animals as instrumented property
+ *   - farmed_animals: primary target (powerless/trapped) — bears full cost with no legal standing to register it
+ *   - laboratory_animals: primary target (powerless/trapped) — same structural exclusion in research context
+ *   - animal_welfare_advocates: excluded voice (organized/constrained) — argument has no doctrinal category to attach to
+ *   - courts_and_legislatures: agenda-setter (institutional/analytical) — administers and could revise the classification
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(animal_status_kernel__property_reading, 0.88).
+domain_priors:suppression_score(animal_status_kernel__property_reading, 0.8).
+domain_priors:theater_ratio(animal_status_kernel__property_reading, 0.25).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(animal_status_kernel__property_reading, extractiveness, 0.88).
+narrative_ontology:constraint_metric(animal_status_kernel__property_reading, suppression_requirement, 0.8).
+narrative_ontology:constraint_metric(animal_status_kernel__property_reading, theater_ratio, 0.25).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(animal_status_kernel__property_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(animal_status_kernel__property_reading, resistance, 0.55).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(animal_status_kernel__property_reading, snare).
+narrative_ontology:human_readable(animal_status_kernel__property_reading, "Animal-as-Property Legal Status (Property Reading)").
+narrative_ontology:topic_domain(animal_status_kernel__property_reading, "moral_philosophy/legal_theory/animal_ethics").
+
+domain_priors:requires_active_enforcement(animal_status_kernel__property_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(animal_status_kernel__property_reading, '0d62159a-b0e5-4176-a318-bbbd9c1df9b7').
+narrative_ontology:cs_kernel_codification('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', formalized).
+narrative_ontology:cs_authority_grounding('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', extraction).
+narrative_ontology:cs_interpretation_layer_present('0d62159a-b0e5-4176-a318-bbbd9c1df9b7').
+narrative_ontology:cs_reading_relation('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', animal_status_kernel__welfare_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', animal_status_kernel__abolitionist_reading, forecloses).
+narrative_ontology:cs_axiom('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', foundational, moral_status_derives_from_ownership).
+narrative_ontology:cs_axiom_status(moral_status_derives_from_ownership, holdable).
+narrative_ontology:cs_axiom_grounding('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', moral_status_derives_from_ownership, conventional).
+narrative_ontology:cs_axiom('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', foundational, economic_value_is_sole_relevant_metric).
+narrative_ontology:cs_axiom_status(economic_value_is_sole_relevant_metric, holdable).
+narrative_ontology:cs_axiom_grounding('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', economic_value_is_sole_relevant_metric, instrumental).
+narrative_ontology:cs_reference_frame('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', chattel_property_common_law_foundation).
+narrative_ontology:cs_drift_state('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', contemporary_sentience_science_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('0d62159a-b0e5-4176-a318-bbbd9c1df9b7', '').
+narrative_ontology:cs_kernel_id(animal_status_kernel__property_reading, animal_status_kernel).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(animal_status_kernel__property_reading, livestock_industry_owners).
+narrative_ontology:constraint_beneficiary(animal_status_kernel__property_reading, biomedical_research_institutions).
+narrative_ontology:constraint_beneficiary(animal_status_kernel__property_reading, entertainment_and_breeding_industries).
+narrative_ontology:constraint_beneficiary(animal_status_kernel__property_reading, commodity_input_supply_chains).
+narrative_ontology:constraint_victim(animal_status_kernel__property_reading, farmed_animals).
+narrative_ontology:constraint_victim(animal_status_kernel__property_reading, laboratory_animals).
+narrative_ontology:constraint_victim(animal_status_kernel__property_reading, companion_animals_in_disputes).
+narrative_ontology:constraint_victim(animal_status_kernel__property_reading, animal_welfare_advocates).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(animal_status_kernel__property_reading, consumers_of_animal_products).
+narrative_ontology:constraint_vindicates(animal_status_kernel__property_reading, chattel_property_doctrine).
+narrative_ontology:constraint_vindicates(animal_status_kernel__property_reading, economic_value_as_sole_normative_metric).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Own, breed, confine, and slaughter animals as capital and inventory. Lobby for statutory frameworks that classify animals as property so that husbandry practices are governed by commercial reasonableness standards rather than any independent animal-interest test. Capture nearly all economic value the arrangement produces and shape the anti-cruelty statutes that apply to their own operations.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, livestock_industry_owners, beneficiary,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(animal_status_kernel__property_reading, livestock_industry_owners, agenda_setter).
+
+% Use animals as experimental instruments under regulatory regimes premised on animals as owned research materials. Institutional review requirements exist but are framed around research validity and institutional liability, not animal moral status; exit from the property framing would require replacing entire experimental paradigms.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, biomedical_research_institutions, beneficiary,
+    institutional, generational, arbitrage, national).
+
+% Breed and exhibit animals for profit (racing, shows, zoos, breeding operations). The property framing lets them treat animals as tradeable, insurable, and disposable assets whose value is set by market demand rather than welfare condition.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, entertainment_and_breeding_industries, beneficiary,
+    organized, biographical, mobile, national).
+
+% Feed suppliers, transport firms, slaughter and processing operations, and financial instruments (livestock futures) all rely on animals being fungible property units with clear title and no independent moral claims to complicate transactions.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, commodity_input_supply_chains, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Confined, bred, and killed according to production schedules set entirely by economic optimization. Because they are property rather than victims in law, no cost-benefit analysis is legally required to weigh their suffering against their owner's profit; anti-cruelty statutes intervene only when treatment falls below a threshold that would damage the owner's own property value or offend public sensibility, not when it damages the animal.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, farmed_animals, payer,
+    powerless, immediate, trapped, national).
+
+% Bred and used as instrumented experimental material. Institutional protocols evaluate protocol design and researcher conduct, not the animal's independent standing; the property frame means the animal has no legal voice or interest that could halt or redirect an experiment on its own behalf.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, laboratory_animals, payer,
+    powerless, immediate, trapped, national).
+
+% In custody disputes, injury claims, or abandonment cases, courts value companion animals at replacement or market cost rather than any measure tied to the animal's own experience or relational bonds — a direct legal consequence of the property classification.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, companion_animals_in_disputes, payer,
+    powerless, biographical, trapped, local).
+
+% Argue for recognizing animal sentience and interests as independently weighable in law. Under the property reading their claims have no standing category to attach to — courts and legislatures routing questions through property law structurally exclude the interest-based argument from the operative legal test, not merely losing it on the merits.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, animal_welfare_advocates, excluded,
+    organized, generational, constrained, national).
+
+% Purchase meat, dairy, leather, and research-derived products at prices that reflect the absence of any legally mandated animal-interest cost internalization. Individually mobile (can change consumption choices) but the market-wide pricing structure they rely on depends on the property framing persisting at scale.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, consumers_of_animal_products, beneficiary,
+    moderate, immediate, mobile, national).
+
+% Administer and could in principle revise the property classification through statute or common-law development. Historically defer to the ownership frame absent strong political pressure, and largely draft anti-cruelty provisions as property-adjacent nuisance or public-morals law rather than animal-interest law.
+narrative_ontology:constraint_stakeholder(animal_status_kernel__property_reading, courts_and_legislatures, agenda_setter,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(animal_status_kernel__property_reading, livestock_industry_owners).
+narrative_ontology:fixing_cost_class(animal_status_kernel__property_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a stable, transferable, and insurable legal category for animals as economic assets — enabling markets in livestock, research subjects, working animals, and companion animals to function with clear title, contract, and liability rules.
+% TRANSFER_FUNCTION: Moves the entire cost of an animal's suffering, confinement, and death off any legally cognizable ledger and onto no one; the corresponding economic surplus (cheap production inputs, unconstrained experimental access, tradeable living assets) flows to owners, industries, and downstream consumers.
+% ABSENT_VOICES: The animals themselves have no legal voice under this reading by construction — their interests are not merely underweighted, they are not a category the law is built to register. Animal welfare advocates who would argue for interest-based standing are present in public discourse but structurally excluded from the operative legal test, which routes every dispute through property doctrine.
+% DISAPPEARANCE_RATIONALE: If the property classification were removed overnight and replaced with any interest-holding status for animals, entire industries (industrial animal agriculture, much of biomedical research, breeding and exhibition markets) would need to redesign core operations around a countervailing animal-interest constraint; pricing, insurance, inheritance, and tort law would all require rebuilding around a new category of non-property sentient interest-holder.
+% FOUNDING_PROBLEM: Historically, animals needed a stable legal category to enable agriculture, transport, and early science to function as organized economic activity — someone needed clear, enforceable title over working and food animals to invest in breeding, husbandry, and trade.
+% FOUNDING_PROBLEM_CORROBORATION: Livestock and research industries attest the property framing remains necessary for functioning markets and scientific infrastructure. Animal welfare scientists, comparative cognition researchers, and legal scholars outside the beneficiary industries (documented in veterinary ethics literature and comparative law journals) attest that the scientific case for animal sentience has moved far beyond what the founding property framework anticipated, and that the category persists now primarily because revising it would be costly to entrenched industries, not because animals lack morally relevant interests.
+narrative_ontology:disappearance_verdict(animal_status_kernel__property_reading, world_rearranges).
+narrative_ontology:founding_problem_status(animal_status_kernel__property_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(animal_status_kernel__property_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_sonnet2', 'agent/example_platform_commission.json',
+    'claude-sonnet-5', 'max_tokens=16384,thinking=disabled,temperature=api_default').
+narrative_ontology:story_seed(animal_status_kernel__property_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(animal_status_kernel__property_reading, 0.88, 'claude-sonnet-5', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(animal_status_kernel__property_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(animal_status_kernel__property_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(animal_status_kernel__property_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is authored high (0.88) because, under this reading, there is no countervailing moral constraint on use whatsoever — the only limits on treatment are those that protect the owner's own economic interest (a damaged or dead animal is a depreciated asset) or public morals concerns unrelated to the animal's experience. Suppression is high (0.8) because the property classification is actively maintained through statute, doctrine, and industry lobbying against any interest-based standing reform; this is not passive inertia. Theater ratio is comparatively low-moderate (0.25) and rising: anti-cruelty enforcement performs some genuine function (protecting owners from vandalism-style harm to their property, addressing extreme cases that offend public sensibility) but an increasing share of enforcement activity is symbolic — publicized cruelty prosecutions that leave the vast bulk of routine industrial use entirely untouched.
+ *
+ * PERSPECTIVAL GAP:
+ *   From the owner/agenda-setter seat, this looks like a functioning Rope or even a Mountain — a natural, necessary category enabling markets that predates any specific actor's choice. From the payer seat (to the extent animals or their advocates could occupy an analytical seat), the same structure is a Snare: coordination language covering an arrangement that permits unlimited extraction because the extracted party is definitionally excluded from having interests the law must weigh. The engine should compute markedly different per-seat classifications from the same structural data — that divergence is not an error in the story, it is the finding.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Owners, industries, and downstream consumers sit near the full-beneficiary end: the arrangement subsidizes their economic activity by removing an entire category of cost internalization. Animals sit at the full-target end by construction — as property rather than persons, they cannot be beneficiaries or symmetric parties in this reading's own terms; the reading assigns them a directionality of pure extraction target with no exit (trapped, not merely constrained, since an animal cannot exit its own ownership). Welfare advocates are excluded rather than positioned on the beneficiary/victim axis at all, which is itself the structural point: the reading does not have a slot for their argument.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem (needing a stable transferable legal category to enable agricultural and scientific economic activity) may have been genuinely live historically. Whether it remains live today, given contemporary scientific consensus on animal sentience and cognition, is contested — and notably, the strongest corroboration for 'still live' comes primarily from the industries that benefit from the classification, while corroboration for 'founding problem has been overtaken by better evidence about animal minds' comes from comparative cognition science and legal scholarship outside the beneficiary set. This is the classic mandatrophy signature: a mandate whose original coordination rationale is increasingly decoupled from its current extractive function, sustained by the parties who profit from non-revision.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_indeterminacy,
+    'Is the animal-status kernel genuinely indeterminate between property, welfare, and abolitionist readings, or does one reading correspond to the actual moral facts about animal sentience and interests, with the others representing either under- or over-attribution of moral status?',
+    'This is likely irresolvable by empirical means alone: it depends on unsettled questions in philosophy of mind (what sentience entails morally) combined with contested normative theory (whether sentience alone grounds interest-holding status). Comparative cognition science can narrow empirical uncertainty about animal capacities but cannot by itself settle the normative question of what capacities warrant what legal status.',
+    'If the abolitionist reading''s core premise (property status is itself the injustice) is correct, the property reading is not merely extractive but foundationally illegitimate rather than a defensible if harsh coordination mechanism. If the property reading''s premise (economic value is the only relevant value) is correct, the welfare and abolitionist readings are themselves the constructed impositions, not this one.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(kernel_reading_indeterminacy, conceptual, 'Whether the kernel has a determinate correct reading or is genuinely contested across incommensurable frameworks.').
+
+omega_variable(
+    property_reading_as_false_summit,
+    'Is the property reading''s presentation of the classification as economically necessary and naturally efficient (a market-enabling Mountain) actually a false summit — a constructed legal choice that identifiable beneficiaries (livestock, research, and breeding industries) have strong incentive to naturalize?',
+    'Comparative legal history: jurisdictions that have introduced limited non-property or quasi-personhood categories for animals (e.g., some companion-animal custody reforms, Swiss and German constitutional animal-dignity provisions) without collapsing the underlying economic activity would be evidence the property frame is not strictly necessary for market function, only convenient for current beneficiaries.',
+    'If false-summit, the property reading''s claimed necessity is cover for extraction rather than genuine coordination constraint, strengthening the case that this reading computes as snare/tangled_rope rather than the rope-like framing its own proponents offer.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(property_reading_as_false_summit, empirical, 'Whether claimed economic necessity of the property classification is genuine or naturalized cover for beneficiary interest.').
+
+omega_variable(
+    anti_cruelty_statute_function,
+    'Do existing anti-cruelty statutes under the property reading function as a genuine (if minimal) welfare floor, or purely as protection of owner property value and public sensibility with zero independent animal-interest content?',
+    'Doctrinal analysis of anti-cruelty case law: cases where prosecution succeeded despite the owner''s consent to or economic benefit from the treatment would indicate some independent animal-interest content; cases uniformly tracking owner economic harm or public offense would confirm the purely derivative function.',
+    'If purely derivative, the extractiveness score (0.88) may understate the case — there would be literally no legal check tied to animal interest. If some independent content exists, the property reading is less totalizing than authored here and the extractiveness/theater balance should shift.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(anti_cruelty_statute_function, empirical, 'Whether anti-cruelty enforcement has any independent animal-interest content or is purely derivative of owner/public interests.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(animal_status_kernel__property_reading, 0, 40).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(anim_tr_t0, animal_status_kernel__property_reading, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(anim_tr_t8, animal_status_kernel__property_reading, theater_ratio, 8, 0.13).
+narrative_ontology:measurement(anim_tr_t16, animal_status_kernel__property_reading, theater_ratio, 16, 0.17).
+narrative_ontology:measurement(anim_tr_t24, animal_status_kernel__property_reading, theater_ratio, 24, 0.2).
+narrative_ontology:measurement(anim_tr_t32, animal_status_kernel__property_reading, theater_ratio, 32, 0.23).
+narrative_ontology:measurement(anim_tr_t40, animal_status_kernel__property_reading, theater_ratio, 40, 0.25).
+
+% Extraction over time
+narrative_ontology:measurement(anim_be_t0, animal_status_kernel__property_reading, base_extractiveness, 0, 0.72).
+narrative_ontology:measurement(anim_be_t8, animal_status_kernel__property_reading, base_extractiveness, 8, 0.78).
+narrative_ontology:measurement(anim_be_t16, animal_status_kernel__property_reading, base_extractiveness, 16, 0.82).
+narrative_ontology:measurement(anim_be_t24, animal_status_kernel__property_reading, base_extractiveness, 24, 0.85).
+narrative_ontology:measurement(anim_be_t32, animal_status_kernel__property_reading, base_extractiveness, 32, 0.87).
+narrative_ontology:measurement(anim_be_t40, animal_status_kernel__property_reading, base_extractiveness, 40, 0.88).
+
+% Suppression requirement over time
+narrative_ontology:measurement(anim_su_t0, animal_status_kernel__property_reading, suppression_requirement, 0, 0.62).
+narrative_ontology:measurement(anim_su_t8, animal_status_kernel__property_reading, suppression_requirement, 8, 0.68).
+narrative_ontology:measurement(anim_su_t16, animal_status_kernel__property_reading, suppression_requirement, 16, 0.72).
+narrative_ontology:measurement(anim_su_t24, animal_status_kernel__property_reading, suppression_requirement, 24, 0.75).
+narrative_ontology:measurement(anim_su_t32, animal_status_kernel__property_reading, suppression_requirement, 32, 0.78).
+narrative_ontology:measurement(anim_su_t40, animal_status_kernel__property_reading, suppression_requirement, 40, 0.8).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(animal_status_kernel__property_reading, resource_allocation).
+narrative_ontology:affects_constraint(animal_status_kernel__property_reading, animal_status_kernel__welfare_reading).
+narrative_ontology:affects_constraint(animal_status_kernel__property_reading, animal_status_kernel__abolitionist_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three sibling readings of the animal_status_kernel, each authored as a separate ε-invariant story per the decomposition rule. property_reading (this file, ε=0.88, claimed snare) excludes animals from the victim-set by definition and treats economic value as the sole relevant metric. welfare_reading (sibling) retains property status but layers welfare obligations, producing a lower ε and a tangled_rope-flavored structure (genuine coordination plus constrained extraction). abolitionist_reading (sibling) rejects property status as itself the injustice, producing a structure where the entire property_reading arrangement is the named extraction with animals as categorical victims and no legitimate coordination function conceded. The three should NOT be averaged or reconciled; each is a distinct constraint sharing a kernel, linked here for contamination-propagation and family-coherence analysis.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "75f50d2c-8e5c-4375-89a4-8e766a854720"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Beta Designation Severity Carve-Out (Life-Safety/Financial/Critical Systems Exclusion)",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "critical_system_end_users",
+      "patients_and_care_recipients",
+      "consumers_of_financial_software",
+      "plaintiffs_bar_specializing_in_product_liability",
+      "safety_regulators"
+    ],
+    "victims": [
+      "software_vendors_in_regulated_verticals",
+      "startups_building_medtech_and_fintech",
+      "enterprise_procurement_teams_relying_on_beta_carveout"
+    ],
+    "vindicated_propositions": [
+      "harm_severity_overrides_contractual_disclaimer",
+      "categorical_domain_exclusion_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "critical_system_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Depend on life-safety, medical, or financial software without visibility into its testing status or internal risk assessment. Under this reading, they are protected because vendors cannot use a 'beta' label to disclaim liability for harms in these domains regardless of what the license agreement says or how conspicuously the beta status was disclosed."
+    },
+    {
+      "name": "patients_and_care_recipients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Rely on medical device software, diagnostic algorithms, and care-coordination systems that may be run under an early-release label. They have no practical ability to evaluate the software's maturity and cannot decline treatment mediated by it without cost; the carve-out is what stands between them and unrecoverable harm shielded by a disclaimer."
+    },
+    {
+      "name": "consumers_of_financial_software",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Use trading platforms, robo-advisors, or payment infrastructure that vendors sometimes market as beta to limit exposure for calculation errors or fund-handling defects. Under this reading their losses cannot be waived away by the beta label; they retain standard product liability and consumer protection remedies."
+    },
+    {
+      "name": "plaintiffs_bar_specializing_in_product_liability",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Litigate harms in these verticals and press courts to adopt the categorical carve-out as doctrine. They benefit professionally and financially from a bright-line rule that removes the beta defense entirely in high-severity domains, and they actively litigate test cases to entrench the reading."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Agencies overseeing medical devices, financial services, and critical infrastructure software. They administer and can expand or narrow the severity carve-out through rulemaking and enforcement guidance, treating the beta label as irrelevant to their statutory mandate to prevent harm in these sectors."
+    },
+    {
+      "name": "software_vendors_in_regulated_verticals",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Built products with genuine beta/testing phases and disclosed this clearly to customers, expecting the label to modulate liability exposure the way it does in ordinary consumer software. Under this reading that protection is categorically unavailable in their vertical no matter how rigorous or transparent their testing disclosure was; they bear full product liability exposure they priced their release strategy around avoiding."
+    },
+    {
+      "name": "startups_building_medtech_and_fintech",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Smaller entrants without the balance sheet of incumbents rely on iterative beta releases to gather real-world data cheaply before full liability exposure. The carve-out removes that on-ramp entirely for their domain, forcing either full pre-release liability insurance costs they may not afford, or exit from the regulated vertical altogether. They cannot relocate the harm-severity classification of their own product."
+    },
+    {
+      "name": "enterprise_procurement_teams_relying_on_beta_carveout",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Negotiated contracts assuming beta-labeled components carried reduced vendor liability, and priced their own downstream obligations accordingly. The carve-out unwinds that risk allocation retroactively for any component touching life-safety or financial-critical functions, exposing them to renegotiation and potential contractual gaps they did not budget for."
+    },
+    {
+      "name": "courts_and_appellate_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a given beta disclaimer is enforceable given the severity of the domain. They hear testimony from vendors, injured parties, and regulators, and their rulings either entrench or narrow this categorical exclusion over time."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a bright-line rule that harm severity in life-safety, financial, and other critical domains categorically overrides any contractual or labeling attempt to reallocate liability via a 'beta' designation — coordinating expectations across vendors, regulators, and courts about which domains cannot be experimented on with reduced liability regardless of disclosure quality.",
+    "transfer_function": "Moves liability exposure from end users and consumers back onto vendors and their downstream commercial customers in regulated verticals, reversing what a beta label would otherwise have shifted onto users who accepted the designation.",
+    "absent_voices": "Vendors who conducted genuinely rigorous, well-disclosed beta programs in borderline-critical domains (e.g., wellness apps adjacent to but not strictly medical) are not distinguished from reckless mislabeling; their voice — that severity-based categorical exclusion punishes good-faith incremental testing indiscriminately — is not part of the doctrine's own reasoning, which treats domain classification as dispositive rather than testing conduct.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this carve-out vanished, vendors in medtech, fintech, and critical infrastructure could resume using beta labels to limit liability the way general consumer software does; insurance pricing, procurement contracts, and litigation strategy in these verticals would shift substantially, and some harms currently compensable would instead be barred or reduced by disclaimer.",
+    "founding_problem": "Software vendors in high-stakes domains were using 'beta' or 'early access' labels — sometimes alongside real testing, sometimes as pure liability theater — to disclaim responsibility for harms (misdiagnoses, trading losses, infrastructure failures) that ordinary users could not meaningfully consent to given the severity and irreversibility of the potential harm.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety regulators and courts outside the plaintiffs' bar corroborate the founding problem through documented enforcement actions and published opinions describing beta-labeled medical and financial software causing harm the label was invoked to excuse; independent academic product-liability scholarship on 'move fast' culture colliding with regulated domains supports the same account from outside both the plaintiff and vendor interest groups."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the severity carve-out reading of the beta designation kernel: the claim that regardless of how genuinely a product is in testing, how clearly the beta status is disclosed, or how narrow its duration, the beta label is categorically unavailable as a liability-limiting mechanism once the software touches life-safety, financial, or other critical functions. This is not a claim about disclosure adequacy (narrow_warning_reading) or about the scope of what beta can waive in general (expansive_shield_reading) — it is a domain-based exclusion that operates upstream of both, ruling certain subject-matter categories out of the beta-liability bargain entirely. Courts and regulators applying this reading do not ask whether the testing was real or the warning was clear; they ask only whether the harm-severity classification of the domain triggers the carve-out.",
+    "logic_rationale": "Extraction (0.58) reflects that vendors in regulated verticals who built compliant, well-disclosed beta programs still lose the liability-limiting benefit entirely — the cost lands on them regardless of good-faith conduct, which is a real transfer, not merely risk-pricing. Suppression (0.42) is moderate: the rule is enforced through litigation and regulatory guidance rather than direct coercion, but it does foreclose an entire commercial practice (regulated-vertical beta releases) as a category, which is a meaningful accessibility collapse for that specific use. Accessibility_collapse (0.35) is lower than a pure mountain because vendors retain other risk-mitigation tools (staged rollout, informed consent frameworks, insurance) — beta labeling specifically is foreclosed, not risk management generally. Resistance (0.55) is substantial: vendor associations and startups actively litigate and lobby against the categorical bar, arguing case-by-case testing-conduct review would be fairer than a domain-based bright line.",
+    "directionality_logic": "End users, patients, and financial consumers are beneficiaries with low derived directionality — the carve-out exists specifically to prevent liability from being shifted onto them via label. Vendors and enterprise procurement in regulated verticals are targets: the rule strips a risk-allocation tool they had reasonably priced into their release strategy, and their exit options are constrained (they cannot simply leave the regulated vertical without abandoning the market or relocating jurisdictionally, which is itself costly). Regulators and the plaintiffs' bar are both beneficiaries and agenda-setters — they gain from the doctrine's existence (mandate fulfillment, litigation opportunity) and actively work to entrench it, which is the coordination/extraction hybrid this tangled_rope reading captures.",
+    "mandatrophy_analysis": "The founding problem — vendors weaponizing beta labels to disclaim harm in domains users cannot meaningfully consent to given irreversibility — remains live wherever critical software continues to ship under early-access framing. The doctrine has not drifted into pure theater: enforcement and litigation activity are increasing (suppression_requirement climbing from 0.22 to 0.42), not merely performative. However, the categorical (rather than conduct-based) nature of the carve-out means it extracts even from vendors whose testing and disclosure practices were genuinely responsible — this is the tangled_rope signature: real coordination function (protecting non-consenting parties from catastrophic, hard-to-reverse harm) bundled with asymmetric extraction (good-faith vendors pay the same categorical price as bad-faith ones).",
+    "kernel_context": "This constraint is the severity_carve_out_reading of the beta_designation_doctrine kernel. Two sibling readings of the same underlying text/practice exist as separate constraints: expansive_shield_reading (beta as comprehensive, indefinite liability waiver across all contexts) and narrow_warning_reading (beta as time-bounded disclosure that preserves base product liability but does not categorically exclude any domain). This reading is distinguished by making domain/harm-severity, not disclosure adequacy or waiver scope, the dispositive variable — it operates as a threshold gate that would apply even where the narrow_warning_reading's disclosure requirements are fully satisfied."
+  },
+  "omegas": [
+    {
+      "id": "domain_boundary_line_drawing",
+      "question": "Where exactly does 'life-safety, financial, or other critical systems' stop? Is a wellness app that tracks but does not diagnose covered? Is a budgeting app that does not custody funds covered?",
+      "resolution_mechanism": "Accumulated case law and regulatory guidance defining the boundary categories; a taxonomy of covered domains would need to be built through litigation or rulemaking rather than existing ex ante.",
+      "impact": "A narrowly drawn boundary limits the carve-out's extraction to genuinely high-stakes vendors; an expansively drawn boundary sweeps in borderline products and increases extraction on startups without a corresponding increase in the protected harm class.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Uncertainty about which domains fall within the categorical carve-out."
+    },
+    {
+      "id": "conduct_versus_domain_gating",
+      "question": "Should the doctrine gate on domain classification alone (this reading) or on testing conduct plus domain (a hybrid the sibling readings partially anticipate)? Is the categorical exclusion the right instrument, or would a conduct-sensitive standard achieve the same protective function with less collateral extraction from good-faith vendors?",
+      "resolution_mechanism": "Comparative outcome study: jurisdictions or time periods applying conduct-based review versus categorical domain exclusion, measured against harm rates and innovation/entry rates in regulated verticals.",
+      "impact": "If conduct-based review achieves comparable harm reduction with less extraction from responsible actors, the categorical form of this reading would be shown to be doing more coercive work than its coordination function requires — pushing it further toward the snare end of tangled_rope.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether categorical domain exclusion is the right instrument versus conduct-sensitive review."
+    },
+    {
+      "id": "kernel_framing_under_determination",
+      "question": "Is 'the beta designation doctrine' genuinely one kernel with three readings, or are these three functionally independent legal rules that happen to share vocabulary (the word 'beta') but do not actually compete for the same adjudicative space?",
+      "resolution_mechanism": "Examine whether any single case could plausibly be argued under more than one reading simultaneously (suggesting shared kernel) versus whether courts treat these as entirely separate doctrinal questions triggered by different fact patterns (suggesting three unrelated rules mislabeled as one kernel).",
+      "impact": "If the readings never actually compete in the same case, the kernel framing is a labeling artifact and this story should be treated as a standalone constraint rather than linked via reading_relations; if they do compete, the reading_relations correctly capture live doctrinal tension.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three declared readings genuinely share one contested kernel or are independently-triggered rules sharing only vocabulary."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__narrow_warning_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the beta_designation_doctrine kernel. expansive_shield_reading treats beta as a comprehensive, indefinite liability waiver across all software contexts (ε low from the vendor-protective seat). narrow_warning_reading treats beta as time-bounded disclosure preserving base liability, gated on disclosure adequacy and genuine testing duration (ε moderate, contested on conduct). This severity_carve_out_reading is orthogonal to both: it imposes a categorical domain-based gate that operates regardless of how the disclosure-adequacy or waiver-scope questions are resolved. A single fact pattern (e.g., a medical-diagnostic app labeled beta with clear disclosure and a defined testing window) could be argued to satisfy narrow_warning_reading's disclosure standard while still being barred entirely under this reading's domain exclusion — the readings are not mutually exclusive outcomes but stack as sequential gates a vendor must clear."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_categorically_overrides_disclaimer",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "domain_classification_is_dispositive_not_conduct",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "consumer_software_beta_norm",
+    "drift_state": {
+      "moment": "post_medtech_fintech_beta_litigation_wave",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

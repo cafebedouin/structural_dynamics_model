@@ -1,0 +1,306 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "103ab10a-2259-46e6-826e-468a02fef8b3"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.58,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Targeting-Efficiency Reading of the Income Support Commitment",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "targeted_program_recipients_current_regime",
+      "means_testing_administrative_apparatus",
+      "deficit_conscious_fiscal_policymakers"
+    ],
+    "victims": [
+      "targeted_program_recipients_under_ubi_conversion",
+      "categorically_ineligible_working_poor",
+      "administratively_burdened_applicants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "targeted_program_recipients_current_regime",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "A household (e.g. a Queens parent) that qualifies for a stack of categorical programs — TANF, SNAP, housing assistance, EITC, Medicaid — totaling roughly $31,100 annually because each program targets a specific demonstrated need (children, low income, housing insecurity, medical need). This stack is larger than any single flat transfer would be, because targeting lets the state concentrate resources on documented deprivation rather than spreading a fixed pool across everyone. They bear the transaction cost of proving need through repeated documentation, recertification, and program-specific eligibility rules, but the concentrated dollar amount currently exceeds what a universal, non-targeted replacement would deliver to the same household."
+    },
+    {
+      "name": "targeted_program_recipients_under_ubi_conversion",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The same demographic profile as the current-regime recipients, but modeled under a UBI-style conversion that funds a universal flat payment by eliminating or consolidating the targeted programs. Under this reading's own arithmetic the same household drops from roughly $31,100 to $19,100 — a roughly $12,000 loss — because the flat payment spread across the entire population is worth less per targeted-need household than the sum of programs it replaced. They cannot opt back into the eliminated categorical programs once consolidated; the loss is structural, not a choice they made."
+    },
+    {
+      "name": "categorically_ineligible_working_poor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Low-wage workers just above categorical thresholds (income, household composition, disability status) who receive little or nothing from the current targeted system despite genuine need, because targeting is calibrated to specific documented categories rather than income level alone. They would gain under a universal payment but this reading treats their exclusion as the correct operation of demonstrated-need concentration, not as a flaw — their inclusion is not the story's declared design goal."
+    },
+    {
+      "name": "administratively_burdened_applicants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Applicants across all targeted programs who must repeatedly document income, household composition, work hours, medical status, and residency to maintain eligibility. Administrative churn causes eligible people to lose benefits through paperwork failure, not need resolution. This population absorbs the verification cost that concentration on demonstrated need requires."
+    },
+    {
+      "name": "means_testing_administrative_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The eligibility-verification bureaucracy (caseworkers, program offices, contracted verification vendors) that administers, designs, and defends the targeting architecture. Its institutional survival and budget depend on demonstrated-need concentration remaining the organizing principle; a universal flat payment would eliminate most of its function. It sets the documentation and recertification rules that recipients and applicants must satisfy."
+    },
+    {
+      "name": "deficit_conscious_fiscal_policymakers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislators and budget officials who favor targeting because it caps aggregate outlay by excluding the non-needy, holding the program's fiscal footprint down relative to a universal payment covering the entire population at any comparable per-recipient level. They benefit politically and fiscally from being able to defend spending as need-concentrated rather than universal."
+    },
+    {
+      "name": "ubi_advocacy_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Advocates for unconditional universal payment who argue targeting's administrative burden and categorical exclusions are themselves a form of extraction from the poor, and that the $31,100-vs-$19,100 comparison this reading relies on assumes a specific, low-revenue-neutral UBI design rather than a fully funded one. They are not treated as a party to this reading's own arithmetic — their design assumptions are excluded from the comparison this reading authors."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Concentrating income support on documented categorical need allows a fixed pool of public funds to deliver larger per-household transfers to the most deprived households than an equal-sized pool spread universally across the whole population — this is a real allocative-efficiency coordination problem when the funding pool is treated as fixed.",
+    "transfer_function": "Moves general tax revenue to households that can document specific categorical need (children, disability, housing insecurity, low income) rather than to the population at large; the administrative apparatus that verifies eligibility captures a share of the pool as operating cost.",
+    "absent_voices": "The UBI advocacy coalition disputes the reading's core comparison — they argue the $31,100-vs-$19,100 framing assumes a revenue-neutral swap rather than a fully funded universal payment, and that administrative churn under targeting already extracts from eligible non-applicants who fail to navigate paperwork. They are not represented in this reading's own stakeholder arithmetic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If targeting were abandoned overnight in favor of an unfunded universal conversion (the scenario this reading models), the documented household drops roughly $12,000 in annual support, the means-testing apparatus loses its institutional function, and fiscal policymakers lose the mechanism that currently caps aggregate outlay to the demonstrably needy — the transfer system reorganizes around a flatter, lower-concentration structure.",
+    "founding_problem": "Public assistance historically faced a fixed-budget allocation problem: with finite tax revenue, undifferentiated distribution to the whole population delivers less to those in acute need than concentrating the same revenue on documented deprivation. Categorical targeting was built to solve that allocation problem.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The means-testing apparatus and deficit-conscious policymakers attest the founding problem remains live — budgets are still finite and need is still unevenly distributed. Independent poverty researchers and the excluded UBI coalition attest that the founding problem has been partially superseded by administrative burden itself becoming a source of unmet need (eligible non-take-up), a finding corroborated by GAO and academic take-up-rate studies conducted outside both the administering agencies and the advocacy groups with a stake in either outcome."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the targeting-efficiency reading of the income_support_commitment kernel: income support should be concentrated on demonstrated categorical need rather than distributed universally. The reading's own arithmetic is the source of its high measured extraction — the standing arrangement it is ABOUT is the current targeted-program stack, and this reading treats a UBI-style conversion (funded by cannibalizing that stack) as extracting roughly $12,000 annually from the household it is nominally meant to help (a Queens parent moving from ~$31,100 to ~$19,100). The poor are simultaneously the beneficiaries this reading credits with the current concentration and, under a targeting-to-universal conversion, the victims of the redistribution it authors. This is deliberately NOT the freedom_floor_reading (which authors the opposite valence — UBI as autonomy-enabling) or the dependency_trap_reading (which focuses on work-disincentive rather than allocative comparison). Each reading is a separate constraint with its own ε, authored independently per the ε-invariance principle; they are linked only through the shared kernel, not through a shared metric.",
+    "key_agents": [
+      "targeted_program_recipients_current_regime: primary beneficiary under the current targeted architecture (powerless/trapped) — collects the concentrated stack",
+      "targeted_program_recipients_under_ubi_conversion: same population modeled as victim under this reading's UBI-conversion counterfactual — loses ~$12,000",
+      "categorically_ineligible_working_poor: excluded by design from targeted programs; this reading does not treat their inclusion as a design failure",
+      "means_testing_administrative_apparatus: agenda-setter that designs and defends the categorical architecture and administers the verification burden",
+      "deficit_conscious_fiscal_policymakers: institutional beneficiary of a budget-capping targeting design",
+      "ubi_advocacy_coalition: excluded voice disputing the reading's revenue-neutral comparison assumption"
+    ],
+    "logic_rationale": "Extraction (ε=0.71) is authored high because this reading's central empirical claim — that a UBI-style conversion funded by consolidating targeted programs would cost the modeled household roughly $12,000 annually — describes a direct transfer of resources away from the demonstrably needy toward the general population, with the poor bearing that transfer's cost under the reading's own accounting. Suppression (0.58) reflects the administrative apparatus that must actively verify and re-verify categorical need to sustain the targeting architecture and defend it against consolidation pressure; this is moderate rather than extreme because the targeting regime, while burdensome, is not a coercive extraction mechanism in itself — it is the counterfactual conversion this reading evaluates that produces the loss. Theater ratio (0.42) captures the growing share of administrative activity devoted to eligibility verification theater (recertification cycles, documentation churn) relative to the substantive transfer function, rising over the measured interval as programs layered additional verification requirements. Accessibility collapse is moderate (0.40) — alternatives to targeting (universal payment designs, negative income tax, guaranteed income pilots) remain visible and actively debated, unlike a genuine natural-law constraint. Resistance (0.62) is substantial: UBI advocates, poverty researchers, and some fiscal conservatives all actively contest the targeting architecture from different directions.",
+    "directionality_logic": "Current-regime recipients are declared both beneficiaries (of the concentrated stack) and payers (of the administrative burden required to obtain it) — a genuinely dual-positioned seat, hence the secondary_role. Under the UBI-conversion counterfactual this reading models, the same demographic becomes purely a payer relative to their current position, having their concentrated benefit diluted. The administrative apparatus and fiscal policymakers are structural beneficiaries with institutional exit options (arbitrage/analytical) — they set the rules and are not bound by them the way recipients are. The categorically-ineligible working poor are payers by exclusion rather than by transfer — the targeting design's cost to them is opportunity cost, not extraction of something they held.",
+    "perspectival_gap": "From the agenda-setter seat (the means-testing apparatus), this arrangement is coordination — efficient allocation of scarce public funds toward documented need. From the payer seat modeled under UBI conversion, the identical arrangement (understood as 'targeting persisting against consolidation pressure') looks like extraction — the poor lose ground precisely because the system that is supposed to serve them is structured to resist redistribution to the broader population, and when redistribution happens anyway it is funded by cannibalizing their existing support rather than by new revenue. The engine computing these as different seat-level types from the same structural data is expected and is not an error to be reconciled.",
+    "mandatrophy_analysis": "The founding problem — finite public funds allocated more efficiently to acute need than to universal distribution — remains genuinely live in a world of constrained budgets, which argues against pure mandatrophy. But the administrative apparatus's own institutional survival now depends on targeting's persistence independent of whether targeting remains the most efficient allocation mechanism, and take-up-rate research (corroborated outside both the apparatus and the UBI coalition) documents that administrative burden itself now generates unmet need. This is not full mandatrophy (the founding problem has not fully died) but partial goal displacement: the mechanism increasingly defends its own continuation rather than being re-evaluated against alternative designs that might serve the same allocative goal with less administrative extraction.",
+    "kernel_context": "This constraint instantiates the targeting_efficiency_reading of the income_support_commitment kernel. Two sibling readings exist as separate constraint stories: the freedom_floor_reading (which authors unconditional income support as an enabler of autonomy and labor-market exit capacity — a low-ε rope/scaffold framing) and the dependency_trap_reading (which authors unconditional support as work-disincentive that atrophies skills — a different high-suppression framing focused on behavioral effects rather than allocative comparison). This reading's distinctive structural claim is that a fixed pool of public funds, concentrated on documented need, delivers more to the demonstrably poor than the same pool spread universally — and therefore any universal conversion funded by consolidating targeted programs functions as extraction from the poor, using the poor's own nominal beneficiary status as cover. The $31,100-vs-$19,100 example is this reading's evidentiary anchor and is NOT shared with the sibling readings, which would author entirely different numbers or dispute the comparison's framing (revenue-neutral vs. fully-funded UBI design)."
+  },
+  "omegas": [
+    {
+      "id": "revenue_neutrality_assumption",
+      "question": "Does the $31,100-to-$19,100 loss comparison assume a revenue-neutral UBI conversion (consolidating existing programs into a flat payment at the same total budget), or does it compare against an alternative UBI design funded by new revenue that would not require cannibalizing targeted programs?",
+      "resolution_mechanism": "Explicit budget-scoring of the specific UBI proposal being compared against: does it hold total transfer spending constant while flattening distribution, or does it raise new revenue?",
+      "impact": "If the comparison assumes revenue neutrality, the reading's snare classification depends entirely on that funding assumption — a fully-funded UBI design (new revenue, not cannibalized targeting) could deliver the same per-household benefit without the modeled loss, which would substantially undercut this reading's ε and its claim that universalization is inherently extractive from the poor.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the reading's central loss figure depends on an unstated revenue-neutrality assumption."
+    },
+    {
+      "id": "administrative_cost_offset",
+      "question": "How much of the $31,100 in current targeted benefits is offset by administrative compliance costs (time, foregone work hours, professional assistance for paperwork) borne by the recipient household but not counted in the benefit figure?",
+      "resolution_mechanism": "Time-use studies and administrative-burden research measuring hours spent on recertification, documentation gathering, and appeals across the stacked programs, converted to an implicit cost figure.",
+      "impact": "If administrative compliance costs are substantial, the true net value of targeted benefits is lower than $31,100, narrowing (or even reversing) the gap this reading uses to characterize universal conversion as extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether administrative burden erodes the nominal targeted-benefit advantage this reading relies on."
+    },
+    {
+      "id": "targeting_as_natural_versus_constructed_efficiency",
+      "question": "Is concentrating support on demonstrated need a natural implication of budget scarcity (a mountain-like allocative constraint), or is it a constructed institutional choice that itself creates the scarcity framing it claims to solve (by capping aggregate transfer spending below what a universal design would deliver)?",
+      "resolution_mechanism": "Comparative cross-national analysis of countries with universal versus targeted transfer systems, controlling for total transfer spending as a share of GDP, to determine whether targeting is a response to fixed budgets or a cause of constrained budgets.",
+      "impact": "If targeting itself suppresses the political will to expand aggregate transfer spending (by making transfers look like charity to the needy rather than a universal entitlement), the reading's framing of a 'fixed pool' is partly self-fulfilling, which would weaken the coordination-function claim underlying this reading's efficiency argument.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the fixed-budget premise underlying targeting-efficiency is exogenous or partly constructed by targeting itself."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three siblings decomposing the natural-language 'universal vs. targeted income support' debate into structurally distinct constraints per the ε-invariance principle. targeting_efficiency_reading (this story) authors high ε because it evaluates a specific counterfactual (targeted-to-UBI conversion funded by program cannibalization) as extraction from the poor. freedom_floor_reading authors low ε because it evaluates unconditional support's autonomy-enabling function under a different (typically fully-funded) design assumption. dependency_trap_reading authors its own distinct ε focused on behavioral work-disincentive effects rather than the allocative comparison this story relies on. The three do not share a metric; they share only the kernel (the underlying policy commitment the three parties dispute) and are linked here for contamination-propagation analysis, not for metric averaging."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "fixed_budget_allocative_efficiency",
+    "drift_state": {
+      "moment": "post_universal_basic_income_pilot_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fixed_transfer_budget_premise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "categorical_documentation_is_legitimate_allocation_mechanism",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "means_testing_administrative_apparatus",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

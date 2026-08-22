@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "6b4886bb-3b33-4a37-8e94-b46768ed8ec7"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Disaster Drills and Inspections as Live-Validated Competence",
+    "topic_domain": "disaster_risk_management/institutional_memory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "residents_in_hazard_zones",
+      "emergency_response_agencies",
+      "infrastructure_operators",
+      "drill_participant_workforce"
+    ],
+    "victims": [
+      "drill_participant_workforce"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "civil_defense_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Designs and mandates the drill and inspection calendar, sets scenario variation to prevent rote memorization, and certifies capability based on live performance rather than paper compliance. Bears reputational and legal exposure if certified capacity fails during an actual event."
+    },
+    {
+      "name": "residents_in_hazard_zones",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Depend on responders and infrastructure operators actually being able to execute evacuation, triage, and repair under real conditions. Cannot personally verify competence, only observe drill frequency and outcomes when disasters occur; exit means relocating away from the hazard zone, which most cannot readily do."
+    },
+    {
+      "name": "emergency_response_agencies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Participate in drills that genuinely stress-test their coordination and communication under scenario variation designed to surface novel failure modes. Gain real operational feedback and revised protocols, but bear the recurring cost in staff time, overtime, and equipment wear that drilling imposes."
+    },
+    {
+      "name": "infrastructure_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Submit dams, grids, and structural systems to inspection regimes that surface genuine degradation and failure signatures inspectors have been trained to recognize under live conditions. Costs are real (downtime, remediation spend) but the inspections catch problems before failure, which the operators themselves rely on to avoid catastrophic liability."
+    },
+    {
+      "name": "drill_participant_workforce",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Firefighters, inspectors, and civil-defense conscripts who physically execute the repeated drills. Bear the fatigue, injury risk, and career cost of continuous re-certification, but are also the direct beneficiaries of the skill retention and improvisation capacity the exercises are designed to build in them."
+    },
+    {
+      "name": "novel_disaster_scenarios",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Represents the future failure modes that have not yet occurred and cannot speak for themselves in the drill-design process; the drill designers must anticipate them without direct testimony, which is the structural gap this reading claims is being closed by scenario variation rather than left open."
+    },
+    {
+      "name": "independent_capability_auditors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "External reviewers (legislative oversight bodies, academic disaster researchers, insurance actuaries) who examine post-incident performance against drilled competence claims and can corroborate or contest whether the exercised knowledge actually transferred to real events."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine problem that emergency and infrastructure competence atrophies without practice and that written procedures alone do not transfer tacit skill; live, scenario-varied drills and inspections re-validate that capacity actually exists in the people and systems that would need to exercise it.",
+    "transfer_function": "Moves time, fatigue, and operating cost from response agencies, infrastructure operators, and the drill workforce into a public good — verified real-world capability — that residents in hazard zones and the agencies themselves draw on when an actual disaster occurs.",
+    "absent_voices": "The disasters that have not yet happened cannot testify to whether the current scenario library covers their failure signature; this reading asserts inspectors and drill designers close that gap through generalizable skill and pattern recognition, but the claim is only as strong as the scenario design discipline behind it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If live drilling and inspection stopped, procedures would persist on paper but the tacit, improvisational capacity to execute them under real, non-scripted conditions would decay within a few years; certification would become paper-only, and the gap would only surface catastrophically at the next real event.",
+    "founding_problem": "Institutional and individual competence to respond to low-frequency, high-consequence disasters degrades between events; without periodic live re-validation, procedures written after one disaster are not reliably executable by the people and systems present for the next one.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent capability auditors and post-incident academic reviews (outside the civil defense agency and the response agencies that benefit from favorable capability certification) attest that regions with high-fidelity, scenario-varied drilling show measurably better real-event outcomes than regions with rote or infrequent drilling — this is the evidentiary basis this reading rests on, distinct from the agency's own self-certification."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the competence reading of the preparedness_transmission kernel: drills and inspections in disaster risk management function as live-exercised knowledge, where each cycle of practice actually re-validates capability rather than merely performing it. On this reading, scenario variation is deliberately engineered to surface novel failure signatures, inspectors develop genuine pattern-recognition transferable to unscripted conditions, and drill participants build improvisational capacity rather than rote script-following. This is a low-extraction, low-suppression reading: the coordination function (skill retention across a low-frequency-high-consequence hazard domain) dominates, and the costs borne by response agencies, infrastructure operators, and the drill workforce are proportionate to a genuine, functioning coordination good. The sibling readings (husk_reading, hybrid_reading) describe the same institutional apparatus but claim the operational content has hollowed out either wholesale or selectively; those are separate constraints with their own ε and stakeholder structures, not alternative measurements of this one.",
+    "key_agents": [
+      "civil_defense_agency: agenda_setter (institutional/analytical) — designs scenario-varied drills and certifies capability from live performance",
+      "residents_in_hazard_zones: beneficiary (moderate/constrained) — depend on the certified capacity actually existing when disaster strikes",
+      "emergency_response_agencies: beneficiary/payer (organized/constrained) — stress-tested and genuinely improved by the exercises, at recurring operational cost",
+      "infrastructure_operators: beneficiary/payer (powerful/constrained) — inspected under conditions that surface real degradation before failure",
+      "drill_participant_workforce: payer/beneficiary (moderate/constrained) — bears the physical and career cost while building the retained skill",
+      "independent_capability_auditors: observer (institutional/analytical) — corroborates or contests the competence claim from outside the certifying agency"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.18 at interval end) because on this reading the coordination function is real and dominant: drills produce genuinely improved, generalizable capability rather than performing compliance. Suppression is low-moderate (0.22) because participation is mandated by professional and regulatory obligation but is not coercively extractive — the enforcement exists to guarantee the coordination good gets produced, not to extract rent. Theater ratio is kept low (0.15) and only mildly rising, reflecting that this reading's core empirical claim is precisely that performative drift has NOT set in; a rising theater ratio approaching or exceeding 0.5 would itself be evidence for the husk_reading, not this one. All three metrics move on one shared time grid.",
+    "directionality_logic": "The civil defense agency sets the agenda but bears the accountability risk if certified capacity fails during a real event, keeping it close to a coordinating rather than purely extracting seat. Residents, response agencies, and infrastructure operators are net beneficiaries of a working competence-transmission system, even though response agencies and operators also pay real operating costs — hence their dual beneficiary/payer roles. The drill workforce is the seat that bears the most direct physical and career cost (fatigue, injury risk, repeated re-certification) while also being the direct locus of the skill this reading claims is genuinely being built; their dual role reflects that the same activity that costs them the most is also what benefits them most on this reading.",
+    "mandatrophy_analysis": "The founding problem (skill atrophy between low-frequency disaster events) remains structurally live regardless of reading — disasters are still low-frequency and high-consequence, and tacit skill still decays without practice. What distinguishes this reading from husk_reading is not whether the founding problem persists (it does, on all three readings) but whether the arrangement still actually solves it. Classifying this as a functioning rope, rather than defaulting to piton on the grounds that 'all long-running institutional rituals decay,' requires the specific empirical claim that scenario variation is real and that inspectors/participants demonstrate transfer to unscripted conditions — precisely the claim independent capability auditors are positioned to corroborate or refute from outside the certifying agency's own self-assessment.",
+    "kernel_context": "This is the competence_reading of the preparedness_transmission kernel. The kernel is the shared object 'what drills and inspections in civil defense actually transmit across generations of practitioners.' This reading holds that the transmission is substantively live: exercised knowledge, not memorial performance. The husk_reading holds the opposite — that operational knowledge has hollowed out and only ritual performance persists (this would be authored as a separate story with much higher theater_ratio and likely a piton or snare classification depending on beneficiary capture). The hybrid_reading holds a stratified claim — physical/engineering inspection competence remains high while civilian coordination knowledge has decayed, meaning parts of the same apparatus would classify differently across its own sub-domains. All three readings share the same underlying institutional kernel (the drill/inspection regime) but diverge on the empirical and structural question of whether the exercised knowledge is real, decayed, or unevenly distributed — and so instantiate three distinct constraints with three distinct ε values, per the ε-invariance principle."
+  },
+  "omegas": [
+    {
+      "id": "competence_vs_husk_discriminator",
+      "question": "What observable would distinguish genuine skill transfer (this reading) from hollowed-out ritual performance (husk_reading) when both produce the same drill calendar and the same certification paperwork?",
+      "resolution_mechanism": "Post-incident performance audits comparing drilled predictions to actual event outcomes, blind scenario injection during drills (novel failure modes not in the training library), and independent (non-agency) observer scoring of improvisation quality under scenario variation.",
+      "impact": "If post-incident audits and blind-injection results show drilled personnel and inspectors generalizing well to unscripted failure modes, this reading is corroborated. If audits instead show performance collapses outside the rehearsed script, the apparatus is better described by the husk_reading despite identical surface-level drill frequency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The discriminating evidence between the competence and husk readings of the same drill/inspection apparatus."
+    },
+    {
+      "id": "stratification_boundary_location",
+      "question": "Even under this reading, is competence genuinely uniform across all domains (engineering, medical, civilian coordination, logistics), or does the hybrid_reading's stratification claim apply to some sub-domains within what this story treats as a single apparatus?",
+      "resolution_mechanism": "Domain-disaggregated post-incident review: compare structural/engineering inspection outcomes against civilian evacuation-coordination outcomes in the same events.",
+      "impact": "If stratification is real, this reading may only hold for the physical-infrastructure sub-domain, and a separate, lower-ε story should be written for civilian coordination specifically — this omega flags where this single-constraint framing may itself need decomposition rather than remaining one reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's uniform-competence claim should itself be decomposed along the hybrid_reading's stratification line."
+    },
+    {
+      "id": "self_certification_independence",
+      "question": "How independent is the corroboration this reading relies on — do independent capability auditors have genuine access and incentive to detect decay, or are they substantially dependent on the same agencies they audit?",
+      "resolution_mechanism": "Examine auditor funding sources, appointment mechanisms, and historical instances where audit findings contradicted agency self-certification and were acted upon.",
+      "impact": "If auditor independence is weak, the corroboration this reading cites is thinner than claimed, which would weaken confidence in competence_reading relative to husk_reading without changing the authored ε directly — this bears on how much weight the classification computed from this story's data should carry.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The strength of the outside corroboration this reading depends on for its founding-problem-status claim."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__husk_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the preparedness_transmission kernel, decomposed per the ε-invariance principle: competence_reading (this file, ε≈0.18, rope), husk_reading (expected high theater_ratio and high ε, likely piton or snare depending on capture), and hybrid_reading (expected split ε across sub-domains, potentially requiring further decomposition per the stratification_boundary_location omega). All three describe the same drill/inspection apparatus but diverge on the empirical claim of whether exercised knowledge actually transfers, and so are linked here rather than merged into one measurement-parameterized story."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_exercised_competence_standard",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scenario_variation_produces_generalizable_skill",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "certification_reflects_live_performance_not_paper_compliance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

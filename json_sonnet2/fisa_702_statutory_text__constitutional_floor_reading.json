@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__constitutional_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "c73bc1ba-a780-4cb4-8ee3-ab7452c255bc"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.55,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fourth Amendment Constitutional Floor Reading of Section 702 Queries",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_person_communicants",
+      "judicial_oversight_bodies"
+    ],
+    "victims": [
+      "us_person_communicants",
+      "criminal_defense_bar"
+    ],
+    "vindicated_propositions": [
+      "fourth_amendment_search_definition_applies_to_query_not_collection",
+      "individualized_probable_cause_requirement"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_person_communicants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Their communications are incidentally collected under Section 702 targeting foreign persons abroad, then queried by domestic agencies using U.S.-person identifiers without an individualized warrant. Under this reading, that query is itself a Fourth Amendment search; the communicant has no ability to know a query occurred, contest it in advance, or exit the collection pool because it depends on being in contact with a foreign target they did not choose. They bear the privacy cost of warrantless querying and would be the beneficiaries of a probable-cause gate if this reading prevailed."
+    },
+    {
+      "name": "intelligence_and_law_enforcement_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate the query systems, set internal minimization and querying procedures, and resist judicial imposition of a pre-query probable cause requirement on efficiency and secrecy grounds. Under the statutory interpretation they favor, queries are not separately regulated searches; under this constitutional floor reading, their query practices become subject to individualized judicial review, materially slowing operational tempo and requiring disclosure that risks sources and methods."
+    },
+    {
+      "name": "fisa_court",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Currently reviews certifications and targeting/minimization procedures programmatically rather than individualized queries. Under this reading, the court would be required to conduct case-by-case probable cause review of U.S.-person queries, expanding its docket and adjudicative role from programmatic oversight to something resembling ordinary criminal warrant review — a role it is institutionally unaccustomed to and under-resourced for."
+    },
+    {
+      "name": "criminal_defense_bar",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Defendants whose prosecutions rest partly on evidence derived from warrantless 702 queries currently face notice and standing barriers to challenging that evidence. Under this reading, defense counsel would gain a constitutional hook to suppress query-derived evidence lacking a warrant, but until the reading is adopted they continue litigating a foreclosed argument in most circuits, absorbing the cost of a doctrine not yet recognized."
+    },
+    {
+      "name": "congress",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reauthorizes Section 702 periodically and has repeatedly declined to impose a statutory warrant requirement for U.S.-person queries, instead layering procedural safeguards (query standards, some judicial approval for certain query categories). Under a constitutional floor reading, congressional statutory choices become irrelevant to the underlying constitutional question — Congress's repeated judgment that no warrant is required is treated as non-dispositive, effectively sidelining the legislature's considered institutional position on its own foreign intelligence framework."
+    },
+    {
+      "name": "civil_liberties_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Advocate for exactly this reading in litigation and before Congress, arguing that treating queries as searches is the only way to give the Fourth Amendment operative force against a collection architecture designed to route around individualized suspicion. They bear no direct cost from adoption and stand to gain the doctrinal win they have pursued across multiple reauthorization cycles."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Read at its strongest, this reading solves a genuine constitutional-design problem: preventing a foreign-intelligence collection architecture from becoming a backdoor around the individualized-suspicion requirement that governs domestic searches, by locating the search event at the query rather than at collection.",
+    "transfer_function": "If adopted, the reading would shift procedural burden and delay cost from U.S.-person communicants (who currently bear the privacy cost of warrantless querying) to intelligence and law enforcement agencies and the FISA Court (who would bear compliance, disclosure, and docket costs). Currently, under the competing statutory reading, the burden runs the other way.",
+    "absent_voices": "Foreign intelligence targets and allied foreign governments have no voice in this domestically-framed constitutional debate, yet the scope of permissible collection against them is the predicate for the U.S.-person query controversy. Congress's institutional judgment, while formally represented, is analytically excluded from the constitutional question by this reading's own logic — the reading holds that no statutory choice by Congress can satisfy the Fourth Amendment floor.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this reading vanished as a live constitutional claim, the query practices at issue would continue entirely unchanged in the near term, since it is a minority position not yet adopted by any controlling court — so operationally the world stays the same. But the parties dispute this: civil liberties advocates and affected defendants would say the disappearance of the argument forecloses a live avenue for constraining a large-scale surveillance architecture, which is a rearrangement of legal exposure and institutional incentive even without an immediate operational change.",
+    "founding_problem": "The reading was constructed to close what its proponents see as a structural loophole: collection targeted at foreigners abroad, once pooled into a searchable database, becomes a mechanism for querying U.S. persons' communications content without the individualized probable cause that would be constitutionally required if the government sought that content directly and domestically.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Federal public defenders and several circuit dissents/concurrences (outside the intelligence community and outside the civil liberties advocacy groups that originated the argument) have independently flagged the query-as-search structure as an open constitutional question in suppression litigation; no federal appellate court has yet adopted the reading as controlling law, and the government's own oversight reports acknowledge the volume of U.S.-person queries without conceding the constitutional characterization — corroboration exists from adjudicative dissents but not yet from a controlling majority or from the agencies themselves."
+  },
+  "interval": {
+    "start": 2008,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the constitutional-floor reading of the Section 702 kernel: the claim that a database query of incidentally collected communications for U.S.-person identifiers is itself a Fourth Amendment search requiring individualized probable cause, regardless of how the underlying collection was authorized. The reading has been pressed in litigation and by civil liberties advocates through successive reauthorization cycles (2008, 2012, 2018, 2023) but has not been adopted by a controlling federal appellate decision; it remains a minority constitutional position with growing traction in dissents and concurrences. Two sibling readings of the same statutory kernel — the incidental_collection_reading (queries are permissible incident to lawful foreign-intelligence collection) and the foreign_target_strict_reading (the statute's own foreign-target language should be read narrowly to minimize U.S.-person exposure without reaching the constitutional question) — are separate constraints, not alternate framings of this one. ε is authored here at 0.25, reflecting constitutional compliance cost to the executive (delay, disclosure, docket burden) under this reading's own lights, not the ε of the status quo query practice the incidental_collection_reading would measure, and not the ε of an idealized post-adoption warrant regime.",
+    "key_agents": [
+      "us_person_communicants: Primary target/beneficiary (powerless/trapped) — bears warrantless query exposure under current practice; would benefit from probable cause gate",
+      "intelligence_and_law_enforcement_agencies: Primary agenda-setter (institutional/arbitrage) — operates query systems, resists judicial imposition of pre-query review",
+      "fisa_court: Secondary institutional actor (institutional/constrained) — would absorb expanded adjudicative burden if reading adopted",
+      "criminal_defense_bar: Secondary payer (moderate/constrained) — litigates a not-yet-recognized suppression theory",
+      "congress: Excluded institutional voice (institutional/analytical) — statutory judgment rendered non-dispositive by this reading's own logic",
+      "civil_liberties_organizations: Analytical beneficiary/advocate (organized/analytical) — originates and presses the reading"
+    ],
+    "logic_rationale": "Extractiveness is authored low-moderate (0.25) because this reading's own metric is constitutional compliance cost to the executive, not surveillance harm to communicants — from the reading's perspective, the current absence of a warrant requirement is the extraction, and adopting the reading would impose a compliance cost on agencies that is real but bounded (individualized review of a subset of queries, not blanket collection prohibition). Suppression is moderate (0.55): the reading's proponents are not physically prevented from litigating it, but structural doctrines (standing barriers, state secrets, sealed FISC proceedings, notice deficiencies) make it very difficult for an affected communicant to ever reach a court capable of adopting the reading. Theater ratio rises across the interval (0.2 to 0.4) as agencies layer procedural query-approval requirements and public transparency reporting that create an appearance of self-imposed constraint without conceding the constitutional characterization this reading demands — a form of proxy compliance substituting for the individualized judicial review the reading actually requires. Accessibility collapse is moderate (0.45): once a party understands the structure, some avenues (habeas, criminal suppression motions, FOIA-driven oversight litigation) remain open, but the practical path to a controlling adoption is narrow. Resistance is high (0.7): agencies, much of the FISA Court's established practice, and successive Congresses have actively resisted this characterization across three reauthorization cycles.",
+    "directionality_logic": "U.S. person communicants are declared both payer (bear the current warrantless-query exposure) and prospective beneficiary (would gain a probable-cause gate if the reading prevailed) — the derivation should place them near the target end of directionality given their trapped exit and powerless standing, since under the status quo they cannot avoid being incidentally collected or queried. Intelligence and law enforcement agencies are the agenda-setters who would bear the compliance cost this reading's ε measures; their institutional power and arbitrage-grade exit (they can adjust practice, litigate, or seek legislative cover) place them near the low-χ end structurally even though this reading casts them as bearing a cost. The FISA Court occupies an unusual dual position — administratively constrained (it did not choose its current programmatic-review role and would be required to expand it) yet institutionally powerful; it is coded agenda_setter/observer rather than payer because it administers rather than bears the substantive cost.",
+    "mandatrophy_analysis": "The founding problem — closing the query-as-backdoor gap — remains live by this reading's own account (query volumes have risen, not fallen, since 2008), which forecloses a mandatrophy verdict for this reading: the arrangement it argues against is not treated as a dead mandate persisting on inertia, but as an active and expanding practice whose constitutional justification is precisely what is contested. The interesting mandatrophy question sits on the sibling incidental_collection_reading, not here: if that reading's founding justification (foreign intelligence necessity) has become decoupled from its current domestic-query use, that is the reading where mandatrophy_resolved would be the live question.",
+    "kernel_context": "This constraint instantiates the constitutional_floor_reading of the fisa_702_statutory_text kernel: the claim that Fourth Amendment probable-cause protection attaches at the point of U.S.-person query regardless of statutory foreign/domestic collection categories. Two sibling constraints read the same kernel differently and are authored as separate stories: incidental_collection_reading holds that the statute's foreign-intelligence purpose permits warrantless query of incidentally collected content, and foreign_target_strict_reading holds that the statute's own targeting language — read narrowly — should minimize U.S.-person exposure without reaching the constitutional question at all. This reading differs from both by relocating the entire dispute from statutory interpretation to constitutional floor: even a statute drafted exactly as the incidental_collection_reading construes it would, on this reading, be unconstitutional as applied to U.S.-person queries."
+  },
+  "omegas": [
+    {
+      "id": "query_as_search_doctrinal_status",
+      "question": "Is a database query of previously and lawfully collected communications a separate 'search' under the Fourth Amendment, or does the search occur only at the point of original collection?",
+      "resolution_mechanism": "Circuit split resolution by the Supreme Court, or explicit adoption/rejection of the query-as-search theory in a controlling appellate decision (e.g., a future certiorari grant on a 702-derived suppression motion).",
+      "impact": "If queries are searches, this reading's structural delta (pre-query probable cause requirement, individualized FISC review) becomes binding law; if not, the incidental_collection_reading's framework governs and this reading remains a minority constitutional argument with only persuasive force.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether database query of lawfully collected data is itself a Fourth Amendment search event."
+    },
+    {
+      "id": "standing_and_notice_barrier_scope",
+      "question": "How much of the measured suppression (0.55) is structural (classification, sealed proceedings, no notice mechanism) versus a doctrinal choice (standing rules) that could be relaxed without touching the underlying constitutional question?",
+      "resolution_mechanism": "Track outcomes if Congress or courts mandate query notice to affected communicants in criminal proceedings; observe whether suppression drops independent of the constitutional merits being resolved.",
+      "impact": "If suppression is mostly a separable notice/standing artifact, the constitutional floor reading could gain a much larger practical test population without any doctrinal shift on the search question itself — the two barriers currently compound each other in a way that may overstate this reading's inherent difficulty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is a standing-rule artifact separable from the constitutional merits."
+    },
+    {
+      "id": "committer_framing_alternative_query_frequency",
+      "question": "Would framing this constraint around the FREQUENCY and SCALE of U.S.-person queries (millions per year, per oversight reports) rather than around the DOCTRINAL query-as-search claim change the classification — from a contested constitutional argument (tangled_rope, moderate ε) to a bulk-surveillance snare (high ε, concentrated victim set)?",
+      "resolution_mechanism": "A separate constraint story authored around query volume and victim concentration, linked via network.affects_constraints, would test whether the scale framing produces a materially different ε and type than the doctrinal framing authored here.",
+      "impact": "If the scale-framing story computes as snare while this doctrinal-framing story computes as tangled_rope, that divergence is itself informative about which framing the corpus should treat as primary for this kernel — but per the ε-invariance principle they should be authored as two separate stories, not reconciled within this one.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternative framing (query scale vs. doctrinal search classification) that would plausibly shift ε and type; documented here rather than folded into this story's classification."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__foreign_target_strict_reading"
+    ],
+    "dual_formulation_note": "These three constraints decompose the single natural-language label 'the 702 U.S.-person query controversy' per the ε-invariance principle: each reading of the fisa_702_statutory_text kernel produces a structurally distinct claim about where the Fourth Amendment applies, with a different ε (this reading: 0.25, measuring constitutional compliance cost to the executive under adoption; incidental_collection_reading: measuring operational/foreign-intelligence value preserved by the status quo; foreign_target_strict_reading: measuring statutory-minimization compliance cost short of reaching the constitutional question). They are linked rather than merged because adopting this reading would foreclose or substantially narrow the operative force of incidental_collection_reading, while foreign_target_strict_reading offers a narrower statutory path that could resolve some disputes without reaching this reading's constitutional claim at all."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "fourth_amendment_individualized_suspicion_baseline",
+    "drift_state": {
+      "moment": "post_snowden_702_reauthorization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "foreign_target_strict_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "query_constitutes_independent_fourth_amendment_search",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "statutory_foreign_domestic_distinction_constitutionally_irrelevant_at_query",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__strong_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "04baa3f7-074b-488f-aef8-eeee430dd502"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.71,
+    "claimed_type": "snare",
+    "human_readable": "GPL Section 2(b) Strong Copyleft Reading (Expansive Derivative-Work Boundary)",
+    "topic_domain": "software_licensing/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_software_foundation",
+      "copyleft_aligned_developer_communities",
+      "gpl_component_maintainers"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "commercial_plugin_developers",
+      "embedded_systems_integrators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "free_software_foundation",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Drafts and promotes the expansive reading of Section 2(b), asserting that dynamic linking and tight code coupling create a single combined work that must be released under GPL terms. Funds enforcement actions and compliance advocacy (via affiliated bodies) that treat this reading as settled doctrine, even though no definitive appellate ruling on dynamic linking exists in most jurisdictions."
+    },
+    {
+      "name": "copyleft_aligned_developer_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Contribute code under GPL expecting that anything linking against it will also become open. Under this reading they receive a structural guarantee that downstream derivative code stays available to the commons, reinforcing their ecosystem's growth and preventing proprietary capture of shared infrastructure."
+    },
+    {
+      "name": "gpl_component_maintainers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain widely-used GPL libraries and benefit when downstream integrators are forced either to open their code or avoid the library entirely, which channels contributions and adoption back into the copyleft commons rather than fragmenting into proprietary forks."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Want to integrate GPL-licensed components (via dynamic linking, plugin hooks, or tight API coupling) into commercial products without releasing their own proprietary source. Under this reading, any such coupling triggers full GPL obligations on the combined work, forcing them to either avoid the component entirely, re-implement it, negotiate a costly dual-license, or risk infringement litigation. Their exit is technically possible (rewrite, relicense, avoid) but commercially expensive and disruptive to existing product lines."
+    },
+    {
+      "name": "commercial_plugin_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Build plugins or extensions that interoperate closely with GPL host applications. Under the strong reading, their plugin architecture itself may constitute a combined work requiring GPL licensing, even absent static linking. Many lack the resources to relitigate the boundary question and simply comply, abandon the plugin market, or operate under legal uncertainty they cannot afford to resolve."
+    },
+    {
+      "name": "embedded_systems_integrators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ship GPL components (drivers, kernels, utilities) inside hardware products alongside proprietary firmware. The strong reading treats tight coupling in the firmware image as creating a combined work, exposing them to compliance demands or enforcement threats over their proprietary control logic, which they cannot open without losing competitive differentiation."
+    },
+    {
+      "name": "enforcement_organizations",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Groups such as compliance labs and legal defense funds send cease-and-desist notices and pursue settlements against vendors under the strong reading, treating dynamic linking and close coupling as presumptively infringing absent a court ruling squarely resolving the boundary. Settlement leverage comes from litigation cost asymmetry, not from judicial certainty."
+    },
+    {
+      "name": "courts_and_legal_scholars",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Have not definitively resolved whether dynamic linking creates a derivative or combined work under copyright doctrine in most jurisdictions. Scholarly and appellate treatment remains fragmented; the strong reading operates as an assertively enforced norm rather than settled law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that anyone who builds on and distributes a GPL-licensed component keeps their combined work's source available to the community, preventing free-riding where proprietary products capture the value of community-maintained code while contributing nothing back.",
+    "transfer_function": "Moves bargaining leverage and potential revenue from vendors who would otherwise monetize proprietary integrations toward the copyleft commons, either by forcing source disclosure (transferring technical value) or by forcing vendors to avoid, relicense, or pay to avoid the GPL component (transferring money via dual-licensing or reimplementation costs).",
+    "absent_voices": "Vendors who settled quietly under enforcement pressure rarely surface publicly, so the corpus of contested cases underrepresents how often the expansive reading is asserted against parties who lack resources to litigate the boundary question; their silence is frequently read as tacit endorsement of the strong reading rather than as an artifact of settlement asymmetry.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strong reading's enforcement threat vanished, proprietary vendors would integrate GPL components far more freely via dynamic linking and plugin architectures without the source-release exposure; some GPL projects would lose the leverage that currently pressures commercial adoption into dual-licensing revenue or contribution-back arrangements; the copyleft commons would lose a structural guarantee it currently treats as settled.",
+    "founding_problem": "Free software authors wanted to prevent proprietary vendors from taking community-built code, embedding it invisibly inside closed products, and capturing commercial value while the original contributors received nothing back and users lost access to modifiable source.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Free Software Foundation and copyleft communities attest the problem remains live and cite ongoing embedded and commercial integration as evidence the expansive boundary is still necessary. Independent legal scholars and several appellate-adjacent commentaries note that the specific boundary question for dynamic linking has never been squarely tested in most jurisdictions, and some open-source foundations with different licensing philosophies (permissive-license advocates) argue the founding problem is real but this particular reading of the boundary overshoots what copyright doctrine actually requires — corroboration exists but is split between parties with a stake in the outcome."
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the strong copyleft reading of GPL Section 2(b): that any combined or dynamically linked work incorporating a GPL component becomes itself a derivative work subject to GPL's source-disclosure obligations, regardless of the mechanism of coupling. This reading is asserted aggressively by FSF-aligned enforcement bodies and treated as settled by much of the copyleft community, but it has never been definitively confirmed by controlling appellate precedent in most jurisdictions for the dynamic-linking case specifically. Under this reading, proprietary vendors integrating GPL components face structural exclusion from commercial closed-source use without full source release, dual-licensing negotiation, or reimplementation — a high-epsilon extraction pattern enforced through litigation-cost asymmetry rather than judicial certainty. This is one reading among three of the same kernel (gpl_copyleft_scope); the narrow_scope_reading and enforcement_vacuum_reading are separate constraints with their own ε values, not alternative framings folded into this one.",
+    "key_agents": [
+      "free_software_foundation: agenda-setter and primary beneficiary, institutional power, analytical exit (sets the doctrine)",
+      "proprietary_software_vendors: primary target, powerful but constrained exit (commercially costly to avoid)",
+      "commercial_plugin_developers and embedded_systems_integrators: secondary targets, moderate power, trapped/constrained exit (fewer resources to contest the boundary)",
+      "enforcement_organizations: agenda-setters who operationalize the reading through settlement pressure",
+      "courts_and_legal_scholars: analytical observers noting the doctrine remains substantially untested"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects that the strong reading extends the derivative-work boundary well past what has been judicially confirmed, converting a contestable legal theory into an enforced business risk that vendors must price in as though settled. Suppression (0.62) captures the credible threat of litigation and public compliance shaming used to make vendors comply without ever needing a court to resolve the underlying boundary question — this is the coercive lever that keeps exits closed even for well-resourced actors. Theater ratio is comparatively low (0.20) because actual compliance actions (real cease-and-desist campaigns, real settlements, real source releases) substantially exceed symbolic gesture; this is not a hollowed-out constraint, it is a functioning extraction/coordination hybrid. Accessibility collapse (0.58) is moderate rather than near-total: sophisticated vendors can still avoid GPL components, reimplement functionality, or negotiate dual licenses, but for smaller integrators the practical alternatives collapse further. Resistance (0.71) is high because major vendors and legal scholars actively contest the boundary's scope in courts, standards bodies, and public commentary — this is a live, contested doctrine, not a quietly accepted one.",
+    "directionality_logic": "The FSF and copyleft-aligned communities are structural beneficiaries: they gain a broader guarantee of code availability and stronger negotiating leverage over commercial adopters, with analytical/mobile exit options that let them set terms rather than absorb them. Proprietary vendors, plugin developers, and embedded integrators are structural targets: the reading converts their commercial integration choices into legal exposure, and their exit options range from constrained (large vendors can reimplement or dual-license, at cost) to trapped (small plugin developers who cannot afford to relitigate or rearchitect). This asymmetry — one side sets the interpretive terms and collects the compliance benefit, the other bears real cost under threat of enforcement without judicial certainty — is the core of the snare structure under this reading.",
+    "mandatrophy_analysis": "The founding problem (preventing free-riding on community-built code) remains genuinely live in many contexts, which is why this is authored as contested rather than dead — this is not a pure mandatrophy case. However, the STRONG reading's expansive boundary claim increasingly outruns what the founding problem strictly requires: preventing free-riding does not obviously require treating every form of dynamic linking as creating a single combined work. The classification as snare (rather than tangled_rope) reflects that under this specific reading, the coordination story (protecting the commons) is used to justify an enforcement scope broader than the underlying doctrine has been shown to require, with real identifiable victims bearing disproportionate cost relative to uncertain legal grounding.",
+    "kernel_context": "This constraint is the strong_copyleft_reading of the gpl_copyleft_scope kernel: GPL Section 2(b) creates a combined-work obligation for ANY dynamic linking or tight code coupling, full stop. Two sibling readings of the same kernel are separate constraints: narrow_scope_reading holds that Section 2(b) tracks traditional copyright derivative-work doctrine and does NOT automatically capture aggregation, plugin architectures, or many forms of dynamic linking; enforcement_vacuum_reading holds that the absence of controlling precedent means neither the strong nor narrow reading is authoritative, and the operative constraint in any given case depends on which interpretive community holds enforcement capacity there. This story's ε (0.68) is authored specifically for the strong reading's enforcement pattern and should not be confused with the sibling readings' ε values, which are lower (narrow scope, less extraction) or contested/split (enforcement vacuum)."
+  },
+  "omegas": [
+    {
+      "id": "dynamic_linking_boundary_uncertainty",
+      "question": "Does dynamic linking (as opposed to static linking or source-code inclusion) actually create a legally cognizable 'combined work' under controlling copyright doctrine in the relevant jurisdictions, or is this an FSF interpretive assertion that has not been tested to judgment?",
+      "resolution_mechanism": "A definitive appellate ruling squarely addressing dynamic linking as the sole point of coupling (most existing settlements and rulings involve static linking, source copying, or other unambiguous incorporation, leaving the pure dynamic-linking case largely untested).",
+      "impact": "If courts confirm the strong reading, this constraint's classification stabilizes as a legitimately enforceable tangled_rope (real coordination function, real enforcement, but now judicially grounded). If courts adopt the narrow reading instead, this constraint's enforcement pattern would be substantially undermined, and its extraction would be recharacterized as having rested on an unfounded legal claim — pushing it further toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the core doctrinal claim underlying the strong reading has been or would be judicially confirmed."
+    },
+    {
+      "id": "kernel_reading_indexing",
+      "question": "Is 'the GPL Section 2(b) derivative-work boundary' a single constraint with contested interpretation, or genuinely three distinct constraints (strong, narrow, enforcement-vacuum) each with their own ε, victim set, and enforcement pattern?",
+      "resolution_mechanism": "This has been resolved by authorial decomposition per the ε-invariance principle: this file represents only the strong_copyleft_reading. The sibling readings (narrow_scope_reading, enforcement_vacuum_reading) are authored as separate constraint stories with their own ε values and linked via network.affects_constraints. A reader treating 'GPL Section 2(b)' as one undifferentiated constraint will get an incoherent ε because the readings genuinely diverge in extraction level and victim scope.",
+      "impact": "Ensures analysis of this specific reading is not diluted or averaged against the narrower or vacuum readings, which would produce a false 'moderate' ε that describes no actual party's experience.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Documents the committer-frame decomposition of the GPL Section 2(b) kernel into three sibling constraint readings."
+    },
+    {
+      "id": "enforcement_settlement_selection_bias",
+      "question": "Does the visible pattern of vendor compliance and settlement under the strong reading reflect genuine legal merit, or does it reflect that litigation-averse vendors settle regardless of the underlying doctrine's strength, creating an appearance of settled law that is actually an artifact of asymmetric litigation costs?",
+      "resolution_mechanism": "Compare settlement rates and terms against the small number of cases that were actually litigated to judgment on the dynamic-linking question specifically; look for evidence that settlement terms tracked litigation risk pricing rather than doctrinal certainty.",
+      "impact": "If settlements are driven primarily by cost-avoidance rather than doctrinal confidence, the apparent 'enforceability' of the strong reading substantially overstates its actual legal grounding, reinforcing the snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether visible compliance under the strong reading reflects legal merit or litigation-cost asymmetry."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "narrow_scope_reading",
+      "enforcement_vacuum_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the gpl_copyleft_scope kernel. strong_copyleft_reading (this file) authors high ε (0.68) reflecting an expansively enforced but judicially unconfirmed derivative-work boundary. narrow_scope_reading authors substantially lower ε reflecting a boundary that tracks traditional copyright doctrine and excludes most aggregation/plugin/dynamic-linking cases. enforcement_vacuum_reading authors a split/contested ε reflecting that the operative constraint depends entirely on which interpretive community holds enforcement capacity in a given context, rather than on a single settled doctrine. All three share the same underlying kernel text (GPL Section 2(b)) but instantiate structurally distinct constraints with different beneficiary/victim sets and different persistence mechanisms — they are linked here rather than merged, per the ε-invariance principle."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "fsf_expansive_combined_work_doctrine",
+    "drift_state": {
+      "moment": "post_2010_enforcement_maturation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_scope_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "enforcement_vacuum_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coupling_mechanism_irrelevant_to_derivative_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "combined_work_arises_from_functional_integration_not_copying",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "free_software_foundation",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

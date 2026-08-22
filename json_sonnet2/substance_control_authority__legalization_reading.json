@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "e0d13368-b68d-4606-a614-09d7e96430aa"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Regulated Legal Drug Commerce Authority",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "licensed_drug_producers",
+      "state_tax_authorities",
+      "adult_recreational_users",
+      "former_illicit_market_participants_now_licensed"
+    ],
+    "victims": [
+      "residual_illicit_market_participants",
+      "communities_near_licensed_retail_outlets",
+      "heavy_use_dependent_populations",
+      "youth_exposed_to_normalized_marketing"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_regulatory_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Designs and administers the licensing, taxation, potency-labeling, and retail-access rules that convert what was an illegal market into a regulated commercial one. Collects license fees and tax revenue, sets quality and advertising standards, and enforces against unlicensed sale. Its authority rests on the claim that regulated commerce controls harms better than either criminalization or non-intervention."
+    },
+    {
+      "name": "licensed_drug_producers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate legally within licensing rules, capturing the commercial value of a formerly criminalized market. Face compliance costs (potency limits, labeling, taxation) but gain legal protection, access to banking and advertising, and the ability to scale distribution. Their exit option is strong: they can lobby for looser rules or relocate production to more permissive jurisdictions."
+    },
+    {
+      "name": "state_tax_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Collect excise and sales tax revenue from the newly legal market, revenue that funds enforcement of the regulatory regime itself and general public spending. Have a direct fiscal interest in market volume growing, which creates a structural incentive misaligned with harm minimization."
+    },
+    {
+      "name": "adult_recreational_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Exit the criminal victim set entirely — no longer face arrest or unregulated-supply risk (adulteration, unknown potency, violence-prone black-market transactions). Pay taxed retail prices and are subject to marketing exposure that legalization not only permits but commercially incentivizes; their consumption may rise as access and social acceptability increase."
+    },
+    {
+      "name": "former_illicit_market_participants_now_licensed",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Small-scale growers, sellers, or distributors who previously operated illegally and now attempt to obtain licenses. Benefit from legal status when licensing succeeds, but licensing costs and capital requirements often favor larger operators, so many are structurally excluded from formalizing even as the market they built is legalized around them."
+    },
+    {
+      "name": "residual_illicit_market_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Continue operating outside the licensed system — either priced out of licensing, unable to meet compliance requirements, or serving demand the regulated market doesn't reach (lower prices, no ID checks). Face continued criminal enforcement, now framed as protecting the legal market's integrity rather than protecting the public from drugs as such; the legalization regime does not eliminate this population, it narrows and re-justifies its criminalization."
+    },
+    {
+      "name": "communities_near_licensed_retail_outlets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear concentrated externalities of retail siting decisions made by state licensing boards — traffic, public consumption, local market saturation — often in lower-income neighborhoods where zoning resistance is weaker. Have limited voice in siting decisions relative to producer lobbying and municipal tax-revenue incentives."
+    },
+    {
+      "name": "heavy_use_dependent_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the health costs of increased availability and commercial marketing optimized for frequent use; the legal market's revenue model depends disproportionately on heavy users, giving licensed producers and tax authorities a shared interest in sustaining rather than reducing dependent consumption. Treatment and public health support are typically funded from a fraction of the tax revenue their consumption generates."
+    },
+    {
+      "name": "youth_exposed_to_normalized_marketing",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience a social environment where drug commerce is normalized, advertised, and commercially present, even where direct sales to minors remain illegal. Have no voice in the regulatory design and bear diffuse long-term exposure risk that is difficult to attribute causally to any single licensing decision."
+    },
+    {
+      "name": "public_health_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study use-volume trends, health outcomes, and market structure after legalization, comparing outcomes to both the prohibition baseline and harm-reduction alternatives. Provide the empirical record that different readings of the kernel cite selectively in support of their own framing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts an unregulated or criminalized transaction into a licensed, taxed, quality-controlled commercial one — solving the genuine problems of adulterated supply, unpredictable potency, and violence-prone illicit distribution that unregulated markets produce.",
+    "transfer_function": "Moves the drug trade's economic value from illicit operators to licensed commercial entities and the state treasury, while moving criminal-justice risk away from consumers and onto the shrinking population that remains outside the licensed system. Health costs of increased availability are moved onto heavy users and their communities, offset only partially by tax-funded services.",
+    "absent_voices": "Communities where retail outlets are sited, and populations who become heavy users under expanded commercial availability, are not meaningfully represented in licensing board proceedings, which are structured around producer applications and municipal revenue projections. Small-scale illicit operators who cannot afford licensing are treated as a residual enforcement problem rather than as stakeholders in the transition design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regulatory authority disappeared, the market would not return to the pre-legalization status quo — a large licensed commercial infrastructure (retail chains, tax revenue streams, supply chains) would either collapse or continue unregulated, producing acute quality and access chaos; users currently protected from criminal liability would face renewed legal exposure at scale, and the state would lose a substantial and often politically difficult-to-replace revenue source.",
+    "founding_problem": "Prohibition-era illicit drug markets caused significant harm through criminal violence, unregulated (adulterated, unpredictable-potency) supply, and mass incarceration of users and low-level sellers, while doing little to reduce use. Legalization with regulation was built to eliminate the illicit market's violence and supply-safety problems by bringing the trade under state licensing and quality control.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health researchers and criminal-justice reform advocates outside the licensed industry attest that arrest and incarceration harms have substantially declined and supply-safety has improved in legalized jurisdictions — corroborating the founding problem as partially resolved. However, independent public health data also show illicit markets persist at the margins (untaxed, unlicensed) and use-volume and heavy-use indicators have risen in several jurisdictions, which licensed industry associations do not foreground; researchers not funded by industry or state tax offices are the source of this countervailing evidence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors the legalization reading of the contested substance-control-authority kernel: the state's authority to regulate drug markets as licensed, taxed commerce with quality and access controls, rather than criminalizing use (prohibition_reading) or accepting use while minimizing harm through public health means without commercializing supply (harm_reduction_reading). Under this reading, users exit both the criminal-justice victim set and the unregulated-supply victim set — legalization's central claimed achievement — but a new extraction structure emerges: licensed producers and tax authorities acquire a shared commercial interest in market volume, including from heavy and dependent users, and enforcement is not eliminated but narrowed and re-justified against the residual illicit market and against retail siting externalities borne by powerless communities. The ε for this reading (0.42) is lower than a plausible prohibition-reading ε (which would carry the weight of mass criminalization of users) because a large victim class exits the constraint entirely; it is not zero because the regulatory-commercial structure creates its own extraction relationships that a coordination-only framing would obscure.",
+    "key_agents": [
+      "state_regulatory_agency: agenda-setter, designs and enforces the licensing regime",
+      "licensed_drug_producers: primary beneficiary, captures commercial value of formerly illicit trade",
+      "adult_recreational_users: exits criminal/unregulated-supply victim sets, becomes taxed consumer",
+      "residual_illicit_market_participants: remains criminalized under a narrower justification",
+      "communities_near_licensed_retail_outlets and heavy_use_dependent_populations: bear new, diffuse costs of commercialized availability"
+    ],
+    "logic_rationale": "Extractiveness (0.42) reflects a genuine coordination achievement (eliminating criminal-market violence and adulteration risk for the exiting user population) alongside a real, if smaller, extraction structure: licensed producers and tax authorities benefit from consumption volume, including from populations whose increased use the regime does little to discourage. Suppression (0.35) is authored as declining over the interval because the population subject to active state coercion under this reading shrinks as the licensed market absorbs former users — but it does not go to zero, since residual illicit market participants continue to face enforcement, now justified as protecting the integrity of the licensed market rather than suppressing drug use as such. Theater ratio is low-to-moderate and rising modestly (0.10 to 0.20) reflecting some performative compliance activity (health warnings, marketing restrictions) that grows as public health critique of commercialization accumulates, without yet dominating the regime's function.",
+    "directionality_logic": "Licensed producers and tax authorities sit near the beneficiary end: they collect commercial and fiscal value directly from the constraint's operation, with strong or institutional exit options. Adult recreational users sit closer to symmetric-to-beneficiary: real gains from decriminalization and safer supply, offset by taxed prices and marketing exposure, with mobile exit (they can choose not to consume or to consume less). Residual illicit market participants, communities near retail outlets, heavy users, and youth sit at the target end: trapped or identity-locked exit options, powerless structural position, and costs that flow directly from decisions made by agenda-setters and beneficiaries they cannot meaningfully influence.",
+    "perspectival_gap": "From the state regulatory agency's seat, this reads as successful coordination: crime is down, supply is safer, revenue funds public goods. From the residual illicit market participant's seat, criminalization continues essentially unchanged, now with less public sympathy because 'the state already solved the problem.' From the heavy-use dependent population's seat, the constraint looks like a for-profit apparatus with a fiscal interest in their continued consumption. The engine's per-seat computation should surface this divergence rather than average it into a single verdict.",
+    "mandatrophy_analysis": "The classification as tangled_rope (rather than pure rope) prevents this reading from being mistaken for costless harm elimination: legalization genuinely solves the coordination problem prohibition created (violence, adulteration, mass incarceration of users) but layers a new, real extraction relationship onto the solution — commercial and fiscal actors profiting from consumption volume, with the heaviest costs falling on populations with the least power to object. Calling this a pure rope would erase the youth-marketing, retail-siting, and dependent-use costs; calling it a pure snare would erase the substantial and real benefit to the population that exits the criminal and unregulated-supply victim sets. The tangled_rope classification is the one that can hold both truths.",
+    "kernel_context": "This constraint instantiates the legalization_reading of the substance_control_authority kernel: state authority is read as properly exercised through licensed commercial regulation (quality control, taxation, controlled retail access) rather than criminal prohibition (prohibition_reading) or non-commercial public-health acceptance (harm_reduction_reading). The defining structural delta from prohibition_reading is that users exit the criminal victim set; the defining delta from harm_reduction_reading is that this reading authorizes commercial marketing and profit-seeking supply rather than treating use as a public-health-managed condition outside commerce. Sibling readings are separate constraint files linked via network.affects_constraints; this file's ε (0.42) is not comparable to theirs by design — each reading has its own referent, its own beneficiary/victim structure, and its own ε."
+  },
+  "omegas": [
+    {
+      "id": "commercialization_vs_harm_reduction_tradeoff",
+      "question": "Does converting drug supply into commercial enterprise systematically increase total consumption and dependent use beyond what harm-reduction-without-commerce would produce, and if so, is that increase an acceptable cost of eliminating criminal-market harms?",
+      "resolution_mechanism": "Longitudinal comparison of use-volume, dependency-rate, and mortality/morbidity trends across jurisdictions choosing legalization, harm-reduction, and prohibition regimes, controlling for regional and demographic confounds.",
+      "impact": "If commercialization substantially increases dependent use relative to harm-reduction regimes, this reading's coordination claim weakens relative to the harm_reduction_reading sibling, and the tangled_rope extraction component (producer/tax-authority interest in volume) becomes the dominant structural feature rather than a secondary cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legalization's commercial structure causally drives higher problematic use than non-commercial harm reduction."
+    },
+    {
+      "id": "residual_criminalization_justification",
+      "question": "Is continued enforcement against residual illicit market participants, under a legalization regime, structurally different from prohibition-era enforcement, or is it the same enforcement apparatus re-labeled as protecting market integrity?",
+      "resolution_mechanism": "Comparative analysis of enforcement targeting, sentencing patterns, and resource allocation before and after legalization in jurisdictions that legalized, focusing on whether enforcement intensity per-capita against unlicensed sellers changed.",
+      "impact": "If enforcement patterns are structurally continuous with prohibition, the legalization reading's claim to have 'eliminated illegal markets' is partly rhetorical, and the residual_illicit_market_participants victim group's structural position is closer to unchanged than to newly liberated — strengthening the tangled_rope reading over a rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether post-legalization enforcement against unlicensed sellers is functionally continuous with prohibition enforcement."
+    },
+    {
+      "id": "licensing_capital_barrier_effect",
+      "question": "Do licensing capital and compliance requirements systematically exclude former illicit-market participants (often from communities most harmed by prohibition) from formalizing, transferring the market's value to better-capitalized new entrants?",
+      "resolution_mechanism": "Track licensing approval rates and applicant demographics/financial profiles against pre-legalization market participant demographics in jurisdictions with social-equity licensing provisions versus those without.",
+      "impact": "If capital barriers systematically exclude the population most harmed by prohibition from capturing the legal market's value, the beneficiary set for this reading (licensed_drug_producers) is structurally narrower and more extractive relative to the exiting victim population than the coordination narrative suggests.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether licensing capital requirements reproduce exclusion of prohibition-harmed populations from the legal market's benefits."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the substance_control_authority kernel, each authored as a separate constraint story per the ε-invariance principle: prohibition_reading (criminalization to protect third parties), harm_reduction_reading (public-health acceptance without commercialization), and legalization_reading (this file — regulated commercial legality). Each reading has a distinct beneficiary/victim structure and a distinct ε; they are linked here rather than merged because measuring 'drug policy' by different observables (criminal-justice outcomes vs. public-health outcomes vs. market-structure outcomes) yields structurally different constraints, not one constraint viewed three ways."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "regulated_commerce_reduces_net_harm_versus_criminalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_licensed_market_access_is_legitimate_state_function",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "criminalized_illicit_market_baseline",
+    "drift_state": {
+      "moment": "post_multi_jurisdiction_legalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_prioritization__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "8440c1ed-8cec-40f3-adce-d6ed7cf63a56"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Existential-Risk Framing of AI Risk Prioritization",
+    "topic_domain": "technology_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "xrisk_research_institutes",
+      "longtermist_funders",
+      "frontier_lab_safety_teams"
+    ],
+    "victims": [
+      "algorithmically_harmed_communities",
+      "near_term_ai_justice_researchers",
+      "future_humanity"
+    ],
+    "vindicated_propositions": [
+      "extinction_level_ai_threat_is_the_dominant_risk_category"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "xrisk_research_institutes",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set research agendas, publish threat models, and advise policymakers on the premise that misalignment risk dominates. Control a large and growing share of philanthropic and government funding earmarked for AI safety, and shape which risks count as 'safety' in grant calls, conference programs, and legislative testimony."
+    },
+    {
+      "name": "longtermist_funders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Direct philanthropic capital toward alignment research and capability-control advocacy, justified by expected-value calculations over astronomical future populations. Their giving strategy is validated by the existential framing continuing to dominate the field's prestige hierarchy and funding priorities."
+    },
+    {
+      "name": "frontier_lab_safety_teams",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Staff internal alignment teams at major AI developers; their organizational relevance and funding depend on the existential frame remaining the field's central legitimating narrative, even as their employers ship deployed systems with measurable present-day harms."
+    },
+    {
+      "name": "algorithmically_harmed_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience discriminatory lending, wrongful arrest from facial recognition, algorithmic wage suppression, and automated benefits denial today. Have little say in an agenda that treats their harms as lower priority than speculative future extinction, and cannot easily exit systems already embedded in housing, employment, and policing."
+    },
+    {
+      "name": "near_term_ai_justice_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Study deployed-system harms — bias, surveillance, labor displacement — and compete for funding, journal space, and institutional attention against an existential-risk framing that is often explicitly counterposed to their work as a 'distraction.' Career progression narrows when funders and prestigious venues privilege x-risk framing."
+    },
+    {
+      "name": "future_humanity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Nonexistent or not-yet-born persons whose interests the existential framing claims to represent and protect through alignment research; simultaneously bear the risk if resources are misallocated away from correcting present harms that compound into future structural inequities, and have no voice of their own in the allocation debate."
+    },
+    {
+      "name": "policymakers_and_regulators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Draft AI governance legislation under intense lobbying pressure from both x-risk-framed and harms-framed advocacy coalitions; often lack independent technical capacity to adjudicate between the two framings and default to whichever coalition has more established access and credibility in a given legislative session."
+    },
+    {
+      "name": "capability_control_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Push for compute governance, model weight restrictions, and international coordination mechanisms premised on catastrophic misalignment risk; these policy asks compete directly with near-term interventions (audits, disclosure mandates, liability regimes) for the same finite legislative and regulatory bandwidth."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates scarce technical talent, philanthropic capital, and policy attention around a single dominant threat model (catastrophic misalignment), enabling large, well-resourced, long-horizon research programs (interpretability, alignment theory, compute governance) that would be difficult to sustain under fragmented near-term-harms funding models.",
+    "transfer_function": "Moves research funding, policy attention, media coverage, and regulatory bandwidth away from documented present-day algorithmic harms and toward speculative long-horizon alignment and capability-control research; also moves reputational capital and institutional legitimacy toward the x-risk research community.",
+    "absent_voices": "Communities currently harmed by deployed algorithmic systems — over-policed neighborhoods, gig workers subject to algorithmic management, applicants denied credit or housing by opaque scoring systems — are rarely present in the elite forums (AI safety summits, alignment funding boards) where existential-risk prioritization is set. Future persons, invoked as the primary beneficiaries, cannot speak for themselves and are represented only by the framing's own advocates.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the existential-risk framing vanished overnight, x-risk institutes would lose funding legitimacy and reallocate toward near-term harms work (a real rearrangement for that sector), but researchers on both sides dispute whether the underlying catastrophic risk itself would remain unaddressed — existential-risk proponents argue the world would become dramatically more dangerous without alignment research continuing regardless of framing; near-term-harms proponents argue little of substance would change since deployed-harm mitigation would simply regain proportionate attention.",
+    "founding_problem": "Early AI safety researchers (2000s-2010s) identified that sufficiently capable, goal-directed AI systems could pursue objectives misaligned with human values in ways that are difficult to correct once capability thresholds are crossed, potentially causing irreversible or extinction-level outcomes with no opportunity for course-correction.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Some AI capability researchers outside the x-risk funding ecosystem (in academic ML and some national AI safety institutes) corroborate that misalignment at scale is a genuine open technical problem. However, a substantial body of near-term-harms researchers, science-and-technology-studies scholars, and some AI ethics practitioners — largely outside the beneficiary set — contend the extinction framing is empirically underdetermined relative to documented present harms and functions partly to secure funding and prestige for a specific research program; no consensus corroboration exists outside parties with a stake in one framing or the other."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the existential-risk reading of a contested kernel about how AI risk attention and resources should be prioritized. On this reading, misaligned artificial general intelligence poses an extinction-level threat to humanity, and alignment research and capability controls are the paramount, resource-deserving priority. The reading has consolidated real institutional power: dedicated research institutes, longtermist philanthropic infrastructure, and safety teams inside frontier labs, whose funding and prestige depend on this framing continuing to dominate the field. It coexists in an ongoing contest with a near-term-harms reading of the same underlying kernel (deployed AI systems causing measurable discrimination, displacement, and surveillance now), which is authored as a separate, sibling constraint (near_term_harms_reading) with its own ε and stakeholder structure — not folded into this one. The ε authored here (0.58) is for the standing arrangement as this reading's own advocates and critics jointly observe it operating: a real coordination function (pooling scarce talent and capital around a genuinely hard technical problem) running alongside a documented pattern of crowding out near-term harms funding and framing that work as a distraction.",
+    "logic_rationale": "Extractiveness is authored at 0.58 — moderate-high, not extreme — because the coordination function is genuine (catastrophic misalignment is a real open technical question with credentialed researchers across institutions, not merely constructed to extract). But resources, media attention, and regulatory bandwidth are finite, and the existential framing's dominance measurably displaces near-term harms work, which is the asymmetric extraction component. Suppression (0.52) reflects the documented rhetorical move of framing near-term algorithmic justice concerns as a 'distraction' from the paramount existential concern — this delegitimizes competing claims on the same scarce attention rather than physically barring them. Theater ratio (0.42) is elevated because a portion of alignment-adjacent activity (conference circuits, high-profile open letters, symbolic governance commitments) functions more as field-legitimating performance than as tractable technical progress, though a substantial core of real interpretability and control research remains functional. Accessibility collapse (0.48) is moderate: near-term harms researchers and advocates are not fully locked out of funding or policy access, but the existential frame's dominance narrows the practical field of workable alternatives inside elite AI governance venues. Resistance (0.61) is comparatively high because near-term-harms researchers, AI ethics scholars, and affected communities actively contest the framing in academic literature, congressional testimony, and public advocacy.",
+    "directionality_logic": "X-risk research institutes, longtermist funders, and frontier lab safety teams sit near the beneficiary end: they set or heavily influence the agenda, and their institutional standing and funding flows are validated by the framing's continued dominance. Algorithmically harmed communities and near-term-harms researchers sit near the target end: they bear the real cost of displaced attention and resources, and their exit options are constrained — communities cannot easily escape systems already embedded in housing, credit, and policing, and researchers face narrowed career paths when prestige and funding concentrate elsewhere. Future humanity is deliberately dual-coded: nominally the primary beneficiary the framing exists to protect, but also a payer if resource misallocation (away from correcting compounding present-day harms) produces worse structural outcomes by the time that future arrives — and future persons have no seat to advocate for themselves, which is exactly the gap the framing's critics point to.",
+    "mandatrophy_analysis": "The tangled_rope classification prevents two mislabeling errors. First, it avoids treating this purely as extraction cover: the misalignment research agenda addresses a genuine, non-trivial technical uncertainty, and dismissing it entirely as a snare would mischaracterize a body of real, falsifiable research. Second, it avoids treating this purely as neutral coordination: the framing's dominance is not merely an efficient division of intellectual labor but is actively maintained by rhetorical suppression of competing claims on the same resource pool, and by institutional structures (dedicated funding streams, elite conference circuits) whose continued legitimacy depends on the extinction narrative retaining priority status. The founding problem (irreversible catastrophic misalignment) is genuinely contested as live-vs-dead-vs-displaced — some technical researchers regard it as a serious unresolved question, others regard the resourcing pattern as having outrun the evidentiary basis and functioning now mainly to sustain the institutions built around it.",
+    "kernel_context": "This constraint instantiates the existential_risk_reading of the ai_risk_prioritization kernel. The kernel is the underlying contested question of how AI risk attention and resources should be allocated across time horizons and harm types. This reading holds that extinction-level misalignment risk is the dominant category deserving paramount resourcing on a 10-100 year horizon, with future humanity (including not-yet-existing persons) as the primary beneficiary class and existing algorithmic-harm mitigation treated as comparatively lower priority. The sibling reading, near_term_harms_reading (authored separately, not folded into this file), holds that documented present-day harms from deployed systems are the dominant, resource-deserving risk category on an immediate-to-biographical horizon. Both readings are live positions held by distinct, overlapping professional communities; this file's ε (0.58) is authored strictly for the existential-risk reading's own standing arrangement, not averaged against or adjusted for the sibling reading's claims."
+  },
+  "omegas": [
+    {
+      "id": "extinction_risk_empirical_tractability",
+      "question": "Is catastrophic AI misalignment a well-specified, empirically tractable risk comparable to other extinction-level threats (e.g., asteroid impact, engineered pandemics), or is it a speculative extrapolation whose probability and timeline estimates are not meaningfully falsifiable with current evidence?",
+      "resolution_mechanism": "Longitudinal tracking of concrete alignment failure incidents in deployed frontier systems, expert elicitation calibration studies, and post-hoc evaluation of past x-risk timeline predictions against actual capability trajectories.",
+      "impact": "If tractable and well-calibrated, the resource allocation toward alignment research is substantially justified as genuine coordination against a real threat. If largely speculative and poorly calibrated, the framing's dominance looks more like extraction of prestige and funding using an unfalsifiable threat model, shifting the classification toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether extinction-level misalignment risk is empirically well-grounded or largely speculative."
+    },
+    {
+      "id": "committer_kernel_reading_split",
+      "question": "This constraint is one reading (existential_risk_reading) of the ai_risk_prioritization kernel; the sibling reading (near_term_harms_reading) allocates victim status to presently-harmed communities and beneficiary status to near-term-harms researchers and advocates instead. Where exactly does the disagreement between readings live structurally?",
+      "resolution_mechanism": "The disagreement is located in the choice of time horizon (10-100 years vs. immediate-to-biographical) and in the composition of the victim set (nonexistent future persons vs. presently identifiable harmed communities) — not in a factual dispute about whether AI causes harm, which both readings affirm. Resolving the kernel dispute would require settling how to weigh probabilistic future catastrophe against certain present harm, which is a normative allocation question, not a purely empirical one.",
+      "impact": "If policymakers or funders adopt the sibling reading's time-horizon and victim-set framing, resource flows reverse: near-term harms research becomes the paramount priority and this reading's beneficiaries lose funding legitimacy. The two readings cannot both be fully resourced from the same finite attention and funding pool, which is why they function as genuinely rival, not merely complementary, claims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the existential-risk and near-term-harms readings of the shared kernel structurally diverge."
+    },
+    {
+      "id": "future_persons_representation_legitimacy",
+      "question": "Can any existing institution legitimately claim to represent the interests of future, not-yet-existing persons in a resource allocation debate, or does invoking 'future humanity' as a beneficiary class function mainly to insulate the framing's current advocates from being challenged by presently-existing stakeholders?",
+      "resolution_mechanism": "Comparative institutional analysis of other domains that formally represent future-generation interests (e.g., long-term environmental trusteeship models, intergenerational equity clauses in constitutional law) and whether comparable accountability mechanisms exist or could exist for AI x-risk governance.",
+      "impact": "If no legitimate representation mechanism can exist, the beneficiary claim on behalf of future humanity is unfalsifiable and effectively transfers decision authority entirely to current x-risk institutions, strengthening the case for suppression of competing (verifiable, present-day) harm claims. If representation mechanisms are plausible, the framing's beneficiary claim gains more structural legitimacy.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether current institutions can legitimately represent nonexistent future persons' interests."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "near_term_harms_reading"
+    ],
+    "dual_formulation_note": "This constraint and near_term_harms_reading are sibling readings of the shared ai_risk_prioritization kernel, per the ε-invariance decomposition principle. They share the underlying natural-language label ('AI risk prioritization') but diverge in victim set, timescale, and beneficiary composition, and are authored as two separate constraint stories with independent ε values rather than one story with an averaged or measurement-dependent ε. This story's authored ε (0.58) reflects the existential-risk reading's own standing arrangement; the sibling story authors its own ε independently. Both stories should be read together for the full kernel contest, but neither substitutes for the other."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "precautionary_extinction_avoidance_priority",
+    "drift_state": {
+      "moment": "post_frontier_lab_commercialization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "extinction_level_outcomes_dominate_expected_value_calculus",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "future_persons_carry_comparable_moral_weight_to_present_persons",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "gain_flow": "xrisk_research_institutes",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__maximalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "1dc90b8d-d385-4a4e-81aa-e2f588e5019e"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "21-Million-Cap Monetary Immutability Covenant (Maximalist Reading)",
+    "topic_domain": "cryptoeconomics/monetary_systems/distributed_consensus",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_holders",
+      "miners_with_sunk_asic_capital",
+      "core_dev_conservative_faction"
+    ],
+    "victims": [
+      "scalability_layer_developers",
+      "unbanked_transactional_users",
+      "protocol_researchers_proposing_monetary_changes"
+    ],
+    "vindicated_propositions": [
+      "sound_money_doctrine",
+      "credible_commitment_theory"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "early_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Acquired large positions when the asset was cheap and the 21-million cap was a marketing claim rather than a tested commitment. Their wealth is directly a function of scarcity holding; any credible move to alter issuance or cap parameters threatens the basis of their position. They fund advocacy, media, and conference infrastructure that frames the cap as sacred and any technical discussion of changing it as heresy."
+    },
+    {
+      "name": "miners_with_sunk_asic_capital",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Have sunk enormous capital into specialized hardware whose value depends on the fee market maturing exactly as the whitepaper's issuance schedule predicts. They enforce the social consensus around the covenant by threatening to fork away from any client that changes core monetary parameters, exercising de facto veto power over protocol changes."
+    },
+    {
+      "name": "core_dev_conservative_faction",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintains the reference client and gatekeeps which changes are considered legitimate. Their professional and reputational identity is fused with having defended the immutability narrative for over a decade; proposing a monetary change would be read by their own community as betrayal. They administer the technical review process that any change must pass, and they are the ones who could in principle propose changes but treat doing so as unthinkable."
+    },
+    {
+      "name": "scalability_layer_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build layer-2 and sidechain workarounds because base-layer throughput and fee-market changes are foreclosed by the covenant. They bear the engineering cost of routing around a constraint they did not choose, and any proposal to relax base-layer parameters to reduce that burden is met with accusations of attacking sound money. Their exit is limited to building elsewhere, abandoning years of accumulated expertise and community standing."
+    },
+    {
+      "name": "unbanked_transactional_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Were promised peer-to-peer electronic cash for everyday transactions in the original whitepaper's framing, but face high fees and slow confirmation as the network's transactional-use case has been deprioritized relative to its store-of-value use case. They have no voice in protocol governance and no realistic technical alternative that carries the same network effects."
+    },
+    {
+      "name": "protocol_researchers_proposing_monetary_changes",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Have proposed technically serious changes (tail emission for long-term security budget, adjusted issuance curves) grounded in game-theoretic concerns about post-subsidy security. They are excluded from serious consideration not on technical merit but because the maximalist reading treats any such proposal as violating covenant, ending careers and inviting harassment rather than debate."
+    },
+    {
+      "name": "monetary_policy_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study whether a fixed, unappealable monetary rule is a genuine Schelling point solving a real credible-commitment problem, or a constructed dogma that transfers wealth to early positions while foreclosing adaptation. They observe the social enforcement mechanisms without being subject to them directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine credible-commitment problem: without a hard, unappealable cap, any monetary authority (even a decentralized one) faces pressure to inflate, and market participants cannot price the asset with confidence if the supply schedule is negotiable. Fixing the parameters ex ante and treating them as beyond discussion removes that discretion entirely.",
+    "transfer_function": "Moves scarcity-derived appreciation from anyone who could have benefited from adaptive monetary or protocol changes (transactional users needing lower fees, researchers wanting a tail-emission security budget, new entrants who would benefit from a more flexible base layer) to those already holding large positions and those whose capital is sunk in the current fee-market structure.",
+    "absent_voices": "Protocol researchers proposing monetary changes and transactional users in the unbanked/underbanked segment would object that the covenant has calcified from a credible-commitment tool into a wealth-preservation dogma, but they hold no formal governance role and voicing the objection publicly costs them standing in the community whose infrastructure they depend on.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Believers hold that if the immutability covenant were abandoned, the entire value proposition collapses overnight — the asset becomes just another flexible-supply currency with no differentiated claim on being sound money, and early holders' wealth evaporates. Critics hold that the network's actual utility (settlement, censorship-resistance, transactional use) would persist or even improve under a technically negotiated change, and that only the speculative premium tied to absolute fixedness would be affected. The two camps do not agree on what 'the world' even is here.",
+    "founding_problem": "The whitepaper needed to solve double-spending without a trusted third party, and needed a credible answer to 'why won't this just be inflated away like every prior digital cash scheme or fiat currency,' to bootstrap trust in a novel, trustless system with no central bank track record to point to.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Early holders and the conservative dev faction (the benefiting parties) attest the problem remains live and that any deviation reopens the inflation-trust problem from scratch. Independent monetary economists and protocol researchers outside the holder base — including original mailing-list participants who raised the tail-emission security-budget question years before it became taboo — attest that the founding trust problem was substantially solved by the network's track record and hash-rate security, and that the remaining absolute-immutability stance now serves wealth preservation more than trust-bootstrapping."
+  },
+  "gain_flow": "early_holders",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors the MAXIMALIST reading of the Bitcoin consensus kernel: the position that the whitepaper's issuance schedule and monetary parameters are a founding covenant, immutable in the sense that any technical proposal to alter them (fee-market redesign, tail emission, cap adjustment) is treated as an existential attack on the protocol's core value proposition rather than as an ordinary engineering question. This is NOT a story about the whole of 'Bitcoin governance' — it is one specific reading, held by a specific coalition, of a kernel that other parties read differently (see kernel_context). The ε authored here (0.66) is for the standing arrangement AS THIS READING SEES IT: a hardened, socially-enforced immutability norm that increasingly transfers value to early positions and forecloses adaptation, not for any alternative arrangement this reading would prefer instead.",
+    "key_agents": [
+      "early_holders: Primary beneficiary (organized/arbitrage) — scarcity-derived wealth depends on the covenant holding",
+      "miners_with_sunk_asic_capital: Beneficiary and de facto enforcer (organized/constrained) — sunk capital tied to fee-market trajectory implied by fixed issuance",
+      "core_dev_conservative_faction: Agenda-setter (institutional/identity_locked) — administers the technical veto and is identity-fused with defending immutability",
+      "scalability_layer_developers: Primary target (moderate/constrained) — bears engineering cost of working around a foreclosed base layer",
+      "unbanked_transactional_users: Primary target (powerless/trapped) — promised cash-like utility, receives store-of-value prioritization instead",
+      "protocol_researchers_proposing_monetary_changes: Excluded voice (moderate/trapped) — technically serious proposals treated as heresy",
+      "monetary_policy_researchers: Analytical observer — assesses credible-commitment function vs. constructed dogma"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.28 to 0.66 over the interval, tracking the network's transition from an experimental payment system (where immutability was a genuine, contested design bet) to an asset class whose narrative depends on absolute scarcity (where immutability defends realized wealth). Suppression tracks alongside (0.35 to 0.71) as social enforcement mechanisms — reputational attacks on researchers, community ostracism, narrative gatekeeping by media and conference organizers funded by holder interests — hardened into a mature apparatus. Theater ratio rises more modestly (0.15 to 0.42): a genuine credible-commitment function persists (this reading is not claimed as pure snare), but an increasing share of 'defending sound money' activity is performative signaling rather than technical necessity.",
+    "directionality_logic": "Early holders and sunk-capital miners sit near the full-beneficiary end: the covenant's persistence is the mechanism by which their positions retain and grow value, and their exit options (arbitrage for holders, constrained-but-organized for miners) let them extract without bearing proportional cost. Scalability developers and transactional users sit near the full-target end: they bear engineering and utility costs directly traceable to the same immutability norm, with constrained-to-trapped exit. The conservative dev faction is agenda-setter rather than simple beneficiary — they administer the gate but their capture is identity-based (professional/reputational fusion with the immutability narrative) rather than straightforwardly financial, which is why exit_options is coded identity_locked rather than arbitrage.",
+    "mandatrophy_analysis": "The classification as tangled_rope (not pure snare) preserves the fact that a real coordination problem — credible commitment against monetary discretion — was genuinely solved by the original design and genuinely benefits participants who value predictability. The tangled element is that the SAME structure that solved the original bootstrapping problem now also serves as a wealth-preservation mechanism for early positions and forecloses adaptations (tail emission for long-term security budget, base-layer throughput changes) that serious researchers argue the network may eventually need. Treating this as pure mountain (immutable natural law) would erase the identifiable beneficiaries; treating it as pure snare would erase the genuine coordination function the original whitepaper solved. The maximalist reading, by making the covenant literally unappealable, is the reading most likely to convert a time-bound credible-commitment device into a permanent extraction structure — which is exactly the structural delta this reading is authored to expose.",
+    "kernel_context": "This constraint instantiates the MAXIMALIST reading of the contested bitcoin_consensus_kernel: the whitepaper's monetary parameters are read as an unappealable founding covenant, any change to which is a violation rather than an engineering decision. Two sibling readings of the SAME kernel are NOT part of this file: the utility_reading (whitepaper as minimum viable consensus mechanism enabling iterative improvement — likely a much lower-ε, closer-to-rope story) and the pragmatic_synthesis (base-layer monetary rules immutable, but upper layers permit innovation — likely a tangled_rope or scaffold story with a narrower victim set limited to base-layer-dependent use cases). This reading's high ε and high suppression reflect the maximalist camp's own operation, not a judgment applied uniformly across all Bitcoin governance positions."
+  },
+  "omegas": [
+    {
+      "id": "credible_commitment_vs_wealth_preservation",
+      "question": "Is the maximalist immutability stance still functioning as a credible-commitment device solving a live monetary-trust problem, or has it become primarily a wealth-preservation mechanism for early positions now that the network's trust track record is independently established?",
+      "resolution_mechanism": "Compare the security-budget game theory (would the network's hash-rate security genuinely collapse post-subsidy without either fee-market growth or tail emission) against the actual voting/signaling patterns of the coalition defending immutability (does opposition correlate with position size and duration rather than with mainnet security metrics).",
+      "impact": "If the credible-commitment function is still load-bearing, the tangled_rope classification's coordination leg is well-supported. If the function is now vestigial and defense correlates with holding size, the constraint is closer to a snare wearing a coordination-function costume, and the maximalist reading's claimed_type should be revisited downward toward snare in a future story version.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether immutability defense still tracks a genuine security-budget problem or now tracks holder wealth."
+    },
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "Where exactly does the maximalist reading diverge from the pragmatic_synthesis and utility readings — is it a disagreement about WHAT the whitepaper committed to (textual/interpretive), or a disagreement about WHETHER any commitment, once made, can ever legitimately be revised (procedural/normative)?",
+      "resolution_mechanism": "Textual analysis of the original whitepaper's own hedging language (Nakamoto's own later mailing-list posts entertained parameter changes) cross-referenced against community constitutional practice (has any monetary parameter ever actually been changed, and under what consensus threshold).",
+      "impact": "If the disagreement is textual, this reading is vulnerable to originalist counter-argument from within its own tradition (the founding text itself may not support absolute immutability). If procedural, the disagreement is normative all the way down and no textual resolution is possible — the readings simply coexist as competing values commitments.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locates whether the maximalist/utility/pragmatic split is interpretive or normative."
+    },
+    {
+      "id": "identity_lock_reversibility",
+      "question": "How reversible is the conservative dev faction's identity-lock — could a generational turnover in core maintainers restore monetary-parameter discussion to an ordinary engineering question, or has the social-layer enforcement (community ostracism, funding structures) made the lock self-perpetuating regardless of who holds maintainer roles?",
+      "resolution_mechanism": "Track whether newer contributors who did not personally build their reputations defending immutability show different openness to tail-emission or parameter-change proposals than long-tenured maintainers.",
+      "impact": "If the lock is generational/personal, it may loosen naturally over decades. If it is structural (funding, community norms, holder-funded media) it will persist independent of who holds the roles, supporting the tangled_rope's requires_active_enforcement characterization as durable rather than transitional.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the identity-lock on core developers is personal or structurally self-perpetuating."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_consensus_kernel__utility_reading",
+      "bitcoin_consensus_kernel__pragmatic_synthesis"
+    ],
+    "dual_formulation_note": "This story is one of three siblings decomposing the natural-language claim 'the Bitcoin whitepaper establishes immutable monetary policy.' Each sibling reads the same founding text and consensus history differently: maximalist_reading (this file, high epsilon, tangled_rope) treats the covenant as unappealable and authors a wealth-transfer structure toward early holders; utility_reading authors the whitepaper as a minimum-viable mechanism enabling iterative improvement (expected low epsilon, closer to rope); pragmatic_synthesis authors a layered structure where only base-layer monetary rules are immutable while upper layers permit innovation (expected moderate epsilon, narrower victim set). All three share the same underlying text and consensus-history facts but diverge sharply on beneficiary/victim structure and extraction because they diverge on what the founding covenant actually claims. Per the epsilon-invariance principle, these are three constraints, not one constraint measured three ways."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "utility_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_synthesis",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "monetary_parameters_are_unappealable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "any_parameter_change_constitutes_covenant_breach",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "genesis_block_issuance_schedule",
+    "drift_state": {
+      "moment": "post_institutional_adoption_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

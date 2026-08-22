@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_boundary__balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "2316fdb5-58fc-4a05-a745-d3c1743eef18"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection Boundary — Case-by-Case Balancing Reading",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "judiciary_as_institution",
+      "litigants_with_resources_to_appeal",
+      "targeted_groups_seeking_dignitary_relief"
+    ],
+    "victims": [
+      "low_resource_speakers",
+      "marginal_political_movements",
+      "speakers_in_lower_courts_facing_unpredictable_outcomes"
+    ],
+    "vindicated_propositions": [
+      "no_speech_right_is_absolute",
+      "constitutional_values_must_be_reconciled_contextually"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "omegas": [
+    {
+      "id": "balancing_versus_categorical_legitimacy",
+      "question": "Is case-by-case balancing a genuine improvement in fit between speech doctrine and social reality, or is it a mechanism that quietly transfers gatekeeping power from fixed rules (which constrain judges) to individual judges (who can rationalize outcomes post hoc)?",
+      "resolution_mechanism": "Longitudinal analysis of outcome variance across circuits and judges for factually similar speech claims; if variance is high and correlates with judicial ideology rather than case facts, the balancing framework functions as discretion-laundering rather than principled weighing.",
+      "impact": "High unexplained variance would support classifying the constraint as substantially extractive (a snare wearing coordination language); low variance would support the tangled_rope or even rope reading of genuine contextual calibration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether balancing produces principled variance or judge-dependent unpredictability."
+    },
+    {
+      "id": "kernel_reading_selection",
+      "question": "This constraint instantiates the balancing_reading of the speech_protection_boundary kernel, structurally distinct from the absolutist_reading (near-categorical protection, harm exception limited to Brandenburg) and the harm_limited_reading (protection conditional on absence of dignitary/equality harm). Is the balancing reading's claim to occupy a principled 'middle' actually a stable third position, or is it a name for wherever judicial discretion currently happens to land between the two poles?",
+      "resolution_mechanism": "Compare case outcomes attributed to 'balancing' against outcomes that would be predicted by either pole reading; a balancing reading with no independent predictive content beyond ex post rationalization of either pole's results indicates the middle position is not structurally distinct but is a discretion sink.",
+      "impact": "If balancing has no independent predictive content, its coordination claim (principled contextual adjudication) collapses and the constraint reads closer to snare (extraction of predictability from speakers, redistributed to whichever value the deciding judge favors); if it does have independent content, the tangled_rope classification holds — real coordination function (context-sensitivity) coexisting with real extraction (unpredictability cost borne disproportionately by low-resource speakers).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the balancing reading is a genuine third position or an unstable label for ad hoc discretion between the absolutist and harm-limited poles."
+    },
+    {
+      "id": "gatekeeper_distribution_effect",
+      "question": "Does distributing the gatekeeper function across the judiciary (rather than fixing it in a categorical rule) produce net-beneficial responsiveness to emerging harms (e.g., coded incitement, algorithmically amplified speech) or does it produce a structural advantage for whichever party can afford to litigate the boundary repeatedly?",
+      "resolution_mechanism": "Track relitigation rates and win rates by party resources across circuits over the interval; sustained resource-correlated success in redefining the boundary would indicate the distributed gatekeeper function has been captured by well-resourced repeat litigants.",
+      "impact": "Would refine whether the primary beneficiary is the judiciary's institutional flexibility or a subset of well-funded litigants using that flexibility as a wedge.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether distributed judicial discretion advantages repeat, well-resourced litigants over ordinary speakers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models the balancing reading of the speech_protection_boundary kernel: courts determine whether speech is protected by weighing First Amendment interests case-by-case against countervailing constitutional values (equality, dignity, public safety) and demonstrated harms. Unlike the absolutist reading (near-categorical protection, narrow Brandenburg-style exception) and the harm_limited reading (protection conditional on absence of dignitary/equality harm), the balancing reading distributes the gatekeeper function across the judiciary rather than fixing it in a bright-line rule. This produces genuine responsiveness to context — coded speech, algorithmically amplified harassment, and emergent harms can be addressed without waiting for legislative or doctrinal overhaul — but the same flexibility becomes a resource-dependent litigation surface: parties who can afford repeated appeals shape the boundary over time in ways low-resource speakers cannot contest.",
+    "key_agents": [
+      "judiciary_as_institution: Primary agenda-setter (institutional/analytical) — administers the weighing test, gains interpretive authority and institutional flexibility",
+      "litigants_with_resources_to_appeal: Beneficiary (powerful/arbitrage) — can relitigate boundary questions repeatedly, effectively co-authoring doctrine over time",
+      "targeted_groups_seeking_dignitary_relief: Beneficiary (organized/constrained) — gain a doctrinal avenue to weigh equality and dignity harms against speech claims that the absolutist reading would foreclose",
+      "low_resource_speakers: Primary payer (powerless/trapped) — bear the cost of unpredictability; cannot afford to litigate close cases to a favorable outcome",
+      "marginal_political_movements: Payer (powerless/constrained) — face case-by-case scrutiny of their speech that better-resourced or more mainstream speakers do not encounter as acutely",
+      "speakers_in_lower_courts_facing_unpredictable_outcomes: Payer (moderate/constrained) — experience circuit-level variance in how the balancing test is applied, without the resources to appeal to resolve it"
+    ],
+    "logic_rationale": "Extractiveness (0.42) reflects a genuine coordination function — courts adapting doctrine to context that categorical rules cannot anticipate — combined with a real transfer: unpredictability cost is not borne evenly but concentrated on speakers who cannot afford to litigate the boundary repeatedly. Suppression (0.48) is moderate: the balancing framework does not categorically forbid disfavored speech the way a harm-limited reading might, but it does create a chilling effect from unpredictability itself — speakers self-censor rather than risk an adverse case-by-case determination. Theater ratio (0.28) is present but not dominant: balancing opinions genuinely engage with competing interests, but a growing share of judicial language performs 'careful weighing' to legitimate outcomes that track other factors (circuit composition, litigant resources). Accessibility collapse (0.35) is moderate-low — the categorical alternatives (absolutist or harm-limited rules) remain live and contested, unlike a settled natural-law-style boundary. Resistance (0.58) is substantial: both free-speech absolutists and harm-focused reformers actively contest the balancing approach from opposite directions, which is itself evidence this is a contested reading rather than a stable consensus position.",
+    "directionality_logic": "The judiciary as an institution is the primary agenda-setter: it administers the weighing test, retains interpretive discretion, and its authority expands precisely because the boundary is not fixed by a bright-line rule. Well-resourced repeat litigants function as structural beneficiaries — they can afford to bring case after case that incrementally reshapes the boundary in their favor, converting judicial discretion into a lever they alone can pull effectively. Targeted groups seeking redress for dignitary or equality harms also benefit from the case-by-case approach, since it offers an avenue foreclosed by the absolutist reading's near-categorical protection. Low-resource speakers, marginal political movements, and litigants without appellate capacity are structural targets: they face the same discretionary standard without the resources to shape or predict its application, and they bear the chilling effect of not knowing in advance which side of the line their speech falls on.",
+    "perspectival_gap": "From the judiciary's seat, balancing is principled contextual adjudication — the considered alternative to both rigid absolutism and categorical harm-exclusion, tracking constitutional values as they actually compete in hard cases. From a low-resource speaker's seat, the same framework is an unpredictable gauntlet: the rule that will be applied to their speech is not knowable in advance and depends on who is willing and able to litigate it to a favorable forum. The engine's per-seat computation should register this divergence: institutional/analytical seats see coordination; powerless/trapped seats see cost without a corresponding voice in how the standard evolves.",
+    "mandatrophy_analysis": "The founding problem — that neither absolute protection nor blanket harm-exclusion adequately handles every speech controversy — remains genuinely live; new categories of contested speech (algorithmically amplified harassment, coded incitement, synthetic media) continue to emerge that no categorical rule anticipated. This argues against treating the constraint as a pure mandatrophy case (a mandate persisting after its problem died). However, the specific INSTITUTIONAL SHAPE the balancing reading takes — case-by-case judicial weighing without codified standards — has arguably outlived any claim to being the uniquely necessary response to that founding problem, since both sibling readings claim to address the same underlying tension through different, more predictable mechanisms. The mandatrophy question here is not 'is the problem dead' but 'has this particular institutional means become self-perpetuating independent of whether it is the best available means' — a question the omega on balancing-versus-categorical legitimacy is designed to probe.",
+    "kernel_context": "This constraint instantiates the balancing_reading of the speech_protection_boundary kernel. Two sibling readings exist as separate constraints: the absolutist_reading (near-categorical protection, harm exception limited to imminent lawless action under Brandenburg) and the harm_limited_reading (protection conditional on absence of significant dignitary, equality, or harassment harm). The balancing reading occupies neither pole: it authorizes courts to weigh First Amendment interests against countervailing constitutional values and demonstrated harms on a case-by-case basis, distributing gatekeeper authority across the judiciary rather than fixing it in a bright-line rule. This produces a structurally distinct ε profile from both siblings — lower extraction than the harm_limited_reading (which would author much higher ε for the same standing arrangement, since its own lights view routine unprotected-speech findings as the norm rather than the exception) and higher extraction than the absolutist_reading (whose lights view nearly all speech as protected, with correspondingly minimal transfer). The three readings are linked via network.affects_constraints and this file authors only the balancing reading's own ε, its own beneficiary/victim structure, and its own type."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_boundary__absolutist_reading",
+      "speech_protection_boundary__harm_limited_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the speech_protection_boundary kernel. The absolutist_reading and harm_limited_reading are separate constraint files with their own ε values, beneficiary/victim structures, and computed types — per the ε-invariance principle, they are not alternative measurements of this constraint but structurally distinct constraints sharing a contested kernel. The balancing_reading's moderate ε (0.42) sits between the absolutist_reading's expected low ε (protection is the default, exceptions narrow) and the harm_limited_reading's expected higher ε (protection is conditional, unprotected findings routine) — this ordering is a prediction to be checked against the sibling files' authored values, not a constraint imposed here."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "judiciary_as_institution",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the case-by-case weighing test, deciding which constitutional values prevail in each speech dispute. Retains and expands interpretive authority precisely because the boundary is not fixed by a bright-line categorical rule; each new case is an occasion to further specify (or leave open) the doctrine's content."
+    },
+    {
+      "name": "litigants_with_resources_to_appeal",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Can afford to bring repeated cases to shape how the balancing test is applied in contexts favorable to their interests, effectively co-authoring doctrine over time through sustained litigation investment that ordinary speakers cannot match."
+    },
+    {
+      "name": "targeted_groups_seeking_dignitary_relief",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gain a doctrinal avenue to argue that speech causing dignitary or equality harm should yield to countervailing constitutional interests, an avenue the absolutist reading would largely foreclose. Depend on courts weighing their asserted harms seriously case by case, which is itself uncertain."
+    },
+    {
+      "name": "low_resource_speakers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face the same case-by-case standard as well-funded parties but cannot afford to litigate a close case through appeal to a favorable outcome. Must guess in advance whether their speech will be protected, often choosing silence rather than risk an adverse, unpredictable ruling."
+    },
+    {
+      "name": "marginal_political_movements",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Their speech is more likely to be characterized as presenting demonstrated harms justifying restriction, since they lack the institutional standing or media access to frame their own speech favorably before a court applies the balancing test."
+    },
+    {
+      "name": "speakers_in_lower_courts_facing_unpredictable_outcomes",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Experience significant variance in how the balancing test is applied across circuits and judges for facially similar speech claims, without the resources to appeal a disfavorable outcome to a court that might resolve the variance."
+    },
+    {
+      "name": "free_speech_advocacy_organizations",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue from outside most individual cases that the balancing approach itself is the problem — that any standard short of near-categorical protection invites erosion by whichever value currently commands judicial sympathy. Their structural critique of the balancing reading as a category is rarely the direct subject of any single case."
+    },
+    {
+      "name": "constitutional_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study outcome patterns across the balancing doctrine's application, documenting where it produces principled context-sensitivity versus unexplained judge-dependent variance, informing but not controlling how the doctrine develops."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allows courts to resolve genuinely hard speech cases — where categorical rules give clearly wrong answers in some contexts — by weighing the actual competing constitutional interests and demonstrated harms present in each case, rather than forcing every dispute through a single fixed rule.",
+    "transfer_function": "Moves predictability and the practical power to shape doctrine from speakers who cannot afford sustained litigation to well-resourced repeat litigants and to the judiciary's own interpretive discretion; correspondingly moves some protective benefit toward groups asserting dignitary or equality harms who would fare worse under a more absolutist standard.",
+    "absent_voices": "Free speech advocacy organizations objecting to the balancing approach as a category (rather than to any single outcome) rarely get to litigate that structural objection directly, since courts resolve individual cases rather than adjudicate the wisdom of the standard itself. Low-resource and marginal speakers whose cases never reach appellate review are effectively unheard on how the standard is refined over time.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If case-by-case balancing disappeared and were replaced by a categorical rule (either pole), a large body of pending and future speech disputes would resolve differently and predictably rather than depending on judge, circuit, and litigant resources; well-resourced repeat litigants would lose their primary lever for incrementally reshaping the boundary, and low-resource speakers would gain predictability at the cost of losing case-specific consideration of context.",
+    "founding_problem": "Neither an absolute free-speech rule nor a rule conditioning protection on absence of harm could handle the full range of speech disputes courts actually faced — some speech causes serious, particularized harm that a purely categorical protective rule would ignore, while some harm-based exceptions would be so broad they would swallow protection for legitimate dissent. Balancing was adopted to let courts weigh the actual competing interests in each case.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Constitutional law scholars outside the litigating parties broadly corroborate that genuinely hard cases exist where categorical rules produce poor results, supporting the founding problem's continued vitality. However, the same scholarly literature also documents substantial unexplained outcome variance correlated with circuit and judicial composition rather than case facts, which free speech advocacy organizations and some scholars read as evidence that the current institutional form of balancing has drifted from principled context-sensitivity toward judge-dependent discretion — a status not attested by the judiciary itself, which continues to describe its own weighing as principled."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_constitutional_value_is_categorically_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "context_sensitive_adjudication_produces_more_accurate_outcomes_than_bright_line_rules",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_brandenburg_multifactor_scrutiny_framework",
+    "drift_state": {
+      "moment": "contemporary_platform_speech_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

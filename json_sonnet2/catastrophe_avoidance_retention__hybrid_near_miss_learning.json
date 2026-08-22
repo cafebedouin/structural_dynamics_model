@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_avoidance_retention__hybrid_near_miss_learning",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "e8cdef6c-ad73-4b3b-9ee3-d5468d434674"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Distributed Near-Miss / Foreign-Incident / High-Realism-Drill Learning System",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "traveling_public",
+      "patients",
+      "frontline_operators",
+      "safety_regulators"
+    ],
+    "victims": [
+      "frontline_reporters",
+      "junior_clinicians",
+      "whistleblower_engineers"
+    ],
+    "vindicated_propositions": [
+      "distributed_incident_learning_hypothesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Design and mandate the reporting, drill, and cross-industry information-sharing infrastructure (e.g. ASRS-style voluntary reporting, foreign-incident bulletins, simulator recertification cycles). They collect the aggregated safety benefit and legitimacy of a functioning system but bear none of the reporting cost directly."
+    },
+    {
+      "name": "traveling_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Rely entirely on the competence-retention system working without any visibility into it; cannot audit whether the airline or hospital they use participates meaningfully in near-miss sharing. Benefit passively when the system functions, bear catastrophic cost when it fails silently."
+    },
+    {
+      "name": "patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Depend on clinicians whose competence is retained (or not) through morbidity-and-mortality conferences, simulation training, and incident review, but have no way to know whether their institution actually participates in cross-organizational learning networks as aviation does, or merely performs compliance."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pilots, controllers, surgeons, nurses who both generate the raw material of the learning system (near misses, drill performance) and benefit from others' reported incidents. Their exit from the reporting obligation is constrained by professional norms and licensing requirements, not by free choice."
+    },
+    {
+      "name": "frontline_reporters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The individual who files the near-miss report or admits the drill failure bears the personal career risk, stigma, or blame exposure so the system as a whole can learn. Protection against retaliation is uneven and depends heavily on the strength of the reporting culture in their specific organization."
+    },
+    {
+      "name": "junior_clinicians",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the brunt of hierarchical suppression when incident review in medicine (unlike aviation) is filtered through attending-physician gatekeeping; their honest reporting of near misses can be professionally costly in a specialty or hospital culture without strong no-blame norms."
+    },
+    {
+      "name": "whistleblower_engineers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Engineers or technicians who escalate a near-miss finding beyond their immediate chain of command absorb retaliation risk (reassignment, blacklisting) when the organization's actual culture punishes disclosure despite official no-blame policy."
+    },
+    {
+      "name": "industry_associations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Aviation bodies (ICAO, IATA) and medical bodies (specialty boards) administer the cross-organizational incident-sharing protocols that make the hybrid learning model work or fail; they set standards for what counts as a reportable near miss and how foreign incidents get disseminated, and their institutional prestige rides on the system appearing to function."
+    },
+    {
+      "name": "simulation_training_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell high-realism simulators and drill programs; benefit from the hybrid model's premise that simulation is necessary-but-not-sufficient, since it legitimizes continued investment in simulator fidelity without displacing the incident-sharing function that keeps demand for their product tied to actual operational risk."
+    },
+    {
+      "name": "comparative_safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study why aviation's cross-organizational learning network (ASRS, ICAO incident exchange) sustains competence while medicine's more fragmented, hierarchical, litigation-averse reporting culture does not replicate the same retention effect, holding simulation fidelity roughly constant across both domains."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aggregates dispersed near-miss reports, foreign-incident bulletins, and high-realism drill outcomes across many organizations so that any single organization's rare catastrophic-precursor events become shared learning material for the whole industry, substituting distributed vicarious experience for the actual catastrophes that would otherwise be the only teacher.",
+    "transfer_function": "Moves the cost of learning (career risk, stigma, disclosure burden) from the industry collectively to the individual frontline reporter who admits the near miss, while moving the benefit (retained competence, avoided catastrophe) to the traveling public, patients, and the institutions whose safety records improve without them bearing the individual disclosure cost.",
+    "absent_voices": "Individual clinicians and technicians in weak-reporting-culture institutions who would testify that the no-blame policy is aspirational rather than operative are structurally absent from the aggregate statistics that make the system look like it is working; their silence (non-reporting) is invisible to the very metric meant to detect system failure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If distributed incident-sharing infrastructure vanished, aviation-style industries would lose their primary non-catastrophic competence-retention channel and would either need to substitute pure simulation (untested at scale for producing equivalent vigilance) or would drift toward the catastrophe-as-selector regime by default, with a measurable rise in fatal incidents over the following years — the arrangement is load-bearing, not decorative.",
+    "founding_problem": "Catastrophic failures in aviation (and later medicine) were recognized as too costly, too rare, and too idiosyncratic individually to serve as a reliable teacher; the founding insight (post-WWII aviation safety movement, later adopted in healthcare via the 1999 To Err Is Human report) was that aggregating near misses across many organizations could approximate the statistical power of catastrophe without paying its cost.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent comparative safety researchers (e.g. NTSB historical analyses, healthcare patient-safety scholars outside hospital administration) attest the founding problem remains live: aviation's incident-sharing rate correlates with its declining fatal-accident rate, while medicine's much lower voluntary-reporting rate is independently documented by researchers unaffiliated with hospital risk-management departments, who are the ones with incentive to claim the system already works."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the hybrid-near-miss-learning reading of the catastrophe-avoidance-retention kernel: the claim that competence in high-reliability systems (aviation, medicine, nuclear operations) is maintained neither by simulation alone nor by actual catastrophe alone, but by a distributed network of near-miss reports, foreign-incident dissemination, and high-realism drills that together approximate the statistical and psychological force of catastrophe without paying its cost. The reading's expected structural delta is that success depends on the strength of cross-organizational incident-sharing infrastructure — aviation's ASRS/ICAO exchange model succeeds where medicine's more hierarchical, litigation-averse reporting culture partially fails, holding simulation technology roughly constant across both domains. This is a Tangled Rope: the coordination function (aggregating rare precursor events into shared learning) is genuine and the beneficiaries (traveling public, patients, frontline operators generally) are real, but the extraction runs through the individual reporter who bears disclosure risk, and requires active enforcement (protected reporting statutes, no-blame policy mandates, mandatory drill certification) to keep the system from collapsing back into pure catastrophe-as-teacher.",
+    "key_agents": [
+      "safety_regulators: administer the incident-sharing and drill infrastructure",
+      "traveling_public/patients: passive beneficiaries with no visibility into system function",
+      "frontline_reporters/junior_clinicians/whistleblower_engineers: bear the individual cost of disclosure",
+      "industry_associations: set standards determining whether the hybrid model actually operates",
+      "comparative_safety_researchers: analytical observers of the aviation/medicine divergence"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42) because the system genuinely distributes learning benefit widely while concentrating disclosure cost narrowly on individual reporters — this is real but not severe extraction, consistent with tangled_rope rather than snare. Suppression (0.38) reflects the structural and cultural barriers reporters face (blame culture, hierarchy, litigation fear) that vary sharply by industry; this is the mechanism the sibling reading catastrophe_as_necessary_selector implicitly denies exists at all. Theater ratio rises modestly over the interval (0.15→0.30) as institutions increasingly perform compliance with reporting mandates (checkbox incident logs, pro-forma M&M conferences) without the underlying no-blame culture that makes the aviation model work — this is the drift the reading predicts will separate aviation-like successes from medicine-like failures.",
+    "directionality_logic": "Safety regulators and industry associations are agenda-setters who administer the system and collect its legitimacy without bearing individual disclosure risk — low d, beneficiary end. Traveling public and patients are diffuse beneficiaries with no exit and no visibility — near-symmetric but trapped. Frontline reporters, junior clinicians, and whistleblower engineers are the structural payers: they generate the raw material the system needs but absorb career and reputational risk with constrained or trapped exit — high d, target end. Frontline operators generally sit dual-role: they benefit from others' shared incidents but pay when it is their own incident to report.",
+    "mandatrophy_analysis": "The founding problem (catastrophes are too costly and too rare to serve as a reliable teacher) remains live by outside corroboration, which blocks a mandatrophy verdict at the story level — this is not a constraint whose function has vanished while its apparatus persists. But the rising theater ratio is the leading indicator to watch: if the reporting infrastructure hardens into compliance theater without the underlying psychological safety that makes disclosure costless, the system risks quietly reverting to the catastrophe-as-selector regime while still claiming hybrid-learning legitimacy — a piton in aviation's institutional clothing.",
+    "perspectival_gap": "From the safety-regulator seat, this looks like functioning coordination: incident rates fall, the system appears to work. From the frontline-reporter seat in a weak-culture institution, the same structure looks like a demand to personally absorb risk for a benefit that flows to people who will never know your name. The engine should compute these as structurally different seat classifications from the same base data — that divergence is the point of the tangled_rope claim, not an error to reconcile.",
+    "kernel_context": "This constraint is the hybrid_near_miss_learning reading of the catastrophe_avoidance_retention kernel. Sibling readings: simulation_as_proxy_catastrophe (high-fidelity drills alone are functionally equivalent to catastrophe for competence maintenance — this reading denies that claim, treating simulation as necessary-but-insufficient) and catastrophe_as_necessary_selector (only actual catastrophes provide adequate selection pressure — this reading denies that claim too, asserting that distributed incident-sharing can substitute for catastrophe's teaching function if the sharing infrastructure is strong enough). This reading occupies the middle position: it forecloses neither sibling's premise outright but claims each is insufficient alone, creating structural pressure on both by asserting that the cross-organizational network variable — not simulation fidelity, not catastrophe frequency — is the actual determinant of competence retention."
+  },
+  "omegas": [
+    {
+      "id": "aviation_medicine_divergence_mechanism",
+      "question": "Is the aviation/medicine divergence in competence retention actually explained by incident-sharing network strength, or by confounds like error visibility (crashes are public, misdiagnoses are private), regulatory structure, or professional culture unrelated to reporting infrastructure per se?",
+      "resolution_mechanism": "Comparative natural experiment: hospital systems and specialties that adopt aviation-style protected no-blame reporting (e.g. some anesthesiology departments, some NHS trusts) can be compared against matched control institutions on incident rates and reporting volume over a multi-year window, controlling for public visibility of errors.",
+      "impact": "If the divergence is genuinely explained by network strength, this validates the hybrid reading's central causal claim and argues for investment in cross-organizational reporting infrastructure as the primary lever. If confounds dominate, the hybrid reading's policy implications weaken substantially even if its descriptive claim about aviation stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incident-sharing network strength is the true causal driver of the aviation/medicine competence-retention gap, or a confound."
+    },
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "Where exactly do the three kernel readings disagree — is it an empirical question (does simulation fidelity alone produce equivalent vigilance to real incident exposure?) or a normative question (is it acceptable to accept a higher catastrophe rate in exchange for lower individual disclosure cost)?",
+      "resolution_mechanism": "Decompose the disagreement: the simulation_as_proxy_catastrophe reading and this reading disagree empirically (testable via longitudinal comparison of simulation-heavy vs. incident-sharing-heavy organizations); the catastrophe_as_necessary_selector reading and this reading disagree partly normatively (is it legitimate to try to avoid the trauma that reading treats as necessary) as well as empirically.",
+      "impact": "If the disagreement with simulation_as_proxy_catastrophe is purely empirical, it is resolvable by evidence and one reading should eventually be abandoned. If the disagreement with catastrophe_as_necessary_selector is partly normative, no amount of evidence fully resolves it — the three readings may remain permanently coexisting rather than one being vindicated.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel contest is empirically resolvable or contains an irreducible normative disagreement among the three readings."
+    },
+    {
+      "id": "reporter_suppression_mechanism",
+      "question": "Is the suppression frontline reporters experience structural (legal liability exposure, absence of protected-reporting statutes) or internalized (professional identity that treats admitting error as personal failure, persisting even where formal no-blame protections exist)?",
+      "resolution_mechanism": "Track reporting rates before and after protected-reporting statute implementation in a given institution or jurisdiction; a rate increase indicates the suppression was primarily structural, while persistent underreporting after legal protection indicates a substantial internalized component.",
+      "impact": "If internalized, the effective suppression frontline reporters carry exceeds what the structural suppression metric alone would predict, and policy interventions limited to legal protection would be insufficient without accompanying culture change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether frontline reporter suppression is structural (legal/institutional) or internalized (professional identity), or both."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_proxy_catastrophe",
+      "catastrophe_as_necessary_selector"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the catastrophe_avoidance_retention kernel. simulation_as_proxy_catastrophe claims high-fidelity drills alone suffice; catastrophe_as_necessary_selector claims only actual catastrophe provides adequate selection pressure; this reading (hybrid_near_miss_learning) claims neither alone suffices and that a distributed incident-sharing network is the operative mechanism. Each reading is authored as its own constraint with its own ε and stakeholder structure per the ε-invariance principle; they are linked here rather than merged because they make structurally distinct, differently falsifiable claims about the same underlying phenomenon of competence retention in high-reliability organizations."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary_selector",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "network_strength_determines_retention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "neither_simulation_nor_catastrophe_alone_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_aviation_incident_sharing_model",
+    "drift_state": {
+      "moment": "contemporary_cross_industry_adoption",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "total_war_reachability_boundary__contraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1c6fd352-0204-46af-8f77-dc482ab92bc9"
+  },
+  "base_properties": {
+    "extractiveness": 0.03,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "Nuclear-Contracted Total War Reachability Boundary (Contraction Reading)",
+    "topic_domain": "international_relations/strategic_studies/nuclear_deterrence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [],
+    "victims": [
+      "global_population"
+    ],
+    "vindicated_propositions": [
+      "mutually_assured_destruction_makes_total_war_unwinnable"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "boundary_naturalness_vs_technological_contingency",
+      "question": "Is the closure of winnable-total-war a genuine physical mountain (thermonuclear yield, delivery redundancy, and radiative/climatic effects making victory structurally impossible for any actor) or is it a technologically contingent state that persists only because no actor has yet achieved the missile-defense, decapitation-strike, or hardening capability that would reopen the feasible set?",
+      "resolution_mechanism": "Track whether any state achieves a credible first-strike/damage-limitation capability (near-total counterforce plus effective missile defense) that materially restores a winnable-outcome scenario; absence of such a capability across multiple decades despite sustained investment strengthens the mountain reading.",
+      "impact": "If a state achieves such a capability, this reading is falsified retroactively and the constraint should be reclassified toward the contingent_reachability_reading's piton framing — the boundary would reveal itself as an atrophied capability gap rather than a physical limit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the contracted strategic space is a physical mountain or a contingent technological plateau."
+    },
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "Where exactly do the three readings of the total_war_reachability_boundary kernel diverge, and does the contraction reading's mountain classification survive contact with the dropping_reading's claim that deterrence is an actively maintained coordination equilibrium rather than a physical closure?",
+      "resolution_mechanism": "This is a conceptual/framing question, not an empirical one within this story. The disagreement is located at whether MAD's stability is (a) a structural fact about physics and payoff matrices that persists independent of any party's choice to maintain it (this reading), or (b) an equilibrium that requires continuous strategic signaling, arsenal maintenance, and crisis management to hold (dropping_reading), or (c) a capability gap that specific technologies (missile defense, counterforce precision) could close (contingent_reachability_reading).",
+      "impact": "If the dropping_reading's framing is correct, this constraint's claimed_type should be rope or tangled_rope, not mountain, and beneficiaries (nuclear-armed states preserving strategic advantage through the deterrence equilibrium) would need to be declared. If the contingent_reachability_reading is correct, this constraint is better modeled as a piton with theater_ratio rising over time as capability erodes or is reconstituted.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Locates the structural disagreement among the three kernel readings and its classification consequences."
+    },
+    {
+      "id": "universal_victim_beneficiary_asymmetry",
+      "question": "A mountain typically carries no beneficiaries — does declaring 'global_population' as a universal victim set without any beneficiary group correctly represent a constraint from which literally no actor extracts advantage, or does it obscure narrower beneficiaries (e.g., nuclear-weapon states' diplomatic leverage, arms industry contracts) who benefit from maintaining the appearance of contraction even if they could not survive its failure?",
+      "resolution_mechanism": "Examine whether any actor's welfare improves under the counterfactual removal of the boundary (i.e., would any actor be better off if total war became winnable again); if no such actor exists even hypothetically, the no-beneficiary structure holds.",
+      "impact": "If narrow beneficiaries exist (e.g., states whose relative power position depends on others believing total war is foreclosed), this reading would need to add beneficiaries and likely reclassify toward tangled_rope, converging with the dropping_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the universal-victim, no-beneficiary structure is complete or masks narrower strategic beneficiaries."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 26,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 39,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 52,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 65,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 26,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 39,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 52,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 65,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 65
+  },
+  "commentary": {
+    "narrative_context": "Beginning in 1945 and hardening through the thermonuclear era and the achievement of survivable second-strike arsenals by the major powers, this reading holds that nuclear weapons did not merely change the probability of total war — they removed 'winnable total war between major nuclear powers' from the feasible set entirely, as a matter of physical and strategic structure rather than policy choice. Under this reading, mutually assured destruction is not a coordination equilibrium that participants maintain through effort (the dropping_reading's framing) and not a contingent capability gap that could close with new technology (the contingent_reachability_reading's framing). It is a structural closure: given current physics (fission/fusion yields, the impossibility of comprehensive damage-limitation against a survivable retaliatory force, and the climatic/radiative consequences of large-scale exchange), no strategy converts a total-war initiation into a winning outcome for the initiator. This is the contraction_reading of the total_war_reachability_boundary kernel — one of three readings generated as separate constraint stories per the ε-invariance principle. The dropping_reading treats the same boundary as an actively-maintained rope (deterrence requires continuous signaling and crisis management, and could in principle fail or be abandoned). The contingent_reachability_reading treats it as a piton — an atrophied capability gap that specific technological developments (effective missile defense, precision counterforce, hypersonic decapitation strikes) could reopen. This story generates ONLY the contraction reading: total war as a mountain, with no beneficiary structure (no actor, including nuclear-weapon states, gains from an actual total-war outcome) and a victim set that is universal — the entire species bears extinction-level tail risk from the mere existence of the arsenals that hold the boundary closed, even though no one benefits from that risk.",
+    "key_agents": [
+      "global_population: universal victim (analytical/trapped) — bears species-level extinction-tail risk from arsenal existence, with no exit from the risk itself",
+      "nuclear_weapon_states: agenda-setters over arsenal posture and doctrine, but not beneficiaries of total war's foreclosure in any extractive sense — they are equally subject to the mountain",
+      "non_nuclear_states: bear the same tail risk as nuclear states with no agenda-setting power over the arsenals that generate it",
+      "strategic_theorists: analytical observers who study and debate which of the three kernel readings best describes the boundary"
+    ],
+    "logic_rationale": "Extractiveness is authored near zero (0.03) because under this reading no actor collects rent, advantage, or differential benefit from the boundary's existence — the closure is symmetric and inescapable for every party, including those who built the arsenals that produced it. Suppression is authored low (0.05) because the boundary is not maintained by coercing any actor into compliance; it is not a rule anyone enforces against a resistant party, it is a physical/strategic fact about payoff structures. Accessibility collapse is authored very high (0.92): once the thermonuclear and second-strike facts are understood, the alternative of a winnable total war essentially disappears from the strategic imagination for any rational actor — there is no discovered path back to a feasible winnable-war strategy under current technology. Resistance is authored low (0.10): unlike a constructed constraint that must be defended against challengers, no party contests the physical facts underlying the boundary, though parties do contest which KERNEL READING best characterizes the boundary's persistence mechanism (physical law vs. maintained equilibrium vs. capability gap) — that contest is the omega material, not resistance to the boundary itself. Theater ratio is authored low but nonzero (0.08, rising slightly) to capture the genuine but secondary performative element of deterrence signaling (parades, doctrine publications, posture reviews) that exists alongside the substantive physical closure — this is far lower than would be authored for the dropping_reading, where the performative maintenance function would be central rather than secondary.",
+    "directionality_logic": "Because this reading declares no beneficiaries, there is no beneficiary-target asymmetry to compute — every stakeholder's directionality clusters near the same region of the space, reflecting universal, non-differential exposure. Nuclear-weapon states are agenda-setters over doctrine and posture (they decide alert levels, arsenal composition, declaratory policy) but this agenda-setting power does not translate into extraction from the boundary itself — they cannot make total war winnable by choosing differently, only manage the arsenal that instantiates the closure. Non-nuclear states and the general population bear the same tail risk with zero agenda-setting power, which is why they are named as payer/victim despite the absence of any capturing beneficiary — this is the structurally unusual case of a victim set with no corresponding beneficiary, appropriate to a genuine mountain rather than a snare or tangled_rope.",
+    "mandatrophy_analysis": "Mandatrophy analysis does not apply in the ordinary sense here because there is no mandate to outlive its function — a mountain has no founding mandate, only a physical fact. The founding_problem framing is used descriptively (what problem the nuclear order was built to manage) rather than to assess whether an institutional mandate has become hollow. The interesting mandatrophy-adjacent question is routed to the kernel_reading_disagreement_location omega: if the dropping_reading is correct that deterrence is an actively maintained rope, then something IS being maintained past or within its function, and mandatrophy analysis would apply there, not in this mountain reading.",
+    "kernel_context": "This constraint instantiates the contraction_reading of the total_war_reachability_boundary kernel: total war among major nuclear powers has left the feasible set as a matter of physical/strategic structure (mountain), not merely dropped in probability (the sibling dropping_reading, which treats deterrence as an actively-maintained rope-type coordination equilibrium) and not merely gapped by current-generation technology (the sibling contingent_reachability_reading, which treats the closure as a piton-type atrophied capability that could reverse with missile defense or counterforce breakthroughs). All three readings are generated as separate constraint stories per the ε-invariance principle and linked via network.affects_constraints; this file authors ONLY the contraction reading's structural claims, metrics, and stakeholders."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "none",
+    "reading_relations": [
+      {
+        "sibling_id": "dropping_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "contingent_reachability_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mad_produces_physical_impossibility_not_managed_equilibrium",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "current_arsenal_physics_forecloses_damage_limitation_permanently",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_nuclear_total_war_feasibility",
+    "drift_state": {
+      "moment": "post_second_strike_survivability_era",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "network": {
+    "affects_constraints": [
+      "total_war_reachability_boundary__dropping_reading",
+      "total_war_reachability_boundary__contingent_reachability_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraint files decomposing the natural-language 'total war reachability boundary' kernel per the ε-invariance principle. contraction_reading (this file) authors near-zero extraction and mountain classification, treating the boundary as physical closure. dropping_reading authors a rope/tangled_rope-consistent profile with active-maintenance beneficiaries (nuclear-armed states preserving strategic stability through continuous signaling). contingent_reachability_reading authors a piton-consistent profile with rising theater_ratio as capability gaps are noted to be closing. The three ε values are deliberately different because they describe structurally distinct claims about the SAME kernel, not the same claim measured three ways."
+  },
+  "stakeholders": [
+    {
+      "name": "global_population",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Bears species-level extinction-tail risk simply by existing within the geographic and atmospheric reach of thermonuclear exchange and its climatic aftermath, with zero say over arsenal posture, doctrine, or alert status. There is no exit from the risk — it is not possible to arbitrage or emigrate away from a planetary climatic effect. No entity collects what this group pays; the risk is borne, not extracted."
+    },
+    {
+      "name": "nuclear_weapon_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "Set doctrine, alert levels, arsenal composition, and declaratory policy — the visible, managed surface of the deterrence order. Under this reading, however, this agenda-setting does not translate into the ability to make total war winnable; these states are as physically foreclosed from a winnable total-war outcome as any other party, and their doctrinal choices manage the arsenal rather than reopening the feasible set."
+    },
+    {
+      "name": "non_nuclear_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the same tail risk as the general population, with no agenda-setting power over the arsenals of nuclear-weapon states and no ability to independently alter the physical closure. Some participate in extended-deterrence arrangements or nonproliferation regimes, but these are downstream of the boundary, not levers on it."
+    },
+    {
+      "name": "strategic_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study deterrence stability, crisis dynamics, and arms-control regimes, producing the competing readings (mountain vs. rope vs. piton) that this kernel decomposition formalizes. They hold no material stake in the outcome and no power to alter the physical facts, only to characterize them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None, under this reading. A mountain has no coordination problem it solves for any party — the closure of winnable total war is not a solution any actor chose or maintains, it is a physical/strategic fact that happens to also prevent a coordination failure (total war) without any party having engineered that prevention as a collective-action solution.",
+    "transfer_function": "No systematic transfer occurs between named parties. What is 'moved' is risk, not resources: the mere existence of arsenals sufficient to hold the boundary closed distributes a shared, non-differential extinction-tail exposure across the entire global population, without any corresponding flow of benefit to a beneficiary.",
+    "absent_voices": "Future generations, who bear the tail risk most acutely (civilizational time horizon) and have no voice in current arsenal or doctrinal decisions, are structurally absent from the deliberation. They are represented here only through the global_population stakeholder's civilizational time horizon, not as a distinct seat, since they cannot be interviewed.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Under this reading specifically, if the boundary 'disappeared' (i.e., if total war became winnable again through some technological reversal), the rearrangement would be severe: strategic planning, alliance structures, and crisis-management doctrine would all restructure around a reopened feasible set. But whether the boundary itself is the kind of thing that COULD disappear is exactly the disputed question among the three kernel readings — this reading holds it is a physical fact that cannot simply vanish absent a change in the underlying physics, while the sibling readings hold it could erode (dropping_reading) or already be eroding via technology (contingent_reachability_reading). The verdict is authored 'contested' to reflect that the disappearance question is itself the site of the kernel disagreement, not resolved within this file.",
+    "founding_problem": "The problem this boundary is 'built to solve' is unusual for a mountain: no one built it. It emerged as a side effect of thermonuclear weapons physics and second-strike-survivable delivery systems, closing off outcomes that great-power war planners had previously assumed feasible (limited nuclear exchange survived by a 'winning' side). There was no founding intention; the founding problem framing is retrofitted by observers trying to characterize a structural fact.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested from outside any benefiting party because there is no benefiting party under this reading: nuclear-weapon-state military planners, arms-control scholars, and independent physicists studying nuclear-winter and fallout effects converge (from otherwise adversarial institutional positions) on the assessment that no current strategy converts a total nuclear exchange into a winning outcome for the initiator. The corroboration is cross-adversarial rather than external-to-all-parties in the usual sense, since the relevant 'benefiting party' set is empty."
+  },
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

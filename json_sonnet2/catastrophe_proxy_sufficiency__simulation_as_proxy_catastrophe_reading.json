@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__simulation_as_proxy_catastrophe_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "50fadbbc-d9b6-4be7-b526-9adbd026e412"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.28,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Simulation-as-Sufficient-Catastrophe-Proxy Doctrine",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "regulatory_bodies",
+      "simulation_program_administrators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_bodies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Certifies operators as competent on the basis of documented simulation hours and exercise completion records. This certification discharges the regulator's own liability exposure — if a certified operator later fails during a real event, the regulator can point to the simulation regime as due diligence performed. The regulator sets the simulation curriculum and audits compliance but does not itself run the simulations."
+    },
+    {
+      "name": "simulation_program_administrators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Designs, schedules, and scores the simulation exercises; certifies personnel as proficient based on simulator performance. Their institutional standing depends on the simulation regime being accepted as adequate; they have professional and budgetary incentive to defend sufficiency but also genuinely refine scenarios based on incident review and near-miss data."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Undergoes recurring simulation training as a condition of continued certification and employment. Benefits from structured, repeatable practice that builds procedural fluency and from a legal/professional shield ('I trained per protocol') if an incident occurs. Bears the time cost of training cycles and the risk that simulator-honed reflexes may not transfer cleanly to a genuinely novel failure mode, but this risk is not concentrated or extracted from them by any identifiable party — it is a shared epistemic limitation of the arrangement, not a directed cost."
+    },
+    {
+      "name": "simulator_technology_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sells and maintains the simulation platforms that constitute the practice mechanism. Benefits directly from the doctrine's persistence, since it is the commercial basis for the entire training-and-certification industry, but does not administer certification and does not extract from operators beyond ordinary commercial transactions."
+    },
+    {
+      "name": "the_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Relies on the certified system (aviation, nuclear, maritime, or similar high-reliability domain) operating safely. If the doctrine is correct, the public benefits from continuously maintained competence without needing real catastrophes to occur first. Has no direct role in the simulation regime and cannot verify its sufficiency independently."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine problem that real catastrophic events are too rare, too costly, and too dangerous to serve as the primary vehicle for maintaining operator competence — simulation lets the organization rehearse rare failure modes repeatedly, safely, and on a controllable schedule, coordinating training investment across an entire workforce without waiting for accidents to occur.",
+    "transfer_function": "Moves liability assurance from an unverifiable claim ('our people would perform well in a real crisis') to a documented, auditable claim ('our people completed N certified simulation hours'), which regulators and organizations can point to. No material resource transfer from a victim class occurs under this reading — the transfer is epistemic/legal (documentation substituting for a currently-unfalsifiable competence claim).",
+    "absent_voices": "Practitioners of the sibling readings (catastrophe_necessity and hybrid_degradation) would object that this reading conflates procedural fluency with the tacit, stress-tested judgment that only genuine catastrophic uncertainty produces; they are not in this constraint's own room because this story is authored strictly from within the simulation-sufficiency framework, per the kernel-reading discipline.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the simulation-as-sufficient-proxy doctrine were abandoned overnight, certification regimes across aviation, nuclear power, and similar domains would lose their evidentiary basis; regulators would need an alternative competence-verification mechanism (which does not currently exist at scale), and simulation vendors, training administrators, and certified operators would all face immediate legitimacy and liability exposure.",
+    "founding_problem": "Organizations operating catastrophe-capable systems needed a way to build and verify operator competence for failure modes that occur too rarely, too destructively, or too irreversibly to be safely practiced live.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent safety researchers and post-incident investigation boards (e.g., aviation and nuclear incident review bodies) attest that the scarcity-of-real-catastrophe problem is real and unresolved by any means other than simulation or waiting for accidents; this corroboration comes from investigators outside the regulatory and vendor beneficiary set, though those same investigators are frequently the ones raising the hybrid-degradation and fidelity-threshold objections to this reading's sufficiency claim."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors ONE reading within the contested catastrophe_proxy_sufficiency kernel: the claim that structured simulation exercises are themselves sufficient — not merely useful, not a stopgap, but categorically adequate — to maintain operational competence in catastrophe-capable systems indefinitely, without any need for exposure to actual catastrophic events. Under this reading, the constraint is a coordination mechanism: it solves the real problem of rare, high-cost, high-destruction failure modes by letting organizations rehearse them safely and repeatedly, and it grounds a liability-protective certification regime for regulators. Extraction is authored low because no identifiable victim class bears a directed cost under this reading's own lights — frontline operators are trained and generally protected, not extracted from. The sibling readings (catastrophe_necessity_reading, hybrid_degradation_reading, simulation_fidelity_threshold) are NOT part of this constraint; they are separate constraint files with their own epsilon values, per the epsilon-invariance principle, and this story does not hedge, average, or describe their content internally.",
+    "key_agents": [
+      "regulatory_bodies: institutional beneficiary and partial agenda-setter — gains liability shield from certifying against documented simulation hours",
+      "simulation_program_administrators: organized agenda-setter — designs and certifies the practice regime, professionally invested in its sufficiency",
+      "frontline_operators: moderate-power beneficiary/payer — trains under the regime, gains procedural fluency and legal cover, bears training time cost",
+      "simulator_technology_vendors: organized beneficiary — commercial basis of the doctrine's persistence",
+      "the_public: powerless beneficiary — relies on the certified system's safety without visibility into whether the sufficiency claim holds"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.22 at interval end) because, within this reading, no party is structurally positioned to extract rents through the simulation regime — the transfer described in transfer_function is epistemic/legal substitution, not resource extraction. Theater ratio is authored moderate and rising (0.18 to 0.30) because as certification volume grows, some portion of simulation activity plausibly drifts toward box-checking documentation rather than genuinely stress-testing competence — this is the seam where the hybrid_degradation and fidelity_threshold siblings would contest this reading's own claim, but from within this reading it remains a manageable, non-dominant theater component. Suppression is moderate (0.28): this reading does not require coercive enforcement to persist, but regulatory mandate does compel participation, which is real if not extractive suppression.",
+    "directionality_logic": "Regulatory bodies and simulation administrators sit near the beneficiary end: they set the terms of the practice regime and collect the liability/legitimacy benefit of its acceptance. Frontline operators sit closer to symmetric — real costs (time, cognitive load, the risk that simulation-honed skill may not transfer) balanced against real benefits (competence, legal cover, employment continuity) — hence dual beneficiary/payer roles rather than a pure victim declaration. No agent is declared a pure victim under this reading because the reading's own structural claim is that the arrangement produces genuine competence, not that it extracts from anyone while claiming to.",
+    "mandatrophy_analysis": "The founding problem (rare catastrophic events cannot be safely used for training) is authored as live and corroborated by investigators outside the regulatory/vendor beneficiary set. This blocks the mandatrophy misreading in the trivial direction: a critic cannot simply assert that simulation-training regimes are pure institutional self-perpetuation with no underlying coordination function — the scarcity problem the regime addresses is real and independently attested. Whether the STATUS QUO SUFFICIENCY of simulation to solve the live problem is itself accurate is exactly the contested claim the kernel's sibling readings dispute; this story does not adjudicate that dispute, it only fixes clean values for the sufficiency reading.",
+    "kernel_context": "This constraint instantiates the simulation_as_proxy_catastrophe_reading of the catastrophe_proxy_sufficiency kernel: the claim that simulation exercises constitute catastrophe-EQUIVALENT practice, sufficient indefinitely, with no fidelity threshold and no generational degradation. Three sibling readings exist as separate constraint files: catastrophe_necessity_reading (only real catastrophes provide the necessary irreducible stress — this reading's direct denial), hybrid_degradation_reading (simulation holds procedural competence but tacit/stress-response capacity erodes generationally without real events), and simulation_fidelity_threshold (sufficiency is real but conditional on a fidelity threshold, making it a technology-dependent claim rather than the categorical one authored here). This reading claims the strongest, most unconditional form of sufficiency among the four."
+  },
+  "omegas": [
+    {
+      "id": "sufficiency_categorical_vs_conditional",
+      "question": "Is simulation-based competence maintenance categorically sufficient (this reading), or does it hold only above some undetermined simulation-fidelity threshold (simulation_fidelity_threshold reading), or does it degrade over generational timescales despite adequate fidelity (hybrid_degradation_reading)?",
+      "resolution_mechanism": "Longitudinal comparison of incident-response performance between operators trained purely under high-fidelity simulation regimes versus operators with historical exposure to real catastrophic events within the same domain, tracked across multiple career generations without an intervening real catastrophe.",
+      "impact": "If sufficiency turns out to be conditional on fidelity or to degrade generationally, this reading's zero-victim, low-extraction structure is itself a symptom of unfalsifiability rather than genuine adequacy — the regulatory liability shield would then be certifying competence that is not actually being maintained, converting the beneficiary structure (regulatory_bodies, simulation_program_administrators) into something closer to a tangled rope with the public as an undeclared, diffuse victim.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether simulation-catastrophe equivalence is categorical, threshold-dependent, or time-degrading — the core disagreement among the kernel's four readings."
+    },
+    {
+      "id": "regulatory_liability_shield_incentive_bias",
+      "question": "Does the regulatory body's own liability-protection interest in accepting the sufficiency claim bias its willingness to certify simulation regimes as adequate, independent of whether they actually are?",
+      "resolution_mechanism": "Compare certification standards and audit rigor across regulatory bodies with differing liability exposure structures (e.g., state-indemnified vs. directly-liable regulators) for the same class of catastrophe-capable system.",
+      "impact": "If liability-protection incentive dominates, the regulatory_bodies beneficiary role is doing more structural work than this reading's low-extraction, rope-leaning claim acknowledges, and the constraint would compute closer to a false-summit or tangled-rope pattern despite the doctrine's genuine coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory self-interest in liability protection distorts sufficiency certification independent of actual competence outcomes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "catastrophe_necessity_reading",
+      "hybrid_degradation_reading",
+      "simulation_fidelity_threshold"
+    ],
+    "dual_formulation_note": "Four constraint files decompose the catastrophe_proxy_sufficiency kernel: this file (simulation_as_proxy_catastrophe_reading, the strong/categorical sufficiency claim), catastrophe_necessity_reading (the direct denial — only real catastrophe suffices), hybrid_degradation_reading (procedural competence holds, tacit/stress competence erodes generationally), and simulation_fidelity_threshold (sufficiency is real but technology/fidelity-conditional, not categorical). Each carries its own epsilon, beneficiary/victim structure, and claimed_type per the epsilon-invariance principle; they are linked via affects_constraints rather than merged into one story with an observable parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulation_regime_as_full_competence_substitute",
+    "drift_state": {
+      "moment": "contemporary_certification_practice",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_necessity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_degradation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_fidelity_threshold",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_equivalence_is_categorical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_maintenance_requires_no_real_catastrophic_exposure",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

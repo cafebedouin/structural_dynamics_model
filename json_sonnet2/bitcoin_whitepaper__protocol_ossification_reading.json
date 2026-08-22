@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__protocol_ossification_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "a639761c-65b1-4cab-89b9-f1e65549ba59"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Base-Layer Ossification Doctrine (Near-Unanimity Requirement for Protocol Change)",
+    "topic_domain": "cryptocurrency economics / monetary systems / technology governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_holders",
+      "mining_pool_operators",
+      "core_maintainer_coalition",
+      "layer2_infrastructure_operators"
+    ],
+    "victims": [
+      "merchants_needing_cheap_onchain_payments",
+      "unbanked_users_in_high_fee_periods",
+      "protocol_researchers_proposing_capacity_changes",
+      "developing_world_remittance_users"
+    ],
+    "vindicated_propositions": [
+      "monetary_policy_credibility_requires_immutability",
+      "conservatism_prevents_catastrophic_bugs"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold bitcoin primarily as a store of value and benefit directly from any change being blocked unless it approaches unanimity: predictability of the 21 million supply cap and settlement rules is the entire basis of their valuation thesis. They can exit into other assets at will and lose nothing if base-layer capacity never grows, so they campaign hardest for stasis."
+    },
+    {
+      "name": "mining_pool_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Earn revenue from transaction fee pressure that scarce block space generates; a near-unanimity requirement lets a coordinated minority of hashpower or node operators veto any change that would relieve fee pressure. They can redeploy hashpower to other chains but profit from the status quo as long as it holds."
+    },
+    {
+      "name": "core_maintainer_coalition",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Controls the reference implementation and the social process for merging changes; enforces the norm that anything short of overwhelming consensus is illegitimate to ship, which in practice means their gatekeeping judgment decides what counts as consensus. Their professional identity and reputational capital are built entirely around stewarding conservatism, making exit from this posture equivalent to abandoning their role."
+    },
+    {
+      "name": "layer2_infrastructure_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build businesses (payment channels, sidechains, custodial rails) whose entire value proposition depends on base-layer scarcity pushing transaction demand upward into their layer. A change that cheaply expanded base-layer throughput would directly compete with their product, so they lobby to keep the ossification norm intact."
+    },
+    {
+      "name": "merchants_needing_cheap_onchain_payments",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Want to accept bitcoin directly for everyday transactions but face fee spikes and confirmation delays whenever demand rises, because base-layer capacity has not scaled to meet transaction volume. Their only real options are routing through custodial or layer-2 intermediaries (reintroducing counterparty risk) or abandoning on-chain use entirely."
+    },
+    {
+      "name": "unbanked_users_in_high_fee_periods",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Rely on bitcoin as an alternative to banking infrastructure they cannot access, but during periods of network congestion the fees required for a confirmed transaction can exceed the value being sent, pricing them out of the very use case the network was pitched to them for. They have no seat in the governance process and no resources to run alternative infrastructure."
+    },
+    {
+      "name": "protocol_researchers_proposing_capacity_changes",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design and propose block-size, opcode, or throughput changes backed by technical analysis, but find proposals blocked indefinitely because any identifiable faction's objection is treated as sufficient to deny 'approaching universal consensus.' Their career investment in bitcoin-specific research makes exiting to a different chain costly, but staying means perpetual proposal death."
+    },
+    {
+      "name": "developing_world_remittance_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Need low-cost cross-border transfers and were told bitcoin would serve this need; instead they absorb volatility plus fee volatility, and during congestion the fee alone can consume a meaningful share of a small remittance. They have essentially no voice in the technical governance debates that set these tradeoffs."
+    },
+    {
+      "name": "alternative_scaling_chains",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Forked or independently built chains that adopted larger blocks or faster settlement were effectively expelled from the 'Bitcoin' brand and social consensus despite implementing changes the ossification-reading community rejected. Their technical arguments are excluded from the governance conversation by definition, since the base-layer community treats departure from stability-first governance as disqualifying."
+    },
+    {
+      "name": "protocol_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the block-size wars, SegWit activation, and subsequent governance disputes to trace how the near-unanimity norm formed, whose interests it now serves, and whether it functions as principled conservatism or as a veto captured by whoever currently benefits from scarcity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Requiring near-universal consensus before changing consensus-critical rules genuinely solves a real coordination problem: a permissionless network with no central authority needs an extremely high bar for changing the rules everyone relies on, because a contested or narrowly-passed change risks a chain split that destroys the very property (a single canonical ledger) the system exists to provide.",
+    "transfer_function": "The near-unanimity requirement moves optionality and fee-market rents toward those already holding bitcoin, controlling mining infrastructure, or operating layer-2 businesses built on base-layer scarcity, and moves cost and exclusion onto users who need cheap, high-volume, on-chain settlement — remittance senders, small merchants, and anyone the original whitepaper's medium-of-exchange framing was aimed at.",
+    "absent_voices": "Developing-world remittance users and unbanked populations who bear fee spikes directly have no technical or organizational presence in the mailing lists, BIP process, or conference circuit where 'consensus' is actually measured; their absence lets the maintainer coalition and long-term holders describe stasis as broadly agreed when the affected population was never consulted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the near-unanimity norm vanished and base-layer parameters could change on ordinary majority technical judgment, block capacity, fee markets, layer-2 business models, and the investment thesis built on fixed-supply predictability would all be exposed to renegotiation — mining revenue models, L2 infrastructure valuations, and holder expectations about monetary policy immutability would all have to adjust.",
+    "founding_problem": "Early Bitcoin needed a way to prevent any single actor or coalition from unilaterally rewriting consensus rules, because a network without central authority that allows easy rule changes is vulnerable to capture, chain splits, or loss of the scarcity guarantee that gives the currency its value.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The core maintainer coalition and long-term holders attest the founding problem (capture-resistance, credible scarcity) remains fully live and justifies continued conservatism. Independent academic analyses of the 2015-2017 block-size conflict and testimony from departed developers and merchant-adoption advocates argue the problem has been partially resolved by SegWit and Taproot's technical adequacy, and that the current near-unanimity bar now functions less as capture-resistance and more as a veto mechanism serving whichever coalition currently profits from scarcity — a reading corroborated by economists studying Bitcoin fee markets from outside the maintainer and holder communities."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors ONE reading of the Bitcoin whitepaper kernel: the protocol-ossification reading, which holds that base-layer protocol changes are illegitimate unless they approach universal consensus, and that stability is the primary virtue of the system. Under this reading, the 2015-2017 block-size conflict, the SegWit compromise, and the subsequent multi-year moratorium on further base-layer capacity increases are read as principled conservatism protecting the network from capture and chain-split risk. The same events, read through the sibling p2p-cash reading (censorship-resistant medium of exchange) or the digital-gold reading (scarce store of value), would emit different constraints with different ε values and different victim sets — this file does not attempt to average across those readings or describe the contest itself; it authors the ossification reading cleanly, on its own terms, as the arrangement under contest, evaluated by its own lights.",
+    "key_agents": [
+      "long_term_holders: primary beneficiary — predictable monetary policy is their entire investment thesis",
+      "mining_pool_operators: beneficiary and partial agenda-setter — fee-market pressure from scarce block space is revenue",
+      "core_maintainer_coalition: agenda-setter — controls the reference implementation and what counts as 'approaching consensus'",
+      "merchants_needing_cheap_onchain_payments, unbanked_users_in_high_fee_periods, developing_world_remittance_users: primary targets — bear fee spikes and exclusion from base-layer use",
+      "alternative_scaling_chains: excluded — forked implementations that rejected the ossification norm were expelled from the social-consensus boundary of 'Bitcoin'",
+      "protocol_historians: analytical observer"
+    ],
+    "logic_rationale": "Extraction rose from a modest 0.22 at the network's early stage (when block space was not yet scarce and stability was uncontroversial) to 0.58 by the interval's end, tracking the entrenchment of the near-unanimity norm as an effective veto after the block-size wars. Suppression climbed sharply (0.30 to 0.62) as the social and technical mechanisms for blocking base-layer change hardened — from informal mailing-list objection to a settled norm that any identifiable faction's dissent defeats a proposal. Theater ratio rose moderately (0.15 to 0.40) as 'consensus-seeking' processes increasingly function as venues for performing due diligence on proposals that have no realistic path to passage, rather than genuine deliberation. Accessibility collapse is high (0.72) because once a user or developer understands that any capacity-increasing proposal will be vetoed regardless of technical merit, the perceived alternative space (fork, or route through L2/custodial rails) collapses to those two paths. Resistance is high (0.70): researchers, merchants, and remittance-focused developers have repeatedly proposed and fought for base-layer changes, and that resistance is precisely what the near-unanimity requirement is built to absorb and defeat.",
+    "directionality_logic": "Long-term holders, mining pool operators, the core maintainer coalition, and layer-2 infrastructure operators sit near the beneficiary end of directionality: their revenue, valuation thesis, or professional standing are all subsidized by the norm's persistence, and each retains meaningful exit options (arbitrage into other assets or chains, or institutional identity-lock that nonetheless carries real influence over outcomes). Merchants, unbanked users, remittance senders, and capacity researchers sit near the target end: they bear the fee-market consequences directly, have constrained or trapped exit options, and have no comparable influence over what counts as 'approaching consensus.' Alternative scaling chains are excluded rather than merely disadvantaged — their technical proposals are foreclosed from the conversation by the community boundary itself, which is why they are marked excluded rather than payer.",
+    "mandatrophy_analysis": "The founding problem — preventing unilateral rule changes that could enable capture or fracture the network's canonical ledger — was genuinely live in Bitcoin's early years, when the network had no track record and any change carried existential risk. Whether that problem remains as acute after more than a decade of battle-tested infrastructure, multiple successful soft forks (SegWit, Taproot), and a mature technical review process is exactly the contested genealogy question this story routes to the six_questions founding-problem fields rather than resolving unilaterally: the maintainer coalition and holders say the problem is still live; independent economists and departed developers say the arrangement has drifted from capture-resistance to rent-preserving veto. The classification as tangled_rope (rather than snare) reflects that the coordination function — genuine chain-split-avoidance value — has not disappeared, even as an asymmetric extraction pattern has grown up alongside it and now requires active social and technical enforcement (informal excommunication of dissenting implementations, gatekeeping of the BIP process) to sustain.",
+    "perspectival_gap": "From the core maintainer coalition's seat, the near-unanimity requirement is the mechanism that has protected Bitcoin from every proposed capture attempt and preserved the one property — a single canonical, predictable ledger — that gives the asset its value; refusing easy changes is fidelity to the founding design. From a remittance user or merchant's seat, the same requirement is experienced as an unaccountable veto that has priced them out of the use case they were told the system existed for, enforced by a community whose deliberative process they have no access to. The engine computes these as structurally different seat-level classifications from the same authored data; this file does not adjudicate between them.",
+    "kernel_context": "This constraint instantiates the protocol_ossification_reading of the bitcoin_whitepaper kernel. Two sibling readings exist as separate constraint files: the digital_gold_reading (Bitcoin as scarce store-of-value/inflation hedge) and the p2p_cash_reading (Bitcoin as censorship-resistant medium of exchange for direct transactions). This reading is largely load-bearing FOR the digital_gold_reading — predictable, unchangeable monetary policy is precisely what makes the store-of-value thesis credible — while it stands in structural tension with the p2p_cash_reading, whose transactional use case is the one most directly foreclosed by base-layer capacity constraints. The victim set here (merchants, remittance users, capacity researchers) is exactly the population the p2p_cash_reading's beneficiary set would include; this file does not resolve that tension, only names it."
+  },
+  "omegas": [
+    {
+      "id": "ossification_capture_resistance_ambiguity",
+      "question": "Is the near-unanimity requirement still functioning as genuine capture-resistance (protecting the network from unilateral rule changes by any single powerful actor), or has it become a captured veto mechanism serving whichever coalition currently profits from base-layer scarcity?",
+      "resolution_mechanism": "Compare technical review outcomes for capacity-neutral security patches (which pass) against capacity-increasing proposals with comparable engineering review and testing (which do not), controlling for objective technical risk; also examine whether objecting parties in blocked proposals have identifiable financial stakes in scarcity persisting.",
+      "impact": "If the pattern shows technically comparable proposals blocked selectively based on whether they threaten scarcity-dependent revenue streams, the classification should move toward snare; if blocking is uncorrelated with beneficiary financial interest and tracks genuine unresolved technical risk, the tangled_rope classification with a live coordination function is better supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the ossification norm is genuine capture-resistance or a captured veto."
+    },
+    {
+      "id": "kernel_reading_boundary_disagreement",
+      "question": "Where exactly does the ossification reading's core commitment (stability as primary virtue) locate the boundary of legitimate change — is it a fixed technical property of Bitcoin, or a socially negotiated and shifting threshold that has hardened over time as certain actors' interests became entrenched in the status quo?",
+      "resolution_mechanism": "Historical analysis of what counted as 'sufficient consensus' for SegWit versus what has been demanded of subsequent capacity proposals — if the bar has risen over time independent of technical stakes, that supports a socially-constructed and drifting threshold rather than a fixed principle.",
+      "impact": "A rising, interest-correlated bar for 'consensus' would support reading this constraint's persistence as increasingly extractive over time (consistent with the authored measurement trend); a stable, principle-derived bar would support the maintainer coalition's own account of consistent conservatism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the consensus bar is a fixed principle or a drifting, interest-correlated threshold."
+    },
+    {
+      "id": "sibling_reading_foreclosure_question",
+      "question": "Does the ossification reading's dominance within the Bitcoin developer and node-operator community effectively foreclose the p2p_cash_reading as a live option for the base protocol itself (as opposed to merely pushing it to Layer 2), even though the two readings are declared coexists_with at the kernel level?",
+      "resolution_mechanism": "Track whether any base-layer capacity-increasing proposal aligned with the p2p_cash_reading's transactional-use priorities has had a realistic path to activation in the post-block-size-war era, versus proposals routed entirely to off-chain layers.",
+      "impact": "If no base-layer path remains realistically open, the coexists_with relation between this reading and p2p_cash_reading may understate the actual foreclosure occurring in practice, even though both readings remain nominally live as public positions.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether practical foreclosure of on-chain scaling exceeds the declared coexists_with relation."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__p2p_cash_reading"
+    ],
+    "dual_formulation_note": "These three constraint files decompose the natural-language label 'the Bitcoin whitepaper' into three structurally distinct readings sharing one kernel (bitcoin_whitepaper). Each reading has a different ε, different beneficiary/victim structure, and would classify differently under the engine. The ossification_reading (this file) is upstream-supportive of the digital_gold_reading's scarcity thesis and downstream-constraining on the p2p_cash_reading's transactional use case. Do not average ε across the three; each is a separate, ε-invariant constraint linked here for contamination-propagation analysis only."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "p2p_cash_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protocol_stability_is_primary_virtue",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "legitimacy_requires_near_universal_consensus",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "satoshi_era_rough_consensus_norm",
+    "drift_state": {
+      "moment": "post_block_size_war_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

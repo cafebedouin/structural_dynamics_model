@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__pragmatic_development_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "f4ed838a-0a9c-4072-8d1b-da157f2c0544"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.18,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Open Source as Superior Development Methodology (Pragmatic/Instrumental Reading)",
+    "topic_domain": "software_engineering/political_economy_of_technology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "open_source_maintainers",
+      "downstream_commercial_integrators",
+      "corporate_platform_sponsors",
+      "software_users_relying_on_peer_review"
+    ],
+    "victims": [
+      "unpaid_contributor_labor_pool"
+    ],
+    "vindicated_propositions": [
+      "many_eyes_bug_detection_hypothesis",
+      "permissive_licensing_compatibility_with_quality"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "open_source_maintainers",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Set project direction, review policy, and licensing terms for widely-used codebases. They administer the methodology's actual mechanics (code review, CI, issue triage) and collect reputational capital and career leverage from it, but frequently perform substantial unpaid or underpaid labor sustaining infrastructure that commercial actors depend on without contributing proportionally back."
+    },
+    {
+      "name": "corporate_platform_sponsors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Adopt permissively-licensed open source components into commercial products, capturing the velocity and quality benefits of peer review and community bug detection at effectively zero marginal licensing cost. Can fork, redistribute proprietary derivatives, or withdraw sponsorship at will; bear none of the maintenance obligations that fall on maintainers."
+    },
+    {
+      "name": "downstream_commercial_integrators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build products atop open codebases, benefiting from the quality and security improvements the open development process produces. Free to choose among competing open projects or maintain internal forks; not locked into any single project's governance."
+    },
+    {
+      "name": "unpaid_contributor_labor_pool",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Volunteer developers, often early-career or hobbyist, whose contributions get absorbed into projects that generate substantial commercial value elsewhere. Their labor is the substrate the 'many eyes' quality claim depends on; burnout and uncompensated maintenance burden are common, and exit means abandoning a project others depend on or watching it decay."
+    },
+    {
+      "name": "software_users_relying_on_peer_review",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "End users and enterprises who benefit from the security auditability and rapid bug-fixing that open development enables, without needing to participate in or understand the underlying labor structure."
+    },
+    {
+      "name": "proprietary_vendors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Compete for the same developer mindshare and enterprise contracts but are structurally disadvantaged in framing debates when 'open is simply better engineering' becomes the default industry narrative; their argument that closed development can match or exceed quality under different incentive structures rarely gets a hearing in this reading's own terms."
+    },
+    {
+      "name": "software_engineering_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study empirical claims about defect density, time-to-patch, and innovation velocity across open and closed codebases, producing evidence that can support or undercut the pragmatic reading's central methodological claim."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Distributes code review, testing, and bug detection across a large, self-selected pool of contributors, lowering the marginal cost of catching defects and accelerating iteration relative to a closed development process that must fund all review internally.",
+    "transfer_function": "Moves unpaid or underpaid development, review, and maintenance labor from a distributed volunteer and semi-volunteer contributor base to commercial integrators and platform sponsors who capture the resulting quality and velocity gains in shipped products, largely without proportional compensation flowing back.",
+    "absent_voices": "Proprietary vendors whose closed-development quality claims are structurally disadvantaged once 'open is better engineering' becomes the default framing; burned-out former maintainers who exited the labor pool are rarely surveyed in the empirical literature this reading cites.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the pragmatic-superiority framing vanished overnight, most existing open source projects would continue operating (the practice predates and exceeds the theory), but the rhetorical justification corporate sponsors use to rely on unpaid labor without compensation would lose cover — the underlying labor imbalance would become harder to frame as a natural feature of superior methodology and might attract funding-model reform. Maintainers dispute whether the framing helps them (career signal) or exploits them (justification for non-payment); this is precisely why the verdict is contested rather than settled.",
+    "founding_problem": "Closed, single-vendor development in the 1980s-90s often meant slow bug-fix cycles, unauditable security flaws, and vendor lock-in; open development was proposed as a methodology, independent of ethical claims about freedom, for producing more reliable and faster-iterating software by distributing review and testing widely.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Empirical software engineering research (defect-density studies, CVE patch-time comparisons) partially corroborates the methodological claim independent of any beneficiary's interest. However, labor economists studying open source maintenance burden and several former maintainers writing publicly about burnout attest that the 'superior methodology' framing is now also used by well-resourced corporate beneficiaries to justify continued non-payment for labor whose founding coordination problem (distributed peer review) remains genuinely live but whose compensation problem was never solved and is arguably worsening."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the pragmatic development reading of the software_source_status kernel: open source is valued instrumentally, as an engineering methodology that produces better software through distributed peer review, faster bug detection, and higher innovation velocity — not because proprietary software is unjust (freedom_imperative_reading) or because creators lack property rights (property_rights_reading rejects that premise entirely) or because licensing choice should be optimized case-by-case for aggregate welfare (utilitarian_hybrid_reading). Under this reading, permissive licensing is fine, corporate use of open code is fine, and the methodology's superiority is treated as an empirical engineering claim rather than a moral one. The measured extraction here is real but modest and rising over time: it comes from the accumulating gap between the volunteer/underpaid labor that produces the peer-review benefit and the commercial capture of that benefit by well-resourced sponsors and integrators who owe nothing back under this reading's own permissive-licensing logic.",
+    "logic_rationale": "Extractiveness starts low (0.12) and rises modestly to 0.28 over the interval, reflecting a real but not severe transfer: as more commercial value concentrates around open codebases, the compensation gap for maintainers widens, but nothing in this reading requires suppression or exit-blocking — contributors can leave, projects can be forked, and no one is coerced into contributing. Suppression is low (0.18) because this reading, unlike the freedom_imperative reading, makes no claim that closed alternatives are illegitimate — proprietary software coexists freely. Theater ratio is low-moderate and slowly rising (0.08 to 0.22) reflecting some drift toward performative 'open-source-friendly' corporate sponsorship programs that provide visibility without proportional funding.",
+    "directionality_logic": "Maintainers sit near the payer end structurally (low power, constrained exit, labor absorbed by others) despite nominally being agenda-setters over their own projects — their agenda-setting power is real but does not translate into capture of the downstream commercial value their labor generates. Corporate sponsors and downstream integrators sit at the beneficiary end: arbitrage-grade exit, institutional power, and they capture quality/velocity gains without bearing the maintenance cost. This is the central asymmetry this reading's own metrics register even though the reading itself does not treat this asymmetry as illegitimate (that judgment belongs to the freedom_imperative or utilitarian_hybrid readings, not this one).",
+    "mandatrophy_analysis": "The founding problem (slow, unauditable, vendor-locked closed development) remains partially live per corroborating empirical software-engineering research — this prevents the constraint from being classified as pure zombie mandate. But the compensation dimension of the coordination problem was never solved and the framing is now also doing cover-story work for uncompensated labor extraction, which is why founding_problem_status is authored as contested rather than simply live.",
+    "kernel_context": "This constraint instantiates the pragmatic_development_reading of the software_source_status kernel. It asserts open development's superiority as an empirical, instrumental claim about engineering outcomes (peer review, bug detection, velocity), explicitly not grounded in an ethical freedom claim (freedom_imperative_reading), not grounded in a property-rights claim about legitimate restriction (property_rights_reading), and distinct from the context-sensitive welfare-maximization calculus of utilitarian_hybrid_reading. Sibling readings are generated as separate constraint files with their own ε values; this file's ε (0.28, low-moderate) reflects only the labor-compensation extraction this reading's own lights recognize, not the moral extraction claims other readings would author for the same underlying arrangement."
+  },
+  "omegas": [
+    {
+      "id": "methodology_claim_vs_labor_extraction_boundary",
+      "question": "Is the empirical 'many eyes' quality claim genuinely separable from the labor-compensation problem, or does the pragmatic-methodology framing function partly as a rhetorical device that naturalizes uncompensated labor by redescribing it as a superior process rather than an economic relationship?",
+      "resolution_mechanism": "Comparative analysis of defect rates and patch velocity in fully-funded open projects (foundation-backed, paid maintainers) versus volunteer-dependent projects; if quality benefits persist under paid models, the methodology claim is separable from the extraction question and the extraction is a contingent funding failure, not intrinsic to the methodology.",
+      "impact": "If separable, this reading's low ε is well-supported and the extraction is a fixable funding gap. If inseparable — if the methodology's cost-effectiveness specifically depends on labor being uncompensated — the pragmatic reading is quietly doing extraction-legitimizing work it does not acknowledge, and ε would need to be revised upward.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the instrumental quality claim depends structurally on uncompensated labor."
+    },
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "Where exactly do the four kernel readings (freedom_imperative, pragmatic_development, property_rights, utilitarian_hybrid) disagree, structurally?",
+      "resolution_mechanism": "This is not resolvable by data — it is the committer structure itself. The freedom_imperative_reading treats proprietary restriction as intrinsically unjust regardless of engineering outcomes; this pragmatic reading treats restriction as a legitimate business choice that merely tends to underperform openness on certain quality metrics. The property_rights_reading treats the entire quality-comparison framing as secondary to a prior claim about creator entitlement that this reading does not contest but also does not need. The utilitarian_hybrid_reading would fold this reading's empirical claim into a context-dependent welfare calculus this reading declines to perform, preferring a general methodological verdict.",
+      "impact": "A reader who conflates this reading with freedom_imperative_reading would wrongly import a moral-illegitimacy claim about proprietary software that this reading explicitly does not make; a reader who conflates it with property_rights_reading would wrongly assume this reading is indifferent to engineering outcomes, when the whole point is an empirical superiority claim.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Locates the structural disagreement among sibling kernel readings to prevent conflation."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling readings of the software_source_status kernel, each authored as an independent constraint with its own ε, beneficiary/victim structure, and stakeholders. The pragmatic_development_reading (this file) authors the lowest ε among the four because it makes no moral claim against proprietary software and treats the labor-compensation gap as a fixable funding problem rather than an injustice or a property violation. freedom_imperative_reading would author higher suppression/extractiveness on the same underlying practice because it treats proprietary restriction itself as the extraction. property_rights_reading inverts the beneficiary/victim structure, treating open-source normative pressure on proprietary vendors as the extraction. utilitarian_hybrid_reading would author a context-dependent ε that varies by deployment context rather than a single scalar."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "utilitarian_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "openness_is_empirically_superior_engineering_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "licensing_choice_is_morally_neutral_business_decision",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "distributed_peer_review_engineering_norm",
+    "drift_state": {
+      "moment": "contemporary_platform_capitalism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "corporate_platform_sponsors",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

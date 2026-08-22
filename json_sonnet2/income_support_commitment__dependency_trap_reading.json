@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "92bde22e-4cb3-4341-bc23-a78575369792"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.4,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Work-Disincentive (Dependency Trap Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "labor_market_exiters"
+    ],
+    "victims": [
+      "working_taxpayers",
+      "skill_atrophied_recipients"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "labor_market_exiters",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional payments regardless of work status and, in this reading, use that floor to reduce or exit labor-force participation. They collect the transfer continuously without a work test, and the tax base funds their non-participation. From the taxing side this reading treats their situation as a moral hazard the design failed to price in."
+    },
+    {
+      "name": "working_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the transfer through payroll and income taxation while continuing to work full labor hours. They bear the fiscal cost of both the direct payment and the foregone output of exiters, with no mechanism to reduce their contribution proportional to program participation. Exit from the tax base is possible only through emigration or informality, both costly."
+    },
+    {
+      "name": "skill_atrophied_recipients",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive the floor income but, in this reading, experience skill and network decay the longer they remain outside employment, making eventual re-entry to the labor market progressively harder. They are simultaneously subsidized in the short run and structurally disadvantaged in the long run — a victim of the same mechanism that pays them."
+    },
+    {
+      "name": "welfare_administering_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Designs, funds, and enforces the unconditional eligibility rule, sets tax rates to cover it, and administers disbursement without work conditionality. Could add work requirements or phase-outs but bears none of the fiscal or skill-atrophy costs directly."
+    },
+    {
+      "name": "employers_facing_labor_shortage",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Compete for workers against a payment floor that raises the reservation wage for low-productivity jobs. They are not party to the eligibility design and have no formal voice in setting it, though they absorb higher wage costs or unfilled positions."
+    },
+    {
+      "name": "labor_economists_dependency_school",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study labor-force participation elasticities and skill-depreciation curves among long-term recipients, producing the evidence base this reading draws on. They advocate for work conditionality or time limits based on observed participation declines."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a income floor that removes destitution risk without means-testing administration costs, in principle coordinating a basic social insurance function across the whole population in one stroke.",
+    "transfer_function": "Moves tax revenue from continuously working taxpayers to recipients who, on this reading, use the floor to reduce or exit labor-force participation; a secondary transfer moves long-run earning capacity away from recipients themselves as skills atrophy.",
+    "absent_voices": "Employers facing labor shortages and future taxpayers who will inherit a larger dependent population have no formal seat in eligibility design; the labor economists documenting participation decline are consulted unevenly and often after policy is locked in.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unconditional transfer vanished overnight, labor-force participation among marginal recipients would rise (per this reading's own model), tax rates could fall, and the skill-atrophy trajectory would reverse for those still able to re-enter work — though those already long-term detached would face acute income loss without a transition mechanism.",
+    "founding_problem": "Poverty and income volatility among households without stable employment, which conditional and means-tested programs failed to reach efficiently or with dignity.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The administering state and recipient advocates attest the poverty-prevention problem remains live and is being solved. Labor economists in the dependency school, drawing on longitudinal labor-force participation data collected independently of program administrators, attest that a distinct problem — chronic non-participation and skill depreciation — has been created or worsened by the unconditional design, corroborating this reading's claim from outside the beneficiary group."
+  },
+  "gain_flow": "labor_market_exiters",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the dependency-trap reading of the income-support-commitment kernel: an unconditional cash transfer, read as a work-disincentive whose primary structural effect is labor-force exit among marginal recipients and skill atrophy that compounds their eventual dependence. Under this reading, working taxpayers subsidize non-participation, and recipients who remain detached from work for extended periods are themselves harmed by the same mechanism that pays them, since human capital depreciates outside employment. This is a distinct constraint from the freedom_floor_reading (which reads the same transfer as enabling autonomous choice) and the targeting_efficiency_reading (which reads the debate as one of allocation mechanism rather than work incentive) — each reading has its own beneficiary/victim structure and its own epsilon, and none averages with the others.",
+    "key_agents": [
+      "labor_market_exiters: beneficiary (moderate/constrained) — collect the transfer, reduce participation",
+      "working_taxpayers: payer (organized/constrained) — fund the transfer and the foregone output",
+      "skill_atrophied_recipients: payer/beneficiary (powerless/trapped) — subsidized short-term, harmed long-term",
+      "welfare_administering_state: agenda_setter (institutional/analytical) — designs and enforces eligibility",
+      "employers_facing_labor_shortage: excluded (powerful/constrained) — absorb wage pressure with no design voice",
+      "labor_economists_dependency_school: observer (analytical/analytical) — supplies the evidentiary basis for this reading"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.52) reflecting a genuine transfer from continuously working taxpayers to non-participating recipients, but the transfer includes a real coordination function (poverty floor) that keeps epsilon well below a pure-snare level. Suppression is moderate (0.40) because the arrangement persists through payroll tax enforcement and program eligibility rules rather than through coercive exit-blocking; accessibility_collapse is comparatively low (0.35) because recipients formally retain the option to work — the atrophy mechanism operates through capacity erosion, not through blocked alternatives, which this reading treats as the crux of the harm. Resistance (0.60) is elevated because working-taxpayer organizations and dependency-school economists actively contest the design.",
+    "perspectival_gap": "From the administering state's seat this looks like successful poverty prevention; from the working-taxpayer seat it looks like an open-ended subsidy for non-participation; from the skill-atrophied recipient's own seat, the short-run relief and the long-run capacity loss are both true simultaneously — the same transfer that beneficiary and victim in this reading.",
+    "directionality_logic": "Labor_market_exiters are declared full beneficiaries — they collect the transfer and reduce their labor input, so directionality sits near the subsidized end. Working_taxpayers are declared victims with constrained exit (tax obligations are not easily escaped), placing them near the full-target end. Skill_atrophied_recipients carry the unusual dual role: beneficiary of the immediate transfer, victim of its compounding effect on their own future earning capacity — this asymmetry across time horizons is exactly what the dependency-trap reading claims is invisible to a cross-sectional evaluation.",
+    "mandatrophy_analysis": "The founding problem (destitution prevention) remains partially live, which keeps this from being a clean mandatrophy case — the coordination function has not become pure inertia. But the dependency-school corroboration argues a second, unaddressed problem (chronic non-participation) has been created by the same mechanism, without triggering redesign. Classifying this as tangled_rope rather than snare preserves the genuine poverty-floor coordination function while still registering the asymmetric extraction the dependency reading identifies.",
+    "kernel_context": "This constraint is the dependency_trap_reading of the income_support_commitment kernel. Two sibling readings of the same underlying policy commitment exist as separate constraints: freedom_floor_reading treats the identical transfer as an autonomy-enabling floor with a very different beneficiary/victim structure (recipients as full beneficiaries, minimal victim class), and targeting_efficiency_reading treats the live dispute as one of allocation mechanism (universal vs. means-tested) rather than work-incentive effects. This story's epsilon (0.52) and its tangled_rope classification are specific to the dependency-trap premise and must not be averaged with or substituted for the siblings' values."
+  },
+  "omegas": [
+    {
+      "id": "labor_supply_elasticity_magnitude",
+      "question": "How large is the actual labor-supply response to an unconditional income floor — do marginal recipients meaningfully reduce work hours or exit entirely, or is the effect small relative to poverty-reduction benefits?",
+      "resolution_mechanism": "Randomized or quasi-experimental basic-income trials with long-run (5+ year) labor-force tracking, compared across designs with and without conditionality.",
+      "impact": "A small elasticity would undercut this reading's core premise and shift the constraint's classification toward the freedom_floor_reading's rope-like structure; a large, sustained elasticity would support treating the extraction as more severe than currently authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the work-disincentive effect this reading assumes is empirically large or small."
+    },
+    {
+      "id": "skill_atrophy_causal_direction",
+      "question": "Does time outside employment cause skill atrophy and reduced re-entry prospects, or do recipients who were already lower-skilled/lower-attachment simply select into longer non-participation (reverse causation)?",
+      "resolution_mechanism": "Longitudinal studies with pre-program skill and employment trajectories as controls, distinguishing selection from treatment effects.",
+      "impact": "If selection dominates, the 'atrophy victim' framing for skill_atrophied_recipients weakens substantially and the constraint looks more like a rope with a pre-existing vulnerable population; if causation dominates, the tangled_rope classification with recipients as partial victims is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether skill atrophy is caused by the transfer or merely correlated with pre-existing recipient characteristics."
+    },
+    {
+      "id": "kernel_reading_selection_basis",
+      "question": "Given the same underlying income-support commitment, what determines which reading (dependency_trap, freedom_floor, targeting_efficiency) a given analyst or policymaker adopts — is it prior ideological commitment, differential weighting of the same evidence base, or genuinely different empirical beliefs?",
+      "resolution_mechanism": "Cross-national comparison of policy adoption patterns against pre-existing welfare-state ideology measures, controlling for local labor-market conditions.",
+      "impact": "If reading selection tracks ideology more than evidence, all three sibling constraints should be read as contested normative framings of a single ambiguous policy space rather than as three empirically resolvable claims — this affects how much weight any single reading's epsilon should carry in aggregate policy analysis.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the choice among kernel readings is empirically or ideologically driven."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "targeting_efficiency_reading"
+    ],
+    "dual_formulation_note": "This story is one of three siblings decomposing the natural-language concept 'unconditional income support commitment' per the ε-invariance principle. freedom_floor_reading shares the same underlying transfer mechanism but authors near-zero epsilon and rope classification, reflecting a beneficiary-only structure (recipients as full beneficiaries, taxpayers as willing coordinators rather than victims). targeting_efficiency_reading treats the contested claim as an allocation-mechanism question independent of work-incentive effects and authors its own distinct epsilon around administrative and leakage costs. All three are linked via affects_constraints; none should be merged or averaged — each is evaluated on its own reading's terms per DP-001."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "residual_welfare_conditionality_norm",
+    "drift_state": {
+      "moment": "post_universal_basic_income_pilot_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_transfer_erodes_work_norm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "labor_force_attachment_is_a_protected_public_good",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

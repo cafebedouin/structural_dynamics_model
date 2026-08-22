@@ -1,0 +1,320 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "21bc92e4-487a-4dee-b69b-99f69040e9de"
+  },
+  "base_properties": {
+    "extractiveness": 0.64,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "HOA Covenant as Fine-Proliferation Revenue and Board Power Mechanism",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "board_members",
+      "property_management_firms",
+      "collections_legal_counsel"
+    ],
+    "victims": [
+      "financially_vulnerable_homeowners",
+      "renters_via_pass_through"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "board_members",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Sets and amends the covenant's rules-enforcement schedule, votes to hire the management firm and legal counsel, and controls which violations get cited. Board seats often rotate among a small clique with low turnout elections; individual board members are frequently shielded from personal liability while directing fine schedules and lien referrals that generate revenue and cement their control of the association's discretionary budget."
+    },
+    {
+      "name": "property_management_firms",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Contracted by the board to administer inspections, issue violation notices, and process fines; frequently paid a percentage of collected fines and administrative fees on top of a flat management fee, giving a direct financial incentive to maximize citation volume rather than resolve underlying issues. Can be replaced by the board but often shapes the covenant amendments it will later enforce."
+    },
+    {
+      "name": "collections_legal_counsel",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Retained to send demand letters, file liens, and pursue foreclosure on delinquent fine balances; recovers attorney's fees from the homeowner under the covenant's fee-shifting clause regardless of the underlying fine's size, so a fifty-dollar violation can generate thousands in recoverable legal costs. Has no incentive to resolve disputes informally since litigation and lien processing are the revenue event."
+    },
+    {
+      "name": "financially_vulnerable_homeowners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Own units subject to the covenant and cannot exit without selling, which the accumulating lien itself can block or devalue. A missed payment, disputed fine, or unresolved aesthetic citation compounds through late fees, attorney fees, and interest until the total owed can exceed the original violation by an order of magnitude, occasionally leading to foreclosure over sums far smaller than the home's value."
+    },
+    {
+      "name": "renters_via_pass_through",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Do not sit on the board and cannot vote, but bear the covenant's costs indirectly as landlords pass through HOA fine exposure, special assessments, and rising dues in rent. Can move at lease end but have no voice in the rules generating the cost, and short-term leases mean the cost repeats with each unit turnover."
+    },
+    {
+      "name": "well_resourced_homeowners",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Can absorb occasional fines without financial distress and often serve on or have informal access to the board, giving them influence over which rules get written and which violations get selectively enforced against neighbors. Pay dues and occasional fines but do not face the compounding lien spiral that threatens vulnerable owners."
+    },
+    {
+      "name": "state_real_estate_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Some states have begun requiring dispute-resolution steps before liens or capping attorney-fee recovery on small violations, but enforcement of these caps is uneven and most HOA governance remains largely self-regulated with minimal external audit of fine schedules or fee arrangements."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In principle, coordinates shared costs (landscaping, insurance, common-area repair) and internalizes externalities between adjacent owners — a genuine collective-action problem that motivated the original covenant structure.",
+    "transfer_function": "Moves money from cited homeowners (and, through rent pass-through, from renters) to the management firm's fine-collection share, to collections counsel's recoverable attorney's fees, and to the discretionary budget the board controls — well beyond what shared-infrastructure coordination requires.",
+    "absent_voices": "Renters have no vote despite bearing pass-through costs. Homeowners facing foreclosure over compounding fines rarely have the resources to contest a lien in court and are absent from the board meetings where fine schedules are set and amended.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If covenant enforcement vanished, the management firm's per-fine revenue stream and collections counsel's fee-shifting pipeline would disappear immediately; board members would lose the primary discretionary lever they currently use to reward allies and punish dissenters; genuine shared-infrastructure costs would need a different funding mechanism, but the fine-and-lien apparatus itself is not what funds landscaping or insurance.",
+    "founding_problem": "Original covenants were adopted to solve real coordination problems: shared maintenance costs, insurance pooling, and preventing free-riding on common-area upkeep.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Board members and management firms attest the fine schedule remains necessary for property-value protection and compliance. Independent evidence — state regulator complaint data, foreclosure-over-small-lien case reporting, and homeowner litigation records — corroborates from outside the benefiting parties that fine proliferation and fee-shifting substantially exceed what the original coordination problem requires, and several state legislatures have moved to cap fee recovery in response."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the extraction reading of the contested HOA covenant-scope kernel: the covenant text is the same document a coordination reading and a behavioral-control reading would also describe, but this reading holds that the covenant's operative function has become revenue generation and board power consolidation via fine proliferation, expedited lien processes, and attorney-fee extraction under fee-shifting clauses. The referent for extractiveness is the standing enforcement arrangement as this reading sees it — a fine-and-lien apparatus that has grown well past any plausible coordination cost — not the reformed, coordination-only covenant this reading would prefer. Two other readings of the same kernel (coordination_reading, behavioral_control_reading) are separate constraint files; they are not folded into this one.",
+    "logic_rationale": "Extractiveness rises across the interval (0.38 to 0.64) tracking the compounding pattern the reading identifies: initial fine schedules that were plausibly cost-recovery oriented drift toward escalating late fees, mandatory attorney referral at low delinquency thresholds, and lien filing timelines shortened to accelerate fee-generating events. Suppression is high and rising (0.45 to 0.71) because homeowners are structurally trapped — a lien can block sale, and disputing a fine risks compounding attorney fees regardless of the fine's merit, which chills contestation independent of any legal remedy's formal availability. Theater ratio is moderate and rising (0.42 at end) — some genuine property-standards enforcement occurs, but a growing share of activity is procedural: notice cycles and hearing rituals that exist mainly to satisfy due-process minimums before the fee-generating lien step, not to resolve the underlying issue.",
+    "directionality_logic": "Board members, the management firm, and collections counsel are declared beneficiaries because the fine-and-fee structure is the direct source of their discretionary control and revenue — this reading places them near the beneficiary end of directionality. Financially vulnerable homeowners are declared victims: trapped exit options (a lien can block or devalue sale) push their effective directionality toward full target regardless of nominal power parity with well-resourced owners. Renters bear costs through pass-through without any board vote, which this reading treats as extraction without even nominal coordination input on their part — their mobile exit (moving at lease end) does not offset the recurring cost imposed on each new tenancy.",
+    "mandatrophy_analysis": "The tangled-rope classification is deliberate: this reading does not deny that shared-infrastructure coordination is a real function the covenant could serve (avoiding a pure-snare mislabel that would erase the genuine externality problem), but it holds that the SAME structure now also runs an asymmetric extraction channel through fine proliferation and fee-shifting that the coordination function does not require. Collapsing this into either 'pure coordination, ignore the fines' or 'pure extraction, no coordination ever existed' would each be a mandatrophy failure — the classification requires both a real beneficiary/coordination structure and a real victim/enforcement structure to be true simultaneously, which is exactly what tangled_rope demands.",
+    "perspectival_gap": "From the board's seat, aggressive fine enforcement is protecting property values and covenant integrity through legitimate governance discretion. From the trapped homeowner's seat, the identical fine schedule and lien timeline is a mechanism that converts a minor rules infraction into a foreclosure-scale liability via compounding fees the homeowner has no practical way to contest before the fees exceed the original violation. The engine computes these as different seat classifications from the same structural data; this reading does not adjudicate between them but authors the structural facts (fee-shifting, lien acceleration, trapped exit) that produce the divergence.",
+    "kernel_context": "This constraint instantiates the extraction_reading of the hoa_covenant_scope kernel. The kernel is the covenant instrument itself (fine schedules, enforcement discretion, lien and fee-shifting mechanisms) as a single persisting commitment different parties read differently. Sibling readings — coordination_reading (the covenant solves genuine shared-infrastructure externalities) and behavioral_control_reading (the covenant enforces aesthetic/behavioral conformity as a value-maximization strategy) — are separate constraint files with their own ε and stakeholder structures. This reading's ε (0.64) is substantially higher than a coordination reading would author, because this reading holds that fine proliferation, expedited liens, and attorney-fee recovery have become the covenant's operative function, decoupled from any coordination cost they nominally reference."
+  },
+  "omegas": [
+    {
+      "id": "coordination_extraction_severability",
+      "question": "Is the fine-and-fee enforcement apparatus severable from the covenant's genuine shared-infrastructure coordination function, or are they structurally fused such that any enforcement mechanism capable of coordinating maintenance costs necessarily also enables this extraction pattern?",
+      "resolution_mechanism": "Comparative study of HOAs that cap attorney-fee recovery and mandate pre-lien mediation against those with uncapped fee-shifting: if coordination outcomes (maintenance funding, dues collection) hold steady while extraction indicators (average fine-to-original-violation ratio, foreclosure-over-small-lien incidence) drop, the functions are severable.",
+      "impact": "If severable, the extraction component is purely additive rent-seeking layered onto a legitimate coordination core, supporting reform via caps and mandated dispute resolution rather than covenant abolition. If fused, reform would require restructuring the coordination mechanism itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction and coordination functions can be structurally separated by policy intervention."
+    },
+    {
+      "id": "kernel_framing_choice_extraction_vs_coordination",
+      "question": "Given that the same covenant text supports a coordination reading, a behavioral-control reading, and this extraction reading, what evidence justifies foregrounding fine proliferation and fee-shifting as the operative function rather than treating them as enforcement overhead on a genuinely coordinating instrument?",
+      "resolution_mechanism": "This reading was selected because the fee-shifting and lien-acceleration pattern is documented as growing over time (rising base_extractiveness series) independent of any corresponding growth in actual shared-infrastructure costs, and because state regulatory responses (fee caps, mandated mediation) specifically target the fine/fee mechanism rather than the underlying maintenance-funding function — signaling that external observers also locate the problem there.",
+      "impact": "Under the coordination_reading, the same covenant text would carry low ε and classify as rope or scaffold; under this reading it classifies as tangled_rope with high ε. The classification is reading-indexed, not a single fact about the covenant.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative framing documentation: why this reading was selected as the extraction-foregrounding account of the kernel."
+    },
+    {
+      "id": "selective_enforcement_evidentiary_basis",
+      "question": "Is selective enforcement (citing dissenting or less-connected owners more aggressively than allied or well-resourced owners) a documented empirical pattern in this specific association, or an inference from structural incentive alone?",
+      "resolution_mechanism": "Audit of citation records against board voting records and social proximity to board members; comparison of fine dismissal rates across owner categories.",
+      "impact": "If selective enforcement is documented, it strengthens the board-power-consolidation half of this reading considerably; if fine issuance is in fact uniform, this reading's power-consolidation claim would need to rest solely on the revenue-extraction mechanism rather than discretionary targeting.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether selective/discretionary enforcement is empirically substantiated or inferred from incentive structure."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__coordination_reading",
+      "hoa_covenant_scope__behavioral_control_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the hoa_covenant_scope kernel decomposed per the ε-invariance principle: coordination_reading (low ε, rope/scaffold, genuine externality-internalization function), behavioral_control_reading (moderate ε, aesthetic/behavioral conformity enforcement as value-maximization), and this extraction_reading (high ε 0.55-0.70, tangled_rope, fine-proliferation and fee-shifting as revenue/power mechanism). Each reading authors its own ε, beneficiary/victim structure, and classification from the same underlying covenant text; they are linked here rather than merged into one story with an observable parameter."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "cost_recovery_enforcement_baseline",
+    "drift_state": {
+      "moment": "contemporary_fee_shifting_regime",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "coordination_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "behavioral_control_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "enforcement_revenue_decoupled_from_cost",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "fee_shifting_disproportionate_to_violation_severity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "board_members",
+  "fixing_cost": "cheap",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

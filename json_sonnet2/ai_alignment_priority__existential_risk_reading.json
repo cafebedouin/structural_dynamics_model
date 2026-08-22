@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "6619560a-7b0f-43bd-bd3e-c2d5dab653b2"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.48,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Existential-Risk Reading of AI Alignment Priority",
+    "topic_domain": "AI governance / technology ethics / risk assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontier_lab_safety_teams",
+      "longtermist_research_institutes",
+      "future_generations"
+    ],
+    "victims": [
+      "algorithmically_marginalized_users",
+      "nearterm_harm_researchers",
+      "global_south_ai_labor"
+    ],
+    "vindicated_propositions": [
+      "loss_of_control_is_the_central_risk",
+      "capability_scaling_requires_proportionate_safety_investment"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "frontier_lab_safety_teams",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets research agendas, funding priorities, and public discourse framing around catastrophic risk. Administers red-teaming programs, interpretability research, and governance proposals justified by loss-of-control scenarios. Controls hiring, publication venues, and the definition of what counts as an 'alignment' problem worth funding. Captures prestige, funding, and regulatory influence from being the recognized authority on existential safety."
+    },
+    {
+      "name": "longtermist_research_institutes",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Receive philanthropic and lab funding premised on the existential framing; produce forecasting and governance work that both justifies and depends on the priority ordering holding. Their institutional survival is tied to the continued salience of catastrophic-risk framing over present-harms framing."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Named as the primary beneficiary of existential-risk mitigation but cannot advocate, verify claims made on their behalf, or object to how resources allocated in their name are actually spent. A non-agent placeholder whose interests are asserted rather than represented."
+    },
+    {
+      "name": "algorithmically_marginalized_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Experience discriminatory lending, hiring, policing, and content-moderation harms from deployed systems today. Their harms are documented, ongoing, and unaddressed by red-teaming pipelines oriented toward speculative loss-of-control scenarios; research and remediation funding that could address their situation is redirected toward capability-scaling safety work instead."
+    },
+    {
+      "name": "nearterm_harm_researchers",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Study bias, labor exploitation, and surveillance harms from currently deployed AI. Compete for the same conference slots, grants, and policy attention as existential-risk researchers, and report their work being deprioritized, defunded, or framed as a distraction from 'the real risk.' Their career paths and funding pipelines bear the opportunity cost of the priority ordering."
+    },
+    {
+      "name": "global_south_ai_labor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Perform data labeling, content moderation, and RLHF annotation work, often under harsh conditions and low pay, that underwrites the capability scaling the existential-risk framing treats as inevitable and worth accelerating safely rather than as a labor-condition problem worth addressing in itself."
+    },
+    {
+      "name": "capability_focused_labs",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build increasingly capable systems and fund safety research that frames the central problem as controlling future superintelligent systems rather than remediating present deployment harms — a framing that does not require slowing or restructuring current commercial deployment, only adding safety research alongside it."
+    },
+    {
+      "name": "policy_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Draft AI governance frameworks and must decide how much regulatory attention and enforcement capacity to allocate between catastrophic-risk provisions (model evaluations, compute thresholds) and present-harms provisions (anti-discrimination audits, labor protections). Take testimony from all other seats."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates scarce technical safety talent, compute resources, and policy attention around a single, tractable, adversarially-testable failure mode (loss of control over increasingly capable systems), avoiding the coordination failure of every lab defining 'safety' idiosyncratically.",
+    "transfer_function": "Moves research funding, regulatory attention, and public concern toward capability-scaling safety work (interpretability, red-teaming, control mechanisms) and away from present-harms remediation (bias audits, labor protections, algorithmic accountability for deployed systems), on the premise that catastrophic outcomes dominate expected harm.",
+    "absent_voices": "Communities currently harmed by deployed systems — over-policed neighborhoods subject to predictive policing, workers replaced or surveilled by automated systems, data-labeling workers in the Global South — are rarely represented in alignment research governance bodies, which are dominated by technical researchers at frontier labs and longtermist philanthropic institutions.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Existential-risk advocates argue that removing this priority ordering would leave humanity unprepared for genuinely catastrophic capability jumps with no chance to correct course. Nearterm-harms advocates argue the world would barely change for people currently harmed by deployed systems, since existential-risk framing has not historically produced remediation for them — the dispute over what would rearrange is itself the contested terrain between readings.",
+    "founding_problem": "Advanced AI capabilities were scaling faster than institutional and technical capacity to verify system behavior, raising the possibility that a sufficiently capable system could act in ways its designers could not predict, correct, or stop.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Frontier lab safety researchers and longtermist institutes attest the problem is live and worsening with each capability generation. Independent AI ethics researchers and labor advocates outside these institutions attest that the loss-of-control problem, while not fabricated, has been elevated above equally live and better-evidenced present harms partly because it is more fundable, more prestigious, and less threatening to current commercial deployment than remediation mandates would be."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the existential-risk reading of the contested AI alignment priority kernel: alignment is defined as preventing catastrophic loss of control over advanced AI systems, and safety work is prioritized on that basis. Under this reading, resources, prestige, and regulatory attention flow toward capability-scaling safety research (interpretability, red-teaming, control mechanisms for hypothetical future systems), while present, documented harms from deployed systems — discriminatory lending and policing algorithms, exploitative data-labeling labor, surveillance — receive comparatively less institutional attention. This is a genuine coordination structure (it solves a real problem: uncoordinated safety practice across labs facing genuinely unprecedented capability growth) that also produces an asymmetric transfer of resources and attention away from present, verifiable harm and toward speculative future harm, benefiting the institutions positioned to do that research and study future generations who cannot verify or contest how their interests are represented.",
+    "key_agents": [
+      "frontier_lab_safety_teams: agenda_setter/beneficiary (institutional/arbitrage) — sets research priorities, captures funding and prestige",
+      "longtermist_research_institutes: beneficiary (organized/arbitrage) — institutional survival tied to framing salience",
+      "future_generations: beneficiary, non-agent (analytical/analytical) — named beneficiary, cannot verify or contest",
+      "algorithmically_marginalized_users: payer (powerless/trapped) — bears present, undressed harms",
+      "nearterm_harm_researchers: payer/excluded (moderate/constrained) — competes for deprioritized attention and funding",
+      "global_south_ai_labor: payer (powerless/trapped) — underwrites capability scaling under exploitative conditions",
+      "capability_focused_labs: beneficiary/agenda_setter (institutional/arbitrage) — framing permits continued deployment without present-harm remediation mandates",
+      "policy_regulators: observer (institutional/analytical) — allocates enforcement attention between competing readings"
+    ],
+    "logic_rationale": "Extractiveness (0.62) reflects the diversion of finite safety-research, funding, and regulatory attention from present, well-evidenced harms toward speculative future scenarios — a real opportunity cost borne by identifiable present victims, even though the coordination function (avoiding uncoordinated, ad hoc capability scaling) is genuine. Suppression (0.48) is moderate: nearterm-harms researchers and affected communities are not silenced outright, but face structural disadvantage in funding competitions, publication venues, and policy access shaped by the dominant framing. Accessibility collapse is low-moderate (0.35) because alternative framings (nearterm, integrated) remain visible and actively argued in the field — this is a live kernel contest, not a foreclosed one. Resistance (0.55) is substantial: nearterm-harms researchers, AI ethics scholars, and affected communities actively contest the priority ordering in public and institutional venues.",
+    "directionality_logic": "Frontier labs and longtermist institutes sit near the beneficiary end: they set the agenda, capture funding and prestige, and hold arbitrage-grade exit (can pivot framing or funding source without losing standing). Future generations are declared beneficiaries but are a non-agent placeholder — their 'benefit' cannot be verified or contested by them, which is itself a structural feature of this reading worth flagging. Algorithmically marginalized users and global south AI labor sit near the full-target end: trapped exit, powerless, bearing costs (foregone remediation, exploitative labor conditions) that flow through the same resource-allocation structure that funds existential-risk research. Nearterm-harm researchers are targets in a softer sense — moderate power, constrained exit — competing within the same institutional structure for deprioritized attention.",
+    "mandatrophy_analysis": "The founding problem (uncoordinated response to unprecedented capability scaling) remains genuinely live — this is not a pure zombie mandate. But the priority ordering that was justified by tractability and urgency has hardened into an institutional identity (funding streams, career paths, prestige hierarchies) that persists independent of continued evidence that existential risk dominates present, documented harm in expected-value terms. The contested founding-problem status and the split corroboration (benefiting institutions vs. outside researchers) is exactly the divergence the mandatrophy question is designed to surface: coordination function and extraction are structurally fused here, not separable, which is why this reading computes as tangled_rope rather than snare.",
+    "perspectival_gap": "From the frontier-lab and longtermist seat, this priority ordering is urgent, tractable coordination on the most consequential possible failure mode. From the algorithmically marginalized user or nearterm-harm researcher seat, the identical resource-allocation structure operates as an opportunity-cost extraction mechanism — funding and attention that could address verified present harm are redirected toward speculative future scenarios that (from this seat) conveniently avoid implicating current commercial deployment practices. The engine's per-seat computation should reflect this: the agenda-setter and beneficiary seats will compute closer to rope/coordination; the payer seats will compute closer to tangled_rope or snare.",
+    "kernel_context": "This constraint is the existential_risk_reading of the ai_alignment_priority kernel. The kernel is the contested claim about what 'alignment' means and what should be prioritized. This reading holds that alignment centrally means preventing catastrophic loss of control over advanced AI systems, with existential safety as the overriding priority. The sibling readings — nearterm_harms_reading (alignment means preventing present discriminatory/extractive harms, priority is justice for marginalized populations) and integrated_reading (both catastrophic and present harms are complementary, non-competing priorities) — are separate constraint stories with their own ε, beneficiaries, and victims. This reading's ε (0.62) is authored for the standing arrangement as this reading's own advocates would assess it if honest about opportunity cost — not for the abolition of the priority ordering, and not averaged against the sibling readings' assessments."
+  },
+  "omegas": [
+    {
+      "id": "existential_risk_probability_estimate",
+      "question": "What is the actual probability mass on catastrophic loss-of-control scenarios within a policy-relevant time horizon, and does it justify the resource allocation this reading produces relative to present, documented harms?",
+      "resolution_mechanism": "Long-run track record of capability forecasting accuracy, adversarial red-team results made public and independently audited, and formal expected-value comparison against documented present-harm base rates (discriminatory lending denials, wrongful predictive-policing flags, labor displacement).",
+      "impact": "If existential probability mass is low relative to the resourcing it commands, this reading's coordination function is largely cover for prestige/funding capture (pushes toward snare); if genuinely high, the resource diversion is justified coordination under uncertainty (pushes toward rope).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the probability-weighted severity of existential risk justifies this reading's resource allocation relative to present harms."
+    },
+    {
+      "id": "future_generations_representation_problem",
+      "question": "Can 'future generations' function as a legitimate beneficiary category when no living representative can verify, contest, or redirect how resources allocated in their name are actually spent?",
+      "resolution_mechanism": "Compare stated research priorities and funding allocations against any available proxy for future-oriented preference (e.g., historical track record of similar precautionary allocations producing verifiable long-run benefit) and check for capture by present institutional interests dressed in future-oriented language.",
+      "impact": "If systematically undecidable or historically prone to capture by present beneficiaries, the 'future generations' beneficiary designation functions primarily as legitimating cover rather than a genuine coordination target, strengthening the case for tangled_rope/snare readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether a non-verifiable beneficiary category can ground a legitimate coordination claim."
+    },
+    {
+      "id": "kernel_framing_choice_and_coupling",
+      "question": "Is the existential-risk framing the only coherent way to read the ai_alignment_priority kernel, or does the choice of this framing (over nearterm_harms or integrated) itself track which actors are positioned to benefit from prioritizing speculative future capability over present deployment accountability?",
+      "resolution_mechanism": "Compare institutional funding sources, staffing composition, and public communications strategy across labs/institutes advocating each reading; a strong correlation between commercial deployment interests and existential-risk-framing advocacy would support a Power x Scope coupling read rather than a pure epistemic disagreement.",
+      "impact": "If framing choice tracks beneficiary interest more than epistemic merit, this reading's claimed coordination function is substantially cover; if framing choice tracks genuine differences in risk assessment across good-faith actors, the coordination function is more credible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the choice of this reading over its siblings tracks epistemic merit or beneficiary interest — the CS-framing under-determination this kernel presents."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__nearterm_harms_reading",
+      "ai_alignment_priority__integrated_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the ai_alignment_priority kernel. The existential_risk_reading (this story) authors high ε on speculative catastrophic capability, an undifferentiated 'all of humanity' victim frame with concrete present-day victims identified through opportunity cost, and a long-term-future beneficiary. The nearterm_harms_reading authors ε for present discriminatory/extractive deployment harms with concretely identified marginalized-population victims and corporate/institutional beneficiaries of continued unaccountable deployment. The integrated_reading authors a lower ε reflecting a coordination structure that treats both harm classes as complementary rather than competing, with correspondingly different beneficiary/victim structure. All three share the same underlying kernel text but instantiate structurally distinct constraints with different ε, different victims, and different classifications — per the ε-invariance principle, they are linked here rather than merged."
+  },
+  "gain_flow": "frontier_lab_safety_teams",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "nearterm_harms_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "catastrophic_severity_dominates_expected_harm_calculus",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "loss_of_control_is_the_central_alignment_failure_mode",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "capability_scaling_outpacing_verification",
+    "drift_state": {
+      "moment": "post_frontier_model_release_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

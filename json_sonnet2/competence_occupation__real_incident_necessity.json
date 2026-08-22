@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__real_incident_necessity",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "7fd6126b-89f2-418a-982d-4bf0459f97af"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.61,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Real-Incident-Necessity Reading of the Competence Kernel",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [],
+    "victims": [
+      "frontline_operators",
+      "shift_supervisors",
+      "downstream_public_exposed_to_lapsed_competence"
+    ],
+    "vindicated_propositions": [
+      "authenticity_of_experience_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Perform safety-critical work (reactor control, surgical response, wildland fire command) under a professional norm that only having lived through an actual catastrophic event confers real competence. They cannot manufacture such an event, cannot certify themselves as 'truly' competent absent one, and carry a standing, unresolvable doubt about their own readiness that no amount of drilling relieves under this reading."
+    },
+    {
+      "name": "shift_supervisors",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Responsible for certifying crew readiness and for organizational reporting after incidents. Under this reading, their own authority to declare a crew 'competent' is hollow until tested by a real event, which puts them in the position of either overstating confidence they cannot ground, or admitting the organization has no way to know if it is ready — both costly."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set minimum training and certification standards built around drills, simulations, and audits — mechanisms this reading treats as inherently inauthentic. Their entire regulatory apparatus is structurally sidelined by the reading's own premise, yet they are not consulted inside the reading's logic about whether that premise is correct."
+    },
+    {
+      "name": "organizational_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must certify organizational readiness to boards, insurers, and the public. Under this reading they inherit an unresolvable epistemic gap: they can never truthfully claim tested competence without wishing for the catastrophe that would supply the test, and cannot honestly deny the gap without undermining public confidence."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study near-miss and incident data across organizations, comparing outcomes at sites with real-incident history against sites without. They document the reading's structural bind without holding a stake in either legitimating or dismantling it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Names a genuine problem — simulated and procedural training may fail to reproduce the physiological stress, ambiguity, and improvisational demand of a true catastrophic event, so competence claims resting solely on drills may be overstated.",
+    "transfer_function": "Moves epistemic legitimacy away from every certification and training mechanism an organization can actually deploy (drills, simulators, refreshers, audits) toward a condition (a real catastrophic incident) that cannot be produced, scheduled, or ethically sought — leaving operators and supervisors permanently short of the standard the reading itself sets.",
+    "absent_voices": "Regulatory bodies and simulation-technology vendors, whose entire mandate rests on drills being adequate proxies for real events, are structurally excluded from adjudicating this reading's premise even though the premise directly devalues their instruments.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of the kernel disappeared, organizations would stop treating tested-by-real-catastrophe as the benchmark of competence, certification would re-anchor on achievable mechanisms (simulation, procedural reinforcement, audits), and the standing anxiety among operators and supervisors about unverifiable readiness would dissolve — training investment and regulatory posture would visibly shift.",
+    "founding_problem": "Post-incident investigations (e.g., nuclear near-misses, aviation disasters) repeatedly found that personnel who had only drilled froze, deviated from procedure, or missed cues that survivors of prior real events recognized instantly — suggesting drills miss something real events supply.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Some investigators and veteran operators who lived through real incidents attest that their own reflexes changed in ways drills never produced. But training researchers and regulators — outside any incentive to inflate the value of catastrophe — counter that the observed post-incident deficits are better explained by inadequate drill fidelity and infrequent refresh cycles than by an intrinsic authenticity gap, and no controlled study isolates 'lived catastrophe' as a distinct causal factor from drill quality."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.61
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one contested reading of the 'competence occupation' kernel in high-reliability organizations: the claim that only having actually lived through a catastrophic incident can furnish the authentic conditions needed to genuinely occupy the competence kernel — that is, to actually possess (not merely be certified as possessing) the readiness the organization needs. This reading is generated on its own terms, ε-invariant, without folding in the sibling readings (simulation_sufficiency, hybrid_occupation) as alternatives inside this file. As authored, the reading produces a structurally unresolvable maintenance problem: the standard it sets cannot be met without the catastrophe it exists to prevent, so every operator and supervisor lives under a competence claim that can never be honestly closed by ordinary organizational means. There is no viable beneficiary — nobody profits from catastrophes being the measuring stick — which routes this reading toward extraction-without-a-collector rather than coordination.",
+    "logic_rationale": "Extractiveness (0.68) reflects the standing cost imposed on operators and supervisors who must operate under, and periodically re-assert, a competence claim the reading's own logic says cannot be genuinely grounded absent a catastrophic event — a psychological and organizational tax paid continuously for a condition that is by design almost never met. Suppression (0.42) is moderate rather than high: no one is coercively preventing exit from this belief, but professional culture and post-incident narrative reinforcement (survivors' authority) make the belief self-sustaining. Theater ratio (0.61) is elevated and rising because organizations respond to the unresolvable gap by manufacturing proxy rituals — solemn post-incident debriefs, veteran-operator mentorship programs, 'battle scar' status hierarchies — that perform authenticity without closing it. Accessibility collapse is comparatively low (0.35): alternative framings (simulation sufficiency, hybrid approaches) remain visibly available and practiced elsewhere, which is precisely why this reading must be actively re-asserted rather than simply persisting by default. Resistance is high (0.72) because training researchers, regulators, and much of the simulation industry structurally reject the premise.",
+    "directionality_logic": "There is no beneficiary group under this reading — that absence is itself the analytically significant finding for the FSM-style check on any 'natural' framing of competence claims. Frontline operators and shift supervisors are victims: they bear the cost of an ungroundable standard directly, in the form of persistent self-doubt, performance anxiety, and vulnerability to the narrative authority of anyone who has 'really been through it.' Downstream publics who depend on these organizations' actual readiness are secondary victims: an organization that internalizes this reading may under-invest in achievable readiness mechanisms (simulation, procedural rigor) while waiting for a real event to validate itself, degrading actual safety margins.",
+    "mandatrophy_analysis": "This reading is a candidate mandatrophy case in the making: it names a real founding concern (drills sometimes fail to reproduce catastrophic conditions) but its own logic offers no closing mechanism — competence can never be certified as 'truly' occupied because the only sufficient test is the disaster the organization exists to prevent. Classifying this as snare (rather than mountain, despite its framing as an inevitable truth about human psychology) captures that the standard functions to extract ongoing anxiety and status-hierarchy compliance from operators without a corresponding coordination payoff, and without any party positioned to certify closure.",
+    "kernel_context": "This constraint instantiates the real_incident_necessity reading of the competence_occupation kernel: the claim that lived catastrophic experience, not simulation or hybrid multi-mechanism exercise, is the necessary condition for genuinely occupying competence. The sibling readings — simulation_sufficiency (drills suffice) and hybrid_occupation (continuous multi-mechanism exercise suffices, configuration contested) — are generated as separate constraint files with their own ε and stakeholder structures. This reading's distinguishing structural feature relative to both siblings is that it has no viable beneficiary: it cannot be satisfied by any deliberate organizational action, only by the occurrence of the very catastrophe the organization exists to avoid, which the other readings can at least attempt to approximate through achievable mechanisms."
+  },
+  "omegas": [
+    {
+      "id": "authenticity_thesis_empirical_status",
+      "question": "Is there any controlled evidence that lived catastrophic experience produces a distinct competence advantage over high-fidelity simulation, independent of drill quality and frequency confounds?",
+      "resolution_mechanism": "Comparative outcome studies matching organizations with real-incident-experienced personnel against organizations with equivalent drill investment but no real-incident history, controlling for drill fidelity and refresh cadence.",
+      "impact": "If no distinct advantage is found, the reading collapses into a pure status/authority narrative with no coordination substance; if a genuine advantage is found even controlling for drill quality, this reading gains partial mountain-like standing for the specific residual effect, though the unresolvable-maintenance problem remains.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether lived-catastrophe competence advantage is real or a confound of drill quality."
+    },
+    {
+      "id": "kernel_framing_choice",
+      "question": "Is the more defensible framing of this constraint 'the intrinsic value of real-incident experience' (as authored here) or 'the social authority claimed by real-incident survivors within organizational hierarchies' (a status-extraction framing one level up)?",
+      "resolution_mechanism": "Trace whether competence deference tracks documented incident-response performance or simply tenure/survivor status; interview junior staff on whether veteran authority is challengeable with contrary evidence.",
+      "impact": "If authority tracks status rather than demonstrated performance, this reading is better modeled as a status-hierarchy-preserving mechanism dressed in a competence-authenticity vocabulary — the extraction is more concentrated (on veteran-adjacent authority) than the diffuse 'no beneficiary' picture assumed here.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative framing: intrinsic experiential value vs. survivor-status authority extraction."
+    },
+    {
+      "id": "resolvability_of_the_bind",
+      "question": "Can any organizational practice (e.g., high-fidelity immersive simulation, structured psychological debrief of near-misses treated as partial incidents) substitute enough of the claimed authentic conditions to functionally close the gap this reading asserts?",
+      "resolution_mechanism": "Track whether organizations investing heavily in near-miss analysis and immersive simulation report declining reliance on real-incident-survivor authority over time.",
+      "impact": "A demonstrated substitute would support reclassifying organizational practice toward the hybrid_occupation reading; failure to find one would reinforce this reading's unresolvable-snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether practical substitutes can close the gap this reading claims only real incidents can close."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "lived_catastrophe_as_ground_truth",
+    "drift_state": {
+      "moment": "contemporary_high_reliability_practice",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "authenticity_requires_real_stakes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulated_conditions_cannot_replicate_true_stakes",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__simulation_sufficiency",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the competence_occupation kernel. simulation_sufficiency claims drills suffice (lower ε, coordination-favorable, likely rope/tangled_rope); hybrid_occupation claims a contested multi-mechanism configuration suffices (moderate ε, contested coordination); real_incident_necessity (this file) claims only lived catastrophe suffices, which structurally forecloses simulation_sufficiency's premise (both cannot hold in the same certifying framework) while placing downstream pressure on hybrid_occupation's configuration debate (if real incidents are held necessary, no hybrid configuration of achievable mechanisms can ever be declared sufficient). Each story carries its own ε per the ε-invariance principle; do not average across them."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

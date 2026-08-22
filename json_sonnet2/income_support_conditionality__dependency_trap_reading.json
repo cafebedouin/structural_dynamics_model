@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "1701ae4a-7283-4e53-b027-900dc1153e0a"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support as Dependency Trap",
+    "topic_domain": "political_economy/social_policy/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "benefits_administration_bureaucracy"
+    ],
+    "victims": [
+      "ubi_recipients",
+      "general_taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ubi_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive an unconditional transfer sufficient for subsistence but structured such that returning to work triggers effective marginal tax rates near or above 100% once benefit withdrawal, lost eligibility, and foregone administrative goodwill are counted. Over years, skills atrophy, work history gaps widen, and professional networks decay. The transfer itself becomes the only stable feature of their economic life, and exiting the arrangement means voluntarily absorbing an income cliff most cannot bridge without a job already in hand — which the atrophy has made harder to get."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the transfer program through general taxation with no direct return — no labor output, no tax revenue from recipients, no reduction in future dependency. Individually they cannot opt out of the tax obligation; collectively their only lever is electoral, which acts on a multi-year cycle far slower than the compounding fiscal and social cost of expanding non-productive rolls."
+    },
+    {
+      "name": "benefits_administration_bureaucracy",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs eligibility rules, administers disbursement, and justifies the unconditional structure as simplicity and dignity. Its budget, staffing, and institutional mandate scale with caseload rather than with exit-to-employment outcomes, so it bears no structural cost when dependency persists or grows — and gains resourcing and relevance the larger the dependent population becomes."
+    },
+    {
+      "name": "low_wage_employers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Would prefer a labor supply with strong reentry incentives at the wages they offer; under the dependency-trap structure they see fewer entry-level applicants and rising wage floors as the reservation wage created by unconditional support exceeds what many jobs pay. They have no formal voice in benefit design and are not consulted on eligibility rules, despite absorbing the labor-supply effect directly."
+    },
+    {
+      "name": "policy_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study labor-supply elasticity, marginal effective tax rates, and longitudinal employment outcomes for recipients. They can identify the dependency mechanism empirically but hold no administrative authority to redesign the program; their findings enter policy debate but do not automatically change enforcement structure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a basic income floor without means-testing bureaucracy at the point of disbursement, avoiding the humiliation and administrative cost of proving need repeatedly.",
+    "transfer_function": "Moves general tax revenue to recipients on an unconditional basis, and moves opportunity cost (foregone labor market attachment, skill development, wage growth) from the transfer's designers onto the recipients who receive it long enough to atrophy.",
+    "absent_voices": "Low-wage employers who bear the labor-supply consequences are not part of eligibility design. Former recipients who successfully exited and would testify to the difficulty of the reentry cliff are also structurally absent from ongoing program review, which draws mainly on current-recipient satisfaction surveys.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unconditional transfer vanished overnight, long-term recipients would face an acute income shock with degraded labor-market readiness; the administering bureaucracy would lose its caseload-based mandate and shrink; taxpayers would see an immediate reduction in transfer-program tax burden; low-wage employers would see labor supply increase and reservation wages fall. All four seats' arrangements are built around the transfer's existence.",
+    "founding_problem": "Means-tested welfare created high administrative overhead, stigmatizing eligibility checks, and sharp benefit cliffs that also produced work disincentives — unconditional transfer was proposed to remove the bureaucratic gatekeeping and stigma.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The administering bureaucracy and current recipients attest the original stigma-reduction problem remains live and justifies the unconditional design. Independent labor economists and legislative auditors outside the benefiting administrative apparatus attest that the original problem has been substantially replaced by a new one — chronic non-employment and skill loss — that the unconditional structure itself now sustains rather than solves."
+  },
+  "gain_flow": "benefits_administration_bureaucracy",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint instantiates the dependency_trap_reading of the income_support_conditionality kernel: unconditional income support as a mechanism that undermines work incentive and produces durable dependency and skill atrophy, structurally classified as a snare with recipients and taxpayers as victims. Two sibling readings of the same kernel exist as separate constraints and are NOT part of this file: freedom_floor_reading treats the identical transfer arrangement as a decommodification mechanism producing positive freedom from coercive labor (a rope from that reading's seat), and wage_subsidy_reading treats it as an employer subsidy enabling wage suppression (a tangled_rope from that seat, with low-wage employers as beneficiary rather than excluded). All three readings share the same underlying policy text and disbursement mechanism but author entirely different beneficiary/victim structures, entirely different ε, and entirely different classifications — per the ε-invariance principle they are three constraints, not one constraint measured three ways.",
+    "narrative_context": "An unconditional income support program disburses a subsistence-level transfer to all eligible residents regardless of work status or job search activity. From the dependency-trap reading, the absence of any work requirement or benefit taper removes the pressure to maintain labor-market attachment; over a multi-year interval, recipients experience skill atrophy, network decay, and increasingly severe effective marginal tax rates on any return to work, while the administering bureaucracy's institutional interests scale with caseload rather than exit outcomes. The claim (snare) and the metrics (extraction rising from 0.42 to 0.71, suppression rising from 0.38 to 0.58) are authored independently — this is what the reading believes is descriptively and structurally true of the arrangement it is examining, not a target the numbers were tuned to hit.",
+    "key_agents": [
+      "ubi_recipients: primary target (powerless/trapped) — bears skill atrophy and reentry-cliff cost",
+      "general_taxpayers: secondary target (moderate/constrained) — funds non-productive transfer with no return",
+      "benefits_administration_bureaucracy: agenda setter and structural beneficiary (institutional/arbitrage) — caseload-scaled mandate grows with dependency",
+      "low_wage_employers: excluded party (powerful/mobile) — absorbs labor-supply effect with no design voice",
+      "policy_economists: analytical observer (analytical/analytical) — measures the mechanism without administrative power to change it"
+    ],
+    "logic_rationale": "Extraction rises over the interval (0.42 to 0.71) as the compounding effect of skill atrophy and benefit-cliff entrenchment deepens — early recipients face a milder reentry gap; long-tenure recipients face a much steeper one, and the fiscal burden on taxpayers accumulates correspondingly. Suppression (0.58 at end) reflects the effective marginal tax rate wall on returning to work rather than overt coercion — the trap is structural (benefit withdrawal mathematics) more than administrative. Theater ratio stays comparatively low (0.28) because the disbursement mechanism genuinely functions as designed; the extraction is not performative, it is a byproduct of the incentive structure operating as intended for a different goal (stigma removal) than the one now being evaluated (labor-market attachment).",
+    "directionality_logic": "Recipients are declared victims because the program's design captures them in a low-mobility equilibrium: the transfer plus benefit-cliff mathematics makes them structurally worse off in labor-market terms the longer they remain enrolled, even though each individual disbursement is a nominal subsidy. This is why the derivation would misfire without explicit victim declaration — a naive read of 'recipient of a transfer' would code as pure beneficiary (low d), but the dependency-trap reading holds that the long-run trajectory reverses the sign: what looks like subsidy in the disbursement ledger is extraction in the labor-capital ledger. Taxpayers are victims by direct fiscal transfer with no productive return under this reading. The administering bureaucracy is the true structural beneficiary — caseload growth expands its budget and mandate durability — which is why it is coded as agenda_setter plus secondary beneficiary rather than a neutral administrator.",
+    "perspectival_gap": "The bureaucracy's seat and the recipient/taxpayer seats compute to different types under this reading: from the agenda-setter's position the arrangement is stable, well-functioning coordination (uniform, low-overhead disbursement); from the recipient and taxpayer seats the same structure computes as extraction with a high and rising cost of exit. This divergence is exactly what distinguishes the dependency-trap reading from the freedom-floor reading of the identical mechanism — the freedom-floor reading would compute the recipient seat as a beneficiary (decommodified from coercive work), while this reading computes the same seat as trapped. The difference is not measurement error; it is a difference in which normative premise about the value of continuous labor-market attachment is doing the work.",
+    "mandatrophy_analysis": "The founding problem (stigmatizing, high-overhead means-testing) is largely solved by the unconditional mechanism, but the mechanism's persistence is no longer justified by that original problem under this reading — it persists because the administering bureaucracy's institutional interest and the recipients' short-horizon incentive both favor continuation, while the long-horizon costs (skill atrophy, fiscal burden) are diffuse and slow to surface. Classifying this as snare rather than rope prevents the error of treating a program that removed one real problem (administrative stigma) as costless simply because its original justification was sound — the founding problem's partial obsolescence combined with the new problem it generates (dependency) is precisely the contested-status genealogy captured in six_questions."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection",
+      "question": "Is the dependency-trap reading, the freedom-floor reading, or the wage-subsidy reading the structurally correct account of what unconditional income support does to labor-market behavior — or do all three operate simultaneously on different subpopulations?",
+      "resolution_mechanism": "Longitudinal labor-supply studies segmenting recipients by pre-transfer employment history, sector, and local wage floor; compare actual reentry rates and wage trajectories against each reading's predicted mechanism.",
+      "impact": "If dependency-trap effects dominate for a subpopulation while freedom-floor effects dominate for another, the single-reading classification is a coarse aggregate over a genuinely heterogeneous population — this would argue for further decomposition rather than resolution in favor of any one reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which kernel reading (or mixture) best fits observed recipient behavior."
+    },
+    {
+      "id": "counterfactual_labor_attachment",
+      "question": "Would the recipients now showing skill atrophy have maintained stronger labor-market attachment under a conditional (work-requirement) alternative, or were they already structurally excluded from stable employment before the transfer existed?",
+      "resolution_mechanism": "Natural experiment comparing regions with unconditional transfers to matched regions with work-conditional transfers, controlling for pre-existing labor market conditions and recipient demographics.",
+      "impact": "If pre-existing exclusion dominates, the dependency-trap reading over-attributes causation to the transfer design rather than to prior structural unemployment — this would reduce confidence in the snare classification and shift weight toward a rope or scaffold reading of the same mechanism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the transfer causes dependency or merely reveals pre-existing labor-market exclusion."
+    },
+    {
+      "id": "bureaucratic_capture_degree",
+      "question": "Does the administering bureaucracy actively resist reforms that would reduce caseload (e.g., work-requirement pilots, time limits), or does it implement whatever policy legislators direct without institutional self-interest shaping outcomes?",
+      "resolution_mechanism": "Review internal agency communications, budget request patterns relative to caseload projections, and agency positions taken during legislative reform hearings.",
+      "impact": "Active resistance would corroborate the beneficiary/agenda_setter dual-role coding and strengthen the snare classification; passive implementation would weaken the case for treating the bureaucracy as a structural beneficiary and might shift it toward a pure agenda_setter with no capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether administrative self-interest actively shapes program persistence."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "labor_market_attachment_primacy",
+    "drift_state": {
+      "moment": "post_multi_year_enrollment_cohorts",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "continuous_labor_attachment_is_a_protected_good",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "unconditional_transfer_design_causes_measurable_skill_atrophy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "wage_subsidy_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraint-family members reading the same kernel (income_support_conditionality). dependency_trap_reading authors ε=0.71 with recipients and taxpayers as victims and the administering bureaucracy as beneficiary (snare). freedom_floor_reading authors a low ε for the same transfer mechanism with recipients as beneficiaries (decommodification, rope). wage_subsidy_reading authors moderate-high ε with low-wage employers as beneficiaries and recipients/taxpayers as victims of wage suppression (tangled_rope). All three share the identical disbursement text and are linked via affects_constraints rather than merged, per the ε-invariance decomposition rule — each reading's beneficiary/victim structure and classification is authored independently of the others."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

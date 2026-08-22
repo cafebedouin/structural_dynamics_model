@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "2bacacde-e454-4433-8668-79822b23727a"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.44,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Multi-Mechanism Competence Maintenance Regime (Hybrid Occupation Reading)",
+    "topic_domain": "organizational/safety/high_reliability_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "training_program_vendors",
+      "compliance_and_audit_departments",
+      "senior_operations_leadership"
+    ],
+    "victims": [
+      "frontline_operators",
+      "shift_supervisors",
+      "training_budget_departments"
+    ],
+    "vindicated_propositions": [
+      "no_single_mechanism_suffices_for_competence"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Must complete simulation sessions, refresher courses, procedural reinforcement drills, and pass line audits on overlapping but non-aligned schedules, on top of full operational duty. Cannot decline any single mechanism without risking certification lapse, yet no configuration of the four is presented as sufficient on its own — each new incident or audit finding adds another layer rather than replacing an existing one. Exit means leaving the licensed occupation entirely."
+    },
+    {
+      "name": "shift_supervisors",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Responsible for scheduling and documenting all four mechanisms for their crews, absorbing the coordination burden between simulation vendors, refresher calendars, procedural checklists, and audit visits. They administer the regime locally but do not set its design, and are held accountable when any single mechanism's paperwork is incomplete regardless of whether competence was actually maintained."
+    },
+    {
+      "name": "training_program_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sell simulation platforms, refresher curricula, and procedural-reinforcement software as separate, continuously billed products. Because no consensus configuration exists, they can always propose an additional module or an enhanced version of an existing one as the missing piece that finally closes the competence gap, without ever being required to demonstrate that the combination they sell is sufficient."
+    },
+    {
+      "name": "compliance_and_audit_departments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Design and administer the line-audit component and set documentation standards across all four mechanisms. Their institutional relevance depends on the absence of a settled, minimal-sufficiency standard; a converged, cheap configuration would shrink their audit mandate and headcount justification."
+    },
+    {
+      "name": "senior_operations_leadership",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Can point to the full multi-mechanism regime as evidence of due diligence after any incident, regardless of whether the specific mechanisms implicated were the ones actually deficient. The redundancy itself functions as liability insurance for leadership, independent of its marginal safety contribution."
+    },
+    {
+      "name": "training_budget_departments",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund all four mechanisms simultaneously because no research consensus permits dropping any one without perceived liability exposure. Budget requests to consolidate or trial a reduced configuration are routinely rejected as too risky, so costs accumulate additively rather than being optimized."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study skill-decay curves, simulation transfer validity, and audit-behavior data across organizations, attempting to establish which mechanisms or combinations actually predict incident reduction. Their findings are contested and slow to converge, which is itself part of what sustains the multi-mechanism status quo."
+    },
+    {
+      "name": "downstream_public_and_customers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the consequences of any actual competence failure (accidents, service disruptions) but have no voice in how the training regime is configured, funded, or audited. They would presumably want whatever configuration actually minimizes incidents at lowest cost, but that question is never put to them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Genuinely reduces catastrophic-failure risk by exercising competence through multiple partially-independent channels, so that a weakness in any single mechanism (e.g., simulation not capturing a real failure mode) is caught by another (e.g., a line audit).",
+    "transfer_function": "Moves operator time, supervisor coordination labor, and training budget toward vendors, compliance departments, and leadership's liability-insurance function, in exchange for a redundancy whose marginal safety contribution beyond some subset of the mechanisms is not established.",
+    "absent_voices": "Frontline operators bearing the cumulative time burden have informal but not decision-making input into mechanism design; the downstream public who would benefit from an optimized (cheaper, equally safe) configuration has no voice at all in what is authored as a purely internal training-design question.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Compliance departments and senior leadership would say the world rearranges catastrophically (uncontrolled skill decay, liability exposure). Safety researchers and some frontline operators would say a leaner, evidence-selected subset of the four mechanisms would likely maintain most of the safety benefit at substantially lower burden — meaning the FULL four-mechanism regime, as opposed to some reduced regime, could disappear without the underlying safety outcome changing much. The dispute over which reading is correct is precisely the unresolved configuration question the constraint names.",
+    "founding_problem": "Real catastrophic failures in high-reliability domains (aviation, nuclear, chemical process) revealed that competence certified once at qualification does not persist — skills decay, procedures drift, and simulators cannot reproduce every real failure mode, so a single mechanism was empirically shown insufficient.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Safety researchers outside the training-vendor and compliance ecosystem corroborate that skill decay and simulation-transfer gaps are real and that some ongoing multi-channel exercise is warranted; they do NOT corroborate that the specific four-mechanism configuration currently mandated is the minimal or optimal one — that stronger claim is asserted mainly by the parties who administer and sell the mechanisms."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.44
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In high-reliability domains, regulators and organizations have concluded that no single competence-maintenance mechanism (simulation, periodic refresher training, procedural reinforcement, or line audit) is sufficient on its own to keep operators safely competent between formal qualifications. This reading of the competence-occupation kernel holds that ALL FOUR mechanisms, run continuously and in combination, are required — and that because no research consensus fixes an optimal configuration or weighting among them, the training apparatus is structurally open-ended: new findings, incidents, or vendor proposals can always justify adding another layer rather than substituting for an existing one. This is one of three competing readings of the same underlying kernel (competence occupation): the sibling readings hold that simulation alone suffices (simulation_sufficiency) or that only real incidents provide authentic occupation of the competence kernel (real_incident_necessity). This story authors ONLY the hybrid_occupation reading, with its own ε, its own beneficiary/victim structure, and its own claimed type — it does not average across, or take a position resolving, the sibling readings.",
+    "key_agents": [
+      "frontline_operators: primary payer (powerless/constrained) — bears the compounding time and certification burden of all four mechanisms",
+      "shift_supervisors: dual payer/agenda_setter (moderate/constrained) — administers the regime locally without designing it",
+      "training_program_vendors: primary beneficiary (organized/arbitrage) — sells continuously expanding modules under cover of the no-consensus problem",
+      "compliance_and_audit_departments: beneficiary/agenda_setter (institutional/mobile) — institutional relevance tied to configuration remaining unsettled",
+      "senior_operations_leadership: beneficiary (institutional/mobile) — uses the full regime as liability insurance",
+      "safety_researchers: analytical observer (analytical/analytical) — studies the underlying decay/transfer questions the regime claims to answer"
+    ],
+    "logic_rationale": "Extraction is authored at a moderate 0.52 by interval end: there is a genuine, well-evidenced coordination function (skills decay, single mechanisms have known blind spots), but the absence of a sufficiency consensus is exploited by vendors and compliance bodies to add mechanisms rather than optimize them, producing a slow additive cost escalation captured in the rising base_extractiveness series. Theater ratio rises from 0.22 to 0.40 as documentation-for-audit's-sake grows relative to mechanisms' actual incremental safety contribution — this is the Goodhart signature of a metric-substitution drift, not yet dominant but clearly trending. Suppression is moderate (0.44) rather than high: operators are not coerced by force, but certification lapse is a real structural cost that forecloses most alternatives, and the regime is defended by institutional actors whose relevance depends on it staying unresolved.",
+    "directionality_logic": "Vendors, compliance/audit departments, and senior leadership are structural beneficiaries: none of them personally executes the drills, but all either collect revenue, collect institutional mandate, or collect liability cover from the regime's persistence and expansion. Frontline operators and shift supervisors are structural targets: they absorb the compounding time burden and bear certification risk, with constrained exit (leaving the licensed occupation). Training budget departments are also targets in a resource sense — they fund an ever-expanding basket without the standing to consolidate it. Safety researchers sit outside the directionality axis as analytical observers whose findings could, in principle, resolve the ambiguity but currently do not.",
+    "mandatrophy_analysis": "The founding problem — single-mechanism competence certification failing to catch real-world skill decay and simulation-transfer gaps — remains genuinely live per outside corroboration (safety researchers), which is why this reading is NOT classified as a pure snare or piton: there is a real coordination function underneath. But the specific four-mechanism configuration currently mandated has outrun what the founding problem demands, sustained instead by parties (vendors, compliance departments, leadership) whose interests are served by non-convergence. The tangled_rope classification captures exactly this: a genuine coordination core (preventing decay) fused with an asymmetric extraction layer (compounding, unoptimized mechanism accumulation) that requires active enforcement (certification-lapse consequences) to hold.",
+    "perspectival_gap": "From the agenda-setting compliance and leadership seats, the multi-mechanism regime looks like prudent, evidence-driven redundancy — exactly what a due-diligence framework should look like after past catastrophic failures. From the frontline operator and supervisor seats, the same structure looks like an ever-growing, unprioritized checklist whose marginal safety value per additional hour of burden is never demonstrated before the next mechanism is added. The engine's per-seat computation should reflect this: agenda-setter/beneficiary seats trend toward rope-like readings of the same data that payer seats read as extractive.",
+    "kernel_context": "This story instantiates the hybrid_occupation reading of the competence_occupation kernel: competence is held to require ALL FOUR mechanisms running continuously, with no single mechanism or subset declared sufficient, and no consensus fixing the optimal weighting among them. The sibling readings — simulation_sufficiency (simulation alone suffices) and real_incident_necessity (only real catastrophic incidents provide authentic occupation) — are NOT represented in this file's metrics or classification; each is its own constraint with its own ε and stakeholder structure, linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "optimal_configuration_existence",
+      "question": "Does an optimal (or even a dominant, cost-minimizing) configuration of the four mechanisms actually exist and remain undiscovered, or is 'no consensus on optimal configuration' itself a structurally maintained condition that benefits parties who profit from non-convergence?",
+      "resolution_mechanism": "A large-scale, independently funded (non-vendor, non-compliance-department) comparative study varying mechanism subsets and measuring incident rates and skill-decay curves directly, with results made binding on regulatory configuration requirements.",
+      "impact": "If an optimal reduced configuration is found and adopted, the regime reclassifies toward scaffold (transitional toward a settled standard) or even rope; if no such configuration is discoverable in principle (genuine irreducible complexity), the tangled_rope reading is reinforced as structurally correct rather than as an artifact of vendor/compliance incentives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the lack of configuration consensus is a genuine open research problem or a maintained condition serving non-coordination interests."
+    },
+    {
+      "id": "kernel_reading_partition_location",
+      "question": "Where exactly does the disagreement between the hybrid_occupation, simulation_sufficiency, and real_incident_necessity readings actually live — is it a disagreement about EMPIRICAL sufficiency (which mechanisms causally prevent incidents) or about EVIDENTIARY standard (what counts as proof of competence, independent of cost)?",
+      "resolution_mechanism": "Structured elicitation of each reading's proponents to identify whether their disagreement would resolve given identical incident data, or persists due to different standards for what 'occupying the competence kernel' requires.",
+      "impact": "If the disagreement is purely empirical, resolving the causal question in omega above would likely resolve all three readings' practical convergence; if it is evidentiary/normative, the three readings could remain permanently coexisting even under full empirical consensus.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locates whether the kernel contest is empirical or normative in character, per the committer-frame routing rule."
+    },
+    {
+      "id": "theater_versus_function_boundary",
+      "question": "Within the rising theater_ratio (0.22 to 0.40), what proportion of documentation and audit activity is verifying real competence versus generating a compliance record independent of competence?",
+      "resolution_mechanism": "Blind comparison of documented compliance status against independently assessed operator competence (e.g., unannounced skills assessment) across a sample of certified operators.",
+      "impact": "A large gap between documented compliance and assessed competence would confirm the theater_ratio trend as genuine Goodhart drift rather than legitimate increased rigor, strengthening the tangled_rope classification's extraction component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishes genuine verification growth from proxy-goal substitution in the rising theater ratio."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_sufficiency",
+      "real_incident_necessity"
+    ],
+    "dual_formulation_note": "This constraint is one of three siblings decomposing the natural-language concept 'competence occupation' under the ε-invariance principle. hybrid_occupation claims moderate, additive, slowly-rising extraction (0.52) reflecting a genuine but exploited coordination core. simulation_sufficiency and real_incident_necessity are separate stories with their own ε values, beneficiary/victim structures, and claimed types — they are not alternate measurements of this constraint but structurally distinct claims about what satisfies the same underlying kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "single_mechanism_qualification_standard",
+    "drift_state": {
+      "moment": "contemporary_multi_mechanism_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_single_mechanism_suffices",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "configuration_optimality_is_an_open_research_problem",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

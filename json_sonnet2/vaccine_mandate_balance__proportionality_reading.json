@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "ee473327-c678-4a5e-b296-cec01d84d1a8"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality-Gated Vaccine Mandate Framework",
+    "topic_domain": "public_health_ethics/constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "public_health_agencies",
+      "general_population_below_herd_threshold"
+    ],
+    "victims": [
+      "vaccine_hesitant_workers",
+      "borderline_exemption_claimants",
+      "low_severity_pathogen_mandate_targets"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the proportionality test — assesses disease severity, transmission risk, and vaccine safety data before authorizing a mandate, and is responsible for calibrating exemption criteria. Benefits from legitimacy when the test is applied honestly, but bears reputational and legal risk when the threshold is misjudged in either direction."
+    },
+    {
+      "name": "immunocompromised_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cannot be vaccinated themselves or face lethal risk from exposure; depend entirely on herd-level compliance achieved through mandates that meet the proportionality bar. They have no exit from the epidemiological environment others create around them and no voice in setting the threshold."
+    },
+    {
+      "name": "general_population_below_herd_threshold",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gains protection when the mandate is correctly calibrated to a genuinely severe, transmissible, low-risk-vaccine pathogen; bears the mandate's compliance burden (time, minor medical risk, occasional side effects) in exchange for that protection. Whether this population nets as beneficiary or payer depends on whether the proportionality test was applied honestly for the specific pathogen."
+    },
+    {
+      "name": "vaccine_hesitant_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face employment or access conditioned on vaccination status once a mandate clears the proportionality threshold. Their genuine safety or autonomy concerns are only heard through the exemption process; if exemptions are narrowly drawn, they bear the mandate's coercive weight even when their individual risk calculus differs from the population-level threshold that justified the policy."
+    },
+    {
+      "name": "borderline_exemption_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Have medical, religious, or conscience objections that sit near the edge of what counts as a 'robust' exemption. Whether their claim is honored depends on how strictly the exemption robustness standard is administered — a standard tightened for compliance optics can convert a legitimate exemption claimant into a mandate target."
+    },
+    {
+      "name": "low_severity_pathogen_mandate_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Are subject to a mandate for a pathogen whose severity or transmission risk turns out, on later or more rigorous review, not to have cleared the proportionality bar it was claimed to clear. They bear the mandate's costs under a proportionality claim that was asserted rather than rigorously verified at the time."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews whether a specific mandate's proportionality showing (severity, transmission, safety, exemption robustness) meets the legal threshold, and can strike down or narrow mandates that fail the test. Neither collects from nor pays into the arrangement; adjudicates it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, falsifiable test — severity, transmission risk, vaccine safety, exemption robustness — that lets a mandate be authorized only when collective protection genuinely outweighs the individual burden, rather than authorized or denied by political convenience.",
+    "transfer_function": "When the test is satisfied, moves compliance burden (bodily intervention, minor risk, time cost) from the vulnerable population's exposure risk onto the vaccinated population; when the test is not honestly applied, moves the same burden onto workers and exemption claimants without the compensating collective benefit that justifies it.",
+    "absent_voices": "Individuals whose personal risk-benefit calculus diverges from the population-level threshold (rare adverse-reaction risk, prior infection, unusual occupational exposure) are represented only through the abstract 'vaccine safety' variable in the test, not as individuated voices; the exemption process is their only channel, and it is administered by the same agency that set the mandate.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Public health agencies would say vanishing the proportionality standard reverts mandate authority to unconstrained political discretion, exposing vulnerable populations to under-protection or workers to over-mandate depending on who holds power. Civil liberties advocates would say the standard already fails to reliably constrain mandates in practice and its disappearance would only make explicit what selective enforcement already permits. Both agree something would change; they disagree on direction.",
+    "founding_problem": "Early pandemic-era mandates were issued or resisted on largely political or categorical grounds (either 'safety trumps everything' or 'consent trumps everything'), producing mandates poorly matched to actual epidemiological severity and eroding public trust in both directions.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal scholars outside public health agencies (constitutional law academics, several appellate courts applying tiered-scrutiny analysis) attest the proportionality framework is a genuine constraint that has struck down or narrowed mandates failing the test — corroboration external to the agencies that administer it. Civil liberties organizations counter that the threshold has in practice been calibrated post hoc to justify mandates already decided on political grounds, meaning the founding problem persists disguised as solved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the proportionality reading of the vaccine mandate balance kernel: mandates are permissible only when disease severity, transmission risk, and vaccine safety jointly clear a strict threshold, and any mandate must carry robust exemptions. This is deliberately a middle reading between two categorical siblings — bodily_autonomy_primary (consent is inviolable regardless of collective benefit) and public_health_primary (collective protection supersedes consent once voluntary compliance fails). The proportionality reading rejects both categorical premises: it treats mandate legitimacy as a function of pathogen-specific parameters rather than a fixed rule in either direction. Because legitimacy is conditional on disease parameters, epsilon is authored here for the standing arrangement as the proportionality reading's own test currently administers it (moderate, contested) — not for either sibling's endorsed alternative, and not averaged across pathogens. A smallpox-level mandate under this test would show near-zero extraction; a seasonal-flu-level mandate forced through the same administrative apparatus would show much higher extraction. This story authors the ε for the framework's actual operating record across the pathogens it has in fact been applied to during the interval, which is mixed-severity, hence the moderate 0.42.",
+    "logic_rationale": "Extractiveness (0.42) reflects that the proportionality test, as actually administered, has been satisfied cleanly for some mandates (high-severity, high-transmission, well-established vaccine safety) and applied more loosely for others (moderate-severity pathogens where the threshold showing was asserted rather than rigorously demonstrated) - producing a mixed record rather than either pole. Suppression (0.48) is moderate: the framework does have enforcement teeth (workplace and access conditions) but is explicitly bounded by the exemption requirement, which is a genuine, if imperfectly administered, release valve. Theater ratio (0.3) captures that some proportionality showings are procedurally performed - the severity/transmission/safety memo is produced, but the underlying data review is sometimes thin, especially at the margins where mandate authorization is politically convenient.",
+    "directionality_logic": "Immunocompromised populations and the general population below herd threshold are structural beneficiaries when the test is honestly satisfied — they receive real collective protection at bounded personal cost. Vaccine-hesitant workers, borderline exemption claimants, and low-severity-pathogen mandate targets are victims precisely to the degree the proportionality showing for their specific pathogen event was weak or the exemption standard was drawn narrowly. Directionality here is genuinely conditional on the pathogen-specific facts, which is the structural signature this reading is built to capture — unlike the categorical siblings, this reading's ε and victim set are functions of the disease parameters, not fixed regardless of them.",
+    "mandatrophy_analysis": "The proportionality reading is designed specifically to prevent mandatrophy in both directions: it prevents public-health mandates from calcifying into permanent extraction once a pathogen's severity has genuinely declined (mandate that outlives the disease parameters that justified it), and it prevents bodily-autonomy claims from being used to block mandates that remain genuinely proportionate. The mixed measurement record (ε rising slightly from 0.30 to 0.42 over the interval) reflects mandates increasingly being tested against pathogens of declining severity — the framework's own trend line shows it drifting toward looser application of its own standard, which is exactly the drift the framework exists to catch, and exactly the kind of drift its critics (both sibling readings) point to as evidence the proportionality test does not reliably self-correct."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection",
+      "question": "Is the proportionality reading a genuinely distinct normative position, or an unstable compromise that collapses into one of the two categorical siblings under real-world pressure to decide specific cases?",
+      "resolution_mechanism": "Track case-by-case outcomes: if courts and agencies applying the proportionality test converge predictably (e.g., systematically favoring mandate authorization or systematically favoring exemption) across a large sample of pathogen-specific applications, that convergence pattern would indicate the 'balance' reading functions as one of the categorical siblings in practice despite its stated framework.",
+      "impact": "If the reading collapses into public_health_primary in practice, its ε and victim set should track that sibling's higher-suppression profile; if it collapses into bodily_autonomy_primary, mandates would rarely if ever clear the threshold and ε would trend toward zero.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the proportionality reading is a stable third position or an unstable compromise between the two categorical siblings."
+    },
+    {
+      "id": "pathogen_specific_epsilon_variance",
+      "question": "How much does epsilon actually vary across pathogens governed by the same proportionality framework — is a single ε value for this reading defensible, or does the framework itself split into as many constraints as there are pathogen risk profiles?",
+      "resolution_mechanism": "Compile mandate-by-mandate proportionality showings across multiple pathogens (smallpox, measles, seasonal influenza, a novel pandemic pathogen) and measure the dispersion of resulting extraction and suppression scores under the same administrative test.",
+      "impact": "If the dispersion is very high (e.g., near-zero ε for smallpox-tier mandates versus high ε for flu-tier mandates), the ε-invariance principle would argue for decomposing this single story into pathogen-tier-specific constraints rather than one aggregate proportionality-reading story; the current 0.42 would then be understood as a population-weighted average masking two structurally distinct constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pathogen-specific variance is large enough to require further decomposition beyond the three kernel readings."
+    },
+    {
+      "id": "exemption_robustness_administration",
+      "question": "Is the exemption-robustness requirement enforced as a genuine check on mandate scope, or is 'robust exemptions' a nominal criterion that is administratively narrowed whenever compliance targets are prioritized?",
+      "resolution_mechanism": "Compare exemption grant rates and appeal outcomes across jurisdictions and time periods with differing political pressure toward high compliance; a systematic tightening of exemption criteria correlated with compliance-target pressure (rather than with new safety or medical evidence) would indicate the robustness requirement functions as theater.",
+      "impact": "If exemption robustness is administratively hollow, the theater_ratio and suppression figures understate the framework's actual coercive weight on borderline claimants, and the tangled_rope classification would strengthen toward a snare-leaning profile for that subgroup.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the exemption requirement is a real constraint on mandate scope or a nominal one."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_balance__public_health_primary",
+      "vaccine_mandate_balance__bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the vaccine_mandate_balance kernel. public_health_primary treats collective protection as categorically superseding consent once voluntary compliance fails; bodily_autonomy_primary treats consent as categorically inviolable regardless of collective benefit. This proportionality_reading rejects both categorical premises in favor of a pathogen-conditional test, producing a moderate, contested ε (0.42) rather than either sibling's more extreme value. All three share the same underlying kernel (the legitimacy conditions for state-compelled vaccination) but instantiate structurally distinct constraints with distinct victim sets, distinct beneficiary sets, and distinct persistence conditions."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandate_legitimacy_is_conditional_not_categorical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "exemption_robustness_is_a_necessary_condition_of_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "tiered_scrutiny_public_health_jurisprudence",
+    "drift_state": {
+      "moment": "post_pandemic_mandate_litigation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

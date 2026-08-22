@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__lord_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "4a18d89b-6a7a-405a-acf2-8bf48506fcb4"
+  },
+  "base_properties": {
+    "extractiveness": 0.86,
+    "suppression": 0.79,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "snare",
+    "human_readable": "Feudal Oath as Unbounded Lord Extraction (Rebellion-Threshold Reading)",
+    "topic_domain": "Medieval Political Economy / Legal History / Institutional Analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landholding_liege_lords"
+    ],
+    "victims": [
+      "enfeoffed_knights",
+      "sub_tenant_peasant_households",
+      "minor_vassal_lineages"
+    ],
+    "vindicated_propositions": [
+      "doctrine_of_fealty_supremacy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "landholding_liege_lords",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Grants fiefs in exchange for the oath of homage and fealty, then sets the actual demands for military service, scutage, aids, wardship revenue, and labor dues each year according to need and opportunity rather than fixed schedule. Interprets the oath's ambiguity in his own favor when demands are challenged, and can escheat a vassal's holding for perceived breach of fealty, which functions as the ultimate enforcement lever. Holds the courts that adjudicate disputes about the oath's meaning."
+    },
+    {
+      "name": "enfeoffed_knights",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold land conditionally on service and owe whatever the lord construes fealty to require in a given year — military levy beyond customary terms, extraordinary aids, or forced attendance at court at personal cost. Formal exit means forfeiting the fief and often social standing; appeal runs through the lord's own court or, rarely, upward to a king who has identical incentives. Some retain enough retinue to negotiate terms informally, but cannot refuse outright without risking charges of breach of fealty."
+    },
+    {
+      "name": "sub_tenant_peasant_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the downstream weight of the lord's extraction as it passes through the knight's own need to meet obligations upward: labor services, tallage, and in-kind renders are increased whenever the knight himself is squeezed. Cannot invoke the oath at all, since they are not party to it, and have no court of appeal within the system that produced their burden. Flight to another lord's land or to a town is the only exit, and it is dangerous and often blocked by lords acting in mutual interest to prevent poaching of labor."
+    },
+    {
+      "name": "minor_vassal_lineages",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Hold small or marginal fiefs with little military value to offer in bargaining, and so absorb wardship and marriage-right extraction most heavily — the lord's right to control heirs' marriages and manage estates during minority is used to extract fees and favorable matches without effective resistance. Generational continuity of the lineage's landholding depends entirely on the lord's forbearance."
+    },
+    {
+      "name": "royal_overlord",
+      "role": "observer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sits atop the same structure as ultimate liege and shares the extraction logic when acting as a lord of lords, but also has an interest in restraining the worst extraction by great lords to prevent baronial rebellion from threatening the crown. Intervenes selectively — through charters, inquests, or adjudication — when extraction destabilizes the wider order rather than out of concern for individual vassals."
+    },
+    {
+      "name": "rebellious_baronial_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Represents the only structural check this reading recognizes: when extraction crosses a threshold, vassals with sufficient coordinated military capacity can withhold service or rise in arms, as at Runnymede. This is not a voice built into the system's ordinary operation — it is an extra-legal correction that only activates after extraction has already occurred and only for vassals wealthy or numerous enough to coordinate; smaller vassals and peasants below them have no equivalent recourse."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The oath nominally coordinates a mutual-defense and land-tenure system: the lord provides protection and land tenure security, the vassal provides military service and loyalty. Under this reading, that coordination function is real in origin but has become the pretext under which extraction operates, since the lord alone interprets what fealty requires.",
+    "transfer_function": "Moves military service, cash renders (scutage, aids, reliefs), labor, and control over marriage/wardship from vassals and their dependents upward to the lord, in quantities the lord sets unilaterally within the elastic bound of what the vassal can be made to bear before open rebellion becomes viable.",
+    "absent_voices": "Sub-tenant peasants and minor lineages have no standing to invoke the oath at all — they are not parties to it, yet bear its downstream costs. The rebellious baronial coalition is the closest thing to a voice with power, but it speaks only for vassals wealthy enough to organize; it is excluded from the ordinary operation of the constraint and appears only as a rupture.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the oath's extractive authority vanished overnight, the entire upward flow of scutage, aids, unscheduled levies, and wardship revenue would stop; lords would lose their principal revenue and coercive lever over vassals, knights would retain land without unpredictable liability, and the elaborate court and escheat apparatus that exists to enforce compliance would become unnecessary almost immediately.",
+    "founding_problem": "Post-Carolingian collapse left no reliable central military or administrative capacity; the oath structure was built to bind mounted warriors to land and to a lord in exchange for protection, solving a genuine problem of decentralized defense and administration in the absence of a functioning state.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Lords and their court clerks attest that customary service remains a live necessity requiring flexible interpretation of the oath. Independent evidence — chronicle accounts of baronial revolt (1215 and its antecedents), ecclesiastical commentary condemning 'unjust exactions,' and the drafting of charters explicitly to fix obligations against arbitrary lordly demand — corroborates from outside the lords' own ranks that the original defense-and-administration problem had, by the practices this reading describes, been substantially superseded by rent-extraction untethered to any defensive necessity."
+  },
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.86
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.79
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested feudal-oath kernel: the reading under which the mutual oath of homage and fealty functions primarily as a license for the lord to extract whatever the vassal hierarchy can be made to bear, bounded not by any fixed charter term but by the practical ceiling of rebellion capacity. Under this reading, the coordination story (mutual defense, land security) is real at the founding moment but decays into cover as lords learn to interpret ambiguous fealty obligations expansively, escalate scutage and aids, and use wardship/marriage rights as an additional extraction channel over lineages too weak to resist. This is a distinct constraint from the vassal_coordination_reading (which holds the same oath text produces fixed, charter-bounded obligations) and from the ecclesiastical_mediation_reading (which holds Christian charity doctrine caps secular extraction) — the epsilon here is high and stable-to-rising because, on this reading's own terms, no textual or doctrinal ceiling actually binds the lord; only the empirical threshold of coordinated violent resistance does.",
+    "key_agents": [
+      "landholding_liege_lords: primary beneficiary and agenda-setter (institutional/arbitrage) — sets and reinterprets extraction demands, controls adjudication",
+      "enfeoffed_knights: primary target (moderate/constrained) — bears escalating unscheduled demands, exit costs forfeiture of status and land",
+      "sub_tenant_peasant_households: downstream target (powerless/trapped) — absorbs extraction passed down the chain, has no standing under the oath at all",
+      "minor_vassal_lineages: structurally weakest target (powerless/trapped) — absorbs wardship/marriage extraction with no bargaining leverage",
+      "royal_overlord: secondary beneficiary and systemic observer (institutional/analytical) — shares the extraction logic but intervenes when destabilization threatens the crown",
+      "rebellious_baronial_coalition: excluded voice with power (organized/constrained) — the only real check, activating post-hoc via revolt rather than through the oath's ordinary machinery"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.86 at interval end) and rising because, under this reading, nothing textually or doctrinally caps what the lord can demand under the fealty relationship — the only real ceiling is the vassal's or coalition's capacity to withhold service or revolt, which is a threshold event, not a routine constraint. Suppression is high (0.79) because escheat, forfeiture, and the lord's own courts function as active enforcement against noncompliance; it is not scaled by scope per the framework's rule — it is authored directly as the raw coercive apparatus available to enforce compliance. Theater ratio is moderate (0.42) and rising, reflecting that as extraction intensifies, more of the apparatus (court ritual, homage ceremony, formal record-keeping of 'customary' dues that are no longer actually customary) becomes performative legitimation layered atop what is functionally unilateral extraction. accessibility_collapse (0.62) and resistance (0.71) reflect that alternatives are not fully foreclosed — flight, revolt, and appeal to the crown remain theoretically available — but are costly and rare enough that most vassals experience the arrangement as a closed system most of the time.",
+    "perspectival_gap": "The lord's seat and the knight's/peasant's seats diverge sharply on this reading: from the lord's position, exercising discretion over fealty's meaning is simply governing — a prerogative inherent to lordship, exercised because circumstances (war, marriage, minority) genuinely require flexible response. From the payer seats, the identical discretion is experienced as an unbounded extraction license whose only real limit is what will trigger armed resistance. The royal overlord occupies a third position: benefiting from the same logic upward while needing to cap its excesses downward to prevent the coalition problem from reaching him.",
+    "directionality_logic": "landholding_liege_lords sit at the full-beneficiary end: they set demands, adjudicate disputes over those demands in their own courts, and hold the ultimate escheat lever — d is derived near 0 (subsidized) from the beneficiary declaration and their arbitrage-grade exit (they can always find another vassal to enfeoff). enfeoffed_knights and sub_tenant_peasant_households and minor_vassal_lineages are declared victims with trapped or constrained exit, driving d toward the full-target end — amplified further for the peasants and minor lineages because their exit options (trapped, local scope) leave them with no arbitrage at all. The royal_overlord is given a directionality_override below because the default derivation (from beneficiary declaration alone) would treat him identically to the primary lords, when in fact his structural position — needing to prevent baronial coalitions from threatening the crown — makes him a partial, self-interested check rather than a pure co-beneficiary.",
+    "mandatrophy_analysis": "This reading resists conflating founding coordination function with present extraction: the founding_problem (decentralized defense in a collapsed administrative order) is authored as historically real, but founding_problem_status is marked contested because, on this reading's own account, the defense function had been substantially superseded by rent-extraction well before the practices described here stabilized — corroborated by chronicle and charter evidence external to the lords' own self-justification. Treating the constraint as still purely functional coordination (as the vassal_coordination_reading does) would mislabel entrenched extraction as bounded reciprocity; treating it as having never had a coordination function would erase the genuine founding problem. The engine's per-seat computation is what should surface this: the lord's seat may compute as something closer to a legitimate hierarchy, while the payer seats compute as a snare — that divergence is the finding, not an error to reconcile.",
+    "kernel_context": "This constraint instantiates the lord_extraction_reading of the feudal_oath_reciprocity kernel: the oath of homage and fealty, read as authorizing the lord to extract without a fixed ceiling, bounded only by the vassal hierarchy's rebellion threshold. Two sibling readings of the SAME oath text are declared elsewhere and are NOT this constraint: vassal_coordination_reading holds that the oath establishes fixed, charter-enforced reciprocal obligations (a bounded-rope reading, much lower epsilon); ecclesiastical_mediation_reading holds that Christian sacramental and charity doctrine caps what the lord may licitly extract (a doctrine-limited reading, moderate epsilon). This story's high, rising epsilon reflects the extraction-reading's own premise that no textual or doctrinal limit actually binds — only violence does — and should not be averaged against the siblings' lower values; each reading is its own constraint with its own stable epsilon."
+  },
+  "omegas": [
+    {
+      "id": "reciprocity_kernel_reading_indeterminacy",
+      "question": "Does the feudal oath's actual historical operation match the lord_extraction_reading (unbounded, rebellion-threshold-limited extraction), the vassal_coordination_reading (fixed charter-bounded obligations), or the ecclesiastical_mediation_reading (doctrine-capped extraction) — or did its operation vary substantially by region, period, and individual lord?",
+      "resolution_mechanism": "Comparative analysis of manorial and court rolls across regions and centuries: frequency and magnitude of extraordinary levies relative to customary baseline, frequency of successful vassal appeal to church or crown courts against lordly demands, and documented instances of demands scaling with lord's need versus staying fixed by charter.",
+      "impact": "If the historical record shows extraction consistently tracking the lord's unilateral need rather than fixed terms, this reading is well-supported as the dominant operative pattern; if charter terms were generally honored and appeal mechanisms were regularly effective, the vassal_coordination_reading better describes the actual arrangement and this story's high epsilon would be reading-specific rather than descriptive of typical practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which kernel reading best matches actual historical operation, and whether operation varied by region/period."
+    },
+    {
+      "id": "rebellion_threshold_as_bound_or_absence_of_bound",
+      "question": "Is 'bounded only by rebellion threshold' itself a meaningful structural limit (a real, if crude, ceiling) or is it functionally equivalent to no bound at all, given how rarely coordinated rebellion was actually achievable?",
+      "resolution_mechanism": "Historical frequency analysis of successful baronial coalitions relative to total instances of escalating lordly demand — if successful checks were rare relative to demand escalation events, the 'bound' is closer to theoretical than operative.",
+      "impact": "A rare, hard-to-coordinate check functions closer to unbounded extraction for classification purposes; a frequently-exercised check would push this reading's extraction ceiling downward and closer to the tangled_rope range rather than pure snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the rebellion threshold is a real structural bound or a nominal one."
+    },
+    {
+      "id": "kernel_disagreement_location",
+      "question": "Where, precisely, do the three sibling readings of the feudal oath disagree — is it about what the oath TEXT says, about how courts actually enforced it, or about what background doctrine (ecclesiastical, customary, or royal) was understood to constrain it?",
+      "resolution_mechanism": "Textual analysis of surviving oath formulas and charters compared against court records and canonical/ecclesiastical commentary from the same period and region, to locate whether the disagreement is textual, enforcement-practical, or doctrinal.",
+      "impact": "If the disagreement is primarily doctrinal (whether church teaching effectively capped lordly demand), the ecclesiastical_mediation_reading and this reading are compatible at the textual level and diverge only on doctrine's practical force. If the disagreement is enforcement-practical (whether charter terms were actually honored), this reading and the vassal_coordination_reading are the ones in direct tension.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Locating the specific structural element the three kernel readings disagree about."
+    }
+  ],
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_oath_reciprocity__vassal_coordination_reading",
+      "feudal_oath_reciprocity__ecclesiastical_mediation_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the feudal_oath_reciprocity kernel. vassal_coordination_reading treats the same oath as producing fixed, charter-enforced reciprocal obligations (low-to-moderate epsilon, closer to tangled_rope or rope). ecclesiastical_mediation_reading treats the oath as bound by sacramental/charity doctrine that caps secular extraction (moderate epsilon). This story (lord_extraction_reading) authors the highest epsilon of the three, on the premise that no textual or doctrinal limit actually binds the lord's discretion — only the empirical threshold of coordinated resistance does. All three share the same underlying kernel text and historical institution but instantiate structurally distinct constraints per the epsilon-invariance principle; they must not be averaged or treated as observation angles on one constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "unilateral_lordly_discretion_over_fealty",
+    "drift_state": {
+      "moment": "high_medieval_baronial_crisis",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "vassal_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ecclesiastical_mediation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fealty_grants_unbounded_interpretive_discretion_to_lord",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "rebellion_capacity_is_the_only_operative_limit_on_extraction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "landholding_liege_lords",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

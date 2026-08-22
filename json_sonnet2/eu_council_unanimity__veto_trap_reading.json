@@ -1,0 +1,313 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__veto_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "8f996fe7-469b-43a7-b932-08330e5ad758"
+  },
+  "base_properties": {
+    "extractiveness": 0.79,
+    "suppression": 0.62,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Council Unanimity Rule as Veto-Trap Extraction Mechanism",
+    "topic_domain": "institutional_design/international_relations/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "blocking_member_state"
+    ],
+    "victims": [
+      "coalition_majority_states",
+      "sanctioned_third_party_targets",
+      "eu_commission_agenda"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "blocking_member_state",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Holds a single vote equal in formal weight to any other member state under the unanimity rule for the relevant policy area (e.g. sanctions, taxation, enlargement, foreign policy). Withholds consent from a measure the rest of the Council supports, signaling it will not lift the block absent specific concessions: a side-payment, a carve-out for a domestic industry, an opt-out clause, or an unrelated policy trade. Because the measure legally cannot proceed without its consent, its threat to hold out is fully credible at zero cost to itself until the majority capitulates or the measure dies."
+    },
+    {
+      "name": "coalition_majority_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Represent a large preference-weighted majority of member states and population but cannot convert that majority into a legally binding outcome. Must either concede resources or policy content to the blocking state, dilute the measure into something weaker than the majority's actual preference, or accept indefinite delay. Exit from the negotiation means abandoning the policy entirely, which is often costlier than paying the extraction."
+    },
+    {
+      "name": "sanctioned_third_party_targets",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "External states or entities that would be subject to a proposed sanctions package or foreign-policy measure. When a member state blocks or waters down the measure in exchange for concessions, the sanctioned target experiences a weaker or delayed constraint than the coalition majority intended — an indirect beneficiary of the veto trap's dilution effect, though not a party to the negotiation."
+    },
+    {
+      "name": "eu_commission_agenda",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The Commission's proposed policy program is systematically narrowed to whatever survives serial veto negotiation. Ambitious proposals are pre-filtered or watered down in drafting specifically to avoid triggering a block, meaning the extraction shapes the agenda before a vote is ever taken, not only at the point of a formal veto."
+    },
+    {
+      "name": "small_member_state_negotiators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Officials in smaller or lower-GDP member states who have learned that credible blocking threats are the most reliable lever their state has for extracting transfers or exemptions it could not obtain through weighted voting. They actively cultivate a reputation for following through on blocks to keep the threat credible in future rounds."
+    },
+    {
+      "name": "eu_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Study patterns of veto use, side-payments, and policy dilution across Council votes on sanctions, taxation, and treaty amendments. Document the frequency with which unanimity requirements produce concession bargains rather than genuine consensus, informing debates on qualified-majority voting reform."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In principle, unanimity coordinates member states around measures that bind all of them by ensuring no state is subject to a collective decision it never agreed to — a genuine coordination problem when sovereignty stakes are high.",
+    "transfer_function": "Moves policy content, side-payments, and negotiating leverage from the coalition majority (and, indirectly, from third-party sanctions targets) to whichever member state credibly threatens to withhold consent, in the form of concessions, carve-outs, or diluted measures.",
+    "absent_voices": "Third-party states or entities targeted by a proposed sanctions package have no seat in the Council negotiation at all — their exposure is decided entirely by the internal bargain between the blocking state and the majority, with no voice of their own in how much dilution they receive.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unanimity were replaced by qualified majority voting in the relevant policy areas overnight, blocking states would lose their extraction leverage immediately, sanctions and foreign-policy measures would pass closer to majority preference, and the entire practice of pre-negotiation side-payments to avoid a veto would collapse — the Commission's agenda-setting behavior and member-state negotiating strategy would both reorganize substantially.",
+    "founding_problem": "Unanimity was built to prevent a majority of member states from imposing binding obligations on a state whose core sovereignty interests were directly implicated, particularly in foreign policy, taxation, and treaty change, where consent was treated as a precondition for legitimate collective action.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Blocking states and their negotiators attest the sovereignty-protection problem remains fully live. Independent political scientists and several Commission officials attest, based on patterns of concession-extraction documented in sanctions and tax-harmonization votes, that the mechanism has substantially shifted from protecting genuine sovereignty interests toward routine leverage-extraction largely disconnected from any live sovereignty concern in the specific blocked measure."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.79
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story is the veto_trap reading of the eu_council_unanimity kernel: the same procedural rule that requires all member states to consent before certain Council measures pass, read specifically as a structural vulnerability exploited by individual states for extraction. Under this reading, the rule's coordination story (sovereignty protection) is cover for a persistent pattern in which a single state's credible refusal to consent forces the coalition majority to buy its cooperation through side-payments, carve-outs, and diluted measures. This is deliberately ONE of three readings of the same kernel; the sovereignty_guarantor_reading and diplomatic_capital_reading are separate constraint stories with their own ε values, beneficiary/victim structures, and classifications — they are not folded into this one, per the ε-invariance principle. Where this reading finds high extraction concentrated on a single beneficiary seat, the sibling readings find low or diffuse extraction; that is not a contradiction to resolve but the expected structural delta between readings of a contested kernel.",
+    "key_agents": [
+      "blocking_member_state: Primary beneficiary (moderate/arbitrage) — extracts concessions via credible non-consent",
+      "coalition_majority_states: Primary target (organized/constrained) — pays through dilution and side-payments",
+      "sanctioned_third_party_targets: Secondary target (powerful/trapped) — receives weakened measures with no seat at the table",
+      "eu_commission_agenda: Structural payer (institutional, non-agent) — pre-filters proposals to avoid triggering blocks",
+      "eu_legal_scholars: Analytical observer — documents the pattern across votes"
+    ],
+    "logic_rationale": "Extraction (0.79 at interval end) reflects the accumulated evidence, drawn from sanctions and tax-harmonization votes, that unanimity produces systematic concession bargains rather than one-off holdouts over genuine sovereignty stakes. Suppression (0.62) is moderate-high: the coalition majority is not physically coerced, but is structurally barred from any legal path around a single state's non-consent, which functions as a powerful suppressive mechanism on its preferred outcome. Theater ratio (0.40) captures that a meaningful share of Council deliberation now performs consensus-building ritual around a bargain whose real content is a private side-payment, not the ostensible sovereignty concern. All three temporal series share one time grid (T=0 to T=24) per the alignment rule.",
+    "directionality_logic": "The blocking_member_state is the structural beneficiary: it collects concessions at effectively zero direct cost, and its exit options are best described as arbitrage — it can play the same leverage move in future rounds, so d sits near the full-beneficiary end. The coalition_majority_states bear the transfer and cannot exit the negotiation without abandoning the substantive goal, placing them near the full-target end. sanctioned_third_party_targets are trapped and bear costs (or receive under-strength restrictions) without ever being a party to the bargain that determined those costs — a pure victim seat with no negotiating presence at all. small_member_state_negotiators are grouped with beneficiaries because, under this reading, they are agents actively deploying the same mechanism the blocking_member_state exemplifies, not passive recipients of it.",
+    "perspectival_gap": "Under the veto_trap reading, the blocking state's own account (protecting a vital national interest) and the coalition majority's account (paying ransom for a policy it could pass on the merits) look like the same negotiation viewed from opposite ends — the engine computes each seat's classification from the structural data (power, exit, beneficiary/victim role) rather than from either party's stated justification, which is exactly how a coordination cover story is distinguished from the underlying extraction.",
+    "mandatrophy_analysis": "The founding problem (protecting sovereignty from majoritarian coercion) is authored as contested rather than flatly dead, because in some specific votes the blocking state's sovereignty concern is genuinely live. But the R5 corroboration shows that outside observers (political scientists, some Commission officials) increasingly find the mechanism decoupled from any live sovereignty concern in the specific measure being blocked — it has become a generalized leverage tool independent of the substantive stake. This is the mandatrophy signature: a mandate (sovereignty protection) that has partially outlived its founding function while the procedural form persists unchanged and is now used for a different purpose (extraction) than the one that justified it.",
+    "kernel_context": "This constraint instantiates the veto_trap_reading of the eu_council_unanimity kernel. Two sibling readings exist as separate constraint stories: sovereignty_guarantor_reading (unanimity as legitimate protection against majoritarian coercion of sovereignty-implicating decisions — low ε, likely mountain or rope from the blocking state's own framework) and diplomatic_capital_reading (unanimity as a consensus-forcing mechanism that strengthens eventual policy legitimacy through iterative negotiation — moderate ε, likely rope or scaffold). This reading authors the same underlying procedural rule but treats the blocking state's veto threat as the primary extraction mechanism rather than as legitimate sovereign consent or legitimacy-building negotiation. The disagreement among the three readings is not a difference of opinion about a shared constraint — it is a difference in which structural claim about the SAME kernel each reading treats as true, which is why each gets its own ε, beneficiary/victim structure, and classification rather than being averaged into one story."
+  },
+  "omegas": [
+    {
+      "id": "veto_trap_vs_sovereignty_guarantor_boundary",
+      "question": "For any given blocked measure, is the blocking state exercising a genuine sovereignty veto over a decision that materially implicates its core national interest, or is it exercising a generalized leverage tool disconnected from the specific measure's sovereignty stakes?",
+      "resolution_mechanism": "Case-by-case analysis of blocked measures against the blocking state's declared and revealed sovereignty interest in the specific policy area, cross-referenced against the concessions actually extracted (unrelated side-payments vs. narrow carve-outs tailored to the stated sovereignty concern).",
+      "impact": "If sovereignty stakes are consistently present and the concessions are narrowly tailored to those stakes, this reading's high-ε classification overstates the extraction and the sovereignty_guarantor_reading is closer to descriptively accurate for that measure. If concessions are consistently unrelated side-payments, this reading's classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether veto use tracks genuine sovereignty stakes or generalized leverage extraction, on a case-by-case basis."
+    },
+    {
+      "id": "diplomatic_capital_reading_overlap",
+      "question": "Does the iterative negotiation process that produces a final concession bargain also generate genuine legitimacy gains for the resulting policy (the diplomatic_capital_reading's claim), such that some of what this reading counts as pure extraction is partly offset by legitimacy value the coalition majority itself receives?",
+      "resolution_mechanism": "Comparative study of policy compliance and domestic ratification smoothness for measures passed via unanimity-with-concessions versus counterfactual qualified-majority-passed measures in comparable domains.",
+      "impact": "If legitimacy gains are substantial and shared by the coalition majority, part of the measured extraction may be better modeled as a joint coordination cost rather than a pure one-directional transfer, which would argue for treating this reading's ε as an upper bound rather than a settled value.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether legitimacy gains from iterative consensus-building offset the extraction this reading identifies."
+    },
+    {
+      "id": "third_party_target_exclusion_severity",
+      "question": "How much of the sanctions-dilution effect experienced by third-party targets is attributable specifically to unanimity-driven veto trading, versus other factors (diplomatic relationships, economic interdependence, general EU foreign-policy caution)?",
+      "resolution_mechanism": "Comparative analysis of sanctions severity in unanimity-governed EU foreign policy versus qualified-majority-governed EU trade measures against comparable targets.",
+      "impact": "A high isolated effect would strengthen the claim that third-party targets are a genuine victim class of this specific mechanism; a low isolated effect would suggest the sanctions_target victim designation overstates this constraint's causal role relative to other EU foreign-policy dynamics.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "How much sanctions dilution is specifically attributable to the veto-trap mechanism versus other causes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_council_unanimity__sovereignty_guarantor_reading",
+      "eu_council_unanimity__diplomatic_capital_reading",
+      "eu_qualified_majority_voting_reform"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the eu_council_unanimity kernel, decomposed per the ε-invariance principle rather than represented as one constraint with an observable parameter. sovereignty_guarantor_reading and diplomatic_capital_reading are separate files with their own ε values and classifications. All three should be treated as a constraint family; each links to the other two via affects_constraints. This reading also links to eu_qualified_majority_voting_reform, since the extraction pattern documented here is the primary structural argument cited by reform advocates for replacing unanimity with qualified majority voting in the affected policy areas."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_guarantor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diplomatic_capital_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "consent_leverage_is_rent_not_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "unanimity_function_has_decoupled_from_stated_purpose",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_maastricht_consensus_norm",
+    "drift_state": {
+      "moment": "post_2014_sanctions_regime_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "blocking_member_state",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

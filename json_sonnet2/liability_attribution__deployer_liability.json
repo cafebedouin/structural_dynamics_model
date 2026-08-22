@@ -1,0 +1,320 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__deployer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "a439492d-18e1-4b84-a940-b0df09e31feb"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Deployer-Primary Liability Reading of AI Harm Attribution",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "foundation_model_providers",
+      "insurance_underwriters_for_deployers"
+    ],
+    "victims": [
+      "downstream_deployers",
+      "small_and_midsize_deployers",
+      "end_users_harmed_by_deployed_systems"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "foundation_model_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Trains and releases the underlying model, retaining exclusive knowledge of training data, architecture, and known failure modes. Under this reading, liability attaches at the point of deployment decision, not the point of capability creation, so the provider's exposure to downstream harm claims is sharply reduced regardless of how foreseeable the harm was from the model's known behavior. Distributes the model widely via API or license and captures revenue from that distribution without bearing the corresponding tail risk."
+    },
+    {
+      "name": "downstream_deployers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Integrates a foundation model into a product or service and configures, prompts, fine-tunes, or otherwise controls how it is used in a specific context. Under this reading, bears primary liability for resulting harms because it controlled the deployment context and made the decision to deploy — even where the harmful behavior originates in model weaknesses the deployer had no practical way to audit or fully understand. Cannot obtain the model's full training data, safety evaluation internals, or red-team results, yet is assigned the due-diligence burden of having caught the flaw before deployment."
+    },
+    {
+      "name": "small_and_midsize_deployers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Smaller companies and public agencies that adopt foundation models off-the-shelf, without the technical staff or contractual leverage to demand transparency from the provider or to negotiate indemnification. They face the same primary-liability exposure as large enterprise deployers but without the resources to conduct meaningful due diligence or to self-insure against catastrophic-tail outcomes, making the assigned liability effectively unbounded relative to their capacity to bear it."
+    },
+    {
+      "name": "end_users_harmed_by_deployed_systems",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals harmed by a deployed AI system — denied a loan, misdiagnosed, wrongly flagged — who must identify and sue the deployer rather than the model's creator. Their recovery depends on the deployer's solvency and insurance, which is often thinner than the foundation model provider's balance sheet, and on litigating a due-diligence standard that does not require the provider to disclose the information that would prove the underlying defect."
+    },
+    {
+      "name": "insurance_underwriters_for_deployers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Builds a new market selling AI-deployment liability coverage to deployers who now face concentrated primary liability. Prices policies based on deployer due-diligence practices it can audit contractually, and profits from the risk transfer this liability reading creates, without itself bearing exposure to the underlying model defects."
+    },
+    {
+      "name": "regulators_and_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates and codifies the deployer-primary liability standard, drawing on doctrines of proximate cause and control (the party closest to the point of harm and with decision authority over context is assigned the duty of care). Can revise the standard toward shared or developer-primary liability if the due-diligence burden proves structurally impossible for deployers to discharge."
+    },
+    {
+      "name": "ai_safety_researchers_and_auditors",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would testify that many failure modes are latent in the foundation model itself and are not discoverable by deployer-side testing no matter how diligent, given the providers' refusal to disclose training data provenance or internal evaluation results. Rarely party to the liability litigation itself and has no standing to compel the disclosure that would settle the due-diligence question."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Assigns a single, locatable, judgment-proof-adjacent party (the deployer) as the point of legal accountability for AI-caused harm, so injured parties and regulators have a clear address for claims instead of an unresolvable multi-party causal inquiry into a modelâ€™s training pipeline.",
+    "transfer_function": "Moves liability exposure, insurance cost, and due-diligence burden from foundation model providers to deployers, and moves recovery risk from end users (who face thinner, less certain deployer balance sheets) away from providers with the deepest pockets and most complete information about the underlying defect.",
+    "absent_voices": "AI safety researchers and independent auditors who understand which failure modes are latent in the model itself are not parties to the liability standard-setting process and have no mechanism to compel the training-data and evaluation disclosure that would let deployers actually discharge the due-diligence burden assigned to them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If deployer-primary liability were abandoned overnight in favor of developer-primary or shared liability, foundation model providers would face direct exposure to downstream harm claims, insurance markets currently pricing deployer risk would collapse and reprice around providers, and deployers — especially small and midsize ones — would face dramatically reduced litigation exposure and could adopt AI systems with less defensive over-caution.",
+    "founding_problem": "As foundation models became embedded in countless downstream products, courts and regulators needed a liability rule that did not require litigating the internals of a black-box model in every harm case; assigning liability to the party with visible deployment context and decision authority offered a tractable, administrable standard.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Foundation model providers and their industry associations attest the rule is sound because deployers make the proximate decisions that determine real-world harm. Independent AI safety researchers, plaintiffs' counsel in early AI-harm litigation, and several legal scholars outside the foundation-model industry attest the rule shifts liability toward the party least able to detect or prevent the underlying defect, and that the administrability the rule buys comes at the cost of accuracy in assigning responsibility to the party that actually controls the risk."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "As foundation models proliferated into downstream deployments, courts, regulators, and industry lobbying converged on a liability rule that places primary legal responsibility on deployers — the parties who select, configure, and put AI systems into specific use contexts — rather than on the developers who trained the underlying models. This story instantiates the deployer-liability reading of a contested liability-attribution kernel: it treats the standing arrangement (deployer-primary liability as currently being codified and litigated) as the referent for extraction, assessed from within this reading's own premises. The sibling readings — developer-primary liability and shared/proportional liability — are separate constraints with their own ε values and victim sets; they are not represented here, per the ε-invariance and kernel-reading discipline. Under the deployer-liability reading, foundation model providers are structurally shielded because the standard locates the duty of care at the point of context control rather than the point of capability creation, and deployers — particularly smaller, less-resourced ones — absorb a due-diligence burden they often lack the informational access to actually discharge.",
+    "key_agents": [
+      "foundation_model_providers: primary beneficiary (institutional/arbitrage) — shielded from downstream liability by the standard",
+      "downstream_deployers: primary target (moderate/constrained) — assigned primary liability despite limited model visibility",
+      "small_and_midsize_deployers: secondary target (powerless/trapped) — bear disproportionate relative exposure",
+      "end_users_harmed_by_deployed_systems: ultimate victims (powerless/trapped) — recovery depends on thinner deployer balance sheets",
+      "insurance_underwriters_for_deployers: secondary beneficiary (organized/mobile) — profits from the new risk-transfer market this rule creates",
+      "regulators_and_courts: agenda-setter (institutional/analytical) — codifies and could revise the standard",
+      "ai_safety_researchers_and_auditors: excluded voice (moderate/constrained) — has no standing to compel disclosure that would resolve the due-diligence question"
+    ],
+    "logic_rationale": "Extractiveness is substantial (0.62 at interval end) but not extreme: the rule genuinely solves a real coordination problem (a locatable point of accountability for AI harm) while also asymmetrically transferring risk away from the party with the deepest information advantage. Suppression (0.58) reflects the structural difficulty deployers face in contesting the standard — they cannot compel the disclosure that would let them prove the harm originated in undiscoverable model defects rather than deployment negligence. Theater ratio is modest (0.28) and rising, reflecting an increasing gap between the stated due-diligence standard and deployers' actual practical ability to meet it, as foundation models grow more opaque and complex over the measured interval.",
+    "directionality_logic": "Foundation model providers sit near the full-beneficiary end: they retain proprietary information advantage, capture distribution revenue, and are shielded from the liability their design choices help produce. Downstream deployers and especially small/midsize deployers sit near the full-target end: they are assigned primary liability for harms rooted in decisions and information they do not control. End users are targets once removed — their practical recovery is capped by deployer solvency rather than provider solvency. Insurance underwriters are a secondary beneficiary class created by the liability allocation itself, profiting from a risk transfer they did not cause but that this reading manufactures.",
+    "mandatrophy_analysis": "The founding problem — needing an administrable liability rule instead of litigating opaque model internals in every case — remains partially live (courts still need a workable standard), but the specific allocation to deployers increasingly serves an administrative-convenience function disconnected from actual causal control, since deployers frequently cannot obtain the technical information needed to have prevented the harm. Classifying this as tangled_rope rather than snare preserves the genuine coordination value (a locatable defendant, predictable liability rules enabling insurance markets and adoption) while still registering the asymmetric extraction (providers externalize risk onto parties who cannot fully mitigate it) that a pure-coordination 'rope' label would obscure.",
+    "perspectival_gap": "From the foundation model provider's seat, the standard is efficient allocation to the party with genuine contextual control — a coordination story. From the small deployer's seat, the same standard is liability assigned without the information needed to discharge it — an extraction story riding on the coordination framing. The engine computes these divergent seat classifications from the same structural data; this story does not resolve the divergence, it documents it.",
+    "kernel_context": "This constraint instantiates the deployer_liability reading of the liability_attribution kernel: the contested question of who bears primary legal responsibility when a deployed AI system causes harm. Sibling readings — developer_liability (developers bear primary liability as creators of the underlying capability) and shared_liability (joint liability distributed along the value chain by causal contribution and control) — are separate constraint stories with their own ε, beneficiary/victim sets, and classifications. Under this reading specifically, deployers enter the victim set, developers externalize deployment risk onto them, opacity becomes the deployer's due-diligence burden rather than the developer's disclosure obligation, and foundation model providers are shielded from downstream harm claims."
+  },
+  "omegas": [
+    {
+      "id": "administrability_vs_accuracy_tradeoff",
+      "question": "Does the deployer-primary standard's administrability (a single locatable defendant) justify its accuracy cost (assigning liability to a party that frequently lacks the information to have prevented the harm)?",
+      "resolution_mechanism": "Comparative litigation outcome studies across jurisdictions applying deployer-primary vs. developer-primary vs. shared liability standards, tracking settlement rates, case duration, and correlation between liability assignment and actual causal contribution as established at trial.",
+      "impact": "If administrability gains are large and accuracy losses are modest, the tangled_rope classification's coordination component strengthens; if accuracy losses dominate, the constraint drifts toward snare as the coordination story becomes primarily cover for cost-shifting.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deployer-primary rule's convenience benefits outweigh its misallocation costs."
+    },
+    {
+      "id": "which_reading_becomes_dominant_law",
+      "question": "Which of the three kernel readings (deployer_liability, developer_liability, shared_liability) will actually consolidate into binding law or dominant industry practice, and does that consolidation reflect genuine assessment of causal control or the relative lobbying power of foundation model providers versus deployers?",
+      "resolution_mechanism": "Track regulatory and appellate court convergence across major jurisdictions (EU AI Act enforcement, US state tort law, sectoral regulators) over the next five to ten years; compare against lobbying expenditure and testimony records from foundation model providers versus deployer trade associations.",
+      "impact": "If deployer_liability consolidates primarily due to provider lobbying rather than principled causal analysis, this strengthens the case that the current reading functions as regulatory capture dressed as administrable doctrine; if it consolidates because courts independently find deployment context genuinely dispositive, the coordination function is more genuine than the extraction critique suggests.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which sibling reading of the liability_attribution kernel will become dominant, and why."
+    },
+    {
+      "id": "disclosure_feasibility_ambiguity",
+      "question": "Is it technically and economically feasible for foundation model providers to disclose enough training-data and evaluation information for deployers to conduct meaningful due diligence, without destroying the providers' competitive position or exposing proprietary methods?",
+      "resolution_mechanism": "Technical feasibility studies on structured disclosure regimes (e.g., model cards with enforceable minimum content, red-team result escrow, third-party audit access) and their effect on deployer due-diligence outcomes in pilot jurisdictions.",
+      "impact": "If meaningful disclosure is feasible without destroying provider incentives, the deployer-liability reading's due-diligence burden becomes more defensible; if truly infeasible, the burden is structurally undischargeable and the reading functions as liability-shifting regardless of deployer effort.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deployers could in principle meet the due-diligence standard if providers disclosed more."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "context_control_grounds_duty_of_care",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "capability_creation_is_too_remote_for_proximate_liability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "deployment_context_as_proximate_cause",
+    "drift_state": {
+      "moment": "post_frontier_model_opacity_escalation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__shared_liability"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the liability_attribution kernel, decomposed per the ε-invariance principle: deployer_liability (this story, deployers as primary victim class), developer_liability (developers as primary victim class, foundation model providers face direct exposure), and shared_liability (proportional distribution by causal contribution, diffusing both victim and beneficiary concentration). Each reading has its own ε, beneficiary/victim structure, and classification because each reading describes a structurally different standing arrangement, not merely a different opinion about the same arrangement. All three link to each other via affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "gain_flow": "foundation_model_providers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

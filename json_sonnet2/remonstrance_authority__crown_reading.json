@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__crown_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-25",
+    "status": "ACTIVE",
+    "story_uid": "c47d8df8-370a-4cf6-b3e1-20f64152d589"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.52,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.71,
+    "claimed_type": "snare",
+    "human_readable": "Parlementary Remonstrance as Minoritarian Fiscal Veto (Crown Reading)",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parlement_magistrates",
+      "venal_office_holders",
+      "regional_privileged_estates"
+    ],
+    "victims": [
+      "royal_treasury",
+      "crown_fiscal_administration",
+      "unprivileged_taxpayers",
+      "royal_reform_ministers"
+    ],
+    "vindicated_propositions": [
+      "sovereign_fiscal_supremacy_doctrine",
+      "unitary_royal_legislative_will"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "royal_treasury",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Depends on registered edicts to raise loans and levy taxes; when a parlement remonstrates and delays registration, the treasury's borrowing costs rise and revenue collection stalls at the moment it is most needed, typically during war finance emergencies. It cannot bypass registration without a lit de justice, which itself invites further resistance and non-compliance in the provinces."
+    },
+    {
+      "name": "crown_fiscal_administration",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Ministers and intendants draft fiscal edicts meant to apply uniformly across the realm. They must negotiate, cajole, exile magistrates, or force registration through royal presence, spending political capital and administrative bandwidth on a body whose formal task was to verify legal form, not to adjudicate the substance of fiscal policy."
+    },
+    {
+      "name": "parlement_magistrates",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Hold venal, heritable offices that give them the exclusive standing to register or remonstrate against royal edicts within their jurisdiction. They collect prestige, patronage, and the ability to shield their own class and region from taxation by delaying or reshaping fiscal measures, while bearing almost none of the fiscal consequences of the delays they cause."
+    },
+    {
+      "name": "venal_office_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Purchased their offices as durable, transmissible property and use remonstrance to entrench the privileges attached to those offices — including tax exemptions — against any uniform fiscal reform that would erode the value of what they bought."
+    },
+    {
+      "name": "regional_privileged_estates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Nobility and clergy within a parlement's jurisdiction benefit when the local court remonstrates against measures that would tax their lands or income at parity with commoners; they lobby magistrates, many of whom are drawn from their own ranks, to use the remonstrance right on their behalf."
+    },
+    {
+      "name": "unprivileged_taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear a disproportionate share of whatever taxes ultimately survive the remonstrance-and-negotiation process, since the exemptions the magistrates defend fall on the privileged orders, shifting the residual fiscal burden onto commoners without any comparable body to remonstrate on their behalf."
+    },
+    {
+      "name": "royal_reform_ministers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individual ministers who attempt uniform fiscal reform (equalized land taxes, stamp duties, reduced venality) find their edicts blocked or watered down by remonstrance, and their careers and reputations suffer for proposing measures the parlements can portray as tyrannical innovation."
+    },
+    {
+      "name": "provincial_intendants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Royal administrators in the field who see firsthand how remonstrance delays translate into unequal, ad hoc enforcement across provinces, but have no formal standing within the remonstrance process itself — they report the effects upward without a seat at the registration dispute."
+    },
+    {
+      "name": "constitutional_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Assess, after the fact, whether the parlements' remonstrance right functioned as a genuine check on arbitrary power or as a mechanism by which a narrow, self-perpetuating class entrenched its own exemptions against necessary and popularly beneficial reform."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In its formal design, remonstrance lets a court of registration flag legal or procedural defects in a royal edict before it takes force, in principle protecting subjects from poorly drafted or contradictory law.",
+    "transfer_function": "The right moves fiscal risk and delay cost from the privileged office-holding and landed classes onto the royal treasury and onto unprivileged taxpayers, who absorb both the shortfall from unregistered measures and the residual burden once exemptions are preserved.",
+    "absent_voices": "Unprivileged taxpayers and provincial intendants have no formal standing in the registration dispute; the negotiation happens entirely between crown ministers and magistrates drawn from or allied with the privileged orders whose exemptions are at stake.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If remonstrance vanished overnight, royal edicts would register immediately and uniformly, fiscal reform could proceed without provincial veto points, treasury borrowing costs tied to registration delay would fall, and the parlements would lose their principal lever for defending regional and class-based tax exemptions — a substantial rearrangement of who bears the fiscal burden.",
+    "founding_problem": "Registration of royal edicts by sovereign courts was originally meant to verify that new law was consistent with existing law and properly recorded, guarding against clerical error and outright forgery in an age without centralized legislative drafting.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Royal ministers across multiple reigns (Turgot, Calonne) attest that by the eighteenth century remonstrance no longer functioned as verification but as a device by which magistrates substituted their own policy judgment, and largely their own class interest, for the crown's; contemporary intendant correspondence outside the parlements corroborates that the delays tracked exemption-defense rather than any detected legal defect."
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the crown reading of the remonstrance-authority kernel: the parlements' right to remonstrate against and delay registration of royal edicts is read, from the crown's structural position, as an illegitimate minoritarian veto exercised by a self-perpetuating, venal office-holding class to protect its own fiscal exemptions and those of allied privileged estates, at the expense of the treasury and of unprivileged taxpayers who absorb the residual burden. The sibling magistrate reading treats the same formal right as a fundamental constitutional check against arbitrary royal innovation; that reading is a separate constraint (magistrate_reading) with its own ε and beneficiary/victim structure, not a different observable of this one. Under the crown reading, the standing arrangement under contest is the parlements' exercise of remonstrance as it actually operated in the eighteenth century, not the reformed unitary-registration system the crown sought to install.",
+    "key_agents": [
+      "royal_treasury: primary target — bears fiscal cost of delayed and blocked registration",
+      "crown_fiscal_administration: agenda-setter frustrated in its own function — must negotiate around the veto it formally administers",
+      "parlement_magistrates: primary beneficiary — venal office holders whose remonstrance right entrenches class and regional exemption",
+      "unprivileged_taxpayers: secondary target — absorbs the residual fiscal burden the exemptions displace",
+      "constitutional_historians: analytical observer — evaluates the function historically"
+    ],
+    "logic_rationale": "Extraction is authored high (0.78 at interval end) because, under the crown reading, remonstrance functions as leverage that magistrates use to preserve fiscal exemptions unrelated to the edicts' legal form, imposing borrowing-cost and delay costs on the treasury and shifting the ultimate tax burden onto commoners. Suppression is authored moderate (0.52) rather than extreme because the crown retained the lit de justice and exile as counter-levers throughout the period — the veto was contested, not absolute — but its rising trajectory reflects the entrenchment of remonstrance practice across the century as magistrates elaborated increasingly elaborate constitutional arguments for their standing. Theater ratio rises to 0.42 because an increasing share of remonstrance activity, by the crown's lights, took the form of performative appeals to 'ancient constitution' rhetoric rather than substantive legal-defect review — the original verification function had by the 1770s-80s become largely pretextual cover for interest defense. Accessibility collapse is moderate (0.4): alternative fiscal paths (direct taxation without registration, provincial estates, financial edicts by simple declaration) existed but were costly and politically fraught, so alternatives were narrowed but not eliminated. Resistance is authored high (0.71) because the crown, treasury, and reform ministers repeatedly and forcefully contested the right through lits de justice, exiles of magistrates, and outright suppression attempts (1771 Maupeou coup), which is itself evidence of how much friction the arrangement generated rather than how settled it was.",
+    "directionality_logic": "Parlement magistrates and the estates allied with them sit near the full-beneficiary end: they collect prestige, patronage, and durable fiscal exemption from the arrangement while bearing almost none of the cost of the delays they cause. The royal treasury and reform ministers sit near the full-target end: they bear the fiscal and political cost of an obstruction they cannot simply route around, given magistrates' arbitrage-grade exit (venal offices could be sold, held, or defended across reigns) versus the treasury's structural entrapment in the registration requirement. Unprivileged taxpayers are also targets, though indirectly — they do not negotiate with magistrates at all; the exemptions magistrates defend are simply subtracted from the tax base before the remaining burden falls on them.",
+    "mandatrophy_analysis": "The founding_problem (verification of edicts against existing law and correct recording) is authored dead — by the eighteenth century the function had been substituted by policy review keyed to class and regional interest, per the corroboration of reform ministers and intendant correspondence outside the parlements. The disappearance_verdict of world_rearranges combined with founding_problem_status of dead is exactly the capture/zombie signature the R5 mismatch consumer is built to catch: an arrangement whose stated function is gone but whose removal would still visibly rearrange who bears fiscal costs, because a different, unstated function (class and regional exemption defense) has been substituted underneath the same formal right. This is why the crown reading claims snare rather than tangled_rope: verification-of-form is not read, from this seat, as a live coordination function still operating alongside the extraction — it is read as dead cover.",
+    "kernel_context": "This constraint is the crown reading of the remonstrance_authority kernel (kernel_id: remonstrance_authority, reading_id: crown_reading). The sibling magistrate_reading treats the identical formal right — parlementary registration and remonstrance — as a fundamental constitutional mechanism preserving ancient liberties against arbitrary royal innovation, with the crown itself as the primary source of illegitimate extraction and the magistrates as beneficiaries acting as trustees for the governed rather than for themselves. The two readings share the kernel (the remonstrance right as a stabilized institutional practice) but diverge entirely on ε, on beneficiary/victim assignment, and on classification: this reading authors high ε for royal fiscal authority thwarted by the veto and places the crown/treasury in the victim set, while the magistrate reading would place the crown as extractor and the magistrates/subjects as beneficiaries of a genuine check. Neither reading is generated here except as this one; magistrate_reading is a separate constraint file linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "verification_function_genuinely_dead_or_merely_captured",
+      "question": "Did the legal-verification function of remonstrance actually atrophy to nothing by the eighteenth century, or did it persist alongside the exemption-defense function, making this a tangled rope rather than a pure snare from a neutral observer's seat?",
+      "resolution_mechanism": "Systematic content analysis of remonstrance texts across the century, coding each for genuine legal-defect argumentation versus policy/interest argumentation, compared against the rate at which crown edicts were found to contain actual drafting errors flagged by parlements.",
+      "impact": "If a substantial share of remonstrances still performed genuine legal review, the crown reading's snare classification overstates the case and a tangled_rope reading (coordination function still partly live, extraction layered on top) would be more defensible even from a crown-sympathetic seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding verification function was genuinely dead or partially persisting alongside captured exemption-defense."
+    },
+    {
+      "id": "crown_reading_vs_magistrate_reading_locus_of_disagreement",
+      "question": "The two readings of the remonstrance_authority kernel disagree principally on where illegitimate extraction is located — in the crown's fiscal demands (magistrate reading) or in the magistrates' exemption defense (crown reading). Is this disagreement resolvable by evidence, or is it an irreducible framing choice about which baseline (royal sovereignty vs. ancient constitutional liberty) is the legitimate reference point?",
+      "resolution_mechanism": "This is not resolvable by additional historical fact alone; it depends on which theory of sovereign legitimacy (unitary royal will vs. customary/estates-based constitutionalism) is taken as the evaluative baseline — an irreducibly conceptual/preference-laden choice, though the distributional facts (who paid, who was exempted) are separately empirically checkable.",
+      "impact": "Adopting the crown reading's baseline routes ε and victim assignment as authored here; adopting the magistrate reading's baseline would invert beneficiary and victim roles entirely for the same formal institution, producing a structurally different constraint (magistrate_reading), not a different measurement of this one.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel-level framing choice between royal-sovereignty and ancient-liberty baselines, routed here rather than folded into this reading's classification."
+    },
+    {
+      "id": "coalition_capacity_of_unprivileged_taxpayers",
+      "question": "Could unprivileged taxpayers, as a powerless but numerous class, have exercised any coalition leverage against the exemption-defense function of remonstrance, or were they structurally without any comparable institutional lever throughout the period?",
+      "resolution_mechanism": "Comparative study of provincial estates and municipal bodies that did have some standing to petition against tax burdens, assessing whether any such channel provided even partial counter-leverage prior to 1789.",
+      "impact": "If some coalition capacity existed (via provincial estates, tax revolts, or municipal petitions) the powerless-payer characterization should be qualified; if none existed, the trapped/powerless characterization for unprivileged_taxpayers stands as authored.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether unprivileged taxpayers had any coalition-based counter-leverage against the exemptions remonstrance defended."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "magistrate_reading",
+      "venal_office_market",
+      "ancien_regime_fiscal_reform_attempts"
+    ],
+    "dual_formulation_note": "remonstrance_authority__crown_reading and remonstrance_authority__magistrate_reading decompose a single natural-language kernel (the parlements' remonstrance right) into two structurally distinct constraints per the ε-invariance principle: the crown reading authors high ε for royal fiscal authority and places the crown/treasury among the victims of a minoritarian veto; the magistrate reading authors high ε for royal power and places the magistrates/subjects as beneficiaries of a constitutional check against arbitrary innovation. Both readings share the same kernel (the stabilized institutional practice of registration-with-remonstrance) but are not two measurements of one constraint — they are two constraints linked here and in the sibling file via affects_constraints, each with its own claimed_type, beneficiary/victim structure, and metrics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "magistrate_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unitary_royal_legislative_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "venal_office_privilege_is_illegitimate_particularism",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "absolute_royal_fiscal_prerogative",
+    "drift_state": {
+      "moment": "eve_of_1789",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "parlement_magistrates",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

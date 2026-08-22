@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_for_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "25b3ed86-2615-4ba2-ba85-32548c180407"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Expected-Value-Dominant Acceptable Risk Standard for Nuclear Energy",
+    "topic_domain": "risk_assessment/energy_policy/public_safety_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nuclear_utility_operators",
+      "grid_planning_authorities",
+      "climate_policy_advocates",
+      "ratepayers_in_decarbonizing_grids"
+    ],
+    "victims": [
+      "communities_near_waste_storage_sites",
+      "populations_in_low_probability_high_consequence_exclusion_zones"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_utility_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Site, license, and operate reactors under a regulatory standard that permits construction and continued operation whenever annualized expected cost (probability times consequence, summed across accident scenarios) compares favorably to expected climate and cost benefits of the generated power. This framing lets them site plants, secure financing, and avoid design requirements keyed to worst-case rather than expected-value scenarios. They can relocate capital to other jurisdictions or energy sources if the standard shifts against them."
+    },
+    {
+      "name": "grid_planning_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set and administer the expected-value acceptability threshold used in licensing and planning decisions; commission the probabilistic risk assessments that translate accident probability and consequence estimates into a single annualized figure comparable across coal, gas, nuclear, and renewables. They control which probability estimates and discount rates enter the calculation."
+    },
+    {
+      "name": "climate_policy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Favor the expected-value frame because it lets nuclear's low-probability accident risk be netted against its high-certainty climate benefit (displaced fossil generation), producing a favorable comparison that supports nuclear deployment as a decarbonization tool. They are not directly exposed to accident consequences and can advocate for the standard from a position with no personal downside."
+    },
+    {
+      "name": "ratepayers_in_decarbonizing_grids",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive lower-carbon, often lower-cost electricity under a licensing regime that does not require worst-case-scenario design margins, but also bear diffuse exposure if a low-probability event occurs; their exit is limited to switching electricity providers or advocating politically, not opting out of grid-wide risk exposure."
+    },
+    {
+      "name": "communities_near_waste_storage_sites",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live adjacent to interim or permanent waste storage facilities sited under a framework that treats long-term waste disposal as a solvable engineering cost folded into the annualized expected-cost calculation rather than an irreversible intergenerational burden. They did not choose the siting, cannot easily relocate given property value effects and local economic dependence, and bear concentrated local risk that the national-scale expected-value average obscures."
+    },
+    {
+      "name": "populations_in_low_probability_high_consequence_exclusion_zones",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live within the geographic radius that would be catastrophically affected in the tail-probability accident scenario the expected-value framework discounts by its low probability. If the rare event occurs, consequences are borne entirely by this population despite the national-level calculus treating the risk as acceptable in aggregate; they have no meaningful exit once resident and no voice in how probability estimates were derived."
+    },
+    {
+      "name": "probabilistic_risk_assessment_modelers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Construct the probability and consequence models that feed the expected-value calculation; their methodological choices (which accident sequences to include, what discount rate to apply to future consequences, how to treat model uncertainty) determine the numeric answer the acceptability standard produces, but they do not bear consequences of either accident or licensing decisions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single commensurable metric — annualized expected cost, computed as probability times consequence — that lets regulators compare nuclear risk against the risks of coal, gas, and renewable alternatives on the same scale, enabling a licensing and siting decision process instead of an open-ended, incommensurable debate about incomparable harms.",
+    "transfer_function": "Moves siting and design burden away from worst-case engineering margins (which would raise costs and could halt projects) and toward statistically-averaged safety margins; this transfers concentrated tail risk from the national ratepayer/advocate population (who see only the favorable average) onto the smaller populations geographically proximate to plants and waste sites, who would bear the full consequence if the discounted-probability event actually occurs.",
+    "absent_voices": "Future generations who will live near waste storage sites decades or centuries hence have no seat in the current probability estimation process; populations in the consequence radius of low-probability accident scenarios are typically a small fraction of the electorate whose local risk is averaged away at the national policy level and rarely participate in setting the discount rates or probability models used against them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expected-value acceptability standard were replaced overnight by a catastrophic-tail-dominant standard, several currently-licensable reactor designs and waste storage siting decisions would fail acceptability review; utilities would face design margin requirements calibrated to worst-case rather than probability-weighted scenarios, licensing costs would rise sharply, and some currently operating comparisons favoring nuclear over fossil alternatives would need to be re-litigated under a different risk metric.",
+    "founding_problem": "Regulators needed a tractable, quantitative method to compare the risks of different energy sources so that licensing decisions could proceed on a defensible technical basis rather than ad hoc political judgment or unquantified fear of nuclear accidents relative to visibly-accepted but statistically worse fossil fuel harms.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Nuclear engineering and regulatory economics literature (independent academic risk analysts, not utility-affiliated) attest the comparative tractability problem was real and remains partially live — commensurable comparison across energy sources is genuinely useful for policy. However, communities near waste sites and tail-risk researchers attest, from outside the beneficiary set, that the expected-value framing has become a mechanism for discounting irreversible, geographically-concentrated harms rather than a neutral technical tool, particularly regarding multi-millennial waste storage liability."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the expected_value_dominant reading of the acceptable_risk_for_energy kernel: the arrangement in which nuclear licensing acceptability is determined by annualized expected cost (probability of an accident scenario multiplied by its consequence, summed across scenarios) weighed against annual expected climate and economic benefit. Under this reading, nuclear's genuinely low accident probability nets out favorably against fossil alternatives' certain, ongoing emissions harm, and long-horizon waste disposal is treated as a bounded engineering cost that can be discounted and amortized rather than an open-ended intergenerational liability. This is a deliberately narrow reading: the sibling readings (catastrophic_tail_dominant, comparative_risk_dominant) are NOT part of this constraint's classification, ε, or stakeholder structure — they are separate constraints linked only via cs_structure.reading_relations and network.affects_constraints. The coordination function (commensurable comparison across energy sources) is genuine; the extraction runs through discount-rate and probability-model choices that concentrate tail consequence on populations who have no seat in setting those parameters.",
+    "key_agents": [
+      "nuclear_utility_operators: beneficiary of the favorable expected-value comparison, organized/mobile",
+      "grid_planning_authorities: agenda_setter administering the acceptability threshold, institutional/analytical",
+      "climate_policy_advocates: beneficiary via nuclear-as-decarbonization framing, organized/mobile, no personal accident exposure",
+      "communities_near_waste_storage_sites: payer bearing concentrated local siting burden discounted to a bounded engineering line item, powerless/trapped",
+      "populations_in_low_probability_high_consequence_exclusion_zones: payer bearing full consequence if the discounted tail event occurs, powerless/trapped",
+      "probabilistic_risk_assessment_modelers: observer whose methodological choices (probability estimates, discount rates) determine the numeric outcome the standard produces"
+    ],
+    "logic_rationale": "Extractiveness is authored moderate-low (0.32) because under THIS reading's own lights the expected-value framing is largely doing genuine coordination work: it produces real, defensible commensurability across energy sources and the underlying probability estimates for modern reactor designs are not fabricated. The extraction that exists runs through discount-rate selection for multi-generational waste liability and through the averaging-away of geographically concentrated tail consequence — real but narrower than a tail-dominant reading would find. Suppression is low-moderate (0.28): tail-risk framing is not actively suppressed under this standard, it is simply outweighed in the calculation rather than excluded from discourse — this is the declared structural delta (low suppression of tail-risk framing) distinguishing this reading from the sibling readings. Accessibility collapse is moderate (0.4): once a jurisdiction adopts expected-value licensing, alternative frames remain visible and contestable in policy debate, they just don't determine the licensing outcome. Resistance is moderate-high (0.55) reflecting active contestation from waste-adjacent communities and tail-risk researchers even though the standard currently prevails procedurally.",
+    "perspectival_gap": "From the grid_planning_authorities and nuclear_utility_operators seats, the standard reads as rope: real coordination problem (commensurable cross-source risk comparison), genuine beneficiary class, no concentrated victim by their own accounting because tail risk is 'priced in.' From the seat of communities_near_waste_storage_sites and exclusion-zone populations, the same structure reads closer to tangled_rope: the coordination function is real at the national planning level, but the specific parameter choices (discount rates, probability model scope) that make the expected value favorable are set by parties who bear none of the concentrated downside. The engine should compute this divergence from the differential exit_options (mobile/analytical vs. trapped) and power atoms (organized/institutional vs. powerless), not from any authored type label.",
+    "directionality_logic": "Nuclear utility operators and grid planning authorities sit near the beneficiary end: they set or benefit from the calculation and can relocate capital or revise methodology respectively. Climate policy advocates similarly benefit without direct accident exposure. Ratepayers in decarbonizing grids are declared beneficiary-with-secondary-payer because they receive real climate and cost benefit but carry diffuse, unpriced tail exposure — closer to symmetric than either pole. The two payer groups (waste-adjacent communities, exclusion-zone populations) sit near the full-target end: trapped exit options, powerless standing, and the specific structural feature that the national-level expected-value average is computed precisely by netting their concentrated local risk against benefits enjoyed elsewhere. No override was needed; the derivation from beneficiary/victim declarations plus exit_options tracks the intended structural story directly.",
+    "mandatrophy_analysis": "The founding problem (need for a tractable cross-source risk comparison method) remains genuinely live at the level of policy tractability — regulators still need SOME commensurable metric. But the specific parameter choices embedded in the standard (which discount rate, which accident sequences, how far the exclusion radius extends) can drift from serving that founding problem toward serving whichever party currently controls the risk-assessment methodology, without the underlying justification (tractable comparison) ever being challenged. Classifying this as rope rather than tangled_rope reflects that, under this reading's terms, the coordination function still dominates the extraction; a rising theater_ratio or extractiveness trend over a longer interval would be the signal that the standard has drifted toward tangled_rope as parameter-capture accumulates.",
+    "kernel_context": "This constraint instantiates the expected_value_dominant reading of the acceptable_risk_for_energy kernel. Two sibling readings exist as separate constraints, not folded into this one: catastrophic_tail_dominant (which would treat irreversibility and intergenerational waste burden as dominating the calculus, placing nuclear utility operators and grid planning authorities into the victim set rather than nuclear communities) and comparative_risk_dominant (which drops the absolute expected-value threshold entirely in favor of relative-to-alternatives acceptability, changing which parties count as beneficiaries depending on the comparison set chosen). Under this reading specifically, nuclear exits the victim set when the expected-value comparison to fossil alternatives is favorable, tail-risk framing is not suppressed but simply outweighed rather than excluded from discourse, and waste disposal is treated as a solvable engineering-cost line item rather than an unresolvable intergenerational liability — precisely the declared structural delta for this reading."
+  },
+  "omegas": [
+    {
+      "id": "discount_rate_selection_as_hidden_extraction",
+      "question": "Is the discount rate applied to multi-generational waste liability a neutral technical parameter or a de facto policy lever that systematically favors present beneficiaries over future/local payers?",
+      "resolution_mechanism": "Compare discount rates used in nuclear waste licensing against discount rates used elsewhere in the same regulatory system for comparably long-horizon environmental liabilities (e.g. Superfund remediation, climate damage functions); a consistently lower rate applied uniquely to nuclear waste would indicate parameter selection is doing extractive work under cover of technical neutrality.",
+      "impact": "If the discount rate is shown to be selected to produce favorable expected-value outcomes rather than derived from a consistent cross-domain standard, the extractiveness score for this reading should rise and the classification should be reconsidered toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether waste-liability discount rate selection is neutral or extraction-serving."
+    },
+    {
+      "id": "reading_selection_as_the_real_contest",
+      "question": "Is the choice of which kernel reading (expected_value_dominant vs. catastrophic_tail_dominant vs. comparative_risk_dominant) governs a given licensing decision itself a neutral technical matter, or is reading-selection the primary site of contest, with each party favoring whichever reading yields the outcome it prefers?",
+      "resolution_mechanism": "Track which reading each institutional actor (utility, regulator, advocacy group, affected community) argues for across multiple licensing proceedings; consistent alignment between an actor's preferred reading and its structural position (beneficiary vs. payer) would indicate reading-selection itself functions as the extraction mechanism, prior to any within-reading calculation.",
+      "impact": "If reading-selection tracks structural position this cleanly, the three sibling constraints in this family are not independent technical disagreements but a single higher-order contest whose outcome the expected_value_dominant reading's proponents structurally benefit from — this would not change this story's own ε (which remains fixed per DP-001) but would strengthen the case for weighting network analysis across the family.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether kernel-reading selection itself is the primary extraction site, prior to in-reading calculation."
+    },
+    {
+      "id": "waste_engineering_solvability_ambiguity",
+      "question": "Is multi-millennial nuclear waste disposal genuinely a bounded, solvable engineering problem (as this reading treats it) or an irreducibly open-ended liability whose true cost cannot be annualized at all?",
+      "resolution_mechanism": "Track the actual performance of deep geological repository programs (e.g. long-term monitoring data, cost overruns relative to original engineering estimates) against the amortized cost assumptions used in expected-value licensing calculations over multiple decades.",
+      "impact": "If repository costs and timelines consistently exceed original engineering estimates, this reading's core premise (waste disposal is a solvable, boundable engineering cost) weakens, strengthening the catastrophic_tail_dominant reading's claim that annualization mischaracterizes an irreversible burden.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether treating waste disposal as bounded engineering cost is empirically supportable."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_for_energy_catastrophic_tail_dominant",
+      "acceptable_risk_for_energy_comparative_risk_dominant"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the acceptable_risk_for_energy kernel. catastrophic_tail_dominant treats irreversibility and intergenerational burden as dominating the calculus (reversing the victim/beneficiary structure authored here); comparative_risk_dominant drops the absolute threshold for a relative-to-alternatives standard. Each reading has its own ε, its own stakeholder structure, and its own classification per the ε-invariance principle; they are linked here rather than merged because the underlying legitimacy contest is which risk-weighting framework governs licensing, not a shared measurable quantity."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "comparative_risk_dominant",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "probability_weighted_aggregation_is_the_correct_unit_of_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "annualized_amortization_is_valid_for_intergenerational_liabilities",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_probabilistic_risk_assessment_regulatory_consensus",
+    "drift_state": {
+      "moment": "post_fukushima_reassessment_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "nuclear_utility_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

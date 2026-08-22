@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "41273621-2da4-4fed-b538-2ba99d79e98e"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin as Peer-to-Peer Electronic Cash (Big-Block / On-Chain Scaling Reading)",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payment_processors",
+      "low_value_transactors",
+      "merchant_adopters",
+      "mining_pools_favoring_throughput"
+    ],
+    "victims": [
+      "home_node_operators",
+      "resource_constrained_verifiers",
+      "future_full_node_participants"
+    ],
+    "vindicated_propositions": [
+      "whitepaper_title_is_governing_telos",
+      "on_chain_scaling_preserves_peer_to_peer_property"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "payment_processors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build merchant-facing infrastructure that depends on low per-transaction fees and fast confirmation for everyday purchases. A big-block, high-throughput chain lowers their per-transaction cost basis and expands the market of viable use cases (coffee, retail, remittance). They can route volume to whichever chain implementation wins the capacity argument, and lobby for larger block sizes accordingly."
+    },
+    {
+      "name": "low_value_transactors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ordinary users who want to send small amounts cheaply — remittance senders, everyday spenders, unbanked populations targeted by the whitepaper's original framing. They benefit directly from lower fees and faster settlement but have no direct voice in the governance fight over block size; they experience the outcome as either cash-like usability or fee-priced exclusion."
+    },
+    {
+      "name": "merchant_adopters",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Businesses that would accept Bitcoin for point-of-sale transactions if fees stay low and confirmation stays fast. Their adoption decisions are contingent on the network optimizing for transactional throughput rather than settlement assurance; they can simply not adopt, or adopt a competing chain, if fees rise."
+    },
+    {
+      "name": "mining_pools_favoring_throughput",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large mining operations that profit from higher transaction volume and fee revenue at scale; some have economic incentive to support larger blocks since it grows the fee market and transaction count they can process. They have historically pushed for block size increases and can credibly threaten hash-power realignment or chain splits to enforce this reading."
+    },
+    {
+      "name": "home_node_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals running full nodes on consumer hardware and residential internet connections to independently verify the chain. Larger blocks directly raise the storage, bandwidth, and initial-sync cost of running a node. As blocks grow, many are priced out of verification and must either trust third parties or stop verifying — their only real exit is abandoning independent verification altogether, which forfeits the property they joined the network to hold."
+    },
+    {
+      "name": "resource_constrained_verifiers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Verifiers in regions with expensive or capped bandwidth and storage — often exactly the unbanked or economically marginal populations the electronic-cash vision claims to serve. Bigger blocks that lower transaction fees for them simultaneously raise the cost of running the software that lets them verify their own holdings without trusting an intermediary."
+    },
+    {
+      "name": "future_full_node_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Not yet in the network, but structurally affected by irreversible capacity decisions made now: a permanently larger block size compounds the initial-block-download burden for every future participant who wants to verify the chain from genesis. They have no voice in the present governance contest and inherit whatever verification cost the current fight settles on."
+    },
+    {
+      "name": "protocol_developers_scaling_faction",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Developers and client maintainers who read the whitepaper's title and abstract as binding: 'A Purely Peer-to-Peer Version of Electronic Cash.' They advocate for and implement on-chain capacity increases, framing verification cost as a solvable engineering problem rather than a governing constraint, and have historically forked implementations to pursue this reading when consensus with the small-block faction failed."
+    },
+    {
+      "name": "small_block_faction_developers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold the rival reading (decentralization/verifiability as binding) and object to this reading's premise that transactional throughput should govern capacity decisions. Structurally excluded from this reading's own frame by definition — this constraint story authors their sibling reading as a separate constraint, not as a voice within this one, per the ε-invariance decomposition rule."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a payment network where many independent parties can transact peer-to-peer without a trusted intermediary, at costs low enough for everyday retail and remittance use — the genuine collective-action problem of building a censorship-resistant, low-friction payment rail.",
+    "transfer_function": "Moves verification cost from transaction senders and receivers (who get low fees) onto node operators (who bear higher storage, bandwidth, and sync costs as capacity scales), and moves influence over the network's governing telos from the pseudonymous founding text to whichever coalition of miners, processors, and developers can operationalize their preferred reading of it.",
+    "absent_voices": "Satoshi Nakamoto is absent by design (departed 2011) and cannot adjudicate which telos is binding. Future participants who would run nodes on cheap consumer hardware, and who are structurally priced out by a permanently expanded block size, have no seat in the current governance contest. The small-block/decentralization faction is treated as the sibling reading rather than a voice inside this one.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the electronic-cash-as-binding-telos reading disappeared overnight (i.e., this reading lost the governance contest entirely), payment processors and merchant adopters who depend on low fees would need to migrate to layered or off-chain solutions or to alternative chains; low-value transactors would face the fee pressure the original design sought to avoid. Node operators, conversely, would see their verification costs stabilize. Whether the 'world rearranges' or 'stays the same' depends entirely on which constituency you ask — hence contested rather than a clean verdict.",
+    "founding_problem": "The whitepaper was written to solve double-spending without a trusted third party, explicitly framed in its title and abstract as enabling peer-to-peer electronic cash — a payment system usable for everyday commerce without banks or payment processors as intermediaries.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The whitepaper text itself (Section 1, Introduction) and its title are cited by this reading's proponents as authoritative and unambiguous. However, no living corroboration exists from Nakamoto post-2011; the small-block faction — an outside party sharing no benefit from this reading's victory — corroborates that the text says 'electronic cash' but disputes that this phrase forecloses capacity trade-offs against decentralization, citing later Nakamoto forum posts about block size caps as evidence the founder anticipated exactly this tension without resolving it in favor of unlimited scaling."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint instantiates the electronic_cash_reading of the bitcoin_whitepaper_purpose kernel: the whitepaper's title and stated purpose ('A Purely Peer-to-Peer Version of Electronic Cash') is treated as the binding telos, requiring the protocol to prioritize low transaction fees and everyday transactional throughput, including via expanded on-chain capacity. The sibling store_of_value_reading (authored as a separate constraint) treats decentralization and full-node verifiability as binding instead, subordinating throughput to those goals. A third sibling, nakamoto_oracle_opacity, is not itself a reading of the telos but documents the structural fact that Nakamoto's 2011 disappearance leaves no living authority to adjudicate between the other two. This story's ε (0.58, substantially extractive) describes the standing arrangement as this reading's proponents' own operation would look under scrutiny — a coordination function (cheap peer-to-peer payments) riding alongside an asymmetric transfer (verification cost pushed onto node operators, especially future ones) — not the sibling arrangement it argues against.",
+    "narrative_context": "Bitcoin's founding whitepaper is titled 'Bitcoin: A Peer-to-Peer Electronic Cash System.' One reading of that title treats 'cash' as the binding design telos: the system must remain usable for small, frequent, low-fee transactions, which in practice requires expanding on-chain block capacity (8MB+ has been proposed and, in forked implementations, deployed) to keep per-transaction fees low as adoption grows. This reading was operationalized in the 2017 block size fork that produced Bitcoin Cash and its subsequent splits, and remains a live position among some Bitcoin proponents who argue the original chain has drifted from its founding purpose toward a settlement-layer / store-of-value function instead.",
+    "key_agents": [
+      "payment_processors: primary beneficiary (organized/mobile) — lower per-transaction costs, larger addressable market",
+      "home_node_operators: primary target (powerless/trapped) — bear rising verification costs from larger blocks",
+      "mining_pools_favoring_throughput: secondary beneficiary/agenda_setter (powerful/arbitrage) — profit from transaction volume, can force chain splits",
+      "protocol_developers_scaling_faction: agenda_setter (organized/arbitrage) — implements and defends the capacity-increase interpretation",
+      "small_block_faction_developers: excluded from this reading's frame — holds the sibling reading, authored elsewhere"
+    ],
+    "logic_rationale": "Extractiveness (0.58) reflects a genuine coordination function — the network really does need to process transactions cheaply to serve as cash — layered with an asymmetric cost transfer: throughput increases are funded by degrading the economic feasibility of independent verification, and that cost falls hardest on node operators who hold no direct financial stake to offset it, unlike miners and processors who profit from volume. Suppression (0.52) captures that this reading has historically been enforced through hard forks and hash-power contests rather than pure voluntary coordination — 'enforcement' here means the capacity decision, once made in a chain a coalition controls, forecloses the option of low-cost verification for anyone who stays. Theater ratio (0.40) reflects that some capacity-increase advocacy has shifted from solving the original bandwidth/storage problem toward defending a brand/legitimacy claim ('we are the real Bitcoin') independent of whether throughput gains are still delivering the promised fee reductions at current adoption levels. Accessibility collapse (0.45) is moderate — Lightning Network and sidechains exist as alternative routes to low fees without expanding base-layer blocks, so the on-chain-capacity path is not the only route to the stated goal, which is why this reading is contested rather than settled. Resistance (0.72) is high, reflecting the sustained, organized opposition from the small-block/decentralization faction, which has repeatedly out-competed this reading for control of the dominant chain's naming and network effects.",
+    "directionality_logic": "Payment processors, merchant adopters, and low-value transactors are declared beneficiaries because the reading's success directly lowers their costs and expands their addressable use cases — low d, benefit-side of the derivation. Mining pools favoring throughput are also beneficiaries, deriving fee-market growth from higher transaction volume, and secondarily function as agenda-setters because their hash power can enforce a fork. Home node operators, resource-constrained verifiers, and future full-node participants are declared victims: the same capacity increase that lowers fees for the beneficiary set directly raises their storage/bandwidth/sync burden, and their exit option is effectively to stop independently verifying — which is not a neutral exit but a forfeiture of the property (trustless verification) that gives the currency its value proposition in the first place. This is why their exit_options are marked trapped rather than merely constrained: leaving the constraint means abandoning the thing they joined for.",
+    "mandatrophy_analysis": "The founding problem (build a payment system usable for everyday commerce without trusted intermediaries) is contested as live vs. dead: proponents of this reading say it remains completely live and unsolved on the base layer as fees have historically spiked during congestion; opponents (including the small-block faction, an outside corroborating voice) argue the problem has been substantially addressed via layer-2 protocols (Lightning) without requiring base-layer capacity expansion, and that continued push for bigger blocks past that point is agenda-setter capture (mining pools and processors preserving base-layer fee revenue and settlement dominance) rather than genuine unmet coordination need. The classification as tangled_rope rather than snare reflects that the coordination function (cheap payments) is real and was the literal stated purpose of the founding document — this is not manufactured cover, unlike a pure snare. But it is not a clean rope either, because the verification-cost transfer onto node operators, especially future ones who never consented to the capacity decision, is a genuine asymmetric extraction riding on top of that real coordination function."
+  },
+  "omegas": [
+    {
+      "id": "cash_telos_bindingness",
+      "question": "Is the whitepaper's title and framing ('cash') a binding design constraint that overrides all other considerations, or one design goal among several (decentralization, censorship-resistance, fixed supply) that must be balanced rather than prioritized?",
+      "resolution_mechanism": "No living authority can resolve this (Nakamoto's 2011 disappearance is itself the subject of the sibling nakamoto_oracle_opacity constraint). Resolution in practice occurs through market selection among forked implementations — whichever chain's user base, developer ecosystem, and price discovery persist longest is treated retroactively as having 'won' the interpretive contest, though this is a sociological fact about adoption, not a logical resolution of the textual question.",
+      "impact": "If the cash telos is binding, capacity-limiting design choices on the dominant chain constitute a departure from founding purpose and this reading's beneficiaries have a strong normative claim; if the telos is one goal among several to be balanced, the store_of_value_reading's prioritization of decentralization is equally faithful to the source text and this reading's exclusive claim on 'the real purpose' weakens substantially.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the whitepaper's stated title constitutes a binding, overriding design telos or one of several balanced goals."
+    },
+    {
+      "id": "verification_cost_externality_magnitude",
+      "question": "At what block size does the storage/bandwidth cost of full-node verification become prohibitive enough for ordinary users (as opposed to well-resourced entities) to price out independent verification at scale?",
+      "resolution_mechanism": "Empirical measurement of full-node counts, geographic distribution, and initial-block-download times across implementations with different block size limits (comparing Bitcoin, Bitcoin Cash, and other forked chains with larger blocks over comparable adoption periods).",
+      "impact": "If node counts and geographic diversity have held steady or grown on higher-capacity chains, the victim-side cost claim in this story is overstated; if they have measurably declined relative to counterfactual growth, the tangled_rope classification's asymmetric-extraction premise is empirically supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical relationship between block size and the real-world decline of independent full-node verification."
+    },
+    {
+      "id": "layer_two_substitutability",
+      "question": "Do off-chain scaling solutions (Lightning Network, sidechains) fully substitute for on-chain capacity in delivering the 'cash' telos's low-fee, high-throughput goal, making base-layer capacity increases unnecessary?",
+      "resolution_mechanism": "Comparative analysis of transaction volume, fee levels, and adoption friction on layer-2 solutions versus base-layer capacity-expanded chains over a multi-year period.",
+      "impact": "If layer-2 fully substitutes, this reading's central premise (that the telos requires base-layer capacity expansion) is undermined and the extraction imposed on node operators becomes harder to justify as necessary; if layer-2 solutions face persistent adoption friction or centralization pressure of their own, the on-chain reading's coordination claim strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether off-chain scaling solutions are a genuine substitute for the capacity expansion this reading demands."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "store_of_value_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "nakamoto_oracle_opacity",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "title_text_fixes_governing_purpose",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "throughput_capacity_is_engineering_tradeoff_not_constraint",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "original_whitepaper_cash_framing",
+    "drift_state": {
+      "moment": "post_2017_scaling_wars",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__store_of_value_reading",
+      "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity"
+    ],
+    "dual_formulation_note": "This story is one of three linked constraints decomposing the natural-language label 'the purpose of the Bitcoin whitepaper' per the ε-invariance principle: electronic_cash_reading (this file, tangled_rope, ε=0.58), store_of_value_reading (sibling file, expected lower ε or different classification given its decentralization-first premise), and nakamoto_oracle_opacity (sibling file, documenting the structural absence of an adjudicating authority rather than instantiating a reading itself). Each carries its own stable ε and stakeholder set; none averages over the others. The electronic_cash_reading and store_of_value_reading are mutually coexisting positions held by different factions of the same ongoing dispute — neither forecloses the other within a single framework, which is why their reading_relation is coexists_with rather than forecloses. The oracle_opacity constraint influences both readings downstream by removing the possibility of authoritative resolution, which is why it is marked influences rather than coexists_with from this reading's perspective."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

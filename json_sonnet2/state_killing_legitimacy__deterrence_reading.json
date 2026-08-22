@@ -1,0 +1,306 @@
+{
+  "header": {
+    "constraint_id": "state_killing_legitimacy__deterrence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "396d5509-8730-4024-b570-9b3cf2d71395"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Capital Punishment Justified as Deterrent Signal",
+    "topic_domain": "criminal_justice/political_philosophy/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_future_victims",
+      "state_deterrence_apparatus",
+      "elected_prosecutors_and_officials"
+    ],
+    "victims": [
+      "condemned_offenders",
+      "wrongfully_convicted_death_row_inmates",
+      "offender_families"
+    ],
+    "vindicated_propositions": [
+      "rational_actor_deterrence_theory",
+      "state_capacity_to_calibrate_punishment_to_social_utility"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "condemned_offenders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Sentenced to death not primarily because of what they deserve as individuals but as an instrument of a broader signal the state sends to future would-be killers. Their execution is scheduled, appealed, and carried out by a state apparatus that treats their death as a communicative act aimed at third parties, not at them. They have no exit from the sentence once affirmed on appeal."
+    },
+    {
+      "name": "wrongfully_convicted_death_row_inmates",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "A subset of the condemned population who did not commit the crime but were convicted through eyewitness error, prosecutorial misconduct, or inadequate defense. The deterrence rationale requires irreversible execution to work as a signal, which forecloses correction once carried out; they bear the full cost of any error in the system with no path to remedy after execution."
+    },
+    {
+      "name": "offender_families",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Carry social stigma, financial cost of appeals, and the loss of a family member as a side effect of the state's demonstration project. They have no standing in the deterrence calculus at all — they are neither offenders nor beneficiaries, simply uncompensated collateral."
+    },
+    {
+      "name": "potential_future_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "An unidentifiable, statistical population who would be saved from future murder if the deterrent effect is real. They cannot be named, cannot consent to or contest the arrangement made in their name, and the entire justification rests on an empirical claim about their existence that cannot be verified for any specific individual."
+    },
+    {
+      "name": "state_deterrence_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Prosecutes capital cases, carries out sentences, and produces the public narrative that executions reduce future homicide rates. Selects which studies and statistics to cite, controls execution scheduling and publicity, and bears no direct cost if the deterrence claim turns out to be empirically false — the mechanism persists regardless of what the evidence shows."
+    },
+    {
+      "name": "elected_prosecutors_and_officials",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Gain political capital from being 'tough on crime' by seeking and obtaining death sentences, using the deterrence rationale as public justification. Their careers benefit from visible severity regardless of whether the underlying deterrent mechanism functions as claimed; they can move to other offices or private practice regardless of outcome."
+    },
+    {
+      "name": "criminology_deterrence_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study whether execution rates causally affect homicide rates using panel data and natural experiments. The empirical literature is genuinely contested — some studies find deterrent effects, most find none or find effects too small to distinguish from noise. Their findings are selectively cited by both sides of the political debate."
+    },
+    {
+      "name": "general_public_as_jurors_and_voters",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Vote for capital-punishment-supporting officials and serve on capital juries based on a belief in deterrence that is rarely tested against the actual empirical record presented to them. Their consent to the arrangement is real but built on contested and often outdated claims about what the evidence shows."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a mechanism, in principle, for reducing future murders by raising the expected cost of killing to a level that rational potential offenders will weigh against the benefit of the act, protecting an unidentifiable class of future victims.",
+    "transfer_function": "Moves the offender's life from the offender to an instrumental role in a public signal, and moves whatever protective value the signal produces (if any) to potential future victims and to the political capital of officials who campaign on capital punishment's toughness.",
+    "absent_voices": "Potential future victims cannot speak for themselves — they are a statistical abstraction invoked on their behalf without their consent or corroboration. Wrongfully convicted inmates, once executed, are permanently excluded from any subsequent exoneration process that could correct the record.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If capital punishment were abolished, states that already show no measurable deterrent effect in the empirical record would see no change in homicide rates by the deterrence reading's own logic (arguing the mechanism was theater). Officials and segments of the public who believe in the signal would contest this, insisting the world would rearrange toward more killing. The disagreement is precisely about whether the coordination function is real or a cover story, which is why the verdict is contested rather than settled.",
+    "founding_problem": "The claimed problem is unconstrained future homicide: without a maximal, irreversible penalty communicating the state's seriousness, rational potential killers would not be sufficiently deterred by lesser penalties.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Prosecutors and elected officials who campaign on capital punishment attest the deterrent problem is live and execution addresses it. Outside the benefiting parties, the National Research Council's 2012 review of deterrence studies and the majority of published criminology panel-data research attest that existing studies are too methodologically flawed to establish a deterrent effect either way — meaning the founding problem's solution by this specific mechanism is empirically uncorroborated by the research community that would be positioned to confirm it."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the deterrence reading of the state-killing-legitimacy kernel: execution is justified not by what the offender deserves (the retributive reading) or condemned outright regardless of outcome (the abolition reading), but as a rational signal calibrated to reduce future homicides by raising the expected cost of killing. The offender is instrumentalized as a means to a social end — their death is valuable to the state not for its own sake but for its communicative and deterrent effect on an unidentifiable population of potential future offenders and victims. The empirical support for the deterrent mechanism is genuinely contested in the criminology literature (the NRC 2012 review found existing studies uninformative), which is the structural source of this reading's moderate rather than extreme extractiveness — the coordination story may be partly real, but it also may be a fully unverifiable justification riding on the machinery of execution.",
+    "logic_rationale": "Extractiveness (0.58) is moderate rather than severe because the reading retains a genuine, if contested, coordination claim: if deterrence is real, potential future victims are a real beneficiary class, distinguishing this from a pure snare. Suppression (0.72) is high because the arrangement requires an active state apparatus — courts, executioners, appellate review — to carry out irreversible punishment, and it forecloses any correction for the wrongfully convicted. Theater ratio (0.44, rising over the interval) reflects the growing gap between the strength of the empirical deterrence claim (weakening as sounder panel-data studies fail to find robust effects) and the persistence of the rationale in political and prosecutorial discourse — the signal is increasingly maintained as performance for the voting public rather than as data-supported policy.",
+    "directionality_logic": "Condemned offenders and especially wrongfully convicted inmates sit at the full-target end: trapped, powerless, irreversibly harmed, with no capacity to benefit from or exit the arrangement. Potential future victims are named as the structural beneficiary class per the reading's own logic, but they are unidentifiable and cannot corroborate their own benefit, which is exactly the evidentiary gap the omega below addresses. Elected officials are a secondary beneficiary who profit politically regardless of whether the underlying mechanism functions, which is why their exit options (mobile) diverge sharply from the state apparatus's institutional arbitrage position despite sharing beneficiary status.",
+    "mandatrophy_analysis": "The founding problem (unconstrained homicide requiring maximal deterrent signal) is authored as contested rather than dead or live, because the underlying empirical claim was never robustly established even at founding — this is not a mandate that clearly solved its problem and then outlived it, but one whose problem-solving status has always been uncertain. Classifying this as tangled_rope rather than snare preserves the distinction between an arrangement with zero coordination function and one with a contested-but-possible one; classifying it as tangled_rope rather than rope acknowledges the asymmetric, irreversible cost borne by a class (wrongfully convicted inmates) whose harm cannot be coordination-justified even if deterrence is real for others.",
+    "kernel_context": "This constraint is the deterrence reading of the state_killing_legitimacy kernel. The sibling readings are the retributive_reading (murderer forfeits life-right through proportional desert, independent of any social utility calculation) and the abolition_reading (state killing categorically violates human dignity regardless of desert or utility). This reading is distinguished by instrumentalizing the offender as a means to a social end — the ε here is driven by contested empirical deterrence evidence, not by proportionality claims (retributive) or categorical dignity claims (abolition). The three readings are generated as separate constraint stories per the ε-invariance principle; they share no ε and are linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "deterrence_effect_empirical_reality",
+      "question": "Does execution actually produce a measurable marginal deterrent effect on homicide rates beyond what long-term imprisonment produces, or is the deterrence claim empirically unsupported?",
+      "resolution_mechanism": "Meta-analysis of natural experiments (moratoria, Furman-era suspension and reinstatement, cross-state panel data controlling for simultaneity) using methodologically rigorous causal inference, as attempted by the NRC 2012 panel.",
+      "impact": "If no deterrent effect exists, the entire beneficiary class (potential_future_victims) is fictional and the constraint collapses toward a snare — irreversible extraction from condemned offenders with no offsetting coordination benefit. If a robust effect is found, the tangled_rope classification's coordination leg is substantially strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deterrent mechanism this reading depends on is empirically real."
+    },
+    {
+      "id": "instrumentalization_vs_desert_distinctness",
+      "question": "Is treating the offender purely as a means to future-victim protection (rather than as receiving deserved punishment) a coherent moral basis for execution independent of retributive justification, or does the deterrence reading covertly smuggle in desert-based reasoning to justify why THIS offender (rather than a random person) is the one sacrificed for the signal?",
+      "resolution_mechanism": "Philosophical analysis of whether deterrence theory can select a specific offender for execution without appeal to desert — e.g., whether a deterrence-only framework could justify executing a random innocent person if it produced an equivalent signal, and whether real-world capital sentencing ever actually operates this way.",
+      "impact": "If deterrence cannot coherently select offenders without borrowing desert-based criteria, this reading may not be structurally independent of the retributive_reading, which would change the reading_relations declared in cs_structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether pure deterrence reasoning can stand independent of retributive desert in offender selection."
+    },
+    {
+      "id": "wrongful_conviction_irreversibility_asymmetry",
+      "question": "How does the deterrence reading's own logic weigh the cost of executing an innocent person (which produces a false signal and destroys any future correction) against the projected marginal benefit to potential future victims?",
+      "resolution_mechanism": "Formal cost-benefit modeling using documented exoneration rates for capital cases (DNA-era exoneration data) against the best-available deterrence effect-size estimates.",
+      "impact": "If the wrongful-execution cost dominates the expected deterrent benefit under any plausible parameter range, the deterrence reading's own utilitarian logic would counsel against retaining execution, which is a strong internal-consistency omega for this reading specifically.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deterrence reading's utilitarian calculus is internally consistent given known wrongful conviction rates."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "state_killing_legitimacy__retributive_reading",
+      "state_killing_legitimacy__abolition_reading"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the state_killing_legitimacy kernel, each authored as a separate constraint with its own ε: the retributive_reading (proportional desert, forfeiture of life-right independent of utility), the deterrence_reading (this story — instrumentalization for social signal, moderate contested ε), and the abolition_reading (categorical dignity violation, which would author execution's ε as near-maximal extraction with no coordination leg at all). The readings are linked here rather than merged because their beneficiary structures, victim sets, and empirical dependencies are structurally distinct — merging them would violate ε-invariance."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "utilitarian_penal_calculus",
+    "drift_state": {
+      "moment": "post_nrc_2012_review_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "abolition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "offender_instrumentalization_for_aggregate_welfare",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "deterrent_signal_causally_reduces_future_homicides",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

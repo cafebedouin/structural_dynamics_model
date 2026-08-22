@@ -1,0 +1,279 @@
+{
+  "header": {
+    "constraint_id": "animal_moral_status__property_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "567c356d-e234-49bc-8cdb-a9651e9aea5d"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.35,
+    "claimed_type": "mountain",
+    "human_readable": "Animal Property Status: Interests Subordinate to Human Interests by Definition",
+    "topic_domain": "applied_ethics/legal_philosophy/animal_studies",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "livestock_producers",
+      "animal_agriculture_industry",
+      "biomedical_research_industry",
+      "pet_and_working_animal_owners",
+      "consumers_of_animal_products"
+    ],
+    "vindicated_propositions": [
+      "property_rights_doctrine",
+      "human_interest_primacy_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_property_status",
+      "question": "Is the classification of animals as property a mind-independent structural fact (analogous to a natural law of ownership over non-rational beings) or a constructed legal-economic arrangement maintained because it benefits identifiable industries and consumers?",
+      "resolution_mechanism": "Compare cross-jurisdictional and cross-historical variation in animal legal status: if property classification is a genuine mountain, it should show minimal variation across independent legal traditions with different economic interests; substantial variation correlated with the economic stake of the classifying institution would indicate a constructed arrangement wearing naturalized cover.",
+      "impact": "If constructed, the FSM signature applies and the correct classification is tangled_rope or snare (property owners benefit, animals bear costs, enforcement via law is active) rather than mountain. If genuinely natural (grounded in an uncontested moral-status boundary), the mountain claim holds and beneficiary presence is incidental rather than diagnostic.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether animal-as-property is natural-law-like or a constructed arrangement with identifiable beneficiaries (FSM trigger)."
+    },
+    {
+      "id": "kernel_reading_location_of_disagreement",
+      "question": "Where exactly does the property_reading diverge from the welfare_reading and abolitionist_reading — is it a disagreement about facts (do animals have morally relevant interests?) or about the threshold at which interests generate constraints on use?",
+      "resolution_mechanism": "Examine whether property-reading proponents deny animal sentience/interest-having as a factual matter, or concede sentience but deny that sentience alone generates standing independent of ownership. The welfare reading concedes sentience and regulates cruelty; the property reading's distinguishing move is that even conceded suffering does not generate an independent claim — only waste/inefficiency constrains use.",
+      "impact": "If the disagreement is factual (about sentience), it is resolvable by biology and should collapse toward welfare or abolitionist readings as evidence accumulates. If it is a threshold/definitional disagreement (interests exist but don't bind), it is a stable normative fork that persists regardless of empirical findings about animal cognition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locates the property reading's core distinguishing move relative to its sibling readings within the animal_moral_status kernel."
+    },
+    {
+      "id": "waste_inefficiency_constraint_scope",
+      "question": "Does the 'no constraint on use, only on waste/inefficiency' feature of this reading function as a genuine limit, or is it vacuous in practice because 'waste' is defined by the property owner's own economic calculus?",
+      "resolution_mechanism": "Examine anti-cruelty and waste statutes as actually enforced under property frameworks (e.g., livestock 'humane handling' rules justified on carcass-quality/productivity grounds): if enforcement tracks economic loss to the owner rather than animal suffering per se, the constraint is definitionally circular and adds no real limit.",
+      "impact": "If circular, the property reading's claimed metrics (low extraction, low suppression) understate the actual leverage the reading exercises over animal treatment, since 'waste' is set entirely by the beneficiary class.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the waste/inefficiency limit is a real constraint or an artifact of owner-defined economic calculus."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is one reading of the contested animal_moral_status kernel — the property reading, under which animals are legally and morally classified as resources or property whose interests have no independent standing; any consideration they receive is derivative of, and subordinate to, human interests (economic, scientific, recreational, nutritional). This reading imposes no constraint on use as such — an owner may use an animal for any human purpose — and only constrains outright waste or gross inefficiency (destroying a resource without benefit to anyone). The property reading is authored here as a clean, self-contained constraint: it does not describe or average over the welfare_reading (which concedes sentience and regulates cruelty within permitted use) or the abolitionist_reading (which holds that property status itself is the violation). Those are separate constraints, linked via network.affects_constraints, each with its own ε.",
+    "key_agents": [
+      "livestock_producers: Primary beneficiary (organized/institutional, arbitrage exit) — collects economic value from treating animals as capital/inventory",
+      "animal_agriculture_industry: Primary beneficiary (institutional, arbitrage exit) — entire business model rests on the property classification",
+      "biomedical_research_industry: Beneficiary (institutional, constrained exit) — research access depends on animals lacking independent standing that would require consent-like protections",
+      "pet_and_working_animal_owners: Beneficiary (moderate, mobile exit) — ownership rights over companion and working animals depend on the same doctrine",
+      "consumers_of_animal_products: Diffuse beneficiary (organized, mobile exit) — benefits from low-cost animal products enabled by unconstrained use",
+      "animal_welfare_advocates: Excluded/resisting voice (organized, analytical exit) — contests the doctrine's naturalness from outside the beneficiary set",
+      "legal_scholars_of_animal_law: Observer (analytical, analytical exit) — analyzes the doctrine's structure without direct stake"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.15) because, from within this reading's own lights, the property classification is not experienced as extraction at all — there is no victim class within the reading's own terms (animals are not moral patients whose loss counts as a cost in this reading's accounting). Suppression is moderate (0.3): the doctrine is defended in law and social practice against welfare and abolitionist challengers, requiring some active maintenance (property statutes, agricultural exemptions from general animal cruelty law, research-animal exemptions), but it is not principally coercive against human parties — there is no human class being suppressed to sustain it, only animals excluded from the moral-patient category by definitional fiat. Accessibility collapse is high (0.7): once one accepts the property framing, alternative framings (welfare or rights) become hard to construct within the same legal-economic logic, since property law's own categories (owner/object, waste/non-waste) have no native slot for an object's own interests. Resistance is moderate (0.35): welfare and abolitionist movements actively contest the doctrine, but the doctrine's centrality to entire industries gives it substantial inertial defense.",
+    "perspectival_gap": "From the beneficiary seats (producers, industry, owners), this reading appears as settled background law — barely visible as a constraint at all, more like the water animals-as-property swim in. From the excluded seat (welfare/rights advocates), the same arrangement is visible as an actively defended, historically contingent legal choice with enormous stakes for billions of sentient beings. The engine computes these as different seat-level readings of the same structural data; the divergence is exactly what a kernel-reading analysis is built to surface, not something to resolve within this file.",
+    "directionality_logic": "Beneficiaries (property owners, industry, consumers) sit near the full-beneficiary end of directionality — the constraint subsidizes their use of animals as inputs with no independent-standing constraint to internalize. There is no victim group authored in this reading's own base_properties, because within the property reading's own terms, animals are not agents whose costs register as extraction — this is the reading's defining structural move, not an oversight. (The abolitionist_reading and welfare_reading, as separate constraints, author animals or animal-interest-proxies within their own victim sets according to their own lights.)",
+    "mandatrophy_analysis": "Mandatrophy is not directly at issue for a mountain claim, but the FSM omega documents the live question of whether this 'natural' classification has outlived any genealogical function it once had (e.g., early property law's practical need for a workable ownership category for domesticated animals) and now persists primarily because it is profitable to maintain, independent of whether it remains descriptively adequate to what is now known about animal cognition and sentience.",
+    "kernel_context": "This constraint instantiates the property_reading of the animal_moral_status kernel. Two sibling readings exist as separate constraint files: welfare_reading (animals are sentient beings whose suffering should be minimized within regulated use; cruelty is wrong, use is permissible) and abolitionist_reading (animals are rights-bearing individuals; property status itself is the violation; all use perpetuates victimization). This file authors ONLY the property reading's own internal logic and does not average, hedge, or blend across the three readings — ε here (0.15, v_low) reflects the property reading's own accounting, in which no victim class is recognized, not a compromise value between the readings' differing ε's."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_moral_status__welfare_reading",
+      "animal_moral_status__abolitionist_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling stories decomposing the colloquial 'animal moral status' claim per the ε-invariance principle: property_reading (this file, ε≈0.15, mountain claim, no victims), welfare_reading (ε mid-range, tangled_rope claim, victims are animals-within-permitted-use-suffering-beyond-regulated-limits), and abolitionist_reading (ε high, snare claim, victims are all animals under any use). The three are NOT the same constraint measured three ways — each reading has a structurally distinct victim set, beneficiary set, and enforcement story, per DP-001 ε-invariance. They are linked here via affects_constraints because each reading's legal and cultural dominance shapes the resource availability and legitimacy conditions available to the others (e.g., property_reading's legal entrenchment raises the cost of establishing welfare_reading's regulatory constraints, and welfare_reading's regulatory apparatus in turn provides partial cover that helps stabilize property_reading against abolitionist challenge)."
+  },
+  "stakeholders": [
+    {
+      "name": "livestock_producers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Own and manage animals as productive capital — inventory, machinery-equivalents whose value is measured in yield. The property classification means no independent animal interest can override a production decision; only waste (destroying value without economic benefit) is constrained. They lobby to maintain and extend agricultural exemptions from general animal-cruelty statutes."
+    },
+    {
+      "name": "animal_agriculture_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "An entire economic sector — meat, dairy, egg, and byproduct production and processing — is structured around treating animals as fungible resource units. The property doctrine is load-bearing for cost structures, financing, insurance, and trade law; its erosion would require systemic restructuring."
+    },
+    {
+      "name": "biomedical_research_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Uses animals as experimental subjects/tools under regulatory frameworks (e.g., IACUC-style review) that assume animals as property-like research materials subject to procedural safeguards against waste and unnecessary suffering, not to independent standing that could require consent-equivalent protections. Exit from the doctrine would require fundamentally different research paradigms."
+    },
+    {
+      "name": "pet_and_working_animal_owners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Hold legal ownership over companion and working animals, entitling them to make unilateral decisions (rehoming, euthanasia, breeding, sale) that would be constrained if the animal held independent legal standing. Most experience this as an unremarkable background feature of ordinary life rather than a contested doctrine."
+    },
+    {
+      "name": "consumers_of_animal_products",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit diffusely from lower prices and unconstrained supply chains that the property classification enables — no independent-standing consideration adds cost to production. Individually mobile (can choose alternative products) but collectively benefit from the doctrine's stability as a class."
+    },
+    {
+      "name": "animal_welfare_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Contest the property reading from outside the beneficiary set, arguing that even conceding productive use, animals' capacity to suffer generates claims that a pure property/waste framework cannot register. They are excluded from the property reading's own internal accounting by definitional construction, not by procedural oversight — the reading's core move is precisely to exclude their concern as a category error."
+    },
+    {
+      "name": "legal_scholars_of_animal_law",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the doctrine's historical development, cross-jurisdictional variation, and internal tensions (e.g., anti-cruelty statutes carved out of a property framework) without a direct material stake in its persistence or abolition."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, low-transaction-cost legal category (property) that lets humans allocate, trade, breed, use, and dispose of animals without needing to resolve or litigate any independent-interest claim on the animal's behalf — coordinating markets, research, agriculture, and companionship around a single settled ownership logic.",
+    "transfer_function": "Under this reading, nothing is 'transferred' from animals to humans in a morally cognizable sense, because animals are not accounted as parties with interests capable of being transferred from — the reading's own accounting registers only transfers among human parties (producer to consumer, owner to owner). This is itself the structurally significant fact the reading asserts.",
+    "absent_voices": "Animal welfare and rights advocates are the clearest excluded voice — they would argue the property/waste framework is definitionally incapable of registering the harm the reading's own operation may produce, but this reading is authored from within a framework that treats their objection as external to the relevant legal-moral category, not as an internal correction it must accommodate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the property classification of animals disappeared overnight (replaced by, say, a rights-bearing or trust-beneficiary status), livestock and biomedical industries would face immediate existential restructuring, ownership transactions (sale, breeding, euthanasia decisions) would require new legal processes, and entire supply chains and financing structures built on animals-as-inventory would need to be rebuilt around a different legal category. The scale of rearrangement is exactly what marks this as a constructed legal arrangement rather than a physical mountain, notwithstanding its claimed naturalness.",
+    "founding_problem": "Early legal systems needed a workable category for domesticated animals as objects of ownership, trade, inheritance, and productive use — resolving disputes over livestock, working animals, and animal products required a settled ownership framework analogous to other movable property.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Property-owning industries attest the founding problem remains fully live (animals must be tradeable, financeable, insurable assets for modern agriculture and research to function). Legal historians and animal-law scholars — a seat outside the beneficiary set — attest that while the practical need for a workable ownership category was real historically, the doctrine's current scope (extending unconstrained-use logic to contexts involving sentient, cognitively sophisticated animals under industrial conditions unimaginable when the doctrine formed) substantially exceeds what the founding problem required, making the doctrine's current form at least partly a persistence-by-inertia-and-interest phenomenon rather than a pure solution to its original problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "welfare_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "animal_interests_have_no_independent_standing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "use_constrained_only_by_waste_not_by_animal_interest",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "classical_property_law_ownership_doctrine",
+    "drift_state": {
+      "moment": "contemporary_animal_cognition_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

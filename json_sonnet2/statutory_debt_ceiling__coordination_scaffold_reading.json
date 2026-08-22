@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "statutory_debt_ceiling__coordination_scaffold_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "26de279a-9ddd-4abb-bd90-029ca46f4767"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.15,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
+    "claimed_type": "scaffold",
+    "human_readable": "Statutory Debt Ceiling as Treasury Operational Coordination Mechanism",
+    "topic_domain": "constitutional_law/political_economy/fiscal_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "treasury_department",
+      "congress_appropriations_committees",
+      "bond_market_participants"
+    ],
+    "vindicated_propositions": [
+      "legislative_control_of_borrowing_authority",
+      "periodic_congressional_review_of_aggregate_debt"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "treasury_department",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Issues and manages federal debt within the aggregate ceiling set by Congress, using extraordinary measures to smooth cash management around ceiling adjustments. Benefits from a single aggregate authorization rather than needing item-by-item borrowing approval for every appropriation Congress has already enacted. Cannot unilaterally raise the ceiling and must coordinate timing with Congress before headroom exhausts."
+    },
+    {
+      "name": "congress_appropriations_committees",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sets the aggregate ceiling periodically as a single vote rather than authorizing each individual bond issuance or spending program's financing separately. Retains a checkpoint for reviewing the cumulative fiscal trajectory that spending and tax votes already created, without re-litigating each appropriation's financing mechanics."
+    },
+    {
+      "name": "bond_market_participants",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Rely on predictable, rules-based Treasury issuance to price and hold federal debt. Benefit when the ceiling functions as routine housekeeping — resolved with reasonable lead time — because it preserves confidence in orderly market operations; they are exposed to volatility only when the coordination function breaks down, which this reading treats as a distinct pathology rather than a design feature."
+    },
+    {
+      "name": "federal_program_beneficiaries",
+      "role": "observer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Depend on continued federal payments (benefits, contracts, salaries) that flow through Treasury operations governed by the ceiling. Under the coordination-scaffold reading, routine and timely ceiling adjustments mean this population experiences no disruption — their situation here is the baseline case, not the crisis case documented in the sibling extraction reading."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the ceiling's operation as one instance of Congress's Article I borrowing-authorization power, comparing pre-1917 individual bond authorizations to the aggregate-limit statute. Assess whether the aggregate mechanism preserves meaningful congressional control while reducing transaction costs, independent of episodes where the mechanism has been used coercively."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prior to 1917, Congress authorized federal borrowing bond-issue by bond-issue, requiring a separate act for each instrument. The aggregate ceiling replaced that with a single periodic cap, letting Treasury manage issuance mechanics (maturities, timing, instruments) without returning to Congress for each transaction, while preserving a periodic congressional checkpoint on the total.",
+    "transfer_function": "In this reading, no systematic transfer occurs: the mechanism reallocates administrative labor from repeated congressional bond-by-bond votes to periodic aggregate votes, moving procedural burden rather than resources between parties. Treasury gains issuance flexibility; Congress retains and periodically exercises a check on total borrowing.",
+    "absent_voices": "Legislative minorities who would use the periodic vote as leverage for unrelated policy demands are not silenced by this reading — they are simply outside its scope; this reading brackets episodes of weaponized brinkmanship as a distinct phenomenon (see extraction_snare_reading) rather than treating them as evidence against the coordination function.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the aggregate ceiling vanished, Treasury could issue debt within appropriated levels without a separate borrowing-authorization step, and the periodic congressional review moment would disappear. Whether this counts as 'the world rearranging' is itself contested within the kernel: the coordination-scaffold reading holds the review function could be replicated by other means (e.g., built into the budget resolution process), making disappearance largely administrative; other readings hold the leverage point itself is the point and its disappearance would be structurally significant. This reading records the split rather than resolving it.",
+    "founding_problem": "In 1917, financing World War I required rapid, large-scale, flexible bond issuance. Requiring Congress to authorize every individual bond series was administratively unworkable at wartime borrowing volumes, so Congress substituted a single aggregate limit for the previous instrument-by-instrument authorization system.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Treasury officials and congressional budget staff (interviews, GAO reports on debt issuance mechanics) attest the administrative-coordination problem remains live — Treasury still benefits from not needing per-instrument authorization. Independent fiscal historians and organizations outside Treasury (e.g. Committee for a Responsible Federal Budget, Government Accountability Office) attest that whatever the founding administrative problem, the ceiling has since the 1970s functioned mainly as a periodic political flashpoint rather than as active fiscal restraint, since it does not constrain future spending or taxing decisions already enacted."
+  },
+  "interval": {
+    "start": 1917,
+    "end": 2023
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1917,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1917,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors the coordination-scaffold reading of the statutory debt ceiling kernel: the view that the aggregate limit is best understood as a procedural substitute for the pre-1917 practice of authorizing each federal bond issuance individually, reducing transaction costs for Treasury while preserving a periodic congressional checkpoint. Under this reading, the vast majority of ceiling adjustments historically have been routine, and episodes of brinkmanship are treated as a distinct, separable pathology rather than as the mechanism's true function. This is a deliberately narrow, low-extraction reading: it authors ε at 0.22, reflecting the theater and friction costs the routine-adjustment process still carries (periodic political posturing, media cycles, occasional short-term uncertainty) without asserting the systemic hostage-taking dynamic the sibling extraction_snare_reading documents.",
+    "key_agents": [
+      "treasury_department: Primary administrator/beneficiary (institutional/constrained) — gains issuance flexibility, coordinates timing with Congress",
+      "congress_appropriations_committees: Primary agenda-setter (institutional/mobile) — retains periodic aggregate review without per-bond votes",
+      "bond_market_participants: Secondary beneficiary (organized/mobile) — benefits from predictable, rules-based issuance",
+      "federal_program_beneficiaries: Downstream observer (powerless/trapped) — experiences no disruption under this reading's routine-case assumption",
+      "constitutional_scholars: Analytical observer (analytical/analytical) — assesses the mechanism's structural function independent of episodic misuse"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.22) and rising only modestly across the interval, reflecting this reading's core empirical claim: most historical ceiling adjustments (78+ instances since 1917) were routine, bipartisan, and low-conflict. The rising theater_ratio (0.1 to 0.4) captures a real drift this reading acknowledges even while defending the coordination function: since the 1970s, and especially after 2011, the periodic vote increasingly attracts performative brinkmanship, raising the proportion of activity that is symbolic/leveraging rather than substantive fiscal review. Suppression is low (0.15) because within this reading no party is coerced into compliance beyond ordinary legislative process — Treasury operates within a limit Congress set and can revise. Accessibility_collapse is moderate (0.35): once the mechanism is understood, alternative designs (built-in debt authorization tied to appropriations, as most other democracies use) become visible, so this is not a mountain-grade collapse of alternatives, consistent with a scaffold rather than a natural necessity.",
+    "directionality_logic": "Treasury and Congress both sit near the beneficiary end: the mechanism reduces their respective transaction costs (per-bond authorization for Treasury; per-bond voting burden for Congress) relative to the pre-1917 baseline. Bond market participants benefit from the predictability the routine-case pattern provides. Federal program beneficiaries are structurally exposed to disruption if the coordination function fails, but under this reading's own terms that failure mode is bracketed as exceptional rather than definitional — hence their exit_options are authored as 'trapped' (reflecting real dependency) while the extraction metric stays low (reflecting this reading's claim that the trap is rarely sprung).",
+    "mandatrophy_analysis": "The founding problem (per-bond authorization unworkable at wartime borrowing scale) is genuinely dead as a live technical constraint — modern Treasury has electronic issuance infrastructure that would trivially handle per-appropriation authorization if required. This creates a mandatrophy tension internal to the coordination-scaffold reading itself: the aggregate-ceiling *form* persists past the *administrative* problem it solved, even though this reading maintains the periodic-review *function* remains valuable as an independent check. The scaffold classification (with sunset-clause-equivalent: periodic legislative renewal) is the right frame for this internal tension — it flags the coordination function as needing to justify itself at each renewal rather than being grandfathered as settled infrastructure.",
+    "kernel_context": "This constraint instantiates the coordination_scaffold_reading of the statutory_debt_ceiling kernel. Two sibling readings of the same kernel exist as separate constraints: extraction_snare_reading treats the identical statutory text as a weaponized boundary enabling legislative-minority hostage-taking under default threat (high ε, high suppression, victims = federal beneficiaries and global bond markets); constitutional_nullity_reading treats the ceiling as void ab initio under the 14th Amendment's public-debt clause, making the entire coordination-vs-extraction question moot at the constitutional layer. This reading is narrowly the routine-operation case: it shares the same statutory kernel and the same underlying Treasury/Congress relationship as extraction_snare_reading but authors a structurally distinct claim about the modal case versus the tail-risk case, and shares no textual premise with constitutional_nullity_reading, which denies the kernel's validity altogether."
+  },
+  "omegas": [
+    {
+      "id": "modal_case_vs_tail_risk_framing",
+      "question": "Is the debt ceiling correctly characterized by its modal historical operation (routine, low-conflict adjustment, ~90% of instances) or by its tail-risk operation (weaponized brinkmanship episodes: 1995-96, 2011, 2013, 2023), given that the tail episodes carry disproportionate real-world cost (2011 credit rating downgrade, market volatility)?",
+      "resolution_mechanism": "Quantify the asymmetry: compare aggregate administrative cost savings from routine adjustments against the realized and counterfactual costs of brinkmanship episodes (credit rating impact, borrowing cost premia, market volatility spillover). If tail costs dominate expected value, the coordination framing understates the constraint's true operation even if modally accurate.",
+      "impact": "If tail risk dominates the expected-value calculation, this reading's low ε (0.22) understates the mechanism's true extractive potential, and the extraction_snare_reading becomes the more descriptively accurate lens for policy purposes even though this reading remains historically defensible for the median case.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether modal-case or tail-risk framing is the correct basis for classifying the ceiling's function."
+    },
+    {
+      "id": "coordination_function_separability",
+      "question": "Is the periodic congressional review function this reading credits as valuable actually separable from the aggregate-limit mechanism, or does the review function require the leverage/crisis-potential that the extraction reading identifies as the point?",
+      "resolution_mechanism": "Comparative analysis of alternative designs (e.g., automatic debt-limit adjustment tied to enacted appropriations, used in some other democracies) that would preserve a review checkpoint without creating a binding, breachable limit. If such designs demonstrably preserve congressional oversight without crisis risk, the current mechanism's crisis-proneness is not functionally necessary to its coordination value.",
+      "impact": "If separable, the coordination_scaffold_reading's defense of the current statutory form (rather than of some review function in the abstract) is weakened — the current mechanism's specific hostage-taking-enabling structure would be shown as inessential to the coordination benefit this reading identifies.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the review/coordination function requires the specific breachable-limit design or could be achieved by a non-crisis-prone alternative."
+    },
+    {
+      "id": "reading_selection_evidentiary_basis",
+      "question": "What determines which of the three kernel readings (coordination scaffold, extraction snare, constitutional nullity) is the operative frame for a given administration or Congress at a given moment?",
+      "resolution_mechanism": "Track which reading's predictions (routine adjustment vs. brinkmanship vs. litigation over 14th Amendment authority) actually materialize across administrations, and whether the party control configuration (unified vs. divided government) predicts which reading manifests.",
+      "impact": "If divided government reliably predicts extraction-reading dynamics while unified government reliably predicts coordination-reading dynamics, the three readings are not just interpretive stances but empirically distinguishable regimes triggered by an identifiable structural variable — which would argue for decomposing this kernel further by government-configuration rather than treating the readings as purely interpretive.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether party-control configuration is the hidden variable selecting which kernel reading manifests in practice."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "extraction_snare_reading",
+      "constitutional_nullity_reading"
+    ],
+    "dual_formulation_note": "Three constraints share the statutory_debt_ceiling kernel: this story (coordination_scaffold_reading, scaffold, ε=0.22), extraction_snare_reading (tangled_rope or snare, high ε, victims = federal beneficiaries/bond markets under crisis conditions), and constitutional_nullity_reading (mountain-adjacent or void classification under 14th Amendment analysis, ε near zero if the nullity claim is correct since no valid constraint would exist to extract). All three read the identical statutory text (31 U.S.C. 3101) but diverge on whether the modal case or tail case is definitional, and whether the statute is even constitutionally operative. Each is authored as a separate ε-invariant story per the decomposition principle; this file does not attempt to average or reconcile the three."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "administrative_efficiency_substitution_1917",
+    "drift_state": {
+      "moment": "post_2011_debt_ceiling_crisis_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_snare_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_nullity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregate_authorization_reduces_transaction_costs_without_ceding_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "periodic_review_checkpoint_retains_meaningful_congressional_oversight",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__hybrid_dependency",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "e0ecb92a-194e-49b9-99a9-845853df2572"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Simulation/Real-World Competence Exercise Requirement",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "flying_public",
+      "carrier_safety_departments",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "line_pilots",
+      "junior_crew",
+      "training_departments"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set the minimum required mix of simulator hours, line-operating experience, and non-jeopardy audit checks that a pilot must accumulate to remain current. Administers the certification regime and can shift the ratio between simulation and real-world components in response to accident data or lobbying. Does not fly the routes or absorb the schedule cost of compliance."
+    },
+    {
+      "name": "carrier_safety_departments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design and administer the internal training curricula that satisfy the hybrid requirement, and benefit from the liability shield and public trust the requirement provides. They also enforce scheduling around line-check slots and real-aircraft rotations, absorbing organizational cost but capturing reputational and legal benefit."
+    },
+    {
+      "name": "line_pilots",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must periodically surrender scheduled flying time and personal time to complete simulator sessions, line checks, and non-jeopardy audits on top of an already demanding roster. Cannot substitute pure simulation for the real-aircraft and line-operations components without losing currency and, ultimately, their certification and livelihood. Their only real exit is leaving the profession."
+    },
+    {
+      "name": "junior_crew",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the requirement most acutely: junior first officers and new-type-rated pilots need the largest volume of real-aircraft anchoring hours precisely when they have the least seniority to secure favorable scheduling for it, and the least standing to contest audit outcomes that could end a probationary career."
+    },
+    {
+      "name": "flying_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Fly on aircraft crewed by pilots whose competence is maintained under this hybrid regime. They cannot observe or verify the training mix directly and have no exit from the constraint's operation other than not flying; they benefit passively from a requirement they never negotiate."
+    },
+    {
+      "name": "training_departments",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Absorb the operational cost of scheduling real aircraft out of revenue service for training legs and coordinating non-jeopardy audits around live operations, while also gaining professional legitimacy and budget from being the visible custodians of the safety function."
+    },
+    {
+      "name": "simulator_manufacturers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Have a commercial interest in the requirement shifting further toward simulation (their product) and away from real-aircraft time, but are not parties to the certification debate and have no direct say in how the hybrid ratio is set, despite lobbying through industry associations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine problem that neither pure simulation nor pure real-world practice alone reliably maintains rare-event competence: simulation builds procedural muscle memory and allows rehearsal of failures too dangerous to stage live, while real aircraft time and non-jeopardy line audits anchor that rehearsal against the sensory, organizational, and interpersonal texture of actual operations that simulation cannot fully replicate.",
+    "transfer_function": "Moves scheduled flying hours, rest time, and career risk exposure from pilots (especially junior crew) to the training and safety apparatus, in exchange for certified currency; moves liability protection and public trust capital to carriers and regulators who administer the requirement.",
+    "absent_voices": "Simulator manufacturers, who profit from the simulation component and have a structural interest in expanding its share of the requirement, are lobbying stakeholders but not seated parties to the certification-ratio decision. Passengers, the ultimate beneficiaries, have no voice in setting the mix at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the real-world anchoring component vanished and only simulation training remained, carriers would save substantial scheduling and revenue-service cost, but the competence base would drift toward a fragile equilibrium calibrated to simulator physics rather than live aircraft behavior — this is a testable degradation, not a mere preference shift, and the certification and insurance regime would need to be rebuilt around a different risk model.",
+    "founding_problem": "Early flight training and later jet-era CRM failures showed that pilots who trained exclusively in early low-fidelity simulators or exclusively through infrequent real-world exposure both developed dangerous competence gaps — the hybrid requirement was built after accident investigations (e.g., loss-of-control and automation-complacency events) identified specific failure modes traceable to each pure approach.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent accident investigation boards (not carriers or regulators themselves) continue to cite both simulator-only training gaps and real-world exposure gaps in post-incident reports; academic human-factors researchers outside the airline industry corroborate that the specific failure modes the hybrid regime targets remain observed in current data, not merely historical."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.415
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'hybrid_dependency' reading of the competence-exercise kernel: the claim that neither pure simulation nor pure real-world catastrophe exposure is sufficient to maintain rare-event competence in high-reliability aviation operations, and that a structured mix of simulator training, periodic real aircraft time, and non-jeopardy line audits is required. The requirement is administered by regulators and carrier safety departments, who benefit from the liability shield and public trust it confers, while the operational cost — schedule disruption, career risk exposure during audits, and the disproportionate real-aircraft-hour burden on junior crew — falls on line pilots. This is presented as a Tangled Rope: it solves a genuine coordination problem (competence maintenance under rare-event risk) but does so through a structure that extracts disproportionately from junior and lower-power crew relative to the carriers and regulators who administer it, and that extraction requires active enforcement (mandatory currency requirements, audit failure consequences) to persist.",
+    "logic_rationale": "Extractiveness is moderate (0.38 at interval end) — the requirement is not primarily rent-extraction but does impose real, unevenly distributed cost. Suppression is moderate (0.42): pilots cannot simply opt out of the real-aircraft component without losing certification, but the requirement is not coercive in the sense of foreclosing exit from the profession altogether. Theater ratio is modest but rising (0.18 to 0.28) reflecting a genuine risk in hybrid regimes: as scheduling pressure grows, the real-world anchoring component can drift toward minimally-compliant, ritualized line checks rather than genuinely diagnostic exercise — a Goodhart-style drift the temporal series is intended to flag for review, not to assert has already occurred.",
+    "directionality_logic": "Regulatory agencies and carrier safety departments sit near the beneficiary end: they administer the requirement, capture the liability and trust benefits, and bear little of the schedule or career-risk cost directly. Line pilots and especially junior crew sit near the target end: they supply the real-aircraft hours and absorb audit risk with constrained or trapped exit (their only alternative to compliance is exiting the profession). The flying public is a passive, powerless beneficiary — trapped in the sense of having no practical alternative to flying but also collecting the safety benefit without bearing any of the transfer cost.",
+    "mandatrophy_analysis": "The hybrid framing prevents mislabeling this as pure extraction: there is a real, well-corroborated coordination function (closing failure modes neither pure simulation nor pure real-exposure training close) that would not disappear if the constraint were removed — accident data would likely worsen. It also prevents mislabeling it as pure coordination (a Rope): the cost of the real-world anchoring component falls disproportionately and structurally on the least powerful seats (junior crew), and the requirement is actively enforced against them via certification consequences, which is exactly the asymmetric-extraction-plus-coordination signature of Tangled Rope rather than Rope.",
+    "perspectival_gap": "From the regulator and safety-department seats, the requirement reads as pure coordination — a necessary technical standard they steward on behalf of public safety. From the junior-crew seat, the same requirement reads as an unevenly distributed burden imposed by parties who do not fly the audited legs or absorb the schedule disruption. The engine's per-seat computation should reflect this asymmetry rather than resolving it toward either seat's self-report.",
+    "kernel_context": "This story instantiates the hybrid_dependency reading of the competence_exercise_requirement kernel: competence is maintained only through a combined simulation-plus-real-world regime, in contrast to the simulation_as_adequate_exercise reading (which holds high-fidelity simulation alone suffices) and the catastrophe_as_necessary_anchor reading (which holds that only real catastrophic or near-miss events provide irreducible exercise). This reading occupies the middle position: it treats simulation as necessary-but-insufficient, and treats non-jeopardy audits and real aircraft time — not actual catastrophe — as the required anchor, making it structurally distinct from both siblings rather than a synthesis of them."
+  },
+  "omegas": [
+    {
+      "id": "hybrid_ratio_correctness",
+      "question": "Is the specific mix of simulation hours to real-world anchoring hours mandated by current regulation actually calibrated to the failure modes it targets, or is the ratio a historical artifact that has not been re-derived from current accident and near-miss data?",
+      "resolution_mechanism": "Longitudinal comparison of competence-related incident rates across carriers or jurisdictions with different simulation-to-real-world ratios, controlling for fleet type and route complexity.",
+      "impact": "If the ratio is poorly calibrated, the requirement is extracting real-world hour costs from pilots without a corresponding safety return, shifting the classification toward a less-justified extraction; if well-calibrated, the coordination function is strongly validated and extraction is better understood as a necessary cost of the coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the mandated simulation/real-world mix is empirically calibrated or a legacy artifact."
+    },
+    {
+      "id": "reading_boundary_location",
+      "question": "Where exactly does the hybrid_dependency reading's boundary with simulation_as_adequate_exercise sit — at what simulator fidelity level would the real-world anchoring component become redundant, if ever?",
+      "resolution_mechanism": "Track simulator fidelity improvements (motion, visual, and physiological cueing) against incident rates in carriers that have experimentally reduced real-world hour requirements; identify whether a fidelity threshold exists past which the two readings converge.",
+      "impact": "If a fidelity threshold is found where outcomes are statistically indistinguishable from the hybrid regime, this reading's core claim (that real-world anchoring is irreducibly necessary) would be falsified for that fidelity class, collapsing this story into the simulation_as_adequate_exercise reading rather than the two remaining structurally distinct constraints.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the hybrid reading's distinguishing premise survives future simulator fidelity gains."
+    },
+    {
+      "id": "junior_crew_burden_asymmetry",
+      "question": "Is the disproportionate real-aircraft-hour burden on junior crew a necessary feature of any hybrid regime (junior pilots need more anchoring because they have less accumulated tacit experience) or an avoidable scheduling-power artifact (senior pilots use seniority to claim favorable slots, pushing burden downward)?",
+      "resolution_mechanism": "Compare hour-allocation patterns across carriers with seniority-based versus needs-based scheduling systems for training and audit slots.",
+      "impact": "If seniority-driven, the asymmetric extraction on junior crew is a fixable organizational artifact rather than an inherent feature of the coordination function, which would narrow the tangled-rope classification's extractive component without touching its coordination component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether junior-crew burden asymmetry is structurally necessary or a scheduling-power artifact."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_adequate_exercise",
+      "catastrophe_as_necessary_anchor"
+    ],
+    "dual_formulation_note": "This story is one of three sibling readings of the competence_exercise_requirement kernel. simulation_as_adequate_exercise claims high-fidelity simulation alone suffices (lower extraction, closer to Rope). catastrophe_as_necessary_anchor claims only real catastrophic or near-miss events provide irreducible exercise (structurally cannot be safely administered as policy, and would likely classify very differently given its ethical impossibility as a designed regime). This story (hybrid_dependency) claims an intermediate, actively-administered mixed regime, with its own distinct beneficiary/victim structure and extraction profile — it is not an average of the other two but a structurally distinct claim about what a working competence regime requires."
+  },
+  "gain_flow": "carrier_safety_departments",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_adequate_exercise",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "real_world_anchoring_is_necessary_supplement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "non_jeopardy_audit_suffices_as_anchor_without_catastrophe",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_automation_complacency_training_reform",
+    "drift_state": {
+      "moment": "contemporary_scheduling_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

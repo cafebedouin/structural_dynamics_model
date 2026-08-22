@@ -1,0 +1,298 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__legitimacy_erosion_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "4843c449-2084-4356-bf85-92c821584ea9"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.58,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rough Consensus Mechanism — Legitimacy Erosion Reading",
+    "topic_domain": "technology_governance/internet_standards/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "well_resourced_vendor_coalitions",
+      "incumbent_working_group_chairs"
+    ],
+    "victims": [
+      "independent_implementers",
+      "underfunded_participants",
+      "future_standards_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "well_resourced_vendor_coalitions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund multiple full-time engineers to attend every meeting, author every draft revision, and staff the mailing-list threads that determine what counts as 'the sense of the room.' Coordinate positions across delegates so that any dissenting voice appears isolated rather than representative. Can walk away and ship a de facto standard through market power if the working group does not ratify their preferred design, so their exit option undercuts the coordination stakes for everyone else."
+    },
+    {
+      "name": "incumbent_working_group_chairs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Declare rough consensus, decide which objections are 'considered but overridden,' and control the agenda and document editorship. Depend on continued participation from well-funded coalitions to keep the working group active and are professionally identified with the process's legitimacy, which makes them reluctant to rule against the loudest, best-staffed faction even when its position is a minority view."
+    },
+    {
+      "name": "independent_implementers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and maintain implementations without corporate sponsorship, attend meetings on personal time, and cannot staff the sustained thread presence needed to be heard as 'the room.' Their technical objections are frequently noted in minutes and then overridden by declared rough consensus. Exit means either implementing a spec they believe is technically inferior or maintaining an incompatible fork that loses interoperability."
+    },
+    {
+      "name": "underfunded_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Represent civil-society, academic, or Global South interests with no travel budget and no dedicated staff time; participate sporadically via mailing list. Their positions arrive late, are read as 'not really part of the discussion,' and are the first excluded when a chair narrates who was 'considered.' They have no credible exit — they either accept whatever emerges or lose any voice in a standard that will govern infrastructure they depend on."
+    },
+    {
+      "name": "future_standards_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Everyone who will build on top of the ratified standard after the fact — developers, downstream vendors, end users of interoperable systems. Never had a seat in the room and bear the long-run cost of a standard shaped to favor incumbents' architecture rather than open interoperability, discovered only once switching costs have made the design load-bearing."
+    },
+    {
+      "name": "ietf_leadership_bodies",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The IESG and IAB hear appeals of consensus calls and can, in principle, overturn a chair's declaration. In practice they rarely reverse a working-group consensus determination absent egregious procedural failure, and their review criteria (was the process followed) do not reach whether the underlying consensus was captured by resource asymmetry rather than technical merit."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Rough consensus is meant to let a technically diverse, geographically distributed community converge on a single interoperable specification without a formal vote that a minority could weaponize or a single vendor veto that could stall progress indefinitely.",
+    "transfer_function": "Moves the authority to define what counts as 'the sense of the working group' — and thereby the shape of the resulting standard — from whichever position is technically strongest to whichever position is best staffed and most persistently voiced, transferring architectural control from independent and underfunded participants to well-resourced coalitions.",
+    "absent_voices": "Underfunded participants and future standards users are structurally quietest: the former cannot sustain the thread presence rough consensus actually measures, the latter are not born yet or not present as an organized interest. Their objections, when raised at all, are the ones most often narrated by chairs as 'considered but not enough to block consensus.'",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Well-resourced coalitions would say the world stays the same — they would simply route around a defunct IETF via de facto market standards, having the market power to do so. Independent implementers and underfunded participants would say the world rearranges significantly: without even a contested legitimacy claim to appeal to, there would be no forum in which a well-documented technical minority objection could ever be recorded, let alone occasionally prevail. The dispute over which is true is itself part of what the legitimacy-erosion reading identifies as under contest.",
+    "founding_problem": "Early internet standards bodies needed a way to reach durable technical agreement across an open, voluntary, non-hierarchical community without the paralysis of unanimity requirements or the capture risk of formal majority voting controlled by whoever shows up with the most delegates.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IETF leadership and long-tenured chairs attest the mechanism still functions as designed and point to successful multi-stakeholder standards as evidence. Independent researchers studying IETF participation data (academic network-governance scholarship, not funded by working-group participants) and several public post-mortems from implementers who left contested working groups attest that participation and influence now correlate strongly with employer travel budgets and staffing, and that 'considered but overridden' has become a formula for dismissing under-resourced objections regardless of technical merit — corroboration from outside the coalitions that benefit from the current reading of consensus."
+  },
+  "gain_flow": "well_resourced_vendor_coalitions",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the legitimacy-erosion reading of the IETF openness-commitment kernel: rough consensus as a procedural mechanism whose own credibility is the object being extracted. Unlike the commons-stewardship reading (which treats the open-standard as a public good preserved for all implementers) or the capture-substrate reading (which treats the standards process as a coordination substrate where resource advantage is encoded directly into technical gatekeeping), this reading's claim is narrower and more corrosive: the consensus-determination act itself — the chair's declaration of 'rough consensus' — is a legitimacy-bearing artifact that well-resourced factions have learned to manufacture through sustained presence rather than earn through technical argument, and every successful manufacture of that kind degrades the credibility of the mechanism for the next dispute. The victim here is not (only) any single excluded implementer's design preference; it is the future evidentiary value of a 'consensus was reached' claim.",
+    "logic_rationale": "Extractiveness rises over the interval (0.38 to 0.71) as sustained-presence tactics (staffed delegations, thread persistence, coordinated late-stage objections) become more professionalized among vendor coalitions, while theater_ratio rises even faster (0.25 to 0.62) because the actual technical deliberation that rough consensus is supposed to measure increasingly gives way to performative process-following — extensive minute-taking and 'last call' rituals that document that objections were heard without altering outcomes. Suppression is moderate and rising (0.32 to 0.58): there is no formal exclusion, but sustained procedural fatigue and the framing of persistent objectors as 'blocking' functions as an increasingly effective informal filter. Accessibility_collapse is comparatively low (0.4) because the mailing lists and meetings remain nominally open to anyone — the capture operates through differential capacity to use the open door, not through closing it.",
+    "directionality_logic": "Vendor coalitions sit near the beneficiary end: their arbitrage-grade exit option (they can ship de facto standards regardless of IETF ratification) paradoxically increases their leverage inside the process, since they have the least to lose if a given consensus call goes against them and the most staff to make sure it usually doesn't. Independent implementers and underfunded participants sit near the target end: constrained-to-trapped exit options mean the outcome of any given consensus call is load-bearing for their actual product or advocacy work, with no comparable fallback. Future standards users are structurally maximal-target despite having zero present voice — their d is high not because they are exploited today but because the standard's design costs will be theirs to bear indefinitely.",
+    "mandatrophy_analysis": "The founding problem — reaching durable technical agreement without unanimity-paralysis or majority-vote capture — has not disappeared; large open standards efforts still need SOME convergence mechanism. That is why this is authored as tangled_rope rather than snare: a genuine coordination function persists (the working group does eventually produce interoperable specifications that ship and work). But the specific instrument for measuring 'the sense of the room' has drifted from a technical-merit proxy toward a staffing-and-persistence proxy, and that drift is not visible in the process's own self-description — chairs and leadership bodies still narrate every consensus call as a merit-based technical determination. The mandatrophy is partial and reading-specific: the mechanism's ORIGINAL mandate (durable convergence) is still live; what has eroded is the CLAIM that the mechanism reliably measures the thing it purports to measure. That erosion is precisely what the sibling capture_substrate_reading treats as already fully realized in the technical output, while this reading locates the erosion one level up, in the credibility of the determination procedure itself.",
+    "perspectival_gap": "From the chairs' and vendor coalitions' seats, each individual consensus call looks procedurally sound — objections were heard, minutes reflect deliberation, no rule was violated. From independent implementers' and underfunded participants' seats, the same sequence of individually-defensible calls aggregates into a pattern where their technically substantive objections are reliably the ones narrated as 'considered but overridden.' Neither seat is lying; the divergence is structural, arising from who has the resources to make persistence itself the deciding factor.",
+    "kernel_context": "This constraint instantiates the legitimacy_erosion_reading of the ietf_openness_commitment kernel. The sibling commons_stewardship_reading treats the open standard as a preserved public good and focuses on interoperability outcomes for implementers broadly; it would author much lower extraction because it evaluates the standard's output rather than the process's internal credibility. The sibling capture_substrate_reading treats the standards process as already a coordination substrate for encoding resource advantage directly into technical gatekeeping — a more totalizing capture claim focused on the artifact (the spec) rather than the procedure (the consensus call). This reading is narrower and more procedural than either: its claim is specifically that the rough-consensus determination mechanism — the act of declaring 'the room agrees' — is contested and increasingly game-able, and that this contestation is corrosive to the mechanism's own legitimacy independent of whether any particular resulting spec is good or bad on the merits."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_ietf_openness",
+      "question": "The IETF openness commitment kernel admits at least three structurally distinct readings (commons_stewardship, capture_substrate, legitimacy_erosion); which reading a given dispute over a specific working group invokes determines whether the relevant failure mode is measured as design capture, credibility erosion, or no failure at all.",
+      "resolution_mechanism": "No single resolution mechanism disambiguates the readings, because they are not competing empirical claims about one fact — they are different structural lenses on the same kernel, each tracking a different variable (output interoperability, encoded gatekeeping, procedural credibility). A sibling reading would change which variable is treated as the victim: commons_stewardship tracks whether the resulting standard remains implementable by all; capture_substrate tracks whether resource advantage is directly encoded into technical choices; legitimacy_erosion (this reading) tracks whether the consensus-declaration act itself retains evidentiary value.",
+      "impact": "Adopting the capture_substrate_reading instead would shift the analysis from the credibility of the process to the content of the resulting standard, likely producing a starker victim set (implementers locked into an inferior architecture) and possibly a snare rather than tangled_rope classification, since capture_substrate's coordination story is thinner. Adopting commons_stewardship would produce a much lower extractiveness reading focused on whether interoperability was actually preserved.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the openness-commitment kernel a given IETF dispute should be evaluated under, and where structural disagreement is located."
+    },
+    {
+      "id": "consensus_measurement_validity",
+      "question": "Is 'rough consensus' still measuring anything distinguishable from 'sustained staffed presence,' or has the proxy fully replaced the target it was meant to approximate?",
+      "resolution_mechanism": "Comparative analysis of working groups with mandatory participation-diversity requirements or resourced travel grants for underfunded participants against working groups without such support, examining whether consensus outcomes and technical quality differ.",
+      "impact": "If diversity-supported working groups produce measurably different (and more broadly adopted or more interoperable) outcomes, this would corroborate the legitimacy_erosion reading's claim that resource asymmetry — not technical merit — is currently driving consensus declarations. If outcomes are indistinguishable, the erosion claim weakens considerably.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rough consensus retains discriminating power independent of participant resourcing."
+    },
+    {
+      "id": "appeal_mechanism_toothlessness",
+      "question": "Does the IESG/IAB appeal process for consensus calls provide a genuine check on capture, or is it structurally unable to reach resource-asymmetry-driven capture because its review standard is procedural compliance rather than substantive fairness?",
+      "resolution_mechanism": "Review of historical appeal outcomes: how many appeals alleging resource-driven capture (as distinct from procedural irregularity) have succeeded, and what standard of review was applied.",
+      "impact": "If appeals essentially never succeed on capture grounds because the review standard cannot reach the underlying asymmetry, this substantially strengthens the case that requires_active_enforcement (chairs' authority to declare consensus, backed by an appeal process that rarely overturns it) sustains the tangled-rope structure rather than checking it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the formal appeal mechanism can actually reach resource-driven capture of consensus calls."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__capture_substrate_reading"
+    ],
+    "dual_formulation_note": "Three linked readings of one kernel (ietf_openness_commitment): commons_stewardship_reading (low extraction, output-focused, treats the standard as preserved public infrastructure), capture_substrate_reading (high extraction, artifact-focused, treats the process as already encoding resource advantage into technical outcomes), and this legitimacy_erosion_reading (moderate-high extraction, procedure-focused, treats the consensus-declaration mechanism's own credibility as the contested resource). Each reading authors its own ε against the same underlying kernel text and institutional history; they are not averaged or reconciled — per DP-001 each is a distinct constraint with a stable ε from its own reading's lights."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "rough_consensus_as_merit_convergence",
+    "drift_state": {
+      "moment": "post_professionalized_participation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "capture_substrate_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "consensus_declaration_is_a_credibility_bearing_act",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sustained_presence_is_not_a_valid_proxy_for_technical_merit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ietf_openness_commitment__commons_stewardship_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

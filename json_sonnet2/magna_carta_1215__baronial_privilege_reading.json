@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__baronial_privilege_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "6ff1fde0-eaed-4695-a0be-7c9cdad390ba"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magna Carta 1215 as Feudal Contract Between King and Baronage (Baronial Privilege Reading)",
+    "topic_domain": "constitutional_law/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landowning_barons",
+      "great_ecclesiastical_lords"
+    ],
+    "victims": [
+      "unfree_villeins",
+      "free_peasant_tenants",
+      "urban_commoners",
+      "women_of_all_classes",
+      "jewish_moneylenders"
+    ],
+    "vindicated_propositions": [
+      "feudal_reciprocity_doctrine",
+      "baronial_consent_to_taxation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "landowning_barons",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Drafted and forced the charter on King John at Runnymede after military rebellion. Secure their own feudal privileges — protection from arbitrary disseisin, scutage only by common counsel, judgment by peers — as a class of tenants-in-chief holding land directly of the crown. Can withdraw military and financial support from the king (and did) as leverage; hold castles and armed retinues as exit/enforcement capacity no other group possesses."
+    },
+    {
+      "name": "great_ecclesiastical_lords",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Bishops and abbots holding baronies benefit alongside lay barons from the same clauses protecting free tenure and freedom of the Church (clause 1). Possess independent international leverage through Rome and can excommunicate or interdict, giving them exit options unavailable to lesser parties."
+    },
+    {
+      "name": "king_john_and_successors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Forced to seal the charter under military duress and sought papal annulment within weeks; his successors reissued modified versions repeatedly. The king administers the crown's relationship to the baronage under the charter's terms and is the party whose arbitrary action (disseisin, unlawful scutage, denial of justice to peers) the document is built to constrain — but only for the contracting class."
+    },
+    {
+      "name": "unfree_villeins",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Constitute the large majority of the rural population, bound to the land and to a lord's manorial court. The charter's protections run to 'free men' (liberi homines) — a term of art excluding villeins by definition. Clause 20's amercement protections for villeins' 'wainage' (implements of husbandry) are the rare exception, protecting the baron's productive asset rather than the villein as a rights-bearer. Have no voice in the charter's negotiation and no standing under it."
+    },
+    {
+      "name": "free_peasant_tenants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Technically 'free' in feudal-legal terms but hold no substantial land and no baronial standing. In practice cannot invoke judgment by peers in any court that matters, cannot bargain with the crown, and are subject to the same lords the charter empowers. The charter's language could in principle be read to cover them, but no enforcement mechanism, court, or advocate exists to make that reading operative for this class in 1215."
+    },
+    {
+      "name": "urban_commoners",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "London and other towns receive limited liberties (clause 13 confirms London's customs) but the mass of urban tradespeople and laborers are not parties to the negotiation and have no representation in the drafting baronial council. Benefit incidentally from municipal charter confirmations but not from the personal-liberty clauses."
+    },
+    {
+      "name": "women_of_all_classes",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Excluded from feudal tenancy-in-chief and thus from the charter's operative class of 'free men' regardless of rank; clauses on widows (7, 8) grant procedural protection against forced remarriage and dower deprivation, but these run to widows as an incident of their late husbands' tenures, not as rights held in their own name. No woman is a contracting party."
+    },
+    {
+      "name": "jewish_moneylenders",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Named adversely in clauses 10 and 11, which restrict debts owed to Jewish creditors upon a debtor's death or minority — protecting baronial heirs' estates from Jewish creditors specifically, singling them out rather than including them among protected parties. Bear a direct textual cost from a charter that names them only to their disadvantage."
+    },
+    {
+      "name": "legal_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Examine the 1215 text, the barons' Articles of the Barons, and contemporary chronicle evidence to establish what 'liber homo' meant to the drafters and how narrowly enforcement actually ran in the years immediately following sealing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine collective-action problem among the tenant-in-chief baronage: constrains King John's arbitrary use of relief, scutage, disseisin, and denial of justice against fellow barons, replacing unilateral royal discretion with common counsel and judgment by peers for the baronial class.",
+    "transfer_function": "Moves discretionary power over taxation, feudal incidents, and judicial process from the king to the baronage as a bloc; imposes no corresponding transfer toward villeins, free peasants, urban commoners, women, or Jewish creditors, two of whom (clauses 10-11) are named only as sources of restricted claims against baronial estates.",
+    "absent_voices": "Villeins, free peasants without baronial standing, urban laborers, women of every class, and Jewish moneylenders were not present at Runnymede and are not addressed by the charter's protective clauses as bearers of the rights it creates; their objection — that 'free men' functions as a term of exclusion rather than universal reference — is visible in the text's own vocabulary but was not voiced by any party with standing in 1215.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 1215 charter (under this reading, as a baronial feudal contract) had never been sealed or been immediately voided without trace, the baronage would have lost its primary written instrument constraining royal fiscal and judicial discretion, and the specific mechanism of judgment by peers and common counsel on scutage would not exist as a precedent the baronage could invoke in subsequent conflicts with the crown (1216, 1217, 1225 reissues). The unprotected classes' situation would be materially unchanged, which is itself part of what this reading asserts.",
+    "founding_problem": "King John's escalating, arbitrary extraction from his tenants-in-chief — unpredictable relief payments, seizure of land without judgment, denial of access to royal courts, and heavy scutage to fund failed continental wars — had made baronial tenure insecure and provoked armed rebellion.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Contemporary chroniclers (Roger of Wendover, Matthez Paris writing shortly after) attest the rebellion's fiscal and feudal grievances from outside the baronial council itself, and papal correspondence (Innocent III's bull annulling the charter within ten weeks) independently corroborates that the instrument was read at the time as a narrow baronial restraint on the crown, not a universal rights charter — the founding problem (unconstrained royal extraction from tenants-in-chief) was substantially resolved by subsequent constitutional development (Parliament, common law courts) centuries ago, though this reading holds the original document itself addressed only the baronial class."
+  },
+  "interval": {
+    "start": 1215,
+    "end": 1225
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1215,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1216,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1217,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1220,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1225,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1215,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1216,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1217,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1220,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1225,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1215,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1216,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1217,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1220,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1225,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story reads the 1215 charter strictly as its own drafters and immediate context frame it: a feudal contract negotiated between an armed baronial faction and a besieged king, in which 'liber homo' (free man) refers to the class of free tenants — practically, the tenant-in-chief baronage and lesser free tenants with standing — and the protections against arbitrary disseisin, unlawful amercement, and denial of judgment by peers run only to parties within that contracting relationship. Villeins, the majority of the rural population, free peasants without baronial standing, urban commoners beyond municipal charter confirmations, women in their own right, and Jewish creditors (named adversely, not protectively, in clauses 10-11) fall outside the charter's operative scope under this reading. Extraction here is measured as the ratio of who bears the costs and exclusions of the settlement (unprotected classes, whose prior vulnerability to arbitrary lordly power is left wholly undisturbed, plus Jewish creditors who are textually disadvantaged) against who captures its protective machinery (the baronage). This is a tangled rope, not a snare: it possesses a genuine coordination function (constraining the king's arbitrary fiscal and judicial power against a specific class of tenants) alongside asymmetric extraction (the protective machinery is built, funded, and enforced by and for that class alone, while the rest of the population's status is untouched or actively worsened).",
+    "key_agents": [
+      "landowning_barons: Primary beneficiary and co-drafter (powerful/arbitrage) — secures feudal protections and taxation consent",
+      "king_john_and_successors: Constrained party and enforcer (institutional/constrained) — bears the extraction of reduced discretion, administers the settlement",
+      "unfree_villeins: Excluded majority (powerless/trapped) — receives no standing under 'free men'",
+      "jewish_moneylenders: Named adversely (powerless/trapped) — textually disadvantaged rather than protected",
+      "legal_historians: Analytical observer — reconstructs contemporary meaning of liber homo from primary sources"
+    ],
+    "logic_rationale": "Extractiveness (0.58) is moderate-high: the charter does real coordination work for its contracting class but the benefit set is narrow relative to the total population governed by the same crown, and two named groups (Jewish creditors, indirectly villeins under their lords) bear costs the instrument does not offset. Suppression (0.62) reflects the coercive character of the settlement's origin (armed rebellion, forced sealing, subsequent papal annulment and renewed war) and the fact that maintaining the baronial reading required repeated military and political contest through 1215-1217. Theater ratio is low (0.2) because the coordination function is substantively real for the contracting class, not merely performative — barons genuinely obtained enforceable constraints on relief and disseisin. Accessibility collapse is high (0.7): once the feudal-contract frame is understood, there was no accessible alternative reading available to excluded groups in 1215 — no court, advocate, or textual hook let a villein or woman invoke the charter on their own behalf.",
+    "directionality_logic": "Barons and great ecclesiastical lords are structural beneficiaries: they co-authored the terms, hold military and financial leverage against the king, and the protective clauses are drafted around their specific feudal incidents (relief, wardship, scutage, disseisin of freehold). The king is the target of the extraction under this reading — his prior discretionary power is what the charter removes — but he retains institutional power and negotiates modified reissues, so his directionality is dampened relative to a fully powerless target. The excluded groups (villeins, free peasants, urban commoners, women, Jewish creditors) are not parties to the transfer at all under this reading; they are outside the constraint's directional axis entirely for the protective clauses, except where the text names them adversely (clauses 10-11), which gives Jewish moneylenders an active victim directionality distinct from the merely-excluded groups.",
+    "mandatrophy_analysis": "The baronial-privilege reading prevents the anachronistic move of treating the 1215 text as already accomplishing universal due process (that is a distinct constraint — the living-document and universal-rights readings — not this one). It also prevents flattening the charter into pure extraction: the coordination function among the baronage was real and effective (it produced a durable check on scutage and disseisin that outlasted John's reign through the 1216, 1217, and 1225 reissues). Classifying this reading as tangled_rope rather than snare or rope avoids both errors: snare would deny any genuine coordination occurred; rope would deny that the settlement's benefits were captured by a narrow class at the expense of everyone else's unchanged (or worsened) position.",
+    "kernel_context": "This is the baronial_privilege_reading of the magna_carta_1215 kernel: 'free men' (liberi homines) is read as a term of feudal art denoting tenant-in-chief status, and the charter's protections are scoped to the contracting relationship between the king and that class alone. Two sibling constraints instantiate different readings of the same kernel and are NOT part of this story: universal_rights_reading treats 'free men' as proto-universal and Clause 39 as emitting a transhistorical due-process constraint reaching all persons; living_document_reading treats the charter's original meaning as legitimately superseded by centuries of interpretive and precedential accumulation (Coke, the American founders, subsequent common law). This story's ε (0.58) is authored strictly for the baronial-contract arrangement as this reading sees it in 1215-1225; it does not average with, or borrow ε from, either sibling."
+  },
+  "omegas": [
+    {
+      "id": "liber_homo_semantic_scope_1215",
+      "question": "Did 'liber homo' in the 1215 text denote only tenant-in-chief barons and greater free tenants, or did contemporary usage already extend more broadly to a wider free (non-villein) population including some urban freemen?",
+      "resolution_mechanism": "Philological analysis of contemporary legal usage of 'liber homo' in plea rolls, charters, and the Assize of Clarendon-era documents contemporaneous with 1215, cross-referenced against the Articles of the Barons' drafting history and the identity of the twenty-five sureties named in clause 61 (all barons).",
+      "impact": "If contemporary usage was already broader than the baronial class, this reading's victim set (free peasants, urban commoners) shrinks and some reclassification toward a wider rope-like coordination is warranted; if usage was as narrow as this reading claims, the tangled_rope classification with a narrow beneficiary set is strongly supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 1215-contemporary legal usage of 'free man' was as narrow as the baronial reading claims."
+    },
+    {
+      "id": "villein_incidental_protection_extent",
+      "question": "Does clause 20's protection of villeins' wainage from disproportionate amercement constitute a genuine (if narrow) extension of protection to unfree tenants, undermining the claim that the charter's protective machinery runs exclusively to the baronial class?",
+      "resolution_mechanism": "Compare enforcement records (where any exist) of clause 20 invoked on behalf of villeins versus invoked to protect a lord's economic interest in his villein's productive capacity.",
+      "impact": "If clause 20 was enforced as protecting the lord's asset rather than the villein as rights-holder, it corroborates this reading's exclusion of villeins from the protected class; if enforced occasionally in the villein's own interest, the victim/beneficiary boundary is less absolute than authored here.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether clause 20 constitutes real villein protection or protection of a baronial economic asset."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Is the correct unit of analysis the 1215 sealed text alone (supporting a narrow baronial reading) or the 1215 text read together with its near-immediate reissues (1216, 1217, 1225), which already show some broadening of enforceable scope through Parliamentary confirmation practice?",
+      "resolution_mechanism": "Textual comparison of the 1215, 1216, 1217, and 1225 versions for scope-relevant changes, and examination of whether reissue confirmations were sought or invoked by any non-baronial party in that decade.",
+      "impact": "If the 1225 reissue (the version that became the basis for later statute-book inclusion) already shows meaningful broadening, this reading's ε and victim set are more defensible as describing 1215 specifically but less defensible as characterizing 'Magna Carta' as it entered enduring legal memory — this is exactly the kind of observable-dependent divergence the ε-invariance principle requires resolving by decomposition rather than averaging, and is part of why this kernel is split into three sibling constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the 1215 text alone or the 1215-1225 reissue sequence is the correct referent for the baronial reading's ε."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "universal_rights_reading",
+      "living_document_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the magna_carta_1215 kernel. baronial_privilege_reading (this story) authors ε=0.58 for a tangled_rope: genuine coordination among the baronial class plus asymmetric extraction against excluded classes, narrowly scoped to 1215-1225. universal_rights_reading authors a distinct, lower-extraction constraint premised on 'free men' reaching all persons and Clause 39 emitting a transhistorical due-process norm. living_document_reading authors a constraint premised on legitimate interpretive supersession of original meaning through centuries of precedent, with its own distinct ε reflecting the modern constitutional-substrate function rather than the 1215 feudal-contract function. The three do not average into one ε; each is a separate constraint linked here for contamination-propagation and family-tracking purposes only."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "feudal_baronial_contract_1215",
+    "drift_state": {
+      "moment": "post_1225_reissue_statute_incorporation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "universal_rights_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "living_document_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liber_homo_denotes_feudal_tenant_class",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "charter_obligations_bind_only_contracting_parties",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

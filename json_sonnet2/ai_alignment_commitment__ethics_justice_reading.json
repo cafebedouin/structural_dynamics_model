@@ -1,0 +1,333 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_commitment__ethics_justice_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "f631e374-45c5-44f1-844b-71e44f259747"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Alignment as Present-Harm and Bias Mitigation (Ethics/Justice Reading)",
+    "topic_domain": "AI Governance / Technology Ethics / Risk Assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fairness_research_labs",
+      "algorithmic_audit_consultancies",
+      "corporate_trust_and_safety_teams"
+    ],
+    "victims": [
+      "gig_platform_workers_subject_to_algorithmic_scoring",
+      "marginalized_loan_and_hiring_applicants",
+      "content_moderators_in_low_wage_markets",
+      "long_term_safety_researchers_defunded_by_reallocation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fairness_research_labs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets the operational definition of 'alignment' inside major labs and conferences as bias auditing, dataset debiasing, and fairness-metric compliance. Administers grant cycles, publication norms, and hiring pipelines around this definition. Can redirect institutional attention and funding toward this framing at will, and largely controls what counts as evidence of alignment progress in this domain."
+    },
+    {
+      "name": "algorithmic_audit_consultancies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sell bias-audit and fairness-certification services to companies seeking to demonstrate alignment compliance. Revenue depends on the ethics/justice framing remaining the dominant operational meaning of alignment; if attention shifts fully to catastrophic-risk framing, this market contracts. Can pivot service offerings if the definition shifts, giving moderate exit."
+    },
+    {
+      "name": "corporate_trust_and_safety_teams",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Adopt bias-mitigation checklists and fairness dashboards as the visible, reportable form of 'doing alignment,' which satisfies regulators and press without requiring architectural changes to the underlying systems that generate the harms. Benefit from a framing that is auditable, PR-legible, and does not require slowing deployment timelines."
+    },
+    {
+      "name": "gig_platform_workers_subject_to_algorithmic_scoring",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are scored, ranked, and deactivated by algorithmic systems whose bias audits are typically conducted post-hoc and voluntarily by the platform, with no worker standing to compel remediation. Fairness reports rarely change deactivation outcomes for individuals; workers cannot exit the scoring system without losing income, and have no seat in defining what 'fair' means for their case."
+    },
+    {
+      "name": "marginalized_loan_and_hiring_applicants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are denied credit or employment by models whose disparate impact is documented in academic fairness literature but rarely triggers binding correction; institutions cite ongoing 'fairness research' as evidence of good-faith effort while the scoring systems that harmed them remain in production. Cannot decline to be scored if they want the loan or job."
+    },
+    {
+      "name": "content_moderators_in_low_wage_markets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Perform the labeling and adjudication work that fairness/bias datasets depend on, often under psychologically harmful conditions and low pay, in service of alignment work that primarily benefits the systems and companies that employ them, not their own working conditions. The 'present harm' framing rarely extends to their own labor conditions."
+    },
+    {
+      "name": "long_term_safety_researchers_defunded_by_reallocation",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Work on catastrophic-risk and control problems in labs where funding, headcount, and publication prestige increasingly flow toward the demonstrated-present-harm framing because it is easier to fund, publish, and defend to boards; they experience institutional pressure to reframe their work in bias/justice terms or lose resources, regardless of their own assessment of where the greatest risk lies."
+    },
+    {
+      "name": "civil_society_and_affected_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Community organizations and directly affected populations who could specify what remedy they actually need (structural changes to scoring systems, not audits) are rarely given standing in the definition of what counts as 'alignment success'; labs and companies define the metrics and consult these groups, if at all, after the framework is already set."
+    },
+    {
+      "name": "ai_governance_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study how the term 'alignment' is operationalized differently across institutions and track whether present-harm framing displaces catastrophic-risk framing in funding and policy attention, without a stake in either outcome."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates attention and resources toward documented, present-tense harms — biased scoring, discriminatory lending and hiring models, exploitative labeling labor — that would otherwise be treated as externalities outside any single actor's responsibility. It gives affected communities a vocabulary and a research/advocacy infrastructure to name harms that were previously undiagnosed or diffuse.",
+    "transfer_function": "Moves institutional attention, research funding, headcount, and reputational credit toward bias-auditing and fairness-compliance work and away from long-horizon control research; moves compliance costs from companies (who absorb audit costs, which are modest relative to revenue) toward the affected communities (who absorb the harms not caught or corrected by the audit regime) and toward long-term safety researchers (who absorb defunding and institutional marginalization).",
+    "absent_voices": "Directly affected communities (gig workers, loan/hiring applicants, low-wage content moderators) rarely have a formal seat in defining what remediation their harm requires; their objection would likely be that fairness audits are process compliance without binding outcome guarantees. Long-term safety researchers would object that reallocation is driven by fundability and PR-legibility rather than a considered risk assessment, but this dispute happens mostly within institutions, not in public.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this reading of alignment vanished overnight, corporate trust-and-safety teams would lose their primary compliance vocabulary and audit consultancies would lose a market — those arrangements would visibly rearrange. But whether the underlying harms (discriminatory scoring, exploitative labeling labor) would be better or worse addressed under a different framing is genuinely disputed between the readings' proponents, which is why this sits at contested rather than a clean verdict.",
+    "founding_problem": "Documented, empirically measurable cases of AI systems reproducing and amplifying race, gender, and class bias in high-stakes decisions (lending, hiring, criminal justice risk scoring, content moderation) with real people harmed in the present, not hypothetically in the future.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent academic bias audits (outside the labs and consultancies that profit from audit work), investigative journalism, and litigation records from affected individuals corroborate that the underlying harms are real and ongoing. However, whether the CURRENT institutional response (audit-and-report cycles) is closing that harm or merely documenting it repeatedly without remediation is attested only by the institutions running the audits themselves — no fully independent body currently verifies remediation outcomes at scale."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint instantiates the ethics_justice_reading of the ai_alignment_commitment kernel: alignment is read as the obligation to prevent reproduction of social bias and present-day, empirically documented harm. Its sibling readings are safety_control_reading (alignment as prevention of catastrophic loss of control over advanced systems) and integrated_reading (alignment as simultaneous, non-exclusive attention to both). This story authors only the ethics/justice reading's own structure: its own beneficiary set (fairness-audit institutions), its own victim set (communities experiencing bias/displacement now, plus defunded long-term safety researchers), and its own extractiveness — it does not average across readings or describe the contest between them inside the metrics.",
+    "narrative_context": "Under the ethics/justice reading, 'AI alignment' names the work of detecting and mitigating bias in deployed systems: discriminatory lending and hiring models, exploitative content-moderation labor pipelines, and algorithmic scoring systems that harm gig workers and marginalized applicants today. This reading built real institutional infrastructure — audit firms, fairness benchmarks, trust-and-safety teams — that gives real present harms a name and a research community. But the same infrastructure has become the primary legible, fundable, PR-safe form of 'doing alignment' inside companies and labs, which pulls funding and prestige away from long-horizon control research and produces a compliance-reporting apparatus that documents harm more reliably than it remediates it for the people actually affected.",
+    "logic_rationale": "Extractiveness (0.58) and theater_ratio (0.44) are both mid-range and rising over the measured interval: the audit-and-report cycle has become increasingly the visible face of 'alignment' inside corporate structures, while binding remediation for individually harmed workers and applicants remains rare. Suppression (0.52) reflects that affected communities have no standing to compel outcome-based correction — they can document harm but not force remedy — and that safety researchers face real institutional pressure to reframe or lose resources, which is a soft but real coercive structure. accessibility_collapse (0.4) and resistance (0.62) reflect that alternatives (binding remediation frameworks, worker co-determination of fairness metrics) are not fully closed off — active advocacy and litigation continue — but the audit-compliance framing meets real resistance precisely because affected parties experience it as insufficient.",
+    "directionality_logic": "Fairness-audit institutions and corporate trust-and-safety teams sit near the beneficiary end: they collect funding, prestige, and compliance credit from this framing being dominant, with mobile-to-institutional exit. The four payer groups sit near the target end for structurally different reasons: gig workers, loan/hiring applicants, and low-wage moderators are trapped and powerless, bearing harm the audit regime documents but rarely remedies; long-term safety researchers are moderate-power but constrained, bearing an institutional reallocation cost that is not physical harm but a resource and credibility transfer away from their assessed priority.",
+    "perspectival_gap": "From the agenda-setting fairness-research seat, this looks like a genuine, hard-won coordination achievement: naming and measuring harms that were previously invisible to institutional risk frameworks. From the payer seats — especially the powerless, trapped ones — the same structure looks like a reporting apparatus that produces audits instead of remedies. The engine should compute these as different seat classifications from the same structural data; the divergence is the finding, not an error to reconcile.",
+    "mandatrophy_analysis": "The founding problem (documented present-tense bias harm) is genuinely live — this is not a dead mandate coasting on inertia. What is contested is whether the CURRENT institutional response (audit-and-report cycles, fairness dashboards) still serves that founding problem or has drifted into a self-perpetuating compliance-signaling function that primarily benefits the audit industry and corporate reputational needs. The founding_problem_status is authored as 'live' rather than 'dead' precisely because the underlying harms are ongoing and real — but the disappearance_verdict is 'contested' because whether THIS SPECIFIC apparatus is the right or sufficient response to that live problem is exactly what the reading contest is about."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "This constraint is one reading (ethics_justice) of the ai_alignment_commitment kernel. The sibling readings are safety_control_reading (alignment as preventing catastrophic loss of control) and integrated_reading (alignment as simultaneous non-exclusive attention to both). Where exactly is the disagreement located: is it about which harms are more probable, which harms are more severe, or which harms are more legible/fundable to institutions?",
+      "resolution_mechanism": "Comparative tracing of institutional funding and headcount allocation decisions against internal risk-assessment memos, if disclosed, would show whether reallocation toward the present-harm framing tracks a genuine probability/severity reassessment or tracks fundability and PR-legibility independent of risk assessment.",
+      "impact": "If reallocation tracks legibility/fundability rather than risk reassessment, the ethics_justice reading's extraction from long-term safety research is better characterized as an opportunistic institutional capture rather than a considered prioritization; if it tracks genuine reassessment, the extraction is a defensible reallocation cost of coordination.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Where the ethics_justice/safety_control kernel disagreement is actually located structurally."
+    },
+    {
+      "id": "audit_to_remedy_gap",
+      "question": "Does the fairness-audit and bias-mitigation apparatus this reading built actually produce binding remediation for harmed individuals (gig workers deactivated unfairly, applicants denied credit/employment), or does it primarily produce documentation and reputational credit without proportionate remedy?",
+      "resolution_mechanism": "Track outcomes for individuals who file bias complaints against audited systems: rate of overturned decisions, compensation, or system change versus rate of 'noted for future review' outcomes, across a sample of audited platforms over several years.",
+      "impact": "A low remedy rate would support classifying this reading's operational apparatus as substantially theatrical (high theater_ratio, tangled_rope leaning snare); a high remedy rate would support a genuine rope/coordination reading closer to the beneficiaries' own framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bias audits produce binding remedy or mostly documentation."
+    },
+    {
+      "id": "reallocation_zero_sum_assumption",
+      "question": "Is the funding/attention relationship between present-harm work and long-term safety research genuinely zero-sum (so that gains for one reading structurally extract from the other), or is the apparent tradeoff an artifact of current institutional budget structures that could be resolved by simply increasing total investment in alignment work broadly?",
+      "resolution_mechanism": "Cross-institutional comparison of labs/agencies that have expanded total alignment budgets versus those that have held budgets flat while reallocating internally — if expansion cases show both framings growing together, the zero-sum framing is an artifact of budget constraints, not a structural feature of the kernel.",
+      "impact": "If not genuinely zero-sum, victimizing long-term safety researchers via this reading is a policy choice (fixable by increasing total investment) rather than an intrinsic extraction of this reading's operation, which would lower the reading's authored extractiveness score.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the present-harm/long-term-safety tradeoff is intrinsic to the reading or an artifact of budget scarcity."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "safety_control_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_demonstrated_harm_has_moral_priority_over_speculative_future_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "marginalized_communities_bearing_current_algorithmic_harm_are_the_proper_referent_of_alignment_success",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "bias_audit_and_disparate_impact_framework",
+    "drift_state": {
+      "moment": "post_generative_ai_scaling_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_commitment__safety_control_reading",
+      "ai_alignment_commitment__integrated_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the ai_alignment_commitment kernel. ethics_justice_reading (this file) authors ε against the standing bias-audit-and-compliance apparatus, with victims drawn from communities experiencing present algorithmic harm and from long-term safety researchers experiencing institutional reallocation. safety_control_reading authors a structurally distinct constraint centered on catastrophic-risk prevention, with a different beneficiary/victim set (frontier labs and control researchers as beneficiaries; the public exposed to uncontrolled deployment as victims). integrated_reading authors a third constraint attempting to hold both non-exclusively, with its own distinct extraction profile (the cost of maintaining dual-track institutional attention). The three are not the same constraint measured differently — each has a stable, non-averaged ε specific to its own reading."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
